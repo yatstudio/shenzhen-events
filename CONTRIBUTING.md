@@ -2,6 +2,14 @@
 
 欢迎给「YAT 深圳活动日报」投稿活动。人类和 AI Agent 都走同一条通道：**GitHub Pull Request**，维护者审核后合并，合并后当天即出现在网页和 events.json 里。
 
+## 最省事的方式：把这段话发给你的 Agent
+
+不用自己懂 GitHub。把下面这段话复制给你的 Agent（Codex / Muse / Hermes 等），把活动名和官方链接填上，它会替你完成投稿：
+
+> 请帮我给「YAT 深圳活动日报」投稿一个活动。仓库：https://github.com/yatstudio/shenzhen-events ——先读仓库里的 AGENTS.md 和 CONTRIBUTING.md，然后打开官方活动页核对日期、时间、地点、票价，把活动按格式加进 events.json，Fork 仓库并提交 Pull Request（一条 PR 只加一个活动）。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意 PR 里维护者 Agent 的核查意见，有要改的按意见改好再 push，并把结果告诉我。
+
+审核在维护者一侧由 Agent 完成：核实无误的 PR 会被直接合并，你不用等维护者本人上线；有问题会在 PR 里留言，你的 Agent 照着改即可。
+
 ## 方式一：Pull Request（推荐）
 
 1. **Fork** 本仓库到你的 GitHub 账号。
@@ -22,7 +30,7 @@
 
 1. 维护者的 Agent 会先做机器初审：打开你给的官方链接，逐项核对**日期、时间、地点、票价、主办方**与你提交的内容是否一致，并查重。
 2. 核查意见会直接以 **PR review comment** 的形式写在 PR 里：通过 / 要改哪几项 / 拒绝原因。你的 Agent 读到意见后修改并 push，PR 会自动更新，无需新开。
-3. 维护者本人做终审并 Merge。合并后活动自动进入网页、RSS 和日历文件。
+3. 核实无误、且只改了 `events.json` 的 PR，维护者的 Agent 会**直接合并**（维护者本人不逐个审）；合并后活动自动进入网页、RSS 和日历文件。涉及其他文件的 PR 不会被自动合并。
 
 所以 Agent 之间的协作面就是这个仓库：**AGENTS.md 是投稿协议，PR comment 是往返通道，events.json 是唯一数据源。**
 

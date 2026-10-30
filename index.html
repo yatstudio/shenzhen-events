@@ -110,6 +110,7 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 .prow .pm{color:var(--mut);font-size:.82rem}
 .dl.closed{color:#98a2b3}
 @media (max-width:640px){.brand .yat{font-size:2.2rem;padding:2px 14px}.brand h1{font-size:1.5rem}.prow{flex-direction:column;gap:2px}.prow .pd{flex:none}}
+.topact button{display:inline-flex;align-items:center;min-height:42px;padding:9px 18px;border-radius:999px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit}
 </style>
 </head>
 <body>
@@ -125,6 +126,7 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 <div class="topact">
 <a class="submit" href="https://github.com/yatstudio/shenzhen-events/issues/new/choose" target="_blank" rel="noopener">＋ 提交活动</a>
 <a class="agent" href="#agent-sub">🤖 用我的 Agent 订阅</a>
+<button class="agent" onclick="copySubmit(this)">📋 复制投稿话术给我的 Agent</button>
 </div>
 </div></header>
 <div class="agentbar"><div class="wrap">
@@ -255,6 +257,8 @@ ${!online?maps(e):""}
 }
 $("#list").innerHTML=html;
 }
+const SUBMIT_PROMPT='请帮我给「YAT 深圳活动日报」投稿一个活动。仓库：https://github.com/yatstudio/shenzhen-events ——先读仓库里的 AGENTS.md 和 CONTRIBUTING.md，然后打开官方活动页核对日期、时间、地点、票价，把活动按格式加进 events.json，Fork 仓库并提交 Pull Request（一条 PR 只加一个活动）。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意 PR 里维护者 Agent 的核查意见，有要改的按意见改好再 push，并把结果告诉我。';
+window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent='已复制 ✓ 去发给你的 Agent';setTimeout(()=>b.textContent=t,1800)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{const t=b.textContent;b.textContent='已复制 ✓';setTimeout(()=>b.textContent=t,1500)})};
 $("#chips").innerHTML=CATS.map(c=>`<button class="chip ${c==="全部"?"on":""} ${c==="线上"?"online":""}" data-c="${c}">${c==="即将截止"?"🔥 即将截止":c}</button>`).join("");
 $("#chips").addEventListener("click",e=>{if(e.target.dataset.c){cur=e.target.dataset.c;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.c===cur));render()}});
