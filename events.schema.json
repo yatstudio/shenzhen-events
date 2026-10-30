@@ -1,1 +1,135 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","properties":{"city":{"type":"string"},"events":{"items":{"additionalProperties":false,"properties":{"categories":{"items":{"enum":["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"]},"minItems":1,"type":"array"},"city":{"default":"深圳","type":"string"},"district":{"description":"深圳行政区，如 宝安区 / 南山区；线上活动填 null","type":["string","null"]},"end":{"type":["string","null"]},"fee":{"description":"如 免费 / ¥99 / 报名审核制","type":["string","null"]},"format":{"enum":["线下","线上Space","线上","线上+线下"]},"organizer":{"type":["string","null"]},"registration_deadline":{"type":["string","null"]},"source":{"description":"信息来源平台，如 Luma / 活动行 / HackerTrip / X","type":"string"},"start":{"description":"ISO 8601 local time, e.g. 2026-10-31T10:00:00+08:00","type":["string","null"]},"submitted_by":{"description":"投稿者或投稿 Agent 的署名（可选）","type":["string","null"]},"summary":{"type":["string","null"]},"title":{"type":"string"},"url":{"description":"官方活动/报名页，唯一去重键之一","format":"uri","type":"string"},"venue":{"type":["string","null"]},"verdict_hint":{"type":["string","null"]}},"required":["title","start","categories","format","url","source"],"type":"object"},"type":"array"},"updated_at":{"format":"date-time","type":"string"}},"required":["updated_at","events"],"title":"ShenzhenEvents","type":"object"}
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "properties": {
+  "city": {
+   "type": "string"
+  },
+  "events": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "categories": {
+      "items": {
+       "enum": [
+        "AI",
+        "创业",
+        "科技",
+        "跨境",
+        "Web3",
+        "加密",
+        "黑客松",
+        "技术",
+        "硬件",
+        "在线Space"
+       ]
+      },
+      "minItems": 1,
+      "type": "array"
+     },
+     "city": {
+      "default": "深圳",
+      "type": "string"
+     },
+     "district": {
+      "description": "深圳行政区，如 宝安区 / 南山区；线上活动填 null",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "end": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "fee": {
+      "description": "如 免费 / ¥99 / 报名审核制",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "format": {
+      "enum": [
+       "线下",
+       "线上Space",
+       "线上",
+       "线上+线下"
+      ]
+     },
+     "organizer": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "registration_deadline": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "source": {
+      "description": "信息来源平台，如 Luma / 活动行 / HackerTrip / X",
+      "type": "string"
+     },
+     "start": {
+      "description": "ISO 8601 local time, e.g. 2026-10-31T10:00:00+08:00",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "submitted_by": {
+      "description": "投稿者或投稿 Agent 的署名（可选）",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "summary": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "title": {
+      "type": "string"
+     },
+     "url": {
+      "description": "官方活动/报名页，唯一去重键之一",
+      "format": "uri",
+      "type": "string"
+     },
+     "venue": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "title",
+     "start",
+     "categories",
+     "format",
+     "url",
+     "source"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "updated_at": {
+   "format": "date-time",
+   "type": "string"
+  }
+ },
+ "required": [
+  "updated_at",
+  "events"
+ ],
+ "title": "ShenzhenEvents",
+ "type": "object"
+}
