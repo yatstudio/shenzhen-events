@@ -79,6 +79,8 @@ input[type=search]{width:100%;margin-top:8px;padding:14px 18px;border:1px solid 
 .fee.free{background:#dcfae6;color:#027a48}
 .fee.paid{background:#fef0c7;color:#b54708}
 .fee.na{background:#f2f4f7;color:var(--mut);font-weight:600}
+.hkflag{display:inline-block;background:#b42318;color:#fff;font-size:.76rem;font-weight:850;border-radius:7px;padding:2px 9px;margin-right:9px;vertical-align:.14em;letter-spacing:.05em;white-space:nowrap}
+.hkpin{color:#b42318;font-weight:850;white-space:nowrap}
 .org{font-size:.98rem;margin:4px 0 2px;color:#1d2939}
 .org b{font-weight:800}
 /* Online events: unmistakable */
@@ -248,7 +250,7 @@ const t0=new Date();t0.setHours(0,0,0,0);
 const isPast=e=>!!(e.start&&new Date(e.end||e.start)<t0);
 const qv=$("#q").value.trim();
 const past=DATA.filter(isPast).filter(e=>!qv||(e.title+(e.organizer||"")).includes(qv)).sort((a,b)=>new Date(b.start)-new Date(a.start));
-$("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">📚 过往活动<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">点开看历史记录</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a><div class="pm">${[e.organizer,e.district,e.venue].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">暂无过往记录，活动结束后会自动归档到这里</div>'}</div></div>`;
+$("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">📚 过往活动<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">点开看历史记录</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.city==="香港"?"🇭🇰 ":""}${e.title}</a><div class="pm">${[e.organizer,e.district,e.venue].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">暂无过往记录，活动结束后会自动归档到这里</div>'}</div></div>`;
 const evs=DATA.filter(e=>!isPast(e)).filter(pass)
 .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
 $("#st-total").textContent=DATA.filter(e=>!isPast(e)).length;
@@ -269,12 +271,12 @@ const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>
 const online=isOnline(e),hybrid=isHybrid(e);
 const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
 const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
-:`<div class="loc"><span class="pin">📍</span> <b>${[(e.city&&e.city!=="深圳")?e.city:null,e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
+:`<div class="loc"><span class="pin">📍</span> <b>${e.city==="香港"?'<span class="hkpin">🇭🇰 香港</span> · ':''}${[e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
 const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${c}</span>`).join("");
 html+=`<div class="ev">
 <div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
 <div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
-<div class="trow"><h3><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
+<div class="trow"><h3>${e.city==="香港"?'<span class="hkflag">🇭🇰 香港</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
 ${e.organizer?`<div class="org">🏢 主办方：<b>${e.organizer}</b></div>`:""}
 ${loc}
 ${dl?`<div class="meta">${dl}</div>`:""}
