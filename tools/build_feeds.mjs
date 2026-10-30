@@ -21,7 +21,7 @@ const items = events.map((e) => `  <item>
   </item>`).join("\n");
 writeFileSync(join(root, "feed.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-  <title>深圳活动日报</title>
+  <title>YAT 深圳活动日报</title>
   <link>${site}</link>
   <description>深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件 + X Space，每天更新</description>
   <lastBuildDate>${new Date(data.updated_at || Date.now()).toUTCString()}</lastBuildDate>

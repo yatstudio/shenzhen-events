@@ -2,113 +2,211 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>深圳活动日报 · AI / 创业 / 跨境 / Web3 / 黑客松 / 硬件 / X Space</title>
-<meta name="description" content="深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场 + X Space，每天更新。机器可读数据：events.json">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YAT 深圳活动日报 · AI / 创业 / 跨境 / Web3 / 黑客松 / 硬件 / X Space</title>
+<meta name="description" content="YAT 深圳活动日报：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场 + X Space，每天更新。机器可读数据：events.json">
 <style>
-  :root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--mut:#6b7280;--line:#e5e7eb;--acc:#e03131;--acc2:#0b7285;--chip:#eef2f5}
-  *{box-sizing:border-box} body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
-  header{background:#101318;color:#fff;padding:26px 16px 18px}
-  .wrap{max-width:880px;margin:0 auto;padding:0 14px}
-  h1{margin:0 0 6px;font-size:24px} .sub{color:#aeb6c2;font-size:13px;line-height:1.6}
-  .stats{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap} .stat b{font-size:20px;display:block} .stat span{font-size:12px;color:#aeb6c2}
-  .bar{position:sticky;top:0;background:var(--bg);padding:10px 0 6px;z-index:5}
-  .chips{display:flex;gap:8px;flex-wrap:wrap} .chip{border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer}
-  .chip.on{background:#101318;color:#fff;border-color:#101318}
-  input[type=search]{width:100%;margin-top:8px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px}
-  .day{font-size:14px;font-weight:700;margin:18px 0 8px;color:#343a40}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
-  .card h3{margin:0 0 6px;font-size:16px;line-height:1.45} .card h3 a{color:var(--ink);text-decoration:none} .card h3 a:hover{text-decoration:underline}
-  .meta{font-size:13px;color:var(--mut);line-height:1.7}
-  .tags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0} .tag{font-size:11px;background:var(--chip);border-radius:6px;padding:2px 8px;color:#345}
-  .tag.space{background:#e7f5ff;color:var(--acc2)} .tag.hack{background:#fff0f6;color:#a61e4d}
-  .dl{display:inline-block;font-size:12px;font-weight:700;color:var(--acc)} .dl.soon{color:#fff;background:var(--acc);border-radius:6px;padding:1px 7px}
-  .sum{font-size:13.5px;line-height:1.65;margin:6px 0 0} .why{font-size:13px;line-height:1.65;margin:6px 0 0;color:var(--acc2)}
-  .foot{font-size:12.5px;color:var(--mut);padding:22px 0 40px;line-height:1.9} .foot a{color:var(--acc2)}
-  .empty{padding:36px 0;text-align:center;color:var(--mut);font-size:14px}
+:root{--bg:#f4f5f7;--card:#fff;--ink:#14161a;--mut:#68707d;--line:#e4e7ec;--red:#d92d20;--amber:#b54708;--blue:#175cd3;--violet:#6941c6;--online-bg:#eef4ff;--radius:16px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+/* Masthead */
+header{background:#0c0e12;color:#fff;padding:30px 0 22px}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.brand.yat{font-size:2rem;font-weight:900;letter-spacing:.04em;background:#fff;color:#0c0e12;border-radius:10px;padding:0 12px;line-height:1.25}
+.brand h1{font-size:1.7rem;font-weight:800;margin:0;letter-spacing:.02em}
+.tagline{color:#9aa3b2;font-size:.86rem;margin-top:10px;line-height:1.7}
+.tagline b{color:#e6e9ef;font-weight:600}
+.stats{display:flex;gap:26px;margin-top:16px;flex-wrap:wrap}
+.stat b{font-size:1.45rem;font-weight:800;font-variant-numeric:tabular-nums;display:block;line-height:1.1}
+.stat span{font-size:.75rem;color:#9aa3b2}
+/* Toolbar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(244,245,247,.92);backdrop-filter:blur(8px);padding:10px 0 8px;margin:0 -16px;padding-left:16px;padding-right:16px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:.85rem;cursor:pointer;min-height:38px;color:var(--ink)}
+.chip.on{background:#0c0e12;color:#fff;border-color:#0c0e12;font-weight:700}
+.chip.online.on{background:var(--violet);border-color:var(--violet)}
+input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid var(--line);border-radius:12px;font-size:1rem;background:#fff}
+/* Day group (Luma-like) */
+.dayhead{position:sticky;top:118px;z-index:10;display:flex;align-items:baseline;gap:10px;padding:16px 0 8px;background:var(--bg)}
+.dayhead.dnum{font-size:2rem;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.dayhead.dmeta{font-size:.95rem;font-weight:700}
+.dayhead.drel{font-size:.78rem;font-weight:800;color:#fff;background:var(--red);border-radius:6px;padding:2px 8px}
+.dayhead.drel.future{background:#0c0e12}
+/* Event row */
+.ev{display:flex;gap:14px;margin-bottom:12px}
+.rail{flex:0 0 64px;text-align:right;padding-top:14px}
+.rail.t1{font-size:1.02rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.rail.t2{font-size:.75rem;color:var(--mut);font-variant-numeric:tabular-nums}
+.card{flex:1;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px 12px}
+.card h3{margin:0 0 4px;font-size:1.06rem;font-weight:800;line-height:1.4}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.loc{font-size:.9rem;color:#344054;margin:4px 0 2px}
+.loc.pin{color:var(--red)}
+.meta{font-size:.82rem;color:var(--mut);line-height:1.7}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 2px}
+.tag{font-size:.72rem;font-weight:600;background:#f2f4f7;border-radius:6px;padding:2px 8px;color:#344054}
+.tag.hack{background:#fff1f3;color:#c01048}.tag.web3{background:#ecfdf3;color:#027a48}.tag.space{background:#eef4ff;color:var(--blue)}
+.dl{display:inline-block;font-size:.75rem;font-weight:800;color:var(--amber)}
+.dl.soon{color:#fff;background:var(--red);border-radius:6px;padding:1px 8px}
+.sum{font-size:.92rem;line-height:1.65;margin:7px 0 0}
+.why{font-size:.88rem;line-height:1.6;margin:6px 0 0;color:#175cd3}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+.btn{display:inline-flex;align-items:center;min-height:38px;padding:7px 13px;border-radius:10px;font-size:.84rem;font-weight:700;text-decoration:none;border:1px solid var(--line);color:#344054;background:#fff;cursor:pointer}
+.btn.primary{background:#0c0e12;color:#fff;border-color:#0c0e12}
+.btn.nav{background:#f0f9ff;border-color:#bfe3ff;color:#026aa2}
+/* Online events: unmistakable */
+.card.online{background:var(--online-bg);border:2px solid var(--violet);padding-top:0;overflow:hidden}
+.online-strip{margin:0 -16px 10px;background:linear-gradient(90deg,var(--violet),var(--blue));color:#fff;font-weight:900;font-size:.92rem;letter-spacing:.06em;padding:8px 16px}
+.card.hybrid{border:2px solid var(--blue)}
+.hybrid-strip{margin:0 -16px 10px;background:#eff8ff;color:var(--blue);font-weight:900;font-size:.9rem;letter-spacing:.05em;padding:8px 16px;border-bottom:1px solid #bfe3ff}
+.card.online h3,.card.hybrid h3{margin-top:2px}
+.subcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin:20px 0 4px}
+.subcard h3{margin:0 0 8px;font-size:1rem}
+.subcard.prompt{background:#f2f4f7;border-radius:10px;padding:11px 13px;font-size:.88rem;line-height:1.65}
+.foot{font-size:.8rem;color:var(--mut);padding:20px 0 44px;line-height:1.9}
+.foot a{color:var(--blue)}
+.empty{padding:38px 0;text-align:center;color:var(--mut)}
+@media (max-width:640px){
+.brand.yat{font-size:1.55rem}.brand h1{font-size:1.35rem}
+.ev{flex-direction:column;gap:0}
+.rail{flex:none;text-align:left;padding:0 0 2px;display:flex;gap:8px;align-items:baseline}
+.rail.t1{font-size:1rem}.rail.t2{font-size:.8rem}
+.dayhead{top:112px}.dayhead.dnum{font-size:1.6rem}
+.card{padding:13px 14px 11px;border-radius:14px}
+.btn{flex:1;justify-content:center}
+.actions.btn.nav{flex:0 0 auto}
+}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <h1>深圳活动日报</h1>
-  <div class="sub">AI · 创业 · 科技 · 跨境出海 · Web3 · 加密 ｜ 黑客松 / 技术 / 硬件专场 ｜ X Space（在线）<br>每天早上更新 · 数据来源：Luma / 活动行 / 互动吧 / 联谱 / HackerTrip / 黑123 / X 等公开页面，逐条核实后收录</div>
-  <div class="stats">
-    <div class="stat"><b id="st-total">–</b><span>在列活动</span></div>
-    <div class="stat"><b id="st-week">–</b><span>未来 7 天</span></div>
-    <div class="stat"><b id="st-dl">–</b><span>72h 内截止报名</span></div>
-    <div class="stat"><b id="st-upd">–</b><span>最近更新</span></div>
-  </div>
+<div class="brand"><span class="yat">YAT</span><h1>深圳活动日报</h1></div>
+<div class="tagline"><b>默认线下</b> · AI / 创业 / 科技 / 跨境出海 / Web3 / 加密 ｜ 黑客松 · 技术 · 硬件 ｜ <b>线上活动会特别标明</b><br>每天早上更新 · 来源 Luma / 活动行 / 互动吧 / 联谱 / HackerTrip / 黑123 / X，逐条核实后收录</div>
+<div class="stats">
+<div class="stat"><b id="st-total">–</b><span>在列活动</span></div>
+<div class="stat"><b id="st-week">–</b><span>未来 7 天</span></div>
+<div class="stat"><b id="st-dl">–</b><span>72h 内截止报名</span></div>
+<div class="stat"><b id="st-upd">–</b><span>最近更新</span></div>
+</div>
 </div></header>
 
 <div class="wrap">
-  <div class="bar">
-    <div class="chips" id="chips"></div>
-    <input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
-  </div>
-  <div id="list"><div class="empty">加载中…</div></div>
-  <div class="card" style="margin-top:18px">
-    <h3>🤖 让你的 Agent 提醒你，不用自己刷</h3>
-    <p class="sum">把下面这段话复制给你的 Agent（Codex / Muse / Hermes 等任何能联网的 Agent），它会每天读取本页数据，按你的兴趣给你活动提醒：</p>
-    <p class="sum" id="subprompt" style="background:#f1f3f5;border-radius:10px;padding:10px 12px">请订阅「深圳活动日报」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣【填你关心的：如 AI / 硬件 / Web3 / 跨境】和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
-    <button class="chip" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button>
-  </div>
-  <div class="foot">
-    数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a><br>
-    Agent 投稿接入说明见仓库 <a href="https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md">AGENTS.md</a>：欢迎 Codex / Muse / Hermes 等 Agent 按格式提 PR 或 Issue 投稿，核实去重后收录。<br>
-    报名前请以官方页面最新信息为准（时间、名额、审核状态可能变化）。
-  </div>
+<div class="bar">
+<div class="chips" id="chips"></div>
+<input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
+</div>
+<div id="list"><div class="empty">加载中…</div></div>
+
+<div class="subcard">
+<h3>🤖 让你的 Agent 提醒你，不用自己刷</h3>
+<p class="sum">把下面这段话复制给你的 Agent（Codex / Muse / Hermes 等任何能联网的 Agent），它会每天读取本页数据，按你的兴趣给你活动提醒：</p>
+<p class="prompt" id="subprompt">请订阅「YAT 深圳活动日报」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
+<div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div>
+</div>
+
+<div class="foot">
+数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历.ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a><br>
+Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md">AGENTS.md</a>。报名前请以官方页面最新信息为准。
+</div>
 </div>
 
 <script>
-const CATS = ["全部","本周","即将截止","AI","创业","跨境","Web3","加密","黑客松","硬件","技术","在线Space"];
-let DATA=[], cur="全部";
+const CATS=["全部","今天","本周","即将截止","线下","线上","AI","创业","跨境","Web3","黑客松","硬件","在线Space"];
+let DATA=[],cur="全部";
 const $=s=>document.querySelector(s);
-const fmtD=t=>{const d=new Date(t);return d.toLocaleDateString("zh-CN",{month:"numeric",day:"numeric",weekday:"short"})};
-const fmtT=t=>{const d=new Date(t);return d.toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit",hour12:false})};
-const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/864e5):null;
+const DAY=864e5, now0=new Date(); now0.setHours(0,0,0,0);
+const isOnline=e=>e.format==="线上Space"||e.format==="线上";
+const isHybrid=e=>e.format==="线上+线下";
+const fmtT=t=>new Date(t).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit",hour12:false});
+const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/DAY):null;
+const dayKey=t=>{const d=new Date(t);return d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate()};
+const relLabel=t=>{const diff=Math.round((new Date(dayKey(t))-new Date(dayKey(Date.now())))/DAY);return diff===0?"今天":diff===1?"明天":diff===2?"后天":""};
 function pass(e){
-  const q=$("#q").value.trim();
-  if(q && !(e.title+(e.organizer||"")+(e.venue||"")+(e.summary||"")).includes(q)) return false;
-  if(cur==="全部") return true;
-  if(cur==="本周") return e.start && (new Date(e.start)-Date.now())<=7*864e5;
-  if(cur==="即将截止"){const d=dlDays(e);return d!==null&&d<=7&&d>=0}
-  if(cur==="Web3") return e.categories.includes("Web3")||e.categories.includes("加密");
-  return e.categories.includes(cur);
+const q=$("#q").value.trim();
+if(q&&!(e.title+(e.organizer||"")+(e.venue||"")+(e.summary||"")).includes(q))return false;
+const st=e.start?new Date(e.start):null;
+switch(cur){
+case "全部": return true;
+case "今天": return st&&dayKey(st)===dayKey(Date.now());
+case "本周": return st&&(st-Date.now())<=7*DAY;
+case "即将截止": {const d=dlDays(e);return d!==null&&d<=7&&d>=0}
+case "线下": return!isOnline(e);
+case "线上": return isOnline(e)||isHybrid(e);
+case "Web3": return e.categories.includes("Web3")||e.categories.includes("加密");
+default: return e.categories.includes(cur);
 }
+}
+function maps(e){
+if(!e.venue)return"";
+const q=encodeURIComponent("深圳市"+(e.district||"")+e.venue);
+return `<a class="btn nav" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${q}">高德</a>`+
+`<a class="btn nav" target="_blank" rel="noopener" href="https://maps.apple.com/?q=${q}">苹果地图</a>`+
+`<a class="btn nav" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${q}">谷歌地图</a>`;
+}
+function ics(e){
+const dt=t=>new Date(t).toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+const body=["BEGIN:VCALENDAR","VERSION:2.0","BEGIN:VEVENT","UID:"+Date.now()+"@yat-events","DTSTAMP:"+dt(Date.now()),
+"DTSTART:"+dt(e.start),"DTEND:"+dt(e.end||new Date(new Date(e.start).getTime()+2*3600e3)),
+"SUMMARY:"+e.title.replace(/,/g,"\\,"),"LOCATION:"+([e.district,e.venue].filter(Boolean).join(" ")||e.format).replace(/,/g,"\\,"),
+"DESCRIPTION:报名 "+e.url,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar"}));a.download="event.ics";a.click();URL.revokeObjectURL(a.href);
+}
+window._ics=ics;
 function render(){
-  const now=Date.now();
-  const evs=DATA.filter(e=>!e.start||new Date(e.end||e.start)>=new Date(now-864e5)).filter(pass)
-                .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
-  $("#st-total").textContent=DATA.length;
-  $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*864e5&&new Date(e.start)>=new Date(now-864e5)).length;
-  $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
-  if(!evs.length){$("#list").innerHTML='<div class="empty">没有符合条件的活动</div>';return}
-  let html="", lastDay="";
-  for(const e of evs){
-    const day=e.start?fmtD(e.start):"时间待定";
-    if(day!==lastDay){html+=`<div class="day">${day}</div>`;lastDay=day}
-    const d=dlDays(e);
-    const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${fmtD(e.registration_deadline)}</span>`):"";
-    const where=e.format==="线上Space"||e.format==="线上"?"🌐 在线":("📍 "+[e.district,e.venue].filter(Boolean).join(" · "));
-    const time=e.start?(fmtT(e.start)+(e.end?" – "+fmtT(e.end):"")):"时间待定";
-    html+=`<div class="card">
-      <h3><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>
-      <div class="meta">🕐 ${time} ｜ ${where}${e.fee?" ｜ 💰 "+e.fee:""}${e.organizer?" ｜ 主办："+e.organizer:""} ${dl}</div>
-      <div class="tags">${e.categories.map(c=>`<span class="tag ${c==="在线Space"?"space":""} ${c==="黑客松"||c==="硬件"?"hack":""}">${c}</span>`).join("")}</div>
-      ${e.summary?`<p class="sum">${e.summary}</p>`:""}
-      ${e.verdict_hint?`<p class="why">▸ ${e.verdict_hint}</p>`:""}
-      <div class="meta">来源：${e.source} · <a href="${e.url}" target="_blank" rel="noopener">官方页/报名 →</a></div>
-    </div>`;
-  }
-  $("#list").innerHTML=html;
+const now=Date.now();
+const evs=DATA.filter(e=>!e.start||new Date(e.end||e.start)>=new Date(now-DAY)).filter(pass)
+.sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
+$("#st-total").textContent=DATA.length;
+$("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
+$("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
+if(!evs.length){$("#list").innerHTML='<div class="empty">没有符合条件的活动</div>';return}
+let html="",lastDay="";
+for(const e of evs){
+const dk=e.start?dayKey(e.start):"待定";
+if(dk!==lastDay){
+lastDay=dk;
+if(e.start){const d=new Date(e.start),rel=relLabel(e.start);
+html+=`<div class="dayhead"><span class="dnum">${d.getDate()}</span><span class="dmeta">${d.getMonth()+1}月 · ${d.toLocaleDateString("zh-CN",{weekday:"long"})}</span>${rel?`<span class="drel ${rel==="今天"?"":"future"}">${rel}</span>`:""}</div>`;
+}else{html+=`<div class="dayhead"><span class="dmeta">时间待定（看报名截止）</span></div>`}
 }
-$("#chips").innerHTML=CATS.map(c=>`<button class="chip ${c==="全部"?"on":""}" data-c="${c}">${c==="即将截止"?"🔥 即将截止":c}</button>`).join("");
+const d=dlDays(e);
+const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span>`):"";
+const online=isOnline(e),hybrid=isHybrid(e);
+const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
+const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
+:`<div class="loc"><span class="pin">📍</span> <b>${[e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
+const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${c}</span>`).join("");
+html+=`<div class="ev">
+<div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
+<div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
+<h3><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>
+${loc}
+<div class="meta">${e.fee?"💰 "+e.fee+" ｜ ":""}${e.organizer?"主办："+e.organizer+" ｜ ":""}${dl}</div>
+<div class="tags">${tags}</div>
+${e.summary?`<p class="sum">${e.summary}</p>`:""}
+${e.verdict_hint?`<p class="why">▸ ${e.verdict_hint}</p>`:""}
+<div class="actions">
+<a class="btn primary" href="${e.url}" target="_blank" rel="noopener">官方页 / 报名 →</a>
+${e.start?`<button class="btn" onclick="_ics(DATA[${DATA.indexOf(e)}])">＋ 加日历</button>`:""}
+${!online?maps(e):""}
+</div>
+<div class="meta" style="margin-top:8px">来源：${e.source}</div>
+</div>
+</div>`;
+}
+$("#list").innerHTML=html;
+}
+$("#chips").innerHTML=CATS.map(c=>`<button class="chip ${c==="全部"?"on":""} ${c==="线上"?"online":""}" data-c="${c}">${c==="即将截止"?"🔥 即将截止":c}</button>`).join("");
 $("#chips").addEventListener("click",e=>{if(e.target.dataset.c){cur=e.target.dataset.c;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.c===cur));render()}});
 $("#q").addEventListener("input",render);
 fetch("events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
-  DATA=j.events||[];
-  $("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"}):"–";
-  render();
+DATA=j.events||[];
+$("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"}):"–";
+render();
 }).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>'});
 </script>
 </body>

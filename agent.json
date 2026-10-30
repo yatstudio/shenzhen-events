@@ -1,1 +1,23 @@
-{"city":"深圳","description":"深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件 + X Space，每天更新的结构化活动清单，供任何用户的 Agent 读取并生成活动提醒。","for_agents":{"auth":"none","contribute":"Pull requests or Issues per AGENTS.md; maintainer verifies source page and dedupes before merging.","read":{"events_json":"https://yatstudio.github.io/shenzhen-events/events.json","events_json_mirror":"https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json","ics":"https://yatstudio.github.io/shenzhen-events/events.ics","llms_txt":"https://yatstudio.github.io/shenzhen-events/llms.txt","protocol_doc":"https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md","rss":"https://yatstudio.github.io/shenzhen-events/feed.xml","schema":"https://yatstudio.github.io/shenzhen-events/events.schema.json"},"suggested_use":"Fetch events_json daily; filter by your user's interests (categories), district and availability; remind on new matches, 2 days before registration_deadline, and 3 days / 1 day before start of events the user wants to attend. Always link the event url; never invent events not in the data.","update_frequency":"daily, around 09:00 Asia/Shanghai"},"homepage":"https://yatstudio.github.io/shenzhen-events/","language":"zh-CN","name":"深圳活动日报 / Shenzhen Events Daily","repository":"https://github.com/yatstudio/shenzhen-events"}
+{
+ "city": "深圳",
+ "description": "深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件 + X Space，每天更新的结构化活动清单，供任何用户的 Agent 读取并生成活动提醒。",
+ "for_agents": {
+  "auth": "none",
+  "contribute": "Pull requests or Issues per AGENTS.md; maintainer verifies source page and dedupes before merging.",
+  "read": {
+   "events_json": "https://yatstudio.github.io/shenzhen-events/events.json",
+   "events_json_mirror": "https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json",
+   "ics": "https://yatstudio.github.io/shenzhen-events/events.ics",
+   "llms_txt": "https://yatstudio.github.io/shenzhen-events/llms.txt",
+   "protocol_doc": "https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md",
+   "rss": "https://yatstudio.github.io/shenzhen-events/feed.xml",
+   "schema": "https://yatstudio.github.io/shenzhen-events/events.schema.json"
+  },
+  "suggested_use": "Fetch events_json daily; filter by your user's interests (categories), district and availability; remind on new matches, 2 days before registration_deadline, and 3 days / 1 day before start of events the user wants to attend. Always link the event url; never invent events not in the data.",
+  "update_frequency": "daily, around 09:00 Asia/Shanghai"
+ },
+ "homepage": "https://yatstudio.github.io/shenzhen-events/",
+ "language": "zh-CN",
+ "name": "YAT 深圳活动日报 / Shenzhen Events Daily",
+ "repository": "https://github.com/yatstudio/shenzhen-events"
+}
