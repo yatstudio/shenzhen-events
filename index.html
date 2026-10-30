@@ -58,6 +58,14 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 .btn{display:inline-flex;align-items:center;min-height:38px;padding:7px 13px;border-radius:10px;font-size:.84rem;font-weight:700;text-decoration:none;border:1px solid var(--line);color:#344054;background:#fff;cursor:pointer}
 .btn.primary{background:#0c0e12;color:#fff;border-color:#0c0e12}
 .btn.nav{background:#f0f9ff;border-color:#bfe3ff;color:#026aa2}
+.trow{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.trow h3{flex:1;min-width:0}
+.fee{flex:0 0 auto;font-size:.82rem;font-weight:900;border-radius:999px;padding:3px 11px;margin-top:1px;white-space:nowrap}
+.fee.free{background:#dcfae6;color:#027a48}
+.fee.paid{background:#fef0c7;color:#b54708}
+.fee.na{background:#f2f4f7;color:var(--mut);font-weight:600}
+.org{font-size:.93rem;margin:3px 0 1px;color:#1d2939}
+.org b{font-weight:800}
 /* Online events: unmistakable */
 .card.online{background:var(--online-bg);border:2px solid var(--violet);padding-top:0;overflow:hidden}
 .online-strip{margin:0 -16px 10px;background:linear-gradient(90deg,var(--violet),var(--blue));color:#fff;font-weight:900;font-size:.92rem;letter-spacing:.06em;padding:8px 16px}
@@ -123,6 +131,16 @@ const isOnline=e=>e.format==="线上Space"||e.format==="线上";
 const isHybrid=e=>e.format==="线上+线下";
 const fmtT=t=>new Date(t).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit",hour12:false});
 const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/DAY):null;
+function feeBadge(e){
+  const f=(e.fee||"").trim();
+  if(!f)return `<span class="fee na">票价见官方页</span>`;
+  const esc=f.replace(/"/g,"&quot;");
+  if(f.startsWith("免费"))return `<span class="fee free" title="${esc}">免费</span>`;
+  let m=f.match(/(¥|￥)\s?\d[\d,\.–\-~]*\d|(¥|￥)\s?\d/)||f.match(/[A-Z]{3}\s?\d[\d,]*/);
+  let txt=m?m[0].replace(/\s+/g,""):"付费";
+  if(m&&(f.split("¥").length>2||f.includes("；")||(f.includes("/")&&f.length>20)))txt+=" 起";
+  return `<span class="fee paid" title="${esc}">💰 ${txt}</span>`;
+}
 const dayKey=t=>{const d=new Date(t);return d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate()};
 const relLabel=t=>{const diff=Math.round((new Date(dayKey(t))-new Date(dayKey(Date.now())))/DAY);return diff===0?"今天":diff===1?"明天":diff===2?"后天":""};
 function pass(e){
@@ -183,9 +201,10 @@ const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"
 html+=`<div class="ev">
 <div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
 <div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
-<h3><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>
+<div class="trow"><h3><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
+${e.organizer?`<div class="org">🏢 主办方：<b>${e.organizer}</b></div>`:""}
 ${loc}
-<div class="meta">${e.fee?"💰 "+e.fee+" ｜ ":""}${e.organizer?"主办："+e.organizer+" ｜ ":""}${dl}</div>
+${dl?`<div class="meta">${dl}</div>`:""}
 <div class="tags">${tags}</div>
 ${e.summary?`<p class="sum">${e.summary}</p>`:""}
 ${e.verdict_hint?`<p class="why">▸ ${e.verdict_hint}</p>`:""}
