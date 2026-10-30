@@ -88,6 +88,28 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 .btn{flex:1;justify-content:center}
 .actions.btn.nav{flex:0 0 auto}
 }
+
+.brand .yat{font-size:2.9rem;padding:2px 18px;border-radius:14px;box-shadow:0 6px 22px rgba(255,255,255,.22)}
+.brand h1{font-size:2rem}
+.topact{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.topact a{display:inline-flex;align-items:center;min-height:42px;padding:9px 18px;border-radius:999px;font-weight:800;font-size:.95rem;text-decoration:none}
+.topact .submit{background:#ffd60a;color:#0c0e12}
+.topact .agent{background:transparent;color:#fff;border:1.5px solid #fff}
+.agentbar{background:linear-gradient(90deg,#6941c6,#175cd3);color:#fff}
+.agentbar .wrap{display:flex;gap:12px;align-items:center;padding-top:11px;padding-bottom:11px;flex-wrap:wrap}
+.agentbar p{margin:0;font-size:.92rem;flex:1;min-width:230px}
+.agentbar button{flex:0 0 auto;background:#fff;color:#3a2a8f;border:0;border-radius:999px;padding:9px 16px;font-weight:800;cursor:pointer;min-height:40px;font-size:.9rem}
+.pastsec{margin:26px 0 4px}
+.pasthead{display:flex;align-items:center;gap:10px;width:100%;background:#eceef1;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:1rem;font-weight:800;cursor:pointer;color:#344054;text-align:left}
+.pasthead .cnt{background:#0c0e12;color:#fff;border-radius:999px;padding:1px 10px;font-size:.8rem}
+.pastlist{display:none;padding-top:10px}
+.pastlist.open{display:block}
+.prow{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px;font-size:.9rem;align-items:baseline}
+.prow .pd{flex:0 0 86px;color:var(--mut);font-variant-numeric:tabular-nums}
+.prow a{color:var(--ink);font-weight:700;text-decoration:none}
+.prow .pm{color:var(--mut);font-size:.82rem}
+.dl.closed{color:#98a2b3}
+@media (max-width:640px){.brand .yat{font-size:2.2rem;padding:2px 14px}.brand h1{font-size:1.5rem}.prow{flex-direction:column;gap:2px}.prow .pd{flex:none}}
 </style>
 </head>
 <body>
@@ -100,7 +122,15 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 <div class="stat"><b id="st-dl">–</b><span>72h 内截止报名</span></div>
 <div class="stat"><b id="st-upd">–</b><span>最近更新</span></div>
 </div>
+<div class="topact">
+<a class="submit" href="https://github.com/yatstudio/shenzhen-events/issues/new/choose" target="_blank" rel="noopener">＋ 提交活动</a>
+<a class="agent" href="#agent-sub">🤖 用我的 Agent 订阅</a>
+</div>
 </div></header>
+<div class="agentbar"><div class="wrap">
+<p>🤖 <b>不用自己刷</b>：把订阅话术发给你的 Agent（Codex / Muse / Hermes 等），它每天自动帮你盯新活动和报名截止。</p>
+<button onclick="copyPrompt(this)">一键复制订阅话术</button>
+</div></div>
 
 <div class="wrap">
 <div class="bar">
@@ -108,8 +138,9 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 <input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
 </div>
 <div id="list"><div class="empty">加载中…</div></div>
+<div id="past"></div>
 
-<div class="subcard">
+<div class="subcard" id="agent-sub">
 <h3>🤖 让你的 Agent 提醒你，不用自己刷</h3>
 <p class="sum">把下面这段话复制给你的 Agent（Codex / Muse / Hermes 等任何能联网的 Agent），它会每天读取本页数据，按你的兴趣给你活动提醒：</p>
 <p class="prompt" id="subprompt">请订阅「YAT 深圳活动日报」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
@@ -176,9 +207,14 @@ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{
 window._ics=ics;
 function render(){
 const now=Date.now();
-const evs=DATA.filter(e=>!e.start||new Date(e.end||e.start)>=new Date(now-DAY)).filter(pass)
+const t0=new Date();t0.setHours(0,0,0,0);
+const isPast=e=>!!(e.start&&new Date(e.end||e.start)<t0);
+const qv=$("#q").value.trim();
+const past=DATA.filter(isPast).filter(e=>!qv||(e.title+(e.organizer||"")).includes(qv)).sort((a,b)=>new Date(b.start)-new Date(a.start));
+$("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">📚 过往活动<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">点开看历史记录</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a><div class="pm">${[e.organizer,e.district,e.venue].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">暂无过往记录，活动结束后会自动归档到这里</div>'}</div></div>`;
+const evs=DATA.filter(e=>!isPast(e)).filter(pass)
 .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
-$("#st-total").textContent=DATA.length;
+$("#st-total").textContent=DATA.filter(e=>!isPast(e)).length;
 $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
 $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
 if(!evs.length){$("#list").innerHTML='<div class="empty">没有符合条件的活动</div>';return}
@@ -192,7 +228,7 @@ html+=`<div class="dayhead"><span class="dnum">${d.getDate()}</span><span class=
 }else{html+=`<div class="dayhead"><span class="dmeta">时间待定（看报名截止）</span></div>`}
 }
 const d=dlDays(e);
-const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span>`):"";
+const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span>`):(d!==null&&d<0&&e.start&&new Date(e.start)>now?`<span class="dl closed">报名已截止</span>`:"");
 const online=isOnline(e),hybrid=isHybrid(e);
 const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
 const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
@@ -219,12 +255,13 @@ ${!online?maps(e):""}
 }
 $("#list").innerHTML=html;
 }
+window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{const t=b.textContent;b.textContent='已复制 ✓';setTimeout(()=>b.textContent=t,1500)})};
 $("#chips").innerHTML=CATS.map(c=>`<button class="chip ${c==="全部"?"on":""} ${c==="线上"?"online":""}" data-c="${c}">${c==="即将截止"?"🔥 即将截止":c}</button>`).join("");
 $("#chips").addEventListener("click",e=>{if(e.target.dataset.c){cur=e.target.dataset.c;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.c===cur));render()}});
 $("#q").addEventListener("input",render);
 fetch("events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.events||[];
-$("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"}):"–";
+$("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleString("zh-CN",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";
 render();
 }).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>'});
 </script>
