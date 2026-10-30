@@ -36,14 +36,21 @@ radial-gradient(560px 300px at 55% 115%,rgba(255,150,60,.16),transparent 62%),
 .agentbar button{flex:0 0 auto;background:#fff;color:#3a2a8f;border:0;border-radius:999px;padding:11px 20px;font-weight:800;cursor:pointer;min-height:44px;font-size:.95rem}
 /* Toolbar */
 .bar{position:sticky;top:0;z-index:20;background:rgba(246,246,244,.92);backdrop-filter:blur(10px);padding:14px 0 10px;margin:0 -24px;padding-left:24px;padding-right:24px}
-.chips{display:flex;gap:9px;flex-wrap:wrap;padding-bottom:4px}
-.chips::-webkit-scrollbar{display:none}
 .chip{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-size:.93rem;cursor:pointer;min-height:44px;color:var(--ink);font-weight:550}
 .chip.on{background:#0a0c10;color:#fff;border-color:#0a0c10;font-weight:750}
-.chip.online.on{background:var(--violet);border-color:var(--violet)}
-input[type=search]{width:100%;margin-top:8px;padding:14px 18px;border:1px solid var(--line);border-radius:14px;font-size:1.02rem;background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+input[type=search]{width:100%;padding:14px 18px;border:1px solid var(--line);border-radius:14px;font-size:1.02rem;background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+#ftoggle{display:none;width:100%;margin-top:8px;background:#fff;border:1px solid var(--line);border-radius:12px;min-height:42px;font-weight:750;font-size:.95rem;padding:0 14px;align-items:center;justify-content:space-between;cursor:pointer;color:var(--ink);font-family:inherit}
+#ftoggle #fcount{color:var(--red);font-weight:800;margin-right:6px}
+.fgroup{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.flabel{font-size:.8rem;color:var(--mut);font-weight:750;min-width:2.2em}
+.seg{display:inline-flex;gap:7px;flex-wrap:wrap;align-items:center}
+.fgroup .chip{min-height:36px;padding:6px 13px;font-size:.88rem}
+#fdate{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.88rem;background:#fff;color:var(--ink);min-height:36px;font-family:inherit}
+#fdate.on{border-color:var(--blue);box-shadow:0 0 0 2px rgba(23,92,211,.25);font-weight:700}
+.fres{margin-left:auto;font-size:.85rem;color:var(--mut);font-weight:650}
+.fclear{margin-left:auto;background:none;border:0;color:var(--red);font-weight:750;cursor:pointer;font-size:.88rem;min-height:36px;font-family:inherit}
 /* Day group (Luma-like) */
-.dayhead{position:sticky;top:136px;z-index:10;display:flex;align-items:baseline;gap:12px;padding:30px 0 12px;background:var(--bg)}
+.dayhead{position:sticky;top:var(--barh,136px);z-index:10;display:flex;align-items:baseline;gap:12px;padding:30px 0 12px;background:var(--bg)}
 .dayhead .dnum{font-size:2.7rem;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .dayhead .dmeta{font-size:1.06rem;font-weight:750}
 .dayhead .drel{font-size:.8rem;font-weight:800;color:#fff;background:var(--red);border-radius:7px;padding:3px 10px}
@@ -120,10 +127,14 @@ header{padding:46px 0 38px}
 .agentbar button{min-height:40px;padding:8px 16px;font-size:.88rem}
 .wrap{padding:0 16px}
 .bar{margin:0 -16px;padding:10px 16px 8px}
-.chips{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:2px 16px 6px}
-.chip{min-height:36px;padding:6px 13px;font-size:.88rem}
-input[type=search]{margin-top:6px;padding:11px 14px;font-size:16px;border-radius:12px}
-.dayhead{top:102px;padding:18px 0 8px}
+#ftoggle{display:flex}
+#fgroups{display:none}
+#fgroups.open{display:block}
+.fgroup{gap:7px;margin-top:9px}
+.fgroup .chip{min-height:36px;padding:6px 12px;font-size:.87rem}
+.fres{margin-left:0;width:100%}
+input[type=search]{margin-top:2px;padding:11px 14px;font-size:16px;border-radius:12px}
+.dayhead{padding:18px 0 8px}
 .dayhead .dnum{font-size:2rem}
 .ev{flex-direction:column;gap:0;margin-bottom:12px}
 .rail{flex:none;text-align:left;padding:0 0 3px;display:flex;gap:9px;align-items:baseline}
@@ -166,8 +177,13 @@ input[type=search]{margin-top:6px;padding:11px 14px;font-size:16px;border-radius
 
 <div class="wrap">
 <div class="bar">
-<div class="chips" id="chips"></div>
 <input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
+<button id="ftoggle" aria-expanded="false"><span>🎛 筛选 Filter</span><span><span id="fcount"></span> ▾</span></button>
+<div id="fgroups">
+<div class="fgroup"><span class="flabel">时间</span><span class="seg" id="g-time"><button class="chip on" data-v="all">全部</button><button class="chip" data-v="today">今天</button><button class="chip" data-v="tomorrow">明天</button><button class="chip" data-v="dayafter">后天</button><button class="chip" data-v="week">本周</button><button class="chip" data-v="deadline">🔥 即将截止</button></span><input type="date" id="fdate" aria-label="按日期筛选"><span class="fres" id="fres"></span></div>
+<div class="fgroup"><span class="flabel">费用</span><span class="seg" id="g-fee"><button class="chip on" data-v="all">全部</button><button class="chip" data-v="free">免费</button><button class="chip" data-v="paid">付费</button></span><span class="flabel">形式</span><span class="seg" id="g-fmt"><button class="chip on" data-v="all">全部</button><button class="chip" data-v="offline">线下</button><button class="chip" data-v="online">线上</button></span><span class="flabel">城市</span><span class="seg" id="g-city"><button class="chip on" data-v="all">全部</button><button class="chip" data-v="sz">深圳</button><button class="chip" data-v="hk">🇭🇰 香港</button></span></div>
+<div class="fgroup"><span class="flabel">分类</span><span class="seg" id="g-cats"></span><button id="fclear" class="fclear" hidden>清除筛选 ✕</button></div>
+</div>
 </div>
 <div id="list"><div class="empty">加载中…</div></div>
 <div id="past"></div>
@@ -192,8 +208,9 @@ Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-event
 </div>
 
 <script>
-const CATS=["全部","今天","本周","即将截止","线下","线上","香港","AI","创业","跨境","Web3","黑客松","硬件","在线Space"];
-let DATA=[],cur="全部";
+const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"];
+let DATA=[];
+let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
 const $=s=>document.querySelector(s);
 const DAY=864e5, now0=new Date(); now0.setHours(0,0,0,0);
 const isOnline=e=>e.format==="线上Space"||e.format==="线上";
@@ -216,17 +233,35 @@ function pass(e){
 const q=$("#q").value.trim();
 if(q&&!(e.title+(e.organizer||"")+(e.venue||"")+(e.summary||"")).includes(q))return false;
 const st=e.start?new Date(e.start):null;
-switch(cur){
-case "全部": return true;
-case "今天": return st&&dayKey(st)===dayKey(Date.now());
-case "本周": return st&&(st-Date.now())<=7*DAY;
-case "即将截止": {const d=dlDays(e);return d!==null&&d<=7&&d>=0}
-case "线下": return!isOnline(e);
-case "线上": return isOnline(e)||isHybrid(e);
-case "香港": return e.city==="香港";
-case "Web3": return e.categories.includes("Web3")||e.categories.includes("加密");
-default: return e.categories.includes(cur);
+if(F.time==="deadline"){const d=dlDays(e);if(!(d!==null&&d<=7&&d>=0))return false}
+else if(F.time!=="all"){
+if(!st)return false;
+const n=new Date();
+const dd=Math.round((new Date(st.getFullYear(),st.getMonth(),st.getDate())-new Date(n.getFullYear(),n.getMonth(),n.getDate()))/864e5);
+if(F.time==="today"&&dd!==0)return false;
+if(F.time==="tomorrow"&&dd!==1)return false;
+if(F.time==="dayafter"&&dd!==2)return false;
+if(F.time==="week"&&(dd<0||dd>7))return false;
 }
+if(F.date){
+if(!st)return false;
+const p=F.date.split("-").map(Number);
+if(!(st.getFullYear()===p[0]&&st.getMonth()===p[1]-1&&st.getDate()===p[2]))return false;
+}
+const fee=(e.fee||"").trim();
+if(F.fee==="free"&&!fee.startsWith("免费"))return false;
+if(F.fee==="paid"&&!(fee&&!fee.startsWith("免费")&&fee!=="票价见官方页"))return false;
+if(F.fmt==="offline"&&isOnline(e))return false;
+if(F.fmt==="online"&&!(isOnline(e)||isHybrid(e)))return false;
+if(F.city==="hk"&&e.city!=="香港")return false;
+if(F.city==="sz"&&e.city==="香港")return false;
+if(F.cats.size){
+const eff=new Set(F.cats);
+if(eff.has("Web3"))eff.add("加密");
+if(eff.has("加密"))eff.add("Web3");
+if(![...eff].some(c=>e.categories.includes(c)))return false;
+}
+return true;
 }
 function maps(e){
 if(!e.venue)return"";
@@ -253,6 +288,7 @@ const past=DATA.filter(isPast).filter(e=>!qv||(e.title+(e.organizer||"")).includ
 $("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">📚 过往活动<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">点开看历史记录</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.city==="香港"?"🇭🇰 ":""}${e.title}</a><div class="pm">${[e.organizer,e.district,e.venue].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">暂无过往记录，活动结束后会自动归档到这里</div>'}</div></div>`;
 const evs=DATA.filter(e=>!isPast(e)).filter(pass)
 .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
+const fr=$("#fres");if(fr)fr.textContent="共 "+evs.length+" 场";
 $("#st-total").textContent=DATA.filter(e=>!isPast(e)).length;
 $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
 $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
@@ -297,13 +333,54 @@ $("#list").innerHTML=html;
 const SUBMIT_PROMPT='请帮我给「YAT 深圳活动日报」投稿一个活动。仓库：https://github.com/yatstudio/shenzhen-events ——先读仓库里的 AGENTS.md 和 CONTRIBUTING.md，然后打开官方活动页核对日期、时间、地点、票价，把活动按格式加进 events.json，Fork 仓库并提交 Pull Request（一条 PR 只加一个活动）。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意 PR 里维护者 Agent 的核查意见，有要改的按意见改好再 push，并把结果告诉我。';
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent='已复制 ✓ 去发给你的 Agent';setTimeout(()=>b.textContent=t,1800)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{const t=b.textContent;b.textContent='已复制 ✓';setTimeout(()=>b.textContent=t,1500)})};
-$("#chips").innerHTML=CATS.map(c=>`<button class="chip ${c==="全部"?"on":""} ${c==="线上"?"online":""}" data-c="${c}">${c==="即将截止"?"🔥 即将截止":c}</button>`).join("");
-$("#chips").addEventListener("click",e=>{if(e.target.dataset.c){cur=e.target.dataset.c;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.c===cur));render()}});
-$("#q").addEventListener("input",render);
+function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
+window.addEventListener("resize",measureBar);
+function syncFilterUI(){
+const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.city!=="all"?1:0)+F.cats.size;
+$("#fclear").hidden=active===0;
+$("#fcount").textContent=active?("已选 "+active+" 项"):"";
+}
+function segWire(id,key){
+const el=$(id);
+el.addEventListener("click",ev=>{
+const b=ev.target.closest("[data-v]");if(!b)return;
+F[key]=b.dataset.v;
+el.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===b));
+if(key==="time"){F.date="";const d=$("#fdate");d.value="";d.classList.remove("on")}
+syncFilterUI();render();measureBar();
+});
+}
+segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");segWire("#g-city","city");
+$("#g-cats").innerHTML=CATS.map(c=>`<button class="chip" data-c="${c}">${c}</button>`).join("");
+$("#g-cats").addEventListener("click",ev=>{
+const b=ev.target.closest("[data-c]");if(!b)return;
+const c=b.dataset.c;
+if(F.cats.has(c))F.cats.delete(c);else F.cats.add(c);
+b.classList.toggle("on",F.cats.has(c));
+syncFilterUI();render();measureBar();
+});
+$("#fdate").addEventListener("change",e=>{
+F.date=e.target.value;
+e.target.classList.toggle("on",!!F.date);
+if(F.date){F.time="all";document.querySelectorAll("#g-time .chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all"))}
+syncFilterUI();render();measureBar();
+});
+$("#fclear").addEventListener("click",()=>{
+F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
+document.querySelectorAll(".seg").forEach(s=>s.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all")));
+const d=$("#fdate");d.value="";d.classList.remove("on");
+syncFilterUI();render();measureBar();
+});
+$("#ftoggle").addEventListener("click",()=>{
+const g=$("#fgroups");g.classList.toggle("open");
+$("#ftoggle").setAttribute("aria-expanded",g.classList.contains("open"));
+measureBar();
+});
+$("#q").addEventListener("input",()=>{render();measureBar()});
 fetch("events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.events||[];
 $("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleString("zh-CN",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";
-render();
+render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>'});
 </script>
 </body>
