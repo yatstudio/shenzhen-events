@@ -86,6 +86,11 @@ input[type=search]{width:100%;padding:14px 18px;border:1px solid var(--line);bor
 .fee.free{background:#dcfae6;color:#027a48}
 .fee.paid{background:#fef0c7;color:#b54708}
 .fee.na{background:#f2f4f7;color:var(--mut);font-weight:600}
+.hwhead{background:linear-gradient(120deg,#1c0f38,#3a1160 55%,#6e2a0c);color:#fff;border-radius:18px;padding:20px 24px;margin:8px 0 6px;display:flex;align-items:center;gap:14px;box-shadow:0 10px 28px rgba(58,17,96,.3)}
+.hwhead .pumpkin{font-size:2rem}
+.hwhead .t{font-size:1.3rem;font-weight:850;letter-spacing:.01em}
+.hwhead .s{font-size:.88rem;color:#ffd8a8;font-weight:650;margin-top:2px}
+.hwflag{display:inline-block;background:#e8590c;color:#fff;font-size:.76rem;font-weight:850;border-radius:7px;padding:2px 9px;margin-right:9px;vertical-align:.14em;white-space:nowrap}
 .hkflag{display:inline-block;background:#b42318;color:#fff;font-size:.76rem;font-weight:850;border-radius:7px;padding:2px 9px;margin-right:9px;vertical-align:.14em;letter-spacing:.05em;white-space:nowrap}
 .hkpin{color:#b42318;font-weight:850;white-space:nowrap}
 .org{font-size:.98rem;margin:4px 0 2px;color:#1d2939}
@@ -208,7 +213,7 @@ Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-event
 </div>
 
 <script>
-const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"];
+const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space","万圣节"];
 let DATA=[];
 let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
 const $=s=>document.querySelector(s);
@@ -279,6 +284,32 @@ const body=["BEGIN:VCALENDAR","VERSION:2.0","BEGIN:VEVENT","UID:"+Date.now()+"@y
 const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar"}));a.download="event.ics";a.click();URL.revokeObjectURL(a.href);
 }
 window._ics=ics;
+function cardOf(e,now){
+const d=dlDays(e);
+const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span>`):(d!==null&&d<0&&e.start&&new Date(e.start)>now?`<span class="dl closed">报名已截止</span>`:"");
+const online=isOnline(e),hybrid=isHybrid(e);
+const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
+const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
+:`<div class="loc"><span class="pin">📍</span> <b>${e.city==="香港"?'<span class="hkpin">🇭🇰 香港</span> · ':''}${[e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
+const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${c}</span>`).join("");
+return `<div class="ev">
+<div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
+<div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
+<div class="trow"><h3>${e.categories.includes("万圣节")?'<span class="hwflag">🎃 万圣节</span>':''}${e.city==="香港"?'<span class="hkflag">🇭🇰 香港</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
+${e.organizer?`<div class="org">🏢 主办方：<b>${e.organizer}</b></div>`:""}
+${loc}
+${dl?`<div class="meta">${dl}</div>`:""}
+<div class="tags">${tags}</div>
+${e.summary?`<p class="sum">${e.summary}</p>`:""}
+<div class="actions">
+<a class="btn primary" href="${e.url}" target="_blank" rel="noopener">官方页 / 报名 →</a>
+${e.start?`<button class="btn" onclick="_ics(DATA[${DATA.indexOf(e)}])">＋ 加日历</button>`:""}
+${!online?maps(e):""}
+</div>
+<div class="meta" style="margin-top:8px">来源：${e.source}</div>
+</div>
+</div>`;
+}
 function render(){
 const now=Date.now();
 const t0=new Date();t0.setHours(0,0,0,0);
@@ -293,8 +324,16 @@ $("#st-total").textContent=DATA.filter(e=>!isPast(e)).length;
 $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
 $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
 if(!evs.length){$("#list").innerHTML='<div class="empty">没有符合条件的活动</div>';return}
-let html="",lastDay="";
-for(const e of evs){
+const isHW=e=>e.categories.includes("万圣节");
+let html="";
+const hw=evs.filter(isHW);
+hw.sort((a,b)=>Math.max(new Date(a.start||"2100"),t0)-Math.max(new Date(b.start||"2100"),t0));
+if(hw.length){
+html+=`<div class="hwhead"><span class="pumpkin">🎃</span><span><div class="t">万圣节专区</div><div class="s">10月31日 · 深圳 + 香港精选</div></span></div>`;
+html+=hw.map(e=>cardOf(e,now)).join("");
+}
+let lastDay="";
+for(const e of evs.filter(x=>!isHW(x))){
 const dk=e.start?dayKey(e.start):"待定";
 if(dk!==lastDay){
 lastDay=dk;
@@ -302,31 +341,7 @@ if(e.start){const d=new Date(e.start),rel=relLabel(e.start);
 html+=`<div class="dayhead"><span class="dnum">${d.getDate()}</span><span class="dmeta">${d.getMonth()+1}月 · ${d.toLocaleDateString("zh-CN",{weekday:"long"})}</span>${rel?`<span class="drel ${rel==="今天"?"":"future"}">${rel}</span>`:""}</div>`;
 }else{html+=`<div class="dayhead"><span class="dmeta">时间待定（看报名截止）</span></div>`}
 }
-const d=dlDays(e);
-const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span>`):(d!==null&&d<0&&e.start&&new Date(e.start)>now?`<span class="dl closed">报名已截止</span>`:"");
-const online=isOnline(e),hybrid=isHybrid(e);
-const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
-const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
-:`<div class="loc"><span class="pin">📍</span> <b>${e.city==="香港"?'<span class="hkpin">🇭🇰 香港</span> · ':''}${[e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
-const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${c}</span>`).join("");
-html+=`<div class="ev">
-<div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
-<div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
-<div class="trow"><h3>${e.city==="香港"?'<span class="hkflag">🇭🇰 香港</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
-${e.organizer?`<div class="org">🏢 主办方：<b>${e.organizer}</b></div>`:""}
-${loc}
-${dl?`<div class="meta">${dl}</div>`:""}
-<div class="tags">${tags}</div>
-${e.summary?`<p class="sum">${e.summary}</p>`:""}
-${""}
-<div class="actions">
-<a class="btn primary" href="${e.url}" target="_blank" rel="noopener">官方页 / 报名 →</a>
-${e.start?`<button class="btn" onclick="_ics(DATA[${DATA.indexOf(e)}])">＋ 加日历</button>`:""}
-${!online?maps(e):""}
-</div>
-<div class="meta" style="margin-top:8px">来源：${e.source}</div>
-</div>
-</div>`;
+html+=cardOf(e,now);
 }
 $("#list").innerHTML=html;
 }

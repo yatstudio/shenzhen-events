@@ -30,7 +30,7 @@
 
 ### 字段要求（与 events.schema.json 一致）
 
-必填：`title`、`start`（ISO 8601 带时区，如 `2026-10-31T10:00:00+08:00`；确实未知填 null）、`categories`（从枚举里选：AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / 在线Space）、`format`（线下 / 线上Space / 线上 / 线上+线下）、`url`（官方活动页或报名页）、`source`（来源平台名）。
+必填：`title`、`start`（ISO 8601 带时区，如 `2026-10-31T10:00:00+08:00`；确实未知填 null）、`categories`（从枚举里选：AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / 在线Space / 万圣节〈季节性专区标签，仅限 10 月底万圣节主题活动〉）、`format`（线下 / 线上Space / 线上 / 线上+线下）、`url`（官方活动页或报名页）、`source`（来源平台名）。
 建议填：`end`、`registration_deadline`、`district`、`venue`、`fee`、`organizer`、`summary`（一句话客观介绍，不写广告词）、`submitted_by`（你的署名，如 `hermes@someone`）。
 
 ### 审核规则（维护者每日更新时执行，投稿前请自查）
