@@ -143,7 +143,7 @@ input[type=search]{margin-top:6px;padding:11px 14px;font-size:16px;border-radius
 <body>
 <header><div class="wrap">
 <div class="brand"><span class="yat">YAT</span><h1>深圳活动日报</h1></div>
-<div class="tagline"><b>默认线下</b> · AI / 创业 / 科技 / 跨境出海 / Web3 / 加密 ｜ 黑客松 · 技术 · 硬件 ｜ <b>线上活动会特别标明</b><br>每天早上更新 · 来源 Luma / 活动行 / 互动吧 / 联谱 / HackerTrip / 黑123 / X，逐条核实后收录</div>
+<div class="tagline"><b>默认线下</b> · AI / 创业 / 科技 / 跨境出海 / Web3 / 加密 ｜ 黑客松 · 技术 · 硬件 ｜ <b>线上活动会特别标明</b><br>每天早上更新 · 深圳为主，<b>香港精选活动</b>同步收录（点「香港」筛选）· 来源 Luma / 活动行 / 互动吧 / 联谱 / HackerTrip / 黑123 / X，逐条核实后收录</div>
 <div class="stats">
 <div class="stat"><b id="st-total">–</b><span>在列活动</span></div>
 <div class="stat"><b id="st-week">–</b><span>未来 7 天</span></div>
@@ -190,7 +190,7 @@ Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-event
 </div>
 
 <script>
-const CATS=["全部","今天","本周","即将截止","线下","线上","AI","创业","跨境","Web3","黑客松","硬件","在线Space"];
+const CATS=["全部","今天","本周","即将截止","线下","线上","香港","AI","创业","跨境","Web3","黑客松","硬件","在线Space"];
 let DATA=[],cur="全部";
 const $=s=>document.querySelector(s);
 const DAY=864e5, now0=new Date(); now0.setHours(0,0,0,0);
@@ -221,13 +221,14 @@ case "本周": return st&&(st-Date.now())<=7*DAY;
 case "即将截止": {const d=dlDays(e);return d!==null&&d<=7&&d>=0}
 case "线下": return!isOnline(e);
 case "线上": return isOnline(e)||isHybrid(e);
+case "香港": return e.city==="香港";
 case "Web3": return e.categories.includes("Web3")||e.categories.includes("加密");
 default: return e.categories.includes(cur);
 }
 }
 function maps(e){
 if(!e.venue)return"";
-const q=encodeURIComponent("深圳市"+(e.district||"")+e.venue);
+const q=encodeURIComponent((e.city==="香港"?"香港":"深圳市")+(e.district||"")+e.venue);
 return `<a class="btn nav" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${q}">高德</a>`+
 `<a class="btn nav" target="_blank" rel="noopener" href="https://maps.apple.com/?q=${q}">苹果地图</a>`+
 `<a class="btn nav" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${q}">谷歌地图</a>`;
@@ -268,7 +269,7 @@ const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>
 const online=isOnline(e),hybrid=isHybrid(e);
 const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
 const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
-:`<div class="loc"><span class="pin">📍</span> <b>${[e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
+:`<div class="loc"><span class="pin">📍</span> <b>${[(e.city&&e.city!=="深圳")?e.city:null,e.district,e.venue].filter(Boolean).join(" · ")||"地点待公布"}</b></div>`;
 const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${c}</span>`).join("");
 html+=`<div class="ev">
 <div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
