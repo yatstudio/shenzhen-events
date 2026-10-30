@@ -95,6 +95,7 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 .topact a{display:inline-flex;align-items:center;min-height:42px;padding:9px 18px;border-radius:999px;font-weight:800;font-size:.95rem;text-decoration:none}
 .topact .submit{background:#ffd60a;color:#0c0e12}
 .topact .agent{background:transparent;color:#fff;border:1.5px solid #fff}
+.topact .mail{background:#fff;color:#0c0e12}
 .agentbar{background:linear-gradient(90deg,#6941c6,#175cd3);color:#fff}
 .agentbar .wrap{display:flex;gap:12px;align-items:center;padding-top:11px;padding-bottom:11px;flex-wrap:wrap}
 .agentbar p{margin:0;font-size:.92rem;flex:1;min-width:230px}
@@ -126,6 +127,7 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 <div class="topact">
 <a class="submit" href="https://github.com/yatstudio/shenzhen-events/issues/new/choose" target="_blank" rel="noopener">＋ 提交活动</a>
 <a class="agent" href="#agent-sub">🤖 用我的 Agent 订阅</a>
+<a class="mail" href="#email-sub">✉️ 邮件订阅</a>
 <button class="agent" onclick="copySubmit(this)">📋 复制投稿话术给我的 Agent</button>
 </div>
 </div></header>
@@ -147,6 +149,12 @@ input[type=search]{width:100%;margin-top:6px;padding:11px 14px;border:1px solid 
 <p class="sum">把下面这段话复制给你的 Agent（Codex / Muse / Hermes 等任何能联网的 Agent），它会每天读取本页数据，按你的兴趣给你活动提醒：</p>
 <p class="prompt" id="subprompt">请订阅「YAT 深圳活动日报」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
 <div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div>
+</div>
+
+<div class="subcard" id="email-sub">
+<h3>✉️ 邮件订阅：每天早上发到你的邮箱</h3>
+<p class="sum">没有 Agent 也没关系。留下邮箱，每天早上收到一封日报邮件：今天和本周的重点活动、72 小时内截止的报名。每天最多一封，不发广告；想停了，回复邮件注明「退订」即可。</p>
+<div class="actions"><a class="btn primary" href="https://forms.gle/zFKXnRiZVRTE5maZA" target="_blank" rel="noopener">填写邮箱订阅</a></div>
 </div>
 
 <div class="foot">
