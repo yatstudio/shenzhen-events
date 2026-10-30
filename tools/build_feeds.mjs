@@ -1,1 +1,42 @@
-Ly8g55SxIGV2ZW50cy5qc29uIOeUn+aIkCBmZWVkLnhtbO+8iFJTU++8ieS4jiBldmVudHMuaWNz77yI5pel5Y6G77yJ44CC55So5rOV77yabm9kZSB0b29scy9idWlsZF9mZWVkcy5tanMKaW1wb3J0IHsgcmVhZEZpbGVTeW5jLCB3cml0ZUZpbGVTeW5jIH0gZnJvbSAibm9kZTpmcyI7CmltcG9ydCB7IGRpcm5hbWUsIGpvaW4gfSBmcm9tICJub2RlOnBhdGgiOwppbXBvcnQgeyBmaWxlVVJMVG9QYXRoIH0gZnJvbSAibm9kZTp1cmwiOwoKY29uc3Qgcm9vdCA9IGpvaW4oZGlybmFtZShmaWxlVVJMVG9QYXRoKGltcG9ydC5tZXRhLnVybCkpLCAiLi4iKTsKY29uc3QgZGF0YSA9IEpTT04ucGFyc2UocmVhZEZpbGVTeW5jKGpvaW4ocm9vdCwgImV2ZW50cy5qc29uIiksICJ1dGY4IikpOwpjb25zdCBldmVudHMgPSAoZGF0YS5ldmVudHMgfHwgW10pLmZpbHRlcigoZSkgPT4gZSAmJiBlLnRpdGxlICYmIGUudXJsKTsKY29uc3Qgc2l0ZSA9ICJodHRwczovL3lhdHN0dWRpby5naXRodWIuaW8vc2hlbnpoZW4tZXZlbnRzLyI7CmNvbnN0IGVzYyA9IChzKSA9PiBTdHJpbmcocyA/PyAiIikucmVwbGFjZSgvJi9nLCAiJmFtcDsiKS5yZXBsYWNlKC88L2csICImbHQ7IikucmVwbGFjZSgvPi9nLCAiJmd0OyIpOwpjb25zdCBpY3NFc2MgPSAocykgPT4gU3RyaW5nKHMgPz8gIiIpLnJlcGxhY2UoL1xcL2csICJcXFxcIikucmVwbGFjZSgvOy9nLCAiXFw7IikucmVwbGFjZSgvLC9nLCAiXFwsIikucmVwbGFjZSgvXG4vZywgIlxcbiIpOwpjb25zdCBpY3NEdCA9ICh0KSA9PiBuZXcgRGF0ZSh0KS50b0lTT1N0cmluZygpLnJlcGxhY2UoL1stOl0vZywgIiIpLnJlcGxhY2UoL1wuXGR7M30vLCAiIik7CgovLyBSU1MKY29uc3QgaXRlbXMgPSBldmVudHMubWFwKChlKSA9PiBgICA8aXRlbT4KICAgIDx0aXRsZT4ke2VzYyhlLnRpdGxlKX08L3RpdGxlPgogICAgPGxpbms+JHtlc2MoZS51cmwpfTwvbGluaz4KICAgIDxndWlkIGlzUGVybWFMaW5rPSJmYWxzZSI+JHtlc2MoZS51cmwpfTwvZ3VpZD4KICAgIDxwdWJEYXRlPiR7bmV3IERhdGUoZGF0YS51cGRhdGVkX2F0IHx8IERhdGUubm93KCkpLnRvVVRDU3RyaW5nKCl9PC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPiR7ZXNjKFtlLnN0YXJ0ID8gIuaXtumXtO+8miIgKyBlLnN0YXJ0IDogIiIsIGUudmVudWUgPyAi5Zyw54K577yaIiArIGUudmVudWUgOiAiIiwgZS5zdW1tYXJ5IHx8ICIiXS5maWx0ZXIoQm9vbGVhbikuam9pbigiIO+9nCAiKSl9PC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+YCkuam9pbigiXG4iKTsKd3JpdGVGaWxlU3luYyhqb2luKHJvb3QsICJmZWVkLnhtbCIpLCBgPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJzcyB2ZXJzaW9uPSIyLjAiPjxjaGFubmVsPgogIDx0aXRsZT7mt7HlnLPmtLvliqjml6XmiqU8L3RpdGxlPgogIDxsaW5rPiR7c2l0ZX08L2xpbms+CiAgPGRlc2NyaXB0aW9uPua3seWcsyBBScK35Yib5Liawrfnp5HmioDCt+i3qOWig8K3V2ViM8K35Yqg5a+G5rS75YqoICsg6buR5a6i5p2+L+ehrOS7tiArIFggU3BhY2XvvIzmr4/lpKnmm7TmlrA8L2Rlc2NyaXB0aW9uPgogIDxsYXN0QnVpbGREYXRlPiR7bmV3IERhdGUoZGF0YS51cGRhdGVkX2F0IHx8IERhdGUubm93KCkpLnRvVVRDU3RyaW5nKCl9PC9sYXN0QnVpbGREYXRlPgoke2l0ZW1zfQo8L2NoYW5uZWw+PC9yc3M+CmApOwoKLy8gSUNT77yI5q+P5Liq5rS75Yqo5LiA5p2h77yb5peg57uT5p2f5pe26Ze06buY6K6kICsyIOWwj+aXtu+8iQpjb25zdCB2ZXZlbnRzID0gZXZlbnRzLmZpbHRlcigoZSkgPT4gZS5zdGFydCkubWFwKChlLCBpKSA9PiB7CiAgY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShlLnN0YXJ0KTsKICBjb25zdCBlbmQgPSBlLmVuZCA/IG5ldyBEYXRlKGUuZW5kKSA6IG5ldyBEYXRlKHN0YXJ0LmdldFRpbWUoKSArIDIgKiAzNjAwZTMpOwogIGNvbnN0IHVpZCA9IEJ1ZmZlci5mcm9tKGUudXJsKS50b1N0cmluZygiYmFzZTY0dXJsIikuc2xpY2UoMCwgMjQpICsgaSArICJAc2hlbnpoZW4tZXZlbnRzIjsKICByZXR1cm4gWyJCRUdJTjpWRVZFTlQiLCBgVUlEOiR7dWlkfWAsIGBEVFNUQU1QOiR7aWNzRHQoZGF0YS51cGRhdGVkX2F0IHx8IG5ldyBEYXRlKCkpfWAsIGBEVFNUQVJUOiR7aWNzRHQoc3RhcnQpfWAsIGBEVEVORDoke2ljc0R0KGVuZCl9YCwKICAgIGBTVU1NQVJZOiR7aWNzRXNjKGUudGl0bGUpfWAsIGBMT0NBVElPTjoke2ljc0VzYyhbZS5kaXN0cmljdCwgZS52ZW51ZV0uZmlsdGVyKEJvb2xlYW4pLmpvaW4oIiAiKSB8fCAoZS5mb3JtYXQgfHwgIiIpKX1gLAogICAgYERFU0NSSVBUSU9OOiR7aWNzRXNjKChlLnN1bW1hcnkgfHwgIiIpICsgIiDmiqXlkI3vvJoiICsgZS51cmwpfWAsIGBVUkw6JHtlLnVybH1gLCAiRU5EOlZFVkVOVCJdLmpvaW4oIlxyXG4iKTsKfSkuam9pbigiXHJcbiIpOwp3cml0ZUZpbGVTeW5jKGpvaW4ocm9vdCwgImV2ZW50cy5pY3MiKSwgWyJCRUdJTjpWQ0FMRU5EQVIiLCAiVkVSU0lPTjoyLjAiLCAiUFJPRElEOi0vL3NoZW56aGVuLWV2ZW50cy8vQ04iLCAiQ0FMU0NBTEU6R1JFR09SSUFOIiwgdmV2ZW50cywgIkVORDpWQ0FMRU5EQVIiLCAiIl0uam9pbigiXHJcbiIpKTsKY29uc29sZS5sb2coYGZlZWQueG1sICsgZXZlbnRzLmljcyBnZW5lcmF0ZWQgZnJvbSAke2V2ZW50cy5sZW5ndGh9IGV2ZW50c2ApOwo=
+// 由 events.json 生成 feed.xml（RSS）与 events.ics（日历）。用法：node tools/build_feeds.mjs
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const data = JSON.parse(readFileSync(join(root, "events.json"), "utf8"));
+const events = (data.events || []).filter((e) => e && e.title && e.url);
+const site = "https://yatstudio.github.io/shenzhen-events/";
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const icsEsc = (s) => String(s ?? "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+const icsDt = (t) => new Date(t).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+
+// RSS
+const items = events.map((e) => `  <item>
+    <title>${esc(e.title)}</title>
+    <link>${esc(e.url)}</link>
+    <guid isPermaLink="false">${esc(e.url)}</guid>
+    <pubDate>${new Date(data.updated_at || Date.now()).toUTCString()}</pubDate>
+    <description>${esc([e.start ? "时间：" + e.start : "", e.venue ? "地点：" + e.venue : "", e.summary || ""].filter(Boolean).join(" ｜ "))}</description>
+  </item>`).join("\n");
+writeFileSync(join(root, "feed.xml"), `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>深圳活动日报</title>
+  <link>${site}</link>
+  <description>深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件 + X Space，每天更新</description>
+  <lastBuildDate>${new Date(data.updated_at || Date.now()).toUTCString()}</lastBuildDate>
+${items}
+</channel></rss>
+`);
+
+// ICS（每个活动一条；无结束时间默认 +2 小时）
+const vevents = events.filter((e) => e.start).map((e, i) => {
+  const start = new Date(e.start);
+  const end = e.end ? new Date(e.end) : new Date(start.getTime() + 2 * 3600e3);
+  const uid = Buffer.from(e.url).toString("base64url").slice(0, 24) + i + "@shenzhen-events";
+  return ["BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${icsDt(data.updated_at || new Date())}`, `DTSTART:${icsDt(start)}`, `DTEND:${icsDt(end)}`,
+    `SUMMARY:${icsEsc(e.title)}`, `LOCATION:${icsEsc([e.district, e.venue].filter(Boolean).join(" ") || (e.format || ""))}`,
+    `DESCRIPTION:${icsEsc((e.summary || "") + " 报名：" + e.url)}`, `URL:${e.url}`, "END:VEVENT"].join("\r\n");
+}).join("\r\n");
+writeFileSync(join(root, "events.ics"), ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//shenzhen-events//CN", "CALSCALE:GREGORIAN", vevents, "END:VCALENDAR", ""].join("\r\n"));
+console.log(`feed.xml + events.ics generated from ${events.length} events`);

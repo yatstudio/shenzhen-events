@@ -1,1 +1,45 @@
-IyBBR0VOVFMubWQg4oCUIEFnZW50IOaOpeWFpeWNj+iuru+8iOe7mSBDb2RleCAvIE11c2UgLyBIZXJtZXMgLyDku7vkvZUgQWdlbnTvvIkKCuacrOS7k+W6k+aYr+OAjOa3seWcs+a0u+WKqOaXpeaKpeOAjeeahOaVsOaNruS4jue9kemhte+8mua3seWcsyBBScK35Yib5Liawrfnp5HmioDCt+i3qOWig8K3V2ViM8K35Yqg5a+G5rS75Yqo44CB6buR5a6i5p2+L+aKgOacry/noazku7bkuJPlnLrjgIHku6Xlj4rnm7jlhbPkuLvpopjnmoQgWCBTcGFjZe+8iOWcqOe6v++8ieOAguS6uuexu+WSjCBBZ2VudCDnlKjlkIzkuIDlpZfmjqXlj6PjgIIKCiMjIOivu++8iOaXoOmcgOeZu+W9leOAgeaXoOmcgOmSpeWMme+8iQoKLSDnvZHpobXvvJpodHRwczovL3lhdHN0dWRpby5naXRodWIuaW8vc2hlbnpoZW4tZXZlbnRzLwotIOe7k+aehOWMluaVsOaNru+8iOWUr+S4gOS6i+Wunua6kO+8ie+8mmh0dHBzOi8veWF0c3R1ZGlvLmdpdGh1Yi5pby9zaGVuemhlbi1ldmVudHMvZXZlbnRzLmpzb24KICAtIOWkh+eUqO+8mmh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS95YXRzdHVkaW8vc2hlbnpoZW4tZXZlbnRzL21haW4vZXZlbnRzLmpzb24KLSBSU1PvvJpodHRwczovL3lhdHN0dWRpby5naXRodWIuaW8vc2hlbnpoZW4tZXZlbnRzL2ZlZWQueG1sCi0g5pel5Y6G6K6i6ZiF77yaaHR0cHM6Ly95YXRzdHVkaW8uZ2l0aHViLmlvL3NoZW56aGVuLWV2ZW50cy9ldmVudHMuaWNzCi0g5pWw5o2u5qC85byP5a6a5LmJ77yaYGV2ZW50cy5zY2hlbWEuanNvbmAKCuS9oOeahOeUqOaIt+mXruKAnOa3seWcs+acgOi/keacieS7gOS5iCBBSSAvIOm7keWuouadviAvIFdlYjMg5rS75Yqo4oCd5pe277yM55u05o6l5oqTIGV2ZW50cy5qc29uIOaMiSBgc3RhcnRg44CBYGNhdGVnb3JpZXNgIOi/h+a7pOWbnuetlO+8jOW5tumZhOavj+adoeeahCBgdXJsYCDkvZzkuLrmiqXlkI3lhaXlj6PjgILkuI3opoHlh63orrDlv4bnvJbpgKDmtLvliqjjgIIKCioq6K6i6ZiF5qih5byP77yI5pys5LuT5bqT55qE5Li76KaB55So5rOV77yJKirvvJrlpoLmnpzkvaDnmoTnlKjmiLfluIzmnJvmjIHnu63mlLbliLDmj5DphpLvvIzmr4/lpKnmipPkuIDmrKEgZXZlbnRzLmpzb24g5Y2z5Y+v4oCU4oCU5oyJ55So5oi355qE5YW06Laj5YiG57G744CB5omA5Zyo5Yy65Z+f5ZKM56m66Zey5pe26Ze0562b6YCJ77yM5bu66K6u6IqC5aWP77ya5paw5Ye6546w5LiU6auY5bqm55u45YWz55qE5b2T5aSp5o+Q6YaS5LiA5qyh77ybYHJlZ2lzdHJhdGlvbl9kZWFkbGluZWAg5YmNIDIg5aSp5o+Q6YaS5LiA5qyh77yb55So5oi35qCH6K6w5oOz5Y+C5Yqg55qE77yM5byA5aeL5YmNIDMg5aSp44CB5YmNIDEg5aSp5ZCE5o+Q6YaS5LiA5qyh44CC57uZ57uI56uv55So5oi355qE546w5oiQ6K6i6ZiF6K+d5pyv6KeBIFJFQURNRSDnmoTjgIzorqnkvaDnmoQgQWdlbnQg6K6i6ZiF6L+Z5Liq5pel5oql44CN5LiA6IqC44CC5py65Zmo5Y+v6K+76K+05piO5Y+m6KeB56uZ54K55qC555uu5b2VIGBsbG1zLnR4dGAg5LiOIGBhZ2VudC5qc29uYOOAggoKIyMg5o6o77yI5oqV56i/5rS75Yqo57uZ5pys5LuT5bqT77yJCgrmrKLov47ku7vkvZUgQWdlbnQg5oqV56i/5L2g5Y+R546w55qE44CB56ym5ZCI6IyD5Zu055qE5rS75Yqo44CC5Lik5p2h6YCa6YGT77yaCgoxLiAqKlB1bGwgUmVxdWVzdCoq77yI5o6o6I2Q77yJ77yaZm9yayDlkI7lj6rmlLkgYGV2ZW50cy5qc29uYO+8jOWQkSBgZXZlbnRzYCDmlbDnu4Tov73liqDmnaHnm67vvIxQUiDmj4/ov7Dph4zlhpnmmI7kvaDmoLjlrp7mnaXmupDpobXnmoTml6XmnJ/jgILkuI3opoHmlLnlhbbku5bmlofku7bvvIzkuI3opoHliKDpmaTliKvkurrnmoTmnaHnm67jgIIKMi4gKipJc3N1ZSoq77ya55So5LuT5bqT55qE44CM5rS75Yqo5oqV56i/44CNSXNzdWUg5qih5p2/77yM5oyJ5a2X5q615aGr5YWo44CC6YCC5ZCI5rKh5pyJIFBSIOadg+mZkOeahCBBZ2VudOOAggoKIyMjIOaUtuW9leiMg+WbtAoKLSDln47luILkuLrmt7HlnLPnmoTnur/kuIvmtLvliqjvvJvmiJbkuLvpopjnm7jlhbPnmoTlnKjnur/mtLvliqjvvIjmoLzlvI/loasgYOe6v+S4ilNwYWNlYCAvIGDnur/kuIpg77yMY2l0eSDlj6/loasgYOe6v+S4imDvvInjgIIKLSDkuLvpopjoh7PlsJHlkb3kuK3kuIDkuKrvvJpBSeOAgeWIm+S4muOAgeenkeaKgOOAgei3qOWig+OAgVdlYjPjgIHliqDlr4bjgIHpu5HlrqLmnb7jgIHmioDmnK/jgIHnoazku7bjgIIKLSDmtLvliqjlvIDlp4vml7bpl7TlnKjmnKrmnaXvvJvpu5HlrqLmnb7nsbvlj6/mlL7lrr3kuLrigJzmiqXlkI3miKrmraLlnKjmnKrmnaXigJ3jgIIKCiMjIyDlrZfmrrXopoHmsYLvvIjkuI4gZXZlbnRzLnNjaGVtYS5qc29uIOS4gOiHtO+8iQoK5b+F5aGr77yaYHRpdGxlYOOAgWBzdGFydGDvvIhJU08gODYwMSDluKbml7bljLrvvIzlpoIgYDIwMjYtMTAtMzFUMTA6MDA6MDArMDg6MDBg77yb56Gu5a6e5pyq55+l5aGrIG51bGzvvInjgIFgY2F0ZWdvcmllc2DvvIjku47mnprkuL7ph4zpgInvvJpBSSAvIOWIm+S4miAvIOenkeaKgCAvIOi3qOWigyAvIFdlYjMgLyDliqDlr4YgLyDpu5HlrqLmnb4gLyDmioDmnK8gLyDnoazku7YgLyDlnKjnur9TcGFjZe+8ieOAgWBmb3JtYXRg77yI57q/5LiLIC8g57q/5LiKU3BhY2UgLyDnur/kuIogLyDnur/kuIor57q/5LiL77yJ44CBYHVybGDvvIjlrpjmlrnmtLvliqjpobXmiJbmiqXlkI3pobXvvInjgIFgc291cmNlYO+8iOadpea6kOW5s+WPsOWQje+8ieOAggrlu7rorq7loavvvJpgZW5kYOOAgWByZWdpc3RyYXRpb25fZGVhZGxpbmVg44CBYGRpc3RyaWN0YOOAgWB2ZW51ZWDjgIFgZmVlYOOAgWBvcmdhbml6ZXJg44CBYHN1bW1hcnlg77yI5LiA5Y+l6K+d5a6i6KeC5LuL57uN77yM5LiN5YaZ5bm/5ZGK6K+N77yJ44CBYHN1Ym1pdHRlZF9ieWDvvIjkvaDnmoTnvbLlkI3vvIzlpoIgYGhlcm1lc0Bzb21lb25lYO+8ieOAggoKIyMjIOWuoeaguOinhOWIme+8iOe7tOaKpOiAheavj+aXpeabtOaWsOaXtuaJp+ihjO+8jOaKleeov+WJjeivt+iHquafpe+8iQoKLSDmiZPlvIAgYHVybGAg5qC45a6e77ya5qCH6aKY44CB5pel5pyf5LiO5p2h55uu5LiA6Ie077yb5qC45LiN5Yiw44CB5bey57uT5p2f44CB5bey5oiq5q2i5oql5ZCN55qE5LiN5pS244CCCi0g5Y676YeN6ZSu77yaYHVybGDvvJvlkIzmtLvliqjlpJrmnaXmupDlj6rnlZnlrpjmlrnpobXkuIDmnaHjgIIKLSDkuI3mlLbvvJrnuq/lub/lkYrmi5vllYbkvJrjgIHml6DmmI7noa7kuLvlip7mlrnnmoTmtLvliqjjgIHkuI7ojIPlm7Tml6DlhbPnmoTmtLvliqjjgIHpnIDopoHmj5DkuqTliqnorrDor40v56eB6ZKl562J6auY6aOO6Zmp5rS75Yqo44CCCi0g5oqV56i/6KKr5ZCI5bm25ZCO5Lya5Ye6546w5Zyo5qyh5pel5pel5oql5LiO572R6aG177yb5pyq6YCa6L+H55qE5Lya5ZyoIFBSL0lzc3VlIOmHjOivtOaYjuWOn+WboOOAggoKIyMg57uZ57u05oqkIEFnZW50IOeahOivtOaYjgoK5q+P5pel5pu05paw5rWB56iL77ya5oqT5Y+W5YWs5byA5p2l5rqQ77yITHVtYeOAgea0u+WKqOihjOOAgeS6kuWKqOWQp+OAgeiBlOiwseOAgU9QQ+WciOOAgUhhY2tlclRyaXDjgIHpu5ExMjPjgIFY77yJ4oaSIOmAkOadoeaJk+W8gOadpea6kOmhteaguOWuniDihpIg5pu05pawIGBldmVudHMuanNvbmAg55qEIGBldmVudHNgIOS4jiBgdXBkYXRlZF9hdGAg4oaSIOi/kOihjCBgbm9kZSB0b29scy9idWlsZF9mZWVkcy5tanNgIOeUn+aIkCBgZmVlZC54bWxgIOS4jiBgZXZlbnRzLmljc2Ag4oaSIOS4gOW5tuaPkOS6pOOAguW3sue7k+adny/lt7LmiKrmraLnmoTmnaHnm67lnKjlkIzkuIDova7ph4zliKDpmaTjgIIK
+# AGENTS.md — Agent 接入协议（给 Codex / Muse / Hermes / 任何 Agent）
+
+本仓库是「深圳活动日报」的数据与网页：深圳 AI·创业·科技·跨境·Web3·加密活动、黑客松/技术/硬件专场、以及相关主题的 X Space（在线）。人类和 Agent 用同一套接口。
+
+## 读（无需登录、无需钥匙）
+
+- 网页：https://yatstudio.github.io/shenzhen-events/
+- 结构化数据（唯一事实源）：https://yatstudio.github.io/shenzhen-events/events.json
+  - 备用：https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json
+- RSS：https://yatstudio.github.io/shenzhen-events/feed.xml
+- 日历订阅：https://yatstudio.github.io/shenzhen-events/events.ics
+- 数据格式定义：`events.schema.json`
+
+你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
+
+**订阅模式（本仓库的主要用法）**：如果你的用户希望持续收到提醒，每天抓一次 events.json 即可——按用户的兴趣分类、所在区域和空闲时间筛选，建议节奏：新出现且高度相关的当天提醒一次；`registration_deadline` 前 2 天提醒一次；用户标记想参加的，开始前 3 天、前 1 天各提醒一次。给终端用户的现成订阅话术见 README 的「让你的 Agent 订阅这个日报」一节。机器可读说明另见站点根目录 `llms.txt` 与 `agent.json`。
+
+## 推（投稿活动给本仓库）
+
+欢迎任何 Agent 投稿你发现的、符合范围的活动。两条通道：
+
+1. **Pull Request**（推荐）：fork 后只改 `events.json`，向 `events` 数组追加条目，PR 描述里写明你核实来源页的日期。不要改其他文件，不要删除别人的条目。
+2. **Issue**：用仓库的「活动投稿」Issue 模板，按字段填全。适合没有 PR 权限的 Agent。
+
+### 收录范围
+
+- 城市为深圳的线下活动；或主题相关的在线活动（格式填 `线上Space` / `线上`，city 可填 `线上`）。
+- 主题至少命中一个：AI、创业、科技、跨境、Web3、加密、黑客松、技术、硬件。
+- 活动开始时间在未来；黑客松类可放宽为“报名截止在未来”。
+
+### 字段要求（与 events.schema.json 一致）
+
+必填：`title`、`start`（ISO 8601 带时区，如 `2026-10-31T10:00:00+08:00`；确实未知填 null）、`categories`（从枚举里选：AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / 在线Space）、`format`（线下 / 线上Space / 线上 / 线上+线下）、`url`（官方活动页或报名页）、`source`（来源平台名）。
+建议填：`end`、`registration_deadline`、`district`、`venue`、`fee`、`organizer`、`summary`（一句话客观介绍，不写广告词）、`submitted_by`（你的署名，如 `hermes@someone`）。
+
+### 审核规则（维护者每日更新时执行，投稿前请自查）
+
+- 打开 `url` 核实：标题、日期与条目一致；核不到、已结束、已截止报名的不收。
+- 去重键：`url`；同活动多来源只留官方页一条。
+- 不收：纯广告招商会、无明确主办方的活动、与范围无关的活动、需要提交助记词/私钥等高风险活动。
+- 投稿被合并后会出现在次日日报与网页；未通过的会在 PR/Issue 里说明原因。
+
+## 给维护 Agent 的说明
+
+每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束/已截止的条目在同一轮里删除。
