@@ -225,10 +225,15 @@ const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术"
 let DATA=[];
 let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
 const $=s=>document.querySelector(s);
-const DAY=864e5, now0=new Date(); now0.setHours(0,0,0,0);
+const DAY=864e5;
+const TZ="Asia/Shanghai";
+const _dtf=new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"});
+const shParts=t=>{const p={};for(const x of _dtf.formatToParts(new Date(t)))p[x.type]=x.value;return [+p.year,+p.month,+p.day]};
+const shDayNum=t=>{const p=shParts(t);return Date.UTC(p[0],p[1]-1,p[2])/DAY};
+const shMidnightMs=()=>shDayNum(Date.now())*DAY-8*3600e3;
 const isOnline=e=>e.format==="线上Space"||e.format==="线上";
 const isHybrid=e=>e.format==="线上+线下";
-const fmtT=t=>new Date(t).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit",hour12:false});
+const fmtT=t=>new Date(t).toLocaleTimeString("zh-CN",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false});
 const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/DAY):null;
 function feeBadge(e){
   const f=(e.fee||"").trim();
@@ -240,8 +245,8 @@ function feeBadge(e){
   if(m&&(f.split("¥").length>2||f.includes("；")||(f.includes("/")&&f.length>20)))txt+=" 起";
   return `<span class="fee paid" title="${esc}">💰 ${txt}</span>`;
 }
-const dayKey=t=>{const d=new Date(t);return d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate()};
-const relLabel=t=>{const diff=Math.round((new Date(dayKey(t))-new Date(dayKey(Date.now())))/DAY);return diff===0?"今天":diff===1?"明天":diff===2?"后天":""};
+const dayKey=t=>shParts(t).join("-");
+const relLabel=t=>{const diff=shDayNum(t)-shDayNum(Date.now());return diff===0?"今天":diff===1?"明天":diff===2?"后天":""};
 function pass(e){
 const q=$("#q").value.trim();
 if(q&&!(e.title+(e.organizer||"")+(e.venue||"")+(e.summary||"")).includes(q))return false;
@@ -249,8 +254,7 @@ const st=e.start?new Date(e.start):null;
 if(F.time==="deadline"){const d=dlDays(e);if(!(d!==null&&d<=7&&d>=0))return false}
 else if(F.time!=="all"){
 if(!st)return false;
-const n=new Date();
-const dd=Math.round((new Date(st.getFullYear(),st.getMonth(),st.getDate())-new Date(n.getFullYear(),n.getMonth(),n.getDate()))/864e5);
+const dd=shDayNum(st)-shDayNum(Date.now());
 if(F.time==="today"&&dd!==0)return false;
 if(F.time==="tomorrow"&&dd!==1)return false;
 if(F.time==="dayafter"&&dd!==2)return false;
@@ -259,7 +263,7 @@ if(F.time==="week"&&(dd<0||dd>7))return false;
 if(F.date){
 if(!st)return false;
 const p=F.date.split("-").map(Number);
-if(!(st.getFullYear()===p[0]&&st.getMonth()===p[1]-1&&st.getDate()===p[2]))return false;
+const spk=shParts(st);if(!(spk[0]===p[0]&&spk[1]===p[1]&&spk[2]===p[2]))return false;
 }
 const fee=(e.fee||"").trim();
 if(F.fee==="free"&&!fee.startsWith("免费"))return false;
@@ -294,7 +298,7 @@ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{
 window._ics=ics;
 function cardOf(e,now){
 const d=dlDays(e);
-const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span>`):(d!==null&&d<0&&e.start&&new Date(e.start)>now?`<span class="dl closed">报名已截止</span>`:"");
+const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">报名剩 ${d} 天</span>`:`<span class="dl">报名截止 ${new Date(e.registration_deadline).toLocaleDateString("zh-CN",{timeZone:TZ,month:"numeric",day:"numeric"})}</span>`):(d!==null&&d<0&&e.start&&new Date(e.start)>now?`<span class="dl closed">报名已截止</span>`:"");
 const online=isOnline(e),hybrid=isHybrid(e);
 const strip=online?`<div class="online-strip">🌐 线上活动 · ONLINE${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">🌐+📍 线上 + 线下均可参加</div>`:"";
 const loc=online?`<div class="loc">🌐 <b>线上参加</b>${e.venue?" · "+e.venue:""}</div>`
@@ -320,11 +324,11 @@ ${!online?maps(e):""}
 }
 function render(){
 const now=Date.now();
-const t0=new Date();t0.setHours(0,0,0,0);
+const t0=shMidnightMs();
 const isPast=e=>!!(e.start&&new Date(e.end||e.start)<t0);
 const qv=$("#q").value.trim();
 const past=DATA.filter(isPast).filter(e=>!qv||(e.title+(e.organizer||"")).includes(qv)).sort((a,b)=>new Date(b.start)-new Date(a.start));
-$("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">📚 过往活动<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">点开看历史记录</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString("zh-CN",{month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.city==="香港"?"🇭🇰 ":""}${e.title}</a><div class="pm">${[e.organizer,e.district,e.venue].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">暂无过往记录，活动结束后会自动归档到这里</div>'}</div></div>`;
+$("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">📚 过往活动<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">点开看历史记录</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString("zh-CN",{timeZone:TZ,month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.city==="香港"?"🇭🇰 ":""}${e.title}</a><div class="pm">${[e.organizer,e.district,e.venue].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">暂无过往记录，活动结束后会自动归档到这里</div>'}</div></div>`;
 const evs=DATA.filter(e=>!isPast(e)).filter(pass)
 .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
 const fr=$("#fres");if(fr)fr.textContent="共 "+evs.length+" 场";
@@ -345,8 +349,8 @@ for(const e of evs.filter(x=>!isHW(x))){
 const dk=e.start?dayKey(e.start):"待定";
 if(dk!==lastDay){
 lastDay=dk;
-if(e.start){const d=new Date(e.start),rel=relLabel(e.start);
-html+=`<div class="dayhead"><span class="dnum">${d.getDate()}</span><span class="dmeta">${d.getMonth()+1}月 · ${d.toLocaleDateString("zh-CN",{weekday:"long"})}</span>${rel?`<span class="drel ${rel==="今天"?"":"future"}">${rel}</span>`:""}</div>`;
+if(e.start){const sp=shParts(e.start),rel=relLabel(e.start),wd=new Date(e.start).toLocaleDateString("zh-CN",{timeZone:TZ,weekday:"long"});
+html+=`<div class="dayhead"><span class="dnum">${sp[2]}</span><span class="dmeta">${sp[1]}月 · ${wd}</span>${rel?`<span class="drel ${rel==="今天"?"":"future"}">${rel}</span>`:""}</div>`;
 }else{html+=`<div class="dayhead"><span class="dmeta">时间待定（看报名截止）</span></div>`}
 }
 html+=cardOf(e,now);
@@ -402,7 +406,7 @@ measureBar();
 $("#q").addEventListener("input",()=>{render();measureBar()});
 fetch("events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.events||[];
-$("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleString("zh-CN",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";
+$("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleString("zh-CN",{timeZone:TZ,month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";
 render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>'});
 </script>
