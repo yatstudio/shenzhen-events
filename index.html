@@ -159,6 +159,25 @@ input[type=search]{margin-top:2px;padding:11px 14px;font-size:16px;border-radius
 .prow .pd{flex:none}
 #agent-sub,#email-sub{scroll-margin-top:106px}
 }
+
+.ovl{position:fixed;inset:0;background:rgba(4,6,18,.74);display:none;z-index:200;align-items:flex-start;justify-content:center;padding:22px 12px;overflow:auto}
+.ovl.open{display:flex}
+.modal{background:#141a33;border:1px solid #2c3a6e;border-radius:14px;max-width:640px;width:100%;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.55)}
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.mhead h3{margin:0;font-size:17px}
+.mchips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 4px}
+.mchip{border:1px solid #33428a;background:#0f1531;color:#c6d2f5;border-radius:999px;padding:5px 12px;cursor:pointer;font-size:13px}
+.mchip.on{background:#4f6df5;color:#fff;border-color:#4f6df5}
+.msteps{color:#a9b6d9;font-size:13px;line-height:1.7;margin:6px 0 8px}
+.modal textarea{width:100%;min-height:168px;background:#0b1026;color:#e7ecff;border:1px solid #2c3a6e;border-radius:10px;padding:10px;font-size:13.5px;line-height:1.65;box-sizing:border-box;font-family:inherit}
+.mhint{color:#8fd0ff;font-size:12.5px;margin:8px 0 0}
+.mex{background:#0f1531;border:1px dashed #33428a;border-radius:10px;padding:10px 12px;font-size:13px;color:#c6d2f5;line-height:1.85;margin:10px 0 2px}
+.mex b{color:#fff}
+.mrow{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.welc{position:fixed;right:14px;bottom:14px;z-index:205;background:#141a33;border:1px solid #2c3a6e;border-radius:14px;max-width:320px;padding:14px 16px;box-shadow:0 18px 60px rgba(0,0,0,.55);display:none;font-size:14px;line-height:1.6}
+.tourcard{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:210;background:#141a33;border:1px solid #2c3a6e;border-radius:14px;max-width:560px;width:calc(100% - 24px);padding:14px 16px;box-shadow:0 18px 60px rgba(0,0,0,.55);display:none;font-size:14px;line-height:1.7}
+.tourcard.open{display:block}
+.tour-hl{outline:3px solid #ffb020!important;outline-offset:3px}
 </style>
 <!-- Microsoft Clarity（访客统计；项目 ID 待填） -->
 <script type="text/javascript">
@@ -181,14 +200,15 @@ input[type=search]{margin-top:2px;padding:11px 14px;font-size:16px;border-radius
 </div>
 <div class="topact">
 <a class="submit" href="https://github.com/yatstudio/shenzhen-events/issues/new/choose" target="_blank" rel="noopener">＋ 提交活动</a>
-<a class="agent" href="#agent-sub">🤖 用我的 Agent 订阅</a>
+<button class="agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
 <a class="mail" href="#email-sub">✉️ 邮件订阅</a>
-<button class="agent" onclick="copySubmit(this)">📋 复制投稿话术给我的 Agent</button>
+<button class="agent" onclick="startTour()">🧭 新手导览</button>
+<button class="agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
 </div>
 </div></header>
 <div class="agentbar"><div class="wrap">
 <p>🤖 <b>不用自己刷</b>：豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅，它每天自动帮你盯新活动和报名截止。</p>
-<button onclick="copyPrompt(this)">一键复制订阅话术</button>
+<button onclick="openModal('sub')">一键复制订阅话术</button>
 </div></div>
 
 <div class="wrap">
@@ -232,6 +252,25 @@ input[type=search]{margin-top:2px;padding:11px 14px;font-size:16px;border-radius
 Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md">AGENTS.md</a>。报名前请以官方页面最新信息为准。
 </div>
 </div>
+
+<div class="ovl" id="ovl" onclick="if(event.target===this)closeModal()">
+<div class="modal">
+<div class="mhead"><h3 id="mtitle">🤖 订阅话术</h3><button class="btn" onclick="closeModal()">✕ 关闭</button></div>
+<div class="mchips" id="mchips">
+<button class="mchip on" data-k="generic">通用版</button>
+<button class="mchip" data-k="doubao">🫘 豆包工作</button>
+<button class="mchip" data-k="workbuddy">💼 WorkBuddy</button>
+<button class="mchip" data-k="codex">🧑‍💻 Codex</button>
+</div>
+<p class="msteps" id="msteps"></p>
+<textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
+<p class="mhint">✏️ 这段话术可以直接改：把【】里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。</p>
+<div class="mex" id="mex"></div>
+<div class="mrow"><button class="btn primary" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" onclick="closeModal()">关闭</button></div>
+</div>
+</div>
+<div class="welc" id="welc"><b>👋 第一次来？</b><br>30 秒导览带你逛一圈：找活动、让 Agent 每天提醒你、投稿，都在这里。<div class="mrow"><button class="btn primary" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" onclick="dismissWelc()">直接逛逛</button></div></div>
+<div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" onclick="endTour()">结束导览</button><span id="tourprog" style="color:#a9b6d9;font-size:12.5px"></span></div></div>
 
 <script>
 const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space","万圣节"];
@@ -375,6 +414,31 @@ $("#list").innerHTML=html;
 const SUBMIT_PROMPT='请帮我给「YAT 深圳活动日报」投稿一个活动。仓库：https://github.com/yatstudio/shenzhen-events ——先读仓库里的 AGENTS.md 和 CONTRIBUTING.md，然后打开官方活动页核对日期、时间、地点、票价，把活动按格式加进 events.json，Fork 仓库并提交 Pull Request（一条 PR 只加一个活动）。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意 PR 里维护者 Agent 的核查意见，有要改的按意见改好再 push，并把结果告诉我。';
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent='已复制 ✓ 去发给你的 Agent';setTimeout(()=>b.textContent=t,1800)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{const t=b.textContent;b.textContent='已复制 ✓';setTimeout(()=>b.textContent=t,1500)})};
+const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
+const MEX_SUB="<b>定制示例（照着改）：</b><br>· 只看宝安、南山：把筛选条件改成「只看宝安区和南山区的活动」<br>· 只看免费：加一句「只推免费活动」<br>· 只看硬件创客：类别改成【硬件 / 技术】<br>· 只看周末：加一句「只推周六、周日的」";
+const MEX_POST="<b>填写示例：</b><br>「我要投稿的活动：【深圳湾 AI 开发者沙龙，https://官方链接】」——把【】里换成真实的活动名和官方链接再复制。投稿前先打开官方页，确认日期、地点、票价无误。";
+let mMode="sub",mKey="generic";
+function mLoad(){const ta=document.getElementById("mprompt");
+if(mMode==="post"){ta.value=SUBMIT_PROMPT;document.getElementById("msteps").textContent="把话术发给你的 Agent（Codex / Claude Code 等），它会核对官方页并代你提 PR。";document.getElementById("mex").innerHTML=MEX_POST;document.getElementById("mtitle").textContent="📋 投稿话术";}
+else{const src={generic:"subprompt",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=MSTEPS[mKey];document.getElementById("mex").innerHTML=MEX_SUB;document.getElementById("mtitle").textContent="🤖 订阅话术";}}
+function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
+function closeModal(){document.getElementById("ovl").classList.remove("open")}
+document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
+function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent="已复制 ✓ 去粘贴给你的 Agent";setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
+const TOUR=[
+{sel:"#ftoggle",t:"<b>第 1 步 · 找活动</b>：点「🎛 筛选」可以按时间、费用、形式（线下/线上）、城市（深圳/香港）和分类缩小范围；也可以直接在搜索框搜活动名、主办方、地点。"},
+{sel:".topact .agent",t:"<b>第 2 步 · 让 Agent 订阅</b>：点「🤖 用我的 Agent 订阅」，在弹窗里按你用的 Agent（豆包工作 / WorkBuddy / Codex / 通用版）复制话术；话术可以按你的喜好改，设置一次，之后每天自动提醒你。"},
+{sel:"#postbtn",t:"<b>第 3 步 · 投稿</b>：你发现的好活动也能加进来。点「📋 复制投稿话术」，把活动名和官方链接填进去发给你的 Agent，它会核对信息并代你提交，维护者的 Agent 审核后就会上榜。"},
+{sel:"a.mail",t:"<b>第 4 步 · 邮件订阅</b>：没有 Agent 也没关系，点「✉️ 邮件订阅」留下邮箱，每天早上收到一封日报邮件。就这些，去逛逛吧！"}];
+let tourI=-1,tourEl=null;
+function tourShow(){const st=TOUR[tourI];if(tourEl)tourEl.classList.remove("tour-hl");tourEl=document.querySelector(st.sel);if(tourEl){tourEl.scrollIntoView({behavior:"smooth",block:"center"});tourEl.classList.add("tour-hl")}document.getElementById("tourtext").innerHTML=st.t;document.getElementById("tourprog").textContent=(tourI+1)+" / "+TOUR.length;document.getElementById("tourprev").disabled=tourI===0;document.getElementById("tournext").textContent=tourI===TOUR.length-1?"完成":"下一步"}
+function startTour(){tourI=0;document.getElementById("tourcard").classList.add("open");tourShow()}
+function tourStep(d){tourI+=d;if(tourI>=TOUR.length){endTour();return}if(tourI<0)tourI=0;tourShow()}
+function endTour(){if(tourEl)tourEl.classList.remove("tour-hl");tourEl=null;document.getElementById("tourcard").classList.remove("open");try{localStorage.setItem("szTourSeen","1")}catch(e){}}
+function dismissWelc(){document.getElementById("welc").style.display="none";try{localStorage.setItem("szTourSeen","1")}catch(e){}}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();endTour()}});
+try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="block"}catch(e){}
+
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
@@ -425,5 +489,6 @@ $("#st-upd").textContent=j.updated_at?new Date(j.updated_at).toLocaleString("zh-
 render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>'});
 </script>
+
 </body>
 </html>
