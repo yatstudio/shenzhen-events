@@ -336,7 +336,9 @@ $("#st-total").textContent=DATA.filter(e=>!isPast(e)).length;
 $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
 $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
 if(!evs.length){$("#list").innerHTML='<div class="empty">没有符合条件的活动</div>';return}
-const isHW=e=>e.categories.includes("万圣节");
+const _spNow=shParts(Date.now());
+const hwSeason=_spNow[1]===10&&_spNow[2]>=24;
+const isHW=e=>hwSeason&&e.categories.includes("万圣节");
 let html="";
 const hw=evs.filter(isHW);
 hw.sort((a,b)=>Math.max(new Date(a.start||"2100"),t0)-Math.max(new Date(b.start||"2100"),t0));
