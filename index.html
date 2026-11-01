@@ -117,6 +117,9 @@ input[type=search]{width:100%;padding:14px 18px;border:1px solid var(--line);bor
 .prow .pm{color:var(--mut);font-size:.85rem}
 .btn,.chip,button{touch-action:manipulation}
 #agent-sub,#email-sub{scroll-margin-top:118px}
+.agblock{border-top:1px dashed #26305a;margin-top:16px;padding-top:12px}
+.agblock h4{margin:0 0 6px;font-size:14.5px}
+.agblock ol{margin:0 0 8px;padding-left:18px;color:#c6d2f5;font-size:13px;line-height:1.75}
 @media (max-width:640px){
 header{padding:46px 0 38px}
 .brand{gap:14px}
@@ -184,7 +187,7 @@ input[type=search]{margin-top:2px;padding:11px 14px;font-size:16px;border-radius
 </div>
 </div></header>
 <div class="agentbar"><div class="wrap">
-<p>🤖 <b>不用自己刷</b>：把订阅话术发给你的 Agent（Codex / Muse / Hermes 等），它每天自动帮你盯新活动和报名截止。</p>
+<p>🤖 <b>不用自己刷</b>：豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅，它每天自动帮你盯新活动和报名截止。</p>
 <button onclick="copyPrompt(this)">一键复制订阅话术</button>
 </div></div>
 
@@ -203,9 +206,19 @@ input[type=search]{margin-top:2px;padding:11px 14px;font-size:16px;border-radius
 
 <div class="subcard" id="agent-sub">
 <h3>🤖 让你的 Agent 提醒你，不用自己刷</h3>
-<p class="sum">把下面这段话复制给你的 Agent（Codex / Muse / Hermes 等任何能联网的 Agent），它会每天读取本页数据，按你的兴趣给你活动提醒：</p>
+<p class="sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
 <p class="prompt" id="subprompt">请订阅「YAT 深圳活动日报」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
 <div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div>
+
+<div class="agblock"><h4>🫘 豆包工作</h4>
+<ol><li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li></ol>
+<p class="prompt" id="prompt-doubao">每天早上 9 点，打开 https://yatstudio.github.io/shenzhen-events/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-doubao').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
+<div class="agblock"><h4>💼 WorkBuddy</h4>
+<ol><li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li></ol>
+<p class="prompt" id="prompt-workbuddy">每天早上 9 点，打开 https://yatstudio.github.io/shenzhen-events/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-workbuddy').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
+<div class="agblock"><h4>🧑‍💻 Codex</h4>
+<ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你提交活动（提 PR）</li></ol>
+<p class="prompt" id="prompt-codex">请为我订阅「深圳活动日报」：每天早上 9 点（Asia/Shanghai）获取 https://yatstudio.github.io/shenzhen-events/events.json，并阅读仓库说明 https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按 AGENTS.md 的规范提 PR。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
 </div>
 
 <div class="subcard" id="email-sub">
