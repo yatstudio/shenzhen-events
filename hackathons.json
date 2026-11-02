@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-02T11:00:00+08:00",
- "note": "数据来源：黑123（hack123.henryht.sh）公开接口，每日同步核实；收录范围：报名未截止、大陆/港澳台线下与全部线上。",
+ "updated_at": "2026-11-02T13:39:30+08:00",
+ "note": "数据主要来自黑123（hack123.henryht.sh）公开接口，另由 Devpost、lablab.ai、HackerTrip 等渠道补漏；逐条核实官方页后收录。收录范围：报名未截止、大陆/港澳台线下与全部线上。",
  "hackathons": [
   {
    "title": "ARC Prize 2026",
@@ -91,6 +91,24 @@
    "detail_url": "https://hack123.henryht.sh/h/devfest-gdgoc-japan-hackathon-2026",
    "source": "黑123",
    "summary": "Google 开发者社区 GDG on Campus Japan 办的日本全国学生黑客松，六天用 Gemini 和 Google Cloud 把点子做成产品，决赛在 Google 涩谷办公室。 看点：11 月 1 日线上"
+  },
+  {
+   "title": "Neural Storm",
+   "start": "2026-11-02",
+   "end": null,
+   "deadline": "2026-11-04",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "机器学习"
+   ],
+   "prize": "奖金池 20,000 印度卢比",
+   "url": "https://neuralstorm.devpost.com/",
+   "detail_url": "https://neuralstorm.devpost.com/",
+   "source": "Devpost",
+   "summary": "48 小时线上 AI/ML 黑客松，设未来科技、绿色地球、人类影响三条赛道共 15 个命题，11 月 2 日至 4 日举行。"
   },
   {
    "title": "Lexsi AI Safety and Alignment Hackathon（Cohere Labs × Hugging Face 安全对齐黑客松）",
@@ -536,6 +554,24 @@
    "detail_url": "https://hack123.henryht.sh/h/clocked-build-challenge-2026",
    "source": "黑123",
    "summary": "Rezolve.ai 旗下 Clocked 主办的三周线上黑客松，用 Clocked API（决策、提取与结构化输出）构建智能应用，面向全球 18 岁以上开发者。 看点：个人或最多 4 人组队参赛；作品须为赛期内新作并使"
+  },
+  {
+   "title": "Ctrl+V Hackathon",
+   "start": "2026-11-06",
+   "end": null,
+   "deadline": "2026-11-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "无障碍"
+   ],
+   "prize": "",
+   "url": "https://ctrl-v-hackathon-31831.devpost.com/",
+   "detail_url": "https://ctrl-v-hackathon-31831.devpost.com/",
+   "source": "Devpost",
+   "summary": "线上黑客松，主题是用 AI 与技术消除获取障碍，围绕教育、医疗、信息、机会与公共服务的可达性做产品，奖项为证书类荣誉。"
   },
   {
    "title": "MEME.ZKWASM() 黑客松（10 万 USDT 奖池）",
@@ -1032,6 +1068,24 @@
    "summary": "NEAR 基金会办的两周线上黑客松，在 NEAR Intents、NEAR AI Cloud、链签名等技术栈上做能用的产品，主题是「会自己花钱的 AI」和可编程货币。 看点：13 条赛道，一半和 AI 智能体相关（自主企"
   },
   {
+   "title": "Scope-AI-Thon 2026",
+   "start": "2026-11-01",
+   "end": null,
+   "deadline": "2026-11-14",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "医疗"
+   ],
+   "prize": "奖金池 1,400 加元",
+   "url": "https://scope-ai-thon-2026.devpost.com/",
+   "detail_url": "https://scope-ai-thon-2026.devpost.com/",
+   "source": "Devpost",
+   "summary": "线上方案设计型黑客松：围绕住院患者急性恶化的早期检测，比较四类监测数据方案并设计 AI 检测与临床响应系统，提交系统方案而非代码。"
+  },
+  {
    "title": "Code for a Billion 黑客松 2026（印度公益 Agentic AI）",
    "start": "2026-10-02",
    "end": null,
@@ -1120,6 +1174,44 @@
    "detail_url": "https://hack123.henryht.sh/h/kartika-cyber-hackathon-2026",
    "source": "黑123",
    "summary": "印尼陆军网络中心与 CODEPOLITAN 主办的全国网络安全黑客松，面向全印尼开发者、网络安全从业者、学生与技术爱好者，为印尼国防网络空间需求打造解决方案。 看点：2—3 人组队，也可个人报名，免费参赛；四个赛道：进攻"
+  },
+  {
+   "title": "Mathematics for systems security",
+   "start": "2026-10-16",
+   "end": null,
+   "deadline": "2026-11-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "密码学",
+    "AI",
+    "安全"
+   ],
+   "prize": "",
+   "url": "https://mathematics-systems-security.devpost.com/",
+   "detail_url": "https://mathematics-systems-security.devpost.com/",
+   "source": "Devpost",
+   "summary": "线上黑客松，设密码学与 AI 隐私管线两条赛道：设计秘密共享加密算法，或构建输入加密、主机不可见主密钥的 AI 智能体管线，奖项为认证头衔。"
+  },
+  {
+   "title": "STEMergent Hacks 2026",
+   "start": "2026-10-31",
+   "end": null,
+   "deadline": "2026-11-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "STEM",
+    "教育",
+    "社会影响"
+   ],
+   "prize": "",
+   "url": "https://stemergent-hacks.devpost.com/",
+   "detail_url": "https://stemergent-hacks.devpost.com/",
+   "source": "Devpost",
+   "summary": "学生线上黑客松兼创意马拉松，用科技解决学校与社区的真实问题，可走只交方案的 Ideathon 赛道或做原型的 Hackathon 赛道，奖品为平台额度。"
   },
   {
    "title": "UGREEN Hackathon 2026 on AI NAS（绿联 AI NAS Skill 黑客松，4.6 万美元现金）",
@@ -1467,6 +1559,25 @@
    "summary": "虹桥国际科技周在国家会展中心（上海）展馆里办的黑客松，与 ExplorNeo 联合主办。 看点：AI 智能体、AI 全球化应用、AI+硬件三条赛道；预计 200 多名开发者、60 余支队伍；场地在 1.1 号馆 1E11"
   },
   {
+   "title": "Bridge The Gap Hacks",
+   "start": "2026-11-15",
+   "end": null,
+   "deadline": "2026-11-21",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "社会影响",
+    "AI",
+    "应用开发"
+   ],
+   "prize": "",
+   "url": "https://sq-hacks.devpost.com/",
+   "detail_url": "https://sq-hacks.devpost.com/",
+   "source": "Devpost",
+   "summary": "线上黑客松，主张创新不应取决于地点，围绕教育与无障碍、AI 与新兴技术、社区影响、可持续、健康等主题做应用与游戏，无现金奖金。"
+  },
+  {
    "title": "Dakar Bitcoin Hack by BTrust（线上一个月，用比特币、闪电网络、Nostr 和 AI 服务非洲）",
    "start": "2026-10-26",
    "end": null,
@@ -1652,6 +1763,24 @@
    "summary": "嵌入式 AI 开发平台 Embedder 联合 Arduino、高通办的线上硬件挑战，先交项目创意，选中的 100 人免费拿 UNO Q 开发板和 Embedder 授权把它做出来。 看点：方向不限，机器人与自动化、边缘"
   },
   {
+   "title": "Build Your First AI App",
+   "start": "2026-10-27",
+   "end": null,
+   "deadline": "2026-11-27",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "应用开发"
+   ],
+   "prize": "",
+   "url": "https://build-your-first-ai-app.devpost.com/",
+   "detail_url": "https://build-your-first-ai-app.devpost.com/",
+   "source": "Devpost",
+   "summary": "Yasir Insights 办的新手友好线上黑客松，30 天内做出第一个 AI 应用（聊天机器人、文档问答、学习助手或效率工具），免费参加，奖项为证书。"
+  },
+  {
    "title": "Dev3pack Global Hackathon 2026",
    "start": "2026-11-27",
    "end": null,
@@ -1669,6 +1798,24 @@
    "detail_url": "https://hack123.henryht.sh/h/dev3pack-global-hackathon-2026",
    "source": "黑123",
    "summary": "Dev3pack 主办的全球最大 Solana 大学生黑客松，面向全球大学生，三天内打造在 Solana 上真实可用的应用。 看点：混合式参赛——纯线上，或在全球本地 build station 与他人一起开发；赛道含最"
+  },
+  {
+   "title": "Global AI Builder's Challenge",
+   "start": "2026-11-21",
+   "end": null,
+   "deadline": "2026-11-28",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "应用开发"
+   ],
+   "prize": "",
+   "url": "https://global-ai-builders-challenge.devpost.com/",
+   "detail_url": "https://global-ai-builders-challenge.devpost.com/",
+   "source": "Devpost",
+   "summary": "Refactor The World 办的免费线上黑客松，面向 13 岁以上学生，用 AI 做帮助学习、创作或日常效率的可用产品，设 21 个类别奖项与证书。"
   },
   {
    "title": "Agent Attribution Hackathon（Apart Research，识别 AI 智能体背后是谁在操控）",
@@ -1893,6 +2040,24 @@
    "summary": "用AI从零做产品，找到至少一名真实付费客户，让作品先赚到第一笔钱。 看点：16岁起，个人或至多3人；全球线上免费；收入与商业可行性占70% 奖金：冠军1000欧元现金，另1000欧元捐给教育机构 截止日期：12月1日"
   },
   {
+   "title": "AMD AI League",
+   "start": "2026-09-01",
+   "end": null,
+   "deadline": "2026-12-01",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "机器学习"
+   ],
+   "prize": "联赛奖金池 5,000 美元现金，另每场 Match 设分奖",
+   "url": "https://lablab.ai/ai-hackathons/amd-lablab-ai-academy-challenge",
+   "detail_url": "https://lablab.ai/ai-hackathons/amd-lablab-ai-academy-challenge",
+   "source": "lablab.ai",
+   "summary": "lablab.ai 与 AMD 办的线上 AI 联赛：9 月至 12 月滚动进行多场 Match，用 AMD ROCm 平台开发 AI 应用，可随时加入，按场次与联赛总排名发奖。"
+  },
+  {
    "title": "emma Hackathon（多云 GPU 平台 emma 线上黑客松，免费算力，5 万美元现金）",
    "start": null,
    "end": null,
@@ -1911,6 +2076,44 @@
    "detail_url": "https://hack123.henryht.sh/h/emma-multi-cloud-hackathon-2026",
    "source": "黑123",
    "summary": "卢森堡多云平台 emma 办的线上黑客松，免费给 11 家云、23 种 GPU 的额度，用它的 API/SDK 做多云基础设施产品或演示。 看点：两条赛道——Builders（2—3 周，1—5 人，做能上生产的产品：开"
+  },
+  {
+   "title": "支付宝 AI 付 PAYATHON 2026 年度黑客松",
+   "start": "2026-09-21",
+   "end": null,
+   "deadline": "2026-12-01",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "智能体",
+    "支付"
+   ],
+   "prize": "总奖池 20 万元",
+   "url": "https://aipay.alipay.com/community/events/payathon-2026",
+   "detail_url": "https://hackertrip.space/hackathon/ht-payathon-2026",
+   "source": "HackerTrip",
+   "summary": "支付宝「AI 付」主办的年度黑客松，设 Vibe Pay、Skill Pay、Token Pay、Machine Pay、Agent Pay 五个赛道，线上开发，12 月 26 日线下决赛。"
+  },
+  {
+   "title": "ML Empowerment Build Challenge 4.0",
+   "start": "2026-11-01",
+   "end": null,
+   "deadline": "2026-12-02",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "机器学习",
+    "教育"
+   ],
+   "prize": "",
+   "url": "https://ml-build-challenge-4.devpost.com/",
+   "detail_url": "https://ml-build-challenge-4.devpost.com/",
+   "source": "Devpost",
+   "summary": "ML Empowerment Foundation 办的全球学生线上挑战：先学 12 课 AI 课程，再在导师指导下完成一个真实场景 AI 项目，奖项为证书类荣誉。"
   },
   {
    "title": "深圳科创学院「极客营」硬件黑客松：Negentropy · Deploy or Die（120 小时，包住报销路费）",
@@ -2111,6 +2314,25 @@
    "detail_url": "https://hack123.henryht.sh/h/microsoft-agent-a-thon-2026",
    "source": "黑123",
    "summary": "微软官方办的全球线上 AI 智能体黑客松，12 月 3 日直播开做，从零代码到生产级 Agent 分三档，谁都能报。 看点：Explorer 用 Microsoft 365 Copilot 的 Agent Builder"
+  },
+  {
+   "title": "BUILD 4 ALL",
+   "start": "2026-12-05",
+   "end": null,
+   "deadline": "2026-12-12",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "教育",
+    "AI",
+    "社会影响"
+   ],
+   "prize": "",
+   "url": "https://build4all.devpost.com/",
+   "detail_url": "https://build4all.devpost.com/",
+   "source": "Devpost",
+   "summary": "CS4ALL 办的学生线上黑客松，可做任意项目，设最佳 AI/ML、教育与社会影响、新手项目等奖项，奖品为开发额度与课程订阅等非现金奖励。"
   },
   {
    "title": "2027 WFEO 可持续交通工程黑客松",
@@ -2420,6 +2642,42 @@
    "detail_url": "https://hack123.henryht.sh/h/united-hacks-v8-2027",
    "source": "黑123",
    "summary": "学生公益组织 Hack United 办的周末线上黑客松，13 岁以上学生组队做项目并路演。 看点：全程线上，Discord 交流和直播，有工作坊；作品须为本次原创，不能拿去投别的比赛；适合第一次参加的中学生和大学生 奖"
+  },
+  {
+   "title": "Syntax Summit",
+   "start": "2026-07-18",
+   "end": null,
+   "deadline": "2027-01-14",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "编程语言",
+    "编译器"
+   ],
+   "prize": "",
+   "url": "https://syntax-summit.devpost.com/",
+   "detail_url": "https://syntax-summit.devpost.com/",
+   "source": "Devpost",
+   "summary": "长周期线上黑客松：为某个垂直领域设计并实现一门领域专用语言（DSL），提交解析器、编译器或解释器与示例程序，奖项为荣誉头衔。"
+  },
+  {
+   "title": "Code for Humanity",
+   "start": "2026-07-16",
+   "end": null,
+   "deadline": "2027-01-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "社会影响",
+    "AI"
+   ],
+   "prize": "",
+   "url": "https://code-for-humanity.devpost.com/",
+   "detail_url": "https://code-for-humanity.devpost.com/",
+   "source": "Devpost",
+   "summary": "全球线上公益黑客松，为弱势群体（残障、难民、低收入与医疗教育资源不足地区）做技术产品，新手友好，奖项为证书类荣誉。"
   },
   {
    "title": "Google Quantum AI 可验证量子电路编译竞赛（Kaggle，用 AI 智能体压缩量子电路，奖池约 15 万美元）",

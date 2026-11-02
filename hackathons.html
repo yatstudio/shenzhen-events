@@ -252,7 +252,7 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 <body>
 <header><div class="wrap">
 <div class="brand"><span class="yat">YAT</span><h1>黑客松专题</h1></div>
-<div class="tagline"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新<br>数据来源 <b>黑123</b>（hack123.henryht.sh），经其公开接口同步核实 · 报名与赛程以各比赛官方页为准</div>
+<div class="tagline"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新<br>数据主要来自 <b>黑123</b>，另由 Devpost、lablab.ai、HackerTrip 等渠道补漏 · 逐条核实官方页后收录，报名与赛程以官方页为准</div>
 <div class="stats">
 <div class="stat"><b id="st-total">–</b><span>报名中</span></div>
 <div class="stat"><b id="st-soon">–</b><span>72 小时内截止</span></div>
@@ -262,7 +262,7 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 <div class="topact">
 <a class="submit" href="./">← 返回活动日报</a>
 <button class="agent" onclick="openModal()">🤖 用我的 Agent 订阅</button>
-<a class="mail" href="https://hack123.henryht.sh" target="_blank" rel="noopener">数据来源：黑123 ↗</a>
+<a class="mail" href="https://hack123.henryht.sh" target="_blank" rel="noopener">主来源：黑123 ↗</a>
 </div>
 </div></header>
 <div class="wrap">
@@ -276,7 +276,7 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 </div>
 <div class="wrap"><div id="list"><div class="empty">加载中…</div></div></div>
 <footer><div class="wrap"><div>
-🤖 本站由 Yat 的 Agent 自动维护（每日更新）· 黑客松专题数据来源：<a href="https://hack123.henryht.sh" target="_blank" rel="noopener">黑123</a> · 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a><br>← <a href="./">回到活动日报：深圳 + 香港 AI / 创业 / 科技活动</a>
+🤖 本站由 Yat 的 Agent 自动维护（每日更新）· 黑客松专题数据来源：<a href="https://hack123.henryht.sh" target="_blank" rel="noopener">黑123</a>、Devpost、lablab.ai、HackerTrip 等渠道（逐条核实） · 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a><br>← <a href="./">回到活动日报：深圳 + 香港 AI / 创业 / 科技活动</a>
 </div></div></footer>
 <script>
 const $=s=>document.querySelector(s);
@@ -294,8 +294,8 @@ function cardOf(h){
 <div class="trow"><h3><span class="rb ${RB[h.region]||"on"}">${h.region}${h.region!=="线上"?" · "+h.city:""}</span><a href="${h.url}" target="_blank" rel="noopener">${h.title}</a></h3></div>
 <div class="meta">${dates} · ${h.format}${h.prize?` · <span class="prize">💰 ${h.prize}</span>`:""}</div>
 ${h.summary?`<p class="sum">${h.summary}</p>`:""}
-<div class="tags">${(h.topics||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-<div class="acts"><a class="btn pri" href="${h.url}" target="_blank" rel="noopener">官方页 / 报名</a><a class="btn" href="${h.detail_url}" target="_blank" rel="noopener">黑123 详情</a></div>
+<div class="tags">${(h.topics||[]).map(t=>`<span class="tag">${t}</span>`).join("")}<span class="tag">来源：${h.source||"黑123"}</span></div>
+<div class="acts"><a class="btn pri" href="${h.url}" target="_blank" rel="noopener">官方页 / 报名</a>${h.detail_url&&h.detail_url!==h.url?`<a class="btn" href="${h.detail_url}" target="_blank" rel="noopener">${h.source==="黑123"?"黑123 详情":(h.source||"来源")+" 详情"}</a>`:""}</div>
 </div></article>`;
 }
 function sectHead(t,s){return `<div class="dayhead"><span class="dmeta">${t}${s?` · ${s}`:""}</span></div>`}
