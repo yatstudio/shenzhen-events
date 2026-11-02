@@ -26,8 +26,8 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .topbar{position:sticky;top:0;z-index:100;background:rgba(13,18,24,.95);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
 .topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
 .topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
-.topbar-icon{width:clamp(28px,6vw,36px);height:clamp(28px,6vw,36px);flex-shrink:0}
-.topbar-logo{height:clamp(18px,4vw,22px);flex-shrink:0}
+.topbar-icon{width:clamp(38px,7vw,48px);height:clamp(38px,7vw,48px);flex-shrink:0}
+.topbar-logo{height:clamp(28px,5vw,38px);flex-shrink:0}
 .topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
 .topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
 .topbar-nav a:hover{color:var(--green)}
@@ -41,6 +41,7 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .terminal-prompt{color:var(--green);font-weight:600;font-size:clamp(1rem,2.2vw,1.1rem);margin-bottom:var(--sp-md)}
 .terminal-status{color:var(--ink-sec);margin-top:var(--sp-sm);font-size:clamp(.84rem,2vw,.9rem)}
 .talk-block{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-xl),4vw,var(--sp-2xl)) clamp(var(--sp-lg),4vw,var(--sp-xl));margin-bottom:clamp(var(--sp-xl),4vw,var(--sp-2xl))}
+.intro{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-xl),4vw,var(--sp-2xl));margin-bottom:clamp(var(--sp-xl),4vw,var(--sp-2xl))}
 .talk-block h3{margin:0 0 var(--sp-lg);font-size:clamp(1.05rem,2.4vw,1.2rem);font-weight:650;color:var(--ink)}
 .code-block{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-md);padding:var(--sp-lg);font-family:var(--font-mono);font-size:clamp(.82rem,1.9vw,.88rem);line-height:1.75;color:var(--ink-sec);margin:var(--sp-md) 0;position:relative;white-space:pre-wrap;word-break:break-word}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:clamp(42px,10vw,48px);padding:var(--sp-md) clamp(var(--sp-lg),3vw,var(--sp-xl));border-radius:var(--r-md);font-size:clamp(.88rem,2vw,.94rem);font-weight:600;text-decoration:none;border:1px solid var(--border);color:var(--ink-sec);background:var(--panel);cursor:pointer;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit;letter-spacing:.005em;white-space:nowrap}
@@ -53,6 +54,8 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .endpoint-list{display:grid;gap:var(--sp-md);margin:var(--sp-lg) 0}
 .endpoint-item{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-lg);display:grid;grid-template-columns:auto 1fr auto;gap:var(--sp-md);align-items:center;font-family:var(--font-mono);font-size:clamp(.82rem,1.9vw,.88rem);transition:all .2s ease}
 .endpoint-item:hover{background:rgba(0,0,0,.4);border-color:rgba(255,255,255,.12)}
+.endpoint-item .btn-copy{position:static;flex-shrink:0}
+.endpoint-desc{grid-column:1/-1}
 .endpoint-name{color:var(--green);font-weight:650}
 .endpoint-url{color:var(--ink-sec);font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .endpoint-desc{color:var(--ink-ter);font-size:.82rem;font-family:var(--font-sans);grid-column:2 / 4;margin:-6px 0 0}
@@ -73,7 +76,7 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .topact .submit:hover{background:#fcd34d;transform:translateY(-1px);box-shadow:var(--shadow-md)}
 .topact .agent{background:var(--green);color:var(--bg);border-color:var(--green)}
 .topact .agent:hover{background:#3df4b5;transform:translateY(-1px)}
-.bar{position:sticky;top:var(--barh,70px);z-index:20;background:rgba(13,18,24,.96);backdrop-filter:blur(16px) saturate(180%);padding:var(--sp-lg) 0;margin:0 calc(-1 * clamp(var(--sp-lg),4vw,var(--sp-xl)));padding-left:clamp(var(--sp-lg),4vw,var(--sp-xl));padding-right:clamp(var(--sp-lg),4vw,var(--sp-xl));border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(255,255,255,.02)}
+.bar{position:static;background:rgba(13,18,24,.96);backdrop-filter:blur(16px) saturate(180%);padding:var(--sp-lg) 0;margin:0 calc(-1 * clamp(var(--sp-lg),4vw,var(--sp-xl)));padding-left:clamp(var(--sp-lg),4vw,var(--sp-xl));padding-right:clamp(var(--sp-lg),4vw,var(--sp-xl));border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(255,255,255,.02)}
 .chip{flex:0 0 auto;border:1px solid var(--border);background:var(--panel);border-radius:var(--r-pill);padding:var(--sp-sm) var(--sp-lg);font-size:.88rem;cursor:pointer;min-height:38px;color:var(--ink-sec);font-weight:600;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit;letter-spacing:.005em}
 .chip:hover{border-color:var(--border-hover);background:var(--panel-hover);transform:translateY(-1px)}
 .chip:active{transform:translateY(0)}
@@ -94,7 +97,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .fres{margin-left:auto;font-size:.85rem;color:var(--ink-ter);font-weight:600}
 .fclear{margin-left:auto;background:none;border:0;color:var(--coral);font-weight:650;cursor:pointer;font-size:.87rem;min-height:36px;font-family:inherit;transition:all .2s ease}
 .fclear:hover{color:#ff8184;opacity:.9}
-.dayhead{position:sticky;top:var(--barh,120px);z-index:10;display:flex;align-items:baseline;gap:var(--sp-md);padding:clamp(var(--sp-xl),5vw,28px) 0 clamp(var(--sp-md),2vw,var(--sp-md));background:var(--bg)}
+.dayhead{position:static;display:flex;align-items:baseline;gap:var(--sp-md);padding:clamp(var(--sp-xl),5vw,28px) 0 clamp(var(--sp-md),2vw,var(--sp-md));background:var(--bg)}
 .dayhead .dnum{font-size:clamp(2rem,4.5vw,2.4rem);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;color:var(--green)}
 .dayhead .dmeta{font-size:clamp(1rem,2.2vw,1.1rem);font-weight:650;color:var(--ink-sec);letter-spacing:-.005em}
 .dayhead .drel{font-size:.79rem;font-weight:650;color:var(--bg);background:var(--coral);border-radius:var(--r-sm);padding:4px var(--sp-md);letter-spacing:.015em}
@@ -267,7 +270,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
         <span class="terminal-title">agent — subscribe</span>
       </div>
       <div class="terminal-body">
-        <div class="terminal-prompt">$ subscribe: yat's list · 深圳活动</div>
+        <div class="terminal-prompt">$ subscribe: yat's list · 深圳活动日报</div>
         <div class="terminal-status">
           <span id="st-total">–</span> 场活动在列 ·
           <span id="hackcount">–</span> 场黑客松 ·
@@ -335,10 +338,19 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 <!-- Human Section (第二屏) -->
 <section class="human-section" id="human-section">
   <div class="wrap">
+    <!-- Intro for humans -->
+    <div class="intro">
+      <img src="logo-main.svg" alt="Yat's List" style="width:min(430px,100%);height:auto;display:block;margin-bottom:16px">
+      <h3 style="font-size:1.18rem;margin:0 0 10px">Yat's List 是什么？</h3>
+      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 10px">Yat's List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接往下浏览，也可以把第一屏的话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。</p>
+      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 14px">这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">✓ 每条都核实过</span><span class="tag">🤖 Agent 可直接订阅</span><span class="tag">🔕 没命中就不打扰</span></div>
+    </div>
+
     <!-- Section Header -->
     <div class="section-header">
       <h2 class="section-title">Yat's List · 深圳活动清单</h2>
-      <p class="section-subtitle">原深圳活动日报 · 每天 07:30 更新</p>
+      <p class="section-subtitle">每天 07:30 更新 · 每条都打开官方页核实过</p>
     </div>
 
     <!-- Stats -->
