@@ -242,14 +242,15 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 <meta name="theme-color" content="#0d1218">
 </head>
 <body>
+<a id="top"></a>
 
 <!-- Sticky Topbar -->
 <div class="topbar">
   <div class="wrap">
-    <div class="topbar-brand">
+    <a class="topbar-brand" href="#top" aria-label="回到顶部" style="text-decoration:none">
       <img src="logo-icon.svg" alt="Yat's List" class="topbar-icon">
       <img src="logo-plain.svg" alt="Yat's List" class="topbar-logo">
-    </div>
+    </a>
     <nav class="topbar-nav">
       <a href="#agent-section">给 Agent</a>
       <a href="#human-section">活动清单</a>
