@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>黑客松专题 · 大陆 + 港澳台 + 线上 | YAT 深圳活动日报</title>
+<title>Yat's List · 黑客松专题 | 大陆 + 港澳台 + 线上</title>
 <meta name="description" content="正在报名的黑客松与创新大赛：大陆、香港、澳门、台湾线下为主，线上不限区域。每日更新，数据来自黑123并逐项核实。">
 <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
-<meta name="theme-color" content="#0a0d12">
+<meta name="theme-color" content="#0d1218">
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z6a9pxyr63");</script>
 <style>
 :root{
---s0:#05070C;--s1:#0A0D12;--s2:#0F131C;--s3:#161D2B;--s4:#1E2636;
---ink:#E7ECF5;--ink-sec:#A5B4D3;--ink-ter:#6B7A99;
---accent:#38BDF8;--accent-hover:#7DD3FC;--accent-dim:#075985;
---warm:#FBBF24;--warm-dim:#78350F;
+--s0:#0D1218;--s1:#10151B;--s2:#10151B;--s3:#161D26;--s4:#1E2833;
+--ink:#E6EDF3;--ink-sec:#8B98A5;--ink-ter:#6A737D;
+--accent:#2EE6A8;--accent-hover:#5CEEBE;--accent-dim:#0E3A2B;
+--warm:#FF5A5F;--warm-dim:#4A2124;
 --red:#F87171;--red-dim:#7F1D1D;
---green:#4ADE80;--green-dim:#14532D;
+--green:#2EE6A8;--green-dim:#0E3A2B;
+--border:rgba(255,255,255,.08);
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
 --r-card:16px;--r-btn:12px;--r-pill:999px;
 --shadow-sm:0 1px 3px rgba(0,0,0,.3);
 --shadow-md:0 4px 12px rgba(0,0,0,.4);
@@ -28,10 +30,21 @@
 html{font-size:16px}
 body{margin:0;font-family:var(--font-body);background:var(--s0);color:var(--ink);line-height:1.65;letter-spacing:.01em}
 .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
-header{padding:clamp(var(--sp-3xl),10vw,80px) 0 clamp(40px,8vw,64px);background:linear-gradient(165deg,var(--s3) 0%,var(--s1) 40%,var(--s0) 100%);position:relative;overflow:hidden}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(13,18,24,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-lg);padding-top:10px;padding-bottom:10px}
+.tb-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.topbar-icon{width:clamp(38px,7vw,48px);height:clamp(38px,7vw,48px)}
+.topbar-logo{height:clamp(28px,5vw,38px)}
+.tb-links{display:flex;gap:var(--sp-md);align-items:center;flex-wrap:wrap}
+.tb-links a,.tb-links button{font:inherit;font-size:.92rem;font-weight:600;color:var(--ink);background:var(--s3);border:1px solid var(--border);border-radius:var(--r-pill);padding:9px 16px;text-decoration:none;cursor:pointer}
+.tb-links button{background:var(--accent);color:#0D1218;border-color:transparent}
+.cmdline{margin-top:var(--sp-xl);font-family:var(--font-mono);background:#0A0E13;border:1px solid var(--border);border-radius:var(--r-btn);padding:12px 16px;color:var(--accent);display:flex;gap:12px;align-items:center;flex-wrap:wrap;position:relative;z-index:1;font-size:.92rem}
+.cmdline .u{color:var(--ink-sec);font-size:.83rem;word-break:break-all}
+.cmdline button{margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--accent);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+header{padding:clamp(var(--sp-3xl),10vw,80px) 0 clamp(40px,8vw,64px);background:var(--s1);position:relative;overflow:hidden}
 header::before{content:"";position:absolute;inset:0;background:
-radial-gradient(600px 400px at 20% 10%,rgba(56,189,248,.1),transparent 60%),
-radial-gradient(500px 300px at 80% 90%,rgba(251,191,36,.06),transparent 60%);
+radial-gradient(600px 400px at 20% 10%,rgba(46,230,168,.08),transparent 60%),
+radial-gradient(500px 300px at 80% 90%,rgba(46,230,168,.04),transparent 60%);
 pointer-events:none;opacity:.9}
 .brand{display:flex;align-items:center;gap:clamp(var(--sp-md),3vw,20px);flex-wrap:wrap;position:relative;z-index:1}
 .brand .yat{font-size:clamp(2.8rem,7vw,3.8rem);font-weight:900;letter-spacing:-.02em;background:linear-gradient(135deg,var(--accent),var(--warm));color:var(--s0);border-radius:14px;padding:var(--sp-xs) 18px;line-height:1.15;box-shadow:var(--shadow-md);font-family:var(--font-display)}
@@ -46,8 +59,8 @@ pointer-events:none;opacity:.9}
 .topact .submit{background:var(--warm);color:var(--s0);box-shadow:var(--shadow-sm)}
 .topact .submit:hover{background:#fcd34d;transform:translateY(-1px);box-shadow:var(--shadow-md)}
 .topact .submit:active{transform:translateY(0);box-shadow:var(--shadow-sm)}
-.topact .agent{background:linear-gradient(135deg,var(--accent),var(--accent-hover));color:var(--s0);box-shadow:var(--shadow-sm)}
-.topact .agent:hover{transform:translateY(-1px);box-shadow:var(--shadow-md);background:linear-gradient(135deg,#50c7f9,#9ee0fc)}
+.topact .agent{background:var(--accent);color:#0D1218;box-shadow:var(--shadow-sm)}
+.topact .agent:hover{transform:translateY(-1px);box-shadow:var(--shadow-md);background:var(--accent-hover)}
 .topact .agent:active{transform:translateY(0);box-shadow:var(--shadow-sm)}
 .topact .mail{background:var(--s3);color:var(--ink);border:1px solid rgba(255,255,255,.12)}
 .topact .mail:hover{background:var(--s4);border-color:rgba(255,255,255,.22);transform:translateY(-1px)}
@@ -250,9 +263,14 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 </style>
 </head>
 <body>
+<div class="topbar"><div class="wrap topbar-in">
+<a class="tb-brand" href="./"><img src="logo-icon.svg" alt="Yat's List" class="topbar-icon"><img src="logo-plain.svg" alt="Yat's List" class="topbar-logo"></a>
+<nav class="tb-links"><a href="./">← 深圳活动日报</a><button onclick="openModal()">🤖 用我的 Agent 订阅</button></nav>
+</div></div>
 <header><div class="wrap">
-<div class="brand"><img src="logo-icon.svg" alt="Yat's List" style="width:36px;height:36px;border-radius:9px"><h1>Yat's List · 黑客松专题</h1></div>
+<div class="brand"><h1>Yat's List · 黑客松专题</h1></div>
 <div class="tagline"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新<br>数据主要来自 <b>黑123</b>，另由 Devpost、lablab.ai、HackerTrip 等渠道补漏 · 逐条核实官方页后收录，报名与赛程以官方页为准</div>
+<div class="cmdline"><span>$ subscribe: yat's list · 黑客松</span><span class="u">https://yatstudio.github.io/shenzhen-events/hackathons.json</span><button onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button></div>
 <div class="stats">
 <div class="stat"><b id="st-total">–</b><span>报名中</span></div>
 <div class="stat"><b id="st-soon">–</b><span>72 小时内截止</span></div>
