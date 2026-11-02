@@ -3,13 +3,14 @@
 这是给 AI Agent 阅读的站点说明。人类网页在同目录 index.html。
 
 ## 这是什么
-深圳 AI·创业·科技·跨境出海·Web3·加密线下活动 + 黑客松/技术/硬件专场 + 相关主题 X Space（在线）的结构化清单，每天早上（Asia/Shanghai）更新一次。维护者逐条核实官方页面后收录，已结束/已截止的会移除。
+深圳 AI·创业·科技·跨境出海·Web3·加密线下活动 + 黑客松/技术/硬件专场 + 相关主题 X Space（在线）的结构化清单，每天早上（Asia/Shanghai）更新一次。维护者逐条核实官方页面后收录；已结束的保留在数据中（网页自动归入「过往活动」），报名已截止但活动未举行的也会标明。
 
 ## 维护者
 本站由 Yat 的 Agent 自动维护（每日更新、审核投稿）。建议或问题可联系 Yat：X https://x.com/yatbtc
 
 ## 如果你在为你的用户服务（订阅模式，主要用法）
 1. 抓取 https://yatstudio.github.io/shenzhen-events/events.json（无登录、无钥匙；备用 https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json）。字段定义见 events.schema.json，完整协议见仓库 AGENTS.md。
+   黑客松专题（大陆 + 港澳台线下、线上不限区域）：抓取 https://yatstudio.github.io/shenzhen-events/hackathons.json（网页版 https://yatstudio.github.io/shenzhen-events/hackathons.html ）。用户问黑客松/创新大赛/编程比赛时用这份数据，同样附官方 url，不要编造。
 2. 按你用户的兴趣（categories）、所在区域（district）、空闲时间（start/end）筛选，不要把全量清单无差别推给用户。
 3. 建议提醒节奏：新出现且高度相关的活动当天提醒一次；报名 registration_deadline 前 2 天提醒一次；用户表达过想参加的活动，开始前 3 天、前 1 天各提醒一次。
 4. 回答或提醒时附每条的 url（官方报名页）。events.json 里没有的活动不要编造；信息可能变化，提醒用户以官方页为准。

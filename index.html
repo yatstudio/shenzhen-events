@@ -233,6 +233,10 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 .foldhead.open .chev{transform:rotate(180deg)}
 .foldbody{display:none}
 .foldbody.open{display:block}
+
+.boardbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 4px;background:linear-gradient(135deg,rgba(232,89,12,.16),rgba(255,214,10,.10));border:1px solid rgba(255,150,60,.35);border-radius:14px;padding:13px 16px;color:var(--ink);text-decoration:none;font-size:.97rem}
+.boardbar b{color:#ffb35c}
+.boardbar .go{font-weight:800;color:#ffd60a;white-space:nowrap}
 </style>
 <!-- Microsoft Clarity（访客统计；项目 ID 待填） -->
 <script type="text/javascript">
@@ -266,7 +270,8 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 <div class="agentbar"><div class="wrap">
 <p>🤖 <b>不用自己刷</b>：豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅，它每天自动帮你盯新活动和报名截止。</p>
 <button onclick="openModal('sub')">一键复制订阅话术</button>
-</div></div>
+</div>
+<a class="boardbar" href="hackathons.html"><span>🛠 <b>黑客松专题</b>：大陆 + 港澳台 + 线上，正在报名的比赛都在这</span><span class="go">去看看 →</span></a></div>
 
 <div class="wrap">
 <div class="bar">
@@ -332,7 +337,7 @@ Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-event
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" onclick="endTour()">结束导览</button><span id="tourprog" style="color:#a9b6d9;font-size:12.5px"></span></div></div>
 
 <script>
-const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space","万圣节"];
+const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"];
 let DATA=[];
 let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
 let FAVS=new Set();try{FAVS=new Set(JSON.parse(localStorage.getItem("szFavs")||"[]"))}catch(e){}
@@ -423,7 +428,7 @@ const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"
 return `<div class="ev">
 <div class="rail"><div class="t1">${e.start?fmtT(e.start):"待定"}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
 <div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
-<div class="trow"><h3>${ongoing?'<span class="live">● 进行中</span>':''}${e.categories.includes("万圣节")?'<span class="hwflag">🎃 万圣节</span>':''}${e.city==="香港"?'<span class="hkflag">🇭🇰 香港</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
+<div class="trow"><h3>${ongoing?'<span class="live">● 进行中</span>':''}${e.city==="香港"?'<span class="hkflag">🇭🇰 香港</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${e.title}</a></h3>${feeBadge(e)}</div>
 ${e.organizer?`<div class="org">🏢 主办方：<b>${e.organizer}</b></div>`:""}
 ${loc}
 ${dl?`<div class="meta">${dl}</div>`:""}
@@ -459,20 +464,11 @@ $("#list").innerHTML='<div class="dayhead"><span class="dmeta">⭐ 我的收藏<
 return;
 }
 if(!evs.length){$("#list").innerHTML='<div class="empty">没有符合条件的活动</div>';return}
-const _spNow=shParts(Date.now());
-const hwSeason=_spNow[1]===10&&_spNow[2]>=24;
-const isHW=e=>hwSeason&&e.categories.includes("万圣节");
 let html="";
-const hw=evs.filter(isHW);
-hw.sort((a,b)=>Math.max(new Date(a.start||"2100"),t0)-Math.max(new Date(b.start||"2100"),t0));
-if(hw.length){
-html+=`<div class="hwhead"><span class="pumpkin">🎃</span><span><div class="t">万圣节专区</div><div class="s">10月31日 · 深圳 + 香港精选</div></span></div>`;
-html+=hw.map(e=>cardOf(e,now)).join("");
-}
 const todayNum=shDayNum(now);
 const todayKey=dayKey(now);
 const groups=new Map();
-for(const e of evs.filter(x=>!isHW(x))){
+for(const e of evs){
 const effTs=e.start?(shDayNum(e.start)<todayNum?t0+12*3600e3:new Date(e.start).getTime()):null;
 const dk=e.start?dayKey(effTs):"待定";
 if(!groups.has(dk))groups.set(dk,{effTs,items:[]});
