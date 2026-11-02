@@ -250,23 +250,19 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-<div class="brandrow">
-<div class="brand"><div class="logo">YAT</div><div><div class="bname">深圳活动日报</div><div class="ben">SHENZHEN EVENTS DAILY</div></div></div>
-<div class="topact">
-<a class="btn" href="./">← 活动日报</a>
-<a class="btn" href="./#agent-sub">让你的 Agent 订阅</a>
-<a class="btn" href="https://hack123.henryht.sh" target="_blank" rel="noopener">数据来源：黑123 ↗</a>
-</div>
-</div>
-<h1 class="tagline">🛠 黑客松专题</h1>
-<p class="sub">正在报名的黑客松与创新大赛 · 大陆 / 香港 / 澳门 / 台湾线下为主，线上不限区域 · 每日更新</p>
-<p class="srcnote">📡 本专题数据来自 <a href="https://hack123.henryht.sh" target="_blank" rel="noopener">黑123 hack123.henryht.sh</a>（经其公开接口同步核实），报名与赛程以各比赛官方页为准。</p>
+<header><div class="wrap">
+<div class="brand"><span class="yat">YAT</span><h1>黑客松专题</h1></div>
+<div class="tagline"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新<br>数据来源 <b>黑123</b>（hack123.henryht.sh），经其公开接口同步核实 · 报名与赛程以各比赛官方页为准</div>
 <div class="stats">
 <div class="stat"><b id="st-total">–</b><span>报名中</span></div>
 <div class="stat"><b id="st-soon">–</b><span>72 小时内截止</span></div>
 <div class="stat"><b id="st-cn">–</b><span>大陆 + 港澳台线下</span></div>
 <div class="stat"><b id="st-upd">–</b><span>数据更新</span></div>
+</div>
+<div class="topact">
+<a class="submit" href="./">← 返回活动日报</a>
+<button class="agent" onclick="openModal()">🤖 用我的 Agent 订阅</button>
+<a class="mail" href="https://hack123.henryht.sh" target="_blank" rel="noopener">数据来源：黑123 ↗</a>
 </div>
 </div></header>
 <div class="wrap">
@@ -325,6 +321,19 @@ $("#regions").addEventListener("click",e=>{const b=e.target.closest("[data-r]");
 $("#q").addEventListener("input",render);
 $("#ftoggle").addEventListener("click",()=>{const g=$("#fgroups");g.classList.toggle("open");$("#ftoggle").setAttribute("aria-expanded",g.classList.contains("open"))});
 fetch("hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{DATA=d.hackathons||[];$("#st-upd").textContent=(d.updated_at||"").slice(5,10);render()}).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请稍后刷新</div>'});
+</script>
+<div class="ovl" id="ovl" onclick="if(event.target===this)closeModal()">
+<div class="modal">
+<div class="mhead"><h3>🤖 订阅黑客松专题</h3><button class="btn" onclick="closeModal()">✕ 关闭</button></div>
+<p class="prompt" id="subprompt">请订阅「YAT 黑客松专题」并给我报名提醒：数据源 https://yatstudio.github.io/shenzhen-events/hackathons.json（每天早上更新，无需登录）。每天读取一次，按我的技术方向和所在地区筛选；新出现且高度相关的黑客松当天告诉我；报名截止前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的比赛，提醒时附官方报名链接。</p>
+<div class="mrow"><button class="btn primary" onclick="copySub(this)">📋 复制这段话</button><button class="btn" onclick="closeModal()">关闭</button></div>
+</div>
+</div>
+<script>
+function openModal(){document.getElementById("ovl").classList.add("open")}
+function closeModal(){document.getElementById("ovl").classList.remove("open")}
+function copySub(b){if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById("subprompt").innerText).then(()=>{const t=b.textContent;b.textContent="已复制 ✓";setTimeout(()=>b.textContent=t,1500)})}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 </script>
 </body>
 </html>

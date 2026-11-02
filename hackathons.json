@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-02T08:20:00+08:00",
- "note": "黑客松专题：大陆+港澳台线下为主，线上不限区域；数据经黑123 MCP 核实，报名以官方页为准。",
+ "updated_at": "2026-11-02T11:00:00+08:00",
+ "note": "数据来源：黑123（hack123.henryht.sh）公开接口，每日同步核实；收录范围：报名未截止、大陆/港澳台线下与全部线上。",
  "hackathons": [
   {
    "title": "ARC Prize 2026",
@@ -18,7 +18,7 @@
    "url": "https://arcprize.org/",
    "detail_url": "https://hack123.henryht.sh/h/arc-prize-2026",
    "source": "黑123",
-   "summary": "一句话简介：ARC Prize 基金会（创始人 Mike Knoop、François Chollet）主办、与 Kaggle 合作的 AGI 基准竞赛：做在静态推理谜题（ARC-AGI-2）、交互式智能体游戏（ARC-"
+   "summary": "ARC Prize 基金会（创始人 Mike Knoop、François Chollet）主办、与 Kaggle 合作的 AGI 基准竞赛：做在静态推理谜题（ARC-AGI-2）、交互式智能体游戏（ARC-AGI-3）"
   },
   {
    "title": "Kane CLI Online Hackathon（TestMu AI，AI 编程智能体 + 自动验证）",
@@ -34,10 +34,29 @@
     "测试"
    ],
    "prize": "3,000 美元现金：第 1 名 1,500、第 2 名 1,000、第 3 名 500；获奖队另得与创始人 1 对 1 交流、3 个月 Kane CLI Pro 和官方博客专题",
-   "url": "https://luma.com/kanecli-online-hackathon",
+   "url": "https://www.testmuai.com/kane-cli/",
    "detail_url": "https://hack123.henryht.sh/h/kane-cli-online-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：TestMu AI（原 LambdaTest）办的一周线上黑客松：用任意 AI 编程智能体做一个能跑的 Web 应用，再用 Kane CLI 自动验证它，让「写代码的 AI」能检查自己的成果。 看点：Clau"
+   "summary": "TestMu AI（原 LambdaTest）办的一周线上黑客松：用任意 AI 编程智能体做一个能跑的 Web 应用，再用 Kane CLI 自动验证它，让「写代码的 AI」能检查自己的成果。 看点：Claude Cod"
+  },
+  {
+   "title": "Codex x TwitchCon Hackathon（用 OpenAI Codex 给 Twitch 直播做工具，2.5 万美元）",
+   "start": "2026-10-23",
+   "end": null,
+   "deadline": "2026-11-03",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI 编程",
+    "游戏",
+    "开发者工具"
+   ],
+   "prize": "2.5 万美元现金：第一名 1 万、第二名 6,000、第三名 4,000、优胜奖 2 名各 2,500；前 5 名在 TwitchCon 圣迭戈 Codex 展台登台展示",
+   "url": "https://twitchcon-codex.devpost.com/rules",
+   "detail_url": "https://hack123.henryht.sh/h/codex-twitchcon-hackathon-2026",
+   "source": "黑123",
+   "summary": "用 OpenAI Codex 给 Twitch 主播和观众做直播互动工具。 看点：弹幕游戏、实时投票、直播叠加层；必须接入 Twitch，提交代码、演示视频和 Codex 会话 ID 奖金：25000美元现金 截止日期："
   },
   {
    "title": "YouCam API 黑客松（美妆电商 AI）2026",
@@ -57,42 +76,21 @@
    "summary": "Perfect Corp 主办：用 YouCam API 构建护肤、美妆、时尚与电商的 AI 应用，虚拟试妆、肤质检测、电商虚拟试穿都可做。 看点：6,000 美元现金奖；线上全球；Devpost 已有 466 人报名；"
   },
   {
-   "title": "Codex x TwitchCon Hackathon（用 OpenAI Codex 给 Twitch 直播做工具，2.5 万美元）",
-   "start": "2026-10-23",
+   "title": "DevFest GDGoC Japan Hackathon 2026（Google 日本学生黑客松，用 Gemini 和 Google Cloud 六天做产品，决赛在 Google 涩谷）",
+   "start": "2026-11-05",
    "end": null,
-   "deadline": "2026-11-03",
+   "deadline": "2026-11-04",
    "city": "线上",
    "region": "线上",
-   "format": "线上",
-   "topics": [
-    "AI 编程",
-    "游戏",
-    "开发者工具"
-   ],
-   "prize": "2.5 万美元现金：第一名 1 万、第二名 6,000、第三名 4,000、优胜奖 2 名各 2,500；前 5 名在 TwitchCon 圣迭戈 Codex 展台登台展示",
-   "url": "https://twitchcon-codex.devpost.com/",
-   "detail_url": "https://hack123.henryht.sh/h/codex-twitchcon-hackathon-2026",
-   "source": "黑123",
-   "summary": "用 OpenAI Codex 给 Twitch 主播和观众做直播互动工具。 看点：弹幕游戏、实时投票、直播叠加层；必须接入 Twitch，提交代码、演示视频和 Codex 会话 ID 奖金：25000美元现金 截止日期："
-  },
-  {
-   "title": "第三届「兴智杯」全国人工智能创新应用大赛",
-   "start": "2026-08-31",
-   "end": null,
-   "deadline": "2026-11-05",
-   "city": "深圳",
-   "region": "大陆",
    "format": "线上+线下",
    "topics": [
-    "AI",
-    "Agent",
-    "具身智能"
+    "AI"
    ],
-   "prize": "各主题赛设一二三等奖，总决赛设一二三等奖及优胜奖；另有投资对接、落地政策支持、招聘绿色通道（官方未公布现金额）",
-   "url": "http://www.aiinnovation.com.cn/",
-   "detail_url": "https://hack123.henryht.sh/h/xingzhi-cup-ai-innovation-2026",
+   "prize": "无现金奖；冠军获 GDG DevFest Tokyo 闪电演讲席位，并有与 Google 实习 / 应届招聘相关的机会；4 队获 DevFest 展位；前 10 队有赴东京交通补助；全员发 Google Cloud 额度",
+   "url": "https://df-hack26.gdgs.jp/en",
+   "detail_url": "https://hack123.henryht.sh/h/devfest-gdgoc-japan-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：中国信通院、深圳市人工智能产业办公室、龙岗区政府联合主办的国家级 AI 赛事，第三届主题「兴智赋能，云创未来」，往届报名超 1.8 万人。 看点：技术创新（大模型智能体、小分子药物预测、Agent 机械臂）、"
+   "summary": "Google 开发者社区 GDG on Campus Japan 办的日本全国学生黑客松，六天用 Gemini 和 Google Cloud 把点子做成产品，决赛在 Google 涩谷办公室。 看点：11 月 1 日线上"
   },
   {
    "title": "Lexsi AI Safety and Alignment Hackathon（Cohere Labs × Hugging Face 安全对齐黑客松）",
@@ -111,7 +109,7 @@
    "url": "https://hackathon.lexsi.ai/",
    "detail_url": "https://hack123.henryht.sh/h/lexsi-ai-safety-alignment-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：Lexsi Labs 联合 Cohere Labs、Hugging Face 办的全球线上黑客松：用 Lexsi 开源的后训练、红队、安全修复与可解释性工具链，把 Cohere 的小型开源权重模型调得更好、更"
+   "summary": "Lexsi Labs 联合 Cohere Labs、Hugging Face 办的全球线上黑客松：用 Lexsi 开源的后训练、红队、安全修复与可解释性工具链，把 Cohere 的小型开源权重模型调得更好、更安全，并用前"
   },
   {
    "title": "开物黑客松·高校场（福州站）：33 小时开一家「AI 员工」公司（免费，80 队封顶）",
@@ -130,7 +128,64 @@
    "url": "https://www.huodongxing.com/event/9883938191800",
    "detail_url": "https://hack123.henryht.sh/h/kaiwu-hackathon-fuzhou-campus-2026",
    "source": "黑123",
-   "summary": "一句话简介：福州首场高校黑客松，33 小时里每队带着 AI 员工「开一家只活两天的公司」，评委拿投资额度而不是打分表。 看点：四条赛道——跑通一门小生意、做解决校园痛点的 Agent（唯一需要写代码的）、两天起号看真实数"
+   "summary": "福州首场高校黑客松，33 小时里每队带着 AI 员工「开一家只活两天的公司」，评委拿投资额度而不是打分表。 看点：四条赛道——跑通一门小生意、做解决校园痛点的 Agent（唯一需要写代码的）、两天起号看真实数据、把实验室"
+  },
+  {
+   "title": "第三届「兴智杯」全国人工智能创新应用大赛",
+   "start": "2026-08-31",
+   "end": null,
+   "deadline": "2026-11-05",
+   "city": "深圳",
+   "region": "大陆",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "Agent",
+    "具身智能"
+   ],
+   "prize": "各主题赛设一二三等奖，总决赛设一二三等奖及优胜奖；另有投资对接、落地政策支持、招聘绿色通道（官方未公布现金额）",
+   "url": "http://www.aiinnovation.com.cn/",
+   "detail_url": "https://hack123.henryht.sh/h/xingzhi-cup-ai-innovation-2026",
+   "source": "黑123",
+   "summary": "中国信通院、深圳市人工智能产业办公室、龙岗区政府联合主办的国家级 AI 赛事，第三届主题「兴智赋能，云创未来」，往届报名超 1.8 万人。 看点：技术创新（大模型智能体、小分子药物预测、Agent 机械臂）、行业赋能（工"
+  },
+  {
+   "title": "2026 永續智慧創新黑客松",
+   "start": "2026-12-13",
+   "end": null,
+   "deadline": "2026-11-06",
+   "city": "台中",
+   "region": "台湾",
+   "format": "线上+线下",
+   "topics": [
+    "创业",
+    "教育",
+    "能源"
+   ],
+   "prize": "每一命题前三名新台币 15,000 / 12,000 / 10,000 元",
+   "url": "https://sustainabilityhackathon-tw.org/",
+   "detail_url": "https://hack123.henryht.sh/h/sustainability-hackathon-tw-2026",
+   "source": "黑123",
+   "summary": "面向台湾与日本大专院校在学学生的永续主题企业命题黑客松，线上提交提案后，晋级队伍于 12月13日在台中中国医药大学水湳校区现场决赛。 看点：企业命题＋工作坊／讲座；每队 2—7 人，可跨校跨系；初赛交提案计划书与在学证明"
+  },
+  {
+   "title": "Cardif InsurHack 第四届法国巴黎人寿校园黑客松",
+   "start": "2027-01-19",
+   "end": null,
+   "deadline": "2026-11-06",
+   "city": "台北",
+   "region": "台湾",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "保险科技",
+    "金融科技"
+   ],
+   "prize": "金奖 70,000 新台币，银奖 50,000 新台币，铜奖 30,000 新台币；总奖金 150,000 新台币现金",
+   "url": "https://contest.bhuntr.com/tw/2026_cardif_insurhack/",
+   "detail_url": "https://hack123.henryht.sh/h/cardif-insurhack-2026",
+   "source": "黑123",
+   "summary": "法国巴黎人寿台湾分公司主办的第四届校园黑客松商业竞赛，面向全台大专院校与硕士班学生，把保险业真实营运场景做成 AI 原型实作挑战赛 看点：1—5 人组队、可跨校，每队另可设 1 名指导老师；四阶段赛制：初赛缴 20 页企"
   },
   {
    "title": "Founding.dev 设计黑客松 2026",
@@ -148,7 +203,7 @@
    "url": "https://www.founding.dev/hackathon/design",
    "detail_url": "https://hack123.henryht.sh/h/founding-dev-design-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：Founding.dev 主办的线上设计黑客松，面向 18 岁以上参赛者，用其落地页搭建器设计并发布一个任意主题的落地页，无需写代码。 看点：单人或 2 人组队；名额有限、需审核，审核通过者开赛前收到邮件确认"
+   "summary": "Founding.dev 主办的线上设计黑客松，面向 18 岁以上参赛者，用其落地页搭建器设计并发布一个任意主题的落地页，无需写代码。 看点：单人或 2 人组队；名额有限、需审核，审核通过者开赛前收到邮件确认并获 10 "
   },
   {
    "title": "JUNCTION CHINA 2026（北京中关村，40+ 小时，AI / 具身机器人 / 智能穿戴三赛道）",
@@ -168,7 +223,7 @@
    "url": "https://hackjunction.cn/",
    "detail_url": "https://hack123.henryht.sh/h/junction-china-2026",
    "source": "黑123",
-   "summary": "一句话简介：芬兰黑客松品牌 Junction 的北京站，40 多小时半封闭开发，三家企业各出一条赛道。 看点：小米 MiMo 的 AI 与 Agent 赛道、银河通用的具身智能机器人赛道、亮亮视野的智能眼镜与穿戴赛道；单"
+   "summary": "芬兰黑客松品牌 Junction 的北京站，40 多小时半封闭开发，三家企业各出一条赛道。 看点：小米 MiMo 的 AI 与 Agent 赛道、银河通用的具身智能机器人赛道、亮亮视野的智能眼镜与穿戴赛道；单人或最多 5"
   },
   {
    "title": "MLH × Solana Hackathon（线上周末黑客松，不懂区块链也能参加）",
@@ -186,7 +241,22 @@
    "url": "https://events.mlh.com/events/15200-solana-hackathon",
    "detail_url": "https://hack123.henryht.sh/h/mlh-solana-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：MLH 和 Solana 合办的线上周末黑客松，用 Solana 做支付、游戏、消费应用或链上 AI Agent，没写过区块链也欢迎。 看点：免费参加；官方给快速上手指南、一键安装脚本、开发模板和给 AI A"
+   "summary": "MLH 和 Solana 合办的线上周末黑客松，用 Solana 做支付、游戏、消费应用或链上 AI Agent，没写过区块链也欢迎。 看点：免费参加；官方给快速上手指南、一键安装脚本、开发模板和给 AI Agent 用"
+  },
+  {
+   "title": "Netcompany 雅典黑客松 2026",
+   "start": "2026-11-12",
+   "end": null,
+   "deadline": "2026-11-06",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [],
+   "prize": "6,000 欧元现金：第一名 3,000 欧元、第二名 2,000 欧元、第三名 1,000 欧元；获奖团队另获 Netcompany 职业 workshop。",
+   "url": "https://netcompany.com/hackathon-athens-2026/",
+   "detail_url": "https://hack123.henryht.sh/h/netcompany-hackathon-athens-2026",
+   "source": "黑123",
+   "summary": "Netcompany 与雅典多所高校合作举办的学生黑客松，面向雅典六所高校在读学生，用两周时间解决真实世界挑战。 看点：个人或最多 5 人组队；仅限雅典经济商业大学、雅典国立技术大学、雅典大学、比雷埃夫斯大学、哈罗科皮奥"
   },
   {
    "title": "PANDA JAM · 2026 成都科幻周游戏创作大赛（科幻主题 Game Jam，100 个席位）",
@@ -204,7 +274,7 @@
    "url": "https://vcn8j0q2otr0.feishu.cn/share/base/form/shrcnCQGlKA7hEuiytuiDjzL8Zc",
    "detail_url": "https://hack123.henryht.sh/h/panda-jam-chengdu-scifi-week-2026",
    "source": "黑123",
-   "summary": "一句话简介：2026 成都科幻周的科幻主题 Game Jam，现场揭题，一个周末和队友做出能试玩的科幻游戏。 看点：11 月 6 日 18:30 现场揭题，作品必须带科幻元素；交 Windows 可运行游戏包、3 张截图"
+   "summary": "2026 成都科幻周的科幻主题 Game Jam，现场揭题，一个周末和队友做出能试玩的科幻游戏。 看点：11 月 6 日 18:30 现场揭题，作品必须带科幻元素；交 Windows 可运行游戏包、3 张截图和 100 "
   },
   {
    "title": "昇腾 AI 行业创新大赛·2026 电力行业算子专场（华为 × 南方电网，广州决赛）",
@@ -225,42 +295,40 @@
    "summary": "从真实电力问题出发，把算子做得更快、更高效。 看点：华为×南方电网等；1—3人；CANN9.0与910B；可申请云算力 奖金：选手共18万元含税现金，另3万元导师奖 截止日期：11月6日12:00（北京时间；线上预赛，1"
   },
   {
-   "title": "2026 永續智慧創新黑客松",
-   "start": "2026-12-13",
+   "title": "DevDay Exchange Community Hack Day：台中（OpenAI Codex 社区一日黑客松，前三名每人一年 ChatGPT Pro）",
+   "start": "2026-11-07",
    "end": null,
-   "deadline": "2026-11-06",
+   "deadline": "2026-11-07",
    "city": "台中",
    "region": "台湾",
-   "format": "线上+线下",
+   "format": "线下",
    "topics": [
-    "创业",
-    "教育",
-    "能源"
+    "AI 编程"
    ],
-   "prize": "每一命题前三名新台币 15,000 / 12,000 / 10,000 元",
-   "url": "https://sustainabilityhackathon-tw.org/",
-   "detail_url": "https://hack123.henryht.sh/h/sustainability-hackathon-tw-2026",
+   "prize": "无现金奖；前三名团队每位经核准的成员获一年 ChatGPT Pro 订阅，另有 API 额度",
+   "url": "https://luma.com/8al1pfmi",
+   "detail_url": "https://hack123.henryht.sh/h/openai-codex-hack-day-taichung-2026",
    "source": "黑123",
-   "summary": "一句话简介：面向台湾与日本大专院校在学学生的永续主题企业命题黑客松，线上提交提案后，晋级队伍于 12月13日在台中中国医药大学水湳校区现场决赛。 看点：企业命题＋工作坊／讲座；每队 2—7 人，可跨校跨系；初赛交提案计划"
+   "summary": "OpenAI Codex 台中社区大使 Harry Ng 办的一日黑客松，属于 OpenAI DevDay Exchange 社区活动，用 Codex 和 OpenAI 工具把点子做成能操作的作品（社区发起的非官方活动）"
   },
   {
-   "title": "Cardif InsurHack 第四届法国巴黎人寿校园黑客松",
-   "start": "2027-01-19",
+   "title": "MakeUC 2026（辛辛那提大学 IEEE 24 小时黑客松，线上线下同步）",
+   "start": "2026-11-07",
    "end": null,
-   "deadline": "2026-11-06",
-   "city": "台北",
-   "region": "台湾",
+   "deadline": "2026-11-07",
+   "city": "线上",
+   "region": "线上",
    "format": "线上+线下",
    "topics": [
-    "AI",
-    "保险科技",
-    "金融科技"
+    "学生赛",
+    "硬件",
+    "教育"
    ],
-   "prize": "金奖 70,000 新台币，银奖 50,000 新台币，铜奖 30,000 新台币；总奖金 150,000 新台币现金",
-   "url": "https://contest.bhuntr.com/tw/2026_cardif_insurhack/",
-   "detail_url": "https://hack123.henryht.sh/h/cardif-insurhack-2026",
+   "prize": "设赛道奖和赞助商奖（今年金额官网未公布，往届奖品总值数万美元）；免费参加，提供赞助商 API 和工具资源",
+   "url": "https://makeuc.io/",
+   "detail_url": "https://hack123.henryht.sh/h/makeuc-2026",
    "source": "黑123",
-   "summary": "一句话简介：法国巴黎人寿台湾分公司主办的第四届校园黑客松商业竞赛，面向全台大专院校与硕士班学生，把保险业真实营运场景做成 AI 原型实作挑战赛 看点：1—5 人组队、可跨校，每队另可设 1 名指导老师；四阶段赛制：初赛缴"
+   "summary": "辛辛那提大学 IEEE 学生分会办的 24 小时黑客松，线下（辛辛那提）和线上同步进行，新手友好。 看点：四个赛道——硬件（用单片机、传感器、执行器做出能演示的原型）、教育、社会议题、安全，不选赛道也能得奖；高中生年满 "
   },
   {
    "title": "MindPulse「STORY: ON」AIGC 创作黑客松（北京，36 小时，短片 / 游戏 / 商业创意）",
@@ -279,43 +347,26 @@
    "url": "https://mp.weixin.qq.com/s/dPDE9bTUH_Vxb8KIlzPmDA",
    "detail_url": "https://hack123.henryht.sh/h/mindpulse-story-on-aigc-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：北大、清华、人大、中传学生社团发起的 AIGC 创作黑客松，在北京现场 36 小时，用 AI 做短片、小游戏或品牌创意。 看点：三条赛道——叙事影像（AI 短片、AI 编剧、AI MV）、互动游戏（AI 游戏"
+   "summary": "北大、清华、人大、中传学生社团发起的 AIGC 创作黑客松，在北京现场 36 小时，用 AI 做短片、小游戏或品牌创意。 看点：三条赛道——叙事影像（AI 短片、AI 编剧、AI MV）、互动游戏（AI 游戏、互动体验）"
   },
   {
-   "title": "DevDay Exchange Community Hack Day：台中（OpenAI Codex 社区一日黑客松，前三名每人一年 ChatGPT Pro）",
-   "start": "2026-11-07",
-   "end": null,
-   "deadline": "2026-11-07",
-   "city": "台中",
-   "region": "台湾",
-   "format": "线下",
-   "topics": [
-    "AI 编程"
-   ],
-   "prize": "无现金奖；前三名团队每位经核准的成员获一年 ChatGPT Pro 订阅，另有 API 额度",
-   "url": "https://luma.com/8al1pfmi",
-   "detail_url": "https://hack123.henryht.sh/h/openai-codex-hack-day-taichung-2026",
-   "source": "黑123",
-   "summary": "一句话简介：OpenAI Codex 台中社区大使 Harry Ng 办的一日黑客松，属于 OpenAI DevDay Exchange 社区活动，用 Codex 和 OpenAI 工具把点子做成能操作的作品（社区发起的"
-  },
-  {
-   "title": "华硕 A+青年 Creator Lab 大学生 AI 共创黑客松（线上预赛 + 上海 48 小时决赛，10 万奖池）",
-   "start": "2026-10-24",
+   "title": "BoHack 2026 天津青年黑客松「日新 Renew」（42 小时，做会自我进化的智能，免费）",
+   "start": "2026-11-13",
    "end": null,
    "deadline": "2026-11-08",
-   "city": "上海",
+   "city": "天津",
    "region": "大陆",
-   "format": "线上+线下",
+   "format": "线下",
    "topics": [
     "AI",
-    "AI 编程",
-    "教育"
+    "Agent",
+    "机器人"
    ],
-   "prize": "金奖 2 万、银奖 1 万、铜奖 5,000 元，5 个单项奖各 3,000 元，海选 50 强每队 1,000 元，合计 10 万元",
-   "url": "https://mp.weixin.qq.com/s/A34fmiXT1iqKuuOKd7iRdA",
-   "detail_url": "https://hack123.henryht.sh/h/asus-a-plus-creator-lab-2026",
+   "prize": "设奖金，金额未公布；参赛免费，提供部分交通补助",
+   "url": "https://bohack.top/",
+   "detail_url": "https://hack123.henryht.sh/h/bohack-2026",
    "source": "黑123",
-   "summary": "一句话简介：华硕 A+青年面向全国大学生的 AI 共创赛，先线上交方案和演示视频，入围后到上海 48 小时集中开发。 看点：从专业学习、校园生活、求职、内容创作、社交协作等真实痛点出发，做网页、App 或桌面端产品；复旦"
+   "summary": "天津高校学生团队办的第三届 BoHack，42 小时做出「会自我进化」的作品——现场跑两次，第二次要比第一次更好。 看点：主题「日新 Renew」，方向举例有自适应学习、个性化健康、推理加速、会自我纠错的 Agent、示"
   },
   {
    "title": "Flip the Switch Hackathon（把 AI 编程 Agent 接进团队群聊，1 万美元）",
@@ -337,6 +388,80 @@
    "summary": "把 Codex、Claude Code 等 Agent 接进团队群聊，让人和 Agent 一起完成任务。 看点：个人或最多4人；Switch 必须是核心，可接 Slack、Teams、Discord 等 奖金：10000"
   },
   {
+   "title": "Swarm Alignment Hackathon（Apart Research × AI Alignment Foundation 多智能体对齐黑客松）",
+   "start": "2026-11-06",
+   "end": null,
+   "deadline": "2026-11-08",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "多智能体",
+    "AI 安全",
+    "Agent"
+   ],
+   "prize": "共 8,000 美元：全球线上赛 4,000 美元 + 洛杉矶线下场另设 4,000 美元（同一项目可两边都拿）",
+   "url": "https://www.aialignmentfoundation.org/hackathons/swarm-alignment-2026",
+   "detail_url": "https://hack123.henryht.sh/h/swarm-alignment-hackathon-2026",
+   "source": "黑123",
+   "summary": "Apart Research 和 AI Alignment Foundation 联合 AE Studio 办的 3 天对齐研究冲刺，研究一群 AI 智能体为什么会合作、合谋或偏离任务。 看点：起因是 2026 年 7 "
+  },
+  {
+   "title": "Vultr: Agent Rush Hackathon（混合赛，9,000 美元现金）",
+   "start": "2026-11-03",
+   "end": null,
+   "deadline": "2026-11-08",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI 智能体",
+    "云计算"
+   ],
+   "prize": "9000美元现金，另5000美元云额度",
+   "url": "https://lablab.ai/ai-hackathons/vultr-hackathon",
+   "detail_url": "https://hack123.henryht.sh/h/vultr-agent-rush-hackathon-2026",
+   "source": "黑123",
+   "summary": "让Agent在沙盒里执行代码、操作浏览器，或做能跑通的企业多步工作流。 看点：全球线上、1—6人；须部署Vultr VM后端，交公开代码、应用链接和演示视频 奖金：9000美元现金，另5000美元云额度 活动日期：11月"
+  },
+  {
+   "title": "华硕 A+青年 Creator Lab 大学生 AI 共创黑客松（线上预赛 + 上海 48 小时决赛，10 万奖池）",
+   "start": "2026-10-24",
+   "end": null,
+   "deadline": "2026-11-08",
+   "city": "上海",
+   "region": "大陆",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "AI 编程",
+    "教育"
+   ],
+   "prize": "金奖 2 万、银奖 1 万、铜奖 5,000 元，5 个单项奖各 3,000 元，海选 50 强每队 1,000 元，合计 10 万元",
+   "url": "https://mp.weixin.qq.com/s/A34fmiXT1iqKuuOKd7iRdA",
+   "detail_url": "https://hack123.henryht.sh/h/asus-a-plus-creator-lab-2026",
+   "source": "黑123",
+   "summary": "华硕 A+青年面向全国大学生的 AI 共创赛，先线上交方案和演示视频，入围后到上海 48 小时集中开发。 看点：从专业学习、校园生活、求职、内容创作、社交协作等真实痛点出发，做网页、App 或桌面端产品；复旦 AI 导师"
+  },
+  {
+   "title": "Agent-Native 黑客松（Builder.io，做有界面的 AI Agent 应用，线上，1 万美元）",
+   "start": "2026-10-27",
+   "end": null,
+   "deadline": "2026-11-09",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "AI 编程"
+   ],
+   "prize": "共 1 万美元现金：第一 5,000、第二 2,500、第三 1,500、第四 750、第五 250 美元，另有 Builder 官方渠道曝光",
+   "url": "https://www.builder.io/hackathon",
+   "detail_url": "https://hack123.henryht.sh/h/agent-native-hackathon-builderio-2026",
+   "source": "黑123",
+   "summary": "Builder.io 办的两周线上黑客松，用开源框架 Agent-Native 做一个「人和 Agent 一起干活」的应用——Agent 有明确的活，用户有界面能查看、修改、指挥它的结果。 看点：不用报名，10 月 27"
+  },
+  {
    "title": "Agents on Open Rails 黑客松（Celo，做能在主网真实收付款的 AI Agent，线上，5,000 美元）",
    "start": "2026-10-06",
    "end": null,
@@ -352,7 +477,7 @@
    "url": "https://www.loops.house/agents-on-open-rails",
    "detail_url": "https://hack123.henryht.sh/h/celo-agents-on-open-rails-2026",
    "source": "黑123",
-   "summary": "一句话简介：Celo 在 Loops House 上办的五周线上黑客松，做能在 Celo 主网上自己收钱、付钱、结算的 AI Agent。 看点：三条赛道——拉美本币稳定币（Ripio 的 wARS、wBRL、wMXN "
+   "summary": "Celo 在 Loops House 上办的五周线上黑客松，做能在 Celo 主网上自己收钱、付钱、结算的 AI Agent。 看点：三条赛道——拉美本币稳定币（Ripio 的 wARS、wBRL、wMXN 等）、跨币种"
   },
   {
    "title": "Learn AR with SPECS（Snap × Devpost 线上 AR 眼镜黑客松）",
@@ -373,44 +498,63 @@
    "url": "https://learn-specs.devpost.com/",
    "detail_url": "https://hack123.henryht.sh/h/learn-ar-with-specs-2026",
    "source": "黑123",
-   "summary": "一句话简介：Devpost 联合 Snap 举办的线上 AR 学习型黑客松，面向想为 Snap AR 眼镜 SPECS 设计应用的设计师和开发者，核心玩法是用 AI 编程助手替你动手写 Lens Studio 的 Len"
+   "summary": "Devpost 联合 Snap 举办的线上 AR 学习型黑客松，面向想为 Snap AR 眼镜 SPECS 设计应用的设计师和开发者，核心玩法是用 AI 编程助手替你动手写 Lens Studio 的 Lens。 看点："
   },
   {
-   "title": "Agent-Native 黑客松（Builder.io，做有界面的 AI Agent 应用，线上，1 万美元）",
-   "start": "2026-10-27",
+   "title": "2026 首届珠海人工智能 OPC 创业大赛",
+   "start": null,
    "end": null,
-   "deadline": "2026-11-09",
-   "city": "线上",
-   "region": "线上",
-   "format": "线上",
+   "deadline": "2026-11-10",
+   "city": "珠海",
+   "region": "大陆",
+   "format": "线上+线下",
    "topics": [
+    "创业",
     "Agent",
-    "AI 编程"
+    "AIGC"
    ],
-   "prize": "共 1 万美元现金：第一 5,000、第二 2,500、第三 1,500、第四 750、第五 250 美元，另有 Builder 官方渠道曝光",
-   "url": "https://www.builder.io/hackathon",
-   "detail_url": "https://hack123.henryht.sh/h/agent-native-hackathon-builderio-2026",
+   "prize": "高校组与社会组各设一/二/三等奖；已在珠海注册企业一等奖 6 万、二等奖 4 万、三等奖 2 万（两组合计现金资助约 40 万元）；未注册项目分段资助；另有场地孵化、算力券/模型券、创业担保贷款等",
+   "url": "https://zhrsj.zhuhai.gov.cn/gkmlpt/content/3/3944/post_3944618.html",
+   "detail_url": "https://hack123.henryht.sh/h/zhuhai-ai-opc-startup-2026",
    "source": "黑123",
-   "summary": "一句话简介：Builder.io 办的两周线上黑客松，用开源框架 Agent-Native 做一个「人和 Agent 一起干活」的应用——Agent 有明确的活，用户有界面能查看、修改、指挥它的结果。 看点：不用报名，1"
+   "summary": "珠海市人力资源和社会保障局主办的首届人工智能一人公司（OPC）创业大赛，设高校组与社会组，聚焦 AI 硬件、AI 软件与智能体、AIGC 三大方向，鼓励以轻量化 OPC 模式在珠海创业落地。 看点：不限户籍地域；每项目不"
   },
   {
-   "title": "Spark-X2.5 端侧模型创新挑战赛（科大讯飞 iFLYTEK AI 开发者大赛·词元星火）",
-   "start": "2026-09-11",
+   "title": "Clocked Build Challenge 2026",
+   "start": "2026-10-21",
    "end": null,
    "deadline": "2026-11-10",
    "city": "线上",
    "region": "线上",
    "format": "线上",
    "topics": [
-    "端侧 AI",
-    "AI应用",
-    "开源"
+    "智能体",
+    "API开发"
    ],
-   "prize": "总奖金 10 万元（税前）：一等奖 2.5 万 ×1、二等奖 1.5 万 ×3、三等奖 5,000 ×6；获奖选手有机会进星火基模团队实习",
-   "url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
-   "detail_url": "https://hack123.henryht.sh/h/spark-x25-edge-model-challenge-2026",
+   "prize": "2,000 美元现金，共 5 个奖项：最佳整体作品 600 美元、最佳商业应用 400 美元、最具原创性 400 美元、最佳开发者体验 400 美元、人气奖 200 美元",
+   "url": "https://clocked.rezolve.ai/challenge",
+   "detail_url": "https://hack123.henryht.sh/h/clocked-build-challenge-2026",
    "source": "黑123",
-   "summary": "一句话简介：科大讯飞 2026 iFLYTEK AI 开发者大赛里的应用赛，由讯飞旗下词元星火主办：用刚开源的端侧模型 Spark-X2.5（4B / 1.7B）做一个能在手机、电脑、开发板、机器人、可穿戴或车载设备上真"
+   "summary": "Rezolve.ai 旗下 Clocked 主办的三周线上黑客松，用 Clocked API（决策、提取与结构化输出）构建智能应用，面向全球 18 岁以上开发者。 看点：个人或最多 4 人组队参赛；作品须为赛期内新作并使"
+  },
+  {
+   "title": "MEME.ZKWASM() 黑客松（10 万 USDT 奖池）",
+   "start": "2026-10-15",
+   "end": null,
+   "deadline": "2026-11-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "全链游戏",
+    "zkWASM",
+    "Meme"
+   ],
+   "prize": "100,000 USDT（官方 BeWater 页面口径）",
+   "url": "https://build.bewater.pro/en/campaigns/wK6i-MEMEZKWASM-Hackathon",
+   "detail_url": "https://hack123.henryht.sh/h/meme-zkwasm-hackathon-2026",
+   "source": "黑123",
+   "summary": "Delphinus Lab 联合 BeWater 与 SevenX Ventures 举办的混合黑客松，主题「Little Dolphin's Adventure」，用 zkWASM 技术做全链游戏与 Meme 创作。 "
   },
   {
    "title": "MINMAX 粤港澳大湾区创客 AI Agent 黑客松挑战赛（不设赛道，11 月下旬广州 Agent Show）",
@@ -429,25 +573,44 @@
    "url": "https://www.gba-base.com/",
    "detail_url": "https://hack123.henryht.sh/h/minmax-gba-ai-agent-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：粤港澳大湾区创新创业孵化基地办的 AI Agent 挑战赛，不设赛道，用 Agent、AI 编程或低代码把一个真实痛点做成能用的产品。 看点：不限行业和岗位，文科生、设计师、产品经理都能报；可用 Codex、"
+   "summary": "粤港澳大湾区创新创业孵化基地办的 AI Agent 挑战赛，不设赛道，用 Agent、AI 编程或低代码把一个真实痛点做成能用的产品。 看点：不限行业和岗位，文科生、设计师、产品经理都能报；可用 Codex、WorkBu"
   },
   {
-   "title": "中国独立游戏节 · 零代码 AI 游戏创作大赛（灵珠 AI，线上，冠军 iPhone 18 Pro）",
-   "start": "2026-10-10",
+   "title": "Spark-X2.5 端侧模型创新挑战赛（科大讯飞 iFLYTEK AI 开发者大赛·词元星火）",
+   "start": "2026-09-11",
    "end": null,
    "deadline": "2026-11-10",
    "city": "线上",
    "region": "线上",
    "format": "线上",
    "topics": [
-    "游戏",
-    "AIGC"
+    "端侧 AI",
+    "AI应用",
+    "开源"
    ],
-   "prize": "冠军 iPhone 18 Pro + 特级宣发资源，亚军 iPad Air，季军 Apple Watch；4—10 名 800 元灵珠卡；另有四个专项奖；新增「收益榜」按广告收益给前 50 名现金奖励，第一名 3,000 元",
-   "url": "https://www.lzhu.cn/activity/2026/china-good-game/index.html",
-   "detail_url": "https://hack123.henryht.sh/h/lingzhu-china-indie-game-festival-2026",
+   "prize": "总奖金 10 万元（税前）：一等奖 2.5 万 ×1、二等奖 1.5 万 ×3、三等奖 5,000 ×6；获奖选手有机会进星火基模团队实习",
+   "url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
+   "detail_url": "https://hack123.henryht.sh/h/spark-x25-edge-model-challenge-2026",
    "source": "黑123",
-   "summary": "一句话简介：灵珠 AI 主办的零代码 AI 游戏创作大赛，用说话的方式把玩法、故事和画面描述给灵珠的游戏智能体「魔丸」，生成可玩的游戏并发布参赛。 看点：不用写代码，新用户送 2,000 积分、每天再领 500 积分；每"
+   "summary": "科大讯飞 2026 iFLYTEK AI 开发者大赛里的应用赛，由讯飞旗下词元星火主办：用刚开源的端侧模型 Spark-X2.5（4B / 1.7B）做一个能在手机、电脑、开发板、机器人、可穿戴或车载设备上真跑起来的应用"
+  },
+  {
+   "title": "Tech4Bharat 2026（GAVS 全国学生黑客松，印度，4 人一队，150 万卢比）",
+   "start": "2026-10-12",
+   "end": null,
+   "deadline": "2026-11-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Agent",
+    "创业"
+   ],
+   "prize": "总奖池 150 万卢比：总冠军 30 万卢比；8 个主题各设第一 10 万、第二 5 万卢比；另有孵化、云额度和投资人辅导",
+   "url": "https://www.thegavshackathon.com/",
+   "detail_url": "https://hack123.henryht.sh/h/tech4bharat-gavs-hackathon-2026",
+   "source": "黑123",
+   "summary": "印度 Global Accelerators Vision Summit（GAVS 2026）的全国学生黑客松，4 人一队选一道真实命题，线上初赛做方案和原型，入围后到班加罗尔宫现场答辩。 看点：Karnataka Ar"
   },
   {
    "title": "Total Recall 黑客松（Walrus × Tatum，给应用和 Agent 加上链上长期记忆，线上，4,500 美元）",
@@ -465,7 +628,25 @@
    "url": "https://tatum.io/hackathon/total-recall",
    "detail_url": "https://hack123.henryht.sh/h/walrus-tatum-total-recall-2026",
    "source": "黑123",
-   "summary": "一句话简介：Walrus 基金会和 Tatum 合办的三周线上黑客松，用 Sui 主网上的 Walrus Memory 给应用或 Agent 加上能跨会话保留的长期记忆。 看点：三条赛道——赛事和市场预测、生活里的智能 "
+   "summary": "Walrus 基金会和 Tatum 合办的三周线上黑客松，用 Sui 主网上的 Walrus Memory 给应用或 Agent 加上能跨会话保留的长期记忆。 看点：三条赛道——赛事和市场预测、生活里的智能 Agent（"
+  },
+  {
+   "title": "中国独立游戏节 · 零代码 AI 游戏创作大赛（灵珠 AI，线上，冠军 iPhone 18 Pro）",
+   "start": "2026-10-10",
+   "end": null,
+   "deadline": "2026-11-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "游戏",
+    "AIGC"
+   ],
+   "prize": "冠军 iPhone 18 Pro + 特级宣发资源，亚军 iPad Air，季军 Apple Watch；4—10 名 800 元灵珠卡；另有四个专项奖；新增「收益榜」按广告收益给前 50 名现金奖励，第一名 3,000 元",
+   "url": "https://www.lzhu.cn/activity/2026/china-good-game/index.html",
+   "detail_url": "https://hack123.henryht.sh/h/lingzhu-china-indie-game-festival-2026",
+   "source": "黑123",
+   "summary": "灵珠 AI 主办的零代码 AI 游戏创作大赛，用说话的方式把玩法、故事和画面描述给灵珠的游戏智能体「魔丸」，生成可玩的游戏并发布参赛。 看点：不用写代码，新用户送 2,000 积分、每天再领 500 积分；每人选一款新发"
   },
   {
    "title": "怀柔科学城 AI for Science·OPC 48小时黑客松 2026",
@@ -487,6 +668,24 @@
    "summary": "2026怀柔科学城 AI for Science·OPC创新挑战赛的48小时黑客松赛道，在北京怀柔科学城线下举行。 由北京怀柔科学城管委会指导，北京怀柔科学城发展集团有限公司、北京嵌入式系统技术行业协会、北京交叉科学学会"
   },
   {
+   "title": "DataNova 2026 Global Data-thon（线上数据科学 / AI 挑战赛，1,750 美元）",
+   "start": "2026-11-11",
+   "end": null,
+   "deadline": "2026-11-11",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "数据",
+    "AI"
+   ],
+   "prize": "现金共 1,750 美元：第一名 1,000、第二名 500、第三名 250 美元",
+   "url": "https://datanova-2026-global-data-thon.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/datanova-2026-global-data-thon",
+   "source": "黑123",
+   "summary": "全线上的国际数据马拉松，学生团队用数据科学、机器学习和 AI 解决一个真实问题。 看点：九个开放赛道，覆盖生成式与负责任 AI、数据工程与 BI、反欺诈、医疗、可持续和运筹决策等；评分看问题定义、方法、原创性、可行性和影"
+  },
+  {
    "title": "MatrixNext 2026 企业智能体黑客松（矩阵起源等，报关单 / 采购 / 工业图纸命题，上海复兴岛决赛）",
    "start": "2026-10-12",
    "end": null,
@@ -502,7 +701,7 @@
    "url": "https://matrixorigin.cn/matrixnext",
    "detail_url": "https://hack123.henryht.sh/h/matrixnext-2026",
    "source": "黑123",
-   "summary": "一句话简介：矩阵起源联合汉得信息等办的企业智能体黑客松，用真实业务命题做 Agent，Top20 到上海复兴岛线下决赛。 看点：命题赛道来自报关单、采购寻源、询价、工业图纸等企业场景，也可走创意赛道；1—5 人一队；11"
+   "summary": "矩阵起源联合汉得信息等办的企业智能体黑客松，用真实业务命题做 Agent，Top20 到上海复兴岛线下决赛。 看点：命题赛道来自报关单、采购寻源、询价、工业图纸等企业场景，也可走创意赛道；1—5 人一队；11 月 11 "
   },
   {
    "title": "MozFest Developers Wilding: Online（Mozilla 线上黑客松，用 Mozilla.ai 开源平台 Otari 把搁置的项目做完）",
@@ -521,25 +720,7 @@
    "url": "https://x.com/mozilla/status/2114735082904678799",
    "detail_url": "https://hack123.henryht.sh/h/mozfest-developers-wilding-online-2026",
    "source": "黑123",
-   "summary": "一句话简介：Mozilla 配合 MozFest 巴塞罗那办的两周线上黑客松，主题是「把你搁置的业余项目做完」，要求用 Mozilla.ai 的开源 AI 网关 Otari。 看点：Otari 可以自选模型（含开源权重模"
-  },
-  {
-   "title": "DataNova 2026 Global Data-thon（线上数据科学 / AI 挑战赛，1,750 美元）",
-   "start": "2026-11-11",
-   "end": null,
-   "deadline": "2026-11-11",
-   "city": "线上",
-   "region": "线上",
-   "format": "线上",
-   "topics": [
-    "数据",
-    "AI"
-   ],
-   "prize": "现金共 1,750 美元：第一名 1,000、第二名 500、第三名 250 美元",
-   "url": "https://datanova-2026-global-data-thon.devpost.com/",
-   "detail_url": "https://hack123.henryht.sh/h/datanova-2026-global-data-thon",
-   "source": "黑123",
-   "summary": "一句话简介：全线上的国际数据马拉松，学生团队用数据科学、机器学习和 AI 解决一个真实问题。 看点：九个开放赛道，覆盖生成式与负责任 AI、数据工程与 BI、反欺诈、医疗、可持续和运筹决策等；评分看问题定义、方法、原创性"
+   "summary": "Mozilla 配合 MozFest 巴塞罗那办的两周线上黑客松，主题是「把你搁置的业余项目做完」，要求用 Mozilla.ai 的开源 AI 网关 Otari。 看点：Otari 可以自选模型（含开源权重模型），自带代"
   },
   {
    "title": "c0mpiled-18：YC Startup School 黑客松·台北站",
@@ -557,7 +738,7 @@
    "url": "https://luma.com/compiled-poy7",
    "detail_url": "https://hack123.henryht.sh/h/c0mpiled-18-taipei-2026",
    "source": "黑123",
-   "summary": "一句话简介：Transpose Platform 主办的 c0mpiled 系列黑客松首次来到台湾，恰逢首届 YC Startup School 亚洲站，面向工程师、设计师、研究者与早期创业者，用一天时间围绕 Y Com"
+   "summary": "Transpose Platform 主办的 c0mpiled 系列黑客松首次来到台湾，恰逢首届 YC Startup School 亚洲站，面向工程师、设计师、研究者与早期创业者，用一天时间围绕 Y Combinato"
   },
   {
    "title": "清华FRCBS Protein Design Competition 2026",
@@ -579,22 +760,166 @@
    "summary": "设计能激活NK2R受体的纳米抗体，入选后由主办方合成并做活性实验。 看点：每人交3条独立序列，鼓励团队；按实际激动活性排名 奖金：84000元现金，最高35000元 截止日期：11月11日末报名及序列提交（北京时间，线上"
   },
   {
-   "title": "PayPal AI Hackathon 2026",
-   "start": "2026-10-03",
+   "title": "#AI4Elections 尼日利亚选举创新黑客松",
+   "start": "2026-11-18",
+   "end": null,
+   "deadline": "2026-11-12",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "选举"
+   ],
+   "prize": "10,000,000 奈拉现金",
+   "url": "https://ai4elections.risenetworks.org/",
+   "detail_url": "https://hack123.henryht.sh/h/ai4elections-hackathon-2026",
+   "source": "黑123",
+   "summary": "Rise Networks 联合尼日利亚国家独立选举委员会及 Google、Microsoft、Meta 等伙伴主办的全国性非党派选举创新黑客松，面向尼日利亚 18 岁以上公民，用 AI 与新兴技术为选举流程的诚信、透明"
+  },
+  {
+   "title": "2026 Epic AI MegaJam（Epic Games）",
+   "start": "2026-11-12",
+   "end": null,
+   "deadline": "2026-11-12",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Agent",
+    "游戏"
+   ],
+   "prize": "65,000 美元现金：3 个主类别（Unreal Engine 最佳整体、UEFN 最佳整体、最佳学生作品）各设 7,500、5,000、2,500 美元一、二、三等奖，共 45,000 美元；修饰类别共 20,000 美元（最佳团队 5,000 美元；最佳单人、最佳视觉、最佳开发日志、最佳 LLM NPC 叙事各 2,500 美元；最佳手游 Unreal Engine 与 UEFN 各 1 名，各 2,500 美元）。",
+   "url": "https://www.unrealengine.com/news/2026-epic-ai-megajam",
+   "detail_url": "https://hack123.henryht.sh/h/epic-ai-megajam-2026",
+   "source": "黑123",
+   "summary": "Epic Games 主办的 AI 游戏开发马拉松，用 Unreal Engine 或 UEFN 在 4 天内做一款可玩游戏，面向全球开发者。 看点：最多 5 人组队，另可不限量使用 AI Agent 协助，AI 工具自"
+  },
+  {
+   "title": "2026华为开发者大赛·智能体创新赛（北部/南部/中部/西南/西北五赛区）",
+   "start": null,
+   "end": null,
+   "deadline": "2026-11-12",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Agent",
+    "创业"
+   ],
+   "prize": "各赛区页面均标注奖金 50 万元（奖项明细见官网「奖项配置」页，本站未能读取；是否为各赛区独立奖池以官网为准）",
+   "url": "https://developer.huaweicloud.com/competition/information/1300000355/introduction",
+   "detail_url": "https://hack123.henryht.sh/h/huawei-developer-contest-agent-2026",
+   "source": "黑123",
+   "summary": "华为面向全领域开发者的旗舰赛事华为开发者大赛的智能体赛道，按参赛者所在城市分北部、南部、中部、西南、西北五个赛区，用华为云码道代码智能体等工具做 AI 原生应用。 看点：北部赛区含北京、天津、河北、辽宁、吉林、黑龙江、内"
+  },
+  {
+   "title": "GITAM National AI Challenge 2026",
+   "start": "2026-11-24",
+   "end": null,
+   "deadline": "2026-11-12",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI应用",
+    "青少年"
+   ],
+   "prize": "2,000,000 卢比现金",
+   "url": "https://aiworkshop.gitam.edu/",
+   "detail_url": "https://hack123.henryht.sh/h/gitam-national-ai-challenge-2026",
+   "source": "黑123",
+   "summary": "印度 GITAM 大学面向 11—12 年级中学生的全国 AI 挑战赛，先经免费 AI 工作坊学习，再提交真实 AI 应用/工具/原型作品参赛，多阶段晋级。 看点：200 万卢比（₹20 lakh）现金奖池，前 5 名瓜"
+  },
+  {
+   "title": "SpaceXAI 澳门黑客松 2026",
+   "start": "2026-11-12",
+   "end": null,
+   "deadline": "2026-11-12",
+   "city": "澳门",
+   "region": "澳门",
+   "format": "线下",
+   "topics": [
+    "AI",
+    "物理AI",
+    "一人公司"
+   ],
+   "prize": "无现金奖（官方海报未提及奖金设置）",
+   "url": "https://www.xiaohongshu.com/discovery/item/6abd0d62000000000d009f07",
+   "detail_url": "https://hack123.henryht.sh/h/spacexai-macau-hackathon-2026",
+   "source": "黑123",
+   "summary": "SPACEX 澳门社区主办的线下黑客松，11月12—14日在澳门旅游塔举行，3 天用 AI 动手造，主题是物理 AI × 一人公司。 看点：3 天线下实作；MakerMods 赞助、Macao Startup Club "
+  },
+  {
+   "title": "2026 野革盃台灣棒球數據黑客松（Rebas 主办，30,000 新台币奖金）",
+   "start": "2026-09-28",
+   "end": null,
+   "deadline": "2026-11-13",
+   "city": "台中",
+   "region": "台湾",
+   "format": "线上+线下",
+   "topics": [
+    "体育",
+    "数据科学",
+    "AI"
+   ],
+   "prize": "总奖金 30,000 新台币",
+   "url": "https://blog.rebas.tw/articles/4136",
+   "detail_url": "https://hack123.henryht.sh/h/rebas-baseball-data-hackathon-2026",
+   "source": "黑123",
+   "summary": "野球革命 Rebas Sports 主办、中山醫學大學协办的台湾首个棒球数据黑客松，以棒球实际问题与数据产品开发为核心，不限科系、职业或棒球背景。 看点：1—5 人组队，开放个人、跨校、跨系、跨领域组队；两阶段赛制：先交"
+  },
+  {
+   "title": "CIPS & IBM Virtual Hackathon 2026（IBM 加拿大线上黑客松，必须用 IBM Bob，限加拿大 IT 从业者）",
+   "start": "2026-11-24",
    "end": null,
    "deadline": "2026-11-13",
    "city": "线上",
    "region": "线上",
    "format": "线上",
    "topics": [
-    "AI",
-    "支付"
+    "AI 编程",
+    "AI"
    ],
-   "prize": "67,500美元现金＋2,250美元Render积分，一等奖12,000美元",
-   "url": "https://paypalaihackathon.devpost.com/",
-   "detail_url": "https://hack123.henryht.sh/h/paypal-ai-hackathon-2026",
+   "prize": "只有一个奖：冠军队共 1,400 加元，队员平分",
+   "url": "https://cips.ca/wp-content/uploads/CIPS_IBM_Hackathon_2026_Official_Rules_Final_EN.pdf",
+   "detail_url": "https://hack123.henryht.sh/h/cips-ibm-virtual-hackathon-2026",
    "source": "黑123",
-   "summary": "把PayPal支付与AI结合，做一个真正能运行的应用。 看点：全程线上，个人或团队均可；须实质性集成PayPal与AI，提交开源代码和演示视频 奖金：67,500美元现金＋2,250美元Render积分，一等奖12,00"
+   "summary": "加拿大 IT 专业人员协会 CIPS 和 IBM 加拿大合办的线上黑客松，主题「企业 AI：做下一个」，现场公布题目，必须用 IBM 的 AI 编程智能体 IBM Bob。 看点：题目开赛当天由 IBM 公布，四小时作答"
+  },
+  {
+   "title": "GTransformer AI Buildathon 2026：AI for Global Good（湾区米尔皮塔斯 + 线上）",
+   "start": "2026-11-13",
+   "end": null,
+   "deadline": "2026-11-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "教育",
+    "医疗"
+   ],
+   "prize": "冠军 1,000 美元现金，外加后续导师辅导",
+   "url": "https://gtransformer-buildathon-2026.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/gtransformer-ai-buildathon-2026",
+   "source": "黑123",
+   "summary": "GTransformer 基金会在湾区米尔皮塔斯和线上同步办的三天 AI 建造营，做能实实在在帮到人的 AI 原型。 看点：三个主题——心理健康、人与人连接、学习与机会；负责任 AI（安全、隐私、偏见、无障碍）是每个项目"
+  },
+  {
+   "title": "Global Virtual Hackathon 2026（国际学生线上黑客松）",
+   "start": "2026-11-19",
+   "end": null,
+   "deadline": "2026-11-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [],
+   "prize": "3000美元现金，分两个年龄组评奖",
+   "url": "https://gvhackathon.com/",
+   "detail_url": "https://hack123.henryht.sh/h/global-virtual-hackathon-2026",
+   "source": "黑123",
+   "summary": "全球14—18岁在校生，用七天完成命题项目，做完还要解释自己的代码。 看点：免费，2—4人；AI辅助可用；老师确认、全员监护人同意，录制问答须全队同处一室 奖金：3000美元现金，分两个年龄组评奖 截止日期：11月13日"
   },
   {
    "title": "Meta Earth 黑客松 Beacon（台湾线下 + 全球线上，基于 ME Network 做链上应用，奖池 25 万新台币）",
@@ -613,7 +938,43 @@
    "url": "https://www.mec.me/zh-TW/hackathon/beacon",
    "detail_url": "https://hack123.henryht.sh/h/metaearth-hackathon-beacon-2026",
    "source": "黑123",
-   "summary": "一句话简介：Meta Earth 办的链上应用黑客松，台湾有线下交流，全球可线上参加，作品须跑在 ME Network 上。 看点：四个赛道——开发者工具、AI 与信任、链上金融、消费支付；3—5 人一队，需完成 ME "
+   "summary": "Meta Earth 办的链上应用黑客松，台湾有线下交流，全球可线上参加，作品须跑在 ME Network 上。 看点：四个赛道——开发者工具、AI 与信任、链上金融、消费支付；3—5 人一队，需完成 ME ID 高级认"
+  },
+  {
+   "title": "PayPal AI Hackathon 2026",
+   "start": "2026-10-03",
+   "end": null,
+   "deadline": "2026-11-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "支付"
+   ],
+   "prize": "67,500美元现金＋2,250美元Render积分，一等奖12,000美元",
+   "url": "https://paypalaihackathon.devpost.com/rules",
+   "detail_url": "https://hack123.henryht.sh/h/paypal-ai-hackathon-2026",
+   "source": "黑123",
+   "summary": "把PayPal支付与AI结合，做一个真正能运行的应用。 看点：全程线上，个人或团队均可；须实质性集成PayPal与AI，提交开源代码和演示视频 奖金：67,500美元现金＋2,250美元Render积分，一等奖12,00"
+  },
+  {
+   "title": "Startup Buildathon India 2026（Google AI 创业 Buildathon，印度 10 城，前 10 队各 1 万美元）",
+   "start": "2026-11-20",
+   "end": null,
+   "deadline": "2026-11-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "创业",
+    "AI"
+   ],
+   "prize": "总奖池 10 万美元：前 10 队每队 5,000 美元现金 + 5,000 美元 Google AI 和 Google Cloud 额度",
+   "url": "https://startupbuildathon.com/",
+   "detail_url": "https://hack123.henryht.sh/h/startup-buildathon-india-2026",
+   "source": "黑123",
+   "summary": "hack2skill 联合 Google AI 和 Google Cloud 在印度办的创业 Buildathon，带着 AI 创业点子报名，入围后两天把它做成能用的产品。 看点：线上申请要交点子、方案、架构和路演 PP"
   },
   {
    "title": "Veritas AI 国际高中生 AI 黑客松 2026（线上 48 小时）",
@@ -634,37 +995,22 @@
    "summary": "全球高中生在48小时内合作做AI项目，免费参加，新手也有入门资源。 看点：仅限11月14日时在读高中生；1—3人组队，可跨国跨校；11月14—15日开发，11月21日线上决赛（均为美东日期） 奖励：金奖每人获Arecib"
   },
   {
-   "title": "Global Virtual Hackathon 2026（国际学生线上黑客松）",
-   "start": "2026-11-19",
+   "title": "NASA Space Apps Challenge 2026",
+   "start": "2026-08-08",
    "end": null,
-   "deadline": "2026-11-13",
+   "deadline": "2026-11-14",
    "city": "线上",
    "region": "线上",
-   "format": "线上",
-   "topics": [],
-   "prize": "3000美元现金，分两个年龄组评奖",
-   "url": "https://gvhackathon.com/",
-   "detail_url": "https://hack123.henryht.sh/h/global-virtual-hackathon-2026",
-   "source": "黑123",
-   "summary": "全球14—18岁在校生，用七天完成命题项目，做完还要解释自己的代码。 看点：免费，2—4人；AI辅助可用；老师确认、全员监护人同意，录制问答须全队同处一室 奖金：3000美元现金，分两个年龄组评奖 截止日期：11月13日"
-  },
-  {
-   "title": "CIPS & IBM Virtual Hackathon 2026（IBM 加拿大线上黑客松，必须用 IBM Bob，限加拿大 IT 从业者）",
-   "start": "2026-11-24",
-   "end": null,
-   "deadline": "2026-11-13",
-   "city": "线上",
-   "region": "线上",
-   "format": "线上",
+   "format": "线上+线下",
    "topics": [
-    "AI 编程",
-    "AI"
+    "开放数据",
+    "太空"
    ],
-   "prize": "只有一个奖：冠军队共 1,400 加元，队员平分",
-   "url": "https://cips.ca/wp-content/uploads/CIPS_IBM_Hackathon_2026_Official_Rules_Final_EN.pdf",
-   "detail_url": "https://hack123.henryht.sh/h/cips-ibm-virtual-hackathon-2026",
+   "prize": "全球奖项 + 官方展示",
+   "url": "https://www.spaceappschallenge.org/",
+   "detail_url": "https://hack123.henryht.sh/h/nasa-space-apps-2026",
    "source": "黑123",
-   "summary": "一句话简介：加拿大 IT 专业人员协会 CIPS 和 IBM 加拿大合办的线上黑客松，主题「企业 AI：做下一个」，现场公布题目，必须用 IBM 的 AI 编程智能体 IBM Bob。 看点：题目开赛当天由 IBM 公布"
+   "summary": "全球年度最大黑客松之一，免费用 NASA 及合作机构的开放数据，在48小时内解决地球与太空的真实问题。 看点：程序员、设计师、科学家、学生都能参加；支持线下 Local Event 或线上 Universal Event"
   },
   {
    "title": "NEAR HACKATHON 2026（NEAR 基金会，AI 智能体 × 链上支付，$25 万）",
@@ -683,25 +1029,7 @@
    "url": "https://nearhackathon.com/",
    "detail_url": "https://hack123.henryht.sh/h/near-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：NEAR 基金会办的两周线上黑客松，在 NEAR Intents、NEAR AI Cloud、链签名等技术栈上做能用的产品，主题是「会自己花钱的 AI」和可编程货币。 看点：13 条赛道，一半和 AI 智能体"
-  },
-  {
-   "title": "「AI上天津」网络精品共创邀请赛 · AI 网络音视频赛道",
-   "start": "2026-08-27",
-   "end": null,
-   "deadline": "2026-11-15",
-   "city": "线上",
-   "region": "线上",
-   "format": "线上",
-   "topics": [
-    "AIGC",
-    "影像"
-   ],
-   "prize": "获奖作品有奖金（税前，金额官方未公布）、算力支持、流量扶持与产业孵化；晋级团队获算力、创作工具与导师辅导",
-   "url": "https://feature.people.cn/tj/page.html",
-   "detail_url": "https://hack123.henryht.sh/h/ai-shang-tianjin-2026",
-   "source": "黑123",
-   "summary": "一句话简介：中央网信办网络传播局、天津市委宣传部指导，天津市委网信办等九部门主办的全国性 AI 内容创作邀请赛，用 AI 讲述河海、红色、工商、建筑、民俗、演艺、文博、休闲等津派文化故事，在人民网专题网站投稿。 看点：主"
+   "summary": "NEAR 基金会办的两周线上黑客松，在 NEAR Intents、NEAR AI Cloud、链签名等技术栈上做能用的产品，主题是「会自己花钱的 AI」和可编程货币。 看点：13 条赛道，一半和 AI 智能体相关（自主企"
   },
   {
    "title": "Code for a Billion 黑客松 2026（印度公益 Agentic AI）",
@@ -723,23 +1051,22 @@
    "summary": "Code for India 主办的 90 天全球线上 Agentic AI 黑客松：为印度公共卫生领域开发开源数字公益品，学生、专业人士、独立开发者全球均可免费参加。 看点：总奖金 180 万印度卢比：每个赛道类别一等"
   },
   {
-   "title": "UGREEN Hackathon 2026 on AI NAS（绿联 AI NAS Skill 黑客松，4.6 万美元现金）",
-   "start": "2026-10-22",
+   "title": "DSH Hacks V2（AI × 医疗健康，学生线上赛）",
+   "start": null,
    "end": null,
    "deadline": "2026-11-15",
    "city": "线上",
    "region": "线上",
    "format": "线上",
    "topics": [
-    "Agent",
-    "硬件",
-    "开发者工具"
+    "AI",
+    "医疗"
    ],
-   "prize": "4.6 万美元现金：一等奖 2 万、二等奖 1 万、三等奖 6,000，最具创意奖 5,000 ×2",
-   "url": "https://ugreenhackathon.devpost.com/",
-   "detail_url": "https://hack123.henryht.sh/h/ugreen-ai-nas-hackathon-2026",
+   "prize": "无现金奖：前三名各获工具积分和订阅（约 3,000 美元以上）",
+   "url": "https://dsh-hacks-v2.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/dsh-hacks-v2-2026",
    "source": "黑123",
-   "summary": "一句话简介：绿联（UGREEN）把自家 AI NAS 开放给开发者，用官方 Skill 开发包给 UGOS 系统做一个 AI Skill，在 NAS 上整理文件、找资料、自动处理日常任务。 看点：四个赛道——工作流自动化"
+   "summary": "Devpost 上的全球线上学生黑客松，围绕 AI 与医疗健康做解决真实问题的技术产品，13 岁以上学生可参加。 看点：标注新手友好、支持低代码/无代码；仅限学生，公司和机构不能参赛；已有约 450 人报名；设科研向项目"
   },
   {
    "title": "Geek Room Global AI Hackathon（全球线上 AI 黑客松，两周做原型，1–4 人）",
@@ -757,7 +1084,7 @@
    "url": "https://www.geekroom.co.in/event/global-ai-hackathon",
    "detail_url": "https://hack123.henryht.sh/h/geek-room-global-ai-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：印度开发者社区 Geek Room 办的全球线上 AI 黑客松，11 月 1 日放出赛题，两周内做出能跑的原型。 看点：全程线上，任何国家都能报；1—4 人组队，不限水平；冠名伙伴 Bifrost（Maxim"
+   "summary": "印度开发者社区 Geek Room 办的全球线上 AI 黑客松，11 月 1 日放出赛题，两周内做出能跑的原型。 看点：全程线上，任何国家都能报；1—4 人组队，不限水平；冠名伙伴 Bifrost（Maxim AI），T"
   },
   {
    "title": "Homingo Hackathon（印度全国 AI 工程黑客松）",
@@ -775,25 +1102,80 @@
    "url": "https://hackathon.homingo.co.in/",
    "detail_url": "https://hack123.henryht.sh/h/homingo-hack-days-2026",
    "source": "黑123",
-   "summary": "一句话简介：Homingo（SurgeLabs）办的全国级 AI 工程黑客松：做解决真实问题的 AI Agent、自动化流水线或 LLM 应用，由生产一线工程师担任评委和导师，面向全印度学生与早期职业开发者。 看点：三个"
+   "summary": "Homingo（SurgeLabs）办的全国级 AI 工程黑客松：做解决真实问题的 AI Agent、自动化流水线或 LLM 应用，由生产一线工程师担任评委和导师，面向全印度学生与早期职业开发者。 看点：三个赛道（Age"
   },
   {
-   "title": "DSH Hacks V2（AI × 医疗健康，学生线上赛）",
-   "start": null,
+   "title": "Kartika 网络安全黑客松 2026",
+   "start": "2026-10-19",
+   "end": null,
+   "deadline": "2026-11-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "网络安全"
+   ],
+   "prize": "40,000,000 印尼盾现金（奖品总值 100,700,000 印尼盾）",
+   "url": "https://kartikacyberhackathon.id/",
+   "detail_url": "https://hack123.henryht.sh/h/kartika-cyber-hackathon-2026",
+   "source": "黑123",
+   "summary": "印尼陆军网络中心与 CODEPOLITAN 主办的全国网络安全黑客松，面向全印尼开发者、网络安全从业者、学生与技术爱好者，为印尼国防网络空间需求打造解决方案。 看点：2—3 人组队，也可个人报名，免费参赛；四个赛道：进攻"
+  },
+  {
+   "title": "UGREEN Hackathon 2026 on AI NAS（绿联 AI NAS Skill 黑客松，4.6 万美元现金）",
+   "start": "2026-10-22",
    "end": null,
    "deadline": "2026-11-15",
    "city": "线上",
    "region": "线上",
    "format": "线上",
    "topics": [
-    "AI",
-    "医疗"
+    "Agent",
+    "硬件",
+    "开发者工具"
    ],
-   "prize": "无现金奖：前三名各获工具积分和订阅（约 3,000 美元以上）",
-   "url": "https://dsh-hacks-v2.devpost.com/",
-   "detail_url": "https://hack123.henryht.sh/h/dsh-hacks-v2-2026",
+   "prize": "4.6 万美元现金：一等奖 2 万、二等奖 1 万、三等奖 6,000，最具创意奖 5,000 ×2",
+   "url": "https://ugreenhackathon.devpost.com/rules",
+   "detail_url": "https://hack123.henryht.sh/h/ugreen-ai-nas-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：Devpost 上的全球线上学生黑客松，围绕 AI 与医疗健康做解决真实问题的技术产品，13 岁以上学生可参加。 看点：标注新手友好、支持低代码/无代码；仅限学生，公司和机构不能参赛；已有约 450 人报名；"
+   "summary": "绿联（UGREEN）把自家 AI NAS 开放给开发者，用官方 Skill 开发包给 UGOS 系统做一个 AI Skill，在 NAS 上整理文件、找资料、自动处理日常任务。 看点：四个赛道——工作流自动化、照片视频回"
+  },
+  {
+   "title": "「AI上天津」网络精品共创邀请赛 · AI 网络音视频赛道",
+   "start": "2026-08-27",
+   "end": null,
+   "deadline": "2026-11-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AIGC",
+    "影像"
+   ],
+   "prize": "获奖作品有奖金（税前，金额官方未公布）、算力支持、流量扶持与产业孵化；晋级团队获算力、创作工具与导师辅导",
+   "url": "https://feature.people.cn/tj/page.html",
+   "detail_url": "https://hack123.henryht.sh/h/ai-shang-tianjin-2026",
+   "source": "黑123",
+   "summary": "中央网信办网络传播局、天津市委宣传部指导，天津市委网信办等九部门主办的全国性 AI 内容创作邀请赛，用 AI 讲述河海、红色、工商、建筑、民俗、演艺、文博、休闲等津派文化故事，在人民网专题网站投稿。 看点：主赛道 AI "
+  },
+  {
+   "title": "2026华为开发者大赛·小红书Skill创新赛",
+   "start": null,
+   "end": null,
+   "deadline": "2026-11-16",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Agent",
+    "AIGC",
+    "开发者工具"
+   ],
+   "prize": "50万元税前现金，金奖10万元",
+   "url": "https://developer.huaweicloud.com/competition/information/1300000350/introduction",
+   "detail_url": "https://hack123.henryht.sh/h/huawei-xiaohongshu-skill-2026",
+   "source": "黑123",
+   "summary": "把真实生活需求做成能运行、能复用的Skill，让小红书用户使用并反馈。 看点：个人或2—5人；须用码道CodeArts或果办OfficeAce之一；作品提交至华为云和小红书Skill市场 奖金：50万元税前现金，金奖10"
   },
   {
    "title": "IceHacks 2026（学生线上新手黑客松）",
@@ -807,7 +1189,7 @@
     "教育"
    ],
    "prize": "无现金奖；工具额度、软件订阅、会员及奖学金等非现金权益",
-   "url": "https://icehacks.devpost.com/",
+   "url": "https://icehacks.devpost.com/rules",
    "detail_url": "https://hack123.henryht.sh/h/icehacks-2026",
    "source": "黑123",
    "summary": "13岁以上高中生可个人或1—4人组队，用一周做网站、App、AI工具或硬件。 看点：11月8—15日开发；提交视频和公开代码，AI贡献需披露。 奖金：工具额度、会员等非现金奖励。 截止日期：11月16日10:00（北京时"
@@ -828,7 +1210,7 @@
    "url": "https://luma.com/tanstackstarthackathonv1",
    "detail_url": "https://hack123.henryht.sh/h/tanstack-start-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：由 Convex、Cloudflare、Netlify 等联合举办的线上黑客松，基于 TanStack Start 构建全新的全栈应用。 看点：纯线上、全球参与；应用必须在 10 月 29 日之后启动开发；多"
+   "summary": "由 Convex、Cloudflare、Netlify 等联合举办的线上黑客松，基于 TanStack Start 构建全新的全栈应用。 看点：纯线上、全球参与；应用必须在 10 月 29 日之后启动开发；多家基础设施厂"
   },
   {
    "title": "「话中画」Art In Word 48 小时 AIGC 共创赛（杭州，AI 短片，25 万奖池）",
@@ -846,7 +1228,7 @@
    "url": "https://www.xiaohongshu.com/explore/6ae0209a000000000d01c4b5",
    "detail_url": "https://hack123.henryht.sh/h/art-in-word-hangzhou-2026",
    "source": "黑123",
-   "summary": "一句话简介：浙江哦维科技在杭州办的 AI 短片共创赛，先线上海选，入围后到玉皇山南基金小镇现场 48 小时创作。 看点：单一「AI 短片」赛道；海选作品不少于 90 秒，要交视频、音频、工作流截图和剧本片段；只能用国内大"
+   "summary": "浙江哦维科技在杭州办的 AI 短片共创赛，先线上海选，入围后到玉皇山南基金小镇现场 48 小时创作。 看点：单一「AI 短片」赛道；海选作品不少于 90 秒，要交视频、音频、工作流截图和剧本片段；只能用国内大模型和工具；"
   },
   {
    "title": "腾讯视频「火龙 AIGC 黑客松大赛」（杭州，48 小时现场成片，120 万现金）",
@@ -864,7 +1246,206 @@
    "url": "https://www.sina.cn/news/detail/5359032514645022.html",
    "detail_url": "https://hack123.henryht.sh/h/tencent-video-huolong-aigc-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：腾讯视频办的 AIGC 影视黑客松，是 2026 星光周的开场活动，入围的 36 支队伍到杭州现场 48 小时从零做出一部完整的 AI 作品。 看点：主题「野生格式 UNTAMED GRAMMAR」，不要 P"
+   "summary": "腾讯视频办的 AIGC 影视黑客松，是 2026 星光周的开场活动，入围的 36 支队伍到杭州现场 48 小时从零做出一部完整的 AI 作品。 看点：主题「野生格式 UNTAMED GRAMMAR」，不要 PPT 式的画"
+  },
+  {
+   "title": "10-Day Founder Hackathon（Half Baked × Bolt，1.5 万美元）",
+   "start": "2026-11-19",
+   "end": null,
+   "deadline": "2026-11-19",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "创业",
+    "AI"
+   ],
+   "prize": "最佳产品 7,500 美元、最佳创意 2,500 美元、Build in Public 奖 2,500 美元、视频路演奖 2,500 美元",
+   "url": "https://luma.com/halfbakedhackathon",
+   "detail_url": "https://hack123.henryht.sh/h/10-day-founder-hackathon-2026",
+   "source": "黑123",
+   "summary": "创业资讯 Half Baked（12 万+ 每日订阅）联合 Bolt 举办的 10 天线上黑客松，面向创业者，10 天内从 idea 走到产品验证，免费注册。 看点：11 月 19 日开幕活动由 Bolt CEO Eri"
+  },
+  {
+   "title": "Capture The Flag Hackathon 2026 v4.0",
+   "start": "2026-11-21",
+   "end": null,
+   "deadline": "2026-11-19",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "网络安全",
+    "CTF"
+   ],
+   "prize": "6,000 马来西亚林吉特现金（冠军 2,500 / 亚军 1,500 / 季军 1,000 / 4 个安慰奖各 250）",
+   "url": "https://curtin.edu.my/event/capture-the-flag/",
+   "detail_url": "https://hack123.henryht.sh/h/capture-the-flag-hackathon-2026-v4-0",
+   "source": "黑123",
+   "summary": "马来西亚 Curtin 大学电气与计算机工程系主办、Sarawak Digital Economy Corporation（SDEC）协办的 24 小时线上 CTF（夺旗）网络安全黑客松，面向全马来西亚队伍。 看点：CT"
+  },
+  {
+   "title": "Meta VR Start 开发者大赛 2026",
+   "start": "2026-09-24",
+   "end": null,
+   "deadline": "2026-11-19",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "VR",
+    "硬件"
+   ],
+   "prize": "1,000,000 美元现金",
+   "url": "https://start-developer-competition-26.devpost.com/rules",
+   "detail_url": "https://hack123.henryht.sh/h/meta-vr-start-developer-competition-2026",
+   "source": "黑123",
+   "summary": "为 Meta VR 设备开发 VR/MR 娱乐、游戏或生产力应用。 看点：以手部交互为核心；可做全新应用或有重大更新的已有项目；提交人须为 Start 计划成员，并有开发者权限 奖金：1000000美元现金 截止日期：1"
+  },
+  {
+   "title": "Muse Spark Open Kernel Challenge（Meta × Paradigm，给 8160 亿参数开源模型写 GPU 内核提速，10 万美元）",
+   "start": "2026-10-22",
+   "end": null,
+   "deadline": "2026-11-19",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "开源"
+   ],
+   "prize": "共 10 万美元：第一名 5 万美元 + Meta 团队签名 H200，第二 3 万，第三 1 万，第四 3,000，第五 2,000，第六到十名各 1,000；奖金只发给服务赛道排名；前排选手有机会面试 Meta",
+   "url": "https://openkernelchallenge.dev/",
+   "detail_url": "https://hack123.henryht.sh/h/muse-spark-open-kernel-challenge-2026",
+   "source": "黑123",
+   "summary": "Paradigm 联合 Meta、Andromeda 办的线上性能赛，让 Meta 8160 亿参数的开源 MoE 模型 Muse Spark Open 在 H200 上跑得更快。 看点：分两段——内核赛道（太平洋时间 "
+  },
+  {
+   "title": "「单人成军·智创高新」首届 OPC 创新应用挑战赛（天津滨海高新区）",
+   "start": "2026-10-19",
+   "end": null,
+   "deadline": "2026-11-19",
+   "city": "天津",
+   "region": "大陆",
+   "format": "线上+线下",
+   "topics": [
+    "一人公司",
+    "AIGC",
+    "AI Coding"
+   ],
+   "prize": "现金共 3 万元（两个赛道合计）：一等奖 5,000 元 ×2、二等奖 3,000 元 ×4、三等奖 1,000 元 ×6、优秀奖 500 元 ×4，另发获奖证书",
+   "url": "https://www.opczone.cn/events/dan-ren-cheng-jun-zhi-chuang-gao-xin-shou-jie-opc-chuang-xin",
+   "detail_url": "https://hack123.henryht.sh/h/tianjin-binhai-opc-innovation-challenge-2026",
+   "source": "黑123",
+   "summary": "天津滨海高新区首届一人公司（OPC）AI 挑战赛，做 AI 短视频或用 AI 编程做出能跑的产品。 看点：两个赛道——AIGC 破圈组（短视频，30—45 秒、1080P 横屏，AI 生成为主、人工后期不超过 20%，须"
+  },
+  {
+   "title": "群核科技 Aholo 全球 3D AI 黑客松（Manycore Aholo Global 3D AI Hackathon，¥32 万）",
+   "start": "2026-10-19",
+   "end": null,
+   "deadline": "2026-11-19",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AIGC",
+    "游戏",
+    "3D 生成"
+   ],
+   "prize": "32万元现金，特别奖10万元",
+   "url": "https://www.aholo.ai/hackathon",
+   "detail_url": "https://hack123.henryht.sh/h/manycore-aholo-global-3d-ai-hackathon-2026",
+   "source": "黑123",
+   "summary": "用Aholo Lux3D和API做出可体验的3D作品，游戏、3D打印、机器人和空间设计都能探索。 看点：全球线上免费；单人或至多3人；无年龄限制，未满18岁须监护同意 奖金：32万元现金，特别奖10万元 截止日期：11月"
+  },
+  {
+   "title": "AI Film Award 2027（迪拜「10 亿粉丝峰会」× TikTok × 字节 Seedance，5–7 分钟 AI 短片，头奖 100 万美元）",
+   "start": null,
+   "end": null,
+   "deadline": "2026-11-20",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AIGC",
+    "AI 视频",
+    "影像"
+   ],
+   "prize": "头奖 100 万美元（1 名，颁奖后 60 天内银行转账）；前 5 名作品在迪拜峰会首映",
+   "url": "https://www.1billionsummit.com/ai-award-2027",
+   "detail_url": "https://hack123.henryht.sh/h/ai-film-award-2027",
+   "source": "黑123",
+   "summary": "迪拜「10 亿粉丝峰会」联合字节 BytePlus、TikTok 办的第二届 AI 电影奖，用 Seedance 做一部 5—7 分钟的原创 AI 短片，头奖 100 万美元。 看点：五个主题任选其一——社会与人道议题、"
+  },
+  {
+   "title": "Build Out Loud（Scaler × Wispr 语音优先黑客松，印度，300 万卢比）",
+   "start": "2026-11-04",
+   "end": null,
+   "deadline": "2026-11-20",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "语音",
+    "Vibe Coding"
+   ],
+   "prize": "奖池 300 万卢比分给前 15 队：第一名 70 万、第二名 50 万、第三名 30 万，第 4—15 名每队 12.5 万；每人 12 个月 Wispr Flow Pro，另有赞助新加坡之行和 Wispr 岗位面试",
+   "url": "https://hackos.scaler.com/wispr/",
+   "detail_url": "https://hack123.henryht.sh/h/scaler-wispr-build-out-loud-2026",
+   "source": "黑123",
+   "summary": "印度编程学校 Scaler 和语音输入法 Wispr Flow 合办的「语音优先」黑客松，用印地语、英语或双语给印度做语音工具。 看点：五个方向——政务服务、医疗、教育、小商户、无障碍日常；两轮线上（热身小任务 + 统一"
+  },
+  {
+   "title": "Build with Gemma – Innovate in Windsor（GDG Windsor × Google，端侧 Gemma 解决温莎本地问题）",
+   "start": "2026-11-13",
+   "end": null,
+   "deadline": "2026-11-20",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "开源模型"
+   ],
+   "prize": "Devpost 未列现金奖",
+   "url": "https://innovate-in-windsor-hackathon.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/build-with-gemma-innovate-in-windsor-2026",
+   "source": "黑123",
+   "summary": "加拿大温莎 GDG 和 Google 办的端侧 AI 挑战，用本地运行的 Gemma 模型解决温莎—埃塞克斯地区的真实问题。 看点：两个方向——边境、桥梁隧道和交通；温莎本地生活；作品可以是网页、手机、桌面或嵌入式设备，"
+  },
+  {
+   "title": "Xylem 全球学生创新挑战赛 2026",
+   "start": "2026-09-28",
+   "end": null,
+   "deadline": "2026-11-20",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [],
+   "prize": "总奖池 $20,000，高中组、大学组各设冠军 $4,500 等 6 个奖",
+   "url": "https://xyleminnovationchallenge.bemyapp.com/",
+   "detail_url": "https://hack123.henryht.sh/h/xylem-global-student-innovation-challenge-2026",
+   "source": "黑123",
+   "summary": "水务公司 Xylem 办的 8 周线上挑战赛，三个命题任选其一：水量、水质、用水可及性。分高中组和大学组。 看点：只收 13—25 岁学生，未成年需监护人同意书；最多 5 人组队；有 Xylem 专家导师和课程；10月6"
+  },
+  {
+   "title": "亚马逊 Amazon Ring Appstore 挑战赛 2026",
+   "start": "2026-10-22",
+   "end": null,
+   "deadline": "2026-11-20",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "智能家居",
+    "应用开发"
+   ],
+   "prize": "500,000 美元现金：最高收入奖 250,000 美元、适老化最具影响力奖 100,000 美元、最受欢迎奖 75,000 美元、最具创意奖 75,000 美元；入围者另各获一套 Ring 硬件套件。",
+   "url": "https://blog.ring.com/products-innovation/ring-appstore-challenge-2026/",
+   "detail_url": "https://hack123.henryht.sh/h/ring-appstore-challenge-2026",
+   "source": "黑123",
+   "summary": "Ring（Amazon 旗下智能家居品牌）面向美国在校大学生举办的应用商店挑战赛，从提案、开发到上线运营，为 Ring Appstore 打造面向真实用户的应用。 看点：个人或最多 3 人组队，提案 500 词以内，评审"
   },
   {
    "title": "虹桥国际科技周黑客松大赛（上海国家会展中心，三赛道，10 万奖池）",
@@ -883,7 +1464,99 @@
    "url": "https://www.hongqiaotechweek.com/events/",
    "detail_url": "https://hack123.henryht.sh/h/hongqiao-tech-week-hackathon-2026",
    "source": "黑123",
-   "summary": "一句话简介：虹桥国际科技周在国家会展中心（上海）展馆里办的黑客松，与 ExplorNeo 联合主办。 看点：AI 智能体、AI 全球化应用、AI+硬件三条赛道；预计 200 多名开发者、60 余支队伍；场地在 1.1 号"
+   "summary": "虹桥国际科技周在国家会展中心（上海）展馆里办的黑客松，与 ExplorNeo 联合主办。 看点：AI 智能体、AI 全球化应用、AI+硬件三条赛道；预计 200 多名开发者、60 余支队伍；场地在 1.1 号馆 1E11"
+  },
+  {
+   "title": "Dakar Bitcoin Hack by BTrust（线上一个月，用比特币、闪电网络、Nostr 和 AI 服务非洲）",
+   "start": "2026-10-26",
+   "end": null,
+   "deadline": "2026-11-21",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Web3",
+    "AI"
+   ],
+   "prize": "共 900 美元，以 BTC 发放：第一名 500、第二名 250、第三名 150 美元",
+   "url": "https://dakar-bitcoin-hack-2026.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/dakar-bitcoin-hack-2026",
+   "source": "黑123",
+   "summary": "塞内加尔达喀尔比特币社区联合 BTrust 办的一个月线上黑客松，用比特币、闪电网络、Nostr 和 AI 做能改善非洲人日常生活的开源工具。 看点：100% 线上，志愿者组织，成果开源；可用开源和闭源的比特币工具；商业"
+  },
+  {
+   "title": "MAKE ME MONEY 黑客松 2026（Shipyard，伦敦）",
+   "start": "2026-11-02",
+   "end": null,
+   "deadline": "2026-11-21",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI 智能体",
+    "创业"
+   ],
+   "prize": "10,000 英镑以上奖金池（Grand Prize 归收入最高者，另设 First Blood、Iron Mode、Crowd Favourite 等奖；合作伙伴奖项持续叠加；智能体所赚收入归参赛者所有）",
+   "url": "https://shipyard.london/hackathon",
+   "detail_url": "https://hack123.henryht.sh/h/make-me-money-shipyard-2026",
+   "source": "黑123",
+   "summary": "伦敦 Shipyard 社区主办的 AI 智能体赚钱锦标赛：11月2—21日远程让智能体在真实市场里赚钱，11月21日伦敦 Soho 现场 Demo Day，奖金池 1 万英镑起。 看点：全球首个公开的 AI 智能体赚钱"
+  },
+  {
+   "title": "Nexconn Build Challenge 2026（用 Nexconn Chat SDK 做实时聊天应用，线上，5,000 美元）",
+   "start": "2026-10-23",
+   "end": null,
+   "deadline": "2026-11-22",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "开发者工具",
+    "AI"
+   ],
+   "prize": "现金共 5,000 美元：第一名 2,000，第二 1,250，第三 750，第四、五名各 500；每个获奖队另得 2 年 Nexconn 免费聊天套餐和 AWS / 阿里云折扣",
+   "url": "https://reskilll.com/hack/nexconn/",
+   "detail_url": "https://hack123.henryht.sh/h/nexconn-build-challenge-2026",
+   "source": "黑123",
+   "summary": "Reskilll 替即时通讯 SDK 厂商 Nexconn 办的一个月线上黑客松，用 Nexconn Chat SDK 做一个实时聊天驱动的应用。 看点：必须用 Chat SDK（Chat UI 也算），语音视频 Cal"
+  },
+  {
+   "title": "科技少年黑客松｜少年月球建造计划",
+   "start": "2026-10-12",
+   "end": null,
+   "deadline": "2026-11-22",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AIGC",
+    "影像",
+    "游戏"
+   ],
+   "prize": "冠军3D打印机或15万元现金；每赛道亚军天文望远镜或2.5万元现金；每赛道季军星域换装机或1.59万元现金；优秀奖每赛道5000元",
+   "url": "https://mp.weixin.qq.com/s/0Wh7mG4vgPbqaEJQ9qEeZw",
+   "detail_url": "https://hack123.henryht.sh/h/tech-youth-moon-hackathon-2026",
+   "source": "黑123",
+   "summary": "面向不同编程基础的青少年：萌新到高手都能选组，围绕“2030年在月球建一座城”，把奇思妙想做成能在猿编程App里运行的小产品，成为第一批“月球工程师”。 看点：AIGC绘图、游戏开发、应用与网站三组；萌新、进击、高手按编"
+  },
+  {
+   "title": "荣耀·英特尔 AI 智造创新赛（全国高校，YOYO Claw 智能体开发）",
+   "start": "2026-12-18",
+   "end": null,
+   "deadline": "2026-11-22",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Agent",
+    "端侧 AI",
+    "学生赛"
+   ],
+   "prize": "13.5万元现金；一二三等奖另有MagicBook Pro 14",
+   "url": "https://www.honor.com/cn/ai-smart-innovation-challenge/",
+   "detail_url": "https://hack123.henryht.sh/h/honor-intel-ai-smart-innovation-2026",
+   "source": "黑123",
+   "summary": "全国高校在校生用AI做Bot、Skill或创意方案，没有荣耀电脑也能参加。 看点：研发1—3人组队，创意个人参赛；研发晋级队须赴线下决赛 奖金：13.5万元现金；一二三等奖另有MagicBook Pro 14 截止日期："
   },
   {
    "title": "鲸锐 AI 创作大赛（虎鲸文娱 × 优酷，1000 万奖金池）",
@@ -904,6 +1577,342 @@
    "summary": "把AI影像做成有完整故事的作品，优秀创作者还有机会加入虎鲸AI人才计划。 看点：虎鲸文娱×优酷；个人或团队；横版1080p、至少10分钟，另附故事阐述 奖金：1000万元税前现金，单项最高200万元，共265个获奖名额 "
   },
   {
+   "title": "Team1 Vietnam UniHack（Avalanche 越南，$3,500 奖金）",
+   "start": "2026-11-02",
+   "end": null,
+   "deadline": "2026-11-25",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "区块链",
+    "DeFi",
+    "Avalanche"
+   ],
+   "prize": "总奖金 3,500 美元：决赛 10 强分享 3,000 美元（第一名 30,000,000 越南盾），另有价值 500 美元的 Builder Pass 随机分给 50 名建设者",
+   "url": "https://team1vn.xyz/",
+   "detail_url": "https://hack123.henryht.sh/h/team1-vietnam-unihack-2026",
+   "source": "黑123",
+   "summary": "Team1 Vietnam（Avalanche 越南社区）主办的线上黑客松，限越南大学生参加，在 Avalanche Fuji 测试网上构建解决真实问题的 DeFi 应用。 看点：参赛免费，可单人或最多 3 人组队，不限"
+  },
+  {
+   "title": "Google Gemma 4 Developer Agent Competition（Kaggle 编程智能体赛）",
+   "start": "2026-09-23",
+   "end": null,
+   "deadline": "2026-11-26",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "AI 编程",
+    "开源模型"
+   ],
+   "prize": "主赛65000美元现金：37000、18000、10000美元；另设独立论文赛道，不并入主赛奖池",
+   "url": "https://www.kaggle.com/competitions/gemma-4-developer-agent/overview",
+   "detail_url": "https://hack123.henryht.sh/h/kaggle-gemma-4-developer-agent-2026",
+   "source": "黑123",
+   "summary": "后训练Gemma 4，让离线Agent读代码库、修真实软件问题。 看点：提交Agent配置、提示词与Skills等；修复结果按测试通过率评分 奖金：主赛6.5万美元现金，前三名3.7万、1.8万、1万美元 截止日期：11"
+  },
+  {
+   "title": "HackWithAditya 2026（印度 Aditya 大学 48 小时驻校黑客松，带原型参赛，50 万卢比）",
+   "start": null,
+   "end": null,
+   "deadline": "2026-11-26",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "硬件",
+    "医疗"
+   ],
+   "prize": "总奖池 50 万印度卢比；设综合优胜、最强工程、最佳用户影响、硬件创新、最佳女性主导团队、社区选择等奖项",
+   "url": "https://hackwithaditya.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/hackwithaditya-2026",
+   "source": "黑123",
+   "summary": "印度 Aditya 大学联合 Oracle Academy、OpenAI Student Collective 办的全国性黑客松，带着已能跑的原型来参赛，线上筛选后到校驻场 48 小时继续开发。 看点：原型优先，不从零开"
+  },
+  {
+   "title": "Arduino UNO Q × Embedder Build Challenge（Arduino × 高通 × Embedder，先交创意，送 100 块 UNO Q）",
+   "start": "2026-10-28",
+   "end": null,
+   "deadline": "2026-11-27",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "硬件",
+    "AI"
+   ],
+   "prize": "入选 100 人各得一块 Arduino UNO Q 和 Embedder 完整授权；10 个决赛作品获官方渠道展示；3 个获胜作品各得一块 Apple Watch（无现金）",
+   "url": "https://embedder.com/uno-q-challenge",
+   "detail_url": "https://hack123.henryht.sh/h/arduino-uno-q-embedder-build-challenge-2026",
+   "source": "黑123",
+   "summary": "嵌入式 AI 开发平台 Embedder 联合 Arduino、高通办的线上硬件挑战，先交项目创意，选中的 100 人免费拿 UNO Q 开发板和 Embedder 授权把它做出来。 看点：方向不限，机器人与自动化、边缘"
+  },
+  {
+   "title": "Dev3pack Global Hackathon 2026",
+   "start": "2026-11-27",
+   "end": null,
+   "deadline": "2026-11-27",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Solana",
+    "区块链",
+    "Web3"
+   ],
+   "prize": "奖池 10,000 美元+（现金），官方公布的奖项包括最佳 Solana 应用、最佳 Solana 移动应用、各国本地赛道等；另有硬件、赞助福利和加速器席位。",
+   "url": "https://hack.dev3pack.xyz/",
+   "detail_url": "https://hack123.henryht.sh/h/dev3pack-global-hackathon-2026",
+   "source": "黑123",
+   "summary": "Dev3pack 主办的全球最大 Solana 大学生黑客松，面向全球大学生，三天内打造在 Solana 上真实可用的应用。 看点：混合式参赛——纯线上，或在全球本地 build station 与他人一起开发；赛道含最"
+  },
+  {
+   "title": "Agent Attribution Hackathon（Apart Research，识别 AI 智能体背后是谁在操控）",
+   "start": "2026-11-27",
+   "end": null,
+   "deadline": "2026-11-29",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "网络安全",
+    "AI"
+   ],
+   "prize": "现金共 2,000 美元（第一 1,000 / 第二 500 / 第三 300 / 第四、五各 100）；优胜队可快速进入 Apart Fellowship 继续研究",
+   "url": "https://apartresearch.com/sprints/agent-attribution-2026",
+   "detail_url": "https://hack123.henryht.sh/h/apart-agent-attribution-hackathon-2026",
+   "source": "黑123",
+   "summary": "AI 安全研究机构 Apart Research 的 3 天线上研究冲刺，主题是「智能体溯源」：一个 AI Agent 出事时，判断它是自己在跑、被人松散监督，还是被人紧密操控。 看点：三个赛道——检测（在标注好的日志和"
+  },
+  {
+   "title": "#BuildHybridAI 2026（Google Firebase AI Logic 端云混合 AI 线上挑战赛）",
+   "start": "2026-11-09",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "端侧 AI",
+    "AI",
+    "开发者工具"
+   ],
+   "prize": "Devpost 目前列出头奖 5,000 美元现金；介绍里写「共 1 万美元现金」，完整奖项 11 月 9 日公布",
+   "url": "https://firebasehybridaihackathon.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/firebase-buildhybridai-2026",
+   "source": "黑123",
+   "summary": "Google Firebase 团队在 Devpost 办的三周线上挑战赛，用 Firebase AI Logic 的混合推理（hybrid inference）做一个既能在设备端跑、又能调用云端模型的 AI 应用。 看"
+  },
+  {
+   "title": "2026 Qoder 高校创造力大赛（阿里 Qoder × 天池，用 AI 编程做应用，8.85 万元）",
+   "start": "2026-10-29",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI 编程",
+    "教育"
+   ],
+   "prize": "三个赛道各设一等奖 2 名 × 5,000 元、二等奖 3 名 × 3,000 元、三等奖 4 名 × 2,000 元、优秀奖 5 名 × 500 元，合计 8.85 万元（税前）；提交合格送 Qoder 周边，优秀作品可获 Qoder 实习内推",
+   "url": "https://tianchi.aliyun.com/competition/entrance/532536/introduction",
+   "detail_url": "https://hack123.henryht.sh/h/qoder-campus-creativity-contest-2026",
+   "source": "黑123",
+   "summary": "阿里 AI 编程工具 Qoder 在天池办的全国大学生线上赛，用 Qoder 做一个能公开访问的完整应用。 看点：三个赛道分别评奖——StudyHack 学习科研、LifeHack 生活娱乐、Hack4Good 技术向善"
+  },
+  {
+   "title": "2026 全球超级个体（OPC 3.0）创新创业大赛·第二赛季",
+   "start": "2026-10-10",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "创业",
+    "一人公司"
+   ],
+   "prize": "2.6万元现金，工具额度和专项奖另计",
+   "url": "https://opc.gecacademy.cn/",
+   "detail_url": "https://hack123.henryht.sh/h/opc-super-individual-2026-s2",
+   "source": "黑123",
+   "summary": "学生、独立开发者用AI做产品或解企业命题，尝试把个人能力变成一门生意。 看点：14岁起，个人或1—5人；至少1人具国际视野或项目出海潜力；未成年须成年领队报名及监护同意 奖金：2.6万元现金，工具额度和专项奖另计 截止日"
+  },
+  {
+   "title": "2026兴火燎原创新马拉松公开赛",
+   "start": "2026-10-06",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "苏州",
+   "region": "大陆",
+   "format": "线上+线下",
+   "topics": [
+    "金融科技",
+    "AI应用",
+    "创业"
+   ],
+   "prize": "全国总决赛30万元现金，一等奖7万元",
+   "url": "https://idea.cib.com.cn",
+   "detail_url": "https://hack123.henryht.sh/h/xinghuoliaoyuan-hackathon-2026",
+   "source": "黑123",
+   "summary": "兴业银行等机构面向企业、团队与个人，征集数字金融与场景生态创新方案。 看点：高校师生也能参加；苏州、重庆、南昌、济南四大赛区，各赛区前三晋级全国总决赛 奖金：全国总决赛30万元现金，一等奖7万元 截止日期：11月30日2"
+  },
+  {
+   "title": "EasyEDA Spark 2026（嘉立创 / 立创 EDA 全球硬件创作计划，8.5 万美元奖池）",
+   "start": "2026-01-01",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "硬件",
+    "开源硬件",
+    "IoT"
+   ],
+   "prize": "奖池 8.5 万美元，最佳项目最高 3 万美元；嘉立创报销最高 80% 的合规制造和运费；完成合格项目送 100 美元 JLCPCB 券、工厂参观邀请和 2027 EasyEDA Spark 大会邀请",
+   "url": "https://oshwlab.com/activities/easyeda-spark-2026",
+   "detail_url": "https://hack123.henryht.sh/h/easyeda-spark-2026",
+   "source": "黑123",
+   "summary": "嘉立创旗下立创 EDA（EasyEDA）的全球硬件创作计划，用 EasyEDA Pro 画板、在嘉立创打样生产、把项目开源发到 OSHWLab，就能参与 8.5 万美元奖池评选。 看点：不限主题，PCB、CNC、钣金、3"
+  },
+  {
+   "title": "QIE Hackathon 3.0 · Mainnet Edition",
+   "start": "2026-08-01",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "Web3"
+   ],
+   "prize": "总额 17,000 美元现金（第 1 名 5,000 / 第 2 名 3,000 / 第 3 名 2,000 / 5 个赛道奖各 500 / 特别奖 4,500）",
+   "url": "https://hackathon.qie.digital",
+   "detail_url": "https://hack123.henryht.sh/h/qie-hackathon-3-0-2026",
+   "source": "黑123",
+   "summary": "QIE 区块链主办的 Mainnet Edition 黑客松，要求在 QIE 主网部署真实产品、用 90 天验证真实用户增长，面向全球开发者。 看点：5 大赛道：DeFi 与金融基础设施、AI 与自主智能体、消费应用与社"
+  },
+  {
+   "title": "SpectoV 全国黑客松 2026",
+   "start": "2026-12-01",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "人工智能",
+    "移动应用",
+    "Web 开发"
+   ],
+   "prize": "550,000 卢比以上现金",
+   "url": "https://snh.hiringspectov.com/",
+   "detail_url": "https://hack123.henryht.sh/h/spectov-national-hackathon-2026",
+   "source": "黑123",
+   "summary": "印度 SpectoV 主办的全国学生黑客松，面向印度在读学生个人参赛，在 AI、应用开发、Web 开发三个赛道中交付可实际运行的产品。 看点：仅限个人报名，不接受组队；限 250 个名额，先到先得，报名费 149 卢比；"
+  },
+  {
+   "title": "工业文化创新发展大赛·2026人工智能未来设计赛",
+   "start": "2026-09-01",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "东莞",
+   "region": "大陆",
+   "format": "线上+线下",
+   "topics": [
+    "AIGC",
+    "硬件",
+    "创业"
+   ],
+   "prize": "官方未写统一现金奖池；证书奖杯＋产业对接、打样量产、投融资等权益支持（公开报道权益约 1—10 万元量级）",
+   "url": "https://www.tscup-design.com/",
+   "detail_url": "https://hack123.henryht.sh/h/industrial-culture-ai-future-design-2026",
+   "source": "黑123",
+   "summary": "工信部工业文化发展中心主办的 AI 时尚与工业美学设计赛，设非命题开放创作、主题限定创作与 OPC 创新创业三大方向，东莞与上海临港联合承办，免费线上报名。 看点：OPC 方向含 AI+硬件／软件／产品，可交原型与可运行"
+  },
+  {
+   "title": "长江杯2026全球AI蛋白质设计挑战赛（约140万元现金）",
+   "start": "2026-10-06",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "医疗",
+    "数据"
+   ],
+   "prize": "约140万元人民币现金奖金，税前；7000条候选序列免费实验验证，公开报名团队择优进入实验",
+   "url": "https://aiprotein.sjtu.edu.cn/",
+   "detail_url": "https://hack123.henryht.sh/h/changjiang-cup-ai-protein-design-2026",
+   "source": "黑123",
+   "summary": "用AI从头设计纳米抗体或迷你结合蛋白，让真实湿实验检验设计效果。 看点：全球免费；7000条候选序列免费实验；每队每赛道最多交20条，公开报名队择优进入实验 奖金：约140万元人民币，税前 截止日期：11月30日报名及序"
+  },
+  {
+   "title": "雾客松 2027",
+   "start": "2027-01-22",
+   "end": null,
+   "deadline": "2026-11-30",
+   "city": "重庆",
+   "region": "大陆",
+   "format": "线下",
+   "topics": [
+    "游戏",
+    "出行"
+   ],
+   "prize": "8.5 万元奖池，附股权和办公、投资资源",
+   "url": "https://mp.weixin.qq.com/s/m_8adveaSVqrHtbMcTiwuw",
+   "detail_url": "https://hack123.henryht.sh/h/wukesong-2027",
+   "source": "黑123",
+   "summary": "重庆 48 小时黑客松加游园会，围绕人车、游戏和开放交互做 AI 作品。 看点：2—5 人；学生和 26 岁以下青年可参赛；游戏、应用、网页、模型、视频均可 奖金：8.5 万元奖池，附股权和办公、投资资源 截止日期：11"
+  },
+  {
+   "title": "AI Builder Challenge 2026",
+   "start": null,
+   "end": null,
+   "deadline": "2026-12-01",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "创业",
+    "AIGC"
+   ],
+   "prize": "冠军1000欧元现金，另1000欧元捐给教育机构",
+   "url": "https://www.aibuilderchallenge.bg/",
+   "detail_url": "https://hack123.henryht.sh/h/ai-builder-challenge-2026",
+   "source": "黑123",
+   "summary": "用AI从零做产品，找到至少一名真实付费客户，让作品先赚到第一笔钱。 看点：16岁起，个人或至多3人；全球线上免费；收入与商业可行性占70% 奖金：冠军1000欧元现金，另1000欧元捐给教育机构 截止日期：12月1日"
+  },
+  {
+   "title": "emma Hackathon（多云 GPU 平台 emma 线上黑客松，免费算力，5 万美元现金）",
+   "start": null,
+   "end": null,
+   "deadline": "2026-12-01",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "云计算",
+    "GPU",
+    "开发者工具"
+   ],
+   "prize": "现金 5 万美元：第一名 2.5 万、第二名 1.5 万、第三名 7,000，人气奖 3,000；两条赛道共用同一评分标准",
+   "url": "https://hackathon.emma.ms/",
+   "detail_url": "https://hack123.henryht.sh/h/emma-multi-cloud-hackathon-2026",
+   "source": "黑123",
+   "summary": "卢森堡多云平台 emma 办的线上黑客松，免费给 11 家云、23 种 GPU 的额度，用它的 API/SDK 做多云基础设施产品或演示。 看点：两条赛道——Builders（2—3 周，1—5 人，做能上生产的产品：开"
+  },
+  {
    "title": "深圳科创学院「极客营」硬件黑客松：Negentropy · Deploy or Die（120 小时，包住报销路费）",
    "start": "2026-12-02",
    "end": null,
@@ -920,7 +1929,44 @@
    "url": "https://watcha.cn/activities/activity-TBD4g6l1g3SdJPKr",
    "detail_url": "https://hack123.henryht.sh/h/innox-geek-camp-negentropy-2026",
    "source": "黑123",
-   "summary": "一句话简介：深圳科创学院办的 120 小时硬件黑客松「极客营」，主题 Negentropy（熵减）· Deploy or Die，约 100 名极客现场做出能跑的硬件原型。 看点：免费参加，报销国内往返路费，提供 5 晚"
+   "summary": "深圳科创学院办的 120 小时硬件黑客松「极客营」，主题 Negentropy（熵减）· Deploy or Die，约 100 名极客现场做出能跑的硬件原型。 看点：免费参加，报销国内往返路费，提供 5 晚住宿、元器件"
+  },
+  {
+   "title": "Kiroween 万圣节黑客松（AWS Kiro，10 万美元）",
+   "start": "2026-10-30",
+   "end": null,
+   "deadline": "2026-12-04",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "开发者工具",
+    "万圣节"
+   ],
+   "prize": "总奖金 100,000 美元现金；具体奖项 10月30日公布",
+   "url": "https://kiroween.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/kiroween-2026",
+   "source": "黑123",
+   "summary": "AWS Kiro 主办的全球线上万圣节黑客松，用 Kiro 做一个真正能运行的创意应用。 看点：必须使用 Kiro；4 个主题赛道（Resurrection、Frankenstein、Skeleton Crew、Cost"
+  },
+  {
+   "title": "VIVERSE 沉浸式世界黑客松 2026",
+   "start": "2026-11-09",
+   "end": null,
+   "deadline": "2026-12-04",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "沉浸式体验",
+    "游戏"
+   ],
+   "prize": "27,000 美元现金：三个赛道各设第一名 5,000 美元、第二名 2,500 美元、第三名 1,500 美元，共 9 支获奖队伍；奖金以银行转账支付。",
+   "url": "https://www.viverse.com/events/hackathon",
+   "detail_url": "https://hack123.henryht.sh/h/viverse-hackathon-2026",
+   "source": "黑123",
+   "summary": "HTC 旗下 VIVERSE 主办的线上沉浸式世界黑客松，面向在校大学生，用 VIVERSE 无代码工具或 A-Frame、Unity 等引擎导入，构建沉浸式 3D 世界参赛。 看点：1—5 人组队，须同校组队，每人只能"
   },
   {
    "title": "第四届「神仙湖」国际创新创业大赛",
@@ -937,7 +1983,225 @@
    "url": "https://fairylakecompetition.cuhk.edu.cn/",
    "detail_url": "https://hack123.henryht.sh/h/fairylake-shenxianhu-2026",
    "source": "黑123",
-   "summary": "一句话简介：香港中文大学（深圳）发起的第四届「神仙湖」国际创新创业大赛，面向国内外早期项目，设大数据和人工智能、高端智能制造和半导体、新材料和新能源、生物医药和医疗器械四大赛道。 看点：报名截止前未注册或融资不超过两轮的"
+   "summary": "香港中文大学（深圳）发起的第四届「神仙湖」国际创新创业大赛，面向国内外早期项目，设大数据和人工智能、高端智能制造和半导体、新材料和新能源、生物医药和医疗器械四大赛道。 看点：报名截止前未注册或融资不超过两轮的初创可参赛；"
+  },
+  {
+   "title": "支付宝「智能体涌现奖」2026 首轮（蚂蚁集团）",
+   "start": "2026-09-10",
+   "end": null,
+   "deadline": "2026-12-06",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "创业"
+   ],
+   "prize": "年度最佳智能体 1 名奖金 100 万元（2027 年 Q4 评出）；首轮前 200 名各获价值 5000 元创作激励；许愿池 5 个金点子各获价值 2000 元激励；每年总奖池 1000 万元",
+   "url": "https://emerge.alipay.com/",
+   "detail_url": "https://hack123.henryht.sh/h/alipay-agent-emergence-award-2026",
+   "source": "黑123",
+   "summary": "支付宝面向普通创作者、开发者、商家和机构的智能体创作奖，把真实生活需求做成可用的 AI 应用。 看点：无需会写代码；可用 QMuse 等工具；可从「阿宝许愿池」选题；提交公开访问链接；首轮入围作品自动晋级年度评选 奖金："
+  },
+  {
+   "title": "Agent Games: Main Street Edition（Agentplace，给真实小店做 AI 导购 Agent，72 小时线上，奖 iPad）",
+   "start": "2026-12-04",
+   "end": null,
+   "deadline": "2026-12-07",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent"
+   ],
+   "prize": "iPad、AirPods Pro 和 Agentplace 额度；第一名另获与创始人面试的机会；交出能用的 Agent 的人都有证书和推荐信",
+   "url": "https://luma.com/vg2hvdre",
+   "detail_url": "https://hack123.henryht.sh/h/agent-games-main-street-2026",
+   "source": "黑123",
+   "summary": "Agentplace 办的 72 小时线上黑客松，挑一家真实的小商家，给它做一个能接待顾客、推荐方案、促成预约或下单的 AI Agent。 看点：三条赛道（医美诊所、床垫店、婚礼场地）外加开放赛道，每条都有一键可改的模板"
+  },
+  {
+   "title": "HackOut! 2027: Technology for Good（全球高中生线上黑客松，一个月，3,000 美元）",
+   "start": "2027-01-01",
+   "end": null,
+   "deadline": "2026-12-07",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "教育",
+    "AI"
+   ],
+   "prize": "共 3,000 美元现金：总冠军 1,000 美元，五个类别各 300 美元，社区影响力奖 500 美元",
+   "url": "https://hackout-branchout.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/hackout-2027",
+   "source": "黑123",
+   "summary": "STEM 教育非营利组织 BranchOut! 办的全球高中生线上黑客松，1 月一整个月，用技术解决一个真实问题。 看点：13—18 岁高中生，2—4 人一队，没队友可以在报名表里申请匹配；五个类别——金融、生物医学、可"
+  },
+  {
+   "title": "X Layer × TapeOut Accelerate 黑客松（OKX X Layer，10 万 USDT）",
+   "start": "2026-10-16",
+   "end": null,
+   "deadline": "2026-12-07",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Web3",
+    "创业",
+    "开发者工具"
+   ],
+   "prize": "10 万 USDT：一等奖 2 万 ×1、二等奖 1 万 ×5、三等奖 6,000 ×5；获奖者另有 X Layer 官方传播支持，奖池可能继续增加",
+   "url": "https://web3.okx.com/xlayer/build-x-series",
+   "detail_url": "https://hack123.henryht.sh/h/x-layer-tapeout-accelerate-2026",
+   "source": "黑123",
+   "summary": "OKX 旗下公链 X Layer 的 Build X 系列线上黑客松，用 TapeOut 协议在 X Layer 上做真正有人用的链上应用。 看点：须使用 TapeOut 电路、合约或 X Layer 上的链上数据，或部"
+  },
+  {
+   "title": "Enveda CASMI 2026",
+   "start": "2026-09-14",
+   "end": null,
+   "deadline": "2026-12-08",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "机器学习",
+    "生物科技",
+    "质谱"
+   ],
+   "prize": "50,000 美元现金，前五名团队瓜分，冠军 16,000 美元",
+   "url": "https://www.businesswire.com/news/home/20260915334355/en/Enveda-Is-Launching-the-Next-AlphaFold-Contest.-This-Time-to-Solve-the-Structures-of-90-of-Biological-Molecules-That-No-One-Can-Identify.",
+   "detail_url": "https://hack123.henryht.sh/h/enveda-casmi-2026",
+   "source": "黑123",
+   "summary": "从质谱数据预测小分子的二维结构，用机器学习识别自然界的未知分子。 看点：官方欢迎无化学背景的机器学习研究者；Kaggle Notebook离线运行，按候选结构排序评分 奖金：50000美元现金，前五名获奖，冠军16000"
+  },
+  {
+   "title": "AI Builders Challenge 北美版 2026（IBM SkillsBuild × BeMyApp，用 IBM Bob 做 AI 原型）",
+   "start": "2026-11-02",
+   "end": null,
+   "deadline": "2026-12-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "人工智能",
+    "AI 智能体",
+    "IBM Bob"
+   ],
+   "prize": "15,000 美元现金，冠军 10,000 美元、亚军 3,000 美元、最佳 AI for Good 作品 1,000 美元、最佳 Wildcard 作品 1,000 美元",
+   "url": "https://aibuilderschallenge-na.bemyapp.com/",
+   "detail_url": "https://hack123.henryht.sh/h/ai-builders-challenge-north-america-2026",
+   "source": "黑123",
+   "summary": "IBM SkillsBuild 赞助、BeMyApp 主办的北美大学生线上 AI 挑战赛，用 IBM Bob 开发真实 AI 原型，面向美国与加拿大在校大学生。 看点：1—5 人组队，个人也可参加；三条赛道：AI for"
+  },
+  {
+   "title": "Microsoft Agent-a-Thon 2026（微软全球线上 AI 智能体黑客松，12 月 3 日，15 台 Surface Pro）",
+   "start": "2026-12-03",
+   "end": null,
+   "deadline": "2026-12-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent"
+   ],
+   "prize": "无现金奖；微软评审选出 15 位参赛者各得一台 Surface Pro Copilot+ PC 12 英寸",
+   "url": "https://www.microsoft.com/en-us/events/local-events/microsoft-agent-a-thon",
+   "detail_url": "https://hack123.henryht.sh/h/microsoft-agent-a-thon-2026",
+   "source": "黑123",
+   "summary": "微软官方办的全球线上 AI 智能体黑客松，12 月 3 日直播开做，从零代码到生产级 Agent 分三档，谁都能报。 看点：Explorer 用 Microsoft 365 Copilot 的 Agent Builder"
+  },
+  {
+   "title": "2027 WFEO 可持续交通工程黑客松",
+   "start": "2026-11-20",
+   "end": null,
+   "deadline": "2026-12-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "可持续交通",
+    "工程"
+   ],
+   "prize": "总额 7,000 欧元现金（第 1 名 4,000 / 第 2 名 2,000 / 第 3 名 1,000，队内均分）",
+   "url": "https://worldengineeringday.net/hackathon/",
+   "detail_url": "https://hack123.henryht.sh/h/wfeo-hackathon-2027",
+   "source": "黑123",
+   "summary": "围绕可持续交通工程，组队提出解决方案。 看点：全球线上；3–5人；须由工程专业学生或30岁以下青年工程师带队；11月20日揭题，可用AI辅助 奖金：7000欧元现金，前三名分别4000、2000、1000欧元 截止日期："
+  },
+  {
+   "title": "Machine Learning for Microscopy Hackathon 3（全球 70 多个站点 + 线上，用 AI 做显微镜数据）",
+   "start": "2026-12-15",
+   "end": null,
+   "deadline": "2026-12-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "科研"
+   ],
+   "prize": "官网未公布奖金，评审后于 2027 年 1 月公布获奖队伍",
+   "url": "https://kaliningroup.github.io/mic_hackathon_3/",
+   "detail_url": "https://hack123.henryht.sh/h/ml-microscopy-hackathon-3-2026",
+   "source": "黑123",
+   "summary": "第三届「机器学习 × 显微镜」全球黑客松，组跨学科小队，用 AI 处理真实的显微镜成像和谱学数据。 看点：线上线下混合，全球 70 多个站点（佐治亚理工、俄亥俄州立、东京大学、KAIST、帝国理工等）可线下参加，也能全程"
+  },
+  {
+   "title": "Dabao Open Hardware Hackathon（开源芯片开发板黑客松，最高 $5,000）",
+   "start": "2026-11-03",
+   "end": null,
+   "deadline": "2026-12-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "硬件",
+    "开源",
+    "Web3"
+   ],
+   "prize": "奖金最高 5,000 美元，按评审评分颁给最出色的作品；免费领限量版 Dabao 开发板",
+   "url": "https://luma.com/qivci0a6",
+   "detail_url": "https://hack123.henryht.sh/h/dabao-open-hardware-hackathon-2026",
+   "source": "黑123",
+   "summary": "CrossBar 和 Baochip 办的开源硬件黑客松，在 Dabao 开发板（Baochip-1x / CrossBar Daric 芯片，设计源码公开）上做点酷东西。 看点：不设赛道、不限技术栈，可以玩 4 个 7"
+  },
+  {
+   "title": "LaunchHacks V（湾区高中生线上黑客松）",
+   "start": "2026-12-11",
+   "end": null,
+   "deadline": "2026-12-16",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "教育",
+    "CS/STEM"
+   ],
+   "prize": "总额 $575 现金：第一名 $200、第二名 $150、第三名 $100、第四名 $75、第五名 $50",
+   "url": "https://launchhacks-v.devpost.com/rules",
+   "detail_url": "https://hack123.henryht.sh/h/launchhacks-v-2026",
+   "source": "黑123",
+   "summary": "面向高中生的线上CS/STEM作品赛，每队最多4人。 看点：12月11—15日开发；须为学生并达到居住地法定成年年龄，AI辅助需注明。 奖金：575美元现金奖池。 截止日期：12月16日10:00（北京时间，线上） 原始"
+  },
+  {
+   "title": "AI Agents for Founders Challenge（HETIC 2026，线上，997 欧元现金）",
+   "start": "2026-10-07",
+   "end": null,
+   "deadline": "2026-12-18",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI Agent",
+    "创业"
+   ],
+   "prize": "997 欧元现金（大奖 600 / 亚军 250 / Critical Thinking by Design 奖 147）。",
+   "url": "https://ai-agents-founders-hetic-26.devpost.com",
+   "detail_url": "https://hack123.henryht.sh/h/ai-agents-founders-hetic-2026",
+   "source": "黑123",
+   "summary": "巴黎 HETIC 面向全球高校学生发起的挑战赛，构建能为创业者节省可衡量时间的 AI Agent，要求仅使用免费/开源权重模型并保留人工检查点。 看点：纯线上、全球参与；2—5 人组队；聚焦创业者真实效率场景；要求开源权"
   },
   {
    "title": "GS1 Hong Kong IoT 数据黑客松 2027",
@@ -956,7 +2220,170 @@
    "url": "https://www.gs1hk.org/iotdatahackathon",
    "detail_url": "https://hack123.henryht.sh/h/gs1-iot-data-hackathon-2027",
    "source": "黑123",
-   "summary": "一句话简介：GS1 Hong Kong 联合香港数码港、香港科技园主办的 IoT 数据黑客松第四届，面向大专学生、初创与专业人士，用 IoT 数据与开放数据解决真实商业与社会问题。 看点：学生组与专业组双赛道，最多 6 "
+   "summary": "GS1 Hong Kong 联合香港数码港、香港科技园主办的 IoT 数据黑客松第四届，面向大专学生、初创与专业人士，用 IoT 数据与开放数据解决真实商业与社会问题。 看点：学生组与专业组双赛道，最多 6 人组队，每人"
+  },
+  {
+   "title": "Arbiter Hacks V1（线上学生黑客松，7,800 美元现金）",
+   "start": "2026-10-07",
+   "end": null,
+   "deadline": "2026-12-21",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "创新",
+    "环保"
+   ],
+   "prize": "现金共 7,800 美元：General、Theme 两个赛道各设第一名 2,100 美元、第二名 1,550 美元，另有 500 美元参与奖；获奖者另有 Adaption、Deployxa 赞助额度",
+   "url": "https://arbiter-hacks-v1.devpost.com",
+   "detail_url": "https://hack123.henryht.sh/h/arbiter-hacks-v1-2026",
+   "source": "黑123",
+   "summary": "面向学生的线上黑客松，两个赛道分开评奖：General 赛道题目不限，Theme 赛道围绕「Rethinking Waste」做减少、分拣或回收废弃物的项目。 看点：仅限 13 岁以上学生，全球可参加（Devpost 常"
+  },
+  {
+   "title": "Cosmo Hacks 2026",
+   "start": "2026-12-18",
+   "end": null,
+   "deadline": "2026-12-22",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "教育"
+   ],
+   "prize": "142,505 美元现金",
+   "url": "https://cosmohacks.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/cosmo-hacks-2026",
+   "source": "黑123",
+   "summary": "面向高中生与大学生的 4 天线上周末黑客松：做一个 App 或网站，赢真实奖金，12 月 18—21 日。 看点：142,505 美元现金奖；13 岁以上学生可参加；要求组队参加；新手友好，主题为教育与开放创新 奖金：1"
+  },
+  {
+   "title": "Codegeist 2026（Atlassian 年度线上黑客松，用 Forge 做团队 AI 应用，12 万美元）",
+   "start": "2026-10-27",
+   "end": null,
+   "deadline": "2026-12-23",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "开发者工具",
+    "MCP"
+   ],
+   "prize": "现金共 12 万美元：三个类别各设一等奖 1.5 万、二等奖 8,000、三等奖 5,000 美元；另有 24 个 1,500 美元专项奖（Rovo 智能体、Atlassian MCP、Teamwork Graph 集成、上架 Marketplace 各 6 个）；一等奖每队送 2 张 Team '27 门票；前 300 份合格作品送周边",
+   "url": "https://codegeist2026.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/atlassian-codegeist-2026",
+   "source": "黑123",
+   "summary": "Atlassian（Jira、Confluence 的公司）一年一度的线上黑客松，在 Forge 平台上做一个接入 Jira / Confluence / Bitbucket / Rovo 等产品的应用，用团队里的上下文"
+  },
+  {
+   "title": "新加坡具身 AI 挑战赛·制造业 2026",
+   "start": "2027-03-20",
+   "end": null,
+   "deadline": "2026-12-31",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "具身智能",
+    "机器人"
+   ],
+   "prize": "88,000 新元现金：冠军 50,000 新元，亚军 20,000 新元，季军 10,000 新元，第 4 名 4,000 新元，第 5、6 名各 2,000 新元。",
+   "url": "https://nrp.gov.sg/SGEAIchallenge/",
+   "detail_url": "https://hack123.henryht.sh/h/singapore-embodied-ai-challenge-manufacturing-2026",
+   "source": "黑123",
+   "summary": "南洋理工大学 PINE Lab、ASTAR 与新加坡国家机器人计划联合主办的具身 AI 竞赛，面向全球大学、实验室、企业与独立队伍，用机器人装配系统解决制造业实际任务，冠名赞助为 Micron。 看点：两阶段赛制：10 "
+  },
+  {
+   "title": "YAI 新加坡青年 AI 黑客松 26/27 赛季",
+   "start": "2027-01-16",
+   "end": null,
+   "deadline": "2027-01-02",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "青少年"
+   ],
+   "prize": "35,550 新元现金：大学组冠军 10,000 新元、中学组冠军 5,000 新元、小学组冠军 2,000 新元，各组另设亚军、季军与社区选择奖，另有 8 个各 500 新元的特别奖。",
+   "url": "https://yai.sg/",
+   "detail_url": "https://hack123.henryht.sh/h/yai-singapore-youth-ai-hackathon-2026",
+   "source": "黑123",
+   "summary": "新加坡注册社团 YCESS 主办的青年 AI 黑客松 26/27 赛季，面向全球 7—24 岁学生，按小学、中学、大学三个组别分别评审，用 AI 完成艺术、机器人、公益或智能体四类任务。 看点：1—4 人组队，选手来自任"
+  },
+  {
+   "title": "NFL Big Data Bowl 2027",
+   "start": "2027-01-06",
+   "end": null,
+   "deadline": "2027-01-06",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "数据科学",
+    "体育"
+   ],
+   "prize": "100,000 美元现金。",
+   "url": "https://www.kaggle.com/c/nfl-big-data-bowl-2027",
+   "detail_url": "https://hack123.henryht.sh/h/nfl-big-data-bowl-2027",
+   "source": "黑123",
+   "summary": "美国国家橄榄球联盟（NFL）主办的第九届年度数据黑客松，在 Kaggle 上挖掘 Combine 体测传感追踪数据与 NFL 常规赛表现之间的非显性关联，面向全球数据科学家。 看点：Kaggle 官方认证 Feature"
+  },
+  {
+   "title": "Chroma Awards 第二季（ElevenLabs 孵化的全球 AI 影像创作大赛，$45 万+）",
+   "start": "2026-10-19",
+   "end": null,
+   "deadline": "2027-01-07",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AIGC",
+    "AI 视频",
+    "游戏"
+   ],
+   "prize": "现金和差旅奖励共 45 万美元以上：工具赞助奖 26.4 万、学生奖 6.05 万、影视 3.8 万、广告 3.5 万、MV 2.4 万、游戏 2.05 万、幕后花絮 1.7 万美元；其中 ElevenLabs 专项奖 2.2 万美元（22 名）",
+   "url": "https://chromaawards.com/",
+   "detail_url": "https://hack123.henryht.sh/h/chroma-awards-season-2",
+   "source": "黑123",
+   "summary": "ElevenLabs 孵化的全球最大 AI 影像创作大赛（前身 Project Odyssey）第二季，用 AI 做短片、MV、广告、网页游戏都能投。 看点：影视、音乐 MV、广告、游戏（网页游戏和互动体验）、幕后花絮五"
+  },
+  {
+   "title": "The Barcelona Build：Mainloop 一周黑客松",
+   "start": "2027-01-08",
+   "end": null,
+   "deadline": "2027-01-08",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "AI",
+    "编程"
+   ],
+   "prize": "冠军 10,000 欧元现金，奖金发至第十名（其余名次金额官方未公布）",
+   "url": "https://mainloopai.com/en/events/barcelona-build/",
+   "detail_url": "https://hack123.henryht.sh/h/barcelona-build-2027",
+   "source": "黑123",
+   "summary": "Mainloop AI 主办的一周混合式黑客松，面向应届毕业生与职业早期工程师，围绕真实工程问题自选 1 道题目独立开发，决赛可到巴塞罗那线下参加或远程参加。 看点：仅限个人参赛，须年满 18 岁；1月8日 18:00（"
+  },
+  {
+   "title": "checkpoint 1 — games for good",
+   "start": "2027-01-08",
+   "end": null,
+   "deadline": "2027-01-10",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "游戏开发",
+    "AI"
+   ],
+   "prize": "1,400 美元现金——一等奖 $150、二等奖 $100、三等奖 $100、最佳新手 $100、最具创意 $100、最佳 AI 应用 $100，另 50 个提交奖各 $15。",
+   "url": "https://checkpoint-1.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/checkpoint-1-games-for-good",
+   "source": "黑123",
+   "summary": "Checkpoint 系列黑客松第一期，由 The Hack Foundation（501(c)(3) 非营利组织）财政赞助，面向 13—18 岁青少年，48 小时内在线做一款「对世界有益」的游戏。 看点：主题 Game"
   },
   {
    "title": "Hong Kong Techathon+ 第 11 届（港科园跨校创业赛）",
@@ -974,44 +2401,113 @@
    "url": "https://www.hktechathon.com/",
    "detail_url": "https://hack123.henryht.sh/h/hong-kong-techathon-plus-11",
    "source": "黑123",
-   "summary": "一句话简介：香港科技园公司（HKSTP）与十余所高校合办的跨校 AI 创业赛第 11 届，主题「Prompt the Future」，设学生组与 Deep Tech & Open 组，四大赛道覆盖生命健康、可持续与新能源"
+   "summary": "香港科技园公司（HKSTP）与十余所高校合办的跨校 AI 创业赛第 11 届，主题「Prompt the Future」，设学生组与 Deep Tech & Open 组，四大赛道覆盖生命健康、可持续与新能源、数字经济与"
   },
   {
-   "title": "北纬社区AI黑客松",
-   "start": "2026-10-23",
+   "title": "United Hacks V8（Hack United 线上学生黑客松，13 岁以上）",
+   "start": "2027-01-08",
    "end": null,
-   "deadline": null,
-   "city": "北京",
-   "region": "大陆",
-   "format": "线下",
+   "deadline": "2027-01-11",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
    "topics": [
     "AI",
-    "创业"
+    "教育"
    ],
-   "prize": "优秀作品可对接孵化资源与创业合作机会",
-   "url": "https://mp.weixin.qq.com/s/EfS_w3KZt7bHy-v8Cd5_FQ",
-   "detail_url": "https://hack123.henryht.sh/h/beiwei-community-ai-hackathon-2026",
+   "prize": "Devpost 标注奖品总值约 13,700 美元，以赞助额度和周边为主；综合第一名现金 250 美元、第二名 100 美元，另有单人最佳、最佳路演等奖项",
+   "url": "https://unitedhacksv8.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/united-hacks-v8-2027",
    "source": "黑123",
-   "summary": "在北京用72小时，把一个AI想法做成能展示的作品。 看点：专家授课、组队实战、导师辅导、决赛路演；面向AI探索者、开发者和创业者 奖励：优秀作品可对接孵化资源与创业合作机会 活动日期：10月23—25日（北京中关村AI北"
+   "summary": "学生公益组织 Hack United 办的周末线上黑客松，13 岁以上学生组队做项目并路演。 看点：全程线上，Discord 交流和直播，有工作坊；作品须为本次原创，不能拿去投别的比赛；适合第一次参加的中学生和大学生 奖"
   },
   {
-   "title": "第五届琶洲算法大赛·具身机器人场景应用大赛",
-   "start": null,
+   "title": "Google Quantum AI 可验证量子电路编译竞赛（Kaggle，用 AI 智能体压缩量子电路，奖池约 15 万美元）",
+   "start": "2026-10-22",
    "end": null,
-   "deadline": null,
-   "city": "广州",
-   "region": "大陆",
+   "deadline": "2027-01-21",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "数据",
+    "AI"
+   ],
+   "prize": "奖池 15 万美元（金额来自 Quantum Computing Report 报道，分配以 Kaggle 竞赛页为准）",
+   "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation",
+   "detail_url": "https://hack123.henryht.sh/h/google-quantum-ai-circuit-compilation-kaggle-2026",
+   "source": "黑123",
+   "summary": "Google Quantum AI 在 Kaggle 上办的全球公开赛，用 AI 智能体或启发式搜索，把容错量子算法里最贵的子程序电路压得更小。 看点：三道基准题——核聚变（定点 1/√x 相位）、组合优化（DQI 算法"
+  },
+  {
+   "title": "DeveloperWeek 2027 Hackathon",
+   "start": "2027-01-25",
+   "end": null,
+   "deadline": "2027-02-11",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [],
+   "prize": "赞助商赛道现金 5,000 美元以上，总冠军另获 12,500 美元等值奖品",
+   "url": "https://developerweek-2027-hackathon.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/developerweek-2027-hackathon",
+   "source": "黑123",
+   "summary": "DevNetwork 在 DeveloperWeek 2027 大会期间办的混合黑客松：线上 1 月 25 日—2 月 11 日，线下 2 月 9—11 日在圣克拉拉会展中心，可从零做移动或 Web 应用，也可只冲赞助商"
+  },
+  {
+   "title": "Build Beyond Hackathon（线上两周学生黑客松，做能活过比赛的产品，5,000 美元）",
+   "start": "2027-03-01",
+   "end": null,
+   "deadline": "2027-03-15",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "AI",
+    "创业",
+    "开源"
+   ],
+   "prize": "现金奖池 5,000 美元（Devpost 列为 1 个获奖名额）",
+   "url": "https://build-beyond.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/build-beyond-hackathon-2027",
+   "source": "黑123",
+   "summary": "为期两周的线上学生黑客松，主张别只做演示原型，要做比赛结束后还能继续长大的产品。 看点：技术栈不限，AI、开源、Web、移动都行；鼓励找真实用户验证、记录迭代过程；评委包括 Zoom 高级产品经理；新手友好 奖金：现金奖"
+  },
+  {
+   "title": "GNEC Hackathon 2027 冬季赛（联合国关联 NGO 委员会办，学生线上做气候行动项目，赢 NGO 实习）",
+   "start": "2027-01-26",
+   "end": null,
+   "deadline": "2027-03-26",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "能源",
+    "教育"
+   ],
+   "prize": "现金 700 美元（第一 400、第二 200、第三 100）；前三名另获 GNEC Hackathon、GNEC、世界青年大会（WAY）的实习机会",
+   "url": "https://gnec-hackathon-2027-winter.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/gnec-hackathon-2027-winter",
+   "source": "黑123",
+   "summary": "和联合国合作 60 年的非营利组织 Global NGO Executive Committee（GNEC）办的线上学生黑客松，本届主题是联合国可持续发展目标第 13 项「气候行动」。 看点：13 岁以上学生、全球可报；"
+  },
+  {
+   "title": "DeveloperWeek New York 2027 Hackathon（线上 + 纽约会场，企业命题挑战）",
+   "start": "2027-05-31",
+   "end": null,
+   "deadline": "2027-06-17",
+   "city": "线上",
+   "region": "线上",
    "format": "线上+线下",
    "topics": [
-    "具身智能",
-    "机器人",
-    "AIGC"
+    "AI",
+    "开发者工具"
    ],
-   "prize": null,
-   "url": "https://www.aicompetition-pz.com/topic_detail/42",
-   "detail_url": "https://hack123.henryht.sh/h/pazhou-embodied-robot-application-2026",
+   "prize": "Devpost 标注总冠军奖品价值 12,500 美元（以大会门票、实物等为主），另有各赞助商挑战奖",
+   "url": "https://developerweek-new-york-2027.devpost.com/",
+   "detail_url": "https://hack123.henryht.sh/h/developerweek-new-york-2027-hackathon",
    "source": "黑123",
-   "summary": "第五届琶洲算法大赛生态合作赛之一，海珠区科工商信局、海珠区人工智能发展局指导，海珠城市建设发展集团、广东智动未来科技承办。官网报名列表显示「报名中」。 赛题：A 机器人二次开发；B 服务机器人场景；C AIGC 科幻机甲"
+   "summary": "开发者大会 DeveloperWeek New York 2027 配套的企业命题黑客松，先线上开发，再到纽约旁的会场现场冲刺和评审。 看点：赞助商出 API 和平台挑战，选一个或多个做；线上 5 月 31 日开始，现场"
   }
  ]
 }
