@@ -227,6 +227,12 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 
 .live{display:inline-block;background:#16a34a;color:#fff;font-size:.72rem;font-weight:700;border-radius:var(--r-pill);padding:2px 9px;vertical-align:2px;margin-right:6px;letter-spacing:.02em}
 .favbtn.on{background:#ffd60a;border-color:#ffd60a;color:#0a0c10;font-weight:650;box-shadow:0 0 0 3px rgba(255,214,10,.15)}
+
+.foldhead{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 4px;background:var(--s2);border:1px dashed rgba(255,255,255,.18);border-radius:var(--r-btn);padding:12px 16px;color:var(--ink-sec);font:inherit;font-size:.92rem;font-weight:650;cursor:pointer}
+.foldhead .chev{transition:transform .2s ease}
+.foldhead.open .chev{transform:rotate(180deg)}
+.foldbody{display:none}
+.foldbody.open{display:block}
 </style>
 <!-- Microsoft Clarity（访客统计；项目 ID 待填） -->
 <script type="text/javascript">
@@ -463,18 +469,27 @@ if(hw.length){
 html+=`<div class="hwhead"><span class="pumpkin">🎃</span><span><div class="t">万圣节专区</div><div class="s">10月31日 · 深圳 + 香港精选</div></span></div>`;
 html+=hw.map(e=>cardOf(e,now)).join("");
 }
-let lastDay="";
 const todayNum=shDayNum(now);
+const todayKey=dayKey(now);
+const groups=new Map();
 for(const e of evs.filter(x=>!isHW(x))){
 const effTs=e.start?(shDayNum(e.start)<todayNum?t0+12*3600e3:new Date(e.start).getTime()):null;
 const dk=e.start?dayKey(effTs):"待定";
-if(dk!==lastDay){
-lastDay=dk;
-if(e.start){const sp=shParts(effTs),rel=relLabel(effTs),wd=new Date(effTs).toLocaleDateString("zh-CN",{timeZone:TZ,weekday:"long"});
+if(!groups.has(dk))groups.set(dk,{effTs,items:[]});
+groups.get(dk).items.push(e);
+}
+for(const [dk,g] of groups){
+if(g.effTs){const sp=shParts(g.effTs),rel=relLabel(g.effTs),wd=new Date(g.effTs).toLocaleDateString("zh-CN",{timeZone:TZ,weekday:"long"});
 html+=`<div class="dayhead"><span class="dnum">${sp[2]}</span><span class="dmeta">${sp[1]}月 · ${wd}</span>${rel?`<span class="drel ${rel==="今天"?"":"future"}">${rel}</span>`:""}</div>`;
 }else{html+=`<div class="dayhead"><span class="dmeta">时间待定（看报名截止）</span></div>`}
+if(dk===todayKey){
+const own=g.items.filter(e=>shDayNum(e.start)>=todayNum);
+const ongoing=g.items.filter(e=>shDayNum(e.start)<todayNum);
+html+=own.map(e=>cardOf(e,now)).join("");
+if(ongoing.length)html+=`<button class="foldhead" onclick="this.nextElementSibling.classList.toggle('open');this.classList.toggle('open')"><span>🔁 持续进行中 · ${ongoing.length} 场长活动</span><span class="chev">▾</span></button><div class="foldbody">${ongoing.map(e=>cardOf(e,now)).join("")}</div>`;
+}else{
+html+=g.items.map(e=>cardOf(e,now)).join("");
 }
-html+=cardOf(e,now);
 }
 $("#list").innerHTML=html;
 }
