@@ -234,9 +234,14 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 .foldbody{display:none}
 .foldbody.open{display:block}
 
-.boardbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 4px;background:linear-gradient(135deg,rgba(232,89,12,.16),rgba(255,214,10,.10));border:1px solid rgba(255,150,60,.35);border-radius:14px;padding:13px 16px;color:var(--ink);text-decoration:none;font-size:.97rem}
-.boardbar b{color:#ffb35c}
-.boardbar .go{font-weight:800;color:#ffd60a;white-space:nowrap}
+.boardbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0 6px;background:linear-gradient(135deg,rgba(232,89,12,.28),rgba(255,214,10,.14));border:1.5px solid rgba(255,160,60,.55);border-radius:18px;padding:20px 22px;color:var(--ink);text-decoration:none;box-shadow:0 8px 32px rgba(232,89,12,.18)}
+.boardbar .bb-main{display:flex;align-items:center;gap:16px;min-width:0}
+.boardbar .bb-emoji{font-size:2.1rem;line-height:1}
+.boardbar .bb-text{display:flex;flex-direction:column;gap:2px}
+.boardbar .bb-title{font-size:1.32rem;font-weight:850;letter-spacing:.01em;color:#fff}
+.boardbar .bb-sub{font-size:.94rem;color:var(--ink-sec)}
+.boardbar .bb-sub b{color:#ffd60a;font-variant-numeric:tabular-nums}
+.boardbar .go{background:#ffd60a;color:#0a0c10;font-weight:850;white-space:nowrap;border-radius:999px;padding:11px 20px;font-size:1rem}
 </style>
 <!-- Microsoft Clarity（访客统计；项目 ID 待填） -->
 <script type="text/javascript">
@@ -271,7 +276,7 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 <p>🤖 <b>不用自己刷</b>：豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅，它每天自动帮你盯新活动和报名截止。</p>
 <button onclick="openModal('sub')">一键复制订阅话术</button>
 </div>
-<a class="boardbar" href="hackathons.html"><span>🛠 <b>黑客松专题</b>：大陆 + 港澳台 + 线上，正在报名的比赛都在这</span><span class="go">去看看 →</span></a></div>
+<a class="boardbar" href="hackathons.html"><span class="bb-main"><span class="bb-emoji">🛠</span><span class="bb-text"><span class="bb-title">黑客松专题</span><span class="bb-sub">大陆 + 港澳台 + 线上 · <b id="hackcount">55</b> 场正在报名，含腾讯 120 万奖池大赛</span></span></span><span class="go">进入专题 →</span></a></div>
 
 <div class="wrap">
 <div class="bar">
@@ -570,5 +575,6 @@ render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>'});
 </script>
 
+<script>fetch("hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.hackathons||[]).length;var el=document.getElementById("hackcount");if(el&&n)el.textContent=n}).catch(function(){})</script>
 </body>
 </html>
