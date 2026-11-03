@@ -212,22 +212,59 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 @keyframes slideUp{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
 .tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
 @media (max-width:768px){
+body{overflow-x:hidden}
+.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
+.topbar-brand{flex-shrink:0}
+.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav a{flex-shrink:0;font-size:.84rem}
+.terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
+.terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
+.terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
+.intro{padding:var(--sp-lg)}
+.talk-block{padding:var(--sp-lg)}
+.code-block{overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:pre-wrap;word-wrap:break-word;padding:var(--sp-md)}
+.btn-copy{position:static;margin-top:var(--sp-sm);width:100%}
+.endpoint-item{grid-template-columns:1fr;padding:var(--sp-md)}
+.endpoint-name{grid-column:1/-1}
+.endpoint-url{grid-column:1/-1;overflow-wrap:break-word;word-break:break-all;white-space:normal}
+.endpoint-item .btn-copy{position:static;grid-column:1/-1;margin-top:var(--sp-sm);width:auto}
+.endpoint-desc{grid-column:1/-1}
+.stats{gap:var(--sp-lg);flex-wrap:wrap;justify-content:space-around}
+.topact{gap:var(--sp-sm);flex-wrap:wrap}
+.topact .btn,.topact button{flex:1 1 calc(50% - 4px);min-width:140px;font-size:.86rem;padding:var(--sp-sm) var(--sp-md)}
+.boardbar{flex-direction:column;align-items:stretch;gap:var(--sp-md);padding:var(--sp-lg)}
+.boardbar .bb-main{width:100%}
+.boardbar .go{width:100%;text-align:center}
+#ftoggle{display:flex}
+.fgroup{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+.fgroup::-webkit-scrollbar{display:none}
+.fgroup .chip{flex-shrink:0}
+.seg{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+.seg::-webkit-scrollbar{display:none}
+.seg .chip{flex-shrink:0}
+input[type=search]{font-size:16px;padding:var(--sp-md)}
+textarea{font-size:16px}
+select{font-size:16px}
 .ev{flex-direction:column;gap:0;margin-bottom:var(--sp-md)}
 .rail{flex:none;text-align:left;padding:0 0 var(--sp-xs);display:flex;gap:9px;align-items:baseline}
 .rail .t1{font-size:1.08rem}.rail .t2{font-size:.82rem;margin-top:0}
 .card{padding:clamp(18px,4vw,20px)}
-.card h3{font-size:1.14rem}
+.card h3{font-size:1.14rem;word-wrap:break-word}
 .online-strip{margin:0 calc(-1 * clamp(18px,4vw,20px)) var(--sp-md);padding:var(--sp-md) clamp(18px,4vw,20px)}
 .hybrid-strip{margin:0 calc(-1 * clamp(18px,4vw,20px)) var(--sp-md);padding:var(--sp-md) clamp(18px,4vw,20px)}
-.actions{gap:var(--sp-sm);margin-top:var(--sp-md)}
+.actions{gap:var(--sp-sm);margin-top:var(--sp-md);flex-wrap:wrap}
 .btn{flex:0 1 auto;min-height:44px;padding:var(--sp-sm) var(--sp-md);font-size:.88rem;white-space:nowrap}
 .prow{flex-direction:column;gap:var(--sp-xs)}
 .prow .pd{flex:none}
 #agent-sub,#email-sub{scroll-margin-top:106px}
 .wrap{padding:0 var(--sp-lg)}
 .bar{margin:0 calc(-1 * var(--sp-lg));padding:var(--sp-md) var(--sp-lg)}
-#ftoggle{display:flex}
-.topbar-nav{gap:var(--sp-md)}
+.ovl{padding:12px}
+.modal{width:calc(100vw - 24px);padding:var(--sp-lg)}
+.welc{left:12px;right:12px;max-width:calc(100vw - 24px);bottom:12px}
+.tourcard{width:calc(100vw - 24px);left:12px;right:12px;transform:none;bottom:12px;padding:var(--sp-md) 14px}
+@keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 }
 </style>
 <!-- Microsoft Clarity -->
@@ -365,7 +402,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
       <a class="btn submit" href="https://github.com/yatstudio/shenzhen-events/issues/new/choose" target="_blank" rel="noopener">＋ 提交活动</a>
       <button class="btn agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
       <a class="btn" href="#email-sub">✉️ 邮件订阅</a>
-      <button class="btn agent" onclick="startTour()">🧭 新手导览</button>
+      <button class="btn agent" onclick="startTour()">🧭 订阅导览</button>
       <button class="btn agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
     </div>
 
@@ -493,7 +530,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 </div>
 
 <!-- Welcome Card -->
-<div class="welc" id="welc"><b>👋 第一次来？</b><br>30 秒导览带你逛一圈：找活动、让 Agent 每天提醒你、投稿，都在这里。<div class="mrow"><button class="btn primary" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" onclick="dismissWelc()">直接逛逛</button></div></div>
+<div class="welc" id="welc"><b>👋 第一次来？</b><br>这个站主要是给 Agent 订阅的。30 秒导览带你走完订阅流程：复制话术 → 发给你的 Agent → 每天只推你命中的活动。<div class="mrow"><button class="btn primary" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" onclick="dismissWelc()">直接逛逛</button></div></div>
 
 <!-- Tour Card -->
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" onclick="endTour()">结束导览</button><span id="tourprog" style="color:var(--ink-ter);font-size:12.5px"></span></div></div>
@@ -682,10 +719,11 @@ document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly
 document.getElementById("list").addEventListener("click",ev=>{const b=ev.target.closest("[data-fav]");if(!b)return;ev.preventDefault();toggleFav(decodeURIComponent(b.dataset.fav))});
 function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent="已复制 ✓ 去粘贴给你的 Agent";setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
 const TOUR=[
-{sel:".bar",t:"<b>第 1 步 · 找活动</b>：点「🎛 筛选」可以按时间、费用、形式（线下/线上）、城市（深圳/香港）和分类缩小范围；也可以直接在搜索框搜活动名、主办方、地点。"},
-{sel:".topact .agent",t:"<b>第 2 步 · 让 Agent 订阅</b>：点「🤖 用我的 Agent 订阅」，在弹窗里按你用的 Agent（豆包工作 / WorkBuddy / Codex / 通用版）复制话术；话术可以按你的喜好改，设置一次，之后每天自动提醒你。"},
-{sel:"#postbtn",t:"<b>第 3 步 · 投稿</b>：你发现的好活动也能加进来。点「📋 复制投稿话术」，把活动名和官方链接填进去发给你的 Agent，它会核对信息并代你提交，维护者的 Agent 审核后就会上榜。"},
-{sel:"a[href='#email-sub']",t:"<b>第 4 步 · 邮件订阅</b>：没有 Agent 也没关系，点「✉️ 邮件订阅」留下邮箱，每天早上收到一封日报邮件。就这些，去逛逛吧！"}];
+{sel:".intro",t:"<b>第 1 步 · 这个站是给 Agent 读的</b>：Yat's List 把深圳的行业活动逐条核实、整理成数据接口，第一屏就是订阅终端；人看的活动清单在页面下半部分。"},
+{sel:".terminal",t:"<b>第 2 步 · 订阅只要一句话</b>：终端里这段话术就是订阅指令——复制它，发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上会自己来拉数据。"},
+{sel:"#subprompt",t:"<b>第 3 步 · 话术可以改</b>：里面的兴趣类别、提醒节奏都能按你的喜好改，改完再发给 Agent。设置一次，之后不用再管。"},
+{sel:"#agent-sub",t:"<b>第 4 步 · 按你的 Agent 选版本</b>：豆包、WorkBuddy、Codex 各有专用话术，在下面这片区域里对应复制即可；拿不准用哪个，就用第 2 步的通用版。"},
+{sel:"#email-sub",t:"<b>第 5 步 · 没有 Agent 也没关系</b>：可以订邮件日报（每天一封）或把 ICS 导进日历。订阅之后，只有活动命中你的兴趣时才会提醒你，没命中不打扰。导览结束，去逛逛活动清单吧。"}];
 let tourI=-1,tourEl=null;
 function tourShow(){const st=TOUR[tourI];if(tourEl)tourEl.classList.remove("tour-hl");tourEl=document.querySelector(st.sel);if(tourEl){tourEl.scrollIntoView({behavior:"smooth",block:"center"});tourEl.classList.add("tour-hl")}document.getElementById("tourtext").innerHTML=st.t;document.getElementById("tourprog").textContent=(tourI+1)+" / "+TOUR.length;document.getElementById("tourprev").disabled=tourI===0;document.getElementById("tournext").textContent=tourI===TOUR.length-1?"完成":"下一步"}
 function startTour(){tourI=0;document.getElementById("tourcard").classList.add("open");tourShow()}
