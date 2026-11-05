@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松</title>
-<meta name="description" content="Yat's List 深圳活动清单：给 Agent 订阅的活动数据源。深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天更新。Machine-readable: events.json">
+<meta name="description" content="Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。">
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
@@ -31,7 +31,11 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
 .topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
 .topbar-nav a:hover{color:var(--green)}
-.agent-section{background:var(--bg);padding:clamp(var(--sp-3xl),8vw,80px) 0 clamp(var(--sp-3xl),8vw,60px);min-height:80vh;display:flex;flex-direction:column;justify-content:center}
+.agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
+.agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
+.agentnote b{color:var(--ink)}
+.agentnote a{color:var(--green);text-decoration:none;font-weight:600}
+.agentnote a:hover{text-decoration:underline}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
 .terminal{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:clamp(var(--sp-2xl),5vw,var(--sp-3xl))}
 .terminal-header{background:rgba(0,0,0,.3);padding:var(--sp-md) var(--sp-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-sm)}
@@ -298,97 +302,12 @@ select{font-size:16px}
   </div>
 </div>
 
-<!-- Agent Section (第一屏) -->
-<section class="agent-section" id="agent-section">
-  <div class="wrap">
-    <!-- Intro for humans -->
-    <div class="intro">
-      <img src="logo-main.svg" alt="Yat's List" style="width:min(430px,100%);height:auto;display:block;margin-bottom:16px">
-      <h3 style="font-size:1.18rem;margin:0 0 10px">Yat's List 是什么？</h3>
-      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 10px">Yat's List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接往下浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。</p>
-      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 14px">这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">✓ 每条都核实过</span><span class="tag">🤖 Agent 可直接订阅</span><span class="tag">🔕 没命中就不打扰</span></div>
-    </div>
-
-    <!-- Terminal Window -->
-    <div class="terminal">
-      <div class="terminal-header">
-        <span class="terminal-dot"></span>
-        <span class="terminal-dot"></span>
-        <span class="terminal-dot"></span>
-        <span class="terminal-title">agent — subscribe</span>
-      </div>
-      <div class="terminal-body">
-        <div class="terminal-prompt">$ subscribe: yat's list · 深圳活动日报</div>
-        <div class="terminal-status">
-          <span id="st-total">–</span> 场活动在列 ·
-          <span id="hackcount">–</span> 场黑客松 ·
-          最近更新 <span id="st-upd">–</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Subscription Talk Block -->
-    <div class="talk-block">
-      <h3>🤖 订阅话术（给 Agent）</h3>
-      <p class="sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：</p>
-      <div class="code-block" id="subprompt">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。
-        <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText.trim()).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制',1500)})">复制</button>
-      </div>
-      <div class="actions">
-        <button class="btn btn-primary" onclick="openModal('sub')">其他 Agent 版本（豆包 / WorkBuddy / Codex）</button>
-      </div>
-    </div>
-
-    <!-- Endpoint List -->
-    <div class="talk-block">
-      <h3>📡 接口清单（给 Agent）</h3>
-      <div class="endpoint-list">
-        <div class="endpoint-item">
-          <span class="endpoint-name">events.json</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/events.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/events.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
-          <span class="endpoint-desc">活动数据（JSON，每天 07:30 更新）</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">hackathons.json</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/hackathons.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
-          <span class="endpoint-desc">黑客松数据（大陆+港澳台+线上）</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">feed.xml</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/feed.xml</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/feed.xml').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
-          <span class="endpoint-desc">RSS 订阅源</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">events.ics</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/events.ics</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/events.ics').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
-          <span class="endpoint-desc">日历订阅文件</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">llms.txt</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/llms.txt</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/llms.txt').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
-          <span class="endpoint-desc">给 AI 的站点说明</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll Hint -->
-    <div class="scroll-hint">
-      <a href="#human-section">↓ 人类版在下面</a>
-    </div>
-  </div>
-</section>
-
-<!-- Human Section (第二屏) -->
+<!-- Human Section (第一屏) -->
 <section class="human-section" id="human-section">
   <div class="wrap">
     <!-- Section Header -->
     <div class="section-header">
+      <img src="logo-main.svg" alt="Yat's List" style="width:min(430px,100%);height:auto;display:block;margin:0 auto 14px">
       <h2 class="section-title">Yat's List · 深圳活动清单</h2>
       <p class="section-subtitle">每天 07:30 更新 · 每条都打开官方页核实过</p>
     </div>
@@ -407,6 +326,9 @@ select{font-size:16px}
       <button class="btn agent" onclick="startTour()">🧭 订阅导览</button>
       <button class="btn agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
     </div>
+
+    <!-- Agent Note -->
+    <div class="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。</div>
 
     <!-- Hackathon Boardbar -->
     <a class="boardbar" href="hackathons.html">
@@ -509,6 +431,91 @@ select{font-size:16px}
       <div>🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新、审核投稿）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a></div>
       数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历.ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a><br>
       Agent 投稿接入见仓库 <a href="https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md">AGENTS.md</a>。报名前请以官方页面最新信息为准。
+    </div>
+  </div>
+</section>
+
+<!-- Agent Section (给 Agent) -->
+<section class="agent-section" id="agent-section">
+  <div class="wrap">
+    <!-- Intro for humans -->
+    <div class="intro">
+      <h3 style="font-size:1.18rem;margin:0 0 10px">Yat's List 是什么？</h3>
+      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 10px">Yat's List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接在上方清单里浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。</p>
+      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 14px">这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">✓ 每条都核实过</span><span class="tag">🤖 Agent 可直接订阅</span><span class="tag">🔕 没命中就不打扰</span></div>
+    </div>
+
+    <!-- Terminal Window -->
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-title">agent — subscribe</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-prompt">$ subscribe: yat's list · 深圳活动日报</div>
+        <div class="terminal-status">
+          <span id="st-total">–</span> 场活动在列 ·
+          <span id="hackcount">–</span> 场黑客松 ·
+          最近更新 <span id="st-upd">–</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscription Talk Block -->
+    <div class="talk-block">
+      <h3>🤖 订阅话术（给 Agent）</h3>
+      <p class="sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：</p>
+      <div class="code-block" id="subprompt">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。
+        <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText.trim()).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制',1500)})">复制</button>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="openModal('sub')">其他 Agent 版本（豆包 / WorkBuddy / Codex）</button>
+      </div>
+    </div>
+
+    <!-- Endpoint List -->
+    <div class="talk-block">
+      <h3>📡 接口清单（给 Agent）</h3>
+      <div class="endpoint-list">
+        <div class="endpoint-item">
+          <span class="endpoint-name">events.json</span>
+          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/events.json</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/events.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-desc">活动数据（JSON，每天 07:30 更新）</span>
+        </div>
+        <div class="endpoint-item">
+          <span class="endpoint-name">hackathons.json</span>
+          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/hackathons.json</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-desc">黑客松数据（大陆+港澳台+线上）</span>
+        </div>
+        <div class="endpoint-item">
+          <span class="endpoint-name">feed.xml</span>
+          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/feed.xml</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/feed.xml').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-desc">RSS 订阅源</span>
+        </div>
+        <div class="endpoint-item">
+          <span class="endpoint-name">events.ics</span>
+          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/events.ics</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/events.ics').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-desc">日历订阅文件</span>
+        </div>
+        <div class="endpoint-item">
+          <span class="endpoint-name">llms.txt</span>
+          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/llms.txt</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/llms.txt').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-desc">给 AI 的站点说明</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Hint -->
+    <div class="scroll-hint">
+      <a href="#human-section">↓ 人类版在下面</a>
     </div>
   </div>
 </section>
