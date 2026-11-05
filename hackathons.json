@@ -1,42 +1,7 @@
 {
- "updated_at": "2026-11-04T07:30:00+08:00",
- "note": "数据来源：黑123（hack123.henryht.sh）公开接口，每日同步核实；收录范围：报名未截止、大陆/港澳台线下与全部线上。",
+ "updated_at": "2026-11-05T07:35:06+08:00",
+ "note": "数据来源：黑123（hack123.henryht.sh）公开接口每日同步核实，另有 Devpost / lablab.ai / HackerTrip 渠道补录；收录范围：报名未截止、大陆/港澳台线下与全部线上。",
  "hackathons": [
-  {
-   "title": "DevFest GDGoC Japan Hackathon 2026（Google 日本学生黑客松，用 Gemini 和 Google Cloud 六天做产品，决赛在 Google 涩谷）",
-   "start": "2026-11-05",
-   "end": null,
-   "deadline": "2026-11-04",
-   "city": "线上",
-   "region": "线上",
-   "format": "线上+线下",
-   "topics": [
-    "AI"
-   ],
-   "prize": "无现金奖；冠军获 GDG DevFest Tokyo 闪电演讲席位，并有与 Google 实习 / 应届招聘相关的机会；4 队获 DevFest 展位；前 10 队有赴东京交通补助；全员发 Google Cloud 额度",
-   "url": "https://df-hack26.gdgs.jp/en",
-   "detail_url": "https://hack123.henryht.sh/h/devfest-gdgoc-japan-hackathon-2026",
-   "source": "黑123",
-   "summary": "Google 开发者社区 GDG on Campus Japan 办的日本全国学生黑客松，六天用 Gemini 和 Google Cloud 把点子做成产品，决赛在 Google 涩谷办公室。 看点：11 月 1 日线上"
-  },
-  {
-   "title": "Neural Storm",
-   "start": "2026-11-02",
-   "end": null,
-   "deadline": "2026-11-04",
-   "city": "线上",
-   "region": "线上",
-   "format": "线上",
-   "topics": [
-    "AI",
-    "机器学习"
-   ],
-   "prize": "奖金池 20,000 印度卢比",
-   "url": "https://neuralstorm.devpost.com/",
-   "detail_url": "https://neuralstorm.devpost.com/",
-   "source": "Devpost",
-   "summary": "48 小时线上 AI/ML 黑客松，设未来科技、绿色地球、人类影响三条赛道共 15 个命题，11 月 2 日至 4 日举行。"
-  },
   {
    "title": "Lexsi AI Safety and Alignment Hackathon（Cohere Labs × Hugging Face 安全对齐黑客松）",
    "start": "2026-11-01",
@@ -331,6 +296,25 @@
    "detail_url": "https://hack123.henryht.sh/h/flip-the-switch-hackathon-2026",
    "source": "黑123",
    "summary": "把 Codex、Claude Code 等 Agent 接进团队群聊，让人和 Agent 一起完成任务。 看点：个人或最多4人；Switch 必须是核心，可接 Slack、Teams、Discord 等 奖金：10000"
+  },
+  {
+   "title": "LUMS CleanTech Hackathon 2026",
+   "start": null,
+   "end": null,
+   "deadline": "2026-11-08",
+   "city": "拉合尔",
+   "region": "大陆",
+   "format": "线下",
+   "topics": [
+    "创业",
+    "孵化",
+    "能源"
+   ],
+   "prize": "100 万巴基斯坦卢比现金",
+   "url": "https://lce.lums.edu.pk/cleantech-hackathon-2026/",
+   "detail_url": "https://hack123.henryht.sh/h/lums-cleantech-hackathon-2026",
+   "source": "黑123",
+   "summary": "拉合尔管理科学大学创业中心与巴基斯坦石油天然气开发公司联合主办的清洁技术黑客松，面向创新者、研究者、工程师与初创团队，为巴基斯坦能源、水与气候问题做可落地的解决方案。 看点：七大赛道：可再生能源与替代能源、储能与能效、清"
   },
   {
    "title": "Swarm Alignment Hackathon（Apart Research × AI Alignment Foundation 多智能体对齐黑客松）",
@@ -813,6 +797,25 @@
    "detail_url": "https://hack123.henryht.sh/h/rebas-baseball-data-hackathon-2026",
    "source": "黑123",
    "summary": "野球革命 Rebas Sports 主办、中山醫學大學协办的台湾首个棒球数据黑客松，以棒球实际问题与数据产品开发为核心，不限科系、职业或棒球背景。 看点：1—5 人组队，开放个人、跨校、跨系、跨领域组队；两阶段赛制：先交"
+  },
+  {
+   "title": "BAND Dark Factory Buildathon（旧金山 AWS Builder Loft + 远程，让 AI 编程智能体组队造软件，4,500 美元）",
+   "start": "2026-11-13",
+   "end": null,
+   "deadline": "2026-11-13",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上+线下",
+   "topics": [
+    "Agent",
+    "多智能体",
+    "AI 编程"
+   ],
+   "prize": "奖金 4,500 美元：第一名 2,000、第二名 1,500、第三名 1,000（提交一周后评审）",
+   "url": "https://luma.com/band-ai-hacks-nov13-2026",
+   "detail_url": "https://hack123.henryht.sh/h/band-dark-factory-buildathon-sf-2026",
+   "source": "黑123",
+   "summary": "BAND 联合 HackerSquad、Sierra Ventures 办的 Buildathon，在旧金山 AWS Builder Loft 线下开场、之后远程做一周，用 BAND Desktop 搭一座让多个 AI "
   },
   {
    "title": "CIPS & IBM Virtual Hackathon 2026（IBM 加拿大线上黑客松，必须用 IBM Bob，限加拿大 IT 从业者）",
@@ -2042,6 +2045,25 @@
    "summary": "支付宝「AI 付」主办的年度黑客松，设 Vibe Pay、Skill Pay、Token Pay、Machine Pay、Agent Pay 五个赛道，线上开发，12 月 26 日线下决赛。"
   },
   {
+   "title": "魔搭 AI+∞ 开发者创作大赛第三期「AI 造游戏」（阿里魔搭 × Qoder × 盛趣游戏，现金 4 万元 + NVIDIA DGX Spark）",
+   "start": "2026-11-02",
+   "end": null,
+   "deadline": "2026-12-01",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "游戏",
+    "AIGC",
+    "AI 编程"
+   ],
+   "prize": "现金合计 4 万元：金奖 1.5 万、银奖 8,000、铜奖 5,000，最佳 AI 原生玩法、最佳 Agent 工程实践各 4,000，最佳创新创意、最佳创作实践各 2,000；最佳 AI 原生游戏创作工具得 NVIDIA DGX Spark 一台，另有华硕智能体电脑特别奖（ROG 迷你主机等）、人气奖 5 名，各奖项附 Qoder Credits 和魔粒值；报名通过送 500 Qoder Credits，完整提交并审核通过送 1,000",
+   "url": "https://www.modelscope.cn/events/394",
+   "detail_url": "https://hack123.henryht.sh/h/modelscope-ai-game-creation-2026",
+   "source": "黑123",
+   "summary": "阿里魔搭社区联合 Qoder、盛趣游戏办的线上创作赛，用 AI 做一款原创、能直接点开玩的游戏，发布到魔搭创空间。 看点：方向不限，灵感库里有休闲手速（消除、跳跃、街机）、策略博弈（解谜、卡牌、塔防）、故事与 AI NP"
+  },
+  {
    "title": "ML Empowerment Build Challenge 4.0",
    "start": "2026-11-01",
    "end": null,
@@ -2242,6 +2264,25 @@
    "detail_url": "https://hack123.henryht.sh/h/enveda-casmi-2026",
    "source": "黑123",
    "summary": "从质谱数据预测小分子的二维结构，用机器学习识别自然界的未知分子。 看点：官方欢迎无化学背景的机器学习研究者；Kaggle Notebook离线运行，按候选结构排序评分 奖金：50000美元现金，前五名获奖，冠军16000"
+  },
+  {
+   "title": "Concordium Trusted Agents Hackathon（Encode Club 六周线上赛，给 AI 智能体加上「有真人负责」的证明）",
+   "start": "2026-11-02",
+   "end": null,
+   "deadline": "2026-12-09",
+   "city": "线上",
+   "region": "线上",
+   "format": "线上",
+   "topics": [
+    "Agent",
+    "Web3",
+    "AI 身份"
+   ],
+   "prize": "官方未公布现金奖金；获胜团队可直接向 Concordium 7,500 万 CCD 资助计划委员会提案（以资助条款为准）",
+   "url": "https://www.concordium.com/article/concordium-trusted-agents-hackathon-encode-club",
+   "detail_url": "https://hack123.henryht.sh/h/concordium-trusted-agents-hackathon-2026",
+   "source": "黑123",
+   "summary": "Concordium 和 Encode Club 合办的免费六周线上黑客松，给你已经在跑的 AI 智能体加上「背后有经过验证的真人负责」的证明，并让它能自己收付款、留下行为记录。 看点：用 Verified by Con"
   },
   {
    "title": "AI Builders Challenge 北美版 2026（IBM SkillsBuild × BeMyApp，用 IBM Bob 做 AI 原型）",
