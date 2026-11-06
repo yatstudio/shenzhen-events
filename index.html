@@ -270,6 +270,38 @@ select{font-size:16px}
 .tourcard{width:calc(100vw - 24px);left:12px;right:12px;transform:none;bottom:12px;padding:var(--sp-md) 14px}
 @keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 }
+
+/* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
+@media (max-width:820px){
+.topbar{padding:8px 0}
+.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
+.topbar-icon{height:26px}
+.topbar-logo{display:none}
+.topbar-nav{gap:14px;overflow:visible;width:auto}
+.topbar-nav a{font-size:.82rem}
+.human-section{padding-top:24px}
+.section-header img{width:min(248px,70%)!important;margin-bottom:8px!important}
+.section-title{font-size:1.5rem}
+.section-subtitle{font-size:.9rem}
+.stats{margin:12px 0 2px}
+.stat b{font-size:1.65rem}
+.topact{margin:12px 0}
+.agentnote{font-size:.86rem;padding:10px 12px;margin-bottom:14px;line-height:1.65}
+.boardbar{padding:14px 16px;margin-top:12px}
+.bar{padding-top:12px;padding-bottom:12px}
+.fgroup{flex-wrap:wrap;overflow:visible;row-gap:8px}
+.fgroup .seg{flex:1 1 calc(100% - 3.4em);min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+.fgroup .seg::-webkit-scrollbar{display:none}
+.fgroup .chip{flex-shrink:0}
+#fdate{flex:0 0 auto}
+.fres{white-space:nowrap;margin-left:auto}
+.welc{padding:12px 14px;font-size:.86rem;line-height:1.55}
+.welc .mrow{gap:8px;margin-top:10px}
+.welc .btn{min-height:40px;padding:6px 12px;font-size:.86rem;flex:1}
+.tourcard{font-size:.88rem;line-height:1.6;padding:12px 14px}
+.subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
+.card .actions .btn{flex:1 1 30%}
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -539,7 +571,7 @@ select{font-size:16px}
 </div>
 
 <!-- Welcome Card -->
-<div class="welc" id="welc"><b>👋 第一次来？</b><br>这个站主要是给 Agent 订阅的。30 秒导览带你走完订阅流程：复制话术 → 发给你的 Agent → 每天只推你命中的活动。<div class="mrow"><button class="btn primary" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" onclick="dismissWelc()">直接逛逛</button></div></div>
+<div class="welc" id="welc"><b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。<div class="mrow"><button class="btn primary" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" onclick="dismissWelc()">直接逛逛</button></div></div>
 
 <!-- Tour Card -->
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" onclick="endTour()">结束导览</button><span id="tourprog" style="color:var(--ink-ter);font-size:12.5px"></span></div></div>
