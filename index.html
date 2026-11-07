@@ -435,20 +435,20 @@ select{font-size:16px}
     <div class="subcard" id="agent-sub">
       <h3>🤖 让你的 Agent 提醒你，不用自己刷</h3>
       <p class="sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
-      <p class="prompt">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
+      <p class="prompt">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
       <div class="actions"><button class="btn primary" onclick="openModal('sub')">查看全部 Agent 版本</button></div>
 
       <div class="agblock"><h4>🫘 豆包工作</h4>
       <ol><li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li></ol>
-      <p class="prompt" id="prompt-doubao">每天早上 9 点，打开 https://yatstudio.github.io/shenzhen-events/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-doubao').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
+      <p class="prompt" id="prompt-doubao">每天早上 9 点，打开 https://yatslist.com/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-doubao').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
 
       <div class="agblock"><h4>💼 WorkBuddy</h4>
       <ol><li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li></ol>
-      <p class="prompt" id="prompt-workbuddy">每天早上 9 点，打开 https://yatstudio.github.io/shenzhen-events/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-workbuddy').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
+      <p class="prompt" id="prompt-workbuddy">每天早上 9 点，打开 https://yatslist.com/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-workbuddy').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
 
       <div class="agblock"><h4>🧑‍💻 Codex</h4>
       <ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你提交活动（提 PR）</li></ol>
-      <p class="prompt" id="prompt-codex">请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatstudio.github.io/shenzhen-events/events.json，并阅读仓库说明 https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按 AGENTS.md 的规范提 PR。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
+      <p class="prompt" id="prompt-codex">请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读仓库说明 https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按 AGENTS.md 的规范提 PR。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制这段话',1500)})">复制这段话</button></div></div>
     </div>
 
     <!-- Email Subscription Card -->
@@ -500,7 +500,7 @@ select{font-size:16px}
     <div class="talk-block">
       <h3>🤖 订阅话术（给 Agent）</h3>
       <p class="sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：</p>
-      <div class="code-block" id="subprompt">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。
+      <div class="code-block" id="subprompt">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。
         <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt').innerText.trim()).then(()=>{this.textContent='已复制 ✓';setTimeout(()=>this.textContent='复制',1500)})">复制</button>
       </div>
       <div class="actions">
@@ -514,32 +514,32 @@ select{font-size:16px}
       <div class="endpoint-list">
         <div class="endpoint-item">
           <span class="endpoint-name">events.json</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/events.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/events.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-url">https://yatslist.com/events.json</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
           <span class="endpoint-desc">活动数据（JSON，每天 07:30 更新）</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">hackathons.json</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/hackathons.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-url">https://yatslist.com/hackathons.json</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
           <span class="endpoint-desc">黑客松数据（大陆+港澳台+线上）</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">feed.xml</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/feed.xml</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/feed.xml').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-url">https://yatslist.com/feed.xml</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/feed.xml').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
           <span class="endpoint-desc">RSS 订阅源</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">events.ics</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/events.ics</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/events.ics').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-url">https://yatslist.com/events.ics</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.ics').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
           <span class="endpoint-desc">日历订阅文件</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">llms.txt</span>
-          <span class="endpoint-url">https://yatstudio.github.io/shenzhen-events/llms.txt</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/llms.txt').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
+          <span class="endpoint-url">https://yatslist.com/llms.txt</span>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/llms.txt').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button>
           <span class="endpoint-desc">给 AI 的站点说明</span>
         </div>
       </div>

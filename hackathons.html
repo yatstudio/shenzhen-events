@@ -288,7 +288,7 @@ header{padding:clamp(42px,9vw,48px) 0 clamp(36px,7vw,40px)}
 <header><div class="wrap">
 <div class="brand"><h1>Yat's List · 黑客松专题</h1></div>
 <div class="tagline"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新</div>
-<div class="cmdline"><span>$ subscribe: yat's list · 黑客松</span><span class="u">https://yatstudio.github.io/shenzhen-events/hackathons.json</span><button onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatstudio.github.io/shenzhen-events/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button></div>
+<div class="cmdline"><span>$ subscribe: yat's list · 黑客松</span><span class="u">https://yatslist.com/hackathons.json</span><button onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/hackathons.json').then(()=>{this.textContent='已复制';setTimeout(()=>this.textContent='复制',1200)})">复制</button></div>
 <div class="stats">
 <div class="stat"><b id="st-total">–</b><span>报名中</span></div>
 <div class="stat"><b id="st-soon">–</b><span>72 小时内截止</span></div>
@@ -360,7 +360,7 @@ fetch("hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{DATA=d.ha
 <div class="ovl" id="ovl" onclick="if(event.target===this)closeModal()">
 <div class="modal">
 <div class="mhead"><h3>🤖 订阅黑客松专题</h3><button class="btn" onclick="closeModal()">✕ 关闭</button></div>
-<p class="prompt" id="subprompt">请订阅「YAT 黑客松专题」并给我报名提醒：数据源 https://yatstudio.github.io/shenzhen-events/hackathons.json（每天早上更新，无需登录）。每天读取一次，按我的技术方向和所在地区筛选；新出现且高度相关的黑客松当天告诉我；报名截止前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的比赛，提醒时附官方报名链接。</p>
+<p class="prompt" id="subprompt">请订阅「YAT 黑客松专题」并给我报名提醒：数据源 https://yatslist.com/hackathons.json（每天早上更新，无需登录）。每天读取一次，按我的技术方向和所在地区筛选；新出现且高度相关的黑客松当天告诉我；报名截止前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的比赛，提醒时附官方报名链接。</p>
 <div class="mrow"><button class="btn primary" onclick="copySub(this)">📋 复制这段话</button><button class="btn" onclick="closeModal()">关闭</button></div>
 </div>
 </div>

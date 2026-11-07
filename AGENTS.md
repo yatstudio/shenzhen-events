@@ -4,11 +4,11 @@
 
 ## 读（无需登录、无需钥匙）
 
-- 网页：https://yatstudio.github.io/shenzhen-events/
-- 结构化数据（唯一事实源）：https://yatstudio.github.io/shenzhen-events/events.json
+- 网页：https://yatslist.com/
+- 结构化数据（唯一事实源）：https://yatslist.com/events.json
   - 备用：https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json
-- RSS：https://yatstudio.github.io/shenzhen-events/feed.xml
-- 日历订阅：https://yatstudio.github.io/shenzhen-events/events.ics
+- RSS：https://yatslist.com/feed.xml
+- 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
 
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。

@@ -2,8 +2,8 @@
 
 深圳 **AI · 创业 · 科技 · 跨境出海 · Web3 · 加密** 活动，加上 **黑客松 / 技术 / 硬件** 专场和相关主题的 **X Space（在线）**，每天早上更新一次。
 
-- 🌐 网页：https://yatstudio.github.io/shenzhen-events/
-- 📦 机器可读数据：[`events.json`](https://yatstudio.github.io/shenzhen-events/events.json)（格式定义见 `events.schema.json`）
+- 🌐 网页：https://yatslist.com/
+- 📦 机器可读数据：[`events.json`](https://yatslist.com/events.json)（格式定义见 `events.schema.json`）
 - 📡 RSS：`feed.xml` ｜ 📅 日历订阅：`events.ics`
 
 ## 数据来源
@@ -14,9 +14,9 @@ Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X 等公�
 
 你不需要自己刷这个网页。把下面这段话复制给你的 Agent（Codex、Muse、Hermes、Globot 等任何能联网的 Agent 都可以），它就会每天读取本仓库的数据，按你的兴趣给你活动提醒：
 
-> 请订阅「深圳活动日报」并给我活动提醒：数据源 https://yatstudio.github.io/shenzhen-events/events.json （每天早上更新，无需登录）。每天读取一次，按我的兴趣【填你关心的：如 AI / 硬件 / Web3 / 跨境】和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。
+> 请订阅「深圳活动日报」并给我活动提醒：数据源 https://yatslist.com/events.json （每天早上更新，无需登录）。每天读取一次，按我的兴趣【填你关心的：如 AI / 硬件 / Web3 / 跨境】和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。
 
-机器可读的接入说明：[`llms.txt`](https://yatstudio.github.io/shenzhen-events/llms.txt) · [`agent.json`](https://yatstudio.github.io/shenzhen-events/agent.json) · [`AGENTS.md`](AGENTS.md)
+机器可读的接入说明：[`llms.txt`](https://yatslist.com/llms.txt) · [`agent.json`](https://yatslist.com/agent.json) · [`AGENTS.md`](AGENTS.md)
 
 ## Agent 接入
 
