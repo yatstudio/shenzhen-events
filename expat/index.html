@@ -140,6 +140,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .subcard{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;margin:28px 0 6px;box-shadow:var(--shadow-sm)}
 .subcard h3{margin:0 0 10px;font-size:1.18rem;font-weight:820}
 .subcard .prompt{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:.92rem;line-height:1.7;color:var(--ink-sec)}
+#event-post.hl{outline:2px solid var(--green);outline-offset:3px}
 /* ===== footer (shared with Yat's List) ===== */
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px;margin-top:34px}
 .sitefoot .wrap{text-align:center}
@@ -206,6 +207,7 @@ input[type=search]{font-size:16px}
 <p class="tagline" id="tagline"></p>
 <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">外国人活动</span></span><span class="u">https://yatslist.com/expat/events.json</span><button type="button" id="cmd-copy">复制</button></div>
 <div class="statsline" id="st-line">Loading…</div>
+<div class="actions" style="justify-content:center;margin-top:14px"><a class="btn" id="ta-submit" href="#event-post" onclick="hlSubmit()">＋ 提交活动</a></div>
 </div></header>
 <div class="agentbar"><div class="wrap">
 <p id="agentbar-p"></p>
@@ -233,6 +235,24 @@ input[type=search]{font-size:16px}
 <p class="prompt" id="subprompt"></p>
 <div class="actions"><button class="btn primary copybtn" onclick="copyPrompt(this)"></button></div>
 </div>
+<div class="subcard" id="event-post">
+<h3 id="epost-title"></h3>
+<p class="sum" id="epost-q"></p>
+<div class="actions"><button type="button" class="btn" id="epost-yes" onclick="routePost('gh')"></button><button type="button" class="btn" id="epost-mail" onclick="routePost('mail')"></button><button type="button" class="btn" id="epost-no" onclick="routePost('form')"></button></div>
+<div id="route-gh" hidden>
+<p class="prompt" id="prompt-post-card"></p>
+<div class="actions"><button type="button" class="btn primary" id="epost-copy" onclick="copyPostPrompt(this)"></button></div>
+</div>
+<div id="route-mail" hidden>
+<p class="sum" id="epost-mail-note"></p>
+<p class="prompt">event.submit@yatslist.com</p>
+<div class="actions"><button type="button" class="btn primary" id="epost-mail-copy" onclick="copyRouteMail(this)"></button><a class="btn" id="epost-mail-send" href="mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A"></a></div>
+</div>
+<div id="route-form" hidden>
+<div class="actions"><a class="btn primary" id="epost-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener"></a></div>
+<p class="sum" id="epost-form-note"></p>
+</div>
+</div>
 </div>
 
 <footer class="sitefoot"><div class="wrap">
@@ -241,7 +261,7 @@ input[type=search]{font-size:16px}
 <nav class="sf-nav">
 <a href="https://yatslist.com" id="sf-home"></a>
 <a href="https://yatslist.com/hackathons.html" id="sf-hack"></a>
-<a href="./" id="sf-expat"></a>
+<a href="https://yatslist.com/expat/" id="sf-expat"></a>
 <a href="#agent-sub" id="sf-sub"></a>
 </nav>
 <p class="sf-small" id="sf-small"></p>
@@ -268,6 +288,9 @@ if(nl.indexOf("zh")===0){LANG=(nl.indexOf("tw")>0||nl.indexOf("hk")>0||nl.indexO
 const PROMPT_EN=`Please subscribe to the "SZMeetups Agent Mirror" and remind me about Shenzhen events: data source https://yatslist.com/expat/events.json (updated daily, no login needed; it is an unofficial mirror of szmeetups.com). Fetch it once a day and filter by my interests and my area. Tell me the same day when a new event matches my interests; for events I say I want to attend, remind me 3 days before and 1 day before they start. Never invent events that are not in the data, and always include the original szmeetups.com event link.`;
 const PROMPT_ZH=`请订阅「SZMeetups Agent 镜像」并给我深圳活动提醒：数据源 https://yatslist.com/expat/events.json（每天更新，无需登录；这是 szmeetups.com 的非官方镜像）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附上 szmeetups.com 的原始活动链接。`;
 const PROMPT_TW=`請訂閱「SZMeetups Agent 鏡像」並給我深圳活動提醒：數據源 https://yatslist.com/expat/events.json（每天更新，無需登錄；這是 szmeetups.com 的非官方鏡像）。每天讀取一次，按我的興趣和所在區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附上 szmeetups.com 的原始活動鏈接。`;
+const POST_PROMPT_ZH=`请帮我向 Yat's List 的「深圳外国人活动清单」提交一场活动：先打开活动官方页，核对活动名称、开始时间、地点和费用无误，然后把活动名称、官方链接、时间、地点和一句话介绍，通过投稿表单 https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform 提交（「所属清单」选「深圳外国人活动」），或者发邮件到 event.submit@yatslist.com。这张清单是每天核实更新的精选清单、由维护方统一录入，不要直接修改它的数据文件——改数据的 PR 不会被接受。提交完成后告诉我结果。`;
+const POST_PROMPT_TW=`請幫我向 Yat's List 的「深圳外國人活動清單」提交一場活動：先打開活動官方頁，核對活動名稱、開始時間、地點和費用無誤，然後把活動名稱、官方連結、時間、地點和一句話介紹，透過投稿表單 https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform 提交（「所屬清單」選「深圳外國人活動」），或者發電郵到 event.submit@yatslist.com。這張清單是每天核實更新的精選清單、由維護方統一錄入，不要直接修改它的數據文件——改數據的 PR 不會被接受。提交完成後告訴我結果。`;
+const POST_PROMPT_EN=`Please submit an event to the "Shenzhen Expat Events" list on Yat's List for me: first open the event's official page and verify its name, start time, venue and fee, then send the event name, official link, time, venue and a one-line description via the submission form https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform (choose "Shenzhen Expat Events" as the list) or by email to event.submit@yatslist.com. This list is a curated list verified and updated daily by its maintainer - do not edit its data files directly; PRs that change the data will not be accepted. Tell me the result when you are done.`;
 const STRINGS={
 zh:{docTitle:"深圳外国人活动清单 | SZMeetups 镜像",
 navHome:"深圳活动清单",navHack:"黑客松清单",navExpat:"外国人活动",pageTitle:"深圳外国人活动清单",cmdLabel:"外国人活动",cmdCopy:"复制",cmdCopied:"已复制 ✓",
@@ -286,7 +309,7 @@ venueTbc:"地点待定",tbc:"待定",
 feeFree:"免费",feeNa:"票价见原站",
 sessions:n=>` · 🔁 共 ${n} 场`,
 details:"在 SZMeetups 看详情 →",cal:"＋ 日历",amap:"高德地图",gmaps:"谷歌地图",
-subH:"🤖 让你的 Agent 帮你盯着",
+navSubmit:"＋ 提交活动",postTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",postCopy:"📋 复制投稿话术给我的 Agent",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",routeFormBtn:"📝 打开网页表单提交",routeFormNote:"提交时在「所属清单」里选「深圳外国人活动」。",subH:"🤖 让你的 Agent 帮你盯着",
 subIntro:"把下面这段话复制给你的 Agent（Codex / Muse / Hermes / Globot——任何能联网的 Agent 都可以）：",
 stats:(t,f,u)=>`<b>${t}</b> 个即将开始 · <b>${f}</b> 个免费 · 更新于 ${u}`,
 footTag:"深圳活动，喂给你的 Agent 吃。",footSub:"订阅说明",
@@ -311,7 +334,7 @@ venueTbc:"地點待定",tbc:"待定",
 feeFree:"免費",feeNa:"票價見原站",
 sessions:n=>` · 🔁 共 ${n} 場`,
 details:"在 SZMeetups 看詳情 →",cal:"＋ 日曆",amap:"高德地圖",gmaps:"谷歌地圖",
-subH:"🤖 讓你的 Agent 幫你盯著",
+navSubmit:"＋ 提交活動",postTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",postCopy:"📋 複製投稿話術給我的 Agent",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",routeFormBtn:"📝 打開網頁表單提交",routeFormNote:"提交時在「所屬清單」裡選「深圳外國人活動」。",subH:"🤖 讓你的 Agent 幫你盯著",
 subIntro:"把下面這段話複製給你的 Agent（Codex / Muse / Hermes / Globot——任何能聯網的 Agent 都可以）：",
 stats:(t,f,u)=>`<b>${t}</b> 個即將開始 · <b>${f}</b> 個免費 · 更新於 ${u}`,
 footTag:"深圳活動，餵給你的 Agent 吃。",footSub:"訂閱說明",
@@ -336,7 +359,7 @@ venueTbc:"Venue TBC",tbc:"TBC",
 feeFree:"Free",feeNa:"Price: see page",
 sessions:n=>` · 🔁 ${n} sessions`,
 details:"Details on SZMeetups →",cal:"＋ Calendar",amap:"Amap",gmaps:"Google Maps",
-subH:"🤖 Let your Agent watch this for you",
+navSubmit:"+ Submit an event",postTitle:"📋 Submit an event: add one to this list",routeQ:"How would you like to submit?",routeYes:"Use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",postCopy:"📋 Copy the submission prompt for my Agent",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",routeFormBtn:"📝 Open the web submission form",routeFormNote:"When you submit, choose \"Shenzhen Expat Events\" as the list.",subH:"🤖 Let your Agent watch this for you",
 subIntro:"Copy this to your Agent (Codex / Muse / Hermes / Globot — any agent with web access):",
 stats:(t,f,u)=>`<b>${t}</b> upcoming · <b>${f}</b> free · updated ${u}`,
 footTag:"Shenzhen events, served to your Agent.",footSub:"How to subscribe",
@@ -493,6 +516,10 @@ function renderStats(){
   const upd=UPD?new Date(UPD).toLocaleString(LANG==="zh"?"zh-CN":LANG==="tw"?"zh-TW":"en-GB",{month:LANG==="en"?"short":"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";
   $("#st-line").innerHTML=S().stats(DATA.length,free,esc(upd));
 }
+window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),fm=document.getElementById("route-form"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail"),n=document.getElementById("epost-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};
+window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
+window.copyPostPrompt=function(b){if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById("prompt-post-card").innerText).then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
+window.hlSubmit=()=>{setTimeout(()=>{const el=document.getElementById("event-post");if(!el)return;el.classList.add("hl");setTimeout(()=>el.classList.remove("hl"),1800)},400)};
 function applyLang(){
   const t=S();
   document.documentElement.lang=LANG==="en"?"en":(LANG==="tw"?"zh-TW":"zh-CN");
@@ -512,6 +539,14 @@ function applyLang(){
   $("#sub-h").textContent=t.subH;
   $("#sub-intro").textContent=t.subIntro;
   $("#subprompt").textContent=LANG==="zh"?PROMPT_ZH:LANG==="tw"?PROMPT_TW:PROMPT_EN;
+  _st("#ta-submit",t.navSubmit);
+  _st("#epost-title",t.postTitle);_st("#epost-q",t.routeQ);
+  _st("#epost-yes",t.routeYes);_st("#epost-mail",t.routeMail);_st("#epost-no",t.routeNo);
+  _st("#epost-copy",t.postCopy);
+  $("#prompt-post-card").textContent=LANG==="zh"?POST_PROMPT_ZH:LANG==="tw"?POST_PROMPT_TW:POST_PROMPT_EN;
+  _st("#epost-mail-note",t.routeMailNote);_st("#epost-mail-copy",t.routeMailCopy);_st("#epost-mail-send",t.routeMailSend);
+  document.getElementById("epost-mail-send").href=t.routeMailHref;
+  _st("#epost-form-btn",t.routeFormBtn);_st("#epost-form-note",t.routeFormNote);
   _st("#sf-tag",t.footTag);_st("#sf-home",t.navHome);_st("#sf-hack",t.navHack);_st("#sf-expat",t.navExpat);_st("#sf-sub",t.footSub);
   _st("#sf-small",t.footSmall);_sh("#sf-feeds",t.footFeeds);_sh("#sf-src",t.footSrc);_sh("#sf-contact",t.footContact);
   syncThemeUI();
