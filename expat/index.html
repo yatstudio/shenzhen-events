@@ -269,6 +269,7 @@ body{overflow-x:hidden}
 
 <div class="subcard" id="agent-sub">
 <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">外国人活动</span></span><span class="u">https://yatslist.com/expat/events.json</span><button type="button" id="cmd-copy">复制</button></div>
+<div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
 <h3 id="sub-h"></h3>
 <p class="sum" id="sub-intro"></p>
 <p class="prompt" id="subprompt"></p>
@@ -332,7 +333,7 @@ const POST_PROMPT_TW=`請幫我向 Yat's List 的「深圳外國人活動清單�
 const POST_PROMPT_EN=`Please submit an event to the "Shenzhen Expat Events" list on Yat's List for me: first open the event's official page and verify its name, start time, venue and fee, then send the event name, official link, time, venue and a one-line description via the submission form https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform (choose "Shenzhen Expat Events" as the list) or by email to event.submit@yatslist.com. This list is a curated list verified and updated daily by its maintainer - do not edit its data files directly; PRs that change the data will not be accepted. Tell me the result when you are done.`;
 const STRINGS={
 zh:{docTitle:"深圳外国人活动清单 | SZMeetups 镜像",
-navHome:"深圳活动清单",navHack:"黑客松清单",navExpat:"外国人活动",pageTitle:"深圳外国人活动清单",cmdLabel:"外国人活动",cmdCopy:"复制",cmdCopied:"已复制 ✓",subBtn:"订阅",
+navHome:"深圳活动清单",navHack:"黑客松清单",navExpat:"外国人活动",pageTitle:"深圳外国人活动清单",cmdLabel:"外国人活动",pipLabel:"命令行 CLI",cmdCopy:"复制",cmdCopied:"已复制 ✓",subBtn:"订阅",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 tagline:`<b>深圳有什么好玩的</b> —— 聚会 · 演出与夜生活 · 展览 · 展会，镜像自 <b>szmeetups.com</b>，供真人与 AI Agent 使用，每天更新。`,
 agentbar:`🤖 <b>别自己刷——交给你的 Agent。</b>把订阅话术复制给你的 Agent，按你的兴趣给你推送深圳活动提醒。`,
@@ -357,7 +358,7 @@ footFeeds:`数据接口（开放、无需登录）：<a href="events.json">event
 footSrc:`<a href="https://szmeetups.com" target="_blank" rel="noopener">szmeetups.com</a> 的非官方 Agent 友好镜像——全部活动数据 © SZMeetups，请始终回链原始活动页。出发前请在原站确认最终信息。`,
 footContact:`合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`},
 tw:{docTitle:"深圳外國人活動清單 | SZMeetups 鏡像",
-navHome:"深圳活動清單",navHack:"黑客松清單",navExpat:"外國人活動",pageTitle:"深圳外國人活動清單",cmdLabel:"外國人活動",cmdCopy:"複製",cmdCopied:"已複製 ✓",subBtn:"訂閱",
+navHome:"深圳活動清單",navHack:"黑客松清單",navExpat:"外國人活動",pageTitle:"深圳外國人活動清單",cmdLabel:"外國人活動",pipLabel:"命令列 CLI",cmdCopy:"複製",cmdCopied:"已複製 ✓",subBtn:"訂閱",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 tagline:`<b>深圳有什麼好玩的</b> —— 聚會 · 演出與夜生活 · 展覽 · 展會，鏡像自 <b>szmeetups.com</b>，供真人與 AI Agent 使用，每天更新。`,
 agentbar:`🤖 <b>別自己刷——交給你的 Agent。</b>把訂閱話術複製給你的 Agent，按你的興趣給你推送深圳活動提醒。`,
@@ -382,7 +383,7 @@ footFeeds:`數據接口（開放、無需登錄）：<a href="events.json">event
 footSrc:`<a href="https://szmeetups.com" target="_blank" rel="noopener">szmeetups.com</a> 的非官方 Agent 友好鏡像——全部活動數據 © SZMeetups，請始終回鏈原始活動頁。出發前請在原站確認最終資訊。`,
 footContact:`合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`},
 en:{docTitle:"Shenzhen Expat Events | SZMeetups Mirror",
-navHome:"Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",pageTitle:"Shenzhen Expat Events",cmdLabel:"Expat Events",cmdCopy:"Copy",cmdCopied:"Copied ✓",subBtn:"Subscribe",
+navHome:"Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",pageTitle:"Shenzhen Expat Events",cmdLabel:"Expat Events",pipLabel:"CLI",cmdCopy:"Copy",cmdCopied:"Copied ✓",subBtn:"Subscribe",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 tagline:`<b>What's on in Shenzhen</b> — meetups · shows &amp; nightlife · exhibitions · trade shows, mirrored from <b>szmeetups.com</b> for humans and AI agents, updated daily.`,
 agentbar:`🤖 <b>Don't browse — delegate.</b> Copy the subscription prompt to your Agent and get Shenzhen event reminders matched to your interests.`,
@@ -566,7 +567,7 @@ function applyLang(){
   document.querySelectorAll(".langsw button").forEach(b=>{const on=b.dataset.setlang===LANG;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")});
   _st("#nav-home",t.navHome);_st("#nav-hack",t.navHack);_st("#nav-expat",t.navExpat);
   _st("#lsw-home",t.navHome);_st("#lsw-hack",t.navHack);_st("#lsw-expat",t.navExpat);_st("#ta-sub",t.subBtn);
-  _st("#page-title",t.pageTitle);_st("#cmd-label",t.cmdLabel);_st("#cmd-copy",t.cmdCopy);
+  _st("#page-title",t.pageTitle);_st("#cmd-label",t.cmdLabel);_st("#cmd-copy",t.cmdCopy);_st("#pip-label",t.pipLabel);_st("#pip-copy",t.cmdCopy);
   _sh("#tagline",t.tagline);
   _sh("#agentbar-p",t.agentbar);
   document.querySelectorAll(".copybtn").forEach(b=>b.textContent=t.copy);
@@ -596,6 +597,7 @@ function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("s
 document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById("subprompt").innerText).then(()=>{const t=b.textContent;b.textContent=S().copied;setTimeout(()=>b.textContent=S().copy,1500)})};
 document.getElementById("cmd-copy").addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/expat/events.json").then(()=>{this.textContent=S().cmdCopied;setTimeout(()=>this.textContent=S().cmdCopy,1200)})});
+document.getElementById("pip-copy").addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("pip install yatslist").then(()=>{this.textContent=S().cmdCopied;setTimeout(()=>this.textContent=S().cmdCopy,1200)})});
 function measureBar(){
   const tb=document.querySelector(".topbar");if(tb)document.documentElement.style.setProperty("--tbh",tb.offsetHeight+"px");
   const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px");

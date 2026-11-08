@@ -10,6 +10,7 @@
 - RSS：https://yatslist.com/feed.xml
 - 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
+- 命令行 CLI（已发布 PyPI）：`pip install yatslist` 后可用 `yatslist`（深圳活动）、`yatslist hackathons`（黑客松）、`yatslist expat`（外国人活动）、`yatslist search 关键词`（跨清单搜索）在终端直接查询三张清单。
 
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
 

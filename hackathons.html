@@ -515,6 +515,7 @@ input[type=search]{font-size:16px}
 <!-- Agent Subscription Card -->
 <div class="subcard" id="agent-sub">
 <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">黑客松清单</span></span><span class="u">https://yatslist.com/hackathons.json</span><button type="button" id="cmd-copy">复制</button></div>
+<div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
 <h3 id="hsub-title">🤖 让你的 Agent 盯着黑客松，不用自己刷</h3>
 <p class="sum" id="hsub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
 <p class="prompt" id="hprompt-generic"></p>
@@ -601,7 +602,7 @@ navHome:"← 深圳活动清单",navHack:"黑客松清单",navExpat:"外国人�
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 pageTitle:"Yat's List · 黑客松清单",
 pageSub:"<b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 港澳台</b>线下为主，<b>线上</b>全球可报 · 每天更新，每条打开官方页核实",
-cmdLabel:"黑客松清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把黑客松名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"复制",copied:"已复制 ✓",
+cmdLabel:"黑客松清单",pipLabel:"命令行 CLI",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把黑客松名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"复制",copied:"已复制 ✓",
 statTotal:"报名中",statSoon:"72 小时内截止",statCn:"大陆 + 港澳台线下",statUpd:"数据更新",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",subAnchor:"订阅 ↓",
 backBtn:"← 返回 Yat's List · 深圳活动",agentBtn:"🤖 用我的 Agent 订阅",
 searchPh:"搜比赛名、城市、主题（如：AI Agent / 机器人 / 深圳）",
@@ -640,7 +641,7 @@ navHome:"← 深圳活動清單",navHack:"黑客松清單",navExpat:"外國人�
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 pageTitle:"Yat's List · 黑客松清單",
 pageSub:"<b>正在報名</b>的黑客松與創新大賽 · <b>大陸 / 港澳台</b>線下為主，<b>線上</b>全球可報 · 每天更新，每條打開官方頁核實",
-cmdLabel:"黑客松清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把黑客松名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"複製",copied:"已複製 ✓",
+cmdLabel:"黑客松清單",pipLabel:"命令列 CLI",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把黑客松名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"複製",copied:"已複製 ✓",
 statTotal:"報名中",statSoon:"72 小時內截止",statCn:"大陸 + 港澳台線下",statUpd:"數據更新",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",subAnchor:"訂閱 ↓",
 backBtn:"← 返回 Yat's List · 深圳活動",agentBtn:"🤖 用我的 Agent 訂閱",
 searchPh:"搜比賽名、城市、主題（如：AI Agent / 機器人 / 深圳）",
@@ -679,7 +680,7 @@ navHome:"← Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 pageTitle:"Yat's List · Hackathons",
 pageSub:"Hackathons &amp; innovation contests <b>open for registration</b> · <b>Mainland / HK / Macau / Taiwan</b> in person, <b>online</b> worldwide · Updated daily, each verified on its official page",
-cmdLabel:"Hackathons",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the hackathon name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",copy:"Copy",copied:"Copied ✓",
+cmdLabel:"Hackathons",pipLabel:"CLI",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the hackathon name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",copy:"Copy",copied:"Copied ✓",
 statTotal:"Open now",statSoon:"Closing in 72h",statCn:"Mainland + HK/MO/TW in-person",statUpd:"Updated",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",subAnchor:"Subscribe ↓",
 backBtn:"← Back to Yat's List · Shenzhen Events",agentBtn:"🤖 Subscribe via my Agent",
 searchPh:"Search by name, city or topic (e.g. AI Agent / Robotics / Shenzhen)",
@@ -767,7 +768,7 @@ function applyLang(){
   document.querySelectorAll(".langsw button").forEach(b=>{const on=b.dataset.setlang===LANG;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")});
   _st("#nav-home",tr("navHome"));_st("#nav-hack",tr("navHack"));_st("#nav-expat",tr("navExpat"));
   _st("#lsw-ev",tr("swEv"));_st("#lsw-hack",tr("swHack"));_st("#lsw-expat",tr("swExpat"));_st("#ta-sub",tr("subAnchor"));
-  _st("#page-title",tr("pageTitle"));_sh("#page-sub",tr("pageSub"));_st("#cmd-label",tr("cmdLabel"));_st("#cmd-copy",tr("copy"));
+  _st("#page-title",tr("pageTitle"));_sh("#page-sub",tr("pageSub"));_st("#cmd-label",tr("cmdLabel"));_st("#cmd-copy",tr("copy"));_st("#pip-label",tr("pipLabel"));_st("#pip-copy",tr("copy"));
   _st("#st-total-label",tr("statTotal"));_st("#st-soon-label",tr("statSoon"));_st("#st-cn-label",tr("statCn"));_st("#st-upd-label",tr("statUpd"));
   _st("#back-btn",tr("backBtn"));_st("#agent-btn",tr("agentBtn"));
   const q=$("#q");if(q)q.setAttribute("placeholder",tr("searchPh"));
@@ -858,6 +859,7 @@ $("#q").addEventListener("input",render);
 $("#ftoggle").addEventListener("click",()=>{const g=$("#fgroups");g.classList.toggle("open");$("#ftoggle").setAttribute("aria-expanded",g.classList.contains("open"))});
 $("#fclear").addEventListener("click",()=>{F={region:"all",fmt:"all",topic:"all"};$("#q").value="";buildChips();render()});
 $("#cmd-copy").addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/hackathons.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
+$("#pip-copy").addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("pip install yatslist").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 let mMode="sub",mKey="generic";
 function mLoad(){const ta=$("#mprompt");if(!ta)return;
 if(mMode==="post"){ta.value=HSUBMIT[LANG]||HSUBMIT.zh;$("#msteps").textContent=HPOST_STEPS[LANG]||HPOST_STEPS.zh;$("#mex").innerHTML=HMEX_POST[LANG]||HMEX_POST.zh;$("#mtitle").textContent=tr("mPostTitle")}
