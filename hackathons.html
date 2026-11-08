@@ -416,6 +416,7 @@ select{font-size:16px}
     <nav class="topbar-nav">
       <a href="./" id="nav-home">← 深圳活动清单</a>
       <span class="navcur" id="nav-hack">黑客松专题</span>
+      <a href="https://yatstudio.github.io/szmeetups-agent/" id="nav-expat">外国人活动</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
     </nav>
@@ -533,7 +534,7 @@ const STR={
 zh:{
 docTitle:"Yat's List · 黑客松专题 | 大陆 + 港澳台 + 线上",
 metaDesc:"正在报名的黑客松与创新大赛：大陆、香港、澳门、台湾线下为主，线上不限区域。每日更新，数据来自黑123等渠道并逐条核实。",
-navHome:"← 深圳活动清单",navHack:"黑客松专题",
+navHome:"← 深圳活动清单",navHack:"黑客松专题",navExpat:"外国人活动",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 pageTitle:"Yat's List · 黑客松专题",
 pageSub:"<b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新",
@@ -572,7 +573,7 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 tw:{
 docTitle:"Yat's List · 黑客松專題 | 大陸 + 港澳台 + 線上",
 metaDesc:"正在報名的黑客松與創新大賽：大陸、香港、澳門、臺灣線下為主，線上不限區域。每日更新，數據來自黑123等渠道並逐條核實。",
-navHome:"← 深圳活動清單",navHack:"黑客松專題",
+navHome:"← 深圳活動清單",navHack:"黑客松專題",navExpat:"外國人活動",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 pageTitle:"Yat's List · 黑客松專題",
 pageSub:"<b>正在報名</b>的黑客松與創新大賽 · <b>大陸 / 香港 / 澳門 / 臺灣</b>線下為主，<b>線上不限區域</b> · 每天早上更新",
@@ -611,7 +612,7 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 en:{
 docTitle:"Yat's List · Hackathons | Mainland China + HK / MO / TW + Online",
 metaDesc:"Hackathons and innovation contests open for registration: mostly in-person across Mainland China, Hong Kong, Macau and Taiwan, online worldwide. Updated daily; data from Hack123 and other channels, each listing verified.",
-navHome:"← Shenzhen Events",navHack:"Hackathons",
+navHome:"← Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 pageTitle:"Yat's List · Hackathons",
 pageSub:"Hackathons &amp; innovation contests <b>open for registration</b> · Mostly <b>in-person across Mainland China / Hong Kong / Macau / Taiwan</b>, <b>online worldwide</b> · Updated every morning",
@@ -701,7 +702,7 @@ function applyLang(){
   document.title=tr("docTitle");
   const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
   document.querySelectorAll(".langsw button").forEach(b=>{const on=b.dataset.setlang===LANG;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")});
-  _st("#nav-home",tr("navHome"));_st("#nav-hack",tr("navHack"));
+  _st("#nav-home",tr("navHome"));_st("#nav-hack",tr("navHack"));_st("#nav-expat",tr("navExpat"));
   _st("#page-title",tr("pageTitle"));_sh("#page-sub",tr("pageSub"));_st("#cmd-label",tr("cmdLabel"));_st("#cmd-copy",tr("copy"));
   _st("#st-total-label",tr("statTotal"));_st("#st-soon-label",tr("statSoon"));_st("#st-cn-label",tr("statCn"));_st("#st-upd-label",tr("statUpd"));
   _st("#back-btn",tr("backBtn"));_st("#agent-btn",tr("agentBtn"));
