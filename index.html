@@ -371,6 +371,51 @@ select{font-size:16px}
 [data-theme="light"] .dl.soon{background:#e5484d;color:#fff}
 [data-theme="light"] .fclear{color:#d92d20}
 [data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
+
+/* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
+.topbar{padding-top:10px;padding-bottom:10px}
+.human-section{padding-top:18px}
+.brandmark{line-height:1.25}
+.section-tagline{line-height:1.4;margin-top:8px}
+.section-title{line-height:1.2}
+.section-subtitle{line-height:1.55}
+.section-header{margin-bottom:10px}
+.herometa{margin:0 auto;text-align:center;color:var(--ink-sec);font-size:.88rem;line-height:1.6}
+.herometa b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.herometa i{font-style:normal;margin:0 7px;color:var(--ink-ter)}
+.listchips{display:flex;gap:var(--sp-md);justify-content:center;margin:12px auto 0;max-width:920px}
+.lchip{flex:1 1 0;min-width:0;text-align:left;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:9px 14px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.lchip.on{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.lc-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;line-height:1.3}
+.lc-top>b{font-size:.95rem;white-space:nowrap}
+.lc-n{color:var(--green);font-weight:700;font-size:.85rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.lc-desc{font-size:.8rem;color:var(--ink-sec);line-height:1.45;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topact{margin:12px 0 0}
+#agent-sub .cmdline{margin-bottom:var(--sp-lg)}
+.cmdline .u{overflow-wrap:anywhere;min-width:0}
+.subcard .prompt,.prompt{overflow-wrap:anywhere}
+.sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+input[type=search]{font-size:16px}
+@media (max-width:820px){
+.topbar{padding:6px 0}
+.topbar .wrap{gap:10px;padding:0 14px}
+.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav>*{flex-shrink:0}
+.langsw button,.themesw button{min-height:32px;padding:4px 7px}
+.human-section{padding-top:14px}
+.section-tagline{display:none}
+.herometa{font-size:.8rem;line-height:1.55;padding:0 4px}
+.listchips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;margin-top:12px;padding-bottom:2px}
+.listchips::-webkit-scrollbar{display:none}
+.lchip{flex:0 0 66%;justify-content:center}
+.topact{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;margin:10px 0 0;padding-bottom:2px}
+.topact::-webkit-scrollbar{display:none}
+.topact .btn,.topact button{flex:0 0 auto;min-height:44px}
+.btn{min-height:44px}
+.chip{min-height:40px}
+#ftoggle{min-height:44px}
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -414,12 +459,23 @@ select{font-size:16px}
       <p class="section-subtitle" id="hero-sub">每天 07:30 更新 · 每条都打开官方页核实过</p>
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
     </div>
-    <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">深圳活动清单</span></span><span class="u">https://yatslist.com/events.json</span><button type="button" id="cmd-copy">复制</button></div>
+    <!-- Hero Meta -->
+    <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><b id="st-week">–</b> <span id="st-week-label">未来 7 天</span><i>·</i><b id="st-dl">–</b> <span id="st-dl-label">72h 内截止报名</span><i>·</i><span id="hm-upd">每日 07:30 更新</span></p>
 
-    <!-- Stats -->
-    <div class="stats">
-      <div class="stat"><b id="st-week">–</b><span id="st-week-label">未来 7 天</span></div>
-      <div class="stat"><b id="st-dl">–</b><span id="st-dl-label">72h 内截止报名</span></div>
+    <!-- List Chips: 三张清单入口 -->
+    <div class="listchips">
+      <a class="lchip on" href="#top" aria-current="page">
+        <span class="lc-top"><b id="lc-ev-name">深圳活动清单</b><span class="lc-n"><b id="lc-ev-n">–</b> <span id="lc-u1">场</span></span></span>
+        <span class="lc-desc" id="lc-ev-desc">AI · 创业 · 科技 · 跨境活动，每天核实更新</span>
+      </a>
+      <a class="lchip" href="hackathons.html">
+        <span class="lc-top"><b id="lc-hack-name">黑客松清单</b><span class="lc-n"><b id="hackcount2">–</b> <span id="lc-u2">场</span></span></span>
+        <span class="lc-desc" id="lc-hack-desc">正在报名的黑客松与创新大赛</span>
+      </a>
+      <a class="lchip" href="https://yatslist.com/expat/">
+        <span class="lc-top"><b id="lc-expat-name">外国人活动</b><span class="lc-n"><b id="lc-expat-n">–</b> <span id="lc-u3">场</span></span></span>
+        <span class="lc-desc" id="lc-expat-desc">外国人常去的聚会、演出与展览</span>
+      </a>
     </div>
 
     <!-- Top Actions -->
@@ -431,20 +487,6 @@ select{font-size:16px}
       <button class="btn agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
     </div>
 
-    <!-- Agent Note -->
-    <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。</div>
-
-    <!-- Hackathon Boardbar -->
-    <a class="boardbar" href="hackathons.html">
-      <span class="bb-main">
-        <span class="bb-emoji">🛠</span>
-        <span class="bb-text">
-          <span class="bb-title" id="bb-title">黑客松清单</span>
-          <span class="bb-sub"><span id="bb-sub-pre">大陆 + 港澳台 + 线上 · </span><b id="hackcount2">55</b> <span id="bb-sub-post">场正在报名</span></span>
-        </span>
-      </span>
-      <span class="go" id="bb-go">进入清单 →</span>
-    </a>
 
     <!-- Filter Bar -->
     <div class="bar">
@@ -503,8 +545,12 @@ select{font-size:16px}
     <!-- Past Events -->
     <div id="past"></div>
 
+    <!-- Agent Note -->
+    <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。</div>
+
     <!-- Agent Subscription Card -->
     <div class="subcard" id="agent-sub">
+      <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">深圳活动清单</span></span><span class="u">https://yatslist.com/events.json</span><button type="button" id="cmd-copy">复制</button></div>
       <h3 id="asub-title">🤖 让你的 Agent 提醒你，不用自己刷</h3>
       <p class="sum" id="asub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
       <p class="prompt" id="prompt-generic-card">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
@@ -690,8 +736,8 @@ zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
 brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"Yat's List · 深圳活动清单",heroSub:"每天 07:30 更新 · 每条都打开官方页核实过",cmdLabel:"深圳活动清单",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
-statWeek:"未来 7 天",statDl:"72h 内截止报名",
+heroTitle:"Yat's List · 深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",cmdLabel:"深圳活动清单",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
+statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",lcDescEv:"AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"正在报名的黑客松与创新大赛",lcDescExpat:"外国人常去的聚会、演出与展览",lcUnit:"场",
 taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
 agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历.ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。',
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
@@ -744,8 +790,8 @@ en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
 brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Yat's List · Shenzhen Events",heroSub:"Updated daily at 07:30 · Every listing verified against its official page",cmdLabel:"Shenzhen Events",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
-statWeek:"Next 7 days",statDl:"Closing within 72h",
+heroTitle:"Yat's List · Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",cmdLabel:"Shenzhen Events",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
+statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Updated daily 07:30",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",lcDescEv:"AI, startup, tech & cross-border events, verified daily",lcDescHack:"Hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcUnit:"events",
 taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
 agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">Calendar.ics</a>, updated daily at 07:30) and only ping you when something matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by category / city / fee below, and tap ☆ to save events you like.',
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
@@ -798,8 +844,8 @@ tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
 brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"Yat's List · 深圳活動清單",heroSub:"每天 07:30 更新 · 每條都打開官方頁核實過",cmdLabel:"深圳活動清單",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
-statWeek:"未來 7 天",statDl:"72h 內截止報名",
+heroTitle:"Yat's List · 深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",cmdLabel:"深圳活動清單",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
+statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",lcDescEv:"AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"正在報名的黑客松與創新大賽",lcDescExpat:"外國人常去的聚會、演出與展覽",lcUnit:"場",
 taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
 agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日曆.ics</a>，每天 07:30 更新），命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按分類 / 城市 / 費用篩選，點 ☆ 收藏想去的活動。',
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
@@ -879,7 +925,7 @@ const TOUR_EN=[
 {sel:"#subprompt",t:"<b>Step 3 · The prompt is yours to edit</b>: adjust the interest categories and reminder rhythm to your taste before you send it. Set it up once and never think about it again."},
 {sel:"#agent-sub",t:"<b>Step 4 · Pick the version for your Agent</b>: Doubao, WorkBuddy and Codex each have a dedicated prompt in the section below; if you are not sure which to use, take the generic version from Step 2."},
 {sel:"#email-sub",t:"<b>Step 5 · No Agent? No problem</b>: subscribe to the daily email digest (one email a day) or import the ICS file into your calendar. Once subscribed, you are only pinged when an event matches your interests. Tour over — go browse the events."}];
-function fmtUpd(){const el=document.getElementById("st-upd");if(!el)return;el.textContent=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–"}
+function fmtUpd(){const _d=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";const el=document.getElementById("st-upd");if(el)el.textContent=_d;const hm=document.getElementById("hm-upd");if(hm)hm.textContent=tr("heroMetaDaily")+(window._updRaw?" · "+tr("heroMetaData")+" "+_d:"")}
 function _setText(sel,txt){const el=document.querySelector(sel);if(el)el.textContent=txt}
 function _setHTML(sel,html){const el=document.querySelector(sel);if(el)el.innerHTML=html}
 function applyLang(){
@@ -890,7 +936,7 @@ const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute(
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
 _setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-expat",tr("navExpat"));
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
-_setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));
+_setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
 _setHTML("#agentnote",tr("agentNote"));
 _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setText("#bb-sub-post",tr("bbSubPost"));_setText("#bb-go",tr("bbGo"));
@@ -1071,7 +1117,7 @@ function render(){
   .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
   const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
   const total=DATA.filter(e=>!isPast(e)).length;
-  $("#st-total").textContent=total;
+  $("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;const _lce=$("#lc-ev-n");if(_lce)_lce.textContent=total;
   $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
   $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
   const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
@@ -1206,6 +1252,7 @@ render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>$("#list").innerHTML='<div class="empty">'+tr("loadFail")+'</div>');
 </script>
 <script>fetch("hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.hackathons||[]).length;var el=document.getElementById("hackcount");if(el&&n)el.textContent=n;var el2=document.getElementById("hackcount2");if(el2&&n)el2.textContent=n}).catch(function(){})</script>
+<script>fetch("expat/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.events||[]).length;var el=document.getElementById("lc-expat-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 </body>
 </html>
 
