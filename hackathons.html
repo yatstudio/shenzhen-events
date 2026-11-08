@@ -384,6 +384,7 @@ select{font-size:16px}
 .cmdline button{margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--green);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer}
 [data-theme="light"] .cmdline{background:#edf2f0;border-color:rgba(16,42,32,.12);color:var(--green)}
 [data-theme="light"] .cmdline button{background:rgba(10,125,85,.08);border-color:rgba(10,125,85,.3)}
+.actions button.btn.on{border-color:var(--green);color:var(--green);background:rgba(46,230,168,.14)}
 .rb{display:inline-block;font-size:.72rem;font-weight:800;border-radius:999px;padding:2px 9px;vertical-align:2px;margin-right:7px;white-space:nowrap}
 .rb.cn{background:#1d3a6e;color:#bcd6ff}.rb.hk{background:#6e1d1d;color:#ffc9c9}.rb.tw{background:#0f4d44;color:#a9ecdf}.rb.mo{background:#4d3a0f;color:#ffe9a9}.rb.on{background:#3a2a5e;color:#dcc9ff}
 [data-theme="light"] .rb.cn{background:#dbeafe;color:#1e40af}[data-theme="light"] .rb.hk{background:#fee2e2;color:#b91c1c}[data-theme="light"] .rb.tw{background:#ccfbf1;color:#115e59}[data-theme="light"] .rb.mo{background:#fef3c7;color:#92400e}[data-theme="light"] .rb.on{background:#ede9fe;color:#6d28d9}
@@ -486,8 +487,16 @@ select{font-size:16px}
 <div class="subcard" id="hack-post">
 <h3 id="hpost-title">📋 投稿黑客松：让你的 Agent 代你提交</h3>
 <p class="sum" id="hpost-sum">发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你提 PR 或发投稿邮件。</p>
+<p class="sum" id="hroute-q">你有 GitHub 账号吗？</p>
+<div class="actions"><button class="btn" id="hroute-yes" onclick="routeHackPost('gh')">有 GitHub</button><button class="btn" id="hroute-no" onclick="routeHackPost('form')">没有，用网页表单</button></div>
+<div id="hroute-gh" hidden>
 <p class="prompt" id="hprompt-post"></p>
 <div class="actions"><button class="btn primary" id="hpost-copy" onclick="copySubmitHack(this)">📋 复制投稿话术给我的 Agent</button></div>
+</div>
+<div id="hroute-form" hidden>
+<div class="actions"><a class="btn primary" id="hroute-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener">📝 打开网页表单提交</a></div>
+<p class="sum"><span id="hroute-mail-tx">也可以发邮件到 </span><a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a></p>
+</div>
 </div>
 </div>
 
@@ -538,7 +547,7 @@ navHome:"← 深圳活动清单",navHack:"黑客松清单",navExpat:"外国人�
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 pageTitle:"Yat's List · 黑客松清单",
 pageSub:"<b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新",
-cmdLabel:"黑客松清单",copy:"复制",copied:"已复制 ✓",
+cmdLabel:"黑客松清单",routeQ:"你有 GitHub 账号吗？",routeYes:"有 GitHub",routeNo:"没有，用网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailTx:"也可以发邮件到 ",copy:"复制",copied:"已复制 ✓",
 statTotal:"报名中",statSoon:"72 小时内截止",statCn:"大陆 + 港澳台线下",statUpd:"数据更新",
 backBtn:"← 返回 Yat's List · 深圳活动",agentBtn:"🤖 用我的 Agent 订阅",
 searchPh:"搜比赛名、城市、主题（如：AI Agent / 机器人 / 深圳）",
@@ -577,7 +586,7 @@ navHome:"← 深圳活動清單",navHack:"黑客松清單",navExpat:"外國人�
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 pageTitle:"Yat's List · 黑客松清單",
 pageSub:"<b>正在報名</b>的黑客松與創新大賽 · <b>大陸 / 香港 / 澳門 / 臺灣</b>線下為主，<b>線上不限區域</b> · 每天早上更新",
-cmdLabel:"黑客松清單",copy:"複製",copied:"已複製 ✓",
+cmdLabel:"黑客松清單",routeQ:"你有 GitHub 帳號嗎？",routeYes:"有 GitHub",routeNo:"沒有，用網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailTx:"也可以發郵件到 ",copy:"複製",copied:"已複製 ✓",
 statTotal:"報名中",statSoon:"72 小時內截止",statCn:"大陸 + 港澳台線下",statUpd:"數據更新",
 backBtn:"← 返回 Yat's List · 深圳活動",agentBtn:"🤖 用我的 Agent 訂閱",
 searchPh:"搜比賽名、城市、主題（如：AI Agent / 機器人 / 深圳）",
@@ -616,7 +625,7 @@ navHome:"← Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 pageTitle:"Yat's List · Hackathons",
 pageSub:"Hackathons &amp; innovation contests <b>open for registration</b> · Mostly <b>in-person across Mainland China / Hong Kong / Macau / Taiwan</b>, <b>online worldwide</b> · Updated every morning",
-cmdLabel:"Hackathons",copy:"Copy",copied:"Copied ✓",
+cmdLabel:"Hackathons",routeQ:"Do you have a GitHub account?",routeYes:"Yes, use GitHub",routeNo:"No, use the web form",routeFormBtn:"📝 Open the web submission form",routeMailTx:"Or email us at ",copy:"Copy",copied:"Copied ✓",
 statTotal:"Open now",statSoon:"Closing in 72h",statCn:"Mainland + HK/MO/TW in-person",statUpd:"Updated",
 backBtn:"← Back to Yat's List · Shenzhen Events",agentBtn:"🤖 Subscribe via my Agent",
 searchPh:"Search by name, city or topic (e.g. AI Agent / Robotics / Shenzhen)",
@@ -710,7 +719,7 @@ function applyLang(){
   _st("#ftoggle-label",tr("filterBtn"));_st("#fl-region",tr("fRegion"));_st("#fl-format",tr("fFormat"));_st("#fl-topic",tr("fTopic"));_st("#fclear",tr("clear"));
   _st("#sf-tag",tr("footTag"));_st("#sf-home",tr("footHome"));_st("#sf-hack",tr("footHack"));_st("#sf-sub",tr("footSubLink"));_st("#sf-small",tr("footSmall"));_sh("#sf-contact",tr("footContact"));_sh("#sf-src",tr("footSrc"));
   _st("#hsub-title",tr("hsubTitle"));_sh("#hsub-sum",tr("hsubSum"));_st("#hsub-all",tr("viewAll"));_st("#hpost-btn",tr("postJump"));
-_st("#hpost-title",tr("postTitle"));_st("#hpost-sum",tr("postSum"));_st("#hpost-copy",tr("postBtn"));
+_st("#hpost-title",tr("postTitle"));_st("#hpost-sum",tr("postSum"));_st("#hpost-copy",tr("postBtn"));_st("#hroute-q",tr("routeQ"));_st("#hroute-yes",tr("routeYes"));_st("#hroute-no",tr("routeNo"));_st("#hroute-form-btn",tr("routeFormBtn"));_st("#hroute-mail-tx",tr("routeMailTx"));
 document.querySelectorAll("#agent-sub.agblock").forEach((b,i)=>{const h=b.querySelector("h4");if(h&&tr("agNames")[i])h.textContent=tr("agNames")[i];const ol=b.querySelector("ol");if(ol&&tr("agSteps")[i])ol.innerHTML=tr("agSteps")[i];const btn=b.querySelector(".actions.btn");if(btn)btn.textContent=tr("copyPrompt")});
 const HP=HPROMPTS[LANG]||HPROMPTS.zh;
 _st("#hprompt-generic",HP.generic);_st("#hprompt-doubao",HP.doubao);_st("#hprompt-workbuddy",HP.workbuddy);_st("#hprompt-codex",HP.codex);
@@ -804,6 +813,7 @@ $("#mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");i
 function copyModal(b){const ta=$("#mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
 function copyEl(id,b){const el=document.getElementById(id);if(!el)return;if(navigator.clipboard)navigator.clipboard.writeText(el.innerText).then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})}
 window.copySubmitHack=b=>{if(navigator.clipboard)navigator.clipboard.writeText(HSUBMIT[LANG]||HSUBMIT.zh).then(()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)})};
+window.routeHackPost=function(w){var gh=document.getElementById("hroute-gh"),fm=document.getElementById("hroute-form"),y=document.getElementById("hroute-yes"),n=document.getElementById("hroute-no");if(!gh||!fm)return;gh.hidden=w!=="gh";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(n)n.classList.toggle("on",w==="form")};
 window.hlPost=()=>{setTimeout(()=>{const el=document.getElementById("hack-post");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 applyLang();
