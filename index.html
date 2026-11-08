@@ -39,7 +39,8 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
 .topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
 .topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
-.topbar-logo{height:clamp(28px,5vw,38px);flex-shrink:0}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
 .topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
 .topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
 .topbar-nav a:hover{color:var(--green)}
@@ -326,8 +327,8 @@ select{font-size:16px}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
-.sf-brand{font-family:var(--font-mono);font-size:1.35rem;font-weight:700;color:var(--green)}
-.sf-brand .sf-cur{color:#FF5C00}
+.sf-brand{font-family:var(--font-mono);font-size:1.25rem;font-weight:700;color:var(--ink)}
+.sf-brand .sf-cur{color:var(--green)}
 .sf-tag{margin:10px 0 0;color:var(--ink);font-size:1rem;font-weight:600}
 .sf-nav{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:18px 0 0}
 .sf-nav a{color:var(--ink-sec);text-decoration:none;font-weight:600;font-size:.94rem;transition:color .2s ease}
@@ -391,7 +392,7 @@ select{font-size:16px}
 <div class="topbar">
   <div class="wrap">
     <a class="topbar-brand" href="#top" aria-label="回到顶部" style="text-decoration:none">
-      <img src="logo-plain.svg" alt="Yat's List" class="topbar-logo">
+      <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
     </a>
     <nav class="topbar-nav">
       <a href="#agent-section" id="nav-agent">给 Agent</a>
