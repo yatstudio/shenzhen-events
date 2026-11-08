@@ -391,6 +391,7 @@ select{font-size:16px}
       <a href="#agent-section" id="nav-agent">给 Agent</a>
       <a href="#human-section" id="nav-events">活动清单</a>
       <a href="hackathons.html" id="nav-hack">黑客松专题</a>
+      <a href="https://yatstudio.github.io/szmeetups-agent/" id="nav-expat">外国人活动</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
     </nav>
@@ -661,7 +662,7 @@ const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
-brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松专题",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松专题",navExpat:"外国人活动",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"Yat's List · 深圳活动清单",heroSub:"每天 07:30 更新 · 每条都打开官方页核实过",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",
 taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
@@ -715,7 +716,7 @@ feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",r
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
-brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Yat's List · Shenzhen Events",heroSub:"Updated daily at 07:30 · Every listing verified against its official page",
 statWeek:"Next 7 days",statDl:"Closing within 72h",
 taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
@@ -769,7 +770,7 @@ feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"To
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
-brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松專題",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松專題",navExpat:"外國人活動",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"Yat's List · 深圳活動清單",heroSub:"每天 07:30 更新 · 每條都打開官方頁核實過",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",
 taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
@@ -860,7 +861,7 @@ document.title=tr("docTitle");
 const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));
+_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-expat",tr("navExpat"));
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
