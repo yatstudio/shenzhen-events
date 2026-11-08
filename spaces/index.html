@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0d1218">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z6a9pxyr63");
+</script>
+<!-- Umami -->
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<title>X Space 纪要清单 | Yat's List</title>
+<meta name="description" content="Yat's List 第四张清单：华语圈 X Space 精选纪要、回放链接与要点存档。人工整理，不定期更新。Curated recaps of Chinese-language X Spaces with replay links and key takeaways.">
+<link rel="canonical" href="https://yatslist.com/spaces/">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<style>
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;--panel2:#0b0f14;
+--green:#2ee6a8;--green-dim:#1a8a66;--green-hover:#3df4b5;
+--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--coral:#FF5A5F;--orange:#FF5C00;--warm:#FBBF24;--red:#F87171;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--r-sm:8px;--r-md:12px;--r-lg:16px;--r-pill:999px;
+--shadow-sm:0 2px 8px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);
+--sp-xs:4px;--sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;--sp-3xl:48px;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+--bar-bg:rgba(13,18,24,.95);--bar-bg96:rgba(13,18,24,.96);
+color-scheme:dark;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;--panel2:#eef3f1;
+--green:#0a7d55;--green-dim:#0a7d55;--green-hover:#0e9263;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--coral:#d92d20;--orange:#e04e00;--warm:#b54708;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--shadow-sm:0 2px 8px rgba(16,42,32,.08);--shadow-md:0 8px 24px rgba(16,42,32,.13);
+--bar-bg:rgba(246,248,247,.92);--bar-bg96:rgba(246,248,247,.94);
+color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;font-size:16px}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
+a{color:var(--green)}
+/* ===== topbar (shared with Yat's List) ===== */
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
+.topbar .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
+.topbar-brand{display:flex;align-items:center;text-decoration:none}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.topbar-nav>a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
+.topbar-nav>a:hover{color:var(--green)}
+.topbar-nav>a.on{color:var(--green)}
+.langsw,.themesw{display:inline-flex;align-items:center;gap:8px}
+.langsw button,.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
+.langsw button:hover,.themesw button:hover{color:var(--ink)}
+.langsw button.on,.themesw button.on{color:var(--green)}
+.lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+/* ===== hero ===== */
+.hero{padding:clamp(var(--sp-xl),5vw,40px) 0 var(--sp-lg)}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.2rem);font-weight:700;margin:0 0 var(--sp-sm);letter-spacing:-.01em;line-height:1.3}
+.tagline{color:var(--ink-sec);font-size:.95rem;margin:8px 0 0;line-height:1.6;max-width:46em}
+.tagline b{color:var(--ink)}
+.statsline{font-size:.82rem;color:var(--ink-ter);margin-top:10px;font-variant-numeric:tabular-nums}
+.statsline b{color:var(--green);font-weight:700}
+/* ===== agent bar ===== */
+.cmdline{margin:0 auto;max-width:780px;font-family:var(--font-mono);background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;color:var(--green);display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.92rem}
+.cmdline .u{color:var(--ink-sec);font-size:.83rem;word-break:break-all}
+.cmdline button{margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--green);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+[data-theme="light"] .cmdline{background:#edf2f0;border-color:rgba(16,42,32,.12);color:var(--green)}
+[data-theme="light"] .cmdline button{background:rgba(10,125,85,.08);border-color:rgba(10,125,85,.3)}
+.agentbar{background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.agentbar .wrap{display:flex;gap:12px;align-items:center;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.agentbar p{margin:0;font-size:.88rem;flex:1;min-width:240px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink-sec)}
+.agentbar p b{color:var(--ink)}
+.agentbar button{flex:0 0 auto;background:var(--green);color:#052e21;border:0;border-radius:var(--r-pill);padding:6px var(--sp-md);font-weight:650;cursor:pointer;min-height:32px;font-size:.82rem;font-family:inherit}
+:root[data-theme="light"] .agentbar button{color:#fff}
+/* ===== filter bar ===== */
+.bar{position:sticky;top:var(--tbh,57px);z-index:90;background:var(--bar-bg96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:var(--sp-lg) 0;margin:0 calc(-1 * clamp(var(--sp-lg),4vw,var(--sp-xl)));padding-left:clamp(var(--sp-lg),4vw,var(--sp-xl));padding-right:clamp(var(--sp-lg),4vw,var(--sp-xl));border-bottom:1px solid var(--border)}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:9px}
+.tab{border:0;background:none;font-family:inherit;font-size:.95rem;font-weight:650;color:var(--ink-sec);padding:7px 12px 9px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;min-height:38px}
+.tab .n{font-size:.76rem;font-weight:700;background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:1px 7px;margin-left:5px;font-variant-numeric:tabular-nums}
+.tab.on{color:var(--ink);font-weight:650;border-bottom-color:var(--green)}
+.tab.on .n{background:var(--green);color:#052e21;border-color:var(--green)}
+:root[data-theme="light"] .tab.on .n{color:#fff}
+.frow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+input[type=search]{flex:1;min-width:170px;padding:13px var(--sp-lg);border:1px solid var(--border);border-radius:var(--r-md);font-size:.95rem;background:var(--panel);color:var(--ink);font-family:inherit;letter-spacing:.005em}
+input[type=search]::placeholder{color:var(--ink-ter)}
+.qseg{display:inline-flex;background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:3px;gap:2px}
+.qseg button{border:0;background:none;font-family:inherit;font-size:.85rem;font-weight:650;color:var(--ink-sec);border-radius:999px;padding:5px 12px;cursor:pointer;min-height:30px}
+.qseg button.on{background:var(--green);color:#052e21;font-weight:650}
+:root[data-theme="light"] .qseg button.on{color:#fff}
+.chip{border:1px solid var(--border);background:var(--panel);border-radius:var(--r-pill);padding:var(--sp-sm) var(--sp-lg);font-size:.88rem;cursor:pointer;min-height:38px;color:var(--ink);font-weight:600;font-family:inherit;letter-spacing:.005em}
+.chip.on{background:var(--green);color:#052e21;border-color:var(--green);font-weight:650}
+:root[data-theme="light"] .chip.on{color:#fff}
+.chip .n{font-size:.74rem;opacity:.65;font-variant-numeric:tabular-nums}
+.fgroup{display:flex;align-items:center;gap:var(--sp-sm);flex-wrap:wrap;margin-top:var(--sp-md)}
+.fgroup .chip{min-height:36px;padding:7px var(--sp-md);font-size:.87rem}
+.flabel{font-size:.78rem;color:var(--ink-ter);font-weight:650;min-width:2.5em;letter-spacing:.08em;text-transform:uppercase}
+.subchip{max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fres{margin-left:auto;font-size:.85rem;color:var(--ink-sec);font-weight:600}
+.fclear{margin-left:auto;background:none;border:0;color:var(--coral);font-weight:650;cursor:pointer;font-size:.87rem;min-height:36px;font-family:inherit}
+.fres+.fclear{margin-left:8px}
+/* ===== day heads & cards ===== */
+.dayhead{position:sticky;top:calc(var(--tbh,57px) + var(--barh,120px));z-index:80;display:flex;align-items:baseline;gap:var(--sp-md);padding:clamp(var(--sp-xl),5vw,28px) 0 clamp(var(--sp-md),2vw,var(--sp-md));background:var(--bg)}
+.dayhead .dnum{font-size:clamp(2rem,4.5vw,2.4rem);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.dayhead .dmeta{font-size:clamp(1rem,2.2vw,1.1rem);font-weight:650;letter-spacing:-.005em}
+.dayhead .drel{font-size:.79rem;font-weight:650;color:#052e21;background:var(--green);border-radius:var(--r-sm);padding:4px var(--sp-md);letter-spacing:.015em}
+.dayhead .drel.future{background:var(--panel2);color:var(--ink-sec);border:1px solid var(--border)}
+.dayhead .ongoing{font-size:.79rem;font-weight:650;color:#fff;background:var(--orange);border-radius:var(--r-sm);padding:4px var(--sp-md);letter-spacing:.015em}
+.ev{display:flex;gap:clamp(var(--sp-md),3vw,20px);margin-bottom:clamp(var(--sp-md),3vw,18px)}
+.rail{flex:0 0 clamp(68px,12vw,82px);text-align:right;padding-top:clamp(20px,4vw,24px)}
+.rail .t1{font-size:clamp(1.08rem,2.4vw,1.24rem);font-weight:650;font-variant-numeric:tabular-nums;line-height:1.2}
+.rail .t2{font-size:.81rem;color:var(--ink-ter);font-variant-numeric:tabular-nums;margin-top:var(--sp-xs)}
+.card{flex:1;min-width:0;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(20px,4vw,24px);box-shadow:var(--shadow-sm)}
+.cinner{display:flex;gap:16px}
+.thumb{flex:0 0 112px;width:112px;height:112px;object-fit:cover;border-radius:12px;background:var(--panel2)}
+.cbody{flex:1;min-width:0}
+.trow{display:flex;gap:var(--sp-md);align-items:flex-start;justify-content:space-between}
+.card h3{margin:0 0 var(--sp-sm);font-size:clamp(1.14rem,2.5vw,1.28rem);font-weight:650;line-height:1.45;letter-spacing:-.005em;flex:1;min-width:0}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.titlezh{font-size:.93rem;color:var(--ink-sec);font-weight:650;margin-top:2px}
+.fee{flex:0 0 auto;font-size:.87rem;font-weight:650;border-radius:var(--r-pill);padding:6px var(--sp-md);margin-top:var(--sp-xs);white-space:nowrap}
+.fee.free{background:rgba(46,230,168,.13);color:var(--green)}
+.fee.paid{background:rgba(251,191,36,.14);color:var(--warm)}
+.fee.na{background:var(--panel2);color:var(--ink-ter);font-weight:600}
+:root[data-theme="light"] .fee.free{background:rgba(10,125,85,.1)}
+:root[data-theme="light"] .fee.paid{background:rgba(181,71,8,.1)}
+.loc{font-size:.96rem;color:var(--ink-sec);margin:var(--sp-sm) 0 var(--sp-xs)}
+.loc b{color:var(--ink);font-weight:650}
+.loc .pin{color:var(--coral)}
+.meta{font-size:.85rem;color:var(--ink-ter);line-height:1.7}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin:var(--sp-md) 0 var(--sp-xs)}
+.tag{font-size:.77rem;font-weight:600;background:var(--panel2);border:1px solid var(--border);border-radius:var(--r-sm);padding:5px var(--sp-md);color:var(--ink-sec)}
+.sum{font-size:.95rem;line-height:1.7;margin:var(--sp-md) 0 0;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.actions{display:flex;gap:var(--sp-sm);flex-wrap:wrap;margin-top:var(--sp-lg)}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:var(--sp-sm) var(--sp-md);border-radius:var(--r-md);font-size:.88rem;font-weight:600;letter-spacing:.005em;text-decoration:none;border:1px solid var(--border);color:var(--ink-sec);background:var(--panel);cursor:pointer;font-family:inherit}
+.btn:hover{border-color:var(--border-hover)}
+.btn.primary{background:var(--green);color:#052e21;border-color:var(--green);font-weight:650}
+:root[data-theme="light"] .btn.primary{color:#fff}
+.btn.nav{background:var(--panel2)}
+/* ===== subscribe card ===== */
+.subcard{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-xl),5vw,var(--sp-2xl));margin:clamp(28px,6vw,36px) 0 var(--sp-sm);box-shadow:var(--shadow-sm)}
+.subcard h3{margin:0 0 var(--sp-md);font-size:clamp(1.16rem,2.6vw,1.28rem);font-weight:650;letter-spacing:-.005em}
+.subcard .prompt{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-lg);font-size:.92rem;line-height:1.75;color:var(--ink-sec)}
+.subcard .sum{font-size:.96rem;line-height:1.7;margin:var(--sp-md) 0;color:var(--ink-sec)}
+#event-post.hl{outline:2px solid var(--green);outline-offset:3px}
+/* ===== footer (shared with Yat's List) ===== */
+.sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
+.sitefoot .wrap{text-align:center}
+.sf-brand{font-family:var(--font-mono);font-size:1.25rem;font-weight:700;color:var(--ink)}
+.sf-brand .sf-cur,.sf-cur{color:var(--green)}
+.sf-tag{color:var(--ink-sec);margin:10px 0 0;font-size:1rem;font-weight:600}
+.sf-nav{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:18px 0 0}
+.sf-nav a{color:var(--ink-sec);text-decoration:none;font-weight:600;font-size:.94rem}
+.sf-nav a:hover{color:var(--green)}
+.sf-small{font-size:.83rem;color:var(--ink-ter);margin:16px 0 0;line-height:1.7}
+.sf-feeds,.sf-src{font-size:.83rem;color:var(--ink-ter);line-height:1.9;margin:10px 0 0}
+.sf-feeds a,.sf-src a{color:var(--green);text-decoration:none;font-weight:600}
+.sf-contact{font-size:.92rem;color:var(--ink-sec);margin:10px 0 0}
+.sf-contact a{color:var(--green);text-decoration:none;font-weight:600}
+.sf-copy{font-size:.83rem;color:var(--ink-ter);margin:6px 0 0}
+.empty{padding:clamp(40px,8vw,52px) 0;text-align:center;color:var(--ink-ter);font-size:.98rem}
+@media (max-width:760px){
+.topbar .wrap{grid-template-columns:1fr;gap:var(--sp-sm)}
+.topbar-nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav>*{flex-shrink:0}
+.hero h1{font-size:1.5rem}
+.bar{padding-top:12px;padding-bottom:12px}
+.fgroup{row-gap:8px}
+}
+@media (max-width:640px){
+.bar{margin:0 calc(-1 * var(--sp-lg));padding:var(--sp-md) var(--sp-lg)}
+.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{white-space:nowrap;padding:6px 9px 8px;font-size:.9rem}
+input[type=search]{font-size:16px;padding:var(--sp-md)}
+.ev{flex-direction:column;gap:0;margin-bottom:var(--sp-md)}
+.rail{flex:none;text-align:left;padding:0 0 var(--sp-xs);display:flex;gap:9px;align-items:baseline}
+.rail .t1{font-size:1.08rem}.rail .t2{font-size:.82rem;margin-top:0}
+.card{padding:clamp(18px,4vw,20px)}
+.card h3{font-size:1.14rem;word-wrap:break-word}
+.thumb{flex-basis:84px;width:84px;height:84px}
+.actions{margin-top:var(--sp-md)}
+.cinner{gap:12px}
+}
+
+/* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
+.topbar{padding-top:10px;padding-bottom:10px}
+.hero{padding:20px 0 14px}
+.brandmark{line-height:1.25}
+.listsw{display:none}
+#agent-sub .cmdline{margin-bottom:var(--sp-lg)}
+.cmdline .u{overflow-wrap:anywhere;min-width:0}
+.prompt{overflow-wrap:anywhere}
+.sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+input[type=search]{font-size:16px}
+@media (max-width:760px){
+body{overflow-x:hidden}
+.topbar{padding:6px 0}
+.hero{padding:10px 0 10px}
+.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.tagline{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.statsline{margin-top:6px}
+.listsw{display:flex;gap:8px;margin:10px 0 0}
+.listsw a{flex:1 1 0;min-width:0;text-align:center;padding:9px 4px;min-height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:var(--r-pill);font-size:.85rem;color:var(--ink-sec);text-decoration:none;background:var(--panel);white-space:nowrap}
+.listsw a.on{background:var(--green);color:#052e21;border-color:var(--green);font-weight:700}
+.dayhead{position:static}
+.chip{min-height:40px}
+.tab{min-height:40px}
+.qseg button{min-height:36px;padding:6px 12px}
+.agentbar button{min-height:36px}
+.fgroup{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.fgroup::-webkit-scrollbar{display:none}
+.fgroup>*{flex-shrink:0}
+}
+
+.sp-top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
+.sp-date{font-family:var(--font-mono);color:var(--green);font-weight:700;font-size:.85rem}
+.badge{display:inline-block;padding:2px 10px;border:1px solid var(--border);border-radius:var(--r-pill);font-size:.78rem;color:var(--ink-sec)}
+.badge.series{color:var(--green);border-color:var(--green-dim)}
+.sp-dur{margin-left:auto;font-size:.8rem;color:var(--ink-ter)}
+.sp-people{margin:4px 0 8px;color:var(--ink-sec);font-size:.9rem;line-height:1.65}
+.sp-people b{color:var(--ink)}
+.sp-hl-h{font-size:.8rem;color:var(--ink-ter);margin:10px 0 4px;letter-spacing:.06em}
+.sp-hl{margin:0 0 14px;padding-left:1.25em;color:var(--ink-sec);line-height:1.75;font-size:.94rem}
+.sp-hl li{margin:2px 0}
+.sp-note{color:var(--ink-ter);font-size:.85rem;line-height:1.7;margin:18px 2px 0}
+</style>
+</head>
+<body id="top">
+<header class="topbar"><div class="wrap topbar-in">
+<a class="topbar-brand" href="https://yatslist.com/szevents/">&gt; yat's list<span class="cur">_</span></a>
+<nav class="topbar-nav">
+<a href="https://yatslist.com/szevents/" id="nav-home">深圳活动</a>
+<a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+<a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
+<a href="https://yatslist.com/spaces/" class="on" id="nav-spaces" aria-current="page">Space 纪要</a>
+</nav>
+<div class="topbar-acts">
+<div class="seg" role="group" aria-label="Language">
+<button type="button" class="segbtn on" data-l="zh">简</button><button type="button" class="segbtn" data-l="tw">繁</button><button type="button" class="segbtn" data-l="en">EN</button>
+</div>
+<div class="seg" role="group" aria-label="Theme">
+<button type="button" class="segbtn" id="tbtn-auto">自动</button><button type="button" class="segbtn" id="tbtn-light" aria-label="浅色">☀</button><button type="button" class="segbtn" id="tbtn-dark" aria-label="深色">☾</button>
+</div>
+<a class="btn primary sm" href="#agent-sub" id="sub-btn">让 Agent 帮我订阅</a>
+</div>
+</div></header>
+
+<div class="wrap hero">
+<h1 id="page-title">X Space 纪要清单</h1>
+<p class="tagline" id="tagline">华语圈 X Space 精选纪要、回放链接与要点存档——结论先行，点开就能听原声。</p>
+<p class="statsline"><span id="sig-a">已收录</span> <b id="sp-total">–</b> <span id="sig-unit">场</span> · <span id="sig-latest-label">最近一场</span> <b id="sp-latest">–</b> · <span id="sig-manual">人工整理 · 不定期更新</span></p>
+<nav class="listsw" aria-label="Lists">
+<a href="https://yatslist.com/szevents/" id="lsw-ev">深圳活动</a>
+<a href="https://yatslist.com/hackathons/" id="lsw-hack">黑客松</a>
+<a href="https://yatslist.com/szexpat/" id="lsw-expat">外国人活动</a>
+<a href="https://yatslist.com/spaces/" class="on" id="lsw-spaces" aria-current="page">Space 纪要</a>
+</nav>
+</div>
+
+<div class="agentbar"><div class="wrap">
+<p id="agentbar-p"></p>
+<button class="copybtn" onclick="copyPrompt(this)"></button>
+</div></div>
+
+<div class="wrap">
+<div class="bar">
+<div class="frow">
+<input type="search" id="q" placeholder="">
+<span class="fres" id="fres"></span>
+<button id="fclear" class="fclear" hidden></button>
+</div>
+<div class="fgroup"><span id="g-chips" style="display:contents"></span></div>
+</div>
+<div id="list"><div class="empty">Loading…</div></div>
+<p class="sp-note" id="sp-note-text"></p>
+
+<div class="subcard" id="agent-sub">
+<div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">Space 纪要</span></span><span class="u">https://yatslist.com/spaces.json</span><button type="button" id="cmd-copy">复制</button></div>
+<div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
+<h3 id="sub-h"></h3>
+<p class="sum" id="sub-intro"></p>
+<p class="prompt" id="subprompt"></p>
+<div class="actions"><button class="btn primary copybtn" onclick="copyPrompt(this)"></button></div>
+</div>
+
+<div class="subcard" id="event-post">
+<h3 id="epost-title"></h3>
+<p class="sum" id="epost-q"></p>
+<div class="actions"><button type="button" class="btn" id="epost-yes" onclick="routePost('gh')"></button><button type="button" class="btn" id="epost-mail" onclick="routePost('mail')"></button><button type="button" class="btn" id="epost-no" onclick="routePost('form')"></button></div>
+<div id="route-gh" hidden>
+<p class="prompt" id="prompt-post-card"></p>
+<div class="actions"><button type="button" class="btn primary" id="epost-copy" onclick="copyPostPrompt(this)"></button></div>
+</div>
+<div id="route-mail" hidden>
+<p class="sum" id="epost-mail-note"></p>
+<p class="prompt">event.submit@yatslist.com</p>
+<div class="actions"><button type="button" class="btn primary" id="epost-mail-copy" onclick="copyRouteMail(this)"></button><a class="btn" id="epost-mail-send" href="mailto:event.submit@yatslist.com?subject=Space%20%E7%BA%AA%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A"></a></div>
+</div>
+<div id="route-form" hidden>
+<div class="actions"><a class="btn primary" id="epost-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener"></a></div>
+<p class="sum" id="epost-form-note"></p>
+</div>
+</div>
+</div>
+
+<footer class="sitefoot"><div class="wrap">
+<div class="sf-brand">&gt; yat's list<span class="sf-cur">_</span></div>
+<p class="sf-tag" id="sf-tag"></p>
+<nav class="sf-nav">
+<a href="https://yatslist.com/szevents/" id="sf-home"></a>
+<a href="https://yatslist.com/hackathons/" id="sf-hack"></a>
+<a href="https://yatslist.com/szexpat/" id="sf-expat"></a>
+<a href="https://yatslist.com/spaces/" id="sf-spaces"></a>
+<a href="#agent-sub" id="sf-sub"></a>
+</nav>
+<p class="sf-small" id="sf-small"></p>
+<p class="sf-feeds" id="sf-feeds"></p>
+<p class="sf-src" id="sf-src"></p>
+<p class="sf-contact" id="sf-contact"></p>
+<p class="sf-copy">© 2026 Yat's List</p>
+</div></footer>
+
+<script>
+var I18N = {"zh": {"docTitle": "X Space 纪要清单 | Yat's List", "navHome": "深圳活动", "navHack": "黑客松", "navExpat": "外国人活动", "navSpaces": "Space 纪要", "pageTitle": "X Space 纪要清单", "tagline": "华语圈 X Space 精选纪要、回放链接与要点存档——结论先行，点开就能听原声。", "cmdLabel": "Space 纪要", "pipLabel": "命令行 CLI", "cmdCopy": "复制", "cmdCopied": "已复制", "subBtn": "让 Agent 帮我订阅", "themeAuto": "自动", "themeLight": "浅色", "themeDark": "深色", "agentbar": "给你的 Agent：读取 https://yatslist.com/spaces.json，把新一期纪要的标题、日期、主持人与要点发我，想听时附上 X 原链接。", "copy": "复制提示词", "copied": "已复制 ✓", "searchPh": "搜索标题 / 主持 / 嘉宾 / 主题…", "chipAll": "全部", "resultUnit": " 场", "clearFilters": "清除筛选", "empty": "没有匹配的场次，换个关键词或清除筛选试试。", "loading": "加载中…", "loadFail": "数据加载失败，请稍后刷新重试。", "sigA": "已收录", "sigUnit": "场", "sigLatest": "最近一场", "sigManual": "人工整理 · 不定期更新", "hostLabel": "主持", "guestsLabel": "嘉宾", "hlLabel": "纪要要点", "listenBtn": "在 X 收听回放 ↗", "epFmt": "第 {n} 期", "spNote": "说明：纪要由维护者整理；其中金额、人数、战绩等数字均为发言人现场自述或转述，未经外部核实，引用请以各方官方后续公告为准。音频只放 X 原链接，本站不搬运录音文件。", "subH": "让你的 Agent 订阅这份清单", "subIntro": "把下面这段话发给你的 AI 助手（ChatGPT、Claude、豆包等），它会定期检查 spaces.json，有新纪要时把要点推给你。", "subPrompt": "请订阅 Yat's List 的 X Space 纪要清单：读取 https://yatslist.com/spaces.json（公开数据，无需登录），记住当前最新一场的日期；之后清单有新场次时，告诉我新纪要的日期、标题、系列、主持人和纪要要点，并附上 X 回放原链接。这是一份人工整理、不定期更新的存档清单，不用催更。", "postTitle": "投稿：把一场 Space 纪要加进清单", "routeQ": "你想怎么提交？", "routeYes": "让 Agent 提 PR", "routeMail": "用邮箱提交", "routeNo": "填网页表单", "postPrompt": "请帮我给 Yat's List 的 Space 纪要清单投稿：先读协议 https://yatslist.com/AGENTS.md 的「Space 纪要清单」一节和数据 https://yatslist.com/spaces.json 的现有条目格式，然后打开我给你的 X Space 链接，核对标题、日期、主持与嘉宾，把我提供的纪要要点整理成一条新条目追加到 spaces 数组（结论先行、每条一句；金额人数等数字注明为发言人自述），只改 spaces.json 一个文件，向 yatstudio/shenzhen-events 提 Pull Request。音频只放 X 原链接，绝不下载或搬运音频。完成后把 PR 链接发我。", "postCopy": "复制投稿提示词", "routeMailNote": "没有顺手的 Agent？直接把 Space 链接和纪要要点发邮件，维护者人工核实后录入。", "routeMailCopy": "复制邮箱地址", "routeMailSend": "打开邮件客户端", "routeFormBtn": "打开投稿表单", "routeFormNote": "表单的「所属清单」暂时没有 Space 选项：先选最接近的一项（深圳活动），并在标题开头注明「Space 纪要：」，维护者会按 Space 清单处理。", "footTag": "深圳活动，喂给你的 Agent 吃。", "footHome": "深圳活动", "footHack": "黑客松", "footSub": "让 Agent 订阅", "footSmall": "数据不定期更新 · 纪要逐条整理自公开 Space · 免费无广告", "footFeeds": "机器入口：spaces.json · llms.txt · AGENTS.md · agent.json", "footSrc": "纪要来自公开 X Space 的整理存档（原合集站已并入本站）", "footContact": "合作联系：yat@yatslist.com"}, "tw": {"docTitle": "X Space 紀要清單 | Yat's List", "navHome": "深圳活動", "navHack": "黑客松", "navExpat": "外國人活動", "navSpaces": "Space 紀要", "pageTitle": "X Space 紀要清單", "tagline": "華語圈 X Space 精選紀要、回放鏈接與要點存檔——結論先行，點開就能聽原聲。", "cmdLabel": "Space 紀要", "pipLabel": "命令行 CLI", "cmdCopy": "複製", "cmdCopied": "已複製", "subBtn": "讓 Agent 幫我訂閱", "themeAuto": "自動", "themeLight": "淺色", "themeDark": "深色", "agentbar": "給你的 Agent：讀取 https://yatslist.com/spaces.json，把新一期紀要的標題、日期、主持人與要點發我，想聽時附上 X 原鏈接。", "copy": "複製提示詞", "copied": "已複製 ✓", "searchPh": "搜索標題 / 主持 / 嘉賓 / 主題…", "chipAll": "全部", "resultUnit": " 場", "clearFilters": "清除篩選", "empty": "沒有匹配的場次，換個關鍵詞或清除篩選試試。", "loading": "加載中…", "loadFail": "數據加載失敗，請稍後刷新重試。", "sigA": "已收錄", "sigUnit": "場", "sigLatest": "最近一場", "sigManual": "人工整理 · 不定期更新", "hostLabel": "主持", "guestsLabel": "嘉賓", "hlLabel": "紀要要點", "listenBtn": "在 X 收聽回放 ↗", "epFmt": "第 {n} 期", "spNote": "說明：紀要由維護者整理；其中金額、人數、戰績等數字均為發言人現場自述或轉述，未經外部核實，引用請以各方官方後續公告為準。音頻只放 X 原鏈接，本站不搬運錄音文件。", "subH": "讓你的 Agent 訂閱這份清單", "subIntro": "把下面這段話發給你的 AI 助手（ChatGPT、Claude、豆包等），它會定期檢查 spaces.json，有新紀要時把要點推給你。", "subPrompt": "請訂閱 Yat's List 的 X Space 紀要清單：讀取 https://yatslist.com/spaces.json（公開數據，無需登錄），記住當前最新一場的日期；之後清單有新場次時，告訴我新紀要的日期、標題、系列、主持人和紀要要點，並附上 X 回放原鏈接。這是一份人工整理、不定期更新的存檔清單，不用催更。", "postTitle": "投稿：把一場 Space 紀要加進清單", "routeQ": "你想怎麼提交？", "routeYes": "讓 Agent 提 PR", "routeMail": "用郵箱提交", "routeNo": "填網頁表單", "postPrompt": "請幫我給 Yat's List 的 Space 紀要清單投稿：先讀協議 https://yatslist.com/AGENTS.md 的「Space 紀要清單」一節和數據 https://yatslist.com/spaces.json 的現有條目格式，然後打開我給你的 X Space 鏈接，核對標題、日期、主持與嘉賓，把我提供的紀要要點整理成一條新條目追加到 spaces 數組（結論先行、每條一句；金額人數等數字註明為發言人自述），只改 spaces.json 一個文件，向 yatstudio/shenzhen-events 提 Pull Request。音頻只放 X 原鏈接，絕不下載或搬運音頻。完成後把 PR 鏈接發我。", "postCopy": "複製投稿提示詞", "routeMailNote": "沒有順手的 Agent？直接把 Space 鏈接和紀要要點發郵件，維護者人工核實後錄入。", "routeMailCopy": "複製郵箱地址", "routeMailSend": "打開郵件客戶端", "routeFormBtn": "打開投稿表單", "routeFormNote": "表單的「所屬清單」暫時沒有 Space 選項：先選最接近的一項（深圳活動），並在標題開頭註明「Space 紀要：」，維護者會按 Space 清單處理。", "footTag": "深圳活動，餵給你的 Agent 吃。", "footHome": "深圳活動", "footHack": "黑客松", "footSub": "讓 Agent 訂閱", "footSmall": "數據不定期更新 · 紀要逐條整理自公開 Space · 免費無廣告", "footFeeds": "機器入口：spaces.json · llms.txt · AGENTS.md · agent.json", "footSrc": "紀要來自公開 X Space 的整理存檔（原合集站已併入本站）", "footContact": "合作聯繫：yat@yatslist.com"}, "en": {"docTitle": "X Space Recaps | Yat's List", "navHome": "Shenzhen Events", "navHack": "Hackathons", "navExpat": "Expat Events", "navSpaces": "Space Notes", "pageTitle": "X Space Recaps", "tagline": "Curated recaps of Chinese-language X Spaces — replay links and key takeaways, conclusions first.", "cmdLabel": "Space Notes", "pipLabel": "CLI", "cmdCopy": "Copy", "cmdCopied": "Copied", "subBtn": "Subscribe via Agent", "themeAuto": "Auto", "themeLight": "Light", "themeDark": "Dark", "agentbar": "For your Agent: read https://yatslist.com/spaces.json and send me each new recap's title, date, host and highlights, with the original X link when I want to listen.", "copy": "Copy prompt", "copied": "Copied ✓", "searchPh": "Search title / host / guest / topic…", "chipAll": "All", "resultUnit": " sessions", "clearFilters": "Clear filters", "empty": "No matching sessions — try another keyword or clear the filters.", "loading": "Loading…", "loadFail": "Failed to load data — please refresh and try again.", "sigA": "Archived", "sigUnit": "sessions", "sigLatest": "Latest", "sigManual": "Hand-curated · updated irregularly", "hostLabel": "Host", "guestsLabel": "Guests", "hlLabel": "Highlights", "listenBtn": "Listen on X ↗", "epFmt": "Ep. {n}", "spNote": "Note: recaps are compiled by the maintainer. Figures such as amounts, headcounts and track records are the speakers' own claims, not independently verified — check official follow-ups before citing. Audio is linked to X only; no recordings are hosted here.", "subH": "Have your Agent subscribe to this list", "subIntro": "Send the prompt below to your AI assistant (ChatGPT, Claude, Doubao…). It will check spaces.json regularly and push new recaps' highlights to you.", "subPrompt": "Please subscribe me to Yat's List X Space recaps: read https://yatslist.com/spaces.json (public data, no login), remember the latest session's date; whenever new sessions appear, tell me the date, title, series, host and highlights of each new recap, with the original X replay link. This is a hand-curated archive updated irregularly — no need to chase updates.", "postTitle": "Submit: add a Space recap to the list", "routeQ": "How would you like to submit?", "routeYes": "Agent opens a PR", "routeMail": "Submit by email", "routeNo": "Web form", "postPrompt": "Please submit a new recap to the Yat's List Space Notes list: first read the 'Space纪要清单' section of the protocol at https://yatslist.com/AGENTS.md and the entry format in https://yatslist.com/spaces.json, then open the X Space link I give you and verify the title, date, host and guests. Turn the recap highlights I provide into one new entry appended to the spaces array (conclusions first, one sentence each; mark figures as speakers' own claims), change only spaces.json, and open a Pull Request to yatstudio/shenzhen-events. Link audio to the original X page only — never download or rehost audio. Send me the PR link when done.", "postCopy": "Copy submission prompt", "routeMailNote": "No Agent handy? Email the Space link and recap highlights — the maintainer verifies and adds them manually.", "routeMailCopy": "Copy email address", "routeMailSend": "Open mail app", "routeFormBtn": "Open the submission form", "routeFormNote": "The form's list selector has no Space option yet: pick the closest one (Shenzhen Events) and start your title with 'Space 纪要：' — the maintainer will route it to the Space list.", "footTag": "Shenzhen events, served to your Agent.", "footHome": "Shenzhen Events", "footHack": "Hackathons", "footSub": "Agent subscribe", "footSmall": "Updated irregularly · Recaps compiled from public Spaces · Free, no ads", "footFeeds": "Machine entry: spaces.json · llms.txt · AGENTS.md · agent.json", "footSrc": "Recaps archived from public X Spaces (the former collection site has merged into this one)", "footContact": "Contact: yat@yatslist.com"}};
+var LANG = "zh";
+try { var _sl = localStorage.getItem("szLang"); if (_sl === "zh" || _sl === "tw" || _sl === "en") LANG = _sl; else { var _nl = (navigator.language || "zh").toLowerCase(); LANG = _nl.indexOf("en") === 0 ? "en" : (_nl.indexOf("hant") >= 0 || _nl.indexOf("tw") >= 0 || _nl.indexOf("hk") >= 0 ? "tw" : "zh"); } } catch (e) {}
+function tr(k) { var d = I18N[LANG] || I18N.zh; return d[k] != null ? d[k] : (I18N.zh[k] || ""); }
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+function _st(s, v) { var e = document.querySelector(s); if (e && v != null) e.textContent = v; }
+function _stH(s, v) { var e = document.querySelector(s); if (e && v != null) e.innerHTML = v; }
+var DATA = null, ACTIVE = "__all", QUERY = "";
+function field(sp, base) { if (LANG === "en" && sp[base + "_en"]) return sp[base + "_en"]; if (LANG === "tw" && sp[base + "_tw"]) return sp[base + "_tw"]; return sp[base]; }
+function hlList(sp) { if (LANG === "en" && sp.highlights_en && sp.highlights_en.length) return sp.highlights_en; if (LANG === "tw" && sp.highlights_tw && sp.highlights_tw.length) return sp.highlights_tw; return sp.highlights || []; }
+function chipsOf() { var seen = [], out = []; if (!DATA) return out; DATA.forEach(function (sp) { if (sp.series && seen.indexOf(sp.series) < 0) { seen.push(sp.series); out.push(sp.series); } }); DATA.forEach(function (sp) { (sp.topics || []).forEach(function (t) { if (seen.indexOf(t) < 0) { seen.push(t); out.push(t); } }); }); return out; }
+function renderChips() { var g = document.getElementById("g-chips"); if (!g) return; var html = '<button class="chip' + (ACTIVE === "__all" ? " on" : "") + '" data-c="__all">' + esc(tr("chipAll")) + "</button>"; chipsOf().forEach(function (c) { html += '<button class="chip' + (ACTIVE === c ? " on" : "") + '" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }); g.innerHTML = html; var bs = g.querySelectorAll(".chip"); for (var i = 0; i < bs.length; i++) { bs[i].addEventListener("click", function () { ACTIVE = this.getAttribute("data-c"); render(); }); } }
+function matches(sp) { if (ACTIVE !== "__all" && sp.series !== ACTIVE && (sp.topics || []).indexOf(ACTIVE) < 0) return false; if (QUERY) { var hay = [sp.title, sp.title_en || "", sp.host || ""].concat(sp.guests || []).concat(sp.topics || []).join(" ").toLowerCase(); if (hay.indexOf(QUERY) < 0) return false; } return true; }
+function render() { renderChips(); var list = document.getElementById("list"); if (!DATA) { list.innerHTML = '<div class="empty">' + esc(tr("loading")) + "</div>"; return; } var items = DATA.filter(matches); var fres = document.getElementById("fres"); if (fres) fres.textContent = items.length + tr("resultUnit"); var fc = document.getElementById("fclear"); if (fc) fc.hidden = !(ACTIVE !== "__all" || QUERY); if (!items.length) { list.innerHTML = '<div class="empty">' + esc(tr("empty")) + "</div>"; return; } var joiner = LANG === "en" ? ", " : "、"; list.innerHTML = items.map(function (sp) { var badges = ""; if (sp.series) { badges += '<span class="badge series">' + esc(sp.series) + (sp.episode ? " · " + esc(tr("epFmt").replace("{n}", sp.episode)) : "") + "</span>"; } (sp.topics || []).forEach(function (t) { badges += '<span class="badge">' + esc(t) + "</span>"; }); var people = '<b>' + esc(tr("hostLabel")) + "</b> " + esc(sp.host || ""); if (sp.guests && sp.guests.length) people += " · <b>" + esc(tr("guestsLabel")) + "</b> " + sp.guests.map(esc).join(joiner); var hls = hlList(sp).map(function (h) { return "<li>" + esc(h) + "</li>"; }).join(""); return '<article class="card"><div class="sp-top"><span class="sp-date">' + esc(sp.date) + "</span>" + badges + '<span class="sp-dur">⏱ ' + esc(sp.duration || "") + '</span></div><h3>' + esc(field(sp, "title")) + '</h3><p class="sp-people">' + people + '</p><div class="sp-hl-h">' + esc(tr("hlLabel")) + '</div><ul class="sp-hl">' + hls + '</ul><div class="actions"><a class="btn primary" href="' + esc(sp.url) + '" target="_blank" rel="noopener">' + esc(tr("listenBtn")) + "</a></div></article>"; }).join(""); }
+function applyLang() { var t = I18N[LANG] || I18N.zh; document.title = t.docTitle; document.documentElement.setAttribute("lang", LANG === "en" ? "en" : (LANG === "tw" ? "zh-Hant" : "zh-CN"));
+_st("#nav-home", t.navHome); _st("#nav-hack", t.navHack); _st("#nav-expat", t.navExpat); _st("#nav-spaces", t.navSpaces);
+_st("#lsw-ev", t.navHome); _st("#lsw-hack", t.navHack); _st("#lsw-expat", t.navExpat); _st("#lsw-spaces", t.navSpaces);
+_st("#page-title", t.pageTitle); _st("#tagline", t.tagline);
+_st("#sig-a", t.sigA); _st("#sig-unit", t.sigUnit); _st("#sig-latest-label", t.sigLatest); _st("#sig-manual", t.sigManual);
+_st("#cmd-label", t.cmdLabel); _st("#pip-label", t.pipLabel); _st("#cmd-copy", t.cmdCopy); _st("#pip-copy", t.cmdCopy);
+_st("#sub-btn", t.subBtn); _st("#tbtn-auto", t.themeAuto);
+_st("#agentbar-p", t.agentbar); _st("#sp-note-text", t.spNote);
+_st("#sub-h", t.subH); _st("#sub-intro", t.subIntro); _st("#subprompt", t.subPrompt);
+_st("#epost-title", t.postTitle); _st("#epost-q", t.routeQ); _st("#epost-yes", t.routeYes); _st("#epost-mail", t.routeMail); _st("#epost-no", t.routeNo);
+_st("#prompt-post-card", t.postPrompt); _st("#epost-copy", t.postCopy);
+_st("#epost-mail-note", t.routeMailNote); _st("#epost-mail-copy", t.routeMailCopy); _st("#epost-mail-send", t.routeMailSend);
+_st("#epost-form-btn", t.routeFormBtn); _st("#epost-form-note", t.routeFormNote);
+_st("#sf-tag", t.footTag); _st("#sf-home", t.footHome); _st("#sf-hack", t.footHack); _st("#sf-expat", t.navExpat); _st("#sf-spaces", t.navSpaces); _st("#sf-sub", t.footSub);
+_st("#sf-small", t.footSmall);
+_stH("#sf-feeds", esc(t.footFeeds).replace("spaces.json", '<a href="/spaces.json">spaces.json</a>').replace("llms.txt", '<a href="/llms.txt">llms.txt</a>').replace("AGENTS.md", '<a href="/AGENTS.md">AGENTS.md</a>').replace("agent.json", '<a href="/agent.json">agent.json</a>'));
+_st("#sf-src", t.footSrc);
+_stH("#sf-contact", esc(t.footContact).replace("yat@yatslist.com", '<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>'));
+_st("#fclear", t.clearFilters);
+var q = document.getElementById("q"); if (q) q.setAttribute("placeholder", t.searchPh);
+var cbs = document.querySelectorAll(".copybtn"); for (var i = 0; i < cbs.length; i++) cbs[i].textContent = t.copy;
+var lbs = document.querySelectorAll(".seg [data-l]"); for (var j = 0; j < lbs.length; j++) lbs[j].classList.toggle("on", lbs[j].getAttribute("data-l") === LANG);
+render(); }
+function setLang(l) { LANG = l; try { localStorage.setItem("szLang", l); } catch (e) {} applyLang(); }
+var _lb = document.querySelectorAll(".seg [data-l]"); for (var _i = 0; _i < _lb.length; _i++) { _lb[_i].addEventListener("click", function () { setLang(this.getAttribute("data-l")); }); }
+function copyText(txt, btn, doneLabel) { function done() { if (!btn) return; var o = btn.textContent; btn.textContent = doneLabel; btn.classList.add("done"); setTimeout(function () { btn.textContent = o; btn.classList.remove("done"); }, 1600); } if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done).catch(function () { fallback(); }); } else fallback(); function fallback() { var ta = document.createElement("textarea"); ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); done(); } }
+function copyPrompt(btn) { copyText(tr("subPrompt"), btn, tr("copied")); }
+function copyPostPrompt(btn) { copyText(tr("postPrompt"), btn, tr("copied")); }
+function copyRouteMail(btn) { copyText("event.submit@yatslist.com", btn, tr("copied")); }
+function routePost(kind) { ["gh", "mail", "form"].forEach(function (k) { var el = document.getElementById("route-" + k); if (el) el.hidden = k !== kind; }); var y = document.getElementById("epost-yes"), m = document.getElementById("epost-mail"), n = document.getElementById("epost-no"); if (y) y.classList.toggle("primary", kind === "gh"); if (m) m.classList.toggle("primary", kind === "mail"); if (n) n.classList.toggle("primary", kind === "form"); }
+function bindCopy(id, txt) { var b = document.getElementById(id); if (b) b.addEventListener("click", function () { copyText(txt, b, tr("cmdCopied")); }); }
+bindCopy("cmd-copy", "https://yatslist.com/spaces.json");
+bindCopy("pip-copy", "pip install yatslist");
+var _q = document.getElementById("q"); if (_q) _q.addEventListener("input", function () { QUERY = this.value.trim().toLowerCase(); render(); });
+var _fc = document.getElementById("fclear"); if (_fc) _fc.addEventListener("click", function () { ACTIVE = "__all"; QUERY = ""; var q2 = document.getElementById("q"); if (q2) q2.value = ""; render(); });
+function curThemeMode() { try { var t = localStorage.getItem("szTheme") || "auto"; return (t === "light" || t === "dark") ? t : "auto"; } catch (e) { return "auto"; } }
+function paintThemeBtns() { var m = curThemeMode(); var map = { auto: "tbtn-auto", light: "tbtn-light", dark: "tbtn-dark" }; for (var k in map) { var b = document.getElementById(map[k]); if (b) b.classList.toggle("on", k === m); } }
+function setThemeMode(m) { try { localStorage.setItem("szTheme", m); } catch (e) {} var d = m === "dark" || (m === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches); document.documentElement.setAttribute("data-theme", d ? "dark" : "light"); document.documentElement.setAttribute("data-theme-mode", m); paintThemeBtns(); }
+["auto", "light", "dark"].forEach(function (m) { var b = document.getElementById("tbtn-" + m); if (b) b.addEventListener("click", function () { setThemeMode(m); }); });
+paintThemeBtns();
+applyLang();
+fetch("/spaces.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) { DATA = (d.spaces || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : (a.date > b.date ? -1 : 0); }); var tot = document.getElementById("sp-total"); if (tot) tot.textContent = DATA.length; var lat = document.getElementById("sp-latest"); if (lat && DATA.length) lat.textContent = DATA[0].date; render(); }).catch(function () { var l = document.getElementById("list"); if (l) l.innerHTML = '<div class="empty">' + esc(tr("loadFail")) + "</div>"; });
+</script>
+</body>
+</html>
