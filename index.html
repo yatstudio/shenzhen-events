@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松</title>
 <meta name="description" content="Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。">
 <style>
@@ -19,11 +21,22 @@
 --font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
 --warm:#FBBF24;--warm-dim:#78350F;
 --red:#F87171;--red-dim:#7F1D1D;
+--green-hover:#3df4b5;--bar-bg:rgba(13,18,24,.95);--bar-bg96:rgba(13,18,24,.96);
+color-scheme:dark;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--green-dim:#0a7d55;--green-hover:#0e9263;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--shadow-sm:0 2px 8px rgba(16,42,32,.08);--shadow-md:0 8px 24px rgba(16,42,32,.13);
+--bar-bg:rgba(246,248,247,.92);--bar-bg96:rgba(246,248,247,.94);
+color-scheme:light;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:rgba(13,18,24,.95);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
 .topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
 .topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
 .topbar-logo{height:clamp(28px,5vw,38px);flex-shrink:0}
@@ -51,7 +64,7 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .btn:hover{background:var(--panel-hover);border-color:var(--border-hover);color:var(--ink);transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
 .btn-primary{background:var(--green);color:var(--bg);border-color:var(--green);font-weight:650;box-shadow:var(--shadow-sm)}
-.btn-primary:hover{background:#3df4b5;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-primary:hover{background:var(--green-hover);transform:translateY(-1px);box-shadow:var(--shadow-md)}
 .btn-copy{position:absolute;top:var(--sp-sm);right:var(--sp-sm);min-height:32px;padding:6px var(--sp-md);font-size:.82rem;background:rgba(46,230,168,.12);border-color:rgba(46,230,168,.25);color:var(--green)}
 .btn-copy:hover{background:rgba(46,230,168,.2)}
 .endpoint-list{display:grid;gap:var(--sp-md);margin:var(--sp-lg) 0}
@@ -75,7 +88,7 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .topact .submit:hover{background:#fcd34d;transform:translateY(-1px);box-shadow:var(--shadow-md)}
 .topact .agent{background:var(--green);color:var(--bg);border-color:var(--green)}
 .topact .agent:hover{background:#3df4b5;transform:translateY(-1px)}
-.bar{position:static;background:rgba(13,18,24,.96);backdrop-filter:blur(16px) saturate(180%);padding:var(--sp-lg) 0;margin:0 calc(-1 * clamp(var(--sp-lg),4vw,var(--sp-xl)));padding-left:clamp(var(--sp-lg),4vw,var(--sp-xl));padding-right:clamp(var(--sp-lg),4vw,var(--sp-xl));border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(255,255,255,.02)}
+.bar{position:static;background:var(--bar-bg96);backdrop-filter:blur(16px) saturate(180%);padding:var(--sp-lg) 0;margin:0 calc(-1 * clamp(var(--sp-lg),4vw,var(--sp-xl)));padding-left:clamp(var(--sp-lg),4vw,var(--sp-xl));padding-right:clamp(var(--sp-lg),4vw,var(--sp-xl));border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(255,255,255,.02)}
 .chip{flex:0 0 auto;border:1px solid var(--border);background:var(--panel);border-radius:var(--r-pill);padding:var(--sp-sm) var(--sp-lg);font-size:.88rem;cursor:pointer;min-height:38px;color:var(--ink-sec);font-weight:600;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit;letter-spacing:.005em}
 .chip:hover{border-color:var(--border-hover);background:var(--panel-hover);transform:translateY(-1px)}
 .chip:active{transform:translateY(0)}
@@ -146,7 +159,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .subcard .sum{font-size:.96rem;line-height:1.7;margin:var(--sp-md) 0;color:var(--ink-sec)}
 .foot{font-size:.83rem;color:var(--ink-ter);padding:clamp(26px,5vw,var(--sp-2xl)) 0 clamp(var(--sp-3xl),10vw,60px);line-height:1.9}
 .foot a{color:var(--green);text-decoration:none;transition:color .2s ease;font-weight:600}
-.foot a:hover{color:#3df4b5}
+.foot a:hover{color:var(--green-hover)}
 .foot>div{margin:0 0 var(--sp-md);padding:var(--sp-md) var(--sp-lg);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);color:var(--ink-sec);font-size:.92rem;line-height:1.7}
 .foot>div b{color:var(--ink);font-weight:650}
 .empty{padding:clamp(40px,8vw,52px) 0;text-align:center;color:var(--ink-ter);font-size:.98rem}
@@ -299,8 +312,13 @@ select{font-size:16px}
 .langsw button:hover{color:var(--ink)}
 .langsw button.on{color:var(--green)}
 .langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+.themesw{display:inline-flex;align-items:center;gap:8px}
+.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
+.themesw button:hover{color:var(--ink)}
+.themesw button.on{color:var(--green)}
+.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
-.sitefoot{border-top:1px solid #26303B;background:#0d1218;padding:42px 0 48px}
+.sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
 .sf-brand{font-family:var(--font-mono);font-size:1.35rem;font-weight:700;color:var(--green)}
 .sf-brand .sf-cur{color:#FF5C00}
@@ -313,6 +331,39 @@ select{font-size:16px}
 .sf-contact a{color:var(--green);font-weight:600;text-decoration:none}
 .sf-contact a:hover{text-decoration:underline}
 .sf-copy{margin:6px 0 0;color:var(--ink-ter);font-size:.83rem;font-family:var(--font-mono)}
+
+/* ===== Light theme overrides (hardcoded dark-only blocks) ===== */
+[data-theme="light"] .terminal-header{background:rgba(16,42,32,.06)}
+[data-theme="light"] .code-block{background:#edf2f0;border-color:rgba(16,42,32,.12);color:var(--ink-sec)}
+[data-theme="light"] .endpoint-item{background:rgba(16,42,32,.04);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .endpoint-item:hover{background:rgba(16,42,32,.07);border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .tag{background:rgba(16,42,32,.05);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .tag.hack{background:rgba(248,113,113,.14);color:#b91c1c;border-color:rgba(185,28,28,.3)}
+[data-theme="light"] .tag.web3{background:rgba(74,222,128,.16);color:#15803d;border-color:rgba(21,128,61,.3)}
+[data-theme="light"] .tag.space{background:rgba(46,230,168,.14);color:var(--green);border-color:rgba(10,125,85,.3)}
+[data-theme="light"] .fee.free{background:rgba(74,222,128,.18);color:#15803d;border-color:rgba(21,128,61,.32)}
+[data-theme="light"] .fee.paid{background:rgba(251,191,36,.22);color:#b45309;border-color:rgba(217,119,6,.38)}
+[data-theme="light"] .fee.na{background:rgba(16,42,32,.05);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .subcard .prompt{background:rgba(16,42,32,.045);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .modal{border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .modal textarea{background:rgba(16,42,32,.04);border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .mex{background:rgba(16,42,32,.04);border-color:rgba(16,42,32,.16)}
+[data-theme="light"] .mchip{background:#eef3f1;border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .mchip:hover{background:rgba(16,42,32,.08);border-color:rgba(16,42,32,.28)}
+[data-theme="light"] .mchip.on{background:var(--green);color:#fff;border-color:var(--green)}
+[data-theme="light"] .welc,[data-theme="light"] .tourcard{border-color:rgba(16,42,32,.16)}
+[data-theme="light"] .agblock{border-top-color:rgba(16,42,32,.12)}
+[data-theme="light"] .boardbar .bb-title{color:#7c2d12}
+[data-theme="light"] .boardbar .bb-sub b{color:#b45309}
+[data-theme="light"] .topact .submit{color:#1a1206}
+[data-theme="light"] .favbtn.on{color:#1a1206}
+[data-theme="light"] .hkflag{background:#e5484d;color:#fff}
+[data-theme="light"] .dayhead .drel{background:#e5484d;color:#fff}
+[data-theme="light"] .dayhead .drel.future{background:var(--green);color:#fff}
+[data-theme="light"] .dl{color:#b45309}
+[data-theme="light"] .dl.soon{background:#e5484d;color:#fff}
+[data-theme="light"] .fclear{color:#d92d20}
+[data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -341,6 +392,7 @@ select{font-size:16px}
       <a href="#human-section" id="nav-events">活动清单</a>
       <a href="hackathons.html" id="nav-hack">黑客松专题</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
+      <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
     </nav>
   </div>
 </div>
@@ -363,7 +415,7 @@ select{font-size:16px}
 
     <!-- Top Actions -->
     <div class="topact">
-      <a class="btn submit" id="ta-submit" href="https://github.com/yatstudio/shenzhen-events/issues/new/choose" target="_blank" rel="noopener">＋ 提交活动</a>
+      <a class="btn submit" id="ta-submit" href="#agent-sub" onclick="hlSubmit()">＋ 提交活动</a>
       <button class="btn agent" id="ta-agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
       <a class="btn" id="ta-email" href="#email-sub">✉️ 邮件订阅</a>
       <button class="btn agent" id="ta-tour" onclick="startTour()">🧭 订阅导览</button>
@@ -459,7 +511,7 @@ select{font-size:16px}
 
       <div class="agblock"><h4>🧑‍💻 Codex</h4>
       <ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你提交活动（提 PR）</li></ol>
-      <p class="prompt" id="prompt-codex">请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读仓库说明 https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按 AGENTS.md 的规范提 PR。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
+      <p class="prompt" id="prompt-codex">请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读说明 https://yatslist.com/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按该说明里的规范提交。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
     </div>
 
     <!-- Email Subscription Card -->
@@ -473,7 +525,7 @@ select{font-size:16px}
     <div class="foot">
       <div id="foot-note">🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新、审核投稿）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a></div>
       <span id="foot-apis">数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：</span><a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历.ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a><br>
-      <span id="foot-tail-pre">Agent 投稿接入见仓库 </span><a href="https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md">AGENTS.md</a><span id="foot-tail-post">。报名前请以官方页面最新信息为准。</span>
+      <span id="foot-tail-pre">Agent 投稿接入见仓库 </span><a href="https://yatslist.com/AGENTS.md">AGENTS.md</a><span id="foot-tail-post">。报名前请以官方页面最新信息为准。</span>
     </div>
   </div>
 </section>
@@ -601,14 +653,15 @@ select{font-size:16px}
 
 <script>
 /* ===== i18n: zh (default) / tw / en — preference stored in localStorage "szLang" ===== */
-let LANG="zh";try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
+let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
+if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
 if(LANG!=="en"&&LANG!=="tw")LANG="zh";
 const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","在线Space":"在线Space"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","在线Space":"在線Space"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","在线Space":"Online Spaces"}};
 const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
-brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松专题",
+brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松专题",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"Yat's List · 深圳活动清单",heroSub:"每天 07:30 更新 · 每条都打开官方页核实过",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",
 taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
@@ -632,7 +685,7 @@ esubTitle:"✉️ 邮件订阅：每天早上发到你的邮箱",
 esubSum:"没有 Agent 也没关系。留下邮箱，每天早上收到一封日报邮件：今天和本周的重点活动、72 小时内截止的报名。每天最多一封，不发广告；想停了，回复邮件注明「退订」即可。",
 esubBtn:"填写邮箱订阅",
 footNote:'🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新、审核投稿）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a>',
-footApis:"数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：",footTailPre:"Agent 投稿接入见仓库 ",footTailPost:"。报名前请以官方页面最新信息为准。",
+footApis:"数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：",footTailPre:"Agent 投稿接入见 ",footTailPost:"。报名前请以官方页面最新信息为准。",
 introTitle:"Yat's List 是什么？",
 introP1:'Yat\'s List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接在上方清单里浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。',
 introP2:'这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。',
@@ -662,7 +715,7 @@ feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",r
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
-brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",
+brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Yat's List · Shenzhen Events",heroSub:"Updated daily at 07:30 · Every listing verified against its official page",
 statWeek:"Next 7 days",statDl:"Closing within 72h",
 taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
@@ -686,7 +739,7 @@ esubTitle:"✉️ Email subscription: a morning digest in your inbox",
 esubSum:"No Agent? No problem. Leave your email and get one digest every morning: today's and this week's key events, plus registrations closing within 72 hours. At most one email a day, no ads — reply with “unsubscribe” any time to stop.",
 esubBtn:"Subscribe by email",
 footNote:'🤖 This site is maintained automatically by <b>Yat\'s Agent</b> (daily updates, submission reviews) · Questions or suggestions? Reach Yat on <a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a>',
-footApis:"Data endpoints (open to anyone and any Agent, no login required): ",footTailPre:"For Agent submissions, see ",footTailPost:" in the repo. Always confirm the latest details on the official page before registering.",
+footApis:"Data endpoints (open to anyone and any Agent, no login required): ",footTailPre:"Agent submissions: see ",footTailPost:". Always confirm the latest details on the official page before registering.",
 introTitle:"What is Yat's List?",
 introP1:'Yat\'s List is <b style="color:var(--ink)">a list built for Agents to subscribe to</b>: no feed, no noise. Every list is verified item by item against official pages by Yat\'s Agent each day, then published as structured data. Browse the list above yourself — or send the prompt below to your Agent and let it filter for you daily, pinging you only when something matches your interests.',
 introP2:'This is the first list — the <b style="color:var(--ink)">Shenzhen Events Digest</b>: AI, startup, tech, cross-border, Web3 and crypto events and hackathons in Shenzhen.',
@@ -716,7 +769,7 @@ feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"To
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
-brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松專題",
+brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松專題",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"Yat's List · 深圳活動清單",heroSub:"每天 07:30 更新 · 每條都打開官方頁核實過",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",
 taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
@@ -740,7 +793,7 @@ esubTitle:"✉️ 郵件訂閱：每天早上發到你的郵箱",
 esubSum:"沒有 Agent 也沒關係。留下郵箱，每天早上收到一封日報郵件：今天和本週的重點活動、72 小時內截止的報名。每天最多一封，不發廣告；想停了，回覆郵件註明「退訂」即可。",
 esubBtn:"填寫郵箱訂閱",
 footNote:'🤖 本站由 <b>Yat 的 Agent</b> 自動維護（每日更新、審核投稿）· 有建議或問題，歡迎聯繫 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a>',
-footApis:"數據接口（任何人 / 任何 Agent 可直接讀取，無需登錄）：",footTailPre:"Agent 投稿接入見倉庫 ",footTailPost:"。報名前請以官方頁面最新信息為準。",
+footApis:"數據接口（任何人 / 任何 Agent 可直接讀取，無需登錄）：",footTailPre:"Agent 投稿接入見 ",footTailPost:"。報名前請以官方頁面最新信息為準。",
 introTitle:"Yat's List 是什麼？",
 introP1:'Yat\'s List 是<b style="color:var(--ink)">給 Agent 訂閱的清單</b>：不做信息流、不刷屏。每份清單都由 Yat 的 Agent 每天逐條打開官方頁核實，再結構化發佈出來。你可以直接在上方清單裡瀏覽，也可以把下面這段話術發給你的 Agent，讓它每天替你篩選，命中你的興趣才提醒你。',
 introP2:'這是第一份清單——<b style="color:var(--ink)">深圳活動日報</b>：深圳的 AI、創業、科技、跨境、Web3、加密活動與黑客松。',
@@ -774,18 +827,18 @@ zh:{
 generic:"请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
 doubao:"每天早上 9 点，打开 https://yatslist.com/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
 workbuddy:"每天早上 9 点，打开 https://yatslist.com/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
-codex:"请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读仓库说明 https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按 AGENTS.md 的规范提 PR。"},
+codex:"请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读说明 https://yatslist.com/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按该说明里的规范提交。"},
 en:{
 generic:"Please subscribe to “Yat's List — Shenzhen Events” and send me event reminders. Data source: https://yatslist.com/events.json (updated every morning, no login required). Read it once a day and filter by my interests and the areas I care about. Tell me the same day when a new event matches my interests; remind me 2 days before a registration deadline; and for events I mark as attending, remind me 3 days before and again 1 day before they start. Never invent events that are not in the data source, and always include the official registration link in your reminders.",
 doubao:"Every morning at 9:00, open https://yatslist.com/events.json and read the latest data (a JSON file of industry events in Shenzhen + Hong Kong). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) events whose registration closes within 72 hours; 3) categories I am interested in: [AI / Startups / Global / Web3 / Hackathons — edit to your own interests]. Sort by date, one event per line: date & time + title + area + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
 workbuddy:"Every morning at 9:00, open https://yatslist.com/events.json and read the latest data (a JSON file of industry events in Shenzhen + Hong Kong). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) events whose registration closes within 72 hours; 3) categories I am interested in: [AI / Startups / Global / Web3 / Hackathons — edit to your own interests]. Sort by date, one event per line: date & time + title + area + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
-codex:"Please subscribe me to “Yat's List — Shenzhen Events”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/events.json and read the repo guide at https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md. Consider only events that have not ended, and filter for: events happening today and tomorrow, registrations closing within 72 hours, and my categories of interest [AI / Startups / Global / Web3 / Hackathons]. Report briefly, sorted by date, one event per line with its registration link; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day. Also, if I ask you to submit an event, follow AGENTS.md and open a PR for it."},
+codex:"Please subscribe me to “Yat's List — Shenzhen Events”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/events.json and read the guide at https://yatslist.com/AGENTS.md. Consider only events that have not ended, and filter for: events happening today and tomorrow, registrations closing within 72 hours, and my categories of interest [AI / Startups / Global / Web3 / Hackathons]. Report briefly, sorted by date, one event per line with its registration link; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day. Also, if I ask you to submit an event, follow the guide and submit it the way it describes."},
 tw:{
 generic:"請訂閱「Yat's List 深圳活動清單」並給我活動提醒：數據源 https://yatslist.com/events.json（每天早上更新，無需登錄）。每天讀取一次，按我的興趣和所在區域篩選；有新活動符合我的興趣時當天告訴我；報名截止前 2 天提醒我一次；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附官方報名鏈接。",
 doubao:"每天早上 9 點，打開 https://yatslist.com/events.json 讀取最新數據（這是深圳+香港行業活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）72 小時內報名截止的；3）我感興趣的類別：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 workbuddy:"每天早上 9 點，打開 https://yatslist.com/events.json 讀取最新數據（這是深圳+香港行業活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）72 小時內報名截止的；3）我感興趣的類別：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
-codex:"請為我訂閱「Yat's List 深圳活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/events.json，並閱讀倉庫說明 https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md 。只看未結束的活動，篩選：今天和明天舉行的、72 小時內報名截止的、以及我感興趣的類別。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。另外，如果我讓你提交活動，也按 AGENTS.md 的規範提 PR。"}};
-const SUBMIT_PROMPT_EN="Please help me submit an event to “Yat's List — Shenzhen Events”. Repo: https://github.com/yatstudio/shenzhen-events — first read AGENTS.md and CONTRIBUTING.md in the repo, then open the official event page to verify the date, time, venue and ticket price, add the event to events.json in the required format, fork the repo and open a Pull Request (one PR per event). The event I want to submit: [event name and official link here]. After submitting, watch for the maintainer Agent's review comments on the PR, fix anything requested and push again, and let me know the result.";
+codex:"請為我訂閱「Yat's List 深圳活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/events.json，並閱讀說明 https://yatslist.com/AGENTS.md 。只看未結束的活動，篩選：今天和明天舉行的、72 小時內報名截止的、以及我感興趣的類別。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。另外，如果我讓你提交活動，也按該說明裡的規範提交。"}};
+const SUBMIT_PROMPT_EN="Please help me submit an event to “Yat's List — Shenzhen Events”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official event page to verify the date, time, venue and ticket price. As the guide describes, add the event to events.json and open a Pull Request — or email the event details to the submission inbox event.submit@yatslist.com instead. The event I want to submit: [event name and official link here]. After submitting, watch for the maintainer Agent's review comments, fix anything requested, and let me know the result.";
 const MSTEPS_EN={generic:"Works with any Agent that can access the web: paste the prompt to it and ask it to set up a daily task.",doubao:"Doubao Workspace → “Scheduled tasks” → New → repeat “Daily”, time 9:00 → paste the prompt as the task content → Save.",workbuddy:"WorkBuddy → “Automation” in the left sidebar → Add task → frequency “Daily 9:00” → paste the prompt → Save.",codex:"Send the prompt straight to Codex and ask it to create a daily 9:00 (Asia/Shanghai) automation."};
 const MEX_SUB_EN="<b>Customization examples (edit the same way):</b><br>· Only Bao'an & Nanshan: change the filter to “only events in Bao'an and Nanshan districts”<br>· Free only: add “only recommend free events”<br>· Hardware & makers: change the categories to [Hardware / Engineering]<br>· Weekends only: add “only Saturdays and Sundays”";
 const MEX_POST_EN="<b>Example:</b><br>“The event I want to submit: [Shenzhen Bay AI Developer Salon, https://official-link]” — replace the brackets with the real event name and official link before copying. Open the official page first to confirm the date, venue and price.";
@@ -842,9 +895,21 @@ _setText("#sf-tag",tr("footTag"));_setText("#sf-home",tr("footHome"));_setText("
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
 fmtUpd();
 if(typeof syncFilterUI==="function")syncFilterUI();
+if(typeof applyTheme==="function")applyTheme();
 }
 function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(typeof renderCats==="function")renderCats();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
 document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
+/* ===== theme: auto (follow system) / light / dark - preference stored in localStorage "szTheme" ===== */
+let THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
+if(THEME!=="light"&&THEME!=="dark")THEME="auto";
+const _mqDark=window.matchMedia("(prefers-color-scheme: dark)");
+function resolvedTheme(){return THEME==="dark"?"dark":THEME==="light"?"light":(_mqDark.matches?"dark":"light")}
+function syncThemeUI(){document.querySelectorAll(".themesw button").forEach(b=>{const on=b.dataset.settheme===THEME;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");if(b.dataset.settheme==="auto")b.textContent=tr("themeAuto");if(b.dataset.settheme==="light"){b.setAttribute("aria-label",tr("themeLight"));b.title=tr("themeLight")}if(b.dataset.settheme==="dark"){b.setAttribute("aria-label",tr("themeDark"));b.title=tr("themeDark")}});const g=document.querySelector(".themesw");if(g)g.setAttribute("aria-label",tr("themeLabel"))}
+function applyTheme(){const r=resolvedTheme();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncThemeUI()}
+function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()}
+document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>setTheme(b.dataset.settheme)));
+if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
+applyTheme();
 </script>
 <script>
 const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"];
@@ -1013,8 +1078,9 @@ function render(){
   }
   $("#list").innerHTML=html;
 }
-const SUBMIT_PROMPT='请帮我给「Yat\'s List 深圳活动清单」投稿一个活动。仓库：https://github.com/yatstudio/shenzhen-events ——先读仓库里的 AGENTS.md 和 CONTRIBUTING.md，然后打开官方活动页核对日期、时间、地点、票价，把活动按格式加进 events.json，Fork 仓库并提交 Pull Request（一条 PR 只加一个活动）。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意 PR 里维护者 Agent 的核查意见，有要改的按意见改好再 push，并把结果告诉我。';
-const SUBMIT_PROMPT_TW='請幫我給「Yat\'s List 深圳活動清單」投稿一個活動。倉庫：https://github.com/yatstudio/shenzhen-events ——先讀倉庫裡的 AGENTS.md 和 CONTRIBUTING.md，然後打開官方活動頁核對日期、時間、地點、票價，把活動按格式加進 events.json，Fork 倉庫並提交 Pull Request（一條 PR 只加一個活動）。我要投稿的活動：【在這裡填活動名和官方鏈接】。提交後留意 PR 裡維護者 Agent 的核查意見，有要改的按意見改好再 push，並把結果告訴我。';
+const SUBMIT_PROMPT='请帮我给「Yat\'s List 深圳活动清单」投稿一个活动。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开官方活动页核对日期、时间、地点、票价，按说明把活动加进 events.json 并提交 Pull Request，或把活动信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意维护者 Agent 的核查意见，有要改的按意见改好，并把结果告诉我。';
+const SUBMIT_PROMPT_TW='請幫我給「Yat\'s List 深圳活動清單」投稿一個活動。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開官方活動頁核對日期、時間、地點、票價，按說明把活動加進 events.json 並提交 Pull Request，或把活動信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的活動：【在這裡填活動名和官方鏈接】。提交後留意維護者 Agent 的核查意見，有要改的按意見改好，並把結果告訴我。';
+window.hlSubmit=()=>{setTimeout(()=>{const el=document.getElementById("agent-sub");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent=tr('copiedGo');setTimeout(()=>b.textContent=t,1800)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText).then(()=>{const t=b.textContent;b.textContent=tr('copied');setTimeout(()=>b.textContent=t,1500)})};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
