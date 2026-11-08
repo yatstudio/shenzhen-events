@@ -188,6 +188,11 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .foldhead.open .chev{transform:rotate(180deg)}
 .foldbody{display:none}
 .foldbody.open{display:block}
+.cmdline{margin:0 auto;max-width:780px;font-family:var(--font-mono);background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;color:var(--green);display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.92rem}
+.cmdline .u{color:var(--ink-sec);font-size:.83rem;word-break:break-all}
+.cmdline button{margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--green);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+[data-theme="light"] .cmdline{background:#edf2f0;border-color:rgba(16,42,32,.12);color:var(--green)}
+[data-theme="light"] .cmdline button{background:rgba(10,125,85,.08);border-color:rgba(10,125,85,.3)}
 .boardbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0 6px;background:linear-gradient(135deg,rgba(232,89,12,.28),rgba(255,214,10,.14));border:1.5px solid rgba(255,160,60,.55);border-radius:18px;padding:20px 22px;color:var(--ink);text-decoration:none;box-shadow:0 8px 32px rgba(232,89,12,.18)}
 .boardbar .bb-main{display:flex;align-items:center;gap:16px;min-width:0}
 .boardbar .bb-emoji{font-size:2.1rem;line-height:1}
@@ -390,7 +395,7 @@ select{font-size:16px}
     <nav class="topbar-nav">
       <a href="#agent-section" id="nav-agent">给 Agent</a>
       <a href="#human-section" id="nav-events">活动清单</a>
-      <a href="hackathons.html" id="nav-hack">黑客松专题</a>
+      <a href="hackathons.html" id="nav-hack">黑客松清单</a>
       <a href="https://yatstudio.github.io/szmeetups-agent/" id="nav-expat">外国人活动</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
@@ -407,6 +412,7 @@ select{font-size:16px}
       <p class="section-subtitle" id="hero-sub">每天 07:30 更新 · 每条都打开官方页核实过</p>
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
     </div>
+    <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">深圳活动清单</span></span><span class="u">https://yatslist.com/events.json</span><button type="button" id="cmd-copy">复制</button></div>
 
     <!-- Stats -->
     <div class="stats">
@@ -431,11 +437,11 @@ select{font-size:16px}
       <span class="bb-main">
         <span class="bb-emoji">🛠</span>
         <span class="bb-text">
-          <span class="bb-title" id="bb-title">黑客松专题</span>
+          <span class="bb-title" id="bb-title">黑客松清单</span>
           <span class="bb-sub"><span id="bb-sub-pre">大陆 + 港澳台 + 线上 · </span><b id="hackcount2">55</b> <span id="bb-sub-post">场正在报名</span></span>
         </span>
       </span>
-      <span class="go" id="bb-go">进入专题 →</span>
+      <span class="go" id="bb-go">进入清单 →</span>
     </a>
 
     <!-- Filter Bar -->
@@ -662,12 +668,12 @@ const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
-brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松专题",navExpat:"外国人活动",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"Yat's List · 深圳活动清单",heroSub:"每天 07:30 更新 · 每条都打开官方页核实过",
+brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+heroTitle:"Yat's List · 深圳活动清单",heroSub:"每天 07:30 更新 · 每条都打开官方页核实过",cmdLabel:"深圳活动清单",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",
 taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
 agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历.ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。',
-bbTitle:"黑客松专题",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入专题 →",
+bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
 searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"🎛 筛选 Filter",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"时间",feeLabel:"费用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分类",
@@ -717,7 +723,7 @@ en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
 brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Yat's List · Shenzhen Events",heroSub:"Updated daily at 07:30 · Every listing verified against its official page",
+heroTitle:"Yat's List · Shenzhen Events",heroSub:"Updated daily at 07:30 · Every listing verified against its official page",cmdLabel:"Shenzhen Events",
 statWeek:"Next 7 days",statDl:"Closing within 72h",
 taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
 agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">Calendar.ics</a>, updated daily at 07:30) and only ping you when something matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by category / city / fee below, and tap ☆ to save events you like.',
@@ -770,12 +776,12 @@ feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"To
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
-brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松專題",navExpat:"外國人活動",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"Yat's List · 深圳活動清單",heroSub:"每天 07:30 更新 · 每條都打開官方頁核實過",
+brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+heroTitle:"Yat's List · 深圳活動清單",heroSub:"每天 07:30 更新 · 每條都打開官方頁核實過",cmdLabel:"深圳活動清單",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",
 taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
 agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日曆.ics</a>，每天 07:30 更新），命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按分類 / 城市 / 費用篩選，點 ☆ 收藏想去的活動。',
-bbTitle:"黑客松專題",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入專題 →",
+bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
 searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"🎛 篩選 Filter",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"時間",feeLabel:"費用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分類",
@@ -862,7 +868,7 @@ const md=document.querySelector('meta[name="description"]');if(md)md.setAttribut
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
 _setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-expat",tr("navExpat"));
-_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
 _setHTML("#agentnote",tr("agentNote"));
@@ -1082,6 +1088,7 @@ function render(){
 const SUBMIT_PROMPT='请帮我给「Yat\'s List 深圳活动清单」投稿一个活动。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开官方活动页核对日期、时间、地点、票价，按说明把活动加进 events.json 并提交 Pull Request，或把活动信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的活动：【在这里填活动名和官方链接】。提交后留意维护者 Agent 的核查意见，有要改的按意见改好，并把结果告诉我。';
 const SUBMIT_PROMPT_TW='請幫我給「Yat\'s List 深圳活動清單」投稿一個活動。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開官方活動頁核對日期、時間、地點、票價，按說明把活動加進 events.json 並提交 Pull Request，或把活動信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的活動：【在這裡填活動名和官方鏈接】。提交後留意維護者 Agent 的核查意見，有要改的按意見改好，並把結果告訴我。';
 window.hlSubmit=()=>{setTimeout(()=>{const el=document.getElementById("agent-sub");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
+const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/events.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent=tr('copiedGo');setTimeout(()=>b.textContent=t,1800)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText).then(()=>{const t=b.textContent;b.textContent=tr('copied');setTimeout(()=>b.textContent=t,1500)})};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};

@@ -41,9 +41,9 @@
 - 投稿被合并后会出现在次日日报与网页；未通过的会在 PR/Issue 里说明原因。
 - **谁来审**：审核由维护者的 Agent 执行（维护者本人不逐个看）。每天随日报处理一次：核实无误、且**只改动 `events.json`** 的 PR 会被直接合并；需要修改的，Agent 会在 PR 里逐项留言，改好 push 后自动复审；明显违规（无官方链接、已过期、重复、超范围、垃圾广告）的会被留言拒绝并关闭。涉及 `index.html`、`tools/`、`.github/` 等其他文件的 PR 不会被自动合并，会转交维护者本人决定。
 
-## 黑客松专题投稿（Submitting to the Hackathons page）
+## 黑客松清单投稿（Submitting to the Hackathons page）
 
-黑客松专题页：https://yatslist.com/hackathons.html ，结构化数据：https://yatslist.com/hackathons.json 。它与 events.json 是两个独立文件：投稿黑客松请走这一节，不要把黑客松条目塞进 events.json。
+黑客松清单页：https://yatslist.com/hackathons.html ，结构化数据：https://yatslist.com/hackathons.json 。它与 events.json 是两个独立文件：投稿黑客松请走这一节，不要把黑客松条目塞进 events.json。
 
 ### 收录范围
 
