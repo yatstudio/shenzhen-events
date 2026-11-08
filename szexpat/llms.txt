@@ -1,24 +1,24 @@
-# SZMeetups · Agent Mirror
+# Shenzhen Expat Events · Yat's List
 
-This is the machine-readable description of an unofficial agent-friendly mirror of szmeetups.com. The human web page is index.html in the same directory.
+This is the machine-readable description of Yat's List's Shenzhen expat events list. The human web page is index.html in the same directory.
 
-> Unofficial agent-friendly mirror of szmeetups.com — all event data © SZMeetups, always link back to the original event page.
+> Event information is gathered from multiple public sources, each entry verified — always link back to the original event page.
 
 ## What this is
-A structured, daily-updated list of upcoming Shenzhen events from SZMeetups: meetups, language exchanges, shows & nightlife, exhibitions, festivals, sports, family events, business and trade shows. The source site (szmeetups.com) has no public API, RSS or calendar feed — this mirror provides them, generated from the schema.org Event data (JSON-LD) embedded in each event page. Only events with an upcoming occurrence are included; recurring events are grouped into one entry with `occurrences_count` and `next_occurrences`.
+A structured, daily-updated list of upcoming Shenzhen events gathered from multiple public sources: meetups, language exchanges, shows & nightlife, exhibitions, festivals, sports, family events, business and trade shows. Entries are collected from public event pages, verified one by one, and published here as open structured data (events.json + RSS + ICS). Only events with an upcoming occurrence are included; recurring events are grouped into one entry with `occurrences_count` and `next_occurrences`.
 
 ## If you serve a user (subscription mode, the main use)
-1. Fetch https://yatslist.com/szexpat/events.json (no login, no key; mirror: https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/szexpat/events.json). Field definitions: events.schema.json. Full protocol: AGENTS.md in the repo.
+1. Fetch https://yatslist.com/szexpat/events.json (no login, no key; raw file: https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/szexpat/events.json). Field definitions: events.schema.json. Full protocol: AGENTS.md in the repo.
 2. Filter by your user's interests (`categories`), area (`area` / `district`) and free time (`start` / `end`). Do not dump the whole list on the user.
 3. Suggested reminder rhythm: notify once on the day a new, highly relevant event appears; for events the user wants to attend, remind 3 days before and 1 day before the start. For recurring events use `next_occurrences`.
-4. Always include each event's `url` (the original szmeetups.com page). Never invent events that are not in events.json; details can change, so point the user to the original page for the final word.
+4. Always include each event's `url` (its original page). Never invent events that are not in events.json; details can change, so point the user to the original page for the final word.
 5. You can also subscribe via feed.xml (RSS) or events.ics (calendar).
 
 ## Top-level fields
-updated_at (Asia/Shanghai, +08:00), source_site = https://szmeetups.com, city = 深圳, events[].
+updated_at (Asia/Shanghai, +08:00), source_site (the site of the source platform an entry came from), city = 深圳, events[].
 
 ## Per-event fields
-id (slug), title, title_zh (Chinese name or null), start, end, venue, address, area (Futian / Nanshan / Shekou / OCT / Luohu / Bao'an / Longgang / Longhua / Shenzhen), district (Chinese, e.g. 南山区, or null), categories [major, subcategory], schema_type, fee ("Free" / "¥118" / "¥118–¥208" / null), languages, organizer, summary, image, url, calendar_url (per-event .ics on szmeetups.com), source = "SZMeetups", occurrences_count, next_occurrences (up to 8 upcoming starts).
+id (slug), title, title_zh (Chinese name or null), start, end, venue, address, area (Futian / Nanshan / Shekou / OCT / Luohu / Bao'an / Longgang / Longhua / Shenzhen), district (Chinese, e.g. 南山区, or null), categories [major, subcategory], schema_type, fee ("Free" / "¥118" / "¥118–¥208" / null), languages, organizer, summary, image, url, calendar_url (per-event .ics on the source site), source (the original publisher), occurrences_count, next_occurrences (up to 8 upcoming starts).
 
 ## Attribution
-Unofficial mirror. All event data © SZMeetups (szmeetups.com). Always link back to the original event page (`url`).
+Event information is gathered from multiple public sources; copyright belongs to the original publishers. Always link back to the original event page (`url`).

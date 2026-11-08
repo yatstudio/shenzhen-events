@@ -6,8 +6,8 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#0d1218">
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
-<title>深圳外国人活动清单 | SZMeetups 镜像</title>
-<meta name="description" content="深圳外国人活动清单：SZMeetups 的非官方 Agent 友好镜像——聚会、演出与夜生活、展览、展会的结构化数据（events.json + RSS + ICS），每天更新。Shenzhen expat events mirrored from szmeetups.com for humans and AI agents.">
+<title>深圳外国人活动清单 | Yat's List</title>
+<meta name="description" content="深圳外国人活动清单：搜集自多个公开平台、逐条核实的聚会、演出与夜生活、展览、展会结构化数据（events.json + RSS + ICS），每天更新。Shenzhen expat events gathered from multiple public sources, each entry verified, for humans and AI agents, updated daily.">
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;--panel2:#0b0f14;
@@ -55,11 +55,11 @@ a{color:var(--green)}
 .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 /* ===== hero ===== */
 .hero{padding:clamp(var(--sp-xl),5vw,40px) 0 var(--sp-lg)}
-.hero h1{font-size:clamp(1.8rem,4.5vw,2.2rem);font-weight:700;margin:0 0 var(--sp-sm);letter-spacing:-.01em;line-height:1.3}
-.tagline{color:var(--ink-sec);font-size:.95rem;margin:8px 0 0;line-height:1.6;max-width:46em}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.2rem);font-weight:700;margin:0 0 var(--sp-sm);letter-spacing:-.01em;line-height:1.2;text-align:center;color:var(--ink)}
+.tagline{color:var(--ink-sec);font-size:clamp(.9rem,2vw,.98rem);margin:0;line-height:1.55;text-align:center}
 .tagline b{color:var(--ink)}
-.statsline{font-size:.82rem;color:var(--ink-ter);margin-top:10px;font-variant-numeric:tabular-nums}
-.statsline b{color:var(--green);font-weight:700}
+.statsline{font-size:.88rem;color:var(--ink-sec);margin:10px auto 0;line-height:1.6;text-align:center}
+.statsline b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
 /* ===== agent bar ===== */
 .cmdline{margin:0 auto;max-width:780px;font-family:var(--font-mono);background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;color:var(--green);display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.92rem}
 .cmdline .u{color:var(--ink-sec);font-size:.83rem;word-break:break-all}
@@ -200,7 +200,7 @@ body{overflow-x:hidden}
 .hero{padding:10px 0 10px}
 .topbar .wrap{grid-template-columns:auto 1fr;gap:10px;align-items:center}
 .tagline{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.statsline{margin-top:6px}
+.statsline{margin-top:6px;font-size:.8rem;line-height:1.55;padding:0 4px}
 .listsw{display:flex;gap:8px;margin:10px 0 0}
 .listsw a{flex:1 1 0;min-width:0;text-align:center;padding:9px 4px;min-height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:var(--r-pill);font-size:.85rem;color:var(--ink-sec);text-decoration:none;background:var(--panel);white-space:nowrap}
 .listsw a.on{background:var(--green);color:#052e21;border-color:var(--green);font-weight:700}
@@ -311,7 +311,7 @@ body{overflow-x:hidden}
 <p class="sf-feeds" id="sf-feeds"></p>
 <p class="sf-src" id="sf-src"></p>
 <p class="sf-contact" id="sf-contact"></p>
-<p class="sf-copy">© 2026 Yat's List · SZMeetups Agent Mirror</p>
+<p class="sf-copy">© 2026 Yat's List</p>
 </div></footer>
 
 <script>
@@ -328,17 +328,17 @@ if(LANG!=="zh"&&LANG!=="tw"&&LANG!=="en"){const nl=(navigator.language||"en").to
 if(nl.indexOf("zh")===0){LANG=(nl.indexOf("tw")>0||nl.indexOf("hk")>0||nl.indexOf("mo")>0||nl.indexOf("hant")>0)?"tw":"zh"}else{LANG="en"}}
 
 /* ---------- i18n ---------- */
-const PROMPT_EN=`Please subscribe to the "SZMeetups Agent Mirror" and remind me about Shenzhen events: data source https://yatslist.com/szexpat/events.json (updated daily, no login needed; it is an unofficial mirror of szmeetups.com). Fetch it once a day and filter by my interests and my area. Tell me the same day when a new event matches my interests; for events I say I want to attend, remind me 3 days before and 1 day before they start. Never invent events that are not in the data, and always include the original szmeetups.com event link.`;
-const PROMPT_ZH=`请订阅「SZMeetups Agent 镜像」并给我深圳活动提醒：数据源 https://yatslist.com/szexpat/events.json（每天更新，无需登录；这是 szmeetups.com 的非官方镜像）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附上 szmeetups.com 的原始活动链接。`;
-const PROMPT_TW=`請訂閱「SZMeetups Agent 鏡像」並給我深圳活動提醒：數據源 https://yatslist.com/szexpat/events.json（每天更新，無需登錄；這是 szmeetups.com 的非官方鏡像）。每天讀取一次，按我的興趣和所在區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附上 szmeetups.com 的原始活動鏈接。`;
+const PROMPT_EN=`Please subscribe to the "Shenzhen Expat Events" list on Yat's List and remind me about Shenzhen events: data source https://yatslist.com/szexpat/events.json (gathered from multiple public sources, each entry verified, updated daily, no login needed). Fetch it once a day and filter by my interests and my area. Tell me the same day when a new event matches my interests; for events I say I want to attend, remind me 3 days before and 1 day before they start. Never invent events that are not in the data, and always include the event's original link.`;
+const PROMPT_ZH=`请订阅 Yat's List 的「深圳外国人活动清单」并给我深圳活动提醒：数据源 https://yatslist.com/szexpat/events.json（搜集自多个公开平台，逐条核实，每天更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附上活动的原始链接。`;
+const PROMPT_TW=`請訂閱 Yat's List 的「深圳外國人活動清單」並給我深圳活動提醒：數據源 https://yatslist.com/szexpat/events.json（蒐集自多個公開平台，逐條核實，每天更新，無需登錄）。每天讀取一次，按我的興趣和所在區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附上活動的原始鏈接。`;
 const POST_PROMPT_ZH=`请帮我向 Yat's List 的「深圳外国人活动清单」提交一场活动：先打开活动官方页，核对活动名称、开始时间、地点和费用无误，然后把活动名称、官方链接、时间、地点和一句话介绍，通过投稿表单 https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform 提交（「所属清单」选「深圳外国人活动」），或者发邮件到 event.submit@yatslist.com。这张清单是每天核实更新的精选清单、由维护方统一录入，不要直接修改它的数据文件——改数据的 PR 不会被接受。提交完成后告诉我结果。`;
 const POST_PROMPT_TW=`請幫我向 Yat's List 的「深圳外國人活動清單」提交一場活動：先打開活動官方頁，核對活動名稱、開始時間、地點和費用無誤，然後把活動名稱、官方連結、時間、地點和一句話介紹，透過投稿表單 https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform 提交（「所屬清單」選「深圳外國人活動」），或者發電郵到 event.submit@yatslist.com。這張清單是每天核實更新的精選清單、由維護方統一錄入，不要直接修改它的數據文件——改數據的 PR 不會被接受。提交完成後告訴我結果。`;
 const POST_PROMPT_EN=`Please submit an event to the "Shenzhen Expat Events" list on Yat's List for me: first open the event's official page and verify its name, start time, venue and fee, then send the event name, official link, time, venue and a one-line description via the submission form https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform (choose "Shenzhen Expat Events" as the list) or by email to event.submit@yatslist.com. This list is a curated list verified and updated daily by its maintainer - do not edit its data files directly; PRs that change the data will not be accepted. Tell me the result when you are done.`;
 const STRINGS={
-zh:{docTitle:"深圳外国人活动清单 | SZMeetups 镜像",
+zh:{docTitle:"深圳外国人活动清单 | Yat's List",
 navHome:"深圳活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",pageTitle:"深圳外国人活动清单",cmdLabel:"外国人活动",pipLabel:"命令行 CLI",cmdCopy:"复制",cmdCopied:"已复制 ✓",subBtn:"订阅",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-tagline:`<b>深圳有什么好玩的</b> —— 聚会 · 演出与夜生活 · 展览 · 展会，镜像自 <b>szmeetups.com</b>，供真人与 AI Agent 使用，每天更新。`,
+tagline:`<b>深圳有什么好玩的</b> —— 聚会 · 演出与夜生活 · 展览 · 展会，搜集自多个公开平台，逐条核实，供真人与 AI Agent 使用，每天更新。`,
 agentbar:`🤖 <b>别自己刷——交给你的 Agent。</b>把订阅话术复制给你的 Agent，按你的兴趣给你推送深圳活动提醒。`,
 copy:"复制 Agent 订阅话术",copied:"已复制 ✓",
 searchPh:"搜索活动 / 地点 / 主办方…",
@@ -351,19 +351,19 @@ rel:["今天","明天","后天"],
 venueTbc:"地点待定",tbc:"待定",
 feeFree:"免费",feeNa:"票价见原站",
 sessions:n=>` · 🔁 共 ${n} 场`,
-details:"在 SZMeetups 看详情 →",cal:"＋ 日历",amap:"高德地图",gmaps:"谷歌地图",
+details:"看详情 →",cal:"＋ 日历",amap:"高德地图",gmaps:"谷歌地图",
 navSubmit:"＋ 提交活动",postTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",postCopy:"📋 复制投稿话术给我的 Agent",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",routeFormBtn:"📝 打开网页表单提交",routeFormNote:"提交时在「所属清单」里选「深圳外国人活动」。",subH:"🤖 让你的 Agent 帮你盯着",
 subIntro:"把下面这段话复制给你的 Agent（Codex / Muse / Hermes / Globot——任何能联网的 Agent 都可以）：",
 stats:(t,f,u)=>`<b>${t}</b> 个即将开始 · <b>${f}</b> 个免费 · 更新于 ${u}`,
 footTag:"深圳活动，喂给你的 Agent 吃。",footSub:"订阅说明",
-footSmall:"数据每日更新 · 镜像自 SZMeetups · 免费无广告",
+footSmall:"数据每日更新 · 多平台搜集逐条核实 · 免费无广告",
 footFeeds:`数据接口（开放、无需登录）：<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · Agent 协议：<a href="AGENTS.md">AGENTS.md</a>`,
-footSrc:`<a href="https://szmeetups.com" target="_blank" rel="noopener">szmeetups.com</a> 的非官方 Agent 友好镜像——全部活动数据 © SZMeetups，请始终回链原始活动页。出发前请在原站确认最终信息。`,
+footSrc:`活动信息搜集自多个公开平台，版权归原发布方所有，请始终回链原始活动页。出发前请在原页面确认最终信息。`,
 footContact:`合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`},
-tw:{docTitle:"深圳外國人活動清單 | SZMeetups 鏡像",
+tw:{docTitle:"深圳外國人活動清單 | Yat's List",
 navHome:"深圳活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",pageTitle:"深圳外國人活動清單",cmdLabel:"外國人活動",pipLabel:"命令列 CLI",cmdCopy:"複製",cmdCopied:"已複製 ✓",subBtn:"訂閱",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-tagline:`<b>深圳有什麼好玩的</b> —— 聚會 · 演出與夜生活 · 展覽 · 展會，鏡像自 <b>szmeetups.com</b>，供真人與 AI Agent 使用，每天更新。`,
+tagline:`<b>深圳有什麼好玩的</b> —— 聚會 · 演出與夜生活 · 展覽 · 展會，蒐集自多個公開平台，逐條核實，供真人與 AI Agent 使用，每天更新。`,
 agentbar:`🤖 <b>別自己刷——交給你的 Agent。</b>把訂閱話術複製給你的 Agent，按你的興趣給你推送深圳活動提醒。`,
 copy:"複製 Agent 訂閱話術",copied:"已複製 ✓",
 searchPh:"搜尋活動 / 地點 / 主辦方…",
@@ -376,19 +376,19 @@ rel:["今天","明天","後天"],
 venueTbc:"地點待定",tbc:"待定",
 feeFree:"免費",feeNa:"票價見原站",
 sessions:n=>` · 🔁 共 ${n} 場`,
-details:"在 SZMeetups 看詳情 →",cal:"＋ 日曆",amap:"高德地圖",gmaps:"谷歌地圖",
+details:"看詳情 →",cal:"＋ 日曆",amap:"高德地圖",gmaps:"谷歌地圖",
 navSubmit:"＋ 提交活動",postTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",postCopy:"📋 複製投稿話術給我的 Agent",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",routeFormBtn:"📝 打開網頁表單提交",routeFormNote:"提交時在「所屬清單」裡選「深圳外國人活動」。",subH:"🤖 讓你的 Agent 幫你盯著",
 subIntro:"把下面這段話複製給你的 Agent（Codex / Muse / Hermes / Globot——任何能聯網的 Agent 都可以）：",
 stats:(t,f,u)=>`<b>${t}</b> 個即將開始 · <b>${f}</b> 個免費 · 更新於 ${u}`,
 footTag:"深圳活動，餵給你的 Agent 吃。",footSub:"訂閱說明",
-footSmall:"數據每日更新 · 鏡像自 SZMeetups · 免費無廣告",
+footSmall:"數據每日更新 · 多平台蒐集逐條核實 · 免費無廣告",
 footFeeds:`數據接口（開放、無需登錄）：<a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">日曆 .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · Agent 協議：<a href="AGENTS.md">AGENTS.md</a>`,
-footSrc:`<a href="https://szmeetups.com" target="_blank" rel="noopener">szmeetups.com</a> 的非官方 Agent 友好鏡像——全部活動數據 © SZMeetups，請始終回鏈原始活動頁。出發前請在原站確認最終資訊。`,
+footSrc:`活動資訊蒐集自多個公開平台，版權歸原發布方所有，請始終回鏈原始活動頁。出發前請在原頁面確認最終資訊。`,
 footContact:`合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`},
-en:{docTitle:"Shenzhen Expat Events | SZMeetups Mirror",
+en:{docTitle:"Shenzhen Expat Events | Yat's List",
 navHome:"Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",pageTitle:"Shenzhen Expat Events",cmdLabel:"Expat Events",pipLabel:"CLI",cmdCopy:"Copy",cmdCopied:"Copied ✓",subBtn:"Subscribe",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-tagline:`<b>What's on in Shenzhen</b> — meetups · shows &amp; nightlife · exhibitions · trade shows, mirrored from <b>szmeetups.com</b> for humans and AI agents, updated daily.`,
+tagline:`<b>What's on in Shenzhen</b> — meetups · shows &amp; nightlife · exhibitions · trade shows, gathered from multiple public sources, each entry verified, for humans and AI agents, updated daily.`,
 agentbar:`🤖 <b>Don't browse — delegate.</b> Copy the subscription prompt to your Agent and get Shenzhen event reminders matched to your interests.`,
 copy:"Copy Agent prompt",copied:"Copied ✓",
 searchPh:"Search events / venues / organisers…",
@@ -401,14 +401,14 @@ rel:["Today","Tomorrow","Day after"],
 venueTbc:"Venue TBC",tbc:"TBC",
 feeFree:"Free",feeNa:"Price: see page",
 sessions:n=>` · 🔁 ${n} sessions`,
-details:"Details on SZMeetups →",cal:"＋ Calendar",amap:"Amap",gmaps:"Google Maps",
+details:"Details →",cal:"＋ Calendar",amap:"Amap",gmaps:"Google Maps",
 navSubmit:"+ Submit an event",postTitle:"📋 Submit an event: add one to this list",routeQ:"How would you like to submit?",routeYes:"Use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",postCopy:"📋 Copy the submission prompt for my Agent",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",routeFormBtn:"📝 Open the web submission form",routeFormNote:"When you submit, choose \"Shenzhen Expat Events\" as the list.",subH:"🤖 Let your Agent watch this for you",
 subIntro:"Copy this to your Agent (Codex / Muse / Hermes / Globot — any agent with web access):",
 stats:(t,f,u)=>`<b>${t}</b> upcoming · <b>${f}</b> free · updated ${u}`,
 footTag:"Shenzhen events, served to your Agent.",footSub:"How to subscribe",
-footSmall:"Updated daily · Mirrored from SZMeetups · Free, no ads",
+footSmall:"Updated daily · Gathered from multiple sources, each verified · Free, no ads",
 footFeeds:`Data feeds (open, no login): <a href="events.json">events.json</a> · <a href="feed.xml">RSS</a> · <a href="events.ics">Calendar .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · Agent protocol: <a href="AGENTS.md">AGENTS.md</a>`,
-footSrc:`Unofficial agent-friendly mirror of <a href="https://szmeetups.com" target="_blank" rel="noopener">szmeetups.com</a> — all event data © SZMeetups, always link back to the original event page. Always confirm final details on the original page before going.`,
+footSrc:`Event information is gathered from multiple public sources; copyright belongs to the original publishers. Always link back to the original event page, and confirm final details there before going.`,
 footContact:`Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`}
 };
 const CAT_ZH={"Meetups":"聚会活动","Shows & Nightlife":"演出与夜生活","Around Town":"城市生活","Trade Shows":"展会","Trade Shows & Conferences":"展会","Language Exchange":"语言交换","Exhibition":"展览","Indie":"独立音乐","Business":"商务","Party":"派对","Concerts":"演唱会","Festival":"节庆活动","Comedy":"喜剧","DJ":"DJ","Jazz":"爵士","Pub Quiz":"酒吧问答","Sports & Fitness":"运动健身","Sports":"运动","Dance":"舞蹈","Dance Fitness":"舞蹈健身","Social":"社交","Market":"市集","Family":"亲子","Live Music":"现场音乐","Nightlife":"夜生活","Sporting Event":"体育赛事","Tech & Startups":"科技创业"};
