@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松</title>
-<meta name="description" content="Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。">
+<meta name="description" content="Yat's List 只做深圳：深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。">
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
@@ -383,6 +383,7 @@ select{font-size:16px}
 .herometa{margin:0 auto;text-align:center;color:var(--ink-sec);font-size:.88rem;line-height:1.6}
 .herometa b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
 .herometa i{font-style:normal;margin:0 7px;color:var(--ink-ter)}
+.scopenote{text-align:center;color:var(--ink-sec);font-size:.85rem;line-height:1.55;margin:10px auto 0;max-width:920px}
 .listchips{display:flex;gap:var(--sp-md);justify-content:center;margin:12px auto 0;max-width:920px}
 .lchip{flex:1 1 0;min-width:0;text-align:left;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:9px 14px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
 .lchip.on{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
@@ -474,11 +475,11 @@ input[type=search]{font-size:16px}
     <div class="listchips">
       <a class="lchip on" href="#top" aria-current="page">
         <span class="lc-top"><b id="lc-ev-name">深圳活动清单</b><span class="lc-n"><b id="lc-ev-n">–</b> <span id="lc-u1">场</span></span></span>
-        <span class="lc-desc" id="lc-ev-desc">AI · 创业 · 科技 · 跨境活动，每天核实更新</span>
+        <span class="lc-desc" id="lc-ev-desc">仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新</span>
       </a>
       <a class="lchip" href="https://yatslist.com/hackathons/">
         <span class="lc-top"><b id="lc-hack-name">黑客松清单</b><span class="lc-n"><b id="hackcount2">–</b> <span id="lc-u2">场</span></span></span>
-        <span class="lc-desc" id="lc-hack-desc">正在报名的黑客松与创新大赛</span>
+        <span class="lc-desc" id="lc-hack-desc">全球黑客松与创新大赛，正在报名</span>
       </a>
       <a class="lchip" href="https://yatslist.com/szexpat/">
         <span class="lc-top"><b id="lc-expat-name">外国人活动</b><span class="lc-n"><b id="lc-expat-n">–</b> <span id="lc-u3">场</span></span></span>
@@ -489,6 +490,8 @@ input[type=search]{font-size:16px}
         <span class="lc-desc" id="lc-space-desc">华语圈 X Space 纪要与回放要点</span>
       </a>
     </div>
+
+    <p class="scopenote" id="scope-note">本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。</p>
 
     <!-- Top Actions -->
     <div class="topact">
@@ -748,10 +751,10 @@ const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境"
 const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
-metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
+metaDesc:"Yat's List 只做深圳：深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
 brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"Yat's List · 深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
-statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"正在报名的黑客松与创新大赛",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
+heroTitle:"Yat's List · 深圳活动清单",heroSub:"只做深圳一座城：深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
+statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
 agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历.ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。',
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
@@ -802,10 +805,10 @@ feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",r
 },
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
-metaDesc:"Yat's List — a verified Shenzhen events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
+metaDesc:"Yat's List — a verified Shenzhen-only events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
 brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Yat's List · Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
-statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Updated daily 07:30",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"AI, startup, tech & cross-border events, verified daily",lcDescHack:"Hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
+heroTitle:"Yat's List · Shenzhen Events",heroSub:"Shenzhen only — events from a single city, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
+statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Updated daily 07:30",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
 agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">Calendar.ics</a>, updated daily at 07:30) and only ping you when something matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by category / city / fee below, and tap ☆ to save events you like.',
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
@@ -856,10 +859,10 @@ feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"To
 },
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
-metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
+metaDesc:"Yat's List 只做深圳：深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
 brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"Yat's List · 深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
-statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"正在報名的黑客松與創新大賽",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
+heroTitle:"Yat's List · 深圳活動清單",heroSub:"只做深圳一座城：深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
+statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
 agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日曆.ics</a>，每天 07:30 更新），命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按分類 / 城市 / 費用篩選，點 ☆ 收藏想去的活動。',
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
@@ -949,7 +952,7 @@ const md=document.querySelector('meta[name="description"]');if(md)md.setAttribut
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
 _setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-expat",tr("navExpat"));_setText("#nav-spaces",tr("navSpaces"));
-_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
 _setHTML("#agentnote",tr("agentNote"));
