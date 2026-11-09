@@ -4,15 +4,12 @@
 
 ## 读（无需登录、无需钥匙）
 
-- 网页：https://yatslist.com/szevents/（根路径 https://yatslist.com/ 会自动跳转到这里）
-- 外国人活动清单：网页 https://yatslist.com/szexpat/ ，数据 https://yatslist.com/szexpat/events.json（该清单自己的协议文件在 `szexpat/AGENTS.md`）
+- 网页：https://yatslist.com/
 - 结构化数据（唯一事实源）：https://yatslist.com/events.json
   - 备用：https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json
 - RSS：https://yatslist.com/feed.xml
 - 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
-- 命令行 CLI（已发布 PyPI）：`pip install yatslist` 后可用 `yatslist`（深圳活动）、`yatslist hackathons`（黑客松）、`yatslist expat`（外国人活动）、`yatslist spaces`（Space 纪要）、`yatslist search 关键词`（跨清单搜索）在终端直接查询四张清单。
-  - 外国人活动数据主地址为 https://yatslist.com/szexpat/events.json ；旧地址 https://yatslist.com/expat/events.json 保留同步兼容副本，供已发布的 CLI 0.1.0 使用，新接入请用主地址。
 
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
 
@@ -44,73 +41,13 @@
 - 投稿被合并后会出现在次日日报与网页；未通过的会在 PR/Issue 里说明原因。
 - **谁来审**：审核由维护者的 Agent 执行（维护者本人不逐个看）。每天随日报处理一次：核实无误、且**只改动 `events.json`** 的 PR 会被直接合并；需要修改的，Agent 会在 PR 里逐项留言，改好 push 后自动复审；明显违规（无官方链接、已过期、重复、超范围、垃圾广告）的会被留言拒绝并关闭。涉及 `index.html`、`tools/`、`.github/` 等其他文件的 PR 不会被自动合并，会转交维护者本人决定。
 
-## 黑客松清单投稿（Submitting to the Hackathons page）
-
-黑客松清单页：https://yatslist.com/hackathons/ ，结构化数据：https://yatslist.com/hackathons.json 。它与 events.json 是两个独立文件：投稿黑客松请走这一节，不要把黑客松条目塞进 events.json。
-
-### 收录范围
-
-- 地区：大陆、香港、澳门、台湾的线下比赛，或线上比赛（不限区域）；纯海外线下不收。
-- 只收报名未截止的（`deadline` 在未来）；已截止或已结束的不收——专题页只保留可报名的比赛。
-- 主题与黑客松 / 创新大赛相关（AI、开发者工具、硬件、Web3 等均可）。
-
-### 字段要求（与 hackathons.json 现有数据一致）
-
-- `title`：比赛名（可带一句卖点，与官方页口径一致）。
-- `start` / `end`：比赛开始 / 结束日期，格式 `YYYY-MM-DD`；未知填 null（`end` 多数情况填 null）。
-- `deadline`：报名截止日期 `YYYY-MM-DD`（必填，是专题页的排序键）。
-- `city`：举办城市（如 `深圳`）；线上比赛填 `线上`。
-- `region`：从枚举里选：大陆 / 香港 / 澳门 / 台湾 / 线上。
-- `format`：线下 / 线上 / 线上+线下。
-- `topics`：主题词数组（如 `["AI", "机器人"]`）。
-- `prize`：奖金说明（如 `总奖池 20 万元`）；官方未公布填 null。
-- `url`：官方页或报名页链接。
-- `detail_url`：来源渠道的详情页链接（如黑123 详情页）；没有独立详情页时与 `url` 相同。
-- `source`：来源渠道名（如 `黑123`、`Devpost`、`DoraHacks`，或主办方官方名）。
-- `summary`：中文摘要，一两句客观介绍，不写广告词。
-- 译文字段（建议同时提供）：`title_en` / `summary_en` / `prize_en` 与 `title_tw` / `summary_tw` / `prize_tw`；源字段为 null 的，对应译文字段也省略。
-
-### 核实要求（投稿前自查）
-
-- 打开官方页逐项核对：报名截止日期、举办地区与城市、形式、奖金，与条目一致；核不到关键信息（尤其是截止日期）的不要投。
-- 去重键：`url`；同一比赛多来源只留官方页一条。
-
-### 提交方式
-
-1. **Pull Request**（推荐）：fork 后只改 `hackathons.json`，向 `hackathons` 数组追加条目（一场只提一条 PR），大致按 `deadline` 升序放入；不要改其他文件，不要删除别人的条目。
-2. **邮件**：把比赛信息（名称、官方链接、报名截止日期、地区、形式、奖金）发到投稿邮箱 event.submit@yatslist.com 。
-
-### 与每日自动流程的关系
-
-专题数据由维护者的 Agent 每天从黑123、Devpost、lablab.ai、HackerTrip、DoraHacks、AI赛事通、Accupass 等渠道自动抓取、核实并整表刷新。人工投稿的条目会被当作补漏线索处理：维护 Agent 会到官方页复核，合格的并入专题，不合格的会说明原因；若同一比赛之后被上述渠道正式收录，会以渠道核实数据为准合并去重。因此投稿不承诺永久保留——以官方页信息与每日核实结果为准。
-
-## Space 纪要清单（X Space recaps）
-
-Space 纪要清单页：https://yatslist.com/spaces/ ，结构化数据：https://yatslist.com/spaces.json 。这是存档型清单：收录已结束的华语圈 X Space 的中文纪要（结论先行 + 要点），与前三张「未来活动」清单性质不同，不承诺更新节奏。
-
-### 收录范围
-
-- 华语圈 X Space，主题与本站相关：加密 / Web3 / AI / 创业 / 科技 / 投资等。
-- 只收已结束、且已有整理好纪要的场次；纪要中的金额、人数、战绩等数字均为发言人现场自述、未经外部核实，条目与页面均带此提醒。
-
-### 字段要求（与 spaces.json 现有数据一致）
-
-- `title`：场次标题；`series`：系列名（如「贤者时间」），非系列填 null；`episode`：系列期次，非系列填 null。
-- `date`：举行日期 `YYYY-MM-DD`；`host`：主持（带 X handle）；`guests`：联合主持与主要发言人数组，没有填 `[]`。
-- `duration`：时长原文（如 `9 小时 32 分`）。
-- `url`：X Space 原链接（形如 `https://x.com/i/spaces/…`）。**音频只放原链接，绝不下载、搬运或托管音频文件。**
-- `topics`：主题词数组；`highlights`：纪要要点数组（结论先行，每条一句）。
-- 译文字段（建议同时提供）：`title_en` / `highlights_en` 与 `title_tw` / `highlights_tw`（繁体由简体经 OpenCC 机械转换）。
-
-### 提交方式
-
-1. **Pull Request**：fork 后只改 `spaces.json`，向 `spaces` 数组追加条目；维护者会打开 X 原链接核对标题、日期、主持与纪要要点是否属实，核实后合并。
-2. **邮件**：把 Space 链接与纪要发到投稿邮箱 event.submit@yatslist.com 。
-
-### 维护口径
-
-本清单由维护者人工整理更新（抓录音、本地转写、整理纪要后录入），没有每日自动流程；新场次随整理进度上线。
-
 ## 给维护 Agent 的说明
 
 每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」），只删结束超过 90 天的；报名已截止但活动未举行的条目保留。
+
+## 短链与分享图（维护管线自动生成，投稿不用管）
+
+- 每条活动有一个冻结的 `id`（6 位短码，由官方链接+开始时间生成，分配后永不变更）。投稿时可不填，维护管线会自动分配并写回。
+- 短链落地页：`https://yatslist.com/e/<id>/`（含活动信息、官方报名入口与 Agent 订阅入口，社交平台预览图即下面的分享卡）。
+- 分享卡图：`https://img.yatslist.com/share/<id>.png`（1080×1350，含短链二维码）。
+- 由 `tools/build_share.py` 在每日更新时增量生成：新活动自动补 id、出图与落地页；活动字段变更会自动重出图。引用单场活动时请优先用短链，不要直接引用会过期的官方页截图。

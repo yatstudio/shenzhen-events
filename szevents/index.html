@@ -790,7 +790,7 @@ dateTBD:"时间待定（看报名截止）",ongoingFold:function(n){return "持�
 dlSoon:function(d){return "报名剩 "+d+" 天"},dlClose:"报名截止 ",dlClosed:"报名已截止",
 onlineStrip:"线上活动 · ONLINE",hybridStrip:"🌐+📍 线上 + 线下均可参加",joinOnline:"线上参加",venueTBA:"地点待公布",
 hk:"🇭🇰 香港",liveNow:"进行中",organizer:"主办方：",tbd:"待定",
-btnOfficial:"官方页 / 报名 →",btnCal:"＋ 加日历",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"来源：",mapBtn:"地图",
+btnOfficial:"官方页 / 报名 →",btnCal:"＋ 加日历",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"来源：",mapBtn:"地图",shareBtn:"↗ 分享",shareT:"分享这场活动",shareHint:"长按或右键图片即可保存，拿去发朋友圈 / 小红书 / X",copyLink:"复制短链接",copied2:"已复制",shareClose:"关闭",
 feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",relTomorrow:"明天",relDayAfter:"后天"
 },
 en:{
@@ -844,7 +844,7 @@ dateTBD:"Date TBD (see registration deadline)",ongoingFold:function(n){return "O
 dlSoon:function(d){return "Registration closes in "+d+(d===1?" day":" days")},dlClose:"Registration closes ",dlClosed:"Registration closed",
 onlineStrip:"ONLINE EVENT",hybridStrip:"🌐+📍 Join online or in person",joinOnline:"Join online",venueTBA:"Venue TBA",
 hk:"🇭🇰 Hong Kong",liveNow:"Happening now",organizer:"Organizer: ",tbd:"TBD",
-btnOfficial:"Official page / Register →",btnCal:"+ Add to calendar",favOn:"★ Saved",favOff:"☆ Save",source:"Source: ",mapBtn:"Map",
+btnOfficial:"Official page / Register →",btnCal:"+ Add to calendar",favOn:"★ Saved",favOff:"☆ Save",source:"Source: ",mapBtn:"Map",shareBtn:"↗ Share",shareT:"Share this event",shareHint:"Long-press or right-click the image to save and share it",copyLink:"Copy short link",copied2:"Copied",shareClose:"Close",
 feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"Today",relTomorrow:"Tomorrow",relDayAfter:"In 2 days"
 },
 tw:{
@@ -898,7 +898,7 @@ dateTBD:"時間待定（看報名截止）",ongoingFold:function(n){return "持�
 dlSoon:function(d){return "報名剩 "+d+" 天"},dlClose:"報名截止 ",dlClosed:"報名已截止",
 onlineStrip:"線上活動 · ONLINE",hybridStrip:"🌐+📍 線上 + 線下均可參加",joinOnline:"線上參加",venueTBA:"地點待公佈",
 hk:"🇭🇰 香港",liveNow:"進行中",organizer:"主辦方：",tbd:"待定",
-btnOfficial:"官方頁 / 報名 →",btnCal:"＋ 加日曆",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"來源：",mapBtn:"地圖",
+btnOfficial:"官方頁 / 報名 →",btnCal:"＋ 加日曆",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"來源：",mapBtn:"地圖",shareBtn:"↗ 分享",shareT:"分享這場活動",shareHint:"長按或右鍵圖片即可保存，拿去發朋友圈 / 小紅書 / X",copyLink:"複製短鏈接",copied2:"已複製",shareClose:"關閉",
 feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",relTomorrow:"明天",relDayAfter:"後天"
 }};
 function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
@@ -1107,6 +1107,7 @@ function cardOf(e,now){
   <a class="btn primary" href="${e.url}" target="_blank" rel="noopener">${tr("btnOfficial")}</a>
   ${e.start?`<button class="btn" onclick="_ics(DATA[${DATA.indexOf(e)}])">${tr("btnCal")}</button>`:""}
   <button class="btn favbtn${FAVS.has(e.url)?" on":""}" data-fav="${encodeURIComponent(e.url)}">${FAVS.has(e.url)?tr("favOn"):tr("favOff")}</button>
+  ${e.id?`<button class="btn" onclick="_share('${e.id}')">${tr("shareBtn")}</button>`:""}
   ${!online?maps(e):""}
   </div>
   <div class="meta" style="margin-top:8px">${tr("source")}${e.source}</div>
@@ -1262,6 +1263,45 @@ render();measureBar();setTimeout(measureBar,400);
 <script>fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.hackathons||[]).length;var el=document.getElementById("hackcount");if(el&&n)el.textContent=n;var el2=document.getElementById("hackcount2");if(el2&&n)el2.textContent=n}).catch(function(){})</script>
 <script>fetch("/szexpat/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.events||[]).length;var el=document.getElementById("lc-expat-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 <script>fetch("/spaces.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.spaces||[]).length;var el=document.getElementById("lc-space-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
+
+<style>
+#shareModal{position:fixed;inset:0;background:rgba(4,8,10,.78);display:none;align-items:center;justify-content:center;z-index:999;padding:18px}
+#shareModal.open{display:flex}
+#shareModal .box{background:#0d1218;border:1px solid #1f2b36;border-radius:16px;max-width:430px;width:100%;max-height:92vh;overflow:auto;padding:20px}
+#shareModal h3{margin:0 0 4px;font-size:17px}
+#shareModal .hint{color:#8fa89c;font-size:12.5px;line-height:1.6}
+#shareModal img{width:100%;border-radius:12px;margin:14px 0 6px;border:1px solid #1f2b36}
+#shareModal .lk{display:flex;gap:10px;align-items:center;background:#0a0f14;border:1px solid #1f2b36;border-radius:9px;padding:10px 12px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#2ee6a8;margin-top:10px}
+#shareModal .lk button{margin-left:auto;background:none;border:1px solid rgba(46,230,168,.4);color:#2ee6a8;border-radius:6px;padding:5px 12px;cursor:pointer;white-space:nowrap}
+#shareModal .cls{width:100%;margin-top:14px;background:#121a23;border:1px solid #1f2b36;color:#dcebe4;border-radius:9px;padding:11px;cursor:pointer;font-size:14px}
+</style>
+<div id="shareModal" role="dialog" aria-modal="true">
+  <div class="box">
+    <h3 id="shareTitle">分享这场活动</h3>
+    <div class="hint" id="shareHint"></div>
+    <img id="shareImg" alt="活动分享卡">
+    <div class="lk"><span id="shareLink"></span><button id="shareCopy" type="button"></button></div>
+    <button class="cls" id="shareCloseBtn" type="button"></button>
+  </div>
+</div>
+<script>
+window._share=function(id){
+  var m=document.getElementById("shareModal");
+  document.getElementById("shareTitle").textContent=tr("shareT");
+  document.getElementById("shareHint").textContent=tr("shareHint");
+  document.getElementById("shareCopy").textContent=tr("copyLink");
+  document.getElementById("shareCloseBtn").textContent=tr("shareClose");
+  document.getElementById("shareImg").src="https://img.yatslist.com/share/"+id+".png";
+  document.getElementById("shareLink").textContent="yatslist.com/e/"+id;
+  m.classList.add("open");
+};
+document.getElementById("shareModal").addEventListener("click",function(ev){if(ev.target===this)this.classList.remove("open")});
+document.getElementById("shareCloseBtn").addEventListener("click",function(){document.getElementById("shareModal").classList.remove("open")});
+document.getElementById("shareCopy").addEventListener("click",function(){
+  var t="https://"+document.getElementById("shareLink").textContent, b=this;
+  if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){b.textContent=tr("copied2");setTimeout(function(){b.textContent=tr("copyLink")},1500)});
+});
+</script>
 </body>
 </html>
 

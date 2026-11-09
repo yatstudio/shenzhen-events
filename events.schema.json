@@ -1,135 +1,151 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "properties": {
-    "city": {
-      "type": "string"
-    },
-    "events": {
-      "items": {
-        "additionalProperties": false,
-        "properties": {
-          "categories": {
-            "items": {
-              "enum": [
-                "AI",
-                "创业",
-                "科技",
-                "跨境",
-                "Web3",
-                "加密",
-                "黑客松",
-                "技术",
-                "硬件",
-                "在线Space"
-              ]
-            },
-            "minItems": 1,
-            "type": "array"
-          },
-          "city": {
-            "default": "深圳",
-            "type": "string"
-          },
-          "district": {
-            "description": "深圳行政区，如 宝安区 / 南山区；线上活动填 null",
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "end": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "fee": {
-            "description": "如 免费 / ¥99 / 报名审核制",
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "format": {
-            "enum": [
-              "线下",
-              "线上Space",
-              "线上",
-              "线上+线下"
-            ]
-          },
-          "organizer": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "registration_deadline": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "source": {
-            "description": "信息来源平台，如 Luma / 活动行 / HackerTrip / X",
-            "type": "string"
-          },
-          "start": {
-            "description": "ISO 8601 local time, e.g. 2026-10-31T10:00:00+08:00",
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "submitted_by": {
-            "description": "投稿者或投稿 Agent 的署名（可选）",
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "summary": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "title": {
-            "type": "string"
-          },
-          "url": {
-            "description": "官方活动/报名页，唯一去重键之一",
-            "format": "uri",
-            "type": "string"
-          },
-          "venue": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        },
-        "required": [
-          "title",
-          "start",
-          "categories",
-          "format",
-          "url",
-          "source"
-        ],
-        "type": "object"
-      },
-      "type": "array"
-    },
-    "updated_at": {
-      "format": "date-time",
-      "type": "string"
-    }
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "properties": {
+  "city": {
+   "type": "string"
   },
-  "required": [
-    "updated_at",
-    "events"
-  ],
-  "title": "ShenzhenEvents",
-  "type": "object"
+  "events": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "categories": {
+      "items": {
+       "enum": [
+        "AI",
+        "创业",
+        "科技",
+        "跨境",
+        "Web3",
+        "加密",
+        "黑客松",
+        "技术",
+        "硬件",
+        "在线Space"
+       ]
+      },
+      "minItems": 1,
+      "type": "array"
+     },
+     "city": {
+      "default": "深圳",
+      "type": "string"
+     },
+     "district": {
+      "description": "深圳行政区，如 宝安区 / 南山区；线上活动填 null",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "end": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "fee": {
+      "description": "如 免费 / ¥99 / 报名审核制",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "format": {
+      "enum": [
+       "线下",
+       "线上Space",
+       "线上",
+       "线上+线下"
+      ]
+     },
+     "layer": {
+      "description": "条目层级：verified = 维护者核实层（默认，缺省即此值）；open = 用户发布层（经 AI 初审、未经人工核实，页面会标注）",
+      "enum": [
+       "verified",
+       "open"
+      ],
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "organizer": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "registration_deadline": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "source": {
+      "description": "信息来源平台，如 Luma / 活动行 / HackerTrip / X",
+      "type": "string"
+     },
+     "start": {
+      "description": "ISO 8601 local time, e.g. 2026-10-31T10:00:00+08:00",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "submitted_by": {
+      "description": "投稿者或投稿 Agent 的署名（可选）",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "summary": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "title": {
+      "type": "string"
+     },
+     "url": {
+      "description": "官方活动/报名页，唯一去重键之一",
+      "format": "uri",
+      "type": "string"
+     },
+     "venue": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "id": {
+      "type": "string",
+      "pattern": "^[0-9a-z]{6}$",
+      "description": "冻结短码：由 url+start 生成，短链 yatslist.com/e/<id>/ 与分享图 img.yatslist.com/share/<id>.png 的键。投稿可不填，维护管线自动分配。"
+     }
+    },
+    "required": [
+     "title",
+     "start",
+     "categories",
+     "format",
+     "url",
+     "source"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "updated_at": {
+   "format": "date-time",
+   "type": "string"
+  }
+ },
+ "required": [
+  "updated_at",
+  "events"
+ ],
+ "title": "ShenzhenEvents",
+ "type": "object"
 }
