@@ -429,6 +429,13 @@ input[type=search]{font-size:16px}
 <meta name="theme-color" content="#0d1218">
 <!-- Umami -->
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0d1218">
+<link rel="apple-touch-icon" href="https://img.yatslist.com/pwa/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yat's List">
 </head>
 <body>
 <a id="top"></a>
@@ -1105,6 +1112,7 @@ renderCats();render();measureBar();setTimeout(measureBar,400);
 <script>fetch("/szexpat/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.events||[]).length;var el=document.getElementById("lc-expat-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 <script>fetch("/spaces.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.spaces||[]).length;var el=document.getElementById("lc-space-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 <script>fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var evs=d.events||[];var f=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit"});var m={};f.formatToParts(new Date()).forEach(function(x){m[x.type]=x.value});var t0=Date.UTC(+m.year,+m.month-1,+m.day)-8*3600e3;var n=evs.filter(function(e){return !(e.start&&new Date(e.end||e.start)<new Date(t0))}).length;var el=document.getElementById("lc-ev-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>
 

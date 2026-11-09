@@ -429,6 +429,13 @@ input[type=search]{font-size:16px}
 <meta name="theme-color" content="#0d1218">
 <!-- Umami -->
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0d1218">
+<link rel="apple-touch-icon" href="https://img.yatslist.com/pwa/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yat's List">
 </head>
 <body>
 <a id="top"></a>
@@ -1302,6 +1309,7 @@ document.getElementById("shareCopy").addEventListener("click",function(){
   if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){b.textContent=tr("copied2");setTimeout(function(){b.textContent=tr("copyLink")},1500)});
 });
 </script>
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>
 

@@ -448,6 +448,13 @@ input[type=search]{font-size:16px}
 #ftoggle{min-height:44px}
 }
 </style>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0d1218">
+<link rel="apple-touch-icon" href="https://img.yatslist.com/pwa/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yat's List">
 </head>
 <body>
 <a id="top"></a>
@@ -886,5 +893,6 @@ fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   applyLang();
 }).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
 </script>
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>

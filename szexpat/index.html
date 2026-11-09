@@ -223,6 +223,13 @@ body{overflow-x:hidden}
 </script>
 <!-- Umami -->
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="63ba389b-af24-499b-9ffb-d923529eb69f"></script>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0d1218">
+<link rel="apple-touch-icon" href="https://img.yatslist.com/pwa/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yat's List">
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -663,5 +670,6 @@ fetch("events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
   applyLang();setTimeout(measureBar,400);
 }).catch(()=>{$("#list").innerHTML=`<div class="empty">${S().loadFail}</div>`});
 </script>
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>

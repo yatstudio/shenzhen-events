@@ -1,0 +1,17 @@
+{
+  "name": "Yat's List · 深圳活动清单",
+  "short_name": "Yat's List",
+  "description": "深圳活动，喂给你的 Agent 吃。AI · 创业 · 科技 · 跨境 · Web3 · 硬件活动，每日更新，逐条核实自官方页面。",
+  "lang": "zh-CN",
+  "start_url": "/szevents/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1218",
+  "theme_color": "#0d1218",
+  "icons": [
+    { "src": "https://img.yatslist.com/pwa/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://img.yatslist.com/pwa/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "https://img.yatslist.com/pwa/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
