@@ -5,6 +5,57 @@
  "source_site": "https://yatstudio.github.io/x-spaces/",
  "spaces": [
   {
+   "id": "binance-fireside-chat-20261109",
+   "title": "《币安炉边谈话：10·29 安全事件回应》",
+   "title_en": "Binance Fireside Chat",
+   "title_tw": "《幣安爐邊談話：10·29 安全事件回應》",
+   "series": null,
+   "episode": null,
+   "date": "2026-11-09",
+   "host": "Jessica Walker @jessicasmw（币安团队）",
+   "guests": [
+    "Richard Teng @_RichardTeng（币安联席 CEO）",
+    "Yi He 何一 @heyibinance（币安联合创始人、联席 CEO）",
+    "Jimmy Su @JimmySu27（币安首席安全官）"
+   ],
+   "duration": "49 分 31 秒",
+   "duration_minutes": 50,
+   "url": "https://x.com/i/spaces/1ybALpPKvqmzaR",
+   "topics": [
+    "币安 10·29 安全事件",
+    "交易所安全",
+    "假招聘面试",
+    "朝鲜黑客",
+    "MPC 热钱包",
+    "AI 安全",
+    "储备证明"
+   ],
+   "highlights": [
+    "核心定性：10 月 29 日攻击利用内部钱包签名服务的未授权访问，约 63.4 亿美元数字资产受影响；受损的是币安自有热钱包，用户资金未受影响、损失由币安全额承担（均为发言人现场说法，未经核实）。",
+    "资金已基本补足：约 98% 受影响代币资产已补足，剩余 2% 为流动性较低的资产；Richard 现场称约 50 亿美元已被冻结或拦截（该句转写有杂音，数字存疑；币安 10 月 30 日公开稿称约 30 亿美元已冻结）。",
+    "攻击链：9 月假招聘面试——工程师在正规求职平台被冒充项目总监者接触，次轮冒充某金融科技公司 CEO 面谈，最后被要求下载“作业”代码仓库，零日恶意软件在安装中执行并替换开发工具组件；2026 年内币安已拦截 57 起疑似朝鲜相关网络威胁。",
+    "为何暂停提现后资金仍流出：攻击者滥用的链上授权独立于币安提现基础设施；热钱包采用 MPC、无单一私钥可立即撤销，团队须现开发撤销程序，遏制花了数小时而非数分钟。",
+    "与 FTX 的区别：FTX 暂停是因客户资金已经不在了；币安暂停是为保护本来就在的客户资金，数日内恢复服务，且用户可用储备证明自行核验余额。",
+    "整改路线：截至 11 月 3 日已在新环境重建钱包系统与内部 AI 工具、更换受影响设备、轮换凭证、全员扫描；下一步为更强环境隔离、独立安全审查、加大 AI 安全投入、设立行业安全研究基金。"
+   ],
+   "highlights_en": [
+    "The core facts: the October 29 attack exploited unauthorized access to Binance's internal wallet signing service, affecting about $6.34B in digital assets; Binance's own hot wallet was hit, user funds were unaffected and the loss is fully covered by Binance (all speakers' claims, unverified).",
+    "Recovery is nearly complete: about 98% of impacted token assets have been replenished, the remaining 2% are less liquid; Richard said about $5B had been frozen or intercepted (that line is garbled in transcription — Binance's October 30 statement put the frozen figure at about $3B).",
+    "The attack chain: a fake job interview in September — an engineer was approached on a legitimate job platform by someone posing as a project director, then interviewed by a fake CEO, and finally asked to download a coding-assignment repo; zero-day malware executed during setup and replaced a dev-tool component; Binance blocked 57 suspected North Korea-linked threat cases in 2026.",
+    "Why outflows continued after withdrawals were paused: the abused on-chain authorization lived independently of Binance's withdrawal infrastructure, and the MPC hot wallet had no single private key to revoke it instantly — the team had to build a revocation procedure under time pressure, so containment took hours, not minutes.",
+    "Not FTX: FTX paused because customer money was gone; Binance paused to protect customer money that was there, restored service within days, and users can verify balances against proof of reserves.",
+    "Remediation roadmap: by November 3 the wallet system and internal AI tools were rebuilt in a new environment, affected devices replaced, credentials rotated and all devices scanned; next steps are stronger environment isolation, an independent security review, bigger AI-security investment and an industry security research fund."
+   ],
+   "highlights_tw": [
+    "核心定性：10 月 29 日攻擊利用內部錢包簽名服務的未授權訪問，約 63.4 億美元數字資產受影響；受損的是幣安自有熱錢包，用戶資金未受影響、損失由幣安全額承擔（均為發言人現場說法，未經核實）。",
+    "資金已基本補足：約 98% 受影響代幣資產已補足，剩餘 2% 為流動性較低的資產；Richard 現場稱約 50 億美元已被凍結或攔截（該句轉寫有雜音，數字存疑；幣安 10 月 30 日公開稿稱約 30 億美元已凍結）。",
+    "攻擊鏈：9 月假招聘面試——工程師在正規求職平臺被冒充項目總監者接觸，次輪冒充某金融科技公司 CEO 面談，最後被要求下載「作業」代碼倉庫，零日惡意軟件在安裝中執行並替換開發工具組件；2026 年內幣安已攔截 57 起疑似朝鮮相關網絡威脅。",
+    "為何暫停提現後資金仍流出：攻擊者濫用的鏈上授權獨立於幣安提現基礎設施；熱錢包採用 MPC、無單一私鑰可立即撤銷，團隊須現開發撤銷程序，遏制花了數小時而非數分鐘。",
+    "與 FTX 的區別：FTX 暫停是因客戶資金已經不在了；幣安暫停是為保護本來就在的客戶資金，數日內恢復服務，且用戶可用儲備證明自行核驗餘額。",
+    "整改路線：截至 11 月 3 日已在新環境重建錢包系統與內部 AI 工具、更換受影響設備、輪換憑證、全員掃描；下一步為更強環境隔離、獨立安全審查、加大 AI 安全投入、設立行業安全研究基金。"
+   ]
+  },
+  {
    "id": "magageddon-blue-tidal-wave-20261108",
    "title": "《MAGAGEDDON：蓝色浪潮——中期选举后的 MAGA 复盘》",
    "title_en": "MAGAGEDDON: Blue Tidal Wave.",
