@@ -261,6 +261,9 @@ def main():
         make_card(e, png); make_page(e)
         manifest[e['id']] = h; made.append(e['id'])
     json.dump(manifest, open(MANIFEST, 'w'), ensure_ascii=False, indent=1)
+    import time
+    json.dump({'generated_at': time.strftime('%Y-%m-%dT%H:%M:%S+08:00'), 'generated_ids': made},
+              open(os.path.join(PRIV, 'share-last-run.json'), 'w'), ensure_ascii=False, indent=1)
     print(f"generated {len(made)}, skipped {len(skipped)}, total {len(data['events'])}")
 
 if __name__ == '__main__':
