@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你的钱包知道得太多：谁来修复链上隐私？ — Yat's List Space 纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/spaces/">← 返回 Space 合集</a>
+<article>
+<h1>会议纪要：你的钱包知道得太多——谁来修复链上隐私？</h1>
+<ul>
+<li><strong>原标题</strong>：Your Wallet Knows Too Much: Who Fixes Onchain Privacy?</li>
+<li><strong>主持人</strong>：Justin Roberty（@wenaltseason，Wenaltseason?）</li>
+<li><strong>时间</strong>：2026-10-15（周四例行场），时长约 1 小时 13 分</li>
+<li><strong>参与</strong>：约 20,780 人；嘉宾约 16 位</li>
+<li><strong>链接</strong>：https://x.com/i/spaces/1kJzDPeMlldKv</li>
+<li><strong>来源</strong>：Space 回放录音本地转写（faster-whisper 英文，逐字稿 1,251 行，覆盖 00:01:58–01:13:42）。以下所有观点均为发言人现场自述，未经核实；数字、案例与项目说法以发言人原话为准。</li>
+</ul>
+<h2>结论先行</h2>
+<ol>
+<li><strong>隐私从边缘议题变成了大规模采用的前提。</strong> 多位嘉宾的共识是：没人会把毕生积蓄、工资和公司金库放进一个公开可查的银行账户里。稳定币把真实的财务生活搬上链之后，隐私不再是密码朋克的情怀，而是“上链十亿人”的入场券。</li>
+<li><strong>安全是比意识形态更硬的驱动力。</strong> “扳手攻击”（线下胁迫交出资产）被反复提及——Ronnie（Zano）称法国去年已有约 90 起，几乎每周两起；Mass Wallets 的联合创始人在墨西哥有过被绑架风险。公开的链上余额正在变成人身安全隐患。</li>
+<li><strong>“隐私币”这个品类可能正在死去，但隐私本身正在变成标配。</strong> Dash、Aztec 的 Joe 等人判断：未来没有单独的“隐私链”，隐私会变成每条链、每个钱包的默认功能；短期会先流行“合规隐私”（执法可定向查看），长期则向“谁也攻不破的铁杆隐私”摆动。</li>
+<li><strong>谁来决定“向谁披露什么”没有达成共识，分歧线很清晰。</strong> 一方主张用户手握密钥、按需向审计/税务做“范围披露”（Crypto Walker、Aztec）；另一方认为机构迟早会用“中间人式隐私”（银行模式、私有链、隐私区）先把路铺好，密码学完美方案若再等八年就等于没解决（Joe、Mr. J）。</li>
+<li><strong>技术上没有“唯一赢家”。</strong> ZK、FHE、多方计算（MPC）各有位置，Tim Arno 等人认为关键在组合；Aztec 的 Joe 提出方法论——“先默认完全隐私，再一层层剥开公开披露”，而不是反过来。</li>
+<li><strong>可复用 KYC 与去中心化身份是全场最具体的产品方向。</strong> Aztec 的 ZK Passport 被作为范例：直接验证护照/驾照芯片里的政府签名，只证明“证件有效”，不泄露姓名、生日和照片。Mass Wallets 则主张多家小型 KYC 机构 + 标准化接口，避免一家独大。</li>
+</ol>
+<h2>嘉宾一览</h2>
+<table>
+<thead>
+<tr>
+<th>嘉宾</th>
+<th>身份（现场自述）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Justin Roberty</td>
+<td>主持人（@wenaltseason）</td>
+</tr>
+<tr>
+<td>Joel / Dash</td>
+<td>Dash（@Dashpay）</td>
+</tr>
+<tr>
+<td>Theo</td>
+<td>Fiber 钱包（@_theopowers），主攻拉美市场</td>
+</tr>
+<tr>
+<td>Ruben</td>
+<td>Firo（@firoorg）</td>
+</tr>
+<tr>
+<td>Ditto</td>
+<td>Ditto Network（@Ditto_Network）</td>
+</tr>
+<tr>
+<td>Mr. J</td>
+<td>Sats Terminal / OnePump、OneSup（@juga_btc）</td>
+</tr>
+<tr>
+<td>Mitchell DiRaimondo</td>
+<td>@MitchDiRaimondo</td>
+</tr>
+<tr>
+<td>Ronnie</td>
+<td>Zano（@RonneTVR）</td>
+</tr>
+<tr>
+<td>George</td>
+<td>Mass Wallets（@masswallets）</td>
+</tr>
+<tr>
+<td>Joe</td>
+<td>Aztec Network（@jaosef），ZK Passport</td>
+</tr>
+<tr>
+<td>Crypto Walker</td>
+<td>@kryptowalk3r</td>
+</tr>
+<tr>
+<td>Jareen</td>
+<td>Privacy Cloak（@jerreenj），15 岁开始写代码</td>
+</tr>
+<tr>
+<td>Tim Arno</td>
+<td>@TimArnoX</td>
+</tr>
+<tr>
+<td>NoNonsense4x</td>
+<td>交易员 / YouTuber（@This_Is_VP4X）</td>
+</tr>
+<tr>
+<td>defijangle</td>
+<td>中途掉线后重回，未作实质发言</td>
+</tr>
+<tr>
+<td>Django、Danielle</td>
+<td>临近尾声加入，未作实质发言</td>
+</tr>
+</tbody>
+</table>
+<h2>分发言人归纳</h2>
+<h3>Dash（Joel）——隐私是“不得不补的课”，合规隐私先行、铁杆隐私随后</h3>
+<ul>
+<li>驱动力很简单：加密早期大家只是在试技术，链上没什么正经价值；现在进入早期大规模采用周期，旧叙事死掉、撑不起存在的链关门，隐私浮出水面。“没人会把毕生积蓄放进公开账本”（People are not going to put their life savings on chain where it's public knowledge）。</li>
+<li>五年展望：隐私会变得相对普遍，“隐私币”作为单独品类会消失——它只是一个必备功能。短期先流行“合规隐私”，例如 NEAR 的 confidential shards（执法可查看特定账户细节），因为公司既想要隐私、又不想被说成在帮洗钱者混币；但随后 Canton 式模型会见顶，越来越多公司和个人会要求“谁也攻不破的铁杆隐私”。</li>
+<li>关键原话：“I think that the concept of something like a privacy coin might be dead in the future because it's just one feature that's now going to be a must-have.”</li>
+</ul>
+<h3>Theo（Fiber）——稳定币把整个人生搬上链，钱包必须多链 + 隐私</h3>
+<ul>
+<li>隐私议题升温的直接原因是稳定币崛起：人们开始用链上收工资、签合同、和朋友转账。早期用户可以接受低隐私，因为“整个人生还没上链”；但要把全世界变成链上金融生活，就不能让每个人都顶着一个公开银行账户。“nobody wants that.”</li>
+<li>链上隐私不是“为隐私而隐私”：ZEC、门罗那套对新来的稳定币用户没什么用，他们需要的是一个多链钱包、上面叠加隐私——这正是 Fiber 在做的方向。不同地区会有不同的钱包，Fiber 主攻拉美。</li>
+<li>对中心化隐私的质疑：Coinbase 已经是一个半公开的链上混合银行，每月也只有约 800 万交易者，“显然不是人们想要的”；中心化隐私的代价是交出大量 KYC 信息，本身就制造一整套新问题。Fiber 只向用户要一个邮箱、甚至只用用户名，“留下的足迹越小越好”。</li>
+</ul>
+<h3>Ruben（Firo）——技术终于成熟了，隐私复兴是“鸡生蛋”</h3>
+<ul>
+<li>Zcash 2016 年上线时需要一台强劲电脑、做一笔交易要约 30 秒；如今基础设施成熟得多，人们更愿意信任它。加密从“好玩的小爱好”变成有严肃价值在流动，隐私需求随之而来；币价上涨也有帮助。</li>
+<li>不是单方面“用户在要”，是供需互相推动。</li>
+</ul>
+<h3>Ditto（Ditto Network）——传统金融的参照系：可验证，但不必全公开</h3>
+<ul>
+<li>区块链的悖论：大家抱怨它“太透明”，但在传统金融里，银行验证交易并不需要公开你的全部账户历史。链上的挑战是“在保留公开可验证性的同时，限制陌生人能从个人身上学到什么”。</li>
+<li>机构既需要审计轨迹，也需要同时保密。解法是“最小暴露数据 + 把选择性披露做进协议和钱包”，而且钱包要让保护措施“像普通人用的东西一样简单”，而不是专家专属流程。</li>
+</ul>
+<h3>Mr. J（Sats Terminal）——“隐私已经被 Canton 修好了”，机构路线已定</h3>
+<ul>
+<li>全场最明确的“已经有答案”立场：链上隐私的修复者是 Canton。DTCC 已选择 Canton 做代币化服务，原因就是隐私；美国国债正在 Canton 上代币化，汇丰、摩根大通、日本方面在 Canton 上清算债券，韩国、香港也在做。机构层面已经完成，OnePump / OneSup 做的是把它带给散户。</li>
+<li>对传统金融自建链的判断：机构不会从头自建，因为直接集成现有基础设施更省事；它们需要的是“按需知情”的隐私——交易某部分让哪些方知道、哪些方不知道。</li>
+<li>对去中心化的直言：“根本不存在真正的去中心化……Hyperliquid 上没有去中心化，谁在乎去中心化？”他认为必须有一组可信的人来管理链上事务，出现问题时能回滚；“谁来控制这些决定，比去中心化程度本身更重要。”</li>
+</ul>
+<h3>Mitchell DiRaimondo——机构要的是“它们习惯的系统”，透明叙事已经变了</h3>
+<ul>
+<li>要让机构入场，就得复刻它们习惯的系统；再去重讲一遍“安全叙事”不会奏效。机构级产品越来越多，LP 更关心真实资产的现金流，而不是 100 倍。</li>
+<li>对主持人“透明是不是当初只是白皮书话术”的追问，他承认：2017–2018 年大家谈的是白皮书技术本身，现在谈的是产品，区块链只是上面的附加层。心态已经变了。</li>
+</ul>
+<h3>Ronnie（Zano）——安全是第一推动力；机构会转向“默认隐私链”</h3>
+<ul>
+<li>补充了前面没人提的一点：推动链上隐私的首要原因是用户安全。“扳手攻击”去年和今年都在疯涨，法国已有约 90 起，“几乎每周两起”；此外还有企业与政府靠用户数据赚钱的监控。</li>
+<li>对 Soda Labs 刚融 300 万美元“把隐私带给公开链”的回应：他认为会发生相反的事——机构会转向默认隐私的区块链，因为公开链上总留有可追溯的痕迹；但隐私链必须有“可选透明”功能，Zano 正在朝这个方向做，计划引入第三方审计来接机构。</li>
+</ul>
+<h3>George（Mass Wallets）——信任与隐私不正交；应用层隐私比链隐私更抗压</h3>
+<ul>
+<li>“我不认为信任与隐私是对立的。”新区块链用透明来建立信任，但现在已有技术可以在不牺牲隐私的前提下验证信息。</li>
+<li>墨西哥联合创始人的例子：有人会被绑架、被要求清空账户，“如果隐私问题不解决，他们不会把资金搬上链”。汇款公司和企业金库会是更大的采用驱动力——企业余额绝不能放在公开链上，客户会直接要求隐私。</li>
+<li>去中心化对隐私是必需的：各国政府迟早会对少数几条链施压；银行保密制度在《银行保密法》之后实际上已不存在，“连瑞士都屈服了”。因此应用层（智能合约层）的隐私比链隐私更有意思：可以有许多带隐私的合约，政府不可能一下子全部攻破。</li>
+<li>五年展望：KYC 走向标准化接口 + 许多小型 KYC 机构，把用户身份代币化、且身份可在全生态复用——既降低集中风险，又保留互操作性。“隐私一定会到来，没有别的路。”</li>
+<li>关于量子与 AI 风险：量子若赢了，“我们有更大的问题”；AI 真正的风险一是人们自愿把信息倒给模型换性能，二是监控国家现在可以给每个人配一个监控代理——30、40 年前建监控国家几乎不可能，现在可以规模化。</li>
+</ul>
+<h3>Joe（Aztec Network）——隐私是光谱，不是开关；可编程隐私是未来</h3>
+<ul>
+<li>Starknet 影子账户（本周刚发布）：只隐藏钱包、不隐藏交易。“技术上没什么新东西”——本质就是用一个新账户注资、切断与身份的关联，以太坊上 Railgun、Aztec、Railgun 类资金池、Coinbase 都能做到；Starknet 的进步在用户体验，把流程整合进一个钱包。但仍容易被行为模式识别：“如果你是 Hyperliquid 大户、每天固定时间交易，看到 15 个地址都在上午 10 点大额交易，大概率是同一个人。”Aztec 内部的原则是“先默认完全隐私，再一层层剥开公开披露”，影子账户是反方向的一小步。</li>
+<li>去中心化为什么重要：不去中心化的隐私等于把隐私交给中间人，而中间人“转身就把你的数据卖掉”。互联网加密之所以成立，正是因为它是去中心化的强密码学。</li>
+<li>技术路线的两种世界：密码学隐私（ZK、FHE、多方计算）vs 中间人式隐私（传统金融的做法；Providium、Tempo 的“隐私区”本质是“给中间人的隐私”）。如果理论上完美的技术还要等八年，大家只会退回中间人方案，“那我们什么都没解决”。</li>
+<li>ZK Passport（可复用 KYC）：现代身份证件——美国新驾照、所有电子护照、多数欧洲身份证——芯片里都有发证政府的签名。ZK Passport 读取签名并用零知识证明“证件有效”，不泄露姓名、出生日期和照片；即使证明泄露，也只泄露“此人持有有效护照”这一事实。做对了，身份就回到用户自己手里，不再需要第三方验证机构。</li>
+<li>五年展望：隐私不是二元的“私密或不私密”，而是一条光谱。关键转向是“可编程隐私”：开发者按自己的用例编码隐私——受监管的证券交易所和跨境支付的隐私需求完全不同。未来不是隐私链，而是带加密功能的智能合约。</li>
+</ul>
+<h3>Crypto Walker——用户握钥匙，披露要“按需、按范围”</h3>
+<ul>
+<li>谁来决定向谁披露什么？“用户应该握着钥匙，接收方应该被限定范围。审计员看到审计员需要的，税务机关看到税务机关需要的，仅此而已。没有人因为有权有势、礼貌敲门，就能拿到整栋房子。”</li>
+<li>真正要怕的是“主密钥的负责人”：“历史上每一把主密钥最终都被偷、被攻破、被卖掉，或丢在出租车、机场的笔记本电脑里。”密码学的意义是为“受托方不再可信的那一天”做设计。</li>
+</ul>
+<h3>Jareen（Privacy Cloak）——市场要的是跨链隐私，不是又一条隐私链</h3>
+<ul>
+<li>门罗和 Zcash 挺过了多年监管压力，市场错判了什么？答案是：新老用户要的都是“跨链通用”——在 Solana 和以太坊之间换币时，不希望一切都被公开。但至今没有任何协议能做到跨链隐私 swaps，所以他正在做 Privacy Cloak：链无关、完全自托管。</li>
+<li>门罗、Zcash 作为独立链，监管压力“令人窒息”，且没有以太坊、Solana 级别的流动性和用户量。把隐私带到现有主流链上、加上跨链功能、用企业级 API 交付，才是下一代用户入场的路径。</li>
+<li>对行业集中化的大判断：传统金融只会留下极少数链，“可能不到前十”；Hyperliquid 之后，新人进加密只认 Hyperliquid 一个交易所；99% 拿 500–1000 万美元融资去建新 Layer 1 的项目“完全没用”。AI 泡沫破裂后，活下来的链会更少。</li>
+<li>对反复 KYC 的态度：反复做 KYC 不会增加任何安全性，只给用户加摩擦；统一身份（如 Worldcoin 那类）理论上能避免 90% 的黑客、诈骗和钓鱼。但也要面对现实：连最顶尖安全团队都会被 Lazarus 黑掉，“在这个行业里没有任何东西是安全的，永远不会是”。</li>
+<li>量子 + AI：行业一路克服了所有困难，密码学家们对方向有完整想法，“到时候我们会是抗量子的”；AI 能不能打败加密，“没人能猜”。</li>
+</ul>
+<h3>Tim Arno——没有唯一最优技术，组合才是答案；匿名不只是协议问题</h3>
+<ul>
+<li>ZK、FHE、MPC 哪个能匹配大规模采用？“没有最好或最差。”MPC 适合多方场景，FHE 理论上更好但还没铺开；对公司来说，押注单一技术不明智。有意思的系统会把它们组合起来，B2B 和 B2C 的解法完全不同。</li>
+<li>匿名不只是链上协议的事：你连咖啡馆 Wi-Fi、到处是摄像头，“想从区块链上消失”还取决于你怎么用电脑和手机。</li>
+<li>五年展望：KYC、KYB 会保留；希望 ZK 还在，因为机构想控制一切；安全方面，代理式（agentic）工具会成为防止 AI 破解系统的防线。</li>
+</ul>
+<h3>NoNonsense4x（投资者视角）——DeFi 还有三到五年的窗口期</h3>
+<ul>
+<li>DeFi 永远有位置，因为不是每个人都能接受传统金融带来的监管。传统金融刚 capitulate（认输）、承认未来是数字化的；但它们也明白，没有隐私层什么都做不了。</li>
+<li>这需要时间：各方要先就“用哪一层”达成一致，再经历“东西不总能 100% 正常工作”的成长期。DeFi 群体大概还有三到五年窗口，之后隐私层真正落地，DeFi 依然重要。</li>
+<li>对大规模采用的用户体验要求：KYC 流程必须“和现在几乎一模一样”，一次做完、快速、熟悉；“如果突然要求所有人都变成加密原住民，这永远行不通。”</li>
+</ul>
+<h3>主持人 Justin Roberty 的串场判断</h3>
+<ul>
+<li>开场即定调：钱包和独立 AI 知道得太多，隐私修复方案是本场主题；全场 16 位嘉宾，他前一天早上只有 6 位确认、开场前 15 分钟才知道最终名单。</li>
+<li>AI 让诈骗变得可怕：他最近收到一封仿冒 Google 的钓鱼邮件，用隐藏字符伪造域名，“逼真到吓人”。AI 正在加速链上分析——他自己报税时发现，AI 能把不同地址、不同交易拼起来、讲清楚；攻击者同样能用这套能力。</li>
+<li>传统金融自建私有链的质疑贯穿全场：摩根大通曾尝试 JPM Coin 私有链，“没人想要”；银行赞助的私有链“行不通”，因为它们只把区块链当成银行间的网络，而不是全球金融系统。</li>
+<li>收尾：每周四同一时间再见；并提醒听众有机会就暂时脱离联网设备，去公园走走。</li>
+</ul>
+<h2>讨论脉络（按时间）</h2>
+<ul>
+<li><strong>00:02–00:07｜为什么是现在</strong>：稳定币把财务生活搬上链；技术成熟了；链上有正经价值在流动了。Dash、Theo、Ruben 三人定调。</li>
+<li><strong>00:07–00:14｜透明的悖论</strong>：银行验证交易不必公开全部历史；链上要同时保住可验证性与隐私。Ditto、Mr. J 谈机构视角。</li>
+<li><strong>00:14–00:20｜透明还是信任</strong>：Mitchell 谈机构只接受“它们习惯的系统”；Ronnie 把安全（扳手攻击）推到台前；George 提出“信任与隐私不正交”。</li>
+<li><strong>00:20–00:28｜传统金融会不会自己建链</strong>：Theo、Joe 以 Coinbase、JPM Coin 为例否定；Joe 拆解 Starknet 影子账户。</li>
+<li><strong>00:28–00:36｜谁来决定披露</strong>：Crypto Walker 的“按需披露”原则；Jareen 谈跨链隐私缺口与 Privacy Cloak；Jareen 预言只剩不到前十条链。</li>
+<li><strong>00:36–00:48｜技术路线与去中心化之争</strong>：Joe 谈 Zcash 被误判为“罪犯链”；Tim 谈 ZK/FHE/MPC 组合；NoNonsense4x 给 DeFi 三到五年窗口；Mr. J 与 Joe 就“去中心化还重要吗”正面交锋。</li>
+<li><strong>00:48–00:52｜AI 是放大器</strong>：主持人谈 AI 钓鱼；Jangle（defijangle）谈 AI 加速链上分析与资产扣押焦虑；Ronnie 谈机构与隐私链。</li>
+<li><strong>00:52–01:01｜可复用 KYC 与灵魂绑定代币</strong>：Joe 讲 ZK Passport 的芯片签名验证；George 讲 KYC 信息转售与集中风险；Jareen 讲统一身份与“什么都不安全”。</li>
+<li><strong>01:01–01:13｜五年展望快问快答</strong>：Tim、George、Dash、NoNonsense4x、Joe、Jareen、George 依次作答；共识是隐私会成为默认功能，路径是“可编程隐私 + 标准化可复用身份”，分歧在于这条路要走合规隐私还是铁杆隐私。</li>
+</ul>
+<h2>未决问题与分歧</h2>
+<ul>
+<li><strong>合规隐私 vs 铁杆隐私</strong>：短期内机构需要可审计、可定向披露的隐私；长期看，Dash、Joe 等人认为需求会滑向无人能攻破的隐私。两者之间的摆动幅度与时间点没有共识。</li>
+<li><strong>去中心化是否还是前提</strong>：Joe、George 认为是（否则隐私只是换个中间人）；Mr. J 认为不是（Hyperliquid 式效率优先，谁控制决策更重要）。</li>
+<li><strong>传统金融是合作方还是收编方</strong>：Mr. J 认为 Canton 已是定局；Jareen 认为传统金融只会留下不到十条链，多数新链毫无意义。</li>
+<li><strong>隐私会不会被 AI 抵消</strong>：AI 既加速链上分析、又让诈骗更逼真；Jangle 认为“你看不见的东西就扣押不了”，George 认为更大的风险在人们自愿向模型交数据。</li>
+</ul>
+<h2>值得记住的原话</h2>
+<ul>
+<li>“People are not going to use a completely public open ledger for things to actually matter.”——Dash</li>
+<li>“If we want to convert the entire world to use on chain as their primary financial life, we can't have everybody be fine with a public bank account because nobody wants that.”——Theo（Fiber）</li>
+<li>“I don't think trust is orthogonal to privacy.”——George（Mass Wallets）</li>
+<li>“The user should hold the keys and the recipient should possibly be scoped. An auditor sees what an auditor needs… No more.”——Crypto Walker</li>
+<li>“You need to start being fully private and then kind of peel back layers of public disclosures versus the other way around.”——Joe（Aztec）</li>
+<li>“If you don't decentralize privacy, you end up with these centralized middlemen providing privacy or promising that you're going to have privacy. And what they actually do is they turn around and sell your data.”——Joe（Aztec）</li>
+<li>“There's no really decentralization… who cares about decentralization because on Hyperliquid, there's no decentralization.”——Mr. J（Sats Terminal）</li>
+<li>“You can't seize what you can't see.”——Jangle（defijangle）</li>
+<li>“Privacy is a spectrum.”——Joe（Aztec）</li>
+<li>“If quantum wins, we have bigger problems.”——George（Mass Wallets）</li>
+</ul>
+</article>
+<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+</body>
+</html>
