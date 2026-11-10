@@ -428,7 +428,11 @@ input[type=search]{font-size:16px}
 .xchip.on{background:var(--green);color:#06130d;border-color:var(--green);font-weight:700}
 .xrow{display:flex;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin:0 0 12px}
 .xrow:hover{background:var(--panel-hover)}
-.xava{flex:0 0 auto;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.35rem;color:#06130d}
+.xava{flex:0 0 auto;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.35rem;color:#06130d;overflow:hidden}
+.xava img{width:100%;height:100%;object-fit:cover;display:block}
+.xjoins{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.xjoins .xjoin{margin-top:0}
+.xjoin.gh{background:transparent;color:var(--green);border:1.5px solid var(--green)}
 .xmain{flex:1 1 auto;min-width:0}
 .xname{font-weight:700;font-size:1.05rem}
 .xhandle{color:#6eaae1;text-decoration:none;margin-left:8px;font-weight:400}
@@ -479,7 +483,10 @@ input[type=search]{font-size:16px}
   <div class="xhero">
     <h1 id="x-title">深圳 X 名录</h1>
     <p class="sub" id="x-sub">在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。</p>
-    <a class="xjoin" id="x-join" href="https://docs.google.com/forms/d/e/1FAIpQLScwxRux0a9EHaKCUB9EAFa8kb2IcWC1XGrpjPADLmY0ruMZrA/viewform" target="_blank" rel="noopener">＋ 把我加进去（填表，不用注册）</a>
+    <div class="xjoins">
+      <a class="xjoin" id="x-join" href="https://submit.carromking.shop/xlist" target="_blank" rel="noopener">＋ 把我加进去（网页提交，不用注册）</a>
+      <a class="xjoin gh" id="x-join-gh" href="https://github.com/yatstudio/shenzhen-events/blob/main/x.json" target="_blank" rel="noopener">用 GitHub 提交（提 PR 加一行）</a>
+    </div>
     <p class="xnote" id="x-count-line">已上榜 <b id="x-count">–</b> 人 · 名单也开放给 Agent 读取：<a href="/x.json" style="color:var(--green)">x.json</a></p>
   </div>
 
@@ -496,7 +503,7 @@ input[type=search]{font-size:16px}
     <span id="xchips"></span>
   </div>
   <div id="xlist"></div>
-  <p class="xnote">加入方式只有一种：在网页表单填你的 @账号、选分类，可再写一句自我介绍（选填，越短越好）。不用注册、不用 GitHub。提交后我们轻核一遍（账号真实、与深圳或所选分类相关）就上榜；头像与粉丝数上线时会从 X 公开资料同步。要下榜或改信息，邮件 yat@yatslist.com 说一声即可。</p>
+  <p class="xnote">加入方式二选一：① 网页提交——打开提交页填 @账号、选分类，可再写一句自我介绍（选填，越短越好），不用注册；② GitHub——在仓库的 x.json 里给自己加一行、提 PR（只改 x.json 的 PR 会被优先处理）。两种都一样：提交后我们轻核一遍（账号真实、与深圳或所选分类相关）就上榜，头像自动从你的 X 账号拉取。要下榜或改信息，邮件 yat@yatslist.com 说一声即可。</p>
 </div>
 
 <footer class="sitefoot">
@@ -519,9 +526,9 @@ applyTheme();
 let LANG="zh"; try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
 if(["zh","tw","en"].indexOf(LANG)<0)LANG="zh";
 const I18N={
- zh:{title:"深圳 X 名录",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（填表，不用注册）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"主页 ›",follow:"＋ 关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
- tw:{title:"深圳 X 名錄",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（填表，不用註冊）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"主頁 ›",follow:"＋ 關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
- en:{title:"Shenzhen X Directory",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (form, no sign-up)",search:"Search name, @handle, intro…",all:"All",home:"Profile ›",follow:"＋ Follow",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
+ zh:{title:"深圳 X 名录",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"主页 ›",follow:"＋ 关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
+ tw:{title:"深圳 X 名錄",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"主頁 ›",follow:"＋ 關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
+ en:{title:"Shenzhen X Directory",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, intro…",all:"All",home:"Profile ›",follow:"＋ Follow",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
 };
 let PEOPLE=[], CAT="全部", Q="";
 const COLORS=["#2ee6a8","#5a8cfb","#f078a0","#f0b450","#78c8aa","#aa82f0","#fb8c5a","#5ac8e6"];
@@ -531,6 +538,7 @@ function applyLang(){
   document.getElementById("x-title").textContent=t.title;
   document.getElementById("x-sub").textContent=t.sub;
   document.getElementById("x-join").textContent=t.join;
+  document.getElementById("x-join-gh").textContent=t.joinGh;
   document.getElementById("xq").placeholder=t.search;
   document.querySelectorAll("[data-setlang]").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
   renderChips(); render();
@@ -558,7 +566,7 @@ function render(){
     const intro=(LANG==="en"&&(p.intro_en||p.intro))||p.intro||"";
     const tags=(p.categories||[]).map(c=>'<span class="xtag">'+esc(c)+"</span>").join("");
     const fans=p.followers?('<div class="xfol">'+t.fans+" "+esc(p.followers)+"</div>"):"";
-    return '<div class="xrow"><div class="xava" style="background:'+color+'">'+initial+'</div><div class="xmain"><div><span class="xname">'+esc(p.name)+'</span><a class="xhandle" href="'+url+'" target="_blank" rel="noopener">@'+esc(p.handle)+'</a></div><div class="xtags">'+tags+'</div><div class="xintro">'+esc(intro)+'</div></div><div class="xside">'+fans+'<div class="xbtns"><a class="xbtn" href="'+url+'" target="_blank" rel="noopener">'+t.home+'</a><a class="xbtn follow" href="'+url+'" target="_blank" rel="noopener">'+t.follow+"</a></div></div></div>";
+    return '<div class="xrow"><div class="xava" style="background:'+color+'"><img src="https://unavatar.io/x/'+encodeURIComponent(p.handle)+'" alt="" loading="lazy" onerror="this.remove()">'+initial+'</div><div class="xmain"><div><span class="xname">'+esc(p.name)+'</span><a class="xhandle" href="'+url+'" target="_blank" rel="noopener">@'+esc(p.handle)+'</a></div><div class="xtags">'+tags+'</div><div class="xintro">'+esc(intro)+'</div></div><div class="xside">'+fans+'<div class="xbtns"><a class="xbtn" href="'+url+'" target="_blank" rel="noopener">'+t.home+'</a><a class="xbtn follow" href="'+url+'" target="_blank" rel="noopener">'+t.follow+"</a></div></div></div>";
   }).join("");
 }
 document.getElementById("xq").addEventListener("input",e=>{Q=e.target.value;render();});
