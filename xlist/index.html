@@ -433,6 +433,21 @@ input[type=search]{font-size:16px}
 .xjoins{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
 .xjoins .xjoin{margin-top:0}
 .xjoin.gh{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+
+.xovl{position:fixed;inset:0;background:rgba(0,0,0,.62);display:none;align-items:flex-start;justify-content:center;z-index:300;overflow:auto;padding:26px 12px}
+.xovl.open{display:flex}
+.xmodal{background:var(--panel);border:1px solid var(--border);border-radius:16px;max-width:560px;width:100%;padding:22px 22px 14px;box-sizing:border-box}
+.xm-head{display:flex;justify-content:space-between;align-items:center}
+.xm-head h3{margin:0;font-size:1.25rem}
+.xm-x{background:none;border:0;color:var(--ink-sec);font-size:1.15rem;cursor:pointer}
+.xmodal label{display:block;margin:16px 0 7px;font-weight:600}
+.xmodal input[type=text]{width:100%;box-sizing:border-box;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:11px 13px;font-size:1rem}
+.xpills label{display:inline-flex;align-items:center;gap:6px;font-weight:400;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:7px 14px;margin:0 8px 8px 0;cursor:pointer}
+.xconsent{display:flex;gap:9px;align-items:flex-start;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 13px;line-height:1.55;font-weight:400}
+.xsubmit{margin-top:20px;width:100%;background:var(--green);color:#06130d;border:0;border-radius:999px;padding:13px;font-size:1.02rem;font-weight:700;cursor:pointer}
+.xfmsg{margin-top:14px;line-height:1.6;display:none}
+.xhp{position:absolute;left:-9999px;top:-9999px}
+
 .xmain{flex:1 1 auto;min-width:0}
 .xname{font-weight:700;font-size:1.05rem}
 .xhandle{color:#6eaae1;text-decoration:none;margin-left:8px;font-weight:400}
@@ -484,7 +499,7 @@ input[type=search]{font-size:16px}
     <h1 id="x-title">深圳 X 名录</h1>
     <p class="sub" id="x-sub">在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。</p>
     <div class="xjoins">
-      <a class="xjoin" id="x-join" href="https://submit.carromking.shop/xlist" target="_blank" rel="noopener">＋ 把我加进去（网页提交，不用注册）</a>
+      <a class="xjoin" id="x-join" href="https://submit.yatslist.com/xlist" onclick="openXJoin();return false;">＋ 把我加进去（网页提交，不用注册）</a>
       <a class="xjoin gh" id="x-join-gh" href="https://github.com/yatstudio/shenzhen-events/blob/main/x.json" target="_blank" rel="noopener">用 GitHub 提交（提 PR 加一行）</a>
     </div>
     <p class="xnote" id="x-count-line">已上榜 <b id="x-count">–</b> 人 · 名单也开放给 Agent 读取：<a href="/x.json" style="color:var(--green)">x.json</a></p>
@@ -504,6 +519,30 @@ input[type=search]{font-size:16px}
   </div>
   <div id="xlist"></div>
   <p class="xnote">加入方式二选一：① 网页提交——打开提交页填 @账号、选分类，可再写一句自我介绍（选填，越短越好），不用注册；② GitHub——在仓库的 x.json 里给自己加一行、提 PR（只改 x.json 的 PR 会被优先处理）。两种都一样：提交后我们轻核一遍（账号真实、与深圳或所选分类相关）就上榜，头像自动从你的 X 账号拉取。要下榜或改信息，邮件 yat@yatslist.com 说一声即可。</p>
+</div>
+
+
+<div class="xovl" id="xovl" onclick="if(event.target===this)closeXJoin()">
+  <div class="xmodal">
+    <div class="xm-head"><h3>把自己加进深圳 X 名录</h3><button class="xm-x" type="button" onclick="closeXJoin()" aria-label="关闭">✕</button></div>
+    <p class="xnote" style="text-align:left;margin:8px 0 0">不用注册、不用离开本页。提交后我们轻核一遍就上榜，头像自动从你的 X 账号拉取。</p>
+    <form id="xf">
+      <label for="xf-handle">你的 X 账号 *</label>
+      <input type="text" id="xf-handle" placeholder="@yatbtc，或 x.com/yatbtc" autocomplete="off">
+      <label>你的分类（可多选）*</label>
+      <div class="xpills" id="xf-cats"></div>
+      <label for="xf-intro">自我介绍（选填，越短越好）</label>
+      <input type="text" id="xf-intro" maxlength="60" placeholder="一句话、60 字以内，例：做 AI 硬件出海，常驻南山">
+      <p class="xnote" style="text-align:left;margin:6px 0 0">不填就用你 X 简介的第一句。</p>
+      <label>你和深圳的关系 *</label>
+      <div class="xpills" id="xf-rels"></div>
+      <label class="xconsent"><input type="checkbox" id="xf-consent" style="margin-top:4px"><span>这是我自己的账号，我同意公开列入名录（随时可邮件 yat@yatslist.com 下榜）</span></label>
+      <input type="text" id="xf-website" class="xhp" tabindex="-1" autocomplete="off">
+      <button type="submit" class="xsubmit" id="xf-btn">提交，上榜</button>
+      <p class="xfmsg" id="xf-msg"></p>
+    </form>
+    <p class="xnote" style="text-align:left">提交不顺手？也可以用<a href="https://submit.yatslist.com/xlist" target="_blank" rel="noopener" style="color:var(--green)">独立提交页</a>，同一个入口。</p>
+  </div>
 </div>
 
 <footer class="sitefoot">
@@ -576,6 +615,36 @@ fetch("/x.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   applyLang();
 }).catch(()=>{document.getElementById("xlist").innerHTML='<p class="xempty">名单加载失败，请刷新重试。</p>';});
 if("serviceWorker" in navigator){try{navigator.serviceWorker.register("/sw.js")}catch(e){}}
+</script>
+<script>
+/* ===== X 名录 AJAX 弹窗提交（不跳页） ===== */
+const XCATS=["AI","硬件","出海","Web3","加密","创业","创作者","投资","其他"];
+const XRELS=["常驻深圳","经常来深圳","不在深圳，但关注深圳"];
+(function(){
+  const c=document.getElementById("xf-cats"), r=document.getElementById("xf-rels");
+  if(c)c.innerHTML=XCATS.map(x=>'<label><input type="checkbox" name="xf-cat" value="'+x+'">'+x+"</label>").join("");
+  if(r)r.innerHTML=XRELS.map((x,i)=>'<label><input type="radio" name="xf-rel" value="'+x+'"'+(i===0?" checked":"")+">"+x+"</label>").join("");
+  const f=document.getElementById("xf");
+  if(f)f.addEventListener("submit",function(e){
+    e.preventDefault();
+    const msg=document.getElementById("xf-msg"); msg.style.display="block";
+    const handle=document.getElementById("xf-handle").value.trim();
+    const cats=[].slice.call(document.querySelectorAll("input[name=xf-cat]:checked")).map(x=>x.value);
+    const rel=(document.querySelector("input[name=xf-rel]:checked")||{}).value||"";
+    if(!handle){msg.textContent="先填你的 X 账号。";return}
+    if(!cats.length){msg.textContent="至少选一个分类。";return}
+    if(!document.getElementById("xf-consent").checked){msg.textContent="要先勾选确认：这是你自己的账号。";return}
+    const btn=document.getElementById("xf-btn"); btn.disabled=true; btn.textContent="提交中…";
+    fetch("https://submit.yatslist.com/v1/xlist",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({channel:"web-modal",website:document.getElementById("xf-website").value,person:{handle:handle,categories:cats,intro:document.getElementById("xf-intro").value.trim(),relation:rel,consent:true}})})
+    .then(r=>r.json()).then(d=>{
+      if(d&&d.status==="queued_for_review"){msg.textContent="✅ 收到了（编号 "+d.id+"）。轻核通过后上榜，明天刷新本页就能看到你。";btn.textContent="已提交"}
+      else{const m={invalid_handle:"账号格式不对，填 @账号 或 x.com/账号 链接。",rate_limited:"提交太频繁了，过一会儿再试。",consent_required:"要先勾选确认。"};msg.textContent="没提交成功："+(m[d&&d.error]||"请稍后再试");btn.disabled=false;btn.textContent="提交，上榜"}
+    }).catch(()=>{msg.textContent="网络出错，请稍后再试。";btn.disabled=false;btn.textContent="提交，上榜"});
+  });
+})();
+function openXJoin(){document.getElementById("xovl").classList.add("open")}
+function closeXJoin(){document.getElementById("xovl").classList.remove("open")}
+
 </script>
 </body>
 </html>
