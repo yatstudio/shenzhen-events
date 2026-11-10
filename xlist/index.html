@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>深圳 X 名录 · Yat's List</title>
-<meta name="description" content="在深圳玩 X 的人聚成一张单子：自己填表加进来，别人按分类找到你，一键打开主页或关注。Yat's List 深圳 X 名录。">
+<title>深圳 X List · Yat's List</title>
+<meta name="description" content="在深圳玩 X 的人聚成一张单子：自己填表加进来，别人按分类找到你，一键打开主页或关注。Yat's List 深圳 X List。">
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
@@ -487,7 +487,7 @@ input[type=search]{font-size:16px}
       <a href="https://yatslist.com/hackathons/">黑客松清单</a>
       <a href="https://yatslist.com/szexpat/">外国人活动</a>
       <a href="https://yatslist.com/spaces/">Space 纪要</a>
-      <a href="https://yatslist.com/xlist/" aria-current="page">X 名录</a>
+      <a href="https://yatslist.com/xlist/" aria-current="page">X List</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
     </nav>
@@ -496,7 +496,7 @@ input[type=search]{font-size:16px}
 
 <div class="wrap">
   <div class="xhero">
-    <h1 id="x-title">深圳 X 名录</h1>
+    <h1 id="x-title">深圳 X List</h1>
     <p class="sub" id="x-sub">在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。</p>
     <div class="xjoins">
       <a class="xjoin" id="x-join" href="https://submit.yatslist.com/xlist" onclick="openXJoin();return false;">＋ 把我加进去（网页提交，不用注册）</a>
@@ -505,26 +505,19 @@ input[type=search]{font-size:16px}
     <p class="xnote" id="x-count-line">已上榜 <b id="x-count">–</b> 人 · 名单也开放给 Agent 读取：<a href="/x.json" style="color:var(--green)">x.json</a></p>
   </div>
 
-  <div class="listchips">
-    <a class="lchip" href="https://yatslist.com/szevents/"><span class="lc-top"><b>深圳活动清单</b></span><span class="lc-desc">仅深圳 · 活动每天核实更新</span></a>
-    <a class="lchip" href="https://yatslist.com/hackathons/"><span class="lc-top"><b>黑客松清单</b></span><span class="lc-desc">全球黑客松与创新大赛，正在报名</span></a>
-    <a class="lchip" href="https://yatslist.com/szexpat/"><span class="lc-top"><b>外国人活动</b></span><span class="lc-desc">外国人常去的聚会、演出与展览</span></a>
-    <a class="lchip" href="https://yatslist.com/spaces/"><span class="lc-top"><b>Space 纪要</b></span><span class="lc-desc">华语圈 X Space 纪要与回放要点</span></a>
-    <a class="lchip on" href="https://yatslist.com/xlist/" aria-current="page"><span class="lc-top"><b>X 名录</b></span><span class="lc-desc">在深圳玩 X 的人，自己加进来</span></a>
-  </div>
 
   <div class="xbar">
     <input type="search" id="xq" placeholder="搜名字、@账号、自我介绍…">
     <span id="xchips"></span>
   </div>
   <div id="xlist"></div>
-  <p class="xnote">加入方式二选一：① 网页提交——打开提交页填 @账号、选分类，可再写一句自我介绍（选填，越短越好），不用注册；② GitHub——在仓库的 x.json 里给自己加一行、提 PR（只改 x.json 的 PR 会被优先处理）。两种都一样：提交后我们轻核一遍（账号真实、与深圳或所选分类相关）就上榜，头像自动从你的 X 账号拉取。要下榜或改信息，邮件 yat@yatslist.com 说一声即可。</p>
+  <p class="xnote">加入方式二选一：网页提交（不用注册），或 GitHub 提 PR 只改 x.json。提交后轻核就上榜；下榜或改信息，邮件 yat@yatslist.com。</p>
 </div>
 
 
 <div class="xovl" id="xovl" onclick="if(event.target===this)closeXJoin()">
   <div class="xmodal">
-    <div class="xm-head"><h3>把自己加进深圳 X 名录</h3><button class="xm-x" type="button" onclick="closeXJoin()" aria-label="关闭">✕</button></div>
+    <div class="xm-head"><h3>把自己加进深圳 X List</h3><button class="xm-x" type="button" onclick="closeXJoin()" aria-label="关闭">✕</button></div>
     <p class="xnote" style="text-align:left;margin:8px 0 0">不用注册、不用离开本页。提交后我们轻核一遍就上榜，头像自动从你的 X 账号拉取。</p>
     <form id="xf">
       <label for="xf-handle">你的 X 账号 *</label>
@@ -536,7 +529,7 @@ input[type=search]{font-size:16px}
       <p class="xnote" style="text-align:left;margin:6px 0 0">不填就用你 X 简介的第一句。</p>
       <label>你和深圳的关系 *</label>
       <div class="xpills" id="xf-rels"></div>
-      <label class="xconsent"><input type="checkbox" id="xf-consent" style="margin-top:4px"><span>这是我自己的账号，我同意公开列入名录（随时可邮件 yat@yatslist.com 下榜）</span></label>
+      <label class="xconsent"><input type="checkbox" id="xf-consent" style="margin-top:4px"><span>这是我自己的账号，我同意公开列入 X List（随时可邮件 yat@yatslist.com 下榜）</span></label>
       <input type="text" id="xf-website" class="xhp" tabindex="-1" autocomplete="off">
       <button type="submit" class="xsubmit" id="xf-btn">提交，上榜</button>
       <p class="xfmsg" id="xf-msg"></p>
@@ -559,7 +552,7 @@ input[type=search]{font-size:16px}
   <div class="wrap">
     <p class="sf-brand"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></p>
     <p class="sf-tag" id="sf-tag">深圳活动，喂给你的 Agent 吃。</p>
-    <p class="sf-nav"><a href="https://yatslist.com/szevents/">深圳活动清单</a> · <a href="https://yatslist.com/hackathons/">黑客松清单</a> · <a href="https://yatslist.com/szexpat/">外国人活动</a> · <a href="https://yatslist.com/spaces/">Space 纪要</a> · <a href="https://yatslist.com/xlist/">X 名录</a> · <a href="https://yatslist.com/AGENTS.md">给 Agent 的说明</a></p>
+    <p class="sf-nav"><a href="https://yatslist.com/szevents/">深圳活动清单</a> · <a href="https://yatslist.com/hackathons/">黑客松清单</a> · <a href="https://yatslist.com/szexpat/">外国人活动</a> · <a href="https://yatslist.com/spaces/">Space 纪要</a> · <a href="https://yatslist.com/xlist/">X List</a> · <a href="https://yatslist.com/AGENTS.md">给 Agent 的说明</a></p>
     <p class="sf-line">数据每日更新 · 逐条核实自官方页面 · 免费无广告</p>
     <p class="sf-contact">合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a></p>
     <p class="sf-copy">© 2026 Yat's List · yatslist.com</p>
@@ -575,9 +568,9 @@ applyTheme();
 let LANG="zh"; try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
 if(["zh","tw","en"].indexOf(LANG)<0)LANG="zh";
 const I18N={
- zh:{title:"深圳 X 名录",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"主页 ›",follow:"＋ 关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
- tw:{title:"深圳 X 名錄",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"主頁 ›",follow:"＋ 關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
- en:{title:"Shenzhen X Directory",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, intro…",all:"All",home:"Profile ›",follow:"＋ Follow",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
+ zh:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"主页 ›",follow:"＋ 关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
+ tw:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"主頁 ›",follow:"＋ 關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
+ en:{title:"Shenzhen X List",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, intro…",all:"All",home:"Profile ›",follow:"＋ Follow",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
 };
 let PEOPLE=[], CAT="全部", Q="";
 const COLORS=["#2ee6a8","#5a8cfb","#f078a0","#f0b450","#78c8aa","#aa82f0","#fb8c5a","#5ac8e6"];
@@ -627,7 +620,7 @@ fetch("/x.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
 if("serviceWorker" in navigator){try{navigator.serviceWorker.register("/sw.js")}catch(e){}}
 </script>
 <script>
-/* ===== X 名录 AJAX 弹窗提交（不跳页） ===== */
+/* ===== X List AJAX 弹窗提交（不跳页） ===== */
 const XCATS=["AI","硬件","出海","Web3","加密","创业","创作者","投资","其他"];
 const XRELS=["常驻深圳","经常来深圳","不在深圳，但关注深圳"];
 (function(){
