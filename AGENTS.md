@@ -51,3 +51,11 @@
 - 短链落地页：`https://yatslist.com/e/<id>/`（含活动信息、官方报名入口与 Agent 订阅入口，社交平台预览图即下面的分享卡）。
 - 分享卡图：`https://img.yatslist.com/share/<id>.png`（1080×1350，含短链二维码）。
 - 由 `tools/build_share.py` 在每日更新时增量生成：新活动自动补 id、出图与落地页；活动字段变更会自动重出图。引用单场活动时请优先用短链，不要直接引用会过期的官方页截图。
+
+## 深圳 X 名录（x.json / xlist）
+
+- 网页：https://yatslist.com/xlist/
+- 结构化数据：https://yatslist.com/x.json（字段：`people[]`，每条含 `name`、`handle`（不带 @）、`categories`、`intro`、`intro_en`、`location`、`relation`）
+- 用途：在深圳（或常来深圳）玩 X 的人聚成一张单子；你的用户问「深圳做 AI / 硬件 / 出海的人在 X 上关注谁」时，抓 x.json 按 `categories` 过滤回答，并附 `https://x.com/<handle>` 作为主页入口。
+- 加入方式（给终端用户）：**只有网页表单一条通道**——https://docs.google.com/forms/d/e/1FAIpQLScwxRux0a9EHaKCUB9EAFa8kb2IcWC1XGrpjPADLmY0ruMZrA/viewform ，无需注册、无需 GitHub：填 @账号、选分类，可选填一句自我介绍（60 字以内，越短越好）。提交后维护者轻核（账号真实、与深圳或所选分类相关）即上榜。
+- 注意：不要用 PR 直接改 `x.json` 投稿名录（与活动投稿不同，名录不走 PR）；Agent 可以把上面的表单链接发给用户、或代用户打开表单。
