@@ -541,6 +541,16 @@ input[type=search]{font-size:16px}
       <button type="submit" class="xsubmit" id="xf-btn">提交，上榜</button>
       <p class="xfmsg" id="xf-msg"></p>
     </form>
+    <div id="xf-ok" style="display:none">
+      <h3 style="margin:4px 0 6px;font-size:1.3rem">✅ 提交成功</h3>
+      <p class="xnote" style="text-align:left;margin:6px 0 0">已经收到你的提交，编号 <b id="xf-ok-id"></b>。轻核通过后就会上榜，你提交的内容是：</p>
+      <div id="xf-ok-sum" style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 14px;line-height:1.75;margin:12px 0;text-align:left"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button type="button" class="xsubmit" id="xf-ok-done" style="flex:1;margin-top:4px">就这样</button>
+        <button type="button" class="xsubmit" id="xf-ok-edit" style="flex:1;margin-top:4px;background:transparent;color:var(--green);border:1.5px solid var(--green)">继续编辑，再提交一次</button>
+      </div>
+      <p class="xnote" style="text-align:left;margin:8px 0 0">不满意就点「继续编辑」：表单内容都还在，改完再提交一次，同一账号以最新一次为准。</p>
+    </div>
     <p class="xnote" style="text-align:left">提交不顺手？也可以用<a href="https://submit.yatslist.com/xlist" target="_blank" rel="noopener" style="color:var(--green)">独立提交页</a>，同一个入口。</p>
   </div>
 </div>
@@ -637,11 +647,17 @@ const XRELS=["常驻深圳","经常来深圳","不在深圳，但关注深圳"];
     const btn=document.getElementById("xf-btn"); btn.disabled=true; btn.textContent="提交中…";
     fetch("https://submit.yatslist.com/v1/xlist",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({channel:"web-modal",website:document.getElementById("xf-website").value,person:{handle:handle,categories:cats,intro:document.getElementById("xf-intro").value.trim(),relation:rel,consent:true}})})
     .then(r=>r.json()).then(d=>{
-      if(d&&d.status==="queued_for_review"){msg.textContent="✅ 收到了（编号 "+d.id+"）。轻核通过后上榜，明天刷新本页就能看到你。";btn.textContent="已提交"}
+      if(d&&d.status==="queued_for_review"){msg.textContent="✅ 收到了（编号 "+d.id+"）。轻核通过后上榜，明天刷新本页就能看到你。";btn.textContent="已提交";
+        document.getElementById("xf-ok-id").textContent=d.id;
+        document.getElementById("xf-ok-sum").innerHTML="X 账号：@"+esc(handle.replace(/^@+/,""))+"<br>分类："+esc(cats.join("、"))+"<br>自我介绍："+esc(document.getElementById("xf-intro").value.trim()||"（没填，上榜时用 X 简介第一句）")+"<br>和深圳的关系："+esc(rel);
+        f.style.display="none";document.getElementById("xf-ok").style.display="block";}
       else{const m={invalid_handle:"账号格式不对，填 @账号 或 x.com/账号 链接。",rate_limited:"提交太频繁了，过一会儿再试。",consent_required:"要先勾选确认。"};msg.textContent="没提交成功："+(m[d&&d.error]||"请稍后再试");btn.disabled=false;btn.textContent="提交，上榜"}
     }).catch(()=>{msg.textContent="网络出错，请稍后再试。";btn.disabled=false;btn.textContent="提交，上榜"});
   });
 })();
+  const okDone=document.getElementById("xf-ok-done"), okEdit=document.getElementById("xf-ok-edit");
+  if(okDone)okDone.addEventListener("click",()=>{closeXJoin();document.getElementById("xf-ok").style.display="none";document.getElementById("xf").style.display="";const b=document.getElementById("xf-btn");b.disabled=false;b.textContent="提交，上榜";});
+  if(okEdit)okEdit.addEventListener("click",()=>{document.getElementById("xf-ok").style.display="none";document.getElementById("xf").style.display="";const b=document.getElementById("xf-btn");b.disabled=false;b.textContent="重新提交";document.getElementById("xf-handle").focus();});
 function openXJoin(){document.getElementById("xovl").classList.add("open")}
 function closeXJoin(){document.getElementById("xovl").classList.remove("open")}
 
