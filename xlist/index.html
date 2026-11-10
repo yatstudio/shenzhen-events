@@ -527,6 +527,8 @@ input[type=search]{font-size:16px}
       <label for="xf-intro">自我介绍（选填，但建议写细一点）</label>
       <input type="text" id="xf-intro" maxlength="160" placeholder="例：做 AI 硬件出海，擅长供应链和海外众筹，常驻南山，想找硬件创业者与海外渠道">
       <p class="xnote" style="text-align:left;margin:6px 0 0">这段介绍会同时给人和 Agent 看：写清你做什么、擅长什么、能帮别人什么、想找什么人，再带上常驻区域（如南山、宝安），才更容易被找到。最多 160 字。不填就用你 X 简介的第一句。</p>
+      <label for="xf-github">GitHub 地址（选填）</label>
+      <input type="text" id="xf-github" maxlength="120" placeholder="例：github.com/你的用户名">
       <label>你和深圳的关系 *</label>
       <div class="xpills" id="xf-rels"></div>
       <label class="xconsent"><input type="checkbox" id="xf-consent" style="margin-top:4px"><span>这是我自己的账号，我同意公开列入 X List（随时可邮件 yat@yatslist.com 下榜）</span></label>
@@ -601,6 +603,7 @@ function render(){
   });
   const box=document.getElementById("xlist");
   if(!rows.length){box.innerHTML='<p class="xempty">'+t.empty+"</p>";return;}
+  function ghUrlP(g){g=String(g||"").trim(); if(/^https?:\/\//.test(g)) return g; g=g.replace(/^@+/,"").replace(/^github\.com\//,""); return "https://github.com/"+g;}
   box.innerHTML=rows.map((p,i)=>{
     const url="https://x.com/"+encodeURIComponent(p.handle);
     const initial=esc((p.name||p.handle||"?").slice(0,1).toUpperCase());
@@ -608,7 +611,7 @@ function render(){
     const intro=(LANG==="en"&&(p.intro_en||p.intro))||p.intro||"";
     const tags=(p.categories||[]).map(c=>'<span class="xtag">'+esc(c)+"</span>").join("");
     const fans=p.followers?('<div class="xfol">'+t.fans+" "+esc(p.followers)+"</div>"):"";
-    return '<div class="xrow"><div class="xava" style="background:'+color+'"><img src="https://unavatar.io/x/'+encodeURIComponent(p.handle)+'" alt="" loading="lazy" onerror="this.remove()">'+initial+'</div><div class="xmain"><div><span class="xname">'+esc(p.name)+'</span><a class="xhandle" href="'+url+'" target="_blank" rel="noopener">@'+esc(p.handle)+'</a></div><div class="xtags">'+tags+'</div><div class="xintro">'+esc(intro)+'</div></div><div class="xside">'+fans+'<div class="xbtns"><a class="xbtn" href="'+url+'" target="_blank" rel="noopener">'+t.home+'</a><a class="xbtn follow" href="'+url+'" target="_blank" rel="noopener">'+t.follow+"</a></div></div></div>";
+    return '<div class="xrow"><div class="xava" style="background:'+color+'"><img src="https://unavatar.io/x/'+encodeURIComponent(p.handle)+'" alt="" loading="lazy" onerror="this.remove()">'+initial+'</div><div class="xmain"><div><span class="xname">'+esc(p.name)+'</span><a class="xhandle" href="'+url+'" target="_blank" rel="noopener">@'+esc(p.handle)+'</a></div><div class="xtags">'+tags+'</div><div class="xintro">'+esc(intro)+'</div></div><div class="xside">'+fans+'<div class="xbtns"><a class="xbtn" href="'+url+'" target="_blank" rel="noopener">'+t.home+'</a><a class="xbtn follow" href="'+url+'" target="_blank" rel="noopener">'+t.follow+"</a>"+(p.github?'<a class="xbtn" href="'+ghUrlP(p.github)+'" target="_blank" rel="noopener">GitHub</a>':"")+"</div></div></div>";
   }).join("");
 }
 document.getElementById("xq").addEventListener("input",e=>{Q=e.target.value;render();});
@@ -638,11 +641,11 @@ const XRELS=["常驻深圳","经常来深圳","不在深圳，但关注深圳"];
     if(!cats.length){msg.textContent="至少选一个分类。";return}
     if(!document.getElementById("xf-consent").checked){msg.textContent="要先勾选确认：这是你自己的账号。";return}
     const btn=document.getElementById("xf-btn"); btn.disabled=true; btn.textContent="提交中…";
-    fetch("https://submit.yatslist.com/v1/xlist",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({channel:"web-modal",website:document.getElementById("xf-website").value,person:{handle:handle,categories:cats,intro:document.getElementById("xf-intro").value.trim(),relation:rel,consent:true}})})
+    fetch("https://submit.yatslist.com/v1/xlist",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({channel:"web-modal",website:document.getElementById("xf-website").value,person:{handle:handle,categories:cats,intro:document.getElementById("xf-intro").value.trim(),github:document.getElementById("xf-github").value.trim(),relation:rel,consent:true}})})
     .then(r=>r.json()).then(d=>{
       if(d&&d.status==="queued_for_review"){msg.textContent="✅ 收到了（编号 "+d.id+"）。轻核通过后上榜，明天刷新本页就能看到你。";btn.textContent="已提交";
         document.getElementById("xf-ok-id").textContent=d.id;
-        document.getElementById("xf-ok-sum").innerHTML="X 账号：@"+esc(handle.replace(/^@+/,""))+"<br>分类："+esc(cats.join("、"))+"<br>自我介绍："+esc(document.getElementById("xf-intro").value.trim()||"（没填，上榜时用 X 简介第一句）")+"<br>和深圳的关系："+esc(rel);
+        document.getElementById("xf-ok-sum").innerHTML="X 账号：@"+esc(handle.replace(/^@+/,""))+"<br>分类："+esc(cats.join("、"))+"<br>自我介绍："+esc(document.getElementById("xf-intro").value.trim()||"（没填，上榜时用 X 简介第一句）")+(document.getElementById("xf-github").value.trim()?"<br>GitHub："+esc(document.getElementById("xf-github").value.trim()):"")+"<br>和深圳的关系："+esc(rel);
         f.style.display="none";document.getElementById("xf-ok").style.display="block";}
       else{const m={invalid_handle:"账号格式不对，填 @账号 或 x.com/账号 链接。",rate_limited:"提交太频繁了，过一会儿再试。",consent_required:"要先勾选确认。"};msg.textContent="没提交成功："+(m[d&&d.error]||"请稍后再试");btn.disabled=false;btn.textContent="提交，上榜"}
     }).catch(()=>{msg.textContent="网络出错，请稍后再试。";btn.disabled=false;btn.textContent="提交，上榜"});
