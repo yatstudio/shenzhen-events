@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>纪要｜《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》</h1>
+<blockquote>
+<p>视频：https://www.youtube.com/watch?v=UCHsMVasxho ｜时长 61 分钟｜郭宇单向街系列分享，本期 keynote 由他与 GPT Live 共同「讲」（GPT 在他的东京服务器上读材料、接话、答问，中途还因语音会话 30 分钟上限断线过一次）
+⚠️ 语境说明：讲述者在片中自称时间为「2026 年 9 月」，片中提到的新版模型（如 GPT-6 Astro、快速分类模型 GEV/JEV）均为其讲述口径，无法核实，请按他的近未来框架来读。
+说明：机器转写，专名多有误听（Tripo 转写为「Triple」，Marvelous Designer 转写为「Mobulist/Move designer」，WorldLabs 转写为「WordLab」，Jevons 转写为「jev」，均按上下文校正）；后半段为采样通读。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>表面讲「语言模型与世界模型之争」，实质是同一件事的两条路：<strong>把物理世界搬进计算机（real-to-sim）</strong>。本月两条路在一个点上撞上了——语言模型靠 computer use 伸手进了专业 3D 软件，20 分钟走完了一件衣服从概念图到工厂打版文件的全流程；世界模型靠两三张照片就能还原带碰撞的虚拟空间。他真正的结论在最后：当机器获取知识的速度碾压人类，「靠智力换超额收益」的旧契约作废，剩下的复利资产只有一样——<strong>叙事</strong>。</p>
+<h2>两条路线，一个目标</h2>
+<ul>
+<li>语言模型的先天缺陷是<strong>没有因果</strong>：它的神经网络里没有时间维度，只能靠搜索维基百科等人类知识沉淀来「借」因果关系。世界模型则自带物理、重力、碰撞——叠床单要知道床单的重量、材质、拉伸受力，否则叠不平整。</li>
+<li>世界模型存在的理由是机器人：现实里录数据的速度太慢，必须用模拟世界生成海量视频喂给具身智能（Figure 刚在旧金山租了 30 个 Airbnb 让机器人练整理房间、洗衣服）。最终目的不是扎克伯格的元宇宙，而是让 AI 以更多维度理解真实世界。</li>
+<li>语言模型这边，靠「写代码」意外地先伸出了手：去年 10 月 Skill 让代码变成即时生成；本月新版 GPT 的 computer use 让这只手伸进专业桌面软件——到这里，两条路线在「生成可用的 3D 资产」这件事上正式相交。</li>
+</ul>
+<h2>主演示：20 分钟做一件衣服</h2>
+<p>他给朋友的小狗做万圣节衣服，全程由 GPT 操作软件链完成：</p>
+<ol>
+<li>图像生成出衣服的三个视图 → 导入 Tripo 这类图生 3D 模型，生成约 200 万三角形的网格；</li>
+<li>导入 Blender 绑定骨骼，小狗动起来；</li>
+<li>导入 Marvelous Designer 做服装打版——选布料（针织/硬挺）、自动把 3D 衣服展开成 2D 裁片、检查并标注哪些部位用什么工法缝制；</li>
+<li>产出的文件可以直接交给工厂制造。<strong>全程 20 分钟。</strong></li>
+</ol>
+<p>人台也是生成的：把女友照片变成等身人台，在虚拟世界里「量体裁衣」；布料克重、垂感在软件里有 90% 以上仿真度，试做之前就能看出明显错误；设计裤子时可以让虚拟模特蹲下、转身录视频检查变形。但他明确指出<strong>人还剩一个不可替代的判断点</strong>：打版对不对——布料的实物表现并没有完全数据化，专业裁缝给西裤留的弹性冗余是经验，AI 未必懂（他做狗衣服时专门请了设计师朋友在旁把关）。「今天需要人把关，不代表永远跨不过去」——把测量、模拟、实作反馈接进去即可，但今天还没到。</p>
+<h2>操作软件的两种方式之争（本期最有判断含量的一段）</h2>
+<ul>
+<li><strong>视觉路线</strong>：像人一样截图看屏幕、逐步操作。慢、费 token，但能判断「衣服哪里破了个洞、走动时哪里别扭」这种无法用语言精确描述的设计问题。有个实操贴士：把专业软件界面设成英文——模型识别英文更快、更省 token，「你看不懂没关系，它能看懂」。</li>
+<li><strong>MCP 路线</strong>：与软件后台直接通信，只知逻辑对错，不知美丑对错。他判断 MCP 已到生命周期尾端：你不可能指望模型在训练时用遍世界上所有软件，下一代 computer use 必然以视觉为主——和特斯拉拒绝激光雷达、用纯视觉学开车是同一套哲学（他顺带夸了奥斯汀无方向盘的 Cybercab）。OSWorld 2.0 基准上，新版比上一代高约 10 个百分点。</li>
+<li>由此对比扩散视频路线：Seedance 生成的视频帧不可编辑、反复参考会逐代失真、好效果背后是上千字提示词——「提示词工程肯定不是未来使用 AI 的方式」。可编辑的真实 3D 资产则可留存复用、即时修改（换帽子颜色走 UV 贴图即可）、还能绑骨骼接语音 API 做成可对话的虚拟角色——日本创作者已经在拿它做 VTuber，一两个小时做完一个。「今年会是内容爆发之年。」</li>
+<li>为什么挑服装开刀：女装是全球消费品里最大的一块（仅次于吃）。个性化制造若吃掉大批量制造哪怕 10% 的份额，通关、物流、贸易格局都会被改写——他留了句挑衅的话：沿这条路走下去，「未来制造业可能就不需要中国了，也是很有可能」。</li>
+</ul>
+<h2>世界模型侧：WorldLabs 的 Atlas</h2>
+<p>李飞飞实验室的新版本：两三张照片还原整个空间的深度与点云，且生成的世界<strong>带碰撞网格</strong>（不会穿模），下一步是把重力等物理加进去（重力可调——月球基地的机器人没法在地球上训练，只能在模拟里练）。手机屏幕上已难辨真假，广角畸变也修好了。眼下用途：虚拟看房、给机器人批量生成训练视频。他坦承不知道其技术细节，开源世界模型暂时都还没做到这个程度。</p>
+<h2>70 毫秒做决定：快速通用分类器（GEV）</h2>
+<p>三四天前刚出现的新物种，他称之为「超级通用分类器」：</p>
+<ul>
+<li>它不生成文字、只做<strong>选择</strong>：把几十万上百万个选项（图片、商品、邮件）和你的特征描述给它，零样本、无需微调，60–300 毫秒出结果——比 GPT 快约 300 倍（两个数量级），输出成本为零，准确率与上一代大模型大体相当。</li>
+<li>定位是搭配：大模型负责需要「变」的部分（设计、创造），分类器负责从海量选项里过滤挑选。使用图景：语音购物时把 Amazon 全部日用品喂给它、你话音刚落商品已上屏；几千封邮件两三秒分拣出待办；下载文件夹新文件自动分类命名（比 Spotlight 建索引快得多且免费）；仓储物流分拣；游戏里做实时决策（马里奥跳不跳）、给 DeepSeek 这类「看不见图像」的模型当眼睛做全功能 AI 游戏角色；FAL 把 MiniMax 视频模型特化后 7 秒生成 15 秒视频，有人拿它做了「无限电视台」（下期分享主题就是 MiniMax H3 实操）。</li>
+<li>他的提醒很实际：快速分类不是新需求——量化交易二十年前就在拼速度，而且有全世界最好的数学家和算力，你正面拼不过；要找量化还没清场的缝隙，比如卡牌拍卖、日本抽选抢购这类长尾场景。普通人把策略交给 ChatGPT 定、让分类器执行即可。接入方面：已可在 OpenRouter 上用；他预言一个月内 GLM、MiniMax、DeepSeek 都会跟进，成本可能只有 OpenAI 的千分之一。（另有一句未经证实的行业八卦：OpenAI 训练 GPT-6 时在数据中心买了大量 Mac 跑专业软件。）</li>
+</ul>
+<h2>收尾：智力的超额收益结束了</h2>
+<p>他把全系列的落点又讲了一遍，但这次最完整：东亚家庭的旧契约是「好好读书→用智力换取超额收益→经济独立」，2023–24 年这件事被攻克——机器获取知识比人快太多，你和 AI 之间能用的智力已完全不成比例，继续逼孩子走这条路是「妄想」。下一个能产生复利的东西是<strong>语言本身</strong>：故事、叙事、品牌——哈利·波特之于罗琳，马斯克的火星故事之于追随者。讲故事某种意义上就是「骗人」，而这恰是 AI 现在还不具备的能力（它能生成无穷视频，但还不知道以什么方式向人类讲述）；亚洲教育恰恰不培养这个，甚至惩罚它（没做成之前不许说、说了会被嘲笑）。他的结语克制而重：不管你是否打算改变孩子的教育，<strong>第一步是客观意识到世界已经变了</strong>。</p>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=UCHsMVasxho">https://www.youtube.com/watch?v=UCHsMVasxho</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-09-26 · 时长：1 小时 01 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>

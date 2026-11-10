@@ -1,0 +1,341 @@
+{
+  "updated_at": "2026-11-11",
+  "title": "Yat's List 访谈清单",
+  "note": "深度访谈与分享的全文纪要存档：每条含原视频链接、要点与全文纪要页（note_url）。内容为嘉宾在节目中的自述与观点，未经核实。人工整理、不定期更新。",
+  "source_site": "https://yatslist.com/interviews/",
+  "interviews": [
+    {
+      "id": "guoyu-story-1-left-behind-child",
+      "title": "《留守儿童，孤独少年，提前到来的成年｜郭宇的故事①》",
+      "series": "郭宇的故事",
+      "date": "2026-11-03",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "22 分钟",
+      "duration_minutes": 22,
+      "url": "https://www.youtube.com/watch?v=3cgBV3WkjIg",
+      "note_url": "/interviews/notes/guoyu-story-1-left-behind-child.html",
+      "topics": [
+        "郭宇个人史",
+        "留守儿童",
+        "三线子弟",
+        "程序员成长"
+      ],
+      "highlights": [
+        "1991 年生于江西铜矿三线子弟家庭；父亲电工遭高压电击坠落进 ICU，后脑梗卧床十几年，郭宇留守四五年由外公外婆带大、初二下学期才到深圳。",
+        "影响一生的三件事：读书与作家梦（《海底两万里》、韩寒郭敬明路径）、从小写日记（没人说话→饭否→X）、网吧与学校机房的 QBasic/Pascal 埋下编程种子。",
+        "高三后因家境下决心学代码经济独立；母亲做家政的认真劲与「不想管人」传给了他。"
+      ]
+    },
+    {
+      "id": "guoyu-indigo-talk-ep52-software-like-milk",
+      "title": "《当软件像牛奶一样便宜，我们还要交付什么｜Indigo Talk EP52》",
+      "series": "Indigo Talk",
+      "date": "2026-10-09",
+      "guest": "郭宇",
+      "host": "Indigo（INDIGO 数字镜像）",
+      "duration": "1 小时 12 分",
+      "duration_minutes": 72,
+      "url": "https://www.youtube.com/watch?v=WkmbKwcJk7k",
+      "note_url": "/interviews/notes/guoyu-indigo-talk-ep52-software-like-milk.html",
+      "topics": [
+        "Agent 时代",
+        "Vibe Coding",
+        "软件交付",
+        "一人公司"
+      ],
+      "highlights": [
+        "软件成本降到像牛奶一样便宜后，交付的不再是软件本身，而是目标、媒介与「活人感」；工程师变成做决策的产品经理，AI 没有意图，决策负担回到人身上。",
+        "企业采用只完成了 2–3%，只有 2–3% 的 Pro 用户被真正放大；Everything is Media。",
+        "给年轻人：不要锚定一份稳定的工作，去深圳、去机会成本最低的地方；这是「文艺复兴」不是「工业革命」。"
+      ]
+    },
+    {
+      "id": "guoyu-everyone-can-build-products",
+      "title": "《郭宇：AI让人人都能做产品，然后呢？｜程序员现场提问》",
+      "series": "银座单向街分享",
+      "date": "2026-09-27",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "44 分钟",
+      "duration_minutes": 44,
+      "url": "https://www.youtube.com/watch?v=_rpcAvsZ9qw",
+      "note_url": "/interviews/notes/guoyu-everyone-can-build-products.html",
+      "topics": [
+        "产品方法",
+        "现场问答",
+        "个人 IP",
+        "分发"
+      ],
+      "highlights": [
+        "做 App 工作法：先语音长聊一小时让 AI 研究全部竞品与市场，再让它出 3 个方案（PRD＋全部页面预渲染图），你只做选择和修改。",
+        "「AI 是镜子」破局法：在提示词前加「不要问我要什么，你做出各种方案来，我来选择」，它给你 10–20 种方案。",
+        "「你要赚取复利，就必须成为一个叙事者」：信任来自 taste、亲切与故事，在 AI 能创造自己的故事之前，叙事是人的地盘。"
+      ]
+    },
+    {
+      "id": "guoyu-language-model-vs-world-model",
+      "title": "《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》",
+      "series": "银座单向街分享",
+      "date": "2026-09-26",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "1 小时 01 分",
+      "duration_minutes": 61,
+      "url": "https://www.youtube.com/watch?v=UCHsMVasxho",
+      "note_url": "/interviews/notes/guoyu-language-model-vs-world-model.html",
+      "topics": [
+        "世界模型",
+        "语言模型",
+        "Computer Use",
+        "服装制造",
+        "Jevons 悖论"
+      ],
+      "highlights": [
+        "两条路线一个目标：把物理世界搬进计算机（real-to-sim）。语言模型先天缺因果，世界模型自带物理、重力与碰撞，为具身智能造模拟数据。",
+        "主演示「20 分钟做一件衣服」：三视图→Tripo 生成 3D 网格→Blender 绑骨骼→Marvelous Designer 打版；人的最后一个判断点是打版对不对。",
+        "MCP 路线已到生命周期尾端，下一代 computer use 必是视觉优先；收尾落点：东亚旧契约被攻克后，剩下的复利资产是叙事。"
+      ]
+    },
+    {
+      "id": "guoyu-intentware-ai-trio",
+      "title": "《郭宇：从软件到意件｜AI 三人行》",
+      "series": "郭宇关于AI的十次分享",
+      "date": "2026-07-16",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "2 小时 23 分",
+      "duration_minutes": 143,
+      "url": "https://www.youtube.com/watch?v=swfFKYoOFHw",
+      "note_url": "/interviews/notes/guoyu-intentware-ai-trio.html",
+      "topics": [
+        "意件",
+        "实时语音模型",
+        "GPT Live",
+        "意图",
+        "在日生活"
+      ],
+      "highlights": [
+        "实时语音模型分水岭：三段式（ASR→LLM→TTS）1–2 秒，原生实时只要 100–200 毫秒，快到可以插话、打断、像人一样聊天。",
+        "语言不等于意图：副语言（语气、表情、眼神、停顿）读不到，AI 就读不到你真正的心思；幽默（timing 与读空气）是下一个界限。",
+        "现场实测五个生活问题：送十年前的自己一本书、朋友来东京两小时去哪、朋友来日本生活一年、被拒绝与读空气、异乡的孤独「你会给谁打电话」。"
+      ]
+    },
+    {
+      "id": "guoyu-from-software-to-intentware",
+      "title": "《郭宇关于AI的十次分享：从软件到意件》",
+      "series": "郭宇关于AI的十次分享",
+      "date": "2026-07-12",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "2 小时 35 分",
+      "duration_minutes": 155,
+      "url": "https://www.youtube.com/watch?v=5ghhAxcH9R0",
+      "note_url": "/interviews/notes/guoyu-from-software-to-intentware.html",
+      "topics": [
+        "意件",
+        "十次分享",
+        "实时模型",
+        "Agent 经济",
+        "声音克隆"
+      ],
+      "highlights": [
+        "软件→「意件」：意图驱动、无 App 无 UI、语音入口、Always-on Agent；实时模型分水岭是三段式（1–2 秒）与原生实时（100–200 毫秒）。",
+        "GPT 思考深度碾压豆包（豆包胜在方言与摄像头）；幽默是下一个界限。",
+        "Agent 经济的关键在预算与责任；配音演员被声音克隆替代，解法是「做数字版的自己」。"
+      ]
+    },
+    {
+      "id": "guoyu-ai-film-everyone-a-director",
+      "title": "《郭宇：用AI做影片，人人都能当导演》",
+      "series": "郭宇关于AI的十次分享",
+      "date": "2026-05-28",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "1 小时 48 分",
+      "duration_minutes": 108,
+      "url": "https://www.youtube.com/watch?v=LAhgDOGXH5A",
+      "note_url": "/interviews/notes/guoyu-ai-film-everyone-a-director.html",
+      "topics": [
+        "AI 影片",
+        "导演手艺",
+        "Seedance",
+        "提示词",
+        "Visio Studio"
+      ],
+      "highlights": [
+        "AI 不会取代导演，但可以让所有人都变成导演：电影 = 故事 + 画面 + 时间，地基是故事。",
+        "提示词颗粒度就是导演功力：抽象情绪词无效，必须写成可见的画面指令；工作流可给 500 美元预算无人值守，一小时严肃 AI 视频约 2,000 美元。",
+        "无限解空间：AI 给你无限选择，也拿走了「命运垂青」的感觉——从被动的命运接受者变成探索者，逼你思考如何定位自己。"
+      ]
+    },
+    {
+      "id": "guoyu-one-person-company-full",
+      "title": "《郭宇：用AI經營一人公司（全）》",
+      "series": "银座单向街分享",
+      "date": "2026-05-27",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "2 小时 03 分",
+      "duration_minutes": 123,
+      "url": "https://www.youtube.com/watch?v=pDAmg04gXV4",
+      "note_url": "/interviews/notes/guoyu-one-person-company-full.html",
+      "topics": [
+        "一人公司",
+        "Wanman",
+        "AI 员工",
+        "信任与复核",
+        "完整版"
+      ],
+      "highlights": [
+        "与《AI做员工，开一人公司》（63 分钟版）是同一场的完整版：前 63 分钟相同，本条收录后半段新增问答。",
+        "信任与复核：代码他 review；商业计划靠 SOTA 模型联网交叉核证，再加银行、律师等专业机构最终裁定；他的工作只有「调度」。",
+        "Wanman 两大待解问题：隐私（接管模式理论上拿到全部数据）与数据整备（很多人文件太乱，导入也只能做到 30 分）。"
+      ]
+    },
+    {
+      "id": "guoyu-ai-film-ten-talks",
+      "title": "《郭宇关于AI的十次分享：AI做影片》",
+      "series": "郭宇关于AI的十次分享",
+      "date": "2026-05-23",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "2 小时 23 分",
+      "duration_minutes": 143,
+      "url": "https://www.youtube.com/watch?v=BcMssIgsvdI",
+      "note_url": "/interviews/notes/guoyu-ai-film-ten-talks.html",
+      "topics": [
+        "AI 影片",
+        "十次分享",
+        "短剧",
+        "Seedance",
+        "原创 IP"
+      ],
+      "highlights": [
+        "横店真人短剧约九成从业者没活干、转 AI 漫剧；成本锚点：一小时严肃 AI 视频约 2,000 美元（Seedance＋音乐，50% 容错抽二留一）。",
+        "工作流 = Codex 驱动：脚本→GPT Image 2 分镜图→Seedance 生成→对照分镜自动质检 retake，可给预算（如 500 美元）无人值守跑。",
+        "版权收紧逼出原创 IP，预言一两个月内出现初代 AI 原生 IP；「先卖不存在的产品」预售创业法：产品图→预售 300–400 单→再找工厂，零风险。"
+      ]
+    },
+    {
+      "id": "guoyu-one-person-company-qa",
+      "title": "《郭宇｜关于AI一人公司，大家最想知道的都在这里》",
+      "series": "银座单向街分享",
+      "date": "2026-05-21",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "1 小时 03 分",
+      "duration_minutes": 63,
+      "url": "https://www.youtube.com/watch?v=diN1fiE52aI",
+      "note_url": "/interviews/notes/guoyu-one-person-company-qa.html",
+      "topics": [
+        "一人公司",
+        "问答",
+        "接管模式",
+        "Wanman",
+        "成本"
+      ],
+      "highlights": [
+        "心法：「不要把 AI 当工具，把它当人」；信任两件套 = 审美写成文档/Skill 文件 + 用时间长谈建立信任。",
+        "接管模式是核心价值：接管代码仓库、「测试覆盖率 100% 不到不许结束」、15 个上线项目的 bug 走 webhook 自动修、晨起审 100+ 分支几十个 PR。",
+        "成本 = 订阅制 Codex Max 200 美元/月，API 贵 10–12 倍；苹果农场案例：一句话目标，40 分钟出含 36 个月预测的完整计划。"
+      ]
+    },
+    {
+      "id": "guoyu-ai-employees-one-person-company",
+      "title": "《郭宇｜AI做员工，开一人公司》",
+      "series": "银座单向街分享",
+      "date": "2026-05-19",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "1 小时 03 分",
+      "duration_minutes": 63,
+      "url": "https://www.youtube.com/watch?v=Prb_YPSdzH4",
+      "note_url": "/interviews/notes/guoyu-ai-employees-one-person-company.html",
+      "topics": [
+        "一人公司",
+        "AI 员工",
+        "Wanman",
+        "Harness Engineering",
+        "协调者"
+      ],
+      "highlights": [
+        "一人公司的本质 = AI 当协调者：写邮件、整理资料、做 PDF、打电话；人退居二线做观察者，只在明确阻塞点干预。",
+        "转折点是与黄东旭（TiDB/PingCAP 创始人）的深夜对话：对方在做「最终的软件」，那晚他没睡，Wanman 本质即同类东西。",
+        "先发优势在摩擦与协调沉淀在 AI 的记忆里；AI 员工如实习生，靠正反馈、导师制与改进技能文档变强。另有 2 小时 03 分完整版（见本清单）。"
+      ]
+    },
+    {
+      "id": "guoyu-ai-unemployment-countdown",
+      "title": "《郭宇｜AI時代到來，失业倒计时？》",
+      "series": "银座单向街分享",
+      "date": "2026-04-26",
+      "guest": "郭宇",
+      "host": "銀座單向街書店",
+      "duration": "37 分钟",
+      "duration_minutes": 37,
+      "url": "https://www.youtube.com/watch?v=rwueq7n_3yA",
+      "note_url": "/interviews/notes/guoyu-ai-unemployment-countdown.html",
+      "topics": [
+        "失业",
+        "Skills",
+        "软件的终结",
+        "职业建议",
+        "OpenClaw"
+      ],
+      "highlights": [
+        "真正的断裂点是 2025 年 10 月 Claude Code 的 Skills（不是 2022 年 12 月 ChatGPT）：软件从写死的代码变成流动的 token/推理。",
+        "程序员先失业：硅谷已基本不招初级程序员，雇人 = 最大摩擦；给年轻人：别学写代码了，学用 agent 三到六个月。",
+        "OneMan AI 实验：5090 PC 上跑 1,000 个循环 6 个多小时，AI 设计一家东京装置艺术公司（财务计划、网站、3D 作品、自动给画廊写投稿邮件）。"
+      ]
+    },
+    {
+      "id": "guoyu-financial-freedom-at-26",
+      "title": "《26岁财富自由的程序员郭宇》",
+      "series": "播客对谈",
+      "date": "2025-03-12",
+      "guest": "郭宇",
+      "host": "课代表立正",
+      "duration": "49 分钟",
+      "duration_minutes": 49,
+      "url": "https://www.youtube.com/watch?v=mf13n8Fl7FM",
+      "note_url": "/interviews/notes/guoyu-financial-freedom-at-26.html",
+      "topics": [
+        "财富自由",
+        "FIRE",
+        "锚点",
+        "投资",
+        "人生选择"
+      ],
+      "highlights": [
+        "锚点论：职场 + 家庭是上班族 80–90% 的意义来源，财富自由后锚点消失才是最危险的；他辞职时间线 2017 动念、2019 提、2020 走。",
+        "FIRE 账：变量是自己的开支不是通胀，一年花 50 万人民币 + 无风险利率 4.5–5% 即可；新加坡（免税）与日本之间选了四季与温泉。",
+        "要赔钱就早赔；目标只跟自己比——赚的钱覆盖开支即可，目标定低动作不变形；股价逻辑只占 20%，情绪与执行占 80%。"
+      ]
+    },
+    {
+      "id": "guoyu-wealth-and-investing",
+      "title": "《第5集｜郭宇谈财富、投资起源于地铁站门口开户》",
+      "series": "播客《一代马之外》",
+      "date": "2023-08-14",
+      "guest": "郭宇",
+      "host": "代码之外 Beyond Code（Randy、GeekPlux）",
+      "duration": "1 小时 19 分",
+      "duration_minutes": 79,
+      "url": "https://www.youtube.com/watch?v=tWmNN87VvcE",
+      "note_url": "/interviews/notes/guoyu-wealth-and-investing.html",
+      "topics": [
+        "财富",
+        "投资起源",
+        "播客",
+        "退休",
+        "风险结构"
+      ],
+      "highlights": [
+        "2023 年录制，是本清单里最「考古」的一集。财富来源纠偏：外界以为靠字节股权——真积累是 2013 年起在深圳地铁站门口开户、每月定投腾讯毫无策略投五年，另有 2013 年比特币。",
+        "「计划的价值不是预测对，而是让你对波动免疫」；自由的操作定义：认真量两年年支出，满意现状则年支出 ×10 资产（4% 规则）即达标。",
+        "给程序员的风险结构课：收入靠薪资 + 财富靠房产双集中，35 岁裁员 + 房贷 + 房子卖不掉 = 流动性危机，日本发生过的事可能在任何国家重演。"
+      ]
+    }
+  ]
+}

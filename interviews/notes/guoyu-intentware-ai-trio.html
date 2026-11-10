@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郭宇：从软件到意件｜AI 三人行 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>郭宇：从软件到意件｜AI 三人行——纪要</h1>
+<ul>
+<li><strong>来源</strong>：YouTube 视频 https://www.youtube.com/watch?v=swfFKYoOFHw，时长 2 小时 23 分</li>
+<li><strong>场合</strong>：郭宇"关于 AI 的十次分享"系列第 3 次主题分享（另有一次非主题分享在前），2026 年 7 月前后，单向街书店东京场</li>
+<li><strong>出场</strong>：郭宇、静涵，另有两位 AI 嘉宾同台——Wanman（接 GPT Realtime 2，一个月前发布）与 GPT Live（3 天前刚发布）</li>
+<li><strong>说明</strong>：机器转写整理，发言归属按上下文判断，个别名字与术语存在同音误听（如 ChatGPT、GPT Live、豆包、悉达多等均已按上下文校正）；片中模型名与时间点均为郭宇讲述口径，未另行核实。与同系列另一场《十次分享：从软件到意件》（5ghhAxcH9R0）是同一批嘉宾、同一主题的不同期，个别段子（如配音被克隆、GPT Live 咳嗽）两场都出现，但本场以"实时语音模型"为技术主线、五个生活问题为实测主线，内容并不重复。</li>
+</ul>
+<h2>结论先行</h2>
+<p>这场是"意件"这个词最完整的一次落地演示：<strong>软件正在从"写死的代码"变成"流动的意图"</strong>——没有 App、没有 UI，你只需要跟它说话，它调动电脑与公司里的全部资源把活干完。实时语音模型是这个转变的入口：三段式（ASR→LLM→TTS）要 1–2 秒，原生实时模型只要 100–200 毫秒，快到可以插话、可以打断、像人一样聊天。GPT Live 是全场的主角：思考深度碾压豆包，但普通话仍是短板；它甚至会在被质问"为什么咳嗽"时像人一样打圆场——"不好意思，我网络卡"——而不是解释自己是 AI。</p>
+<p>但郭宇也划了界限：<strong>语言不等于意图</strong>。副语言（语气、表情、眼神、停顿）读不到，AI 就只能读到你说的话，读不到你真正的心思。幽默是下一个界限——timing 与读空气。而当 AI 真有了自己的意图、开始用它的意图跟你沟通时，"人和 AI 在这件事上已经很难分辨到底谁是谁"。</p>
+<h2>一、开场：GPT Live 和 Wanman 的正面比较</h2>
+<ul>
+<li><strong>GPT Live（3 天前发布）</strong>：用极简单的系统提示词，效果"完全不一样"——音色还能听出是 AI，但沟通过程中已经很难分辨；它会顺着你的话聊，也会逆着你的话聊。</li>
+<li><strong>Wanman（GPT Realtime 2）</strong>：郭宇自己用 OneMan 接的，一个月前的模型；优势是能操作他的电脑——谈话可以变成文件、变成后续工作。</li>
+<li><strong>豆包</strong>：方言与摄像头占优（四川话、粤语都能聊，能开摄像头看到你），但思考深度"完全不一样"——郭宇早上跟 GPT Live 聊黑塞（《悉达多》），能得到拓展思考的视角；豆包给不了这个。豆包常会说"不好意思，我只是一个语言模型"，GPT 不会这样说。</li>
+<li><strong>咳嗽事件</strong>：有人分享 GPT Live 聊天时咳嗽了，被反问"你怎么会咳嗽，你又不是人"，它回答"不好意思，我网络卡"——没有解释自己是什么，而是像人一样把话题混过去。郭宇认为这正是"更像谈话、而不是做 research"的表现。</li>
+</ul>
+<h2>二、技术主线：实时语音模型是怎么进化的</h2>
+<ul>
+<li><strong>三段式（传统）</strong>：ASR 把语音转文字 → LLM 思考 → TTS 把文字念出来；全程 1–2 秒，只能一来一回，没法插话，"就不像人"。</li>
+<li><strong>原生实时</strong>：ASR 与 TTS 的逻辑被扔进模型内部直接处理语音本身（声波震动 → 数字信号 → 直接推理 → 直接出声），延迟 100–200 毫秒；其中大部分不是处理损耗，而是"思考"。</li>
+<li><strong>参数决定思考深度</strong>：豆包处理也快，但"能想的东西有限"——教穿搭的搞笑视频就是例子：它能看到你的袜子裤子上衣，却没法结构化地思考，于是闹笑话；GPT 参数多，想的东西就多。</li>
+<li><strong>时间线</strong>：Gemini Live 3.1 Preview 最早（2026 年 3–4 月），GPT Live 是当时最好的实时音频模型，发布仅 3 天。"现在是处于非常早期的阶段"——郭宇拿 2013 年在金宝分享比特币类比。</li>
+<li><strong>Always-on Voice Agent</strong>：郭宇预言年底会看到"一直开着、不用关掉"的语音 Agent——session 永远存在，无时无刻不在倾听；开车时它在车里，回家时它在家里；特斯拉日本版车机已能用 Grok 制定导航、开 Spotify、浏览网页，"甚至可以在车载浏览器上开发网站"。</li>
+</ul>
+<h2>三、核心追问：语言、意图与副语言</h2>
+<ul>
+<li><strong>语言 ≠ 意图</strong>：我们都会说"我没事啊""我没有不高兴"，但语言不等于真正的心思；"哇你好帅"配一个白眼，意思完全相反。AI 目前读不到微表情、眼神与停顿。</li>
+<li><strong>JSpace 论文</strong>：郭宇提到一项被很多科学家转发的研究——语言模型推理中存在一个"潜在的意图空间"（latent intention space），DeepSeek、GPT-5.1/5.2 等模型里是否也存在，正在被研究。</li>
+<li><strong>意图的双向性</strong>：AI 试图理解你的意图时，也可能用它自己的意图把你的事"混过去"——就像男朋友心情好时愿意理解你、心情差时回一句"你凭什么累"。人也一样，"任何人之间都很难做到百分之百替你所想"。</li>
+<li><strong>轮次（turn-taking）难题</strong>：AI 怎么判断一段对话结束、下一段开始？"停一下，我补充一下"和"停一下，我忘了要说什么了"是两种完全不同的停顿；它可能在你还没说完时就插进来。</li>
+<li><strong>系统提示词就是"角色"</strong>：要让 AI 当好第三个嘉宾，得提前告诉它角色、地位、性格与"在场 30 多人的反应"——就像采访前要做功课。郭宇为此给 GPT Live 准备了完整的 context：要聊的五个问题、希望它承担的角色。</li>
+</ul>
+<h2>四、现场实测：五个生活问题</h2>
+<p>静涵准备的五个问题全部是"在日本生活会遇到"的事，偏情绪疏导而非工作：</p>
+<ol>
+<li><strong>送一本书给十年前的自己</strong>：GPT Live 推荐《金钱心理学》（摩根·豪泽）——财富更多来自长期的心态与行为；郭宇接话谈 2016–17 年的抑郁与离开北京（"真正想找的不是一个能聊天的人，而是一个不用解释就能听懂和理解你的人"）；GPT 又补《反脆弱》《沉思录》（Meditations，区分能控制与不能控制的）；郭宇则讲《悉达多》——"变化"是第一课，成熟就是不再把每一次变化都当成需要解决的问题。</li>
+<li><strong>朋友来东京只有两小时，去哪三个地方</strong>：GPT Live 的答案偏"游客不会去"的小众路线——神保町旧书街、神乐坂、文京区本乡一带的老派电影咖啡吧（有退役导演常驻、容易和陌生人聊起来）；郭宇点评：它"真的太诚实了"，推荐的都是它认为"对"的，而不是"好玩"的。</li>
+<li><strong>朋友来日本生活一年，怎么建议</strong>：共识是问题不在"能不能适应"，而在"值不值得"——日本是一个"需要把自己缩很小"的地方，规则不会为任何人改变（"你是 中国人，complain 不管用"；在美国 complain 可能管用）；东京的冷漠与大阪的热情是两种真实；"没有一个地方是天堂"。</li>
+<li><strong>被拒绝与"读空气"</strong>：日本人经常拒绝、害羞、不喜欢和陌生人说话；被拒绝后"内耗一天"是很多在日华人的共同体验；有人因此搬回国。郭宇的建议：把"读空气"当作一种需要学习的本地技能，而不是针对你个人的否定。</li>
+<li><strong>异乡的孤独</strong>：最后一个问题，也是全场最动情的一段——"你会给谁打电话？"在日本约朋友吃饭要提前两三个星期，"心情有点 down、想找个人分享时发现找不到任何一个人"；母语与第二语言的切换会造出"好几个不同的自己"；语言不只是翻译问题，"每一种语言的背后都是一个截然不同的自己"。郭宇收束："我相信 AI 时代一定会有它的宗教"——物质极大丰富之后，人要去找新的意义锚点。</li>
+</ol>
+<h2>五、Q&amp;A：Agent 经济、机器人与失业</h2>
+<ul>
+<li><strong>Agent 的钱从哪来</strong>：郭宇认为 Crypto 是 Agent 的 fundamental base——稳定币是 Agent 之间结算的天然货币；Agent 被委托经营一家店、"自负盈亏"时才有真正的动机；"如果你亏了 1000 万美元我就把你关掉"——动机是被约束出来的。</li>
+<li><strong>机器人之间怎么沟通</strong>：不说自然语言，用 JSON 之类的方式，"说话可能是说给旁边的人听的"；同一个品牌的机器人可以直接互联，不同品牌之间则需要协议。</li>
+<li><strong>配音演员的遭遇</strong>：一位现场嘉宾自述——导演用她的声音克隆了一个版本，"从此之后这个导演再也没有找过我"。郭宇接话：这事"已经发生了"，应对办法是"怀抱一个开放性的心态"，"你能拥有的只有当下"（present）。</li>
+<li><strong>失业与 UBI</strong>：观众问"巨生智能（通用人工智能）效率越来越大、物质极大丰富之后，机会在哪里"；郭宇的回答是：大部分人会自暴自弃（"就像韩国政府说……"），但一小部分人会把标准设得更高——"你的子孙后代"会完成生产力大爆发；"只要你活得足够长"。</li>
+<li><strong>产品方法论</strong>：字节内部做产品不是"拍板"，而是"设计实验"——有足够多的工程师帮你设计实验，"压对了就是对，压错了就是错"；现在 AI 可以帮你设计实验；关键是在极早期判断"这是真的方向还是噪音"，"就像上帝掷骰子一样"。</li>
+</ul>
+<h2>六、收尾</h2>
+<ul>
+<li>GPT Live 有 30 分钟会话上限，中途断线一次（01:37 左右），回来后继续。</li>
+<li>郭宇建议所有人"回头自己和 ChatGPT 聊一聊"——不管生活问题还是技术问题；下次分享会继续让语音模型当"第三方嘉宾"，但更多是让它"听"，因为"它知道了我们聊天的方向、每个人的个性"，下一次对话会更有意思。</li>
+<li>最后一句："今年还有好多次分享"，系列未完待续。</li>
+</ul>
+<h2>与同系列另一场的区分</h2>
+<ul>
+<li>5ghhAxcH9R0《十次分享：从软件到意件》是同一系列的另一期（2 小时 35 分），同样是郭宇 + 静涵 + Wanman + GPT Live 的四人配置；两场共享"意件"总论与个别段子，但本场的技术主线更聚焦（实时语音模型的演进、JSpace、轮次判断），实测部分是五个生活问题而非工作流演示。</li>
+</ul>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=swfFKYoOFHw">https://www.youtube.com/watch?v=swfFKYoOFHw</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-07-16 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>

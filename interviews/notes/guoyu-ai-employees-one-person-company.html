@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郭宇｜AI做员工，开一人公司 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>纪要｜《郭宇｜AI做员工，开一人公司》</h1>
+<blockquote>
+<p>视频：https://www.youtube.com/watch?v=Prb_YPSdzH4 ｜时长 63 分钟｜郭宇 × 主持人（前青也/新足多背景，现中日两地跑的短视频创作者，同为一人公司实践者）对谈 + Wanman 系统讲解
+说明：机器转写，繁简混杂、个别专名有误听（Wanman 转写为「万万/弯慢」，OpenClaw 转写为「OpenCloud」，Elemis 疑为某 Harness 产品名，转写不确）；纪要按上下文校正，部分后半段为采样通读。产品数据为讲述者现场自述，未经核实。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>这场把「一人公司」讲到了定义层：它与普通用法的根本区别不在工具，而在<strong>谁是协调者</strong>。大多数人是「人当协调者、AI 当工具」，瓶颈永远在人身上；他主张倒过来——<strong>AI 当协调者，人退居二线做观察者</strong>，只在它遇到明确阻塞点、不得不请示时才干预。人剩下的工作只有两件：用聊天把自己的品味教给它，以及在它跑出的无数方案里做选择。</p>
+<h2>开场：回应「制造焦虑」的质疑</h2>
+<p>主持人先替网友发问：网上有人说你贩卖焦虑、说你「没正经上过班」。他回应：</p>
+<ul>
+<li>「享受最后一年的有意义的工作」是 YouTube 一位创始人（Jawed Karim 式洞察）的话，他认同其中技术主义者的悲观色彩。这话对技术工作者是内在动力（我们本来就想改造世界），传到大众那里就变成了外在压力、变成焦虑——压力的方向完全不同。短视频只能截取一个半小时分享的一小部分，误会由此而来。他现在尽量不看自己视频下面的评论。</li>
+<li>意思的澄清：超级 AI 出现在数据中心之后，很多工作会失去意义（在美国、中国被裁员是大概率，在日本有社会保障缓冲）；但这句话主要谈的是<strong>重新定位自己</strong>，而不是失业倒计时。</li>
+<li>标签问题：别人眼中的他是「在日本泡温泉、退休变现几个亿的知名程序员」，他给自己的 title 只是「退休程序员」。自我介绍永远只是人的一部分，认知隔阂很正常。</li>
+</ul>
+<h2>他为什么从躺平变回不睡觉</h2>
+<p>主持人问得很直接：你游山玩水了好几年，为什么突然站起来狂奔？他的叙述：</p>
+<ul>
+<li>温泉旅行社是 2017 年就开始做的项目，疫情期间暂停；退休后他的 to-do list 越攒越多（已发布 15 个产品，三个月内想做的事超过 36 件），这正是他要做 Wanman 的原因。</li>
+<li>转折点在去年 10 月：Claude 推出 Skill 模式后，他和程序员朋友们在 vibe coding 中意识到，软件正在经历图灵机发明以来最大的变化——从「预先定义功能和界面」转向「语言模型读文档、现写代码、现用现丢」，开发周期从几个月到一年压缩成一天（虽然还不够精确）。「如果不去做一个东西，我觉得很可惜。」</li>
+<li>压垮他的最后一根稻草是一个深夜对话：TiDB/PingCAP 创始人黄东旭告诉他，自己在做「最终的软件」——输入一个意图，它在电脑里并发开 100 来个沙箱、把软件的所有可能分支全部实现，一夜跑了 10 亿 token 量级；两三天可以造出一个纳斯达克股票交易系统级别的东西。那晚他没睡，七八点泡着咖啡看窗外的树和阳光，想的是：「从今天开始，我的人生彻底变化了。」Wanman 本质上就是同类东西。</li>
+</ul>
+<h2>核心论点：协调者是谁，决定一切</h2>
+<ul>
+<li>对话式 AI（ChatGPT、Claude Chat、豆包）像雇了个实习生拉进微信群：你必须想清楚每件事再交代，沟通摩擦巨大，而且<strong>阻塞点在实习生和你之间来回弹，最终瓶颈是你</strong>。哪怕工具再强，你依然是全公司唯一的协调者，精力先耗尽。</li>
+<li>一人公司的本质是把协调权交出去：AI 写邮件、整理资料、做 PDF、打电话、协调所有需要沟通的事；他为此做了一串基础设施产品（转写里提到吃瓜、Wanman、Agent Mail 等，都是他做的，让 AI 能自动化协调工作的组件）。</li>
+<li>两类人的分化：AI 替代工作后，一类人拿回时间去享受生活（他称之为 classic real life，很多在日本生活的人选这个）；另一类人欲望多，要让 AI 24 小时把想做的事全做完——「像成年人一样全部都要」。他自认介于两者之间：想做的事太多，又想保留闲暇生活，所以痛苦，所以急着把 Wanman 做出来——让它无监督地替他把那些「值得做、但不值得我盯着做」的事做完。</li>
+</ul>
+<h2>观察者怎么参与：品味与否决权</h2>
+<ul>
+<li>你不是撒手不管。AI 通过 Chat UI（微信/Telegram/WhatsApp）和你聊天，聊得越多，它对你的记忆、审美倾向理解越深，做出的东西越合你的倾向——像交朋友，也像带孩子：你不盯他每天刷多久抖音，你在更宏观的层面影响他。这正是黄仁勋说 taste 重要的原因：<strong>审美是你影响 AI 产出的主要杠杆</strong>。</li>
+<li>否决权随时可用：它给出很多方案，有你不喜欢的（比如不想走滑稽路线）就否决；AI 没有「不可能」的包袱，这点和人不同。</li>
+<li>他赞同推特上一种更激进的用法：先把「能 100% 完成的事」按从易到难、从快到慢全部让 AI 做一遍，把选择空间填满，再来挑——因为反过来，AI 10 分钟给你 100 个选题、你花三天看完还下不了决定，AI 对你就毫无意义，阻塞点全卡在人身上徒增烦恼。</li>
+<li>授权决定自动化程度：互联网上能做的知识工作，AI 已能覆盖 90% 以上；剩下的暂停点多是「需要人在场」的事（在日本拿在留卡去区役所之类）。去年底已经出现「AI 雇佣人类打零工」的网站来补这一环——AI 有预算、能花钱，就能把暂停点也自动化。所以问题只剩：你给它多少授权、多少权力。</li>
+</ul>
+<h2>Harness Engineering 讲解（后半程）</h2>
+<ul>
+<li><strong>词源梗</strong>：Harness 是缰绳/马具——把 AI 想成疯跑的马，你一个人牵着三匹马，像马车夫一样控制方向；最近流行的一个产品干脆取名向爱马仕致敬（转写作「Elemis/爱马仕」）。</li>
+<li><strong>谱系</strong>：Claude Code 本是 Anthropic 的 side project，现在用 Opus 4.6/4.7 直接调动模型能力；OpenClaw 是编排层，协调不同模型与具体的 agent；再往上是更高度的协调系统与 auto research。它们的目标都一样：<strong>把人从工作里拆出来</strong>。OpenClaw 的起源印证了这一点：其创始人卖公司拿了几亿美元、退休五年、迷茫抑郁后靠健身走出来，2025 年写了 100 来个开源项目，龙虾最初只是「用 Telegram 连上我笔记本的 Claude Code」的小工具——因为他也不想整天抱着电脑看 AI 干活。今年 3 月它的 GitHub star 数超过 Linux，成为全球 star 最高的软件，黄仁勋称之为 game changing。但他不满本地派：需要一台专门的电脑、性能有限、动你的真实系统有风险；他主张云端派：沙箱是隔离环境、性能更强、用完即弃（像临时工，「很残忍」），且数据中心有最快的推理速度。</li>
+<li><strong>先发优势论</strong>：谁先采用这套系统，谁的摩擦与协调都沉淀在 AI 的记忆里；晚入场者要花长得多的磨合期，竞争力此消彼长。AI 员工和实习生一样：第一周做得一塌糊涂，靠正反馈、导师制和不断改进的技能文档变强——所有 Harness 系统都带记忆与技能自我改善机制。</li>
+<li><strong>记忆的分寸</strong>：他顺带吐槽了 ChatGPT 式记忆的黑色幽默——你告诉它你失恋了，几个月后它在不相干的对话里突然提起「考虑到你失恋这个事实……」，它不懂关系建立的场合，所以需要「干净模式」：无关的话题不要乱建立关联。人的记忆会被情绪影响、会主动丢掉无意义的对话，AI 不会。</li>
+<li><strong>Wanman 的运行形态</strong>（现场演示解说）：给一个大目标（例：运行一个数字出版社、一个游戏工作室），它先按任务组建团队、安排写手、去网上找素材下载；AI-CEO 不写具体文件，只对齐目标；每个「虚拟工作日」约 5–8 分钟，员工们在左侧的聊天流里彼此对齐、自动推进，CEO 每轮复核评分、把完成的故事标记为完成；遇到障碍它不会停——比如实拍太贵，第二天 CEO 会自己发散想到用 Seedance 2.0 生成素材绕过去。系统内置 40 多个 agent 角色（连「给钓鱼人群卖东西」这种垂直场景，它都知道钓友在哪些社区、该怎么卖）。通过 webhook/hook 可以接入现实：他的电话工具自动接听来电、把对方意图记成备忘录，AI 员工据此发起预约链接，对方点开约好时间后自动生成日历提醒。</li>
+<li><strong>最后的暂停点</strong>：AI 跑出的卡片速度太快、创造的东西太多，人根本看不过来——这正是开场那个不信任问题的来源。有些新产品更激进：用你一生的经验、美学和价值观替你做选择，把人最后的暂停点也摘掉。他对此未置可否地留了一句：模型也许有一天比你还了解你（人脑记忆不过百来 TB 量级），但那一天是否该来，他没有下结论。</li>
+</ul>
+<h2>收束</h2>
+<p>主持人也是单向街的常客、同样在做一人公司，两人最后对了一句：这场变化替代的不是某个软件，而是人的工作本身；Harness Engineering 迟早会内置进所有企业、组织和学校。区别只在于，你是先上车、先把磨合期熬完的那批人，还是等它成熟后再花更长时间追赶的那批人。</p>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=Prb_YPSdzH4">https://www.youtube.com/watch?v=Prb_YPSdzH4</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-19 · 时长：1 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>

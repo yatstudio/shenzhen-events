@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郭宇关于AI的十次分享：AI做影片 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>纪要｜《郭宇关于AI的十次分享：AI做影片》</h1>
+<blockquote>
+<p>视频：https://www.youtube.com/watch?v=BcMssIgsvdI ｜时长 2 小时 23 分｜郭宇 + 孙静涵主持，现场分享 + 实操演示 + 问答
+说明：机器转写，繁简混杂、个别专名有误听（如 C-Dance=Seedance、即梦转写为「寂梦」、Visio Studio 音近「VCO/Wesley」）；纪要按上下文校正。文中行业数字与传闻均为讲述者现场说法，未经核实。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>AI 视频已经越过「猫猫狗狗娱乐短片」阶段，进入严肃影视生产：中国创作者用 Seedance 等工具做出的 3–5 分钟短片已达流媒体级质量，真人短剧行业（横店）九成从业者没活干、集体转 AI 漫剧。郭宇的判断是：这相当于短视频史上的 2016 年——门槛被拉平之后，AI 原生内容会是 PGC+UGC 的百倍千倍；而人的位置只剩一个：做那个定故事、定世界观、在无限生成结果里做选择的人。</p>
+<h2>行业现状（他刚从国内回来的一手观察）</h2>
+<ul>
+<li><strong>横店实况</strong>：真人短剧剧组大批接不到生意，约九成从业者闲置，行业转向「AI 漫剧」（AI 做的真人剧/动漫剧）；字节的红果短剧按流量分成，推着创作者用 AI 工具。</li>
+<li><strong>质量跃升点在今年 5 月</strong>：相当多「可上流媒体」的严肃短片出现，几乎都出自中国创作者，在 X、Instagram 上几千万播放。现场放了三部：音乐 MV 出身的创作者做的废土风短片（对标 Netflix《爱死机》单集 100–300 万美元成本，AI 版是几千分之一）；署名「牛豆」的作品——一个人包办导演、剪辑、音乐、美术；贾樟柯与字节合作的 Seedance 短片（贾樟柯与自己的 AI 数字人对谈，全片生成）。</li>
+<li><strong>成本账</strong>：一小时严肃 AI 视频，用 Seedance + 音乐生成、按 50% 容错（抽两条留一条）算，约 2,000 美元。对工作室不算钱，对个人创作者必须能回收；明后年还会大幅降。</li>
+<li><strong>Netflix 的动向（转述）</strong>：他小姨在 Netflix 工作，据称其团队在做一个新平台——影视生产的框架全保留，但 90% 内容交给 AI，人类只留编剧角色负责讲故事，小团队负责用 AI 把故事呈现出来。郭宇称未来会看到「全部 Powered by AI」的流媒体平台。</li>
+<li><strong>版权收紧反而是好事</strong>：Seedance 2.0 后，迪士尼、美国作家协会发函，含版权角色（米老鼠等）和真人权限只开放给特定 API——普通人被迫不依赖现成 IP、创造自己的角色和故事。他预言一两个月内会出现第一批受大众喜欢的 AI 原生 IP，00 后、05 后的童年将伴随 AI 动画长大。</li>
+<li><strong>为什么是中国创作者领先</strong>：中国科技公司把推理算力大量投给视频模型做消费娱乐，字节 Seedance 目前全球略微领先——赢在人物一致性、镜头语言和出错率低。等 OpenAI/Anthropic 赶上，会在全球范围爆发。</li>
+</ul>
+<h2>方法论：AI 做片的实际工作流（现场演示）</h2>
+<p>整条流水线已经不需要专业软件，一个 Codex / Claude Code 就能跑：</p>
+<ol>
+<li><strong>故事与分镜</strong>：把想法告诉 Codex，它给创意选项，生成分镜脚本——先定世界观、人物性格与情感基调（先定「四个点」：世界观、人物、情感、冲突），再逐镜头拆解。</li>
+<li><strong>分镜图</strong>：GPT Image 2 生成分镜图片（15–20 秒一张），人物设定卡/三视图保证一致性。</li>
+<li><strong>生成视频</strong>：分镜图 + 氛围/音乐描述丢给 Seedance（或经字节 API 到即梦），10–15 秒一段；失败率约一半，用参考图/参考视频（比如指定「只拿一个行李箱」）能大幅降低失败率。</li>
+<li><strong>自动质检迭代</strong>：让 Codex 对照分镜检查生成结果（哪里不符合、为什么），再重生成——「就像拍电影不断 retake」；可以给它一笔预算（「今天把这 500 美元花完」）让它无人值守地跑。</li>
+<li><strong>声音</strong>：旁白/配音跨集保持一致；音乐用 Suno（它想做音乐界的平台/Spotify）。环境音、氛围都要在提示词里写明。</li>
+</ol>
+<p><strong>提示词的颗粒度是核心手艺</strong>：不能只写「依依不舍地道别」——要写清谁先入镜、镜头怎么摇、握手还是拥抱、表情定几个、几秒、谁说话、说什么、停顿在哪、什么口音。抽象情绪词对 AI 没意义，必须翻译成可见的画面指令。</p>
+<p><strong>他自己的两个实证</strong>：
+- 给翻译电话产品 Tua 做广告：全程没找网红，两个视频广告 10 分钟做完挂上官网（有 bug 也懒得修，反而让人直观感到是 AI 生成）。
+- <strong>Visio Studio</strong>（今年 1 月起做）：起因是小姨（硅谷工程师、写了十几本小说，包括讲 2000 年 dot-com 泡沫华人故事的《The Spring of Ice Age》和恐怖小说系列）的小说影视化版权卖给腾讯等平台后做得不满意。产品把长篇小说自动拆解：7 万字里分析出全部角色、生成设定与三视图、拆分镜、统一配音——本质是把编剧的活产品化。</p>
+<h2>观点交锋</h2>
+<ul>
+<li><strong>「匠人精神/古法手搓」之争</strong>：静涵带着偏见来（她自认），郭宇的回应：工具而已——从编辑器到 IDE 到 AI agent，他一直享受的是创造本身；先摘掉偏见、用起来，想法和视角自然会变。但他承认圈内人的创作惯性很难 think out of the box，这波领跑的恰恰多是行业外的人。</li>
+<li><strong>风格问题</strong>：观众问「我不想要贾樟柯 style，我想要我自己的风格怎么办」——答：风格 = 你到底想表达什么，没说出口的东西 AI 理解不了；你要先做「导演」：把世界观、情感、表达全部定下来，让 AI 当伙伴而不是替你决定。和 AI 协作的好处是更快意识到自己做得好或不好。</li>
+<li><strong>「无限解空间」的虚无</strong>：实拍有「上天给的礼物」（夕阳余晖那种不可复制的瞬间）；AI 生成则什么都能得到，于是问题反转——当解无限多，如何在无限解里找最优解、如何不麻木。这不止是做片，也是人生规划问题：明天可以做任何事的第一反应是触碰虚无。他把这留作今年后续专场的话题：<strong>IntentWare——人类如何产生意图</strong>。</li>
+<li><strong>Vlog 的真实性</strong>：他的点子是拍照片、中间用 AI 填充视频，解决「拍摄侵蚀生活」的博主困境；静涵质疑填充的不是真实发生的事。他回应：照片与足迹是真实记录，而人的记忆本来就脆弱、会被重塑。</li>
+<li><strong>小众语言的机会</strong>：聊到《给阿嬷的情书》时他想到——为什么没有客家语电影？因为以前拍不起。AI 让任何语言（哪怕只剩极少使用者的语言）都能做成影视和音乐，这是只有 AI 能办到的事。</li>
+<li><strong>教育</strong>：AI 不会「学导演」，但会让所有人变成导演；想学任何东西直接问 AI 即可，电影学院式学校的存在理由只剩「环境塑造性格」；前提始终是动机——AI 原生代的孩子里会出现拿学院奖的导演。</li>
+</ul>
+<h2>问答精选</h2>
+<ul>
+<li><strong>怎么保持兴趣广泛又专注</strong>（他做了很多不同软件）：兴趣驱动的前提是财富自由——「不然我也不会放弃本科专业去写代码」；没钱时人被房租和家庭推着走，很难直面意图。对世界的建议是：不要抱偏见、不要有上帝视角，固执地觉得「这事不该发生」只会让你在很多年后被动接受。</li>
+<li><strong>跟 AI 沟通的本质</strong>：一位观众苦恼于「我说的它听不懂」。郭宇：AI 没体验过真实世界，光从哪个角度打过来都要你告诉它；但人与人之间也一样——语言靠的是极小的「公约数交集」和大量隐喻填充，听不懂常常不是 AI 的问题，而是表达方式的问题。解法：把意图约束到具体的语言空间里，不加隐喻、非常具体；同时把 AI 当无所不知的伙伴而不是工具，更多地从它那里学。</li>
+<li><strong>工程师的短板</strong>：对大陆工程师来说，与 AI 协作最吃亏的是母语表达——文理分科让很多工程师不擅把想法说清楚，这成了使用 AI 的第一瓶颈。</li>
+<li><strong>「先卖不存在的产品」创业法</strong>（回应一位想创业的观众）：用 GPT Image 生成逼真产品图、Seedance 做宣传视频，先上架预售——有人下单（现场案例 300–400 单）再联系中国的 3D 打印/工厂生产发货，没有订单就零成本放弃。「先把想法变成真实的销售意向」，是近乎无风险的创业验证。他顺带批评：华人社区「太缺乏想象力」，现在靠 AI 赚钱最显眼的是卖课的，但真正的机会在把想象力变成产品。</li>
+<li><strong>小白焦虑</strong>：什么都学、什么都跟不上怎么办——主动性/意图是另一个大话题（预告专场）；外部约束（比如豆瓣小组的叫醒电话）有用，但根本是内心有没有强大的推动力。别把焦虑当行动。</li>
+<li><strong>在日本做产品、职人不信任 AI 怎么办</strong>：信任的建立不在「产品与人」这个层面，而在人与人之间——日本人做生意讲信任感，过年过节送什么、平时怎么相处，比产品里是不是 AI 更重要；何况很多日本本土程序员做出来的东西也很粗糙，成品够好时多数人其实看不出来。</li>
+<li><strong>收尾的工具建议</strong>：别再造轮子——先把第一层 harness 用好：Codex / Claude Code 能控制你的电脑、服务器上 24 小时跑着也不会停；买 $200 档、算力随便用就够了。他自嘲：之前做的 Wanman（实时语音助手）现在意义不大了，因为优秀模型厂商把这些能力都内置了，简单一个 API 请求就能调动。</li>
+</ul>
+<h2>值得记下的句子</h2>
+<ul>
+<li>「AI 不会取代导演，它会让所有人都变成导演。」</li>
+<li>「故事如何设计、怎么把拼接起来的东西变得有趣，意图很难让 AI 自己表达——你必须做那个 lead。」</li>
+<li>「当你什么都能得到的时候，你会问：为什么我什么都做不出来？」</li>
+<li>「先把想法变成真实的销售意向——这是毫无风险的创业。」</li>
+<li>「我们永远没有办法成为上帝，尤其在 AI 的当下更是这样。」</li>
+</ul>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=BcMssIgsvdI">https://www.youtube.com/watch?v=BcMssIgsvdI</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-23 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>

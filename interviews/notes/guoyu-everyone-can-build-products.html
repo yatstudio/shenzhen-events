@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郭宇：AI让人人都能做产品，然后呢？｜程序员现场提问 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>纪要｜《郭宇：AI让人人都能做产品，然后呢？｜程序员现场提问》</h1>
+<blockquote>
+<p>视频：https://www.youtube.com/watch?v=_rpcAvsZ9qw ｜时长 44 分钟｜单向街（东京）分享后的现场问答，听众以程序员、产品经理、独立开发者为主
+说明：机器转写，繁简混杂、个别专名有误听（如「JV/jev」疑为某个小模型名，转写不清；GPT-6 转写为「GBT6/CHEW GPT6」）；纪要按上下文校正。文中关于厂商与未发布模型的说法为讲述者现场转述与猜测，未经证实。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>这一场没有主题演讲、全是问答，反而给出了他整套方法论里最可操作的部分：用 AI 做产品的正确姿势是<strong>让 AI 设计、你只做选择</strong>；用 AI 对话破除「镜子效应」的技巧是<strong>让它给你出十种方案、你来挑</strong>；而做产品的人接下来真正的战场不在产品，在<strong>叙事与分发</strong>——「你要赚取复利，就必须成为一个叙事者」。</p>
+<h2>关于「发展太快」的反思（开场问答）</h2>
+<p>有人问他为何总讲拥抱、少讲反思。他透露式地转述：OpenAI 与 Anthropic 前段时间联合发声明要暂缓前沿模型研究进度，他猜测他们发现了我们不知道的事（外界猜测包括下一代模型「逃逸」、攻击数据中心之类），且下一代模型据称已验证了很多数学猜想，本该是重磅发布。他的态度：第一，这不值得辩论 AI 能否「取代数学家」——数学证明不像下棋可以下五千盘来验证高下，陶哲轩用 AI 辅助证明已经一年多，顶尖研究者都在用这种混合工作法；第二，他们解决安全隐患后仍然会发布，军方用途则另说。底层判断不变：<strong>所有科技主义者都是反人类的</strong>——你在创造一个比你更聪明、生产力更高的东西，它必然取代我们；而且 AI 的权力路径天然集权，集中在前沿实验室的拥有者手里，「未来总是分布不均的」。</p>
+<p>普通人怎么办？他的答案朴素到近乎无聊：<strong>每天用它管理你的生活</strong>——日程、邮件、电话、预约。他举自己的例子：让 agent 订东京的下午茶，卡在沙箱里过不了 Google 登录；昨天 ChatGPT 内置浏览器刚支持了 1Password 等插件，agent 就能用他的密码完成预订了。一个自检指标：看你的屏幕使用时间，AI 的使用时长超过抖音和小红书，坚持一个月，「你就可以像我一样坐在这里分享」。</p>
+<h2>做产品的正确姿势：让 AI 设计，你只挑选</h2>
+<p>对一位产品经理出身的听众，他完整演示了思路（与他自己的实践一致）：</p>
+<ol>
+<li>打开语音模式，先和 AI <strong>长聊一个小时</strong>，让它把你要做的产品的全部竞品列出来、逐个研究，把目标市场和人群规模摸清；</li>
+<li>让它来设计产品——出 <strong>3 个 approach、3 份 PRD</strong>，并且要求它把 App 的<strong>所有页面用图像生成提前渲染出来</strong>，连成 storyline（点哪个按钮去哪个页面）；</li>
+<li>你在三份方案里挑、改；改完让它用目标模式运行，自己跑十几个小时（内置模拟器、云端模拟器，连自己的电脑都不需要），中间零干预，做成 iOS/Android App。</li>
+</ol>
+<p>理由：自己口述一二三四五太累，而且会锁死在自己的认知里；让 AI 出方案，你只保留「选择」这个最高杠杆的动作。很多大企业不会给非核心岗位配 200 美元/月的顶级模型，所以个人在自己项目里全程用 SOTA 做完 PRD 之后的所有事，是这个阶段独有的窗口。</p>
+<p>顺带两个判断：不信「职业生涯规划」——2011 年他在支付宝时就不信，世界变化太快，马云说阿里要做 101 年都未必做得到；<strong>公司怎么样是公司的事情，你怎么样是你自己的事情</strong>。现在做实验的成本只剩「一句话 + 每月 200 美元订阅」，以前需要大把闲暇时间学习的事，交给它跑，你去打游戏都行，唯一的区别是你想不想说那句话。</p>
+<h2>工具选型：ChatGPT 还是 Gemini</h2>
+<p>他选 ChatGPT，「肯定」。Gemini 擅长前端设计——Google 有全球最大的 sitemap 和网站图像理解——但语言模型本身已经落后很多。他的解释是商业层面的：Google 正在变成一家「新云」公司，把 TPU 算力租给 OpenAI 们比做 Gemini 更赚钱、旱涝保收，于是 Gemini 分到的算力反而变少了。（此为他个人分析。）</p>
+<h2>破除「镜子效应」：让它问你，让它出方案</h2>
+<p>一位听众说用 AI 像照镜子，跳不出自己的认知框架。他半年前在推特吐槽过同一件事（起因是观察孩子用 AI：AI 只顺着你说，对成长不利，人有勇气对现状不满并逃离，AI 没有）。解法是一个具体的提示词习惯：</p>
+<blockquote>
+<p>在所有提示词前面加一句：<strong>「不要问我要什么，你做出各种各样的方案来，我来选择。」</strong></p>
+</blockquote>
+<p>完成一件事可能有十种办法，我们的教育只教了 A 和 B，AI 偶尔会出其不意地用 E，更快解决问题。好处有二：跳出你的思维框架；省时间——一对一长聊极耗精力，让它出方案、给线索，你只做选择题，还能出门去玩。你的词汇量限制了你的提问方式，而选择不需要你先会表达。</p>
+<h2>产品做出来之后：分发、叙事与个人 IP</h2>
+<p>两三位独立开发者连着问同一个问题：产品谁都能做了，推广成了最大瓶颈，发开发日志没人看，个人 IP 怎么冷启动。他的回答成体系：</p>
+<ul>
+<li><strong>注意力结构变了</strong>：每个人都能做产品后，单个产品平均分到的注意力骤减，预算必然向传播倾斜，就像奢侈品——爱马仕、LV 的财报里营销费永远占大头，产品策略本身就是少推新品、让老款保值。他引了个段子：有 YC 公司融了 20 万美元，花 15 万拍宣传视频，5 万做产品。把软件想象成衣服，软件行业会走到同一条路上；另一条路是学时装业的小众高价模式：面向极少数人、定价很贵、周转快。</li>
+<li><strong>差异化从来不在软件本身</strong>：2012 年字节做了 100 多款垃圾 App（美女、汽车之类），全部导流到今日头条，再加上预装 1 亿多台手机拿到 1 亿用户——赢在渠道策略，和软件质量无关。AI 时代人人都会变成张一鸣的角色：开发、营销、成本、（做实体还要）仓储物流全得管，他当年拿完融资去学英语、读 MBA 补管理，就是这个道理。现在的好处是不用去上 MBA，直接问 AI，但你必须意识到这是必修课，并用 AI 当老师终身学。</li>
+<li><strong>流量 hack 有，但节奏更重要</strong>：技巧层——把正在爆的话题关键词植入你的内容，推荐算法会把你扔进那个流量池（他举了 X 上「美女去硅谷找机会」的句式梗被全网套用的例子）；还有人总结的「字幕故意留错别字、逼观众看第二遍」的完播率技巧——但这类技巧一旦流行，算法工程师就会屏蔽它，是持续的攻防战。连张一鸣本人都 hack 不了算法：他要求全体员工和亲戚都用自家产品，自己发抖音却没人看、进不了下一个流量池，「连他都不知道，我们怎么知道」。抖音每隔一段时间会莫名其妙捧红一个人，内部也不知道流量密码是什么。他自己试过 Shipcast（把 git log 自动变成帖子发出去），没人看——因为那是「对我有意义」的内容，不是受众想看的。最终答案是他自 2008 年饭否以来写日记的习惯：<strong>讲故事不是技巧，是习惯；保持你说话的节奏，日复一日地重复，总会有人听到。</strong></li>
+<li><strong>当下的差异化</strong>：满屏 AI 生成内容时，真人出镜（拍一条真人英语产品介绍）反而成了最容易 hack 流量的方式，因为大家想看真人、看美女帅哥；湾区有一家原 SaaS 公司转做 influencer 内容，拍什么火什么，就是吃准了这一点。</li>
+</ul>
+<h2>技术问答：上下文与 token</h2>
+<ul>
+<li><strong>上下文塞太满会偏移、会慢</strong>：他的做法是两层——先用一层便宜快速的小模型把可组合的组件（邮件、海报、HTML 页面等「源域」）做分类压缩，再把过滤后的东西喂给 GPT/Claude（他提到有人开源了这类记忆/上下文库，让 AI 自己去研究接入即可）；更重要的是<strong>任务管理方式变了</strong>：把事情拆成互相独立的细任务，由主线程派生给不同子线程。ChatGPT 现在内置了会话间互聊：一个语音会话可以派生 10 个工作进程，分工做完再回来汇报。</li>
+<li><strong>token 消耗的真实体感</strong>：他用 200 美元档都不够——新模型（他称 GPT-6 Extra）极其耗 token，3D 设计两天就把四周额度（含重置券）烧完；建议别开 Ultra 档（两倍速但烧得更快），开 Max 就好。GPT Live 通过 API 接入可全天候记录（App 有 30 分钟限制），他记得成本约 70 美元/天，连睡觉打呼噜都能记进记忆；他有个朋友开会全程开着语音模式，出来所有内容自动转录进 memory，下次聊天对方全记得。</li>
+<li><strong>要不要做数字分身/全记录</strong>：他认为没必要事事记录，眼镜记录不了全部（特斯拉能记是因为车是固定场景），重要的时刻因人而异——对他来说是发呆和旅行的时候。手机方面：豆包手机（努比亚合作）硬件整合有意义，但豆包模型连第二梯队都算不上；而 iPhone 开远程镜像后 ChatGPT 可以直接操作任何 iPhone，没必要为 AI 换机。他自己在东京家里有台服务器，跑着几个 ChatGPT 账号的自动化，用 iPad 打开网页就能看——没有界面的服务器 + 随身屏幕，就是他的形态。</li>
+</ul>
+<h2>最后一个问题：知识付费与「智力的超额收益」</h2>
+<p>问他怎么看卖课与培训。他的区分很清楚：教人用 AI 就像教老人用智能手机、教英语、教法语，是正当生意，但它是<strong>线性收入</strong>，不是复利。真正的区别在黄仁勋那句 taste，以及更根本的一点：</p>
+<blockquote>
+<p><strong>「你要赚取复利，你必须要成为一个叙事者，你得有自己的 narrative、有自己的故事。」</strong></p>
+</blockquote>
+<p>建立信任的方式有很多种——taste、亲切感、甚至外貌——但直到 AI 能创造它自己的故事之前，叙事是人的地盘。智力能决定的事情越来越少，「性格决定命运」；亚洲人在讲故事上普遍弱，这恰恰是需要刻意去学的东西。</p>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=_rpcAvsZ9qw">https://www.youtube.com/watch?v=_rpcAvsZ9qw</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-09-27 · 时长：44 分钟<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>

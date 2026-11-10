@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>当软件像牛奶一样便宜，我们还要交付什么｜Indigo Talk EP52 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>纪要｜Indigo Talk EP52《当软件像牛奶一样便宜，我们还要交付什么》</h1>
+<blockquote>
+<p>与郭宇聊 Agent 时代与 Vibe Coding 之后的路
+频道：INDIGO 数字镜像｜主持：Indigo｜嘉宾：郭宇（前字节跳动工程师，现居日本）
+时长：72 分钟｜来源：YouTube https://www.youtube.com/watch?v=WkmbKwcJk7k
+说明：逐字稿为本地 faster-whisper 机器转写，繁简混杂、个别词有误听（如「贪心」疑为口误/误听、「Cdance」=Seedance、「莫斯特」=Meta 的 Muse），纪要已按上下文校正。</p>
+</blockquote>
+<h2>一句话结论</h2>
+<p>软件的成本会像牛奶一样便宜，「做软件、卖软件」这件事本身正在失去意义——接下来真正要交付的不是软件，而是软件要达成的目的：目标、媒体和「活人感」。工程师的执行工作被 AI 接管，人被推到产品经理和决策者的位置上，半天能干完过去两周的活，但思考负担反而更重了。</p>
+<h2>郭宇其人（本期自述）</h2>
+<ul>
+<li>2011 年在支付宝工作；2013 年 4 月在支付宝分享会上第一次接触 Bitcoin（当时约 100 美元）。</li>
+<li>2014 年去北京加入朋友的创业公司（多说/图虫系，微博基金投过），同年 12 月公司被今日头条收购，就此加入字节。</li>
+<li>在字节长期做中台，后做跑在抖音/TikTok 上的小程序引擎（micro runtime），自述是「技术执行者」角色，从没带过团队、也不想带。</li>
+<li>2019 年底决定离职：当时字节从外部拉一个新用户成本高达 50 多元人民币，「应用工厂都很难拿到新用户」，他判断移动互联网周期基本结束。交接半年，2020 年过年去日本旅行遇上疫情，回不了北京，索性留在日本，拿到长期签证乃至永驻至今。</li>
+<li>本想彻底离开科技行业休息，结果只休息了两三年就被 2022 年底的 AI 浪潮拉回来；目前用 Vibe Coding 做了 30 多个产品（很多没发布），同时管上百台 agent server。</li>
+</ul>
+<h2>核心观点</h2>
+<h3>1. 工程师的角色翻转：从执行者变成提问者和决策者</h3>
+<ul>
+<li>过去两周的迭代周期（定目标→开发→设计→测试→发布→观察实验），现在 1–2 个人半天就能跑完一轮。</li>
+<li>但人没有变轻松：你要同时扮演架构师、设计师、产品经理，最重要的是产品经理——善于提问题、能约束语言模型的「语言空间」，知道用什么语言、什么结构让它持续推进并根据实验结果调整方向。</li>
+<li>AI 做不了完全自动化的决策，不是因为缺上下文，而是因为它<strong>没有主动的意图（intent）</strong>，所以全部决策的心理负担都压回人身上。</li>
+<li>后果：2025 年 10 月到 2026 年初，他看到很多工程师朋友 burnout——两三个月干了过去一两年的活，大脑跟不上 AI 的速度，人变得焦虑，开始重新思考「到底什么事情真的值得做」。</li>
+<li>工作方式的变化：他自己已经很少用「计划模式」了，先和模型聊半小时把 spec 聊透，让它一次性朝目标跑；随着 SOTA 模型和 harness 不断进化，人还要不断适应新工具，这本身也是 burnout 来源之一。</li>
+</ul>
+<h3>2. 软件形态变了：即时生成、用完可丢、不再需要分发</h3>
+<ul>
+<li>软件不再是写死的代码：可以即时编码完成任务，用完就丢，只给自己或很小的组织用；每个人的软件互不兼容，也没必要兼容。</li>
+<li>出现「first-class harness」：模型厂商自己做的第一层 harness（Claude Code、Codex、DeepSeek Harness），进步已经把大量传统软件功能「内化」了——用它做 CRM、管理系统是两分钟、五分钟的事，这类软件作为独立产品已无存在必要。</li>
+<li>下一步是操作系统层面的变化：把 Agent 而非 Application 当一等公民。已经有人在做基于 Linux 的 Agent OS；OpenAI 走了另一条务实的路——买大量 Mac 让下一代模型直接使用 Mac（成熟的 Unix + 成熟的创意/影视软件生态）。</li>
+<li>他的判断：未来我们租用的所有计算资源都会变成「Virtual Agent Server」——一台由 Agent 操作整个系统的虚拟机；人在手机上发指令，远程连回家里或机房的机器。</li>
+<li>安全警告：当所有人用 Agent 管理电脑，Agent 的连接一旦被劫持，就等于世界上最大的肉鸡集群。他自己第一次让 Agent 全自动买服务器、装密钥、删初始密码时，第一反应就是这个风险。</li>
+</ul>
+<h3>3. 模型分层：不需要最强的，只需要最合适的</h3>
+<p>主持人提出、郭宇大体认同的五层划分：
+1. <strong>个人便利型</strong>：处理打电话、订餐厅、管信息等日常需求，如 Meta 的 Muse，集成在 Messenger/WhatsApp/Instagram 里，不需要单独 App；
+2. <strong>个人生产力型</strong>：写代码、做创作，用 Claude、Codex 这类 SOTA 模型；
+3. <strong>企业协作型</strong>：让 Agent 学会用 Mac/电脑串起企业工作流，要求更高；
+4. <strong>娱乐生成型</strong>：字节占优势——Seedance 生成 + 红果平台消费已形成闭环，加上创作者工具；
+5. <strong>科研前沿型</strong>：需要最顶尖的模型，模型公司未必公开发布，而是与研究所、国防订单签框架、利润分成。
+- 郭宇补充第六类「现场 AI」：农场、工厂、摄像头这类场景信息量巨大，必须用边缘计算 + 极便宜的模型 24 小时跑，不可能把图片都传给 OpenAI。</p>
+<h3>4. 企业采用还非常早期，整体只完成了 2%–3%</h3>
+<ul>
+<li>大企业（包括日本企业）顾虑重重：没人能为 AI 的决策负责，中层看到机会也不敢拍板，只有董事会能做这种决策；也有数据外泄顾虑，不敢用别国模型。</li>
+<li>微软把 Copilot 改造成以 Agent 为核心、让 Agent 操作 Office 的「操作系统」，就是在催企业采用。</li>
+<li>小公司和一人公司会自然转向新方案；以投资视角定位：AI 对组织和商业的影响虽然在加速，但只完成了 2%–3%，大量事情没被解决。</li>
+</ul>
+<h3>5. 智能会变成「公共品」，软件像牛奶一样便宜（标题出处）</h3>
+<ul>
+<li>娱乐生成市场是完全竞争市场：总有人用更便宜的 token 做更多实验，定价最终被压到接近模型生成成本，利润微薄到近似于无——智能会像牛奶一样，因为集中化大规模生产而极便宜，成为一种 public goods（准公共品），极大提升社会生产力。</li>
+<li>因此他自己的重心已经从「创造软件」移到下一阶段——「创造软件本身要达成的目的」。他承认目前处于迷茫观察期：打算先观察三到六个月再决定把精力放在哪，并提到朋友（公司卖给 Cloudflare 的小佑）也 burnout 在想下一阶段——当年字节 2012 年成立后也用了两年验证第一个想法、等到环境成熟才起飞，环境没成熟时硬按旧创业思路做软件分发，可能没有意义。</li>
+</ul>
+<h3>6. 人群分化：2%–3% 的 Pro user 被放大，大众靠娱乐填充时间</h3>
+<ul>
+<li>只有约 2%–3% 的人能成为被 AI 放大的 Pro user：一人等于过去 5–60 人的公司，可以管一支 agent「军队」。</li>
+<li>大众没有想法、也不愿提需求（上班听派活、下班看电视），他们的时间将被娱乐型 AI 填充；所有娱乐产品竞争的本质都是对用户时间的直接竞争，产品形态不重要。</li>
+<li>年轻一代没有包袱：物质压力小后更顺着兴趣社群走，像日本泡沫破裂后的「平成废宅」——做三天零工、四天去冲浪，兴趣积累到专业水平甚至去参加奥运会。他判断这可能不是坏事。</li>
+</ul>
+<h3>7. Everything is Media：交付的是「活人感」</h3>
+<ul>
+<li>AI 内容（slop）泛滥后信噪比极低，差异化只能靠<strong>真人出镜</strong>：真人内容在全网占比小且最出挑（有博主总结：想让产品有流量，唯一要做的就是真人出镜介绍产品）。</li>
+<li>主持人的提法：把「自己」产品化——把自己的思考经 AI Agent 整理成可阅读、可订阅、甚至提供 API 的内容，让别人与你产生思维连接；「software 即 media，Everything is Media」，你 vibe code 出来的东西，其动作和结果本身就是媒体，用户消化完还想看你下一篇，如同刷视频。</li>
+<li>郭宇补充：不管分发 AI 内容还是真人内容，本质都是在 hack 新的推荐/流量机制；真人内容稀缺，做得好就会被投进更大的流量池。</li>
+</ul>
+<h3>8. 给年轻人的建议：别把「一份稳定工作」当人生锚点</h3>
+<ul>
+<li>「上班」是工业革命的产物，只有 100 多年历史，会在智能革命之后消失或大幅变形。</li>
+<li>用投资思维看工作：如果一份工作像被套牢的股票、处在很长的下坡道上，关键不是纠结「亏多少离场」，而是看有没有更好的机会——机会成本最贵。他父亲当年下海时每月花几百块「停薪留职」保工龄，结果几年后矿就倒闭了；东北下岗是同理。</li>
+<li>具体建议：不要再追寻稳定工作，可以去南方、去深圳看看——潮汕、福建家族「宁可做小老板也不打工」的观念在 AI 时代反而受用，做自己的 OPC（一人公司）；不知道怎么做就先去看、去跟有经验的人学。但如果能去前沿 AI 工作室成为「创造的那部分人」，这种工作仍然值得做。</li>
+<li>主持人收尾定性：这不是又一次工业革命，而是一次<strong>文艺复兴</strong>——「你只要有无限可能的想法，就有无限可能的工具去做无限可能的事情」。</li>
+</ul>
+<h2>值得记的字节往事</h2>
+<ul>
+<li>2015 年的字节已经是 AI 驱动的公司：产品靠神经网络推荐，算法工程师自称「调参工程师」，连他们自己也不完全知道系统怎么工作，只能靠实验逼近效果——郭宇当时第一次意识到代码跑在黑盒里，和今天的大模型如出一辙。</li>
+<li>2015 年是字节的 tough 年：头条 DAU/MAU 到瓶颈、员工流失严重；2016 年 12 月抖音、火山做了十几个月出来，2017 年局面才改善。</li>
+<li>资源最初押在火山小视频（定位大众），抖音起初是小团队、名字都不叫抖音，形态像 Musical.ly；收购 Musical.ly 后抖音靠「用户泛化」（从 18–20 多岁扩展到 7 岁到 70 岁）反超，最终完成火山的历史任务，两者合并。</li>
+<li>微博当年做推荐流的教训：关系网络在前，用户投诉「我关注的人看不到了」，推荐与关注之争斗了很多年没做好。</li>
+<li>抖音内容 hack 算法的经典技巧：在视频字幕里<strong>故意加错别字</strong>能显著提高完播率——因为观众会回看确认字是不是错了；字节内部有专门团队对抗这类 hack，识别后很快屏蔽。</li>
+</ul>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=WkmbKwcJk7k">https://www.youtube.com/watch?v=WkmbKwcJk7k</a>（Indigo（INDIGO 数字镜像））· 嘉宾：郭宇 · 发布日期：2026-10-09 · 时长：1 小时 12 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>

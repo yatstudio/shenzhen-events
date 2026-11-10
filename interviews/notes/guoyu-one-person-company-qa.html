@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郭宇｜关于AI一人公司，大家最想知道的都在这里 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/interviews/">← 返回访谈清单</a>
+<article>
+<h1>纪要｜《郭宇｜关于AI一人公司，大家最想知道的都在这里》</h1>
+<blockquote>
+<p>视频：https://www.youtube.com/watch?v=diN1fiE52aI ｜时长 63 分钟｜郭宇一人公司/Wanman 主题分享后的集中问答
+说明：机器转写，繁简混杂、个别专名有误听（Wanman 转写为「万万/弯慢/One慢」，OpenClaw 转写为「OpenCloud」，SOTA 转写为「sortar」等）；纪要按上下文校正。产品数据为讲述者现场自述，未经核实。本片由若干段问答剪辑而成，开场的太空数据中心话题在片尾又出现了一次，纪要只记一遍。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>这一场是「一人公司」主题的问答合集，核心信息只有三条：①用 AI 的心法是「不要把 AI 当工具，把它当人」——信任靠把你的审美写成文档 + 花时间长谈来建立；②Wanman 的真实用法曝光：它最大的价值不是从零创业，而是「接管模式」——接管你已有的代码仓库、自动修 bug、补测试，24 小时不停，这是他做这个产品 80% 的动机；③成本结构：不用 API、用订阅制，Codex Max 每月 200 美元跑满额度，API 贵 10–12 倍。</p>
+<h2>信任问题：怎么敢把活全交给 AI</h2>
+<p>观众最集中的焦虑（尤其是程序员）：代码我能 review，商业计划书、财务模型我看不懂，怎么知道它不是幻觉？</p>
+<p>他的回答分三层：
+- <strong>写下来</strong>：如果你有强烈的主观意愿和审美，就把它写成文档、写成 Skill 文件，AI 才可能稳定复现你的风格；你想控制每个细节，前提是先把细节说清楚。
+- <strong>用时间换信任</strong>：「你有没有和 AI 彻夜长谈三个小时？」没有的话，它不理解你要控制的距离和细节，你也不理解它。本质和人与人建立信任一样。
+- <strong>让市场裁定</strong>：AI 做的财务计划会联网检索、交叉对比并附参考文档；至于计划本身合不合理，他没有专业能力评判——拿去银行谈融资，银行经理认可，它就是合理。隐私政策、用户条款他全部交给 Codex/Claude 写，自己从没逐条看过。他的底层立场：对 SOTA 模型有基本信任（做不到 99 分，60–70 分是有的），两三年前还要频繁做事实确认，现在顶尖模型（他举例 GPT-5.5、Opus 4.7）已经不会再编造一个打开是 404 的论文链接。</p>
+<p>他明确不做的事：省 token 的记忆压缩、各种成本优化技巧——「那是模型公司该干的事」。他做的只有「调度」：让 agent ①懂各行各业怎么做事，②有协调能力（发短信、发邮件、打电话），两点齐了产生广泛可组合性，就是超级个体。算力成本问题留给模型进化解决。</p>
+<h2>Wanman 现状（自述）</h2>
+<ul>
+<li>发布 3 天，沙箱被打满；东京一台 128 核服务器，用户约 4,000–5,000 人（他没看 DAU，估算）。瓶颈不在模型，在虚拟化技术——支撑上万人、百万级在线的沙箱基础设施还没有。</li>
+<li>从今年 1 月做到现在，自评 80 分：整个产品像乐高，每个小方块（包括沙箱基础设施）都是他自己搭的。</li>
+<li>免费、部分开源，<strong>不挣钱</strong>：「还没到足够高的品质。」他把这归为开源文化：早期阶段先把东西做得足够好、变成公共领域的知识，收费和持续运营是后面的事（对比日本社会更倾向先申请专利）。</li>
+</ul>
+<h2>两个模式</h2>
+<p><strong>从零模式——苹果农场案例</strong>：一个真实任务，用户只给了一句话：「运营一个观光苹果农场，帮我做好对应的 IT 系统和所有基础设施（并制定持续盈利方案）。」AI 员工团分工：CEO 不写代码、只复核每轮任务是否完成；开发做实施计划与选型；财务出 36 个月财务预测（种多少树、多久收获、回本前投多少、门票定价、靠什么产品赚钱）；市场只产出一份增长策略报告。给了预算（例：5,000 万日元封顶）它会自己找地、查去哪买树、查 JA 贷款渠道。40 多分钟出完整计划。<strong>人类阻断点</strong>是刻意设计的：需要人出面时它停下来，把合同等文件全部备齐，甚至可以用他的翻译电话产品（车点 AI）自动打电话预约时间，然后明确告诉你「这一步你不做完，我没法继续」。</p>
+<p><strong>接管模式——他自称这是做 Wanman 80% 的原因</strong>：接管任意已有代码仓库，给目标即可，例如「把测试覆盖率提到 100%，不到不许结束」，它自动跑到达标。他名下约 15 个上线项目，所有 bug 走 webhook 进 Wanman 由 AI 员工自动修、自动跑；没有 bug 就暂停，有新 bug 再启动。他早上起来常看到 100 来个分支、几十个 PR，自己看不过来，就交给本地的 Claude Code / Codex 审阅合并，也可以新开一个 Story 让 Wanman 自己审 PR、自动合并。</p>
+<p>另一个接管案例（日本蓝莓农场）：为农场主做自动灌溉/施肥系统的完整调研——传感器选型（土壤水分、pH、树龄与生育阶段）、300 棵树 10 个区域的物料清单、数据表设计、现地调查报告模板。他的判断：这本质上是咨询公司干的活，日本中小企业极度依赖咨询公司把想法变成文件再找 IT 团队，Wanman 把这条链压缩了。</p>
+<p><strong>成本</strong>：订阅制而非 API——Codex 在订阅 plan 里跑到 5 小时额度/周额度为止，他的 Codex Max 和 Claude 都是 200 美元/月；接 API 约贵 10–12 倍。他提到 Claude 在他的 Wanman 接入里试过、很快被封号，所以主力用 Codex。（此为他个人经历自述。）</p>
+<h2>新手与组织</h2>
+<ul>
+<li><strong>完全不会编程的人从哪开始</strong>：从你去年的工作开始、从小事开始——先让它做采访提纲，再到剪辑、素材搜索，在建立信任的过程里逐步给它宏大目标。他现场建议：打开 wanman.ai，注册 Codex 账户授权后，把自己的 YouTube 频道链接发给它，说「帮我安排接下来 17 个采访计划」，它会自己去查、自己安排。对宏大目标（比如「做到百万粉丝」），AI 给出的方案会有很多你不认同的东西，但也会有意想不到的思路，有助于重新思考自己想做的事。</li>
+<li><strong>本地派 vs 云端派</strong>：OpenClaw 式 local-first 在你电脑里跑，能拿到你全部数据（包括隐私、信用卡），高效但危险；云端派算力更多、连接性更广，但上下文要靠上传补齐。Wanman 是云端派。他预告文件夹上传功能很容易补上。</li>
+<li><strong>大公司现状</strong>：非常混乱，第一反应普遍是裁员替换；硅谷有些公司把 AI 装进每个员工的电脑进行监控，让它在员工的工作里自我进化。他认为转型期人的位置更像观察者。</li>
+<li><strong>股票盯盘需求</strong>：定投 DCA 券商（如长桥）默认支持，不必自己造；真要自动化，用 OpenClaw/Codex 操作已登录的券商网页即可，但强烈建议放在一台单独设备上，安全得多——它对你电脑里的事无所不知。</li>
+<li><strong>怎么让别人（比如女友）用起来</strong>：没有技巧。先让他亲身感受它有多厉害，动力只能从内心涌现，逼不出来；很多人还没紧迫到要考虑生计。七八岁的小孩和成年人的差距，很多就在这件事上。</li>
+<li><strong>付费建议</strong>：公司不报销、纯业余兴趣的人，没有必要强花这笔钱；但想用 AI 武装自己的人，从今天就该开始。有些东西 AI 替代不了：金牌销售的资源、体力劳动。</li>
+</ul>
+<h2>收尾的两个大话题</h2>
+<p><strong>退休后要「足够放松」</strong>：有观众问，如果还在字节、会不会为竞争力焦虑。他说自己从来不是好员工，只在乎事情好不好玩。混乱中才会建立新秩序，时代一成不变，普通人就没有机会——现在没钱，反而有机会分一杯羹。太执着于目标肌肉会紧绷，事情做不好；所有目标都需要你足够放松。</p>
+<p><strong>权力终局</strong>（开场与结尾同一段论述）：放松的前提是看清本质——谁拥有能源与计算能力。马斯克要把数据中心建到太空、美国要在月球建永久基地，先建通信和太空推理数据中心，有持续且绝对安全的能源后，超级 AI 可以全自动运行一个文明（比如月球），制造在月球、推理回德州——这种权力集中度是人类没遇到过的。他的判语：「我个人觉得所有的科技主义者都是反人类主义者，他们想把人变成神、变成万能的东西」；这条路从工业革命起就埋在所有人心里、越走越快，不会停。结论落在生活层面：安稳的小日子会越来越难、也越来越值得珍惜。</p>
+<p>另有一段现场演示：他让 Wanman 跑「成为百万粉丝 YouTuber」的任务，AI 先算海外中文用户规模、对标频道、内容定位（不是做中文新闻台，而是帮海外华人解决身份、关系、家庭问题），排了每周两条长视频的更新表，并做了成本-收入模型——结论是 20 万到 50 万粉之前都是亏的，所以千万别请人，全用 AI 做。</p>
+<p>以及关于记录：他从小写日记，现在愿意把生活公开发出来——在 AI 时代这格外有价值：你发到互联网上的一切，最终都会成为 AI 模型的一部分，是你留给世界的 legacy。</p>
+</article>
+<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=diN1fiE52aI">https://www.youtube.com/watch?v=diN1fiE52aI</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-21 · 时长：1 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+</body>
+</html>
