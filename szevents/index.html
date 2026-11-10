@@ -1314,6 +1314,12 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 #yl-input{flex:1;background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:9px 11px;font-size:.9rem;outline:none}
 #yl-send{background:var(--green,#2ee6a8);color:#06281c;border:none;border-radius:10px;padding:0 16px;font-weight:700;cursor:pointer}
 #yl-send:disabled{opacity:.5}
+
+/* mobile filter collapse: groups hidden by default on small screens, toggle to open */
+@media (max-width:820px){
+#fgroups{display:none}
+#fgroups.open{display:block}
+}
 </style>
 <button id="yl-fab" aria-label="AI 活动助手">💬<span class="yl-fab-tag">问活动</span></button>
 <div id="yl-panel" role="dialog" aria-label="AI 活动助手">
