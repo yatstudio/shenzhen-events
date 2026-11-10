@@ -1111,7 +1111,7 @@ function cardOf(e,now){
   ${e.id?`<button class="btn" onclick="_share('${e.id}')">${tr("shareBtn")}</button>`:""}
   ${!online?maps(e):""}
   </div>
-  <div class="meta" style="margin-top:8px">${tr("source")}${e.source}</div>
+  <div class="meta srcrow" style="margin-top:8px">${tr("source")}${e.source}</div>
   </div>
   </div>`;
 }
@@ -1319,6 +1319,18 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 @media (max-width:820px){
 #fgroups{display:none}
 #fgroups.open{display:block}
+}
+
+/* ===== Luma-inspired mobile simplification 2026-11-10 ===== */
+@media (max-width:820px){
+  .card .sum{display:none}
+  .card .tags{display:none}
+  .card .meta.srcrow{display:none}
+  .card .actions{gap:6px;margin-top:10px}
+  .card .actions .btn{min-height:32px;padding:4px 10px;font-size:.8rem;border-radius:999px}
+  .lc-desc{display:none}
+  .dayhead .dnum::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:10px;vertical-align:middle}
+  .card{padding:14px 16px}
 }
 </style>
 <button id="yl-fab" aria-label="AI 活动助手">💬<span class="yl-fab-tag">问活动</span></button>
