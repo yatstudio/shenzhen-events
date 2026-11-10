@@ -468,7 +468,8 @@ input[type=search]{font-size:16px}
     <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="回到顶部" style="text-decoration:none">
       <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
     </a>
-    <nav class="topbar-nav">
+    <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+<div id="mnav-panel"><nav class="topbar-nav">
       <a href="#agent-section" id="nav-agent">给 Agent</a>
       <a href="#human-section" id="nav-events">活动清单</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松清单</a>
@@ -476,7 +477,7 @@ input[type=search]{font-size:16px}
       <a href="https://yatslist.com/spaces/" id="nav-spaces">Space 纪要</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
-    </nav>
+    </nav></div>
   </div>
 </div>
 
@@ -1332,6 +1333,18 @@ document.getElementById("shareCopy").addEventListener("click",function(){
   .dayhead .dnum::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:10px;vertical-align:middle}
   .card{padding:14px 16px}
 }
+
+/* ===== mobile topbar dropdown + drop duplicated list chips 2026-11-11 ===== */
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+  .listchips{display:none}
+}
 </style>
 <button id="yl-fab" aria-label="AI 活动助手">💬<span class="yl-fab-tag">问活动</span></button>
 <div id="yl-panel" role="dialog" aria-label="AI 活动助手">
@@ -1367,6 +1380,16 @@ document.getElementById("shareCopy").addEventListener("click",function(){
   }
   send.addEventListener('click',doSend);
   inp.addEventListener('keydown',function(e){if(e.key==='Enter')doSend()});
+})();
+</script>
+
+
+<script>
+(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
+function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
+b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+p.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
 })();
 </script>
 
