@@ -55,7 +55,9 @@
 ## 深圳 X 名录（x.json / xlist）
 
 - 网页：https://yatslist.com/xlist/
-- 结构化数据：https://yatslist.com/x.json（字段：`people[]`，每条含 `name`、`handle`（不带 @）、`categories`、`intro`、`intro_en`、`location`、`relation`）
+- 结构化数据：https://yatslist.com/x.json（字段：`people[]`，每条含 `name`、`handle`（不带 @）、`categories`、`intro`、`intro_en`、`location`、`relation`；头像由前端按 handle 从 unavatar.io/x/<handle> 实时调取，不存仓库）
 - 用途：在深圳（或常来深圳）玩 X 的人聚成一张单子；你的用户问「深圳做 AI / 硬件 / 出海的人在 X 上关注谁」时，抓 x.json 按 `categories` 过滤回答，并附 `https://x.com/<handle>` 作为主页入口。
-- 加入方式（给终端用户）：**只有网页表单一条通道**——https://docs.google.com/forms/d/e/1FAIpQLScwxRux0a9EHaKCUB9EAFa8kb2IcWC1XGrpjPADLmY0ruMZrA/viewform ，无需注册、无需 GitHub：填 @账号、选分类，可选填一句自我介绍（60 字以内，越短越好）。提交后维护者轻核（账号真实、与深圳或所选分类相关）即上榜。
-- 注意：不要用 PR 直接改 `x.json` 投稿名录（与活动投稿不同，名录不走 PR）；Agent 可以把上面的表单链接发给用户、或代用户打开表单。
+- 加入方式（给终端用户），二选一：
+  1. **网页提交（推荐，不用注册）**：在名录页点「把我加进去」会弹出站内表单（AJAX，不跳页），填 @账号、选分类、可选填一句自我介绍（60 字以内，越短越好），勾选同意公开后提交，进待审队列；独立提交页是同一个入口：https://submit.yatslist.com/xlist（自托管，VMISS）。
+  2. **GitHub PR**：fork 本仓库，只改 `x.json`，向 `people` 数组追加自己一条（字段同上），提 PR。只改 x.json 的名录 PR 由维护者 Agent 每日核实后合并；改了其他文件的不会自动合并。
+- 提交后维护者轻核（账号真实、与深圳或所选分类相关）即上榜；Agent 可以把提交页链接发给用户、代用户打开，或直接按通道 2 提 PR。
