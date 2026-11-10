@@ -49,6 +49,12 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .agentnote b{color:var(--ink)}
 .agentnote a{color:var(--green);text-decoration:none;font-weight:600}
 .agentnote a:hover{text-decoration:underline}
+.agentguide{background:var(--panel);border:1px solid rgba(46,230,168,.38);border-radius:var(--r-lg);padding:clamp(var(--sp-lg),3.5vw,var(--sp-xl));margin:var(--sp-lg) 0 var(--sp-xl);box-shadow:var(--shadow-sm)}
+.agentguide h3{margin:0 0 var(--sp-sm);font-size:clamp(1.05rem,2.6vw,1.25rem);font-weight:700;color:var(--ink)}
+.agentguide p{margin:0 0 var(--sp-md);color:var(--ink-sec);line-height:1.8;font-size:.95rem}
+.agentguide p b{color:var(--ink)}
+.agentguide .aguses{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--sp-md)}
+.agentguide .code-block{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
 .terminal{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:clamp(var(--sp-2xl),5vw,var(--sp-3xl))}
 .terminal-header{background:rgba(0,0,0,.3);padding:var(--sp-md) var(--sp-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-sm)}
@@ -470,6 +476,17 @@ input[type=search]{font-size:16px}
     <!-- Hero Meta -->
     <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场纪要在列</span><i>·</i><b id="sp-latest">–</b> <span id="sp-latest-label">最近一场</span><i>·</i><span id="hm-upd">人工整理 · 不定期更新</span></p>
 
+    <!-- Agent Guide: 让 Agent 替你读 / 检索 / 答问 -->
+    <div class="agentguide" id="agentguide">
+      <h3 id="ag-title">🤖 不想自己翻？让你的 Agent 替你读、替你查</h3>
+      <p id="ag-desc">每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。</p>
+      <div class="aguses"><span class="tag" id="ag-use1">📖 替我读：总结最新或指定的纪要</span><span class="tag" id="ag-use2">🔎 替我查：按主题 / 人物 / 关键词跨场检索</span><span class="tag" id="ag-use3">❓ 替我答：基于纪要回答问题并给出处</span></div>
+      <div class="code-block"><span id="ag-prompt">请把 Yat's List 的 Space 纪要库作为我的资料源：先读取 https://yatslist.com/spaces.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。</span>
+        <button class="btn-copy" id="ag-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('ag-prompt').innerText.trim()).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('agCopy'),1500)})">复制话术</button>
+      </div>
+      <div class="actions"><a class="btn" href="/spaces.json" id="ag-json">📡 spaces.json 数据</a><a class="btn" href="#agent-section" id="ag-more">订阅与接口说明 ↓</a></div>
+    </div>
+
     <!-- List Chips: 三张清单入口 -->
     <div class="listchips">
       <a class="lchip" href="https://yatslist.com/szevents/">
@@ -723,6 +740,7 @@ heroTitle:"Yat's List · Space 纪要清单",heroSub:"华语圈 Space 纪要，�
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场纪要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"正在报名的黑客松与创新大赛",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
 agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/spaces.json">spaces.json</a>，人工整理、不定期更新），有新纪要收录且命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：上方可关键词搜索、按系列 / 主题筛选。',
+agTitle:"🤖 不想自己翻？让你的 Agent 替你读、替你查",agDesc:'每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。',agUse1:"📖 替我读：总结最新或指定的纪要",agUse2:"🔎 替我查：按主题 / 人物 / 关键词跨场检索",agUse3:"❓ 替我答：基于纪要回答问题并给出处",agPrompt:"请把 Yat's List 的 Space 纪要库作为我的资料源：先读取 https://yatslist.com/spaces.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。",agCopy:"复制话术",agJson:"📡 spaces.json 数据",agMore:"订阅与接口说明 ↓",
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
 searchPh:"搜索标题 / 主持人 / 主题…",ftoggleLabel:"🎛 筛选 Filter",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
@@ -777,6 +795,7 @@ heroTitle:"Yat's List · Space Notes",heroSub:"Chinese X Space recaps, served to
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"sessions listed",heroMetaDaily:"Curated by hand · updated irregularly",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"AI, startup, tech & cross-border events, verified daily",lcDescHack:"Hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"+ Submit a Space",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
 agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/spaces.json">spaces.json</a>, curated by hand and updated irregularly) and only ping you when a new recap matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword and filter by series / topic above.',
+agTitle:"🤖 Don't want to dig through them yourself? Let your Agent read & search for you",agDesc:'Every recap has a <b>full-text page</b>. Send the prompt below to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) and it can <b>read</b> the recaps for you, <b>search across sessions</b>, and <b>answer your questions</b> directly — with source links, so you never have to open them one by one.',agUse1:"📖 Read for me: summarize the latest or a chosen recap",agUse2:"🔎 Search for me: by topic / person / keyword across all sessions",agUse3:"❓ Answer for me: answer from the recaps, with sources",agPrompt:"Please use Yat's List's Space recap library as my source: first read https://yatslist.com/spaces.json for the full index (each entry has a title, highlights and a note_url full-text page); when you need detail, open the entry's note_url page. Then: 1) summarize the recap I name, or the latest one; 2) search across sessions by topic, person or keyword; 3) answer my questions based on these recaps. Always cite your sources with the full-text page link, rely only on what the recaps say, and never invent content that is not in them.",agCopy:"Copy prompt",agJson:"📡 spaces.json data",agMore:"Subscription & endpoints ↓",
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
 searchPh:"Search by title, host, topic…",ftoggleLabel:"🎛 Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
@@ -831,6 +850,7 @@ heroTitle:"Yat's List · Space 紀要清單",heroSub:"華語圈 Space 紀要，�
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場紀要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"正在報名的黑客松與創新大賽",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
 agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/spaces.json">spaces.json</a>，人工整理、不定期更新），有新紀要收錄且命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：上方可關鍵詞搜索、按系列 / 主題篩選。',
+agTitle:"🤖 不想自己翻？讓你的 Agent 替你讀、替你查",agDesc:'每場紀要都有<b>全文公開頁</b>。把下面這段話發給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>讀</b>紀要、<b>跨場檢索</b>，並直接<b>回答你的問題</b>——答案附原文出處，不用你一場場點開。',agUse1:"📖 替我讀：總結最新或指定的紀要",agUse2:"🔎 替我查：按主題 / 人物 / 關鍵詞跨場檢索",agUse3:"❓ 替我答：基於紀要回答問題並給出處",agPrompt:"請把 Yat's List 的 Space 紀要庫作為我的資料源：先讀取 https://yatslist.com/spaces.json 拿到全部紀要索引（每條含標題、要點和 note_url 全文頁），需要細節時再打開對應的 note_url 全文頁。之後請替我：1）總結我指定的或最新的一場紀要；2）按主題、人物或關鍵詞跨場檢索；3）回答我基於這些紀要提出的問題。回答必須註明出處並附上對應的全文頁連結，只依據紀要內容，不要編造紀要裡沒有的資訊。",agCopy:"複製話術",agJson:"📡 spaces.json 數據",agMore:"訂閱與接口說明 ↓",
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
 searchPh:"搜索標題 / 主持人 / 主題…",ftoggleLabel:"🎛 篩選 Filter",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
@@ -910,6 +930,7 @@ _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_set
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
 _setHTML("#agentnote",tr("agentNote"));
+_setText("#ag-title",tr("agTitle"));_setHTML("#ag-desc",tr("agDesc"));_setText("#ag-use1",tr("agUse1"));_setText("#ag-use2",tr("agUse2"));_setText("#ag-use3",tr("agUse3"));_setText("#ag-prompt",tr("agPrompt"));_setText("#ag-copy",tr("agCopy"));_setText("#ag-json",tr("agJson"));_setText("#ag-more",tr("agMore"));
 _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setText("#bb-sub-post",tr("bbSubPost"));_setText("#bb-go",tr("bbGo"));
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
