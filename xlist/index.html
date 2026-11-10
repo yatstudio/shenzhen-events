@@ -568,9 +568,9 @@ applyTheme();
 let LANG="zh"; try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
 if(["zh","tw","en"].indexOf(LANG)<0)LANG="zh";
 const I18N={
- zh:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"主页 ›",follow:"＋ 关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
- tw:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"主頁 ›",follow:"＋ 關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
- en:{title:"Shenzhen X List",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, intro…",all:"All",home:"Profile ›",follow:"＋ Follow",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
+ zh:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"X主页 ›",follow:"＋ 到X关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
+ tw:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"X主頁 ›",follow:"＋ 到X關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
+ en:{title:"Shenzhen X List",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, intro…",all:"All",home:"X Profile ›",follow:"＋ Follow on X",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
 };
 let PEOPLE=[], CAT="全部", Q="";
 const COLORS=["#2ee6a8","#5a8cfb","#f078a0","#f0b450","#78c8aa","#aa82f0","#fb8c5a","#5ac8e6"];
