@@ -434,6 +434,10 @@ input[type=search]{font-size:16px}
 .actions{margin-top:12px;gap:8px}
 .actions .btn{min-height:36px;padding:6px 14px;font-size:.85rem;border-radius:10px}
 .actions .btn.primary{flex:0 1 auto;min-height:38px;padding:6px 18px}
+
+/* importance tiers: near-term / closing-soon events stand out */
+.card.hot{border-color:rgba(46,230,168,.45);border-left:3px solid var(--green)}
+.card.hot h3{font-size:1.26rem}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -485,8 +489,6 @@ input[type=search]{font-size:16px}
       <p class="section-subtitle" id="hero-sub">只做深圳一座城：深圳活动，喂给你的 Agent 吃。</p>
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
     </div>
-    <!-- Hero Meta -->
-    <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><b id="st-week">–</b> <span id="st-week-label">未来 7 天</span><i>·</i><b id="st-dl">–</b> <span id="st-dl-label">72h 内截止报名</span></p>
 
     <!-- List Chips: 三张清单入口 -->
     <div class="listchips">
@@ -507,8 +509,6 @@ input[type=search]{font-size:16px}
         <span class="lc-desc" id="lc-space-desc">华语圈 X Space 纪要与回放要点</span>
       </a>
     </div>
-
-    <p class="scopenote" id="scope-note">本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。</p>
 
     <!-- Top Actions -->
     <div class="topact">
@@ -726,7 +726,8 @@ input[type=search]{font-size:16px}
     <textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
     <p class="mhint" id="mhint">✏️ 这段话术可以直接改：把【】里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。</p>
     <div class="mex" id="mex"></div>
-    <div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
+    <div class="mex" id="mpost-alt" style="display:none;margin-top:10px"><b>另外两种提交方式：</b><br>② 在线表单：<a href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVAPzP6w/viewform" target="_blank" rel="noopener">打开活动提交表单</a>，填完即达；<br>③ 邮件：把官方链接发到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a>。<br>三种方式任选一种，都会在每日更新时核实、去重后收录。</div>
+<div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
   </div>
 </div>
 
@@ -1092,10 +1093,11 @@ function cardOf(e,now){
   const loc=online?`<div class="loc">🌐 <b>${tr("joinOnline")}</b>${e.venue?" · "+fL(e,"venue"):""}</div>`
   :`<div class="loc"><span class="pin">📍</span> <b>${e.city==="香港"?'<span class="hkpin">'+tr("hk")+'</span> · ':''}${[fL(e,"district"),fL(e,"venue")].filter(Boolean).join(" · ")||tr("venueTBA")}</b></div>`;
   const ongoing=e.start&&new Date(e.start)<shMidnightMs()&&new Date(e.end||e.start)>=shMidnightMs();
+  const hot=(()=>{const t=Date.now();const sd=e.start?(new Date(e.start)-t)/864e5:99;const dd=e.registration_deadline?(new Date(e.registration_deadline)-t)/864e5:99;return sd<=2||(dd>=0&&dd<=3)})();
   const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${CATDISP[LANG][c]||c}</span>`).join("");
   return `<div class="ev">
   <div class="rail"><div class="t1">${e.start?fmtT(e.start):tr("tbd")}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
-  <div class="card ${online?"online":""} ${hybrid?"hybrid":""}">${strip}
+  <div class="card ${online?"online":""} ${hybrid?"hybrid":""} ${hot?"hot":""}">${strip}
   <div class="trow"><h3>${ongoing?'<span class="live">● '+tr("liveNow")+'</span>':''}${e.city==="香港"?'<span class="hkflag">'+tr("hk")+'</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${fL(e,"title")}</a></h3>${feeBadge(e)}</div>
   ${e.organizer?`<div class="org">🏢 ${tr("organizer")}<b>${fL(e,"organizer")}</b></div>`:""}
   ${loc}
@@ -1125,8 +1127,8 @@ function render(){
   const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
   const total=DATA.filter(e=>!isPast(e)).length;
   $("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;const _lce=$("#lc-ev-n");if(_lce)_lce.textContent=total;
-  $("#st-week").textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
-  $("#st-dl").textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
+  const _sw=$("#st-week");if(_sw)_sw.textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
+  const _sd=$("#st-dl");if(_sd)_sd.textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
   const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
   if(favOnly){
     const favs=DATA.filter(e=>FAVS.has(e.url)).sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
@@ -1178,8 +1180,8 @@ const MEX_POST="<b>填写示例：</b><br>「我要投稿的活动：【深圳�
 const MEX_POST_TW="<b>填寫示例：</b><br>「我要投稿的活動：【深圳灣 AI 開發者沙龍，https://官方鏈接】」——把【】裡換成真實的活動名和官方鏈接再複製。投稿前先打開官方頁，確認日期、地點、票價無誤。";
 let mMode="sub",mKey="generic";
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
-if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";}
-else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}}
+if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";document.getElementById("mpost-alt").style.display="block";}
+else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";document.getElementById("mpost-alt").style.display="none";}}
 function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
 document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
