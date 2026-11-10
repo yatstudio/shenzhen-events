@@ -178,7 +178,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .prow a:hover{color:var(--green)}
 .prow .pm{color:var(--ink-ter);font-size:.84rem}
 .btn,.chip,button{touch-action:manipulation}
-#agent-sub,#email-sub,#event-post{scroll-margin-top:118px}
+#agent-sub{scroll-margin-top:118px}
 .agblock{border-top:1px solid rgba(255,255,255,.08);margin-top:18px;padding-top:var(--sp-md)}
 .agblock h4{margin:0 0 var(--sp-sm);font-size:.91rem;font-weight:650;color:var(--ink)}
 .agblock ol{margin:0 0 var(--sp-md);padding-left:20px;color:var(--ink-sec);font-size:.87rem;line-height:1.7}
@@ -276,7 +276,7 @@ select{font-size:16px}
 .btn{flex:0 1 auto;min-height:44px;padding:var(--sp-sm) var(--sp-md);font-size:.88rem;white-space:nowrap}
 .prow{flex-direction:column;gap:var(--sp-xs)}
 .prow .pd{flex:none}
-#agent-sub,#email-sub,#event-post{scroll-margin-top:106px}
+#agent-sub{scroll-margin-top:106px}
 .wrap{padding:0 var(--sp-lg)}
 .bar{margin:0 calc(-1 * var(--sp-lg));padding:var(--sp-md) var(--sp-lg)}
 .ovl{padding:12px}
@@ -482,11 +482,11 @@ input[type=search]{font-size:16px}
     <!-- Section Header -->
     <div class="section-header">
       <h2 class="section-title" id="hero-title">Yat's List · 深圳活动清单</h2>
-      <p class="section-subtitle" id="hero-sub">每天 07:30 更新 · 每条都打开官方页核实过</p>
+      <p class="section-subtitle" id="hero-sub">只做深圳一座城：深圳活动，喂给你的 Agent 吃。</p>
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
     </div>
     <!-- Hero Meta -->
-    <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><b id="st-week">–</b> <span id="st-week-label">未来 7 天</span><i>·</i><b id="st-dl">–</b> <span id="st-dl-label">72h 内截止报名</span><i>·</i><span id="hm-upd">每日 07:30 更新</span></p>
+    <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><b id="st-week">–</b> <span id="st-week-label">未来 7 天</span><i>·</i><b id="st-dl">–</b> <span id="st-dl-label">72h 内截止报名</span></p>
 
     <!-- List Chips: 三张清单入口 -->
     <div class="listchips">
@@ -512,11 +512,11 @@ input[type=search]{font-size:16px}
 
     <!-- Top Actions -->
     <div class="topact">
-      <a class="btn submit" id="ta-submit" href="#event-post" onclick="hlSubmit()">＋ 提交活动</a>
+      <button class="btn submit" id="ta-submit" onclick="openModal('post')">＋ 提交活动</button>
       <button class="btn agent" id="ta-agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
-      <a class="btn" id="ta-email" href="#email-sub">✉️ 邮件订阅</a>
-      <button class="btn agent" id="ta-tour" onclick="startTour()">🧭 订阅导览</button>
-      <button class="btn agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
+      
+      
+      
     </div>
 
 
@@ -578,7 +578,7 @@ input[type=search]{font-size:16px}
     <div id="past"></div>
 
     <!-- Agent Note -->
-    <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。</div>
+    <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a>），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。</div>
 
     <!-- Agent Subscription Card -->
     <div class="subcard" id="agent-sub">
@@ -602,32 +602,6 @@ input[type=search]{font-size:16px}
       <p class="prompt" id="prompt-codex">请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读说明 https://yatslist.com/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按该说明里的规范提交。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
     </div>
 
-    <!-- Event Submission Card -->
-    <div class="subcard" id="event-post">
-      <h3 id="epost-title">📋 提交活动：把一场活动加进清单</h3>
-      <p class="sum" id="epost-q">你想怎么提交？</p>
-      <div class="actions"><button class="btn" id="epost-yes" onclick="routePost('gh')">有 GitHub</button><button class="btn" id="epost-mail" onclick="routePost('mail')">用邮箱提交</button><button class="btn" id="epost-no" onclick="routePost('form')">填网页表单</button></div>
-      <div id="route-gh" hidden>
-        <p class="prompt" id="prompt-post-card"></p>
-        <div class="actions"><button class="btn primary" id="epost-copy" onclick="copySubmit(this)">📋 复制投稿话术给我的 Agent</button></div>
-      </div>
-      <div id="route-mail" hidden>
-        <p class="sum" id="epost-mail-note">把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。</p>
-        <p class="prompt" id="epost-mail-addr">event.submit@yatslist.com</p>
-        <div class="actions"><button class="btn primary" id="epost-mail-copy" onclick="copyRouteMail(this)">📋 复制邮箱</button><a class="btn" id="epost-mail-send" href="mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A">✉️ 写邮件</a></div>
-      </div>
-      <div id="route-form" hidden>
-        <div class="actions"><a class="btn primary" id="epost-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener">📝 打开网页表单提交</a></div>
-      </div>
-    </div>
-
-    <!-- Email Subscription Card -->
-    <div class="subcard" id="email-sub">
-      <h3 id="esub-title">✉️ 邮件订阅：每天早上发到你的邮箱</h3>
-      <p class="sum" id="esub-sum">没有 Agent 也没关系。留下邮箱，每天早上收到一封日报邮件：今天和本周的重点活动、72 小时内截止的报名。每天最多一封，不发广告；想停了，回复邮件注明「退订」即可。</p>
-      <div class="actions"><a class="btn primary" id="esub-btn" href="https://forms.gle/zFKXnRiZVRTE5maZA" target="_blank" rel="noopener">填写邮箱订阅</a></div>
-    </div>
-
     <!-- Footer -->
     <div class="foot">
       <div id="foot-note">🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新、审核投稿）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a></div>
@@ -643,8 +617,7 @@ input[type=search]{font-size:16px}
     <!-- Intro for humans -->
     <div class="intro">
       <h3 style="font-size:1.18rem;margin:0 0 10px" id="intro-title">Yat's List 是什么？</h3>
-      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 10px" id="intro-p1">Yat's List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接在上方清单里浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。</p>
-      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 14px" id="intro-p2">这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。</p>
+      <p style="color:var(--ink-sec);line-height:1.8;margin:0 0 10px" id="intro-p1">每份清单都逐条打开官方页核实过，再结构化发布。在上方浏览，或把订阅话术发给你的 Agent，让它每天替你筛选。</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">✓ 每条都核实过</span><span class="tag">🤖 Agent 可直接订阅</span><span class="tag">🔕 没命中就不打扰</span></div>
     </div>
 
@@ -686,7 +659,7 @@ input[type=search]{font-size:16px}
           <span class="endpoint-name">events.json</span>
           <span class="endpoint-url">https://yatslist.com/events.json</span>
           <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
-          <span class="endpoint-desc">活动数据（JSON，每天 07:30 更新）</span>
+          <span class="endpoint-desc">活动数据（JSON）</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">hackathons.json</span>
@@ -719,6 +692,10 @@ input[type=search]{font-size:16px}
 </section>
 
 <!-- Site Footer -->
+<div class="wrap"><div class="subcard" id="cli-strip-bottom" style="margin:0 0 22px">
+<div class="cmdline"><span>$ pip install: yat's list · CLI</span><span>pip install yatslist</span></div>
+<p class="sum" style="margin-top:10px">程序员：终端里装好，直接 <b>yatslist</b> 查本周深圳活动，<b>yatslist hackathons</b> 看黑客松，不用开网页。</p>
+</div></div>
 <footer class="sitefoot" id="site-footer">
   <div class="wrap">
     <div class="sf-brand">&gt; yat's list<span class="sf-cur">_</span></div>
@@ -771,9 +748,9 @@ docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑�
 metaDesc:"Yat's List 只做深圳：深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
 brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"Yat's List · 深圳活动清单",heroSub:"只做深圳一座城：深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
-statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
+statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
-agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历.ics</a>，每天 07:30 更新），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。',
+agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历.ics</a>），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。',
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
 searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"🎛 筛选 Filter",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
@@ -802,7 +779,7 @@ termPrompt:"$ subscribe: yat's list · 深圳活动日报",evListed:"场活动�
 tbTitle:"🤖 订阅话术（给 Agent）",
 tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：',
 tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
-epDescs:["活动数据（JSON，每天 07:30 更新）","黑客松数据（大陆+港澳台+线上）","RSS 订阅源","日历订阅文件","给 AI 的站点说明"],
+epDescs:["活动数据（JSON）","黑客松数据（大陆+港澳台+线上）","RSS 订阅源","日历订阅文件","给 AI 的站点说明"],
 mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 welcBody:'<b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。',
@@ -825,9 +802,9 @@ docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hacka
 metaDesc:"Yat's List — a verified Shenzhen-only events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
 brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Yat's List · Shenzhen Events",heroSub:"Shenzhen only — events from a single city, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
-statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Updated daily 07:30",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
+statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
-agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">Calendar.ics</a>, updated daily at 07:30) and only ping you when something matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by category / city / fee below, and tap ☆ to save events you like.',
+agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">Calendar.ics</a>) and only ping you when something matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by category / city / fee below, and tap ☆ to save events you like.',
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
 searchPh:"Search by event, organizer, venue…",ftoggleLabel:"🎛 Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
@@ -856,7 +833,7 @@ termPrompt:"$ subscribe: yat's list · Shenzhen events digest",evListed:"events 
 tbTitle:"🤖 Subscription prompt (for your Agent)",
 tbSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Agents can all subscribe. Below is the <b>generic version</b> (works with any Agent that can access the web):',
 tbAll:"Other Agent versions (Doubao / WorkBuddy / Codex)",
-epDescs:["Event data (JSON, updated daily at 07:30)","Hackathon data (Mainland + HK/Macau/Taiwan + online)","RSS feed","Calendar subscription file","Site guide for AI"],
+epDescs:["Event data (JSON)","Hackathon data (Mainland + HK/Macau/Taiwan + online)","RSS feed","Calendar subscription file","Site guide for AI"],
 mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests, areas and budget, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
 chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 welcBody:'<b>👋 First time here?</b><br>This is a Shenzhen events list — verified against official pages and updated daily. Take the 30-second tour: browse on your own, filter by your interests, or let your Agent subscribe and only ping you when something matches.',
@@ -879,9 +856,9 @@ docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑�
 metaDesc:"Yat's List 只做深圳：深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
 brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"Yat's List · 深圳活動清單",heroSub:"只做深圳一座城：深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
-statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"每日 07:30 更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
+statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
-agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日曆.ics</a>，每天 07:30 更新），命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按分類 / 城市 / 費用篩選，點 ☆ 收藏想去的活動。',
+agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日曆.ics</a>），命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按分類 / 城市 / 費用篩選，點 ☆ 收藏想去的活動。',
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
 searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"🎛 篩選 Filter",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
@@ -910,7 +887,7 @@ termPrompt:"$ subscribe: yat's list · 深圳活動日報",evListed:"場活動�
 tbTitle:"🤖 訂閱話術（給 Agent）",
 tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以訂閱。下方是<b>通用版</b>話術（任何能聯網的 Agent 都適用）：',
 tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
-epDescs:["活動數據（JSON，每天 07:30 更新）","黑客松數據（大陸+港澳臺+線上）","RSS 訂閱源","日曆訂閱文件","給 AI 的站點說明"],
+epDescs:["活動數據（JSON）","黑客松數據（大陸+港澳臺+線上）","RSS 訂閱源","日曆訂閱文件","給 AI 的站點說明"],
 mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把裡換成你的興趣、區域、預算，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 welcBody:'<b>👋 第一次來？</b><br>這裡是每天核實更新的深圳活動清單。30 秒導覽帶你看完：自己逛、按興趣篩選，或者讓你的 Agent 訂閱，每天只推你命中的活動。',
@@ -953,7 +930,7 @@ const MEX_POST_EN="<b>Example:</b><br>“The event I want to submit: [Shenzhen B
 const POST_STEPS_ZH="把话术发给你的 Agent（Codex / Claude Code 等），它会核对官方页并代你提 PR。";
 const POST_STEPS_TW="把話術發給你的 Agent（Codex / Claude Code 等），它會核對官方頁並代你提 PR。";
 const POST_STEPS_EN="Send this prompt to your Agent (Codex / Claude Code, etc.) — it will verify the official page and open the PR for you.";
-const TOUR_EN=[{sel:"#list",t:"<b>Step 1 · Start with the events</b>: every event here is verified one by one against its official page (AI / startups / tech / cross-border / Web3 / hardware), sorted by date. Tap a title to open the official registration page — links point to the original source, not an aggregator."},{sel:".bar",t:"<b>Step 2 · Search & filter</b>: type a keyword or tap a category chip to see only what you care about. Hong Kong events, online events and your saved events can each be filtered on their own."},{sel:".card",t:"<b>Step 3 · Reading a card</b>: time on the left; the bold lines are the title and venue, the small print is the organizer and source. Price sits top-right and the orange badge is the registration deadline — act fast when it is close. Buttons under each card: official page, add to calendar, ☆ save, share."},{sel:".terminal",t:"<b>Step 4 · Let an Agent watch for you</b>: copy the prompt in this terminal and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) — it pulls new events every morning and only pings you when something matches your interests."},{sel:"#email-sub",t:"<b>Step 5 · No Agent? Use email</b>: subscribe to the daily email digest (one email each morning) or import the ICS calendar file. That's the tour — go pick your events."}];
+const TOUR_EN=[{sel:"#list",t:"<b>Step 1 · Start with the events</b>: every event here is verified one by one against its official page (AI / startups / tech / cross-border / Web3 / hardware), sorted by date. Tap a title to open the official registration page — links point to the original source, not an aggregator."},{sel:".bar",t:"<b>Step 2 · Search & filter</b>: type a keyword or tap a category chip to see only what you care about. Hong Kong events, online events and your saved events can each be filtered on their own."},{sel:".card",t:"<b>Step 3 · Reading a card</b>: time on the left; the bold lines are the title and venue, the small print is the organizer and source. Price sits top-right and the orange badge is the registration deadline — act fast when it is close. Buttons under each card: official page, add to calendar, ☆ save, share."},{sel:".terminal",t:"<b>Step 4 · Let an Agent watch for you</b>: copy the prompt in this terminal and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) — it pulls new events every morning and only pings you when something matches your interests."},{sel:"#cli-strip-bottom",t:"<b>Step 5 · Developers, check the footer</b>: pip install yatslist in your terminal and query events without opening the site. That's the tour — go pick your events."}];
 function fmtUpd(){const _d=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";const el=document.getElementById("st-upd");if(el)el.textContent=_d;const hm=document.getElementById("hm-upd");if(hm)hm.textContent=tr("heroMetaDaily")+(window._updRaw?" · "+tr("heroMetaData")+" "+_d:"")}
 function _setText(sel,txt){const el=document.querySelector(sel);if(el)el.textContent=txt}
 function _setHTML(sel,html){const el=document.querySelector(sel);if(el)el.innerHTML=html}
@@ -1209,8 +1186,8 @@ document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.
 document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly;document.getElementById("favbtn").classList.toggle("on",favOnly);render()});
 document.getElementById("list").addEventListener("click",ev=>{const b=ev.target.closest("[data-fav]");if(!b)return;ev.preventDefault();toggleFav(decodeURIComponent(b.dataset.fav))});
 function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
-const TOUR=[{sel:"#list",t:"<b>第 1 步 · 先看活动</b>：这里的每场活动都逐条对着官方页核实过（AI / 创业 / 科技 / 跨境 / Web3 / 硬件），按日期排好。点标题就是官方报名页，链接都是一手源、不经二手聚合转手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和筛选</b>：输入关键词、或点分类标签，只看你关心的；香港活动、线上活动、只看收藏，都能单独筛出来。"},{sel:".card",t:"<b>第 3 步 · 一张卡看懂一场</b>：左边是时间，加粗的是标题和地点，小字是主办方和来源；右上角是票价，橙色徽标是报名截止——快截止的先下手。卡片下方按钮：官方页、加到日历、☆ 收藏、分享。"},{sel:".terminal",t:"<b>第 4 步 · 让 Agent 替你盯</b>：把终端里这段话术复制给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自动拉新活动，只在对上你兴趣时才提醒你。"},{sel:"#email-sub",t:"<b>第 5 步 · 没有 Agent 就订邮件</b>：邮件日报每天早上发一封，也可以把 ICS 导进日历。导览结束，去挑活动吧。"}];
-const TOUR_TW=[{sel:"#list",t:"<b>第 1 步 · 先看活動</b>：這裡的每場活動都逐條對著官方頁核實過（AI / 創業 / 科技 / 跨境 / Web3 / 硬件），按日期排好。點標題就是官方報名頁，鏈接都是一手源、不經二手聚合轉手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和篩選</b>：輸入關鍵詞、或點分類標籤，只看你關心的；香港活動、線上活動、只看收藏，都能單獨篩出來。"},{sel:".card",t:"<b>第 3 步 · 一張卡看懂一場</b>：左邊是時間，加粗的是標題和地點，小字是主辦方和來源；右上角是票價，橙色徽標是報名截止——快截止的先下手。卡片下方按鈕：官方頁、加到日曆、☆ 收藏、分享。"},{sel:".terminal",t:"<b>第 4 步 · 讓 Agent 替你盯</b>：把終端裡這段話術複製給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自動拉新活動，只在對上你興趣時才提醒你。"},{sel:"#email-sub",t:"<b>第 5 步 · 沒有 Agent 就訂郵件</b>：郵件日報每天早上發一封，也可以把 ICS 導進日曆。導覽結束，去挑活動吧。"}];
+const TOUR=[{sel:"#list",t:"<b>第 1 步 · 先看活动</b>：这里的每场活动都逐条对着官方页核实过（AI / 创业 / 科技 / 跨境 / Web3 / 硬件），按日期排好。点标题就是官方报名页，链接都是一手源、不经二手聚合转手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和筛选</b>：输入关键词、或点分类标签，只看你关心的；香港活动、线上活动、只看收藏，都能单独筛出来。"},{sel:".card",t:"<b>第 3 步 · 一张卡看懂一场</b>：左边是时间，加粗的是标题和地点，小字是主办方和来源；右上角是票价，橙色徽标是报名截止——快截止的先下手。卡片下方按钮：官方页、加到日历、☆ 收藏、分享。"},{sel:".terminal",t:"<b>第 4 步 · 让 Agent 替你盯</b>：把终端里这段话术复制给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自动拉新活动，只在对上你兴趣时才提醒你。"},{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序员看页脚</b>：终端里 pip install yatslist 就能查活动，不用开网页。导览结束，去挑活动吧。"}];
+const TOUR_TW=[{sel:"#list",t:"<b>第 1 步 · 先看活動</b>：這裡的每場活動都逐條對著官方頁核實過（AI / 創業 / 科技 / 跨境 / Web3 / 硬件），按日期排好。點標題就是官方報名頁，鏈接都是一手源、不經二手聚合轉手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和篩選</b>：輸入關鍵詞、或點分類標籤，只看你關心的；香港活動、線上活動、只看收藏，都能單獨篩出來。"},{sel:".card",t:"<b>第 3 步 · 一張卡看懂一場</b>：左邊是時間，加粗的是標題和地點，小字是主辦方和來源；右上角是票價，橙色徽標是報名截止——快截止的先下手。卡片下方按鈕：官方頁、加到日曆、☆ 收藏、分享。"},{sel:".terminal",t:"<b>第 4 步 · 讓 Agent 替你盯</b>：把終端裡這段話術複製給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自動拉新活動，只在對上你興趣時才提醒你。"},{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序員看頁腳</b>：終端裡 pip install yatslist 就能查活動，不用開網頁。導覽結束，去挑活動吧。"}];
 let tourI=-1,tourEl=null;
 function tourShow(){const st=(LANG==="en"?TOUR_EN:LANG==="tw"?TOUR_TW:TOUR)[tourI];if(tourEl)tourEl.classList.remove("tour-hl");tourEl=document.querySelector(st.sel);if(tourEl){tourEl.scrollIntoView({behavior:"smooth",block:"center"});tourEl.classList.add("tour-hl")}document.getElementById("tourtext").innerHTML=st.t;document.getElementById("tourprog").textContent=(tourI+1)+" / "+TOUR.length;document.getElementById("tourprev").disabled=tourI===0;document.getElementById("tournext").textContent=tourI===TOUR.length-1?tr("tourDone"):tr("tourNext")}
 function startTour(){tourI=0;document.getElementById("tourcard").classList.add("open");tourShow()}
