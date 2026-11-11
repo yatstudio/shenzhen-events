@@ -470,13 +470,14 @@ input[type=search]{font-size:16px}
     </a>
     <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
 <div id="mnav-panel"><nav class="topbar-nav">
-      <a href="#agent-section" id="nav-agent">给 Agent</a>
-      <a href="#human-section" id="nav-events">活动清单</a>
+      <a href="#agent-section" id="nav-agent" class="nav-ag">给 Agent</a>
+      <a href="#human-section" id="nav-events" class="nav-on" aria-current="page">活动清单</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松清单</a>
       <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
       <a href="https://yatslist.com/spaces/" id="nav-spaces">Space 纪要</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
+      <button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">提交活动</button>
     </nav></div>
   </div>
 </div>
@@ -486,45 +487,35 @@ input[type=search]{font-size:16px}
   <div class="wrap">
     <!-- Section Header -->
     <div class="section-header">
-      <h2 class="section-title" id="hero-title">Yat's List · 深圳活动清单</h2>
-      <p class="section-subtitle" id="hero-sub">深圳活动，喂给你的 Agent 吃。</p>
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
+      <h2 class="section-title" id="hero-title">深圳活动清单</h2>
+      <p class="section-subtitle" id="hero-sub">深圳活动，喂给你的 Agent 吃。</p>
     </div>
 
-    <!-- List Chips: 三张清单入口 -->
-    <div class="listchips">
-      <a class="lchip on" href="#top" aria-current="page">
-        <span class="lc-top"><b id="lc-ev-name">深圳活动清单</b><span class="lc-n"><b id="lc-ev-n">–</b> <span id="lc-u1">场</span></span></span>
-        <span class="lc-desc" id="lc-ev-desc">仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/hackathons/">
-        <span class="lc-top"><b id="lc-hack-name">黑客松清单</b><span class="lc-n"><b id="hackcount2">–</b> <span id="lc-u2">场</span></span></span>
-        <span class="lc-desc" id="lc-hack-desc">全球黑客松与创新大赛，正在报名</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/szexpat/">
-        <span class="lc-top"><b id="lc-expat-name">外国人活动</b><span class="lc-n"><b id="lc-expat-n">–</b> <span id="lc-u3">场</span></span></span>
-        <span class="lc-desc" id="lc-expat-desc">外国人常去的聚会、演出与展览</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/spaces/">
-        <span class="lc-top"><b id="lc-space-name">Space 纪要</b><span class="lc-n"><b id="lc-space-n">–</b> <span id="lc-u4">场</span></span></span>
-        <span class="lc-desc" id="lc-space-desc">华语圈 X Space 纪要与回放要点</span>
-      </a>
+    <!-- Agent subscription: the one primary action on the page -->
+    <div class="agentbox" id="agentbox">
+      <div class="ab-head">
+        <div class="ab-text"><div class="ab-title" id="ab-title">让你的 Agent 每天替你刷活动</div><div class="ab-sub" id="ab-sub">豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣才提醒你。</div></div>
+        <button type="button" class="ab-go" id="ta-agent" onclick="openModal('sub')">用我的 Agent 订阅 →</button>
+      </div>
+      <div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/events.json</span><button type="button" id="cmd-copy">复制</button></div>
+      <div class="ab-apis" id="ab-apis">也可以直接读：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）</div>
     </div>
-
-    <!-- Top Actions -->
-    <div class="topact">
-      <button class="btn submit" id="ta-submit" onclick="openModal('post')">＋ 提交活动</button>
-      <button class="btn agent" id="ta-agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
-      
-      
-      
-    </div>
-
 
     <!-- Filter Bar -->
     <div class="bar">
+      <div class="srow">
       <input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
-      <button id="ftoggle" aria-expanded="false"><span id="ftoggle-label">🎛 筛选 Filter</span><span><span id="fcount"></span> ▾</span></button>
+      <button id="ftoggle" aria-expanded="false" aria-controls="fgroups"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2" fill="var(--panel)"/><circle cx="13" cy="10" r="2" fill="var(--panel)"/><circle cx="8" cy="15" r="2" fill="var(--panel)"/></svg><span id="ftoggle-label">筛选</span><span id="fcount"></span></button>
+      </div>
+      <div class="qchips" id="qchips">
+        <button type="button" class="chip on" data-q="all">全部</button>
+        <button type="button" class="chip" data-q="time:week">本周</button>
+        <button type="button" class="chip" data-q="fee:free">免费</button>
+        <button type="button" class="chip" data-q="fmt:online">线上</button>
+        <button type="button" class="chip" data-q="city:sz">深圳</button>
+        <button type="button" class="chip" data-q="city:hk">香港</button>
+      </div>
       <div id="fgroups">
         <div class="fgroup">
           <span class="flabel">收藏</span>
@@ -572,18 +563,17 @@ input[type=search]{font-size:16px}
       </div>
     </div>
 
+    <!-- Welcome (first visit only): inline bar, never covers the list -->
+    <div class="welc" id="welc"><span id="welc-body"><b>第一次来？</b>30 秒导览带你看懂怎么用</span><button type="button" class="welc-tour" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button type="button" class="welc-x" id="welc-x" aria-label="关闭" onclick="dismissWelc()">✕</button></div>
+
     <!-- Event List -->
     <div id="list"><div class="empty" id="list-loading">加载中…</div></div>
 
     <!-- Past Events -->
     <div id="past"></div>
 
-    <!-- Agent Note -->
-    <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a>），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。</div>
-
     <!-- Agent Subscription Card -->
     <div class="subcard" id="agent-sub">
-      <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">深圳活动清单</span></span><span class="u">https://yatslist.com/events.json</span><button type="button" id="cmd-copy">复制</button></div>
       <div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
       <h3 id="asub-title">🤖 让你的 Agent 提醒你，不用自己刷</h3>
       <p class="sum" id="asub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
@@ -733,7 +723,6 @@ input[type=search]{font-size:16px}
 </div>
 
 <!-- Welcome Card -->
-<div class="welc" id="welc"><span id="welc-body"><b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。</span><div class="mrow"><button class="btn primary" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" id="welc-browse" onclick="dismissWelc()">直接逛逛</button></div></div>
 
 <!-- Tour Card -->
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" id="tourend" onclick="endTour()">结束导览</button><span id="tourprog" style="color:var(--ink-ter);font-size:12.5px"></span></div></div>
@@ -749,12 +738,12 @@ zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
 brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"Yat's List · 深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
+heroTitle:"深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
-taSubmit:"＋ 提交活动",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
+taSubmit:"提交活动",taAgent:"用我的 Agent 订阅 →",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
 agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历.ics</a>），命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按分类 / 城市 / 费用筛选，点 ☆ 收藏想去的活动。',
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
-searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"🎛 筛选 Filter",
+searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"筛选",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"时间",feeLabel:"费用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分类",
 segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"后天",week:"本周",deadline:"🔥 即将截止"},
@@ -784,31 +773,35 @@ tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
 epDescs:["活动数据（JSON）","黑客松数据（大陆+港澳台+线上）","RSS 订阅源","日历订阅文件","给 AI 的站点说明"],
 mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。',
+welcBody:'<b>第一次来？</b>30 秒导览带你看懂怎么用',
 welcTour:"开始导览",welcBrowse:"直接逛逛",tourPrev:"上一步",tourNext:"下一步",tourDone:"完成",tourEnd:"结束导览",
 footTag:"深圳活动，喂给你的 Agent 吃。",footHome:"首页",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 逐条核实自官方页面 · 免费无广告",
 footContact:'合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"加载中…",loadFail:"数据加载失败，请刷新页面重试",
 pastTitle:"📚 过往活动",pastHint:"点开看历史记录",pastEmpty:"暂无过往记录，活动结束后会自动归档到这里",
 noResults:"没有符合条件的活动",fres:function(n){return "共 "+n+" 场"},
-favTitle:"⭐ 我的收藏",favEmpty:"还没有收藏。看到想去的活动，点卡片上的「☆ 收藏」就会存到这里——收藏只存在这台设备的浏览器里，不用注册、不会上传。",
+favTitle:"⭐ 我的收藏",favEmpty:"还没有收藏。看到想去的活动，点「···」里的「收藏」就会存到这里——收藏只存在这台设备的浏览器里，不用注册、不会上传。",
 dateTBD:"时间待定（看报名截止）",ongoingFold:function(n){return "持续进行中 · "+n+" 场长活动"},
 dlSoon:function(d){return "报名剩 "+d+" 天"},dlClose:"报名截止 ",dlClosed:"报名已截止",
 onlineStrip:"线上活动 · ONLINE",hybridStrip:"🌐+📍 线上 + 线下均可参加",joinOnline:"线上参加",venueTBA:"地点待公布",
 hk:"🇭🇰 香港",liveNow:"进行中",organizer:"主办方：",tbd:"待定",
 btnOfficial:"官方页 / 报名 →",btnCal:"＋ 加日历",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"来源：",mapBtn:"地图",shareBtn:"↗ 分享",shareT:"分享这场活动",shareHint:"长按或右键图片即可保存，拿去发朋友圈 / 小红书 / X",copyLink:"复制短链接",copied2:"已复制",shareClose:"关闭",
-feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",relTomorrow:"明天",relDayAfter:"后天"
+feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",relTomorrow:"明天",relDayAfter:"后天",
+regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收藏",mFavOff:"收藏",mShare:"分享链接",mMap:"在地图中查看",online:"线上",dayCount:function(n){return n+" 场"},
+abTitle:"让你的 Agent 每天替你刷活动",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣才提醒你。",
+abApis:'也可以直接读：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）',
+qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线上","city:sz":"深圳","city:hk":"香港"},welcClose:"关闭"
 },
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen-only events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
 brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Yat's List · Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
+heroTitle:"Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
-taSubmit:"+ Submit an event",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
+taSubmit:"Submit event",taAgent:"Subscribe with my Agent →",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
 agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">Calendar.ics</a>) and only ping you when something matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by category / city / fee below, and tap ☆ to save events you like.',
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
-searchPh:"Search by event, organizer, venue…",ftoggleLabel:"🎛 Filters",
+searchPh:"Search by event, organizer, venue…",ftoggleLabel:"Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
 timeLabel:"When",feeLabel:"Fee",fmtLabel:"Format",cityLabel:"City",catLabel:"Category",
 segTime:{all:"All",today:"Today",tomorrow:"Tomorrow",dayafter:"In 2 days",week:"This week",deadline:"🔥 Closing soon"},
@@ -838,31 +831,35 @@ tbAll:"Other Agent versions (Doubao / WorkBuddy / Codex)",
 epDescs:["Event data (JSON)","Hackathon data (Mainland + HK/Macau/Taiwan + online)","RSS feed","Calendar subscription file","Site guide for AI"],
 mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests, areas and budget, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
 chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 First time here?</b><br>This is a Shenzhen events list — verified against official pages and updated daily. Take the 30-second tour: browse on your own, filter by your interests, or let your Agent subscribe and only ping you when something matches.',
+welcBody:'<b>First time here?</b>A 30-second tour shows you how it works',
 welcTour:"Start the tour",welcBrowse:"Just browse",tourPrev:"Back",tourNext:"Next",tourDone:"Done",tourEnd:"End tour",
 footTag:"Shenzhen events, served to your Agent.",footHome:"Home",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Every listing verified against its official page · Free, no ads",
 footContact:'Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"Loading…",loadFail:"Failed to load data — please refresh and try again",
 pastTitle:"📚 Past events",pastHint:"Tap to view history",pastEmpty:"No past events yet — finished events are archived here automatically.",
 noResults:"No events match your filters",fres:function(n){return n+" events"},
-favTitle:"⭐ My saved events",favEmpty:"Nothing saved yet. When you spot an event you like, tap “☆ Save” on its card and it will live here — saved only in this device's browser, no account, nothing uploaded.",
+favTitle:"⭐ My saved events",favEmpty:"Nothing saved yet. When you spot an event you like, tap “···” → “Save” and it will live here — saved only in this device's browser, no account, nothing uploaded.",
 dateTBD:"Date TBD (see registration deadline)",ongoingFold:function(n){return "Ongoing · "+n+" multi-day events"},
 dlSoon:function(d){return "Registration closes in "+d+(d===1?" day":" days")},dlClose:"Registration closes ",dlClosed:"Registration closed",
 onlineStrip:"ONLINE EVENT",hybridStrip:"🌐+📍 Join online or in person",joinOnline:"Join online",venueTBA:"Venue TBA",
 hk:"🇭🇰 Hong Kong",liveNow:"Happening now",organizer:"Organizer: ",tbd:"TBD",
 btnOfficial:"Official page / Register →",btnCal:"+ Add to calendar",favOn:"★ Saved",favOff:"☆ Save",source:"Source: ",mapBtn:"Map",shareBtn:"↗ Share",shareT:"Share this event",shareHint:"Long-press or right-click the image to save and share it",copyLink:"Copy short link",copied2:"Copied",shareClose:"Close",
-feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"Today",relTomorrow:"Tomorrow",relDayAfter:"In 2 days"
+feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"Today",relTomorrow:"Tomorrow",relDayAfter:"In 2 days",
+regBtn:"Register →",moreBtn:"More actions",mCal:"Add to calendar",mFavOn:"Remove from saved",mFavOff:"Save",mShare:"Share link",mMap:"Open in map",online:"Online",dayCount:function(n){return n+(n===1?" event":" events")},
+abTitle:"Let your Agent check events for you every day",abSub:"Doubao, WorkBuddy, Codex, Claude Code and others can subscribe. Set it up once; it only pings you when something matches.",
+abApis:'Or read directly: <a href="/feed.xml">RSS</a> · <a href="/events.ics">Calendar .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide)',
+qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online","city:sz":"Shenzhen","city:hk":"Hong Kong"},welcClose:"Close"
 },
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
 brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"Yat's List · 深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
+heroTitle:"深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
-taSubmit:"＋ 提交活動",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
+taSubmit:"提交活動",taAgent:"用我的 Agent 訂閱 →",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
 agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日曆.ics</a>），命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按分類 / 城市 / 費用篩選，點 ☆ 收藏想去的活動。',
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
-searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"🎛 篩選 Filter",
+searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"篩選",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"時間",feeLabel:"費用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分類",
 segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"後天",week:"本週",deadline:"🔥 即將截止"},
@@ -892,20 +889,24 @@ tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
 epDescs:["活動數據（JSON）","黑客松數據（大陸+港澳臺+線上）","RSS 訂閱源","日曆訂閱文件","給 AI 的站點說明"],
 mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把裡換成你的興趣、區域、預算，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 第一次來？</b><br>這裡是每天核實更新的深圳活動清單。30 秒導覽帶你看完：自己逛、按興趣篩選，或者讓你的 Agent 訂閱，每天只推你命中的活動。',
+welcBody:'<b>第一次來？</b>30 秒導覽帶你看懂怎麼用',
 welcTour:"開始導覽",welcBrowse:"直接逛逛",tourPrev:"上一步",tourNext:"下一步",tourDone:"完成",tourEnd:"結束導覽",
 footTag:"深圳活動，餵給你的 Agent 吃。",footHome:"首頁",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 逐條核實自官方頁面 · 免費無廣告",
 footContact:'合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"加載中…",loadFail:"數據加載失敗，請刷新頁面重試",
 pastTitle:"📚 過往活動",pastHint:"點開看歷史記錄",pastEmpty:"暫無過往記錄，活動結束後會自動歸檔到這裡",
 noResults:"沒有符合條件的活動",fres:function(n){return "共 "+n+" 場"},
-favTitle:"⭐ 我的收藏",favEmpty:"還沒有收藏。看到想去的活動，點卡片上的「☆ 收藏」就會存到這裡——收藏只存在這臺設備的瀏覽器裡，不用註冊、不會上傳。",
+favTitle:"⭐ 我的收藏",favEmpty:"還沒有收藏。看到想去的活動，點「···」裡的「收藏」就會存到這裡——收藏只存在這臺設備的瀏覽器裡，不用註冊、不會上傳。",
 dateTBD:"時間待定（看報名截止）",ongoingFold:function(n){return "持續進行中 · "+n+" 場長活動"},
 dlSoon:function(d){return "報名剩 "+d+" 天"},dlClose:"報名截止 ",dlClosed:"報名已截止",
 onlineStrip:"線上活動 · ONLINE",hybridStrip:"🌐+📍 線上 + 線下均可參加",joinOnline:"線上參加",venueTBA:"地點待公佈",
 hk:"🇭🇰 香港",liveNow:"進行中",organizer:"主辦方：",tbd:"待定",
 btnOfficial:"官方頁 / 報名 →",btnCal:"＋ 加日曆",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"來源：",mapBtn:"地圖",shareBtn:"↗ 分享",shareT:"分享這場活動",shareHint:"長按或右鍵圖片即可保存，拿去發朋友圈 / 小紅書 / X",copyLink:"複製短鏈接",copied2:"已複製",shareClose:"關閉",
-feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",relTomorrow:"明天",relDayAfter:"後天"
+feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",relTomorrow:"明天",relDayAfter:"後天",
+regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收藏",mFavOff:"收藏",mShare:"分享連結",mMap:"在地圖中查看",online:"線上",dayCount:function(n){return n+" 場"},
+abTitle:"讓你的 Agent 每天替你刷活動",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，命中興趣才提醒你。",
+abApis:'也可以直接讀：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日曆 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範）',
+qChips:{all:"全部","time:week":"本週","fee:free":"免費","fmt:online":"線上","city:sz":"深圳","city:hk":"香港"},welcClose:"關閉"
 }};
 function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
@@ -932,7 +933,7 @@ const MEX_POST_EN="<b>Example:</b><br>“The event I want to submit: [Shenzhen B
 const POST_STEPS_ZH="把话术发给你的 Agent（Codex / Claude Code 等），它会核对官方页并代你提 PR。";
 const POST_STEPS_TW="把話術發給你的 Agent（Codex / Claude Code 等），它會核對官方頁並代你提 PR。";
 const POST_STEPS_EN="Send this prompt to your Agent (Codex / Claude Code, etc.) — it will verify the official page and open the PR for you.";
-const TOUR_EN=[{sel:"#list",t:"<b>Step 1 · Start with the events</b>: every event here is verified one by one against its official page (AI / startups / tech / cross-border / Web3 / hardware), sorted by date. Tap a title to open the official registration page — links point to the original source, not an aggregator."},{sel:".bar",t:"<b>Step 2 · Search & filter</b>: type a keyword or tap a category chip to see only what you care about. Hong Kong events, online events and your saved events can each be filtered on their own."},{sel:".card",t:"<b>Step 3 · Reading a card</b>: time on the left; the bold lines are the title and venue, the small print is the organizer and source. Price sits top-right and the orange badge is the registration deadline — act fast when it is close. Buttons under each card: official page, add to calendar, ☆ save, share."},{sel:".terminal",t:"<b>Step 4 · Let an Agent watch for you</b>: copy the prompt in this terminal and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) — it pulls new events every morning and only pings you when something matches your interests."},{sel:"#cli-strip-bottom",t:"<b>Step 5 · Developers, check the footer</b>: pip install yatslist in your terminal and query events without opening the site. That's the tour — go pick your events."}];
+const TOUR_EN=[{sel:"#list",t:"<b>Step 1 · Start with the events</b>: every event here is verified one by one against its official page (AI / startups / tech / cross-border / Web3 / hardware), sorted by date. Tap a title to open the official registration page — links point to the original source, not an aggregator."},{sel:".bar",t:"<b>Step 2 · Search & filter</b>: type a keyword or tap a category chip to see only what you care about. Hong Kong events, online events and your saved events can each be filtered on their own."},{sel:".card",t:"<b>Step 3 · Reading a card</b>: time on the left, title in bold, and the grey line shows venue, organizer and price; closing-soon deadlines are flagged. “Register →” opens the official page, and “···” lets you add to calendar, save, share or open the map."},{sel:".terminal",t:"<b>Step 4 · Let an Agent watch for you</b>: copy the prompt in this terminal and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) — it pulls new events every morning and only pings you when something matches your interests."},{sel:"#cli-strip-bottom",t:"<b>Step 5 · Developers, check the footer</b>: pip install yatslist in your terminal and query events without opening the site. That's the tour — go pick your events."}];
 function fmtUpd(){const _d=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";const el=document.getElementById("st-upd");if(el)el.textContent=_d;const hm=document.getElementById("hm-upd");if(hm)hm.textContent=tr("heroMetaDaily")+(window._updRaw?" · "+tr("heroMetaData")+" "+_d:"")}
 function _setText(sel,txt){const el=document.querySelector(sel);if(el)el.textContent=txt}
 function _setHTML(sel,html){const el=document.querySelector(sel);if(el)el.innerHTML=html}
@@ -946,7 +947,9 @@ _setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_s
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
-_setHTML("#agentnote",tr("agentNote"));
+_setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setHTML("#ab-apis",tr("abApis"));
+{const qd=tr("qChips")||{};document.querySelectorAll("#qchips .chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
+{const wx=document.getElementById("welc-x");if(wx)wx.setAttribute("aria-label",tr("welcClose"))}
 _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setText("#bb-sub-post",tr("bbSubPost"));_setText("#bb-go",tr("bbGo"));
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
@@ -971,7 +974,7 @@ document.querySelectorAll(".endpoint-item .btn-copy").forEach(el=>{el.textConten
 _setText("#subprompt-copy",tr("copy"));
 _setText("#mclose1",tr("mclose"));_setText("#mclose2",tr("mclose2"));_setText("#mhint",tr("mhint"));_setText("#mcopy",tr("mcopy"));
 document.querySelectorAll("#mchips .mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
-_setHTML("#welc-body",tr("welcBody"));_setText("#welc-tour",tr("welcTour"));_setText("#welc-browse",tr("welcBrowse"));
+_setHTML("#welc-body",tr("welcBody"));_setText("#welc-tour",tr("welcTour"));
 _setText("#tourprev",tr("tourPrev"));_setText("#tournext",tr("tourNext"));_setText("#tourend",tr("tourEnd"));
 _setText("#sf-tag",tr("footTag"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
@@ -1090,29 +1093,37 @@ function cardOf(e,now){
   const d=dlDays(e);
   const dl=(d!==null&&d>=0)?(d<=3?`<span class="dl soon">${tr("dlSoon",d)}</span>`:`<span class="dl">${tr("dlClose")}${new Date(e.registration_deadline).toLocaleDateString(LOC(),{timeZone:TZ,month:"numeric",day:"numeric"})}</span>`):(d!==null&&d<0&&e.start&&new Date(e.start)>now?`<span class="dl closed">${tr("dlClosed")}</span>`:"");
   const online=isOnline(e),hybrid=isHybrid(e);
-  const strip=online?`<div class="online-strip">🌐 ${tr("onlineStrip")}${e.format==="线上Space"?" · X Space":""}</div>`:hybrid?`<div class="hybrid-strip">${tr("hybridStrip")}</div>`:"";
-  const loc=online?`<div class="loc">🌐 <b>${tr("joinOnline")}</b>${e.venue?" · "+fL(e,"venue"):""}</div>`
-  :`<div class="loc"><span class="pin">📍</span> <b>${e.city==="香港"?'<span class="hkpin">'+tr("hk")+'</span> · ':''}${[fL(e,"district"),fL(e,"venue")].filter(Boolean).join(" · ")||tr("venueTBA")}</b></div>`;
   const ongoing=e.start&&new Date(e.start)<shMidnightMs()&&new Date(e.end||e.start)>=shMidnightMs();
-  const hot=(()=>{const t=Date.now();const sd=e.start?(new Date(e.start)-t)/864e5:99;const dd=e.registration_deadline?(new Date(e.registration_deadline)-t)/864e5:99;return sd<=2||(dd>=0&&dd<=3)})();
-  const tags=e.categories.map(c=>`<span class="tag ${c==="黑客松"||c==="硬件"?"hack":""} ${c==="Web3"||c==="加密"?"web3":""} ${c==="在线Space"?"space":""}">${CATDISP[LANG][c]||c}</span>`).join("");
+  const fav=FAVS.has(e.url);
+  // one quiet meta line: [city] · place · organizer · fee · deadline (no emoji, no colour blocks)
+  const where=[fL(e,"district"),fL(e,"venue")].filter(Boolean).join(" · ");
+  const ven=e.venue?fL(e,"venue"):"";
+  const place=online?(/^(线上|線上|online)/i.test(ven)?ven:[tr("online"),ven].filter(Boolean).join(" · "))
+    :hybrid?tr("online")+" + "+(where||tr("venueTBA")):(where||tr("venueTBA"));
+  const fee=feeBadge(e).replace(/<[^>]+>/g,"").replace(/^💰\s*/,"");
+  const meta=[e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
+  const mapHref=(!online&&e.venue)?`https://uri.amap.com/marker?position=&name=${encodeURIComponent(`${e.city||""}${e.district||""}${e.venue}`)}&src=yat`:"";
+  const idx=DATA.indexOf(e);
+  const menu=[
+    e.start?`<button type="button" role="menuitem" onclick="_ics(DATA[${idx}])">${tr("mCal")}</button>`:"",
+    `<button type="button" role="menuitem" data-fav="${encodeURIComponent(e.url)}">${fav?tr("mFavOn"):tr("mFavOff")}</button>`,
+    e.id?`<button type="button" role="menuitem" onclick="_share('${e.id}')">${tr("mShare")}</button>`:"",
+    mapHref?`<a role="menuitem" href="${mapHref}" target="_blank" rel="noopener">${tr("mMap")}</a>`:""
+  ].join("");
   return `<div class="ev">
   <div class="rail"><div class="t1">${e.start?fmtT(e.start):tr("tbd")}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
-  <div class="card ${online?"online":""} ${hybrid?"hybrid":""} ${hot?"hot":""}">${strip}
-  <div class="trow"><h3>${ongoing?'<span class="live">● '+tr("liveNow")+'</span>':''}${e.city==="香港"?'<span class="hkflag">'+tr("hk")+'</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${fL(e,"title")}</a></h3>${feeBadge(e)}</div>
-  ${e.organizer?`<div class="org">🏢 ${tr("organizer")}<b>${fL(e,"organizer")}</b></div>`:""}
-  ${loc}
-  ${dl?`<div class="meta">${dl}</div>`:""}
-  <div class="tags">${tags}</div>
+  <div class="card">
+  <div class="cmain">
+  <h3>${ongoing?'<span class="live">'+tr("liveNow")+'</span>':''}${fav?'<span class="favmark" aria-hidden="true">★</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${fL(e,"title")}</a></h3>
+  <div class="cmeta">${meta}</div>
+  ${dl?`<div class="cmeta cdl">${dl}</div>`:""}
   ${e.summary?`<p class="sum">${fL(e,"summary")}</p>`:""}
-  <div class="actions">
-  <a class="btn primary" href="${e.url}" target="_blank" rel="noopener">${tr("btnOfficial")}</a>
-  ${e.start?`<button class="btn" onclick="_ics(DATA[${DATA.indexOf(e)}])">${tr("btnCal")}</button>`:""}
-  <button class="btn favbtn${FAVS.has(e.url)?" on":""}" data-fav="${encodeURIComponent(e.url)}">${FAVS.has(e.url)?tr("favOn"):tr("favOff")}</button>
-  ${e.id?`<button class="btn" onclick="_share('${e.id}')">${tr("shareBtn")}</button>`:""}
-  ${!online?maps(e):""}
   </div>
-  <div class="meta srcrow" style="margin-top:8px">${tr("source")}${e.source}</div>
+  <div class="cact">
+  <a class="reg" href="${e.url}" target="_blank" rel="noopener">${tr("regBtn")}</a>
+  <button type="button" class="more" aria-haspopup="menu" aria-expanded="false" aria-label="${tr("moreBtn")}" title="${tr("moreBtn")}">···</button>
+  <div class="cmenu" role="menu">${menu}</div>
+  </div>
   </div>
   </div>`;
 }
@@ -1133,7 +1144,7 @@ function render(){
   const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
   if(favOnly){
     const favs=DATA.filter(e=>FAVS.has(e.url)).sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
-    $("#list").innerHTML='<div class="dayhead"><span class="dmeta">'+tr("favTitle")+'</span></div>'+(favs.length?favs.map(e=>cardOf(e,now)).join(""):'<div class="empty">'+tr("favEmpty")+'</div>');
+    $("#list").innerHTML='<div class="dayhead"><span class="dmeta">'+tr("favTitle")+'</span></div>'+(favs.length?'<div class="dlist">'+favs.map(e=>cardOf(e,now)).join("")+'</div>':'<div class="empty">'+tr("favEmpty")+'</div>');
     return;
   }
   if(!evs.length){$("#list").innerHTML='<div class="empty">'+tr("noResults")+'</div>';return}
@@ -1147,17 +1158,20 @@ function render(){
     if(!groups.has(dk))groups.set(dk,{effTs,items:[]});
     groups.get(dk).items.push(e);
   }
+  const dlist=items=>items.length?`<div class="dlist">${items.map(e=>cardOf(e,now)).join("")}</div>`:"";
   for(const [dk,g] of groups){
+    const cnt=`<span class="dcnt">${tr("dayCount",g.items.length)}</span>`;
     if(g.effTs){const sp=shParts(g.effTs),rel=relLabel(g.effTs),wd=new Date(g.effTs).toLocaleDateString(LOC(),{timeZone:TZ,weekday:"long"});
-    html+=`<div class="dayhead"><span class="dnum">${sp[2]}</span><span class="dmeta">${LANG==="en"?new Date(g.effTs).toLocaleDateString("en-US",{timeZone:TZ,month:"short"}):sp[1]+"月"} · ${wd}</span>${rel?`<span class="drel ${rel===tr("relToday")?"":"future"}">${rel}</span>`:""}</div>`;
-    }else{html+=`<div class="dayhead"><span class="dmeta">${tr("dateTBD")}</span></div>`}
+    const ds=LANG==="en"?new Date(g.effTs).toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):sp[1]+"月"+sp[2]+"日";
+    html+=`<div class="dayhead"><span class="dnum">${rel||ds}</span><span class="dmeta">${rel?ds+" · ":""}${wd}</span>${cnt}</div>`;
+    }else{html+=`<div class="dayhead"><span class="dnum">${tr("dateTBD")}</span>${cnt}</div>`}
     if(dk===todayKey){
       const own=g.items.filter(e=>shDayNum(e.start)>=todayNum);
       const ongoing=g.items.filter(e=>shDayNum(e.start)<todayNum);
-      html+=own.map(e=>cardOf(e,now)).join("");
-      if(ongoing.length)html+=`<button class="foldhead" onclick="this.nextElementSibling.classList.toggle('open');this.classList.toggle('open')"><span>🔁 ${tr("ongoingFold",ongoing.length)}</span><span class="chev">▾</span></button><div class="foldbody">${ongoing.map(e=>cardOf(e,now)).join("")}</div>`;
+      html+=dlist(own);
+      if(ongoing.length)html+=`<button class="foldhead" onclick="this.nextElementSibling.classList.toggle('open');this.classList.toggle('open')"><span>${tr("ongoingFold",ongoing.length)}</span><span class="chev">▾</span></button><div class="foldbody">${dlist(ongoing)}</div>`;
     }else{
-      html+=g.items.map(e=>cardOf(e,now)).join("");
+      html+=dlist(g.items);
     }
   }
   $("#list").innerHTML=html;
@@ -1186,11 +1200,19 @@ else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"promp
 function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
 document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
-document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly;document.getElementById("favbtn").classList.toggle("on",favOnly);render()});
-document.getElementById("list").addEventListener("click",ev=>{const b=ev.target.closest("[data-fav]");if(!b)return;ev.preventDefault();toggleFav(decodeURIComponent(b.dataset.fav))});
+document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly;document.getElementById("favbtn").classList.toggle("on",favOnly);if(typeof syncFilterUI==="function")syncFilterUI();render()});
+function closeMenus(except){document.querySelectorAll(".cact.open").forEach(c=>{if(c!==except){c.classList.remove("open");const m=c.querySelector(".more");if(m)m.setAttribute("aria-expanded","false")}})}
+document.getElementById("list").addEventListener("click",ev=>{
+const mb=ev.target.closest(".more");
+if(mb){const c=mb.parentElement;closeMenus(c);const o=c.classList.toggle("open");mb.setAttribute("aria-expanded",o?"true":"false");return}
+const b=ev.target.closest("[data-fav]");if(b){ev.preventDefault();toggleFav(decodeURIComponent(b.dataset.fav));return}
+if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus();
+});
+document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
+document.addEventListener("keydown",ev=>{if(ev.key==="Escape")closeMenus()});
 function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
-const TOUR=[{sel:"#list",t:"<b>第 1 步 · 先看活动</b>：这里的每场活动都逐条对着官方页核实过（AI / 创业 / 科技 / 跨境 / Web3 / 硬件），按日期排好。点标题就是官方报名页，链接都是一手源、不经二手聚合转手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和筛选</b>：输入关键词、或点分类标签，只看你关心的；香港活动、线上活动、只看收藏，都能单独筛出来。"},{sel:".card",t:"<b>第 3 步 · 一张卡看懂一场</b>：左边是时间，加粗的是标题和地点，小字是主办方和来源；右上角是票价，橙色徽标是报名截止——快截止的先下手。卡片下方按钮：官方页、加到日历、☆ 收藏、分享。"},{sel:".terminal",t:"<b>第 4 步 · 让 Agent 替你盯</b>：把终端里这段话术复制给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自动拉新活动，只在对上你兴趣时才提醒你。"},{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序员看页脚</b>：终端里 pip install yatslist 就能查活动，不用开网页。导览结束，去挑活动吧。"}];
-const TOUR_TW=[{sel:"#list",t:"<b>第 1 步 · 先看活動</b>：這裡的每場活動都逐條對著官方頁核實過（AI / 創業 / 科技 / 跨境 / Web3 / 硬件），按日期排好。點標題就是官方報名頁，鏈接都是一手源、不經二手聚合轉手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和篩選</b>：輸入關鍵詞、或點分類標籤，只看你關心的；香港活動、線上活動、只看收藏，都能單獨篩出來。"},{sel:".card",t:"<b>第 3 步 · 一張卡看懂一場</b>：左邊是時間，加粗的是標題和地點，小字是主辦方和來源；右上角是票價，橙色徽標是報名截止——快截止的先下手。卡片下方按鈕：官方頁、加到日曆、☆ 收藏、分享。"},{sel:".terminal",t:"<b>第 4 步 · 讓 Agent 替你盯</b>：把終端裡這段話術複製給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自動拉新活動，只在對上你興趣時才提醒你。"},{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序員看頁腳</b>：終端裡 pip install yatslist 就能查活動，不用開網頁。導覽結束，去挑活動吧。"}];
+const TOUR=[{sel:"#list",t:"<b>第 1 步 · 先看活动</b>：这里的每场活动都逐条对着官方页核实过（AI / 创业 / 科技 / 跨境 / Web3 / 硬件），按日期排好。点标题就是官方报名页，链接都是一手源、不经二手聚合转手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和筛选</b>：输入关键词、或点分类标签，只看你关心的；香港活动、线上活动、只看收藏，都能单独筛出来。"},{sel:".card",t:"<b>第 3 步 · 一张卡看懂一场</b>：左边是时间，加粗的是标题，灰色小字是地点、主办方和票价，快截止的会标出报名截止。右侧「报名 →」直达官方页，「···」里可以加日历、收藏、分享、看地图。"},{sel:".terminal",t:"<b>第 4 步 · 让 Agent 替你盯</b>：把终端里这段话术复制给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自动拉新活动，只在对上你兴趣时才提醒你。"},{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序员看页脚</b>：终端里 pip install yatslist 就能查活动，不用开网页。导览结束，去挑活动吧。"}];
+const TOUR_TW=[{sel:"#list",t:"<b>第 1 步 · 先看活動</b>：這裡的每場活動都逐條對著官方頁核實過（AI / 創業 / 科技 / 跨境 / Web3 / 硬件），按日期排好。點標題就是官方報名頁，鏈接都是一手源、不經二手聚合轉手。"},{sel:".bar",t:"<b>第 2 步 · 搜索和篩選</b>：輸入關鍵詞、或點分類標籤，只看你關心的；香港活動、線上活動、只看收藏，都能單獨篩出來。"},{sel:".card",t:"<b>第 3 步 · 一張卡看懂一場</b>：左邊是時間，加粗的是標題，灰色小字是地點、主辦方和票價，快截止的會標出報名截止。右側「報名 →」直達官方頁，「···」裡可以加日曆、收藏、分享、看地圖。"},{sel:".terminal",t:"<b>第 4 步 · 讓 Agent 替你盯</b>：把終端裡這段話術複製給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上自動拉新活動，只在對上你興趣時才提醒你。"},{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序員看頁腳</b>：終端裡 pip install yatslist 就能查活動，不用開網頁。導覽結束，去挑活動吧。"}];
 let tourI=-1,tourEl=null;
 function tourShow(){const st=(LANG==="en"?TOUR_EN:LANG==="tw"?TOUR_TW:TOUR)[tourI];if(tourEl)tourEl.classList.remove("tour-hl");tourEl=document.querySelector(st.sel);if(tourEl){tourEl.scrollIntoView({behavior:"smooth",block:"center"});tourEl.classList.add("tour-hl")}document.getElementById("tourtext").innerHTML=st.t;document.getElementById("tourprog").textContent=(tourI+1)+" / "+TOUR.length;document.getElementById("tourprev").disabled=tourI===0;document.getElementById("tournext").textContent=tourI===TOUR.length-1?tr("tourDone"):tr("tourNext")}
 function startTour(){tourI=0;document.getElementById("tourcard").classList.add("open");tourShow()}
@@ -1198,15 +1220,25 @@ function tourStep(d){tourI+=d;if(tourI>=TOUR.length){endTour();return}if(tourI<0
 function endTour(){if(tourEl)tourEl.classList.remove("tour-hl");tourEl=null;document.getElementById("tourcard").classList.remove("open");try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 function dismissWelc(){document.getElementById("welc").style.display="none";try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();endTour()}});
-try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="block"}catch(e){}
+try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="flex"}catch(e){}
 
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
 const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.city!=="all"?1:0)+F.cats.size;
 $("#fclear").hidden=active===0;
-$("#fcount").textContent=active?(LANG==="en"?(active+" selected"):LANG==="tw"?("已選 "+active+" 項"):("已选 "+active+" 项")):"";
+$("#fcount").textContent=active?String(active):"";
+document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=active===0&&!favOnly;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
 }
+$("#qchips").addEventListener("click",ev=>{
+const ch=ev.target.closest("[data-q]");if(!ch)return;
+const q=ch.dataset.q;
+if(q==="all"){$("#fclear").click();if(favOnly)$("#favbtn").click();return}
+const [k,v]=q.split(":");
+const grp={time:"#g-time",fee:"#g-fee",fmt:"#g-fmt",city:"#g-city"}[k];
+const target=$(grp+' [data-v="'+(F[k]===v?"all":v)+'"]');
+if(target)target.click();
+});
 function segWire(id,key){
 const el=$(id);
 el.addEventListener("click",ev=>{
@@ -1345,8 +1377,127 @@ document.getElementById("shareCopy").addEventListener("click",function(){
   #mnav-panel .topbar-nav a{font-size:.95rem}
   .listchips{display:none}
 }
+
+/* ===== simplify pass 2026-11-11: one accent colour, one primary action per event, Agent subscription up top ===== */
+:root{--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3)}
+:root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
+.human-section>.wrap{max-width:880px}
+/* topbar */
+.topbar-nav a.nav-ag{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.nav-submit:hover{border-color:var(--green);color:var(--green)}
+/* hero: left-aligned, tagline above the title */
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{display:block;margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 4px}
+/* Agent box */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.agentbox .cmdline{max-width:none;margin:0;background:var(--cmd-bg);flex-wrap:nowrap;font-size:.85rem;padding:10px 12px}
+.agentbox .cmdline .u{color:var(--ink);font-size:.85rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.agentbox .cmdline button{flex:0 0 auto;white-space:nowrap}
+.ab-apis{font-size:.8rem;color:var(--ink-ter)}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+/* search + quick chips; full filter panel behind the filter button on every screen size */
+.bar{background:none;backdrop-filter:none;border-bottom:0;box-shadow:none;padding-top:18px;padding-bottom:4px}
+.srow{display:flex;gap:10px}
+.srow input[type=search]{flex:1;box-shadow:none;padding:10px 14px}
+#ftoggle{display:inline-flex;width:auto;margin:0;gap:6px;min-height:44px;padding:0 12px;color:var(--ink-sec);justify-content:center}
+#ftoggle #fcount{margin:0;color:var(--green)}
+#ftoggle #fcount:empty{display:none}
+#fgroups{display:none;margin-top:6px}
+#fgroups.open{display:block}
+.qchips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.qchips::-webkit-scrollbar{display:none}
+.chip{background:none;border-color:var(--border-hover);min-height:34px;padding:5px 13px;font-size:.84rem}
+.chip:hover{transform:none}
+.chip.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+[data-theme="light"] .mchip.on,.mchip.on{box-shadow:none}
+.favbtn.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+/* welcome: one-line inline bar */
+.welc{position:static;display:none;align-items:center;gap:12px;max-width:none;margin:14px 0 0;padding:9px 14px;border-radius:10px;border:1px solid var(--border);background:var(--tint);box-shadow:none;animation:none;font-size:.88rem;color:var(--ink-sec)}
+.welc #welc-body{flex:1;min-width:0}
+.welc #welc-body b{margin-right:6px}
+.welc-tour{background:none;border:0;color:var(--green);font:inherit;font-weight:600;cursor:pointer;padding:4px 0;white-space:nowrap}
+.welc-x{background:none;border:0;color:var(--ink-ter);font-size:1rem;cursor:pointer;padding:4px 6px;line-height:1}
+/* day header: "今天  11月11日 · 星期三 ........ 5 场" */
+.dayhead{align-items:baseline;gap:8px;padding:24px 0 10px}
+.dayhead .dnum{font-size:1.02rem;font-weight:700;color:var(--ink);letter-spacing:0}
+.dayhead .dnum::before{display:none!important}
+.dayhead .dmeta{font-size:.85rem;font-weight:400;color:var(--ink-sec)}
+.dayhead .dcnt{margin-left:auto;font-size:.78rem;color:var(--ink-ter)}
+/* one bordered list per day, rows divided by hairlines */
+.dlist{background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.dlist .ev{margin:0;gap:18px;padding:14px 18px;border-top:1px solid var(--border);align-items:flex-start}
+.dlist .ev:first-child{border-top:0}
+.dlist .rail{flex:0 0 72px;text-align:left;padding-top:1px}
+.dlist .rail .t1{font-family:var(--font-mono);font-size:1rem;font-weight:500}
+.dlist .rail .t2{font-family:var(--font-mono);font-size:.75rem;margin-top:2px}
+.dlist .card,.dlist .card:hover{background:none;border:0;border-radius:0;box-shadow:none;padding:0;transform:none;display:flex;gap:16px;align-items:flex-start}
+.cmain{flex:1;min-width:0}
+.dlist .card h3{font-size:1rem;font-weight:700;line-height:1.4;margin:0}
+.cmeta{font-size:.82rem;color:var(--ink-sec);margin-top:3px;line-height:1.5}
+.cmeta .sep{font-style:normal;color:var(--ink-ter)}
+.cmeta .hkpin{color:var(--ink-sec);font-weight:600}
+.cdl .dl,.cdl .dl.soon{background:none;padding:0;color:var(--warm);font-size:.8rem;font-weight:600}
+[data-theme="light"] .cdl .dl,[data-theme="light"] .cdl .dl.soon{background:none;color:#b45309}
+.cdl .dl.closed{color:var(--ink-ter)}
+.dlist .sum{font-size:.82rem;color:var(--ink-ter);margin:3px 0 0;-webkit-line-clamp:1;line-height:1.5}
+.live{background:none;color:var(--green);padding:0;font-size:.78rem;margin-right:8px;vertical-align:1px}
+.favmark{color:var(--warm);margin-right:6px;font-size:.9em}
+[data-theme="light"] .favmark{color:#b45309}
+.cact{flex:0 0 auto;display:flex;align-items:center;gap:8px;position:relative}
+.reg{border:1px solid var(--green);color:var(--green);border-radius:999px;padding:4px 14px;font-size:.84rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.reg:hover{background:var(--tint)}
+.more{background:none;border:0;color:var(--ink-ter);font-size:1.05rem;letter-spacing:1px;line-height:1;width:32px;height:30px;border-radius:6px;cursor:pointer}
+.more:hover,.cact.open .more{background:var(--panel-hover);color:var(--ink)}
+.cmenu{display:none;position:absolute;right:0;top:calc(100% + 6px);z-index:50;min-width:150px;background:var(--panel-hover);border:1px solid var(--border-hover);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden}
+.cact.open .cmenu{display:block}
+.cmenu>*{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--border);padding:9px 16px;font:inherit;font-size:.85rem;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.cmenu>*:first-child{border-top:0}
+.cmenu>*:hover{background:var(--tint);color:var(--green)}
+.foldhead{border-style:solid;font-weight:600}
+/* AI assistant: keep, quieter icon */
+#yl-fab{color:var(--on-green)}
+@media (max-width:820px){
+  .section-tagline{display:block}
+  .human-section>.wrap{padding:0 16px}
+  .agentbox{padding:14px;gap:10px;border-radius:12px}
+  .ab-head{display:contents}
+  .ab-text{order:1}
+  .agentbox .cmdline{order:2;font-size:.78rem;padding:8px 10px}
+  .agentbox .cmdline .u{font-size:.78rem}
+  .ab-go{order:3;text-align:center;padding:11px}
+  .ab-sub,.ab-apis,.ab-cmd{display:none}
+  .bar{margin:0;padding:14px 0 0}
+  #ftoggle-label{display:none}
+  #ftoggle{min-width:46px;padding:0 10px}
+  .chip{min-height:34px}
+  .dlist .ev{flex-direction:row;flex-wrap:wrap;gap:0;padding:12px 14px}
+  .dlist .rail{flex:0 0 100%;display:flex;gap:4px;align-items:baseline;padding:0 0 2px}
+  .dlist .rail .t1{font-size:.8rem;color:var(--ink-sec)}
+  .dlist .rail .t2{font-size:.75rem}
+  .dlist .card{flex:1 1 100%;gap:10px}
+  .dlist .card h3{font-size:.95rem;word-break:break-word}
+  .dlist .sum{display:none}
+  .cact{flex-direction:column;align-items:flex-end;justify-content:space-between;align-self:stretch;gap:6px;margin-top:-22px}
+  .cact .more{order:-1;height:24px}
+  .reg{padding:4px 12px;font-size:.8rem}
+  .cmeta{font-size:.78rem}
+  .welc{font-size:.82rem;gap:8px;padding:8px 10px 8px 12px}
+  .welc #welc-body{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .agentbox .cmdline{gap:8px}
+  #yl-fab .yl-fab-tag{display:none}
+}
 </style>
-<button id="yl-fab" aria-label="AI 活动助手">💬<span class="yl-fab-tag">问活动</span></button>
+<button id="yl-fab" aria-label="AI 活动助手"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span class="yl-fab-tag">问活动</span></button>
 <div id="yl-panel" role="dialog" aria-label="AI 活动助手">
   <div class="yl-head">🤖 AI 活动助手 <small>数据来自本站实时清单</small><button id="yl-close" aria-label="关闭">✕</button></div>
   <div id="yl-msgs"></div>
