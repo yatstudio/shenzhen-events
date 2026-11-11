@@ -422,6 +422,140 @@ input[type=search]{font-size:16px}
 .chip{min-height:40px}
 #ftoggle{min-height:44px}
 }
+
+/* ===== mobile topbar dropdown (same as /szevents/) 2026-11-11 ===== */
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end;font-family:inherit}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap;overflow:visible;width:auto}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+}
+
+/* ===== simplify pass 2026-11-11 (matches /szevents/): one accent colour, one primary action per Space, Agent box up top ===== */
+:root{--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3)}
+:root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
+.human-section>.wrap{max-width:880px}
+/* topbar */
+@media (min-width:821px){.topbar-nav{gap:clamp(12px,1.9vw,26px)}}
+.topbar-nav a.nav-ag{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.nav-submit:hover{border-color:var(--green);color:var(--green)}
+/* hero: left-aligned, tagline above the title */
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{display:block;margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 4px}
+.herometa{text-align:left;margin:6px 0 0;font-size:.8rem;color:var(--ink-ter);padding:0}
+.herometa b{color:var(--ink-sec);font-weight:600}
+.herometa i{margin:0 6px}
+/* Agent box */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.agentbox .cmdline{max-width:none;margin:0;background:var(--cmd-bg);flex-wrap:nowrap;font-size:.85rem;padding:10px 12px}
+.agentbox .cmdline .u{color:var(--ink);font-size:.85rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.agentbox .cmdline button{flex:0 0 auto;white-space:nowrap}
+.ab-apis{font-size:.8rem;color:var(--ink-ter)}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+/* search + quick chips; full filter panel behind the filter button on every screen size */
+.bar{background:none;backdrop-filter:none;border-bottom:0;box-shadow:none;padding-top:18px;padding-bottom:4px;margin-left:0;margin-right:0;padding-left:0;padding-right:0}
+.srow{display:flex;gap:10px}
+.srow input[type=search]{flex:1;box-shadow:none;padding:10px 14px}
+#ftoggle{display:inline-flex;width:auto;margin:0;gap:6px;min-height:44px;padding:0 12px;color:var(--ink-sec);justify-content:center;align-items:center}
+#ftoggle #fcount{margin:0;color:var(--green)}
+#ftoggle #fcount:empty{display:none}
+#fgroups{display:none;margin-top:6px}
+#fgroups.open{display:block}
+#fgroups .fgroup{flex-wrap:wrap;overflow:visible}
+#fgroups .seg{flex-wrap:wrap;overflow:visible;flex:1 1 0;min-width:0}
+#fgroups .flabel{align-self:flex-start;padding-top:8px}
+.qchips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.qchips::-webkit-scrollbar{display:none}
+.qchips .chip{flex:0 0 auto;white-space:nowrap}
+.chip{background:none;border-color:var(--border-hover);min-height:34px;padding:5px 13px;font-size:.84rem}
+.fgroup .chip{min-height:32px;padding:4px 11px;font-size:.82rem}
+.chip:hover{transform:none}
+.chip.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+[data-theme="light"] .mchip.on,.mchip.on{box-shadow:none}
+.mchip.on,[data-theme="light"] .mchip.on{background:var(--tint);color:var(--green);border-color:var(--green)}
+/* welcome: one-line inline bar */
+.welc{position:static;display:none;align-items:center;gap:12px;max-width:none;margin:14px 0 0;padding:9px 14px;border-radius:10px;border:1px solid var(--border);background:var(--tint);box-shadow:none;animation:none;font-size:.88rem;color:var(--ink-sec)}
+.welc #welc-body{flex:1;min-width:0}
+.welc #welc-body b{margin-right:6px}
+.welc-tour{background:none;border:0;color:var(--green);font:inherit;font-weight:600;cursor:pointer;padding:4px 0;white-space:nowrap}
+.welc-x{background:none;border:0;color:var(--ink-ter);font-size:1rem;cursor:pointer;padding:4px 6px;line-height:1}
+.listnote{margin:14px 0 0;font-size:.78rem;color:var(--ink-ter)}
+/* day header: "11月10日  星期二 ........ 1 场" */
+.dayhead{align-items:baseline;gap:8px;padding:24px 0 10px}
+.listnote+#list .dayhead:first-child{padding-top:10px}
+.dayhead .dnum{font-size:1.02rem;font-weight:700;color:var(--ink);letter-spacing:0}
+.dayhead .dmeta{font-size:.85rem;font-weight:400;color:var(--ink-sec)}
+.dayhead .dcnt{margin-left:auto;font-size:.78rem;color:var(--ink-ter)}
+/* one bordered list per day, rows divided by hairlines */
+.dlist{background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.dlist .ev{margin:0;gap:18px;padding:14px 18px;border-top:1px solid var(--border);align-items:flex-start}
+.dlist .ev:first-child{border-top:0}
+.dlist .rail{flex:0 0 72px;text-align:left;padding-top:1px}
+.dlist .rail .t1{font-family:var(--font-mono);font-size:1rem;font-weight:500}
+.dlist .rail .t2{font-family:var(--font-mono);font-size:.75rem;margin-top:2px}
+.dlist .card,.dlist .card:hover{background:none;border:0;border-radius:0;box-shadow:none;padding:0;transform:none;display:flex;gap:16px;align-items:flex-start}
+.cmain{flex:1;min-width:0}
+.dlist .card h3{font-size:1rem;font-weight:700;line-height:1.4;margin:0}
+.cmeta{font-size:.82rem;color:var(--ink-sec);margin-top:3px;line-height:1.5}
+.cmeta .sep{font-style:normal;color:var(--ink-ter)}
+.dlist .sum{font-size:.82rem;color:var(--ink-ter);margin:3px 0 0;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+.cact{flex:0 0 auto;display:flex;align-items:center;gap:8px;position:relative}
+.reg{border:1px solid var(--green);color:var(--green);border-radius:999px;padding:4px 14px;font-size:.84rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.reg:hover{background:var(--tint)}
+.more{background:none;border:0;color:var(--ink-ter);font-size:1.05rem;letter-spacing:1px;line-height:1;width:32px;height:30px;border-radius:6px;cursor:pointer}
+.more:hover,.cact.open .more{background:var(--panel-hover);color:var(--ink)}
+.cmenu{display:none;position:absolute;right:0;top:calc(100% + 6px);z-index:50;min-width:150px;background:var(--panel-hover);border:1px solid var(--border-hover);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden}
+.cact.open .cmenu{display:block}
+.cmenu>*{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--border);padding:9px 16px;font:inherit;font-size:.85rem;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.cmenu>*:first-child{border-top:0}
+.cmenu>*:hover{background:var(--tint);color:var(--green)}
+/* quiet links under the list: email / tour / submission prompt */
+.morelinks{margin:22px 0 10px;font-size:.84rem;color:var(--ink-ter)}
+.morelinks a{color:var(--ink-sec);text-decoration:none;font-weight:600;cursor:pointer}
+.morelinks a:hover{color:var(--green)}
+.morelinks i{font-style:normal;margin:0 7px}
+@media (max-width:820px){
+  .section-tagline{display:block}
+  .human-section>.wrap{padding:0 16px}
+  .herometa{font-size:.76rem}
+  .agentbox{padding:14px;gap:10px;border-radius:12px}
+  .ab-head{display:contents}
+  .ab-text{order:1}
+  .agentbox .cmdline{order:2;font-size:.78rem;padding:8px 10px;gap:8px}
+  .agentbox .cmdline .u{font-size:.78rem}
+  .ab-go{order:3;text-align:center;padding:11px}
+  .ab-sub,.ab-apis,.ab-cmd{display:none}
+  .bar{margin:0;padding:14px 0 0}
+  #ftoggle-label{display:none}
+  #ftoggle{min-width:46px;padding:0 10px;min-height:44px}
+  .chip{min-height:34px}
+  .dlist .ev{flex-direction:row;flex-wrap:wrap;gap:0;padding:12px 14px}
+  .dlist .rail{flex:0 0 100%;display:flex;gap:8px;align-items:baseline;padding:0 0 2px}
+  .dlist .rail .t1{font-size:.8rem;color:var(--ink-sec)}
+  .dlist .rail .t2{font-size:.75rem;margin-top:0}
+  .dlist .card{flex:1 1 100%;gap:10px}
+  .dlist .card h3{font-size:.95rem;word-break:break-word}
+  .dlist .sum{display:none}
+  .cact{flex-direction:column;align-items:flex-end;justify-content:space-between;align-self:stretch;gap:6px;margin-top:-22px}
+  .cact .more{order:-1;height:24px}
+  .reg{padding:4px 12px;font-size:.8rem}
+  .cmeta{font-size:.78rem}
+  .welc{font-size:.82rem;gap:8px;padding:8px 10px 8px 12px}
+  .welc #welc-body{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -452,15 +586,17 @@ input[type=search]{font-size:16px}
     <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="回到顶部" style="text-decoration:none">
       <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
     </a>
-    <nav class="topbar-nav">
-      <a href="#agent-section" id="nav-agent">给 Agent</a>
-      <a href="#human-section" id="nav-events">活动清单</a>
+    <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+<div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agent-section" id="nav-agent" class="nav-ag">给 Agent</a>
+      <a href="https://yatslist.com/szevents/" id="nav-events">活动清单</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松清单</a>
       <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
-      <a href="https://yatslist.com/spaces/" id="nav-spaces">Space 纪要</a>
+      <a href="https://yatslist.com/spaces/" id="nav-spaces" class="nav-on" aria-current="page">Space 纪要</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
-    </nav>
+      <button type="button" class="nav-submit" id="ta-submit" onclick="goSubmit()">提交 Space</button>
+    </nav></div>
   </div>
 </div>
 
@@ -469,71 +605,47 @@ input[type=search]{font-size:16px}
   <div class="wrap">
     <!-- Section Header -->
     <div class="section-header">
-      <h2 class="section-title" id="hero-title">Yat's List · Space 纪要清单</h2>
-      <p class="section-subtitle" id="hero-sub">华语圈 Space 纪要，喂给你的 Agent 吃。</p>
       <p class="section-tagline">SPACES · RECAPS · FOR AGENTS</p>
+      <h2 class="section-title" id="hero-title">Space 纪要清单</h2>
+      <p class="section-subtitle" id="hero-sub">华语圈 Space 纪要，喂给你的 Agent 吃。</p>
+      <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场纪要在列</span><i>·</i><b id="sp-latest">–</b> <span id="sp-latest-label">最近一场</span><i>·</i><span id="hm-upd">人工整理 · 不定期更新</span></p>
     </div>
-    <!-- Hero Meta -->
-    <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场纪要在列</span><i>·</i><b id="sp-latest">–</b> <span id="sp-latest-label">最近一场</span><i>·</i><span id="hm-upd">人工整理 · 不定期更新</span></p>
 
-    <!-- Agent Guide: 让 Agent 替你读 / 检索 / 答问 -->
-    <div class="agentguide" id="agentguide">
-      <h3 id="ag-title">🤖 不想自己翻？让你的 Agent 替你读、替你查</h3>
-      <p id="ag-desc">每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。</p>
-      <div class="aguses"><span class="tag" id="ag-use1">📖 替我读：总结最新或指定的纪要</span><span class="tag" id="ag-use2">🔎 替我查：按主题 / 人物 / 关键词跨场检索</span><span class="tag" id="ag-use3">❓ 替我答：基于纪要回答问题并给出处</span></div>
-      <div class="code-block"><span id="ag-prompt">请把 Yat's List 的 Space 纪要库作为我的资料源：先读取 https://yatslist.com/spaces.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。</span>
-        <button class="btn-copy" id="ag-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('ag-prompt').innerText.trim()).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('agCopy'),1500)})">复制话术</button>
+    <!-- Agent box: the one primary action on the page -->
+    <div class="agentbox" id="agentbox">
+      <div class="ab-head">
+        <div class="ab-text"><div class="ab-title" id="ab-title">让你的 Agent 替你读、替你查</div><div class="ab-sub" id="ab-sub">读纪要 · 跨场检索 · 回答并附出处，豆包 / WorkBuddy / Codex / Claude Code 都能用。</div></div>
+        <button type="button" class="ab-go" id="ta-agent" onclick="openModal('sub','read')">用我的 Agent 订阅 →</button>
       </div>
-      <div class="actions"><a class="btn" href="/spaces.json" id="ag-json">📡 spaces.json 数据</a><a class="btn" href="#agent-section" id="ag-more">订阅与接口说明 ↓</a></div>
+      <div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/spaces.json</span><button type="button" id="cmd-copy">复制</button></div>
+      <div class="ab-apis" id="ab-apis"></div>
     </div>
-
-    <!-- List Chips: 三张清单入口 -->
-    <div class="listchips">
-      <a class="lchip" href="https://yatslist.com/szevents/">
-        <span class="lc-top"><b id="lc-ev-name">深圳活动清单</b><span class="lc-n"><b id="lc-ev-n">–</b> <span id="lc-u1">场</span></span></span>
-        <span class="lc-desc" id="lc-ev-desc">AI · 创业 · 科技 · 跨境活动，每天核实更新</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/hackathons/">
-        <span class="lc-top"><b id="lc-hack-name">黑客松清单</b><span class="lc-n"><b id="hackcount2">–</b> <span id="lc-u2">场</span></span></span>
-        <span class="lc-desc" id="lc-hack-desc">正在报名的黑客松与创新大赛</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/szexpat/">
-        <span class="lc-top"><b id="lc-expat-name">外国人活动</b><span class="lc-n"><b id="lc-expat-n">–</b> <span id="lc-u3">场</span></span></span>
-        <span class="lc-desc" id="lc-expat-desc">外国人常去的聚会、演出与展览</span>
-      </a>
-      <a class="lchip on" href="#top" aria-current="page">
-        <span class="lc-top"><b id="lc-space-name">Space 纪要</b><span class="lc-n"><b id="lc-space-n">–</b> <span id="lc-u4">场</span></span></span>
-        <span class="lc-desc" id="lc-space-desc">华语圈 X Space 纪要与回放要点</span>
-      </a>
-    </div>
-
-    <!-- Top Actions -->
-    <div class="topact">
-      <a class="btn submit" id="ta-submit" href="#event-post" onclick="hlSubmit()">＋ 提交 Space</a>
-      <button class="btn agent" id="ta-agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
-      <a class="btn" id="ta-email" href="#email-sub">✉️ 邮件订阅</a>
-      <button class="btn agent" id="ta-tour" onclick="startTour()">🧭 订阅导览</button>
-      <button class="btn agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
-    </div>
-
 
     <!-- Filter Bar -->
     <div class="bar">
+      <div class="srow">
       <input type="search" id="q" placeholder="搜索标题 / 主持人 / 主题…">
-      <button id="ftoggle" aria-expanded="false"><span id="ftoggle-label">🎛 筛选 Filter</span><span><span id="fcount"></span> ▾</span></button>
+      <button id="ftoggle" aria-expanded="false" aria-controls="fgroups"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2" fill="var(--panel)"/><circle cx="13" cy="10" r="2" fill="var(--panel)"/><circle cx="8" cy="15" r="2" fill="var(--panel)"/></svg><span id="ftoggle-label">筛选</span><span id="fcount"></span></button>
+      </div>
+      <div class="qchips" id="qchips"><button type="button" class="chip on" data-q="all">全部</button></div>
       <div id="fgroups">
         <div class="fgroup">
           <span class="flabel">系列</span>
           <span class="seg" id="g-series"></span>
+          <span class="fres" id="fres"></span>
         </div>
         <div class="fgroup">
           <span class="flabel">主题</span>
           <span class="seg" id="g-topics"></span>
           <button id="fclear" class="fclear" hidden>清除筛选 ✕</button>
-          <span class="fres" id="fres"></span>
         </div>
       </div>
     </div>
+
+    <!-- Welcome (first visit only): inline bar, never covers the list -->
+    <div class="welc" id="welc"><span id="welc-body"><b>第一次来？</b>30 秒导览带你看懂怎么用</span><button type="button" class="welc-tour" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button type="button" class="welc-x" id="welc-x" aria-label="关闭" onclick="dismissWelc()">✕</button></div>
+
+    <p class="listnote" id="list-note">数字为发言人自述、未核实</p>
 
     <!-- Event List -->
     <div id="list"><div class="empty" id="list-loading">加载中…</div></div>
@@ -542,11 +654,12 @@ input[type=search]{font-size:16px}
     <div id="past"></div>
 
     <!-- Agent Note -->
+    <p class="morelinks" id="morelinks"></p>
     <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/spaces.json">spaces.json</a>，人工整理、不定期更新），有新纪要收录且命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：上方可关键词搜索、按系列 / 主题筛选。</div>
 
     <!-- Agent Subscription Card -->
     <div class="subcard" id="agent-sub">
-      <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">Space 纪要清单</span></span><span class="u">https://yatslist.com/spaces.json</span><button type="button" id="cmd-copy">复制</button></div>
+      <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">Space 纪要清单</span></span><span class="u">https://yatslist.com/spaces.json</span><button type="button" id="cmd-copy2">复制</button></div>
       <div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
       <h3 id="asub-title">🤖 让你的 Agent 提醒你，不用自己刷</h3>
       <p class="sum" id="asub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
@@ -606,6 +719,17 @@ input[type=search]{font-size:16px}
 <!-- Agent Section (给 Agent) -->
 <section class="agent-section" id="agent-section">
   <div class="wrap">
+    <!-- Agent Guide: 让 Agent 替你读 / 检索 / 答问 -->
+    <div class="agentguide talk-block" id="agentguide">
+      <h3 id="ag-title">🤖 不想自己翻？让你的 Agent 替你读、替你查</h3>
+      <p id="ag-desc">每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。</p>
+      <div class="aguses"><span class="tag" id="ag-use1">📖 替我读：总结最新或指定的纪要</span><span class="tag" id="ag-use2">🔎 替我查：按主题 / 人物 / 关键词跨场检索</span><span class="tag" id="ag-use3">❓ 替我答：基于纪要回答问题并给出处</span></div>
+      <div class="code-block"><span id="ag-prompt">请把 Yat's List 的 Space 纪要库作为我的资料源：先读取 https://yatslist.com/spaces.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。</span>
+        <button class="btn-copy" id="ag-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('ag-prompt').innerText.trim()).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('agCopy'),1500)})">复制话术</button>
+      </div>
+      <div class="actions"><a class="btn" href="/spaces.json" id="ag-json">📡 spaces.json 数据</a></div>
+    </div>
+
     <!-- Intro for humans -->
     <div class="intro">
       <h3 style="font-size:1.18rem;margin:0 0 10px" id="intro-title">Yat's List 是什么？</h3>
@@ -706,7 +830,8 @@ input[type=search]{font-size:16px}
   <div class="modal">
     <div class="mhead"><h3 id="mtitle">🤖 订阅话术</h3><button class="btn" id="mclose1" onclick="closeModal()">✕ 关闭</button></div>
     <div class="mchips" id="mchips">
-      <button class="mchip on" data-k="generic">通用版</button>
+      <button class="mchip on" data-k="read">替我读 · 查 · 答</button>
+      <button class="mchip" data-k="generic">通用版</button>
       <button class="mchip" data-k="doubao">🫘 豆包工作</button>
       <button class="mchip" data-k="workbuddy">💼 WorkBuddy</button>
       <button class="mchip" data-k="codex">🧑‍💻 Codex</button>
@@ -718,9 +843,6 @@ input[type=search]{font-size:16px}
     <div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
   </div>
 </div>
-
-<!-- Welcome Card -->
-<div class="welc" id="welc"><span id="welc-body"><b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。</span><div class="mrow"><button class="btn primary" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" id="welc-browse" onclick="dismissWelc()">直接逛逛</button></div></div>
 
 <!-- Tour Card -->
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" id="tourend" onclick="endTour()">结束导览</button><span id="tourprog" style="color:var(--ink-ter);font-size:12.5px"></span></div></div>
@@ -736,13 +858,13 @@ zh:{
 docTitle:"Yat's List · Space 纪要清单 · 华语圈 X Space 纪要与回放",
 metaDesc:"Yat's List Space 纪要清单：华语圈 X Space 精选纪要、回放链接与要点存档，人工整理、不定期更新；可搜索、按系列与主题筛选，也可让你的 Agent 订阅 spaces.json。",
 brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"Yat's List · Space 纪要清单",heroSub:"华语圈 Space 纪要，喂给你的 Agent 吃。",cmdLabel:"Space 纪要清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交 Space：把一场 Space 加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把 Space 名称和 X 回放链接发到这个邮箱即可，主题注明「Space 纪要投稿」；被收录后，我们免费转写全文、做摘要并加入清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%BA%AA%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主题",spLatestLabel:"最近一场",segAll:"全部",spDur:"时长",spDurParts:["小时","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉宾：",spNote:"数字为发言人自述、未核实",spListen:"🎧 去 X 收听回放 →",epostNote:"我想提交 Space：贴上 Space 链接即可；被收录后，我们免费转写全文、做摘要并加入清单。",epostFormNote:"❗ 所属清单请先选最接近的一项，标题注明「Space 纪要」。",
+heroTitle:"Space 纪要清单",heroSub:"华语圈 Space 纪要，喂给你的 Agent 吃。",cmdLabel:"Space 纪要清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交 Space：把一场 Space 加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把 Space 名称和 X 回放链接发到这个邮箱即可，主题注明「Space 纪要投稿」；被收录后，我们免费转写全文、做摘要并加入清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%BA%AA%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主题",spLatestLabel:"最近一场",segAll:"全部",spDur:"时长",spDurParts:["小时","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉宾：",spNote:"数字为发言人自述、未核实",spListen:"🎧 去 X 收听回放 →",epostNote:"我想提交 Space：贴上 Space 链接即可；被收录后，我们免费转写全文、做摘要并加入清单。",epostFormNote:"❗ 所属清单请先选最接近的一项，标题注明「Space 纪要」。",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场纪要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"正在报名的黑客松与创新大赛",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
 agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/spaces.json">spaces.json</a>，人工整理、不定期更新），有新纪要收录且命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：上方可关键词搜索、按系列 / 主题筛选。',
 agTitle:"🤖 不想自己翻？让你的 Agent 替你读、替你查",agDesc:'每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。',agUse1:"📖 替我读：总结最新或指定的纪要",agUse2:"🔎 替我查：按主题 / 人物 / 关键词跨场检索",agUse3:"❓ 替我答：基于纪要回答问题并给出处",agPrompt:"请把 Yat's List 的 Space 纪要库作为我的资料源：先读取 https://yatslist.com/spaces.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。",agCopy:"复制话术",agJson:"📡 spaces.json 数据",agMore:"订阅与接口说明 ↓",
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
-searchPh:"搜索标题 / 主持人 / 主题…",ftoggleLabel:"🎛 筛选 Filter",
+searchPh:"搜索标题 / 主持人 / 主题…",ftoggleLabel:"筛选",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"时间",feeLabel:"费用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分类",
 segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"后天",week:"本周",deadline:"🔥 即将截止"},
@@ -772,7 +894,13 @@ tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
 epDescs:["活动数据（JSON，每天 07:30 更新）","黑客松数据（大陆+港澳台+线上）","RSS 订阅源","日历订阅文件","给 AI 的站点说明"],
 mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。',
+welcBody:'<b>第一次来？</b>30 秒导览带你看懂怎么用',welcClose:"关闭",
+abTitle:"让你的 Agent 替你读、替你查",abSub:"读纪要 · 跨场检索 · 回答并附出处，豆包 / WorkBuddy / Codex / Claude Code 都能用。",abGo:"用我的 Agent 订阅 →",
+abApis:'也可以直接读：<a href="/spaces.json">spaces.json</a> · <a href="#agent-section">订阅与接口说明 ↓</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）',
+navSubmit:"提交 Space",mnavBtn:"☰ 菜单",
+moreLinks:'<a href="#email-sub">邮件订阅</a><i>·</i><a href="javascript:void 0" data-act="tour">订阅导览</a><i>·</i><a href="javascript:void 0" data-act="post">复制投稿话术给我的 Agent</a>',
+spRead:"看纪要 →",spListenBtn:"听回放 →",spReplay:"去 X 听回放",mCopyNote:"复制纪要链接",mCopyX:"复制 X 链接",linkCopied:"链接已复制",moreBtn:"更多操作",dayCount:function(n){return n+" 场"},spGuestsN:function(n){return n+" 位嘉宾"},
+chipRead:"替我读 · 查 · 答",mtitleRead:"🤖 让 Agent 替你读、替你查",mstepsRead:"把话术发给任何能联网的 Agent：它先读 spaces.json 索引，需要细节时再打开对应的全文页，回答时附出处链接。",
 welcTour:"开始导览",welcBrowse:"直接逛逛",tourPrev:"上一步",tourNext:"下一步",tourDone:"完成",tourEnd:"结束导览",
 footTag:"深圳活动，喂给你的 Agent 吃。",footHome:"首页",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 逐条核实自官方页面 · 免费无广告",
 footContact:'合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
@@ -791,13 +919,13 @@ en:{
 docTitle:"Yat's List · Space Notes · Chinese X Space Recaps & Highlights",
 metaDesc:"Yat's List Space Notes: curated recaps of Chinese-language X Spaces with replay links and key takeaways — curated by hand and updated irregularly. Search and filter by series and topic, or let your Agent subscribe to spaces.json.",
 brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Yat's List · Space Notes",heroSub:"Chinese X Space recaps, served to your Agent.",cmdLabel:"Space Notes",pipLabel:"CLI",epostTitle:"📋 Submit a Space: add a Space to the list",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the Space title and its X replay link to this address, with “Space Recap Submission” in the subject. If it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",spSeriesLabel:"Series",spTopicLabel:"Topics",spLatestLabel:"Latest session",segAll:"All",spDur:"runtime",spDurParts:["h","m"],spEp:function(n){return "Ep. "+n},spHost:"Host: ",spGuests:"Guests: ",spNote:"Figures are as stated by the speakers — not independently verified.",spListen:"🎧 Listen on X →",epostNote:"Want to submit a Space? Just paste the Space link — if it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",epostFormNote:"❗ In the form's list field, pick the closest option and put “Space Recap” in the title.",
+heroTitle:"Space Notes",heroSub:"Chinese X Space recaps, served to your Agent.",cmdLabel:"Space Notes",pipLabel:"CLI",epostTitle:"📋 Submit a Space: add a Space to the list",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the Space title and its X replay link to this address, with “Space Recap Submission” in the subject. If it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",spSeriesLabel:"Series",spTopicLabel:"Topics",spLatestLabel:"Latest session",segAll:"All",spDur:"runtime",spDurParts:["h","m"],spEp:function(n){return "Ep. "+n},spHost:"Host: ",spGuests:"Guests: ",spNote:"Figures are as stated by the speakers — not independently verified.",spListen:"🎧 Listen on X →",epostNote:"Want to submit a Space? Just paste the Space link — if it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",epostFormNote:"❗ In the form's list field, pick the closest option and put “Space Recap” in the title.",
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"sessions listed",heroMetaDaily:"Curated by hand · updated irregularly",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"AI, startup, tech & cross-border events, verified daily",lcDescHack:"Hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"+ Submit a Space",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
 agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/spaces.json">spaces.json</a>, curated by hand and updated irregularly) and only ping you when a new recap matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword and filter by series / topic above.',
 agTitle:"🤖 Don't want to dig through them yourself? Let your Agent read & search for you",agDesc:'Every recap has a <b>full-text page</b>. Send the prompt below to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) and it can <b>read</b> the recaps for you, <b>search across sessions</b>, and <b>answer your questions</b> directly — with source links, so you never have to open them one by one.',agUse1:"📖 Read for me: summarize the latest or a chosen recap",agUse2:"🔎 Search for me: by topic / person / keyword across all sessions",agUse3:"❓ Answer for me: answer from the recaps, with sources",agPrompt:"Please use Yat's List's Space recap library as my source: first read https://yatslist.com/spaces.json for the full index (each entry has a title, highlights and a note_url full-text page); when you need detail, open the entry's note_url page. Then: 1) summarize the recap I name, or the latest one; 2) search across sessions by topic, person or keyword; 3) answer my questions based on these recaps. Always cite your sources with the full-text page link, rely only on what the recaps say, and never invent content that is not in them.",agCopy:"Copy prompt",agJson:"📡 spaces.json data",agMore:"Subscription & endpoints ↓",
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
-searchPh:"Search by title, host, topic…",ftoggleLabel:"🎛 Filters",
+searchPh:"Search by title, host, topic…",ftoggleLabel:"Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
 timeLabel:"When",feeLabel:"Fee",fmtLabel:"Format",cityLabel:"City",catLabel:"Category",
 segTime:{all:"All",today:"Today",tomorrow:"Tomorrow",dayafter:"In 2 days",week:"This week",deadline:"🔥 Closing soon"},
@@ -827,7 +955,13 @@ tbAll:"Other Agent versions (Doubao / WorkBuddy / Codex)",
 epDescs:["Event data (JSON, updated daily at 07:30)","Hackathon data (Mainland + HK/Macau/Taiwan + online)","RSS feed","Calendar subscription file","Site guide for AI"],
 mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests, areas and budget, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
 chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 First time here?</b><br>This is a Shenzhen events list — verified against official pages and updated daily. Take the 30-second tour: browse on your own, filter by your interests, or let your Agent subscribe and only ping you when something matches.',
+welcBody:'<b>First time here?</b>A 30-second tour shows you how it works',welcClose:"Close",
+abTitle:"Let your Agent read & search the recaps for you",abSub:"Reads recaps, searches across sessions, answers with sources. Works with Doubao, WorkBuddy, Codex, Claude Code.",abGo:"Subscribe with my Agent →",
+abApis:'Or read directly: <a href="/spaces.json">spaces.json</a> · <a href="#agent-section">Subscription &amp; endpoints ↓</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide)',
+navSubmit:"Submit a Space",mnavBtn:"☰ Menu",
+moreLinks:'<a href="#email-sub">Email subscription</a><i>·</i><a href="javascript:void 0" data-act="tour">Subscription tour</a><i>·</i><a href="javascript:void 0" data-act="post">Copy the submission prompt for my Agent</a>',
+spRead:"Read recap →",spListenBtn:"Listen →",spReplay:"Listen to the replay on X",mCopyNote:"Copy recap link",mCopyX:"Copy X link",linkCopied:"Link copied",moreBtn:"More actions",dayCount:function(n){return n+(n===1?" session":" sessions")},spGuestsN:function(n){return n+(n===1?" guest":" guests")},
+chipRead:"Read · search · answer",mtitleRead:"🤖 Let your Agent read & search for you",mstepsRead:"Send this prompt to any Agent that can browse the web: it reads the spaces.json index first, opens a recap's full page when it needs detail, and cites the source link in every answer.",
 welcTour:"Start the tour",welcBrowse:"Just browse",tourPrev:"Back",tourNext:"Next",tourDone:"Done",tourEnd:"End tour",
 footTag:"Shenzhen events, served to your Agent.",footHome:"Home",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Every listing verified against its official page · Free, no ads",
 footContact:'Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
@@ -846,13 +980,13 @@ tw:{
 docTitle:"Yat's List · Space 紀要清單 · 華語圈 X Space 紀要與重播",
 metaDesc:"Yat's List Space 紀要清單：華語圈 X Space 精選紀要、重播連結與要點存檔，人工整理、不定期更新；可搜索、按系列與主題篩選，也可讓你的 Agent 訂閱 spaces.json。",
 brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"Yat's List · Space 紀要清單",heroSub:"華語圈 Space 紀要，餵給你的 Agent 吃。",cmdLabel:"Space 紀要清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交 Space：把一場 Space 加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把 Space 名稱和 X 重播連結發到這個信箱即可，主旨註明「Space 紀要投稿」；被收錄後，我們免費轉寫全文、做摘要並加入清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%B4%80%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主題",spLatestLabel:"最近一場",segAll:"全部",spDur:"時長",spDurParts:["小時","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉賓：",spNote:"數字為發言人自述、未核實",spListen:"🎧 去 X 收聽重播 →",epostNote:"我想提交 Space：貼上 Space 連結即可；被收錄後，我們免費轉寫全文、做摘要並加入清單。",epostFormNote:"❗ 所屬清單請先選最接近的一項，標題註明「Space 紀要」。",
+heroTitle:"Space 紀要清單",heroSub:"華語圈 Space 紀要，餵給你的 Agent 吃。",cmdLabel:"Space 紀要清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交 Space：把一場 Space 加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把 Space 名稱和 X 重播連結發到這個信箱即可，主旨註明「Space 紀要投稿」；被收錄後，我們免費轉寫全文、做摘要並加入清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%B4%80%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主題",spLatestLabel:"最近一場",segAll:"全部",spDur:"時長",spDurParts:["小時","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉賓：",spNote:"數字為發言人自述、未核實",spListen:"🎧 去 X 收聽重播 →",epostNote:"我想提交 Space：貼上 Space 連結即可；被收錄後，我們免費轉寫全文、做摘要並加入清單。",epostFormNote:"❗ 所屬清單請先選最接近的一項，標題註明「Space 紀要」。",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場紀要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"正在報名的黑客松與創新大賽",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
 agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/spaces.json">spaces.json</a>，人工整理、不定期更新），有新紀要收錄且命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：上方可關鍵詞搜索、按系列 / 主題篩選。',
 agTitle:"🤖 不想自己翻？讓你的 Agent 替你讀、替你查",agDesc:'每場紀要都有<b>全文公開頁</b>。把下面這段話發給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>讀</b>紀要、<b>跨場檢索</b>，並直接<b>回答你的問題</b>——答案附原文出處，不用你一場場點開。',agUse1:"📖 替我讀：總結最新或指定的紀要",agUse2:"🔎 替我查：按主題 / 人物 / 關鍵詞跨場檢索",agUse3:"❓ 替我答：基於紀要回答問題並給出處",agPrompt:"請把 Yat's List 的 Space 紀要庫作為我的資料源：先讀取 https://yatslist.com/spaces.json 拿到全部紀要索引（每條含標題、要點和 note_url 全文頁），需要細節時再打開對應的 note_url 全文頁。之後請替我：1）總結我指定的或最新的一場紀要；2）按主題、人物或關鍵詞跨場檢索；3）回答我基於這些紀要提出的問題。回答必須註明出處並附上對應的全文頁連結，只依據紀要內容，不要編造紀要裡沒有的資訊。",agCopy:"複製話術",agJson:"📡 spaces.json 數據",agMore:"訂閱與接口說明 ↓",
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
-searchPh:"搜索標題 / 主持人 / 主題…",ftoggleLabel:"🎛 篩選 Filter",
+searchPh:"搜索標題 / 主持人 / 主題…",ftoggleLabel:"篩選",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"時間",feeLabel:"費用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分類",
 segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"後天",week:"本週",deadline:"🔥 即將截止"},
@@ -882,7 +1016,13 @@ tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
 epDescs:["活動數據（JSON，每天 07:30 更新）","黑客松數據（大陸+港澳臺+線上）","RSS 訂閱源","日曆訂閱文件","給 AI 的站點說明"],
 mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把裡換成你的興趣、區域、預算，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 第一次來？</b><br>這裡是每天核實更新的深圳活動清單。30 秒導覽帶你看完：自己逛、按興趣篩選，或者讓你的 Agent 訂閱，每天只推你命中的活動。',
+welcBody:'<b>第一次來？</b>30 秒導覽帶你看懂怎麼用',welcClose:"關閉",
+abTitle:"讓你的 Agent 替你讀、替你查",abSub:"讀紀要 · 跨場檢索 · 回答並附出處，豆包 / WorkBuddy / Codex / Claude Code 都能用。",abGo:"用我的 Agent 訂閱 →",
+abApis:'也可以直接讀：<a href="/spaces.json">spaces.json</a> · <a href="#agent-section">訂閱與接口說明 ↓</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範）',
+navSubmit:"提交 Space",mnavBtn:"☰ 選單",
+moreLinks:'<a href="#email-sub">郵件訂閱</a><i>·</i><a href="javascript:void 0" data-act="tour">訂閱導覽</a><i>·</i><a href="javascript:void 0" data-act="post">複製投稿話術給我的 Agent</a>',
+spRead:"看紀要 →",spListenBtn:"聽重播 →",spReplay:"去 X 聽重播",mCopyNote:"複製紀要連結",mCopyX:"複製 X 連結",linkCopied:"連結已複製",moreBtn:"更多操作",dayCount:function(n){return n+" 場"},spGuestsN:function(n){return n+" 位嘉賓"},
+chipRead:"替我讀 · 查 · 答",mtitleRead:"🤖 讓 Agent 替你讀、替你查",mstepsRead:"把話術發給任何能聯網的 Agent：它先讀 spaces.json 索引，需要細節時再打開對應的全文頁，回答時附出處連結。",
 welcTour:"開始導覽",welcBrowse:"直接逛逛",tourPrev:"上一步",tourNext:"下一步",tourDone:"完成",tourEnd:"結束導覽",
 footTag:"深圳活動，餵給你的 Agent 吃。",footHome:"首頁",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 逐條核實自官方頁面 · 免費無廣告",
 footContact:'合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
@@ -911,11 +1051,11 @@ const POST_STEPS_ZH="把话术发给你的 Agent（Codex / Claude Code 等），
 const POST_STEPS_TW="把話術發給你的 Agent（Codex / Claude Code 等），它會核對官方頁並代你提 PR。";
 const POST_STEPS_EN="Send this prompt to your Agent (Codex / Claude Code, etc.) — it will verify the official page and open the PR for you.";
 const TOUR_EN=[
-{sel:".intro",t:"<b>Step 1 · This site is built for Agents to read</b>: Yat's List verifies Shenzhen industry events one by one and publishes them as data endpoints — the opening screen is the subscription terminal, and the human-readable events list is in the lower half of the page."},
-{sel:".terminal",t:"<b>Step 2 · Subscribing takes one prompt</b>: the prompt in this terminal is the subscription instruction — copy it and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work); it will come back and pull the data itself every morning."},
-{sel:"#subprompt",t:"<b>Step 3 · The prompt is yours to edit</b>: adjust the interest categories and reminder rhythm to your taste before you send it. Set it up once and never think about it again."},
-{sel:"#agent-sub",t:"<b>Step 4 · Pick the version for your Agent</b>: Doubao, WorkBuddy and Codex each have a dedicated prompt in the section below; if you are not sure which to use, take the generic version from Step 2."},
-{sel:"#email-sub",t:"<b>Step 5 · No Agent? No problem</b>: subscribe to the daily email digest (one email a day) or import the ICS file into your calendar. Once subscribed, you are only pinged when an event matches your interests. Tour over — go browse the events."}];
+{sel:"#list",t:"<b>Step 1 · Start with the recaps</b>: curated recaps of Chinese-language X Spaces, newest first, each with a full write-up page."},
+{sel:".bar",t:"<b>Step 2 · Search and filter</b>: type a title, host or topic; the quick chips below are the most-listened series, and the Filters button opens every series and topic tag."},
+{sel:".dlist .card",t:"<b>Step 3 · One row per Space</b>: date and runtime on the left, the title in bold, then series, episode, host and guest count in grey. “Read recap →” on the right opens the full recap; “···” lets you listen to the replay on X or copy the recap / X link."},
+{sel:"#agentbox",t:"<b>Step 4 · Let your Agent read for you</b>: tap “Subscribe with my Agent →” to get the prompt and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code). It will summarise recaps, search across sessions and answer with sources. You can also just give it the spaces.json URL."},
+{sel:"#morelinks",t:"<b>Step 5 · Other ways in</b>: no Agent? Subscribe by email. To add a Space to the list, use “Submit a Space” at the top right, or copy the submission prompt for your Agent here. That’s the tour — go pick a recap."}];
 function fmtUpd(){const _d=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";const el=document.getElementById("st-upd");if(el)el.textContent=_d;const hm=document.getElementById("hm-upd");if(hm)hm.textContent=tr("heroMetaDaily")+(window._updRaw?" · "+tr("heroMetaData")+" "+_d:"")}
 function _setText(sel,txt){const el=document.querySelector(sel);if(el)el.textContent=txt}
 function _setHTML(sel,html){const el=document.querySelector(sel);if(el)el.innerHTML=html}
@@ -928,7 +1068,7 @@ document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b
 _setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-expat",tr("navExpat"));_setText("#nav-spaces",tr("navSpaces"));
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));_setText("#epost-note",tr("epostNote"));_setText("#epost-form-note",tr("epostFormNote"));_setText("#sp-latest-label",tr("spLatestLabel"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
-_setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
+_setText("#ta-submit",tr("navSubmit"));_setText("#ta-agent",tr("abGo"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
 _setHTML("#agentnote",tr("agentNote"));
 _setText("#ag-title",tr("agTitle"));_setHTML("#ag-desc",tr("agDesc"));_setText("#ag-use1",tr("agUse1"));_setText("#ag-use2",tr("agUse2"));_setText("#ag-use3",tr("agUse3"));_setText("#ag-prompt",tr("agPrompt"));_setText("#ag-copy",tr("agCopy"));_setText("#ag-json",tr("agJson"));_setText("#ag-more",tr("agMore"));
 _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setText("#bb-sub-post",tr("bbSubPost"));_setText("#bb-go",tr("bbGo"));
@@ -954,13 +1094,16 @@ document.querySelectorAll(".endpoint-desc").forEach((el,i)=>{if(STR[LANG].epDesc
 document.querySelectorAll(".endpoint-item .btn-copy").forEach(el=>{el.textContent=tr("copy")});
 _setText("#subprompt-copy",tr("copy"));
 _setText("#mclose1",tr("mclose"));_setText("#mclose2",tr("mclose2"));_setText("#mhint",tr("mhint"));_setText("#mcopy",tr("mcopy"));
-document.querySelectorAll("#mchips .mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
-_setHTML("#welc-body",tr("welcBody"));_setText("#welc-tour",tr("welcTour"));_setText("#welc-browse",tr("welcBrowse"));
+document.querySelectorAll("#mchips .mchip").forEach(ch=>{const key={read:"chipRead",generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
+_setHTML("#welc-body",tr("welcBody"));{const wx=document.getElementById("welc-x");if(wx)wx.setAttribute("aria-label",tr("welcClose"))}
+_setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setHTML("#ab-apis",tr("abApis"));_setHTML("#morelinks",tr("moreLinks"));_setText("#list-note",tr("spNote"));_setText("#mnav-btn",tr("mnavBtn"));_setText("#cmd-copy2",tr("copy"));
+_setText("#welc-tour",tr("welcTour"));_setText("#welc-browse",tr("welcBrowse"));
 _setText("#tourprev",tr("tourPrev"));_setText("#tournext",tr("tourNext"));_setText("#tourend",tr("tourEnd"));
 _setText("#sf-tag",tr("footTag"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
 fmtUpd();
 if(typeof syncFilterUI==="function")syncFilterUI();
+if(typeof renderQuick==="function")renderQuick();
 if(typeof applyTheme==="function")applyTheme();
 }
 function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(typeof renderCats==="function")renderCats();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
@@ -1001,21 +1144,29 @@ function pass(e){
 function cardOf(e){
   const hl=fL(e,"highlights")||[];
   const guests=(e.guests||[]).filter(Boolean);
-  const topics=(e.topics||[]).map(t=>`<span class="tag space">${t}</span>`).join("");
+  const idx=DATA.indexOf(e);
+  // one quiet meta line: series · episode · host · guests · runtime (no emoji, no badges)
+  const meta=[e.series?e.series+(e.episode?" · "+tr("spEp",e.episode):""):"",e.host?tr("spHost")+e.host:"",guests.length?`<span title="${guests.join("、").replace(/"/g,"&quot;")}">${tr("spGuestsN",guests.length)}</span>`:"",e.duration_minutes?fmtDur(e.duration_minutes):""].filter(Boolean).join('<i class="sep"> · </i>');
+  const main=e.note_url||e.url;
+  const p=(e.date||"").split("-");
+  const menu=[
+    e.note_url?`<a role="menuitem" href="${e.url}" target="_blank" rel="noopener">${tr("spReplay")}</a>`:"",
+    e.note_url?`<button type="button" role="menuitem" data-copy="${idx}" data-k="note">${tr("mCopyNote")}</button>`:"",
+    `<button type="button" role="menuitem" data-copy="${idx}" data-k="x">${tr("mCopyX")}</button>`
+  ].join("");
   return `<div class="ev">
-  <div class="rail"><div class="t1">${fmtDurShort(e.duration_minutes)}</div><div class="t2">${tr("spDur")}</div></div>
+  <div class="rail"><div class="t1">${p.length===3?p[1]+"-"+p[2]:""}</div><div class="t2">${fmtDurShort(e.duration_minutes)}</div></div>
   <div class="card">
-  <div class="trow"><h3><a href="${e.url}" target="_blank" rel="noopener">${fL(e,"title")}</a></h3>${e.duration_minutes?`<span class="fee na">⏱ ${fmtDur(e.duration_minutes)}</span>`:""}</div>
-  ${e.series?`<div class="meta">📺 ${e.series}${e.episode?" · "+tr("spEp",e.episode):""}</div>`:""}
-  ${e.host?`<div class="org">🎙 ${tr("spHost")}<b>${e.host}</b></div>`:""}
-  ${guests.length?`<div class="org">👥 ${tr("spGuests")}${guests.join("、")}</div>`:""}
-  ${topics?`<div class="tags">${topics}</div>`:""}
-  ${hl.length?`<div class="sum">${hl.map(h=>"· "+h).join("<br>")}</div>`:""}
-  <div class="actions">
-  <a class="btn primary" href="${e.url}" target="_blank" rel="noopener">${tr("spListen")}</a>
-  ${e.note_url?`<a class="btn" href="${e.note_url}">全文纪要</a>`:""}
+  <div class="cmain">
+  <h3><a href="${main}"${e.note_url?"":' target="_blank" rel="noopener"'}>${fL(e,"title")}</a></h3>
+  ${meta?`<div class="cmeta">${meta}</div>`:""}
+  ${hl.length?`<p class="sum">${hl[0]}</p>`:""}
   </div>
-  <div class="meta" style="margin-top:8px">${tr("spNote")}</div>
+  <div class="cact">
+  <a class="reg" href="${main}"${e.note_url?"":' target="_blank" rel="noopener"'}>${e.note_url?tr("spRead"):tr("spListenBtn")}</a>
+  <button type="button" class="more" aria-haspopup="menu" aria-expanded="false" aria-label="${tr("moreBtn")}" title="${tr("moreBtn")}">···</button>
+  <div class="cmenu" role="menu">${menu}</div>
+  </div>
   </div>
   </div>`;
 }
@@ -1025,7 +1176,6 @@ function render(){
   const total=DATA.length;
   const st=$("#st-total");if(st)st.textContent=total;
   const hm=$("#hm-total");if(hm)hm.textContent=total;
-  const lcs=$("#lc-space-n");if(lcs)lcs.textContent=total;
   const latest=DATA.reduce((a,e)=>e.date>a?e.date:a,"");
   const sl=$("#sp-latest");
   if(sl&&latest){const p=latest.split("-");sl.textContent=LANG==="en"?new Date(latest+"T12:00:00+08:00").toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):(+p[1])+"月"+(+p[2])+"日"}
@@ -1035,15 +1185,17 @@ function render(){
   for(const e of evs){if(!groups.has(e.date))groups.set(e.date,[]);groups.get(e.date).push(e)}
   for(const [dk,items] of groups){
     const ts=new Date(dk+"T12:00:00+08:00");const sp=shParts(ts);const wd=ts.toLocaleDateString(LOC(),{timeZone:TZ,weekday:"long"});
-    html+=`<div class="dayhead"><span class="dnum">${sp[2]}</span><span class="dmeta">${LANG==="en"?ts.toLocaleDateString("en-US",{timeZone:TZ,month:"short"}):sp[1]+"月"} · ${wd}</span></div>`;
-    html+=items.map(cardOf).join("");
+    const ds=LANG==="en"?ts.toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):(+sp[1])+"月"+(+sp[2])+"日";
+    html+=`<div class="dayhead"><span class="dnum">${ds}</span><span class="dmeta">${wd}</span><span class="dcnt">${tr("dayCount",items.length)}</span></div>`;
+    html+=`<div class="dlist">${items.map(cardOf).join("")}</div>`;
   }
   $("#list").innerHTML=html;
 }
 const SUBMIT_PROMPT='请帮我给「Yat\'s List Space 纪要清单」投稿一场 X Space。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开这场 Space 的 X 页面核对标题、日期、主持人，按说明把这场 Space（链接 + 基本信息）加进 spaces.json 并提交 Pull Request，或把 Space 链接和基本信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的 Space：【在这里填 Space 名称和 X 链接】。提交后留意维护者 Agent 的核查意见，有要改的按意见改好，并把结果告诉我。';
 const SUBMIT_PROMPT_TW='請幫我給「Yat\'s List Space 紀要清單」投稿一場 X Space。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開這場 Space 的 X 頁面核對標題、日期、主持人，按說明把這場 Space（連結 + 基本信息）加進 spaces.json 並提交 Pull Request，或把 Space 連結和基本信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的 Space：【在這裡填 Space 名稱和 X 連結】。提交後留意維護者 Agent 的核查意見，有要改的按意見改好，並把結果告訴我。';
+window.goSubmit=()=>{const el=document.getElementById("event-post");if(el)el.scrollIntoView({behavior:"smooth",block:"start"});window.hlSubmit()};
 window.hlSubmit=()=>{setTimeout(()=>{const el=document.getElementById("event-post");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
-const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/spaces.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
+["cmd-copy","cmd-copy2"].forEach(id=>{const _cc=document.getElementById(id);if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/spaces.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})})});
 const _ppc=document.getElementById("pip-copy");if(_ppc)_ppc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("pip install yatslist").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent=tr('copiedGo');setTimeout(()=>b.textContent=t,1800)})};
 window.fillPostCard=function(){var el=document.getElementById("prompt-post-card");if(el)el.textContent=LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT};
@@ -1060,25 +1212,26 @@ const MEX_POST_TW="<b>填寫示例：</b><br>「我要投稿的 Space：【《�
 let mMode="sub",mKey="generic";
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
 if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";}
+else if(mKey==="read"){ta.value=document.getElementById("ag-prompt").innerText.trim();document.getElementById("msteps").textContent=tr("mstepsRead");document.getElementById("mex").innerHTML="· "+[tr("agUse1"),tr("agUse2"),tr("agUse3")].map(x=>x.replace(/^\S+\s/,"")).join("<br>· ");document.getElementById("mtitle").textContent=tr("mtitleRead");}
 else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}}
-function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
+function openModal(mode,key){mMode=mode;if(mode==="sub"){if(key)mKey=key;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x.dataset.k===mKey))}document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
 document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
 
 
 function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
 const TOUR=[
-{sel:".intro",t:"<b>第 1 步 · 这个站是给 Agent 读的</b>：Yat's List 把深圳的行业活动逐条核实、整理成数据接口，第一屏就是订阅终端；人看的活动清单在页面下半部分。"},
-{sel:".terminal",t:"<b>第 2 步 · 订阅只要一句话</b>：终端里这段话术就是订阅指令——复制它，发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上会自己来拉数据。"},
-{sel:"#subprompt",t:"<b>第 3 步 · 话术可以改</b>：里面的兴趣类别、提醒节奏都能按你的喜好改，改完再发给 Agent。设置一次，之后不用再管。"},
-{sel:"#agent-sub",t:"<b>第 4 步 · 按你的 Agent 选版本</b>：豆包、WorkBuddy、Codex 各有专用话术，在下面这片区域里对应复制即可；拿不准用哪个，就用第 2 步的通用版。"},
-{sel:"#email-sub",t:"<b>第 5 步 · 没有 Agent 也没关系</b>：可以订邮件日报（每天一封）或把 ICS 导进日历。订阅之后，只有活动命中你的兴趣时才会提醒你，没命中不打扰。导览结束，去逛逛活动清单吧。"}];
+{sel:"#list",t:"<b>第 1 步 · 先看纪要</b>：华语圈 X Space 的精选纪要，按日期从新到旧排好，每场都有整理过的全文页。"},
+{sel:".bar",t:"<b>第 2 步 · 搜索和筛选</b>：输入标题、主持人或主题关键词；下面的快捷标签是常听的系列，点「筛选」按钮能看到全部系列和主题标签。"},
+{sel:".dlist .card",t:"<b>第 3 步 · 一行看懂一场</b>：左边是日期和时长，加粗的是标题，灰色小字是系列、期数、主持人和嘉宾人数。右侧「看纪要 →」打开全文纪要，「···」里可以去 X 听回放、复制纪要链接或 X 链接。"},
+{sel:"#agentbox",t:"<b>第 4 步 · 让 Agent 替你读</b>：点「用我的 Agent 订阅 →」拿到话术，发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它就能替你总结纪要、跨场检索、回答问题并附出处；也可以只复制 spaces.json 地址给它。"},
+{sel:"#morelinks",t:"<b>第 5 步 · 其他入口</b>：没有 Agent 可以邮件订阅；想把一场 Space 加进清单，点右上角「提交 Space」，或在这里复制投稿话术给你的 Agent。导览结束，去挑一场纪要看吧。"}];
 const TOUR_TW=[
-{sel:".intro",t:"<b>第 1 步 · 這個站是給 Agent 讀的</b>：Yat's List 把深圳的行業活動逐條核實、整理成數據接口，第一屏就是訂閱終端；人看的活動清單在頁面下半部分。"},
-{sel:".terminal",t:"<b>第 2 步 · 訂閱只要一句話</b>：終端裡這段話術就是訂閱指令——複製它，發給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上會自己來拉數據。"},
-{sel:"#subprompt",t:"<b>第 3 步 · 話術可以改</b>：裡面的興趣類別、提醒節奏都能按你的喜好改，改完再發給 Agent。設置一次，之後不用再管。"},
-{sel:"#agent-sub",t:"<b>第 4 步 · 按你的 Agent 選版本</b>：豆包、WorkBuddy、Codex 各有專用話術，在下面這片區域裡對應複製即可；拿不準用哪個，就用第 2 步的通用版。"},
-{sel:"#email-sub",t:"<b>第 5 步 · 沒有 Agent 也沒關係</b>：可以訂郵件日報（每天一封）或把 ICS 導進日曆。訂閱之後，只有活動命中你的興趣時才會提醒你，沒命中不打擾。導覽結束，去逛逛活動清單吧。"}];
+{sel:"#list",t:"<b>第 1 步 · 先看紀要</b>：華語圈 X Space 的精選紀要，按日期從新到舊排好，每場都有整理過的全文頁。"},
+{sel:".bar",t:"<b>第 2 步 · 搜索和篩選</b>：輸入標題、主持人或主題關鍵詞；下面的快捷標籤是常聽的系列，點「篩選」按鈕能看到全部系列和主題標籤。"},
+{sel:".dlist .card",t:"<b>第 3 步 · 一行看懂一場</b>：左邊是日期和時長，加粗的是標題，灰色小字是系列、期數、主持人和嘉賓人數。右側「看紀要 →」打開全文紀要，「···」裡可以去 X 聽重播、複製紀要連結或 X 連結。"},
+{sel:"#agentbox",t:"<b>第 4 步 · 讓 Agent 替你讀</b>：點「用我的 Agent 訂閱 →」拿到話術，發給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它就能替你總結紀要、跨場檢索、回答問題並附出處；也可以只複製 spaces.json 地址給它。"},
+{sel:"#morelinks",t:"<b>第 5 步 · 其他入口</b>：沒有 Agent 可以郵件訂閱；想把一場 Space 加進清單，點右上角「提交 Space」，或在這裡複製投稿話術給你的 Agent。導覽結束，去挑一場紀要看吧。"}];
 let tourI=-1,tourEl=null;
 function tourShow(){const st=(LANG==="en"?TOUR_EN:LANG==="tw"?TOUR_TW:TOUR)[tourI];if(tourEl)tourEl.classList.remove("tour-hl");tourEl=document.querySelector(st.sel);if(tourEl){tourEl.scrollIntoView({behavior:"smooth",block:"center"});tourEl.classList.add("tour-hl")}document.getElementById("tourtext").innerHTML=st.t;document.getElementById("tourprog").textContent=(tourI+1)+" / "+TOUR.length;document.getElementById("tourprev").disabled=tourI===0;document.getElementById("tournext").textContent=tourI===TOUR.length-1?tr("tourDone"):tr("tourNext")}
 function startTour(){tourI=0;document.getElementById("tourcard").classList.add("open");tourShow()}
@@ -1086,14 +1239,15 @@ function tourStep(d){tourI+=d;if(tourI>=TOUR.length){endTour();return}if(tourI<0
 function endTour(){if(tourEl)tourEl.classList.remove("tour-hl");tourEl=null;document.getElementById("tourcard").classList.remove("open");try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 function dismissWelc(){document.getElementById("welc").style.display="none";try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();endTour()}});
-try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="block"}catch(e){}
+try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="flex"}catch(e){}
 
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
 const active=(F.series!=="all"?1:0)+F.topics.size;
 $("#fclear").hidden=active===0;
-$("#fcount").textContent=active?(LANG==="en"?(active+" selected"):LANG==="tw"?("已選 "+active+" 項"):("已选 "+active+" 项")):"";
+$("#fcount").textContent=active?String(active):"";
+document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;ch.classList.toggle("on",q==="all"?active===0:F.series===q.slice(7))});
 }
 function seriesList(){const seen=[];for(const e of DATA){if(e.series&&!seen.includes(e.series))seen.push(e.series)}return seen}
 function topicList(){const seen=[];for(const e of DATA){for(const t of (e.topics||[]))if(!seen.includes(t))seen.push(t)}return seen}
@@ -1102,6 +1256,26 @@ const sg=$("#g-series");if(sg)sg.innerHTML=`<button class="chip${F.series==="all
 const tg=$("#g-topics");if(tg)tg.innerHTML=topicList().map(t=>`<button class="chip${F.topics.has(t)?" on":""}" data-t="${t}">${t}</button>`).join("");
 }
 renderCats();
+/* quick chips: 全部 + the most-listed series (count desc, then first appearance) */
+function renderQuick(){const el=$("#qchips");if(!el)return;const cnt=new Map();for(const e of DATA){if(e.series)cnt.set(e.series,(cnt.get(e.series)||0)+1)}
+const top=[...cnt.entries()].sort((a,b)=>b[1]-a[1]).slice(0,5).map(x=>x[0]);
+el.innerHTML=`<button type="button" class="chip" data-q="all">${tr("segAll")}</button>`+top.map(s=>`<button type="button" class="chip" data-q="series:${s.replace(/"/g,"&quot;")}">${s}</button>`).join("");syncFilterUI()}
+$("#qchips").addEventListener("click",ev=>{const ch=ev.target.closest("[data-q]");if(!ch)return;const q=ch.dataset.q;
+if(q==="all"){F={series:"all",topics:new Set()}}else{const v=q.slice(7);F.series=F.series===v?"all":v}
+renderCats();syncFilterUI();render();measureBar()});
+/* row menus */
+function closeMenus(except){document.querySelectorAll(".cact.open").forEach(c=>{if(c!==except){c.classList.remove("open");const m=c.querySelector(".more");if(m)m.setAttribute("aria-expanded","false")}})}
+$("#list").addEventListener("click",ev=>{
+const mb=ev.target.closest(".more");
+if(mb){const c=mb.parentElement;closeMenus(c);const o=c.classList.toggle("open");mb.setAttribute("aria-expanded",o?"true":"false");return}
+const cb=ev.target.closest("[data-copy]");
+if(cb){const e=DATA[+cb.dataset.copy];if(e){const u=cb.dataset.k==="note"?new URL(e.note_url,"https://yatslist.com/").href:e.url;const t=cb.textContent;if(navigator.clipboard)navigator.clipboard.writeText(u).then(()=>{cb.textContent=tr("linkCopied");setTimeout(()=>{cb.textContent=t;closeMenus()},900)}).catch(()=>closeMenus())}return}
+if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus();
+});
+document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
+document.addEventListener("keydown",ev=>{if(ev.key==="Escape")closeMenus()});
+/* quiet links under the list */
+$("#morelinks").addEventListener("click",ev=>{const a=ev.target.closest("[data-act]");if(!a)return;ev.preventDefault();if(a.dataset.act==="tour")startTour();else openModal("post")});
 $("#g-series").addEventListener("click",ev=>{
 const b=ev.target.closest("[data-s]");if(!b)return;
 F.series=b.dataset.s;
@@ -1127,7 +1301,7 @@ applyLang();
 fetch("/spaces.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.spaces||[];
 window._updRaw=j.updated_at||null;fmtUpd();
-renderCats();render();measureBar();setTimeout(measureBar,400);
+renderCats();renderQuick();render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>$("#list").innerHTML='<div class="empty">'+tr("loadFail")+'</div>');
 </script>
 <script>fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.hackathons||[]).length;var el=document.getElementById("hackcount");if(el&&n)el.textContent=n;var el2=document.getElementById("hackcount2");if(el2&&n)el2.textContent=n}).catch(function(){})</script>
@@ -1135,6 +1309,14 @@ renderCats();render();measureBar();setTimeout(measureBar,400);
 <script>fetch("/spaces.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.spaces||[]).length;var el=document.getElementById("lc-space-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 <script>fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var evs=d.events||[];var f=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit"});var m={};f.formatToParts(new Date()).forEach(function(x){m[x.type]=x.value});var t0=Date.UTC(+m.year,+m.month-1,+m.day)-8*3600e3;var n=evs.filter(function(e){return !(e.start&&new Date(e.end||e.start)<new Date(t0))}).length;var el=document.getElementById("lc-ev-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
+<script>
+(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
+function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
+b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+p.addEventListener('click',function(e){if(e.target.closest('a')||e.target.closest('.nav-submit'))close()});
+document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
+})();
+</script>
 </body>
 </html>
 

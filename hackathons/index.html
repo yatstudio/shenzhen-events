@@ -447,6 +447,123 @@ input[type=search]{font-size:16px}
 .chip{min-height:40px}
 #ftoggle{min-height:44px}
 }
+
+/* ===== simplify pass 2026-11-11 (matches /szevents/): one accent colour, one primary action per row, Agent subscription up top ===== */
+:root{--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3)}
+:root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
+.human-section{padding:22px 0 8px}
+.human-section>.wrap{max-width:880px}
+/* topbar */
+.topbar-nav a.nav-ag{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.nav-submit:hover{border-color:var(--green);color:var(--green)}
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+/* hero: left-aligned, tagline above the title */
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{display:block;margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 4px}
+.section-subtitle b{font-weight:600;color:var(--ink-sec)}
+.hero-meta{margin:4px 0 0;font-size:.82rem;color:var(--ink-ter);font-variant-numeric:tabular-nums}
+.hero-meta:empty{display:none}
+/* Agent box */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.agentbox .cmdline{max-width:none;margin:0;background:var(--cmd-bg);flex-wrap:nowrap;font-size:.85rem;padding:10px 12px}
+.agentbox .cmdline .u{color:var(--ink);font-size:.85rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:normal}
+.agentbox .cmdline button{flex:0 0 auto;white-space:nowrap}
+.ab-apis{font-size:.8rem;color:var(--ink-ter)}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+/* search + quick chips; full filter panel behind the filter button on every screen size */
+.bar{background:none;backdrop-filter:none;border-bottom:0;box-shadow:none;margin:0;padding:18px 0 4px}
+.srow{display:flex;gap:10px}
+.srow input[type=search]{flex:1;box-shadow:none;padding:10px 14px}
+#ftoggle{display:inline-flex;width:auto;margin:0;gap:6px;min-height:44px;padding:0 12px;color:var(--ink-sec);justify-content:center;align-items:center}
+#ftoggle #fcount{margin:0;color:var(--green)}
+#ftoggle #fcount:empty{display:none}
+#fgroups{display:none;margin-top:6px}
+#fgroups.open{display:block}
+.qchips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.qchips::-webkit-scrollbar{display:none}
+.qchips .chip{flex:0 0 auto}
+.chip{background:none;border-color:var(--border-hover);min-height:34px;padding:5px 13px;font-size:.84rem}
+.chip:hover{transform:none}
+.chip.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+.fgroup .chip{min-height:34px;padding:5px 12px;font-size:.84rem}
+.fclear,[data-theme="light"] .fclear{margin-left:12px;color:var(--ink-sec);font-weight:600}
+.fclear:hover{color:var(--green)}
+[data-theme="light"] .mchip.on,.mchip.on{box-shadow:none}
+/* group header: "72 小时内截止  先抢这些 ........ 24 场" */
+.dayhead{align-items:baseline;gap:8px;padding:24px 0 10px}
+.dayhead .dnum{font-size:1.02rem;font-weight:700;color:var(--ink);letter-spacing:0;line-height:1.3}
+.dayhead .dmeta{font-size:.85rem;font-weight:400;color:var(--ink-sec)}
+.dayhead .dcnt{margin-left:auto;font-size:.78rem;color:var(--ink-ter);white-space:nowrap}
+/* one bordered list per group, rows divided by hairlines */
+.dlist{background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.dlist .ev{display:flex;margin:0;gap:18px;padding:14px 18px;border-top:1px solid var(--border);align-items:flex-start}
+.dlist .ev:first-child{border-top:0}
+.dlist .rail{flex:0 0 72px;text-align:left;padding-top:1px}
+.dlist .rail .t1{font-family:var(--font-mono);font-size:1rem;font-weight:500;color:var(--ink);line-height:1.3}
+.dlist .rail .t2,.dlist .rail .t3{font-family:var(--font-mono);font-size:.75rem;margin-top:2px;color:var(--ink-ter);line-height:1.35}
+.dlist .rail .t3.warm{color:var(--warm);font-weight:600}
+[data-theme="light"] .dlist .rail .t3.warm{color:#b45309}
+.dlist .card,.dlist .card:hover{flex:1;min-width:0;background:none;border:0;border-radius:0;box-shadow:none;padding:0;transform:none;display:flex;gap:16px;align-items:flex-start}
+.cmain{flex:1;min-width:0}
+.dlist .card h3{font-size:1rem;font-weight:700;line-height:1.4;margin:0}
+.cmeta{font-size:.82rem;color:var(--ink-sec);margin-top:3px;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden;word-break:break-all}
+.cmeta .sep{font-style:normal;color:var(--ink-ter)}
+.dlist .sum{font-size:.82rem;color:var(--ink-ter);margin:3px 0 0;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+.cact{flex:0 0 auto;display:flex;align-items:center;gap:8px;position:relative}
+.reg{border:1px solid var(--green);color:var(--green);border-radius:999px;padding:4px 14px;font-size:.84rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.reg:hover{background:var(--tint)}
+.more{background:none;border:0;color:var(--ink-ter);font-size:1.05rem;letter-spacing:1px;line-height:1;width:32px;height:30px;border-radius:6px;cursor:pointer;font-family:inherit}
+.more:hover,.cact.open .more{background:var(--panel-hover);color:var(--ink)}
+.more-ph{display:inline-block;width:32px;height:30px}
+.cmenu{display:none;position:absolute;right:0;top:calc(100% + 6px);z-index:50;min-width:150px;background:var(--panel-hover);border:1px solid var(--border-hover);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden}
+.cact.open .cmenu{display:block}
+.cmenu>*{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--border);padding:9px 16px;font:inherit;font-size:.85rem;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.cmenu>*:first-child{border-top:0}
+.cmenu>*:hover{background:var(--tint);color:var(--green)}
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end;font-family:inherit}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap;overflow:visible;width:auto}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+  .section-tagline{display:block;font-size:.66rem;letter-spacing:.04em}
+  .human-section{padding-top:16px}
+  .human-section>.wrap{padding:0 16px}
+  .agentbox{padding:14px;gap:10px;border-radius:12px}
+  .ab-head{display:contents}
+  .ab-text{order:1}
+  .agentbox .cmdline{order:2;font-size:.78rem;padding:8px 10px;gap:8px}
+  .agentbox .cmdline .u{font-size:.78rem}
+  .ab-go{order:3;text-align:center;padding:11px}
+  .ab-sub,.ab-apis,.ab-cmd{display:none}
+  .bar{margin:0;padding:14px 0 0}
+  #ftoggle-label{display:none}
+  #ftoggle{min-width:46px;padding:0 10px}
+  .chip{min-height:34px}
+  .fgroup .chip{min-height:34px}
+  .dlist .ev{flex-direction:row;flex-wrap:wrap;gap:0;padding:12px 14px;margin:0}
+  .dlist .rail{flex:0 0 100%;display:flex;gap:6px;align-items:baseline;padding:0 0 2px;text-align:left}
+  .dlist .rail .t1{font-size:.8rem;color:var(--ink-sec)}
+  .dlist .rail .t2,.dlist .rail .t3{font-size:.75rem;margin-top:0}
+  .dlist .card{flex:1 1 100%;gap:10px}
+  .dlist .card h3{font-size:.95rem;word-break:break-word}
+  .dlist .sum{display:none}
+  .cmeta{font-size:.78rem;-webkit-line-clamp:2}
+  .cact{flex-direction:column;align-items:flex-end;justify-content:space-between;align-self:stretch;gap:6px;margin-top:-22px}
+  .cact .more,.cact .more-ph{order:-1;height:24px}
+  .reg{padding:4px 12px;font-size:.8rem}
+}
 </style>
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d1218">
@@ -465,66 +582,68 @@ input[type=search]{font-size:16px}
     <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="Yat's List" style="text-decoration:none">
       <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
     </a>
-    <nav class="topbar-nav">
-      <a href="https://yatslist.com/szevents/" id="nav-home">← 深圳活动清单</a>
-      <span class="navcur" id="nav-hack">黑客松清单</span>
+    <button id="mnav-btn" type="button" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+<div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agent-sub" id="nav-agent" class="nav-ag">给 Agent</a>
+      <a href="https://yatslist.com/szevents/" id="nav-home">活动清单</a>
+      <a href="https://yatslist.com/hackathons/" id="nav-hack" class="nav-on" aria-current="page">黑客松清单</a>
       <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
       <a href="https://yatslist.com/spaces/" id="nav-spaces">Space 纪要</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
-    </nav>
+      <button type="button" class="nav-submit" id="hpost-btn" onclick="goPost()">提交黑客松</button>
+    </nav></div>
   </div>
 </div>
 
-<div class="wrap hack-hero">
-  <div class="section-header">
-    <h1 class="section-title" id="page-title">Yat's List · 黑客松清单</h1>
-    <p class="section-subtitle" id="page-sub"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 香港 / 澳门 / 台湾</b>线下为主，<b>线上不限区域</b> · 每天早上更新</p>
-    <p class="section-tagline">HACKATHONS · OPEN FOR REGISTRATION · UPDATED DAILY</p>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><b id="st-total">–</b><span id="st-total-label">报名中</span></div>
-    <div class="stat"><b id="st-soon">–</b><span id="st-soon-label">72 小时内截止</span></div>
-    <div class="stat"><b id="st-cn">–</b><span id="st-cn-label">大陆 + 港澳台线下</span></div>
-    <div class="stat"><b id="st-upd">–</b><span id="st-upd-label">数据更新</span></div>
-  </div>
-
-    <nav class="listsw" aria-label="Lists">
-    <a href="https://yatslist.com/szevents/" id="lsw-ev">深圳活动清单</a>
-    <a href="https://yatslist.com/hackathons/" class="on" id="lsw-hack" aria-current="page">黑客松清单</a>
-    <a href="https://yatslist.com/szexpat/" id="lsw-expat">外国人活动</a>
-    <a href="https://yatslist.com/spaces/" id="lsw-spaces">Space 纪要</a>
-  </nav>
-
-
-  <div class="topact">
-    <a class="btn submit" href="https://yatslist.com/szevents/" id="back-btn">← 返回 Yat's List · 深圳活动</a>
-    <button class="btn agent" type="button" id="agent-btn" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
- <a class="btn submit" href="#hack-post" id="hpost-btn" onclick="hlPost()">＋ 提交黑客松</a>
-    <a class="btn" href="#agent-sub" id="ta-sub">订阅 ↓</a>
-  </div>
-</div>
-
+<section class="human-section" id="human-section">
 <div class="wrap">
+  <div class="section-header">
+    <p class="section-tagline">HACKATHONS · OPEN FOR REGISTRATION · UPDATED DAILY</p>
+    <h2 class="section-title" id="page-title">黑客松清单</h2>
+    <p class="section-subtitle" id="page-sub"><b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 港澳台</b>线下为主，<b>线上</b>全球可报 · 每天更新，每条打开官方页核实</p>
+    <p class="hero-meta" id="hero-meta"></p>
+  </div>
+
+  <div class="agentbox" id="agentbox">
+    <div class="ab-head">
+      <div class="ab-text"><div class="ab-title" id="ab-title">让你的 Agent 盯着黑客松，不用自己刷</div><div class="ab-sub" id="ab-sub">豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣、截止前才提醒你。</div></div>
+      <button type="button" class="ab-go" id="agent-btn" onclick="openModal('sub')">用我的 Agent 订阅 →</button>
+    </div>
+    <div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/hackathons.json</span><button type="button" id="cmd-copy">复制</button></div>
+    <div class="ab-apis" id="ab-apis"></div>
+  </div>
+
   <div class="bar">
+    <div class="srow">
     <input type="search" id="q" placeholder="搜比赛名、城市、主题（如：AI Agent / 机器人 / 深圳）">
-    <button id="ftoggle" aria-expanded="false"><span id="ftoggle-label">🎛 筛选 Filter</span><span>▾</span></button>
+    <button id="ftoggle" type="button" aria-expanded="false" aria-controls="fgroups"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2" fill="var(--panel)"/><circle cx="13" cy="10" r="2" fill="var(--panel)"/><circle cx="8" cy="15" r="2" fill="var(--panel)"/></svg><span id="ftoggle-label">筛选</span><span id="fcount"></span></button>
+    </div>
+    <div class="qchips" id="qchips">
+      <button type="button" class="chip on" data-q="all">全部</button>
+      <button type="button" class="chip" data-q="region:线上">线上</button>
+      <button type="button" class="chip" data-q="region:大陆">大陆</button>
+      <button type="button" class="chip" data-q="region:香港">香港</button>
+      <button type="button" class="chip" data-q="region:台湾">台湾</button>
+      <button type="button" class="chip" data-q="topic:AI">AI</button>
+      <button type="button" class="chip" data-q="topic:Agent">Agent</button>
+    </div>
     <div id="fgroups">
       <div class="fgroup"><span class="flabel" id="fl-region">地区</span><span class="seg" id="regions"></span></div>
       <div class="fgroup"><span class="flabel" id="fl-format">形式</span><span class="seg" id="formats"></span></div>
-      <div class="fgroup"><span class="flabel" id="fl-topic">主题</span><span class="seg" id="topics"></span><span class="fres" id="fres"></span><button class="fclear" id="fclear" type="button">清除筛选</button></div>
+      <div class="fgroup"><span class="flabel" id="fl-topic">主题</span><span class="seg" id="topics"></span></div>
+      <div class="fgroup"><span class="fres" id="fres"></span><button class="fclear" id="fclear" type="button" hidden>清除筛选</button></div>
     </div>
   </div>
-</div>
 
-<div class="wrap"><div id="list"><div class="empty" id="loading">加载中…</div></div></div>
+  <div id="list"><div class="empty" id="loading">加载中…</div></div>
+</div>
+</section>
 
 
 <div class="wrap">
 <!-- Agent Subscription Card -->
 <div class="subcard" id="agent-sub">
-<div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">黑客松清单</span></span><span class="u">https://yatslist.com/hackathons.json</span><button type="button" id="cmd-copy">复制</button></div>
 <div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
 <h3 id="hsub-title">🤖 让你的 Agent 盯着黑客松，不用自己刷</h3>
 <p class="sum" id="hsub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
@@ -609,18 +728,18 @@ const STR={
 zh:{
 docTitle:"Yat's List · 黑客松清单 | 大陆 + 港澳台 + 线上",
 metaDesc:"正在报名的黑客松与创新大赛：大陆、香港、澳门、台湾线下为主，线上不限区域。每日更新，数据来自黑123等渠道并逐条核实。",
-navHome:"← 深圳活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",
+navHome:"活动清单",navAgent:"给 Agent",mnavBtn:"☰ 菜单",navSubmit:"提交黑客松",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-pageTitle:"Yat's List · 黑客松清单",
+pageTitle:"黑客松清单",heroMeta:function(a,b,u){return a+" 场报名中 · "+b+" 场 72 小时内截止"+(u?" · 数据 "+u:"")},abTitle:"让你的 Agent 盯着黑客松，不用自己刷",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，快截止时提醒你。",abApis:'也可以直接读：<a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范） · <a href="#agent-sub">各 Agent 设置步骤 ↓</a>',dayCount:function(n){return n+" 场"},regBtn:"报名 →",moreBtn:"更多操作",dlShort:"截止",startShort:"开始",
 pageSub:"<b>正在报名</b>的黑客松与创新大赛 · <b>大陆 / 港澳台</b>线下为主，<b>线上</b>全球可报 · 每天更新，每条打开官方页核实",
 cmdLabel:"黑客松清单",pipLabel:"命令行 CLI",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把黑客松名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"复制",copied:"已复制 ✓",
 statTotal:"报名中",statSoon:"72 小时内截止",statCn:"大陆 + 港澳台线下",statUpd:"数据更新",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",subAnchor:"订阅 ↓",
-backBtn:"← 返回 Yat's List · 深圳活动",agentBtn:"🤖 用我的 Agent 订阅",
+backBtn:"← 返回 Yat's List · 深圳活动",agentBtn:"用我的 Agent 订阅 →",
 searchPh:"搜比赛名、城市、主题（如：AI Agent / 机器人 / 深圳）",
-filterBtn:"🎛 筛选 Filter",fRegion:"地区",fFormat:"形式",fTopic:"主题",fAll:"全部",clear:"清除筛选",
+filterBtn:"筛选",fRegion:"地区",fFormat:"形式",fTopic:"主题",fAll:"全部",clear:"清除筛选",
 fres:function(n){return "共 "+n+" 场"},
 loading:"加载中…",loadFail:"数据加载失败，请稍后刷新",noResults:"没有符合条件的比赛",
-soonT:"🔥 72 小时内截止",soonS:"先抢这些",weekT:"📅 本周内截止",restT:"🛠 报名中",restS:"按截止日期排序",
+soonT:"72 小时内截止",soonS:"先抢这些",weekT:"本周内截止",restT:"报名中",restS:"按截止日期排序",
 regClose:"报名截止",startL:"比赛开始",seeOfficial:"见官方页",dateWord:"日期",
 daysLeft:function(n){return "剩 "+n+" 天"},closesToday:"今天截止",
 contest:"比赛",contestTBD:"比赛时间见官方页",
@@ -636,7 +755,7 @@ hsubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可�
 viewAll:"查看全部 Agent 版本",
 agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
 agSteps:["<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>","<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>","<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（提 PR）</li>"],
-postJump:"＋ 提交黑客松",
+postJump:"提交黑客松",
 postTitle:"📋 投稿黑客松：让你的 Agent 代你提交",
 postSum:"发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你提 PR 或发投稿邮件。",
 postBtn:"📋 复制投稿话术给我的 Agent",
@@ -648,18 +767,18 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 tw:{
 docTitle:"Yat's List · 黑客松清單 | 大陸 + 港澳台 + 線上",
 metaDesc:"正在報名的黑客松與創新大賽：大陸、香港、澳門、臺灣線下為主，線上不限區域。每日更新，數據來自黑123等渠道並逐條核實。",
-navHome:"← 深圳活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",
+navHome:"活動清單",navAgent:"給 Agent",mnavBtn:"☰ 選單",navSubmit:"提交黑客松",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-pageTitle:"Yat's List · 黑客松清單",
+pageTitle:"黑客松清單",heroMeta:function(a,b,u){return a+" 場報名中 · "+b+" 場 72 小時內截止"+(u?" · 數據 "+u:"")},abTitle:"讓你的 Agent 盯著黑客松，不用自己刷",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，快截止時提醒你。",abApis:'也可以直接讀：<a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範） · <a href="#agent-sub">各 Agent 設置步驟 ↓</a>',dayCount:function(n){return n+" 場"},regBtn:"報名 →",moreBtn:"更多操作",dlShort:"截止",startShort:"開始",
 pageSub:"<b>正在報名</b>的黑客松與創新大賽 · <b>大陸 / 港澳台</b>線下為主，<b>線上</b>全球可報 · 每天更新，每條打開官方頁核實",
 cmdLabel:"黑客松清單",pipLabel:"命令列 CLI",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把黑客松名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"複製",copied:"已複製 ✓",
 statTotal:"報名中",statSoon:"72 小時內截止",statCn:"大陸 + 港澳台線下",statUpd:"數據更新",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",subAnchor:"訂閱 ↓",
-backBtn:"← 返回 Yat's List · 深圳活動",agentBtn:"🤖 用我的 Agent 訂閱",
+backBtn:"← 返回 Yat's List · 深圳活動",agentBtn:"用我的 Agent 訂閱 →",
 searchPh:"搜比賽名、城市、主題（如：AI Agent / 機器人 / 深圳）",
-filterBtn:"🎛 篩選 Filter",fRegion:"地區",fFormat:"形式",fTopic:"主題",fAll:"全部",clear:"清除篩選",
+filterBtn:"篩選",fRegion:"地區",fFormat:"形式",fTopic:"主題",fAll:"全部",clear:"清除篩選",
 fres:function(n){return "共 "+n+" 場"},
 loading:"載入中…",loadFail:"數據載入失敗，請稍後刷新",noResults:"沒有符合條件的比賽",
-soonT:"🔥 72 小時內截止",soonS:"先搶這些",weekT:"📅 本週內截止",restT:"🛠 報名中",restS:"按截止日期排序",
+soonT:"72 小時內截止",soonS:"先搶這些",weekT:"本週內截止",restT:"報名中",restS:"按截止日期排序",
 regClose:"報名截止",startL:"比賽開始",seeOfficial:"見官方頁",dateWord:"日期",
 daysLeft:function(n){return "剩 "+n+" 天"},closesToday:"今天截止",
 contest:"比賽",contestTBD:"比賽時間見官方頁",
@@ -675,7 +794,7 @@ hsubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可�
 viewAll:"查看全部 Agent 版本",
 agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
 agSteps:["<li>打開豆包工作 →「定時任務」→ 新建</li><li>重複選「每天」、時間 9:00，任務內容粘貼下方話術</li><li>保存，之後每天自動推送到對話</li>","<li>打開 WorkBuddy → 左側「自動化」→ 添加任務</li><li>執行頻率選「每天 9:00」，提示詞粘貼下方話術</li><li>保存，之後每天自動執行並推送結果</li>","<li>把下方話術直接發給 Codex</li><li>讓它創建每天 9:00（Asia/Shanghai）的自動化任務</li><li>還可以讓它按清單規範代你投稿黑客松（提 PR）</li>"],
-postJump:"＋ 提交黑客松",
+postJump:"提交黑客松",
 postTitle:"📋 投稿黑客松：讓你的 Agent 代你提交",
 postSum:"發現一場清單裡沒有的黑客松？把下方話術發給你的 Agent（Codex / Claude Code 等），它會先讀投稿規範、打開官方頁核對報名截止、地區、形式和獎金，再代你提 PR 或發投稿郵件。",
 postBtn:"📋 複製投稿話術給我的 Agent",
@@ -687,18 +806,18 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 en:{
 docTitle:"Yat's List · Hackathons | Mainland China + HK / MO / TW + Online",
 metaDesc:"Hackathons and innovation contests open for registration: mostly in-person across Mainland China, Hong Kong, Macau and Taiwan, online worldwide. Updated daily; data from Hack123 and other channels, each listing verified.",
-navHome:"← Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",
+navHome:"Events",navAgent:"For Agents",mnavBtn:"☰ Menu",navSubmit:"Submit a hackathon",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-pageTitle:"Yat's List · Hackathons",
+pageTitle:"Hackathons",heroMeta:function(a,b,u){return a+" open · "+b+" closing within 72h"+(u?" · updated "+u:"")},abTitle:"Let your Agent watch hackathons for you",abSub:"Doubao Workspace · WorkBuddy · Codex · Claude Code can all subscribe. Set it up once; get pinged for new matches and closing deadlines.",abApis:'Or read directly: <a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide) · <a href="#agent-sub">Setup steps per Agent ↓</a>',dayCount:function(n){return n+(n===1?" event":" events")},regBtn:"Register →",moreBtn:"More actions",dlShort:"Deadline",startShort:"Starts",
 pageSub:"Hackathons &amp; innovation contests <b>open for registration</b> · <b>Mainland / HK / Macau / Taiwan</b> in person, <b>online</b> worldwide · Updated daily, each verified on its official page",
 cmdLabel:"Hackathons",pipLabel:"CLI",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the hackathon name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",copy:"Copy",copied:"Copied ✓",
 statTotal:"Open now",statSoon:"Closing in 72h",statCn:"Mainland + HK/MO/TW in-person",statUpd:"Updated",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",subAnchor:"Subscribe ↓",
-backBtn:"← Back to Yat's List · Shenzhen Events",agentBtn:"🤖 Subscribe via my Agent",
+backBtn:"← Back to Yat's List · Shenzhen Events",agentBtn:"Subscribe via my Agent →",
 searchPh:"Search by name, city or topic (e.g. AI Agent / Robotics / Shenzhen)",
-filterBtn:"🎛 Filters",fRegion:"Region",fFormat:"Format",fTopic:"Topic",fAll:"All",clear:"Clear filters",
+filterBtn:"Filters",fRegion:"Region",fFormat:"Format",fTopic:"Topic",fAll:"All",clear:"Clear filters",
 fres:function(n){return n+" events"},
 loading:"Loading…",loadFail:"Failed to load data — please refresh",noResults:"No competitions match your filters",
-soonT:"🔥 Closing within 72 hours",soonS:"Grab these first",weekT:"📅 Closing this week",restT:"🛠 Open for registration",restS:"Sorted by deadline",
+soonT:"Closing within 72 hours",soonS:"Grab these first",weekT:"Closing this week",restT:"Open for registration",restS:"Sorted by deadline",
 regClose:"Registration closes",startL:"Event starts",seeOfficial:"See official page",dateWord:"Date",
 daysLeft:function(n){return n+(n===1?" day":" days")+" left"},closesToday:"Closes today",
 contest:"Event",contestTBD:"Event dates on the official page",
@@ -714,7 +833,7 @@ hsubSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Ag
 viewAll:"See all Agent versions",
 agNames:["🫘 Doubao Workspace","💼 WorkBuddy","🧑‍💻 Codex"],
 agSteps:["<li>Open Doubao Workspace → “Scheduled tasks” → New</li><li>Repeat “Daily”, time 9:00, paste the prompt below as the task content</li><li>Save — it will push to your chat every day</li>","<li>Open WorkBuddy → “Automation” in the left sidebar → Add task</li><li>Frequency “Daily 9:00”, paste the prompt below</li><li>Save — it runs daily and pushes the results</li>","<li>Send the prompt below straight to Codex</li><li>Ask it to create a daily 9:00 (Asia/Shanghai) automation</li><li>You can also have it submit hackathons for you (open a PR) following the guide</li>"],
-postJump:"＋ Submit a hackathon",
+postJump:"Submit a hackathon",
 postTitle:"📋 Submit a hackathon: let your Agent do it for you",
 postSum:"Found a hackathon that is not listed here yet? Send the prompt below to your Agent (Codex / Claude Code, etc.) — it will read the submission guide first, verify the deadline, region, format and prize on the official page, then open a PR or send the submission email for you.",
 postBtn:"📋 Copy the submission prompt for my Agent",
@@ -777,7 +896,7 @@ function applyLang(){
   document.title=tr("docTitle");
   const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
   document.querySelectorAll(".langsw button").forEach(b=>{const on=b.dataset.setlang===LANG;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")});
-  _st("#nav-home",tr("navHome"));_st("#nav-hack",tr("navHack"));_st("#nav-expat",tr("navExpat"));_st("#nav-spaces",tr("navSpaces"));
+  _st("#nav-home",tr("navHome"));_st("#nav-agent",tr("navAgent"));_st("#mnav-btn",tr("mnavBtn"));_st("#ab-title",tr("abTitle"));_st("#ab-sub",tr("abSub"));_sh("#ab-apis",tr("abApis"));_st("#nav-hack",tr("navHack"));_st("#nav-expat",tr("navExpat"));_st("#nav-spaces",tr("navSpaces"));
   _st("#lsw-ev",tr("swEv"));_st("#lsw-hack",tr("swHack"));_st("#lsw-expat",tr("swExpat"));_st("#lsw-spaces",tr("swSpaces"));_st("#ta-sub",tr("subAnchor"));
   _st("#page-title",tr("pageTitle"));_sh("#page-sub",tr("pageSub"));_st("#cmd-label",tr("cmdLabel"));_st("#cmd-copy",tr("copy"));_st("#pip-label",tr("pipLabel"));_st("#pip-copy",tr("copy"));
   _st("#st-total-label",tr("statTotal"));_st("#st-soon-label",tr("statSoon"));_st("#st-cn-label",tr("statCn"));_st("#st-upd-label",tr("statUpd"));
@@ -794,6 +913,7 @@ _st("#hprompt-post",(HSUBMIT[LANG]||HSUBMIT.zh));
 _st("#mclose1",tr("mClose"));_st("#mclose2",tr("close"));_st("#mcopy",tr("mcopy"));_st("#mhint",tr("mhint"));
 document.querySelectorAll("#mchips.mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
 if(document.querySelector("#ovl.open")&&typeof mLoad==="function")mLoad();
+  document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;if(q==="all"){ch.textContent=tr("fAll");return}const [k,v]=q.split(":");ch.textContent=k==="region"?disp("reg",v):disp("topic",v)});
   buildChips();
   if(typeof render==="function")render();
 }
@@ -827,40 +947,58 @@ function searchText(h){
   (h.topics||[]).forEach(t=>{parts.push(t);["zh","tw","en"].forEach(L=>parts.push((DISP.topic[L]||{})[t]))});
   return parts.filter(Boolean).join(" ").toLowerCase();
 }
+const mmdd=d=>{if(!d)return "";return d.slice(0,4)===String(new Date().getFullYear())?d.slice(5):d};
 function cardOf(h){
-  const anchor=h.deadline||h.start;
-  const parts=anchor?anchor.split("-"):[];
   const dl=daysLeft(h);
-  const rail=anchor?`<aside class="rail"><div class="d">${+parts[2]}</div><div class="mo">${tr("monthFmt",+parts[1])}</div><div class="tm${dl!==null&&dl<=3?" urgent":""}">${h.deadline?tr("regClose"):tr("startL")}</div>${dl!==null&&dl>=0?`<div class="dur">${dl===0?tr("closesToday"):tr("daysLeft",dl)}</div>`:""}</aside>`:`<aside class="rail"><div class="d">–</div><div class="mo">${tr("dateWord")}</div><div class="tm">${tr("seeOfficial")}</div></aside>`;
-  const dates=h.start?`🗓 ${tr("contest")} ${h.start}${h.end&&h.end!==h.start?" ~ "+h.end:""}`:`🗓 ${tr("contestTBD")}`;
+  const anchor=h.deadline||h.start;
+  const warm=dl!==null&&dl<=3;
+  const left=dl!==null&&dl>=0?`<div class="t3${warm?" warm":""}">${dl===0?tr("closesToday"):tr("daysLeft",dl)}</div>`:"";
+  const rail=anchor?`<div class="rail"><div class="t1">${esc(anchor.slice(5))}</div><div class="t2">${h.deadline?tr("dlShort"):tr("startShort")}</div>${h.deadline?left:""}</div>`
+    :`<div class="rail"><div class="t1">–</div><div class="t2">${tr("seeOfficial")}</div></div>`;
+  const where=esc(disp("reg",h.region))+(h.region!=="线上"&&h.city?" · "+esc(disp("city",h.city)):"");
+  const dates=h.start?`${tr("contest")} ${esc(mmdd(h.start))}${h.end&&h.end!==h.start?" ~ "+esc(mmdd(h.end)):""}`:tr("contestTBD");
   const prize=pickF(h,"prize");
-  return `<article class="card ev">${rail}<div class="mian">
-<div class="trow"><h3><span class="rb ${RB[h.region]||"on"}">${esc(disp("reg",h.region))}${h.region!=="线上"?" · "+esc(disp("city",h.city)):""}</span><a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(pickF(h,"title"))}</a></h3></div>
-<div class="meta">${dates} · ${esc(disp("fmt",h.format))}${prize?` · <span class="prize">💰 ${esc(prize)}</span>`:""}</div>
+  const fmtTxt=h.format===h.region?"":disp("fmt",h.format);
+  const metaParts=[where,dates,esc(fmtTxt),prize?esc(prize):""].filter(Boolean);
+  const metaTxt=[disp("reg",h.region)+(h.region!=="线上"&&h.city?" · "+disp("city",h.city):""),h.start?tr("contest")+" "+mmdd(h.start)+(h.end&&h.end!==h.start?" ~ "+mmdd(h.end):""):tr("contestTBD"),fmtTxt,prize].filter(Boolean).join(" · ");
+  const menu=h.detail_url&&h.detail_url!==h.url?`<a role="menuitem" href="${esc(h.detail_url)}" target="_blank" rel="noopener">${esc(srcName(h.source))} ${tr("detailSuffix")}</a>`:"";
+  return `<div class="ev">${rail}<div class="card"><div class="cmain">
+<h3><a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(pickF(h,"title"))}</a></h3>
+<div class="cmeta" title="${esc(metaTxt)}">${metaParts.join('<i class="sep"> · </i>')}</div>
 ${h.summary?`<p class="sum">${esc(pickF(h,"summary"))}</p>`:""}
-<div class="tags">${(h.topics||[]).map(t=>`<span class="tag">${esc(disp("topic",t))}</span>`).join("")}<span class="tag">${esc(tr("sourcePfx"))}${esc(srcName(h.source))}</span></div>
-<div class="actions"><a class="btn primary" href="${esc(h.url)}" target="_blank" rel="noopener">${tr("official")}</a>${h.detail_url&&h.detail_url!==h.url?`<a class="btn" href="${esc(h.detail_url)}" target="_blank" rel="noopener">${esc(srcName(h.source))} ${tr("detailSuffix")}</a>`:""}</div>
-</div></article>`;
+</div><div class="cact">
+<a class="reg" href="${esc(h.url)}" target="_blank" rel="noopener">${tr("regBtn")}</a>
+${menu?`<button type="button" class="more" aria-haspopup="menu" aria-expanded="false" aria-label="${tr("moreBtn")}" title="${tr("moreBtn")}">···</button><div class="cmenu" role="menu">${menu}</div>`:`<span class="more-ph" aria-hidden="true"></span>`}
+</div></div></div>`;
 }
-function sectHead(t,s){return `<div class="dayhead"><span class="dmeta">${t}${s?` · ${s}`:""}</span></div>`}
+function sectHead(t,s,n){return `<div class="dayhead"><span class="dnum">${t}</span>${s?`<span class="dmeta">${s}</span>`:""}<span class="dcnt">${tr("dayCount",n)}</span></div>`}
+const dlist=items=>`<div class="dlist">${items.map(cardOf).join("")}</div>`;
+let UPD="";
+function syncFilterUI(){
+  const active=(F.region!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.topic!=="all"?1:0)+($("#q").value.trim()?1:0);
+  const fc=(F.region!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.topic!=="all"?1:0);
+  $("#fclear").hidden=active===0;
+  $("#fcount").textContent=fc?String(fc):"";
+  document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=fc===0;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
+}
 function render(){
   if(!LOADED)return;
+  syncFilterUI();
   const q=$("#q").value.trim().toLowerCase();
   let evs=DATA.filter(h=>{const d=daysLeft(h);return d===null||d>=0});
   evs=evs.filter(h=>(F.region==="all"||h.region===F.region)&&(F.fmt==="all"||h.format===F.fmt)&&(F.topic==="all"||(h.topics||[]).includes(F.topic))&&(!q||searchText(h).includes(q)));
   evs.sort((a,b)=>(a.deadline||"9999")<(b.deadline||"9999")?-1:1);
-  $("#st-total").textContent=DATA.length;
-  $("#st-soon").textContent=DATA.filter(h=>{const d=daysLeft(h);return d!==null&&d>=0&&d<=3}).length;
-  $("#st-cn").textContent=DATA.filter(h=>["大陆","香港","澳门","台湾"].includes(h.region)).length;
+  const nSoon=DATA.filter(h=>{const d=daysLeft(h);return d!==null&&d>=0&&d<=3}).length;
+  $("#hero-meta").textContent=tr("heroMeta",DATA.length,nSoon,UPD);
   $("#fres").textContent=tr("fres",evs.length);
   if(!evs.length){$("#list").innerHTML=`<div class="empty">${tr("noResults")}</div>`;return}
   const soon=evs.filter(h=>{const d=daysLeft(h);return d!==null&&d<=3});
   const week=evs.filter(h=>{const d=daysLeft(h);return d!==null&&d>3&&d<=7});
   const rest=evs.filter(h=>{const d=daysLeft(h);return d===null||d>7});
   let html="";
-  if(soon.length)html+=sectHead(tr("soonT"),tr("soonS"))+soon.map(cardOf).join("");
-  if(week.length)html+=sectHead(tr("weekT"))+week.map(cardOf).join("");
-  if(rest.length)html+=sectHead(tr("restT"),tr("restS"))+rest.map(cardOf).join("");
+  if(soon.length)html+=sectHead(tr("soonT"),tr("soonS"),soon.length)+dlist(soon);
+  if(week.length)html+=sectHead(tr("weekT"),"",week.length)+dlist(week);
+  if(rest.length)html+=sectHead(tr("restT"),tr("restS"),rest.length)+dlist(rest);
   $("#list").innerHTML=html;
 }
 $("#regions").addEventListener("click",e=>{const b=e.target.closest("[data-r]");if(!b)return;F.region=b.dataset.r;document.querySelectorAll("#regions .chip").forEach(x=>x.classList.toggle("on",x===b));render()});
@@ -869,6 +1007,16 @@ $("#topics").addEventListener("click",e=>{const b=e.target.closest("[data-t]");i
 $("#q").addEventListener("input",render);
 $("#ftoggle").addEventListener("click",()=>{const g=$("#fgroups");g.classList.toggle("open");$("#ftoggle").setAttribute("aria-expanded",g.classList.contains("open"))});
 $("#fclear").addEventListener("click",()=>{F={region:"all",fmt:"all",topic:"all"};$("#q").value="";buildChips();render()});
+$("#qchips").addEventListener("click",ev=>{const ch=ev.target.closest("[data-q]");if(!ch)return;const q=ch.dataset.q;
+  if(q==="all"){F={region:"all",fmt:"all",topic:"all"}}else{const [k,v]=q.split(":");F[k]=F[k]===v?"all":v}
+  buildChips();render()});
+function closeMenus(except){document.querySelectorAll(".cact.open").forEach(c=>{if(c!==except){c.classList.remove("open");const m=c.querySelector(".more");if(m)m.setAttribute("aria-expanded","false")}})}
+$("#list").addEventListener("click",ev=>{const mb=ev.target.closest(".more");
+  if(mb){const c=mb.parentElement;closeMenus(c);const o=c.classList.toggle("open");mb.setAttribute("aria-expanded",o?"true":"false");return}
+  if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus()});
+document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
+document.addEventListener("keydown",ev=>{if(ev.key==="Escape")closeMenus()});
+window.goPost=()=>{const el=document.getElementById("hack-post");if(el)el.scrollIntoView({behavior:"smooth",block:"start"});hlPost()};
 $("#cmd-copy").addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/hackathons.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 $("#pip-copy").addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("pip install yatslist").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 let mMode="sub",mKey="generic";
@@ -887,11 +1035,19 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 applyLang();
 fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   DATA=d.hackathons||[];LOADED=true;
-  $("#st-upd").textContent=(d.updated_at||"").slice(5,10);
+  UPD=(d.updated_at||"").slice(5,10);
   const cnt={};DATA.forEach(h=>(h.topics||[]).forEach(t=>cnt[t]=(cnt[t]||0)+1));
   TOP_TOPICS=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a]).slice(0,12);
   applyLang();
 }).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
+</script>
+<script>
+(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
+function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
+b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+p.addEventListener('click',function(e){if(e.target.closest('a')||e.target.closest('.nav-submit'))close()});
+document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
+})();
 </script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
