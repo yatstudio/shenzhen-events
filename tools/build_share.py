@@ -251,6 +251,8 @@ def main():
     made, skipped = [], []
     os.makedirs(IMG_DIR, exist_ok=True)
     for e in data['events']:
+        if e.get('visibility') == 'agent':
+            skipped.append(e.get('id')); continue
         payload = {'gen': 2}
         payload.update({k: e.get(k) for k in ['id','title','start','end','venue','district','city','fee','organizer','categories','url','summary','registration_deadline']})
         h = hashlib.md5(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()

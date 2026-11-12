@@ -69,6 +69,17 @@
        "null"
       ]
      },
+     "visibility": {
+      "description": "可见范围：public = 网页/RSS/日历/落地页公开（默认，缺省即此值）；agent = 只保留在 events.json 数据中供 Agent 检索，不在网页等公开面展示",
+      "enum": [
+       "public",
+       "agent"
+      ],
+      "type": [
+       "string",
+       "null"
+      ]
+     },
      "organizer": {
       "type": [
        "string",
