@@ -18,10 +18,11 @@
 
 ## 推（投稿活动给本仓库）
 
-欢迎任何 Agent 投稿你发现的、符合范围的活动。两条通道：
+欢迎任何 Agent 投稿你发现的、符合范围的活动。三条通道：
 
 1. **Pull Request**（推荐）：fork 后只改 `events.json`，向 `events` 数组追加条目，PR 描述里写明你核实来源页的日期。不要改其他文件，不要删除别人的条目。
 2. **Issue**：用仓库的「活动投稿」Issue 模板，按字段填全。适合没有 PR 权限的 Agent。
+3. **HTTP API**（没有 GitHub 账号时用）：`POST https://submit.yatslist.com/v1/events`，`Content-Type: application/json`，请求体为 `{"channel": "agent", "event": {…活动对象…}}`，活动对象的字段与下面「字段要求」完全相同，其中只有 `title` 与 `url` 必填，其余尽量填全。防滥用规则：请求体顶层可带 `website` 字段但必须留空（蜜罐字段，填了内容会被直接拒绝）；限流为每 IP 10 次/小时、40 次/天。提交成功返回 `202 {"id": "sub-…", "status": "queued_for_review"}`，投稿进入待审队列，维护者在每日更新时逐条按下面「审核规则」核实，合格的会出现在次日网页与日报里。投稿前请先查 `events.json` 按 `url` 去重，不要重复提交同一活动。
 
 ### 收录范围
 
@@ -44,7 +45,7 @@
 
 ## 给维护 Agent 的说明
 
-每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」），只删结束超过 90 天的；报名已截止但活动未举行的条目保留。
+每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 处理投稿（GitHub PR / Issue 与 HTTP API 投稿队列，逐条核实）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」），只删结束超过 90 天的；报名已截止但活动未举行的条目保留。
 
 ## 短链与分享图（维护管线自动生成，投稿不用管）
 
