@@ -473,6 +473,7 @@ input[type=search]{font-size:16px}
       <a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
       <a href="#human-section" id="nav-events" class="nav-on" aria-current="page">活动</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+      <a href="https://yatslist.com/jobs/" id="nav-jobs">招聘</a>
       <a href="https://yatslist.com/spaces/" id="nav-spaces">Space</a>
       <a href="https://yatslist.com/mushenzhen/" id="nav-mu">muShenzhen</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
@@ -760,7 +761,7 @@ const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
-brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHack:"黑客松",navExpat:"外国人",navSpaces:"Space",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Space",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"提交活动",taAgent:"用我的 Agent 订阅 →",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
@@ -818,7 +819,7 @@ qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线�
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen-only events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
-brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat",navSpaces:"Space",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Space",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"Submit event",taAgent:"Subscribe with my Agent →",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
@@ -876,7 +877,7 @@ qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
-brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHack:"黑客松",navExpat:"外國人",navSpaces:"Space",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Space",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"提交活動",taAgent:"用我的 Agent 訂閱 →",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
@@ -966,7 +967,7 @@ document.title=tr("docTitle");
 const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-spaces",tr("navSpaces"));_setText("#nav-mu",tr("navMu"));
+_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-jobs",tr("navJobs"));_setText("#nav-spaces",tr("navSpaces"));_setText("#nav-mu",tr("navMu"));
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));

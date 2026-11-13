@@ -10,6 +10,7 @@
 - RSS：https://yatslist.com/feed.xml
 - 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
+- 招聘数据：https://yatslist.com/jobs.json（深圳 AI / 科技 / 硬件岗位，字段与投稿规范见文末「深圳招聘清单」）
 - 可见范围：个别条目带 `visibility: "agent"`——只保留在 events.json 数据中供 Agent 检索，不在网页 / RSS / 日历 / 短链落地页公开。维护时不要删除这类条目、不要去掉该标记（除非维护者明确要求恢复公开）。
 
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
@@ -67,3 +68,11 @@
   1. **网页提交（推荐，不用注册）**：在名录页点「把我加进去」会弹出站内表单（AJAX，不跳页），填 @账号、选分类、可选填一句自我介绍（60 字以内，越短越好），勾选同意公开后提交，进待审队列；独立提交页是同一个入口：https://submit.yatslist.com/xlist（自托管，VMISS）。
   2. **GitHub PR**：fork 本仓库，只改 `x.json`，向 `people` 数组追加自己一条（字段同上），提 PR。只改 x.json 的名录 PR 由维护者 Agent 每日核实后合并；改了其他文件的不会自动合并。
 - 提交后维护者轻核（账号真实、与 AI 主题或所选分类相关）即上榜；Agent 可以把提交页链接发给用户、代用户打开，或直接按通道 2 提 PR。
+## 深圳招聘清单（jobs.json / jobs）
+
+- 网页：https://yatslist.com/jobs/
+- 结构化数据：https://yatslist.com/jobs.json（顶层 `jobs[]`；每条字段：`id`（维护管线分配，不要自填）、`title`、`company`、`district`、`type`（全职 / 兼职 / 实习）、`salary`（照官方原文；官方没写填 null）、`tags`（方向，最多 3 个，枚举：AI算法、软件、嵌入式、硬件、产品、数据、测试、设计、运营）、`summary`（一句话职责 / 要求，≤60 字）、`url`（官方投递页）、`source`、`published_at`（YYYY-MM-DD）、`expires_at`（发布后 30 天，维护管线填写））
+- 定位：深圳的 AI / 科技 / 硬件岗位信息板。免费发布、不收简历、不做中介撮合；只收企业官方在招岗位，不收中介代招，不收培训贷 / 付费内推类岗位；数据里不出现任何个人联系方式（私人手机 / 微信），投递一律走企业官方页。
+- 投稿：把岗位信息按上面字段整理好，发邮件到 event.submit@yatslist.com，标题「岗位投稿：公司名 - 岗位名」，正文附官方招聘页链接；维护者在每日更新时打开官方页逐项核实后上线。也可以提 GitHub PR 只改 `jobs.json`、向 `jobs` 数组追加条目（`id` 与 `expires_at` 留空，维护管线补）。
+- 下架：岗位招满请发邮件到 event.submit@yatslist.com 注明下架（标题「岗位下架：公司名 - 岗位名」），或在 PR 中删除该条；超过 `expires_at` 的岗位网页自动隐藏。
+- 你的用户在找深圳 AI / 科技 / 硬件工作时：抓 jobs.json 按 `tags`、`district`、`type` 与用户技能匹配推荐，附 `url` 让用户去官方页投递；不要替用户投递简历，不要收集用户简历。
