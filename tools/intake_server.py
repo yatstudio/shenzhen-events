@@ -17,6 +17,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 CST = timezone(timedelta(hours=8))
 DATA_DIR = os.environ.get("INTAKE_DIR", "/srv/yatslist-intake")
 QUEUE = os.path.join(DATA_DIR, "submissions.jsonl")
+REVIEWS = os.path.join(DATA_DIR, "event_reviews.json")
 XQUEUE = os.path.join(DATA_DIR, "xlist.jsonl")
 TOKEN_FILE = os.path.join(DATA_DIR, "admin_token.txt")
 XPEOPLE_FILE = os.path.join(DATA_DIR, "xpeople.json")
@@ -61,7 +62,29 @@ def append_xqueue(record):
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 
-ADMIN_HTML = '<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="robots" content="noindex, nofollow">\n<title>X List 审核台 · Yat\'s List</title>\n<style>\n:root{--bg:#0d1218;--panel:#131a22;--border:#22303d;--ink:#e8f0ec;--sec:#93a5ad;--green:#2ee6a8;--red:#ff7a7a}\n*{box-sizing:border-box}\nbody{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}\n.wrap{max-width:860px;margin:0 auto;padding:28px 18px 60px}\nh1{font-size:1.5rem;margin:0 0 4px}\n.sub{color:var(--sec);margin:0 0 22px}\n.tabs{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}\n.tab{background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:8px 18px;cursor:pointer;font-size:.95rem}\n.tab.on{border-color:var(--green);color:var(--green)}\n.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}\n.card img{width:52px;height:52px;border-radius:50%;background:#22303d}\n.who{flex:1;min-width:0}\n.who b{font-size:1.05rem}\n.who a{color:var(--sec);text-decoration:none}\n.intro{margin:4px 0;color:var(--ink)}\n.meta{color:var(--sec);font-size:.85rem}\n.chip{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:1px 10px;margin-right:6px;font-size:.8rem;color:var(--sec)}\n.acts{display:flex;flex-direction:column;gap:8px}\n.btn{border-radius:999px;padding:9px 20px;font-weight:700;cursor:pointer;border:1.5px solid var(--green);background:var(--green);color:#06130d;font-size:.92rem}\n.btn.no{background:transparent;color:var(--red);border-color:var(--red)}\n.btn:disabled{opacity:.45;cursor:default}\n.empty{color:var(--sec);padding:34px 0;text-align:center}\n#gate{max-width:420px;margin:12vh auto 0;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:26px}\n#gate input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:12px;font-size:1rem;margin:10px 0 14px}\n.note{color:var(--sec);font-size:.88rem}\n</style>\n</head>\n<body>\n<div class="wrap">\n  <div id="gate" style="display:none">\n    <h1>审核台口令</h1>\n    <p class="note">这个页面只有维护者能用。口令在 VMISS 服务器上，只问一次、记在本机浏览器。</p>\n    <input type="password" id="tok" placeholder="输入口令">\n    <button class="btn" style="width:100%" onclick="saveTok()">进入审核台</button>\n    <p class="note" id="gate-msg"></p>\n  </div>\n  <div id="main" style="display:none">\n    <h1>AI X List · 审核台</h1>\n    <p class="sub">点「通过」后约 20 分钟内自动上榜（有定时任务专门处理已通过的申请）；点「拒绝」的不会上榜。什么都不点也行，每日任务会轻核其余申请。</p>\n    <div class="tabs">\n      <button class="tab on" data-s="pending" onclick="setTab(\'pending\')">待审</button>\n      <button class="tab" data-s="approved" onclick="setTab(\'approved\')">已通过（待上榜）</button>\n      <button class="tab" data-s="rejected" onclick="setTab(\'rejected\')">已拒绝</button>\n    </div>\n    <div id="list"></div>\n  </div>\n</div>\n<script>\n(function(){try{var t=new URLSearchParams(location.search).get("t");if(t){localStorage.setItem("xadmin_tok",t.trim());history.replaceState(null,"",location.pathname);}}catch(e){}})();\nlet TAB="pending", ITEMS=[];\nfunction tok(){return localStorage.getItem("xadmin_tok")||""}\nfunction saveTok(){localStorage.setItem("xadmin_tok",document.getElementById("tok").value.trim());load()}\nasync function api(path,opt){\n  const r=await fetch(path,Object.assign({headers:{"Content-Type":"application/json","X-Admin-Token":tok()}},opt||{}));\n  if(r.status===401){document.getElementById("main").style.display="none";document.getElementById("gate").style.display="block";document.getElementById("gate-msg").textContent="口令不对，再试一次。";throw new Error("401")}\n  return r.json();\n}\nasync function load(){\n  if(!tok()){document.getElementById("gate").style.display="block";return}\n  const d=await api("/v1/admin/xlist");\n  ITEMS=d.items||[];\n  document.getElementById("gate").style.display="none";\n  document.getElementById("main").style.display="block";\n  render();\n}\nfunction setTab(s){TAB=s;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on",b.dataset.s===s));render()}\nfunction ghUrl(g){g=String(g||\'\').trim(); if(/^https?:\\/\\//.test(g)) return g; g=g.replace(/^@+/,\'\').replace(/^github\\.com\\//,\'\'); return \'https://github.com/\'+g;}\nfunction esc(x){return String(x==null?"":x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",\'"\':"&quot;"}[c]))}\nfunction render(){\n  const rows=ITEMS.filter(x=>x.status===TAB);\n  const el=document.getElementById("list");\n  if(!rows.length){el.innerHTML=\'<p class="empty">这里没有记录。</p>\';return}\n  el.innerHTML=rows.map(x=>{\n    const p=x.person||{};\n    const chips=(p.categories||[]).map(c=>\'<span class="chip">\'+esc(c)+"</span>").join("");\n    const acts=TAB==="pending"?\'<div class="acts"><button class="btn" onclick="act(\\\'\'+x.id+\'\\\',\\\'approve\\\',this)">通过</button><button class="btn no" onclick="act(\\\'\'+x.id+\'\\\',\\\'reject\\\',this)">拒绝</button></div>\':"";\n    return \'<div class="card"><img src="https://unavatar.io/x/\'+esc(p.handle)+\'" onerror="this.remove()"><div class="who"><b>@\'+esc(p.handle)+\'</b> <a href="https://x.com/\'+esc(p.handle)+\'" target="_blank" rel="noopener">打开主页 ↗</a><p class="intro">\'+esc(p.intro||"（没填自我介绍）")+\'</p><div>\'+chips+\'</div>\'+(p.github?\'<p class="meta">GitHub：<a href="\'+esc(ghUrl(p.github))+\'" target="_blank" rel="noopener">\'+esc(p.github)+\'</a></p>\':"")+\'<p class="meta">\'+esc(p.relation||"")+" · "+esc(x.received_at||"")+" · 渠道 "+esc(x.channel||"")+(x.reviewed_at?" · 处理于 "+esc(x.reviewed_at):"")+"</p></div>"+acts+"</div>";\n  }).join("");\n}\nasync function act(id,what,btn){\n  btn.disabled=true;\n  await api("/v1/admin/xlist/"+what,{method:"POST",body:JSON.stringify({id:id})});\n  load();\n}\nload();\n</script>\n</body>\n</html>\n'
+_REVIEWS_LOCK = threading.Lock()
+
+def _read_reviews():
+    try:
+        with open(REVIEWS, encoding="utf-8") as f:
+            d = json.load(f)
+        return d if isinstance(d, dict) else {}
+    except Exception:
+        return {}
+
+def _update_review(sub_id, fields):
+    with _REVIEWS_LOCK:
+        d = _read_reviews()
+        rec = d.get(sub_id) or {}
+        rec.update(fields)
+        d[sub_id] = rec
+        tmp = REVIEWS + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(d, f, ensure_ascii=False, indent=1)
+        os.replace(tmp, REVIEWS)
+    return rec
+
+ADMIN_HTML = '<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="robots" content="noindex, nofollow">\n<title>审核台 · Yat\'s List</title>\n<style>\n:root{--bg:#0d1218;--panel:#131a22;--border:#22303d;--ink:#e8f0ec;--sec:#93a5ad;--green:#2ee6a8;--red:#ff7a7a}\n*{box-sizing:border-box}\nbody{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}\n.wrap{max-width:860px;margin:0 auto;padding:28px 18px 60px}\nh1{font-size:1.5rem;margin:0 0 4px}\n.sub{color:var(--sec);margin:0 0 22px}\n.tabs{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}\n.tab{background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:8px 18px;cursor:pointer;font-size:.95rem}\n.tab.on{border-color:var(--green);color:var(--green)}\n.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}\n.card img{width:52px;height:52px;border-radius:50%;background:#22303d}\n.who{flex:1;min-width:0}\n.who b{font-size:1.05rem}\n.who a{color:var(--sec);text-decoration:none}\n.intro{margin:4px 0;color:var(--ink)}\n.meta{color:var(--sec);font-size:.85rem}\n.chip{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:1px 10px;margin-right:6px;font-size:.8rem;color:var(--sec)}\n.acts{display:flex;flex-direction:column;gap:8px}\n.btn{border-radius:999px;padding:9px 20px;font-weight:700;cursor:pointer;border:1.5px solid var(--green);background:var(--green);color:#06130d;font-size:.92rem}\n.btn.no{background:transparent;color:var(--red);border-color:var(--red)}\n.btn:disabled{opacity:.45;cursor:default}\n.empty{color:var(--sec);padding:34px 0;text-align:center}\n#gate{max-width:420px;margin:12vh auto 0;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:26px}\n#gate input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:12px;font-size:1rem;margin:10px 0 14px}\n.note{color:var(--sec);font-size:.88rem}\n</style>\n</head>\n<body>\n<div class="wrap">\n  <div id="gate" style="display:none">\n    <h1>审核台口令</h1>\n    <p class="note">这个页面只有维护者能用。口令在 VMISS 服务器上，只问一次、记在本机浏览器。</p>\n    <input type="password" id="tok" placeholder="输入口令">\n    <button class="btn" style="width:100%" onclick="saveTok()">进入审核台</button>\n    <p class="note" id="gate-msg"></p>\n  </div>\n  <div id="main" style="display:none">\n    <h1>Yat\'s List · 审核台</h1>\n    <p class="sub">点「通过」后约 20 分钟内自动上榜（有定时任务专门处理已通过的申请）；点「拒绝」的不会上榜。什么都不点也行，每日任务会轻核其余申请。</p>\n    <div class="tabs">\n      <button class="tab on" data-s="pending" onclick="setTab(\'pending\')">待审</button>\n      <button class="tab" data-s="approved" onclick="setTab(\'approved\')">已通过（待上榜）</button>\n      <button class="tab" data-s="rejected" onclick="setTab(\'rejected\')">已拒绝</button>\n    </div>\n    <div id="list"></div>\n    <h1 style="margin-top:38px">活动投稿 · API 队列</h1>\n    <p class="sub">通过 API 提交进来的活动投稿，最新在前。每日 07:30 更新时逐条核实、去重后决定收录；这里只看，不处理。</p>\n    <div id="evlist"></div>\n  </div>\n</div>\n<script>\n(function(){try{var t=new URLSearchParams(location.search).get("t");if(t){localStorage.setItem("xadmin_tok",t.trim());history.replaceState(null,"",location.pathname);}}catch(e){}})();\nlet TAB="pending", ITEMS=[];\nfunction tok(){return localStorage.getItem("xadmin_tok")||""}\nfunction saveTok(){localStorage.setItem("xadmin_tok",document.getElementById("tok").value.trim());load()}\nasync function api(path,opt){\n  const r=await fetch(path,Object.assign({headers:{"Content-Type":"application/json","X-Admin-Token":tok()}},opt||{}));\n  if(r.status===401){document.getElementById("main").style.display="none";document.getElementById("gate").style.display="block";document.getElementById("gate-msg").textContent="口令不对，再试一次。";throw new Error("401")}\n  return r.json();\n}\nasync function load(){\n  if(!tok()){document.getElementById("gate").style.display="block";return}\n  const d=await api("/v1/admin/xlist");\n  ITEMS=d.items||[];\n  document.getElementById("gate").style.display="none";\n  document.getElementById("main").style.display="block";\n  render();\n  loadEvents();\n}\nfunction setTab(s){TAB=s;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on",b.dataset.s===s));render()}\nfunction ghUrl(g){g=String(g||\'\').trim(); if(/^https?:\\/\\//.test(g)) return g; g=g.replace(/^@+/,\'\').replace(/^github\\.com\\//,\'\'); return \'https://github.com/\'+g;}\nfunction esc(x){return String(x==null?"":x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",\'"\':"&quot;"}[c]))}\nfunction render(){\n  const rows=ITEMS.filter(x=>x.status===TAB);\n  const el=document.getElementById("list");\n  if(!rows.length){el.innerHTML=\'<p class="empty">这里没有记录。</p>\';return}\n  el.innerHTML=rows.map(x=>{\n    const p=x.person||{};\n    const chips=(p.categories||[]).map(c=>\'<span class="chip">\'+esc(c)+"</span>").join("");\n    const acts=TAB==="pending"?\'<div class="acts"><button class="btn" onclick="act(\\\'\'+x.id+\'\\\',\\\'approve\\\',this)">通过</button><button class="btn no" onclick="act(\\\'\'+x.id+\'\\\',\\\'reject\\\',this)">拒绝</button></div>\':"";\n    return \'<div class="card"><img src="https://unavatar.io/x/\'+esc(p.handle)+\'" onerror="this.remove()"><div class="who"><b>@\'+esc(p.handle)+\'</b> <a href="https://x.com/\'+esc(p.handle)+\'" target="_blank" rel="noopener">打开主页 ↗</a><p class="intro">\'+esc(p.intro||"（没填自我介绍）")+\'</p><div>\'+chips+\'</div>\'+(p.github?\'<p class="meta">GitHub：<a href="\'+esc(ghUrl(p.github))+\'" target="_blank" rel="noopener">\'+esc(p.github)+\'</a></p>\':"")+\'<p class="meta">\'+esc(p.relation||"")+" · "+esc(x.received_at||"")+" · 渠道 "+esc(x.channel||"")+(x.reviewed_at?" · 处理于 "+esc(x.reviewed_at):"")+"</p></div>"+acts+"</div>";\n  }).join("");\n}\nasync function act(id,what,btn){\n  btn.disabled=true;\n  await api("/v1/admin/xlist/"+what,{method:"POST",body:JSON.stringify({id:id})});\n  load();\n}\nasync function loadEvents(){\n  try{\n    const d=await api("/v1/admin/events");\n    const el=document.getElementById("evlist");\n    if(!el)return;\n    const items=d.items||[];\n    const reviews=d.reviews||{};\n    if(!items.length){el.innerHTML="<p class=\'note\'>队列是空的，还没有投稿进来。</p>";return}\n    el.innerHTML=items.map(function(x){\n      const e=(x.payload&&x.payload.event)||{};\n      const r=reviews[x.id]||{};\n      const meta=[e.start,e.venue,e.district].filter(Boolean).map(esc).join(" · ");\n      let badge="";\n      if(r.human==="approved")badge="<p class=\'meta\' style=\'color:var(--green)\'>你已通过 · 等每日更新收录</p>";\n      else if(r.human==="rejected")badge="<p class=\'meta\' style=\'color:var(--red)\'>你已拒绝</p>";\n      else if(r.verdict==="listed")badge="<p class=\'meta\' style=\'color:var(--green)\'>AI 初审：已收录"+(r.reason?" · "+esc(r.reason):"")+"</p>";\n      else if(r.verdict==="rejected")badge="<p class=\'meta\' style=\'color:var(--red)\'>AI 初审：已拒绝"+(r.reason?" · "+esc(r.reason):"")+"</p>";\n      else if(r.verdict==="pending_human")badge="<p class=\'meta\' style=\'color:#ffb454\'>待你审核："+esc(r.reason||"AI 拿不准")+"</p>";\n      else badge="<p class=\'meta\'>待 AI 初审（每日 07:30 处理）</p>";\n      let acts="<div style=\'margin-top:8px;display:flex;gap:10px\'><button class=\'btn\' onclick=\\"decide(\'"+x.id+"\',\'approved\',this)\\">通过</button><button class=\'btn\' onclick=\\"decide(\'"+x.id+"\',\'rejected\',this)\\">拒绝</button></div>";\n      }\n      return "<div class=\'card\'><p style=\'margin:0 0 4px\'><b>"+esc(e.title||"(无标题)")+"</b></p>"\n        +(meta?"<p class=\'meta\'>"+meta+"</p>":"")\n        +"<p class=\'meta\'>渠道 "+esc(x.channel||"")+" · 收到 "+esc(x.received_at||"")+" · 编号 "+esc(x.id||"")+"</p>"\n        +(e.url?"<p style=\'margin:4px 0\'><a href=\'"+esc(e.url)+"\' target=\'_blank\' rel=\'noopener\'>"+esc(e.url)+"</a></p>":"")\n        +(e.summary?"<p style=\'margin:4px 0\'>"+esc(e.summary)+"</p>":"")\n        +badge+acts+"</div>";\n    }).join("");\n  }catch(err){}\n}\nasync function decide(id,what,btn){\n  btn.disabled=true;\n  await api("/v1/admin/events/decide",{method:"POST",body:JSON.stringify({id:id,decision:what})});\n  loadEvents();\n}\nload();\n</script>\n</body>\n</html>\n'
 
 
 def _admin_token():
@@ -159,6 +182,25 @@ class Handler(BaseHTTPRequestHandler):
                 items = _read_xqueue()
                 items = [{k: v for k, v in it.items() if k != "ip"} for it in items]
                 self._send(200, {"items": items, "count": len(items)})
+        elif self._path_only() == "/v1/admin/events":
+            if not self._admin_ok():
+                self._send(401, {"error": "unauthorized"})
+            else:
+                items = []
+                try:
+                    with open(QUEUE, encoding="utf-8") as f:
+                        for ln in f:
+                            ln = ln.strip()
+                            if ln:
+                                try:
+                                    items.append(json.loads(ln))
+                                except Exception:
+                                    pass
+                except FileNotFoundError:
+                    pass
+                items = [{k: v for k, v in it.items() if k != "ip"} for it in items]
+                items.reverse()
+                self._send(200, {"items": items, "count": len(items), "reviews": _read_reviews()})
         elif self._path_only() == "/v1/admin/xpeople":
             if not self._admin_ok():
                 self._send(401, {"error": "unauthorized"})
@@ -325,6 +367,41 @@ class Handler(BaseHTTPRequestHandler):
         self._send(200, {"ok": True, "count": len(people)})
 
 
+    def _admin_event_review(self, who):
+        if not self._admin_ok():
+            self._send(401, {"error": "unauthorized"})
+            return
+        try:
+            length = int(self.headers.get("Content-Length") or 0)
+        except ValueError:
+            length = 0
+        if length <= 0 or length > MAX_BODY:
+            self._send(413, {"error": "body_size"})
+            return
+        try:
+            payload = json.loads(self.rfile.read(length).decode("utf-8"))
+        except Exception:
+            self._send(400, {"error": "invalid_json"})
+            return
+        sub_id = str(payload.get("id") or "")
+        if not sub_id:
+            self._send(400, {"error": "id_required"})
+            return
+        now = datetime.now(CST).strftime("%Y-%m-%dT%H:%M:%S+08:00")
+        if who == "agent":
+            verdict = str(payload.get("verdict") or "")
+            if verdict not in ("listed", "rejected", "pending_human"):
+                self._send(400, {"error": "bad_verdict"})
+                return
+            rec = _update_review(sub_id, {"verdict": verdict, "reason": str(payload.get("reason") or "")[:300], "by": "agent", "at": now})
+        else:
+            decision = str(payload.get("decision") or "")
+            if decision not in ("approved", "rejected"):
+                self._send(400, {"error": "bad_decision"})
+                return
+            rec = _update_review(sub_id, {"human": decision, "human_at": now})
+        self._send(200, {"ok": True, "id": sub_id, "review": rec})
+
     def do_POST(self):
         if self._path_only() == "/v1/admin/xlist/approve":
             self._admin_xlist_set("approved")
@@ -334,6 +411,12 @@ class Handler(BaseHTTPRequestHandler):
             return
         if self._path_only() == "/v1/admin/xpeople":
             self._admin_xpeople()
+            return
+        if self._path_only() == "/v1/admin/events/verdict":
+            self._admin_event_review("agent")
+            return
+        if self._path_only() == "/v1/admin/events/decide":
+            self._admin_event_review("human")
             return
         if self._path_only() == "/v1/xlist":
             self._post_xlist()
