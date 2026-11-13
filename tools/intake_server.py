@@ -479,14 +479,14 @@ button,input{font:inherit;color:inherit}
 (function(){try{var t=new URLSearchParams(location.search).get("t");if(t){localStorage.setItem("xadmin_tok",t.trim());history.replaceState(null,"",location.pathname+location.hash);}}catch(e){}})();
 
 const SECTIONS={
+  ev:{name:"活动投稿",hint:"通过 API 投稿的活动。每日 07:30 由 AI 逐条核实、去重；AI 拿不准的标为「待你审核」，在这里决定。「待 AI 初审」的也可以直接通过 / 拒绝，不用等 AI。",
+     filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已收录"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]},
   x:{name:"X 名录",hint:"自助登记的 X 账号。点「通过」后约 20 分钟内自动上榜，「拒绝」的不会上榜。不处理也行，每日任务会轻核其余申请。",
      filters:[["todo","待审"],["approved","已通过"],["rejected","已拒绝"],["all","全部"]]},
-  ev:{name:"活动投稿",hint:"通过 API 投稿的活动。每日 07:30 由 AI 逐条核实、去重；AI 拿不准的标为「待你审核」，在这里决定。",
-     filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已收录"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]},
-  job:{name:"岗位投稿",hint:"通过 API 投稿的岗位（招聘页暂未公开）。每日更新时 AI 初审；拿不准的标为「待你审核」，在这里决定。",
+  job:{name:"岗位投稿",hint:"通过 API 投稿的岗位（招聘页暂未公开）。每日更新时 AI 初审；拿不准的标为「待你审核」，在这里决定。「待 AI 初审」的也可以直接通过 / 拒绝，不用等 AI。",
      filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已上线"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]}
 };
-const S={sec:(location.hash.slice(1) in SECTIONS)?location.hash.slice(1):"x",filter:{x:"todo",ev:"todo",job:"todo"},q:"",data:{x:[],ev:[],job:[]},rev:{ev:{},job:{}}};
+const S={sec:(location.hash.slice(1) in SECTIONS)?location.hash.slice(1):"ev",filter:{x:"todo",ev:"todo",job:"todo"},q:"",data:{x:[],ev:[],job:[]},rev:{ev:{},job:{}}};
 
 function $(id){return document.getElementById(id)}
 function tok(){return localStorage.getItem("xadmin_tok")||""}
@@ -535,17 +535,17 @@ async function load(manual){
 function xState(it){
   if(it.status==="approved")return {key:"approved",label:"已通过 · 待上榜",c:"green"};
   if(it.status==="rejected")return {key:"rejected",label:"已拒绝",c:"red"};
-  return {key:"todo",label:"待审",c:"amber",act:true};
+  return {key:"todo",label:"待审",c:"amber",act:true,can:true};
 }
 function qState(r,listedWord){
   if(r.human==="approved")return {key:"done",label:"你已通过 · 等每日更新"+listedWord,c:"green"};
   if(r.human==="rejected")return {key:"no",label:"你已拒绝",c:"red"};
   if(r.verdict==="withdrawn")return {key:"withdrawn",label:"投稿人已撤回",c:"sec"};
-  if(r.verdict==="pending_human")return {key:"todo",label:"待你审核",c:"amber",act:true};
-  if(r.needs_recheck)return {key:"queue",label:"已修改 · 待重新初审",c:"blue"};
+  if(r.verdict==="pending_human")return {key:"todo",label:"待你审核",c:"amber",act:true,can:true};
+  if(r.needs_recheck)return {key:"queue",label:"已修改 · 待重新初审",c:"blue",can:true};
   if(r.verdict==="listed")return {key:"done",label:"AI 已"+listedWord,c:"green"};
   if(r.verdict==="rejected")return {key:"no",label:"AI 已拒绝",c:"red"};
-  return {key:"queue",label:"待 AI 初审",c:"blue"};
+  return {key:"queue",label:"待 AI 初审",c:"blue",can:true};
 }
 function stateOf(sec,it){
   if(sec==="x")return xState(it);
@@ -600,7 +600,7 @@ function xCard(it,st){
     +(p.intro?'<p class="text">'+esc(p.intro)+"</p>":'<p class="text none">（没填自我介绍）</p>')
     +(tags?'<div class="tags">'+tags+"</div>":"")
     +foot(it,it.reviewed_at?"<span>处理于 "+when(it.reviewed_at)+"</span>":"")
-    +"</div>"+(st.act?acts("x",it):"")+"</div>";
+    +"</div>"+(st.can?acts("x",it):"")+"</div>";
 }
 
 function qCard(sec,it,st){
@@ -614,7 +614,7 @@ function qCard(sec,it,st){
   const tags=(Array.isArray(tagsSrc)?tagsSrc:(tagsSrc?[tagsSrc]:[])).map(c=>'<span class="tag">'+esc(c)+"</span>").join("");
   let reason="";
   if(r.reason)reason='<div class="reason"><b>AI 初审意见：</b>'+esc(r.reason)+"</div>";
-  if(r.needs_recheck&&st.act)reason+='<div class="reason">投稿人在初审后改过内容。</div>';
+  if(r.needs_recheck)reason+='<div class="reason">投稿人在初审后改过内容。</div>';
   return '<div class="card noav'+(st.act?" todo":"")+'" data-id="'+esc(it.id)+'"><div>'
     +'<div class="title">'+esc(e.title||"（无标题）")+" "+pill(st)+(lu?' <a href="'+esc(lu)+'" target="_blank" rel="noopener">线上条目 ↗</a>':"")+"</div>"
     +metaLine(meta)
@@ -623,7 +623,7 @@ function qCard(sec,it,st){
     +(tags?'<div class="tags">'+tags+"</div>":"")
     +reason
     +foot(it,r.human_at?"<span>你处理于 "+when(r.human_at)+"</span>":r.at?"<span>初审于 "+when(r.at)+"</span>":"")
-    +"</div>"+(st.act?acts(sec,it):"")+"</div>";
+    +"</div>"+(st.can?acts(sec,it):"")+"</div>";
 }
 
 function copyId(el){
