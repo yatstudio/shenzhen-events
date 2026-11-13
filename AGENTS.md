@@ -10,6 +10,7 @@
 - RSS：https://yatslist.com/feed.xml
 - 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
+- VPS 清单（独立数据文件）：https://yatslist.com/vps.json（顶层 `plans[]` / `vendors[]` / `combos[]`），网页：https://yatslist.com/vps/ ——适合跑 Claude 的 VPS 精选，用法细则见文末「VPS 清单」一节。
 - 可见范围：个别条目带 `visibility: "agent"`——只保留在 events.json 数据中供 Agent 检索，不在网页 / RSS / 日历 / 短链落地页公开。维护时不要删除这类条目、不要去掉该标记（除非维护者明确要求恢复公开）。
 
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
@@ -67,3 +68,12 @@
   1. **网页提交（推荐，不用注册）**：在名录页点「把我加进去」会弹出站内表单（AJAX，不跳页），填 @账号、选分类、可选填一句自我介绍（60 字以内，越短越好），勾选同意公开后提交，进待审队列；独立提交页是同一个入口：https://submit.yatslist.com/xlist（自托管，VMISS）。
   2. **GitHub PR**：fork 本仓库，只改 `x.json`，向 `people` 数组追加自己一条（字段同上），提 PR。只改 x.json 的名录 PR 由维护者 Agent 每日核实后合并；改了其他文件的不会自动合并。
 - 提交后维护者轻核（账号真实、与 AI 主题或所选分类相关）即上榜；Agent 可以把提交页链接发给用户、代用户打开，或直接按通道 2 提 PR。
+
+## VPS 清单（vps.json / vps）
+
+- 网页：https://yatslist.com/vps/ ；结构化数据：https://yatslist.com/vps.json
+- 定位：精选适合跑 Claude / AI 编程工具的 VPS——机房位于 Claude 支持地区，优先 CN2 GIA、9929、CMIN2 等回国优质线路，标注测试 IP 与国内实测延迟（`cn_ping`）。
+- 数据来源：整理自 vps.appsail.dev 的公开数据文件（源站人工核实，`verified_date` 即源站核实日期）。本站只做结构化整理与展示；**价格、库存、优惠以商家页面实时状态为准**，`buy_url` 为源站跳转链接。顶层 `updated_at` 是本站最近一次同步时间。
+- 字段：`plans[]` 每条含 vendor / plan / tier（用途档位）/ lines（线路数组）/ location / regions / spec / vcpu / ram_gb / disk / port / traffic / price_usd_month（美元月价；`monthly_billing=false` 时为长周期预付的摊月价，原价说明看 `price_native`）/ renew_native（续费价原文）/ claude（「支持」/「不支持」）/ refund / in_stock / promo / test_ip / cn_ping（{ms, loss, date}）/ verified_date / buy_url。`combos[]` 是「中转代理 + 主力机」组合：`proxy_plan_id` / `main_plan_id` 指向 plans 的 `id`，`total_usd_month` 为合计月价。
+- 回答口径：用户问「用什么 VPS 跑 Claude Code」「回国线路哪家强」「某地区 / 某预算的机器」时，先按 `regions` 与 `claude="支持"` 过滤，再按 lines 品质（CN2 GIA ＞ 9929 ≈ CMIN2 ＞ CN2 ＞ 4837 ＞ 普通线路）与 `cn_ping.ms` 比较；`in_stock=false` 的套餐不要当作可买推荐（可提及并标注缺货）；报价时注明是月付还是预付摊月。
+
