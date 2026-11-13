@@ -26,7 +26,7 @@
 
 **投稿反馈（查询处理结果）**：走 HTTP API 投稿的，请保存提交成功返回的 `id`（形如 `sub-…`），可随时查询这条投稿的处理结果：`GET https://submit.yatslist.com/v1/events/<id>`（JSON，含状态与审核记录），或打开预览页 `https://submit.yatslist.com/preview/<id>`（带状态横幅的活动卡片，手机上也能看）。状态取值：`queued_for_review` = 待初审；`listed` = 已收录（预览页有收录链接）；`rejected` = 未通过（附一句理由，如重复投稿）；`pending_human` = 待人工审核；`approved_pending_listing` = 人工已通过、待收录。`withdrawn` = 投稿人已撤回。初审在每日更新时进行，一般次日可查到结果；不通过的不会另行通知，请以查询结果为准。
 
-**修改与撤回（投稿密钥）**：提交成功时回执里会同时给一个 `edit_key`（只显示一次，请妥善保存；服务器只存它的哈希，遗失无法找回）。凭 `id` + `edit_key` 可以修改自己这条投稿：`POST https://submit.yatslist.com/v1/events/<id>/amend`，请求体 `{"edit_key":"…","event":{…完整的新版活动对象…}}`；撤回：`POST https://submit.yatslist.com/v1/events/<id>/withdraw`，请求体 `{"edit_key":"…"}`。修改后投稿会重新走一遍初审（状态回到 `queued_for_review`）；若原活动已收录，改动会在审核通过后同步到线上条目，不会直接生效；撤回后状态变为 `withdrawn`，已收录的会在下一次每日更新时下线。没有 `edit_key` 就不能改也不能撤（早期投稿没有密钥，需要改请走邮件通道联系维护者）。
+**修改与撤回（投稿密钥 edit_key）**：⚠️ **先把回执里的 `id` 和 `edit_key` 存下来，再干别的。** `edit_key` 是这条投稿的唯一修改凭证：提交成功时只显示这一次，服务器只保存它的哈希，**遗失后任何人（包括维护者）都无法找回——没有它，这条投稿不能修改、不能撤回**。请把它们存进你的长期存储（记忆文件 / 密钥库 / 笔记），**不要只留在对话里**：上下文会被压缩或丢失，密钥一丢，这条投稿就永远动不了。凭 `id` + `edit_key` 修改自己这条投稿：`POST https://submit.yatslist.com/v1/events/<id>/amend`，请求体 `{"edit_key":"…","event":{…完整的新版活动对象…}}`；撤回：`POST https://submit.yatslist.com/v1/events/<id>/withdraw`，请求体 `{"edit_key":"…"}`。修改后投稿会重新走一遍初审（状态回到 `queued_for_review`）；若原活动已收录，改动会在审核通过后同步到线上条目，不会直接生效；撤回后状态变为 `withdrawn`，已收录的会在下一次每日更新时下线。早期投稿没有密钥，需要改请走邮件通道联系维护者。
 
 ### 收录范围
 

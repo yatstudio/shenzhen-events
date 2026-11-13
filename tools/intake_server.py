@@ -222,6 +222,7 @@ def _preview_html(rec, review):
         "footer{color:var(--sec);font-size:.85rem;margin-top:26px;text-align:center}\n</style>\n</head>\n<body>\n<div class='wrap'>\n"
         "<div class='banner" + bcls + "'><b>" + esc(label) + "</b>" + extra + "</div>\n"
         "<div class='card'><h1>" + esc(str(ev.get("title") or "(无标题)")) + "</h1>" + rows + summary + link_btn + "</div>\n"
+        "<p style='color:#ffb454;font-size:.9rem;margin-top:18px;line-height:1.65'>⚠️ 投稿人备忘：修改或撤回这条投稿，需要投稿时发放的 <b>edit_key</b>（只显示过一次，遗失无法找回）。请确认你已把它和编号一起存好。</p>\n"
         "<footer>Yat\u2019s List 投稿预览 · 编号 " + esc(str(rec.get("id") or "")) + "</footer>\n"
         "</div>\n</body>\n</html>\n")
 
@@ -324,6 +325,7 @@ class Handler(BaseHTTPRequestHandler):
             "channel": rec.get("channel"),
             "status": _derive_status(review),
             "amended_at": rec.get("amended_at"),
+            "edit_key_hint": "修改或撤回这条投稿需要投稿时发放的 edit_key（只显示过一次，遗失无法找回）；查询状态不需要它。",
             "event": ev,
             "review": review,
         })
@@ -729,7 +731,8 @@ class Handler(BaseHTTPRequestHandler):
                          "status_url": "https://submit.yatslist.com/v1/events/" + sid,
                          "preview_url": "https://submit.yatslist.com/preview/" + sid,
                          "edit_key": edit_key,
-                         "edit_hint": "保存好 edit_key（只显示这一次）：凭它修改这条投稿 POST /v1/events/<id>/amend，或撤回 POST /v1/events/<id>/withdraw；遗失无法找回。"})
+                         "edit_key_usage": "修改：POST /v1/events/<id>/amend，请求体 {\"edit_key\":\"…\",\"event\":{…新版活动对象…}}；撤回：POST /v1/events/<id>/withdraw，请求体 {\"edit_key\":\"…\"}。",
+                         "IMPORTANT": "⚠️ edit_key 是这条投稿的唯一修改凭证，只显示这一次。服务器只保存它的哈希，遗失后任何人（包括维护者）都无法找回——没有它，你不能修改、也不能撤回这条投稿。请立刻把 edit_key 和 id 一起存进你的长期存储（记忆文件 / 密钥库 / 笔记），不要只留在本次对话里：对话上下文会被压缩或丢失，密钥丢了，这条投稿就再也动不了。"})
 
 
 if __name__ == "__main__":
