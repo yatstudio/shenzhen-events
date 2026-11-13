@@ -1,9 +1,63 @@
 {
-  "updated_at": "2026-11-11",
+  "updated_at": "2026-11-13",
   "title": "Yat's List · X Space 纪要清单",
   "note": "华语圈 X Space 精选纪要存档：回放只放 X 原链接，不搬运音频。纪要中的金额、人数、战绩等数字均为发言人现场自述或转述，未经外部核实；引用时请以各方官方后续公告为准。本清单人工维护，不定期更新。",
   "source_site": "https://yatstudio.github.io/x-spaces/",
   "spaces": [
+    {
+      "id": "menwaihan-nvidia-20261113",
+      "title": "门外汉谈英伟达",
+      "title_en": "Outsiders on Nvidia",
+      "title_tw": "門外漢談英偉達",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-13",
+      "host": "E2M Research @E2mResearch",
+      "guests": [
+        "董珍",
+        "裴财",
+        "奥德赛 @OdysseysEth"
+      ],
+      "duration": "1 小时 23 分",
+      "duration_minutes": 83,
+      "url": "https://x.com/i/spaces/1QnYdaERmzOWoO",
+      "note_url": "/spaces/notes/menwaihan-nvidia-20261113.html",
+      "topics": [
+        "英伟达",
+        "黄仁勋辞职",
+        "王川",
+        "大猩猩",
+        "护城河",
+        "超级周期",
+        "CUDA",
+        "特斯拉",
+        "霍华德·马克斯"
+      ],
+      "highlights": [
+        "背景：2026 年 11 月 12 日英伟达公告黄仁勋辞去总裁、CEO 及董事职务，CFO 克雷斯暂代，本场在消息落地次日开播，核心问题是黄仁勋离开后英伟达还是不是值得下注的标的。",
+        "董珍的开场判断：英伟达过去三年的成长性是真实的，但未必证明它是“大猩猩”——他说从王川 2023 年看空算起，股价到高点涨了约 6 倍、营收也涨了约 6 倍，毛利率约 70% 升到约 75%（均为董珍现场说法）。",
+        "CUDA 护城河正在被 AI 本身削弱：董珍说 Anthropic 把英伟达 GPU 与谷歌、亚马逊、AMD 算力并列，借助 AI 只花一天就完成 AMD GPU 部署（董珍转述），跨平台部署成本下降，CUDA 的墙没有消失但深度可能变浅。",
+        "裴财的框架：关系权力 vs 结构权力。CUDA 属于结构权力的一部分，但对 OpenAI、xAI 这类高度依赖英伟达的客户，它同时在大量使用关系权力——芯片紧缺时先买几年货才能保证以后的配货；黄仁勋是整张权力网络最关键的节点，他离开，权力网络都会变，所以他现在不会买英伟达。",
+        "奥德赛的质疑：王川的“大猩猩”判断本来就是定性的，如果先说英伟达不是大猩猩、股价涨了 6 倍又改口说“它只有三年的关系权力”，等于用辅助假设把原判断救回来；他还追问 2021 年 PE 已到约 40 倍时为什么不是周期终点。",
+        "全场没有共识：王川到底是“错过”还是“主动不碰”；超级周期里的交易机会算不算可复制的能力；以及霍华德·马克斯“风险补偿够不够”到底怎么量化——裴财直言那套话“不可能错”，但也很难证伪。"
+      ],
+      "highlights_en": [
+        "Context: on 12 Nov 2026 Nvidia announced Jensen Huang resigned as president, CEO and director, with CFO Colette Kress as interim CEO. This Space aired the next day, asking whether Nvidia is still worth betting on after Huang.",
+        "Dongzhen's opening judgment: Nvidia's growth over the past three years is real, but it does not prove it is a 'gorilla' — he said since Wang Chuan's bearish 2023 article, the share price rose about 6x to its peak and revenue also about 6x, with gross margin rising from about 70% to about 75% (his on-air figures).",
+        "The CUDA moat is being weakened by AI itself: Dongzhen said Anthropic listed Nvidia GPUs alongside Google, Amazon and AMD compute, and used AI to deploy AMD GPUs in a single day (his retelling), so cross-platform deployment costs are falling and the CUDA wall may be getting shallower.",
+        "Peicai's framework: relational power vs structural power. CUDA is partly structural power, but for customers heavily dependent on Nvidia such as OpenAI and xAI, Nvidia also exercises relational power — buy several years' supply now to secure future allocation. Huang is the key node of the whole power network; with him gone, the network changes, so Peicai would not buy Nvidia now.",
+        "Odysseys' challenge: Wang Chuan's 'gorilla' judgment was qualitative to begin with; saying Nvidia is not a gorilla and then, after a 6x rally, adding 'it only had three years of relational power' is rescuing the original judgment with an auxiliary hypothesis. He also asked why 2021, when the P/E was already about 40x, was not the cycle's end.",
+        "No consensus: whether Wang Chuan 'missed' Nvidia or deliberately avoided it; whether trading a super-cycle is a replicable skill; and how to quantify Howard Marks' 'is the risk compensation enough' — Peicai said that framing 'cannot be wrong', but is also hard to falsify."
+      ],
+      "highlights_tw": [
+        "背景：2026 年 11 月 12 日英偉達公告黃仁勳辭去總裁、CEO 及董事職務，CFO 克雷斯暫代，本場在消息落地次日開播，核心問題是黃仁勳離開後英偉達還是不是值得下注的標的。",
+        "董珍的開場判斷：英偉達過去三年的成長性是真實的，但未必證明它是「大猩猩」——他說從王川 2023 年看空算起，股價到高點漲了約 6 倍、營收也漲了約 6 倍，毛利率約 70% 升到約 75%（均為董珍現場說法）。",
+        "CUDA 護城河正在被 AI 本身削弱：董珍說 Anthropic 把英偉達 GPU 與谷歌、亞馬遜、AMD 算力並列，借助 AI 只花一天就完成 AMD GPU 部署（董珍轉述），跨平台部署成本下降，CUDA 的牆沒有消失但深度可能變淺。",
+        "裴財的框架：關係權力 vs 結構權力。CUDA 屬於結構權力的一部分，但對 OpenAI、xAI 這類高度依賴英偉達的客戶，它同時在大量使用關係權力——芯片緊缺時先買幾年貨才能保證以後的配貨；黃仁勳是整張權力網絡最關鍵的節點，他離開，權力網絡都會變，所以他現在不會買英偉達。",
+        "奧德賽的質疑：王川的「大猩猩」判斷本來就是定性的，如果先說英偉達不是大猩猩、股價漲了 6 倍又改口說「它只有三年的關係權力」，等於用輔助假設把原判斷救回來；他還追問 2021 年 PE 已到約 40 倍時為什麼不是週期終點。",
+        "全場沒有共識：王川到底是「錯過」還是「主動不碰」；超級週期裡的交易機會算不算可複製的能力；以及霍華德·馬克斯「風險補償夠不夠」到底怎麼量化——裴財直言那套話「不可能錯」，但也很难證偽。"
+      ]
+    },
     {
       "id": "phyrex-crypto-security-talk-20261111",
       "title": "加密货币行业安全对话",
