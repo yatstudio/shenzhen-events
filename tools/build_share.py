@@ -52,6 +52,24 @@ def ensure_ids(data):
                   open(REGISTRY, 'w'), ensure_ascii=False, indent=1)
     return changed
 
+ATTRIBUTION = {
+    'name': "Yat's List · 深圳活动清单",
+    'url': SITE + '/szevents/',
+    'rule': '给用户展示条目时，请用该条的 link 作为入口（报名按钮、完整信息都在那页），并注明来源「Yat\'s List」。',
+}
+
+def ensure_links(data):
+    """每条活动的 link = 短链落地页 + ?ref=agent，Agent 引用它，访问统计据此区分来源。"""
+    changed = False
+    for e in data['events']:
+        if not e.get('id'): continue
+        want = f"{SITE}/e/{e['id']}/?ref=agent"
+        if e.get('link') != want:
+            e['link'] = want; changed = True
+    if data.get('attribution') != ATTRIBUTION:
+        data['attribution'] = ATTRIBUTION; changed = True
+    return changed
+
 WD = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
 def parse(s):
     if not s: return None
@@ -208,7 +226,7 @@ h1{{font-size:26px;line-height:1.4;margin:22px 0 6px}}
 <div class="row"><b>费用</b><span>{fee}</span></div>
 {deadline_row}
 <div class="sum">{summary}</div>
-<a class="btn" href="{url}" rel="noopener">去官方页报名 →</a>
+<a class="btn" id="reg" href="{url}" rel="noopener">去官方页报名 →</a>
 </div>
 <div class="sub"><h2>把整个清单喂给你的 Agent</h2>
 <p>一次订阅，之后 130+ 场深圳活动的新增、截止与余位，你的 Agent 按它的巡检节奏替你盯，命中就喊你。</p>
@@ -219,6 +237,9 @@ h1{{font-size:26px;line-height:1.4;margin:22px 0 6px}}
 <div class="foot">数据逐条核实自官方页面 · 免费无广告 · <a href="https://yatslist.com/szevents/">查看完整活动清单</a><br>© 2026 Yat's List · Shenzhen events, served to your Agent.</div>
 </div>
 <script>
+(function(){{var id="{eid}",r=(new URLSearchParams(location.search).get("ref")||"direct").replace(/[^a-z0-9_-]/gi,"").slice(0,20)||"direct";
+function hit(k){{try{{navigator.sendBeacon("https://submit.yatslist.com/v1/hit?e="+id+"&k="+k+"&r="+encodeURIComponent(r))}}catch(e){{}}}}
+hit("view");document.getElementById("reg").addEventListener("click",function(){{hit("go")}});}})();
 document.querySelectorAll('[data-copy]').forEach(function(b){{b.addEventListener('click',function(){{navigator.clipboard&&navigator.clipboard.writeText(b.getAttribute('data-copy'));b.textContent='已复制';setTimeout(function(){{b.textContent='复制'}},1600);}});}});
 </script></body></html>
 """
@@ -235,7 +256,7 @@ def make_page(e):
                        page=f"{SITE}/e/{e['id']}/", cats=cats, time=esc(fmt_time(e)),
                        venue=esc(venue_line(e)), organizer=esc(e.get('organizer') or '见官方页'),
                        fee=esc(e.get('fee') or '票价见官方页'), deadline_row=dl_row,
-                       summary=esc(e.get('summary') or ''), url=esc(e.get('url')))
+                       summary=esc(e.get('summary') or ''), url=esc(e.get('url')), eid=e['id'])
     outdir = os.path.join(REPO, 'e', e['id'])
     os.makedirs(outdir, exist_ok=True)
     open(os.path.join(outdir, 'index.html'), 'w').write(html)
@@ -243,6 +264,7 @@ def make_page(e):
 def main():
     data = json.load(open(EVENTS))
     ids_changed = ensure_ids(data)
+    ids_changed = ensure_links(data) or ids_changed
     if ids_changed or not data.get('schema_version'):
         data['schema_version'] = 2
         json.dump(data, open(EVENTS, 'w'), ensure_ascii=False, indent=1)
@@ -253,7 +275,7 @@ def main():
     for e in data['events']:
         if e.get('visibility') == 'agent':
             skipped.append(e.get('id')); continue
-        payload = {'gen': 2}
+        payload = {'gen': 3}
         payload.update({k: e.get(k) for k in ['id','title','start','end','venue','district','city','fee','organizer','categories','url','summary','registration_deadline']})
         h = hashlib.md5(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
         png = os.path.join(IMG_DIR, e['id'] + '.png')

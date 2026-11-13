@@ -16,6 +16,7 @@ import threading
 import time
 from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import parse_qs, urlparse
 
 CST = timezone(timedelta(hours=8))
 DATA_DIR = os.environ.get("INTAKE_DIR", "/srv/yatslist-intake")
@@ -26,6 +27,7 @@ JREVIEWS = os.path.join(DATA_DIR, "job_reviews.json")
 XQUEUE = os.path.join(DATA_DIR, "xlist.jsonl")
 TOKEN_FILE = os.path.join(DATA_DIR, "admin_token.txt")
 XPEOPLE_FILE = os.path.join(DATA_DIR, "xpeople.json")
+HITS_FILE = os.path.join(DATA_DIR, "hits.json")
 MAX_BODY = 32768
 RATE_HOUR = 10
 RATE_DAY = 40
@@ -126,6 +128,55 @@ def _update_jreview(job_id, fields):
         os.replace(tmp, JREVIEWS)
     return rec
 
+
+# 落地页访问计数：按天 × 来源(ref) × 动作(view 打开 / go 点报名)，另按活动累计。只存计数，不存 IP。
+_HITS_LOCK = threading.Lock()
+_EID_RE = re.compile(r"^[0-9a-z]{6}$")
+_REF_RE = re.compile(r"^[a-z0-9_-]{1,20}$")
+_BOT_UA_RE = re.compile(r"bot|crawl|spider|slurp|preview|headless|python|curl|wget|httpx|axios|node-fetch|go-http", re.I)
+
+def _record_hit(eid, kind, ref, ua):
+    if not _EID_RE.match(eid) or kind not in ("view", "go"):
+        return False
+    ref = ref.lower() if _REF_RE.match(ref.lower()) else "other"
+    if _BOT_UA_RE.search(ua or ""):
+        ref = "bot"
+    day = datetime.now(CST).strftime("%Y-%m-%d")
+    with _HITS_LOCK:
+        try:
+            with open(HITS_FILE, encoding="utf-8") as f:
+                h = json.load(f)
+        except Exception:
+            h = {}
+        d = h.setdefault("days", {}).setdefault(day, {}).setdefault(ref, {})
+        d[kind] = d.get(kind, 0) + 1
+        ev = h.setdefault("events", {}).setdefault(eid, {}).setdefault(ref, {})
+        ev[kind] = ev.get(kind, 0) + 1
+        tmp = HITS_FILE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(h, f, ensure_ascii=False)
+        os.replace(tmp, HITS_FILE)
+    return True
+
+_hit_ips = {}
+
+def _hit_rate_ok(ip):
+    now = time.time()
+    with _HITS_LOCK:
+        ts = [t for t in _hit_ips.get(ip, []) if now - t < 3600]
+        if len(ts) >= 120:
+            _hit_ips[ip] = ts
+            return False
+        ts.append(now)
+        _hit_ips[ip] = ts
+        return True
+
+def _read_hits():
+    try:
+        with open(HITS_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
 
 _SUB_ID_RE = re.compile(r"^sub-[0-9a-f]+$")
 _JOB_ID_RE = re.compile(r"^job-[0-9a-f]+$")
@@ -437,6 +488,12 @@ button,input{font:inherit;color:inherit}
 #toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:10px 16px;opacity:0;transition:.2s;pointer-events:none;font-size:.9rem;z-index:9;max-width:90vw}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 #toast.bad{border-color:var(--red);color:var(--red)}
+.stats{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 18px}
+.stats th,.stats td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line,#1f2b36)}
+.stats th{font-weight:600;opacity:.7}
+.stats .sub{opacity:.55}
+.stats .tot td{font-weight:700}
+.sh{font-size:15px;margin:10px 0 4px}
 @media (max-width:680px){
   .top-in{padding:10px 14px}
   .wrap{padding:16px 14px 70px}
@@ -484,9 +541,10 @@ const SECTIONS={
   x:{name:"X 名录",hint:"自助登记的 X 账号。点「通过」后约 20 分钟内自动上榜，「拒绝」的不会上榜。不处理也行，每日任务会轻核其余申请。",
      filters:[["todo","待审"],["approved","已通过"],["rejected","已拒绝"],["all","全部"]]},
   job:{name:"岗位投稿",hint:"通过 API 投稿的岗位（招聘页暂未公开）。每日更新时 AI 初审；拿不准的标为「待你审核」，在这里决定。「待 AI 初审」的也可以直接通过 / 拒绝，不用等 AI。",
-     filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已上线"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]}
+     filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已上线"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]},
+  st:{name:"访问统计",hint:"活动短链落地页（yatslist.com/e/…）的打开和点报名次数。Agent 拿到的链接带 ref=agent；直接打开、扫码、分享来的算「人」；爬虫和脚本单独算「机器」。每天按北京时间分。",filters:[]}
 };
-const S={sec:(location.hash.slice(1) in SECTIONS)?location.hash.slice(1):"ev",filter:{x:"todo",ev:"todo",job:"todo"},q:"",data:{x:[],ev:[],job:[]},rev:{ev:{},job:{}}};
+const S={sec:(location.hash.slice(1) in SECTIONS)?location.hash.slice(1):"ev",filter:{x:"todo",ev:"todo",job:"todo"},q:"",data:{x:[],ev:[],job:[],st:[]},stats:{},rev:{ev:{},job:{}}};
 
 function $(id){return document.getElementById(id)}
 function tok(){return localStorage.getItem("xadmin_tok")||""}
@@ -526,6 +584,7 @@ async function load(manual){
   const [ev,job]=await Promise.allSettled([api("/v1/admin/events"),api("/v1/admin/jobs")]);
   if(ev.status==="fulfilled"){S.data.ev=byNew(ev.value.items);S.rev.ev=ev.value.reviews||{}}else toast("活动队列加载失败",true);
   if(job.status==="fulfilled"){S.data.job=byNew(job.value.items);S.rev.job=job.value.reviews||{}}else toast("岗位队列加载失败",true);
+  try{S.stats=await api("/v1/admin/stats")}catch(e){if(e.message!=="401")toast("访问统计加载失败",true)}
   $("gate").style.display="none";$("app").style.display="block";
   render();
   if(manual)toast("已刷新");
@@ -547,6 +606,23 @@ function qState(r,listedWord){
   if(r.verdict==="rejected")return {key:"no",label:"AI 已拒绝",c:"red"};
   return {key:"queue",label:"待 AI 初审",c:"blue",can:true};
 }
+function refGroup(r){return r==="agent"?"agent":r==="bot"?"bot":"human"}
+function renderStats(){
+  const days=S.stats.days||{},evs=S.stats.events||{};
+  const sum=(o,g,k)=>Object.keys(o||{}).filter(r=>refGroup(r)===g).reduce((a,r)=>a+(o[r][k]||0),0);
+  const cell=(o,g)=>{const v=sum(o,g,"view"),c=sum(o,g,"go");return "<td>"+v+'<span class="sub"> / '+c+"</span></td>"};
+  const head='<tr><th></th><th>Agent 带来</th><th>人</th><th>机器</th></tr>';
+  const dk=Object.keys(days).sort().reverse();
+  const tot={};dk.forEach(d=>Object.keys(days[d]).forEach(r=>{tot[r]=tot[r]||{};["view","go"].forEach(k=>tot[r][k]=(tot[r][k]||0)+(days[d][r][k]||0))}));
+  let h='<p class="hint">每格是「打开 / 点报名」。</p><table class="stats">'+head
+    +'<tr class="tot"><td>合计</td>'+cell(tot,"agent")+cell(tot,"human")+cell(tot,"bot")+"</tr>"
+    +dk.slice(0,30).map(d=>"<tr><td>"+esc(d)+"</td>"+cell(days[d],"agent")+cell(days[d],"human")+cell(days[d],"bot")+"</tr>").join("")+"</table>";
+  const top=Object.keys(evs).map(id=>({id,a:sum(evs[id],"agent","view"),h:sum(evs[id],"human","view")})).sort((p,q)=>(q.a+q.h)-(p.a+p.h)).slice(0,20);
+  if(top.length)h+='<h3 class="sh">打开最多的活动</h3><table class="stats"><tr><th>短链</th><th>Agent 带来</th><th>人</th></tr>'
+    +top.map(o=>'<tr><td><a href="https://yatslist.com/e/'+esc(o.id)+'/" target="_blank" rel="noopener">'+esc(o.id)+"</a></td><td>"+o.a+"</td><td>"+o.h+"</td></tr>").join("")+"</table>";
+  if(!dk.length)h='<div class="empty">还没有访问记录。活动落地页更新后，有人打开就会开始计数。</div>';
+  return h;
+}
 function stateOf(sec,it){
   if(sec==="x")return xState(it);
   return qState(S.rev[sec][it.id]||{},sec==="ev"?"收录":"上线");
@@ -555,7 +631,7 @@ function stateOf(sec,it){
 function renderNav(){
   $("nav").innerHTML=Object.keys(SECTIONS).map(k=>{
     const n=S.data[k].filter(it=>stateOf(k,it).act).length;
-    return '<button class="'+(k===S.sec?"on":"")+'" onclick="setSec(\''+k+'\')">'+SECTIONS[k].name+'<span class="badge'+(n?" hot":"")+'">'+n+"</span></button>";
+    return '<button class="'+(k===S.sec?"on":"")+'" onclick="setSec(\''+k+'\')">'+SECTIONS[k].name+(k==="st"?"":'<span class="badge'+(n?" hot":"")+'">'+n+"</span>")+"</button>";
   }).join("");
 }
 function setSec(k){S.sec=k;history.replaceState(null,"","#"+k);render();window.scrollTo(0,0)}
@@ -565,6 +641,7 @@ function render(){
   renderNav();
   const sec=S.sec,cfg=SECTIONS[sec],f=S.filter[sec];
   $("hint").textContent=cfg.hint;
+  if(sec==="st"){$("chips").innerHTML="";$("list").innerHTML=renderStats();return}
   const all=S.data[sec].map(it=>({it,st:stateOf(sec,it)}));
   const counts={all:all.length};
   all.forEach(o=>counts[o.st.key]=(counts[o.st.key]||0)+1);
@@ -735,6 +812,20 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    def _hit(self):
+        n = int(self.headers.get("Content-Length") or 0)
+        if n:
+            self.rfile.read(min(n, 4096))
+        q = parse_qs(urlparse(self.path).query)
+        g = lambda k: (q.get(k) or [""])[0][:40]
+        ip = self.headers.get("X-Real-IP") or self.client_address[0]
+        if _hit_rate_ok(ip):
+            _record_hit(g("e"), g("k"), g("r") or "direct", self.headers.get("User-Agent", ""))
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
 
     def _get_event_status(self, sub_id):
         if not _SUB_ID_RE.match(sub_id or ""):
@@ -963,6 +1054,9 @@ class Handler(BaseHTTPRequestHandler):
         if _p.startswith("/v1/events/"):
             self._get_event_status(_p[len("/v1/events/"):])
             return
+        if _p == "/v1/hit":
+            self._hit()
+            return
         if _p.startswith("/preview/"):
             self._get_preview(_p[len("/preview/"):])
             return
@@ -979,6 +1073,11 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_html(200, ADMIN_HTML)
             else:
                 self._send(401, {"error": "admin_token_required", "hint": "open with ?t=<token> once"})
+        elif self._path_only() == "/v1/admin/stats":
+            if not self._admin_ok():
+                self._send(401, {"error": "unauthorized"})
+            else:
+                self._send(200, _read_hits())
         elif self._path_only() == "/health":
             self._send(200, {"ok": True})
         elif self._path_only() == "/v1/admin/xlist":
@@ -1292,6 +1391,9 @@ class Handler(BaseHTTPRequestHandler):
         self._send(200, {"ok": True, "id": sub_id, "status": "queued_for_review", "note": "已更新，将重新走一遍初审；若原已收录，改动会在审核通过后同步到线上条目。"})
 
     def do_POST(self):
+        if self._path_only() == "/v1/hit":
+            self._hit()
+            return
         if self._path_only() == "/v1/admin/xlist/approve":
             self._admin_xlist_set("approved")
             return

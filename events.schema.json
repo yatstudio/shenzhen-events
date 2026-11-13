@@ -134,6 +134,11 @@
       "type": "string",
       "pattern": "^[0-9a-z]{6}$",
       "description": "冻结短码：由 url+start 生成，短链 yatslist.com/e/<id>/ 与分享图 img.yatslist.com/share/<id>.png 的键。投稿可不填，维护管线自动分配。"
+     },
+     "link": {
+      "type": "string",
+      "format": "uri",
+      "description": "本站短链落地页（带 ?ref=agent）。Agent 给用户展示条目时用它作入口；维护管线自动生成，投稿不用填。"
      }
     },
     "required": [
@@ -151,6 +156,22 @@
   "updated_at": {
    "format": "date-time",
    "type": "string"
+  },
+  "attribution": {
+   "type": "object",
+   "description": "数据来源署名与引用规则",
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "url": {
+     "type": "string",
+     "format": "uri"
+    },
+    "rule": {
+     "type": "string"
+    }
+   }
   }
  },
  "required": [
