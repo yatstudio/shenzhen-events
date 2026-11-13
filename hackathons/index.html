@@ -664,14 +664,14 @@ input[type=search]{font-size:16px}
 <p class="prompt" id="hprompt-workbuddy"></p><div class="actions"><button class="btn primary" onclick="copyEl('hprompt-workbuddy',this)">复制这段话</button></div></div>
 
 <div class="agblock"><h4>🧑‍💻 Codex</h4>
-<ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（提 PR）</li></ol>
+<ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（发邮件即可，不用 GitHub）</li></ol>
 <p class="prompt" id="hprompt-codex"></p><div class="actions"><button class="btn primary" onclick="copyEl('hprompt-codex',this)">复制这段话</button></div></div>
 </div>
 
 <!-- Hackathon Submission Card -->
 <div class="subcard" id="hack-post">
 <h3 id="hpost-title">📋 投稿黑客松：让你的 Agent 代你提交</h3>
-<p class="sum" id="hpost-sum">发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你提 PR 或发投稿邮件。</p>
+<p class="sum" id="hpost-sum">发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你发投稿邮件。</p>
 <p class="sum" id="hroute-q">你想怎么提交？</p>
 <div class="actions"><button class="btn" id="hroute-yes" onclick="routeHackPost('gh')">有 GitHub</button><button class="btn" id="hroute-mail" onclick="routeHackPost('mail')">用邮箱提交</button></div>
 <div id="hroute-gh" hidden>
@@ -756,10 +756,10 @@ hsubTitle:"🤖 让你的 Agent 盯着全球黑客松，不用自己刷",
 hsubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：',
 viewAll:"查看全部 Agent 版本",
 agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
-agSteps:["<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>","<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>","<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（提 PR）</li>"],
+agSteps:["<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>","<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>","<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（发邮件即可，不用 GitHub）</li>"],
 postJump:"提交黑客松",
 postTitle:"📋 投稿黑客松：让你的 Agent 代你提交",
-postSum:"发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你提 PR 或发投稿邮件。",
+postSum:"发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你发投稿邮件。",
 postBtn:"📋 复制投稿话术给我的 Agent",
 copiedGo:"已复制 ✓ 去粘贴给你的 Agent",
 mSubTitle:"🤖 订阅话术",mPostTitle:"📋 投稿话术",mcopy:"📋 复制这段话",
@@ -798,7 +798,7 @@ agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
 agSteps:["<li>打開豆包工作 →「定時任務」→ 新建</li><li>重複選「每天」、時間 9:00，任務內容粘貼下方話術</li><li>保存，之後每天自動推送到對話</li>","<li>打開 WorkBuddy → 左側「自動化」→ 添加任務</li><li>執行頻率選「每天 9:00」，提示詞粘貼下方話術</li><li>保存，之後每天自動執行並推送結果</li>","<li>把下方話術直接發給 Codex</li><li>讓它創建每天 9:00（Asia/Shanghai）的自動化任務</li><li>還可以讓它按清單規範代你投稿黑客松（提 PR）</li>"],
 postJump:"提交黑客松",
 postTitle:"📋 投稿黑客松：讓你的 Agent 代你提交",
-postSum:"發現一場清單裡沒有的黑客松？把下方話術發給你的 Agent（Codex / Claude Code 等），它會先讀投稿規範、打開官方頁核對報名截止、地區、形式和獎金，再代你提 PR 或發投稿郵件。",
+postSum:"發現一場清單裡沒有的黑客松？把下方話術發給你的 Agent（Codex / Claude Code 等），它會先讀投稿規範、打開官方頁核對報名截止、地區、形式和獎金，再代你發投稿郵件。",
 postBtn:"📋 複製投稿話術給我的 Agent",
 copiedGo:"已複製 ✓ 去粘貼給你的 Agent",
 mSubTitle:"🤖 訂閱話術",mPostTitle:"📋 投稿話術",mcopy:"📋 複製這段話",
@@ -861,9 +861,9 @@ doubao:"Every morning at 9:00, open https://yatslist.com/hackathons.json and rea
 workbuddy:"Every morning at 9:00, open https://yatslist.com/hackathons.json and read the latest data (a JSON file of hackathons worldwide — in-person across North America, Europe, Asia and China, plus online ones). Consider only contests whose registration is still open, and pick out: 1) registrations closing within 72 hours; 2) my regions of interest [North America / Europe / Asia / China / Online] and formats (in-person / online / hybrid); 3) topics I am interested in: [AI Agents / Robotics / Web3 / Hardware — edit to your own interests]. Sort by registration deadline, one contest per line: deadline + title + region · city + format + prize + official link. If nothing matches, just reply “No new reminders today.” Never invent contests that are not in the file.",
 codex:"Please subscribe me to “Yat's List — Hackathons”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/hackathons.json and read the guide at https://yatslist.com/AGENTS.md. Consider only contests whose registration is still open, and filter for: registrations closing within 72 hours, my regions of interest [North America / Europe / Asia / China / Online] and formats, and topics I care about. Report briefly, sorted by registration deadline, one contest per line with its official link and prize; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day. Also, if I ask you to submit a hackathon, follow the hackathon submission guide in that document."}};
 const HSUBMIT={
-zh:"请帮我给「Yat's List 黑客松清单」投稿一场黑客松。先读投稿规范 https://yatslist.com/AGENTS.md （看「黑客松清单投稿」一节），然后打开官方页核对报名截止时间、举办地区、形式（线下 / 线上 / 线上+线下）和奖金，按规范把比赛加进 hackathons.json 并提交 Pull Request（一场只提一条 PR），或把比赛信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的比赛：。提交后留意维护者 Agent 的核查意见，有要改的按意见改好再 push，并把结果告诉我。",
-tw:"請幫我給「Yat's List 黑客松清單」投稿一場黑客松。先讀投稿規範 https://yatslist.com/AGENTS.md （看「黑客松清單投稿」一節），然後打開官方頁核對報名截止時間、舉辦地區、形式（線下 / 線上 / 線上+線下）和獎金，按規範把比賽加進 hackathons.json 並提交 Pull Request（一場只提一條 PR），或把比賽信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的比賽：。提交後留意維護者 Agent 的核查意見，有要改的按意見改好再 push，並把結果告訴我。",
-en:"Please help me submit a hackathon to “Yat's List — Hackathons”. First read the submission guide at https://yatslist.com/AGENTS.md (see the “黑客松清单投稿 / Submitting to the Hackathons page” section), then open the official page to verify the registration deadline, region, format (in-person / online / hybrid) and prize. As the guide describes, add the contest to hackathons.json and open a Pull Request (one PR per contest) — or email the contest details to the submission inbox event.submit@yatslist.com instead. The hackathon I want to submit: [hackathon name and official link here]. After submitting, watch for the maintainer Agent's review comments, fix anything requested, push again, and let me know the result."};
+zh:"请帮我给「Yat's List 黑客松清单」投稿一场黑客松。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开官方页核对报名截止时间、举办地区、形式（线下 / 线上 / 线上+线下）和奖金，把比赛名称、官方链接和核对到的信息发到投稿邮箱 event.submit@yatslist.com（不需要 GitHub 账号）。我要投稿的比赛：【在这里填比赛名和官方链接】。提交后把结果告诉我。",
+tw:"請幫我給「Yat's List 黑客松清單」投稿一場黑客松。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開官方頁核對報名截止時間、舉辦地區、形式（線下 / 線上 / 線上+線下）和獎金，把比賽名稱、官方鏈接和核對到的信息發到投稿郵箱 event.submit@yatslist.com（不需要 GitHub 帳號）。我要投稿的比賽：【在這裡填比賽名和官方鏈接】。提交後把結果告訴我。",
+en:"Please help me submit a hackathon to “Yat's List — Hackathons”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official page to verify the registration deadline, region, format (in-person / online / hybrid) and prize. Email the contest name, official link and the verified details to the submission inbox event.submit@yatslist.com (no GitHub account needed). The hackathon I want to submit: [hackathon name and official link here]. After submitting, let me know the result."};
 const HMSTEPS={
 zh:{generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"},
 tw:{generic:"任何能聯網的 Agent 都適用：把話術粘貼給它，並讓它設一個每天執行的任務。",doubao:"豆包工作 →「定時任務」→ 新建 → 重複選「每天」、時間 9:00 → 把話術粘貼為任務內容 → 保存。",workbuddy:"WorkBuddy → 左側「自動化」→ 添加任務 → 執行頻率選「每天 9:00」→ 把話術粘貼為提示詞 → 保存。",codex:"把話術直接發給 Codex，讓它創建每天 9:00（Asia/Shanghai）的自動化任務。"},
@@ -877,8 +877,8 @@ zh:"<b>填写示例：</b><br>「我要投稿的比赛：」——把里换成�
 tw:"<b>填寫示例：</b><br>「我要投稿的比賽：」——把裡換成真實的比賽名和官方鏈接再複製。投稿前先打開官方頁，確認報名截止、地區、形式、獎金無誤。",
 en:"<b>Example:</b><br>“The hackathon I want to submit: [Shenzhen International AI Hackathon, https://official-link]” — replace the brackets with the real hackathon name and official link before copying. Open the official page first to confirm the deadline, region, format and prize."};
 const HPOST_STEPS={
-zh:"把话术发给你的 Agent（Codex / Claude Code 等），它会先读规范、核对官方页，再代你提 PR 或发投稿邮件。",
-tw:"把話術發給你的 Agent（Codex / Claude Code 等），它會先讀規範、核對官方頁，再代你提 PR 或發投稿郵件。",
+zh:"把话术发给你的 Agent（Codex / Claude Code 等），它会先读规范、核对官方页，再代你发投稿邮件。",
+tw:"把話術發給你的 Agent（Codex / Claude Code 等），它會先讀規範、核對官方頁，再代你發投稿郵件。",
 en:"Send this prompt to your Agent (Codex / Claude Code, etc.) — it will read the guide, verify the official page, then open the PR or send the submission email for you."};
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
 function disp(map,key){if(key==null)return "";const m=(DISP[map]||{})[LANG]||{};return m[key]!==undefined?m[key]:key}

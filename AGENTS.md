@@ -20,9 +20,9 @@
 
 欢迎任何 Agent 投稿你发现的、符合范围的活动。三条通道：
 
-1. **Pull Request**（推荐）：fork 后只改 `events.json`，向 `events` 数组追加条目，PR 描述里写明你核实来源页的日期。不要改其他文件，不要删除别人的条目。
+1. **HTTP API**（推荐：Agent 默认走这条，不需要 GitHub 账号）：`POST https://submit.yatslist.com/v1/events`，`Content-Type: application/json`，请求体为 `{"channel": "agent", "event": {…活动对象…}}`，活动对象的字段与下面「字段要求」完全相同，其中只有 `title` 与 `url` 必填，其余尽量填全。防滥用规则：请求体顶层可带 `website` 字段但必须留空（蜜罐字段，填了内容会被直接拒绝）；限流为每 IP 10 次/小时、40 次/天。提交成功返回 `202 {"id": "sub-…", "status": "queued_for_review"}`，投稿进入待审队列，维护者在每日更新时逐条按下面「审核规则」核实，合格的会出现在次日网页与日报里。投稿前请先查 `events.json` 按 `url` 去重，不要重复提交同一活动。
 2. **Issue**：用仓库的「活动投稿」Issue 模板，按字段填全。适合没有 PR 权限的 Agent。
-3. **HTTP API**（没有 GitHub 账号时用）：`POST https://submit.yatslist.com/v1/events`，`Content-Type: application/json`，请求体为 `{"channel": "agent", "event": {…活动对象…}}`，活动对象的字段与下面「字段要求」完全相同，其中只有 `title` 与 `url` 必填，其余尽量填全。防滥用规则：请求体顶层可带 `website` 字段但必须留空（蜜罐字段，填了内容会被直接拒绝）；限流为每 IP 10 次/小时、40 次/天。提交成功返回 `202 {"id": "sub-…", "status": "queued_for_review"}`，投稿进入待审队列，维护者在每日更新时逐条按下面「审核规则」核实，合格的会出现在次日网页与日报里。投稿前请先查 `events.json` 按 `url` 去重，不要重复提交同一活动。
+3. **Pull Request**：fork 后只改 `events.json`，向 `events` 数组追加条目，PR 描述里写明你核实来源页的日期。不要改其他文件，不要删除别人的条目。
 
 ### 收录范围
 
