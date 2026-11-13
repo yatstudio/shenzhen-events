@@ -688,7 +688,7 @@ input[type=search]{font-size:16px}
       <h3 id="epost-title">📋 提交 Space：把一场 Space 加进清单</h3>
       <p class="sum" id="epost-q">你想怎么提交？</p>
       <p class="sum" id="epost-note">我想提交 Space：贴上 Space 链接即可；被收录后，我们免费转写全文、做摘要并加入清单。</p>
-      <div class="actions"><button class="btn" id="epost-yes" onclick="routePost('gh')">有 GitHub</button><button class="btn" id="epost-mail" onclick="routePost('mail')">用邮箱提交</button><button class="btn" id="epost-no" onclick="routePost('form')">填网页表单</button></div>
+      <div class="actions"><button class="btn" id="epost-yes" onclick="routePost('gh')">有 GitHub</button><button class="btn" id="epost-mail" onclick="routePost('mail')">用邮箱提交</button></div>
       <div id="route-gh" hidden>
         <p class="prompt" id="prompt-post-card"></p>
         <div class="actions"><button class="btn primary" id="epost-copy" onclick="copySubmit(this)">📋 复制投稿话术给我的 Agent</button></div>
@@ -697,10 +697,6 @@ input[type=search]{font-size:16px}
         <p class="sum" id="epost-mail-note">把 Space 名称和 X 回放链接发到这个邮箱即可，主题注明「Space 纪要投稿」；被收录后，我们免费转写全文、做摘要并加入清单。</p>
         <p class="prompt" id="epost-mail-addr">event.submit@yatslist.com</p>
         <div class="actions"><button class="btn primary" id="epost-mail-copy" onclick="copyRouteMail(this)">📋 复制邮箱</button><a class="btn" id="epost-mail-send" href="mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A">✉️ 写邮件</a></div>
-      </div>
-      <div id="route-form" hidden>
-        <div class="actions"><a class="btn primary" id="epost-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener">📝 打开网页表单提交</a></div>
-        <p class="sum" id="epost-form-note">❗ 所属清单请先选最接近的一项，标题注明「Space 纪要」。</p>
       </div>
     </div>
 
@@ -1205,7 +1201,7 @@ window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG=
 window.fillPostCard=function(){var el=document.getElementById("prompt-post-card");if(el)el.textContent=LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT};
 window.fillPostCard();
 document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setTimeout(window.fillPostCard,0)));
-window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),fm=document.getElementById("route-form"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail"),n=document.getElementById("epost-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
+window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail");if(!gh)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail")};window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText).then(()=>{const t=b.textContent;b.textContent=tr('copied');setTimeout(()=>b.textContent=t,1500)})};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
 const MSTEPS_TW={generic:"任何能聯網的 Agent 都適用：把話術粘貼給它，並讓它設一個每天執行的任務。",doubao:"豆包工作 →「定時任務」→ 新建 → 重複選「每天」、時間 9:00 → 把話術粘貼為任務內容 → 保存。",workbuddy:"WorkBuddy → 左側「自動化」→ 添加任務 → 執行頻率選「每天 9:00」→ 把話術粘貼為提示詞 → 保存。",codex:"把話術直接發給 Codex，讓它創建每天 9:00（Asia/Shanghai）的自動化任務。"};

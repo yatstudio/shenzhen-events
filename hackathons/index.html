@@ -673,7 +673,7 @@ input[type=search]{font-size:16px}
 <h3 id="hpost-title">📋 投稿黑客松：让你的 Agent 代你提交</h3>
 <p class="sum" id="hpost-sum">发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你提 PR 或发投稿邮件。</p>
 <p class="sum" id="hroute-q">你想怎么提交？</p>
-<div class="actions"><button class="btn" id="hroute-yes" onclick="routeHackPost('gh')">有 GitHub</button><button class="btn" id="hroute-mail" onclick="routeHackPost('mail')">用邮箱提交</button><button class="btn" id="hroute-no" onclick="routeHackPost('form')">填网页表单</button></div>
+<div class="actions"><button class="btn" id="hroute-yes" onclick="routeHackPost('gh')">有 GitHub</button><button class="btn" id="hroute-mail" onclick="routeHackPost('mail')">用邮箱提交</button></div>
 <div id="hroute-gh" hidden>
 <p class="prompt" id="hprompt-post"></p>
 <div class="actions"><button class="btn primary" id="hpost-copy" onclick="copySubmitHack(this)">📋 复制投稿话术给我的 Agent</button></div>
@@ -682,9 +682,6 @@ input[type=search]{font-size:16px}
 <p class="sum" id="hroute-mail-note">把黑客松名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。</p>
 <p class="prompt" id="hroute-mail-addr">event.submit@yatslist.com</p>
 <div class="actions"><button class="btn primary" id="hroute-mail-copy" onclick="copyEl('hroute-mail-addr',this)">📋 复制邮箱</button><a class="btn" id="hroute-mail-send" href="mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A">✉️ 写邮件</a></div>
-</div>
-<div id="hroute-form" hidden>
-<div class="actions"><a class="btn primary" id="hroute-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener">📝 打开网页表单提交</a></div>
 </div>
 </div>
 </div>
@@ -1034,7 +1031,7 @@ $("#mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");i
 function copyModal(b){const ta=$("#mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
 function copyEl(id,b){const el=document.getElementById(id);if(!el)return;if(navigator.clipboard)navigator.clipboard.writeText(el.innerText).then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})}
 window.copySubmitHack=b=>{if(navigator.clipboard)navigator.clipboard.writeText(HSUBMIT[LANG]||HSUBMIT.zh).then(()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)})};
-window.routeHackPost=function(w){var gh=document.getElementById("hroute-gh"),ml=document.getElementById("hroute-email"),fm=document.getElementById("hroute-form"),y=document.getElementById("hroute-yes"),m=document.getElementById("hroute-mail"),n=document.getElementById("hroute-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};
+window.routeHackPost=function(w){var gh=document.getElementById("hroute-gh"),ml=document.getElementById("hroute-email"),y=document.getElementById("hroute-yes"),m=document.getElementById("hroute-mail");if(!gh)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail")};
 window.hlPost=()=>{setTimeout(()=>{const el=document.getElementById("hack-post");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 applyLang();
