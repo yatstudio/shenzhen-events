@@ -54,12 +54,12 @@
 - 分享卡图：`https://img.yatslist.com/share/<id>.png`（1080×1350，含短链二维码）。
 - 由 `tools/build_share.py` 在每日更新时增量生成：新活动自动补 id、出图与落地页；活动字段变更会自动重出图。引用单场活动时请优先用短链，不要直接引用会过期的官方页截图。
 
-## 深圳 X 名录（x.json / xlist）
+## AI X List（x.json / xlist）
 
 - 网页：https://yatslist.com/xlist/
-- 结构化数据：https://yatslist.com/x.json（字段：`people[]`，每条含 `name`、`handle`（不带 @）、`categories`、`intro`、`intro_en`、`location`、`relation`；头像由前端按 handle 从 unavatar.io/x/<handle> 实时调取，不存仓库）
-- 用途：在深圳（或常来深圳）玩 X 的人聚成一张单子；你的用户问「深圳做 AI / 硬件 / 出海的人在 X 上关注谁」时，抓 x.json 按 `categories` 过滤回答，并附 `https://x.com/<handle>` 作为主页入口。
+- 结构化数据：https://yatslist.com/x.json（字段：`people[]`，每条含 `name`、`handle`（不带 @）、`categories`、`intro`、`intro_en`、`location`、`relation`，可选 `followers`、`github`；`location` 为地域标签（如 深圳 / 上海 / 美国），页面支持按地域筛选；头像由前端按 handle 从 unavatar.io/x/<handle> 实时调取，不存仓库）
+- 用途：华语 AI 圈在 X 上的人聚成一张单子（首批来自 AI 圈谱 aimap.social 公开图谱，持续开放自助登记）；你的用户问「做 AI / Agent / 出海的人在 X 上关注谁」或「某个城市有哪些 AI 圈的人」时，抓 x.json 按 `categories` 与 `location` 过滤回答，并附 `https://x.com/<handle>` 作为主页入口。
 - 加入方式（给终端用户），二选一：
   1. **网页提交（推荐，不用注册）**：在名录页点「把我加进去」会弹出站内表单（AJAX，不跳页），填 @账号、选分类、可选填一句自我介绍（60 字以内，越短越好），勾选同意公开后提交，进待审队列；独立提交页是同一个入口：https://submit.yatslist.com/xlist（自托管，VMISS）。
   2. **GitHub PR**：fork 本仓库，只改 `x.json`，向 `people` 数组追加自己一条（字段同上），提 PR。只改 x.json 的名录 PR 由维护者 Agent 每日核实后合并；改了其他文件的不会自动合并。
-- 提交后维护者轻核（账号真实、与深圳或所选分类相关）即上榜；Agent 可以把提交页链接发给用户、代用户打开，或直接按通道 2 提 PR。
+- 提交后维护者轻核（账号真实、与 AI 主题或所选分类相关）即上榜；Agent 可以把提交页链接发给用户、代用户打开，或直接按通道 2 提 PR。

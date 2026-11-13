@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>深圳 X List · Yat's List</title>
-<meta name="description" content="在深圳玩 X 的人聚成一张单子：自己填表加进来，别人按分类找到你，一键打开主页或关注。Yat's List 深圳 X List。">
+<title>AI X List · Yat's List</title>
+<meta name="description" content="华语 AI 圈的 X 名单：按分类与地域找人，一键打开主页或关注；自助登记上榜。Yat's List AI X List。">
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
@@ -496,8 +496,8 @@ input[type=search]{font-size:16px}
 
 <div class="wrap">
   <div class="xhero">
-    <h1 id="x-title">深圳 X List</h1>
-    <p class="sub" id="x-sub">在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。</p>
+    <h1 id="x-title">AI X List</h1>
+    <p class="sub" id="x-sub">华语 AI 圈的人，都在这张单子上：按分类和地域找到他们，一键打开主页或关注你。自己加进来，也能被别人找到。</p>
     <div class="xjoins">
       <a class="xjoin" id="x-join" href="https://submit.yatslist.com/xlist" onclick="openXJoin();return false;">＋ 把我加进去（网页提交，不用注册）</a>
       <a class="xjoin gh" id="x-join-gh" href="https://github.com/yatstudio/shenzhen-events/blob/main/x.json" target="_blank" rel="noopener">用 GitHub 提交（提 PR 加一行）</a>
@@ -509,6 +509,7 @@ input[type=search]{font-size:16px}
   <div class="xbar">
     <input type="search" id="xq" placeholder="搜名字、@账号、自我介绍…">
     <span id="xchips"></span>
+    <div class="xregs" id="xregs" style="margin-top:8px"></div>
   </div>
   <div id="xlist"></div>
   <p class="xnote">加入方式二选一：网页提交（不用注册），或 GitHub 提 PR 只改 x.json。提交后轻核就上榜；下榜或改信息，邮件 yat@yatslist.com。</p>
@@ -517,7 +518,7 @@ input[type=search]{font-size:16px}
 
 <div class="xovl" id="xovl" onclick="if(event.target===this)closeXJoin()">
   <div class="xmodal">
-    <div class="xm-head"><h3>把自己加进深圳 X List</h3><button class="xm-x" type="button" onclick="closeXJoin()" aria-label="关闭">✕</button></div>
+    <div class="xm-head"><h3>把自己加进 AI X List</h3><button class="xm-x" type="button" onclick="closeXJoin()" aria-label="关闭">✕</button></div>
     <p class="xnote" style="text-align:left;margin:8px 0 0">不用注册、不用离开本页。提交后我们轻核一遍就上榜，头像自动从你的 X 账号拉取。</p>
     <form id="xf">
       <label for="xf-handle">你的 X 账号 *</label>
@@ -529,7 +530,7 @@ input[type=search]{font-size:16px}
       <p class="xnote" style="text-align:left;margin:6px 0 0">这段介绍会同时给人和 Agent 看：写清你做什么、擅长什么、能帮别人什么、想找什么人，再带上常驻区域（如南山、宝安），才更容易被找到。最多 160 字。不填就用你 X 简介的第一句。</p>
       <label for="xf-github">GitHub 地址（选填）</label>
       <input type="text" id="xf-github" maxlength="120" placeholder="例：github.com/你的用户名">
-      <label>你和深圳的关系 *</label>
+      <label>你的身份 *</label>
       <div class="xpills" id="xf-rels"></div>
       <label class="xconsent"><input type="checkbox" id="xf-consent" style="margin-top:4px"><span>这是我自己的账号，我同意公开列入 X List（随时可邮件 yat@yatslist.com 下榜）</span></label>
       <input type="text" id="xf-website" class="xhp" tabindex="-1" autocomplete="off">
@@ -570,11 +571,11 @@ applyTheme();
 let LANG="zh"; try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
 if(["zh","tw","en"].indexOf(LANG)<0)LANG="zh";
 const I18N={
- zh:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在这张单子上。自己加进来，别人按分类找到你，一键打开你的主页或关注你。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、自我介绍…",all:"全部",home:"X主页 ›",follow:"＋ 到X关注",fans:"粉丝",empty:"还没有人上榜，来做第一个：点上面「把我加进去」。"},
- tw:{title:"深圳 X List",sub:"在深圳玩 X 的人，都在這張單子上。自己加進來，別人按分類找到你，一鍵打開你的主頁或關注你。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、自我介紹…",all:"全部",home:"X主頁 ›",follow:"＋ 到X關注",fans:"粉絲",empty:"還沒有人上榜，來做第一個：點上面「把我加進去」。"},
- en:{title:"Shenzhen X List",sub:"People on X in Shenzhen, on one list. Add yourself, get found by category, and let others open your profile or follow you in one tap.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, intro…",all:"All",home:"X Profile ›",follow:"＋ Follow on X",fans:"followers",empty:"Nobody here yet — be the first: tap Add me above."}
+ zh:{title:"AI X List",sub:"华语 AI 圈的人，都在这张单子上：按分类和地域找到他们，一键打开主页或关注。首批来自 AI 圈谱（aimap.social）公开图谱，也开放自助登记——自己加进来，就能被别人找到。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、地域、自我介绍…",all:"全部",allReg:"全部地区",unknown:"未知",home:"X主页 ›",follow:"＋ 到X关注",fans:"粉丝",empty:"没有符合的人，换个筛选试试。"},
+ tw:{title:"AI X List",sub:"華語 AI 圈的人，都在這張單子上：按分類和地域找到他們，一鍵打開主頁或關注。首批來自 AI 圈譜（aimap.social）公開圖譜，也開放自助登記——自己加進來，就能被別人找到。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、地域、自我介紹…",all:"全部",allReg:"全部地區",unknown:"未知",home:"X主頁 ›",follow:"＋ 到X關注",fans:"粉絲",empty:"沒有符合的人，換個篩選試試。"},
+ en:{title:"AI X List",sub:"The Chinese-speaking AI community on X, on one list — find people by category and region, open a profile or follow in one tap. Seeded from the public AI Map (aimap.social) graph; add yourself to be listed.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, region, intro…",all:"All",allReg:"All regions",unknown:"Unknown",home:"X Profile ›",follow:"＋ Follow on X",fans:"followers",empty:"Nobody matches — try another filter."}
 };
-let PEOPLE=[], CAT="全部", Q="";
+let PEOPLE=[], CAT="全部", REG="__all", Q="";
 const COLORS=["#2ee6a8","#5a8cfb","#f078a0","#f0b450","#78c8aa","#aa82f0","#fb8c5a","#5ac8e6"];
 function esc(s){return (s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function applyLang(){
@@ -592,13 +593,19 @@ function allCats(){const s=[];PEOPLE.forEach(p=>(p.categories||[]).forEach(c=>{i
 function renderChips(){
   const t=I18N[LANG]; const cats=["全部"].concat(allCats());
   document.getElementById("xchips").innerHTML=cats.map(c=>'<button class="xchip'+(CAT===c?" on":"")+'" data-cat="'+esc(c)+'">'+esc(c==="全部"?t.all:c)+"</button>").join("");
-  document.querySelectorAll(".xchip").forEach(b=>b.addEventListener("click",()=>{CAT=b.dataset.cat;renderChips();render();}));
+  document.querySelectorAll("#xchips .xchip").forEach(b=>b.addEventListener("click",()=>{CAT=b.dataset.cat;renderChips();render();}));
+  const rc={};PEOPLE.forEach(p=>{const l=p.location||"未知";rc[l]=(rc[l]||0)+1});
+  const regs=Object.keys(rc).filter(l=>l==="未知"||rc[l]>=3).sort((a,b)=>a==="未知"?1:b==="未知"?-1:rc[b]-rc[a]);
+  const rall=[["__all",t.allReg]].concat(regs.map(l=>[l,l==="未知"?t.unknown:l]));
+  document.getElementById("xregs").innerHTML=rall.map(r=>'<button class="xchip reg'+(REG===r[0]?" on":"")+'" data-reg="'+esc(r[0])+'">'+esc(r[1])+"</button>").join("");
+  document.querySelectorAll("#xregs .xchip").forEach(b=>b.addEventListener("click",()=>{REG=b.dataset.reg;renderChips();render();}));
 }
 function render(){
   const t=I18N[LANG]; const q=Q.trim().toLowerCase();
   const rows=PEOPLE.filter(p=>{ 
     if(CAT!=="全部"&&(p.categories||[]).indexOf(CAT)<0)return false;
-    if(q){const hay=((p.name||"")+" "+(p.handle||"")+" "+(p.intro||"")+" "+(p.intro_en||"")).toLowerCase();if(hay.indexOf(q)<0)return false;}
+    if(REG!=="__all"&&(p.location||"未知")!==REG)return false;
+    if(q){const hay=((p.name||"")+" "+(p.handle||"")+" "+(p.intro||"")+" "+(p.intro_en||"")+" "+(p.location||"")).toLowerCase();if(hay.indexOf(q)<0)return false;}
     return true;
   });
   const box=document.getElementById("xlist");
@@ -609,7 +616,7 @@ function render(){
     const initial=esc((p.name||p.handle||"?").slice(0,1).toUpperCase());
     const color=COLORS[(p.handle||"").length%COLORS.length];
     const intro=(LANG==="en"&&(p.intro_en||p.intro))||p.intro||"";
-    const tags=(p.categories||[]).map(c=>'<span class="xtag">'+esc(c)+"</span>").join("");
+    const tags=(p.categories||[]).map(c=>'<span class="xtag">'+esc(c)+"</span>").join("")+(p.location?'<span class="xtag">📍'+esc(p.location)+"</span>":"");
     const fans=p.followers?('<div class="xfol">'+t.fans+" "+esc(p.followers)+"</div>"):"";
     return '<div class="xrow"><div class="xava" style="background:'+color+'"><img src="https://unavatar.io/x/'+encodeURIComponent(p.handle)+'" alt="" loading="lazy" onerror="this.remove()">'+initial+'</div><div class="xmain"><div><span class="xname">'+esc(p.name)+'</span><a class="xhandle" href="'+url+'" target="_blank" rel="noopener">@'+esc(p.handle)+'</a></div><div class="xtags">'+tags+'</div><div class="xintro">'+esc(intro)+'</div></div><div class="xside">'+fans+'<div class="xbtns"><a class="xbtn" href="'+url+'" target="_blank" rel="noopener">'+t.home+'</a><a class="xbtn follow" href="'+url+'" target="_blank" rel="noopener">'+t.follow+"</a>"+(p.github?'<a class="xbtn" href="'+ghUrlP(p.github)+'" target="_blank" rel="noopener">GitHub</a>':"")+"</div></div></div>";
   }).join("");
@@ -625,7 +632,7 @@ if("serviceWorker" in navigator){try{navigator.serviceWorker.register("/sw.js")}
 <script>
 /* ===== X List AJAX 弹窗提交（不跳页） ===== */
 const XCATS=["AI","硬件","出海","Web3","加密","创业","创作者","投资","其他"];
-const XRELS=["常驻深圳","经常来深圳","不在深圳，但关注深圳"];
+const XRELS=["AI 从业者","AI 创业者","投资人","内容创作者","研究者 / 学生","AI 爱好者"];
 (function(){
   const c=document.getElementById("xf-cats"), r=document.getElementById("xf-rels");
   if(c)c.innerHTML=XCATS.map(x=>'<label><input type="checkbox" name="xf-cat" value="'+x+'">'+x+"</label>").join("");
@@ -645,7 +652,7 @@ const XRELS=["常驻深圳","经常来深圳","不在深圳，但关注深圳"];
     .then(r=>r.json()).then(d=>{
       if(d&&d.status==="queued_for_review"){msg.textContent="✅ 收到了（编号 "+d.id+"）。轻核通过后上榜，明天刷新本页就能看到你。";btn.textContent="已提交";
         document.getElementById("xf-ok-id").textContent=d.id;
-        document.getElementById("xf-ok-sum").innerHTML="X 账号：@"+esc(handle.replace(/^@+/,""))+"<br>分类："+esc(cats.join("、"))+"<br>自我介绍："+esc(document.getElementById("xf-intro").value.trim()||"（没填，上榜时用 X 简介第一句）")+(document.getElementById("xf-github").value.trim()?"<br>GitHub："+esc(document.getElementById("xf-github").value.trim()):"")+"<br>和深圳的关系："+esc(rel);
+        document.getElementById("xf-ok-sum").innerHTML="X 账号：@"+esc(handle.replace(/^@+/,""))+"<br>分类："+esc(cats.join("、"))+"<br>自我介绍："+esc(document.getElementById("xf-intro").value.trim()||"（没填，上榜时用 X 简介第一句）")+(document.getElementById("xf-github").value.trim()?"<br>GitHub："+esc(document.getElementById("xf-github").value.trim()):"")+"<br>身份："+esc(rel);
         f.style.display="none";document.getElementById("xf-ok").style.display="block";}
       else{const m={invalid_handle:"账号格式不对，填 @账号 或 x.com/账号 链接。",rate_limited:"提交太频繁了，过一会儿再试。",consent_required:"要先勾选确认。"};msg.textContent="没提交成功："+(m[d&&d.error]||"请稍后再试");btn.disabled=false;btn.textContent="提交，上榜"}
     }).catch(()=>{msg.textContent="网络出错，请稍后再试。";btn.disabled=false;btn.textContent="提交，上榜"});
