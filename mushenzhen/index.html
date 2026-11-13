@@ -603,7 +603,6 @@ input[type=search]{font-size:16px}
 <div id="mnav-panel"><nav class="topbar-nav">
       <a href="https://yatslist.com/szevents/" id="nav-home">活动</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
-      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人</a>
       <a href="https://yatslist.com/spaces/" id="nav-spaces">Space</a>
       <a href="https://yatslist.com/interviews/" id="nav-interviews">访谈</a>
       <span class="navcur" id="nav-mu" aria-current="page">muShenzhen</span>
@@ -716,7 +715,7 @@ function render(){
 function applyLang(){
   document.documentElement.lang=LANG==="en"?"en":(LANG==="tw"?"zh-TW":"zh-CN");
   document.querySelectorAll("[data-setlang]").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-  $("#mnav-btn").textContent=tr("mnav");$("#nav-home").textContent=tr("home");$("#nav-hack").textContent=tr("hack");$("#nav-expat").textContent=tr("expat");$("#nav-spaces").textContent=tr("spaces");$("#nav-interviews").textContent=tr("interviews");$("#nav-mu").textContent=tr("mu");
+  $("#mnav-btn").textContent=tr("mnav");$("#nav-home").textContent=tr("home");$("#nav-hack").textContent=tr("hack");$("#nav-spaces").textContent=tr("spaces");$("#nav-interviews").textContent=tr("interviews");$("#nav-mu").textContent=tr("mu");
   $("#page-title").textContent=tr("title");$("#page-sub").textContent=tr("sub");
   $("#cta-site").textContent=tr("site");$("#cta-luma").textContent=tr("luma");$("#cta-apply").textContent=tr("apply");
   for(let i=1;i<=6;i++){$("#f"+i+"l").textContent=tr("f"+i+"l");$("#f"+i+"v").textContent=tr("f"+i+"v")}

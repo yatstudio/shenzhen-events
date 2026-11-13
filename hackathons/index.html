@@ -592,7 +592,6 @@ input[type=search]{font-size:16px}
       <a href="#agent-sub" id="nav-agent" class="nav-ag">Agent</a>
       <a href="https://yatslist.com/szevents/" id="nav-home">活动</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack" class="nav-on" aria-current="page">黑客松</a>
-      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人</a>
       <a href="https://yatslist.com/spaces/" id="nav-spaces">Space</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
@@ -902,7 +901,7 @@ function applyLang(){
   document.title=tr("docTitle");
   const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
   document.querySelectorAll(".langsw button").forEach(b=>{const on=b.dataset.setlang===LANG;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")});
-  _st("#nav-home",tr("navHome"));_st("#nav-agent",tr("navAgent"));_st("#mnav-btn",tr("mnavBtn"));_st("#ab-title",tr("abTitle"));_st("#ab-sub",tr("abSub"));_sh("#ab-apis",tr("abApis"));_st("#nav-hack",tr("navHack"));_st("#nav-expat",tr("navExpat"));_st("#nav-spaces",tr("navSpaces"));
+  _st("#nav-home",tr("navHome"));_st("#nav-agent",tr("navAgent"));_st("#mnav-btn",tr("mnavBtn"));_st("#ab-title",tr("abTitle"));_st("#ab-sub",tr("abSub"));_sh("#ab-apis",tr("abApis"));_st("#nav-hack",tr("navHack"));_st("#nav-spaces",tr("navSpaces"));
   _st("#lsw-ev",tr("swEv"));_st("#lsw-hack",tr("swHack"));_st("#lsw-expat",tr("swExpat"));_st("#lsw-spaces",tr("swSpaces"));_st("#ta-sub",tr("subAnchor"));
   _st("#page-title",tr("pageTitle"));_sh("#page-sub",tr("pageSub"));_st("#cmd-label",tr("cmdLabel"));_st("#cmd-copy",tr("copy"));_st("#pip-label",tr("pipLabel"));_st("#pip-copy",tr("copy"));
   _st("#st-total-label",tr("statTotal"));_st("#st-soon-label",tr("statSoon"));_st("#st-cn-label",tr("statCn"));_st("#st-upd-label",tr("statUpd"));
