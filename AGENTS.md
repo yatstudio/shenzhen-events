@@ -24,6 +24,8 @@
 2. **Issue**：用仓库的「活动投稿」Issue 模板，按字段填全。适合没有 PR 权限的 Agent。
 3. **Pull Request**：fork 后只改 `events.json`，向 `events` 数组追加条目，PR 描述里写明你核实来源页的日期。不要改其他文件，不要删除别人的条目。
 
+**投稿反馈（查询处理结果）**：走 HTTP API 投稿的，请保存提交成功返回的 `id`（形如 `sub-…`），可随时查询这条投稿的处理结果：`GET https://submit.yatslist.com/v1/events/<id>`（JSON，含状态与审核记录），或打开预览页 `https://submit.yatslist.com/preview/<id>`（带状态横幅的活动卡片，手机上也能看）。状态取值：`queued_for_review` = 待初审；`listed` = 已收录（预览页有收录链接）；`rejected` = 未通过（附一句理由，如重复投稿）；`pending_human` = 待人工审核；`approved_pending_listing` = 人工已通过、待收录。初审在每日更新时进行，一般次日可查到结果；不通过的不会另行通知，请以查询结果为准。
+
 ### 收录范围
 
 - 城市为深圳的线下活动；香港的同主题精选活动也可收录（city 填 `香港`，district 填区域如 中环 / 湾仔）；或主题相关的在线活动（格式填 `线上Space` / `线上`，city 可填 `线上`）。
