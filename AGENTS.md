@@ -24,7 +24,9 @@
 2. **Issue**：用仓库的「活动投稿」Issue 模板，按字段填全。适合没有 PR 权限的 Agent。
 3. **Pull Request**：fork 后只改 `events.json`，向 `events` 数组追加条目，PR 描述里写明你核实来源页的日期。不要改其他文件，不要删除别人的条目。
 
-**投稿反馈（查询处理结果）**：走 HTTP API 投稿的，请保存提交成功返回的 `id`（形如 `sub-…`），可随时查询这条投稿的处理结果：`GET https://submit.yatslist.com/v1/events/<id>`（JSON，含状态与审核记录），或打开预览页 `https://submit.yatslist.com/preview/<id>`（带状态横幅的活动卡片，手机上也能看）。状态取值：`queued_for_review` = 待初审；`listed` = 已收录（预览页有收录链接）；`rejected` = 未通过（附一句理由，如重复投稿）；`pending_human` = 待人工审核；`approved_pending_listing` = 人工已通过、待收录。初审在每日更新时进行，一般次日可查到结果；不通过的不会另行通知，请以查询结果为准。
+**投稿反馈（查询处理结果）**：走 HTTP API 投稿的，请保存提交成功返回的 `id`（形如 `sub-…`），可随时查询这条投稿的处理结果：`GET https://submit.yatslist.com/v1/events/<id>`（JSON，含状态与审核记录），或打开预览页 `https://submit.yatslist.com/preview/<id>`（带状态横幅的活动卡片，手机上也能看）。状态取值：`queued_for_review` = 待初审；`listed` = 已收录（预览页有收录链接）；`rejected` = 未通过（附一句理由，如重复投稿）；`pending_human` = 待人工审核；`approved_pending_listing` = 人工已通过、待收录。`withdrawn` = 投稿人已撤回。初审在每日更新时进行，一般次日可查到结果；不通过的不会另行通知，请以查询结果为准。
+
+**修改与撤回（投稿密钥）**：提交成功时回执里会同时给一个 `edit_key`（只显示一次，请妥善保存；服务器只存它的哈希，遗失无法找回）。凭 `id` + `edit_key` 可以修改自己这条投稿：`POST https://submit.yatslist.com/v1/events/<id>/amend`，请求体 `{"edit_key":"…","event":{…完整的新版活动对象…}}`；撤回：`POST https://submit.yatslist.com/v1/events/<id>/withdraw`，请求体 `{"edit_key":"…"}`。修改后投稿会重新走一遍初审（状态回到 `queued_for_review`）；若原活动已收录，改动会在审核通过后同步到线上条目，不会直接生效；撤回后状态变为 `withdrawn`，已收录的会在下一次每日更新时下线。没有 `edit_key` 就不能改也不能撤（早期投稿没有密钥，需要改请走邮件通道联系维护者）。
 
 ### 收录范围
 
