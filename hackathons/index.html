@@ -564,6 +564,11 @@ input[type=search]{font-size:16px}
   .cact .more,.cact .more-ph{order:-1;height:24px}
   .reg{padding:4px 12px;font-size:.8rem}
 }
+
+/* ===== topbar compact 2026-11-13 ===== */
+.topbar{padding-top:8px;padding-bottom:8px}
+@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
+@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d1218">
@@ -584,11 +589,11 @@ input[type=search]{font-size:16px}
     </a>
     <button id="mnav-btn" type="button" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
 <div id="mnav-panel"><nav class="topbar-nav">
-      <a href="#agent-sub" id="nav-agent" class="nav-ag">给 Agent</a>
-      <a href="https://yatslist.com/szevents/" id="nav-home">活动清单</a>
-      <a href="https://yatslist.com/hackathons/" id="nav-hack" class="nav-on" aria-current="page">黑客松清单</a>
-      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
-      <a href="https://yatslist.com/spaces/" id="nav-spaces">Space 纪要</a>
+      <a href="#agent-sub" id="nav-agent" class="nav-ag">Agent</a>
+      <a href="https://yatslist.com/szevents/" id="nav-home">活动</a>
+      <a href="https://yatslist.com/hackathons/" id="nav-hack" class="nav-on" aria-current="page">黑客松</a>
+      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人</a>
+      <a href="https://yatslist.com/spaces/" id="nav-spaces">Space</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
       <button type="button" class="nav-submit" id="hpost-btn" onclick="goPost()">提交黑客松</button>
@@ -729,7 +734,7 @@ const STR={
 zh:{
 docTitle:"Yat's List · 全球黑客松清单 | Global Hackathons",
 metaDesc:"全球正在报名的黑客松与创新大赛：北美、欧洲、亚洲、中国线下与全球线上，每日更新，数据来自黑123、Devpost 等渠道并逐条核实。",
-navHome:"活动清单",navAgent:"给 Agent",mnavBtn:"☰ 菜单",navSubmit:"提交黑客松",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",
+navHome:"活动",navAgent:"Agent",mnavBtn:"☰ 菜单",navSubmit:"提交黑客松",navHack:"黑客松",navExpat:"外国人",navSpaces:"Space",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 pageTitle:"全球黑客松清单",heroMeta:function(a,b,u){return a+" 场报名中 · "+b+" 场 72 小时内截止"+(u?" · 数据 "+u:"")},abTitle:"让你的 Agent 盯着全球黑客松，不用自己刷",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，快截止时提醒你。",abApis:'也可以直接读：<a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范） · <a href="#agent-sub">各 Agent 设置步骤 ↓</a>',dayCount:function(n){return n+" 场"},regBtn:"报名 →",moreBtn:"更多操作",dlShort:"截止",startShort:"开始",
 pageSub:"<b>正在报名</b>的黑客松与创新大赛 · <b>全球</b>线下 + <b>线上</b> · 每天更新，每条打开官方页核实",
@@ -768,7 +773,7 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 tw:{
 docTitle:"Yat's List · 全球黑客松清單 | Global Hackathons",
 metaDesc:"全球正在報名的黑客松與創新大賽：北美、歐洲、亞洲、中國線下與全球線上，每日更新，數據來自黑123、Devpost 等渠道並逐條核實。",
-navHome:"活動清單",navAgent:"給 Agent",mnavBtn:"☰ 選單",navSubmit:"提交黑客松",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",
+navHome:"活動",navAgent:"Agent",mnavBtn:"☰ 選單",navSubmit:"提交黑客松",navHack:"黑客松",navExpat:"外國人",navSpaces:"Space",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 pageTitle:"全球黑客松清單",heroMeta:function(a,b,u){return a+" 場報名中 · "+b+" 場 72 小時內截止"+(u?" · 數據 "+u:"")},abTitle:"讓你的 Agent 盯著全球黑客松，不用自己刷",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，快截止時提醒你。",abApis:'也可以直接讀：<a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範） · <a href="#agent-sub">各 Agent 設置步驟 ↓</a>',dayCount:function(n){return n+" 場"},regBtn:"報名 →",moreBtn:"更多操作",dlShort:"截止",startShort:"開始",
 pageSub:"<b>正在報名</b>的黑客松與創新大賽 · <b>全球</b>線下 + <b>線上</b> · 每天更新，每條打開官方頁核實",
@@ -807,7 +812,7 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 en:{
 docTitle:"Yat's List · Global Hackathons | Worldwide, Open for Registration",
 metaDesc:"Hackathons and innovation competitions open for registration worldwide — in-person across North America, Europe, Asia and China, plus online everywhere. Updated daily; data from Hack123, Devpost and other channels, each listing verified.",
-navHome:"Events",navAgent:"For Agents",mnavBtn:"☰ Menu",navSubmit:"Submit a hackathon",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",
+navHome:"Events",navAgent:"Agent",mnavBtn:"☰ Menu",navSubmit:"Submit a hackathon",navHack:"Hackathons",navExpat:"Expat",navSpaces:"Space",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 pageTitle:"Global Hackathons",heroMeta:function(a,b,u){return a+" open · "+b+" closing within 72h"+(u?" · updated "+u:"")},abTitle:"Let your Agent watch global hackathons for you",abSub:"Doubao Workspace · WorkBuddy · Codex · Claude Code can all subscribe. Set it up once; get pinged for new matches and closing deadlines.",abApis:'Or read directly: <a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide) · <a href="#agent-sub">Setup steps per Agent ↓</a>',dayCount:function(n){return n+(n===1?" event":" events")},regBtn:"Register →",moreBtn:"More actions",dlShort:"Deadline",startShort:"Starts",
 pageSub:"Hackathons &amp; innovation competitions <b>open for registration</b> · <b>worldwide</b> in person + <b>online</b> · Updated daily, each verified on its official page",

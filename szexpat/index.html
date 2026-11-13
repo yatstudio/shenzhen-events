@@ -342,6 +342,11 @@ body{overflow-x:hidden}
   .reg{padding:4px 12px;font-size:.8rem}
   .cmeta{font-size:.78rem}
 }
+
+/* ===== topbar compact 2026-11-13 ===== */
+.topbar{padding-top:8px;padding-bottom:8px}
+@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
+@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -365,11 +370,11 @@ body{overflow-x:hidden}
 <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
 <button type="button" id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
 <div id="mnav-panel"><nav class="topbar-nav">
-<a href="#agentbox" id="nav-agent" class="nav-ag">给 Agent</a>
-<a href="https://yatslist.com/szevents/" id="nav-home">活动清单</a>
-<a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松清单</a>
-<a href="https://yatslist.com/szexpat/" class="nav-on" id="nav-expat" aria-current="page">外国人活动</a>
-<a href="https://yatslist.com/spaces/" id="nav-spaces">Space 纪要</a>
+<a href="#agentbox" id="nav-agent" class="nav-ag">Agent</a>
+<a href="https://yatslist.com/szevents/" id="nav-home">活动</a>
+<a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+<a href="https://yatslist.com/szexpat/" class="nav-on" id="nav-expat" aria-current="page">外国人</a>
+<a href="https://yatslist.com/spaces/" id="nav-spaces">Space</a>
 <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
 <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
 <button type="button" class="nav-submit" id="ta-submit" onclick="goSubmit()">提交活动</button>
@@ -479,7 +484,7 @@ const POST_PROMPT_TW=`請幫我向 Yat's List 的「深圳外國人活動清單�
 const POST_PROMPT_EN=`Please submit an event to the "Shenzhen Expat Events" list on Yat's List for me: first open the event's official page and verify its name, start time, venue and fee, then send the event name, official link, time, venue and a one-line description via the submission form https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform (choose "Shenzhen Expat Events" as the list) or by email to event.submit@yatslist.com. This list is a curated list verified and updated daily by its maintainer - do not edit its data files directly; PRs that change the data will not be accepted. Tell me the result when you are done.`;
 const STRINGS={
 zh:{docTitle:"深圳外国人活动清单 | Yat's List",
-navHome:"深圳活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",pageTitle:"外国人活动清单",navAgent:"给 Agent",navEvents:"活动清单",menuBtn:"☰ 菜单",abTitle:"别自己刷，交给你的 Agent",abSub:"把订阅话术复制给你的 Agent，按你的兴趣给你推送深圳活动提醒。",abGo:"用我的 Agent 订阅 →",abCopied:"已复制，粘贴给你的 Agent ✓",abApis:'也可以直接读：<a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · <a href="AGENTS.md">AGENTS.md</a>（Agent 协议）',ftoggleLabel:"筛选",labelTime:"时间",qAll:"全部",qFree:"免费",moreBtn:"更多操作",mCal:"加入日历",dayCount:n=>n+" 场",cmdLabel:"外国人活动",pipLabel:"命令行 CLI",cmdCopy:"复制",cmdCopied:"已复制 ✓",subBtn:"订阅",
+navHome:"深圳活动清单",navHack:"黑客松",navExpat:"外国人",navSpaces:"Space",pageTitle:"外国人活动清单",navAgent:"Agent",navEvents:"活动",menuBtn:"☰ 菜单",abTitle:"别自己刷，交给你的 Agent",abSub:"把订阅话术复制给你的 Agent，按你的兴趣给你推送深圳活动提醒。",abGo:"用我的 Agent 订阅 →",abCopied:"已复制，粘贴给你的 Agent ✓",abApis:'也可以直接读：<a href="feed.xml">RSS</a> · <a href="events.ics">日历 .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · <a href="AGENTS.md">AGENTS.md</a>（Agent 协议）',ftoggleLabel:"筛选",labelTime:"时间",qAll:"全部",qFree:"免费",moreBtn:"更多操作",mCal:"加入日历",dayCount:n=>n+" 场",cmdLabel:"外国人活动",pipLabel:"命令行 CLI",cmdCopy:"复制",cmdCopied:"已复制 ✓",subBtn:"订阅",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 tagline:`<b>深圳有什么好玩的</b> —— 聚会 · 演出与夜生活 · 展览 · 展会，搜集自多个公开平台，逐条核实，供真人与 AI Agent 使用，每天更新。`,
 
@@ -504,7 +509,7 @@ footFeeds:`数据接口（开放、无需登录）：<a href="events.json">event
 footSrc:`活动信息搜集自多个公开平台，版权归原发布方所有，请始终回链原始活动页。出发前请在原页面确认最终信息。`,
 footContact:`合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`},
 tw:{docTitle:"深圳外國人活動清單 | Yat's List",
-navHome:"深圳活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",pageTitle:"外國人活動清單",navAgent:"給 Agent",navEvents:"活動清單",menuBtn:"☰ 選單",abTitle:"別自己刷，交給你的 Agent",abSub:"把訂閱話術複製給你的 Agent，按你的興趣給你推送深圳活動提醒。",abGo:"用我的 Agent 訂閱 →",abCopied:"已複製，貼給你的 Agent ✓",abApis:'也可以直接讀：<a href="feed.xml">RSS</a> · <a href="events.ics">日曆 .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · <a href="AGENTS.md">AGENTS.md</a>（Agent 協議）',ftoggleLabel:"篩選",labelTime:"時間",qAll:"全部",qFree:"免費",moreBtn:"更多操作",mCal:"加入日曆",dayCount:n=>n+" 場",cmdLabel:"外國人活動",pipLabel:"命令列 CLI",cmdCopy:"複製",cmdCopied:"已複製 ✓",subBtn:"訂閱",
+navHome:"深圳活動清單",navHack:"黑客松",navExpat:"外國人",navSpaces:"Space",pageTitle:"外國人活動清單",navAgent:"Agent",navEvents:"活動",menuBtn:"☰ 選單",abTitle:"別自己刷，交給你的 Agent",abSub:"把訂閱話術複製給你的 Agent，按你的興趣給你推送深圳活動提醒。",abGo:"用我的 Agent 訂閱 →",abCopied:"已複製，貼給你的 Agent ✓",abApis:'也可以直接讀：<a href="feed.xml">RSS</a> · <a href="events.ics">日曆 .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · <a href="AGENTS.md">AGENTS.md</a>（Agent 協議）',ftoggleLabel:"篩選",labelTime:"時間",qAll:"全部",qFree:"免費",moreBtn:"更多操作",mCal:"加入日曆",dayCount:n=>n+" 場",cmdLabel:"外國人活動",pipLabel:"命令列 CLI",cmdCopy:"複製",cmdCopied:"已複製 ✓",subBtn:"訂閱",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 tagline:`<b>深圳有什麼好玩的</b> —— 聚會 · 演出與夜生活 · 展覽 · 展會，蒐集自多個公開平台，逐條核實，供真人與 AI Agent 使用，每天更新。`,
 
@@ -529,7 +534,7 @@ footFeeds:`數據接口（開放、無需登錄）：<a href="events.json">event
 footSrc:`活動資訊蒐集自多個公開平台，版權歸原發布方所有，請始終回鏈原始活動頁。出發前請在原頁面確認最終資訊。`,
 footContact:`合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>`},
 en:{docTitle:"Shenzhen Expat Events | Yat's List",
-navHome:"Shenzhen Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",pageTitle:"Shenzhen Expat Events",navAgent:"For Agents",navEvents:"Events",menuBtn:"☰ Menu",abTitle:"Don't browse, delegate to your Agent",abSub:"Copy the subscription prompt to your Agent and get Shenzhen event reminders matched to your interests.",abGo:"Subscribe with my Agent →",abCopied:"Copied, paste it to your Agent ✓",abApis:'Or read directly: <a href="feed.xml">RSS</a> · <a href="events.ics">Calendar .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · <a href="AGENTS.md">AGENTS.md</a> (Agent protocol)',ftoggleLabel:"Filters",labelTime:"Time",qAll:"All",qFree:"Free",moreBtn:"More actions",mCal:"Add to calendar",dayCount:n=>n+(n===1?" event":" events"),cmdLabel:"Expat Events",pipLabel:"CLI",cmdCopy:"Copy",cmdCopied:"Copied ✓",subBtn:"Subscribe",
+navHome:"Shenzhen Events",navHack:"Hackathons",navExpat:"Expat",navSpaces:"Space",pageTitle:"Shenzhen Expat Events",navAgent:"Agent",navEvents:"Events",menuBtn:"☰ Menu",abTitle:"Don't browse, delegate to your Agent",abSub:"Copy the subscription prompt to your Agent and get Shenzhen event reminders matched to your interests.",abGo:"Subscribe with my Agent →",abCopied:"Copied, paste it to your Agent ✓",abApis:'Or read directly: <a href="feed.xml">RSS</a> · <a href="events.ics">Calendar .ics</a> · <a href="llms.txt">llms.txt</a> · <a href="agent.json">agent.json</a> · <a href="AGENTS.md">AGENTS.md</a> (Agent protocol)',ftoggleLabel:"Filters",labelTime:"Time",qAll:"All",qFree:"Free",moreBtn:"More actions",mCal:"Add to calendar",dayCount:n=>n+(n===1?" event":" events"),cmdLabel:"Expat Events",pipLabel:"CLI",cmdCopy:"Copy",cmdCopied:"Copied ✓",subBtn:"Subscribe",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 tagline:`<b>What's on in Shenzhen</b> — meetups · shows &amp; nightlife · exhibitions · trade shows, gathered from multiple public sources, each entry verified, for humans and AI agents, updated daily.`,
 

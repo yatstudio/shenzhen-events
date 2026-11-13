@@ -556,6 +556,11 @@ input[type=search]{font-size:16px}
   .welc{font-size:.82rem;gap:8px;padding:8px 10px 8px 12px}
   .welc #welc-body{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
+
+/* ===== topbar compact 2026-11-13 ===== */
+.topbar{padding-top:8px;padding-bottom:8px}
+@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
+@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -588,11 +593,11 @@ input[type=search]{font-size:16px}
     </a>
     <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
 <div id="mnav-panel"><nav class="topbar-nav">
-      <a href="#agent-section" id="nav-agent" class="nav-ag">给 Agent</a>
-      <a href="https://yatslist.com/szevents/" id="nav-events">活动清单</a>
-      <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松清单</a>
-      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
-      <a href="https://yatslist.com/spaces/" id="nav-spaces" class="nav-on" aria-current="page">Space 纪要</a>
+      <a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
+      <a href="https://yatslist.com/szevents/" id="nav-events">活动</a>
+      <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人</a>
+      <a href="https://yatslist.com/spaces/" id="nav-spaces" class="nav-on" aria-current="page">Space</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
       <button type="button" class="nav-submit" id="ta-submit" onclick="goSubmit()">提交 Space</button>
@@ -857,7 +862,7 @@ const STR={
 zh:{
 docTitle:"Yat's List · Space 纪要清单 · 华语圈 X Space 纪要与回放",
 metaDesc:"Yat's List Space 纪要清单：华语圈 X Space 精选纪要、回放链接与要点存档，人工整理、不定期更新；可搜索、按系列与主题筛选，也可让你的 Agent 订阅 spaces.json。",
-brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"Space 纪要",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHack:"黑客松",navExpat:"外国人",navSpaces:"Space",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"Space 纪要清单",heroSub:"华语圈 Space 纪要，喂给你的 Agent 吃。",cmdLabel:"Space 纪要清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交 Space：把一场 Space 加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把 Space 名称和 X 回放链接发到这个邮箱即可，主题注明「Space 纪要投稿」；被收录后，我们免费转写全文、做摘要并加入清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%BA%AA%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主题",spLatestLabel:"最近一场",segAll:"全部",spDur:"时长",spDurParts:["小时","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉宾：",spNote:"数字为发言人自述、未核实",spListen:"🎧 去 X 收听回放 →",epostNote:"我想提交 Space：贴上 Space 链接即可；被收录后，我们免费转写全文、做摘要并加入清单。",epostFormNote:"❗ 所属清单请先选最接近的一项，标题注明「Space 纪要」。",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场纪要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"正在报名的黑客松与创新大赛",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
@@ -918,7 +923,7 @@ feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",r
 en:{
 docTitle:"Yat's List · Space Notes · Chinese X Space Recaps & Highlights",
 metaDesc:"Yat's List Space Notes: curated recaps of Chinese-language X Spaces with replay links and key takeaways — curated by hand and updated irregularly. Search and filter by series and topic, or let your Agent subscribe to spaces.json.",
-brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Space Notes",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat",navSpaces:"Space",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Space Notes",heroSub:"Chinese X Space recaps, served to your Agent.",cmdLabel:"Space Notes",pipLabel:"CLI",epostTitle:"📋 Submit a Space: add a Space to the list",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the Space title and its X replay link to this address, with “Space Recap Submission” in the subject. If it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",spSeriesLabel:"Series",spTopicLabel:"Topics",spLatestLabel:"Latest session",segAll:"All",spDur:"runtime",spDurParts:["h","m"],spEp:function(n){return "Ep. "+n},spHost:"Host: ",spGuests:"Guests: ",spNote:"Figures are as stated by the speakers — not independently verified.",spListen:"🎧 Listen on X →",epostNote:"Want to submit a Space? Just paste the Space link — if it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",epostFormNote:"❗ In the form's list field, pick the closest option and put “Space Recap” in the title.",
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"sessions listed",heroMetaDaily:"Curated by hand · updated irregularly",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"AI, startup, tech & cross-border events, verified daily",lcDescHack:"Hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"+ Submit a Space",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
@@ -979,7 +984,7 @@ feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"To
 tw:{
 docTitle:"Yat's List · Space 紀要清單 · 華語圈 X Space 紀要與重播",
 metaDesc:"Yat's List Space 紀要清單：華語圈 X Space 精選紀要、重播連結與要點存檔，人工整理、不定期更新；可搜索、按系列與主題篩選，也可讓你的 Agent 訂閱 spaces.json。",
-brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"Space 紀要",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHack:"黑客松",navExpat:"外國人",navSpaces:"Space",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"Space 紀要清單",heroSub:"華語圈 Space 紀要，餵給你的 Agent 吃。",cmdLabel:"Space 紀要清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交 Space：把一場 Space 加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把 Space 名稱和 X 重播連結發到這個信箱即可，主旨註明「Space 紀要投稿」；被收錄後，我們免費轉寫全文、做摘要並加入清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%B4%80%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主題",spLatestLabel:"最近一場",segAll:"全部",spDur:"時長",spDurParts:["小時","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉賓：",spNote:"數字為發言人自述、未核實",spListen:"🎧 去 X 收聽重播 →",epostNote:"我想提交 Space：貼上 Space 連結即可；被收錄後，我們免費轉寫全文、做摘要並加入清單。",epostFormNote:"❗ 所屬清單請先選最接近的一項，標題註明「Space 紀要」。",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場紀要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"正在報名的黑客松與創新大賽",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
