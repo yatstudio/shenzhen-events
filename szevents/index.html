@@ -502,7 +502,7 @@ input[type=search]{font-size:16px}
       <div class="ab-apis" id="ab-apis">也可以直接读：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）</div>
     </div>
 
-    <!-- View Tabs: 中文活动 / English Events (same page, separate data files) -->
+    <!-- View Tabs: 行业活动 / 生活休闲 (same page, separate data files) -->
     <style>
 .viewtabs{display:flex;gap:8px;margin:2px 0 14px}
 .vtab{appearance:none;-webkit-appearance:none;border:1px solid var(--border);background:var(--panel);color:var(--ink-sec);font:inherit;font-size:.92rem;font-weight:650;padding:8px 20px;border-radius:999px;cursor:pointer;transition:all .18s ease}
@@ -512,15 +512,18 @@ input[type=search]{font-size:16px}
 .exbar[hidden]{display:none}
 .exbar input[type=search]{flex:1}
 .excount{font-size:.86rem;color:var(--ink-sec);white-space:nowrap}
+.exnote{font-size:.84rem;color:var(--ink-sec);margin:0 0 10px}
+.exnote[hidden]{display:none}
     </style>
     <div class="viewtabs" role="tablist" aria-label="List view">
-      <button type="button" class="vtab on" id="vtab-zh" role="tab" aria-selected="true">中文活动</button>
-      <button type="button" class="vtab" id="vtab-en" role="tab" aria-selected="false">English Events</button>
+      <button type="button" class="vtab on" id="vtab-zh" role="tab" aria-selected="true">行业活动</button>
+      <button type="button" class="vtab" id="vtab-en" role="tab" aria-selected="false">生活休闲</button>
     </div>
     <div class="exbar" id="exbar" hidden>
       <input type="search" id="q-en" placeholder="Search events by title or venue…" aria-label="Search English events">
       <span class="excount" id="excount"></span>
     </div>
+    <div class="exnote" id="exnote" hidden>生活休闲类活动 · 英文活动 · 外国人社群 · English-language expat community events</div>
 
     <!-- Filter Bar -->
     <div class="bar">
@@ -1371,7 +1374,7 @@ function setView(v,updateHash){
   if(tz){tz.classList.toggle("on",!en);tz.setAttribute("aria-selected",String(!en))}
   if(te){te.classList.toggle("on",en);te.setAttribute("aria-selected",String(en))}
   const bar=document.querySelector(".bar");if(bar)bar.style.display=en?"none":"";
-  const exb=$("#exbar");if(exb)exb.hidden=!en;
+  const exb=$("#exbar");if(exb)exb.hidden=!en;const exn=$("#exnote");if(exn)exn.hidden=!en;
   const past=$("#past");if(past)past.style.display=en?"none":"";
   const u=document.querySelector("#agentbox .cmdline .u");if(u)u.textContent=en?EXURL:ZHURL;
   if(updateHash!==false){try{history.replaceState(null,"",en?"#en":location.pathname+location.search)}catch(e){}}
