@@ -5,7 +5,7 @@
 增量：私有 manifest 记录每条内容哈希，未变的跳过。
 id 规则：6 位 base36(md5(url+start))，注册表在私有目录 event-ids.json，生成即冻结。
 """
-import json, hashlib, os, sys, datetime
+import json, hashlib, os, re, sys, datetime
 
 REPO = os.path.expanduser('~/workspace/shenzhen-events')
 PRIV = os.path.expanduser('~/workspace/shenzhen-events-private')
@@ -195,6 +195,7 @@ PAGE = """<!DOCTYPE html>
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{img}">
 <link rel="canonical" href="{page}">
+{jsonld}
 <style>
 *{{box-sizing:border-box}}body{{margin:0;background:#0d1218;color:#dcebe4;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}}
 .wrap{{max-width:680px;margin:0 auto;padding:28px 20px 48px}}
@@ -244,6 +245,61 @@ document.querySelectorAll('[data-copy]').forEach(function(b){{b.addEventListener
 </script></body></html>
 """
 
+def _parse_offer(fee, is_hk, url):
+    """Conservative fee parsing: emit an Offer only when the fee text parses
+    cleanly (free / $N / HK$N / \u00a5N); otherwise omit it."""
+    if not fee: return None
+    city_ccy = 'HKD' if is_hk else 'CNY'
+    if '\u514d\u8d39' in fee or fee.strip().lower() in ('free', 'free admission'):
+        price, ccy = 0, city_ccy
+    elif (m := re.search(r'HK\$\s*(\d+(?:\.\d+)?)', fee)):
+        price, ccy = float(m.group(1)), 'HKD'
+    elif (m := re.search(r'[\u00a5\uffe5]\s*(\d+(?:\.\d+)?)', fee)):
+        price, ccy = float(m.group(1)), 'CNY'
+    elif (m := re.search(r'(?:US)?\$\s*(\d+(?:\.\d+)?)', fee)):
+        price, ccy = float(m.group(1)), 'USD'
+    else:
+        return None
+    if price == int(price): price = int(price)
+    return {'@type': 'Offer', 'url': url, 'price': price, 'priceCurrency': ccy,
+            'availability': 'https://schema.org/InStock'}
+
+def event_jsonld(e):
+    """schema.org/Event for the landing page <head> (Google event rich results)."""
+    is_hk = e.get('city') == '\u9999\u6e2f'
+    fmt = e.get('format') or '\u7ebf\u4e0b'
+    online = '\u7ebf\u4e0a' in fmt
+    offline = '\u7ebf\u4e0b' in fmt or not online
+    mode = ('https://schema.org/MixedEventAttendanceMode' if (online and offline)
+            else 'https://schema.org/OnlineEventAttendanceMode' if online
+            else 'https://schema.org/OfflineEventAttendanceMode')
+    landing = f"{SITE}/e/{e['id']}/"
+    obj = {'@context': 'https://schema.org', '@type': 'Event', '@id': landing,
+           'url': landing, 'sameAs': e.get('url'),
+           'name': e.get('title_en') or e.get('title'),
+           'description': e.get('summary_en') or e.get('summary'),
+           'startDate': e.get('start'), 'endDate': e.get('end'),
+           'eventStatus': 'https://schema.org/EventScheduled',
+           'eventAttendanceMode': mode,
+           'image': f"{IMG_BASE}/{e['id']}.png",
+           'organizer': {'@type': 'Organization',
+                         'name': e.get('organizer_en') or e.get('organizer')}}
+    if offline:
+        obj['location'] = {'@type': 'Place',
+                           'name': e.get('venue_en') or e.get('venue'),
+                           'address': {'@type': 'PostalAddress',
+                                       'addressLocality': 'Hong Kong' if is_hk else 'Shenzhen',
+                                       'addressRegion': e.get('district_en') or e.get('district'),
+                                       'addressCountry': 'HK' if is_hk else 'CN'}}
+    else:
+        obj['location'] = {'@type': 'VirtualLocation', 'url': e.get('url')}
+    offer = _parse_offer(e.get('fee'), is_hk, e.get('url'))
+    if offer: obj['offers'] = offer
+    obj = {k: v for k, v in obj.items() if v not in (None, '')}
+    return ('<script type="application/ld+json">\n'
+            + json.dumps(obj, ensure_ascii=False, indent=1).replace('</', '<\\/')
+            + '\n</script>')
+
 def esc(s):
     return (s or '').replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
@@ -256,7 +312,8 @@ def make_page(e):
                        page=f"{SITE}/e/{e['id']}/", cats=cats, time=esc(fmt_time(e)),
                        venue=esc(venue_line(e)), organizer=esc(e.get('organizer') or '见官方页'),
                        fee=esc(e.get('fee') or '票价见官方页'), deadline_row=dl_row,
-                       summary=esc(e.get('summary') or ''), url=esc(e.get('url')), eid=e['id'])
+                       summary=esc(e.get('summary') or ''), url=esc(e.get('url')), eid=e['id'],
+                       jsonld=event_jsonld(e))
     outdir = os.path.join(REPO, 'e', e['id'])
     os.makedirs(outdir, exist_ok=True)
     open(os.path.join(outdir, 'index.html'), 'w').write(html)
@@ -275,7 +332,7 @@ def main():
     for e in data['events']:
         if e.get('visibility') == 'agent':
             skipped.append(e.get('id')); continue
-        payload = {'gen': 3}
+        payload = {'gen': 4}
         payload.update({k: e.get(k) for k in ['id','title','start','end','venue','district','city','fee','organizer','categories','url','summary','registration_deadline']})
         h = hashlib.md5(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
         png = os.path.join(IMG_DIR, e['id'] + '.png')
