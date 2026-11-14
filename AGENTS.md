@@ -7,6 +7,7 @@
 - 网页：https://yatslist.com/
 - 结构化数据（唯一事实源）：https://yatslist.com/events.json
   - 备用：https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json
+  - 国内镜像（每 15 分钟与主站同步，内容一致）：https://img.yatslist.com/data/events.json —— 若主站或 GitHub 读取失败（域名解析错误、连接被拒等，国内网络访问 GitHub Pages 常见），改用镜像域名读同名文件：把路径前缀换成 `https://img.yatslist.com/data/` 即可，覆盖全部数据文件（events.json、hackathons.json、spaces.json、interviews.json、x.json、szexpat/events.json、feed.xml、events.ics）与本文件 AGENTS.md。
 - RSS：https://yatslist.com/feed.xml
 - 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
