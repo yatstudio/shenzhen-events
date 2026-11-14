@@ -14,6 +14,36 @@
 <meta name="twitter:description" content="本周主题「环境感知与数据采集」：先看已有方案，用 solution-cli AI 工具链按自然语言需求生成方案、推荐设备并估算成本，再回官方方案库验证；现场用 Wio Terminal + Grove 温湿度/气压传感器">
 <meta name="twitter:image" content="https://img.yatslist.com/share/buwjvn.png">
 <link rel="canonical" href="https://yatslist.com/e/buwjvn/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Event",
+ "@id": "https://yatslist.com/e/buwjvn/",
+ "url": "https://yatslist.com/e/buwjvn/",
+ "sameAs": "https://www.chaihuo.org/activity/list",
+ "name": "Tech Collision Night: Environmental Sensing & Data Collection (Chaihuo Maker Community Wednesday Sharing Session)",
+ "description": "This week's theme: environmental sensing and data collection. Start from existing solutions, use the solution-cli AI toolchain to generate a solution from natural-language requirements (devices recommended, costs estimated), then verify it against the official solution library. Hands-on: build a mini weather station with a Wio Terminal and Grove temperature/humidity/barometric sensors and get the data on screen. No coding background needed; suited to agriculture, environmental, municipal and warehousing practitioners and makers interested in IoT. Registration via the Jinshuju form (jsj.top/f/zFyMtO).",
+ "startDate": "2026-11-11T19:30:00+08:00",
+ "endDate": "2026-11-11T21:00:00+08:00",
+ "eventStatus": "https://schema.org/EventScheduled",
+ "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+ "image": "https://img.yatslist.com/share/buwjvn.png",
+ "organizer": {
+  "@type": "Organization",
+  "name": "Chaihuo Makerspace"
+ },
+ "location": {
+  "@type": "Place",
+  "name": "Chaihuo Makerspace (B622, Design Commune, Vanke Cloud City)",
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Shenzhen",
+   "addressRegion": "Nanshan District",
+   "addressCountry": "CN"
+  }
+ }
+}
+</script>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#0d1218;color:#dcebe4;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
 .wrap{max-width:680px;margin:0 auto;padding:28px 20px 48px}
@@ -45,7 +75,7 @@ h1{font-size:26px;line-height:1.4;margin:22px 0 6px}
 <div class="row"><b>费用</b><span>票价见官方页</span></div>
 
 <div class="sum">本周主题「环境感知与数据采集」：先看已有方案，用 solution-cli AI 工具链按自然语言需求生成方案、推荐设备并估算成本，再回官方方案库验证；现场用 Wio Terminal + Grove 温湿度/气压传感器亲手搭一个小气象站，把数据送上屏。无需编程基础，适合农业、环保、市政、仓储厂房从业者与对物联网感兴趣的 Maker。报名：金数据表单（jsj.top/f/zFyMtO）。</div>
-<a class="btn" href="https://www.chaihuo.org/activity/list" rel="noopener">去官方页报名 →</a>
+<a class="btn" id="reg" href="https://www.chaihuo.org/activity/list" rel="noopener">去官方页报名 →</a>
 </div>
 <div class="sub"><h2>把整个清单喂给你的 Agent</h2>
 <p>一次订阅，之后 130+ 场深圳活动的新增、截止与余位，你的 Agent 按它的巡检节奏替你盯，命中就喊你。</p>
@@ -56,5 +86,8 @@ h1{font-size:26px;line-height:1.4;margin:22px 0 6px}
 <div class="foot">数据逐条核实自官方页面 · 免费无广告 · <a href="https://yatslist.com/szevents/">查看完整活动清单</a><br>© 2026 Yat's List · Shenzhen events, served to your Agent.</div>
 </div>
 <script>
+(function(){var id="buwjvn",r=(new URLSearchParams(location.search).get("ref")||"direct").replace(/[^a-z0-9_-]/gi,"").slice(0,20)||"direct";
+function hit(k){try{navigator.sendBeacon("https://submit.yatslist.com/v1/hit?e="+id+"&k="+k+"&r="+encodeURIComponent(r))}catch(e){}}
+hit("view");document.getElementById("reg").addEventListener("click",function(){hit("go")});})();
 document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){navigator.clipboard&&navigator.clipboard.writeText(b.getAttribute('data-copy'));b.textContent='已复制';setTimeout(function(){b.textContent='复制'},1600);});});
 </script></body></html>

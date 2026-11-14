@@ -14,6 +14,35 @@
 <meta name="twitter:description" content="线上黑客松：作品须接入支付宝AI支付、用真实付费检验产品价值，五大赛道（Vibe Pay / Skill Pay / Token Pay / Machine Pay / Agent Pay），总奖池 20 万元另有 3 ">
 <meta name="twitter:image" content="https://img.yatslist.com/share/c6mzsv.png">
 <link rel="canonical" href="https://yatslist.com/e/c6mzsv/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Event",
+ "@id": "https://yatslist.com/e/c6mzsv/",
+ "url": "https://yatslist.com/e/c6mzsv/",
+ "sameAs": "https://aipay.alipay.com/community/events/payathon-2026",
+ "name": "PAYATHON 2026 · Alipay AI Pay Annual Hackathon",
+ "description": "Online hackathon: entries must integrate Alipay AI Pay and validate product value with real payments, five tracks (Vibe Pay / Skill Pay / Token Pay / Machine Pay / Agent Pay), total prize pool ¥200,000 plus ¥30,000 in surprise rewards; submission deadline December 9, offline final roadshow on December 26 (city to be announced).",
+ "eventStatus": "https://schema.org/EventScheduled",
+ "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+ "image": "https://img.yatslist.com/share/c6mzsv.png",
+ "organizer": {
+  "@type": "Organization",
+  "name": "Alipay AI Pay"
+ },
+ "location": {
+  "@type": "VirtualLocation",
+  "url": "https://aipay.alipay.com/community/events/payathon-2026"
+ },
+ "offers": {
+  "@type": "Offer",
+  "url": "https://aipay.alipay.com/community/events/payathon-2026",
+  "price": 0,
+  "priceCurrency": "CNY",
+  "availability": "https://schema.org/InStock"
+ }
+}
+</script>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#0d1218;color:#dcebe4;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
 .wrap{max-width:680px;margin:0 auto;padding:28px 20px 48px}
@@ -45,7 +74,7 @@ h1{font-size:26px;line-height:1.4;margin:22px 0 6px}
 <div class="row"><b>费用</b><span>免费</span></div>
 <div class="row"><b>报名截止</b><span>12月1日 23:59</span></div>
 <div class="sum">线上黑客松：作品须接入支付宝AI支付、用真实付费检验产品价值，五大赛道（Vibe Pay / Skill Pay / Token Pay / Machine Pay / Agent Pay），总奖池 20 万元另有 3 万元惊喜奖励；作品提交截止 12 月 9 日，12 月 26 日线下决赛路演（城市待公布）。</div>
-<a class="btn" href="https://aipay.alipay.com/community/events/payathon-2026" rel="noopener">去官方页报名 →</a>
+<a class="btn" id="reg" href="https://aipay.alipay.com/community/events/payathon-2026" rel="noopener">去官方页报名 →</a>
 </div>
 <div class="sub"><h2>把整个清单喂给你的 Agent</h2>
 <p>一次订阅，之后 130+ 场深圳活动的新增、截止与余位，你的 Agent 按它的巡检节奏替你盯，命中就喊你。</p>
@@ -56,5 +85,8 @@ h1{font-size:26px;line-height:1.4;margin:22px 0 6px}
 <div class="foot">数据逐条核实自官方页面 · 免费无广告 · <a href="https://yatslist.com/szevents/">查看完整活动清单</a><br>© 2026 Yat's List · Shenzhen events, served to your Agent.</div>
 </div>
 <script>
+(function(){var id="c6mzsv",r=(new URLSearchParams(location.search).get("ref")||"direct").replace(/[^a-z0-9_-]/gi,"").slice(0,20)||"direct";
+function hit(k){try{navigator.sendBeacon("https://submit.yatslist.com/v1/hit?e="+id+"&k="+k+"&r="+encodeURIComponent(r))}catch(e){}}
+hit("view");document.getElementById("reg").addEventListener("click",function(){hit("go")});})();
 document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){navigator.clipboard&&navigator.clipboard.writeText(b.getAttribute('data-copy'));b.textContent='已复制';setTimeout(function(){b.textContent='复制'},1600);});});
 </script></body></html>
