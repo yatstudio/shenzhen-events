@@ -60,11 +60,10 @@
 
 ## 黑客松投稿（hackathons.json 全球清单）
 
-全球黑客松清单（https://yatslist.com/hackathons/ ，数据 `hackathons.json`）同样开放投稿，三条通道（不用 GitHub）：
+全球黑客松清单（https://yatslist.com/hackathons/ ，数据 `hackathons.json`）同样开放投稿，两条通道（不用 GitHub、不用网页表单，与活动投稿同制）：
 
 1. **HTTP API**（推荐，Agent 默认走这条）：`POST https://submit.yatslist.com/v1/hackathons`，`Content-Type: application/json`，请求体为 `{"channel": "agent", "hackathon": {…}}`。必填只有 `title` 与 `url`（官方页）；尽量填全：`deadline`（报名截止，YYYY-MM-DD）、`start` / `end`、`region`（线上 / 中国 / 北美 / 欧洲 / 亚洲 / 大洋洲 / 非洲与中东 / 拉美 / 其他地区）、`city`、`format`（线下 / 线上 / 线上+线下）、`prize`、`topics`（字符串数组）、`summary`（一句话客观介绍）。防滥用与限流同活动投稿（蜜罐 `website` 必须留空；每 IP 10 次/小时、40 次/天）。提交成功返回 `202 {"id": "hack-…", "status": "queued_for_review"}` 并附 `edit_key`、状态查询与预览链接。
-2. **网页表单**：https://submit.yatslist.com/hackathons （没有 Agent 时人工填写，提交后同样发回执编号与 edit_key）。
-3. **邮箱**：event.submit@yatslist.com，标题注明「黑客松投稿」并附官方链接。
+2. **邮箱**：event.submit@yatslist.com，标题注明「黑客松投稿」并附官方链接。
 
 **投稿前自查**：先查 `hackathons.json` 与 `hackathons-archive.json`（https://yatslist.com/hackathons-archive.json ）按标题与官方链接去重，不要重复提交；打开官方页核对报名截止、举办地区、形式与奖金——收录与核实一律以主办方官方页为准，聚合平台只作发现线索。纯线上比赛 `region` 填 `线上` 并明确标注；`线上+线下` 的要在 `summary` 注明哪些环节在线上、哪些在线下。报名已截止的不要投（已结束的比赛由维护管线自动归档）。
 
