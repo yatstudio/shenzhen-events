@@ -514,6 +514,7 @@ input[type=search]{font-size:16px}
     <input type="search" id="xq" placeholder="搜名字、@账号、自我介绍…">
     <span id="xchips"></span>
     <div class="xregs" id="xregs" style="margin-top:8px"></div>
+    <div class="xsort" id="xsort" style="margin-top:8px"></div>
   </div>
   <div id="xlist"></div>
   <p class="xnote">加入方式二选一：网页提交（不用注册），或 GitHub 提 PR 只改 x.json。提交后轻核就上榜；下榜或改信息，邮件 yat@yatslist.com。</p>
@@ -575,11 +576,33 @@ applyTheme();
 let LANG="zh"; try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
 if(["zh","tw","en"].indexOf(LANG)<0)LANG="zh";
 const I18N={
- zh:{title:"AI X List",sub:"华语 AI 圈的人，都在这张单子上：按分类和地域找到他们，一键打开主页或关注。首批来自 AI 圈谱（aimap.social）公开图谱，也开放自助登记——自己加进来，就能被别人找到。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、地域、自我介绍…",all:"全部",allReg:"全部地区",unknown:"未知",home:"X主页 ›",follow:"＋ 到X关注",fans:"粉丝",empty:"没有符合的人，换个筛选试试。"},
- tw:{title:"AI X List",sub:"華語 AI 圈的人，都在這張單子上：按分類和地域找到他們，一鍵打開主頁或關注。首批來自 AI 圈譜（aimap.social）公開圖譜，也開放自助登記——自己加進來，就能被別人找到。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、地域、自我介紹…",all:"全部",allReg:"全部地區",unknown:"未知",home:"X主頁 ›",follow:"＋ 到X關注",fans:"粉絲",empty:"沒有符合的人，換個篩選試試。"},
- en:{title:"AI X List",sub:"The Chinese-speaking AI community on X, on one list — find people by category and region, open a profile or follow in one tap. Seeded from the public AI Map (aimap.social) graph; add yourself to be listed.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, region, intro…",all:"All",allReg:"All regions",unknown:"Unknown",home:"X Profile ›",follow:"＋ Follow on X",fans:"followers",empty:"Nobody matches — try another filter."}
+ zh:{title:"AI X List",sub:"华语 AI 圈的人，都在这张单子上：按分类和地域找到他们，一键打开主页或关注。首批来自 AI 圈谱（aimap.social）公开图谱，也开放自助登记——自己加进来，就能被别人找到。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、地域、自我介绍…",all:"全部",allReg:"全部地区",unknown:"未知",home:"X主页 ›",follow:"＋ 到X关注",fans:"粉丝",sortRec:"推荐",sortFans:"粉丝排序",sortRandom:"随机",shuffle:"🔀 换一换",empty:"没有符合的人，换个筛选试试。"},
+ tw:{title:"AI X List",sub:"華語 AI 圈的人，都在這張單子上：按分類和地域找到他們，一鍵打開主頁或關注。首批來自 AI 圈譜（aimap.social）公開圖譜，也開放自助登記——自己加進來，就能被別人找到。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、地域、自我介紹…",all:"全部",allReg:"全部地區",unknown:"未知",home:"X主頁 ›",follow:"＋ 到X關注",fans:"粉絲",sortRec:"推薦",sortFans:"粉絲排序",sortRandom:"隨機",shuffle:"🔀 換一換",empty:"沒有符合的人，換個篩選試試。"},
+ en:{title:"AI X List",sub:"The Chinese-speaking AI community on X, on one list — find people by category and region, open a profile or follow in one tap. Seeded from the public AI Map (aimap.social) graph; add yourself to be listed.",join:"＋ Add me (web form, no sign-up)",joinGh:"Add via GitHub (PR, one line)",search:"Search name, @handle, region, intro…",all:"All",allReg:"All regions",unknown:"Unknown",home:"X Profile ›",follow:"＋ Follow on X",fans:"followers",sortRec:"Recommended",sortFans:"By followers",sortRandom:"Random",shuffle:"🔀 Shuffle",empty:"Nobody matches — try another filter."}
 };
 let PEOPLE=[], CAT="全部", REG="__all", Q="";
+let SORT="rec"; try{SORT=localStorage.getItem("xlistSort")||"rec"}catch(e){}
+if(["rec","fans","random"].indexOf(SORT)<0)SORT="rec";
+let SEED=0; try{SEED=parseInt(sessionStorage.getItem("xlistSeed")||"0",10)||0}catch(e){}
+if(!SEED){SEED=(Math.random()*2147483647)|0; try{sessionStorage.setItem("xlistSeed",String(SEED))}catch(e){}}
+function rng32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function fansNum(p){const s=String(p.followers||"").replace(/,/g,"");const m=s.match(/([\d.]+)\s*(亿|万)?/);if(!m)return 0;let n=parseFloat(m[1]);if(m[2]==="亿")n*=1e8;else if(m[2]==="万")n*=1e4;return n}
+function orderedPeople(){
+  const pinned=PEOPLE.filter(p=>!p.followers), rest=PEOPLE.filter(p=>!!p.followers);
+  if(SORT==="fans"){rest.sort((a,b)=>fansNum(b)-fansNum(a));}
+  else if(SORT==="random"){const rnd=rng32(SEED);for(let i=rest.length-1;i>0;i--){const j=(rnd()*(i+1))|0;const t=rest[i];rest[i]=rest[j];rest[j]=t;}}
+  return pinned.concat(rest);
+}
+function renderSort(){
+  const t=I18N[LANG];
+  const opts=[["rec",t.sortRec],["fans",t.sortFans],["random",t.sortRandom]];
+  let h=opts.map(o=>'<button class="xchip'+(SORT===o[0]?" on":"")+'" data-sort="'+o[0]+'">'+esc(o[1])+"</button>").join("");
+  if(SORT==="random")h+='<button class="xchip" id="xshuffle">'+esc(t.shuffle)+"</button>";
+  document.getElementById("xsort").innerHTML=h;
+  document.querySelectorAll("#xsort .xchip[data-sort]").forEach(b=>b.addEventListener("click",()=>{SORT=b.dataset.sort;try{localStorage.setItem("xlistSort",SORT)}catch(e){}renderSort();render();}));
+  const sh=document.getElementById("xshuffle");
+  if(sh)sh.addEventListener("click",()=>{SEED=(Math.random()*2147483647)|0;try{sessionStorage.setItem("xlistSeed",String(SEED))}catch(e){}render();});
+}
 const COLORS=["#2ee6a8","#5a8cfb","#f078a0","#f0b450","#78c8aa","#aa82f0","#fb8c5a","#5ac8e6"];
 function esc(s){return (s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function applyLang(){
@@ -590,7 +613,7 @@ function applyLang(){
   document.getElementById("x-join-gh").textContent=t.joinGh;
   document.getElementById("xq").placeholder=t.search;
   document.querySelectorAll("[data-setlang]").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-  renderChips(); render();
+  renderChips(); renderSort(); render();
 }
 document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>{LANG=b.dataset.setlang;try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();}));
 function allCats(){const s=[];PEOPLE.forEach(p=>(p.categories||[]).forEach(c=>{if(s.indexOf(c)<0)s.push(c)}));return s}
@@ -606,7 +629,7 @@ function renderChips(){
 }
 function render(){
   const t=I18N[LANG]; const q=Q.trim().toLowerCase();
-  const rows=PEOPLE.filter(p=>{ 
+  const rows=orderedPeople().filter(p=>{ 
     if(CAT!=="全部"&&(p.categories||[]).indexOf(CAT)<0)return false;
     if(REG!=="__all"&&(p.location||"未知")!==REG)return false;
     if(q){const hay=((p.name||"")+" "+(p.handle||"")+" "+(p.intro||"")+" "+(p.intro_en||"")+" "+(p.location||"")).toLowerCase();if(hay.indexOf(q)<0)return false;}
