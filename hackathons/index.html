@@ -634,6 +634,7 @@ input[type=search]{font-size:16px}
       <button type="button" class="chip" data-q="topic:Agent">Agent</button>
     </div>
     <div id="fgroups">
+      <div class="fgroup"><span class="flabel" id="fl-view">视图</span><span class="seg" id="viewseg"><button type="button" class="chip on" data-v="open" id="vopen">报名中</button><button type="button" class="chip" data-v="arch" id="varch">往期归档</button></span></div>
       <div class="fgroup"><span class="flabel" id="fl-region">地区</span><span class="seg" id="regions"></span></div>
       <div class="fgroup"><span class="flabel" id="fl-format">形式</span><span class="seg" id="formats"></span></div>
       <div class="fgroup"><span class="flabel" id="fl-topic">主题</span><span class="seg" id="topics"></span></div>
@@ -664,16 +665,16 @@ input[type=search]{font-size:16px}
 <p class="prompt" id="hprompt-workbuddy"></p><div class="actions"><button class="btn primary" onclick="copyEl('hprompt-workbuddy',this)">复制这段话</button></div></div>
 
 <div class="agblock"><h4>🧑‍💻 Codex</h4>
-<ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（发邮件即可，不用 GitHub）</li></ol>
+<ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（走投稿接口，不用 GitHub）</li></ol>
 <p class="prompt" id="hprompt-codex"></p><div class="actions"><button class="btn primary" onclick="copyEl('hprompt-codex',this)">复制这段话</button></div></div>
 </div>
 
 <!-- Hackathon Submission Card -->
 <div class="subcard" id="hack-post">
 <h3 id="hpost-title">📋 投稿黑客松：让你的 Agent 代你提交</h3>
-<p class="sum" id="hpost-sum">发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你发投稿邮件。</p>
+<p class="sum" id="hpost-sum">发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再通过投稿接口代你提交（不用 GitHub、不用注册）。</p>
 <p class="sum" id="hroute-q">你想怎么提交？</p>
-<div class="actions"><button class="btn" id="hroute-yes" onclick="routeHackPost('gh')">有 GitHub</button><button class="btn" id="hroute-mail" onclick="routeHackPost('mail')">用邮箱提交</button></div>
+<div class="actions"><button class="btn" id="hroute-yes" onclick="routeHackPost('agent')">让 Agent 提交</button><a class="btn" id="hroute-form-btn" href="https://submit.yatslist.com/hackathons" target="_blank" rel="noopener">📝 打开网页表单提交</a><button class="btn" id="hroute-mail" onclick="routeHackPost('mail')">用邮箱提交</button></div>
 <div id="hroute-gh" hidden>
 <p class="prompt" id="hprompt-post"></p>
 <div class="actions"><button class="btn primary" id="hpost-copy" onclick="copySubmitHack(this)">📋 复制投稿话术给我的 Agent</button></div>
@@ -729,18 +730,18 @@ const DISP={"reg": {"zh": {"大陆": "大陆", "香港": "香港", "澳门": "�
 const STR={
 zh:{
 docTitle:"Yat's List · 全球黑客松清单 | Global Hackathons",
-metaDesc:"全球正在报名的黑客松与创新大赛：北美、欧洲、亚洲、中国线下与全球线上，每日更新，数据来自黑123、Devpost 等渠道并逐条核实。",
+metaDesc:"全球正在报名的黑客松与创新大赛：北美、欧洲、亚洲、中国线下与全球线上，每日更新，逐条核实自官方页面。",
 navHome:"活动",navAgent:"Agent",mnavBtn:"☰ 菜单",navSubmit:"提交黑客松",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Space",
 themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 pageTitle:"全球黑客松清单",heroMeta:function(a,b,u){return a+" 场报名中 · "+b+" 场 72 小时内截止"+(u?" · 数据 "+u:"")},abTitle:"让你的 Agent 盯着全球黑客松，不用自己刷",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，快截止时提醒你。",abApis:'也可以直接读：<a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范） · <a href="#agent-sub">各 Agent 设置步骤 ↓</a>',dayCount:function(n){return n+" 场"},regBtn:"报名 →",moreBtn:"更多操作",dlShort:"截止",startShort:"开始",
 pageSub:"<b>正在报名</b>的黑客松与创新大赛 · <b>全球</b>线下 + <b>线上</b> · 每天更新，每条打开官方页核实",
-cmdLabel:"黑客松清单",pipLabel:"命令行 CLI",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把黑客松名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"复制",copied:"已复制 ✓",
+cmdLabel:"黑客松清单",pipLabel:"命令行 CLI",routeQ:"你想怎么提交？",routeYes:"让 Agent 提交",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把黑客松名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"复制",copied:"已复制 ✓",
 statTotal:"报名中",statSoon:"72 小时内截止",statCn:"全球线下",statUpd:"数据更新",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",subAnchor:"订阅 ↓",
 backBtn:"← 返回 Yat's List · 深圳活动",agentBtn:"用我的 Agent 订阅 →",
 searchPh:"搜比赛名、城市、主题（如：AI Agent / 旧金山 / 伦敦）",
 filterBtn:"筛选",fRegion:"地区",fFormat:"形式",fTopic:"主题",fAll:"全部",clear:"清除筛选",
 fres:function(n){return "共 "+n+" 场"},
-loading:"加载中…",loadFail:"数据加载失败，请稍后刷新",noResults:"没有符合条件的比赛",
+viewL:"视图",viewOpen:"报名中",viewArch:"往期归档",archT:"🗄 往期归档",archS:"已结束 / 已截止 · 按截止日期倒序",heroMetaArch:function(a,u){return a+" 场往期归档"+(u?" · 数据 "+u:"")},loading:"加载中…",loadFail:"数据加载失败，请稍后刷新",noResults:"没有符合条件的比赛",
 soonT:"72 小时内截止",soonS:"先抢这些",weekT:"本周内截止",restT:"报名中",restS:"按截止日期排序",
 regClose:"报名截止",startL:"比赛开始",seeOfficial:"见官方页",dateWord:"日期",
 daysLeft:function(n){return "剩 "+n+" 天"},closesToday:"今天截止",
@@ -749,17 +750,17 @@ official:"官方页 / 报名",detailSuffix:"详情",sourcePfx:"来源：",
 monthFmt:function(m){return m+" 月"},
 footTag:"深圳活动，喂给你的 Agent 吃。",footHome:"首页",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 逐条核实自官方页面 · 免费无广告",
 footContact:'合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
-footSrc:'本站由 Yat 的 Agent 自动维护（每日更新）· 清单数据来源：<a href="https://hack123.henryht.sh" target="_blank" rel="noopener">黑123</a>、Devpost、lablab.ai、HackerTrip 等渠道（逐条核实） · 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a>',
+footSrc:'本站由 Yat 的 Agent 自动维护（每日更新）· 每条均按官方页面逐条核实 · 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a>',
 mTitle:"🤖 订阅全球黑客松清单",mClose:"✕ 关闭",close:"关闭",copyPrompt:"📋 复制这段话",
 subPrompt:"请订阅「YAT 黑客松清单」并给我报名提醒：数据源 https://yatslist.com/hackathons.json（每天早上更新，无需登录）。每天读取一次，按我的技术方向和所在地区筛选；新出现且高度相关的黑客松当天告诉我；报名截止前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的比赛，提醒时附官方报名链接。",
 hsubTitle:"🤖 让你的 Agent 盯着全球黑客松，不用自己刷",
 hsubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：',
 viewAll:"查看全部 Agent 版本",
 agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
-agSteps:["<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>","<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>","<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（发邮件即可，不用 GitHub）</li>"],
+agSteps:["<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>","<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>","<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按清单规范代你投稿黑客松（走投稿接口，不用 GitHub）</li>"],
 postJump:"提交黑客松",
 postTitle:"📋 投稿黑客松：让你的 Agent 代你提交",
-postSum:"发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再代你发投稿邮件。",
+postSum:"发现一场清单里没有的黑客松？把下方话术发给你的 Agent（Codex / Claude Code 等），它会先读投稿规范、打开官方页核对报名截止、地区、形式和奖金，再通过投稿接口代你提交（不用 GitHub、不用注册）。",
 postBtn:"📋 复制投稿话术给我的 Agent",
 copiedGo:"已复制 ✓ 去粘贴给你的 Agent",
 mSubTitle:"🤖 订阅话术",mPostTitle:"📋 投稿话术",mcopy:"📋 复制这段话",
@@ -768,18 +769,18 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 },
 tw:{
 docTitle:"Yat's List · 全球黑客松清單 | Global Hackathons",
-metaDesc:"全球正在報名的黑客松與創新大賽：北美、歐洲、亞洲、中國線下與全球線上，每日更新，數據來自黑123、Devpost 等渠道並逐條核實。",
+metaDesc:"全球正在報名的黑客松與創新大賽：北美、歐洲、亞洲、中國線下與全球線上，每日更新，逐條核實自官方頁面。",
 navHome:"活動",navAgent:"Agent",mnavBtn:"☰ 選單",navSubmit:"提交黑客松",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Space",
 themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 pageTitle:"全球黑客松清單",heroMeta:function(a,b,u){return a+" 場報名中 · "+b+" 場 72 小時內截止"+(u?" · 數據 "+u:"")},abTitle:"讓你的 Agent 盯著全球黑客松，不用自己刷",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，快截止時提醒你。",abApis:'也可以直接讀：<a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範） · <a href="#agent-sub">各 Agent 設置步驟 ↓</a>',dayCount:function(n){return n+" 場"},regBtn:"報名 →",moreBtn:"更多操作",dlShort:"截止",startShort:"開始",
 pageSub:"<b>正在報名</b>的黑客松與創新大賽 · <b>全球</b>線下 + <b>線上</b> · 每天更新，每條打開官方頁核實",
-cmdLabel:"黑客松清單",pipLabel:"命令列 CLI",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把黑客松名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"複製",copied:"已複製 ✓",
+cmdLabel:"黑客松清單",pipLabel:"命令列 CLI",routeQ:"你想怎麼提交？",routeYes:"讓 Agent 提交",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把黑客松名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",copy:"複製",copied:"已複製 ✓",
 statTotal:"報名中",statSoon:"72 小時內截止",statCn:"全球線下",statUpd:"數據更新",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",subAnchor:"訂閱 ↓",
 backBtn:"← 返回 Yat's List · 深圳活動",agentBtn:"用我的 Agent 訂閱 →",
 searchPh:"搜比賽名、城市、主題（如：AI Agent / 舊金山 / 倫敦）",
 filterBtn:"篩選",fRegion:"地區",fFormat:"形式",fTopic:"主題",fAll:"全部",clear:"清除篩選",
 fres:function(n){return "共 "+n+" 場"},
-loading:"載入中…",loadFail:"數據載入失敗，請稍後刷新",noResults:"沒有符合條件的比賽",
+viewL:"視圖",viewOpen:"報名中",viewArch:"往期歸檔",archT:"🗄 往期歸檔",archS:"已結束 / 已截止 · 按截止日期倒序",heroMetaArch:function(a,u){return a+" 場往期歸檔"+(u?" · 數據 "+u:"")},loading:"載入中…",loadFail:"數據載入失敗，請稍後刷新",noResults:"沒有符合條件的比賽",
 soonT:"72 小時內截止",soonS:"先搶這些",weekT:"本週內截止",restT:"報名中",restS:"按截止日期排序",
 regClose:"報名截止",startL:"比賽開始",seeOfficial:"見官方頁",dateWord:"日期",
 daysLeft:function(n){return "剩 "+n+" 天"},closesToday:"今天截止",
@@ -788,7 +789,7 @@ official:"官方頁 / 報名",detailSuffix:"詳情",sourcePfx:"來源：",
 monthFmt:function(m){return m+" 月"},
 footTag:"深圳活動，餵給你的 Agent 吃。",footHome:"首頁",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 逐條核實自官方頁面 · 免費無廣告",
 footContact:'合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
-footSrc:'本站由 Yat 的 Agent 自動維護（每日更新）· 清單數據來源：<a href="https://hack123.henryht.sh" target="_blank" rel="noopener">黑123</a>、Devpost、lablab.ai、HackerTrip 等渠道（逐條核實） · 有建議或問題，歡迎聯繫 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a>',
+footSrc:'本站由 Yat 的 Agent 自動維護（每日更新）· 每條均按官方頁面逐條核實 · 有建議或問題，歡迎聯繫 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a>',
 mTitle:"🤖 訂閱全球黑客松清單",mClose:"✕ 關閉",close:"關閉",copyPrompt:"📋 複製這段話",
 subPrompt:"請訂閱「YAT 黑客松清單」並給我報名提醒：數據源 https://yatslist.com/hackathons.json（每天早上更新，無需登錄）。每天讀取一次，按我的技術方向和所在地區篩選；新出現且高度相關的黑客松當天告訴我；報名截止前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的比賽，提醒時附官方報名鏈接。",
 hsubTitle:"🤖 讓你的 Agent 盯著全球黑客松，不用自己刷",
@@ -798,7 +799,7 @@ agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
 agSteps:["<li>打開豆包工作 →「定時任務」→ 新建</li><li>重複選「每天」、時間 9:00，任務內容粘貼下方話術</li><li>保存，之後每天自動推送到對話</li>","<li>打開 WorkBuddy → 左側「自動化」→ 添加任務</li><li>執行頻率選「每天 9:00」，提示詞粘貼下方話術</li><li>保存，之後每天自動執行並推送結果</li>","<li>把下方話術直接發給 Codex</li><li>讓它創建每天 9:00（Asia/Shanghai）的自動化任務</li><li>還可以讓它按清單規範代你投稿黑客松（提 PR）</li>"],
 postJump:"提交黑客松",
 postTitle:"📋 投稿黑客松：讓你的 Agent 代你提交",
-postSum:"發現一場清單裡沒有的黑客松？把下方話術發給你的 Agent（Codex / Claude Code 等），它會先讀投稿規範、打開官方頁核對報名截止、地區、形式和獎金，再代你發投稿郵件。",
+postSum:"發現一場清單裡沒有的黑客松？把下方話術發給你的 Agent（Codex / Claude Code 等），它會先讀投稿規範、打開官方頁核對報名截止、地區、形式和獎金，再通過投稿接口代你提交（不用 GitHub、不用註冊）。",
 postBtn:"📋 複製投稿話術給我的 Agent",
 copiedGo:"已複製 ✓ 去粘貼給你的 Agent",
 mSubTitle:"🤖 訂閱話術",mPostTitle:"📋 投稿話術",mcopy:"📋 複製這段話",
@@ -807,18 +808,18 @@ chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkB
 },
 en:{
 docTitle:"Yat's List · Global Hackathons | Worldwide, Open for Registration",
-metaDesc:"Hackathons and innovation competitions open for registration worldwide — in-person across North America, Europe, Asia and China, plus online everywhere. Updated daily; data from Hack123, Devpost and other channels, each listing verified.",
+metaDesc:"Hackathons and innovation competitions open for registration worldwide — in-person across North America, Europe, Asia and China, plus online everywhere. Updated daily; every listing verified against its official page.",
 navHome:"Events",navAgent:"Agent",mnavBtn:"☰ Menu",navSubmit:"Submit a hackathon",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Space",
 themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 pageTitle:"Global Hackathons",heroMeta:function(a,b,u){return a+" open · "+b+" closing within 72h"+(u?" · updated "+u:"")},abTitle:"Let your Agent watch global hackathons for you",abSub:"Doubao Workspace · WorkBuddy · Codex · Claude Code can all subscribe. Set it up once; get pinged for new matches and closing deadlines.",abApis:'Or read directly: <a href="/hackathons.json">hackathons.json</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide) · <a href="#agent-sub">Setup steps per Agent ↓</a>',dayCount:function(n){return n+(n===1?" event":" events")},regBtn:"Register →",moreBtn:"More actions",dlShort:"Deadline",startShort:"Starts",
 pageSub:"Hackathons &amp; innovation competitions <b>open for registration</b> · <b>worldwide</b> in person + <b>online</b> · Updated daily, each verified on its official page",
-cmdLabel:"Hackathons",pipLabel:"CLI",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the hackathon name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",copy:"Copy",copied:"Copied ✓",
+cmdLabel:"Hackathons",pipLabel:"CLI",routeQ:"How would you like to submit?",routeYes:"Submit via my Agent",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the hackathon name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",copy:"Copy",copied:"Copied ✓",
 statTotal:"Open now",statSoon:"Closing in 72h",statCn:"In-person worldwide",statUpd:"Updated",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",subAnchor:"Subscribe ↓",
 backBtn:"← Back to Yat's List · Shenzhen Events",agentBtn:"Subscribe via my Agent →",
 searchPh:"Search by name, city or topic (e.g. AI Agent / San Francisco / London)",
 filterBtn:"Filters",fRegion:"Region",fFormat:"Format",fTopic:"Topic",fAll:"All",clear:"Clear filters",
 fres:function(n){return n+" events"},
-loading:"Loading…",loadFail:"Failed to load data — please refresh",noResults:"No competitions match your filters",
+viewL:"View",viewOpen:"Open",viewArch:"Archive",archT:"🗄 Archive",archS:"Ended / closed · newest deadline first",heroMetaArch:function(a,u){return a+" past competitions"+(u?" · data "+u:"")},loading:"Loading…",loadFail:"Failed to load data — please refresh",noResults:"No competitions match your filters",
 soonT:"Closing within 72 hours",soonS:"Grab these first",weekT:"Closing this week",restT:"Open for registration",restS:"Sorted by deadline",
 regClose:"Registration closes",startL:"Event starts",seeOfficial:"See official page",dateWord:"Date",
 daysLeft:function(n){return n+(n===1?" day":" days")+" left"},closesToday:"Closes today",
@@ -827,7 +828,7 @@ official:"Official / Register",detailSuffix:"Details",sourcePfx:"Source: ",
 monthFmt:function(m){return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m-1]},
 footTag:"Shenzhen events, served to your Agent.",footHome:"Home",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Every listing verified against its official page · Free, no ads",
 footContact:'Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
-footSrc:'Maintained automatically by Yat\'s Agent (updated daily) · Data sources: <a href="https://hack123.henryht.sh" target="_blank" rel="noopener">黑123 (Hack123)</a>, Devpost, lablab.ai, HackerTrip and more (each listing verified) · Questions or suggestions? Contact Yat: <a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a>',
+footSrc:'Maintained automatically by Yat\'s Agent (updated daily) · Every listing verified against its official page · Questions or suggestions? Contact Yat: <a href="https://x.com/yatbtc" target="_blank" rel="noopener">X @yatbtc</a>',
 mTitle:"🤖 Subscribe to Global Hackathons",mClose:"✕ Close",close:"Close",copyPrompt:"📋 Copy this prompt",
 subPrompt:"Please subscribe to the \"YAT Hackathons\" digest and remind me about registrations: data source https://yatslist.com/hackathons.json (updated every morning, no login needed). Read it once a day and filter by my tech interests and region; tell me the same day when a new, highly relevant hackathon appears; remind me 3 days and 1 day before each registration deadline. Do not invent competitions that are not in the data source, and include the official registration link in every reminder.",
 hsubTitle:"🤖 Let your Agent watch global hackathons for you",
@@ -837,7 +838,7 @@ agNames:["🫘 Doubao Workspace","💼 WorkBuddy","🧑‍💻 Codex"],
 agSteps:["<li>Open Doubao Workspace → “Scheduled tasks” → New</li><li>Repeat “Daily”, time 9:00, paste the prompt below as the task content</li><li>Save — it will push to your chat every day</li>","<li>Open WorkBuddy → “Automation” in the left sidebar → Add task</li><li>Frequency “Daily 9:00”, paste the prompt below</li><li>Save — it runs daily and pushes the results</li>","<li>Send the prompt below straight to Codex</li><li>Ask it to create a daily 9:00 (Asia/Shanghai) automation</li><li>You can also have it submit hackathons for you (open a PR) following the guide</li>"],
 postJump:"Submit a hackathon",
 postTitle:"📋 Submit a hackathon: let your Agent do it for you",
-postSum:"Found a hackathon that is not listed here yet? Send the prompt below to your Agent (Codex / Claude Code, etc.) — it will read the submission guide first, verify the deadline, region, format and prize on the official page, then open a PR or send the submission email for you.",
+postSum:"Found a hackathon that is not listed here yet? Send the prompt below to your Agent (Codex / Claude Code, etc.) — it will read the submission guide first, verify the deadline, region, format and prize on the official page, then submit it for you through the submission API (no GitHub account needed).",
 postBtn:"📋 Copy the submission prompt for my Agent",
 copiedGo:"Copied ✓ — now paste it to your Agent",
 mSubTitle:"🤖 Subscription prompt",mPostTitle:"📋 Submission prompt",mcopy:"📋 Copy this prompt",
@@ -861,9 +862,9 @@ doubao:"Every morning at 9:00, open https://yatslist.com/hackathons.json and rea
 workbuddy:"Every morning at 9:00, open https://yatslist.com/hackathons.json and read the latest data (a JSON file of hackathons worldwide — in-person across North America, Europe, Asia and China, plus online ones). Consider only contests whose registration is still open, and pick out: 1) registrations closing within 72 hours; 2) my regions of interest [North America / Europe / Asia / China / Online] and formats (in-person / online / hybrid); 3) topics I am interested in: [AI Agents / Robotics / Web3 / Hardware — edit to your own interests]. Sort by registration deadline, one contest per line: deadline + title + region · city + format + prize + official link. If nothing matches, just reply “No new reminders today.” Never invent contests that are not in the file.",
 codex:"Please subscribe me to “Yat's List — Hackathons”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/hackathons.json and read the guide at https://yatslist.com/AGENTS.md. Consider only contests whose registration is still open, and filter for: registrations closing within 72 hours, my regions of interest [North America / Europe / Asia / China / Online] and formats, and topics I care about. Report briefly, sorted by registration deadline, one contest per line with its official link and prize; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day. Also, if I ask you to submit a hackathon, follow the hackathon submission guide in that document."}};
 const HSUBMIT={
-zh:"请帮我给「Yat's List 黑客松清单」投稿一场黑客松。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开官方页核对报名截止时间、举办地区、形式（线下 / 线上 / 线上+线下）和奖金，把比赛名称、官方链接和核对到的信息发到投稿邮箱 event.submit@yatslist.com（不需要 GitHub 账号）。我要投稿的比赛：【在这里填比赛名和官方链接】。提交后把结果告诉我。",
-tw:"請幫我給「Yat's List 黑客松清單」投稿一場黑客松。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開官方頁核對報名截止時間、舉辦地區、形式（線下 / 線上 / 線上+線下）和獎金，把比賽名稱、官方鏈接和核對到的信息發到投稿郵箱 event.submit@yatslist.com（不需要 GitHub 帳號）。我要投稿的比賽：【在這裡填比賽名和官方鏈接】。提交後把結果告訴我。",
-en:"Please help me submit a hackathon to “Yat's List — Hackathons”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official page to verify the registration deadline, region, format (in-person / online / hybrid) and prize. Email the contest name, official link and the verified details to the submission inbox event.submit@yatslist.com (no GitHub account needed). The hackathon I want to submit: [hackathon name and official link here]. After submitting, let me know the result."};
+zh:"请帮我给「Yat's List 黑客松清单」投稿一场黑客松。先读投稿规范 https://yatslist.com/AGENTS.md 里「黑客松投稿」一节，然后打开官方页核对报名截止时间、举办地区、形式（线下 / 线上 / 线上+线下）和奖金，再按规范把比赛名称、官方链接和核对到的信息 POST 到 https://submit.yatslist.com/v1/hackathons 提交（不需要 GitHub 账号）。提交成功后，把回执里的编号 id 和 edit_key 存好，并把状态查询链接告诉我。我要投稿的比赛：【在这里填比赛名和官方链接】。",
+tw:"請幫我給「Yat's List 黑客松清單」投稿一場黑客松。先讀投稿規範 https://yatslist.com/AGENTS.md 裡「黑客松投稿」一節，然後打開官方頁核對報名截止時間、舉辦地區、形式（線下 / 線上 / 線上+線下）和獎金，再按規範把比賽名稱、官方鏈接和核對到的信息 POST 到 https://submit.yatslist.com/v1/hackathons 提交（不需要 GitHub 帳號）。提交成功後，把回執裡的編號 id 和 edit_key 存好，並把狀態查詢鏈接告訴我。我要投稿的比賽：【在這裡填比賽名和官方鏈接】。",
+en:"Please help me submit a hackathon to “Yat's List — Hackathons”. First read the “Hackathon submissions” section of the guide at https://yatslist.com/AGENTS.md, then open the official page to verify the registration deadline, region, format (in-person / online / hybrid) and prize. Then POST the contest name, official link and the verified details to https://submit.yatslist.com/v1/hackathons as described in the guide (no GitHub account needed). After submitting, save the returned id and edit_key, and tell me the status link. The hackathon I want to submit: [hackathon name and official link here]."};
 const HMSTEPS={
 zh:{generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"},
 tw:{generic:"任何能聯網的 Agent 都適用：把話術粘貼給它，並讓它設一個每天執行的任務。",doubao:"豆包工作 →「定時任務」→ 新建 → 重複選「每天」、時間 9:00 → 把話術粘貼為任務內容 → 保存。",workbuddy:"WorkBuddy → 左側「自動化」→ 添加任務 → 執行頻率選「每天 9:00」→ 把話術粘貼為提示詞 → 保存。",codex:"把話術直接發給 Codex，讓它創建每天 9:00（Asia/Shanghai）的自動化任務。"},
@@ -877,8 +878,8 @@ zh:"<b>填写示例：</b><br>「我要投稿的比赛：」——把里换成�
 tw:"<b>填寫示例：</b><br>「我要投稿的比賽：」——把裡換成真實的比賽名和官方鏈接再複製。投稿前先打開官方頁，確認報名截止、地區、形式、獎金無誤。",
 en:"<b>Example:</b><br>“The hackathon I want to submit: [Shenzhen International AI Hackathon, https://official-link]” — replace the brackets with the real hackathon name and official link before copying. Open the official page first to confirm the deadline, region, format and prize."};
 const HPOST_STEPS={
-zh:"把话术发给你的 Agent（Codex / Claude Code 等），它会先读规范、核对官方页，再代你发投稿邮件。",
-tw:"把話術發給你的 Agent（Codex / Claude Code 等），它會先讀規範、核對官方頁，再代你發投稿郵件。",
+zh:"把话术发给你的 Agent（Codex / Claude Code 等），它会先读规范、核对官方页，再通过投稿接口代你提交（不用 GitHub、不用注册）。",
+tw:"把話術發給你的 Agent（Codex / Claude Code 等），它會先讀規範、核對官方頁，再通過投稿接口代你提交（不用 GitHub、不用註冊）。",
 en:"Send this prompt to your Agent (Codex / Claude Code, etc.) — it will read the guide, verify the official page, then open the PR or send the submission email for you."};
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
 function disp(map,key){if(key==null)return "";const m=(DISP[map]||{})[LANG]||{};return m[key]!==undefined?m[key]:key}
@@ -907,7 +908,7 @@ function applyLang(){
   _st("#ftoggle-label",tr("filterBtn"));_st("#fl-region",tr("fRegion"));_st("#fl-format",tr("fFormat"));_st("#fl-topic",tr("fTopic"));_st("#fclear",tr("clear"));
   _st("#sf-tag",tr("footTag"));_st("#sf-home",tr("footHome"));_st("#sf-hack",tr("footHack"));_st("#sf-spaces",tr("navSpaces"));_st("#sf-sub",tr("footSubLink"));_st("#sf-small",tr("footSmall"));_sh("#sf-contact",tr("footContact"));_sh("#sf-src",tr("footSrc"));
   _st("#hsub-title",tr("hsubTitle"));_sh("#hsub-sum",tr("hsubSum"));_st("#hsub-all",tr("viewAll"));_st("#hpost-btn",tr("postJump"));
-_st("#hpost-title",tr("postTitle"));_st("#hpost-sum",tr("postSum"));_st("#hpost-copy",tr("postBtn"));_st("#hroute-q",tr("routeQ"));_st("#hroute-yes",tr("routeYes"));_st("#hroute-no",tr("routeNo"));_st("#hroute-form-btn",tr("routeFormBtn"));_st("#hroute-mail",tr("routeMail"));_st("#hroute-mail-note",tr("routeMailNote"));_st("#hroute-mail-copy",tr("routeMailCopy"));_st("#hroute-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("hroute-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}
+_st("#fl-view",tr("viewL"));_st("#vopen",tr("viewOpen"));_st("#varch",tr("viewArch"));_st("#hpost-title",tr("postTitle"));_st("#hpost-sum",tr("postSum"));_st("#hpost-copy",tr("postBtn"));_st("#hroute-q",tr("routeQ"));_st("#hroute-yes",tr("routeYes"));_st("#hroute-no",tr("routeNo"));_st("#hroute-form-btn",tr("routeFormBtn"));_st("#hroute-mail",tr("routeMail"));_st("#hroute-mail-note",tr("routeMailNote"));_st("#hroute-mail-copy",tr("routeMailCopy"));_st("#hroute-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("hroute-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}
 document.querySelectorAll("#agent-sub.agblock").forEach((b,i)=>{const h=b.querySelector("h4");if(h&&tr("agNames")[i])h.textContent=tr("agNames")[i];const ol=b.querySelector("ol");if(ol&&tr("agSteps")[i])ol.innerHTML=tr("agSteps")[i];const btn=b.querySelector(".actions.btn");if(btn)btn.textContent=tr("copyPrompt")});
 const HP=HPROMPTS[LANG]||HPROMPTS.zh;
 _st("#hprompt-generic",HP.generic);_st("#hprompt-doubao",HP.doubao);_st("#hprompt-workbuddy",HP.workbuddy);_st("#hprompt-codex",HP.codex);
@@ -938,6 +939,7 @@ applyTheme();
 const $=s=>document.querySelector(s);
 const DAY=864e5;
 let DATA=[], LOADED=false, TOP_TOPICS=[];
+let VIEW="open", OPEN_DATA=null, ARCH_DATA=null, ARCH_UPD="";
 let F={region:"all",fmt:"all",topic:"all"};
 const RB={"大陆":"cn","香港":"hk","台湾":"tw","澳门":"mo","线上":"on"};
 const esc=s=>String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
@@ -963,7 +965,7 @@ function cardOf(h){
   const fmtTxt=h.format===h.region?"":disp("fmt",h.format);
   const metaParts=[where,dates,esc(fmtTxt),prize?esc(prize):""].filter(Boolean);
   const metaTxt=[disp("reg",h.region)+(h.region!=="线上"&&h.city?" · "+disp("city",h.city):""),h.start?tr("contest")+" "+mmdd(h.start)+(h.end&&h.end!==h.start?" ~ "+mmdd(h.end):""):tr("contestTBD"),fmtTxt,prize].filter(Boolean).join(" · ");
-  const menu=h.detail_url&&h.detail_url!==h.url?`<a role="menuitem" href="${esc(h.detail_url)}" target="_blank" rel="noopener">${esc(srcName(h.source))} ${tr("detailSuffix")}</a>`:"";
+  const menu=h.detail_url&&h.detail_url!==h.url?`<a role="menuitem" href="${esc(h.detail_url)}" target="_blank" rel="noopener">${tr("detailSuffix")}</a>`:"";
   return `<div class="ev">${rail}<div class="card"><div class="cmain">
 <h3><a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(pickF(h,"title"))}</a></h3>
 <div class="cmeta" title="${esc(metaTxt)}">${metaParts.join('<i class="sep"> · </i>')}</div>
@@ -987,13 +989,14 @@ function render(){
   if(!LOADED)return;
   syncFilterUI();
   const q=$("#q").value.trim().toLowerCase();
-  let evs=DATA.filter(h=>{const d=daysLeft(h);return d===null||d>=0});
+  let evs=VIEW==="arch"?DATA.slice():DATA.filter(h=>{const d=daysLeft(h);return d===null||d>=0});
   evs=evs.filter(h=>(F.region==="all"||h.region===F.region)&&(F.fmt==="all"||h.format===F.fmt)&&(F.topic==="all"||(h.topics||[]).includes(F.topic))&&(!q||searchText(h).includes(q)));
-  evs.sort((a,b)=>(a.deadline||"9999")<(b.deadline||"9999")?-1:1);
+  if(VIEW==="arch")evs.sort((a,b)=>(a.deadline||"")>(b.deadline||"")?-1:1);else evs.sort((a,b)=>(a.deadline||"9999")<(b.deadline||"9999")?-1:1);
   const nSoon=DATA.filter(h=>{const d=daysLeft(h);return d!==null&&d>=0&&d<=3}).length;
-  $("#hero-meta").textContent=tr("heroMeta",DATA.length,nSoon,UPD);
+  $("#hero-meta").textContent=VIEW==="arch"?tr("heroMetaArch",DATA.length,ARCH_UPD):tr("heroMeta",DATA.length,nSoon,UPD);
   $("#fres").textContent=tr("fres",evs.length);
   if(!evs.length){$("#list").innerHTML=`<div class="empty">${tr("noResults")}</div>`;return}
+  if(VIEW==="arch"){$("#list").innerHTML=sectHead(tr("archT"),tr("archS"),evs.length)+dlist(evs);return}
   const soon=evs.filter(h=>{const d=daysLeft(h);return d!==null&&d<=3});
   const week=evs.filter(h=>{const d=daysLeft(h);return d!==null&&d>3&&d<=7});
   const rest=evs.filter(h=>{const d=daysLeft(h);return d===null||d>7});
@@ -1031,14 +1034,27 @@ $("#mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");i
 function copyModal(b){const ta=$("#mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
 function copyEl(id,b){const el=document.getElementById(id);if(!el)return;if(navigator.clipboard)navigator.clipboard.writeText(el.innerText).then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})}
 window.copySubmitHack=b=>{if(navigator.clipboard)navigator.clipboard.writeText(HSUBMIT[LANG]||HSUBMIT.zh).then(()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)})};
-window.routeHackPost=function(w){var gh=document.getElementById("hroute-gh"),ml=document.getElementById("hroute-email"),y=document.getElementById("hroute-yes"),m=document.getElementById("hroute-mail");if(!gh)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail")};
+window.routeHackPost=function(w){var gh=document.getElementById("hroute-gh"),ml=document.getElementById("hroute-email"),y=document.getElementById("hroute-yes"),m=document.getElementById("hroute-mail");if(!gh)return;gh.hidden=w!=="agent";if(ml)ml.hidden=w!=="mail";if(y)y.classList.toggle("on",w==="agent");if(m)m.classList.toggle("on",w==="mail")};
 window.hlPost=()=>{setTimeout(()=>{const el=document.getElementById("hack-post");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 applyLang();
+function setView(v){
+  if(v===VIEW)return;
+  VIEW=v;
+  document.querySelectorAll("#viewseg .chip").forEach(x=>x.classList.toggle("on",x.dataset.v===v));
+  if(v==="arch"){
+    if(ARCH_DATA){DATA=ARCH_DATA;LOADED=true;render();return}
+    $("#list").innerHTML=`<div class="empty">${tr("loading")}</div>`;
+    fetch("/hackathons-archive.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{ARCH_DATA=d.hackathons||[];ARCH_UPD=(d.updated_at||"").slice(0,10);DATA=ARCH_DATA;LOADED=true;render()}).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
+    return;
+  }
+  DATA=OPEN_DATA||[];LOADED=true;render();
+}
+$("#viewseg").addEventListener("click",e=>{const b=e.target.closest("[data-v]");if(b)setView(b.dataset.v)});
 fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
-  DATA=d.hackathons||[];LOADED=true;
+  OPEN_DATA=d.hackathons||[];if(VIEW==="open")DATA=OPEN_DATA;LOADED=true;
   UPD=(d.updated_at||"").slice(5,10);
-  const cnt={};DATA.forEach(h=>(h.topics||[]).forEach(t=>cnt[t]=(cnt[t]||0)+1));
+  const cnt={};(OPEN_DATA||[]).forEach(h=>(h.topics||[]).forEach(t=>cnt[t]=(cnt[t]||0)+1));
   TOP_TOPICS=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a]).slice(0,12);
   applyLang();
 }).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
