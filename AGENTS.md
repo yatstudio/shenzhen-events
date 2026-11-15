@@ -58,6 +58,20 @@
 - 投稿被合并后会出现在次日日报与网页；未通过的会在 PR/Issue 里说明原因。
 - **谁来审**：审核由维护者的 Agent 执行（维护者本人不逐个看）。每天随日报处理一次：核实无误、且**只改动 `events.json`** 的 PR 会被直接合并；需要修改的，Agent 会在 PR 里逐项留言，改好 push 后自动复审；明显违规（无官方链接、已过期、重复、超范围、垃圾广告）的会被留言拒绝并关闭。涉及 `index.html`、`tools/`、`.github/` 等其他文件的 PR 不会被自动合并，会转交维护者本人决定。
 
+## 黑客松投稿（hackathons.json 全球清单）
+
+全球黑客松清单（https://yatslist.com/hackathons/ ，数据 `hackathons.json`）同样开放投稿，三条通道（不用 GitHub）：
+
+1. **HTTP API**（推荐，Agent 默认走这条）：`POST https://submit.yatslist.com/v1/hackathons`，`Content-Type: application/json`，请求体为 `{"channel": "agent", "hackathon": {…}}`。必填只有 `title` 与 `url`（官方页）；尽量填全：`deadline`（报名截止，YYYY-MM-DD）、`start` / `end`、`region`（线上 / 中国 / 北美 / 欧洲 / 亚洲 / 大洋洲 / 非洲与中东 / 拉美 / 其他地区）、`city`、`format`（线下 / 线上 / 线上+线下）、`prize`、`topics`（字符串数组）、`summary`（一句话客观介绍）。防滥用与限流同活动投稿（蜜罐 `website` 必须留空；每 IP 10 次/小时、40 次/天）。提交成功返回 `202 {"id": "hack-…", "status": "queued_for_review"}` 并附 `edit_key`、状态查询与预览链接。
+2. **网页表单**：https://submit.yatslist.com/hackathons （没有 Agent 时人工填写，提交后同样发回执编号与 edit_key）。
+3. **邮箱**：event.submit@yatslist.com，标题注明「黑客松投稿」并附官方链接。
+
+**投稿前自查**：先查 `hackathons.json` 与 `hackathons-archive.json`（https://yatslist.com/hackathons-archive.json ）按标题与官方链接去重，不要重复提交；打开官方页核对报名截止、举办地区、形式与奖金——收录与核实一律以主办方官方页为准，聚合平台只作发现线索。纯线上比赛 `region` 填 `线上` 并明确标注；`线上+线下` 的要在 `summary` 注明哪些环节在线上、哪些在线下。报名已截止的不要投（已结束的比赛由维护管线自动归档）。
+
+**投稿反馈**：保存回执里的 `id`（`hack-…`），随时查询处理结果：`GET https://submit.yatslist.com/v1/hackathons/<id>`，或打开预览页 `https://submit.yatslist.com/preview-hackathon/<id>`。状态取值与活动投稿相同（`queued_for_review` 待初审 / `listed` 已收录 / `rejected` 未通过附理由 / `pending_human` 待人工审核 / `approved_pending_listing` 人工已通过待收录 / `withdrawn` 已撤回）。初审在每日更新时进行，一般次日可查。
+
+**修改与撤回**：同活动投稿——`edit_key` 只在提交成功时显示一次，服务器只存哈希，遗失无法找回，务必先存好再干别的。修改：`POST https://submit.yatslist.com/v1/hackathons/<id>/amend`，请求体 `{"edit_key":"…","hackathon":{…完整新版…}}`；撤回：`POST https://submit.yatslist.com/v1/hackathons/<id>/withdraw`，请求体 `{"edit_key":"…"}`。审核通过后：合格且仍在报名的补进 `hackathons.json`（深圳线下场次同时双落 `events.json`）；已结束的进 `hackathons-archive.json` 归档，页面「往期归档」视图可查。
+
 ## 给维护 Agent 的说明
 
 每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 处理投稿（GitHub PR / Issue 与 HTTP API 投稿队列，逐条核实）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」），只删结束超过 90 天的；报名已截止但活动未举行的条目保留。
