@@ -58,102 +58,6 @@ XFORM_HTML = '<!DOCTYPE html>\n<html lang="zh-CN"><head><meta charset="utf-8">\n
 
 
 
-HFORM_HTML = r"""<!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>投稿黑客松 · Yat's List</title>
-<style>
-body{background:#0d1218;color:#e6edf3;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;padding:24px 16px 48px}
-.wrap{max-width:560px;margin:0 auto}
-.brand{font-family:ui-monospace,Menlo,monospace;color:#2ee6a8;font-weight:700;font-size:1.25rem}
-h1{font-size:1.6rem;margin:14px 0 6px}
-.sub{color:#8b98a5;line-height:1.65;margin:0 0 22px}
-label{display:block;margin:18px 0 7px;font-weight:600}
-input[type=text],input[type=date],select{width:100%;box-sizing:border-box;background:#10151b;border:1px solid rgba(255,255,255,.14);border-radius:10px;color:#e6edf3;padding:12px 14px;font-size:1rem}
-.hint{color:#6a737d;font-size:.85rem;margin-top:6px;line-height:1.55}
-button{margin-top:24px;width:100%;background:#2ee6a8;color:#06130d;border:0;border-radius:999px;padding:14px;font-size:1.05rem;font-weight:700;cursor:pointer}
-.msg{margin-top:18px;line-height:1.6;display:none}
-.overlay{position:fixed;inset:0;background:rgba(3,6,9,.75);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
-.overlay.show{display:flex}
-.dlg{background:#10151b;border:1px solid rgba(46,230,168,.5);border-radius:16px;max-width:520px;width:100%;padding:26px 24px;box-sizing:border-box}
-.dlg h2{margin:0 0 6px;font-size:1.5rem}
-.dlg .sum{background:#0d1218;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;line-height:1.75;margin:14px 0;word-break:break-all}
-.dlg button{margin-top:8px;width:100%}
-a{color:#2ee6a8}
-.hp{position:absolute;left:-9999px;top:-9999px}
-</style></head><body><div class="wrap">
-<div class="brand">&gt; yat's list_</div>
-<h1>投稿一场黑客松</h1>
-<p class="sub">发现一场清单里没有的黑客松 / 创新大赛？填官方页上的信息提交，我们会打开官方页逐条核实、去重后收录进 <a href="https://yatslist.com/hackathons/">黑客松清单</a>。带 * 的必填，其余越全越好。</p>
-<form id="f">
-<label for="title">比赛名称 *</label>
-<input type="text" id="title" maxlength="200" placeholder="例：XX 黑客松 2026" autocomplete="off">
-<label for="url">官方页 / 报名页链接 *</label>
-<input type="text" id="url" maxlength="500" placeholder="https://" autocomplete="off">
-<label for="deadline">报名截止日期</label>
-<input type="date" id="deadline">
-<label for="start">比赛开始日期</label>
-<input type="date" id="start">
-<label for="end">比赛结束日期</label>
-<input type="date" id="end">
-<label for="region">地区</label>
-<select id="region">
-<option value="">（不确定）</option>
-<option>线上</option><option>中国</option><option>北美</option><option>欧洲</option><option>亚洲</option><option>大洋洲</option><option>非洲与中东</option><option>拉美</option><option>其他地区</option>
-</select>
-<label for="city">城市（线下举办城市，如 深圳 / 上海 / New York）</label>
-<input type="text" id="city" maxlength="60" autocomplete="off">
-<label for="format">形式</label>
-<select id="format">
-<option value="">（不确定）</option>
-<option>线下</option><option>线上</option><option>线上+线下</option>
-</select>
-<label for="prize">奖金（如 ¥120,000 / $50,000，无现金奖可写奖品内容）</label>
-<input type="text" id="prize" maxlength="200" autocomplete="off">
-<label for="topics">主题（逗号分隔，如 AI, Web3, 机器人）</label>
-<input type="text" id="topics" maxlength="200" autocomplete="off">
-<label for="summary">一句话简介</label>
-<input type="text" id="summary" maxlength="300" autocomplete="off">
-<input type="text" id="website" class="hp" tabindex="-1" autocomplete="off">
-<button type="submit" id="btn">提交</button>
-<p class="msg" id="msg"></p>
-</form>
-<p class="hint" style="margin-top:26px">也可以让你的 Agent 代你提交（读 <a href="https://yatslist.com/AGENTS.md">投稿规范</a> 里的黑客松一节），或把比赛名和官方链接发邮件到 event.submit@yatslist.com。</p>
-<div class="overlay" id="okOverlay"><div class="dlg">
-<h2>✅ 提交成功</h2>
-<p class="sub" style="margin:0">已经收到你的投稿，编号 <b id="okId"></b>。每日更新时会打开官方页核实，通过后收录进黑客松清单。</p>
-<div class="sum" id="okSum"></div>
-<p class="hint">⚠️ 上面这串 <b>edit_key</b> 是修改 / 撤回这条投稿的唯一凭证，只显示这一次，丢了找不回——请立刻和编号一起存好。查进度：打开预览页即可（地址在提交回执里，形如 submit.yatslist.com/preview-hackathon/编号）。</p>
-<button type="button" id="okDone">就这样</button>
-</div></div>
-</div>
-<script>
-function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
-function v(id){return document.getElementById(id).value.trim()}
-document.getElementById("okDone").addEventListener("click",function(){document.getElementById("okOverlay").classList.remove("show")});
-document.getElementById("f").addEventListener("submit",function(e){
-  e.preventDefault();
-  var msg=document.getElementById("msg"); msg.style.display="block";
-  if(!v("title")){msg.textContent="先填比赛名称。";return}
-  var url=v("url");
-  if(!/^https?:\/\//.test(url)){msg.textContent="官方链接要以 http:// 或 https:// 开头。";return}
-  var topics=v("topics")?v("topics").split(/[,，、]/).map(function(x){return x.trim()}).filter(Boolean):[];
-  var hk={title:v("title"),url:url,deadline:v("deadline")||null,start:v("start")||null,end:v("end")||null,region:v("region"),city:v("city"),format:v("format"),prize:v("prize"),topics:topics,summary:v("summary")};
-  var btn=document.getElementById("btn"); btn.disabled=true; btn.textContent="提交中…";
-  fetch("/v1/hackathons",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({channel:"web",website:document.getElementById("website").value,hackathon:hk})})
-  .then(function(r){return r.json()}).then(function(d){
-    if(d&&d.status==="queued_for_review"){
-      msg.innerHTML="✅ 收到了（编号 "+d.id+"）。核实通过后会出现在 <a href='https://yatslist.com/hackathons/'>黑客松清单</a>。";
-      btn.textContent="已提交";
-      document.getElementById("okId").textContent=d.id;
-      document.getElementById("okSum").innerHTML="编号："+esc(d.id)+"<br>edit_key："+esc(d.edit_key)+"<br>比赛："+esc(hk.title)+"<br>预览："+esc(d.preview_url);
-      document.getElementById("okOverlay").classList.add("show");
-    } else { msg.textContent="没提交成功："+((d&&d.error)||"请稍后再试"); btn.disabled=false; btn.textContent="提交"; }
-  }).catch(function(){msg.textContent="网络出错，请稍后再试。";btn.disabled=false;btn.textContent="提交"});
-});
-</script></body></html>
-"""
-
 def append_queue(record):
     with _lock:
         with open(QUEUE, "a", encoding="utf-8") as f:
@@ -727,7 +631,7 @@ const SECTIONS={
      filters:[["todo","待审"],["approved","已通过"],["rejected","已拒绝"],["all","全部"]]},
   job:{name:"岗位投稿",hint:"通过 API 投稿的岗位（招聘页暂未公开）。每日更新时 AI 初审；拿不准的标为「待你审核」，在这里决定。「待 AI 初审」的也可以直接通过 / 拒绝，不用等 AI。",
      filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已上线"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]},
-  hack:{name:"黑客松投稿",hint:"通过 API / 网页表单投稿的黑客松。每日 07:30 由 AI 逐条打开官方页核实、去重；AI 拿不准的标为「待你审核」，在这里决定。「待 AI 初审」的也可以直接通过 / 拒绝，不用等 AI。",
+  hack:{name:"黑客松投稿",hint:"通过 API 投稿的黑客松。每日 07:30 由 AI 逐条打开官方页核实、去重；AI 拿不准的标为「待你审核」，在这里决定。「待 AI 初审」的也可以直接通过 / 拒绝，不用等 AI。",
      filters:[["todo","待你审核"],["queue","待 AI 初审"],["done","已收录"],["no","已拒绝"],["withdrawn","已撤回"],["all","全部"]]}
 };
 const S={sec:(location.hash.slice(1) in SECTIONS)?location.hash.slice(1):"ev",filter:{x:"todo",ev:"todo",job:"todo",hack:"todo"},q:"",data:{x:[],ev:[],job:[],hack:[]},rev:{ev:{},job:{},hack:{}}};
@@ -1412,9 +1316,6 @@ class Handler(BaseHTTPRequestHandler):
         if _p.startswith("/preview-hackathon/"):
             self._get_hackathon_preview(_p[len("/preview-hackathon/"):])
             return
-        if self._path_only() in ("/hackathons", "/hackathons/"):
-            self._send_html(200, HFORM_HTML)
-            return
         if self._path_only() in ("/xlist", "/xlist/"):
             self._send_html(200, XFORM_HTML)
         elif self._path_only() in ("/admin", "/admin/"):
@@ -1502,7 +1403,6 @@ class Handler(BaseHTTPRequestHandler):
                 "hackathon_submit": "POST /v1/hackathons",
                 "xlist_submit": "POST /v1/xlist",
                 "xlist_form": "GET /xlist",
-                "hackathon_form": "GET /hackathons",
                 "xlist_admin": "GET /admin (token required)",
             })
         else:
