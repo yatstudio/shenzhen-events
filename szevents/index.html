@@ -1433,8 +1433,9 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 <style>
 #yl-fab{position:fixed;right:16px;bottom:16px;z-index:210;width:54px;height:54px;border-radius:50%;background:var(--green,#2ee6a8);color:#06281c;font-size:24px;border:none;cursor:pointer;box-shadow:0 6px 22px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center}
 #yl-fab .yl-fab-tag{position:absolute;right:62px;background:var(--panel);color:var(--ink);font-size:.78rem;padding:5px 10px;border-radius:999px;border:1px solid var(--border);white-space:nowrap}
-#yl-panel{position:fixed;right:16px;bottom:80px;z-index:211;width:min(362px,calc(100vw - 20px));height:min(540px,72vh);background:var(--panel);border:1px solid var(--border);border-radius:16px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.45)}
+#yl-panel{position:fixed;right:16px;bottom:80px;z-index:211;width:min(320px,calc(100vw - 32px));height:min(460px,60vh);background:var(--panel);border:1px solid var(--border);border-radius:16px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.45)}
 #yl-panel.open{display:flex}
+@media (max-width:480px){#yl-panel{right:12px;bottom:76px;height:min(440px,58vh)}}
 .yl-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--border);font-weight:700;font-size:.95rem}
 .yl-head small{font-weight:400;color:var(--ink-ter);font-size:.74rem}
 .yl-head button{margin-left:auto;background:none;border:none;color:var(--ink-sec);font-size:1.05rem;cursor:pointer}
