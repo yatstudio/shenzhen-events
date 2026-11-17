@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>未来 Internet · 大胆版（2030）｜Yat's List</title>
+<meta name="description" content="人退到决策层，机器在网上替人活：Agent 层、信任层、节点层——一张动态图看完 2030 年的 internet。">
+<style>
+  :root{
+    --paper:#FDF8EE; --ink:#2B2B2B; --mut:#6B6252;
+    --green:#4C9A2A; --green-bg:#EAF3E2;
+    --orange:#E8873A; --orange-bg:#FDEBD8;
+    --card:#FFFFFF; --sand:#F3EDE0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased; padding:28px 16px 56px;
+  }
+  .wrap{max-width:1060px;margin:0 auto}
+  h1{font-size:clamp(28px,5vw,44px);font-weight:900;letter-spacing:.5px}
+  .sub{color:var(--mut);font-size:clamp(14px,2.4vw,19px);margin-top:8px}
+  .rise{opacity:0;transform:translateY(18px);animation:rise .7s ease forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* ticker */
+  .ticker{
+    margin:22px 0 6px;display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
+    background:var(--ink);color:#F5EFE0;border-radius:14px;padding:12px 18px;
+    font-size:15px;box-shadow:4px 4px 0 rgba(43,43,43,.15);
+  }
+  .ticker b{color:#FFD97A;font-variant-numeric:tabular-nums;font-size:17px}
+  .ticker .dot{width:9px;height:9px;border-radius:50%;background:#7ED957;display:inline-block;margin-right:8px;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .ticker .hum{color:#B9B09A}
+
+  /* generic card */
+  .box{
+    background:var(--card);border:2.5px solid var(--ink);border-radius:16px;
+    box-shadow:4px 4px 0 rgba(43,43,43,.10);
+    transition:box-shadow .35s, transform .35s, outline-color .35s;outline:3px solid transparent;outline-offset:3px;
+  }
+  .box.active{outline-color:var(--orange);box-shadow:0 0 0 6px rgba(232,135,58,.25),4px 4px 0 rgba(43,43,43,.10);transform:scale(1.012)}
+  .human{max-width:520px;margin:26px auto 0;text-align:center;padding:18px 20px 14px;transform:rotate(-.4deg)}
+  .human .t{font-size:clamp(21px,3.4vw,28px);font-weight:900}
+  .human .s{color:var(--mut);font-size:15px;margin-top:5px}
+
+  /* connector */
+  .conn{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+  .conn .line{width:4px;height:34px;border-radius:2px;background:repeating-linear-gradient(var(--ink) 0 6px,transparent 6px 12px);animation:flow 1s linear infinite}
+  @keyframes flow{to{background-position:0 12px}}
+  .conn .lab{background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:1px 12px;font-size:14px;margin-top:2px}
+
+  /* bands */
+  .band{border-radius:18px;padding:18px 18px 20px;margin-top:2px}
+  .band h2{font-size:clamp(20px,3.4vw,27px);font-weight:900;text-align:center;margin-bottom:14px}
+  .band.agent{background:var(--green-bg);border:2.5px solid var(--green)}
+  .band.trust{background:var(--orange-bg);border:2.5px solid var(--orange)}
+  .band.node{background:var(--card);border:2.5px solid var(--ink)}
+  .cards{display:grid;gap:14px}
+  .cards.c3{grid-template-columns:repeat(3,1fr)}
+  .cards.c4{grid-template-columns:repeat(4,1fr)}
+  .mini{background:var(--card);border:2.5px solid var(--ink);border-radius:12px;padding:13px 10px 11px;text-align:center;box-shadow:3px 3px 0 rgba(43,43,43,.08)}
+  .mini.sand{background:var(--sand)}
+  .mini .t{font-size:clamp(16px,2.4vw,20px);font-weight:800}
+  .mini .s{color:var(--mut);font-size:13.5px;margin-top:4px;line-height:1.45}
+  .tilt-l{transform:rotate(-.6deg)} .tilt-r{transform:rotate(.6deg)}
+
+  /* flywheel */
+  .fly{
+    margin-top:22px;background:var(--sand);border:2.5px dashed var(--green);border-radius:16px;
+    padding:14px 18px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:center;
+    font-size:16px;text-align:center;
+  }
+  .fly .arr{color:var(--green);font-weight:900;animation:nudge 1.4s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+  .fly b{color:var(--green)}
+  .fly .score{font-variant-numeric:tabular-nums}
+
+  /* assertions */
+  .asserts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+  .assert{background:var(--card);border:2.5px solid var(--ink);border-radius:14px;padding:16px 14px;text-align:center;box-shadow:3px 3px 0 rgba(43,43,43,.08)}
+  .assert .big{font-size:clamp(22px,3.6vw,30px);font-weight:900;font-variant-numeric:tabular-nums}
+  .assert .s{color:var(--mut);font-size:14px;margin-top:5px}
+  .assert.hot .big{color:var(--orange)}
+
+  /* simulation */
+  .sim{margin-top:30px;background:var(--card);border:2.5px solid var(--ink);border-radius:18px;padding:20px;box-shadow:4px 4px 0 rgba(43,43,43,.10)}
+  .sim h2{font-size:clamp(20px,3.4vw,26px);font-weight:900}
+  .sim .desc{color:var(--mut);font-size:15px;margin-top:6px;line-height:1.6}
+  .sim button{
+    margin-top:14px;background:var(--green);color:#fff;border:2.5px solid var(--ink);border-radius:999px;
+    font-size:17px;font-weight:800;padding:10px 26px;cursor:pointer;box-shadow:3px 3px 0 rgba(43,43,43,.35);
+    font-family:inherit;transition:transform .15s, box-shadow .15s, opacity .2s;
+  }
+  .sim button:hover:not(:disabled){transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(43,43,43,.35)}
+  .sim button:disabled{opacity:.55;cursor:wait}
+  .log{
+    margin-top:16px;background:#22252A;border-radius:12px;padding:14px 16px;min-height:52px;
+    font-family:"Noto Sans Mono",ui-monospace,Menlo,Consolas,monospace;font-size:14px;line-height:1.85;color:#C9D4C0;
+  }
+  .log .ln{opacity:0;transform:translateX(-6px);animation:lnin .4s ease forwards}
+  @keyframes lnin{to{opacity:1;transform:none}}
+  .log .tm{color:#8A94A6;margin-right:8px}
+  .log .ok{color:#7ED957}
+  .log .warn{color:#FFB35C}
+  .log .me{color:#FFD97A}
+  .log .placeholder{color:#69707D}
+
+  footer{margin-top:34px;text-align:center}
+  footer .end{color:var(--green);font-weight:900;font-size:clamp(18px,3vw,24px)}
+  footer .src{color:var(--mut);font-size:13.5px;margin-top:10px}
+  footer a{color:var(--green)}
+
+  @media (max-width:760px){
+    .cards.c3,.cards.c4,.asserts{grid-template-columns:1fr}
+    .human{transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="rise">
+    <h1>未来 Internet · 大胆版（2030）</h1>
+    <div class="sub">人退到决策层 · 机器在网上替人活 · 世界变成一台状态机</div>
+  </header>
+
+  <div class="ticker rise" style="animation-delay:.15s">
+    <span><span class="dot"></span>此刻 · Agent 间调用 <b id="agentCalls">1,284,392</b> 次</span>
+    <span class="hum">人类页面访问 <span id="humanViews">312,408</span> 次 —— 还在变少</span>
+  </div>
+
+  <!-- 人 -->
+  <div class="box human rise" id="boxHuman" style="animation-delay:.25s">
+    <div class="t">人：只下意图 · 只拍板</div>
+    <div class="s">一屏待拍板清单 · 一天从「刷」变「批」</div>
+  </div>
+
+  <div class="conn rise" style="animation-delay:.35s"><div class="line"></div><div class="lab">委托</div></div>
+
+  <!-- Agent 层 -->
+  <section class="band agent rise" id="bandAgent" style="animation-delay:.45s">
+    <h2>Agent 层 · 占网上流量的八成</h2>
+    <div class="cards c3">
+      <div class="mini tilt-l"><div class="t">你的 Agent 替你办事</div><div class="s">询价 · 核实 · 比价 · 成交</div></div>
+      <div class="mini"><div class="t">机器雇机器</div><div class="s">机床接单 · 订料 · 叫物流</div></div>
+      <div class="mini tilt-r"><div class="t">钱在协议里流</div><div class="s">按次付费 · 广告模式退场</div></div>
+    </div>
+  </section>
+
+  <div class="conn rise" style="animation-delay:.55s"><div class="line"></div><div class="lab">凭信用办事</div></div>
+
+  <!-- 信任层 -->
+  <section class="band trust rise" id="bandTrust" style="animation-delay:.65s">
+    <h2>信任层 · 新的基础设施</h2>
+    <div class="cards c3">
+      <div class="mini"><div class="t">信用档案 = 数字征信</div><div class="s">攒出来的 · 搬不走</div></div>
+      <div class="mini tilt-l"><div class="t">发布 = 签发声明</div><div class="s">带签名 · 过期自失效</div></div>
+      <div class="mini"><div class="t">类目索引 = 默认入口</div><div class="s">权力在「默认设置」里</div></div>
+    </div>
+  </section>
+
+  <div class="conn rise" style="animation-delay:.75s"><div class="line"></div><div class="lab">镜像现实</div></div>
+
+  <!-- 节点层 -->
+  <section class="band node rise" id="bandNode" style="animation-delay:.85s">
+    <h2>节点层 · 物理世界全量接入</h2>
+    <div class="cards c4">
+      <div class="mini sand tilt-l"><div class="t">独立站</div><div class="s">自带身份的节点</div></div>
+      <div class="mini sand"><div class="t">工厂产能</div><div class="s">实时镜像 · 在线接单</div></div>
+      <div class="mini sand"><div class="t">库存 · 号源 · 档期</div><div class="s">现实供给全记录化</div></div>
+      <div class="mini sand tilt-r"><div class="t">平台 = 物业</div><div class="s">可替换 · 封不了路</div></div>
+    </div>
+  </section>
+
+  <!-- 飞轮 -->
+  <div class="fly rise" style="animation-delay:.95s">
+    <span>每笔交易</span><span class="arr">→</span>
+    <span>生成一条<b>签名评价</b></span><span class="arr">→</span>
+    <span>信用变厚（样本工厂 <b class="score" id="creditScore">812</b> 分）</span><span class="arr">→</span>
+    <span>接到更多订单</span><span class="arr">↺</span>
+  </div>
+
+  <!-- 断言 -->
+  <div class="asserts">
+    <div class="assert rise" style="animation-delay:1.05s">
+      <div class="big">2030 人类流量 &lt; <span id="cntHuman">100</span>%</div>
+      <div class="s">公司溶解成临时网络</div>
+    </div>
+    <div class="assert rise" style="animation-delay:1.15s">
+      <div class="big">人类原创 = 奢侈品</div>
+      <div class="s"><span id="cntMachine">0</span>% 内容是机器写给机器的</div>
+    </div>
+    <div class="assert hot rise" style="animation-delay:1.25s">
+      <div class="big">线下在场证明 暴涨</div>
+      <div class="s">真人到场 = 最高信任</div>
+    </div>
+  </div>
+
+  <!-- 模拟 -->
+  <section class="sim rise" style="animation-delay:1.35s">
+    <h2>▶ 模拟一笔 2030 年的采购</h2>
+    <div class="desc">点一下，看你的 Agent 怎么替你订一批克郎球桌：查索引、验信用、发询盘、锁产能、攒信用——全程你只在最后点一次头。</div>
+    <button id="runBtn">开始模拟</button>
+    <div class="log" id="log"><div class="placeholder">（等待运行……）</div></div>
+  </section>
+
+  <footer class="rise" style="animation-delay:1.45s">
+    <div class="end">终局：人只说「我要它变成什么样」 · 剩下的，网自己办</div>
+    <div class="src">Yat's List 畅想 · 配套阅读：<a href="/szevents/">深圳活动清单</a> · <a href="/hackathons/">全球黑客松</a></div>
+  </footer>
+
+</div>
+<script>
+(function(){
+  // ---- ticker: agent 调用不断涨，人类访问缓慢跌 ----
+  var calls = 1284392, views = 312408;
+  var elC = document.getElementById('agentCalls'), elV = document.getElementById('humanViews');
+  function fmt(n){ return n.toLocaleString('en-US'); }
+  setInterval(function(){
+    calls += 120 + Math.floor(Math.random()*900);
+    if (Math.random() < .6 && views > 300000) views -= Math.floor(Math.random()*40);
+    elC.textContent = fmt(calls); elV.textContent = fmt(views);
+  }, 900);
+
+  // ---- 数字动画 ----
+  function countTo(el, from, to, dur){
+    var t0 = null;
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur);
+      el.textContent = Math.round(from + (to - from) * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  setTimeout(function(){
+    countTo(document.getElementById('cntHuman'), 100, 18, 2200);
+    countTo(document.getElementById('cntMachine'), 0, 99, 2200);
+  }, 1300);
+
+  // ---- 模拟一笔采购 ----
+  var log = document.getElementById('log'), btn = document.getElementById('runBtn');
+  var score = document.getElementById('creditScore');
+  var bands = {
+    human: document.getElementById('boxHuman'),
+    agent: document.getElementById('bandAgent'),
+    trust: document.getElementById('bandTrust'),
+    node:  document.getElementById('bandNode')
+  };
+  var steps = [
+    {band:'human', t:'0.0s', html:'<span class="me">你下意图</span>：「订 200 张克郎球桌，出口迪拜，月底前要。」'},
+    {band:'agent', t:'0.4s', html:'Agent 查询<b>类目索引</b> → 3 家候选（耗时 0.4 秒 · 2,300 tokens，自己爬要 8 万）'},
+    {band:'trust', t:'1.1s', html:'逐家验签 + 读信用档案 → <span class="warn">1 家信用不足，淘汰</span>'},
+    {band:'agent', t:'1.8s', html:'向 2 家发询盘 · 比价 · 问交期 · 谈质保'},
+    {band:'node',  t:'3.2s', html:'A 厂回价并<span class="ok">锁定产能</span>（生产线档期实时镜像中）'},
+    {band:'trust', t:'3.6s', html:'成交 → 生成一条<b>签名评价</b> → A 厂信用 <span class="ok">+1</span>', credit:true},
+    {band:'human', t:'3.8s', html:'<span class="me">你只看到一屏摘要</span>：「选 A 家，价格和交期如下」—— 点头，成交。'}
+  ];
+  var running = false;
+  btn.addEventListener('click', function(){
+    if (running) return;
+    running = true; btn.disabled = true; btn.textContent = '模拟中……';
+    log.innerHTML = '';
+    var delay = 0;
+    steps.forEach(function(st, i){
+      setTimeout(function(){
+        Object.keys(bands).forEach(function(k){ bands[k].classList.remove('active'); });
+        var bandEl = bands[st.band];
+        bandEl.classList.add('active');
+        bandEl.scrollIntoView({behavior:'smooth', block:'center'});
+        var div = document.createElement('div');
+        div.className = 'ln';
+        div.innerHTML = '<span class="tm">T+' + st.t + '</span>' + st.html;
+        log.appendChild(div);
+        if (st.credit){
+          var cur = parseInt(score.textContent, 10) || 812;
+          score.textContent = cur + 1;
+        }
+        if (i === steps.length - 1){
+          setTimeout(function(){
+            Object.keys(bands).forEach(function(k){ bands[k].classList.remove('active'); });
+            btn.disabled = false; btn.textContent = '再模拟一笔';
+            running = false;
+          }, 1200);
+        }
+      }, delay);
+      delay += 1050;
+    });
+  });
+})();
+</script>
+</body>
+</html>
