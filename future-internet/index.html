@@ -268,9 +268,7 @@
     steps.forEach(function(st, i){
       setTimeout(function(){
         Object.keys(bands).forEach(function(k){ bands[k].classList.remove('active'); });
-        var bandEl = bands[st.band];
-        bandEl.classList.add('active');
-        bandEl.scrollIntoView({behavior:'smooth', block:'center'});
+        bands[st.band].classList.add('active');
         var div = document.createElement('div');
         div.className = 'ln';
         div.innerHTML = '<span class="tm">T+' + st.t + '</span>' + st.html;
