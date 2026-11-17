@@ -27,6 +27,8 @@ HQUEUE = os.path.join(DATA_DIR, "hackathons.jsonl")
 HREVIEWS = os.path.join(DATA_DIR, "hackathon_reviews.json")
 XQUEUE = os.path.join(DATA_DIR, "xlist.jsonl")
 TOKEN_FILE = os.path.join(DATA_DIR, "admin_token.txt")
+NAV_TOKEN_FILE = os.path.join(DATA_DIR, "nav_token.txt")
+NAV_FILE = os.path.join(DATA_DIR, "nav.html")
 XPEOPLE_FILE = os.path.join(DATA_DIR, "xpeople.json")
 MAX_BODY = 32768
 RATE_HOUR = 10
@@ -815,6 +817,14 @@ def _admin_token():
         return ""
 
 
+def _nav_token():
+    try:
+        with open(NAV_TOKEN_FILE, encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        return ""
+
+
 def _read_xqueue():
     items = []
     try:
@@ -1323,6 +1333,25 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_html(200, ADMIN_HTML)
             else:
                 self._send(401, {"error": "admin_token_required", "hint": "open with ?t=<token> once"})
+        elif self._path_only() in ("/nav", "/nav/"):
+            ok, via_query = self._nav_ok()
+            if not ok:
+                self._send(404, {"error": "not_found"})
+            else:
+                try:
+                    with open(NAV_FILE, encoding="utf-8") as f:
+                        html = f.read()
+                except Exception:
+                    self._send(404, {"error": "not_found"})
+                    return
+                body = html.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                if via_query:
+                    self.send_header("Set-Cookie", "nav_auth=" + _nav_token() + "; Max-Age=2592000; Path=/nav; HttpOnly; Secure; SameSite=Lax")
+                self.end_headers()
+                self.wfile.write(body)
         elif self._path_only() == "/health":
             self._send(200, {"ok": True})
         elif self._path_only() == "/v1/admin/xlist":
@@ -1491,6 +1520,26 @@ class Handler(BaseHTTPRequestHandler):
         except Exception:
             cand = ""
         return bool(cand) and secrets.compare_digest(cand, tok)
+
+    def _nav_ok(self):
+        tok = _nav_token()
+        if not tok:
+            return False, False
+        try:
+            from urllib.parse import urlparse, parse_qs
+            q = parse_qs(urlparse(self.path).query)
+            cand = (q.get("t") or [""])[0]
+        except Exception:
+            cand = ""
+        if cand and secrets.compare_digest(cand, tok):
+            return True, True
+        cookie = self.headers.get("Cookie") or ""
+        for part in cookie.split(";"):
+            part = part.strip()
+            if part.startswith("nav_auth="):
+                if secrets.compare_digest(part[len("nav_auth="):], tok):
+                    return True, False
+        return False, False
 
     def _path_only(self):
         from urllib.parse import urlparse
