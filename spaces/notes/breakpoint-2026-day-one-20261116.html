@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakpoint 2026: Day One — Yat's List Space 纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/spaces/">← 返回 Space 合集</a>
+<article>
+<h1>Breakpoint 2026: Day One 会议纪要</h1>
+<ul>
+<li><strong>活动</strong>：Breakpoint 2026 第一天（Solana 年度大会，第六届，首次在伦敦举办）</li>
+<li><strong>时间</strong>：2026-11-16，伦敦时间约 10:00–14:30（北京时间约 18:00–22:30）；逐字稿覆盖 00:00:03–04:27:10，约 4 小时 27 分</li>
+<li><strong>形式</strong>：X Broadcast 官方直播（英文场），现场 6,000+ 人、100+ 国家、170+ 创始人、250 家机构；线上峰值同时观看 21,530 人，总观看 23,687</li>
+<li><strong>主持</strong>：Lily Lu、Rachel Conlon（Solana 基金会）；制片人 Amira</li>
+<li><strong>来源</strong>：逐字稿全文 2,765 行（<code>transcript.txt</code>），本纪要为中文编译整理</li>
+</ul>
+<blockquote>
+<p>说明：以下数字与判断均为台上嘉宾现场说法，未经独立核实；转写为机器转写，人名与术语按原文整理，疑似转写错误见文末「ASR 还原表」。午休时段（伦敦时间约 13:00–14:00）直播暂停，逐字稿在 03:16–04:00 间无内容；录制在最后一位嘉宾演讲中途（04:27:10）截断，后续内容不在本次逐字稿内。第二天内容不在本次范围。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>Day One 是"机构日"：Solana 宣布主网正式出 Beta（1.0），并用一整天证明同一件事——传统金融的钱、资产与支付正在搬上 Solana，而这场搬家最大的瓶颈不再是技术，是"出口"（提现通道）与分发。</p>
+<h2>开场：Solana 主网 1.0</h2>
+<p>Lily Lu 开场宣布：六年"mainnet beta"结束，<strong>Solana 正式进入 mainnet 1.0</strong>。</p>
+<ul>
+<li>区块时间 400 毫秒→200 毫秒；单区块容量 3 倍以上；租金降 10 倍</li>
+<li>Alpenglow 上线后（10 月 21 日，台上称为"换心手术"），最终确认时间从约 13 秒降至约 150 毫秒，约 85 倍提升</li>
+<li>2026 年数据（现场说法）：上季度代币化股票交易超 70 亿美元；RWA 创纪录 50 亿美元（自 6 月增加 30 亿），持有者超 100 万人；质押 ETF 40 亿美元（接近 6 月的两倍）；B-SOL 不到 10 个月突破 10 亿美元；摩根士丹利 7 月推出 ETF</li>
+<li>应用收入：第一季度应用收入 3.7 亿美元（三个月增长 48%），连续 10 个季度全链应用收入第一；60+ 应用年收入超 100 万美元；日活钱包 220 万</li>
+<li>峰值日 8 月 21 日处理 2.17 亿笔真实交易；8 月 29% 的质押下线，区块照常产出</li>
+<li>Backpack 把美股代币化（每枚代币对应一股真实股票），Sunrise 提供流动性，周交易 10 亿美元；SpaceX 在纳斯达克上市当天，其代币化版本同步在 Solana 上线（现场说法）</li>
+</ul>
+<p><strong>大会主题：代币超级周期（token supercycle）</strong>。这不是价格周期，而是结构性转变——货币、资产、所有权全部上链。核心论点有三：</p>
+<ol>
+<li><strong>分发即估值</strong>：同一美元利润，能买到的地方不同，估值就不同。同一家公司在伦敦上市比在纽约折价 25–30%；全球 22,000 家非美上市公司中只有 5% 能进入指数、被 2 万亿美元资金追踪。代币化让每个资产都能被发现、被买到。</li>
+<li><strong>不是全民基本收入，而是全民基本所有权</strong>：AI 时代人人可以参与经济创造，更关键的是参与所有权；金融变成一次 API 调用，每个应用都可以成为超级应用。</li>
+<li><strong>Solana 承载近四分之三的 x402 代理支付</strong>；稳定币供应三年增长 10 倍以上，过去一年稳定币交易量近 5 万亿美元（2 月单月 6,500 亿美元，为史上任何链单月最高）；三星把 Solana USDC 原生集成进 8,200 万个钱包（从美国起步）。</li>
+</ol>
+<p>制片人 Amira 定调两天分工：<strong>今天是"婴儿潮资产"（boomer assets，机构日），明天是"Z 世代资产"（zoomer assets，前沿：算力等从未进入过大众市场的新资产）</strong>。</p>
+<h2>稳定币专场：对齐问题与三枚新币</h2>
+<p>上午的半天几乎全是稳定币，核心矛盾只有一个：<strong>稳定币好用，但"出口"和收益分配不对齐</strong>。</p>
+<h3>OpenUSD：稳定币的收益该归谁</h3>
+<p>Zach Abrams（Open Standard 创始人，前 Bridge 创始人，Bridge 被 Stripe 收购）指出，现有稳定币有个根本的对齐问题：</p>
+<ul>
+<li>法币放着能生息，换成稳定币，收益就成了发行方的收入——零和博弈，链上建设者在经济上先天吃亏</li>
+<li>想退出还要交"退出税"：Tether 约 10–100 个基点，USDC 约 2–5 个基点，动辄几千美元，大额资金流转根本没法用</li>
+</ul>
+<p>为此推出 <strong>OpenUSD（OUSD）</strong>：底层收益返还给业务方（共享经济）、铸造与销毁免费、建设者按创造的经济价值赚取 Open Standard 的股权。已上线六周，是达到 5 亿美元 AUM 最快的稳定币，有望最快突破 10 亿；合作方包括 Ramp。</p>
+<h3>MoneyGram × Solflare：USDC 直接取现金</h3>
+<p>Lamia Pardo（MoneyGram 首席营销官）：MoneyGram 年服务 6,000 万+活跃客户、200 个国家和地区、50 亿个数字端点、48 万个零售网点（比星巴克加麦当劳全球门店总和还多）。约一半汇款仍以现金提取，尤其在菲律宾（42% 面对面交易用现金）、墨西哥（40%）、尼日利亚（39%）。</p>
+<ul>
+<li><strong>MoneyGram Ramps</strong>：一个 API 接入全球零售网络，170 个国家和地区可提现，柜员无需懂区块链，凭参考码兑付</li>
+<li>与 <strong>Solflare</strong> 合作：即日起，符合条件的 Solflare 用户可把 USDC 换成现金，在 170 个国家和地区的 MoneyGram 网点提取；Solflare 月活 400 万+，自托管资产 150 亿美元+；<strong>年底前 USDC→现金提现零手续费</strong></li>
+</ul>
+<h3>Zelle-USD：美国最大 P2P 网络发币</h3>
+<p>Alexandra Lang（Zelle）：Zelle 是美国最常用的个人对个人支付网络，由七大银行所有（美国银行、Capital One、摩根大通、PNC、Truist、US Bank、富国银行），2,400+ 银行与信用社接入，去年处理超 1 万亿美元、20 亿+笔交易。</p>
+<p>推出 <strong>Zelle-USD</strong>（与 Anchorage Digital 合作、建在 Solana 上的美元稳定币），并现场演示<strong>机密转账与机密余额</strong>：金额对公众链隐藏，仅网络运营方与银行可见，银行之间可加密转账、再解密入账。目标是把"知道对方手机号或邮箱就能转账"的体验带到跨境。</p>
+<h3>Western Union USDPT：175 年老店的"出口"答案</h3>
+<p>Malcolm Clark（Western Union）：公司 175 年前靠电报发了第一条"没有钱的汇款信息"，今天问题没变——钱在后台动，人还得去门店交钱取钱。全球约 4% 人口生活在出生地之外，汇款的 75% 在当地花掉（现金或刷卡，不是加密资产）。</p>
+<ul>
+<li><strong>USDPT 稳定币已在 Solana 上线生产环境</strong>（其原话：这不是承诺，不是产品推介，已经在用），通过 Anchorage Digital Bank 免费铸造与销毁，约 160 个国家可直接铸销</li>
+<li>关键差异在出口：40 万个网点、130 种货币可取现；<strong>Stablecard 应用</strong>已上架：40+ 市场持有 USDPT，可刷 Visa、去门店取现、转入本地银行</li>
+<li><strong>汇款重定向</strong>：收款人收到汇款通知后，可即时把钱转到 stablecard，无需懂加密、无需懂稳定币</li>
+<li><strong>数字资产生态网络"Dan"</strong>：钱包一次集成即可选 Western Union 为出口，130 种货币、180 个国家、40 万+网点；现场向观众派发 20 美元 USDPT 红包</li>
+</ul>
+<h3>圆桌：Ramp × Payoneer——"价格在跌，稳定币在大牛市"</h3>
+<p>主持 Namil Dahul（YC），嘉宾 Ahmed Zifsa（Ramp 稳定币与加密合作负责人）、Roland Berry（Payoneer）。两家合计每年处理超 3,500 亿美元。</p>
+<ul>
+<li><strong>Ramp</strong>：稳定币账户把法币与链上财务流程统一在一个平台；7 月上线墨西哥后，<strong>70% 的交易量发生在银行营业时间之外</strong>（周末与节假日）；支持 USDC、USDT、USDG 与 OpenUSD；选币标准是覆盖、合规、运营成本与客户需求；目前 97% 的交易量仍是美元稳定币；区分"支付用"与"持有用"稳定币；看好墨西哥比索、巴西雷亚尔、阿根廷比索等本地货币稳定币</li>
+<li><strong>Payoneer</strong>：200 万中小企业用户；自发稳定币 payout USD，并已申请美国信托银行牌照——动机不是净息差，而是<strong>监管责任归属</strong>：客户的钱由谁负责、出了问题找谁；最大痛点是出入金（off-ramp）与后台合规：资金来源证明、FinOps 与财资团队的工具不统一、链上退款如何回到最终受益人</li>
+<li>一年后展望：不再谈"稳定币"，只谈为客户创造了什么价值；稳定币与法币的界限模糊到按"最便宜、最快、最合适的通道"自动路由</li>
+</ul>
+<h3>Mastercard 与 Bitso：非美元稳定币的缺口</h3>
+<ul>
+<li><strong>Christian Rao（Mastercard）</strong>：愿景是"选择，且不牺牲安全"；连接 38 亿消费者、5 亿受理点、32 种货币；不押注某个赢家，也不认为未来是"多稳定币"各自为岛——需要<strong>一个全球货币平台</strong>，让法币、不同币种稳定币、代币化存款、代币化基金互通</li>
+<li><strong>Ben Reed（Bitso）</strong>：美国闲置美元赚约 4%（国库券利率），墨西哥约 6%（CETES）；美国小企业贷款 7–11%，墨西哥专业放贷机构要 30–40% 以上；链上借贷用数学压缩利差（借款利率×利用率＝出借收益）；"<strong>比索问题需要比索方案</strong>"：墨西哥人持有的是股票、黄金与应收账款，不是 BTC/ETH；<strong>MXNB（墨西哥比索稳定币，Bitso 发行）即日起上线 Solana</strong></li>
+</ul>
+<h3>Paystack：非洲最后一公里</h3>
+<p>Shola Akinlade（Paystack 联合创始人兼 CEO，非洲的 Stripe，2020 年被 Stripe 收购）：7 个市场 11 张牌照、50+ 银行与移动支付直连、每月 6,000 万+笔交易风控决策、40 万+企业、年收款 150 亿美元+。非洲 15 亿人、中位年龄 19 岁，但有 54 国、41 种货币。<strong>Global Stack API</strong>：一个 API 打通 20 个非洲市场的出入金，把非洲货币接进链上经济。</p>
+<h3>SoFi 与 Squads：银行变成插件</h3>
+<ul>
+<li><strong>Simon Griffin（SoFi）</strong>：1,700 万消费者客户；加密业务一周年；推出 <strong>SOFA USD——第一家美国全国性银行发行的稳定币</strong>；首家银行推出<strong>代币化存款（付 4.4% 利息、FDIC 承保）</strong>；质押即将上线，借贷 2027 年上半年推出；Agent 已在帮用户做理财规划与机器人投顾，MCP 陆续上线</li>
+<li><strong>Stefan Simkin（Squads 联合创始人兼 CEO）</strong>："银行变成插件"——账户（钱存在哪）与服务（谁提供服务）解耦，可编程账户居中，银行与 PSP 变成可插拔的服务；其产品 <strong>Altitude</strong>（全球商业账户）上线 12 个月，已有 800 家企业、80 个国家，年化支付量 20 亿美元，五分之一美元在周末流动，卡消费月增 50%；今年迄今稳定币支付 4,820 亿美元，稳定币卡消费近 100 亿美元；下一步机会是端到端拥有金融工作流、让 AI Agent 替客户完成工作（已上线应付、应收、费用管理、会计工作流与 L2MCP）</li>
+</ul>
+<h2>Agent 经济：每次请求都是一次交易</h2>
+<p>Rohin（Cloudflare，Agent 互联网团队产品经理）：Cloudflare 支撑 20% 以上的互联网；过去一年 HTTP 流量增长 60% 以上；<strong>HTML 内容请求中机器人已超 70%，活跃机器人比人类还多</strong>；旧商业模式（广告）正被 AI 概览与 Agent 流量冲击。</p>
+<p>案例：他让 Agent 找伦敦最好的餐厅，Agent 翻了 1,000+ 份菜单、按他的偏好推荐了几家——只有 1 家受益，另外 999 家白白承担了成本。新思路：<strong>每次请求都是一次价值交换的机会</strong>。</p>
+<ul>
+<li><strong>Monetization Gateway</strong>：任意 URL 的付费墙，数据集、API、MCP 工具、页面均可定价，Agent 到访即付费</li>
+<li><strong>Pay Per Crawl</strong>：可信买家竞价购买内容，并可追踪内容被如何使用、赚了多少钱</li>
+<li>底层是 <strong>x402 协议</strong>（X402 基金会治理，Solana、Cloudflare、Visa、Mastercard、Coinbase、Stripe 等为成员）；<strong>Solana 承载 70% 以上的 x402 交易</strong>；机器间 commerce 需要高吞吐、低延迟、能做微支付（0.1 美分甚至 0.01 美分）的支付轨道</li>
+</ul>
+<h2>私募市场与信贷上链：代币化的第二步</h2>
+<p>Michael（Kamino CEO）与 David Vacheva（Fasenara 代币化负责人）对谈。核心观点：<strong>代币化只是第一步，真正的解锁是拿代币化资产做抵押借贷</strong>。</p>
+<ul>
+<li><strong>Kamino</strong>：代币化股票市场规模 155 万亿美元（现场说法），信贷与另类资产另有 40–50 万亿美元；Kamino 已发放贷款超 200 亿美元、交易超 6,000 亿美元；发布全新 <strong>Kamino App</strong>（资产发现、聚合兑换）与 <strong>Kamino Omni</strong>（超越传统金库：持有资产、抵押借贷、组建投资组合）；策略是不争零售用户来 Kamino，而是把 API 交给已有客户的平台（券商、退休、财富、投顾）</li>
+<li><strong>Fasenara</strong>：80 亿美元资管，专注资产支持信贷（30/60/90 天发票应收等超短久期）；上链一年 TVL 从 0 做到 3 亿美元+；代币化版本可存入 Kamino 等 DeFi 借贷协议换稳定币流动性，比传统经纪商借贷更快更便宜；流动性分三种：赎回流动性、融资流动性（借）、二级市场流动性</li>
+<li>给资管同行的建议：按资产类别找用例（代币化股票讲可及性，私募市场讲解锁流动性）；监管是关键——代币所有权的法律确定性、破产隔离、结算终局性、抵押品质量，都是监管机构要先搞明白的问题</li>
+</ul>
+<h2>迪拜房产上链：从份额到代币</h2>
+<p>Ricardo（Stake 联合创始人兼 CPTO）：Stake 2020 年底创立、2021 年开展业务，200 万用户、206 个国籍、170 个国家；150 美元起即可拥有迪拜房产份额。痛点：所有权只在自家数据库、退出窗口有限、通过 SWIFT 结算。宣布与 Solana 合作把资产代币化：<strong>代币即所有权凭证、全球统一规则（一次身份核验）、自由交易</strong>；目标是"我妈不用懂钱包也能投代币"。</p>
+<h2>Ledger 三项发布</h2>
+<p>Ian Rogers（Ledger）：</p>
+<ol>
+<li><strong>Clear Signing 在 Solana 上线</strong>：签名时能在设备上看到可读文字——以 Jupiter 一笔兑换为例，此前要在 Ledger 上翻 13 屏难读文字，现在 3 屏易读；覆盖 9 个 Solana DApp、日常 22 项核心操作中的 18 项；与 Solana 基金会、Anza 合作</li>
+<li><strong>Ledger Agent Intent</strong>（上月发布）：Agent 审批队列化——Agent 永远不持有私钥，需要动钱时发起审批、用户异步批准（例：pay.sh），Agent 不必停下来等</li>
+<li><strong>Ledger Atom</strong>：新移动设备（基于 AOSP），可变身 Ledger 设备；交易时安全模式把屏幕交给 Ledger 安全元件，密钥对 Android 也不可见；与 Solana Seeker 合作，Atom 是 Seeker 平台登陆的首款硬件设备，Seeker 商店 1,500+ 应用将全部迁移过来</li>
+</ol>
+<h2>伦敦市政府专场与下午政治辩论</h2>
+<h3>副市长：伦敦要做加密之都</h3>
+<p>Howard Dawber（伦敦副市长，分管商业与增长；逐字稿作 Dobber）：伦敦自称世界商业之都；60–70 家企业已注册进入英国新加密监管框架；今年伦敦已诞生 19 家独角兽；AI 方面伦敦是欧洲科技之都、全球三大 AI 集群之一；伦敦增长计划覆盖绿色科技（25% 外国直接投资流向绿色技术）、体验经济、健康与生命科学、科技；伦敦 GDP 年增约 2.5–3%；公司可在几天内完成注册、开户与办公；市长已设 AI 工作组（Martha Lane Fox 牵头），关注 AI 对就业的影响与再培训。</p>
+<h3>鲍里斯·约翰逊与 Ross Kempsell：加密货币与英国经济增长</h3>
+<p>主持 Gareth Jenkinson（The Block 多媒体负责人），嘉宾为前首相鲍里斯·约翰逊与 Lord Ross Kempsell。本节政治色彩浓，多处数字为嘉宾现场说法，未经核实。</p>
+<ul>
+<li><strong>鲍里斯谈经济</strong>：英国 2027 年增长预期仅 1%；抨击现任工党政府税太高、福利开支失控（其说法：六分之一成年人登记领取残障福利 PIP）；任内伦敦亿万富翁数量全球最多，工党上台后亿万富翁流失 10%、百万富翁减少 7%（其说法；全球仅莫斯科同期也在减少）；呼吁尽快换保守党政府</li>
+<li><strong>鲍里斯谈比特币</strong>：承认几个月前写专栏称比特币是庞氏骗局，起因是教区一位老人被骗的经历——"寻找更大傻瓜"的游戏到了牛津郡乡下；但强调这只是针对投机性加密货币的怀疑，区块链与资产代币化技术他完全支持，伦敦应在前沿</li>
+<li><strong>Kempsell</strong>：8% 以上英国成年人持有某种加密资产（其说法）；关键是机构采用区块链技术；英国监管框架正在建立（FCA 划定监管边界、英格兰银行稳定币框架、数字证券沙盒）；伦敦有 3,000+ 活跃金融科技公司，去年欧洲金融科技投资第一目的地</li>
+<li><strong>能源与 AI</strong>：鲍里斯称英国电价太贵是 AI 与数据中心发展的关键瓶颈，主张区域电价（苏格兰、威尔士等可再生能源富集地区电价应更低）；AI 是其一生最重要的认知能力革命</li>
+<li><strong>脱欧议题</strong>：Kempsell 称英国不在欧盟 AI 法案与数字市场法案、数字服务法案管辖内是优势，英国是全球第三大 AI 强国；反对重返欧盟；鲍里斯称重返欧盟将使英国每周向欧盟缴纳 7.5 亿英镑（其说法），且英国公众不会投票放弃边境控制</li>
+</ul>
+<h2>压轴：All Funds——2 万亿美元遇上链上</h2>
+<p>Annabel Spring（All Funds CEO）：All Funds 是基金分销的"数字管道"，连接 3,900+ 资产管理公司与 950+ 分销商（财富管理、银行、保险、私人银行），65+ 国家，规模超 2 万亿美元；Solana 上 RWA 43 亿美元，增长极快；两者之间的差距就是"十年一遇的机会"。</p>
+<p>推出 <strong>Harmony 倡议</strong>：让资产管理公司无需重建运营模式即可触达链上生态，让建设者获得机构级产品流；All Funds 区块链联盟已运作五年，"不是试点、不是实验室"。演讲在举例中途被录制截断，逐字稿在 04:27:10 处中断。</p>
+<h2>值得留意的几条线</h2>
+<ol>
+<li><strong>"出口"是全天的高频词</strong>：OpenUSD、USDPT、MoneyGram Ramps、Western Union Dan、Payoneer 的 off-ramp 痛点——稳定币的竞争已从"谁发币"转向"谁能让钱出来、变成现金"</li>
+<li><strong>非美元稳定币接力</strong>：MXNB（墨西哥比索）上线 Solana；Ramp 点名巴西雷亚尔、阿根廷比索；Mastercard 要的是多币种互通的全球货币平台</li>
+<li><strong>分发压倒产品</strong>：All Funds（2 万亿美元）与 Kamino（把 API 交给已有客户的平台）讲的是同一件事——谁掌握分发，谁掌握估值</li>
+<li><strong>Agent 支付成为独立赛道</strong>：x402 + Solana 占 70%+ 交易 + Cloudflare 的按次付费墙，机器间 commerce 的收费模式正在成型</li>
+<li><strong>监管仍是机构入场的最后一道门</strong>：ICE Clear Europe 的 Hester 明确表示，24/7 抵押品移动要等监管对代币所有权、破产隔离与结算终局性点头；纽约证券交易所正在建代币化 ATS（已可接受 Solana 上铸造的代币），ICE 也在研究成为 Solana 验证者</li>
+</ol>
+<h2>未覆盖与存疑</h2>
+<ul>
+<li>录制在 All Funds 演讲中途截断（04:27:10），当天下午后半段内容不在本次逐字稿内</li>
+<li>ICE Clear Europe 的 Hester（逐字稿未给姓氏）一段：ICE 正在推进零售市场（与机构市场隔离、不影响现有保证基金与风险瀑布）、纽约证券交易所代币化 ATS、代币化证券交易场所合资项目，以及接受黄金、日元、澳元等作为初始保证金——因篇幅未单列，详见逐字稿 03:00–03:16</li>
+<li>午休前后另有短片与暖场内容，未计入要点</li>
+</ul>
+<h2>ASR 还原表</h2>
+<table>
+<thead>
+<tr>
+<th>逐字稿写法</th>
+<th>应为</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Salana / Salina</td>
+<td>Solana</td>
+<td>全文高频</td>
+</tr>
+<tr>
+<td>Freakpoint</td>
+<td>Breakpoint</td>
+<td>主题词</td>
+</tr>
+<tr>
+<td>Zell / ZEL</td>
+<td>Zelle</td>
+<td>美国 P2P 支付网络；其稳定币为 Zelle-USD</td>
+</tr>
+<tr>
+<td>OpenUSC / OpenUSD</td>
+<td>OpenUSD（OUSD）</td>
+<td>Open Standard 的稳定币</td>
+</tr>
+<tr>
+<td>Monogram</td>
+<td>MoneyGram</td>
+<td>汇款公司</td>
+</tr>
+<tr>
+<td>Solfler / Solfair / Sulfur</td>
+<td>Solflare</td>
+<td>Solana 钱包</td>
+</tr>
+<tr>
+<td>US DPT / USDPT</td>
+<td>USDPT</td>
+<td>Western Union 的稳定币</td>
+</tr>
+<tr>
+<td>Kamina / Camino</td>
+<td>Kamino</td>
+<td>Solana 借贷协议</td>
+</tr>
+<tr>
+<td>Fasenara / Fastenara</td>
+<td>Fasenara</td>
+<td>80 亿美元资管</td>
+</tr>
+<tr>
+<td>Pioneer</td>
+<td>Payoneer</td>
+<td>B2B 支付平台</td>
+</tr>
+<tr>
+<td>Howard Dobber</td>
+<td>Howard Dawber</td>
+<td>伦敦副市长（分管商业与增长）</td>
+</tr>
+<tr>
+<td>Kemstle / Kempsel / Lord Camp</td>
+<td>Lord Ross Kempsell</td>
+<td>逐字稿拼写不一</td>
+</tr>
+<tr>
+<td>Lily Lu</td>
+<td>Lily Liu</td>
+<td>Solana 基金会总裁（疑为转写，存疑）</td>
+</tr>
+<tr>
+<td>Dan</td>
+<td>Digital Asset Network</td>
+<td>Western Union 的数字资产生态网络，简称 Dan</td>
+</tr>
+<tr>
+<td>chunk_023</td>
+<td>静音段</td>
+<td>午休时段附近的一段静音，不影响完整性</td>
+</tr>
+</tbody>
+</table>
+</article>
+<footer>来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2NgQPdyyEPkEOk">https://x.com/i/broadcasts/2NgQPdyyEPkEOk</a> · Solana Breakpoint 2026（伦敦）· 2026-11-16 17:59–22:26（约 4 小时 27 分）· 总观看约 2.4 万人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+</body>
+</html>
