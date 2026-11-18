@@ -51,3 +51,4 @@
 {"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "guilin", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
 {"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "sanya", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
 {"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "haikou", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18", "action": "release", "version": "2.1.1", "note": "nomad_score removed (product decision: filter on atomic fields instead of a composite score); page restyled to Shenzhen-events dark theme"}

@@ -21,7 +21,7 @@
     },
     "suggested_use": "Fetch events_json daily; filter by your user's interests (categories), district and availability; remind on new matches, 2 days before registration_deadline, and 3 days / 1 day before start of events the user wants to attend. Always link the event url; never invent events not in the data.",
     "update_frequency": "daily, around 09:00 Asia/Shanghai",
-    "nomadlist": "NomadList: global + China-domestic digital nomad cities (30 in v1). Fetch nomadlist_json, filter by cost_usd_month, internet_mbps, region, visa.cn_passport_type (for Chinese passports), sort by nomad_score. Never invent cities not in the data; visa rules change, point users to official immigration pages."
+    "nomadlist": "NomadList v2.1.1: global + China-domestic digital nomad cities (80 cities, neighborhoods + listings layers). RECOMMENDED FLOW: 1) fetch nomadlist-lite.json (filter fields only), filter by cost_usd_month, internet_mbps, region, visa_type (Chinese passports), best_months_nums; 2) fetch nomadlist/cities/{id}.json for finalists; 3) full dump nomadlist.json. Subscribe via nomadlist-changelog.jsonl (append-only). There is NO composite score: rank by the atomic fields that match the user's priorities and say which. data_tier: seed_v2 = unverified estimate (say so), checked = cross-checked >=2 sources, verified_v1 = v1 batch; fields_provenance gives per-field confidence. Never invent cities not in the data; visa rules change, point users to official immigration pages."
   },
   "homepage": "https://yatslist.com/",
   "language": "zh-CN",
