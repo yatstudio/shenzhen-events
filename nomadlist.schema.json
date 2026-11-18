@@ -93,6 +93,72 @@
                 "type": "boolean"
               }
             }
+          },
+          "data_tier": {
+            "type": "string",
+            "enum": [
+              "verified_v1",
+              "checked",
+              "seed_v2"
+            ],
+            "description": "verified_v1 = v1 seed batch; checked = cross-checked against >=2 independent sources by the hourly collector; seed_v2 = estimate pending verification"
+          },
+          "neighborhoods": {
+            "type": "array",
+            "description": "District layer (learned from StayHere): same city, different districts can differ 2x in rent. Pick a district before a city.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "name_en": {
+                  "type": "string"
+                },
+                "rent_1br_usd_month": {
+                  "type": "number"
+                },
+                "monthly_total_cny_frugal": {
+                  "type": "number",
+                  "description": "frugal-tier total monthly cost in CNY when sourced (e.g. StayHere China cities)"
+                },
+                "rent_cny_month": {
+                  "type": "number"
+                },
+                "vibe": {
+                  "type": "string"
+                },
+                "best_for": {
+                  "type": "string"
+                },
+                "coworking_density": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "note": {
+                  "type": "string"
+                },
+                "listings": {
+                  "type": "array",
+                  "description": "Third layer: specific compounds/places, only when field-checked or sourced; empty when none recorded.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "rent_cny_month": {
+                        "type": "number"
+                      },
+                      "note": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

@@ -1,30 +1,31 @@
 {
- "city": "深圳",
- "description": "深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件 + X Space，每天更新的结构化活动清单，供任何用户的 Agent 读取并生成活动提醒。",
- "for_agents": {
-  "auth": "none",
-  "contribute": "Three channels, lowest friction first: (1) Agent protocol submit — POST JSON per submit.schema.json to https://submit.carromking.shop/v1/events, no account or key needed; AI pre-review, approved items enter the open layer (layer=open). Protocol doc: https://yatslist.com/SUBMIT.md (2) Web one-shot form for humans without an agent: https://yatslist.com/submit.html (3) GitHub Pull Request or Issue per CONTRIBUTING.md (developer supplement only).",
-  "read": {
-   "events_json": "https://yatslist.com/events.json",
-   "events_json_mirror": "https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json",
-   "ics": "https://yatslist.com/events.ics",
-   "llms_txt": "https://yatslist.com/llms.txt",
-   "protocol_doc": "https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md",
-   "rss": "https://yatslist.com/feed.xml",
-   "schema": "https://yatslist.com/events.schema.json",
-   "submit_protocol": "https://yatslist.com/SUBMIT.md",
-   "submit_schema": "https://yatslist.com/submit.schema.json",
-   "submit_endpoint": "https://submit.carromking.shop/v1/events",
-   "nomadlist_json": "https://yatslist.com/nomadlist.json",
-   "nomadlist_page": "https://yatslist.com/nomadlist/",
-   "nomadlist_schema": "https://yatslist.com/nomadlist.schema.json"
+  "city": "深圳",
+  "description": "深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件 + X Space，每天更新的结构化活动清单，供任何用户的 Agent 读取并生成活动提醒。",
+  "for_agents": {
+    "auth": "none",
+    "contribute": "Three channels, lowest friction first: (1) Agent protocol submit — POST JSON per submit.schema.json to https://submit.carromking.shop/v1/events, no account or key needed; AI pre-review, approved items enter the open layer (layer=open). Protocol doc: https://yatslist.com/SUBMIT.md (2) Web one-shot form for humans without an agent: https://yatslist.com/submit.html (3) GitHub Pull Request or Issue per CONTRIBUTING.md (developer supplement only).",
+    "read": {
+      "events_json": "https://yatslist.com/events.json",
+      "events_json_mirror": "https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json",
+      "ics": "https://yatslist.com/events.ics",
+      "llms_txt": "https://yatslist.com/llms.txt",
+      "protocol_doc": "https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md",
+      "rss": "https://yatslist.com/feed.xml",
+      "schema": "https://yatslist.com/events.schema.json",
+      "submit_protocol": "https://yatslist.com/SUBMIT.md",
+      "submit_schema": "https://yatslist.com/submit.schema.json",
+      "submit_endpoint": "https://submit.carromking.shop/v1/events",
+      "nomadlist_json": "https://yatslist.com/nomadlist.json",
+      "nomadlist_page": "https://yatslist.com/nomadlist/",
+      "nomadlist_schema": "https://yatslist.com/nomadlist.schema.json"
+    },
+    "suggested_use": "Fetch events_json daily; filter by your user's interests (categories), district and availability; remind on new matches, 2 days before registration_deadline, and 3 days / 1 day before start of events the user wants to attend. Always link the event url; never invent events not in the data.",
+    "update_frequency": "daily, around 09:00 Asia/Shanghai",
+    "nomadlist": "NomadList: global + China-domestic digital nomad cities (30 in v1). Fetch nomadlist_json, filter by cost_usd_month, internet_mbps, region, visa.cn_passport_type (for Chinese passports), sort by nomad_score. Never invent cities not in the data; visa rules change, point users to official immigration pages."
   },
-  "suggested_use": "Fetch events_json daily; filter by your user's interests (categories), district and availability; remind on new matches, 2 days before registration_deadline, and 3 days / 1 day before start of events the user wants to attend. Always link the event url; never invent events not in the data.",
-  "update_frequency": "daily, around 09:00 Asia/Shanghai",
-  "nomadlist": "NomadList: global + China-domestic digital nomad cities (30 in v1). Fetch nomadlist_json, filter by cost_usd_month, internet_mbps, region, visa.cn_passport_type (for Chinese passports), sort by nomad_score. Never invent cities not in the data; visa rules change, point users to official immigration pages."
- },
- "homepage": "https://yatslist.com/",
- "language": "zh-CN",
- "name": "Yat's List · 深圳活动清单（原深圳活动日报）",
- "repository": "https://github.com/yatstudio/shenzhen-events"
+  "homepage": "https://yatslist.com/",
+  "language": "zh-CN",
+  "name": "Yat's List · 深圳活动清单（原深圳活动日报）",
+  "repository": "https://github.com/yatstudio/shenzhen-events",
+  "nomadlist": "NomadList v2: global + China-domestic digital nomad cities (80 cities, 61 neighborhoods/districts, listings layer for field-checked places). Fetch nomadlist_json, filter by cost_usd_month, internet_mbps, region, visa.cn_passport_type (for Chinese passports), sort by nomad_score. For 'which district' questions use cities[].neighborhoods[] (rent_1br_usd_month, coworking_density, best_for). data_tier: seed_v2 = unverified estimate (say so), checked = cross-checked >=2 sources, verified_v1 = v1 batch. Never invent cities not in the data; visa rules change, point users to official immigration pages."
 }
