@@ -5,6 +5,56 @@
   "source_site": "https://yatstudio.github.io/x-spaces/",
   "spaces": [
     {
+      "id": "misa-okx-simple-options-20261117",
+      "title": "《Misa社区 × 简易期权：专属奖励等你来拿》",
+      "title_en": "Misa Community × Simple Options: OKX Options for Beginners",
+      "title_tw": "《Misa社區 × 簡易期權：專屬獎勵等你來拿》",
+      "series": "Misa 社区",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "Misa（Misa 社区）",
+      "guests": [
+        "区块链日记",
+        "Queen（麦云）",
+        "邵映（OKX）",
+        "温蒂 Wendy",
+        "OKX 产品经理"
+      ],
+      "duration": "2 小时 19 分",
+      "duration_minutes": 139,
+      "url": "https://x.com/i/broadcasts/2jPqOjykjbKOdg",
+      "note_url": "/spaces/notes/misa-okx-simple-options-20261117.html",
+      "topics": [
+        "期权",
+        "OKX",
+        "简易期权",
+        "新手教学",
+        "英伟达财报",
+        "风险管理"
+      ],
+      "highlights": [
+        "期权大白话（邵映，OKX 产品方）：期权里只有两个角色——买权利的人和收钱担义务的人；巴菲特卖可口可乐 Put 收了约 750 万美元权利金；双币赢的底层就是期权。权利金、行权价、到期日、Call/Put 四种组合一次讲清（均为现场说法）。",
+        "三个实景场景（区块链日记，以英伟达约 160 美元为例）：买 Put（行权价 150、权利金 3 美元/股）——跌到 130 净亏 13 美元，裸持股票要亏 30；卖 Put 在 140 接货顺带收 3 美元；买 Call（160、权利金 5 美元）——涨到 180 净赚 15，只涨到 163 反而亏 2。整张合约口径权利金约 400 美元/张。",
+        "Queen 的三误区与回测（雅虎数据 + BS 模型估算，非真实成交）：误区一，期权≠杠杆——2020 年 3 月 BTC 从 9,123 跌到 5,564 美元（-39%），买 Put 权利金 498 美元、赔付 3,559 美元，对冲后组合只亏 5.5%；误区二，亏有限≠容易赚——2024 年 4 月买 6 个月 Call（行权价 73,000、权利金 8,300 美元），到期价 67,003，权利金亏光 100%；误区三，收权利金≠稳定收益——2020 年 2 月 SPY 338 美元卖 Put，3 月跌到 228 被指派，每股亏 91 美元，是权利金的 77 倍。",
+        "OKX 简易期权：入口在交易→期权，标的以美股/ETF 为主、BTC 后续上；下单前预览盈亏；1 股起买，而专业市场 1 张=100 股，门槛差 100 倍；嘉宾反复强调：简化的是操作，不是风险。",
+        "新手风险检查表：搞懂权利与义务再下单、只用亏得起的钱、不裸卖不重仓、看 Theta 与 IV、卖方要有保证金或现货对冲；快问快答里给了英伟达财报前的三种打法——买 12 月 Call、此前高位减仓 + 12 月 Put 保护、买半年 Call；末日期权 IV 超 100% 太贵不做（均为现场说法）。全场多次声明：仅为产品教育与经验交流，不构成投资建议。"
+      ],
+      "highlights_en": [
+        "Options in plain words (Shaoying, OKX): there are only two roles — buying rights, or taking money and owing obligations; Buffett sold Coca-Cola puts and collected ~$7.5M in premium; dual-currency products are options under the hood. Premium, strike, expiry and the four Call/Put combinations, explained once (all on-stage claims).",
+        "Three concrete scenarios (Blockchain Diary, NVDA at ~$160): buying a 150 put for $3/share — a drop to 130 loses $13 net versus $30 holding the stock; selling a put to get filled at 140 while collecting $3; buying a 160 call for $5 — a rise to 180 nets +$15, but only reaching 163 loses $2. Per-contract premium works out to roughly $400.",
+        "Queen's three misconceptions, backtested (Yahoo data + Black-Scholes estimates, not real fills): (1) Options ≠ leverage — in March 2020 BTC fell from $9,123 to $5,564 (-39%); a $498 put paid $3,559 and the hedged book lost only 5.5%. (2) Limited loss ≠ easy money — an April 2024 six-month call (strike $73,000, premium $8,300) expired with BTC at $67,003 and the premium went to zero. (3) Collecting premium ≠ stable income — selling an SPY put at 338 in Feb 2020 got assigned at 228 in March, losing $91/share, 77x the premium.",
+        "OKX Simple Options: entry under Trade → Options; underlyings are mainly US stocks/ETFs with BTC to follow; P&L preview before ordering; starts at 1 share versus 100 shares per contract in pro markets — a 100x lower threshold. The guests stressed repeatedly: what is simplified is the operation, not the risk.",
+        "A beginner risk checklist: understand rights and obligations before ordering, only use money you can afford to lose, never sell naked or oversize, watch Theta and IV, and sellers need margin or a spot hedge. The lightning round gave three NVDA-earnings plays — buy December calls, trim at highs plus December put protection, or buy six-month calls; weekly options with IV over 100% are too expensive to touch (all on-stage claims). Repeated disclaimer: education and experience sharing only, not investment advice."
+      ],
+      "highlights_tw": [
+        "期權大白話（邵映，OKX 產品方）：期權裡只有兩個角色——買權利的人和收錢擔義務的人；巴菲特賣可口可樂 Put 收了約 750 萬美元權利金；雙幣贏的底層就是期權。權利金、行權價、到期日、Call/Put 四種組合一次講清（均為現場說法）。",
+        "三個實景場景（區塊鏈日記，以英偉達約 160 美元為例）：買 Put（行權價 150、權利金 3 美元/股）——跌到 130 淨虧 13 美元，裸持股票要虧 30；賣 Put 在 140 接貨順帶收 3 美元；買 Call（160、權利金 5 美元）——漲到 180 淨賺 15，只漲到 163 反而虧 2。整張合約口徑權利金約 400 美元/張。",
+        "Queen 的三誤區與回測（雅虎數據 + BS 模型估算，非真實成交）：誤區一，期權≠槓桿——2020 年 3 月 BTC 從 9,123 跌到 5,564 美元（-39%），買 Put 權利金 498 美元、賠付 3,559 美元，對沖後組合只虧 5.5%；誤區二，虧有限≠容易賺——2024 年 4 月買 6 個月 Call（行權價 73,000、權利金 8,300 美元），到期價 67,003，權利金虧光 100%；誤區三，收權利金≠穩定收益——2020 年 2 月 SPY 338 美元賣 Put，3 月跌到 228 被指派，每股虧 91 美元，是權利金的 77 倍。",
+        "OKX 簡易期權：入口在交易→期權，標的以美股/ETF 為主、BTC 後續上；下單前預覽盈虧；1 股起買，而專業市場 1 張=100 股，門檻差 100 倍；嘉賓反覆強調：簡化的是操作，不是風險。",
+        "新手風險檢查表：搞懂權利與義務再下單、只用虧得起的錢、不裸賣不重倉、看 Theta 與 IV、賣方要有保證金或現貨對沖；快問快答裡給了英偉達財報前的三種打法——買 12 月 Call、此前高位減倉 + 12 月 Put 保護、買半年 Call；末日期權 IV 超 100% 太貴不做（均為現場說法）。全場多次聲明：僅為產品教育與經驗交流，不構成投資建議。"
+      ]
+    },
+    {
       "id": "coindesk-breakpoint-day2-20261117",
       "title": "《CoinDesk Live at Solana Breakpoint 2026 Day 2》",
       "title_en": "CoinDesk Live at Solana Breakpoint 2026 Day 2",
