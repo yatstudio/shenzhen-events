@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Yat's List NomadList",
+  "type": "object",
+  "required": [
+    "dataset",
+    "updated_at",
+    "cities"
+  ],
+  "properties": {
+    "cities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "city",
+          "country",
+          "region",
+          "cost_usd_month",
+          "internet_mbps",
+          "nomad_score",
+          "visa"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "stable slug, never changes"
+          },
+          "city": {
+            "type": "string"
+          },
+          "city_zh": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "country_zh": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "Southeast Asia",
+              "East Asia",
+              "Europe",
+              "Caucasus",
+              "Middle East",
+              "Middle East / Europe",
+              "Americas",
+              "Africa"
+            ]
+          },
+          "cost_usd_month": {
+            "type": "number",
+            "description": "estimated total monthly cost for one nomad, USD"
+          },
+          "rent_1br_usd_month": {
+            "type": "number"
+          },
+          "coworking_usd_month": {
+            "type": "number"
+          },
+          "internet_mbps": {
+            "type": "number"
+          },
+          "safety_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "english_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "nomad_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "visa": {
+            "type": "object",
+            "properties": {
+              "cn_passport_type": {
+                "type": "string"
+              },
+              "cn_max_stay_days": {
+                "type": "number"
+              },
+              "has_nomad_visa": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

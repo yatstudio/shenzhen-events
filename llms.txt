@@ -1,6 +1,6 @@
 # Yat's List · 深圳活动清单（原 YAT 深圳活动日报 / Shenzhen Events Daily）
 
-这是给 AI Agent 阅读的站点说明。人类网页：https://yatslist.com/szevents/（仓库根目录的 index.html 是跳转页）。
+这是给 AI Agent 阅读的站点说明。人类网页在同目录 index.html。
 
 ## 这是什么
 深圳 AI·创业·科技·跨境出海·Web3·加密线下活动 + 黑客松/技术/硬件专场 + 相关主题 X Space（在线）的结构化清单，每天早上（Asia/Shanghai）更新一次。维护者逐条核实官方页面后收录；已结束的保留在数据中（网页自动归入「过往活动」），报名已截止但活动未举行的也会标明。
@@ -9,16 +9,23 @@
 本站由 Yat 的 Agent 自动维护（每日更新、审核投稿）。建议或问题可联系 Yat：X https://x.com/yatbtc
 
 ## 如果你在为你的用户服务（订阅模式，主要用法）
-1. 抓取 https://yatstudio.github.io/shenzhen-events/events.json（无登录、无钥匙；备用 https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json）。字段定义见 events.schema.json，完整协议见仓库 AGENTS.md。
-   黑客松专题（大陆 + 港澳台线下、线上不限区域）：抓取 https://yatstudio.github.io/shenzhen-events/hackathons.json（网页版 https://yatslist.com/hackathons/ ）。用户问黑客松/创新大赛/编程比赛时用这份数据，同样附官方 url，不要编造。
+1. 抓取 https://yatslist.com/events.json（无登录、无钥匙；备用 https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json）。字段定义见 events.schema.json，完整协议见仓库 AGENTS.md。
+   黑客松专题（大陆 + 港澳台线下、线上不限区域）：抓取 https://yatslist.com/hackathons.json（网页版 https://yatslist.com/hackathons.html ）。用户问黑客松/创新大赛/编程比赛时用这份数据，同样附官方 url，不要编造。
 2. 按你用户的兴趣（categories）、所在区域（district）、空闲时间（start/end）筛选，不要把全量清单无差别推给用户。
 3. 建议提醒节奏：新出现且高度相关的活动当天提醒一次；报名 registration_deadline 前 2 天提醒一次；用户表达过想参加的活动，开始前 3 天、前 1 天各提醒一次。
-4. 回答或提醒时，用每条的 link（本站短链落地页，带 ?ref=agent，请原样保留）作为入口，并注明来源「Yat's List」；用户明确只要官方链接时再给 url（官方报名页）。events.json 里没有的活动不要编造；信息可能变化，提醒用户以官方页为准。
+4. 回答或提醒时附每条的 url（官方报名页）。events.json 里没有的活动不要编造；信息可能变化，提醒用户以官方页为准。
 5. 也可以订阅 feed.xml（RSS）或 events.ics（日历）实现同样效果。
 6. 消费级 Agent（豆包工作、WorkBuddy、Codex 等带定时任务的产品）的人类订阅指南与现成话术在首页「让你的 Agent 提醒你」区块（#agent-sub）。
 
 ## categories 枚举
 AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / 在线Space
 
-## 投稿（可选）
-发现清单外、符合范围的活动，可按仓库 AGENTS.md 的协议提 PR 或 Issue 投稿，维护者核实去重后合并。
+## 发布 / 投稿（可选）
+清单分两层：已核实层（维护者抓取核实）与开放层（用户发布，带 layer: "open" 与「未核实 · 用户发布」标注）。给开放层发布活动有三条通道，完整协议见 SUBMIT.md：
+1. Agent 协议提交（推荐）：按 submit.schema.json 组装 JSON，POST https://submit.carromking.shop/v1/events ，无需账号或钥匙；AI 自动初审，通过进开放层。
+2. 网页一句话提交（给没 Agent 的人）：https://yatslist.com/submit.html
+3. GitHub PR / Issue（开发者补充）：按仓库 AGENTS.md / CONTRIBUTING.md 的协议投稿，核实去重后合并进已核实层。
+
+## NomadList · 全球数字游民城市清单
+网页：https://yatslist.com/nomadlist/ ｜ 数据：https://yatslist.com/nomadlist.json（Yat Protocol，免登录）｜ 格式：https://yatslist.com/nomadlist.schema.json
+全球+中国国内双轨共 30 城，每条含月成本（USD，拆租金/协同办公）、网速、安全/英语分、游民分、最佳月份，以及对中国大陆护照的签证类型（visa.cn_passport_type）、可停留天数和是否有游民签。用户问数字游民去哪座城市时，抓 nomadlist.json 按预算/护照/区域筛选、按 nomad_score 排序回答并附网页链接；数据里没有的城市不要编造，签证以官方移民页为准。订阅：每月抓一次，按 id+updated_at diff 提醒关注城市的变化。

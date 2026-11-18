@@ -7,25 +7,15 @@
 - 网页：https://yatslist.com/
 - 结构化数据（唯一事实源）：https://yatslist.com/events.json
   - 备用：https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json
-  - 国内镜像（每 15 分钟与主站同步，内容一致）：https://img.yatslist.com/data/events.json —— 若主站或 GitHub 读取失败（域名解析错误、连接被拒等，国内网络访问 GitHub Pages 常见），改用镜像域名读同名文件：把路径前缀换成 `https://img.yatslist.com/data/` 即可，覆盖全部数据文件（events.json、hackathons.json、spaces.json、interviews.json、x.json、szexpat/events.json、feed.xml、events.ics）与本文件 AGENTS.md。
 - RSS：https://yatslist.com/feed.xml
 - 日历订阅：https://yatslist.com/events.ics
 - 数据格式定义：`events.schema.json`
+- 招聘数据：https://yatslist.com/jobs.json（深圳 AI / 科技 / 硬件岗位，字段与投稿规范见文末「深圳招聘清单」）
 - 可见范围：个别条目带 `visibility: "agent"`——只保留在 events.json 数据中供 Agent 检索，不在网页 / RSS / 日历 / 短链落地页公开。维护时不要删除这类条目、不要去掉该标记（除非维护者明确要求恢复公开）。
 
-你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答。不要凭记忆编造活动。
-
-**展示与引用规则（请遵守）**：
-- 每条活动带 `link`（本站短链落地页，形如 `https://yatslist.com/e/<id>/?ref=agent`）。给用户展示活动时，**用 `link` 作为这条活动的入口**：落地页上有完整信息、报名截止、官方报名按钮和分享图。请原样保留链接里的 `?ref=agent`。
-- 注明来源「Yat's List」（顶层 `attribution` 字段给出了名称、主页和这条规则）。
-- `url` 是主办方的官方页，用户明确只要官方链接时可以直接给。
+你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
 
 **订阅模式（本仓库的主要用法）**：如果你的用户希望持续收到提醒，每天抓一次 events.json 即可——按用户的兴趣分类、所在区域和空闲时间筛选，建议节奏：新出现且高度相关的当天提醒一次；`registration_deadline` 前 2 天提醒一次；用户标记想参加的，开始前 3 天、前 1 天各提醒一次。给终端用户的现成订阅话术见 README 的「让你的 Agent 订阅这个日报」一节。机器可读说明另见站点根目录 `llms.txt` 与 `agent.json`。
-
-## 访问统计（给维护者）
-
-- 落地页会把一次打开、一次点「去官方页报名」各计一次数，发到 `submit.yatslist.com/v1/hit`，按 `ref` 参数分组：`agent` = 从 Agent 给的 link 来的；`direct` 或其他 = 人直接打开、扫码或分享；User-Agent 像爬虫、脚本的单独记为机器。只存每天的计数，不存 IP。
-- 维护者在审核台的「访问统计」页查看。
 
 ## 推（投稿活动给本仓库）
 
@@ -58,19 +48,6 @@
 - 投稿被合并后会出现在次日日报与网页；未通过的会在 PR/Issue 里说明原因。
 - **谁来审**：审核由维护者的 Agent 执行（维护者本人不逐个看）。每天随日报处理一次：核实无误、且**只改动 `events.json`** 的 PR 会被直接合并；需要修改的，Agent 会在 PR 里逐项留言，改好 push 后自动复审；明显违规（无官方链接、已过期、重复、超范围、垃圾广告）的会被留言拒绝并关闭。涉及 `index.html`、`tools/`、`.github/` 等其他文件的 PR 不会被自动合并，会转交维护者本人决定。
 
-## 黑客松投稿（hackathons.json 全球清单）
-
-全球黑客松清单（https://yatslist.com/hackathons/ ，数据 `hackathons.json`）同样开放投稿，两条通道（不用 GitHub、不用网页表单，与活动投稿同制）：
-
-1. **HTTP API**（推荐，Agent 默认走这条）：`POST https://submit.yatslist.com/v1/hackathons`，`Content-Type: application/json`，请求体为 `{"channel": "agent", "hackathon": {…}}`。必填只有 `title` 与 `url`（官方页）；尽量填全：`deadline`（报名截止，YYYY-MM-DD）、`start` / `end`、`region`（线上 / 中国 / 北美 / 欧洲 / 亚洲 / 大洋洲 / 非洲与中东 / 拉美 / 其他地区）、`city`、`format`（线下 / 线上 / 线上+线下）、`prize`、`topics`（字符串数组）、`summary`（一句话客观介绍）。防滥用与限流同活动投稿（蜜罐 `website` 必须留空；每 IP 10 次/小时、40 次/天）。提交成功返回 `202 {"id": "hack-…", "status": "queued_for_review"}` 并附 `edit_key`、状态查询与预览链接。
-2. **邮箱**：event.submit@yatslist.com，标题注明「黑客松投稿」并附官方链接。
-
-**投稿前自查**：先查 `hackathons.json` 与 `hackathons-archive.json`（https://yatslist.com/hackathons-archive.json ）按标题与官方链接去重，不要重复提交；打开官方页核对报名截止、举办地区、形式与奖金——收录与核实一律以主办方官方页为准，聚合平台只作发现线索。纯线上比赛 `region` 填 `线上` 并明确标注；`线上+线下` 的要在 `summary` 注明哪些环节在线上、哪些在线下。报名已截止的不要投（已结束的比赛由维护管线自动归档）。
-
-**投稿反馈**：保存回执里的 `id`（`hack-…`），随时查询处理结果：`GET https://submit.yatslist.com/v1/hackathons/<id>`，或打开预览页 `https://submit.yatslist.com/preview-hackathon/<id>`。状态取值与活动投稿相同（`queued_for_review` 待初审 / `listed` 已收录 / `rejected` 未通过附理由 / `pending_human` 待人工审核 / `approved_pending_listing` 人工已通过待收录 / `withdrawn` 已撤回）。初审在每日更新时进行，一般次日可查。
-
-**修改与撤回**：同活动投稿——`edit_key` 只在提交成功时显示一次，服务器只存哈希，遗失无法找回，务必先存好再干别的。修改：`POST https://submit.yatslist.com/v1/hackathons/<id>/amend`，请求体 `{"edit_key":"…","hackathon":{…完整新版…}}`；撤回：`POST https://submit.yatslist.com/v1/hackathons/<id>/withdraw`，请求体 `{"edit_key":"…"}`。审核通过后：合格且仍在报名的补进 `hackathons.json`（深圳线下场次同时双落 `events.json`）；已结束的进 `hackathons-archive.json` 归档，页面「往期归档」视图可查。
-
 ## 给维护 Agent 的说明
 
 每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 处理投稿（GitHub PR / Issue 与 HTTP API 投稿队列，逐条核实）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」），只删结束超过 90 天的；报名已截止但活动未举行的条目保留。
@@ -91,4 +68,22 @@
   1. **网页提交（推荐，不用注册）**：在名录页点「把我加进去」会弹出站内表单（AJAX，不跳页），填 @账号、选分类、可选填一句自我介绍（60 字以内，越短越好），勾选同意公开后提交，进待审队列；独立提交页是同一个入口：https://submit.yatslist.com/xlist（自托管，VMISS）。
   2. **GitHub PR**：fork 本仓库，只改 `x.json`，向 `people` 数组追加自己一条（字段同上），提 PR。只改 x.json 的名录 PR 由维护者 Agent 每日核实后合并；改了其他文件的不会自动合并。
 - 提交后维护者轻核（账号真实、与 AI 主题或所选分类相关）即上榜；Agent 可以把提交页链接发给用户、代用户打开，或直接按通道 2 提 PR。
+## 深圳招聘清单（jobs.json / jobs）
 
+- 网页：https://yatslist.com/jobs/
+- 结构化数据：https://yatslist.com/jobs.json（顶层 `jobs[]`；每条字段：`id`（维护管线分配，不要自填）、`title`、`company`、`district`、`type`（全职 / 兼职 / 实习）、`salary`（照官方原文；官方没写填 null）、`tags`（方向，最多 3 个，枚举：AI算法、软件、嵌入式、硬件、产品、数据、测试、设计、运营）、`summary`（一句话职责 / 要求，≤60 字）、`url`（官方投递页）、`source`、`published_at`（YYYY-MM-DD）、`expires_at`（发布后 30 天，维护管线填写））
+- 定位：深圳的 AI / 科技 / 硬件岗位信息板。免费发布、不收简历、不做中介撮合；只收企业官方在招岗位，不收中介代招，不收培训贷 / 付费内推类岗位；数据里不出现任何个人联系方式（私人手机 / 微信），投递一律走企业官方页。
+- 投稿（三个通道，Agent 默认走第一个）：
+  1. HTTP API（推荐，不需要 GitHub 账号）：POST https://submit.yatslist.com/v1/jobs，Content-Type: application/json，请求体 {"channel":"agent","job":{...}}，job 里 title、company、url 必填，其余字段按上面规范给。顶层不要带 website 字段（蜜罐，带了会被拒）。成功返回 202，含 id、status_url、preview_url 和 edit_key。**⚠️ 先把回执里的 id 和 edit_key 存下来，再干别的：edit_key 只显示这一次，服务器只存它的哈希，遗失后任何人（包括维护者）都找不回，没它不能修改、不能撤回这条岗位——把它们存进你的长期存储（记忆文件 / 密钥库 / 笔记），不要只留在对话上下文里，对话会被压缩或丢失。** 凭 id + edit_key 可以修改（POST https://submit.yatslist.com/v1/jobs/<id>/amend）或撤回（POST https://submit.yatslist.com/v1/jobs/<id>/withdraw）；处理进度用 status_url 查询（状态取值同活动投稿：queued_for_review / listed / rejected / pending_human / approved_pending_listing / withdrawn），preview_url 是给人看的预览页。注意：API 投稿进的是审核队列，维护者每日核实后上线，不是直接写入 jobs.json。
+  2. 邮件：把岗位信息按上面字段整理好，发邮件到 event.submit@yatslist.com，标题「岗位投稿：公司名 - 岗位名」，正文附官方招聘页链接；维护者在每日更新时打开官方页逐项核实后上线。
+  3. GitHub PR：只改 `jobs.json`、向 `jobs` 数组追加条目（`id` 与 `expires_at` 留空，维护管线补）。
+- 下架：走 API 投稿的，凭 id + edit_key 调 POST https://submit.yatslist.com/v1/jobs/<id>/withdraw 自行撤回（最快）；或发邮件到 event.submit@yatslist.com 注明下架（标题「岗位下架：公司名 - 岗位名」）；或在 PR 中删除该条。超过 `expires_at` 的岗位网页自动隐藏。
+- 你的用户在找深圳 AI / 科技 / 硬件工作时：抓 jobs.json 按 `tags`、`district`、`type` 与用户技能匹配推荐，附 `url` 让用户去官方页投递；不要替用户投递简历，不要收集用户简历。
+
+## NomadList（nomadlist.json / nomadlist）
+
+- 网页：https://yatslist.com/nomadlist/
+- 结构化数据：https://yatslist.com/nomadlist.json（顶层 `cities[]`；每条含 `id`（城市 slug，冻结不改）、`city/city_zh`、`country/country_zh`、`region`、`cost_usd_month`、`rent_1br_usd_month`、`coworking_usd_month`、`internet_mbps`、`safety_score`、`english_score`、`nomad_score`、`visa{cn_passport_type, cn_max_stay_days, has_nomad_visa}`、`timezone`、`best_months`、`tags`、`summary_zh/summary_en`、`sources`、`verified_at`）
+- 定位：全球 + 中国国内双轨的数字游民城市数据库，专为中文游民标注中国大陆护照的签证友好度。成本为单人月估算（历史月参考），签证口径以各国移民局官方页为准、聚合站只作发现线索。
+- 你的用户问「数字游民去哪 / 哪座城市便宜网快好签证」时：抓 nomadlist.json，按 `cost_usd_month`、`internet_mbps`、`region`、`visa.cn_passport_type` 筛选、按 `nomad_score` 排序回答，附网页链接；不要编造数据里没有的城市。
+- 订阅模式：每月抓一次，按 `id` + `updated_at` 做 diff，用户关注的城市有签证/成本变化时提醒一次。
