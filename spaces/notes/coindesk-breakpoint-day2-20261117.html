@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《CoinDesk Live at Solana Breakpoint 2026 Day 2》 — Yat's List Space 纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/spaces/">← 返回 Space 合集</a>
+<article>
+<h1>会议纪要：CoinDesk Live at Solana Breakpoint 2026 Day 2</h1>
+<ul>
+<li><strong>来源</strong>：X Broadcast <code>2AMLLWRlnOQglO</code>，https://x.com/i/broadcasts/2AMLLWRlnOQglO</li>
+<li><strong>时间</strong>：2026-11-17 21:06–约 22:23 CST，约 74.8 分钟；观看数约 3,237 次（转写完成时数据）</li>
+<li><strong>主持</strong>：CoinDesk 两位主持人（结尾处称其中一位为 Will；另一位自述住在菲律宾，2016–2017 年入圈）</li>
+<li><strong>形式</strong>：Breakpoint 2026（伦敦）场边的演播室访谈节目，共 6 位嘉宾，非主舞台实录。录音开头即为上一段访谈尾声（中途切入），首句不完整。</li>
+<li><strong>逐字稿</strong>：<code>transcript.txt</code>（72,566 字节，13,443 词；本机 faster-whisper small 模型转写，无时间戳）</li>
+<li><strong>口径说明</strong>：以下数字与说法均为嘉宾现场说法，未经核实；人名与专有名词以转写为准，存疑处见文末 ASR 还原表。</li>
+</ul>
+<h2>一句话</h2>
+<p>这期 75 分钟基本是 Breakpoint Day 2 的“落地篇”：球迷经济、稳定币支付、机构入场、代币化利用率、汇款、机器人数据、美国合规永续——七个话题指向同一个判断，链上金融正在从交易投机转向真实使用，而 Solana 想当那个默认结算层。</p>
+<h2>核心内容</h2>
+<h3>1. Peter Moore：球迷是最被低估的链上用户（前 Sega 总裁、Xbox、EA、利物浦 CEO）</h3>
+<ul>
+<li>履历：Reebok 出身，1998 年 44 岁转行进游戏业；Sega 总裁任内推出 Dreamcast（首台联网主机）；后为比尔·盖茨操盘 Xbox 与 Xbox Live、Xbox 360 上市；EA Sports 总裁、EA 首席运营官；最后回英国任利物浦足球俱乐部 CEO，任内与主帅克洛普共事。现为波兰历史俱乐部维斯瓦·克拉科夫（Wisła Kraków）部分所有者，并为 Wrexham（瑞安·雷诺兹与罗伯·麦克尔亨尼所有）提供建议。本场主旨演讲题为《球迷的价值》。</li>
+<li>利物浦自称约有 3 亿球迷，绝大多数一辈子到不了安菲尔德（球场仅容纳 61,000 人），球迷互动只能靠内容与票务完成。</li>
+<li>数字化落地的真实成本：利物浦花了两年时间教球迷用手机出示二维码/动态码进场，包括为习惯纸票的老年球迷设线下培训点。他的结论是“技术永远跑在消费者理解能力前面”，必须按最不懂技术的球迷来设计。</li>
+<li>区块链的用法：追踪与奖励球迷、治理票务欺诈。英国法律禁止门票高于面值转售，倒票背后有组织犯罪。他在台上讲的方案叫 Lucky Fan Index（幸运球迷指数）：看你去过哪些比赛、买过哪位球员的球衣、球队赢还是输——赢球指数上升、输球下降，指数越高忠诚积分越多，整套行为记录上链。</li>
+<li>细节：他 4 岁（1959 年）第一次去安菲尔德，父亲往闸机塞了 2 先令 6 便士。EA 经典配音“It's in the game”出自 Andrew Anthony，此人住在他家附近的圣巴巴拉，每年仍收一笔不菲的费用，EA 多年不换这个声音。</li>
+</ul>
+<h3>2. Ahmed Zifzaf：Ramp——稳定币是“24 小时营业的支付轨道”</h3>
+<ul>
+<li>Ramp 是企业财务运营平台，稳定币是其较新的业务线。过去几个月已有约 2,500–3,000 家企业在用稳定币支付；<strong>70% 的交易量发生在银行下班之后</strong>——企业不睡觉，支付也不该睡觉。</li>
+<li>客户从 AI 实验室、建筑公司到农场都有。稳定币原生 CFO 看中的是法币与稳定币支付统一在一个平台，不用多处拼账。</li>
+<li>Ramp 已支持 Solana 上的 USDG 与 OUSD（OpenUSD，背后是 Visa、Stripe、Coinbase、Mastercard）。选币标准首先是客户需求，其次是团队可信度；一位新入职工程师两周内就完成了 USDG on Solana 的接入。</li>
+<li>Ramp 内部工作流高度 AI 化（自研 AI 平台 Glass），入职培训基本靠 AI 文档平台完成。</li>
+<li>区域稳定币：目前约 95% 的稳定币交易仍以美元稳定币计价；Ramp 希望推动区域稳定币，因为能优化企业财资后端与运营资金。</li>
+</ul>
+<h3>3. Nameel Dalal：Y Combinator——机构终于走到前面来了</h3>
+<ul>
+<li>Dalal 是 YC 访问合伙人，主攻金融科技与加密；曾在 Coinbase 七年，主导 USDC；2012 年 YC 创业者，同批的布莱恩·阿姆斯特朗后来创办 Coinbase。</li>
+<li>YC 至今资助 6,000 多家创业公司，其中加密项目 100 多家。他的判断：Solana 是“互联网资本市场”的中心，股票、债券等一切资产正在上链。</li>
+<li>稳定币圆桌的核心结论有二：一是信任仍是第一要素；二是收益分成正在成为选型关键——USDC 早期余额净息差约 1%，如今是 4%–5%，对零售商这类大余额持有者来说，这笔钱开始重要了。x402（Agent 支付协议）值得关注：稳定币是“Agent 的钱”，因为有 API、全球可用、易于调用，Circle 已在重注 Agent 叙事。</li>
+<li>YC 上月发布的加密创业征集（RFS）首次出现机构申请者多于消费者的情况。未来一两年的重点：股票代币化、稳定币普及、Agent 可用的基础设施，以及 AI 融资——他称 AI 融资是“人类历史上最大规模的融资事件”，堪比铁路与电气化，加密能为其解锁全球流动性。</li>
+<li>机构接棒的原因有三：产品从测试版走向机构可信任；监管明朗（美国《GENIUS 法案》让稳定币成为生态的一等公民，各国立法也在跟进）；用例终于从投机交易扩展到支付与真实对冲。</li>
+<li>一个数字：YC 的单人创业者占比两年内从 3% 跃升至 20%，原因是 AI 工具让一个人也能做出好产品；而且买家越来越多是 AI Agent——Alchemy 的 CTO 告诉他，该公司最大的用户现在就是 Agent。开发工具的买家正在从开发者变成 Agent。</li>
+</ul>
+<h3>4. Kashi Danda：Jupiter——代币化的 99% 利用率缺口</h3>
+<ul>
+<li>Danda 是 Jupiter 首席运营官，自称头衔其实是“Cat Herder”（管猫的人）。Jupiter 从 Solana 最大交易聚合器长成了链上金融超级应用，自我定位是“金融界的谷歌”：交易、借贷、预测市场、抵押、组合管理都在一个屋檐下。</li>
+<li>八天内连发七个产品：上周四个面向用户（研究中心、链上 ETF“篮子”、聚合收益机会的金库产品——与 Bitwise、RE7、K3、HiveMind 合作精选、聚合各协议的组合工具）；昨天主舞台三个，围绕“代币化之后”：<strong>代币化资产名义规模 4,600 亿美元，真正进入 DeFi 的只有约 35 亿美元，99% 的利用率缺口</strong>才是问题。</li>
+<li>补缺口的第一步是 Jupiter Global Passport：用零知识技术做的 KYC 体系——默认匿名，需要时才提供信息；按司法辖区模块化叠加问题（美国发行人问合格投资者资质，香港发行人问另一套）；稳定币消费卡（带返现）是诱导用户完成 KYC 的“特洛伊木马”。</li>
+<li>与机构交易所 Bullish 合作推出发行人担保市场：真正的代币化股票，持币即持股、名字上股东名册，需 KYC。</li>
+<li>数据：10 月是 Jupiter 代币化股票交易最好的一月，环比 9 月增长约 50%；今年迄今全产品交易量约 5,000 亿美元，其中代币化股票约 80–90 亿美元，占比仍小；用户以零售与国际用户为主（本地开券商账户不便的人），不少交易量是纽交所与链上之间的套利。Jupiter 现为 Solana 上最大的借贷市场。</li>
+</ul>
+<h3>5. Malcolm Clark：Western Union——汇款终于等到了链</h3>
+<ul>
+<li>Clark 是 Western Union 数字资产全球负责人。公司在 Solana 上发行了自有稳定币 USDPT（PT 即 payment token，支付代币），配套稳定卡已在 40 个国家上线，目标年底超过 60 个（他本人打了折扣：可能到不了 60）。</li>
+<li>卡的用法：收款人不用再去门店取现金，钱直接进卡，在 Visa 网络消费，或在西联网点提现。重点营销市场是墨西哥、哥伦比亚、阿根廷，以及玻利维亚或秘鲁之一。</li>
+<li>最关键的变化是关系链的延长：过去收款人进店取现走人，关系就结束了；现在卡上有持续的消费数据，稳定币可编程——可以给持币收益、可以做忠诚计划（“在这家店花，1 美元值 1.05 美元”）。</li>
+<li>主持人的点评：汇款是 2016–2017 年加密圈最常讲的用例，当时钱包与出入金通道都不成熟；现在真正的难点是现金进出（cash in / cash out），而这正是西联的强项。菲律宾市场即将上线（一位主持人住在菲律宾）。</li>
+</ul>
+<h3>6. Jonathan Victor：BitRobot——机器人缺的不是模型，是数据</h3>
+<ul>
+<li>Victor 是 BitRobot 总裁。核心论点：大语言模型有互联网文本可训，机器人没有“手臂如何移动、抓握用多大力”的数据集，这是机器人远比 AI 落后的主因。</li>
+<li>产品 RoboCap 是一顶可穿戴采集帽：侧面与正面多摄像头，能看到佩戴者看到的一切甚至更多（手在画面外时侧摄仍能捕捉），记录叠衣服、做饭、组装宜家家具等真实任务，用来训练机器人策略。</li>
+<li>上周开源了 10,000 小时真实工作录像，覆盖 11 个国家、21 个行业；对比之下，一两年前机器人领域所谓“大规模数据”不过 100 小时量级。</li>
+<li>为什么不用 Meta 眼镜这类现成设备：单摄像头无深度信息、做不了手部追踪；电池只能录约一分钟；帽子约 270 克、可换电池、能连续戴数小时。</li>
+<li>商业模式：平价出售帽子，配套 App 按数据被实验室采纳的情况向采集者支付加密货币；迄今约 100,000 名贡献者、覆盖 100 多个国家，全部结算走 Solana——理由是溯源（实验室要知道数据来源）与全球支付成本（传统数据支付中介收 5% 手续费，即时提现再加 10%–15%，稳定币几乎零成本）。</li>
+<li>数据处理：上传后做人脸模糊与去标识化，不合规内容会反馈拒绝。真实世界的“脏数据”恰恰是价值所在：有人叠衣服时一只鸡跑进来、幼儿打翻篮子——仓库里搭一万个叠衣台也复现不了这种混乱。</li>
+</ul>
+<h3>7. Armani Ferrante：Backpack——美国第一家从零拿到 CFTC 清算所+交易所的加密原生平台</h3>
+<ul>
+<li>Ferrante 是 Backpack CEO。头条消息（前一晚公布）：Backpack 成为第一家在美国从零获得 CFTC 监管的清算所与交易所双牌照的加密原生交易所，永续合约（无到期日的期货）与加密抵押品、24 小时交易即将合规进入美国。</li>
+<li>历时三四年，团队包括前 CFTC 专员及代理主席 Mark Wetjen（奥巴马时期任职）与前 CME 首席风险官 Sasha Rosenberg。系统已实盘运行数年，从设计之初就按合规来做——他强调没有任何一天、任何一笔存款或订单能让纽约用户靠 VPN 偷偷交易永续合约。</li>
+<li>竞争格局：永续合约每天在岸外交易数千亿美元，是整个加密的价格发现所在；钱包与消费应用都在接去中心化交易所，但都在岸外。Backpack 的打法不是只做自己的消费产品，而是把合规基础设施做成通用层，让整个生态能触达全球最大的资本市场。</li>
+<li>为什么选 Solana 做代币化股票：速度与可扩展性已解决、开发者生态强、还有一群彼此竞争的创业公司，他称之为“金融界的硅谷”，且遍布全球而非一国；DTCC 本周宣布将其代币化股票平台带入 Solana 生态就是佐证。</li>
+</ul>
+<h3>8. 收尾：主持人各自的 Top 3</h3>
+<ul>
+<li>共同提名：鲍里斯·约翰逊（把 Satoshi Nakamoto 念错，已成 meme 素材）；西联汇款那场对话。</li>
+<li>一位主持人另提 Day 1 回忆：NEAR 的 Ilya（AI 与区块链的一站式）、Austin Federa 讲 DoubleZero（聚合多家 ISP、降延迟提带宽）；另一位提名营销人才正在进入加密：Ian Rogers（曾任 LVMH 数字负责人、创办 Apple Music、参与 Beats Music、做过 Beastie Boys 第一个网站，现主导 Ledger 的用户体验）与 Solana 基金会的 Rachel Conlon（前币安 CMO）。</li>
+<li>全场反复出现的口号：token supercycle（代币超级周期）、always-on capital markets（永不打烊的资本市场）——“市场不需要开盘，如果它从不收盘”。</li>
+</ul>
+<h2>值得注意的点</h2>
+<ul>
+<li><strong>与 Day One 的关系</strong>：这是 CoinDesk 在 Breakpoint 做的第二天演播室节目（约 75 分钟），与 11 月 16 日那场 4.5 小时的官方主舞台直播是两个不同的节目；嘉宾与议题基本不重叠，互补大于重复。</li>
+<li><strong>共识主线</strong>：六位嘉宾说的其实是同一件事的不同切面——球迷、汇款、机器人数据、机构资金都在找“真实使用”，而 Solana 的叙事已从“最快的链”转向“默认的金融结算层”。</li>
+<li><strong>两个最具体的数字</strong>：Jupiter 的 99% 利用率缺口（4,600 亿 vs 35 亿）与 Ramp 的 70% 盘后交易量，都是“链上金融正在变成日常基础设施”的实证口径。</li>
+<li><strong>合规是 Day 2 的暗线</strong>：Backpack 的 CFTC 双牌照、Jupiter 的 ZK-KYC、西联的持牌稳定币，三件事同天出现，说明机构入场的瓶颈正在从技术转向牌照与合规设计。</li>
+</ul>
+<h2>ASR 还原表（转写噪声较大处）</h2>
+<table>
+<thead>
+<tr>
+<th>转写原文</th>
+<th>应为</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whistler / Viswa / Crack Out Football Club</td>
+<td>Wisła Kraków（维斯瓦·克拉科夫）</td>
+<td>波兰俱乐部名，ASR 多次误转</td>
+</tr>
+<tr>
+<td>Brian Reynolds / Rob McElaney</td>
+<td>Ryan Reynolds / Rob McElhenney</td>
+<td>Wrexham 老板</td>
+</tr>
+<tr>
+<td>Ahmed Zipsaf</td>
+<td>Ahmed Zifzaf</td>
+<td>Ramp 数字资产合作负责人</td>
+</tr>
+<tr>
+<td>Namil Dalal</td>
+<td>Nameel Dalal</td>
+<td>YC 访问合伙人</td>
+</tr>
+<tr>
+<td>USCC / Cablecoin</td>
+<td>USDC / stablecoin</td>
+<td>通篇高频误转</td>
+</tr>
+<tr>
+<td>Cash Dunder</td>
+<td>Kashi Danda</td>
+<td>Jupiter COO</td>
+</tr>
+<tr>
+<td>BitRoy</td>
+<td>BitRobot</td>
+<td>机器人数据公司</td>
+</tr>
+<tr>
+<td>Amani Farante</td>
+<td>Armani Ferrante</td>
+<td>Backpack CEO</td>
+</tr>
+<tr>
+<td>NICY</td>
+<td>NYSE（纽交所）</td>
+<td>套利语境</td>
+</tr>
+<tr>
+<td>DTC / Sony ecosystem</td>
+<td>DTCC / Solana ecosystem</td>
+<td>代币化股票平台</td>
+</tr>
+<tr>
+<td>NIR</td>
+<td>NEAR</td>
+<td>Ilya 所在项目</td>
+</tr>
+<tr>
+<td>Mark Wiechen</td>
+<td>Mark Wetjen</td>
+<td>前 CFTC 专员</td>
+</tr>
+<tr>
+<td>“end of Windows 5”</td>
+<td>第五节/最后一节</td>
+<td>节目标段，原文不明</td>
+</tr>
+</tbody>
+</table>
+<h2>核实注</h2>
+<ul>
+<li>黄仁勋已于 2026-11-12 辞任英伟达 CEO（本场未提及，沿用此前核实结论；节目内若出现相关说法以此为准）。</li>
+<li>“鲍里斯·约翰逊念错 Satoshi Nakamoto”为主持人转述的 Day 1 花絮，未在本场逐字稿正文中出现。</li>
+</ul>
+</article>
+<footer>来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2AMLLWRlnOQglO">https://x.com/i/broadcasts/2AMLLWRlnOQglO</a> · CoinDesk 演播室访谈 · 2026-11-17 21:06–22:23（约 1 小时 15 分）· 观看约 3,237 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+</body>
+</html>
