@@ -1,0 +1,73 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "zhuhai",
+    "city": "Zhuhai",
+    "city_zh": "珠海",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "China Domestic",
+    "cost_usd_month": 950,
+    "rent_1br_usd_month": 450,
+    "coworking_usd_month": 76,
+    "internet_mbps": 140,
+    "safety_score": 4.7,
+    "english_score": 3.0,
+    "nomad_score": 78,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "",
+    "avg_temp_c": null,
+    "best_months": "Oct-Apr",
+    "tags": [
+      "beach",
+      "near-macao"
+    ],
+    "summary_zh": "海边慢城、离澳门/香港近，湿度是主要吐槽点。",
+    "summary_en": "",
+    "neighborhoods": [],
+    "sources": [
+      "参照站公开榜单 — 发现线索（见 discovery_sources）",
+      "Numbeo — 成本交叉"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "seed_v2",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

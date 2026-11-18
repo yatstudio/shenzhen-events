@@ -1,0 +1,71 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "xiongan",
+    "city": "Xiong'an",
+    "city_zh": "雄安新区",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "China Domestic",
+    "cost_usd_month": 700,
+    "rent_1br_usd_month": 320,
+    "coworking_usd_month": 56,
+    "internet_mbps": 130,
+    "safety_score": 4.6,
+    "english_score": 3.0,
+    "nomad_score": 70,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "",
+    "avg_temp_c": null,
+    "best_months": "Apr-Jun,Sep-Oct",
+    "tags": [
+      "new-city",
+      "quiet"
+    ],
+    "summary_zh": "游民CO 在列，新城样本、租金低，配套还在长。",
+    "summary_en": "",
+    "neighborhoods": [],
+    "sources": [
+      "参照站公开榜单 — 发现线索（见 discovery_sources）",
+      "Numbeo — 成本交叉"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "seed_v2",
+    "best_months_nums": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

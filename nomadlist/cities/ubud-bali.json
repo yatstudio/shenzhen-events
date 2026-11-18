@@ -1,0 +1,74 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "ubud-bali",
+    "city": "Ubud, Bali",
+    "city_zh": "巴厘岛·乌布",
+    "country": "Indonesia",
+    "country_zh": "印尼",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1300,
+    "rent_1br_usd_month": 600,
+    "coworking_usd_month": 104,
+    "internet_mbps": 55,
+    "safety_score": 4.3,
+    "english_score": 3.0,
+    "nomad_score": 82,
+    "visa": {
+      "cn_passport_type": "voa",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "",
+    "currency": "",
+    "avg_temp_c": null,
+    "best_months": "Apr-Oct",
+    "tags": [
+      "yoga",
+      "ricefield",
+      "quiet"
+    ],
+    "summary_zh": "稻田+瑜伽+写作型游民，和仓古是巴厘岛两种活法。",
+    "summary_en": "",
+    "neighborhoods": [],
+    "sources": [
+      "参照站公开榜单 — 发现线索（见 discovery_sources）",
+      "Numbeo — 成本交叉"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "seed_v2",
+    "best_months_nums": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "chiang-rai",
+    "city": "Chiang Rai",
+    "city_zh": "清莱",
+    "country": "Thailand",
+    "country_zh": "泰国",
+    "region": "Southeast Asia",
+    "cost_usd_month": 900,
+    "rent_1br_usd_month": 200,
+    "coworking_usd_month": 75,
+    "internet_mbps": 80,
+    "safety_score": 4.6,
+    "english_score": 3.0,
+    "nomad_score": 80,
+    "visa": {
+      "cn_passport_type": "visa_free",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+7",
+    "currency": "THB",
+    "avg_temp_c": 24.8,
+    "best_months": "Jan-Feb,Dec",
+    "tags": [
+      "quiet",
+      "mountain",
+      "low-cost"
+    ],
+    "summary_zh": "Livabble ¥3,972/月口径，寺庙+宁静，比清迈更便宜更安静。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "维昂市中心 Wiang",
+        "name_en": "Wiang / City Centre",
+        "rent_1br_usd_month": 200,
+        "vibe": "钟楼夜市商圈，咖啡馆与 MANA coworking 集中",
+        "best_for": "便利与社交",
+        "coworking_density": 4,
+        "note": "租金为 chiangraitimes 市中心 1居约 ฿7,000"
+      },
+      {
+        "name": "湄公河畔 Ban Du",
+        "name_en": "Ban Du / Rim Kok",
+        "rent_1br_usd_month": 150,
+        "vibe": "河景民宿，安静专注",
+        "best_for": "深度专注长住",
+        "coworking_density": 2,
+        "note": "租金为 nomads.one 河景房 ฿4,500–6,000 中值"
+      },
+      {
+        "name": "玛哈法銮大学区",
+        "name_en": "Mae Fah Luang University Quarter",
+        "rent_1br_usd_month": 200,
+        "vibe": "学生公寓多，便宜且 Wi-Fi 可靠",
+        "best_for": "预算型长住",
+        "coworking_density": 2,
+        "note": "租金估算（2居 ฿9,000–12,000，nomads.one）"
+      }
+    ],
+    "sources": [
+      "https://www.nomads.one/thailand/chiang-rai/ — 月预算 ฿18,000–35,000、工作室 ฿5,800–7,500、MANA 月卡 ฿3,500、日卡 ฿300；片区 Wiang/Ban Du/大学区",
+      "https://www.chiangraitimes.com/chiang-rai-guide/chiang-rais-a-digital-hub/ — 舒适月预算约 $1,081、市中心 1居约 ฿7,000、光纤 300–500 Mbps、coworking 月卡 ฿1,800–3,000",
+      "https://thailandknowledge.com/living-in-thailand/cost-of-living/chiang-rai — 1居 ฿3,500–6,000（经济）/฿8,000–15,000（中档），预算档 ฿10,000–15,000",
+      "https://thaipedia.asia/en/data/climate/chiang-rai/ — 泰国气象局 1991–2020 平年值：年均温 24.8°C",
+      "网速口径差异：nomads.one 实测均值约 30 Mbps，chiangraitimes 称光纤套餐可达 300–500 Mbps",
+      "签证：待泰国移民局官方页核实，cn_passport_type / cn_max_stay_days 保持原值（DTV 数字游民签仅作线索，未核实）"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      1,
+      2,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

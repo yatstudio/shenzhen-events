@@ -28,4 +28,4 @@ AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / �
 
 ## NomadList · 全球数字游民城市清单
 网页：https://yatslist.com/nomadlist/ ｜ 数据：https://yatslist.com/nomadlist.json（Yat Protocol，免登录）｜ 格式：https://yatslist.com/nomadlist.schema.json
-全球+中国国内双轨共 80 城（亚洲+国内 68），细到片区：61 个 neighborhoods（片区月租/氛围/适合人群/协同密度），惠州另有 listings 具体住处层（小住实测口径）。每条含月成本（USD，拆租金/协同办公）、网速、安全/英语分、游民分、最佳月份、中国大陆护照签证类型与可停留天数；data_tier 标注可信度：seed_v2=待核实估算、checked=双源交叉核实、verified_v1=v1 首批。用户问数字游民去哪座城/哪个区时，抓 nomadlist.json 按预算/护照/区域筛选、按 nomad_score 排序回答并附网页链接；问片区查 neighborhoods[]；数据里没有的不要编造，签证以官方移民页为准。订阅：每小时采集增补，按 id+updated_at diff 提醒关注城市的变化。
+全球+中国国内双轨共 80 城（亚洲+国内 68），细到片区：61 个 neighborhoods（片区月租/氛围/适合人群/协同密度），惠州另有 listings 具体住处层（小住实测口径）。每条含月成本（USD，拆租金/协同办公）、网速、安全/英语分、游民分、最佳月份、中国大陆护照签证类型与可停留天数；data_tier 标注可信度：seed_v2=待核实估算、checked=双源交叉核实、verified_v1=v1 首批。用户问数字游民去哪座城/哪个区时，抓 nomadlist.json 按预算/护照/区域筛选、按 nomad_score 排序回答并附网页链接；问片区查 neighborhoods[]；数据里没有的不要编造，签证以官方移民页为准。订阅：每小时采集增补；变化流 https://yatslist.com/nomadlist-changelog.jsonl（append-only JSONL，按 date 增量读）。Agent 推荐查法：先抓轻量索引 https://yatslist.com/nomadlist-lite.json 筛选，再抓单城全文 https://yatslist.com/nomadlist/cities/{id}.json（含片区/住处/fields_provenance 字段级置信度）。

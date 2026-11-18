@@ -1,0 +1,114 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "hoi-an",
+    "city": "Hoi An",
+    "city_zh": "会安",
+    "country": "Vietnam",
+    "country_zh": "越南",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1050,
+    "rent_1br_usd_month": 430,
+    "coworking_usd_month": 95,
+    "internet_mbps": 85,
+    "safety_score": 4.6,
+    "english_score": 3.0,
+    "nomad_score": 81,
+    "visa": {
+      "cn_passport_type": "evisa",
+      "cn_max_stay_days": 90,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+7",
+    "currency": "VND",
+    "avg_temp_c": 25.6,
+    "best_months": "Feb-Jul",
+    "tags": [
+      "heritage",
+      "beach",
+      "quiet"
+    ],
+    "summary_zh": "世遗古城+稻田+安邦海滩，节奏比岘港更慢，适合住岘港-会安双城。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "古城 Cam Pho",
+        "name_en": "Old Town (Cam Pho)",
+        "rent_1br_usd_month": 525,
+        "vibe": "世遗灯笼老街，白天游客多、夜晚热闹",
+        "best_for": "文化氛围与步行生活",
+        "coworking_density": 3,
+        "note": "租金为 daytripsvietnam 古城区 $400–650 中值"
+      },
+      {
+        "name": "安邦海滩 An Bang",
+        "name_en": "An Bang Beach",
+        "rent_1br_usd_month": 400,
+        "vibe": "海滩+外籍社区，咖啡馆酒吧集中",
+        "best_for": "海滩生活与社交",
+        "coworking_density": 4,
+        "note": "租金为 daytripsvietnam 安邦 $300–500 中值"
+      },
+      {
+        "name": "锦州 Cam Chau",
+        "name_en": "Cam Chau",
+        "rent_1br_usd_month": 325,
+        "vibe": "稻田环绕，骑车可达古城与海滩",
+        "best_for": "长住性价比",
+        "coworking_density": 3,
+        "note": "租金为 expat.com 1居 $250–400 中值"
+      },
+      {
+        "name": "锦清 Cam Thanh",
+        "name_en": "Cam Thanh",
+        "rent_1br_usd_month": 275,
+        "vibe": "椰林水乡，家庭友好、极安静",
+        "best_for": "家庭与深度慢生活",
+        "coworking_density": 1,
+        "note": "租金为 daytripsvietnam 郊区 $200–350 中值"
+      }
+    ],
+    "sources": [
+      "https://daytripsvietnam.com/guides/vietnam-digital-nomad-cost-of-living-2026/ — 会安舒适月预算 $925–1,200、1居 $250–500（古城 $400–650、安邦 $300–500、郊区 $200–350）、coworking $75–140（Hoi An Hub $90–140、Sunday $75–120）",
+      "https://www.expat.com/en/guide/asia/vietnam/hoi-an/ — 片区（安邦/锦清/锦州/古城）与 1居 $250–400、月总 $720–1,260",
+      "https://nostos.navoy.io/cities/hoi-an — 单人月均 $919（2025）",
+      "https://jobicy.com/cost-of-living/compare/new-york-city-vs-hoi-an — 市中心1居 $420、coworking $95、网速 85 Mbps",
+      "https://vinpearl.com/en/hoi-ans-weather-best-time-to-visit-the-world-famous-ancient-town-in-vietnam — 年均温约 25.6°C（climate-data.org 26.1°C 交叉）",
+      "签证：待越南移民局官方页核实，cn_passport_type / cn_max_stay_days 保持原值"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

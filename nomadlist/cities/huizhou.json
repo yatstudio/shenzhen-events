@@ -1,0 +1,211 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "huizhou",
+    "city": "Huizhou",
+    "city_zh": "惠州",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "China Domestic",
+    "cost_usd_month": 700,
+    "rent_1br_usd_month": 320,
+    "coworking_usd_month": 50,
+    "internet_mbps": 120,
+    "safety_score": 4.7,
+    "english_score": 2.5,
+    "nomad_score": 80,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "中国境内旅居（本国）；外籍人士以144/240小时过境免签及口岸政策官方口径为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "avg_temp_c": 23,
+    "best_months": "Oct-Apr",
+    "tags": [
+      "beach",
+      "low-cost",
+      "near-shenzhen"
+    ],
+    "summary_zh": "小住 StayHere 的实测主场：靠深圳/香港、海边片区多、租金低，适合把深圳当工作半径的旅居。",
+    "summary_en": "StayHere's field-tested base: near Shenzhen/HK, coastal districts, low rent.",
+    "sources": [
+      "游民CO youmin.co/locations — 发现线索",
+      "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
+      "NomadsCN nomadscn.com — 中国城市游民指南线索",
+      "Numbeo — 成本交叉核对",
+      "小住 StayHere 惠州页实测（2026-11-18 核对片区名与节省档口径）"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "巽寮湾",
+        "name_en": "Xunliao Bay, Huidong",
+        "rent_1br_usd_month": 97,
+        "monthly_total_cny_frugal": 1500,
+        "rent_cny_month": 700,
+        "vibe": "海湾度假、海边生活",
+        "best_for": "海边优先、短住比较",
+        "coworking_density": 1,
+        "note": "村民单间三四百、靠海单间600+；周末/节假日价和停车要先核对（小住实测口径）",
+        "listings": [
+          {
+            "name": "村民自建房·单间",
+            "rent_cny_month": 350,
+            "note": "淡季300-350，村电约¥1.0-1.5/度"
+          },
+          {
+            "name": "融创海湾半岛·靠海单间",
+            "rent_cny_month": 650,
+            "note": "淡季600-700，商电约¥1.0-1.2/度，宜自炊"
+          }
+        ]
+      },
+      {
+        "name": "双月湾",
+        "name_en": "Shuangyue Bay, Huidong",
+        "rent_1br_usd_month": 90,
+        "monthly_total_cny_frugal": 1500,
+        "rent_cny_month": 650,
+        "vibe": "双湾海岸、海边生活",
+        "best_for": "看日出、海景长住",
+        "coworking_density": 1,
+        "note": "先确认面向哪一湾、海景要对应具体楼栋朝向（小住实测口径）",
+        "listings": [
+          {
+            "name": "万科双月湾·靠海大单间",
+            "rent_cny_month": 740,
+            "note": "租金600+物业140，下楼直达沙滩"
+          },
+          {
+            "name": "卓越御山海·公寓",
+            "rent_cny_month": 699,
+            "note": "租金499+物业200，山园景"
+          },
+          {
+            "name": "虹海湾·靠海大单间",
+            "rent_cny_month": 600,
+            "note": "大阳台正看东山海日出，商电约¥1.0-1.2/度"
+          }
+        ]
+      },
+      {
+        "name": "罗浮山下",
+        "name_en": "Luofu Mountain, Boluo",
+        "rent_1br_usd_month": 111,
+        "monthly_total_cny_frugal": 1600,
+        "rent_cny_month": 800,
+        "vibe": "山下与乡村、山间慢住",
+        "best_for": "康养、写作",
+        "coworking_density": 1,
+        "note": "以长宁一带为找房起点；到镇区买菜和夜间交通要先核对。暂无具体楼盘档案",
+        "listings": []
+      },
+      {
+        "name": "淡水",
+        "name_en": "Danshui, Huiyang",
+        "rent_1br_usd_month": 125,
+        "monthly_total_cny_frugal": 1700,
+        "rent_cny_month": 900,
+        "vibe": "城镇生活、城市日常",
+        "best_for": "深圳工作半径旅居",
+        "coworking_density": 2,
+        "note": "近深圳；惠阳站与惠州南站是两个站，订票/接驳别搞混。暂无具体楼盘档案",
+        "listings": []
+      },
+      {
+        "name": "澳头",
+        "name_en": "Aotou, Daya Bay",
+        "rent_1br_usd_month": 125,
+        "monthly_total_cny_frugal": 1700,
+        "rent_cny_month": 900,
+        "vibe": "渔港与海岸、海边生活",
+        "best_for": "渔港生活、骑行绿道",
+        "coworking_density": 2,
+        "note": "老城靠渔港无游泳沙滩，游泳要去霞涌；小桂绿道骑行好（小住实测口径）",
+        "listings": [
+          {
+            "name": "澳头居民小区（海景城/蓝湾等）",
+            "rent_cny_month": 900,
+            "note": "成熟城区、外卖密，民水民电约¥0.6/度"
+          }
+        ]
+      },
+      {
+        "name": "西湖老城",
+        "name_en": "West Lake Old Town, Huicheng",
+        "rent_1br_usd_month": 153,
+        "monthly_total_cny_frugal": 1800,
+        "rent_cny_month": 1100,
+        "vibe": "湖畔老城",
+        "best_for": "沿湖散步、生活便利",
+        "coworking_density": 2,
+        "note": "从环城西路/西湖周边街巷找起；看清楼层、电梯和临街朝向。暂无具体楼盘档案",
+        "listings": []
+      },
+      {
+        "name": "江北",
+        "name_en": "Jiangbei, Huicheng",
+        "rent_1br_usd_month": 167,
+        "monthly_total_cny_frugal": 1900,
+        "rent_cny_month": 1200,
+        "vibe": "城市日常、市中心新区",
+        "best_for": "配套最全、长期生活",
+        "coworking_density": 3,
+        "note": "以市民公园周边为参照；常去地点是否需要过江要先核对。暂无具体楼盘档案",
+        "listings": []
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    },
+    "cost_breakdown": {
+      "currency": "CNY",
+      "tier": "frugal",
+      "total": 1700,
+      "range": [
+        1500,
+        2000
+      ],
+      "stay": 670,
+      "food": 450,
+      "transport": 130,
+      "utilities_internet": 240,
+      "coworking": 0,
+      "misc": 260,
+      "basis": "1人·节省档·自己做饭·11月，小住公开行情估算±15%（2026-11）"
+    }
+  }
+}

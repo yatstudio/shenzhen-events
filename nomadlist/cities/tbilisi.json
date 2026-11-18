@@ -1,0 +1,74 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "tbilisi",
+    "city": "Tbilisi",
+    "city_zh": "第比利斯",
+    "country": "Georgia",
+    "country_zh": "格鲁吉亚",
+    "region": "Caucasus",
+    "cost_usd_month": 1100,
+    "rent_1br_usd_month": 500,
+    "coworking_usd_month": 100,
+    "internet_mbps": 70,
+    "safety_score": 4.0,
+    "english_score": 3.0,
+    "nomad_score": 84,
+    "visa": {
+      "cn_passport_type": "visa_free",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": false,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Tbilisi",
+    "currency": "GEL",
+    "avg_temp_c": 15,
+    "best_months": "May-Oct",
+    "tags": [
+      "low-cost",
+      "wine",
+      "mountain"
+    ],
+    "summary_zh": "中格互免30天、低成本、酒和山都好，Remotely from Georgia 曾是经典长住通道，适合做欧洲跳板。",
+    "summary_en": "CN visa-free 30d, low cost, wine and mountains; good Europe springboard.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

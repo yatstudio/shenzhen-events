@@ -1,0 +1,113 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "okinawa-naha",
+    "city": "Okinawa Naha",
+    "city_zh": "冲绳·那霸",
+    "country": "Japan",
+    "country_zh": "日本",
+    "region": "East Asia",
+    "cost_usd_month": 1750,
+    "rent_1br_usd_month": 800,
+    "coworking_usd_month": 140,
+    "internet_mbps": 140,
+    "safety_score": 4.9,
+    "english_score": 3.0,
+    "nomad_score": 77,
+    "visa": {
+      "cn_passport_type": "visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+9",
+    "currency": "JPY",
+    "avg_temp_c": 23.3,
+    "best_months": "Mar-May,Oct-Dec",
+    "tags": [
+      "island",
+      "beach"
+    ],
+    "summary_zh": "日本的亚热带海岛，冬天也暖，适合海岛+城市配套兼得。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "国际通·牧志 Kokusai-dori/Makishi",
+        "name_en": "Kokusai-dori & Makishi",
+        "rent_1br_usd_month": 775,
+        "vibe": "主街商业核心，餐饮酒吧最密，Yui Rail 沿线",
+        "best_for": "便利与社交",
+        "coworking_density": 4,
+        "note": "租金为 thenomadhq 市中心 1居 $600–950 中值"
+      },
+      {
+        "name": "首里 Shuri",
+        "name_en": "Shuri",
+        "rent_1br_usd_month": 650,
+        "vibe": "首里城历史街区，小店与本地食肆",
+        "best_for": "历史氛围与安静",
+        "coworking_density": 2,
+        "note": "估算"
+      },
+      {
+        "name": "小禄·旭桥 Asahibashi",
+        "name_en": "Asahibashi",
+        "rent_1br_usd_month": 600,
+        "vibe": "机场方向单轨沿线住宅区，相对实惠",
+        "best_for": "性价比与机场通达",
+        "coworking_density": 2,
+        "note": "估算"
+      },
+      {
+        "name": "新都心 Omoromachi",
+        "name_en": "Omoromachi",
+        "rent_1br_usd_month": 700,
+        "vibe": "新商业区，大型商场与办公楼",
+        "best_for": "现代商圈与办公",
+        "coworking_density": 3,
+        "note": "估算"
+      }
+    ],
+    "sources": [
+      "https://www.traveldojo.com/naha/ — 月预算 ¥130,000–200,000（约 $900–1,400）、国际通与首里片区",
+      "https://thenomadhq.com/cities/naha — 单人月均 $1,600、1居 $600–950、coworking $110–200",
+      "https://nostos.navoy.io/cities/naha — 单人月均 $1,671",
+      "https://japanlivinglife.com/articles/living-okinawa-foreigner-guide — 那霸 1LDK ¥50,000–80,000、片区对比",
+      "https://ds.data.jma.go.jp/stats/data/en/normal/normal.html — 日本气象厅 1991–2020 平年值：那霸年均温 23.3°C",
+      "签证：待日本出入国在留管理厅官方页核实（thenomadhq 称日本 2024 年引入游民签、约 6 个月，待官方确认），has_nomad_visa 暂保持原值"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      3,
+      4,
+      5,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

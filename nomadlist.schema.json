@@ -91,6 +91,20 @@
               },
               "has_nomad_visa": {
                 "type": "boolean"
+              },
+              "nomad_visa_link": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "official application URL; set only when taken from an official government page"
+              },
+              "policy_last_change": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "date the visa policy last changed, from official source; null = not yet tracked"
               }
             }
           },
@@ -159,9 +173,79 @@
                 }
               }
             }
+          },
+          "best_months_nums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "description": "best_months parsed to month numbers for programmatic filtering"
+          },
+          "avoid_months": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "description": "months to avoid (e.g. Chiang Mai burning season [3,4]); omitted when unknown"
+          },
+          "cost_breakdown": {
+            "type": "object",
+            "description": "Itemized monthly cost where sourced (StayHere-style for China cities; filled gradually for checked cities)",
+            "properties": {
+              "currency": {
+                "type": "string"
+              },
+              "tier": {
+                "type": "string"
+              },
+              "total": {
+                "type": "number"
+              },
+              "stay": {
+                "type": "number"
+              },
+              "food": {
+                "type": "number"
+              },
+              "transport": {
+                "type": "number"
+              },
+              "utilities_internet": {
+                "type": "number"
+              },
+              "coworking": {
+                "type": "number"
+              },
+              "misc": {
+                "type": "number"
+              },
+              "basis": {
+                "type": "string"
+              }
+            }
+          },
+          "fields_provenance": {
+            "type": "object",
+            "description": "Per-field confidence for cost_usd_month / internet_mbps / visa: {confidence 0-1, basis, as_of}. checked~0.8, verified_v1~0.6, seed_v2~0.4; visa 0.5 until policy_last_change is set from an official page.",
+            "additionalProperties": {
+              "type": "object"
+            }
           }
         }
       }
+    },
+    "changelog_url": {
+      "type": "string"
+    },
+    "lite_url": {
+      "type": "string"
+    },
+    "city_url_template": {
+      "type": "string"
     }
   }
 }

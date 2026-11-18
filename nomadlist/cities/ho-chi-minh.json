@@ -1,0 +1,73 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "ho-chi-minh",
+    "city": "Ho Chi Minh City",
+    "city_zh": "胡志明市",
+    "country": "Vietnam",
+    "country_zh": "越南",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1150,
+    "rent_1br_usd_month": 500,
+    "coworking_usd_month": 100,
+    "internet_mbps": 95,
+    "safety_score": 3.8,
+    "english_score": 3.2,
+    "nomad_score": 84,
+    "visa": {
+      "cn_passport_type": "evisa",
+      "cn_max_stay_days": 90,
+      "has_nomad_visa": false,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Ho_Chi_Minh",
+    "currency": "VND",
+    "avg_temp_c": 29,
+    "best_months": "Dec-Apr",
+    "tags": [
+      "city",
+      "food",
+      "startup"
+    ],
+    "summary_zh": "越南经济中心，创业氛围浓、吃喝便宜，摩托车噪音和交通是主要扣分项。",
+    "summary_en": "Vietnam's economic centre; strong startup scene, noisy traffic.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

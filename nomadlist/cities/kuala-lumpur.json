@@ -1,0 +1,108 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "kuala-lumpur",
+    "city": "Kuala Lumpur",
+    "city_zh": "吉隆坡",
+    "country": "Malaysia",
+    "country_zh": "马来西亚",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1250,
+    "rent_1br_usd_month": 550,
+    "coworking_usd_month": 110,
+    "internet_mbps": 110,
+    "safety_score": 4.3,
+    "english_score": 4.5,
+    "nomad_score": 87,
+    "visa": {
+      "cn_passport_type": "visa_free",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Kuala_Lumpur",
+    "currency": "MYR",
+    "avg_temp_c": 28,
+    "best_months": "All year",
+    "tags": [
+      "city",
+      "english",
+      "food"
+    ],
+    "summary_zh": "英语普及、基建好、租金合理，对中国护照免签30天，还有 DE Rantau 游民签可长住。",
+    "summary_en": "English widely spoken, good infra, CN visa-free 30d plus DE Rantau nomad pass.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "孟沙 Bangsar",
+        "name_en": "Bangsar",
+        "rent_1br_usd_month": 650,
+        "vibe": "expat 区、咖啡馆密",
+        "best_for": "品质长住",
+        "coworking_density": 4,
+        "note": "吉隆坡的通罗"
+      },
+      {
+        "name": "满家乐 Mont Kiara",
+        "name_en": "Mont Kiara",
+        "rent_1br_usd_month": 600,
+        "vibe": "国际社区、公寓新",
+        "best_for": "带家人",
+        "coworking_density": 3,
+        "note": "长租公寓供应足"
+      },
+      {
+        "name": "武吉免登 Bukit Bintang",
+        "name_en": "Bukit Bintang",
+        "rent_1br_usd_month": 700,
+        "vibe": "市中心、商场地铁",
+        "best_for": "短住、枢纽",
+        "coworking_density": 5,
+        "note": "热闹贵，适合首周落脚"
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

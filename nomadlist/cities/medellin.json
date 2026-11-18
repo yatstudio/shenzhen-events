@@ -1,0 +1,80 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "medellin",
+    "city": "Medellin",
+    "city_zh": "麦德林",
+    "country": "Colombia",
+    "country_zh": "哥伦比亚",
+    "region": "Americas",
+    "cost_usd_month": 1250,
+    "rent_1br_usd_month": 600,
+    "coworking_usd_month": 110,
+    "internet_mbps": 65,
+    "safety_score": 3.4,
+    "english_score": 2.5,
+    "nomad_score": 83,
+    "visa": {
+      "cn_passport_type": "conditional_visa_free",
+      "cn_max_stay_days": 90,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "America/Bogota",
+    "currency": "COP",
+    "avg_temp_c": 22,
+    "best_months": "All year",
+    "tags": [
+      "climate",
+      "low-cost",
+      "americas"
+    ],
+    "summary_zh": "永春之城、成本低、游民签已开，安全选区差异大，El Poblado/Laureles 之外要谨慎。",
+    "summary_en": "City of eternal spring, low cost, nomad visa; safety varies sharply by area.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

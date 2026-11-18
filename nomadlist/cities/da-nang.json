@@ -1,0 +1,103 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "da-nang",
+    "city": "Da Nang",
+    "city_zh": "岘港",
+    "country": "Vietnam",
+    "country_zh": "越南",
+    "region": "Southeast Asia",
+    "cost_usd_month": 950,
+    "rent_1br_usd_month": 400,
+    "coworking_usd_month": 90,
+    "internet_mbps": 90,
+    "safety_score": 4.2,
+    "english_score": 3.0,
+    "nomad_score": 89,
+    "visa": {
+      "cn_passport_type": "evisa",
+      "cn_max_stay_days": 90,
+      "has_nomad_visa": false,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Ho_Chi_Minh",
+    "currency": "VND",
+    "avg_temp_c": 27,
+    "best_months": "Feb-Aug",
+    "tags": [
+      "beach",
+      "low-cost",
+      "quiet"
+    ],
+    "summary_zh": "海边+低成本+网速快，游民社区增长最快的越南城市，比胡志明安静、比河内宜居。",
+    "summary_en": "Beach, low cost and fast internet; Vietnam's fastest-growing nomad hub.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "安上 An Thuong",
+        "name_en": "An Thuong",
+        "rent_1br_usd_month": 420,
+        "vibe": "海滩步行区、游民公寓密",
+        "best_for": "首站、社交",
+        "coworking_density": 4,
+        "note": "岘港的宁曼，下楼就是同类和咖啡馆"
+      },
+      {
+        "name": "海洲 Hai Chau",
+        "name_en": "Hai Chau",
+        "rent_1br_usd_month": 450,
+        "vibe": "市中心、本地配套",
+        "best_for": "长住生活",
+        "coworking_density": 3,
+        "note": "过河就是，租金稳、没那么游客"
+      },
+      {
+        "name": "山茶 Son Tra",
+        "name_en": "Son Tra",
+        "rent_1br_usd_month": 380,
+        "vibe": "半岛、安静、海景",
+        "best_for": "安静长住",
+        "coworking_density": 2,
+        "note": "适合有摩托的人"
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "hanoi",
+    "city": "Hanoi",
+    "city_zh": "河内",
+    "country": "Vietnam",
+    "country_zh": "越南",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1000,
+    "rent_1br_usd_month": 450,
+    "coworking_usd_month": 80,
+    "internet_mbps": 95,
+    "safety_score": 4.0,
+    "english_score": 3.0,
+    "nomad_score": 80,
+    "visa": {
+      "cn_passport_type": "evisa",
+      "cn_max_stay_days": 90,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+7",
+    "currency": "VND",
+    "avg_temp_c": 24.6,
+    "best_months": "Mar-Apr,Oct",
+    "tags": [
+      "city",
+      "food",
+      "low-cost"
+    ],
+    "summary_zh": "大城市+古城+成本低，空气和交通是扣分项，冬天凉爽。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "西湖 Tay Ho",
+        "name_en": "Tay Ho (West Lake)",
+        "rent_1br_usd_month": 950,
+        "vibe": "湖畔外籍人士聚集区，国际配套最成熟",
+        "best_for": "长住与外籍社群",
+        "coworking_density": 4,
+        "note": "租金为 smilejet 1居 $700–1,200 中值"
+      },
+      {
+        "name": "还剑·老街 Hoan Kiem/Old Quarter",
+        "name_en": "Hoan Kiem & Old Quarter",
+        "rent_1br_usd_month": 725,
+        "vibe": "千年古城，热闹但嘈杂游客多",
+        "best_for": "历史氛围与短住体验",
+        "coworking_density": 3,
+        "note": "租金为 smilejet 1居 $550–900 中值"
+      },
+      {
+        "name": "巴亭 Ba Dinh",
+        "name_en": "Ba Dinh",
+        "rent_1br_usd_month": 625,
+        "vibe": "法式老区与使馆区，安静体面",
+        "best_for": "安静与法式街区",
+        "coworking_density": 3,
+        "note": "租金为 vietnamspot 1居 $450–800 中值"
+      },
+      {
+        "name": "纸桥 Cau Giay",
+        "name_en": "Cau Giay",
+        "rent_1br_usd_month": 310,
+        "vibe": "现代高层住宅区，性价比高",
+        "best_for": "预算与现代公寓",
+        "coworking_density": 2,
+        "note": "租金为 vietnamspot 1居 $235–390 中值"
+      }
+    ],
+    "sources": [
+      "https://smilejet.app/blog/best-areas-live-hanoi-expats-retirees-2026 — 各区 1居租金（西湖 $700–1,200、还剑 $550–900）",
+      "https://vietnamspot.ru/en/blog/hanoi-districts — 各区 1居租金（巴亭 $450–800、纸桥 $235–390）",
+      "https://www.localsvn.com/guides/cost-of-living-hanoi — 单人舒适 $700–1,200/月、Numbeo 1居市中心约 $450",
+      "https://www.vnlocals.com/notes/2026-11-digital-nomad-vietnam-hanoi-danang-hcmc — 河内 1居 $400–800、舒适总计 $600–1,200/月、90 天电子签轮换、无专属游民签",
+      "https://www.climatestotravel.com/climate/vietnam/hanoi — 1991–2020 年均温 24.55°C",
+      "签证：待越南移民局官方页核实，evisa 90 天口径与多源一致，暂保持原值"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      3,
+      4,
+      10
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

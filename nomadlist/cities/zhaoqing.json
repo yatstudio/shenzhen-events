@@ -1,0 +1,76 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "zhaoqing",
+    "city": "Zhaoqing",
+    "city_zh": "肇庆",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "China Domestic",
+    "cost_usd_month": 520,
+    "rent_1br_usd_month": 240,
+    "coworking_usd_month": 40,
+    "internet_mbps": 110,
+    "safety_score": 4.7,
+    "english_score": 2.2,
+    "nomad_score": 78,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "中国境内旅居（本国）；外籍人士以144/240小时过境免签及口岸政策官方口径为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "avg_temp_c": 22,
+    "best_months": "Oct-Apr",
+    "tags": [
+      "low-cost",
+      "lake",
+      "quiet"
+    ],
+    "summary_zh": "游民CO 在列的广东小城，七星岩/鼎湖山，成本极低、离广州高铁不到1小时，安静型旅居。",
+    "summary_en": "Low-cost Guangdong small city on Youmin's list; <1h HSR to Guangzhou.",
+    "sources": [
+      "游民CO youmin.co/locations — 发现线索",
+      "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
+      "NomadsCN nomadscn.com — 中国城市游民指南线索",
+      "Numbeo — 成本交叉核对"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

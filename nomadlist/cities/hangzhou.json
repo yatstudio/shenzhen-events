@@ -1,0 +1,70 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "hangzhou",
+    "city": "Hangzhou",
+    "city_zh": "杭州",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "China Domestic",
+    "cost_usd_month": 1150,
+    "rent_1br_usd_month": 550,
+    "coworking_usd_month": 92,
+    "internet_mbps": 160,
+    "safety_score": 4.8,
+    "english_score": 3.0,
+    "nomad_score": 82,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "",
+    "avg_temp_c": null,
+    "best_months": "Mar,Oct-Nov",
+    "tags": [
+      "city",
+      "lake",
+      "tech"
+    ],
+    "summary_zh": "大城市机会+西湖生活感平衡最好的一档，滨江科技、西湖文化、余杭低成本三区可选。",
+    "summary_en": "",
+    "neighborhoods": [],
+    "sources": [
+      "参照站公开榜单 — 发现线索（见 discovery_sources）",
+      "Numbeo — 成本交叉"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "seed_v2",
+    "best_months_nums": [
+      3,
+      10,
+      11
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

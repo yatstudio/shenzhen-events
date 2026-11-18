@@ -1,0 +1,74 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "valencia",
+    "city": "Valencia",
+    "city_zh": "瓦伦西亚",
+    "country": "Spain",
+    "country_zh": "西班牙",
+    "region": "Europe",
+    "cost_usd_month": 1900,
+    "rent_1br_usd_month": 950,
+    "coworking_usd_month": 140,
+    "internet_mbps": 120,
+    "safety_score": 4.5,
+    "english_score": 3.2,
+    "nomad_score": 87,
+    "visa": {
+      "cn_passport_type": "schengen_visa",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Europe/Madrid",
+    "currency": "EUR",
+    "avg_temp_c": 21,
+    "best_months": "Mar-Jun,Sep-Oct",
+    "tags": [
+      "beach",
+      "eu",
+      "family"
+    ],
+    "summary_zh": "西班牙游民签口碑最好的一档，地中海气候、海滩+城市尺度刚好，比巴塞罗那便宜安静。",
+    "summary_en": "Top pick under Spain's nomad visa; Mediterranean, cheaper and calmer than Barcelona.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      3,
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

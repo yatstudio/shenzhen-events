@@ -1,0 +1,111 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "osaka",
+    "city": "Osaka",
+    "city_zh": "大阪",
+    "country": "Japan",
+    "country_zh": "日本",
+    "region": "East Asia",
+    "cost_usd_month": 1650,
+    "rent_1br_usd_month": 750,
+    "coworking_usd_month": 132,
+    "internet_mbps": 170,
+    "safety_score": 4.7,
+    "english_score": 3.0,
+    "nomad_score": 81,
+    "visa": {
+      "cn_passport_type": "visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+9",
+    "currency": "JPY",
+    "avg_temp_c": 17.1,
+    "best_months": "Mar-May,Oct-Nov",
+    "tags": [
+      "city",
+      "food"
+    ],
+    "summary_zh": "比东京便宜两成、吃喝强、有游民社区，关西枢纽。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "梅田·中之岛 Umeda",
+        "name_en": "Umeda & Nakanoshima",
+        "rent_1br_usd_month": 1150,
+        "vibe": "北部商务枢纽，车站/商场/办公室/coworking 汇聚",
+        "best_for": "便利与 coworking",
+        "coworking_density": 5,
+        "note": "租金为 traveldojo 区间 $900–1,400 中值"
+      },
+      {
+        "name": "难波·心斋桥 Namba",
+        "name_en": "Namba & Shinsaibashi",
+        "rent_1br_usd_month": 1075,
+        "vibe": "道顿堀霓虹、购物与街头小吃，南部热闹核心",
+        "best_for": "夜生活与美食",
+        "coworking_density": 3,
+        "note": "租金为 traveldojo 区间 $850–1,300 中值"
+      },
+      {
+        "name": "西区·靭公园/堀江",
+        "name_en": "Nishi Ward (Utsubo & Horie)",
+        "rent_1br_usd_month": 1000,
+        "vibe": "靭公园绿荫、咖啡馆与精品店，梅田难波之间的安静中点",
+        "best_for": "安静又中心",
+        "coworking_density": 3,
+        "note": "租金为 traveldojo 区间 $800–1,200 中值"
+      },
+      {
+        "name": "天王寺·阿倍野 Tennoji",
+        "name_en": "Tennoji & Abeno",
+        "rent_1br_usd_month": 900,
+        "vibe": "南部繁忙枢纽、阿倍野 Harukas，租金相对低",
+        "best_for": "性价比",
+        "coworking_density": 2,
+        "note": "租金为 traveldojo 区间 $700–1,100 中值"
+      }
+    ],
+    "sources": [
+      "https://www.traveldojo.com/osaka/digital-nomads/ — 月预算 $2,300（精简 $1,500 起）、1居 $750–1,300、片区与租金区间、最佳月份",
+      "https://www.nomadzine.com/osaka — 2026-09 实测：月 $1,270–1,870、市中心 1 居 ¥70k–90k、片区（本町/梅田/难波/天王寺/京桥）",
+      "https://expatlife.ai/japan/cities/osaka — 月 ¥200k–300k、市中心 1 居 ¥80k–130k、5 个片区",
+      "https://www.data.jma.go.jp/stats/data/en/normal/normal.html — 日本气象厅 1991–2020 平年值：大阪年均温 17.1°C",
+      "签证：待日本出入国在留管理厅官方页核实，has_nomad_visa 暂保持原值"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      3,
+      4,
+      5,
+      10,
+      11
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

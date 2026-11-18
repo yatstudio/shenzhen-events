@@ -1,0 +1,112 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "dali",
+    "city": "Dali",
+    "city_zh": "大理",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "China Domestic",
+    "cost_usd_month": 550,
+    "rent_1br_usd_month": 280,
+    "coworking_usd_month": 60,
+    "internet_mbps": 100,
+    "safety_score": 4.6,
+    "english_score": 3.0,
+    "nomad_score": 90,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "中国境内旅居（本国）；外籍人士以144/240小时过境免签及口岸政策官方口径为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "avg_temp_c": 18,
+    "best_months": "Mar-May,Sep-Nov",
+    "tags": [
+      "low-cost",
+      "mountain",
+      "community"
+    ],
+    "summary_zh": "国内游民第一城，苍山洱海、古城/才村片区游民社区最成熟，月成本只要一线三分之一，雨季6-8月要留意。",
+    "summary_en": "China's #1 domestic nomad base by Erhai Lake; mature community at a third of tier-1 cost.",
+    "sources": [
+      "游民CO youmin.co/locations — 发现线索",
+      "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
+      "NomadsCN nomadscn.com — 中国城市游民指南线索",
+      "Numbeo — 成本交叉核对"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "大理古城",
+        "name_en": "Dali Old Town",
+        "rent_1br_usd_month": 300,
+        "vibe": "游民社区最密、床单厂等空间",
+        "best_for": "社交、首站",
+        "coworking_density": 4,
+        "note": "热闹也商业化，住古城边沿最平衡"
+      },
+      {
+        "name": "才村/洱海西岸",
+        "name_en": "Caicun",
+        "rent_1br_usd_month": 260,
+        "vibe": "村落+海景、安静",
+        "best_for": "写作、长住",
+        "coworking_density": 2,
+        "note": "离古城骑行15分钟，租金低"
+      },
+      {
+        "name": "双廊",
+        "name_en": "Shuanglang",
+        "rent_1br_usd_month": 380,
+        "vibe": "海景度假感",
+        "best_for": "短住体验",
+        "coworking_density": 2,
+        "note": "游客价，适合住一周看海"
+      },
+      {
+        "name": "银桥/马久邑",
+        "name_en": "Majiu Yi",
+        "rent_1br_usd_month": 240,
+        "vibe": "本地村落、田园",
+        "best_for": "极安静静居",
+        "coworking_density": 1,
+        "note": "成本地板，配套靠电动车"
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

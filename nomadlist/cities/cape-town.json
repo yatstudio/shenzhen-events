@@ -1,0 +1,73 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "cape-town",
+    "city": "Cape Town",
+    "city_zh": "开普敦",
+    "country": "South Africa",
+    "country_zh": "南非",
+    "region": "Africa",
+    "cost_usd_month": 1550,
+    "rent_1br_usd_month": 750,
+    "coworking_usd_month": 130,
+    "internet_mbps": 55,
+    "safety_score": 3.3,
+    "english_score": 4.5,
+    "nomad_score": 84,
+    "visa": {
+      "cn_passport_type": "visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Africa/Johannesburg",
+    "currency": "ZAR",
+    "avg_temp_c": 22,
+    "best_months": "Nov-Mar",
+    "tags": [
+      "nature",
+      "english",
+      "surf"
+    ],
+    "summary_zh": "山海颜值天花板、英语无障碍、远程工作签2024年开，停电和治安选区是功课。",
+    "summary_en": "Stunning mountain-ocean setting, English, remote work visa 2024; load-shedding and area safety matter.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

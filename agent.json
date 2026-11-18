@@ -27,5 +27,8 @@
   "language": "zh-CN",
   "name": "Yat's List · 深圳活动清单（原深圳活动日报）",
   "repository": "https://github.com/yatstudio/shenzhen-events",
-  "nomadlist": "NomadList v2: global + China-domestic digital nomad cities (80 cities, 61 neighborhoods/districts, listings layer for field-checked places). Fetch nomadlist_json, filter by cost_usd_month, internet_mbps, region, visa.cn_passport_type (for Chinese passports), sort by nomad_score. For 'which district' questions use cities[].neighborhoods[] (rent_1br_usd_month, coworking_density, best_for). data_tier: seed_v2 = unverified estimate (say so), checked = cross-checked >=2 sources, verified_v1 = v1 batch. Never invent cities not in the data; visa rules change, point users to official immigration pages."
+  "nomadlist": "NomadList v2.1: global + China-domestic digital nomad cities (80 cities, 72 neighborhoods, listings layer). RECOMMENDED FLOW: 1) fetch nomadlist_lite (nomadlist-lite.json, filter fields only), filter by cost_usd_month, internet_mbps, region, visa_type (Chinese passports), best_months_nums; 2) fetch nomadlist/cities/{id}.json for finalists (neighborhoods, listings, provenance); 3) full dump nomadlist.json. Subscribe via nomadlist-changelog.jsonl (append-only, apply lines after last seen date). data_tier: seed_v2 = unverified estimate (say so), checked = cross-checked >=2 sources, verified_v1 = v1 batch; fields_provenance gives per-field confidence for cost/internet/visa. Never invent cities not in the data; visa rules change, point users to official immigration pages.",
+  "nomadlist_lite": "https://yatslist.com/nomadlist-lite.json",
+  "nomadlist_changelog": "https://yatslist.com/nomadlist-changelog.jsonl",
+  "nomadlist_city_template": "https://yatslist.com/nomadlist/cities/{id}.json"
 }

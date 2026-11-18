@@ -1,0 +1,113 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "chiang-mai",
+    "city": "Chiang Mai",
+    "city_zh": "清迈",
+    "country": "Thailand",
+    "country_zh": "泰国",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1100,
+    "rent_1br_usd_month": 450,
+    "coworking_usd_month": 120,
+    "internet_mbps": 80,
+    "safety_score": 4.5,
+    "english_score": 3.5,
+    "nomad_score": 92,
+    "visa": {
+      "cn_passport_type": "visa_free",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Bangkok",
+    "currency": "THB",
+    "avg_temp_c": 28,
+    "best_months": "Nov-Feb",
+    "tags": [
+      "low-cost",
+      "community",
+      "mountain"
+    ],
+    "summary_zh": "游民密度全球最高之一，生活成本低、社区成熟，11-2月最舒服，3-4月烧山季空气差要避开。",
+    "summary_en": "One of the densest nomad communities globally; low cost, best Nov-Feb, avoid burning season Mar-Apr.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "宁曼路 Nimman",
+        "name_en": "Nimmanhaemin",
+        "rent_1br_usd_month": 520,
+        "vibe": "咖啡馆/coworking 密度最高、游民大本营",
+        "best_for": "社交、找社区",
+        "coworking_density": 5,
+        "note": "贵一点但下楼就是同类，首站落这里最省心"
+      },
+      {
+        "name": "古城 Old City",
+        "name_en": "Old City",
+        "rent_1br_usd_month": 430,
+        "vibe": "寺庙、夜市、游客氛围",
+        "best_for": "短住体验",
+        "coworking_density": 4,
+        "note": "安静度不如宁曼，胜在氛围"
+      },
+      {
+        "name": "山迪谭 Santitham",
+        "name_en": "Santitham",
+        "rent_1br_usd_month": 350,
+        "vibe": "本地生活、便宜、安静",
+        "best_for": "长住省钱",
+        "coworking_density": 3,
+        "note": "老游民的平替区，离宁曼骑车5分钟"
+      },
+      {
+        "name": "昌克朗/夜市一带",
+        "name_en": "Chang Klan",
+        "rent_1br_usd_month": 400,
+        "vibe": "酒店式公寓多、河边",
+        "best_for": "带家人",
+        "coworking_density": 3,
+        "note": "长租公寓供应最足"
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      11,
+      12
+    ],
+    "avoid_months": [
+      3,
+      4
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

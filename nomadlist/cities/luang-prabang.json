@@ -1,0 +1,71 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "luang-prabang",
+    "city": "Luang Prabang",
+    "city_zh": "琅勃拉邦",
+    "country": "Laos",
+    "country_zh": "老挝",
+    "region": "Southeast Asia",
+    "cost_usd_month": 900,
+    "rent_1br_usd_month": 400,
+    "coworking_usd_month": 72,
+    "internet_mbps": 45,
+    "safety_score": 4.4,
+    "english_score": 3.0,
+    "nomad_score": 73,
+    "visa": {
+      "cn_passport_type": "voa",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "",
+    "currency": "",
+    "avg_temp_c": null,
+    "best_months": "Nov-Feb",
+    "tags": [
+      "heritage",
+      "quiet",
+      "slow"
+    ],
+    "summary_zh": "世遗小城、慢到极致，网速只够异步工作。",
+    "summary_en": "",
+    "neighborhoods": [],
+    "sources": [
+      "参照站公开榜单 — 发现线索（见 discovery_sources）",
+      "Numbeo — 成本交叉"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "seed_v2",
+    "best_months_nums": [
+      1,
+      2,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

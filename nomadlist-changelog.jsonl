@@ -1,0 +1,12 @@
+{"date": "2026-11-18", "action": "release", "version": "1.0", "note": "v1 launch: 30 cities (global 23 + China domestic 7)"}
+{"date": "2026-11-18", "action": "release", "version": "2.0", "note": "v2: 80 cities, neighborhoods layer (61 districts), Huizhou listings layer"}
+{"date": "2026-11-18T20:01+08:00", "action": "update", "city_id": "fukuoka", "fields": ["data_tier", "neighborhoods", "avg_temp_c", "timezone", "currency"], "note": "seed_v2 -> checked, 4 neighborhoods"}
+{"date": "2026-11-18T20:01+08:00", "action": "update", "city_id": "kyoto", "fields": ["data_tier", "neighborhoods", "avg_temp_c", "timezone", "currency"], "note": "seed_v2 -> checked, 4 neighborhoods"}
+{"date": "2026-11-18T20:01+08:00", "action": "update", "city_id": "osaka", "fields": ["data_tier", "neighborhoods", "avg_temp_c", "best_months", "timezone", "currency"], "note": "seed_v2 -> checked, 4 neighborhoods"}
+{"date": "2026-11-18T20:15+08:00", "action": "update", "city_id": "sapporo", "fields": ["data_tier", "neighborhoods", "rent_1br_usd_month", "internet_mbps", "avg_temp_c"], "note": "seed_v2 -> checked, rent 600->450, internet 150->85"}
+{"date": "2026-11-18T20:15+08:00", "action": "update", "city_id": "okinawa-naha", "fields": ["data_tier", "neighborhoods", "avg_temp_c"], "note": "seed_v2 -> checked, 4 neighborhoods"}
+{"date": "2026-11-18T20:15+08:00", "action": "update", "city_id": "hanoi", "fields": ["data_tier", "neighborhoods", "avg_temp_c"], "note": "seed_v2 -> checked, 4 neighborhoods"}
+{"date": "2026-11-18T21:15+08:00", "action": "update", "city_id": "hoi-an", "fields": ["data_tier", "neighborhoods", "rent_1br_usd_month", "avg_temp_c"], "note": "seed_v2 -> checked, rent 480->430"}
+{"date": "2026-11-18T21:15+08:00", "action": "update", "city_id": "da-lat", "fields": ["data_tier", "neighborhoods", "rent_1br_usd_month", "avg_temp_c", "best_months"], "note": "seed_v2 -> checked, rent 400->350"}
+{"date": "2026-11-18T21:15+08:00", "action": "update", "city_id": "chiang-rai", "fields": ["data_tier", "neighborhoods", "rent_1br_usd_month", "avg_temp_c"], "note": "seed_v2 -> checked, rent 380->200"}
+{"date": "2026-11-18", "action": "release", "version": "2.1", "note": "Additive: best_months_nums/avoid_months, visa.nomad_visa_link/policy_last_change, cost_breakdown, fields_provenance; new endpoints nomadlist-lite.json, nomadlist/cities/{id}.json, nomadlist-changelog.jsonl"}

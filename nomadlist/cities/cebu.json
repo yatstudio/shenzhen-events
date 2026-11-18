@@ -1,0 +1,72 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "cebu",
+    "city": "Cebu",
+    "city_zh": "宿务",
+    "country": "Philippines",
+    "country_zh": "菲律宾",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1100,
+    "rent_1br_usd_month": 500,
+    "coworking_usd_month": 88,
+    "internet_mbps": 75,
+    "safety_score": 3.9,
+    "english_score": 3.0,
+    "nomad_score": 75,
+    "visa": {
+      "cn_passport_type": "visa_free",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "",
+    "currency": "",
+    "avg_temp_c": null,
+    "best_months": "Dec-May",
+    "tags": [
+      "island",
+      "diving"
+    ],
+    "summary_zh": "海岛跳板+城市配套，潜水圈热门，治安选区。",
+    "summary_en": "",
+    "neighborhoods": [],
+    "sources": [
+      "参照站公开榜单 — 发现线索（见 discovery_sources）",
+      "Numbeo — 成本交叉"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "seed_v2",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.4,
+        "basis": "estimate, pending verification",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

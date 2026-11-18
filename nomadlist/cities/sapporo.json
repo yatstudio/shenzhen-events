@@ -1,0 +1,102 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "sapporo",
+    "city": "Sapporo",
+    "city_zh": "札幌",
+    "country": "Japan",
+    "country_zh": "日本",
+    "region": "East Asia",
+    "cost_usd_month": 1400,
+    "rent_1br_usd_month": 450,
+    "coworking_usd_month": 112,
+    "internet_mbps": 85,
+    "safety_score": 4.9,
+    "english_score": 3.0,
+    "nomad_score": 78,
+    "visa": {
+      "cn_passport_type": "visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+9",
+    "currency": "JPY",
+    "avg_temp_c": 9.2,
+    "best_months": "Feb,Jun-Sep",
+    "tags": [
+      "cool",
+      "snow"
+    ],
+    "summary_zh": "亚洲最好的夏季避暑城市之一，冬天雪国模式，适合季节性旅居。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "札幌站·北区 Sapporo Station/Kita",
+        "name_en": "Sapporo Station & Kita",
+        "rent_1br_usd_month": 510,
+        "vibe": "中央交通枢纽，公寓与商业集中",
+        "best_for": "出行与便利",
+        "coworking_density": 4,
+        "note": "租金为 traveldojo 区间 ¥60k–100k 中值（¥156/$）"
+      },
+      {
+        "name": "大通·薄野 Odori/Susukino",
+        "name_en": "Odori & Susukino",
+        "rent_1br_usd_month": 465,
+        "vibe": "大通公园与夜生活区，餐饮购物最密",
+        "best_for": "夜生活与市中心氛围",
+        "coworking_density": 4,
+        "note": "租金为 traveldojo 区间 ¥55k–90k 中值（¥156/$）"
+      },
+      {
+        "name": "圆山·平岸 Maruyama/Hiragishi",
+        "name_en": "Maruyama & Hiragishi",
+        "rent_1br_usd_month": 415,
+        "vibe": "公园旁安静住宅区，绿意多",
+        "best_for": "安静长住与跑步",
+        "coworking_density": 2,
+        "note": "租金为 traveldojo 区间 ¥50k–80k 中值（¥156/$）"
+      }
+    ],
+    "sources": [
+      "https://www.traveldojo.com/sapporo/ — 1居市中心 ¥50,000–80,000、片区租金区间（札幌站 ¥60k–100k、大通 ¥55k–90k、圆山 ¥50k–80k）",
+      "https://nostos.navoy.io/cities/sapporo — 单人月均 $1,687、实测网速中值 85 Mbps、市中心 5 个 coworking",
+      "https://www.numbeo.com/cost-of-living/in/Sapporo — 1居市中心 $450.72（$375–563），2026-11 更新",
+      "https://ds.data.jma.go.jp/stats/data/en/normal/normal.html — 日本气象厅 1991–2020 平年值：札幌年均温 9.2°C",
+      "签证：待日本出入国在留管理厅官方页核实（Nostos 称有 Designated Activities 游民签、月入 ≥$5,285，待官方确认），has_nomad_visa 暂保持原值"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      2,
+      6,
+      7,
+      8,
+      9
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

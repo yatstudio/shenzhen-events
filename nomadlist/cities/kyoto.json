@@ -1,0 +1,111 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "kyoto",
+    "city": "Kyoto",
+    "city_zh": "京都",
+    "country": "Japan",
+    "country_zh": "日本",
+    "region": "East Asia",
+    "cost_usd_month": 1500,
+    "rent_1br_usd_month": 700,
+    "coworking_usd_month": 120,
+    "internet_mbps": 150,
+    "safety_score": 4.9,
+    "english_score": 3.0,
+    "nomad_score": 82,
+    "visa": {
+      "cn_passport_type": "visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": false,
+      "note": "以官方移民页为准",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "UTC+9",
+    "currency": "JPY",
+    "avg_temp_c": 15.5,
+    "best_months": "Mar-Apr,Oct-Nov",
+    "tags": [
+      "heritage",
+      "quiet",
+      "writing"
+    ],
+    "summary_zh": "千年古都，适合慢读写作，游客区贵、住北区/西阵一带性价比好。",
+    "summary_en": "",
+    "neighborhoods": [
+      {
+        "name": "中京区·河原町/乌丸御池",
+        "name_en": "Nakagyo (Kawaramachi, Karasuma-Oike)",
+        "rent_1br_usd_month": 500,
+        "vibe": "最步行友好、coworking 最密、地铁/Hankyu 全通，也最贵",
+        "best_for": "工作便利与社交",
+        "coworking_density": 5,
+        "note": "租金为 nomadzine 区间 $455–550（1K）中值"
+      },
+      {
+        "name": "下京区·四条乌丸—京都站",
+        "name_en": "Shimogyo (Shijo-Karasuma to Kyoto Station)",
+        "rent_1br_usd_month": 600,
+        "vibe": "办公带、四家 coworking 在 10 分钟圈内，夜里比河原町安静",
+        "best_for": "办公与交通枢纽",
+        "coworking_density": 5,
+        "note": "租金为 nomadzine 区间 $455–780（1LDK）中值"
+      },
+      {
+        "name": "左京区·下鸭/出町柳",
+        "name_en": "Sakyo (Shimogamo, Demachiyanagi)",
+        "rent_1br_usd_month": 450,
+        "vibe": "鸭川边、神社旁，安静偏北",
+        "best_for": "安静长住、跑步",
+        "coworking_density": 2,
+        "note": "估算：低于市中心一档，nomadzine 称该区为区间下限"
+      },
+      {
+        "name": "东山区·祇园/清水",
+        "name_en": "Higashiyama (Gion, Kiyomizu)",
+        "rent_1br_usd_month": 430,
+        "vibe": "老城寺庙与山边步道，游客区前线",
+        "best_for": "氛围与步行观光",
+        "coworking_density": 1,
+        "note": "租金为 expatlife 区间 ¥55k–75k（约 $370–500）中值"
+      }
+    ],
+    "sources": [
+      "https://www.nomadzine.com/kyoto — 2026-09 实测：月 $1,300–1,820、市中心 1 居 ¥70k–110k、片区租金与 8 家 coworking",
+      "https://www.workfromanywhere.co/cities/kyoto/ — 2026-10-30 核实：市中心 1K ¥52.8k–65.7k、片区（中京/下京/东山）",
+      "https://expatlife.ai/blog/cost-of-living-in-kyoto-2026-monthly-budget-rent-what-expats-actually-spend — 月 ¥180k–280k、片区租金（四条河原町 ¥65k–85k 等）",
+      "https://www.weatherhack.com/climate/japan/ — ERA5 2020–2024：京都年均温约 15.5°C",
+      "签证：待日本出入国在留管理厅官方页核实，has_nomad_visa 暂保持原值（多家聚合站称日本有 6 个月数字游民签，需官方页确认）"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "data_tier": "checked",
+    "best_months_nums": [
+      3,
+      4,
+      10,
+      11
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.8,
+        "basis": "cross_checked >=2 independent sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

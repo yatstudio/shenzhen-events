@@ -1,0 +1,112 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "shenzhen",
+    "city": "Shenzhen",
+    "city_zh": "深圳",
+    "country": "China",
+    "country_zh": "中国",
+    "region": "East Asia",
+    "cost_usd_month": 1600,
+    "rent_1br_usd_month": 750,
+    "coworking_usd_month": 120,
+    "internet_mbps": 180,
+    "safety_score": 4.8,
+    "english_score": 2.8,
+    "nomad_score": 81,
+    "visa": {
+      "cn_passport_type": "home_or_visa_required",
+      "cn_max_stay_days": 0,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "avg_temp_c": 23,
+    "best_months": "Oct-Apr",
+    "tags": [
+      "hardware",
+      "maker",
+      "startup"
+    ],
+    "summary_zh": "硬件和创客生态全球独一份，网速和基建顶级；对外籍游民是144/240小时过境免签+口岸签入口，对中国游民是回国基地。",
+    "summary_en": "Unmatched hardware/maker ecosystem and infrastructure; base city for Chinese nomads, transit visa-free entry for many foreign passports.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "南山·科技园/后海",
+        "name_en": "Nanshan Tech Park",
+        "rent_1br_usd_month": 950,
+        "vibe": "创业/科技圈、coworking 密",
+        "best_for": "找同行、做硬件",
+        "coworking_density": 5,
+        "note": "深圳游民的实际大本营，租金最高"
+      },
+      {
+        "name": "福田·华强北/园岭",
+        "name_en": "Futian / Huaqiangbei",
+        "rent_1br_usd_month": 850,
+        "vibe": "电子市场+市中心配套",
+        "best_for": "硬件采购、跑供应链",
+        "coworking_density": 4,
+        "note": "华强北步行半径是硬件游民的超能力"
+      },
+      {
+        "name": "宝安·石岩/阳台山",
+        "name_en": "Shiyan, Bao'an",
+        "rent_1br_usd_month": 450,
+        "vibe": "山边、租金低、安静",
+        "best_for": "省钱长住、写作",
+        "coworking_density": 2,
+        "note": "你家这一带就是样本：进山5分钟、去南山地铁40分钟"
+      },
+      {
+        "name": "大鹏·较场尾",
+        "name_en": "Jiaochangwei, Dapeng",
+        "rent_1br_usd_month": 500,
+        "vibe": "海边民宿村",
+        "best_for": "周末度假式办公",
+        "coworking_density": 2,
+        "note": "适合短住换脑子，长住通勤不便"
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}

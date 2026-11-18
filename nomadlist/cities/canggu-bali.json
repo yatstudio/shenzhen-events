@@ -1,0 +1,103 @@
+{
+  "protocol": "Yat Protocol",
+  "dataset": "nomadlist",
+  "version": "2.1",
+  "full_dump": "https://yatslist.com/nomadlist.json",
+  "city": {
+    "id": "canggu-bali",
+    "city": "Canggu, Bali",
+    "city_zh": "巴厘岛·仓古",
+    "country": "Indonesia",
+    "country_zh": "印尼",
+    "region": "Southeast Asia",
+    "cost_usd_month": 1400,
+    "rent_1br_usd_month": 700,
+    "coworking_usd_month": 130,
+    "internet_mbps": 60,
+    "safety_score": 4.0,
+    "english_score": 4.0,
+    "nomad_score": 90,
+    "visa": {
+      "cn_passport_type": "voa",
+      "cn_max_stay_days": 30,
+      "has_nomad_visa": true,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "nomad_visa_link": null,
+      "policy_last_change": null
+    },
+    "timezone": "Asia/Makassar",
+    "currency": "IDR",
+    "avg_temp_c": 28,
+    "best_months": "Apr-Oct",
+    "tags": [
+      "surf",
+      "community",
+      "cafe"
+    ],
+    "summary_zh": "冲浪+咖啡馆+coworking 的游民圣地，社区活动最密，雨季和交通拥堵要注意。",
+    "summary_en": "Surf, cafes and coworking mecca with the densest nomad events.",
+    "sources": [
+      "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
+      "Numbeo Cost of Living — 成本交叉核对",
+      "该国移民局/政府官方签证页 — 签证口径"
+    ],
+    "verified_at": "2026-11-18",
+    "updated_at": "2026-11-18",
+    "neighborhoods": [
+      {
+        "name": "贝拉瓦 Berawa",
+        "name_en": "Berawa",
+        "rent_1br_usd_month": 800,
+        "vibe": "冲浪+coworking 最密",
+        "best_for": "社交、冲浪",
+        "coworking_density": 5,
+        "note": "仓古核心，堵车也最严重"
+      },
+      {
+        "name": "佩雷南",
+        "name_en": "Pererenan",
+        "rent_1br_usd_month": 650,
+        "vibe": "安静一档、稻田",
+        "best_for": "长住",
+        "coworking_density": 4,
+        "note": "老游民在往这边搬"
+      },
+      {
+        "name": "乌马拉斯",
+        "name_en": "Umalas",
+        "rent_1br_usd_month": 700,
+        "vibe": "别墅区、安静",
+        "best_for": "带家人/团队",
+        "coworking_density": 4,
+        "note": "适合整租别墅合住"
+      }
+    ],
+    "data_tier": "verified_v1",
+    "best_months_nums": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "fields_provenance": {
+      "cost_usd_month": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "internet_mbps": {
+        "confidence": 0.6,
+        "basis": "v1 seed batch, public sources",
+        "as_of": "2026-11-18"
+      },
+      "visa": {
+        "confidence": 0.5,
+        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
+        "as_of": "2026-11-18"
+      }
+    }
+  }
+}
