@@ -25,25 +25,66 @@
       "nomad_visa_link": null,
       "policy_last_change": null
     },
-    "timezone": "",
-    "currency": "",
-    "avg_temp_c": null,
+    "timezone": "UTC+7",
+    "currency": "THB",
+    "avg_temp_c": 24.0,
     "best_months": "Nov-Feb",
     "tags": [
       "mountain",
       "hippie",
       "quiet"
     ],
-    "summary_zh": "Livabble ¥5,169/月，山谷小镇、嬉皮氛围，网速是短板、只适合慢工作。",
+    "summary_zh": "山谷嬉皮小镇，月租竹屋为主（฿5,000–9,000），光纤约 50 Mbps；3–4 月烧荒烟雾、雨季河水需注意。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "步行街中心",
+        "name_en": "Walking Street Centre",
+        "rent_1br_usd_month": 175,
+        "vibe": "夜市商圈，咖啡馆与社交中心，步行可达一切",
+        "best_for": "初到、没摩托、爱社交",
+        "coworking_density": 2,
+        "note": "租金为 nomads.one 步行街一带房间 ฿5,000–7,000 中值（฿34/$）"
+      },
+      {
+        "name": "河东岸·湄延",
+        "name_en": "East Bank · Mae Yen",
+        "rent_1br_usd_month": 160,
+        "vibe": "竹屋吊床、稻田河景，极安静",
+        "best_for": "预算型、深度专注",
+        "coworking_density": 1,
+        "note": "租金为 nomads.one 河东岸 ฿7,000 与 Mae Yen 走廊 ฿4,000–5,500 区间中值"
+      },
+      {
+        "name": "桑吉村",
+        "name_en": "Santichon Village",
+        "rent_1br_usd_month": 180,
+        "vibe": "云南村，茶与手拉面，清晨云雾",
+        "best_for": "安静长住",
+        "coworking_density": 1,
+        "note": "租金为 nomads.one 桑吉村带家具房间 ฿5,500–7,000 中值"
+      },
+      {
+        "name": "拜峡谷西线",
+        "name_en": "Pai Canyon West",
+        "rent_1br_usd_month": 225,
+        "vibe": "日落带，长住竹屋群",
+        "best_for": "情侣、家庭长住",
+        "coworking_density": 1,
+        "note": "租金为 nomads.one 峡谷路一带竹屋 ฿6,500–9,000 中值"
+      }
+    ],
     "sources": [
-      "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "https://www.nomads.one/thailand/pai/ — 月成本 ฿15,000–30,000、片区与租金区间、光纤 50–60 Mbps（头图均值 20 Mbps 口径冲突，种子网速 55 居中保留）",
+      "https://citycost.org/pai/ — 单人月成本 $888、市中心 1居 $441（种子成本 $950/租金 $420 交叉一致，未改）",
+      "https://destinationthailand.io/where-to-stay-in-pai/ — 五片区划分（步行街/河东岸/南端/北山西线/温泉路）",
+      "https://en.climate-data.org/asia/thailand/mae-hong-son-province/pai-189120/ — 年均温 22.0°C（1991–2021）",
+      "https://www.worldweatheronline.com/amphoe-pai-weather-averages/mae-hong-son/th.aspx — 月均昼夜均值推算约 24°C，取 24.0°C",
+      "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：traveldojo 称 2026-09-15 起免签回 30 天，与种子 30 天一致）"
     ],
     "verified_at": "2026-11-18",
     "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -52,13 +93,13 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "visa": {
@@ -66,6 +107,18 @@
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "THB",
+      "tier": "lean",
+      "stay": 5000,
+      "food": 4000,
+      "transport": 2500,
+      "utilities_internet": 800,
+      "coworking": 0,
+      "misc": 1500,
+      "total": 13800,
+      "basis": "nomads.one 单人实测月账（步行街一带）：房 ฿5,000＋食 ฿4,000＋摩托 ฿2,500＋SIM ฿800＋杂项 ฿1,500"
     }
   }
 }

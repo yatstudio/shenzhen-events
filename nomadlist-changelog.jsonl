@@ -10,3 +10,44 @@
 {"date": "2026-11-18T21:15+08:00", "action": "update", "city_id": "da-lat", "fields": ["data_tier", "neighborhoods", "rent_1br_usd_month", "avg_temp_c", "best_months"], "note": "seed_v2 -> checked, rent 400->350"}
 {"date": "2026-11-18T21:15+08:00", "action": "update", "city_id": "chiang-rai", "fields": ["data_tier", "neighborhoods", "rent_1br_usd_month", "avg_temp_c"], "note": "seed_v2 -> checked, rent 380->200"}
 {"date": "2026-11-18", "action": "release", "version": "2.1", "note": "Additive: best_months_nums/avoid_months, visa.nomad_visa_link/policy_last_change, cost_breakdown, fields_provenance; new endpoints nomadlist-lite.json, nomadlist/cities/{id}.json, nomadlist-changelog.jsonl"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "pai", "fields": ["data_tier", "neighborhoods", "avg_temp_c", "cost_breakdown", "summary_zh"], "note": "seed_v2 -> checked, 4 neighborhoods, cost_breakdown lean ฿13,800"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "phuket", "fields": ["data_tier", "neighborhoods", "avg_temp_c", "internet_mbps", "summary_zh"], "note": "seed_v2 -> checked, 4 neighborhoods, internet 90->100"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "koh-phangan", "fields": ["data_tier", "neighborhoods", "avg_temp_c"], "note": "seed_v2 -> checked, 3 neighborhoods"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "singapore", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "hong-kong", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "bangalore", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "pokhara", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "baguio", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "cebu", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "kaohsiung", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "taichung", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "ubud-bali", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "jakarta", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "siem-reap", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "luang-prabang", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "colombo", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "hangzhou", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "shanghai", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "xiamen", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "kunming", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "zhuhai", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "foshan", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "chongqing", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "nanjing", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "suzhou", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "qingdao", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "dalian", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "changsha", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "wuhan", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "zhengzhou", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "nanchang", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "bazhong", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "meishan", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "lishui", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "yixing", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "xiongan", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "weihai", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "yantai", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "guilin", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "sanya", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}
+{"date": "2026-11-18T22:15+08:00", "action": "update", "city_id": "haikou", "fields": ["timezone", "currency"], "note": "自查小修：补齐时区/货币（定义性事实），data_tier 不变"}

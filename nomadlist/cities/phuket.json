@@ -13,7 +13,7 @@
     "cost_usd_month": 1450,
     "rent_1br_usd_month": 650,
     "coworking_usd_month": 116,
-    "internet_mbps": 90,
+    "internet_mbps": 100,
     "safety_score": 4.1,
     "english_score": 3.0,
     "nomad_score": 79,
@@ -25,24 +25,66 @@
       "nomad_visa_link": null,
       "policy_last_change": null
     },
-    "timezone": "",
-    "currency": "",
-    "avg_temp_c": null,
+    "timezone": "UTC+7",
+    "currency": "THB",
+    "avg_temp_c": 28.0,
     "best_months": "Nov-Apr",
     "tags": [
       "island",
       "beach"
     ],
-    "summary_zh": "泰国最大岛，海滩+夜生活，游民多住普吉镇/Rawai 而非巴东。",
+    "summary_zh": "泰国最大岛，游民多住 Rawai/普吉镇而非巴东；协同办公光纤 100 Mbps 起，旺季房租明显上涨。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "Rawai / 奈汉",
+        "name_en": "Rawai / Nai Harn",
+        "rent_1br_usd_month": 630,
+        "vibe": "南岸外籍聚居带，健身、海滩与协同办公最集中",
+        "best_for": "长住、健身、家庭",
+        "coworking_density": 4,
+        "note": "租金为 travomad ฿15,000–28,000 中值（฿34/$）"
+      },
+      {
+        "name": "普吉老镇",
+        "name_en": "Phuket Old Town",
+        "rent_1br_usd_month": 410,
+        "vibe": "中葡老街，美食与咖啡馆，全岛最便宜",
+        "best_for": "预算型、美食、文化",
+        "coworking_density": 3,
+        "note": "租金为 travomad ฿10,000–18,000 中值"
+      },
+      {
+        "name": "查龙",
+        "name_en": "Chalong",
+        "rent_1br_usd_month": 500,
+        "vibe": "岛内服务中枢，移民局与医院在侧",
+        "best_for": "实用中转、泰拳训练",
+        "coworking_density": 2,
+        "note": "租金为 travomad ฿12,000–22,000 中值"
+      },
+      {
+        "name": "邦涛 / Cherng Talay",
+        "name_en": "Bang Tao / Cherng Talay",
+        "rent_1br_usd_month": 955,
+        "vibe": "西岸高端，海滩俱乐部与国际学校",
+        "best_for": "高预算、家庭长住",
+        "coworking_density": 3,
+        "note": "租金为 travomad ฿20,000–45,000 中值（thailandstuff 区间 ฿25,000–55,000 交叉）"
+      }
+    ],
     "sources": [
-      "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "https://www.travomad.com/blog/phuket-digital-nomad-guide — 四片区租金（Rawai ฿15,000–28,000、老镇 ฿10,000–18,000、查龙 ฿12,000–22,000、邦涛 ฿20,000–45,000）、Rawai 舒适月成本 ฿60,000–90,000",
+      "https://thailandstuff.com/guides/renting-an-apartment-in-phuket — 热门区 1居 ฿25,000–45,000、片区租金表交叉",
+      "https://baanlyy.com/thailand/phuket/areas — 15 片区租金（Rawai ฿15,000–30,000、老镇 ฿12,000–22,000、查龙 ฿12,000–25,000）交叉",
+      "https://www.thethailandguides.com/digital-nomad/best-cities-digital-nomads-thailand/ — 协同办公光纤 100 Mbps–1 Gbps、月成本 ฿45,000–70,000",
+      "https://citycost.org/compare/pai-vs-phuket/ — 普吉单人月成本 $1,282、市中心 1居 $702（种子成本 $1,450/租金 $650 交叉一致，未改）",
+      "https://www.climatestotravel.com/climate/thailand/phuket — 年均温 28.0°C（1991–2020），weatherhack ERA5 约 27.5°C 交叉",
+      "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值"
     ],
     "verified_at": "2026-11-18",
     "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -53,13 +95,13 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "visa": {
