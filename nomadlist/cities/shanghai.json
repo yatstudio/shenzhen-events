@@ -11,8 +11,8 @@
     "country_zh": "中国",
     "region": "China Domestic",
     "cost_usd_month": 1550,
-    "rent_1br_usd_month": 750,
-    "coworking_usd_month": 124,
+    "rent_1br_usd_month": 950,
+    "coworking_usd_month": 200,
     "internet_mbps": 170,
     "safety_score": 4.6,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 17.6,
     "best_months": "Apr,Oct-Nov",
     "tags": [
       "city",
@@ -34,14 +34,60 @@
     ],
     "summary_zh": "国际化密度国内最高、海归适应地，成本也国内最高一档。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "法租界/徐汇 (Former French Concession, Xuhui)",
+        "name_en": "Former French Concession, Xuhui",
+        "rent_1br_usd_month": 1110,
+        "vibe": "梧桐街区、里弄老洋房、酒吧餐厅最密，外籍人士最集中",
+        "best_for": "国际化生活与社交",
+        "coworking_density": 4,
+        "note": "估算：mychinainterpreter 一居 ¥7,000–9,000 区间中值；徐汇一居挂牌中位数 ¥10,500（jasonshanghaihomes 2026-11-02）"
+      },
+      {
+        "name": "静安 (Jing'an)",
+        "name_en": "Jing'an",
+        "rent_1br_usd_month": 1110,
+        "vibe": "南京西路商圈、外滩与苏州河景，地铁密、酒吧餐厅多",
+        "best_for": "市中心通勤与夜生活",
+        "coworking_density": 4,
+        "note": "估算：mychinainterpreter 一居 ¥7,000–9,000 区间中值；静安一居挂牌中位数 ¥10,550（jasonshanghaihomes）"
+      },
+      {
+        "name": "浦东·陆家嘴 (Pudong Lujiazui)",
+        "name_en": "Pudong Lujiazui",
+        "rent_1br_usd_month": 990,
+        "vibe": "金融 CBD、高层公寓、地铁直达，商务氛围浓",
+        "best_for": "金融从业与江景",
+        "coworking_density": 4,
+        "note": "估算：Numbeo 市中心一居 ¥7,104；musheng88 称陆家嘴核心一居 ¥8,000 起"
+      },
+      {
+        "name": "长宁·古北 (Changning / Gubei)",
+        "name_en": "Changning / Gubei",
+        "rent_1br_usd_month": 760,
+        "vibe": "日韩外籍聚居、虹桥枢纽旁，相对安静的国际社区",
+        "best_for": "家庭型与虹桥通勤",
+        "coworking_density": 3,
+        "note": "估算：核心城区一居 ¥4,500–7,000 区间中低值（musheng88）；古北日韩外籍聚居，价格高于中环外均值"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Shanghai?displayCurrency=PLN",
+      "https://www.livingcostlaboratory.com/cities/shanghai/",
+      "https://chinasurvivalkit.com/blog/cost-of-living-in-china",
+      "https://jasonshanghaihomes.com/zh/blog/shanghai-rental-prices-district-guide-2026/",
+      "https://www.musheng88.com/musheng/1281.html",
+      "https://www.mychinainterpreter.com/china-expats-guide/living-in-shanghai-pros-and-cons/",
+      "https://localshanghai.com/coworking-space-shanghai-day-pass-english/",
+      "https://www.climatestotravel.com/climate/china/shanghai",
+      "https://www.shanghai-rentals.com/shanghai-living/moving-into-your-shanghai-home-getting-home-internet/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       10,
@@ -49,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

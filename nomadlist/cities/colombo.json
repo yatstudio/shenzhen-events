@@ -19,29 +19,73 @@
     "visa": {
       "cn_passport_type": "evisa",
       "cn_max_stay_days": 30,
-      "has_nomad_visa": false,
-      "note": "以官方移民页为准",
-      "nomad_visa_link": null,
+      "has_nomad_visa": true,
+      "note": "斯里兰卡移民局官方 DNV 类别表（immigration.gov.lk）2026-11-19 核实：游民签真实存在，月汇入 ≥$2,000、年费 $500/人、1 年可续，需数字经济部推荐+无犯罪证明+国际医保+体检报告，禁本地就业，续签需税务登记；据多家报道 2026-02-26 正式推出。另：中国护照旅游 ETA 自 2026-05-25 起对 40 国（含中国）免费、30 天双次入境（eta.gov.lk Alert 01，多家来源交叉）",
+      "nomad_visa_link": "https://www.immigration.gov.lk/content/files/visa/digital_nomad/Digital%20Nomad%20Visa%20Category.pdf",
       "policy_last_change": null
     },
     "timezone": "Asia/Colombo",
     "currency": "LKR",
-    "avg_temp_c": null,
+    "avg_temp_c": 28.2,
     "best_months": "Dec-Mar",
     "tags": [
       "island",
       "surf"
     ],
-    "summary_zh": "南亚海岛跳板，南部冲浪带（Weligama）是游民实际落点。",
+    "summary_zh": "南亚海岛跳板，2026 年 2 月推出游民签（月汇入 $2,000），南部冲浪带是游民实际落点。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "科伦坡3区/科洛皮蒂亚 (Kollupitiya, Colombo 3)",
+        "name_en": "Kollupitiya, Colombo 3",
+        "rent_1br_usd_month": 620,
+        "vibe": "加勒路海滨、步行可达，Regus 中心在门口，中心繁忙嘈杂",
+        "best_for": "首次落点与步行生活",
+        "coworking_density": 3,
+        "note": "估算：workfromanywhere 带家具一居 LKR 120,000–250,000 区间中值（聚合站，未核实）；Expatlife.ai 称科伦坡 3/7 区一居 $400–800"
+      },
+      {
+        "name": "肉桂花园 (Cinnamon Gardens, Colombo 7)",
+        "name_en": "Cinnamon Gardens, Colombo 7",
+        "rent_1br_usd_month": 1080,
+        "vibe": "林荫安静、大使馆与国际学校区，全城最贵",
+        "best_for": "安静高端长住",
+        "coworking_density": 2,
+        "note": "估算：workfromanywhere 带家具一居 LKR 200,000–450,000 区间中值；Expatlife.ai $400–800 区间提示聚合价偏高，签约前实地核价"
+      },
+      {
+        "name": "班巴拉皮蒂亚 (Bambalapitiya, Colombo 4)",
+        "name_en": "Bambalapitiya, Colombo 4",
+        "rent_1br_usd_month": 430,
+        "vibe": "海岸热闹住宅区，比 3 区便宜、步行方便",
+        "best_for": "性价比与海边生活",
+        "coworking_density": 2,
+        "note": "估算：workfromanywhere 带家具一居 LKR 80,000–180,000 区间中值（聚合站）"
+      },
+      {
+        "name": "蒙特拉维尼亚 (Mount Lavinia)",
+        "name_en": "Mount Lavinia",
+        "rent_1br_usd_month": 350,
+        "vibe": "长滩慢郊区，火车约 30 分钟到 Fort，协同办公极少、网速 30–80 Mbps",
+        "best_for": "海滩与慢节奏",
+        "coworking_density": 1,
+        "note": "估算：workfromanywhere 带家具一居 LKR 60,000–150,000 区间中值；网速 30–80 Mbps（同源）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.workfromanywhere.co/cities/colombo/",
+      "https://www.numbeo.com/cost-of-living/in/Colombo",
+      "https://www.whatsonceylon.com/best-places-to-live-in-sri-lanka-as-an-expat-or-digital-nomad-d7b55a6124e8c256",
+      "https://mycity.lk/long-term-rentals-sri-lanka/",
+      "https://www.climatestotravel.com/climate/sri-lanka/colombo",
+      "https://www.immigration.gov.lk/content/files/visa/digital_nomad/Digital%20Nomad%20Visa%20Category.pdf",
+      "https://eta.gov.lk"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -50,19 +94,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-19"
       }
     }
   }

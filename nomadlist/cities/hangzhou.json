@@ -12,7 +12,7 @@
     "region": "China Domestic",
     "cost_usd_month": 1150,
     "rent_1br_usd_month": 550,
-    "coworking_usd_month": 92,
+    "coworking_usd_month": 130,
     "internet_mbps": 160,
     "safety_score": 4.8,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 17.6,
     "best_months": "Mar,Oct-Nov",
     "tags": [
       "city",
@@ -35,14 +35,59 @@
     ],
     "summary_zh": "大城市机会+西湖生活感平衡最好的一档，滨江科技、西湖文化、余杭低成本三区可选。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "西湖区 (Xihu / West Lake)",
+        "name_en": "Xihu / West Lake",
+        "rent_1br_usd_month": 830,
+        "vibe": "湖畔咖啡馆、骑行道、餐饮夜生活最强，生活感首选",
+        "best_for": "生活品质与湖畔散步",
+        "coworking_density": 3,
+        "note": "估算：lifetourchina 2026 一居 ¥4,500–7,500 区间中值；本地长租一居均价 ¥2,600（我爱我家 2026 Q3）"
+      },
+      {
+        "name": "滨江区 (Binjiang)",
+        "name_en": "Binjiang",
+        "rent_1br_usd_month": 730,
+        "vibe": "钱塘江南岸科技枢纽（阿里/网易/海康），年轻从业者多、功能强氛围弱",
+        "best_for": "科技从业与通勤",
+        "coworking_density": 4,
+        "note": "估算：lifetourchina 2026 一居 ¥4,000–6,500 区间中值；本地长租一居均价 ¥2,180（我爱我家 2026 Q3）"
+      },
+      {
+        "name": "拱墅区 (Gongshu)",
+        "name_en": "Gongshu",
+        "rent_1br_usd_month": 625,
+        "vibe": "主城核心、武林商圈、地铁密，生活配套成熟",
+        "best_for": "市中心生活与性价比平衡",
+        "coworking_density": 3,
+        "note": "估算：lifetourchina 2026 一居 ¥3,500–5,500 区间中值；本地长租一居均价 ¥2,300（我爱我家 2026 Q3）"
+      },
+      {
+        "name": "余杭·未来科技城 (Yuhang / Future Sci-Tech City)",
+        "name_en": "Yuhang / Future Sci-Tech City",
+        "rent_1br_usd_month": 555,
+        "vibe": "阿里西溪园区周边、增长最快的新兴板块，年轻租客多",
+        "best_for": "预算与科技园区通勤",
+        "coworking_density": 3,
+        "note": "估算：lifetourchina 2026 一居 ¥3,000–5,000 区间中值；本地长租一居均价 ¥2,400（我爱我家 2026 Q3）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.lifetourchina.com/housing/hangzhou",
+      "https://www.numbeo.com/cost-of-living/in/Hangzhou?displayCurrency=USD",
+      "https://chinasurvivalkit.com/blog/cost-of-living-in-china",
+      "https://hznews.hangzhou.com.cn/jingji/content/2026-10/23/content_9350033_0.htm",
+      "https://www.climatestotravel.com/climate/china/hangzhou",
+      "https://hangzhou.eswzx.com/article_detail/42667",
+      "https://citiesinsider.com/country/china/hangzhou/internet-access",
+      "https://www.lifetourchina.com/resources/hangzhou-utilities-services"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       10,
@@ -50,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,
