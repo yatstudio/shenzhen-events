@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 950,
-    "rent_1br_usd_month": 450,
+    "cost_usd_month": 800,
+    "rent_1br_usd_month": 335,
     "coworking_usd_month": 76,
     "internet_mbps": 130,
     "safety_score": 4.6,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 13.9,
     "best_months": "May-Oct",
     "tags": [
       "beach",
@@ -34,14 +34,56 @@
     ],
     "summary_zh": "海边+啤酒+崂山，冬天海风冷，适合夏秋旅居。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "市南区·八大关 (Shinan / Badaguan)",
+        "name_en": "Shinan / Badaguan",
+        "rent_1br_usd_month": 390,
+        "vibe": "老德式别墅区+海景，栈桥与第一海水浴场步行可达，风貌最出片",
+        "best_for": "海景与老城风貌",
+        "coworking_density": 3,
+        "note": "LCL：八大关/栈桥一带精装 1 居 ¥2,600–3,200，取 ¥2,800≈$390"
+      },
+      {
+        "name": "市南区·五四广场 (Shinan CBD / May Fourth Square)",
+        "name_en": "Shinan CBD / May Fourth Square",
+        "rent_1br_usd_month": 350,
+        "vibe": "现代 CBD+奥帆中心，写字楼与联合办公最集中，夜景海湾",
+        "best_for": "商务与市中心配套",
+        "coworking_density": 4,
+        "note": "估算：Numbeo 市中心 1 居 ¥2,262 之上，取 ¥2,500≈$350"
+      },
+      {
+        "name": "崂山区 (Laoshan)",
+        "name_en": "Laoshan",
+        "rent_1br_usd_month": 300,
+        "vibe": "崂山脚下、高校与科技园，山海之间，空气好、租金适中",
+        "best_for": "山海与高校氛围",
+        "coworking_density": 2,
+        "note": "估算：Numbeo 市中心与市郊之间，取 ¥2,100≈$300"
+      },
+      {
+        "name": "李沧区·城阳 (Licang / Chengyang)",
+        "name_en": "Licang / Chengyang",
+        "rent_1br_usd_month": 220,
+        "vibe": "北部新城，地铁通勤约 30–40 分钟，租金全市最低一档",
+        "best_for": "性价比长住",
+        "coworking_density": 1,
+        "note": "估算：Numbeo 市郊 1 居 ¥1,323 之上，取 ¥1,550≈$220"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Qingdao?displayCurrency=CNY",
+      "https://citycost.org/qingdao-shandong/",
+      "https://www.livingcostlaboratory.com/cities/qingdao/",
+      "https://costliving.net/qingdao/",
+      "https://www.timeanddate.com/weather/@36.32711,120.40861/climate"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       5,
       6,
@@ -52,9 +94,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
         "confidence": 0.4,

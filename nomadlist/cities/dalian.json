@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 900,
-    "rent_1br_usd_month": 420,
+    "cost_usd_month": 1000,
+    "rent_1br_usd_month": 410,
     "coworking_usd_month": 72,
     "internet_mbps": 130,
     "safety_score": 4.6,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 10.5,
     "best_months": "May-Oct",
     "tags": [
       "beach",
@@ -34,14 +34,56 @@
     ],
     "summary_zh": "北方海滨避暑，夏天比内陆凉快一截。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "中山区·东港 (Zhongshan / Donggang)",
+        "name_en": "Zhongshan / Donggang",
+        "rent_1br_usd_month": 420,
+        "vibe": "CBD+新海湾，写字楼与联合办公最集中，夜景港口",
+        "best_for": "商务与海景新城",
+        "coworking_density": 4,
+        "note": "估算：Numbeo 市中心 1 居 $407.07 之上，东港新盘取 ¥3,000≈$420"
+      },
+      {
+        "name": "沙河口区·星海广场 (Shahekou / Xinghai Square)",
+        "name_en": "Shahekou / Xinghai Square",
+        "rent_1br_usd_month": 380,
+        "vibe": "亚洲最大城市广场+海滨，高校环绕，咖啡馆与书店多",
+        "best_for": "海滨散步与大学城氛围",
+        "coworking_density": 3,
+        "note": "估算：Numbeo 市中心 1 居 $407.07 附近，取 ¥2,700≈$380"
+      },
+      {
+        "name": "甘井子区·高新园 (Ganjinzi / High-tech Zone)",
+        "name_en": "Ganjinzi / High-tech Zone",
+        "rent_1br_usd_month": 300,
+        "vibe": "软件园与科技公司聚集，年轻租客多，地铁通勤方便",
+        "best_for": "科技园通勤",
+        "coworking_density": 3,
+        "note": "估算：Numbeo 市中心与市郊之间，取 ¥2,100≈$300"
+      },
+      {
+        "name": "金州区·旅顺口 (Jinzhou / Lushun)",
+        "name_en": "Jinzhou / Lushun",
+        "rent_1br_usd_month": 230,
+        "vibe": "老城+军港历史，安静、节奏慢，租金全市最低一档",
+        "best_for": "安静长住与低成本",
+        "coworking_density": 1,
+        "note": "估算：Numbeo 市郊 1 居 $241.29 附近，取 ¥1,600≈$230"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Dalian?displayCurrency=USD",
+      "https://www.livingcostlaboratory.com/cities/dalian/",
+      "https://citycost.org/dalian/",
+      "https://urcity.com/en/cities/dalian-ln/",
+      "https://www.worldweatheronline.com/dalian-weather-averages/liaoning/cn.aspx"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       5,
       6,
@@ -52,9 +94,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
         "confidence": 0.4,

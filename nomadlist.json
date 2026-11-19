@@ -6032,8 +6032,8 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 1050,
-   "rent_1br_usd_month": 500,
+   "cost_usd_month": 970,
+   "rent_1br_usd_month": 380,
    "coworking_usd_month": 84,
    "internet_mbps": 150,
    "safety_score": 4.7,
@@ -6048,7 +6048,7 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 16.8,
    "best_months": "Mar-Jun,Sep-Nov",
    "tags": [
     "heritage",
@@ -6056,14 +6056,55 @@
    ],
    "summary_zh": "园林+上海半小时半径，园区现代、姑苏老城慢。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "姑苏区·平江路 (Gusu / Pingjiang Road)",
+     "name_en": "Gusu / Pingjiang Road",
+     "rent_1br_usd_month": 330,
+     "vibe": "园林水巷老城，平江路+观前街，咖啡馆与民宿集中，生活气最浓",
+     "best_for": "老城生活与园林散步",
+     "coworking_density": 2,
+     "note": "估算：Numbeo 市中心 1 居 $381.21，姑苏老城低于园区，取 ¥2,400≈$330"
+    },
+    {
+     "name": "工业园区·金鸡湖 (SIP / Jinji Lake)",
+     "name_en": "SIP / Jinji Lake",
+     "rent_1br_usd_month": 450,
+     "vibe": "现代 CBD+湖景，外企与外籍人士最集中，联合办公与西餐厅最多",
+     "best_for": "现代商圈与外籍社群",
+     "coworking_density": 4,
+     "note": "估算：Numbeo 市中心 $381.21 之上，金鸡湖精装 1 居取 ¥3,200≈$450"
+    },
+    {
+     "name": "苏州新区·狮子山 (SND / Shishan)",
+     "name_en": "SND / Shishan",
+     "rent_1br_usd_month": 300,
+     "vibe": "科技园+高校区，通勤去园区约 20 分钟，配套新、租金适中",
+     "best_for": "科技园通勤与性价比",
+     "coworking_density": 3,
+     "note": "估算：Numbeo 市中心与市郊之间，取 ¥2,100≈$300"
+    },
+    {
+     "name": "吴中区·木渎 (Wuzhong / Mudu)",
+     "name_en": "Wuzhong / Mudu",
+     "rent_1br_usd_month": 230,
+     "vibe": "太湖畔古镇，安静、绿化好，地铁通勤约 40 分钟",
+     "best_for": "安静长住与低成本",
+     "coworking_density": 1,
+     "note": "估算：Numbeo 市郊 1 居 $220.58 附近，取 ¥1,600≈$230"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://www.numbeo.com/cost-of-living/in/Suzhou?displayCurrency=USD",
+    "https://www.livingcostlaboratory.com/cities/suzhou/",
+    "http://en.climate-data.org/asia/china/jiangsu/suzhou-2755/",
+    "https://weatherjourney.com/en/weather-suzhou-1886760"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-19",
+   "updated_at": "2026-11-19",
+   "data_tier": "checked",
    "best_months_nums": [
     3,
     4,
@@ -6075,9 +6116,9 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-19"
     },
     "internet_mbps": {
      "confidence": 0.4,
@@ -6098,8 +6139,8 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 950,
-   "rent_1br_usd_month": 450,
+   "cost_usd_month": 800,
+   "rent_1br_usd_month": 335,
    "coworking_usd_month": 76,
    "internet_mbps": 130,
    "safety_score": 4.6,
@@ -6114,7 +6155,7 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 13.9,
    "best_months": "May-Oct",
    "tags": [
     "beach",
@@ -6122,14 +6163,56 @@
    ],
    "summary_zh": "海边+啤酒+崂山，冬天海风冷，适合夏秋旅居。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "市南区·八大关 (Shinan / Badaguan)",
+     "name_en": "Shinan / Badaguan",
+     "rent_1br_usd_month": 390,
+     "vibe": "老德式别墅区+海景，栈桥与第一海水浴场步行可达，风貌最出片",
+     "best_for": "海景与老城风貌",
+     "coworking_density": 3,
+     "note": "LCL：八大关/栈桥一带精装 1 居 ¥2,600–3,200，取 ¥2,800≈$390"
+    },
+    {
+     "name": "市南区·五四广场 (Shinan CBD / May Fourth Square)",
+     "name_en": "Shinan CBD / May Fourth Square",
+     "rent_1br_usd_month": 350,
+     "vibe": "现代 CBD+奥帆中心，写字楼与联合办公最集中，夜景海湾",
+     "best_for": "商务与市中心配套",
+     "coworking_density": 4,
+     "note": "估算：Numbeo 市中心 1 居 ¥2,262 之上，取 ¥2,500≈$350"
+    },
+    {
+     "name": "崂山区 (Laoshan)",
+     "name_en": "Laoshan",
+     "rent_1br_usd_month": 300,
+     "vibe": "崂山脚下、高校与科技园，山海之间，空气好、租金适中",
+     "best_for": "山海与高校氛围",
+     "coworking_density": 2,
+     "note": "估算：Numbeo 市中心与市郊之间，取 ¥2,100≈$300"
+    },
+    {
+     "name": "李沧区·城阳 (Licang / Chengyang)",
+     "name_en": "Licang / Chengyang",
+     "rent_1br_usd_month": 220,
+     "vibe": "北部新城，地铁通勤约 30–40 分钟，租金全市最低一档",
+     "best_for": "性价比长住",
+     "coworking_density": 1,
+     "note": "估算：Numbeo 市郊 1 居 ¥1,323 之上，取 ¥1,550≈$220"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://www.numbeo.com/cost-of-living/in/Qingdao?displayCurrency=CNY",
+    "https://citycost.org/qingdao-shandong/",
+    "https://www.livingcostlaboratory.com/cities/qingdao/",
+    "https://costliving.net/qingdao/",
+    "https://www.timeanddate.com/weather/@36.32711,120.40861/climate"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-19",
+   "updated_at": "2026-11-19",
+   "data_tier": "checked",
    "best_months_nums": [
     5,
     6,
@@ -6140,9 +6223,9 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-19"
     },
     "internet_mbps": {
      "confidence": 0.4,
@@ -6163,8 +6246,8 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 900,
-   "rent_1br_usd_month": 420,
+   "cost_usd_month": 1000,
+   "rent_1br_usd_month": 410,
    "coworking_usd_month": 72,
    "internet_mbps": 130,
    "safety_score": 4.6,
@@ -6179,7 +6262,7 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 10.5,
    "best_months": "May-Oct",
    "tags": [
     "beach",
@@ -6187,14 +6270,56 @@
    ],
    "summary_zh": "北方海滨避暑，夏天比内陆凉快一截。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "中山区·东港 (Zhongshan / Donggang)",
+     "name_en": "Zhongshan / Donggang",
+     "rent_1br_usd_month": 420,
+     "vibe": "CBD+新海湾，写字楼与联合办公最集中，夜景港口",
+     "best_for": "商务与海景新城",
+     "coworking_density": 4,
+     "note": "估算：Numbeo 市中心 1 居 $407.07 之上，东港新盘取 ¥3,000≈$420"
+    },
+    {
+     "name": "沙河口区·星海广场 (Shahekou / Xinghai Square)",
+     "name_en": "Shahekou / Xinghai Square",
+     "rent_1br_usd_month": 380,
+     "vibe": "亚洲最大城市广场+海滨，高校环绕，咖啡馆与书店多",
+     "best_for": "海滨散步与大学城氛围",
+     "coworking_density": 3,
+     "note": "估算：Numbeo 市中心 1 居 $407.07 附近，取 ¥2,700≈$380"
+    },
+    {
+     "name": "甘井子区·高新园 (Ganjinzi / High-tech Zone)",
+     "name_en": "Ganjinzi / High-tech Zone",
+     "rent_1br_usd_month": 300,
+     "vibe": "软件园与科技公司聚集，年轻租客多，地铁通勤方便",
+     "best_for": "科技园通勤",
+     "coworking_density": 3,
+     "note": "估算：Numbeo 市中心与市郊之间，取 ¥2,100≈$300"
+    },
+    {
+     "name": "金州区·旅顺口 (Jinzhou / Lushun)",
+     "name_en": "Jinzhou / Lushun",
+     "rent_1br_usd_month": 230,
+     "vibe": "老城+军港历史，安静、节奏慢，租金全市最低一档",
+     "best_for": "安静长住与低成本",
+     "coworking_density": 1,
+     "note": "估算：Numbeo 市郊 1 居 $241.29 附近，取 ¥1,600≈$230"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://www.numbeo.com/cost-of-living/in/Dalian?displayCurrency=USD",
+    "https://www.livingcostlaboratory.com/cities/dalian/",
+    "https://citycost.org/dalian/",
+    "https://urcity.com/en/cities/dalian-ln/",
+    "https://www.worldweatheronline.com/dalian-weather-averages/liaoning/cn.aspx"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-19",
+   "updated_at": "2026-11-19",
+   "data_tier": "checked",
    "best_months_nums": [
     5,
     6,
@@ -6205,9 +6330,9 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-19"
     },
     "internet_mbps": {
      "confidence": 0.4,

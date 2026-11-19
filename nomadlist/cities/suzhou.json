@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 1050,
-    "rent_1br_usd_month": 500,
+    "cost_usd_month": 970,
+    "rent_1br_usd_month": 380,
     "coworking_usd_month": 84,
     "internet_mbps": 150,
     "safety_score": 4.7,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 16.8,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "heritage",
@@ -34,14 +34,55 @@
     ],
     "summary_zh": "园林+上海半小时半径，园区现代、姑苏老城慢。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "姑苏区·平江路 (Gusu / Pingjiang Road)",
+        "name_en": "Gusu / Pingjiang Road",
+        "rent_1br_usd_month": 330,
+        "vibe": "园林水巷老城，平江路+观前街，咖啡馆与民宿集中，生活气最浓",
+        "best_for": "老城生活与园林散步",
+        "coworking_density": 2,
+        "note": "估算：Numbeo 市中心 1 居 $381.21，姑苏老城低于园区，取 ¥2,400≈$330"
+      },
+      {
+        "name": "工业园区·金鸡湖 (SIP / Jinji Lake)",
+        "name_en": "SIP / Jinji Lake",
+        "rent_1br_usd_month": 450,
+        "vibe": "现代 CBD+湖景，外企与外籍人士最集中，联合办公与西餐厅最多",
+        "best_for": "现代商圈与外籍社群",
+        "coworking_density": 4,
+        "note": "估算：Numbeo 市中心 $381.21 之上，金鸡湖精装 1 居取 ¥3,200≈$450"
+      },
+      {
+        "name": "苏州新区·狮子山 (SND / Shishan)",
+        "name_en": "SND / Shishan",
+        "rent_1br_usd_month": 300,
+        "vibe": "科技园+高校区，通勤去园区约 20 分钟，配套新、租金适中",
+        "best_for": "科技园通勤与性价比",
+        "coworking_density": 3,
+        "note": "估算：Numbeo 市中心与市郊之间，取 ¥2,100≈$300"
+      },
+      {
+        "name": "吴中区·木渎 (Wuzhong / Mudu)",
+        "name_en": "Wuzhong / Mudu",
+        "rent_1br_usd_month": 230,
+        "vibe": "太湖畔古镇，安静、绿化好，地铁通勤约 40 分钟",
+        "best_for": "安静长住与低成本",
+        "coworking_density": 1,
+        "note": "估算：Numbeo 市郊 1 居 $220.58 附近，取 ¥1,600≈$230"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Suzhou?displayCurrency=USD",
+      "https://www.livingcostlaboratory.com/cities/suzhou/",
+      "http://en.climate-data.org/asia/china/jiangsu/suzhou-2755/",
+      "https://weatherjourney.com/en/weather-suzhou-1886760"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -53,9 +94,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
         "confidence": 0.4,
