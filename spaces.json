@@ -5,6 +5,68 @@
   "source_site": "https://yatstudio.github.io/x-spaces/",
   "spaces": [
     {
+      "id": "walletv-ai-agent-trading-20261119",
+      "title": "《AI替你交易，你的私钥还在你手里吗？》",
+      "title_en": "AI Trades for You — Is Your Private Key Still in Your Hands?",
+      "title_tw": "《AI替你交易，你的私鑰還在你手裡嗎？》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-19",
+      "host": "WalletV中文 @WalletV_CN",
+      "guests": [
+        "茄哥 @qg7777",
+        "Adam（WalletV / Virgo Group 创始人兼 CEO）",
+        "林可 @cryptoquantboo",
+        "Anny（WalletV 市场负责人）"
+      ],
+      "duration": "1 小时 27 分",
+      "duration_minutes": 87,
+      "url": "https://x.com/i/spaces/1VNPAeoLeBWdJa",
+      "note_url": "/spaces/notes/walletv-ai-agent-trading-20261119.html",
+      "topics": [
+        "AI交易",
+        "钱包安全",
+        "DeFi聚合",
+        "Hyperliquid",
+        "预测市场",
+        "积分空投",
+        "私钥"
+      ],
+      "highlights": [
+        "WalletV 专场 AMA（赞助场）：创始人 Adam 用一个多小时讲清产品定位——非托管钱包 + DeFi 聚合 + 内置 AI 交易，私钥在用户手里、AI 只拿下单权；累计在线听众 1058 人。",
+        "WalletV 是什么（Adam 现场说法）：非托管钱包（自管私钥、无需 KYC）+ DeFi Super App（原生接入 Hyperliquid、Aster、Polymarket 等）+ AI 交易门户；另有 Virgo Pay 法币出入金（覆盖 26 国）。DeFi 聚合完成度约六七成，AI 部分完成度只有约 20%。",
+        "AI 如何交易：分提示词策略与量化模型两类，最低 100 美元起，60 秒可完成设置，每 15 分钟出一次带理由的决策，随时可一键停止并选择手动或自动平仓；模型包括 Trader GPT（免费）、DeepSeek、ChatGPT、Claude 5.5、Claude Opus、Gemini 3 Flash、Grok 4.7 等。",
+        "私钥安全（Adam 现场说法）：AI 不碰私钥，交易走 Hyperliquid / Aster 子账号 API，关掉 API 就跑不了；不备份私钥就看不到充值地址；核心环节经 CertiK、SlowMist 等审计，报告在官网可查。",
+        "平台规模（Adam 现场说法）：注册钱包 25 万，月活 5000–10000，累计交易量 13–15 亿美元，月均约 2 亿美元；Hyperliquid builder 收入增速近期排第一，Aster 约第 5 名；WalletV 本身未融资，集团累计融资约 2500 万美元。",
+        "赚钱模式：合约 Builder 费万分之二、Swap 千分之三、预测市场费用 1.95（现场未说明单位），不吃客损；EVM 转账每天补贴一定数量，充值到 Hyperliquid、Aster、Polymarket 的 Gas 一直免费，Swap 超过 5 美元免 Gas。",
+        "Adam 的判断：没有 AI 模型能让人一直赚钱，声称能一直赚钱的平台就是忽悠；未来的竞争不在谁更赚钱，而在谁能提供足够多的模型、让用户在不同市况下选到合适的；安全是底线，做不到差异化。",
+        "新品预告（Adam 现场说法）：预测市场量化交易未来一两周内推出，几个模型回测年化 50% 以上、回撤不大；PC 端目前没有，未来可能推出可连接任意钱包（含硬件钱包）的 web terminal，预计明年上半年、最早明年一季度。",
+        "福利（现场说法）：评论区提问选 5 个，每人 200 积分（约 30–40 美元）；交易 NT 合约先到先得 20 人、每人 25 USDC（共 500 USDC）；TGE 第三阶段奖池 880 万美元；新钱包免费体验 1 个月 VIP；茄哥专场邀请码 QG7777；Space 结束后还有一个 48 小时周期的专场政策待官方公布。"
+      ],
+      "highlights_en": [
+        "A WalletV-sponsored AMA: founder Adam spent over an hour explaining the product — a non-custodial wallet plus DeFi aggregation plus built-in AI trading, with private keys in users' hands and AI holding only order-placement rights. Total live listeners: 1,058.",
+        "What WalletV is (Adam's account): a non-custodial wallet (self-managed keys, no KYC) plus a DeFi Super App (natively integrated Hyperliquid, Aster, Polymarket and more) plus an AI trading portal; Virgo Pay handles fiat on/off-ramps in 26 countries. DeFi aggregation is about 60–70% done; the AI side only about 20%.",
+        "How the AI trades: prompt-based strategies and quant models; $100 minimum, set up in 60 seconds, a reasoned decision every 15 minutes, and one-tap stop with manual or automatic position closing. Models include Trader GPT (free), DeepSeek, ChatGPT, Claude 5.5, Claude Opus, Gemini 3 Flash and Grok 4.7.",
+        "Private-key safety (Adam's account): the AI never touches private keys — trades go through Hyperliquid/Aster sub-account APIs, and turning off the API stops it instantly; you can't see your deposit address until you've backed up your keys; core components were audited by CertiK, SlowMist and others, with reports on the website.",
+        "Scale (Adam's account): 250,000 registered wallets, 5,000–10,000 monthly active users, $1.3–1.5B cumulative volume, about $200M a month; its Hyperliquid builder revenue growth recently ranked #1, Aster around #5. WalletV itself hasn't raised; the group has raised about $25M.",
+        "Business model: a 0.02% builder fee on perps, 0.3% on swaps, 1.95 on prediction markets (unit not stated on air), no profit from user liquidations. Daily EVM transfer gas is subsidized; deposits to Hyperliquid, Aster and Polymarket are always gas-free; swaps over $5 are gas-free.",
+        "Adam's judgment: no AI model can make you money forever — any platform claiming otherwise is a scam. Future competition isn't about who makes more money, but who offers enough models for users to pick the right one for each market regime; security is the baseline, not a differentiator.",
+        "What's next (Adam's account): prediction-market quant trading launches within one to two weeks, with backtests showing 50%+ annualized returns and small drawdowns; no PC client yet, but a web terminal that connects any wallet (including hardware wallets) is planned for the first half of next year, possibly Q1.",
+        "Rewards (as announced on air): 5 commenters get 200 points each (worth about $30–40); first 20 people trading the NT contract get 25 USDC each (500 USDC total); the TGE phase-3 pool is $8.8M; new wallets get one month of VIP free; the host's invite code is QG7777; a 48-hour special policy for this session will be announced after the Space."
+      ],
+      "highlights_tw": [
+        "WalletV 專場 AMA（贊助場）：創始人 Adam 用一個多小時講清產品定位——非託管錢包 + DeFi 聚合 + 內置 AI 交易，私鑰在用戶手裡、AI 只拿下單權；累計在線聽眾 1058 人。",
+        "WalletV 是什麼（Adam 現場說法）：非託管錢包（自管私鑰、無需 KYC）+ DeFi Super App（原生接入 Hyperliquid、Aster、Polymarket 等）+ AI 交易門戶；另有 Virgo Pay 法幣出入金（覆蓋 26 國）。DeFi 聚合完成度約六七成，AI 部分完成度只有約 20%。",
+        "AI 如何交易：分提示詞策略與量化模型兩類，最低 100 美元起，60 秒可完成設置，每 15 分鐘出一次帶理由的決策，隨時可一鍵停止並選擇手動或自動平倉；模型包括 Trader GPT（免費）、DeepSeek、ChatGPT、Claude 5.5、Claude Opus、Gemini 3 Flash、Grok 4.7 等。",
+        "私鑰安全（Adam 現場說法）：AI 不碰私鑰，交易走 Hyperliquid / Aster 子賬號 API，關掉 API 就跑不了；不備份私鑰就看不到充值地址；核心環節經 CertiK、SlowMist 等審計，報告在官網可查。",
+        "平台規模（Adam 現場說法）：註冊錢包 25 萬，月活 5000–10000，累計交易量 13–15 億美元，月均約 2 億美元；Hyperliquid builder 收入增速近期排第一，Aster 約第 5 名；WalletV 本身未融資，集團累計融資約 2500 萬美元。",
+        "賺錢模式：合約 Builder 費萬分之二、Swap 千分之三、預測市場費用 1.95（現場未說明單位），不吃客損；EVM 轉賬每天補貼一定數量，充值到 Hyperliquid、Aster、Polymarket 的 Gas 一直免費，Swap 超過 5 美元免 Gas。",
+        "Adam 的判斷：沒有 AI 模型能讓人一直賺錢，聲稱能一直賺錢的平台就是忽悠；未來的競爭不在誰更賺錢，而在誰能提供足夠多的模型、讓用戶在不同市況下選到合適的；安全是底線，做不到差異化。",
+        "新品預告（Adam 現場說法）：預測市場量化交易未來一兩週內推出，幾個模型回測年化 50% 以上、回撤不大；PC 端目前沒有，未來可能推出可連接任意錢包（含硬件錢包）的 web terminal，預計明年上半年、最早明年一季度。",
+        "福利（現場說法）：評論區提問選 5 個，每人 200 積分（約 30–40 美元）；交易 NT 合約先到先得 20 人、每人 25 USDC（共 500 USDC）；TGE 第三階段獎池 880 萬美元；新錢包免費體驗 1 個月 VIP；茄哥專場邀請碼 QG7777；Space 結束後還有一個 48 小時週期的專場政策待官方公佈。"
+      ]
+    },
+    {
       "id": "lidang-jieda-shijian-wanwu-20261119",
       "title": "《解答世间万物（不要用蓝牙耳机）》",
       "title_en": "Answering Everything in the World (Don't Use Bluetooth Earbuds)",
