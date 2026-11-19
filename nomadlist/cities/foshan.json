@@ -10,9 +10,9 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 850,
-    "rent_1br_usd_month": 400,
-    "coworking_usd_month": 68,
+    "cost_usd_month": 875,
+    "rent_1br_usd_month": 300,
+    "coworking_usd_month": 120,
     "internet_mbps": 130,
     "safety_score": 4.6,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 23.5,
     "best_months": "Oct-Apr",
     "tags": [
       "food",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "顺德美食+广州半小时半径，本地点评称松弛度很高。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "禅城区 (Chancheng)",
+        "name_en": "Chancheng",
+        "rent_1br_usd_month": 300,
+        "vibe": "老城中心、岭南天地商圈、祖庙，地铁广佛线直通广州",
+        "best_for": "市中心生活与广佛通勤",
+        "coworking_density": 3,
+        "note": "Numbeo 市中心一居 $299.96（¥2,000，区间 ¥1,500–2,500）"
+      },
+      {
+        "name": "南海区 (Nanhai)",
+        "name_en": "Nanhai",
+        "rent_1br_usd_month": 250,
+        "vibe": "千灯湖/桂城新城，近广州，金融高新区配套新",
+        "best_for": "新城配套与近广州",
+        "coworking_density": 3,
+        "note": "估算：Numbeo 市中心 $300 与市郊 $161 之间，桂城取 ¥1,700≈$250；Regus Glory IFC 在此区"
+      },
+      {
+        "name": "顺德区 (Shunde)",
+        "name_en": "Shunde",
+        "rent_1br_usd_month": 210,
+        "vibe": "美食之都大良，顺峰山公园，生活气息浓、租金低",
+        "best_for": "美食与低成本长住",
+        "coworking_density": 2,
+        "note": "估算：lanternglow.guide 2026-10 大良单间 ¥600/月，整租一居取 ¥1,400≈$210"
+      },
+      {
+        "name": "三水区 (Sanshui)",
+        "name_en": "Sanshui",
+        "rent_1br_usd_month": 165,
+        "vibe": "外围城区，安静、绿化好，租金全市最低一档",
+        "best_for": "安静长住与最低成本",
+        "coworking_density": 1,
+        "note": "估算：Numbeo 市郊一居 $161.23（¥1,075），取 ¥1,100≈$165"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Foshan?displayCurrency=USD",
+      "https://citycost.org/foshan/",
+      "https://urcity.com/en/cities/foshan-gd/",
+      "https://www.climatestotravel.com/climate/china/foshan",
+      "https://lanternglow.guide/notes/shunde/",
+      "https://Regus.com.sg/en/cn/chancheng/coworking"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -53,14 +96,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

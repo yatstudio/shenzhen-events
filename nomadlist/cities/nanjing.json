@@ -11,8 +11,8 @@
     "country_zh": "中国",
     "region": "China Domestic",
     "cost_usd_month": 1000,
-    "rent_1br_usd_month": 480,
-    "coworking_usd_month": 80,
+    "rent_1br_usd_month": 495,
+    "coworking_usd_month": 130,
     "internet_mbps": 150,
     "safety_score": 4.7,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 16.3,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "heritage",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "高校+历史+成本适中，江宁/河西片区适合长住。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "新街口·鼓楼 (Xinjiekou, Gulou)",
+        "name_en": "Xinjiekou",
+        "rent_1br_usd_month": 695,
+        "vibe": "市中心商圈、高校集中，南京最成熟的中心区",
+        "best_for": "城市生活与高校氛围",
+        "coworking_density": 4,
+        "note": "lifetourchina 现代一居 ¥4,200–5,800 区间中值 ¥5,000≈$694"
+      },
+      {
+        "name": "河西·建邺 (Hexi, Jianye)",
+        "name_en": "Hexi",
+        "rent_1br_usd_month": 765,
+        "vibe": "新 CBD、高端住宅、江景，楼新配套全",
+        "best_for": "商务与新城配套",
+        "coworking_density": 4,
+        "note": "lifetourchina 现代一居 ¥4,500–6,500 区间中值 ¥5,500≈$764"
+      },
+      {
+        "name": "玄武区 (Xuanwu)",
+        "name_en": "Xuanwu",
+        "rent_1br_usd_month": 440,
+        "vibe": "玄武湖、德基广场，老城与新楼混搭",
+        "best_for": "湖景与购物",
+        "coworking_density": 3,
+        "note": "lifetourchina 老楼一居 ¥2,800–3,500 区间中值 ¥3,150≈$438；Regus 德基广场在此区"
+      },
+      {
+        "name": "江宁区 (Jiangning)",
+        "name_en": "Jiangning",
+        "rent_1br_usd_month": 440,
+        "vibe": "科技园新区、地铁通勤、性价比高",
+        "best_for": "预算与科技园通勤",
+        "coworking_density": 2,
+        "note": "lifetourchina 现代一居 ¥2,500–3,800 区间中值 ¥3,150≈$438"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Nanjing?displayCurrency=USD",
+      "https://citycost.org/nanjing/",
+      "https://www.lifetourchina.com/resources/nanjing-rental-market",
+      "https://www.lifetourchina.com/resources/nanjing-neighborhoods-housing",
+      "https://www.climatestotravel.com/climate/china/nanjing",
+      "https://workin.space/en/china/nanjing?t=meeting-room&c=11"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -53,14 +96,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

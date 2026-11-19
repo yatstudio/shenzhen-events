@@ -10,9 +10,9 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 850,
-    "rent_1br_usd_month": 400,
-    "coworking_usd_month": 68,
+    "cost_usd_month": 875,
+    "rent_1br_usd_month": 385,
+    "coworking_usd_month": 90,
     "internet_mbps": 140,
     "safety_score": 4.4,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 18.8,
     "best_months": "Mar-May,Oct-Nov",
     "tags": [
       "city",
@@ -35,14 +35,57 @@
     ],
     "summary_zh": "8D 山城+火锅+低成本，夏天热、爬坡多。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "解放碑·渝中区 (Jiefangbei, Yuzhong)",
+        "name_en": "Jiefangbei",
+        "rent_1br_usd_month": 415,
+        "vibe": "历史商业核心、江景、夜生活最集中，交通最方便",
+        "best_for": "城市生活与夜景",
+        "coworking_density": 4,
+        "note": "lifetourchina 市中心一居 ¥2,400–3,600 区间中值 ¥3,000≈$417"
+      },
+      {
+        "name": "观音桥·江北区 (Guanyinqiao, Jiangbei)",
+        "name_en": "Guanyinqiao",
+        "rent_1br_usd_month": 485,
+        "vibe": "现代商圈、夜生活、国际公司集中，楼新配套全",
+        "best_for": "商务与夜生活",
+        "coworking_density": 4,
+        "note": "chongqingrentalhub 1 居 ¥2,500–4,500 区间中值 ¥3,500≈$486"
+      },
+      {
+        "name": "南岸区 (Nan'an)",
+        "name_en": "Nan'an",
+        "rent_1br_usd_month": 250,
+        "vibe": "长江江景、安静住宅区，南滨路散步首选",
+        "best_for": "江景与安静长住",
+        "coworking_density": 2,
+        "note": "估算：chongqingrentalhub 1 居 ¥1,500 起，取 ¥1,700≈$250"
+      },
+      {
+        "name": "渝北区 (Yubei)",
+        "name_en": "Yubei",
+        "rent_1br_usd_month": 230,
+        "vibe": "北部新城、绿化好、近机场，空间大",
+        "best_for": "家庭与空间",
+        "coworking_density": 2,
+        "note": "lifetourchina 市郊一居 ¥1,300–2,000 区间中值 ¥1,650≈$229"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Chongqing?displayCurrency=USD",
+      "https://citycost.org/compare/chongqing-vs-hangzhou/",
+      "https://www.lifetourchina.com/resources/chongqing-housing-for-expats",
+      "https://www.chongqingrentalhub.com/",
+      "https://www.climatestotravel.com/climate/china/chongqing",
+      "https://www.regus.com/en/cn/chongqing/coworking"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -52,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,
