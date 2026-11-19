@@ -11,9 +11,9 @@
     "country_zh": "中国",
     "region": "China Domestic",
     "cost_usd_month": 750,
-    "rent_1br_usd_month": 340,
-    "coworking_usd_month": 60,
-    "internet_mbps": 120,
+    "rent_1br_usd_month": 240,
+    "coworking_usd_month": 100,
+    "internet_mbps": 75,
     "safety_score": 4.6,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 16.1,
     "best_months": "All year",
     "tags": [
       "climate",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "春城、四季气候国内最稳一档，成本低，适合长住。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "五华·翠湖 (Wuhua / Cuihu / Green Lake)",
+        "name_en": "Wuhua / Cuihu / Green Lake",
+        "rent_1br_usd_month": 360,
+        "vibe": "翠湖公园+文林街，外籍人士最集中，老城生活感最强",
+        "best_for": "外籍社群与老城生活",
+        "coworking_density": 3,
+        "note": "chinahomerent 香宫国际 1 居 ¥2,400/月（75㎡ 精装，2026-11-14）；echinacities 称翠湖为全市最高租金区"
+      },
+      {
+        "name": "盘龙区 (Panlong)",
+        "name_en": "Panlong",
+        "rent_1br_usd_month": 270,
+        "vibe": "市中心东侧，东风广场商圈、地铁密，通勤最方便",
+        "best_for": "市中心通勤",
+        "coworking_density": 3,
+        "note": "估算：Numbeo 市中心 $239.82 之上，取 ¥1,800≈$270"
+      },
+      {
+        "name": "西山区·滇池 (Xishan / Dianchi Lake)",
+        "name_en": "Xishan / Dianchi Lake",
+        "rent_1br_usd_month": 225,
+        "vibe": "滇池畔、空气好，外籍 NGO 聚集区，生活节奏慢",
+        "best_for": "湖景与慢生活",
+        "coworking_density": 2,
+        "note": "估算：Numbeo 市中心与市郊之间，取 ¥1,500≈$225；echinacities 称西山开元一带有外籍 NGO 社群"
+      },
+      {
+        "name": "呈贡区 (Chenggong)",
+        "name_en": "Chenggong",
+        "rent_1br_usd_month": 180,
+        "vibe": "大学城+新城区，年轻租客多，协同办公增长最快",
+        "best_for": "预算与新城配套",
+        "coworking_density": 3,
+        "note": "Numbeo 市郊一居 $179.86（¥1,200）；rewireabroad 称协同办公集中于呈贡与官渡"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Kunming-Yunnan-China?displayCurrency=USD",
+      "https://rewireabroad.com/country/china/city/kunming",
+      "https://chinasurvivalkit.com/blog/cost-of-living-in-china",
+      "https://www.echinacities.net/kunming/city-guide/Apartment-Hunting-in-Kunming",
+      "https://www.chinahomerent.com/index.aspx?city=Kunming&search=%e9%a6%99%e5%ae%ab%e5%9b%bd%e9%99%85",
+      "https://www.climatestotravel.com/climate/china/kunming"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -58,20 +101,31 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 179,
+      "food": 147,
+      "transport": 30,
+      "utilities_internet": 87,
+      "misc": 89,
+      "total": 532,
+      "basis": "rewireabroad.com 2026-11-14 单人中档分项（租金为市郊 1 居 ¥1,200≈$179；食品=杂货 $125+外出就餐 $22；杂项=娱乐生活 $89；分项合计 532，不含协同办公）；Numbeo 单人不含租 $520.1+市中心 1 居 $239.82=$759.9 与 cost_usd_month 750 同量级"
     }
   }
 }

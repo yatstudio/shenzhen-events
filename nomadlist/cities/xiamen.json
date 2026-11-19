@@ -10,9 +10,9 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 1000,
-    "rent_1br_usd_month": 480,
-    "coworking_usd_month": 80,
+    "cost_usd_month": 860,
+    "rent_1br_usd_month": 350,
+    "coworking_usd_month": 120,
     "internet_mbps": 140,
     "safety_score": 4.7,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 22.0,
     "best_months": "Jan-Mar,Nov-Dec",
     "tags": [
       "beach",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "海边+古城，岛内租金不低，适合海岛慢生活。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "思明区 (Siming)",
+        "name_en": "Siming",
+        "rent_1br_usd_month": 420,
+        "vibe": "老城+厦大+鼓浪屿轮渡，咖啡馆与夜生活最集中，海景散步首选",
+        "best_for": "城市生活与海景散步",
+        "coworking_density": 3,
+        "note": "估算：Numbeo 市中心 $350.68 之上；urcity 全市 1 居中位 ¥3,000（安居客/贝壳/链家）交叉，思明为岛内核心取 ¥2,800≈$420"
+      },
+      {
+        "name": "湖里区 (Huli)",
+        "name_en": "Huli",
+        "rent_1br_usd_month": 350,
+        "vibe": "岛内北部新商圈，SM 城市广场周边配套新，通勤去思明约 20 分钟骑行",
+        "best_for": "性价比与购物配套",
+        "coworking_density": 3,
+        "note": "Numbeo 市中心一居 $350.68（¥2,337.50，区间 ¥2,000–3,200）"
+      },
+      {
+        "name": "集美区 (Jimei)",
+        "name_en": "Jimei",
+        "rent_1br_usd_month": 270,
+        "vibe": "集美大学城，高校氛围浓、租金低，岛外安静",
+        "best_for": "预算与校园氛围",
+        "coworking_density": 2,
+        "note": "估算：china-trip.org 称厦大周边老楼 1 居 ¥1,800 以下，集美取 ¥1,800≈$270"
+      },
+      {
+        "name": "海沧区 (Haicang)",
+        "name_en": "Haicang",
+        "rent_1br_usd_month": 250,
+        "vibe": "岛外西岸新城，安静、靠 BRT/地铁通勤，租金全市最低一档",
+        "best_for": "安静长住与低成本",
+        "coworking_density": 1,
+        "note": "估算：Numbeo 市郊一居 $266.67（¥1,777.50）低值，取 ¥1,650≈$250"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Xiamen?displayCurrency=USD",
+      "https://citycost.org/xiamen/",
+      "https://urcity.com/en/cities/xiamen-fj/",
+      "https://www.china-trip.org/xiamen-accommodation-what-nobody-tells-you/",
+      "https://www.regus.com/en/cn/xiamen/coworking",
+      "https://www.climatestotravel.com/climate/china/xiamen"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -51,14 +94,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

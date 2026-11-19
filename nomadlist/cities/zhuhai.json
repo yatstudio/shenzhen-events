@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 950,
-    "rent_1br_usd_month": 450,
+    "cost_usd_month": 880,
+    "rent_1br_usd_month": 430,
     "coworking_usd_month": 76,
     "internet_mbps": 140,
     "safety_score": 4.7,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 22.9,
     "best_months": "Oct-Apr",
     "tags": [
       "beach",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "海边慢城、离澳门/香港近，湿度是主要吐槽点。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "香洲区 (Xiangzhou)",
+        "name_en": "Xiangzhou",
+        "rent_1br_usd_month": 430,
+        "vibe": "市中心商圈，生活配套最全，公交/轻轨枢纽",
+        "best_for": "市中心生活",
+        "coworking_density": 3,
+        "note": "Numbeo 市中心一居 $431.28（¥2,875，区间 ¥2,000–3,500）"
+      },
+      {
+        "name": "拱北 (Gongbei)",
+        "name_en": "Gongbei",
+        "rent_1br_usd_month": 400,
+        "vibe": "澳门口岸商圈，过关去澳门最方便，商场与餐饮密",
+        "best_for": "往返澳门",
+        "coworking_density": 3,
+        "note": "估算：市中心价低一档，取 ¥2,650≈$400"
+      },
+      {
+        "name": "吉大 (Jida)",
+        "name_en": "Jida",
+        "rent_1br_usd_month": 380,
+        "vibe": "海滨老城区，情侣路散步、餐饮多，生活气息浓",
+        "best_for": "海滨散步",
+        "coworking_density": 2,
+        "note": "估算：取 ¥2,500≈$380"
+      },
+      {
+        "name": "唐家湾 (Tangjiawan)",
+        "name_en": "Tangjiawan",
+        "rent_1br_usd_month": 300,
+        "vibe": "高校聚集、珠海北站高铁，租金低、年轻租客多",
+        "best_for": "预算与高校氛围",
+        "coworking_density": 2,
+        "note": "估算：Numbeo 市郊一居 $285.02（¥1,900）之上，取 ¥2,000≈$300"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Zhuhai?displayCurrency=CNY",
+      "https://citycost.org/zhuhai/",
+      "https://urcity.com/en/cities/zhuhai-gd/",
+      "https://freakingnomads.com/places/zhuhai",
+      "https://www.livingcost.net/china/zhuhai",
+      "http://en.climate-data.org/asia/china/guangdong/zhuhai-2698/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -53,14 +96,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,
