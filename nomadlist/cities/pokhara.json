@@ -13,7 +13,7 @@
     "cost_usd_month": 650,
     "rent_1br_usd_month": 280,
     "coworking_usd_month": 52,
-    "internet_mbps": 50,
+    "internet_mbps": 40,
     "safety_score": 4.2,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Kathmandu",
     "currency": "NPR",
-    "avg_temp_c": null,
+    "avg_temp_c": 18.3,
     "best_months": "Feb-May,Oct-Nov",
     "tags": [
       "mountain",
@@ -35,14 +35,57 @@
     ],
     "summary_zh": "费瓦湖+雪山、成本地板级，网速和停电要备方案。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "Lakeside 中央 (Baidam)",
+        "name_en": "Central Lakeside (Baidam)",
+        "rent_1br_usd_month": 300,
+        "vibe": "湖畔主街，咖啡馆、徒步装备店与客栈最密",
+        "best_for": "首次落脚与社交",
+        "coworking_density": 4,
+        "note": "租金为 furnished room 区间 $220-380 中值（digitalnomadsinnepal.com）"
+      },
+      {
+        "name": "North Lakeside (Khahare)",
+        "name_en": "North Lakeside (Khahare)",
+        "rent_1br_usd_month": 240,
+        "vibe": "湖畔北段，安静，湖景房多",
+        "best_for": "安静长住",
+        "coworking_density": 2,
+        "note": "租金为区间 $180-300 中值（digitalnomadsinnepal.com）"
+      },
+      {
+        "name": "Damside",
+        "name_en": "Damside",
+        "rent_1br_usd_month": 190,
+        "vibe": "湖东岸，本地生活气息，便宜",
+        "best_for": "预算优先",
+        "coworking_density": 2,
+        "note": "租金为区间 $140-240 中值（digitalnomadsinnepal.com）"
+      },
+      {
+        "name": "Sarangkot",
+        "name_en": "Sarangkot",
+        "rent_1br_usd_month": 150,
+        "vibe": "山顶村落，雪山全景，远离喧闹",
+        "best_for": "景观与徒步",
+        "coworking_density": 1,
+        "note": "租金为区间 $100-200 中值（expatlife.ai）；房源少"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://expatlife.ai/nepal/housing",
+      "https://www.digitalnomadsinnepal.com/blog/cost-of-living-pokhara-nomad-guide",
+      "https://jobicy.com/cost-of-living/compare/maracaibo-vs-pokhara",
+      "https://en.climate-data.org/asia/nepal/western-development-region/pokhara-613/",
+      "https://www.climatestotravel.com/climate/nepal",
+      "https://nostos.navoy.io/cities/pokhara"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       2,
       3,
@@ -53,14 +96,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

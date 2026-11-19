@@ -10,23 +10,23 @@
     "country": "Laos",
     "country_zh": "老挝",
     "region": "Southeast Asia",
-    "cost_usd_month": 900,
+    "cost_usd_month": 1150,
     "rent_1br_usd_month": 400,
     "coworking_usd_month": 72,
     "internet_mbps": 45,
     "safety_score": 4.4,
     "english_score": 3.0,
     "visa": {
-      "cn_passport_type": "voa",
+      "cn_passport_type": "evisa",
       "cn_max_stay_days": 30,
       "has_nomad_visa": false,
-      "note": "以官方移民页为准",
+      "note": "老挝官方电子签站 laoevisa.gov.la 2026-11-19 核实：中国列入可申办名单；目前网上只办旅游签（FAQ 1.3），单次入境、停留 30 天、批准函 60 天内有效、约 3 个工作日处理；站内无游民签类别；落地签停留期官方页未显示；未见政策变更日期，policy_last_change 保持 null",
       "nomad_visa_link": null,
       "policy_last_change": null
     },
     "timezone": "Asia/Vientiane",
     "currency": "LAK",
-    "avg_temp_c": null,
+    "avg_temp_c": 26.1,
     "best_months": "Nov-Feb",
     "tags": [
       "heritage",
@@ -35,14 +35,57 @@
     ],
     "summary_zh": "世遗小城、慢到极致，网速只够异步工作。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "老城半岛 (Old Town Peninsula)",
+        "name_en": "Old Town Peninsula",
+        "rent_1br_usd_month": 550,
+        "vibe": "世遗核心，法式殖民建筑、30+ 寺庙、夜市，氛围最佳也最贵",
+        "best_for": "首次到访与步行生活",
+        "coworking_density": 2,
+        "note": "估算：服务式公寓约 $550/月（digitalnomads.world）；Sisavangvong 大街房价比外围贵约 50%（cheaptraveldestination）；以咖啡馆办公为主"
+      },
+      {
+        "name": "班香莫安村 (Baan Xieng Mouane)",
+        "name_en": "Baan Xieng Mouane",
+        "rent_1br_usd_month": 300,
+        "vibe": "老城北侧安静村落，本地食肆多，半价住老城边",
+        "best_for": "预算与安静",
+        "coworking_density": 1,
+        "note": "估算：房价约为老城一半（cheaptraveldestination）；步行 2 分钟到主街"
+      },
+      {
+        "name": "班巴坎 (Ban Pakham)",
+        "name_en": "Ban Pakham",
+        "rent_1br_usd_month": 400,
+        "vibe": "城南叶荫住宅区，近法语学院与球场，月租与外籍长住多",
+        "best_for": "月租长住",
+        "coworking_density": 1,
+        "note": "估算：月租型住宿集中区（cheaptraveldestination）；中心区带家具公寓挂牌 $270–280/月（digitalnomads.world）"
+      },
+      {
+        "name": "湄公河畔/潘銮 (Mekong Riverside & Ban Phan Luang)",
+        "name_en": "Mekong Riverside & Ban Phan Luang",
+        "rent_1br_usd_month": 450,
+        "vibe": "湄公河畔老街区，河景、寺庙、安静",
+        "best_for": "河景与慢生活",
+        "coworking_density": 1,
+        "note": "估算：freakingnomads 列为最佳住宿区之一；全城几无专用协同办公空间，密度均为 1–2（digitalnomads.world）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://freakingnomads.com/places/luang-prabang",
+      "https://digitalnomads.world/city-guide/luang-prabang/",
+      "https://wheretoliveguide.com/city/luang-prabang/",
+      "https://www.cheaptraveldestination.com/laos/luang-prabang",
+      "https://www.climatestotravel.com/climate/laos",
+      "https://www.laoevisa.gov.la/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -51,19 +94,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-19"
       }
     }
   }

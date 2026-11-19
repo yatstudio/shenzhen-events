@@ -12,21 +12,21 @@
     "region": "Southeast Asia",
     "cost_usd_month": 1300,
     "rent_1br_usd_month": 600,
-    "coworking_usd_month": 104,
-    "internet_mbps": 55,
+    "coworking_usd_month": 180,
+    "internet_mbps": 20,
     "safety_score": 4.3,
     "english_score": 3.0,
     "visa": {
       "cn_passport_type": "voa",
       "cn_max_stay_days": 30,
-      "has_nomad_visa": false,
-      "note": "以官方移民页为准",
-      "nomad_visa_link": null,
+      "has_nomad_visa": true,
+      "note": "印尼 E33G 遠程工作簽真實存在（印尼移民總局官方頁）：年收入 ≥$60,000、境外雇主合同，停留 1 年可續，費用 Rp7,000,000；頁面未見政策變更日期，policy_last_change 保持 null",
+      "nomad_visa_link": "https://imigrasi.go.id/wna/daftar-visa-indonesia/E33G",
       "policy_last_change": null
     },
     "timezone": "Asia/Makassar",
     "currency": "IDR",
-    "avg_temp_c": null,
+    "avg_temp_c": 25.4,
     "best_months": "Apr-Oct",
     "tags": [
       "yoga",
@@ -35,14 +35,59 @@
     ],
     "summary_zh": "稻田+瑜伽+写作型游民，和仓古是巴厘岛两种活法。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "烏布中心 (Central Ubud)",
+        "name_en": "Central Ubud",
+        "rent_1br_usd_month": 700,
+        "vibe": "步行可達，畫廊、市集、瑜伽館最密",
+        "best_for": "首次落脚与步行生活",
+        "coworking_density": 5,
+        "note": "客棧/1BR Rp4–8jt，入門別墅約 Rp13M（nomads.one、inmobali）；Hubud 月費 Rp4.2jt"
+      },
+      {
+        "name": "沙揚 (Sayan)",
+        "name_en": "Sayan",
+        "rent_1br_usd_month": 800,
+        "vibe": "阿勇河峽谷、叢林景觀，安靜高檔",
+        "best_for": "别墅长住与静修",
+        "coworking_density": 1,
+        "note": "入門 1BR 別墅約 Rp13M；帶泳池 1BR Rp22–30M（inmobali），需機車"
+      },
+      {
+        "name": "佩內斯塔南 (Penestanan)",
+        "name_en": "Penestanan / Campuhan",
+        "rent_1br_usd_month": 750,
+        "vibe": "藝術家村落、稻田小徑，可步行到市中心",
+        "best_for": "艺术氛围与稻田景观",
+        "coworking_density": 2,
+        "note": "普通 1BR/客棧約 $500–800；帶泳池 1BR 別墅 Rp24–36M（inmobali）"
+      },
+      {
+        "name": "尼亞庫寧 (Nyuh Kuning)",
+        "name_en": "Nyuh Kuning",
+        "rent_1br_usd_month": 500,
+        "vibe": "猴林南側安靜村落，田園氣息",
+        "best_for": "预算与安静",
+        "coworking_density": 1,
+        "note": "客棧 $400–600（remoters）；離市中心稍遠，需機車"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.nomads.one/indonesia/ubud/",
+      "https://nostos.navoy.io/cities/ubud",
+      "https://www.inmobali.com/article-ubud-monthly-villa-rental-guide",
+      "https://www.inmobali.com/article-sayan-ubud-monthly-villa-rental-guide",
+      "https://remoters.webflow.io/en/rentals/ubud",
+      "https://en.climate-data.org/asia/indonesia/bali/ubud-977880/",
+      "https://www.happyfreelancelife.com/cities/ubud-hustle-free-index/",
+      "https://imigrasi.go.id/wna/daftar-visa-indonesia/E33G"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -54,19 +99,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-19"
       }
     }
   }

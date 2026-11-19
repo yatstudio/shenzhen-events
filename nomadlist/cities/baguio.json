@@ -13,7 +13,7 @@
     "cost_usd_month": 900,
     "rent_1br_usd_month": 400,
     "coworking_usd_month": 72,
-    "internet_mbps": 70,
+    "internet_mbps": 25,
     "safety_score": 4.3,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Manila",
     "currency": "PHP",
-    "avg_temp_c": null,
+    "avg_temp_c": 19.5,
     "best_months": "Jan-Apr,Nov-Dec",
     "tags": [
       "mountain",
@@ -34,14 +34,56 @@
     ],
     "summary_zh": "菲律宾夏都，海拔1500米凉爽，中国护照免签口径以官方为准。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "Session Road / 市中心",
+        "name_en": "Session Road / City Center",
+        "rent_1br_usd_month": 390,
+        "vibe": "市中心主街，商场、银行、餐厅步行可达，较吵拥挤",
+        "best_for": "便利优先与短住",
+        "coworking_density": 4,
+        "note": "租金为市中心 1BR $393（citycost.org，2026-11）"
+      },
+      {
+        "name": "Camp John Hay",
+        "name_en": "Camp John Hay",
+        "rent_1br_usd_month": 300,
+        "vibe": "松林度假区，安静凉爽",
+        "best_for": "安静长住",
+        "coworking_density": 2,
+        "note": "估算：howrichph.com 列为中档居住区，市中心与市郊租金之间取值"
+      },
+      {
+        "name": "Burnham Park 一带",
+        "name_en": "Burnham Park area",
+        "rent_1br_usd_month": 280,
+        "vibe": "公园旁，步行到 SM 与 Session Road",
+        "best_for": "步行生活",
+        "coworking_density": 3,
+        "note": "估算：市中心 $393 与市郊 $194 之间取值，步行便利溢价"
+      },
+      {
+        "name": "市郊外围",
+        "name_en": "Outskirts",
+        "rent_1br_usd_month": 194,
+        "vibe": "市郊住宅区，便宜，需打车或吉普尼",
+        "best_for": "预算优先长住",
+        "coworking_density": 1,
+        "note": "租金为市郊 1BR $194（citycost.org，2026-11）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://citycost.org/baguio/",
+      "https://www.howrichph.com/philippines-expat-guide/baguio",
+      "https://nostos.navoy.io/cities/baguio",
+      "https://en.climate-data.org/asia/philippines/benguet/baguio-6086/",
+      "https://www.climatestotravel.com/climate/philippines/baguio"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -52,14 +94,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

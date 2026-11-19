@@ -11,22 +11,22 @@
     "country_zh": "台湾",
     "region": "East Asia",
     "cost_usd_month": 1350,
-    "rent_1br_usd_month": 600,
-    "coworking_usd_month": 108,
-    "internet_mbps": 150,
+    "rent_1br_usd_month": 450,
+    "coworking_usd_month": 125,
+    "internet_mbps": 40,
     "safety_score": 4.8,
     "english_score": 3.0,
     "visa": {
       "cn_passport_type": "permit_required",
       "cn_max_stay_days": 0,
-      "has_nomad_visa": false,
-      "note": "以官方移民页为准",
-      "nomad_visa_link": null,
-      "policy_last_change": null
+      "has_nomad_visa": true,
+      "note": "游民签真实存在（BOCA 官方页，2026-08-07 更新），但仅限免签国护照；大陆护照不免签，需另办入台许可",
+      "nomad_visa_link": "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+      "policy_last_change": "2026-08-07"
     },
     "timezone": "Asia/Taipei",
     "currency": "TWD",
-    "avg_temp_c": null,
+    "avg_temp_c": 24.0,
     "best_months": "Jan-Feb,Nov-Dec",
     "tags": [
       "city",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "气候被称台湾最舒服，大陆许可限制同台北。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "綠園道/西區 (Calligraphy Greenway)",
+        "name_en": "Calligraphy Greenway / West District",
+        "rent_1br_usd_month": 300,
+        "vibe": "3 公里綠園道、精品咖啡館街，辦公氛圍最好",
+        "best_for": "咖啡馆办公",
+        "coworking_density": 4,
+        "note": "工作室 $270–340（Medium 台灣游民社區指南 2026-11-15）"
+      },
+      {
+        "name": "逢甲/西屯 (Fengjia/Xitun)",
+        "name_en": "Fengjia / Xitun",
+        "rent_1br_usd_month": 280,
+        "vibe": "夜市、大學城，熱鬧便宜",
+        "best_for": "年轻氛围与夜生活",
+        "coworking_density": 4,
+        "note": "工作室 $200–300（Medium）；WSD Innovation Hub 在此區，月費 NT$3,600（nomads.one）"
+      },
+      {
+        "name": "七期 (Seventh Redevelopment Zone)",
+        "name_en": "Seventh Redevelopment Zone",
+        "rent_1br_usd_month": 650,
+        "vibe": "玻璃高樓、新豪宅區，空置率高",
+        "best_for": "高端公寓",
+        "coworking_density": 3,
+        "note": "服務式房間 $560–780（Medium）"
+      },
+      {
+        "name": "舊城區/中區 (Old Downtown)",
+        "name_en": "Old Downtown / Central District",
+        "rent_1br_usd_month": 260,
+        "vibe": "日治老街、東南亞美食，正在翻新回暖",
+        "best_for": "老城氛围与低价",
+        "coworking_density": 2,
+        "note": "約 $250–280，房源少、價格難精確（Medium，估算）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.nomads.one/taiwan/taichung/",
+      "https://nostos.navoy.io/cities/taichung",
+      "https://citycost.org/compare/taichung-vs-da-nang/",
+      "https://medium.com/@nomadstorygabby/taichung-for-digital-nomads-sunshine-half-the-rent-and-a-slower-pace-5276cc7c069d",
+      "https://weatherandclimate.com/taiwan",
+      "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -50,19 +93,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-19"
       }
     }
   }

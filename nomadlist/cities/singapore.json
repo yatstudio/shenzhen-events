@@ -10,10 +10,10 @@
     "country": "Singapore",
     "country_zh": "新加坡",
     "region": "Southeast Asia",
-    "cost_usd_month": 2900,
-    "rent_1br_usd_month": 1500,
+    "cost_usd_month": 3000,
+    "rent_1br_usd_month": 2200,
     "coworking_usd_month": 232,
-    "internet_mbps": 220,
+    "internet_mbps": 195,
     "safety_score": 4.9,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Singapore",
     "currency": "SGD",
-    "avg_temp_c": null,
+    "avg_temp_c": 27.7,
     "best_months": "All year",
     "tags": [
       "city",
@@ -35,14 +35,54 @@
     ],
     "summary_zh": "中国护照免签30天，基建/航空/金融顶级，贵——适合当枢纽短住，不适合省钱长住。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "中环·丹戎巴葛 Tiong Bahru & Tanjong Pagar",
+        "name_en": "Tiong Bahru & Tanjong Pagar",
+        "rent_1br_usd_month": 2600,
+        "vibe": "装饰艺术老楼、咖啡馆与面包房，紧邻 CBD 与协同办公",
+        "best_for": "咖啡馆办公与步行通勤",
+        "coworking_density": 5,
+        "note": "租金为 traveldojo 区间 $1,700–3,500 中值"
+      },
+      {
+        "name": "罗伯逊码头 Robertson Quay",
+        "name_en": "Robertson Quay",
+        "rent_1br_usd_month": 3000,
+        "vibe": "河畔步道、餐厅与公寓，近克拉码头",
+        "best_for": "市中心绿色基地",
+        "coworking_density": 4,
+        "note": "租金为 traveldojo 区间 $2,000–4,000 中值"
+      },
+      {
+        "name": "武吉士·甘榜格南 Bugis & Kampong Glam",
+        "name_en": "Bugis & Kampong Glam",
+        "rent_1br_usd_month": 2500,
+        "vibe": "阿拉伯街、店屋咖啡馆、哈芝巷小店",
+        "best_for": "个性与夜生活",
+        "coworking_density": 4,
+        "note": "租金为 traveldojo 区间 $1,700–3,300 中值"
+      },
+      {
+        "name": "加东·如切 Katong & Joo Chiat",
+        "name_en": "Katong & Joo Chiat",
+        "rent_1br_usd_month": 2250,
+        "vibe": "娘惹店屋、叻沙与东海岸公园海边",
+        "best_for": "美食与跑步",
+        "coworking_density": 3,
+        "note": "租金为 traveldojo 区间 $1,500–3,000 中值"
+      }
+    ],
     "sources": [
-      "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "https://www.traveldojo.com/singapore/digital-nomads/ — 舒适月预算 $4,500、精简 $3,200 起；片区与 1 居租金区间；光纤 1000+ Mbps；无游民签",
+      "https://rewireabroad.com/country/singapore/city/singapore — 单人中档 $2,986/月（租金 $2,134、市中心 1 居 $2,972、市郊 $2,134）；平均网速 192.7 Mbps",
+      "https://www.numbeo.com/cost-of-living/region_prices_by_city?itemId=26&region=142 — 市中心 1 居 $3,162.85、市郊 $2,235.88（2026-11-16 更新）",
+      "https://www.worlddata.info/asia/singapore/climate.php — 1993–2025 年均温约 27.7°C（樟宜站）",
+      "签证：待新加坡 ICA 官方页核实，has_nomad_visa 暂保持原值"
     ],
     "verified_at": "2026-11-18",
     "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -59,13 +99,13 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "visa": {
@@ -73,6 +113,18 @@
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 2134,
+      "food": 358,
+      "transport": 95,
+      "utilities_internet": 203,
+      "coworking": 232,
+      "misc": 196,
+      "total": 3218,
+      "basis": "rewireabroad.com 2026-11-13 单人中档分项（租金为市郊 1 居）+ coworking 232（种子值）；合计 3,218 与 cost_usd_month 3,000 同量级"
     }
   }
 }

@@ -13,20 +13,20 @@
     "cost_usd_month": 850,
     "rent_1br_usd_month": 380,
     "coworking_usd_month": 68,
-    "internet_mbps": 65,
+    "internet_mbps": 45,
     "safety_score": 4.0,
     "english_score": 3.0,
     "visa": {
-      "cn_passport_type": "voa",
+      "cn_passport_type": "evisa",
       "cn_max_stay_days": 30,
       "has_nomad_visa": false,
-      "note": "以官方移民页为准",
+      "note": "柬埔寨移民局官方电子签站 evisa.gov.kh 2026-11-19 核实：中国护照可办 Visa T 电子签（$30、单次入境、有效期 3 个月、停留 1 个月，3 个工作日出签）；2026-06-15 至 10-15 的 14 天临时免签已过期；站内签证类型仅 T/E/A/B/C 五类，无游民签；落地签停留期官方页未显示。policy_last_change：签证类型页仅见 Last Updated: Jan 01, 2025（页面更新日，非政策变更日），保持 null",
       "nomad_visa_link": null,
       "policy_last_change": null
     },
     "timezone": "Asia/Phnom_Penh",
     "currency": "KHR",
-    "avg_temp_c": null,
+    "avg_temp_c": 27.7,
     "best_months": "Nov-Feb",
     "tags": [
       "heritage",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "吴哥窟门户、成本低、签证友好，医疗短板。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "沃博区 (Wat Bo)",
+        "name_en": "Wat Bo",
+        "rent_1br_usd_month": 350,
+        "vibe": "河东岸住宅区，安静、咖啡馆多，最受长住欢迎",
+        "best_for": "长住与咖啡馆办公",
+        "coworking_density": 3,
+        "note": "jobicy $350/月；BioLAB、Noxy 等咖啡馆可办公；cambodiakingdom 区间 $150–350"
+      },
+      {
+        "name": "老市场/酒吧街 (Old Market & Pub Street)",
+        "name_en": "Old Market & Pub Street",
+        "rent_1br_usd_month": 400,
+        "vibe": "游客中心，步行可达一切，热闹也吵",
+        "best_for": "短住与夜生活",
+        "coworking_density": 4,
+        "note": "jobicy $400/月；cambodiakingdom 区间 $200–500；Footprint 咖啡馆楼上有 walk-in 协同办公层"
+      },
+      {
+        "name": "萨拉康略 (Sala Kamreuk)",
+        "name_en": "Sala Kamreuk",
+        "rent_1br_usd_month": 300,
+        "vibe": "安静住宅巷子，不少外籍长住者",
+        "best_for": "预算与安静",
+        "coworking_density": 2,
+        "note": "jobicy $300/月；rentalalert 同区住宅性价比高"
+      },
+      {
+        "name": "塔普尔村 (Taphul Village)",
+        "name_en": "Taphul Village",
+        "rent_1br_usd_month": 330,
+        "vibe": "河畔村落感，步行友好，首次到访的落脚点",
+        "best_for": "首次到访与步行生活",
+        "coworking_density": 2,
+        "note": "jobicy $330/月；thenomadhq 称 Wat Bo、Sala Kamreuk 一带为长住聚集区"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://jobicy.com/cost-of-living/cambodia/siem-reap",
+      "https://cambodiakingdom.com/living-in-cambodia/digital-nomads/siem-reap",
+      "https://thenomadhq.com/blog/siem-reap-digital-nomad-guide",
+      "https://www.rentalalert.app/blog/renting-in-siem-reap-cost-and-neighbourhood-guide",
+      "https://en.climate-data.org/asia/cambodia/siem-reap/siem-reap-3168/",
+      "https://evisa.gov.kh/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -50,19 +93,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-19"
       }
     }
   }

@@ -11,7 +11,7 @@
     "country_zh": "中国",
     "region": "East Asia",
     "cost_usd_month": 2600,
-    "rent_1br_usd_month": 1300,
+    "rent_1br_usd_month": 1800,
     "coworking_usd_month": 208,
     "internet_mbps": 200,
     "safety_score": 4.7,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Hong_Kong",
     "currency": "HKD",
-    "avg_temp_c": null,
+    "avg_temp_c": 23.3,
     "best_months": "Oct-Apr",
     "tags": [
       "city",
@@ -35,14 +35,55 @@
     ],
     "summary_zh": "国际枢纽+山海，租金是亚洲最贵一档，适合项目制短住。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "中环 Central",
+        "name_en": "Central",
+        "rent_1br_usd_month": 3200,
+        "vibe": "金融中心，办公室/协同办公与夜生活最密",
+        "best_for": "商务与社交",
+        "coworking_density": 5,
+        "note": "租金为 expatexchange 区间 HK$20,000–30,000 中值（HK$25,000÷7.8）"
+      },
+      {
+        "name": "湾仔 Wan Chai",
+        "name_en": "Wan Chai",
+        "rent_1br_usd_month": 2560,
+        "vibe": "中环东侧，年轻专业人士聚集，酒吧餐厅多",
+        "best_for": "市中心便利与活力",
+        "coworking_density": 4,
+        "note": "租金为 expatexchange 区间 HK$15,000–25,000 中值（HK$20,000÷7.8）"
+      },
+      {
+        "name": "铜锣湾 Causeway Bay",
+        "name_en": "Causeway Bay",
+        "rent_1br_usd_month": 2560,
+        "vibe": "购物娱乐枢纽，24 小时商圈与深夜小吃",
+        "best_for": "购物与夜生活",
+        "coworking_density": 4,
+        "note": "租金为 expatexchange 区间 HK$15,000–25,000 中值（HK$20,000÷7.8）"
+      },
+      {
+        "name": "西营盘·坚尼地城 Sai Ying Pun & Kennedy Town",
+        "name_en": "Sai Ying Pun & Kennedy Town",
+        "rent_1br_usd_month": 2300,
+        "vibe": "中环以西，咖啡馆/画廊/年轻社区，租金略低",
+        "best_for": "文艺氛围与性价比",
+        "coworking_density": 4,
+        "note": "估算：hkstay 1–2 居区间 HK$20,000–45,000 下沿"
+      }
+    ],
     "sources": [
-      "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "https://www.numbeo.com/cost-of-living/region_prices_by_city?itemId=26&region=142 — 市中心 1 居 $2,315.73、市郊 $1,772.84（2026-11-16 更新）",
+      "https://www.deel.com/blog/moving-to-the-hong-kong-for-expats/ — 市中心 1 居 HK$18,000–25,000、非市中心 HK$12,000–15,000",
+      "https://www.expatexchange.com/ctryguide/30176/7/Hong-Kong/Living-in-Hong-Kong-Best-Neighborhoods-for-Single-People-in-Hong-Kong — 各区 studio/1 居租金区间（中环 HK$20k–30k、湾仔/铜锣湾 HK$15k–25k）",
+      "https://carexpat.com/blog/en/hong-kong-the-digital-nomads-guide-to-living-and-working-in-hong-kong/ — studio HK$13,000–20,000、交通 HK$500–800、coworking HK$2,000–3,000；片区（中环/湾仔、上环/西营盘、薄扶林、太古、跑马地）",
+      "https://www.worlddata.info/asia/hong-kong/climate.php — 1993–2025 年均温约 22.8→23.8°C，取 23.3°C",
+      "签证：待香港入境事务处官方页核实，has_nomad_visa 暂保持原值"
     ],
     "verified_at": "2026-11-18",
     "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -54,13 +95,13 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "visa": {

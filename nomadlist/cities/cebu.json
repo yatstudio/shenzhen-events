@@ -12,8 +12,8 @@
     "region": "Southeast Asia",
     "cost_usd_month": 1100,
     "rent_1br_usd_month": 500,
-    "coworking_usd_month": 88,
-    "internet_mbps": 75,
+    "coworking_usd_month": 105,
+    "internet_mbps": 50,
     "safety_score": 3.9,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Manila",
     "currency": "PHP",
-    "avg_temp_c": null,
+    "avg_temp_c": 27.0,
     "best_months": "Dec-May",
     "tags": [
       "island",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "海岛跳板+城市配套，潜水圈热门，治安选区。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "IT Park",
+        "name_en": "IT Park",
+        "rent_1br_usd_month": 700,
+        "vibe": "BPO 科技区，24 小时营业，协同办公与咖啡馆最密",
+        "best_for": "首次落脚与协同办公",
+        "coworking_density": 5,
+        "note": "租金为 1-bed $700（nomadalmanac.com）"
+      },
+      {
+        "name": "Lahug",
+        "name_en": "Lahug",
+        "rent_1br_usd_month": 500,
+        "vibe": "IT Park 外围住宅坡地，安静、本地感",
+        "best_for": "性价比长住",
+        "coworking_density": 3,
+        "note": "租金为 1-bed $500（nomadalmanac.com）"
+      },
+      {
+        "name": "Cebu Business Park (Ayala)",
+        "name_en": "Cebu Business Park (Ayala)",
+        "rent_1br_usd_month": 550,
+        "vibe": "商业园，Ayala 商场，整洁安全",
+        "best_for": "便利与安全",
+        "coworking_density": 3,
+        "note": "租金为 1BR 区间 PHP 25,000-35,000 中值约 $550（cebudestinations.com / philippinestravelsguide.com）"
+      },
+      {
+        "name": "Mabolo",
+        "name_en": "Mabolo",
+        "rent_1br_usd_month": 450,
+        "vibe": "两区之间的预算洼地，安静",
+        "best_for": "预算优先",
+        "coworking_density": 2,
+        "note": "租金为区间 PHP 18,000-35,000 中值约 $455（cebudestinations.com）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://cebudestinations.com/guide/digital-nomad-bases-in-cebu-where-to-live",
+      "https://www.nomadalmanac.com/countries/philippines/cities/cebu",
+      "https://nostos.navoy.io/cities/cebu",
+      "https://philippinestravelsguide.com/cities/cebu",
+      "https://ttdi.net/ph/cebu/digital-nomads/",
+      "https://en.climate-data.org/asia/philippines/cebu/cebu-city-3183/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-19",
+    "updated_at": "2026-11-19",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -52,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-19"
       },
       "visa": {
         "confidence": 0.5,

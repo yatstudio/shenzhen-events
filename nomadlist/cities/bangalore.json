@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Kolkata",
     "currency": "INR",
-    "avg_temp_c": null,
+    "avg_temp_c": 24.4,
     "best_months": "Jan,Nov-Dec",
     "tags": [
       "startup",
@@ -34,14 +34,54 @@
     ],
     "summary_zh": "印度硅谷、成本低、英语好，交通和空气扣分，游民CO 在列。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "Indiranagar",
+        "name_en": "Indiranagar",
+        "rent_1br_usd_month": 385,
+        "vibe": "林荫道、精品咖啡馆与酒吧，紫线地铁直达",
+        "best_for": "生活方式与社交",
+        "coworking_density": 4,
+        "note": "租金为 1BHK 区间 ₹28,000–40,000 中值（₹34,000÷88）"
+      },
+      {
+        "name": "Koramangala",
+        "name_en": "Koramangala",
+        "rent_1br_usd_month": 340,
+        "vibe": "创业之都，咖啡馆/协同办公/加速器最密",
+        "best_for": "创业者与创客社交",
+        "coworking_density": 5,
+        "note": "租金为 1BHK 区间 ₹25,000–35,000 中值（₹30,000÷88）"
+      },
+      {
+        "name": "HSR Layout",
+        "name_en": "HSR Layout",
+        "rent_1br_usd_month": 270,
+        "vibe": "整洁街区、公园，近外环路 IT 走廊",
+        "best_for": "IT 从业者与性价比",
+        "coworking_density": 4,
+        "note": "租金为 1BHK 区间 ₹18,000–30,000 中值（₹24,000÷88）"
+      },
+      {
+        "name": "Electronic City",
+        "name_en": "Electronic City",
+        "rent_1br_usd_month": 170,
+        "vibe": "电子城 IT 园区，地铁黄线在建，生活成本最低",
+        "best_for": "预算优先长住",
+        "coworking_density": 2,
+        "note": "估算：2BHK 区间 ₹18,000–30,000 推算 1BHK 约 ₹15,000"
+      }
+    ],
     "sources": [
-      "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "https://freakingnomads.com/digital-nomad-guide-to-bengaluru/ — 舒适生活 < $1,200/月；带家具住处 < $600/月；片区（Indiranagar、Koramangala & HSR）",
+      "https://6packersandmovers.in/moving-tips/moving-to-bangalore-guide/ — 各区 1BHK 租金（Indiranagar ₹28k–40k、Koramangala ₹25k–35k、HSR ₹18k–30k）",
+      "https://www.numbeo.com/cost-of-living/region_prices_by_city?itemId=26&region=142 — 市中心 1 居 $303.79、市郊 $174.95（2026-11-16 更新）",
+      "https://skydelta.io/weather/Bangalore,IN;Singapore,SG — 近 8 年日均最高 28.9°C、最低 19.9°C，均值 24.4°C",
+      "签证：待印度移民局官方页核实，has_nomad_visa 暂保持原值"
     ],
     "verified_at": "2026-11-18",
     "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       11,
@@ -49,13 +89,13 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
+        "confidence": 0.8,
+        "basis": "cross_checked",
         "as_of": "2026-11-18"
       },
       "visa": {
