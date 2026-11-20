@@ -1,0 +1,2535 @@
+{
+  "updated_at": "2026-11-20",
+  "title": "Yat's Talks · 谈话录",
+  "note": "Yat's List 谈话纪要清单：X Space、X 直播与 YouTube 访谈合并清单，人工整理、不定期更新；每条含要点与 note_url 全文纪要页。原 spaces.json 与 interviews.json 继续保留兼容。",
+  "source_site": "https://yatslist.com/talks/",
+  "talks": [
+    {
+      "id": "walletv-ai-agent-trading-20261119",
+      "title": "《AI替你交易，你的私钥还在你手里吗？》",
+      "title_en": "AI Trades for You — Is Your Private Key Still in Your Hands?",
+      "title_tw": "《AI替你交易，你的私鑰還在你手裡嗎？》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-19",
+      "host": "WalletV中文 @WalletV_CN",
+      "guests": [
+        "茄哥 @qg7777",
+        "Adam（WalletV / Virgo Group 创始人兼 CEO）",
+        "林可 @cryptoquantboo",
+        "Anny（WalletV 市场负责人）"
+      ],
+      "duration": "1 小时 27 分",
+      "duration_minutes": 87,
+      "url": "https://x.com/i/spaces/1VNPAeoLeBWdJa",
+      "note_url": "/spaces/notes/walletv-ai-agent-trading-20261119.html",
+      "topics": [
+        "AI交易",
+        "钱包安全",
+        "DeFi聚合",
+        "Hyperliquid",
+        "预测市场",
+        "积分空投",
+        "私钥"
+      ],
+      "highlights": [
+        "WalletV 专场 AMA（赞助场）：创始人 Adam 用一个多小时讲清产品定位——非托管钱包 + DeFi 聚合 + 内置 AI 交易，私钥在用户手里、AI 只拿下单权；累计在线听众 1058 人。",
+        "WalletV 是什么（Adam 现场说法）：非托管钱包（自管私钥、无需 KYC）+ DeFi Super App（原生接入 Hyperliquid、Aster、Polymarket 等）+ AI 交易门户；另有 Virgo Pay 法币出入金（覆盖 26 国）。DeFi 聚合完成度约六七成，AI 部分完成度只有约 20%。",
+        "AI 如何交易：分提示词策略与量化模型两类，最低 100 美元起，60 秒可完成设置，每 15 分钟出一次带理由的决策，随时可一键停止并选择手动或自动平仓；模型包括 Trader GPT（免费）、DeepSeek、ChatGPT、Claude 5.5、Claude Opus、Gemini 3 Flash、Grok 4.7 等。",
+        "私钥安全（Adam 现场说法）：AI 不碰私钥，交易走 Hyperliquid / Aster 子账号 API，关掉 API 就跑不了；不备份私钥就看不到充值地址；核心环节经 CertiK、SlowMist 等审计，报告在官网可查。",
+        "平台规模（Adam 现场说法）：注册钱包 25 万，月活 5000–10000，累计交易量 13–15 亿美元，月均约 2 亿美元；Hyperliquid builder 收入增速近期排第一，Aster 约第 5 名；WalletV 本身未融资，集团累计融资约 2500 万美元。",
+        "赚钱模式：合约 Builder 费万分之二、Swap 千分之三、预测市场费用 1.95（现场未说明单位），不吃客损；EVM 转账每天补贴一定数量，充值到 Hyperliquid、Aster、Polymarket 的 Gas 一直免费，Swap 超过 5 美元免 Gas。",
+        "Adam 的判断：没有 AI 模型能让人一直赚钱，声称能一直赚钱的平台就是忽悠；未来的竞争不在谁更赚钱，而在谁能提供足够多的模型、让用户在不同市况下选到合适的；安全是底线，做不到差异化。",
+        "新品预告（Adam 现场说法）：预测市场量化交易未来一两周内推出，几个模型回测年化 50% 以上、回撤不大；PC 端目前没有，未来可能推出可连接任意钱包（含硬件钱包）的 web terminal，预计明年上半年、最早明年一季度。",
+        "福利（现场说法）：评论区提问选 5 个，每人 200 积分（约 30–40 美元）；交易 NT 合约先到先得 20 人、每人 25 USDC（共 500 USDC）；TGE 第三阶段奖池 880 万美元；新钱包免费体验 1 个月 VIP；茄哥专场邀请码 QG7777；Space 结束后还有一个 48 小时周期的专场政策待官方公布。"
+      ],
+      "highlights_en": [
+        "A WalletV-sponsored AMA: founder Adam spent over an hour explaining the product — a non-custodial wallet plus DeFi aggregation plus built-in AI trading, with private keys in users' hands and AI holding only order-placement rights. Total live listeners: 1,058.",
+        "What WalletV is (Adam's account): a non-custodial wallet (self-managed keys, no KYC) plus a DeFi Super App (natively integrated Hyperliquid, Aster, Polymarket and more) plus an AI trading portal; Virgo Pay handles fiat on/off-ramps in 26 countries. DeFi aggregation is about 60–70% done; the AI side only about 20%.",
+        "How the AI trades: prompt-based strategies and quant models; $100 minimum, set up in 60 seconds, a reasoned decision every 15 minutes, and one-tap stop with manual or automatic position closing. Models include Trader GPT (free), DeepSeek, ChatGPT, Claude 5.5, Claude Opus, Gemini 3 Flash and Grok 4.7.",
+        "Private-key safety (Adam's account): the AI never touches private keys — trades go through Hyperliquid/Aster sub-account APIs, and turning off the API stops it instantly; you can't see your deposit address until you've backed up your keys; core components were audited by CertiK, SlowMist and others, with reports on the website.",
+        "Scale (Adam's account): 250,000 registered wallets, 5,000–10,000 monthly active users, $1.3–1.5B cumulative volume, about $200M a month; its Hyperliquid builder revenue growth recently ranked #1, Aster around #5. WalletV itself hasn't raised; the group has raised about $25M.",
+        "Business model: a 0.02% builder fee on perps, 0.3% on swaps, 1.95 on prediction markets (unit not stated on air), no profit from user liquidations. Daily EVM transfer gas is subsidized; deposits to Hyperliquid, Aster and Polymarket are always gas-free; swaps over $5 are gas-free.",
+        "Adam's judgment: no AI model can make you money forever — any platform claiming otherwise is a scam. Future competition isn't about who makes more money, but who offers enough models for users to pick the right one for each market regime; security is the baseline, not a differentiator.",
+        "What's next (Adam's account): prediction-market quant trading launches within one to two weeks, with backtests showing 50%+ annualized returns and small drawdowns; no PC client yet, but a web terminal that connects any wallet (including hardware wallets) is planned for the first half of next year, possibly Q1.",
+        "Rewards (as announced on air): 5 commenters get 200 points each (worth about $30–40); first 20 people trading the NT contract get 25 USDC each (500 USDC total); the TGE phase-3 pool is $8.8M; new wallets get one month of VIP free; the host's invite code is QG7777; a 48-hour special policy for this session will be announced after the Space."
+      ],
+      "highlights_tw": [
+        "WalletV 專場 AMA（贊助場）：創始人 Adam 用一個多小時講清產品定位——非託管錢包 + DeFi 聚合 + 內置 AI 交易，私鑰在用戶手裡、AI 只拿下單權；累計在線聽眾 1058 人。",
+        "WalletV 是什麼（Adam 現場說法）：非託管錢包（自管私鑰、無需 KYC）+ DeFi Super App（原生接入 Hyperliquid、Aster、Polymarket 等）+ AI 交易門戶；另有 Virgo Pay 法幣出入金（覆蓋 26 國）。DeFi 聚合完成度約六七成，AI 部分完成度只有約 20%。",
+        "AI 如何交易：分提示詞策略與量化模型兩類，最低 100 美元起，60 秒可完成設置，每 15 分鐘出一次帶理由的決策，隨時可一鍵停止並選擇手動或自動平倉；模型包括 Trader GPT（免費）、DeepSeek、ChatGPT、Claude 5.5、Claude Opus、Gemini 3 Flash、Grok 4.7 等。",
+        "私鑰安全（Adam 現場說法）：AI 不碰私鑰，交易走 Hyperliquid / Aster 子賬號 API，關掉 API 就跑不了；不備份私鑰就看不到充值地址；核心環節經 CertiK、SlowMist 等審計，報告在官網可查。",
+        "平台規模（Adam 現場說法）：註冊錢包 25 萬，月活 5000–10000，累計交易量 13–15 億美元，月均約 2 億美元；Hyperliquid builder 收入增速近期排第一，Aster 約第 5 名；WalletV 本身未融資，集團累計融資約 2500 萬美元。",
+        "賺錢模式：合約 Builder 費萬分之二、Swap 千分之三、預測市場費用 1.95（現場未說明單位），不吃客損；EVM 轉賬每天補貼一定數量，充值到 Hyperliquid、Aster、Polymarket 的 Gas 一直免費，Swap 超過 5 美元免 Gas。",
+        "Adam 的判斷：沒有 AI 模型能讓人一直賺錢，聲稱能一直賺錢的平台就是忽悠；未來的競爭不在誰更賺錢，而在誰能提供足夠多的模型、讓用戶在不同市況下選到合適的；安全是底線，做不到差異化。",
+        "新品預告（Adam 現場說法）：預測市場量化交易未來一兩週內推出，幾個模型回測年化 50% 以上、回撤不大；PC 端目前沒有，未來可能推出可連接任意錢包（含硬件錢包）的 web terminal，預計明年上半年、最早明年一季度。",
+        "福利（現場說法）：評論區提問選 5 個，每人 200 積分（約 30–40 美元）；交易 NT 合約先到先得 20 人、每人 25 USDC（共 500 USDC）；TGE 第三階段獎池 880 萬美元；新錢包免費體驗 1 個月 VIP；茄哥專場邀請碼 QG7777；Space 結束後還有一個 48 小時週期的專場政策待官方公佈。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "lidang-jieda-shijian-wanwu-20261119",
+      "title": "《解答世间万物（不要用蓝牙耳机）》",
+      "title_en": "Answering Everything in the World (Don't Use Bluetooth Earbuds)",
+      "title_tw": "《解答世間萬物（不要用藍牙耳機）》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-19",
+      "host": "立党 @lidangzzz",
+      "guests": [
+        "masalachopra123",
+        "Bowen91782404",
+        "aaaassdxx",
+        "KrikFanc",
+        "Zoeyahqp",
+        "aliudn0371",
+        "zhangzhiya71020",
+        "wgzydan688",
+        "Hypnos8153"
+      ],
+      "duration": "4 小时 32 分",
+      "duration_minutes": 272,
+      "url": "https://x.com/i/spaces/1LPYmanrzREYnK",
+      "note_url": "/spaces/notes/lidang-jieda-shijian-wanwu-20261119.html",
+      "topics": [
+        "高考志愿",
+        "选专业",
+        "电子工程",
+        "深圳大学",
+        "昆山杜克",
+        "医学",
+        "AI Agent",
+        "芯片设计",
+        "留学",
+        "职业选择",
+        "英伟达"
+      ],
+      "highlights": [
+        "一场 4 个半小时的超长答疑：前两个半小时是两位北京高三家长的升学大会诊，后两个小时是两位 22 岁左右年轻人的职业咨询，收尾聊了 CoreWeave 上市与英伟达。累计在线听众 1630 人。",
+        "北京高三女生（约 620–650 分段）结论：不要学医，首选电子；Virginia Tech 本科不推荐（硕博好、本科生源差，本科最重要的是同学），昆山杜克值得去，哈工程可以，西工大差约 20 分够不着；广东以色列理工的「计算机」实为 2/3 数学加 1/3 理论计算机，不理想。",
+        "不学医的理由（立党说法）：学制 12 年起步（本博加规培加博士后到 32 岁）、知识结构单一、退出通道差、公立体制内导师说了算；深圳医疗反而是洼地，医学博士去深圳有机会，但那是十年后的事。",
+        "电子优先于计算机：女儿数学、物理中等，电子容错大、知识更新慢、下限高；计算机要吃「手熟写代码」的苦，还要做开源、找实习。数据类课程不要修，需要时现学。AI 药物设计的正确路径是纯计算机算法背景加略懂药，生物信息出身反而不行；生物专业对口产业太小，不要碰。",
+        "北京孩子留京读大学是浪费分数：出京去上海、深圳，同样的分数能换来更高的溢价。深圳大学是潜力股——华为、腾讯、比亚迪、大疆在深圳招不到人只能用深大，本地溢价高；深大在京录取约 610–620 分，与北工大相当。新型大学信息差：宁波东方理工全国只招 70 人计算机大类、基本只招浙江；港大上海首年招生，多数人不知道。",
+        "计算机大类专业避坑清单：区块链工程不要碰（大陆没产业）；密码学没数学天赋别碰；软件工程可以；网络工程不能碰（就是纯网管）；物联网工程千万不能碰（2000 年代浪潮的遗留专业）；数字媒体不要碰；智能科学、人工智能专业要看课表，99% 的概率不教大模型。",
+        "22 岁女生（天津南开中学理科实验班、信息学省一、做直播最多 10 万粉、UCLA 数学休学）问要不要回去读书：立党说不要读书了，把技术捡起来、做开源、攒 GitHub 简历，直接进北京的早期创业团队或头部 AI Lab；方向选 Agent 加芯片、Agent 加大型软件重构、Agent 加机械臂这类「成建制替代旧厂商」的赛道；量化别碰。",
+        "欧洲在读博士（北航自动化本科、欧洲读自动控制博士、面过 Manus 的 Agent 岗）：Simulink 不是好方向，MathWorks 用户深度绑定、替代极难，且在制造业里占比很小；EDA 才是从头到尾的核心软件，想做 Agent 加工程软件，从 PCB、EDA、芯片设计验证入手；数学形式化是必走之路，但要有 100 倍产出才有影响力；不要发论文，开源才有人用。",
+        "收尾：CoreWeave 上市，按立党此前说法可以买一点；英伟达方面，黄仁勋回不来则增长放缓，但能否继续持有立党说不知道、变数太大，非专业交易者买标普、纳指 ETF 就行；黄仁勋能不能回来、俄乌什么时候停战，都是猜不着的事。"
+      ],
+      "highlights_en": [
+        "A 4.5-hour mega Q&A: the first two and a half hours were a college-application deep dive with two Beijing parents of Gaokao seniors, the last two hours career counseling for two people in their early twenties, ending on CoreWeave's IPO and Nvidia. Total live listeners: 1,630.",
+        "For a Beijing Gaokao senior girl (scoring roughly 620–650): don't study medicine; electronics first. Virginia Tech is not recommended for undergrad (strong graduate programs, weak undergrad cohort — classmates matter most in undergrad); Duke Kunshan is worth it; Harbin Engineering is fine; Northwestern Polytechnical is about 20 points out of reach; Guangdong Technion's 'computer science' is actually two-thirds math plus one-third theoretical CS.",
+        "Why not medicine (host's view): 12+ years of training (through residency and postdoc to age 32), a narrow knowledge base, poor exit options, and supervisors holding all the power in public hospitals. Shenzhen's healthcare is underbuilt relative to its economy, so a medical PhD has opportunities there — but that's a decade away.",
+        "Electronics over computer science: with middling math and physics, electronics is more forgiving, slower to go stale, and has a higher floor; CS demands grinding code, open source and internships. Don't take data courses (learn them when needed). The right path into AI drug design is a pure CS algorithms background plus a little pharma — not bioinformatics. Don't touch biology majors: the matching industry is too small.",
+        "Beijing kids waste their scores by staying in Beijing: the same score buys far more in Shanghai or Shenzhen. Shenzhen University is a rising stock — Huawei, Tencent, BYD and DJI have no one else to hire locally, so its graduates command a local premium; its Beijing cutoff is about 610–620, on par with Beijing University of Technology. Hidden-gem new universities: Ningbo Oriental Institute of Technology takes only 70 students nationally in its CS track, mostly from Zhejiang; HKU Shanghai is in its first admissions year and almost nobody knows.",
+        "Majors to avoid inside the CS track: blockchain engineering (no industry in mainland China); cryptography without real math talent; software engineering is fine; network engineering is just network admin; IoT engineering is a leftover from the 2000s hype wave; digital media, no; AI/intelligent-science majors need a syllabus check — 99% likely they don't teach modern large models.",
+        "A 22-year-old woman (Nankai High School science experimental class, informatics provincial first prize, up to 100k livestream followers, dropped out of UCLA math) asked whether to go back to school: the host said no — rebuild technical skills, do open source, build a GitHub resume, and join an early startup or top AI lab in Beijing; pick tracks where agents replace whole vendors, like agents plus chip design, large-software refactoring, or robotic arms; stay away from quant trading.",
+        "A PhD student in Europe (Beihang automation undergrad, now a control-theory PhD, interviewed at Manus for an agent role): Simulink is a bad direction — MathWorks users are deeply locked in and Simulink is a small slice of manufacturing; EDA software is the core that whole companies live on, so start from PCB, EDA and chip design verification; formalizing mathematics is a must-do path but needs 100x output to matter; don't publish papers, ship open source.",
+        "Closing: CoreWeave's IPO is buyable in small size per the host's earlier view; on Nvidia, Jensen Huang not returning means slower growth, but whether to keep holding is unknowable — non-professionals should just buy S&P/Nasdaq ETFs; whether Huang returns or when the Russia-Ukraine war ends is anyone's guess."
+      ],
+      "highlights_tw": [
+        "一場 4 個半小時的超長答疑：前兩個半小時是兩位北京高三家長的升學大會診，後兩個小時是兩位 22 歲左右年輕人的職業諮詢，收尾聊了 CoreWeave 上市與英偉達。累計在線聽眾 1630 人。",
+        "北京高三女生（約 620–650 分段）結論：不要學醫，首選電子；Virginia Tech 本科不推薦（碩博好、本科生源差，本科最重要的是同學），崑山杜克值得去，哈工程可以，西工大差約 20 分夠不著；廣東以色列理工的「計算機」實為 2/3 數學加 1/3 理論計算機，不理想。",
+        "不學醫的理由（立黨說法）：學制 12 年起步（本博加規培加博士後到 32 歲）、知識結構單一、退出通道差、公立體制內導師說了算；深圳醫療反而是窪地，醫學博士去深圳有機會，但那是十年後的事。",
+        "電子優先於計算機：女兒數學、物理中等，電子容錯大、知識更新慢、下限高；計算機要吃「手熟寫代碼」的苦，還要做開源、找實習。數據類課程不要修，需要時現學。AI 藥物設計的正確路徑是純計算機算法背景加略懂藥，生物信息出身反而不行；生物專業對口產業太小，不要碰。",
+        "北京孩子留京讀大學是浪費分數：出京去上海、深圳，同樣的分數能換來更高的溢價。深圳大學是潛力股——華為、騰訊、比亞迪、大疆在深圳招不到人只能用深大，本地溢價高；深大在京錄取約 610–620 分，與北工大相當。新型大學信息差：寧波東方理工全國只招 70 人計算機大類、基本只招浙江；港大上海首年招生，多數人不知道。",
+        "計算機大類專業避坑清單：區塊鏈工程不要碰（大陸沒產業）；密碼學沒數學天賦別碰；軟件工程可以；網絡工程不能碰（就是純網管）；物聯網工程千萬不能碰（2000 年代浪潮的遺留專業）；數字媒體不要碰；智能科學、人工智能專業要看課表，99% 的概率不教大模型。",
+        "22 歲女生（天津南開中學理科實驗班、信息學省一、做直播最多 10 萬粉、UCLA 數學休學）問要不要回去讀書：立黨說不要讀書了，把技術撿起來、做開源、攢 GitHub 簡歷，直接進北京的早期創業團隊或頭部 AI Lab；方向選 Agent 加芯片、Agent 加大型軟件重構、Agent 加機械臂這類「成建制替代舊廠商」的賽道；量化別碰。",
+        "歐洲在讀博士（北航自動化本科、歐洲讀自動控制博士、面過 Manus 的 Agent 崗）：Simulink 不是好方向，MathWorks 用戶深度綁定、替代極難，且在製造業裡佔比很小；EDA 才是從頭到尾的核心軟件，想做 Agent 加工程軟件，從 PCB、EDA、芯片設計驗證入手；數學形式化是必走之路，但要有 100 倍產出才有影響力；不要發論文，開源才有人用。",
+        "收尾：CoreWeave 上市，按立黨此前說法可以買一點；英偉達方面，黃仁勳回不來則增長放緩，但能否繼續持有立黨說不知道、變數太大，非專業交易者買標普、納指 ETF 就行；黃仁勳能不能回來、俄烏什麼時候停戰，都是猜不著的事。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "stocks-btc-talk-20261118",
+      "title": "《11.18 美中俄深圳会 英伟达财报翻倍 Anthropic定价 行情今晚怎么走？》",
+      "title_en": "Nov 18: US-China-Russia Shenzhen Summit, Nvidia Earnings Double, Anthropic Pricing — How Does Tonight Trade?",
+      "title_tw": "《11.18 美中俄深圳會 英偉達財報翻倍 Anthropic定價 行情今晚怎麼走？》",
+      "series": "Stocks BTC Talk",
+      "episode": null,
+      "date": "2026-11-18",
+      "host": "茄哥 @qg7777",
+      "guests": [
+        "老唐 @0xDonaldGao",
+        "Adam Cai @AdamCai15（Virgo CEO）",
+        "kaykay_reads",
+        "liangyiwei11",
+        "hassaandh",
+        "Hualizi_",
+        "yzxiey",
+        "JayJiah25"
+      ],
+      "duration": "3 小时 35 分",
+      "duration_minutes": 215,
+      "url": "https://x.com/i/spaces/1zkZJdBQWZbeMj",
+      "note_url": "/spaces/notes/stocks-btc-talk-20261118.html",
+      "topics": [
+        "美股",
+        "比特币",
+        "Anthropic IPO",
+        "英伟达财报",
+        "黄金",
+        "美联储加息",
+        "人民币",
+        "黄仁勋"
+      ],
+      "highlights": [
+        "Anthropic IPO 是全场第一变量：定价到节目结束仍未出（等 19 日凌晨 6 点），市场预估估值约 1.4–1.5 万亿美元，彭博/华尔街日报称 $80 以上、CNBC 称高于 $78，超额认购 6 倍、最多 20% 股份给散户，开盘市值可能顶到 1.8 万亿再回落。茄哥与老唐一致认为：IPO 锁定几千亿美元流动性，「吸血」是本轮美股、黄金、BTC 齐跌的主因（均为现场说法）。",
+        "英伟达财报超预期但股价没过 160 美元：营收 1,158 亿、同比增 103%、数据中心 1,076 亿、Q4 指引 1,500 亿（节目内说法，转写口径存疑）；盘后一度涨超 4%，盘前又跌回。茄哥称若无黄仁勋丑闻，财报后应在 200 美元，中期选举后已回撤 32%，「跌掉了一个比特币的市值」；老唐认为黄仁勋至少一年内回不来；Adam Cai（Virgo CEO）则坚定做多英伟达——「千万别做空」。",
+        "BTC 震荡偏空：全天在 63,000–65,500 之间磨，币安现货成交量不到 4 亿美元，1 小时线走破底部趋势线。茄哥口径：先向下破一下 63,500 再拉起来，急拉上 65,000 是做空点，6 万很容易到，月底前可能见到 61,700，中线目标坚持 55,000，现货套保绝不能丢，这个位置不建议做多也不建议做空。节目进行中 BTC 真跌破 63,500，茄哥当场认错：「挨打就得立正。」",
+        "黄金分歧在回测深度：茄哥看三浪跌到 3,452，3,450–3,470 缺口必补，头肩顶右肩要比左肩低；老唐看 3,600 附近（各国央行会在 3,600 重新大规模入市对冲），认为 12 月加息预期已部分计入价格。共识：12 月加息前后落底，加息完再考虑买。美联储一线：沃勒称若不释放 1 月加息信号、12 月应加 50bp，市场认为概率很小（FedWatch 约 10%、Polymarket 已降到 4%）；老唐预期 12 月、1 月、4 月加息两到三次。",
+        "美股反弹只剩三天窗口：标普 500 已跌破 200 日均线，QQQ 自 10 月以来回调 15%。茄哥：今晚小反弹、可能收十字星，19 日肯定拉盘、真正大涨在 20 日，反弹到 21 号左右结束，感恩节–圣诞行情没了，月底前反弹到好点位该出货就出货。标题里的美中俄深圳会被场内一致判为「解决不了问题，不用关注」；人民币不可能取代美元、只能双体系（茄哥、老唐共识）。预告：19 日晚 8 点半 WalletWay AMA。"
+      ],
+      "highlights_en": [
+        "Anthropic's IPO was the night's dominant variable: pricing was still not out when the show ended (expected 6 a.m. Beijing time on the 19th), with a rumored valuation of ~$1.4–1.5T, Bloomberg/WSJ above $80 and CNBC above $78, ~6x oversubscribed, at most 20% allocated to retail, and a possible $1.8T opening market cap before fading. Host Qiege and guest Lao Tang agreed the IPO has locked up hundreds of billions in liquidity, draining US equities, gold and BTC alike (all on-air claims).",
+        "Nvidia's earnings beat but the stock could not clear $160: revenue of 115.8B, +103% YoY, data center 107.6B and Q4 guidance of 150B (on-air figures; the transcript's units are suspect), up 4%+ after hours before fading pre-market. Qiege said that without the Jensen Huang scandal the stock should be at $200, down 32% since the midterms — 'it lost a whole Bitcoin's worth of market cap'; Lao Tang argued Huang cannot return within a year; Adam Cai (Virgo CEO) was firmly long — 'whatever you do, don't short it.'",
+        "BTC ground sideways-bearish between 63,000 and 65,500 with Binance spot volume under $400M and the 1H chart breaking its bottom trendline. Qiege's script: dip below 63,500 first, then bounce; a fast rip to 65,000 is a short entry; 60,000 comes easily, 61,700 is possible before month-end, and the mid-term target stays 55,000 — keep spot hedges on, and neither long nor short here. Mid-show BTC did break 63,500 and Qiege admitted on air he was wrong: 'take the hit and stand straight.'",
+        "Gold split the room on pullback depth: Qiege targets 3,452 on a third wave down with the 3,450–3,470 gap 'certain to fill' in a head-and-shoulders top; Lao Tang sees ~3,600, where central banks would step back in at scale, and thinks December hike expectations are partly priced in. Consensus: the bottom comes around the December hike — buy after the hike, not before. On the Fed: Waller said December should be +50bp if January isn't signaled, but markets see little chance (FedWatch ~10%, Polymarket down to 4%); Lao Tang expects two to three hikes across December, January and April.",
+        "US equities have only a three-day bounce window: the S&P 500 has broken its 200-day average and QQQ is down 15% since October. Qiege: a small bounce tonight, possibly a doji; the 19th definitely gets bid, the real rally is the 20th, and the bounce ends around the 21st — no Thanksgiving-to-Christmas rally, so sell into strength before month-end. The title's US-China-Russia Shenzhen summit was dismissed by the room as 'solves nothing, ignore it'; both Qiege and Lao Tang agreed the RMB cannot replace the dollar, only run a parallel system. Teaser: a WalletWay AMA at 8:30 p.m. on the 19th."
+      ],
+      "highlights_tw": [
+        "Anthropic IPO 是全場第一變量：定價到節目結束仍未出（等 19 日凌晨 6 點），市場預估估值約 1.4–1.5 萬億美元，彭博/華爾街日報稱 $80 以上、CNBC 稱高於 $78，超額認購 6 倍、最多 20% 股份給散戶，開盤市值可能頂到 1.8 萬億再回落。茄哥與老唐一致認為：IPO 鎖定幾千億美元流動性，「吸血」是本輪美股、黃金、BTC 齊跌的主因（均為現場說法）。",
+        "英偉達財報超預期但股價沒過 160 美元：營收 1,158 億、同比增 103%、數據中心 1,076 億、Q4 指引 1,500 億（節目內說法，轉寫口徑存疑）；盤後一度漲超 4%，盤前又跌回。茄哥稱若無黃仁勳醜聞，財報後應在 200 美元，中期選舉後已回撤 32%，「跌掉了一個比特幣的市值」；老唐認為黃仁勳至少一年內回不來；Adam Cai（Virgo CEO）則堅定做多英偉達——「千萬別做空」。",
+        "BTC 震盪偏空：全天在 63,000–65,500 之間磨，幣安現貨成交量不到 4 億美元，1 小時線走破底部趨勢線。茄哥口徑：先向下破一下 63,500 再拉起來，急拉上 65,000 是做空點，6 萬很容易到，月底前可能見到 61,700，中線目標堅持 55,000，現貨套保絕不能丟，這個位置不建議做多也不建議做空。節目進行中 BTC 真跌破 63,500，茄哥當場認錯：「挨打就得立正。」",
+        "黃金分歧在回測深度：茄哥看三浪跌到 3,452，3,450–3,470 缺口必補，頭肩頂右肩要比左肩低；老唐看 3,600 附近（各國央行會在 3,600 重新大規模入市對沖），認為 12 月加息預期已部分計入價格。共識：12 月加息前後落底，加息完再考慮買。美聯儲一線：沃勒稱若不釋放 1 月加息信號、12 月應加 50bp，市場認為概率很小（FedWatch 約 10%、Polymarket 已降到 4%）；老唐預期 12 月、1 月、4 月加息兩到三次。",
+        "美股反彈只剩三天窗口：標普 500 已跌破 200 日均線，QQQ 自 10 月以來回調 15%。茄哥：今晚小反彈、可能收十字星，19 日肯定拉盤、真正大漲在 20 日，反彈到 21 號左右結束，感恩節–聖誕行情沒了，月底前反彈到好點位該出貨就出貨。標題裡的美中俄深圳會被場內一致判為「解決不了問題，不用關注」；人民幣不可能取代美元、只能雙體系（茄哥、老唐共識）。預告：19 日晚 8 點半 WalletWay AMA。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "breakpoint-2026-day-two-20261117",
+      "title": "Breakpoint 2026: Day Two（Solana 年度大会第二天）",
+      "title_en": "Breakpoint 2026: Day Two",
+      "title_tw": "Breakpoint 2026：Day Two（Solana 年度大會第二天）",
+      "series": "Solana Breakpoint 2026",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "Solana 官方直播（主持 Vibhu Norby、Amira Valiani、Ellie Platisse）",
+      "guests": [
+        "Martin Gilbert（Revolut）",
+        "Raoul Pal（Real Vision）",
+        "Bobby Ong（CoinGecko）",
+        "Mert（Helium）",
+        "Anatoly Yakovenko",
+        "Kyle Samani（Forward Industries）",
+        "Matt Hougan（Bitwise）",
+        "Sir Nicholas Lyons",
+        "Sol Campbell",
+        "Tristan Thompson",
+        "Brennan Watt（Anza）",
+        "Ilya Polosukhin（NEAR）",
+        "Michael Lewis"
+      ],
+      "duration": "7 小时 36 分",
+      "duration_minutes": 456,
+      "url": "https://x.com/i/broadcasts/2mdqrEaWVkMPVz",
+      "note_url": "/spaces/notes/breakpoint-2026-day-two-20261117.html",
+      "topics": [
+        "Solana",
+        "Breakpoint",
+        "机器经济",
+        "算力市场",
+        "Agent 支付",
+        "x402",
+        "代币化",
+        "SOL",
+        "DAT",
+        "AI 安全",
+        "Michael Lewis"
+      ],
+      "highlights": [
+        "Day Two 主题是「前沿」：AI × 加密的机器经济。Raoul Pal（Real Vision）称「加密的时间现在是无限的」——Agent 是新的经济主体；机器交易已有 2.38 亿笔，但价值至今只有约 150 万美元；代币化股票 14–15 个月从 1,000 万做到 20 亿美元；他预测 2035 年加密市场达 100 万亿美元（均为现场说法）。",
+        "算力金融化三连：Akash 发布 Compute Forward——链上算力远期（1 合约 = 8×B300 × 1 个日历月，无平台代币，2027 年 4 月首个交割月）；Multicoin 的 Shion Sengupta 称算力市场真正的难题是现金流/期限错配，需要主经纪商式风险中介；圆桌称黄仁勋辞任后 Nvidia 单向配置松动，CME 标准化算力期货推迟，下一个检查点 2027 年 1 月 8 日，Grayscale 矿工 ETF 更名为 GCPU（算力基础设施）。",
+        "Agent 支付数据（Solana 基金会 AI 负责人 Rishi Sharma）：机器人占互联网流量 53%，agentic 占代币支出份额从 8% 涨到 76%；x402 已处理 4 亿美元以上 Agent 支付（12 个月前为 0）；solana.ai 上周上线、120+ 团队；Block Run 两个月 6,000 万笔交易。MoonPay 发布 Agent 钱包 Paybox（Agent 永不见密码/卡号/私钥），3 个月 50 万+用户、100 万+笔交易（现场说法）。",
+        "两场辩论：「SOL 是货币吗」——Mert（Helium 创始人）正方胜，观众投票动议通过；Toly 反方金句「它是货币，但是最烂的那种」，认为现代货币的本质是债务记账单位。「DAT 只是带推特账号的 ETF 吗」——Bitwise 的 Matt Hougan 胜（BSOL 返还 94% 质押收益）；Kyle Samani 称 Forward 要做「Solana 的伯克希尔·哈撒韦」，12 个月每股 SOL 复合约 33%（现场说法）。",
+        "机构与英国线：CoinGecko 宣布获 Solana 基金会支持、进入下一阶段（Bobby Ong 称其追踪 5,000 万+代币，但同场又说 220 条链上 1,500 万个，两个数字不一致）；Sir Nicholas Lyons 推英国数字金边债券试点（财政部指定 6 家银行，预计 2027 年一季度发行）；三井物产自 2022 年起发行贵金属背书加密资产、选了 Solana；Solflare 发布 Private Mode 隐私余额；Revolut 董事长 Martin Gilbert 称 Revolut 将用区块链推出 4 只非流动性基金。",
+        "AI 安全圆桌与压轴访谈：Ilya Polosukhin（NEAR）给出防御三件套——形式化验证下探到机器码、用无审查模型红队自家代码、主动监测异常（如无钱地址突然收到合约打款）；Brennan Watt（Anza）称「bunker 叙事有点 loser energy」，Solana 在做后量子密钥。压轴 Michael Lewis 谈新书与第二届特朗普政府：称长期美债是「愚蠢」的持有、五年前已买黄金与欧元；预警如 2005–2006 年，但真正的风险是「政府本身成为问题」；称加密是对法币不信任的度量、「这种不信任是应得的」。闭幕宣布 Breakpoint 2027 于 2027 年 9 月 8–10 日在旧金山举行，补贴票价 75 美元。"
+      ],
+      "highlights_en": [
+        "Day Two's theme was 'the frontier': the machine economy where AI meets crypto. Raoul Pal (Real Vision) declared 'the time of crypto is now infinite' — agents are the new economic actors; machine transactions already number 238M but total only ~$1.5M in value so far; tokenized equities grew from $10M to $2B in 14–15 months; he projects a $100T crypto market by 2035 (all on-stage claims).",
+        "Compute financialization, three ways: Akash launched Compute Forward — on-chain GPU forwards (1 contract = 8×B300 × 1 calendar month, no venue token, first delivery month April 2027); Multicoin's Shion Sengupta said the real problem is cash-flow/duration mismatch, needing prime-broker-style risk intermediaries; a panel said post-Jensen-resignation Nvidia allocation fear is loosening, CME's standardized compute future is delayed to a January 8, 2027 checkpoint, and Grayscale renamed its miner ETF to GCPU (compute infrastructure).",
+        "Agent-payment numbers (Rishi Sharma, Solana Foundation AI lead): bots are 53% of internet traffic and the agentic share of token spend rose from 8% to 76%; x402 has processed $400M+ of agent payments (from $0 twelve months ago); solana.ai launched last week with 120+ teams; Block Run did 60M transactions in two months. MoonPay launched Paybox, an agent wallet where agents never see passwords, card numbers or private keys — 500K+ users and 1M+ transactions in three months (on-stage claims).",
+        "Two debates: 'Is SOL money?' — Mert (Helium founder) won the audience vote for the motion; Toly's counter-line was 'it is money, but the shittiest version', arguing modern money is fundamentally a unit of account for debt. 'Are DATs just ETFs with a Twitter account?' — Bitwise's Matt Hougan won (BSOL returns 94% of staking revenue); Kyle Samani said Forward aims to be 'the Berkshire Hathaway of Solana', compounding SOL per share ~33% over 12 months (on-stage claims).",
+        "Institutions and the UK thread: CoinGecko announced Solana Foundation backing for its next phase (Bobby Ong cited 50M+ tokens tracked, yet also said 15M tokens across 220 chains in the same talk — the two figures are inconsistent); Sir Nicholas Lyons pushed the UK digital gilt pilot (six banks assigned by the Treasury, pilot issuance expected Q1 2027); Mitsui & Co. has issued precious-metal-backed crypto for Japanese retail since 2022 and chose Solana; Solflare launched Private Mode balances; Revolut chairman Martin Gilbert said Revolut will launch four illiquid funds using blockchain.",
+        "AI security and the closing fireside: Ilya Polosukhin (NEAR) gave a three-part defense — formal verification down to machine code, red-teaming your own code with uncensored models, and proactive anomaly monitoring (e.g. an empty address suddenly receiving contract funds); Brennan Watt (Anza) called the bunker framing 'a little bit of loser energy', with Solana building post-quantum keys. Closing guest Michael Lewis discussed his new book and the second Trump administration: long-term Treasuries are a 'dumb' holding, he bought gold and euros five years ago, his antenna is up like 2005–2006 but the real risk is 'the government itself becoming the problem', and crypto is a measure of mistrust in fiat — 'the mistrust is well earned'. Breakpoint 2027 was announced for September 8–10 in San Francisco, with subsidized $75 tickets."
+      ],
+      "highlights_tw": [
+        "Day Two 主題是「前沿」：AI × 加密的機器經濟。Raoul Pal（Real Vision）稱「加密的時間現在是無限的」——Agent 是新的經濟主體；機器交易已有 2.38 億筆，但價值至今只有約 150 萬美元；代幣化股票 14–15 個月從 1,000 萬做到 20 億美元；他預測 2035 年加密市場達 100 萬億美元（均為現場說法）。",
+        "算力金融化三連：Akash 發布 Compute Forward——鏈上算力遠期（1 合約 = 8×B300 × 1 個日曆月，無平台代幣，2027 年 4 月首個交割月）；Multicoin 的 Shion Sengupta 稱算力市場真正的難題是現金流/期限錯配，需要主經紀商式風險中介；圓桌稱黃仁勳辭任後 Nvidia 單向配置鬆動，CME 標準化算力期貨推遲，下一個檢查點 2027 年 1 月 8 日，Grayscale 礦工 ETF 更名為 GCPU（算力基礎設施）。",
+        "Agent 支付數據（Solana 基金會 AI 負責人 Rishi Sharma）：機器人佔互聯網流量 53%，agentic 佔代幣支出份額從 8% 漲到 76%；x402 已處理 4 億美元以上 Agent 支付（12 個月前為 0）；solana.ai 上週上線、120+ 團隊；Block Run 兩個月 6,000 萬筆交易。MoonPay 發布 Agent 錢包 Paybox（Agent 永不見密碼/卡號/私鑰），3 個月 50 萬+用戶、100 萬+筆交易（現場說法）。",
+        "兩場辯論：「SOL 是貨幣嗎」——Mert（Helium 創始人）正方勝，觀眾投票動議通過；Toly 反方金句「它是貨幣，但是最爛的那種」，認為現代貨幣的本質是債務記賬單位。「DAT 只是帶推特賬號的 ETF 嗎」——Bitwise 的 Matt Hougan 勝（BSOL 返還 94% 質押收益）；Kyle Samani 稱 Forward 要做「Solana 的伯克希爾·哈撒韋」，12 個月每股 SOL 複合約 33%（現場說法）。",
+        "機構與英國線：CoinGecko 宣布獲 Solana 基金會支持、進入下一階段（Bobby Ong 稱其追蹤 5,000 萬+代幣，但同場又說 220 條鏈上 1,500 萬個，兩個數字不一致）；Sir Nicholas Lyons 推英國數字金邊債券試點（財政部指定 6 家銀行，預計 2027 年一季度發行）；三井物產自 2022 年起發行貴金屬背書加密資產、選了 Solana；Solflare 發布 Private Mode 隱私餘額；Revolut 董事長 Martin Gilbert 稱 Revolut 將用區塊鏈推出 4 隻非流動性基金。",
+        "AI 安全圓桌與壓軸訪談：Ilya Polosukhin（NEAR）給出防禦三件套——形式化驗證下探到機器碼、用無審查模型紅隊自家代碼、主動監測異常（如無錢地址突然收到合約打款）；Brennan Watt（Anza）稱「bunker 敘事有點 loser energy」，Solana 在做後量子密鑰。壓軸 Michael Lewis 談新書與第二屆特朗普政府：稱長期美債是「愚蠢」的持有、五年前已買黃金與歐元；預警如 2005–2006 年，但真正的風險是「政府本身成為問題」；稱加密是對法幣不信任的度量、「這種不信任是應得的」。閉幕宣布 Breakpoint 2027 於 2027 年 9 月 8–10 日在舊金山舉行，補貼票價 75 美元。"
+      ],
+      "source": "broadcast"
+    },
+    {
+      "id": "tapeout-cafe-opening-20261117",
+      "title": "《tapeout 咖啡馆开业啦》",
+      "title_en": "tapeout Café Opening",
+      "title_tw": "《tapeout 咖啡館開業啦》",
+      "series": "tapeout 咖啡馆",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "周红衣 @Kakabong08",
+      "guests": [
+        "新帅",
+        "风哥",
+        "星星",
+        "晴天",
+        "胖爸",
+        "瓜哥",
+        "大离",
+        "考拉",
+        "福利哥",
+        "百里老师"
+      ],
+      "duration": "4 小时 19 分",
+      "duration_minutes": 259,
+      "url": "https://x.com/i/spaces/1jPqOjydbMYlBj",
+      "note_url": "/spaces/notes/tapeout-cafe-opening-20261117.html",
+      "topics": [
+        "tapeout",
+        "矿机",
+        "BM",
+        "TipAI",
+        "BSC",
+        "X Layer",
+        "社区闲聊"
+      ],
+      "highlights": [
+        "核心仓位论（周红衣、新帅反复讲）：长线看好就拿矿机、不拿币——项目死了两者下行一样，但矿机没有「回本」概念、每天产 BM、可以转卖、给人持仓感；BM 从 60 美元以上跌到约 9–10 美元，矿机价格却守住了。BM 流通约 55.7 万枚、市值约 500 万美元，发言人预测 100 美元以上（均为现场说法）。tapeout 是社区共建的加密协议项目（BSC + X Layer，自称弱创始人）：BM 是基础资产/结算代币，UP 是发射台平台币，TipAI（TAI）是 AI Agent 项目代币，「矿机」是生态内每天产 BM 的挖矿装置。",
+        "TipAI 预存机制问答（考拉主持）：已预存 2 万多个 BM；3% TI 空投；14 天线性释放；Invite Code 可把释放加速到 20%、第一天 10%、开盘直买第一天 10%、24 小时后买释放可达 50%；外盘发射节点未定、由「检察官」投票决定；嘉宾提醒「发币是双刃剑」（现场说法）。",
+        "生态进展：X Layer 跨链方案设计中、TipCard 卡牌在测试、J.O. 的链上计算研究想投科学期刊、余烬世界 Passcard 的 mint 价格从 0.088 涨到 0.88、20 张卡一天打三四十 U（均为现场算法与说法）。",
+        "一场社区价值观争执：福利哥拿矿霸「成王败寇」的口音开玩笑，引发关于「该不该拿建设者口音取乐」的讨论；另有 Claw 账号当天多人被封的消息；结尾清华讲的 Agent 投票「断权」机制，现场无人听懂。",
+        "立场提醒：本场大部分内容是 tapeout 生态参与者讨论其自有代币与产品，有明显站台性质；矿机价格等关键口径在节目中表述含糊，纪要未采用具体数值；录音末尾句中断尾。"
+      ],
+      "highlights_en": [
+        "The core position thesis (repeated by Zhou Hongyi and Xinshuai): if you are long-term bullish, hold mining machines, not the token — if the project dies both go down the same, but a machine has no 'breakeven' concept, produces BM daily, can be resold, and gives a sense of holding. BM fell from $60+ to ~$9–10 while machine prices held. BM supply is ~557K with a ~$5M market cap; speakers predicted $100+ (all on-stage claims). tapeout is a community-built crypto protocol (BSC + X Layer, self-described weak founder): BM is the base/settlement token, UP the launchpad platform token, TipAI (TAI) an AI-agent project token, and 'mining machines' are in-ecosystem devices producing BM daily.",
+        "TipAI pre-deposit mechanics Q&A (hosted by Koala): 20,000+ BM already pre-deposited; a 3% TI airdrop; 14-day linear release; an Invite Code accelerates release to 20%, day-one direct buys release 10% on day one, and buys after 24 hours can release up to 50%; the external launch timing is undecided and will be voted on by 'prosecutors'; guests warned that 'issuing a token is a double-edged sword' (on-stage claims).",
+        "Ecosystem updates: an X Layer cross-chain design is in progress, TipCard is in testing, J.O.'s on-chain computation research aims at a science journal, and Ember World Passcard mint prices rose from 0.088 to 0.88, with 20 cards yielding 30–40U a day (on-stage math and claims).",
+        "A community-values dispute: Fulige joked about mining boss 'Chengwang Baikou's' accent, sparking a debate over whether builders' accents are fair game; several Claw accounts were reportedly banned the same day; the closing segment on Qinghua's agent-voting 'power-cutting' mechanism was understood by no one on stage.",
+        "Positioning note: most of this Space is tapeout ecosystem participants discussing their own tokens and products, with an obvious promotional slant; key figures such as machine prices were stated vaguely on air and the notes do not adopt specific numbers; the recording cuts off mid-sentence at the end."
+      ],
+      "highlights_tw": [
+        "核心倉位論（周紅衣、新帥反覆講）：長線看好就拿礦機、不拿幣——項目死了兩者下行一樣，但礦機沒有「回本」概念、每天產 BM、可以轉賣、給人持倉感；BM 從 60 美元以上跌到約 9–10 美元，礦機價格卻守住了。BM 流通約 55.7 萬枚、市值約 500 萬美元，發言人預測 100 美元以上（均為現場說法）。tapeout 是社區共建的加密協議項目（BSC + X Layer，自稱弱創始人）：BM 是基礎資產/結算代幣，UP 是發射台平台幣，TipAI（TAI）是 AI Agent 項目代幣，「礦機」是生態內每天產 BM 的挖礦裝置。",
+        "TipAI 預存機制問答（考拉主持）：已預存 2 萬多個 BM；3% TI 空投；14 天線性釋放；Invite Code 可把釋放加速到 20%、第一天 10%、開盤直買第一天 10%、24 小時後買釋放可達 50%；外盤發射節點未定、由「檢察官」投票決定；嘉賓提醒「發幣是雙刃劍」（現場說法）。",
+        "生態進展：X Layer 跨鏈方案設計中、TipCard 卡牌在測試、J.O. 的鏈上計算研究想投科學期刊、餘燼世界 Passcard 的 mint 價格從 0.088 漲到 0.88、20 張卡一天打三四十 U（均為現場算法與說法）。",
+        "一場社區價值觀爭執：福利哥拿礦霸「成王敗寇」的口音開玩笑，引發關於「該不該拿建設者口音取樂」的討論；另有 Claw 賬號當天多人被封的消息；結尾清華講的 Agent 投票「斷權」機制，現場無人聽懂。",
+        "立場提醒：本場大部分內容是 tapeout 生態參與者討論其自有代幣與產品，有明顯站台性質；礦機價格等關鍵口徑在節目中表述含糊，紀要未採用具體數值；錄音末尾句中斷尾。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "misa-okx-simple-options-20261117",
+      "title": "《Misa社区 × 简易期权：专属奖励等你来拿》",
+      "title_en": "Misa Community × Simple Options: OKX Options for Beginners",
+      "title_tw": "《Misa社區 × 簡易期權：專屬獎勵等你來拿》",
+      "series": "Misa 社区",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "Misa（Misa 社区）",
+      "guests": [
+        "区块链日记",
+        "Queen（麦云）",
+        "邵映（OKX）",
+        "温蒂 Wendy",
+        "OKX 产品经理"
+      ],
+      "duration": "2 小时 19 分",
+      "duration_minutes": 139,
+      "url": "https://x.com/i/broadcasts/2jPqOjykjbKOdg",
+      "note_url": "/spaces/notes/misa-okx-simple-options-20261117.html",
+      "topics": [
+        "期权",
+        "OKX",
+        "简易期权",
+        "新手教学",
+        "英伟达财报",
+        "风险管理"
+      ],
+      "highlights": [
+        "期权大白话（邵映，OKX 产品方）：期权里只有两个角色——买权利的人和收钱担义务的人；巴菲特卖可口可乐 Put 收了约 750 万美元权利金；双币赢的底层就是期权。权利金、行权价、到期日、Call/Put 四种组合一次讲清（均为现场说法）。",
+        "三个实景场景（区块链日记，以英伟达约 160 美元为例）：买 Put（行权价 150、权利金 3 美元/股）——跌到 130 净亏 13 美元，裸持股票要亏 30；卖 Put 在 140 接货顺带收 3 美元；买 Call（160、权利金 5 美元）——涨到 180 净赚 15，只涨到 163 反而亏 2。整张合约口径权利金约 400 美元/张。",
+        "Queen 的三误区与回测（雅虎数据 + BS 模型估算，非真实成交）：误区一，期权≠杠杆——2020 年 3 月 BTC 从 9,123 跌到 5,564 美元（-39%），买 Put 权利金 498 美元、赔付 3,559 美元，对冲后组合只亏 5.5%；误区二，亏有限≠容易赚——2024 年 4 月买 6 个月 Call（行权价 73,000、权利金 8,300 美元），到期价 67,003，权利金亏光 100%；误区三，收权利金≠稳定收益——2020 年 2 月 SPY 338 美元卖 Put，3 月跌到 228 被指派，每股亏 91 美元，是权利金的 77 倍。",
+        "OKX 简易期权：入口在交易→期权，标的以美股/ETF 为主、BTC 后续上；下单前预览盈亏；1 股起买，而专业市场 1 张=100 股，门槛差 100 倍；嘉宾反复强调：简化的是操作，不是风险。",
+        "新手风险检查表：搞懂权利与义务再下单、只用亏得起的钱、不裸卖不重仓、看 Theta 与 IV、卖方要有保证金或现货对冲；快问快答里给了英伟达财报前的三种打法——买 12 月 Call、此前高位减仓 + 12 月 Put 保护、买半年 Call；末日期权 IV 超 100% 太贵不做（均为现场说法）。全场多次声明：仅为产品教育与经验交流，不构成投资建议。"
+      ],
+      "highlights_en": [
+        "Options in plain words (Shaoying, OKX): there are only two roles — buying rights, or taking money and owing obligations; Buffett sold Coca-Cola puts and collected ~$7.5M in premium; dual-currency products are options under the hood. Premium, strike, expiry and the four Call/Put combinations, explained once (all on-stage claims).",
+        "Three concrete scenarios (Blockchain Diary, NVDA at ~$160): buying a 150 put for $3/share — a drop to 130 loses $13 net versus $30 holding the stock; selling a put to get filled at 140 while collecting $3; buying a 160 call for $5 — a rise to 180 nets +$15, but only reaching 163 loses $2. Per-contract premium works out to roughly $400.",
+        "Queen's three misconceptions, backtested (Yahoo data + Black-Scholes estimates, not real fills): (1) Options ≠ leverage — in March 2020 BTC fell from $9,123 to $5,564 (-39%); a $498 put paid $3,559 and the hedged book lost only 5.5%. (2) Limited loss ≠ easy money — an April 2024 six-month call (strike $73,000, premium $8,300) expired with BTC at $67,003 and the premium went to zero. (3) Collecting premium ≠ stable income — selling an SPY put at 338 in Feb 2020 got assigned at 228 in March, losing $91/share, 77x the premium.",
+        "OKX Simple Options: entry under Trade → Options; underlyings are mainly US stocks/ETFs with BTC to follow; P&L preview before ordering; starts at 1 share versus 100 shares per contract in pro markets — a 100x lower threshold. The guests stressed repeatedly: what is simplified is the operation, not the risk.",
+        "A beginner risk checklist: understand rights and obligations before ordering, only use money you can afford to lose, never sell naked or oversize, watch Theta and IV, and sellers need margin or a spot hedge. The lightning round gave three NVDA-earnings plays — buy December calls, trim at highs plus December put protection, or buy six-month calls; weekly options with IV over 100% are too expensive to touch (all on-stage claims). Repeated disclaimer: education and experience sharing only, not investment advice."
+      ],
+      "highlights_tw": [
+        "期權大白話（邵映，OKX 產品方）：期權裡只有兩個角色——買權利的人和收錢擔義務的人；巴菲特賣可口可樂 Put 收了約 750 萬美元權利金；雙幣贏的底層就是期權。權利金、行權價、到期日、Call/Put 四種組合一次講清（均為現場說法）。",
+        "三個實景場景（區塊鏈日記，以英偉達約 160 美元為例）：買 Put（行權價 150、權利金 3 美元/股）——跌到 130 淨虧 13 美元，裸持股票要虧 30；賣 Put 在 140 接貨順帶收 3 美元；買 Call（160、權利金 5 美元）——漲到 180 淨賺 15，只漲到 163 反而虧 2。整張合約口徑權利金約 400 美元/張。",
+        "Queen 的三誤區與回測（雅虎數據 + BS 模型估算，非真實成交）：誤區一，期權≠槓桿——2020 年 3 月 BTC 從 9,123 跌到 5,564 美元（-39%），買 Put 權利金 498 美元、賠付 3,559 美元，對沖後組合只虧 5.5%；誤區二，虧有限≠容易賺——2024 年 4 月買 6 個月 Call（行權價 73,000、權利金 8,300 美元），到期價 67,003，權利金虧光 100%；誤區三，收權利金≠穩定收益——2020 年 2 月 SPY 338 美元賣 Put，3 月跌到 228 被指派，每股虧 91 美元，是權利金的 77 倍。",
+        "OKX 簡易期權：入口在交易→期權，標的以美股/ETF 為主、BTC 後續上；下單前預覽盈虧；1 股起買，而專業市場 1 張=100 股，門檻差 100 倍；嘉賓反覆強調：簡化的是操作，不是風險。",
+        "新手風險檢查表：搞懂權利與義務再下單、只用虧得起的錢、不裸賣不重倉、看 Theta 與 IV、賣方要有保證金或現貨對沖；快問快答裡給了英偉達財報前的三種打法——買 12 月 Call、此前高位減倉 + 12 月 Put 保護、買半年 Call；末日期權 IV 超 100% 太貴不做（均為現場說法）。全場多次聲明：僅為產品教育與經驗交流，不構成投資建議。"
+      ],
+      "source": "broadcast"
+    },
+    {
+      "id": "coindesk-breakpoint-day2-20261117",
+      "title": "《CoinDesk Live at Solana Breakpoint 2026 Day 2》",
+      "title_en": "CoinDesk Live at Solana Breakpoint 2026 Day 2",
+      "title_tw": "《CoinDesk Live at Solana Breakpoint 2026 Day 2》",
+      "series": "Solana Breakpoint 2026",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "CoinDesk（主持人 Will 等）",
+      "guests": [
+        "Peter Moore",
+        "Ahmed Zifzaf（Ramp）",
+        "Nameel Dalal",
+        "Kashi Danda（Jupiter）",
+        "Malcolm Clark（Western Union）",
+        "Jonathan Victor（BitRobot）",
+        "Armani Ferrante（Backpack）"
+      ],
+      "duration": "1 小时 15 分",
+      "duration_minutes": 75,
+      "url": "https://x.com/i/broadcasts/2AMLLWRlnOQglO",
+      "note_url": "/spaces/notes/coindesk-breakpoint-day2-20261117.html",
+      "topics": [
+        "CoinDesk",
+        "Solana",
+        "Breakpoint",
+        "稳定币",
+        "代币化",
+        "永续合约",
+        "机器人数据",
+        "球迷经济"
+      ],
+      "highlights": [
+        "Peter Moore（前 Sega、Xbox、EA Sports、利物浦首席执行官）：体育迷的终身价值才是真资产——利物浦有 3 亿球迷、安菲尔德只有 61,000 个座位，他用两年教会球迷扫码进场；其参股的波兰 Wisła Kraków 靠 Lucky Fan Index 应用拿下 9 座戛纳狮子奖（均为现场说法）。",
+        "Ahmed Zifzaf（Ramp）：已有 2,500–3,000 家企业用稳定币，70% 的交易量发生在银行下班之后；USDG、OUSD 已上 Solana；95% 的稳定币交易以美元计价（现场说法）。",
+        "Nameel Dalal（YC 访问合伙人，前 Coinbase USDC 负责人）：稳定币竞争的关键是信任加收益分成——分成已从早期的 1% 涨到 4–5%；x402 正在起量，机构申请数首次超过消费者，单人创业者占比从 3% 升到 20%（现场说法）。",
+        "Kashi Danda（Jupiter 首席运营官）：Jupiter 8 天连发 7 个产品；代币化资产有 4,600 亿美元，但 DeFi 实际只用了 35 亿——99% 的利用率缺口才是机会；Global Passport 用 ZK-KYC 做合规，与 Bullish 合作，今年交易量约 5,000 亿美元，代币化股票 80–90 亿美元、10 月环比增长 50%（现场说法）。",
+        "Malcolm Clark（Western Union）：USDPT 与稳定卡已上线 40 个国家，年底 60+ 的目标可能达不到；重点市场是墨西哥、哥伦比亚、阿根廷、玻利维亚或秘鲁，菲律宾即将上线（现场说法）。",
+        "Jonathan Victor（BitRobot）：约 270 克的 RoboCap 采集帽众包机器人数据，已开源 10,000 小时、11 国、21 个行业的数据，约 10 万贡献者，用 Solana 结算；Armani Ferrante（Backpack 首席执行官）：Backpack 是首家从零拿到 CFTC 清算所与交易所双牌照的加密原生交易所，永续合约正合规进入美国（均为现场说法）。"
+      ],
+      "highlights_en": [
+        "Peter Moore (former CEO of Sega, Xbox, EA Sports and Liverpool FC): a fan's lifetime value is the real asset — Liverpool has 300M fans and Anfield only 61,000 seats, and it took two years to teach fans to scan their way in; his part-owned Wisła Kraków won 9 Cannes Lions with its Lucky Fan Index app (all on-stage claims).",
+        "Ahmed Zifzaf (Ramp): 2,500–3,000 businesses already use stablecoins, and 70% of transaction volume happens after banks close; USDG and OUSD are live on Solana; 95% of stablecoin transactions are dollar-denominated (on-stage claims).",
+        "Nameel Dalal (YC visiting partner, ex-Coinbase USDC): stablecoin competition is about trust plus yield sharing — the share has risen from 1% in the early days to 4–5%; x402 is taking off, institutional applications have surpassed consumer ones for the first time, and solo founders rose from 3% to 20% (on-stage claims).",
+        "Kashi Danda (Jupiter COO): Jupiter shipped 7 products in 8 days; tokenized assets total $460B but DeFi actually uses only $3.5B — the 99% utilization gap is the opportunity; Global Passport does compliance with ZK-KYC, a Bullish partnership is live, volume this year is ~$500B, tokenized stocks are $8–9B and grew 50% month over month in October (on-stage claims).",
+        "Malcolm Clark (Western Union): USDPT and the stable card are live in 40 countries, and the 60+ year-end target may be missed; focus markets are Mexico, Colombia, Argentina, Bolivia or Peru, with the Philippines launching soon (on-stage claims).",
+        "Jonathan Victor (BitRobot): the ~270g RoboCap crowdsources robotics data — 10,000 hours across 11 countries and 21 industries open-sourced, ~100K contributors, settled on Solana. Armani Ferrante (Backpack CEO): Backpack is the first crypto-native exchange to win both a CFTC clearinghouse and exchange license from scratch, bringing compliant perpetuals to the US (all on-stage claims)."
+      ],
+      "highlights_tw": [
+        "Peter Moore（前 Sega、Xbox、EA Sports、利物浦首席執行官）：體育迷的終身價值才是真資產——利物浦有 3 億球迷、安菲爾德只有 61,000 個座位，他用兩年教會球迷掃碼進場；其參股的波蘭 Wisła Kraków 靠 Lucky Fan Index 應用拿下 9 座坎城獅子獎（均為現場說法）。",
+        "Ahmed Zifzaf（Ramp）：已有 2,500–3,000 家企業用穩定幣，70% 的交易量發生在銀行下班之後；USDG、OUSD 已上 Solana；95% 的穩定幣交易以美元計價（現場說法）。",
+        "Nameel Dalal（YC 訪問合夥人，前 Coinbase USDC 負責人）：穩定幣競爭的關鍵是信任加收益分成——分成已從早期的 1% 漲到 4–5%；x402 正在起量，機構申請數首次超過消費者，單人創業者占比從 3% 升到 20%（現場說法）。",
+        "Kashi Danda（Jupiter 首席運營官）：Jupiter 8 天連發 7 個產品；代幣化資產有 4,600 億美元，但 DeFi 實際只用了 35 億——99% 的利用率缺口才是機會；Global Passport 用 ZK-KYC 做合規，與 Bullish 合作，今年交易量約 5,000 億美元，代幣化股票 80–90 億美元、10 月環比增長 50%（現場說法）。",
+        "Malcolm Clark（Western Union）：USDPT 與穩定卡已上線 40 個國家，年底 60+ 的目標可能達不到；重點市場是墨西哥、哥倫比亞、阿根廷、玻利維亞或秘魯，菲律賓即將上線（現場說法）。",
+        "Jonathan Victor（BitRobot）：約 270 克的 RoboCap 採集帽眾包機器人數據，已開源 10,000 小時、11 國、21 個行業的數據，約 10 萬貢獻者，用 Solana 結算；Armani Ferrante（Backpack 首席執行官）：Backpack 是首家從零拿到 CFTC 清算所與交易所雙牌照的加密原生交易所，永續合約正合規進入美國（均為現場說法）。"
+      ],
+      "source": "broadcast"
+    },
+    {
+      "id": "waytobot-first-space-20261117",
+      "title": "《WayToBot 社区首场 Space：为什么成立 WayToBot 社区》",
+      "title_en": "WayToBot Community's First Space: Why We Founded WayToBot",
+      "title_tw": "《WayToBot 社區首場 Space：為什麼成立 WayToBot 社區》",
+      "series": "WayToBot 社区",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "蓝哥AI @0xlangeai",
+      "guests": [
+        "Kim @KinGao476942",
+        "铁柱",
+        "李九二 @li9292",
+        "JKL @jklthinking",
+        "文哥",
+        "木都传",
+        "张坤",
+        "赛博弗兰克 @frank160997328",
+        "Wayne Wang",
+        "顾德昊"
+      ],
+      "duration": "2 小时 14 分",
+      "duration_minutes": 134,
+      "url": "https://x.com/i/spaces/1pedlnlnyjZevP",
+      "note_url": "/spaces/notes/waytobot-first-space-20261117.html",
+      "topics": [
+        "WayToBot",
+        "Personal Agent",
+        "Grokbot",
+        "Muse",
+        "Dots",
+        "AI 变现",
+        "额度优化",
+        "开源 Agent"
+      ],
+      "highlights": [
+        "WayToBot 由蓝哥、Kim、铁柱三人发起，定位是帮小白入门 Personal Agent 的免费社区：提供 Grokbot、Muse、Dots 等最新资讯、每周或每两周一次嘉宾分享、免费群里持续分享优质教程；官网已上线，欢迎共建与申请当分享者（均为发言人现场说法）。",
+        "三大产品分工共识：Grokbot 像虚拟员工团队、偏商务/企业助手；Muse 像轻量化的生活/社交管家、个人秘书型；Dots 通知最准但只在 100 美元 Pro 档提供，handoff 到 Codex 时不能指定模型；三者可搭配着用。",
+        "铁柱的 Grokbot 省额度六条：能用脚本就不用浏览器；重任务分给 Codex 等其他 agent；定时任务降频；尽量少用群聊；一个 Bot 做完一件事、别按能力颗粒化拆；第三方工具注册为公共服务；JKL 的补充打法是「小马拉大车」——Grokbot 只当指挥官，实际工作交给下面的 Agent。",
+        "变现四条路（Kim）：跨境电商（Grokbot 军团把上链接效率从两天 100 个提到 1,000 个）、自媒体（三人两三个月涨粉一万+、每两周近千刀收益）、2B 企业服务（AI 培训、工作台，客单价更高）、AI 短剧与独立开发；下期主题已定为 Grokbot + 电商。",
+        "国内 PA 正在补位（发言人说法，未经核实）：软件特代（核心团队有 Manus 出来的人，融资约 10 亿人民币）、AI NAS 硬件 Jabilot（Kickstarter 众筹超 140 万美元）、桌面盒子 VLU（2026 年 9 月众筹约 2,000 万人民币、订单 8,000 多台）；12 月 12 日 Grokbot 在深圳办 Grokbot + 硬件 Meetup。",
+        "X 自动化发帖的红线：官方 API 可以，浏览器 computer use 会封号——JKL 亲身封号后申诉放出；用 Grokbot 可得 100 美元 X API 额度；多 Agent 时代的瓶颈是上下文，场上出现了 Obsidian + GitHub 唯一真源、AGENTS.md 防生态绑架、ADE 聚合三种解法。"
+      ],
+      "highlights_en": [
+        "WayToBot was founded by Lange, Kim and Tiezhu as a free community to help beginners get into Personal Agents: the latest news on Grokbot, Muse, Dots and more, guest sessions every one or two weeks, and ongoing tutorials in free groups. The official site is live, and members are welcome to co-build or apply to share (all speakers' claims).",
+        "The three-way split: Grokbot is a virtual employee team — business and enterprise work; Muse is a lightweight life and social butler, a personal-secretary type; Dots has the most accurate notifications but only on the $100 Pro tier, and handing off to Codex cannot pick a model. The three can be combined.",
+        "Tiezhu's six rules for saving Grokbot credits: use scripts instead of the browser; offload heavy tasks to Codex and other agents; lower scheduled-task frequency; avoid group chats; let one bot finish a whole job instead of splitting by capability; register third-party tools as public services. JKL's add-on: 'a small horse pulling a big cart' — Grokbot only commands, other agents do the work.",
+        "Four monetization paths (Kim): cross-border e-commerce (Grokbot squads lift listing speed from 100 links in two days to 1,000), self-media (the three founders gained 10K+ followers in two to three months and earn close to $1K every two weeks), B2B enterprise services (AI training, workbenches, higher ticket sizes), and AI short dramas plus indie development. Next session: Grokbot + e-commerce.",
+        "Domestic Personal Agents are catching up (speakers' claims, unverified): Tedai software (core team ex-Manus, ~¥1B raised), the Jabilot AI NAS (over $1.4M on Kickstarter), and the VLU desktop box (~¥20M crowdfunded in September 2026, 8,000+ orders); a Grokbot + hardware meetup is set for December 12 in Shenzhen.",
+        "The red line for automating X posts: the official API is fine, browser computer-use gets you banned — JKL was banned firsthand and appealed back; Grokbot comes with $100 of X API credits. The real bottleneck of the multi-agent era is context, and three fixes surfaced: Obsidian + GitHub as single source of truth, AGENTS.md against ecosystem lock-in, and ADE aggregation."
+      ],
+      "highlights_tw": [
+        "WayToBot 由藍哥、Kim、鐵柱三人發起，定位是幫小白入門 Personal Agent 的免費社區：提供 Grokbot、Muse、Dots 等最新資訊、每週或每兩週一次嘉賓分享、免費群裡持續分享優質教程；官網已上線，歡迎共建與申請當分享者（均為發言人現場說法）。",
+        "三大產品分工共識：Grokbot 像虛擬員工團隊、偏商務/企業助手；Muse 像輕量化的生活/社交管家、個人秘書型；Dots 通知最準但只在 100 美元 Pro 檔提供，handoff 到 Codex 時不能指定模型；三者可搭配著用。",
+        "鐵柱的 Grokbot 省額度六條：能用腳本就不用瀏覽器；重任務分給 Codex 等其他 agent；定時任務降頻；盡量少用群聊；一個 Bot 做完一件事、別按能力顆粒化拆；第三方工具註冊為公共服務；JKL 的補充打法是「小馬拉大車」——Grokbot 只當指揮官，實際工作交給下面的 Agent。",
+        "變現四條路（Kim）：跨境電商（Grokbot 軍團把上鏈接效率從兩天 100 個提到 1,000 個）、自媒體（三人兩三個月漲粉一萬+、每兩週近千刀收益）、2B 企業服務（AI 培訓、工作台，客單價更高）、AI 短劇與獨立開發；下期主題已定為 Grokbot + 電商。",
+        "國內 PA 正在補位（發言人說法，未經核實）：軟件特代（核心團隊有 Manus 出來的人，融資約 10 億人民幣）、AI NAS 硬件 Jabilot（Kickstarter 眾籌超 140 萬美元）、桌面盒子 VLU（2026 年 9 月眾籌約 2,000 萬人民幣、訂單 8,000 多台）；12 月 12 日 Grokbot 在深圳辦 Grokbot + 硬件 Meetup。",
+        "X 自動化發帖的紅線：官方 API 可以，瀏覽器 computer use 會封號——JKL 親身封號後申訴放出；用 Grokbot 可得 100 美元 X API 額度；多 Agent 時代的瓶頸是上下文，場上出現了 Obsidian + GitHub 唯一真源、AGENTS.md 防生態綁架、ADE 聚合三種解法。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "stocks-btc-talk-20261117",
+      "title": "《美股是否反弹？BTC 何时出方向？》",
+      "title_en": "Nov 17: Will US Stocks Rebound? When Will BTC Find Direction? | Stocks BTC Talk",
+      "title_tw": "《美股是否反彈？BTC 何時出方向？》",
+      "series": "Stocks BTC Talk",
+      "episode": null,
+      "date": "2026-11-17",
+      "host": "茄哥 @qg7777",
+      "guests": [],
+      "duration": "56 分 27 秒",
+      "duration_minutes": 56,
+      "url": "https://x.com/i/spaces/1WXPPKbaQRPnPW",
+      "note_url": "/spaces/notes/stocks-btc-talk-20261117.html",
+      "topics": [
+        "美股",
+        "比特币",
+        "Anthropic IPO",
+        "美元指数",
+        "ETF",
+        "黄金",
+        "沃尔玛",
+        "黄仁勋"
+      ],
+      "highlights": [
+        "茄哥今晚的判断是「等」：比特币没有持续向上的动力，66,000 是今晚唯一值得看的点位，拉到就下来；真正的方向要等 11 月 18 日 Anthropic 定价之后，破 6 万、去 55,000 的中线目标不变（均为发言人现场说法，未经核实）。",
+        "真正的转折点在 74,000：要把这一段快速跌幅收回去，才代表真正开始快速上涨；到 66,000 根本没什么作用，「勾一下之后大概率还下去」，「6 万 6 可能下去再往下 6 千点」、破 6 万。",
+        "操作口径：今天不建议做多也不建议做空，这个位置选方向意义不大；空单可以挂高点 66,000、66,700，看插针上去再下来；多单不建议开；昨天他在 65,000 开空、跌了就平了。",
+        "美元 103.77 是本场最硬的宏观锚：美国 10 月零售月率 0.2%、前值 0.8%，数据公布后加息预期提高，美元指数刷新 2025 年 4 月以来新高；茄哥直接把它和 2025 年初比特币最狠的下跌段挂钩。",
+        "本场只有 195 人收听、56 分钟就收尾，是茄哥近期最短的一场——开场软路由崩了、几分钟在等听众回来，约 54 分钟后他提前收尾转场去老唐的节目；另，11 月 17 日 ETF 录得正流入 801 个比特币（约 5,200 万美元），以太坊流出 1,300 万美元，但他认为「意义不大」。"
+      ],
+      "highlights_en": [
+        "Qiege's call tonight was 'wait': Bitcoin has no sustained upward momentum; $66,000 is the only level worth watching — a push up there comes back down. Real direction waits for Anthropic's pricing on November 18; the medium-term target stays the same: break $60K and head to $55,000 (all speakers' live claims, unverified).",
+        "The real turning point is $74,000: only by reclaiming the fast sell-off does the market truly start rising again. $66,000 'does nothing' — 'after a poke it will most likely go back down', 'from $66K it may drop another 6,000 points' and break $60K.",
+        "Trading stance: neither long nor short today — picking a direction at this level is meaningless. Shorts can be hung high at $66,000–$66,700 to catch a spike up and back down; no longs. He said he shorted at $65,000 yesterday and closed on the drop.",
+        "The hardest macro anchor of the night was the dollar at 103.77: US October retail sales came in at 0.2% month-on-month (prior 0.8%), rate-hike expectations rose, and the dollar index hit its highest since April 2025 — Qiege tied it directly to Bitcoin's worst sell-off stretch in early 2025.",
+        "The shortest Qiege show in a while: only 195 listeners and 56 minutes — his soft router crashed at the open, minutes were spent waiting for the audience to return, and he wrapped up early to join Donald Gao's show. Also, November 17 ETFs saw net inflows of 801 BTC (~$52M) while Ethereum lost $13M, which he called 'meaningless'."
+      ],
+      "highlights_tw": [
+        "茄哥今晚的判斷是「等」：比特幣沒有持續向上的動力，66,000 是今晚唯一值得看的點位，拉到就下來；真正的方向要等 11 月 18 日 Anthropic 定價之後，破 6 萬、去 55,000 的中線目標不變（均為發言人現場說法，未經核實）。",
+        "真正的轉折點在 74,000：要把這一段快速跌幅收回去，才代表真正開始快速上漲；到 66,000 根本沒什麼作用，「勾一下之後大概率還下去」，「6 萬 6 可能下去再往下 6 千點」、破 6 萬。",
+        "操作口徑：今天不建議做多也不建議做空，這個位置選方向意義不大；空單可以掛高點 66,000、66,700，看插針上去再下來；多單不建議開；昨天他在 65,000 開空、跌了就平了。",
+        "美元 103.77 是本場最硬的宏觀錨：美國 10 月零售月率 0.2%、前值 0.8%，數據公佈後加息預期提高，美元指數刷新 2025 年 4 月以來新高；茄哥直接把它和 2025 年初比特幣最狠的下跌段掛鉤。",
+        "本場只有 195 人收聽、56 分鐘就收尾，是茄哥近期最短的一場——開場軟路由崩了、幾分鐘在等聽眾回來，約 54 分鐘後他提前收尾轉場去老唐的節目；另，11 月 17 日 ETF 錄得正流入 801 個比特幣（約 5,200 萬美元），以太坊流出 1,300 萬美元，但他認為「意義不大」。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "breakpoint-2026-day-one-20261116",
+      "title": "Breakpoint 2026: Day One（Solana 年度大会第一天）",
+      "title_en": "Breakpoint 2026: Day One",
+      "title_tw": "Breakpoint 2026：Day One（Solana 年度大會第一天）",
+      "series": "Solana Breakpoint 2026",
+      "episode": null,
+      "date": "2026-11-16",
+      "host": "Solana 官方直播（主持 Lily Liu、Rachel Conlon）",
+      "guests": [
+        "Zach Abrams（Open Standard）",
+        "Alexandra Lang（Zelle）",
+        "Malcolm Clark（Western Union）",
+        "Christian Rao（Mastercard）",
+        "Simon Griffin（SoFi）",
+        "Ian Rogers（Ledger）",
+        "Boris Johnson",
+        "Annabel Spring（All Funds）"
+      ],
+      "duration": "4 小时 27 分",
+      "duration_minutes": 267,
+      "url": "https://x.com/i/broadcasts/2NgQPdyyEPkEOk",
+      "note_url": "/spaces/notes/breakpoint-2026-day-one-20261116.html",
+      "topics": [
+        "Solana",
+        "稳定币",
+        "代币化",
+        "RWA",
+        "x402",
+        "Agent 支付",
+        "OpenUSD",
+        "USDPT",
+        "Zelle-USD",
+        "主网 1.0",
+        "Alpenglow"
+      ],
+      "highlights": [
+        "全场头条：Solana 主网正式结束六年 Beta、进入 1.0——区块时间 400 毫秒降至 200 毫秒、单区块容量 3 倍以上、租金降 10 倍；Alpenglow 上线后最终确认时间从约 13 秒降至约 150 毫秒（均为官方现场说法）。",
+        "大会主题是「代币超级周期」：不是价格周期，而是货币、资产与所有权全面上链的结构性转变；核心论点包括「分发即估值」（同一家公司在伦敦上市比纽约折价 25–30%）与「全民基本所有权」而非全民基本收入。",
+        "稳定币专场的主线是「出口之争」：OpenUSD 主张收益返还建设者、上线六周做到 5 亿美元 AUM；Western Union 的 USDPT 已在 Solana 上线生产环境，靠 40 万个网点、130 种货币解决提现；MoneyGram 与 Solflare 合作让 USDC 在 170 国直接取现金；Zelle 推出 Zelle-USD 并演示机密转账。",
+        "机构数据（现场说法）：代币化股票上季度交易超 70 亿美元，RWA 达 50 亿美元、持有者超 100 万人；质押 ETF 40 亿美元；Solana 连续 10 个季度应用收入全链第一；三星把 Solana USDC 集成进 8,200 万个钱包。",
+        "Agent 经济成为独立议题：Cloudflare 称 HTML 请求中机器人已超 70%，推出基于 x402 的按次付费墙与 Pay Per Crawl；Solana 承载 70% 以上的 x402 交易，机器间 commerce 需要能做 0.1 美分级微支付的轨道。",
+        "政治专场：前首相鲍里斯·约翰逊承认曾撰文称比特币是庞氏骗局（源于一位被骗的教区老人），但明确支持区块链与代币化技术；ICE Clear Europe 表示 24/7 抵押品移动要等监管对代币所有权与结算终局性点头，纽交所正建可接受 Solana 代币的代币化 ATS（本节数字多为嘉宾现场说法，未经核实）。"
+      ],
+      "highlights_en": [
+        "The headline: Solana mainnet officially exits its six-year beta into 1.0 — block times cut from 400ms to 200ms, 3x+ block capacity, rent down 10x; with Alpenglow live, finality drops from ~13 seconds to ~150ms (all official on-stage claims).",
+        "The theme is the 'token supercycle': not a price cycle but a structural shift of money, assets and ownership on-chain. Core arguments: 'distribution is valuation' (the same company lists 25–30% cheaper in London than in New York) and universal basic ownership instead of universal basic income.",
+        "The stablecoin sessions were really about exits: OpenUSD returns yield to builders and hit $500M AUM in six weeks; Western Union's USDPT is live in production on Solana with cash-out at 400,000 locations in 130 currencies; MoneyGram × Solflare lets users cash out USDC in 170 countries; Zelle launched Zelle-USD and demoed confidential transfers.",
+        "Institutional numbers (on-stage claims): tokenized stocks traded $7B+ last quarter; RWA reached $5B with 1M+ holders; staking ETFs hold $4B; Solana has led all chains in app revenue for 10 straight quarters; Samsung integrated Solana USDC into 82M wallets.",
+        "The agent economy got its own thread: Cloudflare says bots now exceed 70% of HTML requests and launched x402-powered pay-per-request walls and Pay Per Crawl; Solana carries 70%+ of x402 transactions, and machine-to-machine commerce needs rails that can settle 0.1-cent micropayments.",
+        "The politics panel: former PM Boris Johnson admitted his earlier op-ed calling Bitcoin a Ponzi scheme (prompted by a defrauded elderly parishioner) but firmly backed blockchain and tokenization; ICE Clear Europe said 24/7 collateral mobility waits on regulators settling token ownership and settlement finality, while NYSE is building a tokenized ATS that can accept Solana-minted tokens (figures in this segment are the speakers' live claims, unverified)."
+      ],
+      "highlights_tw": [
+        "全場頭條：Solana 主網正式結束六年 Beta、進入 1.0——區塊時間 400 毫秒降至 200 毫秒、單區塊容量 3 倍以上、租金降 10 倍；Alpenglow 上線後最終確認時間從約 13 秒降至約 150 毫秒（均為官方現場說法）。",
+        "大會主題是「代幣超級週期」：不是價格週期，而是貨幣、資產與所有權全面上鏈的結構性轉變；核心論點包括「分發即估值」（同一家公司在倫敦上市比紐約折價 25–30%）與「全民基本所有權」而非全民基本收入。",
+        "穩定幣專場的主線是「出口之爭」：OpenUSD 主張收益返還建設者、上線六週做到 5 億美元 AUM；Western Union 的 USDPT 已在 Solana 上線生產環境，靠 40 萬個網點、130 種貨幣解決提現；MoneyGram 與 Solflare 合作讓 USDC 在 170 國直接取現金；Zelle 推出 Zelle-USD 並演示機密轉帳。",
+        "機構數據（現場說法）：代幣化股票上季度交易超 70 億美元，RWA 達 50 億美元、持有者超 100 萬人；質押 ETF 40 億美元；Solana 連續 10 個季度應用收入全鏈第一；三星把 Solana USDC 集成進 8,200 萬個錢包。",
+        "Agent 經濟成為獨立議題：Cloudflare 稱 HTML 請求中機器人已超 70%，推出基於 x402 的按次付費牆與 Pay Per Crawl；Solana 承載 70% 以上的 x402 交易，機器間 commerce 需要能做 0.1 美分級微支付的軌道。",
+        "政治專場：前首相鮑里斯·約翰遜承認曾撰文稱比特幣是龐氏騙局（源於一位被騙的教區老人），但明確支持區塊鏈與代幣化技術；ICE Clear Europe 表示 24/7 抵押品移動要等監管對代幣所有權與結算終局性點頭，紐交所正建可接受 Solana 代幣的代幣化 ATS（本節數字多為嘉賓現場說法，未經核實）。"
+      ],
+      "source": "broadcast"
+    },
+    {
+      "id": "stocks-btc-talk-20261116",
+      "title": "《11.16 美股行情 比特币走势》",
+      "title_en": "Nov 16: US Stocks & Bitcoin Trend | Stocks BTC Talk",
+      "title_tw": "《11.16 美股行情 比特幣走勢》",
+      "series": "Stocks BTC Talk",
+      "episode": null,
+      "date": "2026-11-16",
+      "host": "茄哥 @qg7777",
+      "guests": [
+        "红毛",
+        "老唐 @0xDonaldGao",
+        "樑枝102 @liangyiwei11",
+        "周红衣 @Kakabong08",
+        "Pengran1217",
+        "lichunhong1204"
+      ],
+      "duration": "2 小时 24 分",
+      "duration_minutes": 144,
+      "url": "https://x.com/i/spaces/1onqRzEzVJoKgm",
+      "note_url": "/spaces/notes/stocks-btc-talk-20261116.html",
+      "topics": [
+        "美股",
+        "比特币",
+        "黄金",
+        "Anthropic IPO",
+        "微策略",
+        "ETF 资金流",
+        "黄仁勋",
+        "跟单 KOL"
+      ],
+      "highlights": [
+        "茄哥全场极度看空：比特币 4 小时级别阴跌无量，今晚区间约 63,000–65,000；57,000 必破，55,000 以下才开始建仓，并称 55,500 可能在 11 月 18–19 号附近出现（均为发言人现场说法，未经核实）。",
+        "中期判断更悲观：春节前比特币回 9 万的概率低于 1%、回 8 万低于 5%；茄哥自述本场 65,176 开空、64,320 平仓，赚了 800 多点。",
+        "红毛自述今早黄金 10 手空单赚了 10 万美元，黄金继续看空、止损只放 1.5 点（发言人自述，未经核实）。",
+        "Anthropic IPO 成全场焦点（场内说法）：11 月 18 日定价、19 日开盘，发行区间 70–78 美元，估值从 2.75 万亿缩水到 1.09–1.4 万亿，并设保留 50.1% 投票权的 B 类股。",
+        "资金面信号：比特币 ETF 本周流出约 10 亿美元（发言人说法）；微策略晒持仓稳军心，但资金基本耗尽；茄哥称其社群 10 月底起已做现货套保。",
+        "茄哥大骂跟单 KOL 的「吃客损」模式；另，黄仁勋辞任英伟达 CEO 已核实（2026-11-12 公告），节目内「董事会罢免/出轨」等说法未经核实。"
+      ],
+      "highlights_en": [
+        "Qiege was extremely bearish all night: Bitcoin is sliding on the 4-hour chart with no volume, tonight's range seen around $63,000–$65,000; $57,000 'will definitely break', and he would only start building positions below $55,000, with $55,500 possibly arriving around November 18–19 (all speakers' live claims, unverified).",
+        "His medium-term view was gloomier still: less than a 1% chance Bitcoin returns to $90K before the Spring Festival, under 5% for $80K; he said he shorted at 65,176 and closed at 64,320 for 800+ points.",
+        "Hong Mao said his 10-lot gold short from the morning made $100,000; he stays short gold with a stop of just 1.5 points (speaker's own account, unverified).",
+        "Anthropic's IPO became the room's focus (in-room claims): pricing on November 18, trading on the 19th, a $70–78 range, valuation cut from $2.75T to $1.09–1.4T, with Class B shares keeping 50.1% of voting power.",
+        "Flow signals: Bitcoin ETFs saw about $1B of outflows this week (speaker's figure); MicroStrategy is showing its holdings to steady morale but is basically out of money; Qiege said his community has been hedging spot since late October.",
+        "Qiege railed against copy-trading KOLs who 'eat client losses'; separately, Jensen Huang's resignation as Nvidia CEO is verified (announced November 12), while the room's 'board ouster / affair' talk is unverified."
+      ],
+      "highlights_tw": [
+        "茄哥全場極度看空：比特幣 4 小時級別陰跌無量，今晚區間約 63,000–65,000；57,000 必破，55,000 以下才開始建倉，並稱 55,500 可能在 11 月 18–19 號附近出現（均為發言人現場說法，未經核實）。",
+        "中期判斷更悲觀：春節前比特幣回 9 萬的概率低於 1%、回 8 萬低於 5%；茄哥自述本場 65,176 開空、64,320 平倉，賺了 800 多點。",
+        "紅毛自述今早黃金 10 手空單賺了 10 萬美元，黃金繼續看空、止損只放 1.5 點（發言人自述，未經核實）。",
+        "Anthropic IPO 成全場焦點（場內說法）：11 月 18 日定價、19 日開盤，發行區間 70–78 美元，估值從 2.75 萬億縮水到 1.09–1.4 萬億，並設保留 50.1% 投票權的 B 類股。",
+        "資金面信號：比特幣 ETF 本週流出約 10 億美元（發言人說法）；微策略曬持倉穩軍心，但資金基本耗盡；茄哥稱其社群 10 月底起已做現貨套保。",
+        "茄哥大罵跟單 KOL 的「吃客損」模式；另，黃仁勳辭任英偉達 CEO 已核實（2026-11-12 公告），節目內「董事會罷免/出軌」等說法未經核實。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "xianzhe-24-20261115",
+      "title": "《贤者时间》24 期：选择一个行业，只是因为能赚钱，而不是因为热爱，靠什么支撑自己长期走下去？",
+      "title_en": "Xianzhe Time EP24: Choosing an Industry Just Because It Pays — What Keeps You Going Without Passion?",
+      "title_tw": "《賢者時間》24 期：選擇一個行業，只是因為能賺錢，而不是因為熱愛，靠什麼支撐自己長期走下去？",
+      "series": "贤者时间",
+      "episode": 24,
+      "date": "2026-11-15",
+      "host": "AZ @AZ77678",
+      "guests": [
+        "茄哥 @qg7777",
+        "红毛",
+        "西西老师",
+        "六水",
+        "安卓洋",
+        "老派克",
+        "Beta",
+        "AJ"
+      ],
+      "duration": "4 小时 19 分",
+      "duration_minutes": 259,
+      "url": "https://x.com/i/spaces/1AMPMbqlpNApVm",
+      "note_url": "/spaces/notes/xianzhe-24-20261115.html",
+      "topics": [
+        "职业选择",
+        "热爱与目标感",
+        "擅长",
+        "职场爬升",
+        "创业",
+        "营养学",
+        "男女关系"
+      ],
+      "highlights": [
+        "西西老师的「热情 × 目标感」打分表（本期核心结论）：有热情又有目标 80 分（使命感，企业家级）；没热情但有目标 64 分（职业级，大部分人能做到的就是这一档）；有热情没目标只有 20 分（自嗨）；两者皆无 10 分（躺平）。普通人想长期走下去，靠的不是热爱，而是目标感。",
+        "AZ 开场定调：热爱是伪命题，选职业尽量选擅长而非热爱——喜欢不代表市场愿意付费、也不代表你有能力；大学生职业规划配比是擅长占 40%、行业占 60%，坐在上升电梯里往上走比个人能力更重要。",
+        "安卓洋的异议与众人反驳：他认为中国环境下热情无法存活（顶层只关心钱、架构师开公司必败、OpenAI 十年不赚钱在中国不可能）；众人把打击面收回——国内也有 insta360、DeepSeek 这样的技术公司，硅谷也不纯粹；共识是杀到前 5%–10% 才有资格谈理想。",
+        "红毛的暴论：认知是伪命题，越讲得完美复杂越是假的；赚钱的事环节超过三个就要小心；真自我感动是卡很久的问题终于解决了，假的是长期内耗迷茫；拿到正向反馈才能走下去。",
+        "AZ 总结的频道三句话：①认清自己（适合什么、身边有什么资源）；②读懂使用说明书（一家公司、一个国家、一个行业各有说明书）；③目标感评分（想成功至少做到 64 分档，有目标还要再拆分）。另附两条家规：不要抱怨、做错事不要解释。",
+        "职场往上爬论：至少要成为一个 leader 才能解锁自由度（不用打卡、调动资源、收获下属功劳）；新人被消费是投资还是消费，取决于目标清不清晰；不当过监考老师，永远不知道底下谁在作弊。",
+        "跑题段落：大学生问能量驱动与探索边界（先赚钱再探索边界，杂事花钱外包）；手表行业信息源（不砸钱不抱大腿拿不到）；营养学（脂肪 25%、碳水 25%、蛋白质 50%，糖危害最大，练腿最重要；推荐书《超越百岁》）。"
+      ],
+      "highlights_en": [
+        "Xixi's 'passion × goal-sense' scoring table (the episode's core conclusion): passion + goals = 80 (mission, entrepreneur level); no passion but goals = 64 (professional level — the most most people can reach); passion without goals = 20 (self-indulgence); neither = 10 (lying flat). For ordinary people, what sustains you long-term is goal-sense, not passion.",
+        "AZ's opening line: passion is a false proposition — choose by strength, not passion. Liking something does not mean the market will pay for it, nor that you are good at it. His formula for graduates: 40% personal strength, 60% industry — riding a rising elevator matters more than individual ability.",
+        "Android Yang's dissent and the pushback: he argued passion cannot survive in China's environment (top people only care about money, an architect founding a company is doomed, OpenAI's ten moneyless years could never happen in China). The room narrowed the claim — China has technical companies like Insta360 and DeepSeek, Silicon Valley is not pure either. Consensus: reach the top 5%–10% before you earn the right to talk about ideals.",
+        "Hong Mao's hot takes: 'cognition' is a false proposition — the more perfect and complex the talk, the faker it is. If making money takes more than three steps, be careful. Real self-touching is finally solving a problem that stuck for ages; fake self-touching is endless internal friction. Only positive feedback keeps you going.",
+        "AZ's three settled lines for the channel: 1) know yourself (what suits you, what resources you have); 2) read the user manual (every company, country and industry has its own); 3) score your goal-sense (aim for at least the 64-point band, then break the goal down). Plus two house rules: don't complain, and don't explain yourself when you are wrong.",
+        "Climbing the workplace ladder: becoming a leader is the only way to unlock freedom (no clocking in, command of resources, credit for your team's work). Whether being 'consumed' as a newcomer is investment or consumption depends on whether your goal is clear. You never know who is cheating until you have been the exam invigilator once.",
+        "Digressions: a student asks about energy-driven work and exploring boundaries (earn money first, outsource chores for cash); watch-industry information sources (no money, no big brother, no information); nutrition (25% fat, 25% carbs, 50% protein; sugar is the biggest harm; train your legs; recommended book: Outlive)."
+      ],
+      "highlights_tw": [
+        "西西老師的「熱情 × 目標感」打分表（本期核心結論）：有熱情又有目標 80 分（使命感，企業家級）；沒熱情但有目標 64 分（職業級，大部分人能做到的就是這一檔）；有熱情沒目標只有 20 分（自嗨）；兩者皆無 10 分（躺平）。普通人想長期走下去，靠的不是熱愛，而是目標感。",
+        "AZ 開場定調：熱愛是偽命題，選職業盡量選擅長而非熱愛——喜歡不代表市場願意付費、也不代表你有能力；大學生職業規劃配比是擅長占 40%、行業占 60%，坐在上升電梯裡往上走比個人能力更重要。",
+        "安卓洋的異議與眾人反駁：他認為中國環境下熱情無法存活（頂層只關心錢、架構師開公司必敗、OpenAI 十年不賺錢在中國不可能）；眾人把打擊面收回——國內也有 insta360、DeepSeek 這樣的技術公司，矽谷也不純粹；共識是殺到前 5%–10% 才有資格談理想。",
+        "紅毛的暴論：認知是偽命題，越講得完美複雜越是假的；賺錢的事環節超過三個就要小心；真自我感動是卡很久的問題終於解決了，假的是長期內耗迷茫；拿到正向反饋才能走下去。",
+        "AZ 總結的頻道三句話：①認清自己（適合什麼、身邊有什麼資源）；②讀懂使用說明書（一家公司、一個國家、一個行業各有說明書）；③目標感評分（想成功至少做到 64 分檔，有目標還要再拆分）。另附兩條家規：不要抱怨、做錯事不要解釋。",
+        "職場往上爬論：至少要成為一個 leader 才能解鎖自由度（不用打卡、調動資源、收穫下屬功勞）；新人被消費是投資還是消費，取決於目標清不清晰；不當過監考老師，永遠不知道底下誰在作弊。",
+        "跑題段落：大學生問能量驅動與探索邊界（先賺錢再探索邊界，雜事花錢外包）；手錶行業信息源（不砸錢不抱大腿拿不到）；營養學（脂肪 25%、碳水 25%、蛋白質 50%，糖危害最大，練腿最重要；推薦書《超越百歲》）。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "xianzhe-22-20261113",
+      "title": "《贤者时间》22 期：你适合创业还是上班，opc",
+      "title_en": "Xianzhe Time EP22: Should You Start a Business or Get a Job? (One-Person Company)",
+      "title_tw": "《賢者時間》22 期：你適合創業還是上班，opc",
+      "series": "贤者时间",
+      "episode": 22,
+      "date": "2026-11-13",
+      "host": "AZ @AZ77678",
+      "guests": [
+        "茄哥 @qg7777",
+        "红毛",
+        "西西老师",
+        "Dr.Yu",
+        "十岁哥",
+        "Lacey @Lacey8ea"
+      ],
+      "duration": "5 小时 47 分",
+      "duration_minutes": 347,
+      "url": "https://x.com/i/spaces/1evBnlXAOqYBzb",
+      "note_url": "/spaces/notes/xianzhe-22-20261113.html",
+      "topics": [
+        "一人公司",
+        "OPC",
+        "创业还是上班",
+        "自媒体",
+        "洗稿",
+        "KOL/KOC",
+        "求职",
+        "福建人",
+        "黄仁勋",
+        "X创业"
+      ],
+      "highlights": [
+        "茄哥的结论：“在我们这个 Space 里，我认为就断了你上班的念头”——很多职业（金融、专项技能）看似上班实为创业、是为创业打基础；但前提是先认真跑满 90 天再下结论，没认真做就没资格说不适合。",
+        "Dr.Yu：创业与上班本质一样，先看天赋——找到你比别人有 10%–20% 优势、做起来得心应手的事；两者是递进关系，不上班就不懂一件事怎么在组织里做成。",
+        "西西老师的“斜修论”与“正修论”：他选先创业后工作，面试加分靠业务能力降维打击；若在组织内，正修只修沟通——把一个人的信息变成很多人的信息，就是给信息上杠杆。",
+        "红毛自述全场起步最低（未成年一个人离家出走去北京），方法论是“抄不丢人”、先靠数量取胜、没有完美方案、想太多完美模型就是不动手；他正在带几个 00 后年轻人做 Claude 账号生意（均为其现场说法）。",
+        "洗稿之争：红毛称一个账号不叫洗稿、10 个以上账号矩阵才叫洗稿；西西则自述写了 100 篇原创长文、享受表达不追求流量；定位论是“狼假装成羊混入羊群，默默进化狼的技能、磨爪子磨牙齿”。",
+        "十岁哥：在美国做餐饮的福建人，约 2013 年 23–24 岁赴美，从后厨自学铁板烧表演厨师起步，巅峰时有 10 家餐厅、现剩 3 家，卖店主因亲戚合伙的股权比例讲不清与内耗。",
+        "福建人讨论：AJ 称福建人像弹簧、能把弹簧压到最底端；福清民间互助多、敢闯敢投敢干，但互助的杠杆加在一起也导致近 10 年连环爆雷；众人约了下期专场聊“福建土匪奋斗文化”。"
+      ],
+      "highlights_en": [
+        "Qie Ge's conclusion: 'In this Space, I would say drop the idea of working a job' — many professions (finance, specialist skills) look like jobs but are really entrepreneurship, laying the groundwork for starting a business. But first, run it seriously for a full 90 days before judging — you have no right to say something doesn't suit you if you never really tried it.",
+        "Dr. Yu: starting a business and working a job are essentially the same — start with talent, finding what you do 10%–20% better than others and with ease. The two are sequential: without working in an organization you cannot learn how something gets done inside one.",
+        "Xixi's 'oblique path' and 'proper path': he chose entrepreneurship before employment, saying interviews are won by business ability that overwhelms the interviewer. Inside an organization, the only proper discipline is communication — turning one person's information into many people's information is leverage on information.",
+        "Hong Mao says he started lowest of everyone present (ran away from home to Beijing as a minor). His method: 'copying is not shameful', win by volume first, there is no perfect plan, and overthinking the perfect model means never acting. He is now leading a few post-00s in a Claude account business (all his on-air claims).",
+        "The rewrite debate: Hong Mao says one account is not rewriting — a matrix of 10+ accounts is. Xixi says he has written 100 original long essays, enjoying expression without chasing traffic. On positioning: 'a wolf disguised as a sheep inside the flock, quietly evolving wolf skills, sharpening claws and teeth, telling no one.'",
+        "Shisui Ge: a Fujianese restaurateur in the US who arrived around 2013 at 23–24, taught himself hibachi performance cooking from the back kitchen, peaked at 10 restaurants and now has 3 left, selling mainly because of equity and infighting in family partnerships.",
+        "The Fujian discussion: AJ says Fujian people are like a spring that can be pressed to the very bottom; Fuqing's mutual aid is strong — daring to venture, invest and act — but the leverage of mutual aid piled up also caused chain bankruptcies in the past decade. The room agreed to a future session on 'Fujian bandit-style striving culture'."
+      ],
+      "highlights_tw": [
+        "茄哥的結論：「在我們這個 Space 裡，我認為就斷了你上班的念頭」——很多職業（金融、專項技能）看似上班實為創業、是為創業打基礎；但前提是先認真跑滿 90 天再下結論，沒認真做就沒資格說不適合。",
+        "Dr.Yu：創業與上班本質一樣，先看天賦——找到你比別人有 10%–20% 優勢、做起來得心應手的事；兩者是遞進關係，不上班就不懂一件事怎麼在組織裡做成。",
+        "西西老師的「斜修論」與「正修論」：他選先創業後工作，面試加分靠業務能力降維打擊；若在組織內，正修只修溝通——把一個人的信息變成很多人的信息，就是給信息上槓桿。",
+        "紅毛自述全場起步最低（未成年一個人離家出走去北京），方法論是「抄不丟人」、先靠數量取勝、沒有完美方案、想太多完美模型就是不動手；他正在帶幾個 00 後年輕人做 Claude 賬號生意（均為其現場說法）。",
+        "洗稿之爭：紅毛稱一個賬號不叫洗稿、10 個以上賬號矩陣才叫洗稿；西西則自述寫了 100 篇原創長文、享受表達不追求流量；定位論是「狼假裝成羊混入羊群，默默進化狼的技能、磨爪子磨牙齒」。",
+        "十歲哥：在美國做餐飲的福建人，約 2013 年 23–24 歲赴美，從後廚自學鐵板燒表演廚師起步，巔峰時有 10 家餐廳、現剩 3 家，賣店主因親戚合夥的股權比例講不清與內耗。",
+        "福建人討論：AJ 稱福建人像彈簧、能把彈簧壓到最底端；福清民間互助多、敢闖敢投敢幹，但互助的槓桿加在一起也導致近 10 年連環爆雷；眾人約了下期專場聊「福建土匪奮鬥文化」。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "xitang-ai-entrepreneurship-20261113",
+      "title": "噪音之后｜西堂：AI副业到AI创业，我是如何通过AI月入10w+",
+      "title_en": "Xitang: From AI Side Hustle to AI Startup — How I Make 100K+ a Month with AI",
+      "title_tw": "噪音之後｜西堂：AI副業到AI創業，我是如何通過AI月入10w+",
+      "series": "噪音之后",
+      "episode": null,
+      "date": "2026-11-13",
+      "host": "蜗牛King @isnail",
+      "guests": [
+        "西堂 @xitang_ai"
+      ],
+      "duration": "2 小时 10 分",
+      "duration_minutes": 130,
+      "url": "https://x.com/i/spaces/1QnYobqOmWeeOL",
+      "note_url": "/spaces/notes/xitang-ai-entrepreneurship-20261113.html",
+      "topics": [
+        "AI创业",
+        "AI副业",
+        "公众号商单",
+        "AI漫剧",
+        "短剧带货",
+        "培训",
+        "MCN",
+        "一人公司",
+        "AI视频",
+        "AI SaaS出海"
+      ],
+      "highlights": [
+        "西堂的结论：技术不值钱，核心是组织和人；AI 时代一个牛人能抵 10 个甚至 50 个人，他现在全职五六个人干的活，传统做法要 30 个人。",
+        "副业稳定月入过万很难，短期很难、长期有可能；他认为零基础打工人只有两条路能做到稳定月入过万——接商单，或做 MCN（或做 IP 流量）。",
+        "现在的现金牛是公众号商单：大号“西堂 AI 视频”均阅从约 1 万做到 1.5 万，单篇商单报价从 3000–4000 元涨到 8000–1 万元，个别品牌方 2 万多也成交；商单中 AIGC 类约占 60%–70%（均为西堂现场自述）。",
+        "时间线：2023 年做闲鱼、求职陪跑等非 AI 副业一年挣不到 1 万；2024 年 2 月 Sora 发布后切入 AI 视频，4 月 8 日团队成立，6 月接第一个政府宣传片商单（约 10 天、1 万多元）；2024 年 7 月 31 日首发培训（为找人不是为赚钱），三人副业当年年入 100 多万元；2025 年 2–10 月线下八个月无休、五六件事同干，3–5 月甚至亏钱；2025 年 10 月 31 日转 AI 漫剧，一个半月做 4 部半 120 分钟动态漫剧；2026 年 7 月 15 日切入公众号商单。",
+        "AI 漫剧已过赚钱窗口：2025 年 10 月底切入时 1 分钟能卖 1500 元，后来 800、600 元都接不到，保底也没了；2026 年 4 月市场下行，原因是字节从剧本、算力到投流全链条说了算、内容过饱和、平台收紧；承制是辛苦钱，培训才是能留下的部分。",
+        "新手别碰的三条线：短剧带货“没人挣钱”，核心在选品和带货能力，不在短剧技术；互动影游靠资源和资本；AI SaaS 出海至少做好半年甚至一年不赚钱的准备，技术不是关键，80% 是流量和运营，产品还容易被抄。",
+        "培训的本质是“招募合伙人”：核心员工全部来自高客单价课程学员；不承诺变现，提前说清楚教什么、能做出什么作品，优秀学员有商单会优先给。出书《AI 漫剧创作一本通》半年多卖了约 9 万册，到手 20 多万元（均为西堂现场自述）。"
+      ],
+      "highlights_en": [
+        "Xitang's conclusion: technology is not what matters — organization and people are. In the AI era one great person can replace 10 or even 50; his five-or-six full-timers now do work that would traditionally take 30 people.",
+        "A side hustle that stably earns 10K+ a month is hard — hard in the short term, possible in the long term. He says a beginner with no resources has only two paths to a stable 10K+: taking commercial orders, or building an MCN (or building IP traffic).",
+        "His current cash cow is WeChat official-account commercial orders: his main account 'Xitang AI Video' grew average reads from about 10K to 15K, and a single sponsored article's price rose from 3,000–4,000 yuan to 8,000–10,000 yuan, with some brands paying over 20,000 yuan; about 60%–70% of orders are AIGC-related (all his on-air claims).",
+        "Timeline: non-AI side hustles in 2023 (Xianyu reselling, job-hunting coaching) earned under 10,000 yuan in a year; after Sora launched in Feb 2024 he moved into AI video, founded the team on 8 Apr 2024, and won his first government promo-video order in June (about 10 days, over 10,000 yuan); first training product on 31 Jul 2024 was launched to recruit people, not to make money, and the three founders earned over 1 million yuan from side hustles that year; Feb–Oct 2025 offline, eight months with almost no rest and five or six lines at once, even losing money in Mar–May; pivoted to AI comic dramas on 31 Oct 2025, making 4.5 animated dramas of 120 minutes in six weeks; moved into official-account commercial orders on 15 Jul 2026.",
+        "AI comic dramas are past their money-making window: 1,500 yuan per minute when he entered in late Oct 2025, later 800 or 600 yuan per minute could not even win orders, and minimum guarantees vanished; the market turned down from Apr 2026 because ByteDance controls the whole chain from scripts to compute to paid traffic, content is oversupplied, and the platform tightened. Production work is hard labor; training is the part that survives.",
+        "Three lines beginners should avoid: short-drama e-commerce ('nobody makes money') — the core is product selection and selling ability, not drama-making skill; interactive games rely on resources and capital; AI SaaS going overseas needs at least six months to a year of no revenue, technology is not the key, 80% is traffic and operations, and products are easy to copy.",
+        "Training is essentially 'recruiting partners': all core employees came from high-ticket course students; he never promises monetization, states upfront what is taught and what work students can produce, and gives commercial orders to excellent students first. His book 'AI Comic Drama Creation Handbook' sold about 90,000 copies in over half a year, netting over 200,000 yuan (all his on-air claims)."
+      ],
+      "highlights_tw": [
+        "西堂的結論：技術不值錢，核心是組織和人；AI 時代一個牛人能抵 10 個甚至 50 個人，他現在全職五六個人幹的活，傳統做法要 30 個人。",
+        "副業穩定月入過萬很難，短期很難、長期有可能；他認為零基礎打工人只有兩條路能做到穩定月入過萬——接商單，或做 MCN（或做 IP 流量）。",
+        "現在的現金牛是公眾號商單：大號「西堂 AI 視頻」均閱從約 1 萬做到 1.5 萬，單篇商單報價從 3000–4000 元漲到 8000–1 萬元，個別品牌方 2 萬多也成交；商單中 AIGC 類約佔 60%–70%（均為西堂現場自述）。",
+        "時間線：2023 年做閒魚、求職陪跑等非 AI 副業一年掙不到 1 萬；2024 年 2 月 Sora 發布後切入 AI 視頻，4 月 8 日團隊成立，6 月接第一個政府宣傳片商單（約 10 天、1 萬多元）；2024 年 7 月 31 日首發培訓（為找人不是為賺錢），三人副業當年年入 100 多萬元；2025 年 2–10 月線下八個月無休、五六件事同幹，3–5 月甚至虧錢；2025 年 10 月 31 日轉 AI 漫劇，一個半月做 4 部半 120 分鐘動態漫劇；2026 年 7 月 15 日切入公眾號商單。",
+        "AI 漫劇已過賺錢窗口：2025 年 10 月底切入時 1 分鐘能賣 1500 元，後來 800、600 元都接不到，保底也沒了；2026 年 4 月市場下行，原因是字節從劇本、算力到投流全鏈條說了算、內容過飽和、平台收緊；承製是辛苦錢，培訓才是能留下的部分。",
+        "新手別碰的三條線：短劇帶貨「沒人掙錢」，核心在選品和帶貨能力，不在短劇技術；互動影遊靠資源和資本；AI SaaS 出海至少做好半年甚至一年不賺錢的準備，技術不是關鍵，80% 是流量和運營，產品還容易被抄。",
+        "培訓的本質是「招募合夥人」：核心員工全部來自高客單價課程學員；不承諾變現，提前說清楚教什麼、能做出什麼作品，優秀學員有商單會優先給。出書《AI 漫劇創作一本通》半年多賣了約 9 萬冊，到手 20 多萬元（均為西堂現場自述）。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "menwaihan-nvidia-20261113",
+      "title": "门外汉谈英伟达",
+      "title_en": "Outsiders on Nvidia",
+      "title_tw": "門外漢談英偉達",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-13",
+      "host": "E2M Research @E2mResearch",
+      "guests": [
+        "董珍",
+        "裴财",
+        "奥德赛 @OdysseysEth"
+      ],
+      "duration": "1 小时 23 分",
+      "duration_minutes": 83,
+      "url": "https://x.com/i/spaces/1QnYdaERmzOWoO",
+      "note_url": "/spaces/notes/menwaihan-nvidia-20261113.html",
+      "topics": [
+        "英伟达",
+        "黄仁勋辞职",
+        "王川",
+        "大猩猩",
+        "护城河",
+        "超级周期",
+        "CUDA",
+        "特斯拉",
+        "霍华德·马克斯"
+      ],
+      "highlights": [
+        "背景：2026 年 11 月 12 日英伟达公告黄仁勋辞去总裁、CEO 及董事职务，CFO 克雷斯暂代，本场在消息落地次日开播，核心问题是黄仁勋离开后英伟达还是不是值得下注的标的。",
+        "董珍的开场判断：英伟达过去三年的成长性是真实的，但未必证明它是“大猩猩”——他说从王川 2023 年看空算起，股价到高点涨了约 6 倍、营收也涨了约 6 倍，毛利率约 70% 升到约 75%（均为董珍现场说法）。",
+        "CUDA 护城河正在被 AI 本身削弱：董珍说 Anthropic 把英伟达 GPU 与谷歌、亚马逊、AMD 算力并列，借助 AI 只花一天就完成 AMD GPU 部署（董珍转述），跨平台部署成本下降，CUDA 的墙没有消失但深度可能变浅。",
+        "裴财的框架：关系权力 vs 结构权力。CUDA 属于结构权力的一部分，但对 OpenAI、xAI 这类高度依赖英伟达的客户，它同时在大量使用关系权力——芯片紧缺时先买几年货才能保证以后的配货；黄仁勋是整张权力网络最关键的节点，他离开，权力网络都会变，所以他现在不会买英伟达。",
+        "奥德赛的质疑：王川的“大猩猩”判断本来就是定性的，如果先说英伟达不是大猩猩、股价涨了 6 倍又改口说“它只有三年的关系权力”，等于用辅助假设把原判断救回来；他还追问 2021 年 PE 已到约 40 倍时为什么不是周期终点。",
+        "全场没有共识：王川到底是“错过”还是“主动不碰”；超级周期里的交易机会算不算可复制的能力；以及霍华德·马克斯“风险补偿够不够”到底怎么量化——裴财直言那套话“不可能错”，但也很难证伪。"
+      ],
+      "highlights_en": [
+        "Context: on 12 Nov 2026 Nvidia announced Jensen Huang resigned as president, CEO and director, with CFO Colette Kress as interim CEO. This Space aired the next day, asking whether Nvidia is still worth betting on after Huang.",
+        "Dongzhen's opening judgment: Nvidia's growth over the past three years is real, but it does not prove it is a 'gorilla' — he said since Wang Chuan's bearish 2023 article, the share price rose about 6x to its peak and revenue also about 6x, with gross margin rising from about 70% to about 75% (his on-air figures).",
+        "The CUDA moat is being weakened by AI itself: Dongzhen said Anthropic listed Nvidia GPUs alongside Google, Amazon and AMD compute, and used AI to deploy AMD GPUs in a single day (his retelling), so cross-platform deployment costs are falling and the CUDA wall may be getting shallower.",
+        "Peicai's framework: relational power vs structural power. CUDA is partly structural power, but for customers heavily dependent on Nvidia such as OpenAI and xAI, Nvidia also exercises relational power — buy several years' supply now to secure future allocation. Huang is the key node of the whole power network; with him gone, the network changes, so Peicai would not buy Nvidia now.",
+        "Odysseys' challenge: Wang Chuan's 'gorilla' judgment was qualitative to begin with; saying Nvidia is not a gorilla and then, after a 6x rally, adding 'it only had three years of relational power' is rescuing the original judgment with an auxiliary hypothesis. He also asked why 2021, when the P/E was already about 40x, was not the cycle's end.",
+        "No consensus: whether Wang Chuan 'missed' Nvidia or deliberately avoided it; whether trading a super-cycle is a replicable skill; and how to quantify Howard Marks' 'is the risk compensation enough' — Peicai said that framing 'cannot be wrong', but is also hard to falsify."
+      ],
+      "highlights_tw": [
+        "背景：2026 年 11 月 12 日英偉達公告黃仁勳辭去總裁、CEO 及董事職務，CFO 克雷斯暫代，本場在消息落地次日開播，核心問題是黃仁勳離開後英偉達還是不是值得下注的標的。",
+        "董珍的開場判斷：英偉達過去三年的成長性是真實的，但未必證明它是「大猩猩」——他說從王川 2023 年看空算起，股價到高點漲了約 6 倍、營收也漲了約 6 倍，毛利率約 70% 升到約 75%（均為董珍現場說法）。",
+        "CUDA 護城河正在被 AI 本身削弱：董珍說 Anthropic 把英偉達 GPU 與谷歌、亞馬遜、AMD 算力並列，借助 AI 只花一天就完成 AMD GPU 部署（董珍轉述），跨平台部署成本下降，CUDA 的牆沒有消失但深度可能變淺。",
+        "裴財的框架：關係權力 vs 結構權力。CUDA 屬於結構權力的一部分，但對 OpenAI、xAI 這類高度依賴英偉達的客戶，它同時在大量使用關係權力——芯片緊缺時先買幾年貨才能保證以後的配貨；黃仁勳是整張權力網絡最關鍵的節點，他離開，權力網絡都會變，所以他現在不會買英偉達。",
+        "奧德賽的質疑：王川的「大猩猩」判斷本來就是定性的，如果先說英偉達不是大猩猩、股價漲了 6 倍又改口說「它只有三年的關係權力」，等於用輔助假設把原判斷救回來；他還追問 2021 年 PE 已到約 40 倍時為什麼不是週期終點。",
+        "全場沒有共識：王川到底是「錯過」還是「主動不碰」；超級週期裡的交易機會算不算可複製的能力；以及霍華德·馬克斯「風險補償夠不夠」到底怎麼量化——裴財直言那套話「不可能錯」，但也很难證偽。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "phyrex-crypto-security-talk-20261111",
+      "title": "加密货币行业安全对话",
+      "title_en": "Crypto Industry Security Dialogue",
+      "title_tw": "加密貨幣行業安全對話",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-11",
+      "host": "Phyrex @PhyrexNi",
+      "guests": [
+        "谢家印 @xiejiayinBitget（Bitget）"
+      ],
+      "duration": "53 分 08 秒",
+      "duration_minutes": 53,
+      "url": "https://x.com/i/spaces/1BlLyALqJrgylv",
+      "note_url": "/spaces/notes/phyrex-crypto-security-talk-20261111.html",
+      "topics": [
+        "交易所安全",
+        "Bitget OCN",
+        "托管与交易分离",
+        "赔付",
+        "冷钱包",
+        "用户资产迁移"
+      ],
+      "highlights": [
+        "核心判断：赔付是底线，不是功劳。谢家印：被盗后赔付用户是交易所的职业道德与底线，不能因为赔了就值得被夸；行业真正的痛点是资产集中带来的单点风险。",
+        "Bitget 的新打法 OCN 开放托管网络，口号「资产在银行，交易在 Bitget」：真实资产托管在银行或专业托管机构，通过资产映射在 Bitget 交易，黑客即便得手也只能拿到无法兑现的映射凭证。",
+        "「大所」不再等于安全：Bybit、币安、Bitget 都很大、也都出过事，大所之间已没有绝对的安全碾压；要看的是平台能否改变资产单一集中的结构。",
+        "用户行为已经在迁移：普通用户开始把资金分散到三四家交易所，不再只看规模和深度；部分人把 BTC 换成 IBIT、ETH 换成 ETHA；「没被盗只是幸存者偏差」。",
+        "OCN 还很早期：2026 年 10 月初 Bitget 出事后才决定做，内部测试约两周、只对机构客户开放；转账清算、授信与风控机制都还没想透，谢家印现场坦承「摸着石头过河」。"
+      ],
+      "highlights_en": [
+        "The core judgment: compensating users after a hack is the baseline, not something to praise. Xie Jiayin: reimbursement is an exchange's professional duty; the real pain point is the single-point risk created by concentrated custody.",
+        "Bitget's new play, OCN (Open Custody Network), under the slogan 'Assets in the bank, trading on Bitget': real assets sit with banks or professional custodians and are mirrored into Bitget for trading, so a hacker who gets in can only steal unredeemable mirror credentials.",
+        "Big no longer means safe: Bybit, Binance and Bitget are all huge — and all have been hacked. There is no absolute safety gap between the big exchanges; what matters is whether a platform can change the fact that assets concentrate in one place.",
+        "User behavior is already shifting: retail users are spreading funds across three or four exchanges instead of judging by size and depth; some are swapping BTC for IBIT and ETH for ETHA; 'not being hacked is just survivorship bias.'",
+        "OCN is still very early: decided only after Bitget's early-October 2026 incident, in internal testing for about two weeks and open to institutional clients only; transfer settlement, credit and risk-control mechanics are unresolved — Xie admitted on air they are 'crossing the river by feeling the stones.'"
+      ],
+      "highlights_tw": [
+        "核心判斷：賠付是底線，不是功勞。謝家印：被盜後賠付用戶是交易所的職業道德與底線，不能因為賠了就值得被誇；行業真正的痛點是資產集中帶來的單點風險。",
+        "Bitget 的新打法 OCN 開放托管網絡，口號「資產在銀行，交易在 Bitget」：真實資產托管在銀行或專業托管機構，通過資產映射在 Bitget 交易，黑客即便得手也只能拿到無法兌現的映射憑證。",
+        "「大所」不再等於安全：Bybit、幣安、Bitget 都很大、也都出過事，大所之間已沒有絕對的安全碾壓；要看的是平台能否改變資產單一集中的結構。",
+        "用戶行為已經在遷移：普通用戶開始把資金分散到三四家交易所，不再只看規模和深度；部分人把 BTC 換成 IBIT、ETH 換成 ETHA；「沒被盜只是倖存者偏差」。",
+        "OCN 還很早期：2026 年 10 月初 Bitget 出事後才決定做，內部測試約兩週、只對機構客戶開放；轉賬清算、授信與風控機制都還沒想透，謝家印現場坦承「摸著石頭過河」。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "xianzhe-19-20261110",
+      "title": "《贤者时间》第 19 期：有钱了你会变坏吗？",
+      "title_en": "Sage Time Ep. 19: Would You Turn Bad If You Got Rich?",
+      "title_tw": "《賢者時間》第 19 期：有錢了你會變壞嗎？",
+      "series": "贤者时间",
+      "episode": 19,
+      "date": "2026-11-10",
+      "host": "AZ @AZ77678",
+      "guests": [
+        "茄哥 @qg7777（联合主持）",
+        "Lacey @Lacey8ea（联合主持）",
+        "希西老师",
+        "电击小子",
+        "小冷"
+      ],
+      "duration": "4 小时 59 分",
+      "duration_minutes": 299,
+      "url": "https://x.com/i/spaces/1OdWkYPodYyQEV",
+      "note_url": "/spaces/notes/xianzhe-19-20261110.html",
+      "topics": [
+        "财富与道德",
+        "A9",
+        "商业与慈善",
+        "爱情四分法",
+        "亲密关系"
+      ],
+      "highlights": [
+        "核心框架：钱不直接让人变坏，它做的是两件事——选择变多、约束变少；变坏还是变好，取决于原来就想做什么。茄哥：「有钱只是让道德边界模糊了一点」「没钱的时候不做没底线的掠夺，有钱的时候不为富不仁」。",
+        "「有钱」的划线 A9：国内 500 万美金、国外 1000 万美金现金。各自的 A9 幻想：找四个男朋友、旅居、养一支电竞战队、开工厂、开医院、找个安静的地方远离纷扰。",
+        "捐钱还是开公司：场上反对直接捐钱（「捐钱是最大的贪腐，钱不好监管」），茄哥的结论被多人认同——最大的慈善是商业，开公司发工资、养活家庭和上下游产业链，就是最大的交税与社会责任。",
+        "全场最实在的一段：一位在校大学生求助（父母是体力劳动者、欠十几万债、父亲接近崩溃、自己两年给家里转了近十万）。茄哥：十几万咬牙帮还，五十万以上一毛钱都不要掏；先给父母买保险，防未来五到十年的重大疾病；剩下的就是把你自己过好。",
+        "后半段滑入爱情与亲密关系：希西老师「爱情四分法」——浪漫、吸引、激情、长期四者互斥，每人总分 200 点，不可能同时拉满；女生眼中好男人的标准：拎得清、诚实、情绪稳定、底色善良；抽身能力比拿得起更重要。"
+      ],
+      "highlights_en": [
+        "The frame everyone converged on: money doesn't make you bad directly — it gives you more choices and removes constraints; whether you turn 'bad' depends on what you already wanted. Qiege: 'Money just blurs your moral boundaries a little.'",
+        "The 'rich' line drawn in the room: A9 — US$5M in cash in China, US$10M abroad. A9 fantasies: four boyfriends, slow travel, bankrolling an esports team, opening a factory or hospital, or just finding a quiet place.",
+        "Donations vs business: the room rejected direct donations ('donating is the biggest corruption; the money can't be supervised'); Qiege's take won broad agreement — the greatest charity is business itself: a company paying wages is the greatest tax contribution and social responsibility.",
+        "The most practical segment: a college student whose laborer parents owe over ¥100k, whose father is near breakdown. Qiege's advice: help repay a ¥100k-level debt, but not a cent toward ¥500k+; buy the parents major-illness insurance first; then get your own life in order.",
+        "The second half slid into relationships: Teacher Xixi's 'Four Parts of Love' — romance, attraction, passion and the long term are mutually exclusive, 200 points in total; a good man is clear-headed, honest, emotionally stable and kind at the core; the ability to walk away matters more than the ability to hold on."
+      ],
+      "highlights_tw": [
+        "核心框架：錢不直接讓人變壞，它做的是兩件事——選擇變多、約束變少；變壞還是變好，取決於原來就想做什麼。茄哥：「有錢只是讓道德邊界模糊了一點」「沒錢的時候不做沒底線的掠奪，有錢的時候不為富不仁」。",
+        "「有錢」的劃線 A9：國內 500 萬美金、國外 1000 萬美金現金。各自的 A9 幻想：找四個男朋友、旅居、養一支電競戰隊、開工廠、開醫院、找個安靜的地方遠離紛擾。",
+        "捐錢還是開公司：場上反對直接捐錢（「捐錢是最大的貪腐，錢不好監管」），茄哥的結論被多人認同——最大的慈善是商業，開公司發工資、養活家庭和上下游產業鏈，就是最大的交稅與社會責任。",
+        "全場最實在的一段：一位在校大學生求助（父母是體力勞動者、欠十幾萬債、父親接近崩潰、自己兩年給家裡轉了近十萬）。茄哥：十幾萬咬牙幫還，五十萬以上一毛錢都不要掏；先給父母買保險，防未來五到十年的重大疾病；剩下的就是把你自己過好。",
+        "後半段滑入愛情與親密關係：希西老師「愛情四分法」——浪漫、吸引、激情、長期四者互斥，每人總分 200 點，不可能同時拉滿；女生眼中好男人的標準：拎得清、誠實、情緒穩定、底色善良；抽身能力比拿得起更重要。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "coin-bureau-bitcoin-below-75k-ai-crash-20261109",
+      "title": "《比特币跌破 75K、AI 崩盘与民主党加密整顿？》",
+      "title_en": "Bitcoin Below $75K, AI CRASH & Democrat Crypto Crackdown?",
+      "title_tw": "《比特幣跌破 75K、AI 崩盤與民主黨加密整頓？》",
+      "series": "Coin Bureau News Live",
+      "episode": null,
+      "date": "2026-11-09",
+      "host": "Guy 与 Nic @coinbureau（Coin Bureau）",
+      "guests": [
+        "Lewis（技术分析嘉宾）"
+      ],
+      "duration": "54 分 05 秒",
+      "duration_minutes": 54,
+      "url": "https://x.com/i/broadcasts/2JQXvdeqYJarKk",
+      "note_url": "/spaces/notes/coin-bureau-bitcoin-below-75k-ai-crash-20261109.html",
+      "topics": [
+        "民主党中期选举横扫",
+        "AI 股崩盘",
+        "数据中心禁令",
+        "比特币跌破 75K",
+        "CLARITY 法案",
+        "Elizabeth Warren",
+        "参议院银行委员会",
+        "传票权",
+        "Lewis 技术分析",
+        "HYPE",
+        "PEPE",
+        "TAO",
+        "巴拉圭银行危机",
+        "黄仁勋"
+      ],
+      "highlights": [
+        "民主党中期选举横扫两院：拿下众议院与参议院、至少 5 个州长席位和 5 个州的完整州级控制权；市场先因结果落地反弹一天，随后消化到监管含义，科技股出现自新冠以来最惨暴跌，纳斯达克 100 跌超 6%、标普跌近 4.5%（均为发言人现场说法，未经核实）。",
+        "数据中心成为选举核心议题：俄亥俄州 14 个市镇禁止或限制数据中心（含叫停亚马逊 20 亿美元项目），另有 8 个市镇通过暂停或禁令，俄亥俄与俄克拉荷马有市长因支持数据中心项目被罢免；主持人称民众不喜欢数据中心、尤其不想住在它旁边。",
+        "加密行业政治豪赌落空：行业投入约 2 亿美元、支持的多名候选人落败，CLARITY 法案基本没戏；2027 年 1 月起民主党掌握传票权，可强制行业人物出庭作证，电视直播听证会将至；特朗普家族被指通过代币销售与加密业务赚约 16 亿美元，成最大软肋。",
+        "比特币跌破 75K 但嘉宾 Lewis 仍总体看多：75–76K 的 38.2% 回撤位未守住，下一关键位是 61.8% 黄金分割约 69–70K，跌破 69K 他才会转空；以太坊黄金分割位约 2,000 美元；TOTAL2 回到自 2020 年以来有效的趋势线，山寨币或迎反弹。",
+        "Lewis 持仓表态：重仓 HYPE 与 PERP（Hyperliquid 相关），称在 Druckenmiller 被曝买入 PERP 后已成彻底的 maximalist、越跌越买；看好 PEPE 下跌期的相对强势与 TAO 的技术位置；目前不用任何杠杆，只做现货重仓。",
+        "其他看点：巴拉圭最大零售银行被央行接管、约 60% 成年人口一度无法使用银行服务，总统被迫辞职，主持人以此论证持有银行体系之外资产的意义；黄仁勋被曝绯闻与间谍指控，主持人认为目前证据下是雷声大雨点小；本周关注 10 月 CPI、思科财报、三季度 GDP 与美国 PPI。"
+      ],
+      "highlights_en": [
+        "Democrats swept both chambers in the midterms — House, Senate, at least five governors' offices and full control of five state governments; markets rallied one day on the result landing, then tech suffered its worst crash since COVID as the regulatory implications sank in, with the Nasdaq 100 down over 6% and the S&P down nearly 4.5% (all speakers' claims, unverified).",
+        "Data centers became a ballot-box issue: 14 Ohio municipalities banned or restricted them (including halting Amazon's $2B project), eight more passed moratoriums or bans, and mayors in Ohio and Oklahoma were recalled for backing data-center projects; the hosts said people don't like data centers, especially living next to one.",
+        "Crypto's political bet failed: the industry spent about $200M and many backed candidates lost; the CLARITY Act is effectively dead, and from January Democrats hold subpoena power to compel industry figures to testify in televised hearings; the Trump family's roughly $1.6B from token sales and crypto ventures is the biggest vulnerability.",
+        "Bitcoin fell below $75K but guest Lewis stays broadly bullish: the 38.2% retracement at $75–76K didn't hold, next key level is the 61.8% golden ratio around $69–70K — only below $69K would he turn bearish; Ethereum's golden ratio sits near $2,000; TOTAL2 is back on its trendline held since 2020, so altcoins may bounce.",
+        "Lewis's positioning: heavily long HYPE and PERP (Hyperliquid-related), calling himself a total maxi after Druckenmiller was reported buying PERP, buying more on dips; likes PEPE's relative strength in the sell-off and TAO's technical setup; no leverage right now, spot only.",
+        "Other threads: Paraguay's largest retail bank was put into resolution, leaving about 60% of adults temporarily unable to bank, and its president was forced to resign — the hosts used it to argue for assets outside the banking system; Jensen Huang faces affair and spy allegations the hosts called a nothing burger on current evidence; this week brings October CPI, Cisco earnings, Q3 GDP and US PPI."
+      ],
+      "highlights_tw": [
+        "民主黨中期選舉橫掃兩院：拿下眾議院與參議院、至少 5 個州長席位和 5 個州的完整州級控制權；市場先因結果落地反彈一天，隨後消化到監管含義，科技股出現自新冠以來最慘暴跌，納斯達克 100 跌超 6%、標普跌近 4.5%（均為發言人現場說法，未經核實）。",
+        "數據中心成為選舉核心議題：俄亥俄州 14 個市鎮禁止或限制數據中心（含叫停亞馬遜 20 億美元項目），另有 8 個市鎮通過暫停或禁令，俄亥俄與俄克拉荷馬有市長因支持數據中心項目被罷免；主持人稱民眾不喜歡數據中心、尤其不想住在它旁邊。",
+        "加密行業政治豪賭落空：行業投入約 2 億美元、支持的多名候選人落敗，CLARITY 法案基本沒戲；2027 年 1 月起民主黨掌握傳票權，可強制行業人物出庭作證，電視直播聽證會將至；特朗普家族被指通過代幣銷售與加密業務賺約 16 億美元，成最大軟肋。",
+        "比特幣跌破 75K 但嘉賓 Lewis 仍總體看多：75–76K 的 38.2% 回撤位未守住，下一關鍵位是 61.8% 黃金分割約 69–70K，跌破 69K 他才會轉空；以太坊黃金分割位約 2,000 美元；TOTAL2 回到自 2020 年以來有效的趨勢線，山寨幣或迎反彈。",
+        "Lewis 持倉表態：重倉 HYPE 與 PERP（Hyperliquid 相關），稱在 Druckenmiller 被曝買入 PERP 後已成徹底的 maximalist、越跌越買；看好 PEPE 下跌期的相對強勢與 TAO 的技術位置；目前不用任何槓桿，只做現貨重倉。",
+        "其他看點：巴拉圭最大零售銀行被央行接管、約 60% 成年人口一度無法使用銀行服務，總統被迫辭職，主持人以此論證持有銀行體系之外資產的意義；黃仁勳被曝緋聞與間諜指控，主持人認為目前證據下是雷聲大雨點小；本週關注 10 月 CPI、思科財報、三季度 GDP 與美國 PPI。"
+      ],
+      "source": "broadcast"
+    },
+    {
+      "id": "stocks-btc-talk-20261109",
+      "title": "《11.9 黄仁勋出轨 股票继续崩还是反弹? 时间之窗已经到来!》",
+      "title_en": "Nov 9: Jensen Huang Scandal — Stocks Keep Crashing or Rebound? The Window Has Arrived | Stocks BTC Talk",
+      "title_tw": "《11.9 黃仁勳出軌 股票繼續崩還是反彈？時間之窗已經到來！》",
+      "series": "Stocks BTC Talk",
+      "episode": null,
+      "date": "2026-11-09",
+      "host": "茄哥 @qg7777",
+      "guests": [
+        "陈冬冬 @chenkaide73",
+        "樑枝102 @liangyiwei11",
+        "Ethan @Weex996",
+        "西西米修斯 @Sisymithus",
+        "Bono @CuiBono_pinap"
+      ],
+      "duration": "3 小时 26 分",
+      "duration_minutes": 207,
+      "url": "https://x.com/i/spaces/1LPXqLldgjBOmv",
+      "note_url": "/spaces/notes/stocks-btc-talk-20261109.html",
+      "topics": [
+        "美股",
+        "比特币",
+        "英伟达",
+        "黄仁勋",
+        "CPI",
+        "12 月加息",
+        "黄金",
+        "狗狗币",
+        "中期选举"
+      ],
+      "highlights": [
+        "今晚看反弹、不是反转：茄哥全场主线是暴跌之后必有反弹，美股与比特币今晚都看反弹；但反弹走完、到 11 月底至圣诞节前结束之后，2027 年是“整个的大熊市”，持续到 2028 大选年才可能反转（均为发言人现场说法，未经核实）。",
+        "黄仁勋“出轨”事件被定性为情绪与消息面砸盘：新闻在美东周末凌晨 5 点爆出而非周一盘前，茄哥认为是“设计好了”的，目的是在底部制造“黄金坑”；西西米修斯提出损害三分类——形象损害最不重要、能力损害可修补、诚信损害最难修复，目前尚看不清属于哪一种，“让子弹飞一会儿”。",
+        "本周最重要的数据是 11 月 10 日（周二）晚公布的 CPI：市场预期整体环比 0.3%（前值 0.6%）、核心环比与核心同比均下降；若 CPI 利好反弹多涨一天，若爆冷门反弹可能就此结束；12 月加息概率被报为 78.3%。",
+        "比特币：回撤到 73,333 附近被视为到位（200 日均线位置），今晚看反弹到 75,000–76,500；反弹高点可能在 11 月底前出现，之后回落，12 月初可能回调、明年 1 月底前或有小高点；长期节奏是 A 浪反弹—B 浪盘整—C 浪再拉，盘整或持续到明年 3 月再冲新高（发言人口径：9 万多）。",
+        "操作口径（发言人自述）：空单在当前位置该平掉，茄哥称自己 CRWV 空单准备平掉；无仓位者只做短线、快进快出；现货紧盯比特币高点拐点，比特币到 78,000–80,000 附近分批出货；狗狗币 0.07 以下可买、反弹目标 0.09 附近；三倍做空 ETF 在 10 月份要谨慎，随时可能被反弹拉爆。"
+      ],
+      "highlights_en": [
+        "Rebound tonight, not a reversal: the host's core call was that a sharp sell-off must be followed by a rebound, for both US stocks and Bitcoin; but once the rebound runs its course — by late November to before Christmas — 2027 will be 'one big bear market', lasting until the 2028 election year (all speakers' claims, unverified).",
+        "The Jensen Huang 'cheating' story was framed as sentiment-driven, news-based selling: the story broke at 5 a.m. US Eastern on the weekend rather than before Monday's open, which the host called 'designed' to dig a 'golden pit' for bottom buyers; guest Sisymithus offered a three-way damage taxonomy — reputational damage matters least, competence damage can be repaired, integrity damage is hardest to fix — and said it is still unclear which one this is: 'let the bullet fly a while.'",
+        "The week's key data is CPI, due Tuesday night, November 10: consensus sees headline month-on-month at 0.3% (prior 0.6%), with core month-on-month and year-on-year both falling; a friendly CPI extends the rebound another day, a cold surprise could end it; the December rate-hike probability was quoted at 78.3%.",
+        "Bitcoin: the pullback to around $73,333 was treated as complete (the 200-day line), with a rebound tonight toward $75,000–$76,500; the rebound high may come before end-November, followed by a pullback, a possible early-December dip and a small high before end-January; the longer path is wave-A rebound, wave-B consolidation, wave-C push, with consolidation possibly lasting until March before a new high (the speaker's figure: above $90,000).",
+        "Trading stance (speakers' own words): close shorts at current levels — the host said he would close his CRWV short; no-position traders should only scalp and exit fast; spot holders should watch for Bitcoin's high-point turn and scale out near $78,000–$80,000; Dogecoin is a buy below $0.07 with a rebound target near $0.09; triple-inverse ETFs need caution in October — a snap rebound can blow them up."
+      ],
+      "highlights_tw": [
+        "今晚看反彈、不是反轉：茄哥全場主線是暴跌之後必有反彈，美股與比特幣今晚都看反彈；但反彈走完、到 11 月底至聖誕節前結束之後，2027 年是「整個的大熊市」，持續到 2028 大選年才可能反轉（均為發言人現場說法，未經核實）。",
+        "黃仁勳「出軌」事件被定性為情緒與消息面砸盤：新聞在美東週末凌晨 5 點爆出而非週一盤前，茄哥認為是「設計好了」的，目的是在底部製造「黃金坑」；西西米修斯提出損害三分類——形象損害最不重要、能力損害可修補、誠信損害最難修復，目前尚看不清屬於哪一種，「讓子彈飛一會兒」。",
+        "本週最重要的數據是 11 月 10 日（週二）晚公佈的 CPI：市場預期整體環比 0.3%（前值 0.6%）、核心環比與核心同比均下降；若 CPI 利好反彈多漲一天，若爆冷門反彈可能就此結束；12 月加息概率被報為 78.3%。",
+        "比特幣：回撤到 73,333 附近被視為到位（200 日均線位置），今晚看反彈到 75,000–76,500；反彈高點可能在 11 月底前出現，之後回落，12 月初可能回調、明年 1 月底前或有小高點；長期節奏是 A 浪反彈—B 浪盤整—C 浪再拉，盤整或持續到明年 3 月再衝新高（發言人口徑：9 萬多）。",
+        "操作口徑（發言人自述）：空單在當前位置該平掉，茄哥稱自己 CRWV 空單準備平掉；無倉位者只做短線、快進快出；現貨緊盯比特幣高點拐點，比特幣到 78,000–80,000 附近分批出貨；狗狗幣 0.07 以下可買、反彈目標 0.09 附近；三倍做空 ETF 在 10 月份要謹慎，隨時可能被反彈拉爆。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "binance-fireside-chat-20261109",
+      "title": "《币安炉边谈话：10·29 安全事件回应》",
+      "title_en": "Binance Fireside Chat",
+      "title_tw": "《幣安爐邊談話：10·29 安全事件回應》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-09",
+      "host": "Jessica Walker @jessicasmw（币安团队）",
+      "guests": [
+        "Richard Teng @_RichardTeng（币安联席 CEO）",
+        "Yi He 何一 @heyibinance（币安联合创始人、联席 CEO）",
+        "Jimmy Su @JimmySu27（币安首席安全官）"
+      ],
+      "duration": "49 分 31 秒",
+      "duration_minutes": 50,
+      "url": "https://x.com/i/spaces/1ybALpPKvqmzaR",
+      "note_url": "/spaces/notes/binance-fireside-chat-20261109.html",
+      "topics": [
+        "币安 10·29 安全事件",
+        "交易所安全",
+        "假招聘面试",
+        "朝鲜黑客",
+        "MPC 热钱包",
+        "AI 安全",
+        "储备证明"
+      ],
+      "highlights": [
+        "核心定性：10 月 29 日攻击利用内部钱包签名服务的未授权访问，约 63.4 亿美元数字资产受影响；受损的是币安自有热钱包，用户资金未受影响、损失由币安全额承担（均为发言人现场说法，未经核实）。",
+        "资金已基本补足：约 98% 受影响代币资产已补足，剩余 2% 为流动性较低的资产；Richard 现场称约 50 亿美元已被冻结或拦截（该句转写有杂音，数字存疑；币安 10 月 30 日公开稿称约 30 亿美元已冻结）。",
+        "攻击链：9 月假招聘面试——工程师在正规求职平台被冒充项目总监者接触，次轮冒充某金融科技公司 CEO 面谈，最后被要求下载“作业”代码仓库，零日恶意软件在安装中执行并替换开发工具组件；2026 年内币安已拦截 57 起疑似朝鲜相关网络威胁。",
+        "为何暂停提现后资金仍流出：攻击者滥用的链上授权独立于币安提现基础设施；热钱包采用 MPC、无单一私钥可立即撤销，团队须现开发撤销程序，遏制花了数小时而非数分钟。",
+        "与 FTX 的区别：FTX 暂停是因客户资金已经不在了；币安暂停是为保护本来就在的客户资金，数日内恢复服务，且用户可用储备证明自行核验余额。",
+        "整改路线：截至 11 月 3 日已在新环境重建钱包系统与内部 AI 工具、更换受影响设备、轮换凭证、全员扫描；下一步为更强环境隔离、独立安全审查、加大 AI 安全投入、设立行业安全研究基金。"
+      ],
+      "highlights_en": [
+        "The core facts: the October 29 attack exploited unauthorized access to Binance's internal wallet signing service, affecting about $6.34B in digital assets; Binance's own hot wallet was hit, user funds were unaffected and the loss is fully covered by Binance (all speakers' claims, unverified).",
+        "Recovery is nearly complete: about 98% of impacted token assets have been replenished, the remaining 2% are less liquid; Richard said about $5B had been frozen or intercepted (that line is garbled in transcription — Binance's October 30 statement put the frozen figure at about $3B).",
+        "The attack chain: a fake job interview in September — an engineer was approached on a legitimate job platform by someone posing as a project director, then interviewed by a fake CEO, and finally asked to download a coding-assignment repo; zero-day malware executed during setup and replaced a dev-tool component; Binance blocked 57 suspected North Korea-linked threat cases in 2026.",
+        "Why outflows continued after withdrawals were paused: the abused on-chain authorization lived independently of Binance's withdrawal infrastructure, and the MPC hot wallet had no single private key to revoke it instantly — the team had to build a revocation procedure under time pressure, so containment took hours, not minutes.",
+        "Not FTX: FTX paused because customer money was gone; Binance paused to protect customer money that was there, restored service within days, and users can verify balances against proof of reserves.",
+        "Remediation roadmap: by November 3 the wallet system and internal AI tools were rebuilt in a new environment, affected devices replaced, credentials rotated and all devices scanned; next steps are stronger environment isolation, an independent security review, bigger AI-security investment and an industry security research fund."
+      ],
+      "highlights_tw": [
+        "核心定性：10 月 29 日攻擊利用內部錢包簽名服務的未授權訪問，約 63.4 億美元數字資產受影響；受損的是幣安自有熱錢包，用戶資金未受影響、損失由幣安全額承擔（均為發言人現場說法，未經核實）。",
+        "資金已基本補足：約 98% 受影響代幣資產已補足，剩餘 2% 為流動性較低的資產；Richard 現場稱約 50 億美元已被凍結或攔截（該句轉寫有雜音，數字存疑；幣安 10 月 30 日公開稿稱約 30 億美元已凍結）。",
+        "攻擊鏈：9 月假招聘面試——工程師在正規求職平臺被冒充項目總監者接觸，次輪冒充某金融科技公司 CEO 面談，最後被要求下載「作業」代碼倉庫，零日惡意軟件在安裝中執行並替換開發工具組件；2026 年內幣安已攔截 57 起疑似朝鮮相關網絡威脅。",
+        "為何暫停提現後資金仍流出：攻擊者濫用的鏈上授權獨立於幣安提現基礎設施；熱錢包採用 MPC、無單一私鑰可立即撤銷，團隊須現開發撤銷程序，遏制花了數小時而非數分鐘。",
+        "與 FTX 的區別：FTX 暫停是因客戶資金已經不在了；幣安暫停是為保護本來就在的客戶資金，數日內恢復服務，且用戶可用儲備證明自行核驗餘額。",
+        "整改路線：截至 11 月 3 日已在新環境重建錢包系統與內部 AI 工具、更換受影響設備、輪換憑證、全員掃描；下一步為更強環境隔離、獨立安全審查、加大 AI 安全投入、設立行業安全研究基金。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "magageddon-blue-tidal-wave-20261108",
+      "title": "《MAGAGEDDON：蓝色浪潮——中期选举后的 MAGA 复盘》",
+      "title_en": "MAGAGEDDON: Blue Tidal Wave.",
+      "title_tw": "《MAGAGEDDON：藍色浪潮——中期選舉後的 MAGA 復盤》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-08",
+      "host": "Godfroy @g0dfr0y",
+      "guests": [
+        "Dr. Strange",
+        "Tisha",
+        "Mandy",
+        "Hubbard（Hubs）",
+        "Destiny",
+        "Thomas",
+        "Andy",
+        "Ian",
+        "Awakening Soul",
+        "Uma",
+        "Razzle"
+      ],
+      "duration": "5 小时 42 分",
+      "duration_minutes": 342,
+      "url": "https://x.com/i/spaces/1ybAlbKRYpEekE",
+      "note_url": "/spaces/notes/magageddon-blue-tidal-wave-20261108.html",
+      "topics": [
+        "美国中期选举",
+        "MAGA",
+        "特朗普",
+        "伊朗战争",
+        "Epstein",
+        "查理·柯克",
+        "托马斯·马西",
+        "尼克·富恩特斯",
+        "民主党",
+        "2028 大选"
+      ],
+      "highlights": [
+        "全场唯一共识：蓝色浪潮是选民对特朗普的否决、不是对民主党的拥抱——主持人 Godfroy 开场即定调，根源是伊朗战争、Epstein 案掩盖与查理·柯克遇刺调查失信三者叠加（均为发言人说法，未经核实）。",
+        "最大分歧是“特朗普是主谋还是棋子”：Godfroy 等人认为是“捧起来再摔碎”的受控拆除（controlled demolition），Dr. Strange 则认为他第一任期尚有自主性、第二任期被身边人操控并困于回音室。",
+        "托马斯·马西是全场唯一被普遍认可的政治人物：讨论集中在他应走共和党初选还是第三党路线；尼克·富恩特斯则评价两极，被称“造王者”也遭质疑实际影响力。",
+        "发言人声称的翻盘版图：民主党翻转得州、佐治亚、艾奥瓦等州长席位，参议院翻转堪萨斯、得州、南卡等；马斯克本次中期选举投入 4.74 亿美元（得州 2.34 亿）；出口民调称仅 16% 选民因支持特朗普投票、44% 因反对他投票（均未经核实）。",
+        "立场提示：本场是 MAGA 内部批评者视角，与合集内《Midterm 2026: 川普主义的升起与降落》互为对照；场内含大量针对犹太人、以色列的阴谋论与贬损言论，纪要已压缩为中性转述。"
+      ],
+      "highlights_en": [
+        "The room's only consensus: the blue wave was voters rejecting Trump, not embracing Democrats — host Godfroy set the tone at the open, blaming the Iran war, the Epstein cover-up and the loss of trust over the Charlie Kirk assassination investigation (all speakers' claims, unverified).",
+        "The biggest split was 'Trump: mastermind or pawn?': Godfroy and others called it a controlled demolition — built up, then smashed — while Dr. Strange argued Trump had real autonomy in his first term and was managed by his inner circle and trapped in an echo chamber in his second.",
+        "Thomas Massie was the only politician the room broadly agreed on, with debate over a Republican primary run versus a third-party bid; Nick Fuentes split the room, praised as a kingmaker and doubted over his real reach.",
+        "The claimed electoral map, per speakers: Democrats flipped governorships in Texas, Georgia and Iowa, and Senate seats in Kansas, Texas and South Carolina; Musk spent $474 million this midterm ($234 million in Texas); exit polls cited said only 16% voted because they backed Trump versus 44% because they opposed him (all unverified).",
+        "Position note: this is a MAGA-insider-critic take, a counterpoint to 'Midterm 2026: Rise & Fall of Trumpism' in the same collection; the session contained extensive conspiracy and disparaging claims about Jewish people and Israel, compressed here into neutral paraphrase."
+      ],
+      "highlights_tw": [
+        "全場唯一共識：藍色浪潮是選民對特朗普的否決、不是對民主黨的擁抱——主持人 Godfroy 開場即定調，根源是伊朗戰爭、Epstein 案掩蓋與查理·柯克遇刺調查失信三者疊加（均為發言人說法，未經核實）。",
+        "最大分歧是「特朗普是主謀還是棋子」：Godfroy 等人認為是「捧起來再摔碎」的受控拆除（controlled demolition），Dr. Strange 則認為他第一任期尚有自主性、第二任期被身邊人操控並困於回音室。",
+        "托馬斯·馬西是全場唯一被普遍認可的政治人物：討論集中在他應走共和黨初選還是第三黨路線；尼克·富恩特斯則評價兩極，被稱「造王者」也遭質疑實際影響力。",
+        "發言人聲稱的翻盤版圖：民主黨翻轉得州、佐治亞、艾奧瓦等州長席位，參議院翻轉堪薩斯、得州、南卡等；馬斯克本次中期選舉投入 4.74 億美元（得州 2.34 億）；出口民調稱僅 16% 選民因支持特朗普投票、44% 因反對他投票（均未經核實）。",
+        "立場提示：本場是 MAGA 內部批評者視角，與合集內《Midterm 2026: 川普主義的升起與降落》互為對照；場內含大量針對猶太人、以色列的陰謀論與貶損言論，紀要已壓縮為中性轉述。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "stocks-btc-talk-20261108",
+      "title": "《11.8 美股 比特币一周行情总结,下周走势预测 Stocks BTC Talk》",
+      "title_en": "Nov 8 Weekly Review: US Stocks & Bitcoin — Outlook for Next Week | Stocks BTC Talk",
+      "title_tw": "《11.8 美股 比特幣一週行情總結，下週走勢預測 Stocks BTC Talk》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-08",
+      "host": "茄哥 | Pod @qg7777",
+      "guests": [
+        "樑枝 @liangyiwei11",
+        "Yahoo @3DotWeb"
+      ],
+      "duration": "1 小时 30 分",
+      "duration_minutes": 90,
+      "url": "https://x.com/i/spaces/1MEXRXmnppjAyW",
+      "note_url": "/spaces/notes/stocks-btc-talk-20261108.html",
+      "topics": [
+        "美股",
+        "比特币",
+        "加密货币",
+        "宏观经济",
+        "美联储加息",
+        "CPI"
+      ],
+      "highlights": [
+        "下周看空为主：茄哥判断美股与比特币的回调都没有走完，QQQ 可能跌破 600、标普 500 的 200 日均线 7332（他报称）一旦彻底跌破将有大变化；比特币周线五连阴之后下周大概率还是阴线，底部一定会在 11 月出现，但修复到 12 万美元可能要等到 2027 年 11 月。",
+        "本周的反弹是被动反弹：他认为急反弹是爆仓、到期、杠杆平仓顶起来的，主动加仓的人很少；操作口径是“观望不下场”，现货没有加仓、没有抄底，最近不建议买期权，合约方向以看空为主。",
+        "关键窗口是 11 月 10 日（周二）的 10 月 CPI，可能进一步推高 12 月加息预期；他报称 12 月加息 25 个基点概率 76.3%，不排除一次性加 50 个基点的极端情况；美元走强、美债收益率暴涨是黄金、美股承压的核心逻辑。",
+        "比特币底位判断：200 日均线在 73,156 美元附近（他报称），底可能在 73,300 美元；若 11 月 9 日一次性插针到 71,400 美元以下可短期判断为底部、现货建头仓；狗狗币跌到 0.07 美元以下“看到就买”；索拉纳 80 美元加仓位一直没到。",
+        "政治叙事压倒一切：他认为民主党已掌控国会、AI 监管会比加密监管来得更快，2028 年大选共和党胜算不大；标普约 3 万亿美元市值可能被抹去（他引述的市场担忧）；特朗普家族与加密货币的关系、佩洛西买股等说法均为其个人观点，未经核实。"
+      ],
+      "highlights_en": [
+        "Bearish into next week: the host judged neither US stocks nor Bitcoin has finished correcting — QQQ could break below 600, and a clean break of the S&P 500's 200-day line at 7,332 (as he reported it) would be a major shift; after five straight weekly losses, Bitcoin will likely print another red week, with the bottom due in November but a recovery to $120,000 possibly not until November 2027.",
+        "This week's rebound was passive, driven by liquidations, expiries and leveraged position-closing, with few genuine buyers; his stance is to stay on the sidelines — no adding to spot, no bottom-fishing, no options buying, with futures positioned mainly short.",
+        "The key event is October CPI on Tuesday, November 10, which could push December rate-hike expectations higher; he quoted a 76.3% chance of a 25bp December hike and did not rule out a one-off 50bp move; a strong dollar and surging Treasury yields are his core case for pressure on gold and stocks.",
+        "Bitcoin bottom levels: the 200-day line near $73,156 (as he reported it), with the bottom possibly at $73,300; a one-day spike below $71,400 on November 9 could mark a short-term bottom for a first spot position; Dogecoin below $0.07 is a 'buy on sight', while his Solana add at $80 never triggered.",
+        "Politics dominated the narrative: he argued Democrats now control Congress, AI regulation will arrive faster than crypto regulation, and Republicans face long odds in 2028; about $3 trillion of S&P market value could be wiped out (a market worry he cited); claims about the Trump family's crypto ties and Pelosi's stock trades are his personal views, unverified."
+      ],
+      "highlights_tw": [
+        "下週看空為主：茄哥判斷美股與比特幣的回調都沒有走完，QQQ 可能跌破 600、標普 500 的 200 日均線 7332（他報稱）一旦徹底跌破將有大變化；比特幣週線五連陰之後下週大概率還是陰線，底部一定會在 11 月出現，但修復到 12 萬美元可能要等到 2027 年 11 月。",
+        "本週的反彈是被動反彈：他認為急反彈是爆倉、到期、槓桿平倉頂起來的，主動加倉的人很少；操作口徑是「觀望不下場」，現貨沒有加倉、沒有抄底，最近不建議買期權，合約方向以看空為主。",
+        "關鍵窗口是 11 月 10 日（週二）的 10 月 CPI，可能進一步推高 12 月加息預期；他報稱 12 月加息 25 個基點概率 76.3%，不排除一次性加 50 個基點的極端情況；美元走強、美債殖利率暴漲是黃金、美股承壓的核心邏輯。",
+        "比特幣底位判斷：200 日均線在 73,156 美元附近（他報稱），底可能在 73,300 美元；若 11 月 9 日一次性插針到 71,400 美元以下可短期判斷為底部、現貨建頭倉；狗狗幣跌到 0.07 美元以下「看到就買」；索拉納 80 美元加倉位一直沒到。",
+        "政治敘事壓倒一切：他認為民主黨已掌控國會、AI 監管會比加密監管來得更快，2028 年大選共和黨勝算不大；標普約 3 萬億美元市值可能被抹去（他引述的市場擔憂）；川普家族與加密貨幣的關係、裴洛西買股等說法均為其個人觀點，未經核實。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "xianzhe-20261107",
+      "title": "《贤者时间》第 16 期：年轻人如何不自卑不脆弱，如何社交？",
+      "title_en": "Sage Time Ep. 16: How Young People Can Stop Feeling Inferior, Grow Confidence and Socialize",
+      "title_tw": "《賢者時間》第 16 期：年輕人如何不自卑不脆弱，如何社交？",
+      "series": "贤者时间",
+      "episode": 16,
+      "date": "2026-11-07",
+      "host": "AZ @AZ77678",
+      "guests": [
+        "茄哥 @qg7777（联合主持）",
+        "Lacey @Lacey8ea（联合主持）",
+        "悲观的多头",
+        "sleep",
+        "Ann",
+        "Bono",
+        "电击小子",
+        "樑枝",
+        "小冷",
+        "班若",
+        "西西老师"
+      ],
+      "duration": "9 小时 32 分",
+      "duration_minutes": 572,
+      "url": "https://x.com/i/spaces/1dKLvpavqNqAly",
+      "note_url": "/spaces/notes/xianzhe-20261107.html",
+      "topics": [
+        "成长社交",
+        "X 运营",
+        "职场"
+      ],
+      "highlights": [
+        "自卑是持续消耗资源、信心与行动力的「负资产」，长期自卑会失去行动力；自信可以后天培养：先「fake it」，并找到自己的「不对称优势」",
+        "社交是能力放大器：把自己当作项目品牌经营，让别人快速识别你的性格、能力与可交换点",
+        "当领导者三点：不「厌蠢」、不太有攻击性、懂实用主义；「知识的诅咒」是领导力的障碍",
+        "X 运营线共识：做真实的人、发自拍、日发帖不低于 4 条；小账号不要讲道理，要做话题、预测与标题党",
+        "班若账号诊断：定位不清、表达太散、没有向下兼容——4000 多条帖子只有 600 多个关注"
+      ],
+      "highlights_en": [
+        "Low self-esteem is a 'negative asset' that drains resources, confidence and drive; confidence can be trained — 'fake it' first and find your asymmetric advantage",
+        "Socializing is an amplifier: run yourself like a project brand so others quickly see your character, skills and what you can exchange",
+        "Leading takes three things: don't despise 'stupidity', don't be overly aggressive, be pragmatic; the 'curse of knowledge' blocks leadership",
+        "X growth consensus: be a real person, post selfies, at least 4 posts a day; small accounts shouldn't preach — run topics, predictions and bold headlines",
+        "Account diagnosis for Banruo: unclear positioning and scattered expression — 4,000+ posts but only 600-odd followers"
+      ],
+      "highlights_tw": [
+        "自卑是持續消耗資源、信心與行動力的「負資產」，長期自卑會失去行動力；自信可以後天培養：先「fake it」，並找到自己的「不對稱優勢」",
+        "社交是能力放大器：把自己當作項目品牌經營，讓別人快速識別你的性格、能力與可交換點",
+        "當領導者三點：不「厭蠢」、不太有攻擊性、懂實用主義；「知識的詛咒」是領導力的障礙",
+        "X 運營線共識：做真實的人、發自拍、日發帖不低於 4 條；小賬號不要講道理，要做話題、預測與標題黨",
+        "班若賬號診斷：定位不清、表達太散、沒有向下兼容——4000 多條帖子只有 600 多個關注"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "pudate-20261106",
+      "title": "【普达特加密夜话】后川普时代，加密行业走势分析",
+      "title_en": "Pudate Crypto Night Talk: The Crypto Market in the Post-Trump Era",
+      "title_tw": "【普達特加密夜話】後川普時代，加密行業走勢分析",
+      "series": "普达特加密夜话",
+      "episode": null,
+      "date": "2026-11-06",
+      "host": "普达特 @Predator_fund",
+      "guests": [],
+      "duration": "2 小时 33 分",
+      "duration_minutes": 153,
+      "url": "https://x.com/i/spaces/1evWmQAJKLLPjm",
+      "note_url": "/spaces/notes/pudate-20261106.html",
+      "topics": [
+        "加密行情",
+        "美国政治"
+      ],
+      "highlights": [
+        "中期选举定性为川普大败，影响长达 50 年：参议院与最高法院格局将被改写，后川普时代是立法僵局",
+        "加密牛市没了、十年内不会有：民主党从根上反加密，比特币 12.6 万美元前高十年难破，9–10 万美元反弹有可能",
+        "以太坊已沦为「洗币工具」；华尔街要搞自己的联盟链，把 USDT 从以太坊与波场上收回去",
+        "他的仓位：只拿比特币和狗狗币当黄金（狗狗币 0.0588 美元买入、0.24 美元起套保），以太坊不碰，黄金等 3600 美元以下再买实物"
+      ],
+      "highlights_en": [
+        "The midterms are called a heavy Trump defeat with 50-year consequences: the Senate and Supreme Court balance will be rewritten, and the post-Trump era is legislative gridlock",
+        "The crypto bull market is over for a decade: Democrats are anti-crypto at the root; Bitcoin's $126K high won't be retaken for ten years, though a bounce to $90–100K is possible",
+        "Ethereum has degenerated into a 'money-laundering tool'; Wall Street will build its own consortium chains and pull USDT back from Ethereum and Tron",
+        "His book: only Bitcoin and Dogecoin held like gold (DOGE bought at $0.0588, hedged from $0.24); no Ethereum; physical gold only below $3,600"
+      ],
+      "highlights_tw": [
+        "中期選舉定性為川普大敗，影響長達 50 年：參議院與最高法院格局將被改寫，後川普時代是立法僵局",
+        "加密牛市沒了、十年內不會有：民主黨從根上反加密，比特幣 12.6 萬美元前高十年難破，9–10 萬美元反彈有可能",
+        "以太坊已淪為「洗幣工具」；華爾街要搞自己的聯盟鏈，把 USDT 從以太坊與波場上收回去",
+        "他的倉位：只拿比特幣和狗狗幣當黃金（狗狗幣 0.0588 美元買入、0.24 美元起套保），以太坊不碰，黃金等 3600 美元以下再買實物"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "walletv-20261105",
+      "title": "黑天鹅碰撞中期大选：巨震行情下，散户如何守住钱包与捕捉波动？",
+      "title_en": "Black Swans Meet the Midterms: How Retail Traders Guard Their Wallets and Catch Volatility",
+      "title_tw": "黑天鵝碰撞中期大選：巨震行情下，散戶如何守住錢包與捕捉波動？",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-05",
+      "host": "@WalletV_CN（WalletV中文）",
+      "guests": [
+        "@Paris13Jeanne（K线教主）",
+        "@qg7777（茄哥）",
+        "@bi_9527zx（DeFi狙击手）",
+        "@BTV_Michael（Michael）",
+        "@0xDonaldGao（唐长老）",
+        "@AdamCai15（Adam）"
+      ],
+      "duration": "1 小时 35 分",
+      "duration_minutes": 95,
+      "url": "https://x.com/i/spaces/1qVjpqmOElnWzg",
+      "note_url": "/spaces/notes/walletv-20261105.html",
+      "topics": [
+        "加密行情",
+        "钱包安全",
+        "AI 交易"
+      ],
+      "highlights": [
+        "短期共识「回调未完、不是熊市」：4 小时级别回调、标准 ABC，C 浪可能砸出「黄金坑」；坑有多深分歧极大（7 万止跌 vs 5 万开头）",
+        "钱包安全是最一致的实操共识：现货放真正物理隔离的冷钱包，交易资本不要全押在中心化交易所",
+        "自托管钱包被多位嘉宾视为交易资本的新去处，可分走 20%–40%",
+        "中期选举被「祛魅」：市场同时高估了它的影响与两党对加密的态度；真正要盯的是可能比肩 2008 年次贷危机的 AI 私募债",
+        "AI 交易判断克制：AI 不能创造策略，只能执行策略、做风控"
+      ],
+      "highlights_en": [
+        "Short-term consensus: 'the pullback isn't over, but it's not a bear market' — a 4-hour-level ABC correction whose C-wave may carve a 'golden pit'; depth estimates diverge wildly ($70K floor vs low $50Ks)",
+        "Wallet security drew the strongest consensus: spot holdings belong in truly air-gapped cold wallets; never keep all trading capital on centralized exchanges",
+        "Self-custody wallets are seen as the new home for trading capital, taking a 20%–40% share",
+        "The midterms were 'demystified': markets overrate their impact and both parties' crypto stance; the real thing to watch is AI private credit, a potential 2008-scale subprime-style bomb",
+        "On AI trading, the room stayed sober: AI cannot create strategies, only execute them and manage risk"
+      ],
+      "highlights_tw": [
+        "短期共識「回調未完、不是熊市」：4 小時級別回調、標準 ABC，C 浪可能砸出「黃金坑」；坑有多深分歧極大（7 萬止跌 vs 5 萬開頭）",
+        "錢包安全是最一致的實操共識：現貨放真正物理隔離的冷錢包，交易資本不要全押在中心化交易所",
+        "自託管錢包被多位嘉賓視為交易資本的新去處，可分走 20%–40%",
+        "中期選舉被「祛魅」：市場同時高估了它的影響與兩黨對加密的態度；真正要盯的是可能比肩 2008 年次貸危機的 AI 私募債",
+        "AI 交易判斷剋制：AI 不能創造策略，只能執行策略、做風控"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "us-midterm-election-night-20261104",
+      "title": "《美国中期选举之夜：民主党横扫与伊朗化学武器指控》",
+      "title_en": "LIVE: U.S MIDTERM ELECTIONS 2026 | ISRAEL: IRAN TO USE CHEMICAL WEAPON",
+      "title_tw": "《美國中期選舉之夜：民主黨橫掃與伊朗化學武器指控》",
+      "series": null,
+      "episode": null,
+      "date": "2026-11-04",
+      "host": "Sulaiman Ahmed @ShaykhSulaiman",
+      "guests": [
+        "Dr. Michael",
+        "Harley",
+        "Matthew Hall",
+        "Esan",
+        "Anthony Aguilé（退役中校）"
+      ],
+      "duration": "6 小时 03 分",
+      "duration_minutes": 363,
+      "url": "https://x.com/i/spaces/1brkWMqWgEMgaR",
+      "note_url": "/spaces/notes/us-midterm-election-night-20261104.html",
+      "topics": [
+        "美国中期选举",
+        "民主党",
+        "特朗普",
+        "伊朗",
+        "化学武器",
+        "以色列",
+        "佛罗里达",
+        "出口民调",
+        "NDAA",
+        "AIPAC"
+      ],
+      "highlights": [
+        "主基调是民主党大胜、共和党惨败的预期与实时播报：开场前多数嘉宾已预判民主党夺回众议院、并有较大机会拿下参议院；随着开票数字陆续报出，主持人多次用“血洗”形容共和党处境（均为发言人当时口径，未经核实）。",
+        "嘉宾普遍把选举结果归因于经济与伊朗战争：多位发言者称选民最关心生活成本、油价与通胀；特朗普被指违背“不再打新战争”、降低生活成本等承诺，引发原支持者的愤怒与“报复性投票”。",
+        "对两党建制派的不信任贯穿全场：尽管多数嘉宾看好民主党当晚获胜，但反复强调两党在对以色列政策、战争拨款上并无本质区别，民主党获胜未必会结束战争；“投票是必要但不充分的工具”是多位嘉宾的共同表述。",
+        "伊朗议题与选举议题被牢牢绑定：开场即通报“美国正准备对伊朗发动迫在眉睫的打击”、以色列称伊朗考虑使用化学武器；多位嘉宾认为特朗普一直在等中期选举结束后再升级对伊朗的军事行动。",
+        "“化学武器”指控在场内基本被当作开战借口看待：多位嘉宾将其类比为伊拉克战争前的“大规模杀伤性武器”叙事，认为真实性存疑，甚至有人提出可能是“假旗行动”的铺垫；但没有任何发言者提供可核实的证据。",
+        "直播中途多次因技术故障转场：主持人多次提到 Space 卡顿、听众被踢出，并数次把直播引导至其 YouTube 频道；约 06:02 主持人以 Space 故障为由结束本场，并预告当晚继续在 YouTube 更新选举结果。"
+      ],
+      "highlights_en": [
+        "The dominant theme was an expected Democratic sweep and a Republican rout, reported live: most guests predicted Democrats would retake the House and had a strong chance in the Senate, and as results came in the host repeatedly described the Republican position as a bloodbath (all figures are the speakers' live claims, unverified).",
+        "Guests widely blamed the economy and the Iran war for the result: voters cared most about the cost of living, gas prices and inflation, speakers said, and Trump was accused of breaking promises of no new wars and lower living costs, provoking angry 'revenge voting' from former supporters.",
+        "Distrust of both parties' establishments ran through the whole session: even while expecting a Democratic win, guests stressed the two parties are essentially identical on Israel policy and war funding, so a Democratic win would not necessarily end the war; 'voting is necessary but not sufficient' was a shared refrain.",
+        "The Iran story was tied tightly to the election story: the show opened with reports that the US was preparing an imminent strike on Iran and that Israel claimed Iran was considering chemical weapons; several guests argued Trump had been waiting for the midterms to end before escalating against Iran.",
+        "The 'chemical weapons' claim was treated in the room mostly as a pretext for war: several guests compared it to the WMD narrative before the Iraq war, doubted its truth, and one even raised a possible false-flag setup; no speaker offered verifiable evidence.",
+        "Technical failures interrupted the broadcast repeatedly: the host mentioned the Space freezing and listeners being kicked out, and several times redirected the audience to his YouTube channel; at about 06:02 he ended the Space citing the glitch and previewed continued election updates on YouTube that evening."
+      ],
+      "highlights_tw": [
+        "主基調是民主黨大勝、共和黨慘敗的預期與即時播報：開場前多數嘉賓已預判民主黨奪回眾議院、並有較大機會拿下參議院；隨著開票數字陸續報出，主持人多次用「血洗」形容共和黨處境（均為發言人當時口徑，未經核實）。",
+        "嘉賓普遍把選舉結果歸因於經濟與伊朗戰爭：多位發言者稱選民最關心生活成本、油價與通脹；川普被指違背「不再打新戰爭」、降低生活成本等承諾，引發原支持者的憤怒與「報復性投票」。",
+        "對兩黨建制派的不信任貫穿全場：儘管多數嘉賓看好民主黨當晚獲勝，但反覆強調兩黨在對以色列政策、戰爭撥款上並無本質區別，民主黨獲勝未必會結束戰爭；「投票是必要但不充分的工具」是多位嘉賓的共同表述。",
+        "伊朗議題與選舉議題被牢牢綁定：開場即通報「美國正準備對伊朗發動迫在眉睫的打擊」、以色列稱伊朗考慮使用化學武器；多位嘉賓認為川普一直在等中期選舉結束後再升級對伊朗的軍事行動。",
+        "「化學武器」指控在場內基本被當作開戰藉口看待：多位嘉賓將其類比為伊拉克戰爭前的「大規模殺傷性武器」敘事，認為真實性存疑，甚至有人提出可能是「假旗行動」的鋪墊；但沒有任何發言者提供可核實的證據。",
+        "直播中途多次因技術故障轉場：主持人多次提到 Space 卡頓、聽眾被踢出，並數次把直播引導至其 YouTube 頻道；約 06:02 主持人以 Space 故障為由結束本場，並預告當晚繼續在 YouTube 更新選舉結果。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "trumpism-midterm-20261103",
+      "title": "美国新音 | Midterm 2026: Rise & Fall of Trumpism | 川普主义的升起和降落",
+      "title_en": "Midterm 2026: Rise & Fall of Trumpism",
+      "title_tw": "美國新音 | Midterm 2026: Rise & Fall of Trumpism | 川普主義的升起和降落",
+      "series": "美国新音",
+      "episode": null,
+      "date": "2026-11-03",
+      "host": "Geopolitics = Ethnopolitics @geo_ethno_wars",
+      "guests": [
+        "Jack Steel @JackSteelAU",
+        "Yao Renquan @Chris28521420",
+        "Peter Duh @peterduh_ea",
+        "YI FU @Yansamsonc30693",
+        "一个普通人 @randnobody666",
+        "Seaskyblue_T @Seaskyblue_T02",
+        "翠儿 @JadeWan97600889",
+        "Coffee.G777咖啡姐 @Question222333",
+        "Wenfeng @Shannon94011261",
+        "Steve @gwdkaku",
+        "Education @NWmx0119",
+        "Alex @alexallwin1",
+        "vv @heron_hero_",
+        "Valor @ValorRed1",
+        "杰瑞 @gerryzhang66",
+        "小澤 Ozawa Seiji @baibianjinshen",
+        "Bab @xbzsc599",
+        "精石所指 @ixnjuluhngl3",
+        "Ryanchan纽约人 @Ryancha07071091",
+        "吉良秀林 @dalinzdl",
+        "风清扬 @cookman18",
+        "晚月老逼抠屁眼儿 @HongChe58003631",
+        "Ocean @jamesadamsz",
+        "统一合平三战 @whatwang4o",
+        "革命家 @geminjia"
+      ],
+      "duration": "8 小时 04 分",
+      "duration_minutes": 484,
+      "url": "https://x.com/i/spaces/1onAOOVOMNPdkB",
+      "note_url": "/spaces/notes/trumpism-midterm-20261103.html",
+      "topics": [
+        "美国中期选举",
+        "川普主义",
+        "美国政治",
+        "地缘政治"
+      ],
+      "highlights": [
+        "场内多数判断民主党在本次中期选举大获全胜；主持人据此提出中心论点：“今天的结果很可能是正式的川普主义开始要降落。”",
+        "主持人提出“川普主义”与“MAGA”可以分开：MAGA 作为民粹精神会长期存在，川普主义以“交易的艺术”为核心、把是否守约的选择权留给自己，时间长了会失效。",
+        "伊朗战争与物价是场内公认的两大决定性因素：独立选民普遍反战，物价上涨直接冲击中间选民；Ryanchan 的经济决定论——物价涨就输，油价打下来就赢。",
+        "场内并非一边倒：杰瑞、文丰认为川普个人没输、铁票未流失，只是中间派转向；翠儿、咖啡姐等持川粉视角；老姚强调美国伟大在于宪法与独立宣言。",
+        "实时选情数字高度不可靠：佛州、缅因、德州、堪萨斯等州的报票前后矛盾、多次自我纠正，纪要中所有数字一律写成“发言人当时报称”，不得作为最终选举结果引用。"
+      ],
+      "highlights_en": [
+        "Most speakers judged the Democrats won big in this midterm; the host's central thesis: \"Today's result is likely the formal beginning of the fall of Trumpism.\"",
+        "The host argued Trumpism and MAGA can be separated: MAGA as a populist spirit will endure, while Trumpism — 'the art of the deal' with the choice of whether to honor a contract kept to oneself — loses its appeal over time.",
+        "The Iran war and prices were seen as the two decisive factors: independent voters broadly oppose the war, and rising prices hit swing voters directly; Ryanchan's economy-only rule — prices up, you lose; bring oil prices down, you win.",
+        "The room was not one-sided: Jerry and Wenfeng argued Trump himself did not lose and his base held, only the middle shifted; Cui'er and Coffee Sister spoke from a pro-Trump view; Yao Renquan stressed that America's greatness lies in the Constitution and the Declaration of Independence.",
+        "Live election numbers were highly unreliable: reported leads in Florida, Maine, Texas, Kansas and other states contradicted each other and were repeatedly corrected, so every figure in the minutes is written as 'as reported by speakers at the time' and must not be cited as final results."
+      ],
+      "highlights_tw": [
+        "場內多數判斷民主黨在本次中期選舉大獲全勝；主持人據此提出中心論點：「今天的結果很可能是正式的川普主義開始要降落。」",
+        "主持人提出「川普主義」與「MAGA」可以分開：MAGA 作為民粹精神會長期存在，川普主義以「交易的藝術」為核心、把是否守約的選擇權留給自己，時間長了會失效。",
+        "伊朗戰爭與物價是場內公認的兩大決定性因素：獨立選民普遍反戰，物價上漲直接衝擊中間選民；Ryanchan 的經濟決定論——物價漲就輸，油價打下來就贏。",
+        "場內並非一邊倒：傑瑞、文豐認為川普個人沒輸、鐵票未流失，只是中間派轉向；翠兒、咖啡姐等持川粉視角；老姚強調美國偉大在於憲法與獨立宣言。",
+        "實時選情數字高度不可靠：佛州、緬因、德州、堪薩斯等州的報票前後矛盾、多次自我糾正，紀要中所有數字一律寫成「發言人當時報稱」，不得作為最終選舉結果引用。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "guoyu-story-1-left-behind-child",
+      "title": "《留守儿童，孤独少年，提前到来的成年｜郭宇的故事①》",
+      "title_en": "《留守儿童，孤独少年，提前到来的成年｜郭宇的故事①》",
+      "title_tw": "《留守儿童，孤独少年，提前到来的成年｜郭宇的故事①》",
+      "series": "郭宇的故事",
+      "episode": null,
+      "date": "2026-11-03",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "22 分钟",
+      "duration_minutes": 22,
+      "url": "https://www.youtube.com/watch?v=3cgBV3WkjIg",
+      "note_url": "/interviews/notes/guoyu-story-1-left-behind-child.html",
+      "topics": [
+        "郭宇个人史",
+        "留守儿童",
+        "三线子弟",
+        "程序员成长"
+      ],
+      "highlights": [
+        "1991 年生于江西铜矿三线子弟家庭；父亲电工遭高压电击坠落进 ICU，后脑梗卧床十几年，郭宇留守四五年由外公外婆带大、初一下学期末才到深圳。",
+        "影响一生的三件事：读书与作家梦（《海底两万里》、韩寒郭敬明路径）、从小写日记（没人说话→饭否→X）、网吧与学校机房的 QBasic/Pascal 埋下编程种子。",
+        "高三后因家境下决心学代码经济独立；母亲做家政的认真劲与「不想管人」传给了他。"
+      ],
+      "highlights_en": [
+        "1991 年生于江西铜矿三线子弟家庭；父亲电工遭高压电击坠落进 ICU，后脑梗卧床十几年，郭宇留守四五年由外公外婆带大、初一下学期末才到深圳。",
+        "影响一生的三件事：读书与作家梦（《海底两万里》、韩寒郭敬明路径）、从小写日记（没人说话→饭否→X）、网吧与学校机房的 QBasic/Pascal 埋下编程种子。",
+        "高三后因家境下决心学代码经济独立；母亲做家政的认真劲与「不想管人」传给了他。"
+      ],
+      "highlights_tw": [
+        "1991 年生于江西铜矿三线子弟家庭；父亲电工遭高压电击坠落进 ICU，后脑梗卧床十几年，郭宇留守四五年由外公外婆带大、初一下学期末才到深圳。",
+        "影响一生的三件事：读书与作家梦（《海底两万里》、韩寒郭敬明路径）、从小写日记（没人说话→饭否→X）、网吧与学校机房的 QBasic/Pascal 埋下编程种子。",
+        "高三后因家境下决心学代码经济独立；母亲做家政的认真劲与「不想管人」传给了他。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "tokenized-stocks-sec-20261029",
+      "title": "《代币化股票合法化：谁赢得 SEC 的五年窗口？》",
+      "title_en": "Tokenized Stocks Go Legal: Who Wins The SEC's 5-Year Window?",
+      "title_tw": "《代幣化股票合法化：誰贏得 SEC 的五年窗口？》",
+      "series": "Wen Alt Season",
+      "episode": null,
+      "date": "2026-10-29",
+      "host": "Justin Roberty @wenaltseason",
+      "guests": [
+        "Kevin @ Palladium",
+        "Ari @ XY Labs",
+        "Matt @ 3Bet Media",
+        "Crypto Walker @ Anid",
+        "CoinTulip"
+      ],
+      "duration": "1 小时 06 分",
+      "duration_minutes": 66,
+      "url": "https://x.com/i/spaces/1yxBePXvXaLJN",
+      "note_url": "/spaces/notes/tokenized-stocks-sec-20261029.html",
+      "topics": [
+        "代币化股票",
+        "SEC",
+        "五年豁免",
+        "DTCC",
+        "RWA",
+        "Robinhood",
+        "Ondo",
+        "OKX",
+        "稳定币",
+        "24/7 交易",
+        "发行人异议",
+        "MiCA"
+      ],
+      "highlights": [
+        "SEC 五年窗口是临时豁免、不是永久修法：9 月 17 日创新豁免允许合规平台用区块链 AMM 交易代币化美股、无需注册为交易所，试验期至 2031 年 9 月；全场共识是赢家大概率还是华尔街、其次是交易所，普通投资者排最后。",
+        "DTCC 已下场、规模碾压加密原生市场：10 月 28 日代币化服务上线，首批 34 只合资格证券、约 30 万亿美元市值，摩根大通、花旗、美银、摩根士丹利、瑞银等 20 家机构签约，跑在 Canton Network 与私有 Vesu 链上；主持人提醒 30 万亿是可代币化市值、不是已代币化金额。",
+        "发行人正在大规模说不：微软、Alphabet、英特尔、甲骨文、IBM 等反对自家股票以 OKX / ISE 代币化形式交易，截至 10 月 28 日已有 33 家发行人提出异议、原定 62 家名单近半退出；Ari 反驳称买了股票就是你的财产，发行人无权规定你能不能把它包成 token。",
+        "散户得到的是更好用的传统金融、不是主权：Ari 指出交易会更快、可能 24 小时、费用可能更低，但你大概率仍不能像转 ETH 那样把一股代币化特斯拉直接转给朋友，KYC 挡在前面；监管结构不变，只是更高配的 TradFi。",
+        "三家路数不同：Robinhood 凭用户基数与年轻用户、加密加股票交叉交易被 Ari 看好；Ondo 做发行与基建、两头下注还与 DTCC 合作；OKX 走 AMM 交易场所加稳定币结算、并与纽交所传有合资，Kevin 押 OKX。",
+        "你买到的不是股票本身、是包装：Crypto Walker 直言底层资产由第三方持有，你拿到的是在对方许可下使用的敞口；托管方破产怎么办、投票权与分红归谁全在小字条款里；听众 CoinTulip 追问自托管代币化股票被盗如何追回，全场无人能答，是本场最大的开放问题。"
+      ],
+      "highlights_en": [
+        "The SEC's five-year window is a temporary exemption, not a permanent rewrite: the September 17 innovation exemption lets qualifying platforms trade tokenized US stocks via blockchain AMMs without registering as exchanges, running to September 2031; the panel's consensus was that Wall Street still wins most likely, then exchanges, with ordinary investors last.",
+        "DTCC has entered with overwhelming scale: its tokenization service launched October 28 with 34 eligible securities worth about $30 trillion, with 20 firms signed up including JPMorgan, Citi, Bank of America, Morgan Stanley and UBS, running on Canton Network and the private Vesu chain; the host noted $30T is tokenizable market value, not amounts already tokenized.",
+        "Issuers are saying no at scale: Microsoft, Alphabet, Intel, Oracle and IBM object to their shares trading in OKX / ISE tokenized form, with 33 issuers objecting as of October 28 and nearly half of the original 62-company roster out; Ari countered that a bought share is your property and issuers have no right to dictate whether you wrap it in a token.",
+        "Retail gets better TradFi, not sovereignty: Ari argued trading gets faster, possibly 24-hour, possibly cheaper, but you most likely still cannot send a tokenized Tesla share to a friend the way you send ETH — KYC stands in the way; the regulatory structure is unchanged, just higher-caliber TradFi.",
+        "Three different playbooks: Robinhood is best placed on user base, young users and crypto-plus-equities cross-trading, per Ari; Ondo does issuance and infrastructure, betting both ways and working with DTCC; OKX runs an AMM venue with stablecoin settlement and is said to have a NYSE joint venture — Kevin backs OKX.",
+        "You are not buying the stock itself, but a wrapper: Crypto Walker said a third party holds the underlying asset and you get exposure usable with their permission; what happens if the custodian goes bankrupt, and who keeps voting rights and dividends, is all in the fine print; listener CoinTulip's question — how is a stolen self-custodied tokenized stock recovered — went unanswered by everyone, the session's biggest open question."
+      ],
+      "highlights_tw": [
+        "SEC 五年窗口是臨時豁免、不是永久修法：9 月 17 日創新豁免允許合規平台用區塊鏈 AMM 交易代幣化美股、無需註冊為交易所，試驗期至 2031 年 9 月；全場共識是贏家大概率還是華爾街、其次是交易所，普通投資者排最後。",
+        "DTCC 已下場、規模碾壓加密原生市場：10 月 28 日代幣化服務上線，首批 34 隻合資格證券、約 30 萬億美元市值，摩根大通、花旗、美銀、摩根士丹利、瑞銀等 20 家機構簽約，跑在 Canton Network 與私有 Vesu 鏈上；主持人提醒 30 萬億是可代幣化市值、不是已代幣化金額。",
+        "發行人正在大規模說不：微軟、Alphabet、英特爾、甲骨文、IBM 等反對自家股票以 OKX / ISE 代幣化形式交易，截至 10 月 28 日已有 33 家發行人提出異議、原定 62 家名單近半退出；Ari 反駁稱買了股票就是你的財產，發行人無權規定你能不能把它包成 token。",
+        "散戶得到的是更好用的傳統金融、不是主權：Ari 指出交易會更快、可能 24 小時、費用可能更低，但你大概率仍不能像轉 ETH 那樣把一股代幣化特斯拉直接轉給朋友，KYC 擋在前面；監管結構不變，只是更高配的 TradFi。",
+        "三家路數不同：Robinhood 憑用戶基數與年輕用戶、加密加股票交叉交易被 Ari 看好；Ondo 做發行與基建、兩頭下注還與 DTCC 合作；OKX 走 AMM 交易場所加穩定幣結算、並與紐交所傳有合資，Kevin 押 OKX。",
+        "你買到的不是股票本身、是包裝：Crypto Walker 直言底層資產由第三方持有，你拿到的是在對方許可下使用的敞口；託管方破產怎麼辦、投票權與分紅歸誰全在小字條款裡；聽眾 CoinTulip 追問自託管代幣化股票被盜如何追回，全場無人能答，是本場最大的開放問題。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "binance-20261029",
+      "title": "币安被黑事件讨论",
+      "title_en": "Discussing the Binance Hack",
+      "title_tw": "幣安被黑事件討論",
+      "series": null,
+      "episode": null,
+      "date": "2026-10-29",
+      "host": "@ChandlerGuo（宝二爷）",
+      "guests": [
+        "@qg7777（茄哥，共同主持）",
+        "大漂亮",
+        "张哥",
+        "K线教主",
+        "Adam",
+        "林可",
+        "ahr996"
+      ],
+      "duration": "6 小时 21 分",
+      "duration_minutes": 381,
+      "url": "https://x.com/i/spaces/1mdjgoregOjLvy",
+      "note_url": "/spaces/notes/binance-20261029.html",
+      "topics": [
+        "交易所安全",
+        "加密行情"
+      ],
+      "highlights": [
+        "币安体量够大、赔得起，不必恐慌性挤兑，这不是第二个 FTX",
+        "没有任何保管方式 100% 安全：所有交易所都会丢币，区别只在丢多少、利润盖不盖得住、冻结能追回多少",
+        "普通人最现实的方案不是学黑客技术，而是分开放、用对姿势、少操作、别信假客服",
+        "涉案口径现场并列（未定论）：总额近 60 亿美元、已冻结约 25.4 亿美元；归因场内无定论，以币安完整报告为准"
+      ],
+      "highlights_en": [
+        "Binance is big enough to pay — no need for a panic bank run; this is not a second FTX",
+        "No custody method is 100% safe: every exchange loses coins; what differs is how much, whether profits cover it, and how much freezes can recover",
+        "For ordinary users the realistic playbook is not hacker skills but: split your funds, use proper setups, operate less, and never trust fake 'support'",
+        "Figures cited live, not settled: roughly $6B involved and about $2.54B frozen; attribution was undecided in the room — Binance's full report is the final word"
+      ],
+      "highlights_tw": [
+        "幣安體量夠大、賠得起，不必恐慌性擠兌，這不是第二個 FTX",
+        "沒有任何保管方式 100% 安全：所有交易所都會丟幣，區別只在丟多少、利潤蓋不蓋得住、凍結能追回多少",
+        "普通人最現實的方案不是學黑客技術，而是分開放、用對姿勢、少操作、別信假客服",
+        "涉案口徑現場並列（未定論）：總額近 60 億美元、已凍結約 25.4 億美元；歸因場內無定論，以幣安完整報告為準"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "ganjin-maifang-20261027",
+      "title": "《赶紧买房！（不要用蓝牙耳机）》",
+      "title_en": "Buy a House Now! (Don't Use Bluetooth Earbuds)",
+      "title_tw": "《趕緊買房！（不要用藍牙耳機）》",
+      "series": null,
+      "episode": null,
+      "date": "2026-10-27",
+      "host": "立党 @lidangzzz",
+      "guests": [
+        "rachel_185 @chao43427774",
+        "yyyw_ @jingyu60985095",
+        "harper @liquefei267881"
+      ],
+      "duration": "4 小时 12 分",
+      "duration_minutes": 252,
+      "url": "https://x.com/i/spaces/1qKDzWNvdvOJV",
+      "note_url": "/spaces/notes/ganjin-maifang-20261027.html",
+      "topics": [
+        "买房",
+        "房价",
+        "职业选择",
+        "具身智能",
+        "AI Agent",
+        "半导体",
+        "医学",
+        "艺术"
+      ],
+      "highlights": [
+        "标题是“钓鱼标题”，本场基本没讲买房：立党两次承认“赶紧买房”是骗听众进来的，全场4小时12分真正谈房子的只有约10分钟。",
+        "关于买房的唯一实质判断（立党自述）：北京房价长期看还会跌，回归“本身价值”约2万元/平米，可能需要一二十年；深圳房价“一定会跌”。",
+        "本场真正的主题是职业与专业选择大型答疑：立党反复强调“专业与工作无关、毕业即被抢”的时代已过去，现在选专业、读研、找工作必须专业对口、立刻能产生价值。",
+        "找工作方法论（立党反复强调）：网上投简历“完全不可能”，一个岗位几千上万份简历，HR先按学历筛掉90%；必须线下跑展会、进社群、面对面拿内推；做开源项目比实习更值钱。",
+        "医学与艺术是本场最悲观的两条线：医生谈三明医改后回扣消失、年轻医生收入低；立党称“不要学艺术”，艺术生班里60人、能从事本行的不到5人。"
+      ],
+      "highlights_en": [
+        "The title was clickbait — the host admitted twice that \"buy a house now\" was just to lure listeners in; in 4 hours 12 minutes, only about 10 minutes actually discussed housing.",
+        "The only substantive housing call (host's own view): Beijing prices will keep falling long-term toward an intrinsic value of about ¥20,000 per sqm, possibly over one or two decades; Shenzhen prices \"will definitely fall\".",
+        "The real theme was a marathon Q&A on careers and majors: the era when \"your major didn't matter and graduates were fought over\" is gone — now your major, graduate study and job must match and deliver value immediately.",
+        "Job-hunting method (repeated by the host): applying online is \"completely impossible\" — thousands of CVs per role, HR screens out 90% by degree first; go to expos, join communities, meet people face to face and get referrals; a good open-source project beats 100 internships.",
+        "Medicine and art were the two bleakest threads: doctors described post-Sanming-reform pay with kickbacks gone and low junior salaries; the host said \"don't study art\" — fewer than 5 of 60 art classmates work in the field."
+      ],
+      "highlights_tw": [
+        "標題是「釣魚標題」，本場基本沒講買房：立黨兩次承認「趕緊買房」是騙聽眾進來的，全場4小時12分真正談房子的只有約10分鐘。",
+        "關於買房的唯一實質判斷（立黨自述）：北京房價長期看還會跌，回歸「本身價值」約2萬元/平米，可能需要一二十年；深圳房價「一定會跌」。",
+        "本場真正的主題是職業與專業選擇大型答疑：立黨反覆強調「專業與工作無關、畢業即被搶」的時代已過去，現在選專業、讀研、找工作必須專業對口、立刻能產生價值。",
+        "找工作方法論（立黨反覆強調）：網上投簡歷「完全不可能」，一個崗位幾千上萬份簡歷，HR先按學歷篩掉90%；必須線下跑展會、進社群、面對面拿內推；做開源項目比實習更值錢。",
+        "醫學與藝術是本場最悲觀的兩條線：醫生談三明醫改後回扣消失、年輕醫生收入低；立黨稱「不要學藝術」，藝術生班裡60人、能從事本行的不到5人。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "maidang-20261027",
+      "title": "噪音之后 · 麦当专场：AI 自媒体创业，10 个月变现 20 万",
+      "title_en": "After the Noise · Maidang Special: An AI Content Business That Made ¥200K in 10 Months",
+      "title_tw": "噪音之後 · 麥當專場：AI 自媒體創業，10 個月變現 20 萬",
+      "series": null,
+      "episode": null,
+      "date": "2026-10-27",
+      "host": "Adrian Punk（@AdrianPunk115）",
+      "guests": [
+        "麦当（@mdldm，主讲）",
+        "李白天",
+        "黄小木（木哥）"
+      ],
+      "duration": "2 小时 08 分",
+      "duration_minutes": 128,
+      "url": "https://x.com/i/spaces/1pKdRDqVlWpJW",
+      "note_url": "/spaces/notes/maidang-20261027.html",
+      "topics": [
+        "AI 自媒体",
+        "知识付费",
+        "创业"
+      ],
+      "highlights": [
+        "麦当卖的不是课而是「订阅我这个人」：单一包年产品约 499 元/年，10 个月 120 多节录播课、约 300–400 名付费用户、变现近 20 万元（自述）",
+        "核心基建是自建知识站：全平台只做引流，结算、权益、数据、评论全部收归一站，框架已开源",
+        "拒绝 9.9 元引流与层层销转，赌低转化、高黏性、高续费（预期续费率约 80%，属个人估算，尚未到验证期）",
+        "内容形态转型：每周一次付费直播 + 录播沉淀为付费资产，对冲工具教程随模型更新迅速过时的问题"
+      ],
+      "highlights_en": [
+        "Maidang sells not a course but 'a subscription to me': one yearly product at about ¥499, 120+ recorded lessons in 10 months, 300–400 paying users, nearly ¥200K revenue (self-reported)",
+        "The core infrastructure is a self-built knowledge site: every platform is only a funnel; payments, entitlements, data and comments live on his own site, and the framework is open-sourced",
+        "He refuses ¥9.9 lead magnets and multi-step upsells, betting on low conversion but high stickiness and renewals (his ~80% renewal estimate is unverified)",
+        "Format shift: one paid livestream per week, with recordings compounding into paid assets — a hedge against tool tutorials going stale as models update"
+      ],
+      "highlights_tw": [
+        "麥當賣的不是課而是「訂閱我這個人」：單一包年產品約 499 元/年，10 個月 120 多節錄播課、約 300–400 名付費用戶、變現近 20 萬元（自述）",
+        "核心基建是自建知識站：全平臺只做引流，結算、權益、數據、評論全部收歸一站，框架已開源",
+        "拒絕 9.9 元引流與層層銷轉，賭低轉化、高黏性、高續費（預期續費率約 80%，屬個人估算，尚未到驗證期）",
+        "內容形態轉型：每週一次付費直播 + 錄播沉澱為付費資產，對沖工具教程隨模型更新迅速過時的問題"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "tru-cookin-w-ict-20261024",
+      "title": "与 ICT 一起下厨：ICT 交易专场",
+      "title_en": "TRU - Cookin w ICT",
+      "title_tw": "與 ICT 一起下廚：ICT 交易專場",
+      "series": "Trader Roundup",
+      "episode": null,
+      "date": "2026-10-24",
+      "host": "Kitt @ICT_Concepts",
+      "guests": [
+        "Pit Munch",
+        "Michael Huddleston (ICT)",
+        "Pippi Banks",
+        "Victor",
+        "P.U.Q.",
+        "Trader in Training 60",
+        "Bobby Obodo",
+        "SHC",
+        "Poison",
+        "Neil",
+        "DJ Mann",
+        "Liquidity Llama"
+      ],
+      "duration": "5 小时 04 分",
+      "duration_minutes": 304,
+      "url": "https://x.com/i/spaces/1wxWjlNMrQWJQ",
+      "note_url": "/spaces/notes/tru-cookin-w-ict-20261024.html",
+      "topics": [
+        "ICT",
+        "交易方法论",
+        "流动性",
+        "FVG",
+        "订单块",
+        "原油",
+        "纳指",
+        "黄金",
+        "交易心理",
+        "Silver Bullet"
+      ],
+      "highlights": [
+        "少做交易、做对少数几次就够了：周四的 expansion 证明不需要大量交易；联合主持 Pit Munch 本周只做 4 笔原油交易，却是她自 2023 年开始交易以来最好的一周。",
+        "Michael（ICT）本场最大转向信号：从纯日内转向留“跑手”——日内模型进场、75% 日内了结、留 25% 做 1–2 周波段；他认为中期选举前后波动将放大、出现可持续数日到两周的大级别行情。",
+        "“独角兽模型”不存在：Michael 亲自澄清，独角兽只是形容“方向、位置、时间、时段全部对齐的罕见完美 setup”的形容词，不是固定参数的模型；既不限于“Breaker 内嵌 FVG”，也不限于市场制造商模型的第二阶段再分配/再积累。",
+        "流动性是第一课：新手先用 2–4 周每天 20–30 分钟看静态图，研究当日高低点为何形成、价格为何去扫前一日高低、缺口与 FVG；先懂“价格为何去某个位置”，再谈入场；一次只练一件事。",
+        "交易 90% 是心理战：不要把家人、伴侣、社交媒体的期待带进交易；不要用账单钱交易；给自己“允许亏损”的许可；把交易当生意、写交易日志，模型浓缩到“一张名片背面能写完”。",
+        "后市判断（均为发言人现场自述，未经核实）：纳指看向 28,815 一带，黄金关注 3,900（跌破后或看 3,600s），原油看多、认为会再创历史新高；Michael 自述目前一周只做一到两个 setup，以防守为主。"
+      ],
+      "highlights_en": [
+        "Take few trades and be right a few times: Thursday's expansion showed you don't need many trades; co-host Pit Munch made only 4 crude-oil trades this week, yet called it her best week since she started trading in 2023.",
+        "Michael's (ICT) biggest pivot this session: from pure intraday to leaving 'runners' — enter with an intraday model, take 75% off intraday, leave 25% for a 1–2 week swing; he expects volatility to expand around the midterm elections.",
+        "There is no 'unicorn model': Michael clarified in person that 'unicorn' is just an adjective for a rare setup where direction, location, time and session all align — not a model with fixed parameters.",
+        "Liquidity is lesson one: beginners should spend 2–4 weeks, 20–30 minutes a day, studying static charts — why daily highs and lows formed, why price sweeps prior-day highs/lows, gaps and FVGs — before talking about entries; practice one thing at a time.",
+        "Trading is 90% psychological warfare: don't bring family, partners or social media expectations into trading; don't trade with bill money; give yourself permission to take losses; treat trading as a business, keep a journal, and fit your model on the back of a business card.",
+        "Market views (all the speakers' own statements, unverified): Nasdaq toward the 28,815 area, gold watching 3,900 (a break could open the 3,600s), crude bullish toward new all-time highs; Michael says he currently takes only one or two setups a week, defensively."
+      ],
+      "highlights_tw": [
+        "少做交易、做對少數幾次就夠了：週四的 expansion 證明不需要大量交易；聯合主持 Pit Munch 本週只做 4 筆原油交易，卻是她自 2023 年開始交易以來最好的一週。",
+        "Michael（ICT）本場最大轉向信號：從純日內轉向留「跑手」——日內模型進場、75% 日內了結、留 25% 做 1–2 週波段；他認為中期選舉前後波動將放大、出現可持續數日到兩週的大級別行情。",
+        "「獨角獸模型」不存在：Michael 親自澄清，獨角獸只是形容「方向、位置、時間、時段全部對齊的罕見完美 setup」的形容詞，不是固定參數的模型；既不限於「Breaker 內嵌 FVG」，也不限於市場製造商模型的第二階段再分配/再積累。",
+        "流動性是第一課：新手先用 2–4 週每天 20–30 分鐘看靜態圖，研究當日高低點為何形成、價格為何去掃前一日高低、缺口與 FVG；先懂「價格為何去某個位置」，再談入場；一次只練一件事。",
+        "交易 90% 是心理戰：不要把家人、伴侶、社交媒體的期待帶進交易；不要用帳單錢交易；給自己「允許虧損」的許可；把交易當生意、寫交易日誌，模型濃縮到「一張名片背面能寫完」。",
+        "後市判斷（均為發言人現場自述，未經核實）：納指看向 28,815 一帶，黃金關注 3,900（跌破後或看 3,600s），原油看多、認為會再創歷史新高；Michael 自述目前一週只做一到兩個 setup，以防守為主。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "tokenized-stocks-cex-20261022",
+      "title": "《代币化股票上线，还需要 CEX 吗？》",
+      "title_en": "Tokenized Stocks Go Live: Does Anyone Still Need A CEX?",
+      "title_tw": "《代幣化股票上線，還需要 CEX 嗎？》",
+      "series": "Wen Alt Season",
+      "episode": null,
+      "date": "2026-10-22",
+      "host": "Justin Roberty @wenaltseason",
+      "guests": [
+        "Zach Prater @ Pop DEX",
+        "Daria",
+        "Matt / Matthew @ Katana",
+        "Nikita @ Holder House",
+        "No Nonsense Forex",
+        "Drew @ Arch Lending",
+        "Mark Ryan @ SpoutFi",
+        "Dr. Jack @ ME Wallet",
+        "Roman @ Piper"
+      ],
+      "duration": "1 小时 16 分",
+      "duration_minutes": 76,
+      "url": "https://x.com/i/spaces/1MJgNbmvngmGL",
+      "note_url": "/spaces/notes/tokenized-stocks-cex-20261022.html",
+      "topics": [
+        "代币化股票",
+        "RWA",
+        "永续合约 DEX",
+        "Hyperliquid",
+        "激励计划",
+        "TradFi",
+        "DeFi",
+        "Pre-IPO",
+        "透明度",
+        "客服"
+      ],
+      "highlights": [
+        "CEX 不会马上消失，但叙事重心已转向链上：全场无人断言 CEX 会死，真正的争夺是代币化股票与永续合约 DEX 能否从 CEX 手里抢走交易量和用户；目前仍以加密原生用户为主，传统金融用户还没真正进来。",
+        "代币化股票的真正卖点不是“能交易”，而是“能组合”：Nikita 认为股票上链后可抵押借贷、质押生息、加杠杆，还能用来对冲锁仓份额与 PIPE 投资，是全场最有分量的论点。",
+        "激励计划只能拉新、留不住人：Drew、Daria、Zach、Matt 一致认为奖励换来短期流量，留存靠产品、执行速度、流动性、客服与信任；积分与平台币模式被多方点名批评。",
+        "Zach 主张 Pop DEX 不发币、100% 价值以 USDT/USDC 直接返还用户；Pop DEX 刚结束约 5 个月封闭 Beta 开放公开 Beta，推出 Megapop 交易抽奖活动，现有约 66 个市场，目标 2027 年做到 500–1,000 个市场。",
+        "蓝筹股代币化对 Web3 吸引力有限：Nikita 与 Roman 认为蓝筹日波动仅几个百分点，小盘股与 Pre-IPO 股权（如 SpaceX、Cursor 案例）才是增量机会，但监管与标准缺失是最大短板。",
+        "快问快答的赢家公式：Mark 说赢在分发（接入 Revolut、Interactive Brokers 等 TradFi 入口），Daria 与 Nikita 说赢在信任与 track record，Zach 说不会只有一个赢家，赢在听用户反馈、抠细节。"
+      ],
+      "highlights_en": [
+        "No one on the panel said the CEX is dead — the real contest is whether tokenized stocks and perp DEXs can take volume and users from CEXs; for now the audience is still mostly crypto-native, with TradFi users yet to arrive.",
+        "The real selling point of tokenized stocks is composability, not just tradability: Nikita argued tokenized shares can be used as collateral to borrow, staked for yield, and levered like BTC, and can hedge vested allocations and PIPE investments.",
+        "Incentive programs only acquire users, they do not retain them: Drew, Daria, Zach and Matt agreed rewards buy short-term traffic while retention depends on product, execution speed, liquidity, customer service and trust; points and native-token models were criticised by several speakers.",
+        "Zach said Pop DEX will not issue a token and returns 100% of value to users in USDT/USDC; Pop DEX just ended a ~5-month closed beta, launched its open beta and the Megapop trading lottery, lists about 66 markets today and targets 500–1,000 markets in 2027.",
+        "Blue-chip tokenization has limited appeal for Web3: Nikita and Roman argued blue chips move only a few percent a day, while small caps and pre-IPO equity (SpaceX, Cursor cases) are the real opportunity — but regulation and standards are missing.",
+        "Speed-round winner formulas: Mark said distribution (deals with Revolut, Interactive Brokers); Daria and Nikita said trust and track record; Zach said there will not be a single winner — winning means listening to users and sweating the details."
+      ],
+      "highlights_tw": [
+        "CEX 不會馬上消失，但敘事重心已轉向鏈上：全場無人斷言 CEX 會死，真正的爭奪是代幣化股票與永續合約 DEX 能否從 CEX 手裡搶走交易量和用戶；目前仍以加密原生用戶為主，傳統金融用戶還沒真正進來。",
+        "代幣化股票的真正賣點不是「能交易」，而是「能組合」：Nikita 認為股票上鏈後可抵押借貸、質押生息、加槓桿，還能用來對沖鎖倉份額與 PIPE 投資，是全場最有分量的論點。",
+        "激勵計劃只能拉新、留不住人：Drew、Daria、Zach、Matt 一致認為獎勵換來短期流量，留存靠產品、執行速度、流動性、客服與信任；積分與平台幣模式被多方點名批評。",
+        "Zach 主張 Pop DEX 不發幣、100% 價值以 USDT/USDC 直接返還用戶；Pop DEX 剛結束約 5 個月封閉 Beta 開放公開 Beta，推出 Megapop 交易抽獎活動，現有約 66 個市場，目標 2027 年做到 500–1,000 個市場。",
+        "藍籌股代幣化對 Web3 吸引力有限：Nikita 與 Roman 認為藍籌日波動僅幾個百分點，小盤股與 Pre-IPO 股權（如 SpaceX、Cursor 案例）才是增量機會，但監管與標準缺失是最大短板。",
+        "快問快答的贏家公式：Mark 說贏在分發（接入 Revolut、Interactive Brokers 等 TradFi 入口），Daria 與 Nikita 說贏在信任與 track record，Zach 說不會只有一個贏家，贏在聽用戶反饋、摳細節。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "wallet-privacy-20261015",
+      "title": "你的钱包知道得太多：谁来修复链上隐私？",
+      "title_en": "Your Wallet Knows Too Much: Who Fixes Onchain Privacy?",
+      "title_tw": "你的錢包知道得太多：誰來修復鏈上隱私？",
+      "series": null,
+      "episode": null,
+      "date": "2026-10-15",
+      "host": "Justin Roberty @wenaltseason",
+      "guests": [
+        "Joel @Dashpay",
+        "Theo @_theopowers",
+        "Ruben @firoorg",
+        "Ditto @Ditto_Network",
+        "Mr. J @juga_btc",
+        "Mitchell DiRaimondo @MitchDiRaimondo",
+        "Ronnie @RonneTVR",
+        "George @masswallets",
+        "Joe @jaosef",
+        "Crypto Walker @kryptowalk3r",
+        "Jareen @jerreenj",
+        "Tim Arno @TimArnoX",
+        "NoNonsense4x @This_Is_VP4X"
+      ],
+      "duration": "1 小时 13 分",
+      "duration_minutes": 73,
+      "url": "https://x.com/i/spaces/1kJzDPeMlldKv",
+      "note_url": "/spaces/notes/wallet-privacy-20261015.html",
+      "topics": [
+        "链上隐私",
+        "钱包",
+        "零知识证明",
+        "稳定币",
+        "KYC",
+        "去中心化",
+        "传统金融"
+      ],
+      "highlights": [
+        "共识：隐私已从密码朋克情怀变成大规模采用的前提——没人会把毕生积蓄、工资和公司金库放进一个公开可查的银行账户；稳定币把真实财务生活搬上链之后，隐私成了“上链十亿人”的入场券。",
+        "安全是更硬的驱动力：Ronnie（Zano）称法国去年已有约 90 起“扳手攻击”（线下胁迫交出资产），几乎每周两起；Mass Wallets 的联合创始人在墨西哥面临过绑架风险；公开的链上余额正在变成人身安全隐患。",
+        "“隐私币”品类可能正在死去，但隐私本身正在变成标配：Dash 与 Aztec 的 Joe 判断未来没有单独的隐私链，隐私会成为每条链、每个钱包的默认功能；短期先流行“合规隐私”（如 NEAR 机密分片，执法可定向查看），长期向“谁也攻不破的铁杆隐私”摆动。",
+        "谁来决定向谁披露什么，分歧明显：Crypto Walker 主张用户握钥匙、按需向审计与税务做范围披露；Joe（Aztec）提出“先默认完全隐私，再一层层剥开公开披露”，并以 ZK Passport 为例——直接验证护照芯片里的政府签名，只证明“证件有效”，不泄露姓名与生日；Mr. J 则认为 Canton 已是定局，DTCC 已选 Canton 做代币化服务。",
+        "五年展望：隐私会成为可编程的默认功能（Joe：按用例编码隐私，证券交易所与跨境支付需求不同），KYC 走向标准化接口加多家小型机构、可复用身份（George）；但 NoNonsense4x 提醒，KYC 体验必须和现在几乎一模一样，否则大规模采用只会更慢。"
+      ],
+      "highlights_en": [
+        "Consensus: privacy has gone from cypherpunk ideal to a precondition for mass adoption — nobody puts life savings, salary or a company treasury in a publicly visible bank account; once stablecoins move real financial lives onchain, privacy becomes the ticket to onboarding a billion people.",
+        "Safety is the harder driver: Ronnie (Zano) said France saw about 90 wrench attacks last year, almost two a week; a Mass Wallets co-founder faced kidnapping risk in Mexico; a public onchain balance is becoming a physical-safety hazard.",
+        "The 'privacy coin' category may be dying, but privacy itself is becoming standard: Dash and Aztec's Joe expect no standalone privacy chains in future — privacy becomes a default feature of every chain and wallet; compliant privacy (e.g. NEAR confidential shards, law-enforcement viewable) comes first, then demand swings toward ironclad privacy nobody can break.",
+        "Who decides what is disclosed to whom remains contested: Crypto Walker argued the user holds the keys and discloses scoped information to auditors and tax authorities on demand; Joe (Aztec) proposed 'start fully private, then peel back layers of disclosure' and cited ZK Passport — verifying the government signature in a passport chip to prove only that the document is valid, without revealing name or birth date; Mr. J countered that Canton is already the answer, with DTCC choosing it for tokenization.",
+        "Five-year outlook: privacy becomes a programmable default (Joe: encode privacy per use case — a regulated securities exchange needs different privacy from cross-border payments), and KYC moves toward standardized interfaces with many small providers and reusable identity (George); but NoNonsense4x warned the KYC experience must look almost exactly like today's, or mass adoption will only slow further."
+      ],
+      "highlights_tw": [
+        "共識：隱私已從密碼龐克情懷變成大規模採用的前提——沒人會把畢生積蓄、工資和公司金庫放進一個公開可查的銀行帳戶；穩定幣把真實財務生活搬上鏈之後，隱私成了「上鏈十億人」的入場券。",
+        "安全是更硬的驅動力：Ronnie（Zano）稱法國去年已有約 90 起「扳手攻擊」（線下脅迫交出資產），幾乎每週兩起；Mass Wallets 的聯合創辦人在墨西哥面臨過綁架風險；公開的鏈上餘額正在變成人身安全隱患。",
+        "「隱私幣」品類可能正在死去，但隱私本身正在變成標配：Dash 與 Aztec 的 Joe 判斷未來沒有單獨的隱私鏈，隱私會成為每條鏈、每個錢包的預設功能；短期先流行「合規隱私」（如 NEAR 機密分片，執法可定向查看），長期向「誰也攻不破的鐵桿隱私」擺動。",
+        "誰來決定向誰揭露什麼，分歧明顯：Crypto Walker 主張用戶握鑰匙、按需向審計與稅務做範圍揭露；Joe（Aztec）提出「先預設完全隱私，再一層層剝開公開揭露」，並以 ZK Passport 為例——直接驗證護照晶片裡的政府簽名，只證明「證件有效」，不洩露姓名與生日；Mr. J 則認為 Canton 已是定局，DTCC 已選 Canton 做代幣化服務。",
+        "五年展望：隱私會成為可程式設計的預設功能（Joe：按用例編碼隱私，證券交易所與跨境支付需求不同），KYC 走向標準化介面加多家小型機構、可重用身分（George）；但 NoNonsense4x 提醒，KYC 體驗必須和現在幾乎一模一樣，否則大規模採用只會更慢。"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "liaodian-douyin-20261015",
+      "title": "《聊点抖音不能聊的》",
+      "title_en": "Talking About What Douyin Won't Let You Talk About",
+      "title_tw": "《聊點抖音不能聊的》",
+      "series": null,
+      "episode": null,
+      "date": "2026-10-15",
+      "host": "自己造船的路飞 @CaptainLufei999",
+      "guests": [
+        "DD 滴滴 @rtk17025（联合主持）",
+        "Koda @wadezone",
+        "与神对话张 @zhang_bj_",
+        "香港王富贵 @fugui8",
+        "陈平安 @0X_CPA",
+        "IAMAI @iamai_omni",
+        "鹿姜南Sam @SamEvarth",
+        "小灰灰香辣鸡翅 @chji42514575",
+        "凤凰派 @RealPengFeii",
+        "李白天 @LeoLibt",
+        "Nora X @NoraX2026",
+        "佩德罗 @A8_Pedro",
+        "杨望川 @Ywc0901",
+        "师傅别念了 @QqCdch9573"
+      ],
+      "duration": "2 小时 11 分",
+      "duration_minutes": 131,
+      "url": "https://x.com/i/spaces/1vJpPNmQLrgJE",
+      "note_url": "/spaces/notes/liaodian-douyin-20261015.html",
+      "topics": [
+        "投资心态",
+        "期权策略",
+        "币圈交易",
+        "自媒体"
+      ],
+      "highlights": [
+        "出名比不出名安全：路飞称有钱人最怕出事没人知道，影响力本身就是保护——“如果我今天死了，明天全国都知道了，这就是安全”；自述“彻底干净、没有辫子”",
+        "上了牌桌不下来一定输：交易所手续费约千分之一，胜率 50% 时成交一千次本金就没了；交易不是零和游戏，是“有人抽水的游戏”；小资金高杠杆、频繁交易是“概率性一定错误”",
+        "他的解法是备兑双卖：持有 QQQ 现货同时卖出看涨、卖出看跌期权收权利金，股票仓位不到 20%、大部分是现金；自述今年期权收益 6.48%，并拿一部分收益定期买“世界末日期权”赌黑天鹅",
+        "散户唯一的优势是不急：资金、信息、速度、手续费全面落后，判断涨跌没有意义（涨跌是共识效应，不是真相）；能赢的办法是船小好掉头、严格执行自己定好的策略",
+        "自媒体要的是影响力这个“无形资产”，变现是顺带的；拒绝给年轻人“过来人建议”；不聊政治，一提即下麦"
+      ],
+      "highlights_en": [
+        "Fame beats obscurity for safety, Lufei argues: a rich person's real fear is something happening that nobody knows about — 'if I died today, the whole country would know tomorrow; that is safety'; he says he is 'completely clean, with no handle'",
+        "If you sit at the table and never leave, you will lose: at roughly 0.1% fees per trade, 1,000 trades at a 50% win rate wipes out the principal; trading is not zero-sum, it is 'a game with someone taking a cut'; small capital, high leverage and frequent trading are 'probabilistically certain to be wrong'",
+        "His answer is a covered short strangle: hold QQQ shares while selling both calls and puts to collect premiums, keep equities under 20% with the rest in cash; he reports 6.48% options income so far this year and spends part of it on quarterly 'end-of-the-world options' betting on black swans",
+        "Retail's only edge is not being in a hurry: it trails on capital, information, speed and fees, and calling the market is meaningless (moves are consensus effects, not truth); the way to win is a small boat that turns fast and a strategy followed strictly",
+        "For content, what matters is influence as an 'intangible asset'; monetization follows. He refuses to give young people 'lessons from experience', and politics is off the table — one mention and you are removed"
+      ],
+      "highlights_tw": [
+        "出名比不出名安全：路飛稱有錢人最怕出事沒人知道，影響力本身就是保護——「如果我今天死了，明天全國都知道了，這就是安全」；自述「徹底乾淨、沒有辮子」",
+        "上了牌桌不下來一定輸：交易所手續費約千分之一，勝率 50% 時成交一千次本金就沒了；交易不是零和遊戲，是「有人抽水的遊戲」；小資金高槓桿、頻繁交易是「概率性一定錯誤」",
+        "他的解法是備兌雙賣：持有 QQQ 現貨同時賣出看漲、賣出看跌期權收權利金，股票倉位不到 20%、大部分是現金；自述今年期權收益 6.48%，並拿一部分收益定期買「世界末日期權」賭黑天鵝",
+        "散戶唯一的優勢是不急：資金、信息、速度、手續費全面落後，判斷漲跌沒有意義（漲跌是共識效應，不是真相）；能贏的辦法是船小好掉頭、嚴格執行自己定好的策略",
+        "自媒體要的是影響力這個「無形資產」，變現是順帶的；拒絕給年輕人「過來人建議」；不聊政治，一提即下麥"
+      ],
+      "source": "space"
+    },
+    {
+      "id": "guoyu-indigo-talk-ep52-software-like-milk",
+      "title": "《当软件像牛奶一样便宜，我们还要交付什么｜Indigo Talk EP52》",
+      "title_en": "《当软件像牛奶一样便宜，我们还要交付什么｜Indigo Talk EP52》",
+      "title_tw": "《当软件像牛奶一样便宜，我们还要交付什么｜Indigo Talk EP52》",
+      "series": "Indigo Talk",
+      "episode": null,
+      "date": "2026-10-09",
+      "host": "Indigo（INDIGO 数字镜像）",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "1 小时 12 分",
+      "duration_minutes": 72,
+      "url": "https://www.youtube.com/watch?v=WkmbKwcJk7k",
+      "note_url": "/interviews/notes/guoyu-indigo-talk-ep52-software-like-milk.html",
+      "topics": [
+        "Agent 时代",
+        "Vibe Coding",
+        "软件交付",
+        "一人公司"
+      ],
+      "highlights": [
+        "软件成本降到像牛奶一样便宜后，交付的不再是软件本身，而是目标、媒介与「活人感」；工程师变成做决策的产品经理，AI 没有意图，决策负担回到人身上。",
+        "企业采用只完成了 2–3%，只有 2–3% 的 Pro 用户被真正放大；Everything is Media。",
+        "给年轻人：不要锚定一份稳定的工作，去深圳、去机会成本最低的地方；这是「文艺复兴」不是「工业革命」。"
+      ],
+      "highlights_en": [
+        "软件成本降到像牛奶一样便宜后，交付的不再是软件本身，而是目标、媒介与「活人感」；工程师变成做决策的产品经理，AI 没有意图，决策负担回到人身上。",
+        "企业采用只完成了 2–3%，只有 2–3% 的 Pro 用户被真正放大；Everything is Media。",
+        "给年轻人：不要锚定一份稳定的工作，去深圳、去机会成本最低的地方；这是「文艺复兴」不是「工业革命」。"
+      ],
+      "highlights_tw": [
+        "软件成本降到像牛奶一样便宜后，交付的不再是软件本身，而是目标、媒介与「活人感」；工程师变成做决策的产品经理，AI 没有意图，决策负担回到人身上。",
+        "企业采用只完成了 2–3%，只有 2–3% 的 Pro 用户被真正放大；Everything is Media。",
+        "给年轻人：不要锚定一份稳定的工作，去深圳、去机会成本最低的地方；这是「文艺复兴」不是「工业革命」。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-everyone-can-build-products",
+      "title": "《郭宇：AI让人人都能做产品，然后呢？｜程序员现场提问》",
+      "title_en": "《郭宇：AI让人人都能做产品，然后呢？｜程序员现场提问》",
+      "title_tw": "《郭宇：AI让人人都能做产品，然后呢？｜程序员现场提问》",
+      "series": "银座单向街分享",
+      "episode": null,
+      "date": "2026-09-27",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "44 分钟",
+      "duration_minutes": 44,
+      "url": "https://www.youtube.com/watch?v=_rpcAvsZ9qw",
+      "note_url": "/interviews/notes/guoyu-everyone-can-build-products.html",
+      "topics": [
+        "产品方法",
+        "现场问答",
+        "个人 IP",
+        "分发"
+      ],
+      "highlights": [
+        "做 App 工作法：先语音长聊一小时让 AI 研究全部竞品与市场，再让它出 3 个方案（PRD＋全部页面预渲染图），你只做选择和修改。",
+        "「AI 是镜子」破局法：在提示词前加「不要问我要什么，你做出各种方案来，我来选择」，它给你 10–20 种方案。",
+        "「你要赚取复利，就必须成为一个叙事者」：信任来自 taste、亲切与故事，在 AI 能创造自己的故事之前，叙事是人的地盘。"
+      ],
+      "highlights_en": [
+        "做 App 工作法：先语音长聊一小时让 AI 研究全部竞品与市场，再让它出 3 个方案（PRD＋全部页面预渲染图），你只做选择和修改。",
+        "「AI 是镜子」破局法：在提示词前加「不要问我要什么，你做出各种方案来，我来选择」，它给你 10–20 种方案。",
+        "「你要赚取复利，就必须成为一个叙事者」：信任来自 taste、亲切与故事，在 AI 能创造自己的故事之前，叙事是人的地盘。"
+      ],
+      "highlights_tw": [
+        "做 App 工作法：先语音长聊一小时让 AI 研究全部竞品与市场，再让它出 3 个方案（PRD＋全部页面预渲染图），你只做选择和修改。",
+        "「AI 是镜子」破局法：在提示词前加「不要问我要什么，你做出各种方案来，我来选择」，它给你 10–20 种方案。",
+        "「你要赚取复利，就必须成为一个叙事者」：信任来自 taste、亲切与故事，在 AI 能创造自己的故事之前，叙事是人的地盘。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-language-model-vs-world-model",
+      "title": "《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》",
+      "title_en": "《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》",
+      "title_tw": "《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》",
+      "series": "银座单向街分享",
+      "episode": null,
+      "date": "2026-09-26",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "1 小时 01 分",
+      "duration_minutes": 61,
+      "url": "https://www.youtube.com/watch?v=UCHsMVasxho",
+      "note_url": "/interviews/notes/guoyu-language-model-vs-world-model.html",
+      "topics": [
+        "世界模型",
+        "语言模型",
+        "Computer Use",
+        "服装制造",
+        "Jevons 悖论"
+      ],
+      "highlights": [
+        "两条路线一个目标：把物理世界搬进计算机（real-to-sim）。语言模型先天缺因果，世界模型自带物理、重力与碰撞，为具身智能造模拟数据。",
+        "主演示「20 分钟做一件衣服」：三视图→Tripo 生成 3D 网格→Blender 绑骨骼→Marvelous Designer 打版；人的最后一个判断点是打版对不对。",
+        "MCP 路线已到生命周期尾端，下一代 computer use 必是视觉优先；收尾落点：东亚旧契约被攻克后，剩下的复利资产是叙事。"
+      ],
+      "highlights_en": [
+        "两条路线一个目标：把物理世界搬进计算机（real-to-sim）。语言模型先天缺因果，世界模型自带物理、重力与碰撞，为具身智能造模拟数据。",
+        "主演示「20 分钟做一件衣服」：三视图→Tripo 生成 3D 网格→Blender 绑骨骼→Marvelous Designer 打版；人的最后一个判断点是打版对不对。",
+        "MCP 路线已到生命周期尾端，下一代 computer use 必是视觉优先；收尾落点：东亚旧契约被攻克后，剩下的复利资产是叙事。"
+      ],
+      "highlights_tw": [
+        "两条路线一个目标：把物理世界搬进计算机（real-to-sim）。语言模型先天缺因果，世界模型自带物理、重力与碰撞，为具身智能造模拟数据。",
+        "主演示「20 分钟做一件衣服」：三视图→Tripo 生成 3D 网格→Blender 绑骨骼→Marvelous Designer 打版；人的最后一个判断点是打版对不对。",
+        "MCP 路线已到生命周期尾端，下一代 computer use 必是视觉优先；收尾落点：东亚旧契约被攻克后，剩下的复利资产是叙事。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-intentware-ai-trio",
+      "title": "《郭宇：从软件到意件｜AI 三人行》",
+      "title_en": "《郭宇：从软件到意件｜AI 三人行》",
+      "title_tw": "《郭宇：从软件到意件｜AI 三人行》",
+      "series": "郭宇关于AI的十次分享",
+      "episode": null,
+      "date": "2026-07-16",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "2 小时 23 分",
+      "duration_minutes": 143,
+      "url": "https://www.youtube.com/watch?v=swfFKYoOFHw",
+      "note_url": "/interviews/notes/guoyu-intentware-ai-trio.html",
+      "topics": [
+        "意件",
+        "实时语音模型",
+        "GPT Live",
+        "意图",
+        "在日生活"
+      ],
+      "highlights": [
+        "实时语音模型分水岭：三段式（ASR→LLM→TTS）1–2 秒，原生实时只要 100–200 毫秒，快到可以插话、打断、像人一样聊天。",
+        "语言不等于意图：副语言（语气、表情、眼神、停顿）读不到，AI 就读不到你真正的心思；幽默（timing 与读空气）是下一个界限。",
+        "现场实测五个生活问题：送十年前的自己一本书、朋友来东京两小时去哪、朋友来日本生活一年、被拒绝与读空气、异乡的孤独「你会给谁打电话」。"
+      ],
+      "highlights_en": [
+        "实时语音模型分水岭：三段式（ASR→LLM→TTS）1–2 秒，原生实时只要 100–200 毫秒，快到可以插话、打断、像人一样聊天。",
+        "语言不等于意图：副语言（语气、表情、眼神、停顿）读不到，AI 就读不到你真正的心思；幽默（timing 与读空气）是下一个界限。",
+        "现场实测五个生活问题：送十年前的自己一本书、朋友来东京两小时去哪、朋友来日本生活一年、被拒绝与读空气、异乡的孤独「你会给谁打电话」。"
+      ],
+      "highlights_tw": [
+        "实时语音模型分水岭：三段式（ASR→LLM→TTS）1–2 秒，原生实时只要 100–200 毫秒，快到可以插话、打断、像人一样聊天。",
+        "语言不等于意图：副语言（语气、表情、眼神、停顿）读不到，AI 就读不到你真正的心思；幽默（timing 与读空气）是下一个界限。",
+        "现场实测五个生活问题：送十年前的自己一本书、朋友来东京两小时去哪、朋友来日本生活一年、被拒绝与读空气、异乡的孤独「你会给谁打电话」。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-from-software-to-intentware",
+      "title": "《郭宇关于AI的十次分享：从软件到意件》",
+      "title_en": "《郭宇关于AI的十次分享：从软件到意件》",
+      "title_tw": "《郭宇关于AI的十次分享：从软件到意件》",
+      "series": "郭宇关于AI的十次分享",
+      "episode": null,
+      "date": "2026-07-12",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "2 小时 35 分",
+      "duration_minutes": 155,
+      "url": "https://www.youtube.com/watch?v=5ghhAxcH9R0",
+      "note_url": "/interviews/notes/guoyu-from-software-to-intentware.html",
+      "topics": [
+        "意件",
+        "十次分享",
+        "实时模型",
+        "Agent 经济",
+        "声音克隆"
+      ],
+      "highlights": [
+        "软件→「意件」：意图驱动、无 App 无 UI、语音入口、Always-on Agent；实时模型分水岭是三段式（1–2 秒）与原生实时（100–200 毫秒）。",
+        "GPT 思考深度碾压豆包（豆包胜在方言与摄像头）；幽默是下一个界限。",
+        "Agent 经济的关键在预算与责任；配音演员被声音克隆替代，解法是「做数字版的自己」。"
+      ],
+      "highlights_en": [
+        "软件→「意件」：意图驱动、无 App 无 UI、语音入口、Always-on Agent；实时模型分水岭是三段式（1–2 秒）与原生实时（100–200 毫秒）。",
+        "GPT 思考深度碾压豆包（豆包胜在方言与摄像头）；幽默是下一个界限。",
+        "Agent 经济的关键在预算与责任；配音演员被声音克隆替代，解法是「做数字版的自己」。"
+      ],
+      "highlights_tw": [
+        "软件→「意件」：意图驱动、无 App 无 UI、语音入口、Always-on Agent；实时模型分水岭是三段式（1–2 秒）与原生实时（100–200 毫秒）。",
+        "GPT 思考深度碾压豆包（豆包胜在方言与摄像头）；幽默是下一个界限。",
+        "Agent 经济的关键在预算与责任；配音演员被声音克隆替代，解法是「做数字版的自己」。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-ai-film-everyone-a-director",
+      "title": "《郭宇：用AI做影片，人人都能当导演》",
+      "title_en": "《郭宇：用AI做影片，人人都能当导演》",
+      "title_tw": "《郭宇：用AI做影片，人人都能当导演》",
+      "series": "郭宇关于AI的十次分享",
+      "episode": null,
+      "date": "2026-05-28",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "1 小时 48 分",
+      "duration_minutes": 108,
+      "url": "https://www.youtube.com/watch?v=LAhgDOGXH5A",
+      "note_url": "/interviews/notes/guoyu-ai-film-everyone-a-director.html",
+      "topics": [
+        "AI 影片",
+        "导演手艺",
+        "Seedance",
+        "提示词",
+        "Visio Studio"
+      ],
+      "highlights": [
+        "AI 不会取代导演，但可以让所有人都变成导演：电影 = 故事 + 画面 + 时间，地基是故事。",
+        "提示词颗粒度就是导演功力：抽象情绪词无效，必须写成可见的画面指令；工作流可给 500 美元预算无人值守，一小时严肃 AI 视频约 2,000 美元。",
+        "无限解空间：AI 给你无限选择，也拿走了「命运垂青」的感觉——从被动的命运接受者变成探索者，逼你思考如何定位自己。"
+      ],
+      "highlights_en": [
+        "AI 不会取代导演，但可以让所有人都变成导演：电影 = 故事 + 画面 + 时间，地基是故事。",
+        "提示词颗粒度就是导演功力：抽象情绪词无效，必须写成可见的画面指令；工作流可给 500 美元预算无人值守，一小时严肃 AI 视频约 2,000 美元。",
+        "无限解空间：AI 给你无限选择，也拿走了「命运垂青」的感觉——从被动的命运接受者变成探索者，逼你思考如何定位自己。"
+      ],
+      "highlights_tw": [
+        "AI 不会取代导演，但可以让所有人都变成导演：电影 = 故事 + 画面 + 时间，地基是故事。",
+        "提示词颗粒度就是导演功力：抽象情绪词无效，必须写成可见的画面指令；工作流可给 500 美元预算无人值守，一小时严肃 AI 视频约 2,000 美元。",
+        "无限解空间：AI 给你无限选择，也拿走了「命运垂青」的感觉——从被动的命运接受者变成探索者，逼你思考如何定位自己。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-one-person-company-full",
+      "title": "《郭宇：用AI經營一人公司（全）》",
+      "title_en": "《郭宇：用AI經營一人公司（全）》",
+      "title_tw": "《郭宇：用AI經營一人公司（全）》",
+      "series": "银座单向街分享",
+      "episode": null,
+      "date": "2026-05-27",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "2 小时 03 分",
+      "duration_minutes": 123,
+      "url": "https://www.youtube.com/watch?v=pDAmg04gXV4",
+      "note_url": "/interviews/notes/guoyu-one-person-company-full.html",
+      "topics": [
+        "一人公司",
+        "Wanman",
+        "AI 员工",
+        "信任与复核",
+        "完整版"
+      ],
+      "highlights": [
+        "与《AI做员工，开一人公司》（63 分钟版）是同一场的完整版：前 63 分钟相同，本条收录后半段新增问答。",
+        "信任与复核：代码他 review；商业计划靠 SOTA 模型联网交叉核证，再加银行、律师等专业机构最终裁定；他的工作只有「调度」。",
+        "Wanman 两大待解问题：隐私（接管模式理论上拿到全部数据）与数据整备（很多人文件太乱，导入也只能做到 30 分）。"
+      ],
+      "highlights_en": [
+        "与《AI做员工，开一人公司》（63 分钟版）是同一场的完整版：前 63 分钟相同，本条收录后半段新增问答。",
+        "信任与复核：代码他 review；商业计划靠 SOTA 模型联网交叉核证，再加银行、律师等专业机构最终裁定；他的工作只有「调度」。",
+        "Wanman 两大待解问题：隐私（接管模式理论上拿到全部数据）与数据整备（很多人文件太乱，导入也只能做到 30 分）。"
+      ],
+      "highlights_tw": [
+        "与《AI做员工，开一人公司》（63 分钟版）是同一场的完整版：前 63 分钟相同，本条收录后半段新增问答。",
+        "信任与复核：代码他 review；商业计划靠 SOTA 模型联网交叉核证，再加银行、律师等专业机构最终裁定；他的工作只有「调度」。",
+        "Wanman 两大待解问题：隐私（接管模式理论上拿到全部数据）与数据整备（很多人文件太乱，导入也只能做到 30 分）。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-ai-film-ten-talks",
+      "title": "《郭宇关于AI的十次分享：AI做影片》",
+      "title_en": "《郭宇关于AI的十次分享：AI做影片》",
+      "title_tw": "《郭宇关于AI的十次分享：AI做影片》",
+      "series": "郭宇关于AI的十次分享",
+      "episode": null,
+      "date": "2026-05-23",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "2 小时 23 分",
+      "duration_minutes": 143,
+      "url": "https://www.youtube.com/watch?v=BcMssIgsvdI",
+      "note_url": "/interviews/notes/guoyu-ai-film-ten-talks.html",
+      "topics": [
+        "AI 影片",
+        "十次分享",
+        "短剧",
+        "Seedance",
+        "原创 IP"
+      ],
+      "highlights": [
+        "真人短剧行业大批从业者没活干、转 AI 漫剧；成本锚点：一小时严肃 AI 视频约 2,000 美元（Seedance＋音乐，50% 容错抽二留一）。",
+        "工作流 = Codex 驱动：脚本→GPT Image 2 分镜图→Seedance 生成→对照分镜自动质检 retake，可给预算（如 500 美元）无人值守跑。",
+        "版权收紧逼出原创 IP，预言一两个月内出现初代 AI 原生 IP；「先卖不存在的产品」预售创业法：产品图→预售 300–400 单→再找工厂，零风险。"
+      ],
+      "highlights_en": [
+        "真人短剧行业大批从业者没活干、转 AI 漫剧；成本锚点：一小时严肃 AI 视频约 2,000 美元（Seedance＋音乐，50% 容错抽二留一）。",
+        "工作流 = Codex 驱动：脚本→GPT Image 2 分镜图→Seedance 生成→对照分镜自动质检 retake，可给预算（如 500 美元）无人值守跑。",
+        "版权收紧逼出原创 IP，预言一两个月内出现初代 AI 原生 IP；「先卖不存在的产品」预售创业法：产品图→预售 300–400 单→再找工厂，零风险。"
+      ],
+      "highlights_tw": [
+        "真人短剧行业大批从业者没活干、转 AI 漫剧；成本锚点：一小时严肃 AI 视频约 2,000 美元（Seedance＋音乐，50% 容错抽二留一）。",
+        "工作流 = Codex 驱动：脚本→GPT Image 2 分镜图→Seedance 生成→对照分镜自动质检 retake，可给预算（如 500 美元）无人值守跑。",
+        "版权收紧逼出原创 IP，预言一两个月内出现初代 AI 原生 IP；「先卖不存在的产品」预售创业法：产品图→预售 300–400 单→再找工厂，零风险。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-one-person-company-qa",
+      "title": "《郭宇｜关于AI一人公司，大家最想知道的都在这里》",
+      "title_en": "《郭宇｜关于AI一人公司，大家最想知道的都在这里》",
+      "title_tw": "《郭宇｜关于AI一人公司，大家最想知道的都在这里》",
+      "series": "银座单向街分享",
+      "episode": null,
+      "date": "2026-05-21",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "1 小时 03 分",
+      "duration_minutes": 63,
+      "url": "https://www.youtube.com/watch?v=diN1fiE52aI",
+      "note_url": "/interviews/notes/guoyu-one-person-company-qa.html",
+      "topics": [
+        "一人公司",
+        "问答",
+        "接管模式",
+        "Wanman",
+        "成本"
+      ],
+      "highlights": [
+        "心法：「不要把 AI 当工具，把它当人」；信任两件套 = 审美写成文档/Skill 文件 + 用时间长谈建立信任。",
+        "接管模式是核心价值：接管代码仓库、「测试覆盖率 100% 不到不许结束」、15 个上线项目的 bug 走 webhook 自动修、晨起审 100+ 分支几十个 PR。",
+        "成本 = 订阅制 Codex Max 200 美元/月，API 贵 10–12 倍；苹果农场案例：一句话目标，40 分钟出含 36 个月预测的完整计划。"
+      ],
+      "highlights_en": [
+        "心法：「不要把 AI 当工具，把它当人」；信任两件套 = 审美写成文档/Skill 文件 + 用时间长谈建立信任。",
+        "接管模式是核心价值：接管代码仓库、「测试覆盖率 100% 不到不许结束」、15 个上线项目的 bug 走 webhook 自动修、晨起审 100+ 分支几十个 PR。",
+        "成本 = 订阅制 Codex Max 200 美元/月，API 贵 10–12 倍；苹果农场案例：一句话目标，40 分钟出含 36 个月预测的完整计划。"
+      ],
+      "highlights_tw": [
+        "心法：「不要把 AI 当工具，把它当人」；信任两件套 = 审美写成文档/Skill 文件 + 用时间长谈建立信任。",
+        "接管模式是核心价值：接管代码仓库、「测试覆盖率 100% 不到不许结束」、15 个上线项目的 bug 走 webhook 自动修、晨起审 100+ 分支几十个 PR。",
+        "成本 = 订阅制 Codex Max 200 美元/月，API 贵 10–12 倍；苹果农场案例：一句话目标，40 分钟出含 36 个月预测的完整计划。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-ai-employees-one-person-company",
+      "title": "《郭宇｜AI做员工，开一人公司》",
+      "title_en": "《郭宇｜AI做员工，开一人公司》",
+      "title_tw": "《郭宇｜AI做员工，开一人公司》",
+      "series": "银座单向街分享",
+      "episode": null,
+      "date": "2026-05-19",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "1 小时 03 分",
+      "duration_minutes": 63,
+      "url": "https://www.youtube.com/watch?v=Prb_YPSdzH4",
+      "note_url": "/interviews/notes/guoyu-ai-employees-one-person-company.html",
+      "topics": [
+        "一人公司",
+        "AI 员工",
+        "Wanman",
+        "Harness Engineering",
+        "协调者"
+      ],
+      "highlights": [
+        "一人公司的本质 = AI 当协调者：写邮件、整理资料、做 PDF、打电话；人退居二线做观察者，只在明确阻塞点干预。",
+        "转折点是与黄东旭（TiDB/PingCAP 创始人）的深夜对话：对方在做「最终的软件」，那晚他没睡，Wanman 本质即同类东西。",
+        "先发优势在摩擦与协调沉淀在 AI 的记忆里；AI 员工如实习生，靠正反馈、导师制与改进技能文档变强。另有 2 小时 03 分完整版（见本清单）。"
+      ],
+      "highlights_en": [
+        "一人公司的本质 = AI 当协调者：写邮件、整理资料、做 PDF、打电话；人退居二线做观察者，只在明确阻塞点干预。",
+        "转折点是与黄东旭（TiDB/PingCAP 创始人）的深夜对话：对方在做「最终的软件」，那晚他没睡，Wanman 本质即同类东西。",
+        "先发优势在摩擦与协调沉淀在 AI 的记忆里；AI 员工如实习生，靠正反馈、导师制与改进技能文档变强。另有 2 小时 03 分完整版（见本清单）。"
+      ],
+      "highlights_tw": [
+        "一人公司的本质 = AI 当协调者：写邮件、整理资料、做 PDF、打电话；人退居二线做观察者，只在明确阻塞点干预。",
+        "转折点是与黄东旭（TiDB/PingCAP 创始人）的深夜对话：对方在做「最终的软件」，那晚他没睡，Wanman 本质即同类东西。",
+        "先发优势在摩擦与协调沉淀在 AI 的记忆里；AI 员工如实习生，靠正反馈、导师制与改进技能文档变强。另有 2 小时 03 分完整版（见本清单）。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-ai-unemployment-countdown",
+      "title": "《郭宇｜AI時代到來，失业倒计时？》",
+      "title_en": "《郭宇｜AI時代到來，失业倒计时？》",
+      "title_tw": "《郭宇｜AI時代到來，失业倒计时？》",
+      "series": "银座单向街分享",
+      "episode": null,
+      "date": "2026-04-26",
+      "host": "銀座單向街書店",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "37 分钟",
+      "duration_minutes": 37,
+      "url": "https://www.youtube.com/watch?v=rwueq7n_3yA",
+      "note_url": "/interviews/notes/guoyu-ai-unemployment-countdown.html",
+      "topics": [
+        "失业",
+        "Skills",
+        "软件的终结",
+        "职业建议",
+        "OpenClaw"
+      ],
+      "highlights": [
+        "真正的断裂点是 2025 年 10 月 Claude Code 的 Skills（不是 2022 年 12 月 ChatGPT）：软件从写死的代码变成流动的 token/推理。",
+        "程序员先失业：硅谷已基本不招初级程序员，雇人 = 最大摩擦；给年轻人：别学写代码了，学用 agent 三到六个月。",
+        "OneMan AI 实验：5090 PC 上跑 1,000 个循环 6 个多小时，AI 设计一家东京装置艺术公司（财务计划、网站、3D 作品、自动给画廊写投稿邮件）。"
+      ],
+      "highlights_en": [
+        "真正的断裂点是 2025 年 10 月 Claude Code 的 Skills（不是 2022 年 12 月 ChatGPT）：软件从写死的代码变成流动的 token/推理。",
+        "程序员先失业：硅谷已基本不招初级程序员，雇人 = 最大摩擦；给年轻人：别学写代码了，学用 agent 三到六个月。",
+        "OneMan AI 实验：5090 PC 上跑 1,000 个循环 6 个多小时，AI 设计一家东京装置艺术公司（财务计划、网站、3D 作品、自动给画廊写投稿邮件）。"
+      ],
+      "highlights_tw": [
+        "真正的断裂点是 2025 年 10 月 Claude Code 的 Skills（不是 2022 年 12 月 ChatGPT）：软件从写死的代码变成流动的 token/推理。",
+        "程序员先失业：硅谷已基本不招初级程序员，雇人 = 最大摩擦；给年轻人：别学写代码了，学用 agent 三到六个月。",
+        "OneMan AI 实验：5090 PC 上跑 1,000 个循环 6 个多小时，AI 设计一家东京装置艺术公司（财务计划、网站、3D 作品、自动给画廊写投稿邮件）。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-financial-freedom-at-26",
+      "title": "《26岁财富自由的程序员郭宇》",
+      "title_en": "《26岁财富自由的程序员郭宇》",
+      "title_tw": "《26岁财富自由的程序员郭宇》",
+      "series": "播客对谈",
+      "episode": null,
+      "date": "2025-03-12",
+      "host": "课代表立正",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "49 分钟",
+      "duration_minutes": 49,
+      "url": "https://www.youtube.com/watch?v=mf13n8Fl7FM",
+      "note_url": "/interviews/notes/guoyu-financial-freedom-at-26.html",
+      "topics": [
+        "财富自由",
+        "FIRE",
+        "锚点",
+        "投资",
+        "人生选择"
+      ],
+      "highlights": [
+        "锚点论：职场 + 家庭是上班族 80–90% 的意义来源，财富自由后锚点消失才是最危险的；他辞职时间线 2017 动念、2019 提、2020 走。",
+        "FIRE 账：变量是自己的开支不是通胀，一年花 50 万人民币 + 无风险利率 4.5–5% 即可；新加坡（免税）与日本之间选了四季与温泉。",
+        "要赔钱就早赔；目标只跟自己比——赚的钱覆盖开支即可，目标定低动作不变形；股价逻辑只占 20%，情绪与执行占 80%。"
+      ],
+      "highlights_en": [
+        "锚点论：职场 + 家庭是上班族 80–90% 的意义来源，财富自由后锚点消失才是最危险的；他辞职时间线 2017 动念、2019 提、2020 走。",
+        "FIRE 账：变量是自己的开支不是通胀，一年花 50 万人民币 + 无风险利率 4.5–5% 即可；新加坡（免税）与日本之间选了四季与温泉。",
+        "要赔钱就早赔；目标只跟自己比——赚的钱覆盖开支即可，目标定低动作不变形；股价逻辑只占 20%，情绪与执行占 80%。"
+      ],
+      "highlights_tw": [
+        "锚点论：职场 + 家庭是上班族 80–90% 的意义来源，财富自由后锚点消失才是最危险的；他辞职时间线 2017 动念、2019 提、2020 走。",
+        "FIRE 账：变量是自己的开支不是通胀，一年花 50 万人民币 + 无风险利率 4.5–5% 即可；新加坡（免税）与日本之间选了四季与温泉。",
+        "要赔钱就早赔；目标只跟自己比——赚的钱覆盖开支即可，目标定低动作不变形；股价逻辑只占 20%，情绪与执行占 80%。"
+      ],
+      "source": "youtube"
+    },
+    {
+      "id": "guoyu-wealth-and-investing",
+      "title": "《第5集｜郭宇谈财富、投资起源于地铁站门口开户》",
+      "title_en": "《第5集｜郭宇谈财富、投资起源于地铁站门口开户》",
+      "title_tw": "《第5集｜郭宇谈财富、投资起源于地铁站门口开户》",
+      "series": "播客《一代马之外》",
+      "episode": null,
+      "date": "2023-08-14",
+      "host": "代码之外 Beyond Code（Randy、GeekPlux）",
+      "guests": [
+        "郭宇"
+      ],
+      "duration": "1 小时 19 分",
+      "duration_minutes": 79,
+      "url": "https://www.youtube.com/watch?v=tWmNN87VvcE",
+      "note_url": "/interviews/notes/guoyu-wealth-and-investing.html",
+      "topics": [
+        "财富",
+        "投资起源",
+        "播客",
+        "退休",
+        "风险结构"
+      ],
+      "highlights": [
+        "2023 年录制，是本清单里最「考古」的一集。财富来源纠偏：外界以为靠字节股权——真积累是 2013 年起在深圳地铁站门口开户、每月定投腾讯毫无策略投五年，另有 2013 年比特币。",
+        "「计划的价值不是预测对，而是让你对波动免疫」；自由的操作定义：认真量两年年支出，满意现状则年支出 ×10 资产（4% 规则）即达标。",
+        "给程序员的风险结构课：收入靠薪资 + 财富靠房产双集中，35 岁裁员 + 房贷 + 房子卖不掉 = 流动性危机，日本发生过的事可能在任何国家重演。"
+      ],
+      "highlights_en": [
+        "2023 年录制，是本清单里最「考古」的一集。财富来源纠偏：外界以为靠字节股权——真积累是 2013 年起在深圳地铁站门口开户、每月定投腾讯毫无策略投五年，另有 2013 年比特币。",
+        "「计划的价值不是预测对，而是让你对波动免疫」；自由的操作定义：认真量两年年支出，满意现状则年支出 ×10 资产（4% 规则）即达标。",
+        "给程序员的风险结构课：收入靠薪资 + 财富靠房产双集中，35 岁裁员 + 房贷 + 房子卖不掉 = 流动性危机，日本发生过的事可能在任何国家重演。"
+      ],
+      "highlights_tw": [
+        "2023 年录制，是本清单里最「考古」的一集。财富来源纠偏：外界以为靠字节股权——真积累是 2013 年起在深圳地铁站门口开户、每月定投腾讯毫无策略投五年，另有 2013 年比特币。",
+        "「计划的价值不是预测对，而是让你对波动免疫」；自由的操作定义：认真量两年年支出，满意现状则年支出 ×10 资产（4% 规则）即达标。",
+        "给程序员的风险结构课：收入靠薪资 + 财富靠房产双集中，35 岁裁员 + 房贷 + 房子卖不掉 = 流动性危机，日本发生过的事可能在任何国家重演。"
+      ],
+      "source": "youtube"
+    }
+  ]
+}
