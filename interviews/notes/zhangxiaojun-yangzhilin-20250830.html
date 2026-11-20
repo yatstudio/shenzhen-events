@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《杨植麟：用 L4 做 L3，管团队要用 RL》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>杨植麟：用 L4 的创新，去做 L3 的 Agent</h1>
+<blockquote>
+<p>节目：张小珺商业访谈录 · 嘉宾：杨植麟（月之暗面 / Kimi 创始人）· 主持：张小珺 · 时长：约 1 小时 40 分
+说明：本纪要据 X 上流传的该访谈视频录音转写整理。原访谈为 2025 年 K2 发布后录制，2026-07-20 被 X 用户 @rdominguezibar 重新分享并配文「每个实验室都执着于模型本身，这是错的——赢的是你如何组织造模型的人」。转写质量较差（中文录音经英文语音识别，多处含混），本纪要为要点重构，专有名词已按上下文校正；数字与说法均为发言人现场口径。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>杨植麟这场谈的是「模型之后的事」：推理与 Agent 是两条不同的 test-time scaling 路线，真正的分水岭是模型能不能参与开发下一代模型（创新）、以及能不能把多个 Agent 组织成系统；而管理一家 AI 公司的方法论，和训练模型是同构的——用 RL 管团队，而不是用 SFT。</p>
+<h2>两种 test-time scaling：缸中之脑 vs 与世界交互</h2>
+<ul>
+<li>推理时扩展有两条路：一条是让模型在内部持续思考（o1 式长思维链），像「缸中之脑」——不与外界交互，靠不断提出假设、自我验证把 pass@k 做成 pass@1；另一条是 Agent 式：多轮与外部环境交互、反复调用工具，用环境的反馈推进任务。</li>
+<li>他对 Claude 路线的解读：Claude 的模型推理分数不是最高，但 Agent 表现非常强——说明背后是不同的技术取向，<strong>推理能力与 Agent 能力并不必然绑定</strong>。做一般 Agent 任务不需要把推理堆到极致（不必每步都烧几千 token 思考，写个测试、跑一下，环境自然给反馈）；但要做最复杂的那类 Agent 任务，推理仍是上限。</li>
+<li>两条路线都会继续进步，谁的天花板更高今天说不清；他判断推理侧的空间还很大。</li>
+</ul>
+<h2>L1–L5 不是台阶，是里程碑</h2>
+<ul>
+<li>聊到 OpenAI 的五级划分（聊天机器人→推理者→Agent→创新者→组织），他认为那是几个重要技术里程碑，<strong>不是必须依次跨越的台阶</strong>：完全可以先做 Agent 能力，再回头补推理，顺序换过来也成立。</li>
+<li>他给「创新」（L4）下的判据很具体：<strong>你的模型能不能参与开发下一代模型</strong>——希望 K2 能参与 K3 的开发：提想法、做实验、分析结果、改进 infra，全需要极强的 Agent 能力。所以创新某种意义上是 Agent 能力的上层建筑。</li>
+<li>「组织」（L5）对应多 Agent 系统：把任务分工给不同 Agent，有的写测试、有的写文档、有的设计架构，再拼起来。难点不是把几个 Agent 摆出来，而是怎么训练出一个真正好用的多 Agent 系统。</li>
+</ul>
+<h2>过去一年最大的变化，与 K1.5 / K2 的技术账</h2>
+<ul>
+<li>他心目中过去一年最重要的事是长思考模型（以 o1 为代表）的出现：模型从「一次给答案」变成「在思考过程中不断试错、验证」，这更接近真实科研与解题的过程。另一个大变化是模型公司亲自下场做一方 Agent 产品（Claude Code、ChatGPT Agent）：过去是第三方在现成模型上套工具、调分布；模型公司的做法是先设计好工具与上下文环境、<strong>在这个环境里训练模型</strong>——模型与工具协同设计，上限更高。月之暗面仍以模型为主线、一方产品做得少，他承认这是值得观察的趋势。</li>
+<li><strong>K1.5</strong> 是对 RL 路线的早期验证：很早就押注强化学习，并发现不需要复杂的過程奖励或价值函数，简单的结果奖励就能把长思考训练得很好，积累了小规模 RL 的算法 know-how。</li>
+<li><strong>K2 的主题词是 token 效率</strong>。逻辑是：高质量数据增长很慢，数据是长期资产，那就把每个 token 的价值榨干——同样的智能，用更少的数据学到。他重点讲了自研的 Muon 优化器（及其大规模版本 MuonClip）：Adam 用了十年但 token 效率不佳，Muon 考虑参数间的相关性，学习效率约相当于 Adam 的两倍（同样 30T 高质量 token，学完约等于别人学 60T）。把 Muon 放大到万亿参数规模时遇到了小规模实验里根本不会出现的 max-logit 爆炸问题，靠新的 clipping 方法解决。配套还做了数据改写（rephrasing），让同一批数据能被多轮吸收又不至于过拟合。他强调这些数都写在技术报告里、刻意保持开放。</li>
+</ul>
+<h2>Agent 的真正瓶颈：评估与泛化</h2>
+<ul>
+<li>他反复回到同一个判断：<strong>Agent 模型最大的限制是评估（evaluation）</strong>。数学、编程有测试用例好验证，复杂任务往往没有现成的验证器；现有 benchmark（如 SWE-bench）很快被刷满，分数不再反映真实能力。没有好评估，就没法指引模型改进——这是整个 Agent 训练的核心堵点。</li>
+<li>出路是「用 AI 训练 AI」：让模型更多参与训练过程本身（做对齐研究、做实验），这既是 L4 的定义，也是解开 L3 评估困局的钥匙——某种意义上要用 L4 的技术去解 L3 的问题。他在结尾把这句话点为当前最重要的押注：「用创新做 Agent，用 L4 做 L3。」</li>
+<li><strong>泛化是 Agent 侧最缺的能力</strong>：未来的工具是长尾的、个性化的（查公司内部数据、订票下单、闻所未闻的 API），模型必须能使用从未见过的工具。人就是通用构造者（universal constructor，他引 David Deutsch）——Agent 系统的设计目标不是模仿人的行为，而是像人一样成为通用目的的执行者；只在几个任务上拟合得好、到用户真实环境里就掉链子，是当前 Agent 的通病。RL 的 on-policy 采样（正负样本都来自模型自身分布）比 SFT 泛化更好，但仍受限于人造任务与数据的规模。</li>
+<li>环境设计上他反对「为单个任务定制环境」：环境要足够通用，让模型在其中自己学会与环境共演化。编程是目前最好的训练场——可验证、且代码就是数字世界的语言（想造新工具本质上就是写代码）；但目标不是做一个 coding 模型，而是通用 Agent 模型，律师、产品经理都在用 Claude Code 干非编程的活就是证据。</li>
+<li>长上下文是另一块硬骨头：很多任务 128K/256K 不够，要百万级以上，而且要「在百万上下文里保持智商」；靠线性注意力等架构换长度可能丢精度，长度与智能之间存在真实冲突，需要更好的架构。</li>
+</ul>
+<h2>开源、产品与商业化</h2>
+<ul>
+<li>开源话题上，主持人翻出他去年的说法（大意是领先者不会开源）。他现在的表述是：开源对月之暗面的价值在于社区加速自身技术、与同行竞争、共建生态、帮自己爬山；但不是所有东西都全开，长期会持续分享更多技术——「既是技术信仰，也是市场策略」。他判断行业会继续向头部集中，最终稳定的玩家是少数几家（开源闭源都在内）。对「中国公司为什么更爱开源」，他归因于市场与生态位。</li>
+<li><strong>产品观是「模型即产品」</strong>：做 Agent 产品时，模型、工具、上下文必须在训练阶段就拼在一起——训练完成时，产品基本上也就完成了，后面只剩交互层。这和互联网产品「先有产品、再长能力」的路径完全不同。</li>
+<li>通用模型的系统复杂度被低估：一个模型要同时做好聊天、推理、Agent、多模态，后训练与 RL 阶段会出现任务互相干扰（比如加多模态不能伤文本大脑），这比预训练「把文档拼起来训」难得多。</li>
+<li>交互界面没有终局形态：Copilot→Cursor→Claude Code，每代界面变化都由模型能力跃升驱动；模型还在进化，界面会继续变。超级入口会在哪里？他的回答偏保守：系统会跑在很多数据中心里（黄仁勋说的「AI 工厂」），终端形态仍在演化。</li>
+<li>商业化上被问「要做中国的 OpenAI 还是中国的 Anthropic」，他说中美环境不同、要用全球视角，很难这样定义；主线仍是爬山，API 与商业化会做实验，但排位在模型效果之后。他给的理由是市场已被验证且在高速增长（全行业 ARR 已是数百亿美元量级、每两个季度翻两三倍），模型效果领先本身就会打开商业空间，先投资技术是对的。</li>
+<li>Scaling law 没死：数据墙是客观存在，穿越方法是提高 token 效率 + 把更多算力投到 RL（RL 的 scaling 效应比预训练更强，on-policy 数据效率更高），所以至今没看到增速放缓。用户反馈不能直接拿来训练（有噪声、太敏感），但要从整体分布上知道用户用得好不好，否则不知道往哪优化。</li>
+</ul>
+<h2>组织即训练：用 RL 管团队，不要用 SFT</h2>
+<p>这是与 X 帖配文呼应的部分。他最近想通的一件事：做研究、创造新知识的过程，和管团队、和训练模型，是同一件事的三种形态。</p>
+<ul>
+<li>知识不是经验直接给的：人类在地球上生活了几十万年，三四百年前还没人知道地球是圆的——要先有人提出猜想，再用实验验证。组织创造知识也是这个循环。</li>
+<li><strong>管团队要用 RL，不要用 SFT</strong>（这是团队里一位同事点醒他的）：SFT 是「你应该这样做」，手把手规定动作；RL 是只给奖励与目标，让人自己探索。SFT 适量有用（像给模型加一点 SFT 防止 pre-training loss 飞掉、防止遗忘），但 SFT 太多，学生会失去探索目标的能力、丢掉创造性——<strong>SFT 管团队的风险是所有人失去创造力</strong>。</li>
+<li><strong>RL 管团队的最大风险是 reward hacking</strong>：奖励定义错了，所有人都把分数刷得很好看，实际目标没达到。所以奖励/指标的定义是管理里最难、最关键的事——要建立多个观测指标、深入理解业务细节，让奖励没法被轻易 hack。他自认还在学，做法是以 RL 为主、少量 SFT 兜底防跑偏。</li>
+<li>同理，组织的演化就是不断提出解释、被现实证伪、再修正：牛顿力学在当时是最好的解释，有错、后来被更好的解释替代；公司战略在某个时点是对的、过时了就得调。最重要的是两件事：投入对的人与技术，以及在过程中快速适应调整。</li>
+<li>K2 的命名梗：K2 不是世界最高峰，但被公认是最难攀登的山峰之一——正对应这一代模型「从对话到 Agent」的范式切换叠加规模跃升的难度。结果基本符合预期，他说做模型最重要的是预测能力（算力、成本都要提前算清），唯一没预测到的是 max-logit 爆炸，因为小规模实验里它根本不出现。</li>
+</ul>
+<h2>世界观与个人部分</h2>
+<ul>
+<li>他重读 David Deutsch《无穷的开始》（The Beginning of Infinity）：「问题不可避免，问题可解决」是刻在石头上的两句话。AGI 不是某个一夜到达的时间点，而是一个方向——很多领域模型已强于 99% 的人，但社会消化一项技术（像蒸汽机）需要上百年，新工作、新生活方式都是 AGI 的一部分。雪山可能根本无顶，「这是一座无限的山」，以后甚至是和 AI 一起爬。</li>
+<li>世界模型与 Agent 的关系：造世界模型是「造世界」，造 Agent 是「造人」；有了好的世界模型，就能为 AI 生成大量可训练的环境，与「AI 训练 AI」是一回事。</li>
+<li>对 Yann LeCun 的 next-token prediction 批评，他的回应是：只靠 NTP 确实不够，但 NTP 攒下的知识基底更大、上限更高，需要 RL 把知识激发出来，两者要配合。</li>
+<li>问 AI 会不会毁灭文明（他真的拿这个问题问过 Kimi 本人）：风险不能说不存在，要做安全与社会机制；但 Kimi 给他的回答他大体认同——AI 是人类的一件重要工具/武器，放弃它等于放弃文明进步。人的意义他列了三样：创造、体验、爱；创造的大部分可能被 AI 接管（那等于接管生产力，人可以享受成果，前提是社会机制慢慢调好，这要二十年量级），体验与爱仍以人为中心。</li>
+<li>成功概率比一年前更高——「因为我们一直在爬，很多人不爬了」；会有恐惧，但恐惧更多取决于当下在做什么。心态就是「做时间的朋友」：喜欢这件事、想把它做好，剩下的没那么复杂，「很多复杂是人为加上去的」。</li>
+<li>生活节奏：睡得晚，时间主要花在看模型怎么训练上——具体说是技术战略（选什么、不选什么，空间太大必须取舍）与读大量实验结果。去年押中的几个技术决策他列了：长思考 RL 反应快、Muon、更大规模训练、较早做开源的 agentic 模型。</li>
+<li>最后两个轻问题：最喜欢的食物是拉面，因为好吃；被要求推荐书，他推的还是《无穷的开始》。</li>
+</ul>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：<a href="https://x.com/rdominguezibar/status/2079142029854912551">https://x.com/rdominguezibar/status/2079142029854912551</a>（张小珺商业访谈录）· 嘉宾：杨植麟 · 发布日期：2025-08-30 · 时长：1 小时 40 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>
