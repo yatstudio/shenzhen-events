@@ -1,9 +1,33 @@
 {
-  "updated_at": "2026-11-20T13:41:37Z",
+  "updated_at": "2026-11-20T14:54:00Z",
   "title": "Yat's List 访谈清单",
   "note": "深度访谈与分享的全文纪要存档：每条含原视频链接、要点与全文纪要页（note_url）。内容为嘉宾在节目中的自述与观点，未经核实。人工整理、不定期更新。",
   "source_site": "https://yatslist.com/interviews/",
   "interviews": [
+    {
+      "id": "okx-friends-zhouyajin-blocksec-20261120",
+      "title": "《AI 让黑客成本暴跌，Web3 安全怎么守？》",
+      "series": "OKX 的朋友们",
+      "date": "2026-11-20",
+      "guest": "周亚金",
+      "host": "佳佳",
+      "duration": "30 分钟",
+      "duration_minutes": 30,
+      "url": "https://www.youtube.com/watch?v=cNxEwNKuy28",
+      "note_url": "/interviews/notes/okx-friends-zhouyajin-blocksec-20261120.html",
+      "topics": [
+        "Web3 安全",
+        "BlockSec",
+        "链上攻防",
+        "AI 攻击",
+        "地址投毒"
+      ],
+      "highlights": [
+        "ParaSpace 被攻击时，BlockSec 在内存池阶段发现攻击交易，在以太坊 12 秒出块窗口内复制攻击手法、只换获利地址并 Gas 竞价抢先上链，救走约 500 万美元；靓号地址救援则用「行动前把计划文档哈希发推存证、事后再公开全文」解决白帽自证问题。",
+        "小团队第一次链上支付前查四件事：先验收款人是真人（防「楚门的世界」式全员假冒）、地址绝不从交易记录里拷（地址投毒真实损失达数千万美元）、常用地址进白名单、大额分批转；发现被盗第一动作不是查原因，而是找机构冻结资金。",
+        "AI 让攻击成本只剩 token 钱并可规模化（韩国 7 家银行数据泄露为 AI 自动化攻击），模型护栏挡不住；防守只能 AI 对 AI，但防守 AI 可以加黑名单、绝不能加白名单——犯错只能错在拦截，不能错在放行。"
+      ]
+    },
     {
       "id": "anthropic-nasdaq-ipo-bell-20261119",
       "title": "《Anthropic 登陆纳斯达克：开盘钟仪式致辞》",

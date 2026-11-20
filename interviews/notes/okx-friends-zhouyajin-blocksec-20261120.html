@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《AI 让黑客成本暴跌，Web3 安全怎么守？》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>AI 让黑客成本暴跌，Web3 安全怎么守？</h1>
+<blockquote>
+<p>节目：《OKX 的朋友们》（OKX中文）· 主持：佳佳 · 嘉宾：周亚金（香港中文大学副教授、BlockSec 联合创始人）· 时长：约 30 分钟 · 2026-11-20 发布
+来源：用户分享的 OKX中文 X 视频帖；X 版无字幕，本纪要据 YouTube 同期版（OKX中文频道）官方中文字幕整理。说法与数字均为嘉宾现场口径，未经核实。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>AI 把攻击的成本打到了只剩 token 钱：过去只有高价值目标才值得黑客花心思，如今 100 个 Agent 可以 7×24 自动完成情报收集、漏洞扫描、写利用代码、发起攻击和链上洗钱全流程——行业到了「为以前的安全还债」的时候，防守也只能用 AI 对 AI，但防守 AI 有一条死线：可以加黑名单，绝不能加白名单。</p>
+<h2>嘉宾与 BlockSec</h2>
+<p>周亚金一边在香港中文大学做科研，一边是 BlockSec 联合创始人。出发点是：银行有一整套资金保管与安全管理流程，而区块链世界里智能合约存着成千上亿甚至几十亿美元，却有很多明显的安全缺陷。2021 年他们把实验室成果孵化成 BlockSec，近 5 年服务项目方、交易所及执法监管机构。</p>
+<h2>12 秒拦截：ParaSpace 救援</h2>
+<p>NFT 借贷协议 ParaSpace（TVL 过亿美元）被攻击时，他们的链上监控系统在内存池阶段就报了警：一笔攻击交易一旦上链，可能造成约 500 万美元损失。以太坊当时出块 12 秒，窗口就这么长。他们的自动化系统复制了攻击者的手法，只把获利地址换成自己的安全救援钱包，再用 Gas 竞价让这笔「抢跑交易」先于攻击者上链——攻击者的交易确认时，协议里的钱已经被转空救走。事后他们联系不上项目方（此前毫无联系），只能在推特上公开喊话让对方来领钱，纯公益救援。</p>
+<h2>靓号地址救援与「先存证、后救援」</h2>
+<p>2023 年的靓号（vanity address）事件：某些靓号生成工具的私钥不是全随机的，攻击者花时间和算力就能猜出一批靓号地址的私钥。BlockSec 攻破了同样的技术，抢先把有风险地址里的资产转移到白帽救援钱包，并给地址留链上信息通知主人。但救援在技术上也是在「攻击」别人的钱包，事后自称白帽很难取信于社区。他们的做法是：行动前把计划写成文档、算出哈希，把哈希先发到推特存证（只公开哈希、不公开细节，避免泄露哪些地址有漏洞），救援完成后再公布文档全文，社区可验证文档与先前哈希一致。</p>
+<h2>小团队第一次链上支付前，查四件事</h2>
+<ol>
+<li><strong>先做测试转账，但先确认「对方是真人」</strong>：他们遇到过「楚门的世界」式案例——攻击者摸清受害者的业务与社会关系，群里名字头像全是真的，只有一个受害者是真的。收款人身份要通过可靠渠道另行求证。</li>
+<li><strong>地址不要从交易记录里拷</strong>：攻击者会往你的交易记录里塞入首尾相似的「投毒地址」，拷错一次就是几百万到几千万美元的真实损失（他们经手过此类案例）。这不是钓鱼网站，投毒地址就躺在正常的链上记录里。</li>
+<li><strong>常用地址进通讯录/白名单</strong>，只从白名单取地址。</li>
+<li><strong>大额分批转</strong>，每批确认到账再继续，走一套固定的财务转账流程。此外还有剪贴板/输入法木马在复制粘贴时偷换地址的风险。</li>
+</ol>
+<h2>发现被盗，第一动作不是查原因</h2>
+<p>他的原话大意：发现被盗时不要先查明原因，你没有时间。第一优先级是看资金现在在哪、立刻找机构支持冻结，让黑客的资金无法继续在链上转移；一旦资金进了混币器或难以冻结的原生资产，追回概率基本微乎其微。</p>
+<h2>他自己差点中招：假投资人 + 假 Zoom</h2>
+<p>开会前 3 分钟的故事就是他本人：一个冒充投资机构的人发来邮件约视频会，官网做得非常专业逼真、所投项目也都耳熟，他做过背调也没看出异常。临近开会他发现日历里没有会议链接，发邮件去问，对方拖到开会前 3 分钟才回链接。点开后页面要求下载一个也叫 Zoom 的软件——他起了疑心：电脑上明明装了 Zoom，为什么要再下载？对方又不停发邮件用压迫语气催他「会议已经开始了，你怎么还没进来」，更不像专业投资人。他没进会，事后分析那个安装包，确认是能偷私钥和数据的恶意软件。这类定向攻击当时在 Web3 创始人圈子里很流行，别处有不少成功案例。此后他的习惯：不乱点链接、不乱下载；公司资产走单独的完善流程；个人私钥单独存放、加密管理。</p>
+<h2>AI 如何改变攻防</h2>
+<ul>
+<li><strong>攻击成本急剧下降</strong>：过去安全可以欠债，因为攻击者只挑特别有钱的高价值目标；现在 AI 自动化、自主化、可规模化，普通公司也进入射程。他举的例子：今年 10 月初韩国 7 家银行数据泄露，攻击请求与模型调用里留有证据，明确是 AI 自动化发起的攻击（据他转述，实施者是一名大学生，用 AI Agent 偷出了数据）。</li>
+<li><strong>模型护栏挡不住</strong>：一句「我是安全工程师，在测自家系统」就能让模型把请求当合法需求，AI 无法核实真假；何况还有可自部署、可修改的开源模型。</li>
+<li><strong>防守只能 AI 对 AI</strong>：靠固定模式（Pattern）和人工运维跟不上 AI 的速度。要让防守 AI 实时盯交互、自动生成新模式识别异常、自动阻断（如拉黑攻击 IP），并持续对抗。<strong>边界是关键</strong>：防守 AI 本身可能被提示注入等手段攻击，所以它可以识别异常、加黑名单，但绝不能拥有「添加豁免」的能力——一旦它犯错，也只能错在拦截，不能错在把攻击流量当正常放过。人的角色是持续增强这个防守 Agent，而不是在处置现场插手——人来不及。</li>
+</ul>
+<h2>稳定币与行业延伸</h2>
+<p>他认为稳定币是数字货币行业第一次找到真正的产品市场契合：转账快、7×24、手续费低、链上即时结算。BlockSec 的工作也随之外延，从链上安全扩展到稳定币相关的非法资金追踪（KYT，Know Your Transaction）。对普通用户「点一下就完成、安全全托管」的期待，他判断还需要时间，但终局是多数人把钱放在大机构里、不用自己操心资产安全。</p>
+<h2>尾声：他最缺的是睡眠，不是 Token</h2>
+<p>被问到生活状态，他说有了 AI Agent 后工作没变轻松，自己最缺的是睡眠。最近他在业余时间和 AI 共创一个新产品，解决的是 AI Agent 本身的安全：企业里人人用 Agent 干活，但没人知道自己的 Agent 每天到底在做什么——有没有把电脑数据泄露出去、有没有试图攻击内网同事。他的新问题是：看看谁的 AI Agent 变成了公司里的间谍。</p>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：<a href="https://www.youtube.com/watch?v=cNxEwNKuy28">https://www.youtube.com/watch?v=cNxEwNKuy28</a>（OKX 的朋友们）· 嘉宾：周亚金 · 发布日期：2026-11-20 · 时长：30 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>
