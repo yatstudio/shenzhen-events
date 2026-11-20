@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's Talks · 谈话录 — Space、直播与访谈全文纪要 | Yat's List</title>
-<meta name="description" content="Yat's Talks · 谈话录：X Space、X 直播与 YouTube 访谈的精选纪要、回放链接与要点存档，人工整理、不定期更新；可搜索、按系列与主题筛选，也可让你的 Agent 订阅 talks.json。">
+<meta name="description" content="Yat's Talks 谈话录：X Space、X 直播与 YouTube 访谈的全文纪要、原链接与要点存档，人工整理、不定期更新；可搜索、按来源/系列/主题筛选，也可让你的 Agent 订阅 talks.json。">
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
@@ -49,12 +49,6 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink)
 .agentnote b{color:var(--ink)}
 .agentnote a{color:var(--green);text-decoration:none;font-weight:600}
 .agentnote a:hover{text-decoration:underline}
-.agentguide{background:var(--panel);border:1px solid rgba(46,230,168,.38);border-radius:var(--r-lg);padding:clamp(var(--sp-lg),3.5vw,var(--sp-xl));margin:var(--sp-lg) 0 var(--sp-xl);box-shadow:var(--shadow-sm)}
-.agentguide h3{margin:0 0 var(--sp-sm);font-size:clamp(1.05rem,2.6vw,1.25rem);font-weight:700;color:var(--ink)}
-.agentguide p{margin:0 0 var(--sp-md);color:var(--ink-sec);line-height:1.8;font-size:.95rem}
-.agentguide p b{color:var(--ink)}
-.agentguide .aguses{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--sp-md)}
-.agentguide .code-block{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
 .terminal{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:clamp(var(--sp-2xl),5vw,var(--sp-3xl))}
 .terminal-header{background:rgba(0,0,0,.3);padding:var(--sp-md) var(--sp-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-sm)}
@@ -184,7 +178,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .prow a:hover{color:var(--green)}
 .prow .pm{color:var(--ink-ter);font-size:.84rem}
 .btn,.chip,button{touch-action:manipulation}
-#agent-sub,#email-sub,#event-post{scroll-margin-top:118px}
+#agent-sub{scroll-margin-top:118px}
 .agblock{border-top:1px solid rgba(255,255,255,.08);margin-top:18px;padding-top:var(--sp-md)}
 .agblock h4{margin:0 0 var(--sp-sm);font-size:.91rem;font-weight:650;color:var(--ink)}
 .agblock ol{margin:0 0 var(--sp-md);padding-left:20px;color:var(--ink-sec);font-size:.87rem;line-height:1.7}
@@ -282,7 +276,7 @@ select{font-size:16px}
 .btn{flex:0 1 auto;min-height:44px;padding:var(--sp-sm) var(--sp-md);font-size:.88rem;white-space:nowrap}
 .prow{flex-direction:column;gap:var(--sp-xs)}
 .prow .pd{flex:none}
-#agent-sub,#email-sub,#event-post{scroll-margin-top:106px}
+#agent-sub{scroll-margin-top:106px}
 .wrap{padding:0 var(--sp-lg)}
 .bar{margin:0 calc(-1 * var(--sp-lg));padding:var(--sp-md) var(--sp-lg)}
 .ovl{padding:12px}
@@ -389,6 +383,7 @@ select{font-size:16px}
 .herometa{margin:0 auto;text-align:center;color:var(--ink-sec);font-size:.88rem;line-height:1.6}
 .herometa b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
 .herometa i{font-style:normal;margin:0 7px;color:var(--ink-ter)}
+.scopenote{text-align:center;color:var(--ink-sec);font-size:.85rem;line-height:1.55;margin:10px auto 0;max-width:920px}
 .listchips{display:flex;gap:var(--sp-md);justify-content:center;margin:12px auto 0;max-width:920px}
 .lchip{flex:1 1 0;min-width:0;text-align:left;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:9px 14px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
 .lchip.on{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
@@ -422,6 +417,27 @@ input[type=search]{font-size:16px}
 .chip{min-height:40px}
 #ftoggle{min-height:44px}
 }
+
+/* ===== readability pass 2026-11-10: hierarchy — bold title, quiet meta, clamped summary, lighter buttons ===== */
+.card{padding:18px 20px}
+.card h3{font-size:1.16rem;font-weight:700;line-height:1.42}
+.org{font-size:.82rem;color:var(--ink-ter);margin:2px 0 0}
+.org b{font-weight:600;color:var(--ink-sec)}
+.loc{font-size:.88rem;margin:6px 0 0}
+.loc b{font-weight:600}
+.sum{font-size:.9rem;line-height:1.65;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tags{margin:10px 0 0}
+.tag{font-size:.72rem;padding:3px 9px}
+.meta{font-size:.78rem;line-height:1.6}
+.dl{font-size:.78rem}
+.fee{font-size:.8rem;padding:4px 10px}
+.actions{margin-top:12px;gap:8px}
+.actions .btn{min-height:36px;padding:6px 14px;font-size:.85rem;border-radius:10px}
+.actions .btn.primary{flex:0 1 auto;min-height:38px;padding:6px 18px}
+
+/* importance tiers: near-term / closing-soon events stand out */
+.card.hot{border-color:rgba(46,230,168,.45);border-left:3px solid var(--green)}
+.card.hot h3{font-size:1.26rem}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -442,6 +458,7 @@ input[type=search]{font-size:16px}
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Yat's List">
+<style>.hls{font-size:.9rem;line-height:1.65;color:var(--ink-sec);margin-top:8px}.hls div{margin:3px 0}</style>
 </head>
 <body>
 <a id="top"></a>
@@ -449,18 +466,20 @@ input[type=search]{font-size:16px}
 <!-- Sticky Topbar -->
 <div class="topbar">
   <div class="wrap">
-    <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="回到顶部" style="text-decoration:none">
+    <a class="topbar-brand" href="https://yatslist.com/talks/" aria-label="回到顶部" style="text-decoration:none">
       <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
     </a>
-    <nav class="topbar-nav">
-      <a href="#agent-section" id="nav-agent">给 Agent</a>
-      <a href="#human-section" id="nav-events">活动清单</a>
-      <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松清单</a>
-      <a href="https://yatslist.com/szexpat/" id="nav-expat">外国人活动</a>
-      <a href="https://yatslist.com/talks/" id="nav-spaces">Yat's Talks</a>
+    <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+<div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
+      <a href="https://yatslist.com/szevents/" id="nav-events">活动</a>
+      <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+      <a href="https://yatslist.com/talks/" id="nav-spaces" class="nav-on" aria-current="page">Talks</a>
+      <a href="https://yatslist.com/mushenzhen/" id="nav-mu">muShenzhen</a>
       <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span>
       <span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span>
-    </nav>
+      <button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">投稿</button>
+    </nav></div>
   </div>
 </div>
 
@@ -469,139 +488,86 @@ input[type=search]{font-size:16px}
   <div class="wrap">
     <!-- Section Header -->
     <div class="section-header">
-      <h2 class="section-title" id="hero-title">Yat's List · Yat's Talks · 谈话录</h2>
-      <p class="section-subtitle" id="hero-sub">华语圈 谈话纪要，喂给你的 Agent 吃。</p>
-      <p class="section-tagline">SPACES · RECAPS · FOR AGENTS</p>
+      <p class="section-tagline">SPACES · LIVE · INTERVIEWS · FULL-TEXT NOTES</p>
+      <h2 class="section-title" id="hero-title">Yat's Talks · 谈话录</h2>
+      <p class="section-subtitle" id="hero-sub">Space、直播、访谈——全文纪要，喂给你的 Agent 读。</p>
     </div>
-    <!-- Hero Meta -->
-    <p class="herometa"><b id="hm-total">–</b> <span id="hm-total-label">场纪要在列</span><i>·</i><b id="sp-latest">–</b> <span id="sp-latest-label">最近一场</span><i>·</i><span id="hm-upd">人工整理 · 不定期更新</span></p>
 
-    <!-- Agent Guide: 让 Agent 替你读 / 检索 / 答问 -->
-    <div class="agentguide" id="agentguide">
-      <h3 id="ag-title">🤖 不想自己翻？让你的 Agent 替你读、替你查</h3>
-      <p id="ag-desc">每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。</p>
-      <div class="aguses"><span class="tag" id="ag-use1">📖 替我读：总结最新或指定的纪要</span><span class="tag" id="ag-use2">🔎 替我查：按主题 / 人物 / 关键词跨场检索</span><span class="tag" id="ag-use3">❓ 替我答：基于纪要回答问题并给出处</span></div>
-      <div class="code-block"><span id="ag-prompt">请把 Yat's List 的 谈话纪要库作为我的资料源：先读取 https://yatslist.com/talks.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。</span>
-        <button class="btn-copy" id="ag-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('ag-prompt').innerText.trim()).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('agCopy'),1500)})">复制话术</button>
+    <!-- Agent subscription: the one primary action on the page -->
+    <div class="agentbox" id="agentbox">
+      <div class="ab-head">
+        <div class="ab-text"><div class="ab-title" id="ab-title">让你的 Agent 替你读纪要、替你查</div><div class="ab-sub" id="ab-sub">豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，有新纪要命中兴趣才提醒你。</div></div>
+        <button type="button" class="ab-go" id="ta-agent" onclick="openModal('sub')">用我的 Agent 订阅 →</button>
       </div>
-      <div class="actions"><a class="btn" href="/talks.json" id="ag-json">📡 talks.json 数据</a><a class="btn" href="#agent-section" id="ag-more">订阅与接口说明 ↓</a></div>
+      <div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/talks.json</span><button type="button" id="cmd-copy">复制</button></div>
+      <div class="ab-apis" id="ab-apis">也可以直接读：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）</div>
     </div>
-
-    <!-- List Chips: 三张清单入口 -->
-    <div class="listchips">
-      <a class="lchip" href="https://yatslist.com/szevents/">
-        <span class="lc-top"><b id="lc-ev-name">深圳活动清单</b><span class="lc-n"><b id="lc-ev-n">–</b> <span id="lc-u1">场</span></span></span>
-        <span class="lc-desc" id="lc-ev-desc">AI · 创业 · 科技 · 跨境活动，每天核实更新</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/hackathons/">
-        <span class="lc-top"><b id="lc-hack-name">黑客松清单</b><span class="lc-n"><b id="hackcount2">–</b> <span id="lc-u2">场</span></span></span>
-        <span class="lc-desc" id="lc-hack-desc">正在报名的黑客松与创新大赛</span>
-      </a>
-      <a class="lchip" href="https://yatslist.com/szexpat/">
-        <span class="lc-top"><b id="lc-expat-name">外国人活动</b><span class="lc-n"><b id="lc-expat-n">–</b> <span id="lc-u3">场</span></span></span>
-        <span class="lc-desc" id="lc-expat-desc">外国人常去的聚会、演出与展览</span>
-      </a>
-      <a class="lchip on" href="#top" aria-current="page">
-        <span class="lc-top"><b id="lc-space-name">谈话纪要</b><span class="lc-n"><b id="lc-space-n">–</b> <span id="lc-u4">场</span></span></span>
-        <span class="lc-desc" id="lc-space-desc">Space · 直播 · 访谈，全文纪要与要点</span>
-      </a>
-    </div>
-
-    <!-- Top Actions -->
-    <div class="topact">
-      <a class="btn submit" id="ta-submit" href="#event-post" onclick="hlSubmit()">＋ 提交 Space</a>
-      <button class="btn agent" id="ta-agent" onclick="openModal('sub')">🤖 用我的 Agent 订阅</button>
-      <a class="btn" id="ta-email" href="#email-sub">✉️ 邮件订阅</a>
-      <button class="btn agent" id="ta-tour" onclick="startTour()">🧭 订阅导览</button>
-      <button class="btn agent" id="postbtn" onclick="openModal('post')">📋 复制投稿话术给我的 Agent</button>
-    </div>
-
 
     <!-- Filter Bar -->
     <div class="bar">
-      <input type="search" id="q" placeholder="搜索标题 / 主持人 / 主题…">
-      <button id="ftoggle" aria-expanded="false"><span id="ftoggle-label">🎛 筛选 Filter</span><span><span id="fcount"></span> ▾</span></button>
+      <div class="srow">
+      <input type="search" id="q" placeholder="搜索标题 / 主持人 / 嘉宾 / 主题…">
+      <button id="ftoggle" aria-expanded="false" aria-controls="fgroups"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2" fill="var(--panel)"/><circle cx="13" cy="10" r="2" fill="var(--panel)"/><circle cx="8" cy="15" r="2" fill="var(--panel)"/></svg><span id="ftoggle-label">筛选</span><span id="fcount"></span></button>
+            </div>
+      
+      <div class="qchips" id="qchips"><button type="button" class="chip on" data-q="all">全部</button>
+        <button type="button" class="chip" data-q="src:space">X Space</button>
+        <button type="button" class="chip" data-q="src:broadcast">X 直播</button>
+        <button type="button" class="chip" data-q="src:youtube">YouTube</button></div>
       <div id="fgroups">
-        <div class="fgroup">
-          <span class="flabel">来源</span>
-          <span class="seg" id="g-source"></span>
-        </div>
-        <div class="fgroup">
-          <span class="flabel">系列</span>
-          <span class="seg" id="g-series"></span>
-        </div>
-        <div class="fgroup">
-          <span class="flabel">主题</span>
-          <span class="seg" id="g-topics"></span>
-          <button id="fclear" class="fclear" hidden>清除筛选 ✕</button>
-          <span class="fres" id="fres"></span>
-        </div>
-      </div>
+<div class="fgroup">
+<span class="flabel">收藏</span>
+<button class="chip" id="favbtn">⭐ 只看收藏<span id="favcount"></span></button>
+<span class="flabel" style="opacity:.75">收藏存本机、无需注册</span>
+<span class="fres" id="fres"></span>
+</div>
+<div class="fgroup">
+<span class="flabel">来源</span>
+<span class="seg" id="g-source"></span>
+</div>
+<div class="fgroup">
+<span class="flabel">系列</span>
+<span class="seg" id="g-series"></span>
+</div>
+<div class="fgroup">
+<span class="flabel">主题</span>
+<span class="seg" id="g-topics"></span>
+<button id="fclear" class="fclear" hidden>清除筛选 ✕</button>
+</div>
+</div>
     </div>
+
+    <!-- Welcome (first visit only): inline bar, never covers the list -->
+    <div class="welc" id="welc"><span id="welc-body"><b>第一次来？</b>30 秒导览带你看懂怎么用</span><button type="button" class="welc-tour" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button type="button" class="welc-x" id="welc-x" aria-label="关闭" onclick="dismissWelc()">✕</button></div>
 
     <!-- Event List -->
     <div id="list"><div class="empty" id="list-loading">加载中…</div></div>
 
-    <!-- Past Events -->
-    <div id="past"></div>
-
-    <!-- Agent Note -->
-    <div class="agentnote" id="agentnote">🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/talks.json">talks.json</a>，人工整理、不定期更新），有新纪要收录且命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：上方可关键词搜索、按系列 / 主题筛选。</div>
-
     <!-- Agent Subscription Card -->
     <div class="subcard" id="agent-sub">
-      <div class="cmdline"><span>$ subscribe: yat's list · <span id="cmd-label">Yat's Talks · 谈话录</span></span><span class="u">https://yatslist.com/talks.json</span><button type="button" id="cmd-copy">复制</button></div>
       <div class="cmdline"><span>$ pip install: yat's list · <span id="pip-label">命令行 CLI</span></span><span>pip install yatslist</span><button type="button" id="pip-copy">复制</button></div>
       <h3 id="asub-title">🤖 让你的 Agent 提醒你，不用自己刷</h3>
       <p class="sum" id="asub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
-      <p class="prompt" id="prompt-generic-card">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</p>
+      <p class="prompt" id="prompt-generic-card">请订阅「Yat's Talks · 谈话录」并给我谈话纪要提醒：数据源 https://yatslist.com/talks.json（人工整理、不定期更新，无需登录）。每周读取一次，有新纪要收录时告诉我：标题、主持人/嘉宾、一句话要点和全文纪要链接；如果新纪要的主题命中我的兴趣，当天就提醒我。不要编造数据源里没有的谈话。</p>
       <div class="actions"><button class="btn primary" id="asub-all" onclick="openModal('sub')">查看全部 Agent 版本</button></div>
 
       <div class="agblock"><h4>🫘 豆包工作</h4>
       <ol><li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li></ol>
-      <p class="prompt" id="prompt-doubao">每天早上 9 点，打开 https://yatslist.com/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-doubao').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
+      <p class="prompt" id="prompt-doubao">每天早上 9 点，打开 https://yatslist.com/talks.json 读取最新数据（这是 X Space、X 直播与 YouTube 访谈的全文纪要索引）。帮我挑出：1）最近 7 天新增的纪要；2）我感兴趣的主题：【AI / Crypto / 创业，按自己的兴趣改】。按日期排序，每场一行：日期 + 标题 + 主持人 + 一句话要点 + 全文纪要链接。没有新增就回一句「今日无新增纪要」。不要编造文件里没有的谈话。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-doubao').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
 
       <div class="agblock"><h4>💼 WorkBuddy</h4>
       <ol><li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li></ol>
-      <p class="prompt" id="prompt-workbuddy">每天早上 9 点，打开 https://yatslist.com/events.json 读取最新数据（这是深圳+香港行业活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）72 小时内报名截止的；3）我感兴趣的类别：【AI / 创业 / 跨境 / Web3 / 黑客松，按自己的兴趣改】。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-workbuddy').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
+      <p class="prompt" id="prompt-workbuddy">每天早上 9 点，打开 https://yatslist.com/talks.json 读取最新数据（这是 X Space、X 直播与 YouTube 访谈的全文纪要索引）。帮我挑出：1）最近 7 天新增的纪要；2）我感兴趣的主题：【AI / Crypto / 创业，按自己的兴趣改】。按日期排序，每场一行：日期 + 标题 + 主持人 + 一句话要点 + 全文纪要链接。没有新增就回一句「今日无新增纪要」。不要编造文件里没有的谈话。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-workbuddy').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
 
       <div class="agblock"><h4>🧑‍💻 Codex</h4>
-      <ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你提交活动（提 PR）</li></ol>
-      <p class="prompt" id="prompt-codex">请为我订阅「Yat's List 深圳活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/events.json，并阅读说明 https://yatslist.com/AGENTS.md 。只看未结束的活动，筛选：今天和明天举行的、72 小时内报名截止的、以及我感兴趣的类别【AI / 创业 / 跨境 / Web3 / 黑客松】。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交活动，也按该说明里的规范提交。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
-    </div>
-
-    <!-- Event Submission Card -->
-    <div class="subcard" id="event-post">
-      <h3 id="epost-title">📋 提交 Space：把一场 Space 加进清单</h3>
-      <p class="sum" id="epost-q">你想怎么提交？</p>
-      <p class="sum" id="epost-note">我想提交 Space：贴上 Space 链接即可；被收录后，我们免费转写全文、做摘要并加入清单。</p>
-      <div class="actions"><button class="btn" id="epost-yes" onclick="routePost('gh')">有 GitHub</button><button class="btn" id="epost-mail" onclick="routePost('mail')">用邮箱提交</button><button class="btn" id="epost-no" onclick="routePost('form')">填网页表单</button></div>
-      <div id="route-gh" hidden>
-        <p class="prompt" id="prompt-post-card"></p>
-        <div class="actions"><button class="btn primary" id="epost-copy" onclick="copySubmit(this)">📋 复制投稿话术给我的 Agent</button></div>
-      </div>
-      <div id="route-mail" hidden>
-        <p class="sum" id="epost-mail-note">把 Space 名称和 X 回放链接发到这个邮箱即可，主题注明「谈话纪要投稿」；被收录后，我们免费转写全文、做摘要并加入清单。</p>
-        <p class="prompt" id="epost-mail-addr">event.submit@yatslist.com</p>
-        <div class="actions"><button class="btn primary" id="epost-mail-copy" onclick="copyRouteMail(this)">📋 复制邮箱</button><a class="btn" id="epost-mail-send" href="mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A">✉️ 写邮件</a></div>
-      </div>
-      <div id="route-form" hidden>
-        <div class="actions"><a class="btn primary" id="epost-form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScg5YqsojxQFEcYYtDj3PyEb0wxbbGga23MRtSyVsMVapzP6w/viewform" target="_blank" rel="noopener">📝 打开网页表单提交</a></div>
-        <p class="sum" id="epost-form-note">❗ 所属清单请先选最接近的一项，标题注明「谈话纪要」。</p>
-      </div>
-    </div>
-
-    <!-- Email Subscription Card -->
-    <div class="subcard" id="email-sub">
-      <h3 id="esub-title">✉️ 邮件订阅：每天早上发到你的邮箱</h3>
-      <p class="sum" id="esub-sum">没有 Agent 也没关系。留下邮箱，每天早上收到一封日报邮件：今天和本周的重点活动、72 小时内截止的报名。每天最多一封，不发广告；想停了，回复邮件注明「退订」即可。</p>
-      <div class="actions"><a class="btn primary" id="esub-btn" href="https://forms.gle/zFKXnRiZVRTE5maZA" target="_blank" rel="noopener">填写邮箱订阅</a></div>
+      <ol><li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你投稿（提 PR）</li></ol>
+      <p class="prompt" id="prompt-codex">请为我订阅「Yat's Talks · 谈话录」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/talks.json，并阅读说明 https://yatslist.com/AGENTS.md 。筛选最近新增的、以及我感兴趣的主题【AI / Crypto / 创业】的纪要，按日期排序简要汇报，每场一行并附全文纪要链接；没有新增时只回「今日无新增纪要」。请把这项工作设为每天自动运行的任务。另外，如果我让你投稿一场谈话，也按该说明里的规范提交。</p><div class="actions"><button class="btn primary" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prompt-codex').innerText).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copyPrompt'),1500)})">复制这段话</button></div></div>
     </div>
 
     <!-- Footer -->
     <div class="foot">
       <div id="foot-note">🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新、审核投稿）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a></div>
-      <span id="foot-apis">数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：</span><a href="/events.json">events.json</a> · <a href="/feed.xml">RSS</a> · <a href="/events.ics">日历.ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a><br>
+      <span id="foot-apis">数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：</span><a href="/talks.json">talks.json</a> · <a href="/spaces.json">spaces.json</a> · <a href="/interviews.json">interviews.json</a> · <a href="/agent.json">agent.json</a><br>
       <span id="foot-tail-pre">Agent 投稿接入见仓库 </span><a href="https://yatslist.com/AGENTS.md">AGENTS.md</a><span id="foot-tail-post">。报名前请以官方页面最新信息为准。</span>
     </div>
   </div>
@@ -613,8 +579,7 @@ input[type=search]{font-size:16px}
     <!-- Intro for humans -->
     <div class="intro">
       <h3 style="font-size:1.18rem;margin:0 0 10px" id="intro-title">Yat's List 是什么？</h3>
-      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 10px" id="intro-p1">Yat's List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接在上方清单里浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。</p>
-      <p style="color:var(--ink-sec);line-height:1.85;margin:0 0 14px" id="intro-p2">这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。</p>
+      <p style="color:var(--ink-sec);line-height:1.8;margin:0 0 10px" id="intro-p1">每份清单都逐条打开官方页核实过，再结构化发布。在上方浏览，或把订阅话术发给你的 Agent，让它每天替你筛选。</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">✓ 每条都核实过</span><span class="tag">🤖 Agent 可直接订阅</span><span class="tag">🔕 没命中就不打扰</span></div>
     </div>
 
@@ -627,9 +592,9 @@ input[type=search]{font-size:16px}
         <span class="terminal-title">agent — subscribe</span>
       </div>
       <div class="terminal-body">
-        <div class="terminal-prompt" id="term-prompt">$ subscribe: yat's list · 谈话纪要</div>
+        <div class="terminal-prompt" id="term-prompt">$ subscribe: yat's list · Yat's Talks</div>
         <div class="terminal-status">
-          <span id="st-total">–</span> <span id="lbl-evlisted">场活动在列</span> ·
+          <span id="st-total">–</span> <span id="lbl-evlisted">场谈话在列</span> ·
           <span id="hackcount">–</span> <span id="lbl-hacklisted">场黑客松</span> ·
           <span id="lbl-lastupd">最近更新</span> <span id="st-upd">–</span>
         </div>
@@ -640,7 +605,7 @@ input[type=search]{font-size:16px}
     <div class="talk-block">
       <h3 id="tb-title">🤖 订阅话术（给 Agent）</h3>
       <p class="sum" id="tb-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：</p>
-      <div class="code-block" id="subprompt"><span id="subprompt-text">请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。</span>
+      <div class="code-block" id="subprompt"><span id="subprompt-text">请订阅「Yat's Talks · 谈话录」并给我谈话纪要提醒：数据源 https://yatslist.com/talks.json（人工整理、不定期更新，无需登录）。每周读取一次，有新纪要收录时告诉我：标题、主持人/嘉宾、一句话要点和全文纪要链接；如果新纪要的主题命中我的兴趣，当天就提醒我。不要编造数据源里没有的谈话。</span>
         <button class="btn-copy" id="subprompt-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText.trim()).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copy'),1500)})">复制</button>
       </div>
       <div class="actions">
@@ -652,51 +617,49 @@ input[type=search]{font-size:16px}
     <div class="talk-block">
       <h3>📡 接口清单（给 Agent）</h3>
       <div class="endpoint-list">
-        <div class="endpoint-item">
-          <span class="endpoint-name">events.json</span>
-          <span class="endpoint-url">https://yatslist.com/events.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
-          <span class="endpoint-desc">活动数据（JSON，每天 07:30 更新）</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">hackathons.json</span>
-          <span class="endpoint-url">https://yatslist.com/hackathons.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/hackathons.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
-          <span class="endpoint-desc">黑客松数据（大陆+港澳台+线上）</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">feed.xml</span>
-          <span class="endpoint-url">https://yatslist.com/feed.xml</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/feed.xml').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
-          <span class="endpoint-desc">RSS 订阅源</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">events.ics</span>
-          <span class="endpoint-url">https://yatslist.com/events.ics</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.ics').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
-          <span class="endpoint-desc">日历订阅文件</span>
-        </div>
-        <div class="endpoint-item">
-          <span class="endpoint-name">llms.txt</span>
-          <span class="endpoint-url">https://yatslist.com/llms.txt</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/llms.txt').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
-          <span class="endpoint-desc">给 AI 的站点说明</span>
-        </div>
-      </div>
+ <div class="endpoint-item">
+ <span class="endpoint-name">talks.json</span>
+ <span class="endpoint-url">https://yatslist.com/talks.json</span>
+ <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/talks.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+ <span class="endpoint-desc">谈话纪要数据（JSON）</span>
+ </div>
+ <div class="endpoint-item">
+ <span class="endpoint-name">spaces.json</span>
+ <span class="endpoint-url">https://yatslist.com/spaces.json</span>
+ <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/spaces.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+ <span class="endpoint-desc">Space 纪要（兼容旧订阅）</span>
+ </div>
+ <div class="endpoint-item">
+ <span class="endpoint-name">interviews.json</span>
+ <span class="endpoint-url">https://yatslist.com/interviews.json</span>
+ <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/interviews.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+ <span class="endpoint-desc">访谈纪要（兼容旧订阅）</span>
+ </div>
+ <div class="endpoint-item">
+ <span class="endpoint-name">AGENTS.md</span>
+ <span class="endpoint-url">https://yatslist.com/AGENTS.md</span>
+ <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/AGENTS.md').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+ <span class="endpoint-desc">Agent 投稿规范</span>
+ </div>
+ </div>
     </div>
 
   </div>
 </section>
 
 <!-- Site Footer -->
+<div class="wrap"><div class="subcard" id="cli-strip-bottom" style="margin:0 0 22px">
+<div class="cmdline"><span>$ pip install: yat's list · CLI</span><span>pip install yatslist</span></div>
+<p class="sum" style="margin-top:10px">程序员：终端里装好，直接 <b>yatslist</b> 查活动、黑客松与谈话纪要，不用开网页。</p>
+</div></div>
 <footer class="sitefoot" id="site-footer">
   <div class="wrap">
     <div class="sf-brand">&gt; yat's list<span class="sf-cur">_</span></div>
-    <p class="sf-tag" id="sf-tag">深圳活动，喂给你的 Agent 吃。</p>
+    <p class="sf-tag" id="sf-tag">谈话纪要，喂给你的 Agent 读。</p>
     <nav class="sf-nav">
       <a href="#top" id="sf-home">首页</a>
       <a href="https://yatslist.com/hackathons/" id="sf-hack">黑客松</a>
-      <a href="https://yatslist.com/spaces/" id="sf-spaces">谈话纪要</a>
+      <a href="https://yatslist.com/talks/" id="sf-spaces">Yat's Talks</a>
       <a href="#agent-section" id="sf-sub">订阅说明</a>
     </nav>
     <p class="sf-small" id="sf-small">数据每日更新 · 逐条核实自官方页面 · 免费无广告</p>
@@ -719,12 +682,12 @@ input[type=search]{font-size:16px}
     <textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
     <p class="mhint" id="mhint">✏️ 这段话术可以直接改：把【】里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。</p>
     <div class="mex" id="mex"></div>
-    <div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
+    <div class="mex" id="mpost-alt" style="display:none;margin-top:10px"><b>没有 Agent？也可以用邮件提交：</b><br>把谈话的原始链接发到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> 即可。两种方式任选一种，都会在更新时核实、去重后收录。</div>
+<div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
   </div>
 </div>
 
 <!-- Welcome Card -->
-<div class="welc" id="welc"><span id="welc-body"><b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。</span><div class="mrow"><button class="btn primary" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button class="btn" id="welc-browse" onclick="dismissWelc()">直接逛逛</button></div></div>
 
 <!-- Tour Card -->
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" id="tourend" onclick="endTour()">结束导览</button><span id="tourprog" style="color:var(--ink-ter);font-size:12.5px"></span></div></div>
@@ -737,16 +700,15 @@ if(LANG!=="en"&&LANG!=="tw")LANG="zh";
 const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","在线Space":"在线Space"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","在线Space":"在線Space"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","在线Space":"Online Spaces"}};
 const STR={
 zh:{
-docTitle:"Yat's List · Yat\'s Talks · 谈话录 · 华语圈 X 谈话纪要与回放",
-metaDesc:"Yat\'s Talks · 谈话录：X Space、X 直播与 YouTube 访谈的精选纪要、回放链接与要点存档，人工整理、不定期更新；可搜索、按系列与主题筛选，也可让你的 Agent 订阅 talks.json。",
-brandTop:"回到顶部",navAgent:"给 Agent",navEvents:"活动清单",navHack:"黑客松清单",navExpat:"外国人活动",navSpaces:"谈话纪要",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"Yat's List · Yat\'s Talks · 谈话录",heroSub:"华语圈 谈话纪要，喂给你的 Agent 吃。",cmdLabel:"Yat\'s Talks · 谈话录",pipLabel:"命令行 CLI",epostTitle:"📋 提交 Space：把一场 Space 加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把 Space 名称和 X 回放链接发到这个邮箱即可，主题注明「谈话纪要投稿」；被收录后，我们免费转写全文、做摘要并加入清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%BA%AA%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主题",spLatestLabel:"最近一场",segAll:"全部",spDur:"时长",spDurParts:["小时","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉宾：",spNote:"数字为发言人自述、未核实",spListen:"🎧 去 X 收听回放 →",epostNote:"我想提交 Space：贴上 Space 链接即可；被收录后，我们免费转写全文、做摘要并加入清单。",epostFormNote:"❗ 所属清单请先选最接近的一项，标题注明「谈话纪要」。",
-statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场纪要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"谈话纪要",lcDescEv:"AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"正在报名的黑客松与创新大赛",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"Space · 直播 · 访谈，全文纪要与要点",lcUnit:"场",
-taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 订阅",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
-agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/talks.json">talks.json</a>，人工整理、不定期更新），有新纪要收录且命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：上方可关键词搜索、按系列 / 主题筛选。',
-agTitle:"🤖 不想自己翻？让你的 Agent 替你读、替你查",agDesc:'每场纪要都有<b>全文公开页</b>。把下面这段话发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>读</b>纪要、<b>跨场检索</b>，并直接<b>回答你的问题</b>——答案附原文出处，不用你一场场点开。',agUse1:"📖 替我读：总结最新或指定的纪要",agUse2:"🔎 替我查：按主题 / 人物 / 关键词跨场检索",agUse3:"❓ 替我答：基于纪要回答问题并给出处",agPrompt:"请把 Yat's List 的 谈话纪要库作为我的资料源：先读取 https://yatslist.com/talks.json 拿到全部纪要索引（每条含标题、要点和 note_url 全文页），需要细节时再打开对应的 note_url 全文页。之后请替我：1）总结我指定的或最新的一场纪要；2）按主题、人物或关键词跨场检索；3）回答我基于这些纪要提出的问题。回答必须注明出处并附上对应的全文页链接，只依据纪要内容，不要编造纪要里没有的信息。",agCopy:"复制话术",agJson:"📡 talks.json 数据",agMore:"订阅与接口说明 ↓",
+docTitle:"Yat's Talks · 谈话录 — Space、直播与访谈全文纪要 | Yat's List",
+metaDesc:"Yat's Talks 谈话录：X Space、X 直播与 YouTube 访谈的全文纪要、原链接与要点存档，人工整理、不定期更新；可搜索、按来源/系列/主题筛选，也可让你的 Agent 订阅 talks.json。",
+brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+heroTitle:"Yat's Talks · 谈话录",heroSub:"Space、直播、访谈——全文纪要，喂给你的 Agent 读。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 投稿：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
+statWeek:"近 7 天新增",statDl:"YouTube 访谈",heroMetaTotal:"场谈话在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Yat's Talks",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"Space · 直播 · 访谈，全文纪要与要点",lcUnit:"场",
+taSubmit:"投稿",taAgent:"用我的 Agent 订阅 →",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
+agentNote:'🤖 <b>Agent 订阅</b>：你的 Agent 也可直接订阅本清单（<a href="/talks.json">talks.json</a>），有新纪要命中你的兴趣才提醒你 — <a href="#agent-section">订阅话术与接口清单 ↓</a>　｜　🔎 <b>检索互动</b>：下方可关键词搜索、按来源 / 系列 / 主题筛选，点 ☆ 收藏想看的谈话。',
 bbTitle:"黑客松清单",bbSubPre:"大陆 + 港澳台 + 线上 · ",bbSubPost:"场正在报名",bbGo:"进入清单 →",
-searchPh:"搜索标题 / 主持人 / 主题…",ftoggleLabel:"🎛 筛选 Filter",
+searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"筛选",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"时间",feeLabel:"费用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分类",
 segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"后天",week:"本周",deadline:"🔥 即将截止"},
@@ -758,7 +720,7 @@ asubTitle:"🤖 让你的 Agent 提醒你，不用自己刷",
 asubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：',
 asubAll:"查看全部 Agent 版本",
 agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
-agSteps:['<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>','<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>','<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你提交 Space（提 PR）</li>'],
+agSteps:['<li>打开豆包工作 →「定时任务」→ 新建</li><li>重复选「每天」、时间 9:00，任务内容粘贴下方话术</li><li>保存，之后每天自动推送到对话</li>','<li>打开 WorkBuddy → 左侧「自动化」→ 添加任务</li><li>执行频率选「每天 9:00」，提示词粘贴下方话术</li><li>保存，之后每天自动执行并推送结果</li>','<li>把下方话术直接发给 Codex</li><li>让它创建每天 9:00（Asia/Shanghai）的自动化任务</li><li>还可以让它按仓库规范代你投稿（提 PR）</li>'],
 copyPrompt:"复制这段话",copy:"复制",copied:"已复制 ✓",copiedShort:"已复制",copiedGo:"已复制 ✓ 去粘贴给你的 Agent",
 esubTitle:"✉️ 邮件订阅：每天早上发到你的邮箱",
 esubSum:"没有 Agent 也没关系。留下邮箱，每天早上收到一封日报邮件：今天和本周的重点活动、72 小时内截止的报名。每天最多一封，不发广告；想停了，回复邮件注明「退订」即可。",
@@ -767,41 +729,44 @@ footNote:'🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新、审�
 footApis:"数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：",footTailPre:"Agent 投稿接入见 ",footTailPost:"。报名前请以官方页面最新信息为准。",
 introTitle:"Yat's List 是什么？",
 introP1:'Yat\'s List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都由 Yat 的 Agent 每天逐条打开官方页核实，再结构化发布出来。你可以直接在上方清单里浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。',
-introP2:'这是第四份清单——<b style="color:var(--ink)">谈话纪要</b>：华语圈 X Space 的精选纪要、回放链接与要点存档。',
+introP2:'这是第一份清单——<b style="color:var(--ink)">深圳活动日报</b>：深圳的 AI、创业、科技、跨境、Web3、加密活动与黑客松。',
 introTags:["✓ 每条都核实过","🤖 Agent 可直接订阅","🔕 没命中就不打扰"],
-termPrompt:"$ subscribe: yat's list · 谈话纪要",evListed:"场纪要在列",hackListed:"场黑客松",lastUpd:"最近更新",
+termPrompt:"$ subscribe: yat's list · Yat's Talks",evListed:"场谈话在列",hackListed:"场黑客松",lastUpd:"最近更新",
 tbTitle:"🤖 订阅话术（给 Agent）",
 tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：',
 tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
-epDescs:["活动数据（JSON，每天 07:30 更新）","黑客松数据（大陆+港澳台+线上）","RSS 订阅源","日历订阅文件","给 AI 的站点说明"],
+epDescs:["活动数据（JSON）","黑客松数据（大陆+港澳台+线上）","RSS 订阅源","日历订阅文件","给 AI 的站点说明"],
 mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 第一次来？</b><br>这里是每天核实更新的深圳活动清单。30 秒导览带你看完：自己逛、按兴趣筛选，或者让你的 Agent 订阅，每天只推你命中的活动。',
+welcBody:'<b>第一次来？</b>30 秒导览带你看懂怎么用',
 welcTour:"开始导览",welcBrowse:"直接逛逛",tourPrev:"上一步",tourNext:"下一步",tourDone:"完成",tourEnd:"结束导览",
-footTag:"深圳活动，喂给你的 Agent 吃。",footHome:"首页",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 逐条核实自官方页面 · 免费无广告",
+footTag:"谈话纪要，喂给你的 Agent 读。",footHome:"首页",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 逐条核实自官方页面 · 免费无广告",
 footContact:'合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"加载中…",loadFail:"数据加载失败，请刷新页面重试",
 pastTitle:"📚 过往活动",pastHint:"点开看历史记录",pastEmpty:"暂无过往记录，活动结束后会自动归档到这里",
-noResults:"没有符合条件的 谈话纪要",fres:function(n){return "共 "+n+" 场"},
-favTitle:"⭐ 我的收藏",favEmpty:"还没有收藏。看到想去的活动，点卡片上的「☆ 收藏」就会存到这里——收藏只存在这台设备的浏览器里，不用注册、不会上传。",
+noResults:"没有符合条件的活动",fres:function(n){return "共 "+n+" 场"},
+favTitle:"⭐ 我的收藏",favEmpty:"还没有收藏。看到想去的活动，点「···」里的「收藏」就会存到这里——收藏只存在这台设备的浏览器里，不用注册、不会上传。",
 dateTBD:"时间待定（看报名截止）",ongoingFold:function(n){return "持续进行中 · "+n+" 场长活动"},
 dlSoon:function(d){return "报名剩 "+d+" 天"},dlClose:"报名截止 ",dlClosed:"报名已截止",
 onlineStrip:"线上活动 · ONLINE",hybridStrip:"🌐+📍 线上 + 线下均可参加",joinOnline:"线上参加",venueTBA:"地点待公布",
 hk:"🇭🇰 香港",liveNow:"进行中",organizer:"主办方：",tbd:"待定",
-btnOfficial:"官方页 / 报名 →",btnCal:"＋ 加日历",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"来源：",mapBtn:"地图",
-feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",relTomorrow:"明天",relDayAfter:"后天"
+btnOfficial:"官方页 / 报名 →",btnCal:"＋ 加日历",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"来源：",mapBtn:"地图",shareBtn:"↗ 分享",shareT:"分享这场谈话",shareHint:"复制链接，把全文纪要页发给朋友就行。",copyLink:"复制短链接",copied2:"已复制",shareClose:"关闭",
+feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",relTomorrow:"明天",relDayAfter:"后天",
+regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收藏",mFavOff:"收藏",mShare:"分享链接",mMap:"在地图中查看",online:"线上",dayCount:function(n){return n+" 场"},
+abTitle:"让你的 Agent 替你读纪要、替你查",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，有新纪要命中兴趣才提醒你。",
+abApis:'也可以直接读：<a href="/talks.json">talks.json</a> · <a href="/spaces.json">spaces.json</a> · <a href="/interviews.json">interviews.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）',
+qChips:{all:"全部","src:space":"X Space","src:broadcast":"X 直播","src:youtube":"YouTube"},welcClose:"关闭"
 },
 en:{
-docTitle:"Yat's List · Yat\'s Talks · Chinese X Space Recaps & Highlights",
-metaDesc:"Yat's List Yat\'s Talks: curated recaps of talks, X Spaces, live broadcasts and interviews with replay links and key takeaways — curated by hand and updated irregularly. Search and filter by series and topic, or let your Agent subscribe to talks.json.",
-brandTop:"Back to top",navAgent:"For Agents",navEvents:"Events",navHack:"Hackathons",navExpat:"Expat Events",navSpaces:"Yat\'s Talks",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Yat's List · Yat\'s Talks",heroSub:"Chinese X Space recaps, served to your Agent.",cmdLabel:"Yat\'s Talks",pipLabel:"CLI",epostTitle:"📋 Submit a Space: add a Space to the list",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the Space title and its X replay link to this address, with “Space Recap Submission” in the subject. If it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",spSeriesLabel:"Series",spTopicLabel:"Topics",spLatestLabel:"Latest session",segAll:"All",spDur:"runtime",spDurParts:["h","m"],spEp:function(n){return "Ep. "+n},spHost:"Host: ",spGuests:"Guests: ",spNote:"Figures are as stated by the speakers — not independently verified.",spListen:"🎧 Listen on X →",epostNote:"Want to submit a Space? Just paste the Space link — if it's accepted, we'll transcribe it in full, write a summary and add it to the list, free of charge.",epostFormNote:"❗ In the form's list field, pick the closest option and put “Space Recap” in the title.",
-statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"sessions listed",heroMetaDaily:"Curated by hand · updated irregularly",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Yat\'s Talks",lcDescEv:"AI, startup, tech & cross-border events, verified daily",lcDescHack:"Hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
-taSubmit:"+ Submit a Space",taAgent:"🤖 Subscribe with my Agent",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
-agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/talks.json">talks.json</a>, curated by hand and updated irregularly) and only ping you when a new recap matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword and filter by series / topic above.',
-agTitle:"🤖 Don't want to dig through them yourself? Let your Agent read & search for you",agDesc:'Every recap has a <b>full-text page</b>. Send the prompt below to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work) and it can <b>read</b> the recaps for you, <b>search across sessions</b>, and <b>answer your questions</b> directly — with source links, so you never have to open them one by one.',agUse1:"📖 Read for me: summarize the latest or a chosen recap",agUse2:"🔎 Search for me: by topic / person / keyword across all sessions",agUse3:"❓ Answer for me: answer from the recaps, with sources",agPrompt:"Please use Yat's List's Space recap library as my source: first read https://yatslist.com/talks.json for the full index (each entry has a title, highlights and a note_url full-text page); when you need detail, open the entry's note_url page. Then: 1) summarize the recap I name, or the latest one; 2) search across sessions by topic, person or keyword; 3) answer my questions based on these recaps. Always cite your sources with the full-text page link, rely only on what the recaps say, and never invent content that is not in them.",agCopy:"Copy prompt",agJson:"📡 talks.json data",agMore:"Subscription & endpoints ↓",
+docTitle:"Yat's Talks — Spaces, Live Broadcasts & Interviews, Full-Text Notes | Yat's List",
+metaDesc:"Yat's Talks: full-text notes of X Spaces, X live broadcasts and YouTube interviews, with source links and key takeaways — curated by hand, updated irregularly. Search and filter by source, series and topic, or let your Agent subscribe to talks.json.",
+brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+heroTitle:"Yat's Talks",heroSub:"Spaces, live broadcasts & interviews — full-text notes, ready for your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
+statWeek:"New in last 7 days",statDl:"YouTube interviews",heroMetaTotal:"talks listed",heroMetaDaily:"Data updated",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Yat's Talks",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Spaces, live broadcasts & interviews — full-text notes",lcUnit:"events",
+taSubmit:"Submit event",taAgent:"Subscribe with my Agent →",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
+agentNote:'🤖 <b>Agent subscription</b>: your Agent can subscribe to this list directly (<a href="/talks.json">talks.json</a>) and only ping you when a new talk matches your interests — <a href="#agent-section">prompts & endpoints ↓</a>　｜　🔎 <b>Search & filter</b>: search by keyword, filter by source / series / topic, and tap ☆ to save talks.',
 bbTitle:"Hackathons",bbSubPre:"Mainland China + HK/Macau/Taiwan + Online · ",bbSubPost:"open for registration",bbGo:"Explore →",
-searchPh:"Search by title, host, topic…",ftoggleLabel:"🎛 Filters",
+searchPh:"Search by event, organizer, venue…",ftoggleLabel:"Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
 timeLabel:"When",feeLabel:"Fee",fmtLabel:"Format",cityLabel:"City",catLabel:"Category",
 segTime:{all:"All",today:"Today",tomorrow:"Tomorrow",dayafter:"In 2 days",week:"This week",deadline:"🔥 Closing soon"},
@@ -813,7 +778,7 @@ asubTitle:"🤖 Let your Agent watch for you — no more scrolling",
 asubSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Agents can all subscribe. Pick the prompt for your Agent, set it up once, and get reminded automatically every day.<br><b>Generic version</b> (works with any Agent that can access the web):',
 asubAll:"See all Agent versions",
 agNames:["🫘 Doubao Workspace","💼 WorkBuddy","🧑‍💻 Codex"],
-agSteps:['<li>Open Doubao Workspace → “Scheduled tasks” → New task</li><li>Set repeat to “Daily” at 9:00 and paste the prompt below as the task content</li><li>Save — it will push the digest to your chat every day</li>','<li>Open WorkBuddy → “Automation” in the left sidebar → Add task</li><li>Set the frequency to “Daily 9:00” and paste the prompt below</li><li>Save — it runs daily and pushes the results to you</li>','<li>Send the prompt below straight to Codex</li><li>Ask it to create a daily 9:00 (Asia/Shanghai) automation</li><li>It can also submit Spaces for you following the repo guidelines (via PR)</li>'],
+agSteps:['<li>Open Doubao Workspace → “Scheduled tasks” → New task</li><li>Set repeat to “Daily” at 9:00 and paste the prompt below as the task content</li><li>Save — it will push the digest to your chat every day</li>','<li>Open WorkBuddy → “Automation” in the left sidebar → Add task</li><li>Set the frequency to “Daily 9:00” and paste the prompt below</li><li>Save — it runs daily and pushes the results to you</li>','<li>Send the prompt below straight to Codex</li><li>Ask it to create a daily 9:00 (Asia/Shanghai) automation</li><li>It can also submit events for you following the repo guidelines (via PR)</li>'],
 copyPrompt:"Copy this prompt",copy:"Copy",copied:"Copied ✓",copiedShort:"Copied",copiedGo:"Copied ✓ — now paste it to your Agent",
 esubTitle:"✉️ Email subscription: a morning digest in your inbox",
 esubSum:"No Agent? No problem. Leave your email and get one digest every morning: today's and this week's key events, plus registrations closing within 72 hours. At most one email a day, no ads — reply with “unsubscribe” any time to stop.",
@@ -822,41 +787,44 @@ footNote:'🤖 This site is maintained automatically by <b>Yat\'s Agent</b> (dai
 footApis:"Data endpoints (open to anyone and any Agent, no login required): ",footTailPre:"Agent submissions: see ",footTailPost:". Always confirm the latest details on the official page before registering.",
 introTitle:"What is Yat's List?",
 introP1:'Yat\'s List is <b style="color:var(--ink)">a list built for Agents to subscribe to</b>: no feed, no noise. Every list is verified item by item against official pages by Yat\'s Agent each day, then published as structured data. Browse the list above yourself — or send the prompt below to your Agent and let it filter for you daily, pinging you only when something matches your interests.',
-introP2:'This is the fourth list — <b style="color:var(--ink)">Yat\'s Talks</b>: curated recaps of talks, X Spaces, live broadcasts and interviews, with replay links and key takeaways.',
+introP2:'This is the first list — the <b style="color:var(--ink)">Shenzhen Events Digest</b>: AI, startup, tech, cross-border, Web3 and crypto events and hackathons in Shenzhen.',
 introTags:["✓ Every listing verified","🤖 Agents can subscribe directly","🔕 Silent unless it matches you"],
-termPrompt:"$ subscribe: yat's list · Yat\'s Talks",evListed:"sessions listed",hackListed:"hackathons",lastUpd:"Last updated",
+termPrompt:"$ subscribe: yat's list · Shenzhen events digest",evListed:"events listed",hackListed:"hackathons",lastUpd:"Last updated",
 tbTitle:"🤖 Subscription prompt (for your Agent)",
 tbSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Agents can all subscribe. Below is the <b>generic version</b> (works with any Agent that can access the web):',
 tbAll:"Other Agent versions (Doubao / WorkBuddy / Codex)",
-epDescs:["Event data (JSON, updated daily at 07:30)","Hackathon data (Mainland + HK/Macau/Taiwan + online)","RSS feed","Calendar subscription file","Site guide for AI"],
+epDescs:["Event data (JSON)","Hackathon data (Mainland + HK/Macau/Taiwan + online)","RSS feed","Calendar subscription file","Site guide for AI"],
 mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests, areas and budget, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
 chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 First time here?</b><br>This is a Shenzhen events list — verified against official pages and updated daily. Take the 30-second tour: browse on your own, filter by your interests, or let your Agent subscribe and only ping you when something matches.',
+welcBody:'<b>First time here?</b>A 30-second tour shows you how it works',
 welcTour:"Start the tour",welcBrowse:"Just browse",tourPrev:"Back",tourNext:"Next",tourDone:"Done",tourEnd:"End tour",
-footTag:"Shenzhen events, served to your Agent.",footHome:"Home",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Every listing verified against its official page · Free, no ads",
+footTag:"Talk notes, ready for your Agent to read.",footHome:"Home",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Every listing verified against its official page · Free, no ads",
 footContact:'Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"Loading…",loadFail:"Failed to load data — please refresh and try again",
 pastTitle:"📚 Past events",pastHint:"Tap to view history",pastEmpty:"No past events yet — finished events are archived here automatically.",
-noResults:"No Space recaps match your filters",fres:function(n){return n+" sessions"},
-favTitle:"⭐ My saved events",favEmpty:"Nothing saved yet. When you spot an event you like, tap “☆ Save” on its card and it will live here — saved only in this device's browser, no account, nothing uploaded.",
+noResults:"No events match your filters",fres:function(n){return n+" events"},
+favTitle:"⭐ My saved events",favEmpty:"Nothing saved yet. When you spot an event you like, tap “···” → “Save” and it will live here — saved only in this device's browser, no account, nothing uploaded.",
 dateTBD:"Date TBD (see registration deadline)",ongoingFold:function(n){return "Ongoing · "+n+" multi-day events"},
 dlSoon:function(d){return "Registration closes in "+d+(d===1?" day":" days")},dlClose:"Registration closes ",dlClosed:"Registration closed",
 onlineStrip:"ONLINE EVENT",hybridStrip:"🌐+📍 Join online or in person",joinOnline:"Join online",venueTBA:"Venue TBA",
 hk:"🇭🇰 Hong Kong",liveNow:"Happening now",organizer:"Organizer: ",tbd:"TBD",
-btnOfficial:"Official page / Register →",btnCal:"+ Add to calendar",favOn:"★ Saved",favOff:"☆ Save",source:"Source: ",mapBtn:"Map",
-feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"Today",relTomorrow:"Tomorrow",relDayAfter:"In 2 days"
+btnOfficial:"Official page / Register →",btnCal:"+ Add to calendar",favOn:"★ Saved",favOff:"☆ Save",source:"Source: ",mapBtn:"Map",shareBtn:"↗ Share",shareT:"Share this talk",shareHint:"Copy the link and send the full-notes page to a friend.",copyLink:"Copy short link",copied2:"Copied",shareClose:"Close",
+feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"Today",relTomorrow:"Tomorrow",relDayAfter:"In 2 days",
+regBtn:"Register →",moreBtn:"More actions",mCal:"Add to calendar",mFavOn:"Remove from saved",mFavOff:"Save",mShare:"Share link",mMap:"Open in map",online:"Online",dayCount:function(n){return n+(n===1?" event":" events")},
+abTitle:"Let your Agent read and search the notes for you",abSub:"Doubao, WorkBuddy, Codex, Claude Code and others can subscribe. Set it up once; it only pings you when a new talk matches your interests.",
+abApis:'Or read directly: <a href="/talks.json">talks.json</a> · <a href="/spaces.json">spaces.json</a> · <a href="/interviews.json">interviews.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide)',
+qChips:{all:"All","src:space":"X Space","src:broadcast":"X Live","src:youtube":"YouTube"},welcClose:"Close"
 },
 tw:{
-docTitle:"Yat's List · Yat\'s Talks · 談話錄 · 華語圈 X 談話紀要與重播",
-metaDesc:"Yat\'s Talks · 談話錄：X Space、X 直播與 YouTube 訪談的精選紀要、重播連結與要點存檔，人工整理、不定期更新；可搜索、按系列與主題篩選，也可讓你的 Agent 訂閱 talks.json。",
-brandTop:"回到頂部",navAgent:"給 Agent",navEvents:"活動清單",navHack:"黑客松清單",navExpat:"外國人活動",navSpaces:"談話紀要",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"Yat's List · Yat\'s Talks · 談話錄",heroSub:"華語圈 談話紀要，餵給你的 Agent 吃。",cmdLabel:"Yat\'s Talks · 談話錄",pipLabel:"命令列 CLI",epostTitle:"📋 提交 Space：把一場 Space 加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把 Space 名稱和 X 重播連結發到這個信箱即可，主旨註明「談話紀要投稿」；被收錄後，我們免費轉寫全文、做摘要並加入清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=Space%20%E7%B4%80%E8%A6%81%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",spSeriesLabel:"系列",spTopicLabel:"主題",spLatestLabel:"最近一場",segAll:"全部",spDur:"時長",spDurParts:["小時","分"],spEp:function(n){return "第 "+n+" 期"},spHost:"主持：",spGuests:"嘉賓：",spNote:"數字為發言人自述、未核實",spListen:"🎧 去 X 收聽重播 →",epostNote:"我想提交 Space：貼上 Space 連結即可；被收錄後，我們免費轉寫全文、做摘要並加入清單。",epostFormNote:"❗ 所屬清單請先選最接近的一項，標題註明「談話紀要」。",
-statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場紀要在列",heroMetaDaily:"人工整理 · 不定期更新",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"談話紀要",lcDescEv:"AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"正在報名的黑客松與創新大賽",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"Space · 直播 · 訪談，全文紀要與要點",lcUnit:"場",
-taSubmit:"＋ 提交 Space",taAgent:"🤖 用我的 Agent 訂閱",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
-agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/talks.json">talks.json</a>，人工整理、不定期更新），有新紀要收錄且命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：上方可關鍵詞搜索、按系列 / 主題篩選。',
-agTitle:"🤖 不想自己翻？讓你的 Agent 替你讀、替你查",agDesc:'每場紀要都有<b>全文公開頁</b>。把下面這段話發給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都可以），它就能替你<b>讀</b>紀要、<b>跨場檢索</b>，並直接<b>回答你的問題</b>——答案附原文出處，不用你一場場點開。',agUse1:"📖 替我讀：總結最新或指定的紀要",agUse2:"🔎 替我查：按主題 / 人物 / 關鍵詞跨場檢索",agUse3:"❓ 替我答：基於紀要回答問題並給出處",agPrompt:"請把 Yat's List 的 談話紀要庫作為我的資料源：先讀取 https://yatslist.com/talks.json 拿到全部紀要索引（每條含標題、要點和 note_url 全文頁），需要細節時再打開對應的 note_url 全文頁。之後請替我：1）總結我指定的或最新的一場紀要；2）按主題、人物或關鍵詞跨場檢索；3）回答我基於這些紀要提出的問題。回答必須註明出處並附上對應的全文頁連結，只依據紀要內容，不要編造紀要裡沒有的資訊。",agCopy:"複製話術",agJson:"📡 talks.json 數據",agMore:"訂閱與接口說明 ↓",
+docTitle:"Yat's Talks · 談話錄 — Space、直播與訪談全文紀要 | Yat's List",
+metaDesc:"Yat's Talks 談話錄：X Space、X 直播與 YouTube 訪談的全文紀要、原連結與要點存檔，人工整理、不定期更新；可搜索、按來源/系列/主題篩選，也可讓你的 Agent 訂閱 talks.json。",
+brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+heroTitle:"Yat's Talks · 談話錄",heroSub:"Space、直播、訪談——全文紀要，餵給你的 Agent 讀。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
+statWeek:"近 7 天新增",statDl:"YouTube 訪談",heroMetaTotal:"場談話在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Yat's Talks",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"Space · 直播 · 訪談，全文紀要與要點",lcUnit:"場",
+taSubmit:"提交活動",taAgent:"用我的 Agent 訂閱 →",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
+agentNote:'🤖 <b>Agent 訂閱</b>：你的 Agent 也可直接訂閱本清單（<a href="/talks.json">talks.json</a>），有新紀要命中你的興趣才提醒你 — <a href="#agent-section">訂閱話術與接口清單 ↓</a>　｜　🔎 <b>檢索互動</b>：下方可關鍵詞搜索、按來源 / 系列 / 主題篩選，點 ☆ 收藏想看的談話。',
 bbTitle:"黑客松清單",bbSubPre:"大陸 + 港澳臺 + 線上 · ",bbSubPost:"場正在報名",bbGo:"進入清單 →",
-searchPh:"搜索標題 / 主持人 / 主題…",ftoggleLabel:"🎛 篩選 Filter",
+searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"篩選",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"時間",feeLabel:"費用",fmtLabel:"形式",cityLabel:"城市",catLabel:"分類",
 segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"後天",week:"本週",deadline:"🔥 即將截止"},
@@ -868,7 +836,7 @@ asubTitle:"🤖 讓你的 Agent 提醒你，不用自己刷",
 asubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以訂閱。按你用的 Agent 選一份話術，設置一次，之後每天自動提醒你。<br><b>通用版</b>（任何能聯網的 Agent 都適用）：',
 asubAll:"查看全部 Agent 版本",
 agNames:["🫘 豆包工作","💼 WorkBuddy","🧑‍💻 Codex"],
-agSteps:['<li>打開豆包工作 →「定時任務」→ 新建</li><li>重複選「每天」、時間 9:00，任務內容粘貼下方話術</li><li>保存，之後每天自動推送到對話</li>','<li>打開 WorkBuddy → 左側「自動化」→ 添加任務</li><li>執行頻率選「每天 9:00」，提示詞粘貼下方話術</li><li>保存，之後每天自動執行並推送結果</li>','<li>把下方話術直接發給 Codex</li><li>讓它創建每天 9:00（Asia/Shanghai）的自動化任務</li><li>還可以讓它按倉庫規範代你提交 Space（提 PR）</li>'],
+agSteps:['<li>打開豆包工作 →「定時任務」→ 新建</li><li>重複選「每天」、時間 9:00，任務內容粘貼下方話術</li><li>保存，之後每天自動推送到對話</li>','<li>打開 WorkBuddy → 左側「自動化」→ 添加任務</li><li>執行頻率選「每天 9:00」，提示詞粘貼下方話術</li><li>保存，之後每天自動執行並推送結果</li>','<li>把下方話術直接發給 Codex</li><li>讓它創建每天 9:00（Asia/Shanghai）的自動化任務</li><li>還可以讓它按倉庫規範代你提交活動（提 PR）</li>'],
 copyPrompt:"複製這段話",copy:"複製",copied:"已複製 ✓",copiedShort:"已複製",copiedGo:"已複製 ✓ 去粘貼給你的 Agent",
 esubTitle:"✉️ 郵件訂閱：每天早上發到你的郵箱",
 esubSum:"沒有 Agent 也沒關係。留下郵箱，每天早上收到一封日報郵件：今天和本週的重點活動、72 小時內截止的報名。每天最多一封，不發廣告；想停了，回覆郵件註明「退訂」即可。",
@@ -877,49 +845,60 @@ footNote:'🤖 本站由 <b>Yat 的 Agent</b> 自動維護（每日更新、審�
 footApis:"數據接口（任何人 / 任何 Agent 可直接讀取，無需登錄）：",footTailPre:"Agent 投稿接入見 ",footTailPost:"。報名前請以官方頁面最新信息為準。",
 introTitle:"Yat's List 是什麼？",
 introP1:'Yat\'s List 是<b style="color:var(--ink)">給 Agent 訂閱的清單</b>：不做信息流、不刷屏。每份清單都由 Yat 的 Agent 每天逐條打開官方頁核實，再結構化發佈出來。你可以直接在上方清單裡瀏覽，也可以把下面這段話術發給你的 Agent，讓它每天替你篩選，命中你的興趣才提醒你。',
-introP2:'這是第四份清單——<b style="color:var(--ink)">談話紀要</b>：華語圈 X Space 的精選紀要、重播連結與要點存檔。',
+introP2:'這是第一份清單——<b style="color:var(--ink)">深圳活動日報</b>：深圳的 AI、創業、科技、跨境、Web3、加密活動與黑客松。',
 introTags:["✓ 每條都核實過","🤖 Agent 可直接訂閱","🔕 沒命中就不打擾"],
-termPrompt:"$ subscribe: yat's list · 談話紀要",evListed:"場紀要在列",hackListed:"場黑客松",lastUpd:"最近更新",
+termPrompt:"$ subscribe: yat's list · 深圳活動日報",evListed:"場活動在列",hackListed:"場黑客松",lastUpd:"最近更新",
 tbTitle:"🤖 訂閱話術（給 Agent）",
 tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以訂閱。下方是<b>通用版</b>話術（任何能聯網的 Agent 都適用）：',
 tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
-epDescs:["活動數據（JSON，每天 07:30 更新）","黑客松數據（大陸+港澳臺+線上）","RSS 訂閱源","日曆訂閱文件","給 AI 的站點說明"],
+epDescs:["活動數據（JSON）","黑客松數據（大陸+港澳臺+線上）","RSS 訂閱源","日曆訂閱文件","給 AI 的站點說明"],
 mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把裡換成你的興趣、區域、預算，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
-welcBody:'<b>👋 第一次來？</b><br>這裡是每天核實更新的深圳活動清單。30 秒導覽帶你看完：自己逛、按興趣篩選，或者讓你的 Agent 訂閱，每天只推你命中的活動。',
+welcBody:'<b>第一次來？</b>30 秒導覽帶你看懂怎麼用',
 welcTour:"開始導覽",welcBrowse:"直接逛逛",tourPrev:"上一步",tourNext:"下一步",tourDone:"完成",tourEnd:"結束導覽",
-footTag:"深圳活動，餵給你的 Agent 吃。",footHome:"首頁",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 逐條核實自官方頁面 · 免費無廣告",
+footTag:"談話紀要，餵給你的 Agent 讀。",footHome:"首頁",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 逐條核實自官方頁面 · 免費無廣告",
 footContact:'合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"加載中…",loadFail:"數據加載失敗，請刷新頁面重試",
 pastTitle:"📚 過往活動",pastHint:"點開看歷史記錄",pastEmpty:"暫無過往記錄，活動結束後會自動歸檔到這裡",
-noResults:"沒有符合條件的 談話紀要",fres:function(n){return "共 "+n+" 場"},
-favTitle:"⭐ 我的收藏",favEmpty:"還沒有收藏。看到想去的活動，點卡片上的「☆ 收藏」就會存到這裡——收藏只存在這臺設備的瀏覽器裡，不用註冊、不會上傳。",
+noResults:"沒有符合條件的活動",fres:function(n){return "共 "+n+" 場"},
+favTitle:"⭐ 我的收藏",favEmpty:"還沒有收藏。看到想去的活動，點「···」裡的「收藏」就會存到這裡——收藏只存在這臺設備的瀏覽器裡，不用註冊、不會上傳。",
 dateTBD:"時間待定（看報名截止）",ongoingFold:function(n){return "持續進行中 · "+n+" 場長活動"},
 dlSoon:function(d){return "報名剩 "+d+" 天"},dlClose:"報名截止 ",dlClosed:"報名已截止",
 onlineStrip:"線上活動 · ONLINE",hybridStrip:"🌐+📍 線上 + 線下均可參加",joinOnline:"線上參加",venueTBA:"地點待公佈",
 hk:"🇭🇰 香港",liveNow:"進行中",organizer:"主辦方：",tbd:"待定",
-btnOfficial:"官方頁 / 報名 →",btnCal:"＋ 加日曆",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"來源：",mapBtn:"地圖",
-feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",relTomorrow:"明天",relDayAfter:"後天"
+btnOfficial:"官方頁 / 報名 →",btnCal:"＋ 加日曆",favOn:"★ 已收藏",favOff:"☆ 收藏",source:"來源：",mapBtn:"地圖",shareBtn:"↗ 分享",shareT:"分享這場談話",shareHint:"複製連結，把全文紀要頁發給朋友就行。",copyLink:"複製短鏈接",copied2:"已複製",shareClose:"關閉",
+feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",relTomorrow:"明天",relDayAfter:"後天",
+regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收藏",mFavOff:"收藏",mShare:"分享連結",mMap:"在地圖中查看",online:"線上",dayCount:function(n){return n+" 場"},
+abTitle:"讓你的 Agent 替你讀紀要、替你查",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，有新紀要命中興趣才提醒你。",
+abApis:'也可以直接讀：<a href="/talks.json">talks.json</a> · <a href="/spaces.json">spaces.json</a> · <a href="/interviews.json">interviews.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範）',
+qChips:{all:"全部","src:space":"X Space","src:broadcast":"X 直播","src:youtube":"YouTube"},welcClose:"關閉"
 }};
 function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
 const PROMPTS={
-zh:{generic:"请订阅「Yat\'s Talks · 谈话录」并给我提醒：数据源 https://yatslist.com/talks.json（人工整理、不定期更新，无需登录）。每天读取一次，有新收录的 谈话纪要时当天告诉我；按我感兴趣的主题和系列筛选【成长 / 加密 / AI，按自己的兴趣改】，每场给我日期、标题、主持人和 3–5 条纪要要点，并附 X 回放链接。没有新增就不用打扰我。不要编造数据源里没有的 Space。",doubao:"每天早上 9 点，打开 https://yatslist.com/talks.json 读取最新数据（这是华语圈 X 谈话纪要的 JSON 数据文件）。帮我挑出：1）最近 7 天新收录的；2）我感兴趣的主题和系列：【成长 / 加密 / AI，按自己的兴趣改】。按日期倒序，每场一行：日期 + 标题 + 主持人 + 一句话要点 + X 回放链接。没有新增就回一句「今日无新增纪要」。不要编造文件里没有的 Space。",workbuddy:"每天早上 9 点，打开 https://yatslist.com/talks.json 读取最新数据（这是华语圈 X 谈话纪要的 JSON 数据文件）。帮我挑出：1）最近 7 天新收录的；2）我感兴趣的主题和系列：【成长 / 加密 / AI，按自己的兴趣改】。按日期倒序，每场一行：日期 + 标题 + 主持人 + 一句话要点 + X 回放链接。没有新增就回一句「今日无新增纪要」。不要编造文件里没有的 Space。",codex:"请为我订阅「Yat\'s Talks · 谈话录」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/talks.json，并阅读说明 https://yatslist.com/AGENTS.md 。有新收录的 谈话纪要时，按我感兴趣的主题和系列【成长 / 加密 / AI】筛选汇报，每场附日期、标题、主持人、3–5 条纪要要点和 X 回放链接；没有新增时只回「今日无新增纪要」。请把这项工作设为每天自动运行的任务。另外，如果我让你提交 Space，也按该说明里的规范提交。"},
-en:{generic:"Please subscribe to “Yat's List — Yat\'s Talks” and send me reminders. Data source: https://yatslist.com/talks.json (curated by hand, updated irregularly, no login required). Read it once a day and tell me the same day when a new Space recap is added; filter by the topics and series I care about [personal growth / crypto / AI — edit to your own interests]. For each one, give me the date, title, host and 3–5 key takeaways, plus the X replay link. If there is nothing new, don't bother me. Never invent Spaces that are not in the data source.",doubao:"Every morning at 9:00, open https://yatslist.com/talks.json and read the latest data (a JSON file of recaps of Chinese-language X Spaces). Pick out: 1) recaps added in the last 7 days; 2) topics and series I am interested in: [personal growth / crypto / AI — edit to your own interests]. Sort by date, newest first, one per line: date + title + host + one-line takeaway + X replay link. If nothing is new, just reply “No new recaps today.” Never invent Spaces that are not in the file.",workbuddy:"Every morning at 9:00, open https://yatslist.com/talks.json and read the latest data (a JSON file of recaps of Chinese-language X Spaces). Pick out: 1) recaps added in the last 7 days; 2) topics and series I am interested in: [personal growth / crypto / AI — edit to your own interests]. Sort by date, newest first, one per line: date + title + host + one-line takeaway + X replay link. If nothing is new, just reply “No new recaps today.” Never invent Spaces that are not in the file.",codex:"Please subscribe me to “Yat's List — Yat\'s Talks”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/talks.json and read the guide at https://yatslist.com/AGENTS.md. When new Space recaps are added, filter by my topics and series of interest [personal growth / crypto / AI] and report each with its date, title, host, 3–5 key takeaways and X replay link; if nothing is new, reply only “No new recaps today.” Set this up as a task that runs automatically every day. Also, if I ask you to submit a Space, follow the guide and submit it the way it describes."},
-tw:{generic:"請訂閱「Yat\'s Talks · 談話錄」並給我提醒：數據源 https://yatslist.com/talks.json（人工整理、不定期更新，無需登錄）。每天讀取一次，有新收錄的 談話紀要時當天告訴我；按我感興趣的主題和系列篩選【成長 / 加密 / AI，按自己的興趣改】，每場給我日期、標題、主持人和 3–5 條紀要要點，並附 X 重播連結。沒有新增就不用打擾我。不要編造數據源裡沒有的 Space。",doubao:"每天早上 9 點，打開 https://yatslist.com/talks.json 讀取最新數據（這是華語圈 X 談話紀要的 JSON 數據文件）。幫我挑出：1）最近 7 天新收錄的；2）我感興趣的主題和系列：【成長 / 加密 / AI，按自己的興趣改】。按日期倒序，每場一行：日期 + 標題 + 主持人 + 一句話要點 + X 重播連結。沒有新增就回一句「今日無新增紀要」。不要編造文件裡沒有的 Space。",workbuddy:"每天早上 9 點，打開 https://yatslist.com/talks.json 讀取最新數據（這是華語圈 X 談話紀要的 JSON 數據文件）。幫我挑出：1）最近 7 天新收錄的；2）我感興趣的主題和系列：【成長 / 加密 / AI，按自己的興趣改】。按日期倒序，每場一行：日期 + 標題 + 主持人 + 一句話要點 + X 重播連結。沒有新增就回一句「今日無新增紀要」。不要編造文件裡沒有的 Space。",codex:"請為我訂閱「Yat\'s Talks · 談話錄」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/talks.json，並閱讀說明 https://yatslist.com/AGENTS.md 。有新收錄的 談話紀要時，按我感興趣的主題和系列【成長 / 加密 / AI】篩選彙報，每場附日期、標題、主持人、3–5 條紀要要點和 X 重播連結；沒有新增時只回「今日無新增紀要」。請把這項工作設為每天自動運行的任務。另外，如果我讓你提交 Space，也按該說明裡的規範提交。"}};
-const SUBMIT_PROMPT_EN="Please help me submit an X Space to “Yat's List — Yat\'s Talks”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the Space's page on X to verify its title, date and host. As the guide describes, add the Space (link + basic info) to talks.json and open a Pull Request — or email the Space link and basic info to the submission inbox event.submit@yatslist.com instead. The Space I want to submit: [Space title and X link here]. After submitting, watch for the maintainer Agent's review comments, fix anything requested, and let me know the result.";
+zh:{
+generic:"请订阅「Yat's Talks · 谈话录」并给我谈话纪要提醒：数据源 https://yatslist.com/talks.json（人工整理、不定期更新，无需登录）。每周读取一次，有新纪要收录时告诉我：标题、主持人/嘉宾、一句话要点和全文纪要链接；如果新纪要的主题命中我的兴趣，当天就提醒我。不要编造数据源里没有的谈话。",
+doubao:"每天早上 9 点，打开 https://yatslist.com/talks.json 读取最新数据（这是 X Space、X 直播与 YouTube 访谈的全文纪要索引）。帮我挑出：1）最近 7 天新增的纪要；2）我感兴趣的主题：【AI / Crypto / 创业，按自己的兴趣改】。按日期排序，每场一行：日期 + 标题 + 主持人 + 一句话要点 + 全文纪要链接。没有新增就回一句「今日无新增纪要」。不要编造文件里没有的谈话。",
+workbuddy:"每天早上 9 点，打开 https://yatslist.com/talks.json 读取最新数据（这是 X Space、X 直播与 YouTube 访谈的全文纪要索引）。帮我挑出：1）最近 7 天新增的纪要；2）我感兴趣的主题：【AI / Crypto / 创业，按自己的兴趣改】。按日期排序，每场一行：日期 + 标题 + 主持人 + 一句话要点 + 全文纪要链接。没有新增就回一句「今日无新增纪要」。不要编造文件里没有的谈话。",
+codex:"请为我订阅「Yat's Talks · 谈话录」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/talks.json，并阅读说明 https://yatslist.com/AGENTS.md 。筛选最近新增的、以及我感兴趣的主题【AI / Crypto / 创业】的纪要，按日期排序简要汇报，每场一行并附全文纪要链接；没有新增时只回「今日无新增纪要」。请把这项工作设为每天自动运行的任务。另外，如果我让你投稿一场谈话，也按该说明里的规范提交。"},
+en:{
+generic:"Please subscribe to “Yat's Talks” and send me new-talk alerts. Data source: https://yatslist.com/talks.json (curated by hand, updated irregularly, no login required). Read it once a week; when a new talk is added, tell me its title, host/guests, a one-line takeaway and the full-notes link. If a new talk matches my interests, tell me the same day. Never invent talks that are not in the data source.",
+doubao:"Every morning at 9:00, open https://yatslist.com/talks.json and read the latest data (an index of full-text notes for X Spaces, X live broadcasts and YouTube interviews). Pick out: 1) notes added in the last 7 days; 2) topics I care about: [AI / crypto / startups — edit to your interests]. Sort by date, one per line: date + title + host + one-line takeaway + full-notes link. If nothing is new, reply “No new notes today.” Never invent talks that are not in the file.",
+workbuddy:"Every morning at 9:00, open https://yatslist.com/talks.json and read the latest data (an index of full-text notes for X Spaces, X live broadcasts and YouTube interviews). Pick out: 1) notes added in the last 7 days; 2) topics I care about: [AI / crypto / startups — edit to your interests]. Sort by date, one per line: date + title + host + one-line takeaway + full-notes link. If nothing is new, reply “No new notes today.” Never invent talks that are not in the file.",
+codex:"Please subscribe me to “Yat's Talks”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/talks.json and read the guide at https://yatslist.com/AGENTS.md. Report newly added notes and ones matching my topics [AI / crypto / startups], sorted by date, one per line with the full-notes link; if nothing is new, reply only “No new notes today.” Set this up as a daily automated task. If I ask you to submit a talk, follow the guide's submission rules."},
+tw:{
+generic:"請訂閱「Yat's Talks · 談話錄」並給我談話紀要提醒：數據源 https://yatslist.com/talks.json（人工整理、不定期更新，無需登錄）。每週讀取一次，有新紀要收錄時告訴我：標題、主持人/嘉賓、一句話要點和全文紀要連結；如果新紀要的主題命中我的興趣，當天就提醒我。不要編造數據源裡沒有的談話。",
+doubao:"每天早上 9 點，打開 https://yatslist.com/talks.json 讀取最新數據（這是 X Space、X 直播與 YouTube 訪談的全文紀要索引）。幫我挑出：1）最近 7 天新增的紀要；2）我感興趣的主題：【AI / Crypto / 創業，按自己的興趣改】。按日期排序，每場一行：日期 + 標題 + 主持人 + 一句話要點 + 全文紀要連結。沒有新增就回一句「今日無新增紀要」。不要編造文件裡沒有的談話。",
+workbuddy:"每天早上 9 點，打開 https://yatslist.com/talks.json 讀取最新數據（這是 X Space、X 直播與 YouTube 訪談的全文紀要索引）。幫我挑出：1）最近 7 天新增的紀要；2）我感興趣的主題：【AI / Crypto / 創業，按自己的興趣改】。按日期排序，每場一行：日期 + 標題 + 主持人 + 一句話要點 + 全文紀要連結。沒有新增就回一句「今日無新增紀要」。不要編造文件裡沒有的談話。",
+codex:"請為我訂閱「Yat's Talks · 談話錄」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/talks.json，並閱讀說明 https://yatslist.com/AGENTS.md 。篩選最近新增的、以及我感興趣的主題【AI / Crypto / 創業】的紀要，按日期排序簡要匯報，每場一行並附全文紀要連結；沒有新增時只回「今日無新增紀要」。請把這項工作設為每天自動運行的任務。另外，如果我讓你投稿一場談話，也按該說明裡的規範提交。"}};
+const SUBMIT_PROMPT_EN="Please help me submit a talk (X Space / X live broadcast / YouTube interview) to “Yat's Talks”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the talk's original page to verify its title, date and host/guests. Add the talk (link + basic info) to talks.json and open a Pull Request as the guide describes, or email the link and basic info to event.submit@yatslist.com. The talk I want to submit: [talk title and link here]. After submitting, watch for the maintainer Agent's review comments, fix anything it asks for, and tell me the result.";
 const MSTEPS_EN={generic:"Works with any Agent that can access the web: paste the prompt to it and ask it to set up a daily task.",doubao:"Doubao Workspace → “Scheduled tasks” → New → repeat “Daily”, time 9:00 → paste the prompt as the task content → Save.",workbuddy:"WorkBuddy → “Automation” in the left sidebar → Add task → frequency “Daily 9:00” → paste the prompt → Save.",codex:"Send the prompt straight to Codex and ask it to create a daily 9:00 (Asia/Shanghai) automation."};
-const MEX_SUB_EN="<b>Customization examples (edit the same way):</b><br>· Only Bao'an & Nanshan: change the filter to “only events in Bao'an and Nanshan districts”<br>· Free only: add “only recommend free events”<br>· Hardware & makers: change the categories to [Hardware / Engineering]<br>· Weekends only: add “only Saturdays and Sundays”";
-const MEX_POST_EN="<b>Example:</b><br>“The Space I want to submit: [Sage Time Ep. 17, https://x.com/i/spaces/…]” — replace the brackets with the real Space title and X link before copying. Open the X page first to confirm the title, date and host.";
-const POST_STEPS_ZH="把话术发给你的 Agent（Codex / Claude Code 等），它会核对官方页并代你提 PR。";
-const POST_STEPS_TW="把話術發給你的 Agent（Codex / Claude Code 等），它會核對官方頁並代你提 PR。";
-const POST_STEPS_EN="Send this prompt to your Agent (Codex / Claude Code, etc.) — it will verify the official page and open the PR for you.";
-const TOUR_EN=[
-{sel:".intro",t:"<b>Step 1 · This site is built for Agents to read</b>: Yat's List verifies Shenzhen industry events one by one and publishes them as data endpoints — the opening screen is the subscription terminal, and the human-readable events list is in the lower half of the page."},
-{sel:".terminal",t:"<b>Step 2 · Subscribing takes one prompt</b>: the prompt in this terminal is the subscription instruction — copy it and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code all work); it will come back and pull the data itself every morning."},
-{sel:"#subprompt",t:"<b>Step 3 · The prompt is yours to edit</b>: adjust the interest categories and reminder rhythm to your taste before you send it. Set it up once and never think about it again."},
-{sel:"#agent-sub",t:"<b>Step 4 · Pick the version for your Agent</b>: Doubao, WorkBuddy and Codex each have a dedicated prompt in the section below; if you are not sure which to use, take the generic version from Step 2."},
-{sel:"#email-sub",t:"<b>Step 5 · No Agent? No problem</b>: subscribe to the daily email digest (one email a day) or import the ICS file into your calendar. Once subscribed, you are only pinged when an event matches your interests. Tour over — go browse the events."}];
+const MEX_SUB_EN="<b>Customization examples (edit the same way):</b><br>· Guo Yu only: change the filter to “only interviews with Guo Yu”<br>· Crypto only: change the topics to [Crypto / Web3]<br>· YouTube only: add “only YouTube interviews”<br>· Long talks: add “only talks over 1 hour”";
+const MEX_POST_EN="<b>Example:</b><br>“The talk I want to submit: [Lidang Q&A Space, https://x.com/i/spaces/…]” — replace the brackets with the real talk title and link before copying. Open the original page first to confirm the title, date and host.";
+const POST_STEPS_ZH="把话术发给你的 Agent（Codex / Claude Code / WorkBuddy 等），它会核对官方页并代你提交，不需要 GitHub 账号。";
+const POST_STEPS_TW="把話術發給你的 Agent（Codex / Claude Code / WorkBuddy 等），它會核對官方頁並代你提交，不需要 GitHub 帳號。";
+const POST_STEPS_EN="Send this prompt to your Agent (Codex / Claude Code / WorkBuddy, etc.) — it will verify the official page and submit it for you. No GitHub account needed.";
+const TOUR_EN=[{sel:"#list",t:"<b>Step 1 · Start with the talks</b>: every Space, live broadcast and interview here comes with full-text notes, newest first. Tap a title for the original video/replay, or “Full notes” for the cleaned-up recap."},{sel:".bar",t:"<b>Step 2 · Search & filter</b>: search titles, hosts and guests; filter by source (X Space / X Live / YouTube), series or topic — or use ⭐ to see only your saved talks."},{sel:".card",t:"<b>Step 3 · Reading a card</b>: length on the left, title in bold, the grey line shows source, series, host and guests, with key takeaways below. “Full notes” opens the notes page; “···” saves or shares the talk."},{sel:".terminal",t:"<b>Step 4 · Let an Agent read for you</b>: copy the prompt in this terminal and send it to your Agent (Doubao / WorkBuddy / Codex / Claude Code) — it reads talks.json itself, summarizes, searches across talks and answers your questions."},{sel:"#cli-strip-bottom",t:"<b>Step 5 · Developers, check the footer</b>: pip install yatslist queries the talks too, no browser needed. That's the tour — go pick a talk."}];
 function fmtUpd(){const _d=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";const el=document.getElementById("st-upd");if(el)el.textContent=_d;const hm=document.getElementById("hm-upd");if(hm)hm.textContent=tr("heroMetaDaily")+(window._updRaw?" · "+tr("heroMetaData")+" "+_d:"")}
 function _setText(sel,txt){const el=document.querySelector(sel);if(el)el.textContent=txt}
 function _setHTML(sel,html){const el=document.querySelector(sel);if(el)el.innerHTML=html}
@@ -929,16 +908,17 @@ document.title=tr("docTitle");
 const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-expat",tr("navExpat"));_setText("#nav-spaces",tr("navSpaces"));
-_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));_setText("#epost-note",tr("epostNote"));_setText("#epost-form-note",tr("epostFormNote"));_setText("#sp-latest-label",tr("spLatestLabel"));
+_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-jobs",tr("navJobs"));_setText("#nav-spaces",tr("navSpaces"));_setText("#nav-mu",tr("navMu"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
-_setHTML("#agentnote",tr("agentNote"));
-_setText("#ag-title",tr("agTitle"));_setHTML("#ag-desc",tr("agDesc"));_setText("#ag-use1",tr("agUse1"));_setText("#ag-use2",tr("agUse2"));_setText("#ag-use3",tr("agUse3"));_setText("#ag-prompt",tr("agPrompt"));_setText("#ag-copy",tr("agCopy"));_setText("#ag-json",tr("agJson"));_setText("#ag-more",tr("agMore"));
+_setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setHTML("#ab-apis",tr("abApis"));
+{const qd=tr("qChips")||{};document.querySelectorAll("#qchips .chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
+{const wx=document.getElementById("welc-x");if(wx)wx.setAttribute("aria-label",tr("welcClose"))}
 _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setText("#bb-sub-post",tr("bbSubPost"));_setText("#bb-go",tr("bbGo"));
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
-const flk=["spSeriesLabel","spTopicLabel"];
+const flk=["favLabel","favNote","timeLabel","feeLabel","fmtLabel","cityLabel","catLabel"];
 document.querySelectorAll(".flabel").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
 const fb=document.getElementById("favbtn");if(fb&&fb.childNodes[0])fb.childNodes[0].textContent=tr("favOnlyBtn");
 const fd=document.getElementById("fdate");if(fd)fd.setAttribute("aria-label",LANG==="en"?"Filter by date":LANG==="tw"?"按日期篩選":"按日期筛选");
@@ -959,7 +939,7 @@ document.querySelectorAll(".endpoint-item .btn-copy").forEach(el=>{el.textConten
 _setText("#subprompt-copy",tr("copy"));
 _setText("#mclose1",tr("mclose"));_setText("#mclose2",tr("mclose2"));_setText("#mhint",tr("mhint"));_setText("#mcopy",tr("mcopy"));
 document.querySelectorAll("#mchips .mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
-_setHTML("#welc-body",tr("welcBody"));_setText("#welc-tour",tr("welcTour"));_setText("#welc-browse",tr("welcBrowse"));
+_setHTML("#welc-body",tr("welcBody"));_setText("#welc-tour",tr("welcTour"));
 _setText("#tourprev",tr("tourPrev"));_setText("#tournext",tr("tourNext"));_setText("#tourend",tr("tourEnd"));
 _setText("#sf-tag",tr("footTag"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
@@ -981,110 +961,133 @@ document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("clic
 if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
 applyTheme();
 </script>
-<script>
+<script>const $=s=>document.querySelector(s);
+const TZ="Asia/Shanghai";
 let DATA=[];
 let F={series:"all",source:"all",topics:new Set()};
-const $=s=>document.querySelector(s);
-const DAY=864e5;
-const TZ="Asia/Shanghai";
-const _dtf=new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"});
-const shParts=t=>{const p={};for(const x of _dtf.formatToParts(new Date(t)))p[x.type]=x.value;return [+p.year,+p.month,+p.day]};
+let FAVS=new Set();try{FAVS=new Set(JSON.parse(localStorage.getItem("szFavs")||"[]"))}catch(e){}
+let favOnly=false;
+function saveFavs(){try{localStorage.setItem("szFavs",JSON.stringify([...FAVS]))}catch(e){}}
+function toggleFav(u){if(FAVS.has(u))FAVS.delete(u);else FAVS.add(u);saveFavs();render()}
 function fL(e,f){if(LANG==="en")return e[f+"_en"]||e[f];if(LANG==="tw")return e[f+"_tw"]||e[f];return e[f]}
+const L3=(zh,en,tw)=>LANG==="en"?en:LANG==="tw"?tw:zh;
 function fmtDurShort(min){if(min===null||min===undefined||min==="")return "";const h=Math.floor(min/60),m=min%60;return h+":"+String(m).padStart(2,"0")}
-function fmtDur(min){if(!min)return "";const h=Math.floor(min/60),m=min%60;const u=(STR[LANG]&&STR[LANG].spDurParts)||STR.zh.spDurParts;return h?(h+" "+u[0]+" "+m+" "+u[1]):(m+" "+u[1])}
+function fmtDur(min){if(!min)return "";const h=Math.floor(min/60),m=min%60;const u=LANG==="en"?["h","min"]:["小时","分钟"];return h?(h+" "+u[0]+" "+m+" "+u[1]):(m+" "+u[1])}
+const srcLabel=s=>({space:"X Space",broadcast:L3("X 直播","X Live","X 直播"),youtube:"YouTube"}[s]||"");
 function pass(e){
-  if(F.series!=="all"&&(e.series||"")!==F.series)return false;
-  if(F.source!=="all"&&(e.source||"")!==F.source)return false;
-  if(F.topics.size>0){const ts=e.topics||[];if(!ts.some(t=>F.topics.has(t)))return false}
-  const q=($("#q").value||"").trim().toLowerCase();
-  if(q){
-    const txt=[e.title,e.title_en,e.title_tw,e.series,e.host,(e.guests||[]).join(" "),(e.topics||[]).join(" "),(e.highlights||[]).join(" "),(e.highlights_en||[]).join(" "),(e.highlights_tw||[]).join(" ")].filter(Boolean).join(" ").toLowerCase();
-    if(!txt.includes(q))return false;
-  }
-  return true;
+if(F.source!=="all"&&(e.source||"")!==F.source)return false;
+if(F.series!=="all"&&(e.series||"")!==F.series)return false;
+if(F.topics.size>0){const ts=e.topics||[];if(!ts.some(t=>F.topics.has(t)))return false}
+if(favOnly&&!FAVS.has(e.url))return false;
+const q=($("#q").value||"").trim().toLowerCase();
+if(q){
+const txt=[e.title,e.title_en,e.title_tw,e.series,e.host,(e.guests||[]).join(" "),(e.topics||[]).join(" "),(e.highlights||[]).join(" "),(e.highlights_en||[]).join(" "),(e.highlights_tw||[]).join(" ")].filter(Boolean).join(" ").toLowerCase();
+if(!txt.includes(q))return false;
+}
+return true;
 }
 function cardOf(e){
-  const hl=fL(e,"highlights")||[];
-  const guests=(e.guests||[]).filter(Boolean);
-  const topics=(e.topics||[]).map(t=>`<span class="tag space">${t}</span>`).join("");
-  return `<div class="ev">
-  <div class="rail"><div class="t1">${fmtDurShort(e.duration_minutes)}</div><div class="t2">${tr("spDur")}</div></div>
-  <div class="card">
-  <div class="trow"><h3><a href="${e.url}" target="_blank" rel="noopener">${fL(e,"title")}</a></h3>${e.duration_minutes?`<span class="fee na">⏱ ${fmtDur(e.duration_minutes)}</span>`:""}</div>
-  ${e.series?`<div class="meta">📺 ${e.series}${e.episode?" · "+tr("spEp",e.episode):""}</div>`:""}
-  ${e.source?`<div class="meta">${{space:"🛰 X Space",broadcast:"📡 X 直播",youtube:"▶ YouTube 访谈"}[e.source]||""}</div>`:""}
-  ${e.host?`<div class="org">🎙 ${tr("spHost")}<b>${e.host}</b></div>`:""}
-  ${guests.length?`<div class="org">👥 ${tr("spGuests")}${guests.join("、")}</div>`:""}
-  ${topics?`<div class="tags">${topics}</div>`:""}
-  ${hl.length?`<div class="sum">${hl.map(h=>"· "+h).join("<br>")}</div>`:""}
-  <div class="actions">
-  <a class="btn primary" href="${e.url}" target="_blank" rel="noopener">${tr("spListen")}</a>
-  ${e.note_url?`<a class="btn" href="${e.note_url}">全文纪要</a>`:""}
-  </div>
-  <div class="meta" style="margin-top:8px">${tr("spNote")}</div>
-  </div>
-  </div>`;
+const hl=fL(e,"highlights")||[];
+const guests=(e.guests||[]).filter(Boolean);
+const fav=FAVS.has(e.url);
+const meta=[e.source?srcLabel(e.source):"",e.series||"",e.host||"",guests.join("、")].filter(Boolean).join('<i class="sep"> · </i>');
+const menu=[
+e.note_url?`<a role="menuitem" href="${e.note_url}">${L3("全文纪要","Full notes","全文紀要")}</a>`:"",
+`<button type="button" role="menuitem" data-fav="${encodeURIComponent(e.url)}">${fav?tr("mFavOn"):tr("mFavOff")}</button>`,
+e.id?`<button type="button" role="menuitem" onclick="_share('${e.id}')">${tr("mShare")}</button>`:""
+].join("");
+return `<div class="ev">
+<div class="rail"><div class="t1">${fmtDurShort(e.duration_minutes)}</div><div class="t2">${L3("时长","length","時長")}</div></div>
+<div class="card">
+<div class="cmain">
+<h3>${fav?'<span class="favmark" aria-hidden="true">★</span>':''}<a href="${e.url}" target="_blank" rel="noopener">${fL(e,"title")}</a></h3>
+<div class="cmeta">${meta}</div>
+${(e.topics&&e.topics.length)?`<div class="tags">${e.topics.map(t=>`<span class="tag">${t}</span>`).join("")}</div>`:""}
+${hl.length?`<div class="hls">${hl.map(h=>"<div>· "+h+"</div>").join("")}</div>`:""}
+</div>
+<div class="cact">
+${e.note_url?`<a class="reg" href="${e.note_url}">${L3("全文纪要","Notes","全文紀要")}</a>`:`<a class="reg" href="${e.url}" target="_blank" rel="noopener">${L3("看回放","Watch","看回放")}</a>`}
+<button type="button" class="more" aria-haspopup="menu" aria-expanded="false" aria-label="${L3("更多","More","更多")}" title="${L3("更多","More","更多")}">···</button>
+<div class="cmenu" role="menu">${menu}</div>
+</div>
+</div>
+</div>`;
 }
 function render(){
-  const evs=DATA.filter(pass).slice().sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
-  const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
-  const total=DATA.length;
-  const st=$("#st-total");if(st)st.textContent=total;
-  const hm=$("#hm-total");if(hm)hm.textContent=total;
-  const lcs=$("#lc-space-n");if(lcs)lcs.textContent=total;
-  const latest=DATA.reduce((a,e)=>e.date>a?e.date:a,"");
-  const sl=$("#sp-latest");
-  if(sl&&latest){const p=latest.split("-");sl.textContent=LANG==="en"?new Date(latest+"T12:00:00+08:00").toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):(+p[1])+"月"+(+p[2])+"日"}
-  if(!evs.length){$("#list").innerHTML='<div class="empty">'+tr("noResults")+'</div>';return}
-  let html="";
-  const groups=new Map();
-  for(const e of evs){if(!groups.has(e.date))groups.set(e.date,[]);groups.get(e.date).push(e)}
-  for(const [dk,items] of groups){
-    const ts=new Date(dk+"T12:00:00+08:00");const sp=shParts(ts);const wd=ts.toLocaleDateString(LOC(),{timeZone:TZ,weekday:"long"});
-    html+=`<div class="dayhead"><span class="dnum">${sp[2]}</span><span class="dmeta">${LANG==="en"?ts.toLocaleDateString("en-US",{timeZone:TZ,month:"short"}):sp[1]+"月"} · ${wd}</span></div>`;
-    html+=items.map(cardOf).join("");
-  }
-  $("#list").innerHTML=html;
+const evs=DATA.filter(pass).slice().sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
+const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
+const total=DATA.length;
+const st=$("#st-total");if(st)st.textContent=total;
+const hm=$("#hm-total");if(hm)hm.textContent=total;
+const lcs=$("#lc-space-n");if(lcs)lcs.textContent=total;
+const sw=$("#st-week");if(sw){const cut=new Date(Date.now()-7*864e5).toISOString().slice(0,10);sw.textContent=DATA.filter(e=>e.date>=cut).length}
+const sd=$("#st-dl");if(sd)sd.textContent=DATA.filter(e=>e.source==="youtube").length;
+const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
+if(favOnly){
+const favs=DATA.filter(e=>FAVS.has(e.url)).sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
+$("#list").innerHTML='<div class="dayhead"><span class="dmeta">'+tr("favTitle")+'</span></div>'+(favs.length?'<div class="dlist">'+favs.map(cardOf).join("")+'</div>':'<div class="empty">'+tr("favEmpty")+'</div>');
+return;
 }
-const SUBMIT_PROMPT='请帮我给「Yat\'s List Yat\'s Talks · 谈话录」投稿一场 X Space。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开这场 Space 的 X 页面核对标题、日期、主持人，按说明把这场 Space（链接 + 基本信息）加进 talks.json 并提交 Pull Request，或把 Space 链接和基本信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的 Space：【在这里填 Space 名称和 X 链接】。提交后留意维护者 Agent 的核查意见，有要改的按意见改好，并把结果告诉我。';
-const SUBMIT_PROMPT_TW='請幫我給「Yat\'s List Yat\'s Talks · 談話錄」投稿一場 X Space。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開這場 Space 的 X 頁面核對標題、日期、主持人，按說明把這場 Space（連結 + 基本信息）加進 talks.json 並提交 Pull Request，或把 Space 連結和基本信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的 Space：【在這裡填 Space 名稱和 X 連結】。提交後留意維護者 Agent 的核查意見，有要改的按意見改好，並把結果告訴我。';
+if(!evs.length){$("#list").innerHTML='<div class="empty">'+tr("noResults")+'</div>';return}
+let html="";
+const groups=new Map();
+for(const e of evs){if(!groups.has(e.date))groups.set(e.date,[]);groups.get(e.date).push(e)}
+for(const [dk,items] of groups){
+const ts=new Date(dk+"T12:00:00+08:00");
+const wd=ts.toLocaleDateString(LOC(),{timeZone:TZ,weekday:"long"});
+const ds=LANG==="en"?ts.toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):(+dk.slice(5,7))+"月"+(+dk.slice(8,10))+"日";
+html+=`<div class="dayhead"><span class="dnum">${ds}</span><span class="dmeta">${wd}</span><span class="dcnt">${items.length} ${L3("场","talks","場")}</span></div><div class="dlist">${items.map(cardOf).join("")}</div>`;
+}
+$("#list").innerHTML=html;
+}
+const SUBMIT_PROMPT='请帮我给「Yat\'s Talks · 谈话录」投稿一场谈话（X Space / X 直播 / YouTube 访谈）。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开这场谈话的原始页面核对标题、日期、主持人/嘉宾，按规范把这场谈话（链接 + 基本信息）加进 talks.json 并提交 Pull Request，或把链接和基本信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的谈话：【在这里填谈话名称和链接】。提交后留意维护者 Agent 的核查意见，有要改的按意见改好，并把结果告诉我。';
+const SUBMIT_PROMPT_TW='請幫我給「Yat\'s Talks · 談話錄」投稿一場談話（X Space / X 直播 / YouTube 訪談）。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開這場談話的原始頁面核對標題、日期、主持人/嘉賓，按規範把這場談話（連結 + 基本信息）加進 talks.json 並提交 Pull Request，或把連結和基本信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的談話：【在這裡填談話名稱和連結】。提交後留意維護者 Agent 的核查意見，有要改的按意見改好，並把結果告訴我。';
 window.hlSubmit=()=>{setTimeout(()=>{const el=document.getElementById("event-post");if(!el)return;el.classList.add("tour-hl");setTimeout(()=>el.classList.remove("tour-hl"),1800)},400)};
-const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/talks.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
+const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText((document.querySelector("#agentbox.cmdline.u")||{}).textContent||"https://yatslist.com/talks.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 const _ppc=document.getElementById("pip-copy");if(_ppc)_ppc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("pip install yatslist").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent=tr('copiedGo');setTimeout(()=>b.textContent=t,1800)})};
 window.fillPostCard=function(){var el=document.getElementById("prompt-post-card");if(el)el.textContent=LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT};
 window.fillPostCard();
 document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setTimeout(window.fillPostCard,0)));
-window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),fm=document.getElementById("route-form"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail"),n=document.getElementById("epost-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
+window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),fm=document.getElementById("route-form"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail"),n=document.getElementById("epost-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};
+window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText).then(()=>{const t=b.textContent;b.textContent=tr('copied');setTimeout(()=>b.textContent=t,1500)})};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
 const MSTEPS_TW={generic:"任何能聯網的 Agent 都適用：把話術粘貼給它，並讓它設一個每天執行的任務。",doubao:"豆包工作 →「定時任務」→ 新建 → 重複選「每天」、時間 9:00 → 把話術粘貼為任務內容 → 保存。",workbuddy:"WorkBuddy → 左側「自動化」→ 添加任務 → 執行頻率選「每天 9:00」→ 把話術粘貼為提示詞 → 保存。",codex:"把話術直接發給 Codex，讓它創建每天 9:00（Asia/Shanghai）的自動化任務。"};
-const MEX_SUB="<b>定制示例（照着改）：</b><br>· 只看宝安、南山：把筛选条件改成「只看宝安区和南山区的活动」<br>· 只看免费：加一句「只推免费活动」<br>· 只看硬件创客：类别改成【硬件 / 技术】<br>· 只看周末：加一句「只推周六、周日的」";
-const MEX_SUB_TW="<b>定製示例（照著改）：</b><br>· 只看寶安、南山：把篩選條件改成「只看寶安區和南山區的活動」<br>· 只看免費：加一句「只推免費活動」<br>· 只看硬件創客：類別改成【硬件 / 技術】<br>· 只看週末：加一句「只推週六、週日的」";
-const MEX_POST="<b>填写示例：</b><br>「我要投稿的 Space：【《贤者时间》第 17 期，https://x.com/i/spaces/…】」——把【】里换成真实的 Space 名称和 X 链接再复制。投稿前先打开 X 页面，确认标题、日期、主持人无误。";
-const MEX_POST_TW="<b>填寫示例：</b><br>「我要投稿的 Space：【《賢者時間》第 17 期，https://x.com/i/spaces/…】」——把【】裡換成真實的 Space 名稱和 X 連結再複製。投稿前先打開 X 頁面，確認標題、日期、主持人無誤。";
+const MEX_SUB="<b>定制示例（照着改）：</b><br>· 只看郭宇：把筛选条件改成「只看郭宇的访谈」<br>· 只看 Crypto：主题改成【Crypto / Web3】<br>· 只看 YouTube：加一句「只推 YouTube 访谈」<br>· 只看长谈：加一句「只推 1 小时以上的」";
+const MEX_SUB_TW="<b>定製示例（照著改）：</b><br>· 只看郭宇：把篩選條件改成「只看郭宇的訪談」<br>· 只看 Crypto：主題改成【Crypto / Web3】<br>· 只看 YouTube：加一句「只推 YouTube 訪談」<br>· 只看長談：加一句「只推 1 小時以上的」";
+const MEX_POST="<b>填写示例：</b><br>「我要投稿的谈话：【立党《解答世间万物》Space，https://x.com/i/spaces/…】」——把【】里换成真实的谈话名称和链接再复制。投稿前先打开原始页面，确认标题、日期、主持人无误。";
+const MEX_POST_TW="<b>填寫示例：</b><br>「我要投稿的談話：【立黨《解答世間萬物》Space，https://x.com/i/spaces/…】」——把【】裡換成真實的談話名稱和連結再複製。投稿前先打開原始頁面，確認標題、日期、主持人無誤。";
 let mMode="sub",mKey="generic";
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
-if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";}
-else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}}
+if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";document.getElementById("mpost-alt").style.display="block";}
+else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";document.getElementById("mpost-alt").style.display="none";}}
 function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
-document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
-
-
+document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips.mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
+const _fb=document.getElementById("favbtn");if(_fb)_fb.addEventListener("click",()=>{favOnly=!favOnly;_fb.classList.toggle("on",favOnly);if(typeof syncFilterUI==="function")syncFilterUI();render()});
+function closeMenus(except){document.querySelectorAll(".cact.open").forEach(c=>{if(c!==except){c.classList.remove("open");const m=c.querySelector(".more");if(m)m.setAttribute("aria-expanded","false")}})}
+document.getElementById("list").addEventListener("click",ev=>{
+const mb=ev.target.closest(".more");
+if(mb){const c=mb.parentElement;closeMenus(c);const o=c.classList.toggle("open");mb.setAttribute("aria-expanded",o?"true":"false");return}
+const b=ev.target.closest("[data-fav]");if(b){ev.preventDefault();toggleFav(decodeURIComponent(b.dataset.fav));return}
+if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus();
+});
+document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
+document.addEventListener("keydown",ev=>{if(ev.key==="Escape")closeMenus()});
 function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
 const TOUR=[
-{sel:".intro",t:"<b>第 1 步 · 这个站是给 Agent 读的</b>：Yat's List 把深圳的行业活动逐条核实、整理成数据接口，第一屏就是订阅终端；人看的活动清单在页面下半部分。"},
-{sel:".terminal",t:"<b>第 2 步 · 订阅只要一句话</b>：终端里这段话术就是订阅指令——复制它，发给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上会自己来拉数据。"},
-{sel:"#subprompt",t:"<b>第 3 步 · 话术可以改</b>：里面的兴趣类别、提醒节奏都能按你的喜好改，改完再发给 Agent。设置一次，之后不用再管。"},
-{sel:"#agent-sub",t:"<b>第 4 步 · 按你的 Agent 选版本</b>：豆包、WorkBuddy、Codex 各有专用话术，在下面这片区域里对应复制即可；拿不准用哪个，就用第 2 步的通用版。"},
-{sel:"#email-sub",t:"<b>第 5 步 · 没有 Agent 也没关系</b>：可以订邮件日报（每天一封）或把 ICS 导进日历。订阅之后，只有活动命中你的兴趣时才会提醒你，没命中不打扰。导览结束，去逛逛活动清单吧。"}];
+{sel:"#list",t:"<b>第 1 步 · 先看谈话</b>：这里的每场 Space、直播、访谈都配了全文纪要，按日期倒序排好。点标题去看原视频 / 回放，点「全文纪要」读整理好的全文。"},
+{sel:".bar",t:"<b>第 2 步 · 搜索和筛选</b>：输入关键词搜标题、主持人、嘉宾；按来源（X Space / X 直播 / YouTube）、系列、主题筛，也可以用 ⭐ 只看收藏。"},
+{sel:".card",t:"<b>第 3 步 · 一张卡看懂一场</b>：左边是时长，加粗是标题，灰色小字是来源、系列、主持人与嘉宾，下面是纪要要点。右侧「全文纪要」直达全文页，「···」里可以收藏、分享。"},
+{sel:".terminal",t:"<b>第 4 步 · 让 Agent 替你读</b>：把终端里这段话术复制给你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它会自己读 talks.json，替你总结、跨场检索、回答问题，只在有新纪要时才提醒你。"},
+{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程序员看页脚</b>：终端里 pip install yatslist 也能查谈话纪要，不用开网页。导览结束，去挑一场听吧。"}];
 const TOUR_TW=[
-{sel:".intro",t:"<b>第 1 步 · 這個站是給 Agent 讀的</b>：Yat's List 把深圳的行業活動逐條核實、整理成數據接口，第一屏就是訂閱終端；人看的活動清單在頁面下半部分。"},
-{sel:".terminal",t:"<b>第 2 步 · 訂閱只要一句話</b>：終端裡這段話術就是訂閱指令——複製它，發給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它每天早上會自己來拉數據。"},
-{sel:"#subprompt",t:"<b>第 3 步 · 話術可以改</b>：裡面的興趣類別、提醒節奏都能按你的喜好改，改完再發給 Agent。設置一次，之後不用再管。"},
-{sel:"#agent-sub",t:"<b>第 4 步 · 按你的 Agent 選版本</b>：豆包、WorkBuddy、Codex 各有專用話術，在下面這片區域裡對應複製即可；拿不準用哪個，就用第 2 步的通用版。"},
-{sel:"#email-sub",t:"<b>第 5 步 · 沒有 Agent 也沒關係</b>：可以訂郵件日報（每天一封）或把 ICS 導進日曆。訂閱之後，只有活動命中你的興趣時才會提醒你，沒命中不打擾。導覽結束，去逛逛活動清單吧。"}];
+{sel:"#list",t:"<b>第 1 步 · 先看談話</b>：這裡的每場 Space、直播、訪談都配了全文紀要，按日期倒序排好。點標題去看原視頻 / 回放，點「全文紀要」讀整理好的全文。"},
+{sel:".bar",t:"<b>第 2 步 · 搜索和篩選</b>：輸入關鍵詞搜標題、主持人、嘉賓；按來源（X Space / X 直播 / YouTube）、系列、主題篩，也可以用 ⭐ 只看收藏。"},
+{sel:".card",t:"<b>第 3 步 · 一張卡看懂一場</b>：左邊是時長，加粗是標題，灰色小字是來源、系列、主持人與嘉賓，下面是紀要要點。右側「全文紀要」直達全文頁，「···」裡可以收藏、分享。"},
+{sel:".terminal",t:"<b>第 4 步 · 讓 Agent 替你讀</b>：把終端裡這段話術複製給你的 Agent（豆包 / WorkBuddy / Codex / Claude Code 都行），它會自己讀 talks.json，替你總結、跨場檢索、回答問題，只在有新紀要時才提醒你。"},
+{sel:"#cli-strip-bottom",t:"<b>第 5 步 · 程式員看頁腳</b>：終端裡 pip install yatslist 也能查談話紀要，不用開網頁。導覽結束，去挑一場聽吧。"}];
 let tourI=-1,tourEl=null;
 function tourShow(){const st=(LANG==="en"?TOUR_EN:LANG==="tw"?TOUR_TW:TOUR)[tourI];if(tourEl)tourEl.classList.remove("tour-hl");tourEl=document.querySelector(st.sel);if(tourEl){tourEl.scrollIntoView({behavior:"smooth",block:"center"});tourEl.classList.add("tour-hl")}document.getElementById("tourtext").innerHTML=st.t;document.getElementById("tourprog").textContent=(tourI+1)+" / "+TOUR.length;document.getElementById("tourprev").disabled=tourI===0;document.getElementById("tournext").textContent=tourI===TOUR.length-1?tr("tourDone"):tr("tourNext")}
 function startTour(){tourI=0;document.getElementById("tourcard").classList.add("open");tourShow()}
@@ -1093,30 +1096,36 @@ function endTour(){if(tourEl)tourEl.classList.remove("tour-hl");tourEl=null;docu
 function dismissWelc(){document.getElementById("welc").style.display="none";try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();endTour()}});
 try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="block"}catch(e){}
-
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
-const active=(F.series!=="all"?1:0)+(F.source!=="all"?1:0)+F.topics.size;
+const active=(F.series!=="all"?1:0)+(F.source!=="all"?1:0)+F.topics.size+(favOnly?1:0);
 $("#fclear").hidden=active===0;
 $("#fcount").textContent=active?(LANG==="en"?(active+" selected"):LANG==="tw"?("已選 "+active+" 項"):("已选 "+active+" 项")):"";
+document.querySelectorAll("#qchips.chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=F.source==="all";else on=F.source===q.slice(4);ch.classList.toggle("on",on)});
 }
 function seriesList(){const seen=[];for(const e of DATA){if(e.series&&!seen.includes(e.series))seen.push(e.series)}return seen}
 function topicList(){const seen=[];for(const e of DATA){for(const t of (e.topics||[]))if(!seen.includes(t))seen.push(t)}return seen}
 function renderCats(){
-const srcg=$("#g-source");if(srcg)srcg.innerHTML=[["all","全部"],["space","X Space"],["broadcast","X 直播"],["youtube","YouTube"]].map(([v,l])=>`<button class="chip${F.source===v?" on":""}" data-src="${v}">${l}</button>`).join("");
+const srcg=$("#g-source");if(srcg)srcg.innerHTML=[["all",L3("全部","All","全部")],["space","X Space"],["broadcast",L3("X 直播","X Live","X 直播")],["youtube","YouTube"]].map(([v,l])=>`<button class="chip${F.source===v?" on":""}" data-src="${v}">${l}</button>`).join("");
 const sg=$("#g-series");if(sg)sg.innerHTML=`<button class="chip${F.series==="all"?" on":""}" data-s="all">${tr("segAll")}</button>`+seriesList().map(s=>`<button class="chip${F.series===s?" on":""}" data-s="${s}">${s}</button>`).join("");
 const tg=$("#g-topics");if(tg)tg.innerHTML=topicList().map(t=>`<button class="chip${F.topics.has(t)?" on":""}" data-t="${t}">${t}</button>`).join("");
 }
 renderCats();
+const _sg=$("#g-source");if(_sg)_sg.addEventListener("click",ev=>{
+const b=ev.target.closest("[data-src]");if(!b)return;
+F.source=b.dataset.src;
+renderCats();syncFilterUI();render();measureBar();
+});
+$("#qchips").addEventListener("click",ev=>{
+const ch=ev.target.closest("[data-q]");if(!ch)return;
+const q=ch.dataset.q;
+F.source=q==="all"?"all":q.slice(4);
+renderCats();syncFilterUI();render();measureBar();
+});
 $("#g-series").addEventListener("click",ev=>{
 const b=ev.target.closest("[data-s]");if(!b)return;
 F.series=b.dataset.s;
-renderCats();syncFilterUI();render();measureBar();
-});
-const _srcg=$("#g-source");if(_srcg)_srcg.addEventListener("click",ev=>{
-const b=ev.target.closest("[data-src]");if(!b)return;
-F.source=b.dataset.src;
 renderCats();syncFilterUI();render();measureBar();
 });
 $("#g-topics").addEventListener("click",ev=>{
@@ -1126,7 +1135,7 @@ if(F.topics.has(t))F.topics.delete(t);else F.topics.add(t);
 renderCats();syncFilterUI();render();measureBar();
 });
 $("#fclear").addEventListener("click",()=>{
-F={series:"all",source:"all",topics:new Set()};
+F={series:"all",source:"all",topics:new Set()};favOnly=false;const fb=$("#favbtn");if(fb)fb.classList.remove("on");
 renderCats();syncFilterUI();render();measureBar();
 });
 $("#ftoggle").addEventListener("click",()=>{
@@ -1145,8 +1154,60 @@ renderCats();render();measureBar();setTimeout(measureBar,400);
 <script>fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.hackathons||[]).length;var el=document.getElementById("hackcount");if(el&&n)el.textContent=n;var el2=document.getElementById("hackcount2");if(el2&&n)el2.textContent=n}).catch(function(){})</script>
 <script>fetch("/szexpat/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.events||[]).length;var el=document.getElementById("lc-expat-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
 <script>fetch("/talks.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.talks||[]).length;var el=document.getElementById("lc-space-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
-<script>fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var evs=d.events||[];var f=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit"});var m={};f.formatToParts(new Date()).forEach(function(x){m[x.type]=x.value});var t0=Date.UTC(+m.year,+m.month-1,+m.day)-8*3600e3;var n=evs.filter(function(e){return !(e.start&&new Date(e.end||e.start)<new Date(t0))}).length;var el=document.getElementById("lc-ev-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
+
+<style>
+#shareModal{position:fixed;inset:0;background:rgba(4,8,10,.78);display:none;align-items:center;justify-content:center;z-index:999;padding:18px}
+#shareModal.open{display:flex}
+#shareModal .box{background:#0d1218;border:1px solid #1f2b36;border-radius:16px;max-width:430px;width:100%;max-height:92vh;overflow:auto;padding:20px}
+#shareModal h3{margin:0 0 4px;font-size:17px}
+#shareModal .hint{color:#8fa89c;font-size:12.5px;line-height:1.6}
+#shareModal img{width:100%;border-radius:12px;margin:14px 0 6px;border:1px solid #1f2b36}
+#shareModal .lk{display:flex;gap:10px;align-items:center;background:#0a0f14;border:1px solid #1f2b36;border-radius:9px;padding:10px 12px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#2ee6a8;margin-top:10px}
+#shareModal .lk button{margin-left:auto;background:none;border:1px solid rgba(46,230,168,.4);color:#2ee6a8;border-radius:6px;padding:5px 12px;cursor:pointer;white-space:nowrap}
+#shareModal .cls{width:100%;margin-top:14px;background:#121a23;border:1px solid #1f2b36;color:#dcebe4;border-radius:9px;padding:11px;cursor:pointer;font-size:14px}
+</style>
+<div id="shareModal" role="dialog" aria-modal="true">
+  <div class="box">
+    <h3 id="shareTitle">分享这场活动</h3>
+    <div class="hint" id="shareHint"></div>
+    <img id="shareImg" alt="活动分享卡">
+    <div class="lk"><span id="shareLink"></span><button id="shareCopy" type="button"></button></div>
+    <button class="cls" id="shareCloseBtn" type="button"></button>
+  </div>
+</div>
+<script>
+window._share=function(id){
+  var m=document.getElementById("shareModal");
+  document.getElementById("shareTitle").textContent=tr("shareT");
+  document.getElementById("shareHint").textContent=tr("shareHint");
+  document.getElementById("shareCopy").textContent=tr("copyLink");
+  document.getElementById("shareCloseBtn").textContent=tr("shareClose");
+  var _te=(typeof DATA!=="undefined")?DATA.find(x=>x.id===id):null;var _im=document.getElementById("shareImg");if(_im)_im.style.display="none";
+  document.getElementById("shareLink").textContent=_te?("yatslist.com"+(_te.note_url||"/talks/")):"yatslist.com/talks/";
+  m.classList.add("open");
+};
+document.getElementById("shareModal").addEventListener("click",function(ev){if(ev.target===this)this.classList.remove("open")});
+document.getElementById("shareCloseBtn").addEventListener("click",function(){document.getElementById("shareModal").classList.remove("open")});
+document.getElementById("shareCopy").addEventListener("click",function(){
+  var t="https://"+document.getElementById("shareLink").textContent, b=this;
+  if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){b.textContent=tr("copied2");setTimeout(function(){b.textContent=tr("copyLink")},1500)});
+});
+</script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
+
+
+
+
+
+<script>
+(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
+function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
+b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+p.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
+})();
+</script>
+
 </body>
 </html>
 
