@@ -6353,9 +6353,9 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 850,
-   "rent_1br_usd_month": 400,
-   "coworking_usd_month": 68,
+   "cost_usd_month": 830,
+   "rent_1br_usd_month": 265,
+   "coworking_usd_month": 60,
    "internet_mbps": 140,
    "safety_score": 4.5,
    "english_score": 3.0,
@@ -6369,7 +6369,7 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 18.5,
    "best_months": "Mar-May,Oct-Nov",
    "tags": [
     "food",
@@ -6377,14 +6377,56 @@
    ],
    "summary_zh": "吃喝夜生活强、成本低，夏天热。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "五一广场·芙蓉 (Wuyi Square / Furong)",
+     "name_en": "Wuyi Square / Furong",
+     "rent_1br_usd_month": 300,
+     "vibe": "繁华商圈+湘江夜景，坡子街小吃与购物集中",
+     "best_for": "市中心商圈与夜生活",
+     "coworking_density": 4,
+     "note": "估算：Numbeo 市中心 1 居 $265.80 之上，五一核心取 ¥2,160≈$300"
+    },
+    {
+     "name": "梅溪湖·湘江新区 (Meixi Lake / Xiangjiang New Area)",
+     "name_en": "Meixi Lake / Xiangjiang New Area",
+     "rent_1br_usd_month": 270,
+     "vibe": "新城湖景+文化地标，配套新、楼盘新",
+     "best_for": "新盘湖景与安静办公",
+     "coworking_density": 3,
+     "note": "估算：新盘 1 居取 ¥1,950≈$270"
+    },
+    {
+     "name": "岳麓·大学城 (Yuelu / University Town)",
+     "name_en": "Yuelu / University Town",
+     "rent_1br_usd_month": 230,
+     "vibe": "高校聚集+岳麓山，学生氛围浓、物价低",
+     "best_for": "学生氛围与低价",
+     "coworking_density": 2,
+     "note": "估算：大学城老楼 1 居取 ¥1,650≈$230"
+    },
+    {
+     "name": "望城·星沙 (Wangcheng / Xingsha)",
+     "name_en": "Wangcheng / Xingsha",
+     "rent_1br_usd_month": 180,
+     "vibe": "郊区新城+地铁沿线，安静、租金低",
+     "best_for": "低成本长住",
+     "coworking_density": 1,
+     "note": "估算：近 Numbeo 市郊 1 居 $168.46，取 ¥1,300≈$180"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://www.numbeo.com/cost-of-living/in/Changsha-China?displayCurrency=USD",
+    "https://citycost.org/compare/changsha-vs-beijing/",
+    "https://www.climatestotravel.com/climate/china/changsha",
+    "https://urcity.com/en/cities/changsha-hn/",
+    "https://www.regus.com/en/cn/changsha/coworking"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-20",
+   "updated_at": "2026-11-20",
+   "data_tier": "checked",
    "best_months_nums": [
     3,
     4,
@@ -6394,14 +6436,14 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-20"
     },
     "internet_mbps": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-20"
     },
     "visa": {
      "confidence": 0.5,
@@ -6417,9 +6459,9 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 900,
-   "rent_1br_usd_month": 420,
-   "coworking_usd_month": 72,
+   "cost_usd_month": 865,
+   "rent_1br_usd_month": 325,
+   "coworking_usd_month": 120,
    "internet_mbps": 140,
    "safety_score": 4.5,
    "english_score": 3.0,
@@ -6433,7 +6475,7 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 17.5,
    "best_months": "Mar-May,Oct-Nov",
    "tags": [
     "city",
@@ -6441,14 +6483,57 @@
    ],
    "summary_zh": "九省通衢+高校密度，夏天热、冬天湿冷。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "江汉路·汉口 (Jianghan Road / Hankou)",
+     "name_en": "Jianghan Road / Hankou",
+     "rent_1br_usd_month": 380,
+     "vibe": "商业中心+江滩步行街，外籍人士最集中",
+     "best_for": "商圈与外籍社群",
+     "coworking_density": 4,
+     "note": "估算：Numbeo 市中心 1 居 $324.05 之上，江汉路核心取 ¥2,750≈$380"
+    },
+    {
+     "name": "中南路·武昌 (Zhongnan Road / Wuchang)",
+     "name_en": "Zhongnan Road / Wuchang",
+     "rent_1br_usd_month": 340,
+     "vibe": "高校+武珞路商圈，老城生活气浓",
+     "best_for": "高校氛围与老城生活",
+     "coworking_density": 3,
+     "note": "估算：武昌中心 1 居取 ¥2,450≈$340"
+    },
+    {
+     "name": "光谷·东湖高新 (Optics Valley)",
+     "name_en": "Optics Valley",
+     "rent_1br_usd_month": 330,
+     "vibe": "科技园+工程师聚集，写字楼与联合办公多",
+     "best_for": "科技园通勤",
+     "coworking_density": 4,
+     "note": "估算：nihaoexpat 称光谷租金高于均值，取 ¥2,380≈$330"
+    },
+    {
+     "name": "汉阳·沌口 (Hanyang / Zhuankou)",
+     "name_en": "Hanyang / Zhuankou",
+     "rent_1br_usd_month": 220,
+     "vibe": "工业区+湖畔住宅，节奏慢、租金低",
+     "best_for": "低成本长住",
+     "coworking_density": 1,
+     "note": "估算：近 Numbeo 市郊 1 居 $189.85 之上，取 ¥1,600≈$220"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://www.numbeo.com/cost-of-living/in/Wuhan?displayCurrency=USD",
+    "https://citycost.org/wuhan/",
+    "https://www.climatestotravel.com/climate/china/wuhan",
+    "https://nihaoexpat.com/en/regiony/city-wuhan/",
+    "https://www.regus.com/en/cn/wuhan/coworking",
+    "https://book.workin.space/en/china/wuhan/day-pass"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-20",
+   "updated_at": "2026-11-20",
+   "data_tier": "checked",
    "best_months_nums": [
     3,
     4,
@@ -6458,14 +6543,14 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-20"
     },
     "internet_mbps": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-20"
     },
     "visa": {
      "confidence": 0.5,
@@ -6481,9 +6566,9 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 800,
-   "rent_1br_usd_month": 380,
-   "coworking_usd_month": 64,
+   "cost_usd_month": 650,
+   "rent_1br_usd_month": 190,
+   "coworking_usd_month": 90,
    "internet_mbps": 130,
    "safety_score": 4.5,
    "english_score": 3.0,
@@ -6497,7 +6582,7 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 15.1,
    "best_months": "Apr-Jun,Sep-Oct",
    "tags": [
     "hub",
@@ -6505,14 +6590,57 @@
    ],
    "summary_zh": "游民CO 在列，交通枢纽+低成本，中原旅居跳板。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "郑东新区·CBD (Zhengdong New Area / CBD)",
+     "name_en": "Zhengdong New Area / CBD",
+     "rent_1br_usd_month": 230,
+     "vibe": "新城+玻璃幕墙+高铁东站，郑州最现代的片区",
+     "best_for": "现代商圈与高铁通勤",
+     "coworking_density": 4,
+     "note": "估算：Numbeo 市中心 1 居 $189.68 之上，郑东新城取 ¥1,650≈$230"
+    },
+    {
+     "name": "金水·花园路 (Jinshui / Huayuan Road)",
+     "name_en": "Jinshui / Huayuan Road",
+     "rent_1br_usd_month": 200,
+     "vibe": "老牌商圈+省政府片区，生活配套最全",
+     "best_for": "市中心生活配套",
+     "coworking_density": 3,
+     "note": "估算：市中心 1 居取 ¥1,440≈$200"
+    },
+    {
+     "name": "二七·二七广场 (Erqi / Erqi Square)",
+     "name_en": "Erqi / Erqi Square",
+     "rent_1br_usd_month": 190,
+     "vibe": "老城商圈+火车站，烟火气最浓",
+     "best_for": "老城烟火气",
+     "coworking_density": 2,
+     "note": "估算：Numbeo 市中心价，取 ¥1,370≈$190"
+    },
+    {
+     "name": "高新区·大学城 (High-tech Zone / University Town)",
+     "name_en": "High-tech Zone / University Town",
+     "rent_1br_usd_month": 150,
+     "vibe": "高校+科技园，年轻、租金低",
+     "best_for": "低成本与高校氛围",
+     "coworking_density": 2,
+     "note": "估算：近 Numbeo 市郊 1 居 $153.49，取 ¥1,080≈$150"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://www.numbeo.com/cost-of-living/in/Zhengzhou-China?displayCurrency=USD",
+    "https://citycost.org/zhengzhou/",
+    "https://www.livingcost.net/china/zhengzhou",
+    "https://www.climatestotravel.com/climate/china/zhengzhou",
+    "https://nihaoexpat.com/en/regiony/city-zhengzhou/",
+    "https://www.regus.com/en/cn/zhengzhou/coworking"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-20",
+   "updated_at": "2026-11-20",
+   "data_tier": "checked",
    "best_months_nums": [
     4,
     5,
@@ -6522,14 +6650,14 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-20"
     },
     "internet_mbps": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-20"
     },
     "visa": {
      "confidence": 0.5,

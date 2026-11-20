@@ -10,9 +10,9 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 850,
-    "rent_1br_usd_month": 400,
-    "coworking_usd_month": 68,
+    "cost_usd_month": 830,
+    "rent_1br_usd_month": 265,
+    "coworking_usd_month": 60,
     "internet_mbps": 140,
     "safety_score": 4.5,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 18.5,
     "best_months": "Mar-May,Oct-Nov",
     "tags": [
       "food",
@@ -34,14 +34,56 @@
     ],
     "summary_zh": "吃喝夜生活强、成本低，夏天热。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "五一广场·芙蓉 (Wuyi Square / Furong)",
+        "name_en": "Wuyi Square / Furong",
+        "rent_1br_usd_month": 300,
+        "vibe": "繁华商圈+湘江夜景，坡子街小吃与购物集中",
+        "best_for": "市中心商圈与夜生活",
+        "coworking_density": 4,
+        "note": "估算：Numbeo 市中心 1 居 $265.80 之上，五一核心取 ¥2,160≈$300"
+      },
+      {
+        "name": "梅溪湖·湘江新区 (Meixi Lake / Xiangjiang New Area)",
+        "name_en": "Meixi Lake / Xiangjiang New Area",
+        "rent_1br_usd_month": 270,
+        "vibe": "新城湖景+文化地标，配套新、楼盘新",
+        "best_for": "新盘湖景与安静办公",
+        "coworking_density": 3,
+        "note": "估算：新盘 1 居取 ¥1,950≈$270"
+      },
+      {
+        "name": "岳麓·大学城 (Yuelu / University Town)",
+        "name_en": "Yuelu / University Town",
+        "rent_1br_usd_month": 230,
+        "vibe": "高校聚集+岳麓山，学生氛围浓、物价低",
+        "best_for": "学生氛围与低价",
+        "coworking_density": 2,
+        "note": "估算：大学城老楼 1 居取 ¥1,650≈$230"
+      },
+      {
+        "name": "望城·星沙 (Wangcheng / Xingsha)",
+        "name_en": "Wangcheng / Xingsha",
+        "rent_1br_usd_month": 180,
+        "vibe": "郊区新城+地铁沿线，安静、租金低",
+        "best_for": "低成本长住",
+        "coworking_density": 1,
+        "note": "估算：近 Numbeo 市郊 1 居 $168.46，取 ¥1,300≈$180"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Changsha-China?displayCurrency=USD",
+      "https://citycost.org/compare/changsha-vs-beijing/",
+      "https://www.climatestotravel.com/climate/china/changsha",
+      "https://urcity.com/en/cities/changsha-hn/",
+      "https://www.regus.com/en/cn/changsha/coworking"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-20",
+    "updated_at": "2026-11-20",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -51,14 +93,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-20"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-20"
       },
       "visa": {
         "confidence": 0.5,

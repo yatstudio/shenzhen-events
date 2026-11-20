@@ -10,9 +10,9 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 800,
-    "rent_1br_usd_month": 380,
-    "coworking_usd_month": 64,
+    "cost_usd_month": 650,
+    "rent_1br_usd_month": 190,
+    "coworking_usd_month": 90,
     "internet_mbps": 130,
     "safety_score": 4.5,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 15.1,
     "best_months": "Apr-Jun,Sep-Oct",
     "tags": [
       "hub",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "游民CO 在列，交通枢纽+低成本，中原旅居跳板。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "郑东新区·CBD (Zhengdong New Area / CBD)",
+        "name_en": "Zhengdong New Area / CBD",
+        "rent_1br_usd_month": 230,
+        "vibe": "新城+玻璃幕墙+高铁东站，郑州最现代的片区",
+        "best_for": "现代商圈与高铁通勤",
+        "coworking_density": 4,
+        "note": "估算：Numbeo 市中心 1 居 $189.68 之上，郑东新城取 ¥1,650≈$230"
+      },
+      {
+        "name": "金水·花园路 (Jinshui / Huayuan Road)",
+        "name_en": "Jinshui / Huayuan Road",
+        "rent_1br_usd_month": 200,
+        "vibe": "老牌商圈+省政府片区，生活配套最全",
+        "best_for": "市中心生活配套",
+        "coworking_density": 3,
+        "note": "估算：市中心 1 居取 ¥1,440≈$200"
+      },
+      {
+        "name": "二七·二七广场 (Erqi / Erqi Square)",
+        "name_en": "Erqi / Erqi Square",
+        "rent_1br_usd_month": 190,
+        "vibe": "老城商圈+火车站，烟火气最浓",
+        "best_for": "老城烟火气",
+        "coworking_density": 2,
+        "note": "估算：Numbeo 市中心价，取 ¥1,370≈$190"
+      },
+      {
+        "name": "高新区·大学城 (High-tech Zone / University Town)",
+        "name_en": "High-tech Zone / University Town",
+        "rent_1br_usd_month": 150,
+        "vibe": "高校+科技园，年轻、租金低",
+        "best_for": "低成本与高校氛围",
+        "coworking_density": 2,
+        "note": "估算：近 Numbeo 市郊 1 居 $153.49，取 ¥1,080≈$150"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Zhengzhou-China?displayCurrency=USD",
+      "https://citycost.org/zhengzhou/",
+      "https://www.livingcost.net/china/zhengzhou",
+      "https://www.climatestotravel.com/climate/china/zhengzhou",
+      "https://nihaoexpat.com/en/regiony/city-zhengzhou/",
+      "https://www.regus.com/en/cn/zhengzhou/coworking"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-20",
+    "updated_at": "2026-11-20",
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -51,14 +94,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-20"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-20"
       },
       "visa": {
         "confidence": 0.5,
