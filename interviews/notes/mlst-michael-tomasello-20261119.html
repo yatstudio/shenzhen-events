@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《松鼠知道而语言模型跳过的东西》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>会议纪要：MLST 对话 Michael Tomasello《松鼠知道而语言模型跳过的东西》</h1>
+<ul>
+<li>时间：2026-11-19（YouTube 发布）</li>
+<li>主持：Tim Scarfe（Machine Learning Street Talk）</li>
+<li>嘉宾：Michael Tomasello（杜克大学心理学教授；曾在马克斯·普朗克研究所工作 20 年，主持儿童与大猿类比较研究；著有《The Evolution of Agency》）</li>
+<li>时长：66 分钟</li>
+<li>来源：YouTube 频道 Machine Learning Street Talk，视频 io7qhEjJoik，官方英文字幕全文 1943 行</li>
+</ul>
+<blockquote>
+<p>本纪要为中文整理。观点均为嘉宾现场口径，未独立核实。时间戳指向字幕位置。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>发展心理学家 Michael Tomasello 用一生的黑猩猩与儿童对比研究回答「机器要怎样才算有能动性（agency）」：能动性不是聪明，而是一套分层进化出来的控制组织——感知、目标、决策，再往上是执行监控、元认知，最后是人类独有的「共享能动性」。今天的 LLM 从金字塔尖（语言）往下搭，跳过了语言赖以成立的全部基础设施；他不怕 AI 接管世界（「70 年代就有人这么喊」），但认为想做出真正有能动性的机器，应该照着自然界的 agent 自下而上地建。</p>
+<h2>核心要点</h2>
+<ol>
+<li><strong>能动性是为不可预测性准备的</strong>：环境可预测且事关生死时，进化直接把行为写死（呼吸、吞咽）；需要决策型 agent，是因为环境不可预测——而最不可预测的东西就是其他 agent：猎物、捕食者、竞争者、合作者。大自然没法预先写好所有应对，只能派一个「现场决策者」（[00:02:29]、[00:02:54]）。</li>
+<li><strong>最小模型是控制系统，不是刺激-反应</strong>：恒温器有感知、有目标、有决策机制——想让红绿灯变聪明，唯一解法就是给它这三样。行为主义的「刺激-反应」框架早该扔掉：有机体是主动追逐目标的，达不到就换办法（[00:08:00]、[00:05:44]）。</li>
+<li><strong>能动性 ≠ 复杂 ≠「智能」</strong>：织网复杂，但蜘蛛并不「控制」自己的行为。他在书里给 intelligence 一词打引号：这个概念源于比奈为法国政府筛选学生而设计的测验，本质是学校型、言语型的智能，被物化成了 IQ。松鼠记得比我们多得多的藏食地点，鸟类能分辨的声音比我们多——自然界到处是专长。他宁愿谈具体的认知能力（知识、规划、预见、假设检验）（[00:09:42]、[00:28:58]）。</li>
+<li><strong>学习只是子过程</strong>：学习存在的意义是帮 agent 做适应性决策；恒温器不学习也能行动。他对强化学习的保留正在于此：它几乎全在讲学习，能动性含量很低（[00:18:16]、[00:19:03]）。</li>
+<li><strong>能动性的四层进化</strong>（只谈通往人类的这一支，鸟类另走一条线）：
+   - <strong>基础能动性</strong>——早期陆生脊椎动物（以爬行类为模型）：简单的控制系统，不可预测性主要来自猎物；
+   - <strong>目标导向/意向能动性</strong>——哺乳动物：多出「执行层」，能形成对不存在状态的想象性表征，做规划与假设检验——用 Dennett 的话，让假设替自己去死。松鼠面对人类防松鼠喂鸟器不断发明新招，就是这一层在工作；
+   - <strong>元认知/理性能动性</strong>——大猿类：能反思自己的计划、判断信息不足就去找更多信息、觉得题太难会主动退出换一道；驱动力是「竞赛型竞争」——必须智胜同类，而不是比谁先到；
+   - <strong>共享能动性</strong>——人类独有的一层（见下）（[00:32:15]、[00:34:00]、[00:35:27]、[00:37:04]）。</li>
+<li><strong>执行层即意识的开端</strong>：执行层观察、监控行动层，能提前预见错误——他认为这是意识的起点；元认知再在其上叠一层：「这个计划好吗？我是不是在浪费力气？」（[00:13:19]、[00:14:29]）。</li>
+<li><strong>共享能动性：人类与黑猩猩的分界线</strong>。两个人可以组成一个「共享 agent」：共同目标、互补角色、联合承诺——你没演好你的角色，我会出声纠正你，因为你的失误会让我们一起失败。黑猩猩不会这样：它们不公平分配合作成果、不纠正搭档、自己拿到奖励就散伙；人类儿童会坚持合作到同伴也拿到奖励为止。联合注意进一步生出「视角」：同一个东西可以是狗、动物、宠物——这种灵活切换视角的能力，其他动物没有（[00:37:20]、[00:38:28]、[00:41:38]）。</li>
+<li><strong>文化是集体能动性</strong>：语言惯例、规范、制度都是文化这个集体 agent 的产物，对个体既约束又赋能——你不必自己发明语言，却能用它写诗。塞尔（Searle）的「地位功能」：纸变钱、人变总统、公司这种虚构个体，反而是地球上最强大的力量（[00:40:18]、[00:56:41]）。</li>
+<li><strong>对 LLM 的核心批评：从终点起步</strong>。语言建立在联合注意、视角采择、协调等一整套更基础的能力之上；LLM 直接从人类成就的巅峰（语言）出发想倒推出通用智能，「能不能跳过中间层，我不确定」。两个具体缺失：LLM 不创造语言惯例——儿童在实验里被切断声音后会自创手势并约定俗成，世界上 6000 种语言都是这么来的；而语篇连贯性至关重要：把互联网文本打散成随机句子再训练，LLM 会差得多（[00:19:18]、[00:42:21]、[00:52:12]）。</li>
+<li><strong>图灵测试远远不够</strong>：「not even close, not even sorta close。」但若一台机器真的具备上述全部品质，按鸭子测试他会承认它是某种 agent；至于「肉身（meat）是否重要」——情绪、激素、神经元——哲学家 Ned Block 的这场讨论没有共识，他也没有答案（[01:04:51]、[01:05:41]）。</li>
+</ol>
+<h2>一、机器缺的是哪一层</h2>
+<ul>
+<li>自动驾驶汽车、无人机在结构上已经和动物 agent 非常相似；目标由人内置也不构成障碍——人类最基本的欲望（吃、繁衍）同样是大自然内置的。真正缺的是执行层：机器还没有以正确的方式「知道自己在做什么」，也还不能在无路可走时<strong>自创一个新目标</strong>（[00:13:01]、[00:15:13]、[00:15:41]）。</li>
+<li>他的研究处方：别只盯着成熟的人类语言做模型；应该有人自下而上地做——从动物式的协调、视角采择、创造惯例开始，把这套基础设施建出来，再把语言放上去（[00:55:25]）。</li>
+</ul>
+<h2>二、共享能动性的起源：协调问题</h2>
+<ul>
+<li>进化起点不是语言，而是协调问题（谢林）：猎鹿博弈里，我去不去取决于你去不去，你去不去取决于我去不去——需要的是「我站在你的视角看你站在我的视角」这种递归。哲学家 David Lewis 说得更直白：惯例就是一种协调装置，语言惯例是人类为了协调行动创造出来的（[00:45:31]、[00:46:48]）。</li>
+<li>语法本身也是视角的：分裂句「是 Fred 打破了窗户」之所以存在，是因为我认为你以为是别人打的，我在纠正你的视角；主动与被动语态，就是取狗的视角还是猫的视角。儿童开口说话之前先学会「指」——我指着那边，你就懂我的意思，靠的正是共享语境（[00:50:13]、[00:53:59]）。</li>
+</ul>
+<h2>三、决定论的两种手指</h2>
+<ul>
+<li>达尔文（自然）与马克思（文化）各讲了一种决定论；他的立场是：这些力量只是「把手指放在天平上」，不决定结果。情绪就是自然的手指——怕蛇让你放下一切逃走，但枪顶着头时你仍可能让蛇爬过脚背。饮食与冰淇淋、承诺与女儿出车祸，冲突必须由 agent 本人裁决（[00:22:01]、[00:27:16]、[00:23:28]）。</li>
+<li>对 Tooby 与 Cosmides「大规模模块化」的分歧：专用模块（择偶、觅食各有启发式）确实存在，但当两个模块同时点火时，必须有跨域的通用过程（感知、注意、记忆）和一个裁决者——这正是哺乳动物起就有的 agent 层（[00:24:46]、[00:25:56]）。</li>
+</ul>
+<h2>四、合作的阴暗面</h2>
+<ul>
+<li>说谎之所以有效，恰恰因为我们默认合作：黑猩猩之间没有谎言，因为它们根本不会假设对方在说真话。奥威尔笔下的操纵、反复念叨「大家都这么说」，利用的都是同一套共同知识机制（[00:58:40]、[00:59:26]）。</li>
+<li>集体意向性的阴暗面是「我们 vs 他们」：进化给我们的「我们」是同吃同住同语言的小群体；农业与城市之后世界变了，共享能动性能否在把自己炸掉之前适应这个新世界，是开放问题（[01:00:17]、[01:01:18]）。</li>
+<li>市场、资本算不算 agent？他谨慎：通胀、股灾、堵车这类「第三类现象」无人意图却由无数意向行动涌现——把市场当 agent 谈可以，但真说它「有目标、会调整」，他会紧张。政策制定者的工作是看清个体决策与涌现结果之间的连线（[01:01:36]、[01:04:09]）。</li>
+</ul>
+<hr />
+<p><em>纪要来源：YouTube 官方英文字幕转写整理。嘉宾学术观点与实验结论为其本人著作《The Evolution of Agency》及节目口径，未独立核实。</em></p>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=io7qhEjJoik">https://www.youtube.com/watch?v=io7qhEjJoik</a>（Machine Learning Street Talk）· 嘉宾：Michael Tomasello · 发布日期：2026-11-19 · 时长：66 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>
