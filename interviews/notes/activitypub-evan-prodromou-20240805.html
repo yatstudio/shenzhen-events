@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《ActivityPub 是 Fediverse 的心脏》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>ActivityPub 是 Fediverse 的心脏：对话协议共同作者 Evan Prodromou</h1>
+<blockquote>
+<p>节目：The Fediverse Files（WordPress.com）· 嘉宾：Evan Prodromou（ActivityPub 共同作者、现任标准编辑）· 发布：2024-08-05 · 时长：11 分钟
+说明：本纪要据 YouTube 英文字幕整理。文中观点为发言人现场口径。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>ActivityPub 之于联邦宇宙（Fediverse），就像 RSS 之于播客：它是让 Threads、Mastodon、WordPress、Ghost 等不同服务在后台互通的开放协议，目标是让用户能带着自己的内容和关注关系在服务之间自由迁徙，把社交关系的控制权从大公司手里拿回来。</p>
+<h2>什么是 Fediverse</h2>
+<ul>
+<li>定义：一组通过开放协议（主要是 ActivityPub）自由连接的网站与应用的集合。已接入的包括 Threads、Flipboard、WordPress、Ghost、Mastodon、Pleroma、Pixelfed 等。</li>
+<li>「联邦」的含义：没有哪一个组织说了算。光 Mastodon 服务器就有数万台，加上无数 WordPress 博客，每个节点都有自己的管理员与审核者——社交关系由一大群人分布地维护，而不是一家公司掌控。这是一种更分布式、更民主的社交网络形态。</li>
+<li>类比 RSS 与播客：大多数播客用户从不去想「RSS」这个词，只知道任何播客 App 都能订阅任何播客源。ActivityPub 想为开放社交网络做同样的事——成为用户无需感知的基础管道。互联网本就是这样设计的：电子邮件、万维网都靠开放标准让任意系统互通。</li>
+</ul>
+<h2>迁徙自由：像携号转网之前的电话号码</h2>
+<ul>
+<li>在 Fediverse 里，如果你不满意当前的 Mastodon 服务器，可以搬到另一台，粉丝能跟着你走，内容理论上也能迁移（Prodromou 承认这还不完美，但方向如此）。这会形成一个服务之间的自由市场，逼平台把服务做好。</li>
+<li>主持人提到他常用的类比：早年的电话公司控制一切，换运营商就丢掉电话号码——对做了招牌推广号码的商家是灾难；这正像今天想离开 Twitter 或在平台间搬家。是否需要靠国会立法来解决？Prodromou 不自称政策专家，但强调：用户现在就已经有选择——博客、Threads、Mastodon 都很容易开通；想要那种有选择权的社交体验，就得真的去行使选择。</li>
+</ul>
+<h2>真正革命性的部分：把控制权拿回来</h2>
+<ul>
+<li>很多人都有这种经历：在一个平台上投入大量心血建社区、攒粉丝、写内容，某天早上醒来看到一篇「感谢陪伴，我们将于月底关停」的博客。平台把用户的连接与关系当作商品，不再相关时就随手丢弃。</li>
+<li>Fediverse 的革命性在于：用户重新掌控自己的社交连接、图片、文字与视频——不会因为某家公司被收购、某个产品被关停就凭空消失。这是对用户与大平台之间权力关系的一次再平衡。</li>
+<li>关于体验层面的诉求（算法控制权、无广告、更好的审核、数据自主）：这些不是协议层要解决的，而是平台层的事；但 ActivityPub 让这类平台更容易被建出来、更容易互联，用户因此能找到无广告、无算法、审核良好的社区。「选择」是内建的。反过来协议也不禁止广告模式——想要更大上传量、愿意用广告换体验的人，同样可以自己选客户端和服务器加入。</li>
+</ul>
+<h2>怎么找到他</h2>
+<ul>
+<li>Fediverse 主账号：evan@cosocial.ca（加拿大 CoSocial 服务器，他在那里发帖，订阅者分布在 Threads、Pleroma、Pixelfed 等各服务上）；博客 Evanp.me（WordPress，已启用 Fediverse）；Threads：evanprodromou@threads.net。</li>
+</ul>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：<a href="https://www.youtube.com/watch?v=nLqwKph7Sxk">https://www.youtube.com/watch?v=nLqwKph7Sxk</a>（The Fediverse Files）· 嘉宾：Evan Prodromou · 发布日期：2024-08-05 · 时长：11 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>

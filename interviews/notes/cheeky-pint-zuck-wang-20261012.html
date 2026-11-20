@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《「模型即产品」：对话扎克伯格与 Alexandr Wang》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>「模型即产品」：Cheeky Pint 对话扎克伯格与 Alexandr Wang</h1>
+<blockquote>
+<p>节目：Cheeky Pint（主持 John Collison，Stripe 联合创始人）· 嘉宾：Mark Zuckerberg（Meta CEO）、Alexandr Wang（Meta 超级智能实验室 MSL 负责人）· 发布：2026-10-12（X 原生视频，另有 YouTube 版）· 时长：2 小时 14 分 · 主题：Meta 新一代前沿模型 Muse Wonder 发布
+说明：本纪要据 X 视频自带英文字幕整理。文中观点、数字均为发言人现场口径，未经核实；字幕将 OpenRouter 多处误转，文中已统一。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>Meta 在 Llama 4 翻车后用一年多时间重建团队（MSL），押上千亿美元级算力，在模型还没影时就签下支票，新模型 Muse Wonder 主打「个人与专业 Agent」：主动记忆、长程专注、领域专家能力——两人的核心主张是：产品会越来越薄，模型本身就是产品。</p>
+<h2>Muse 这个产品：两个当家用例</h2>
+<ul>
+<li>第三方报告称 Muse 可能是有史以来增长最快的 Agent 应用（扎克伯格语）。Wang 的 Muse 名叫 Oiler，每周从台湾、日本的农场给他搜罗越来越冷门的茶并买回来。</li>
+<li>扎克伯格拿 Muse 当 MMA 教练：健身房装摄像头，Muse 在回合间 1 分钟休息内看视频给反馈（重心、髋位、underhook 等）。难点是速度——它自己写整套视频/图像处理管线，还被不断要求「你花了 30 秒，我只有 60 秒，自己优化自己」。这个用例后来成了产品内部评测（eval）之一。他最早在 Muse 之前的 OpenClaw 上就这么用。</li>
+<li>为什么多模态强：行业共识一度只盯编程，但个人超级智能靠感知——大多数人以多模态方式体验世界。眼镜最终可能是一个纯多模态产品，甚至不需要应用商店，界面直接在视野里生成。</li>
+</ul>
+<h2>「模型即产品」之争</h2>
+<ul>
+<li>Collison 的观察：AI 的制胜产品形态收敛得极快（transformer、聊天 UI、如今是带专属电脑的常驻 Agent），简洁到一张明信片能写完，不像支付那样有几十页的产品空间。</li>
+<li>Wang 半反对：现在觉得产品简单，是因为我们看待 AI 产品的维度错了。Muse 的差异化不在 UI 规格，而在模型在每种情境下的行为、人格、工具使用方式——这些是训练出来的。就像移动时代早期人人说「不就是个 App」，后来才发现 nuance 全在里面。</li>
+<li>扎克伯格同意「产品变薄、模型变厚」：Muse 复杂的产品工作主要在隐私与安全模型，其余能力、人格都训进模型；产品负责人 Nat 真正操心的是后训练，不是界面。Muse 刻意不设模型选择器、也不设 effort 选择器——普通用户不该面对一堆编号倒置、名字混乱的模型菜单。</li>
+<li>用户能感知的差异：可靠性、主动性在什么情境触发、以什么语气找你说话——这些「产品决策」最终都落到训练方法、数据与评测上。</li>
+</ul>
+<h2>Muse Wonder：新一档模型</h2>
+<ul>
+<li>预训练的阶梯打法：每一档训得比上一档大 4–5 倍，逐级往上爬。Muse Spark 一系基于去年底的首次预训练（内部代号 Avocado 牛油果），团队自己都惊讶于「其实没那么大」的模型能榨出多少能力。Wonder（代号 Watermelon 西瓜，水果名已用完，下一个只能是榴莲——玩笑）预训练已完成、后训练收尾，体量显著更大，「思考的 nuance 会不一样」。</li>
+<li>两个版本：Muse Wonder 与 Muse Wonder Full（高配版，现场拿 "wonderful" 开了个爸爸玩笑）。</li>
+<li>主攻方向是「最强的个人与专业 Agent 模型」：①<strong>主动记忆（active memory）</strong>——记住你几天、几周、几个月前提过的事并在后续任务里调用；记忆是模型自身的能力（含何时、如何做上下文压缩），不是外挂 harness；OpenClaw 用久了记忆「buggy AF」正是他们要解决的；内部有 Memory Bench 评测。②<strong>主动专注（active focus）</strong>——长程复杂任务的持续执行力，遇挫折能换解法。③<strong>领域专家能力</strong>——购物、个人建议、法律/健康/税务问题；Wang 称其在多项金融与法律评测上是 SOTA，这些能力从预训练就要喂领域语料。④编程大幅跃升：称在 DeepSWE、SWE-Marathon 上 SOTA，Terminal-Bench 4 等表现也很好。</li>
+<li>定位：Collison 问是否与 Astra、Fable 并列前沿，扎克伯格答「按基准看，结论就是这样」；且为 Muse 这个产品形态专门优化，自称是个人专业 Agent 场景的世界最佳。</li>
+<li>上线方式：Wonder 体量大、服务贵，Muse 里先走付费订阅（Spark 继续免费、大额度）；API 经 Meta Model API 与 OpenRouter 提供；Muse Code 订阅者可用，Wonder Full 面向 Muse Code 订阅。</li>
+</ul>
+<h2>基准、Goodhart 与「大模型味」</h2>
+<ul>
+<li>基准饱和得太快，越往后 Meta 越靠内部评测定向。外部基准的供应链尽头往往是某个博士生随手做的网红基准——「把产品思考外包给那个博士生显然是错的」。</li>
+<li>他们量化「大模型味（big model smell）」的方法：看模型在分布内任务（RL/后训练覆盖的）与分布外任务上的表现差距。Spark→Wonder 这一跳很大，源于底座模型本身变强。刷榜（benchmaxing）与「大模型味」互为反面。</li>
+<li>个人 Agent 特有的维度：<strong>分寸感（discretion）</strong>——Agent 知道你过敏、怀孕，才能帮你订对餐厅，但不该把你的医疗状况告诉餐厅。编程 Agent 的环境里人人共享上下文，分寸感不重要；个人场景里它至关重要。</li>
+</ul>
+<h2>前沿模型是怎么做出来的</h2>
+<ul>
+<li><strong>预训练</strong>：海量多模态与领域数据；模型变大就必须同步扩数据，否则过拟合；某些数据有正迁移、某些有负迁移，全是科学问题。互联网增速有限，「数据从哪来」是扩大模型的核心难题。</li>
+<li><strong>SFT</strong>：给问题与理想回答，初始化行为与人格——SFT 结束时模型可能只有 10% 的时候表现出目标行为。</li>
+<li><strong>RL</strong>：把行为的触发率大幅拉高。RL 与预训练的「手感」相反：数据常常少即是多，质量压倒数量；版本迭代（Spark 1→1.3）的本质就是同一预训练上继续加 RL，配方改进带来的体感差异「如昼夜之别」，用户会以为换了预训练。</li>
+<li><strong>对齐观</strong>：高算力 RL 里必须精心设计环境——不能让「只有做不对齐的事才能成功」的场景存在；对齐是整个 RL 过程的属性，不是外加的一步。Meta 的理论：Agent 是为某个人服务的，对齐首先是对使用者的指令与价值对齐，可靠执行、不说教式拒绝；只有灾难性请求才优雅地拒绝。</li>
+<li><strong>周期</strong>：Wonder 从去年 8 月就开始规划，Spark 从一开始就是通往 Wonder 的垫脚石。模型立项到见分晓超过一年，创业者要在信息极度贫乏的环境里下注——「精益创业的反面，类固醇版」。</li>
+</ul>
+<h2>一千亿的支票：在发牌之前全押</h2>
+<ul>
+<li>开场原话（扎克伯格）：去年底「我们还没见过模型，就要签一张 1000 亿、2000 亿美元的支票。我问 Alex：你确定这能成吗？」</li>
+<li>CFO Susan Li 多次把 Wang 拉到一边强调：如果不成，财务上会非常、非常糟；成了就一切都好。</li>
+<li>账算给你听：一座 1GW 集群运营一年约 150 亿美元，建造成本约 500–600 亿美元；俄亥俄 Prometheus 集群超过 1GW，路易斯安那 Hyperion 规划 5GW（规划早于 MSL，2023–24 年就已启动）。训一个前沿模型全口径是「数百亿美元」级，且任一时刻账面是多代模型的研发开支叠在一起。</li>
+<li>扎克伯格的对冲逻辑：风险没听上去那么大——只要 AI 整体成立，算力不愁买家；要让这笔投资归零，得 Meta 失败且 AI 整体失败同时发生；退一步算力还能喂自家其他业务。Wang 总结他的思维：不看失败率，看赢的时候能赢多大——幂律内化。</li>
+<li>产品侧同样要提前下注：为还不存在的产品（Muse）的推理需求提前几年建数据中心。中途有人想保守一点，结论是「烧掉船只，把它做成」。</li>
+</ul>
+<h2>MSL 的组织：人才密度与完全重启</h2>
+<ul>
+<li>Alex 方案的第一条：不需要很多人，要人才密度。研究团队不到 200 人、更接近 100 人；每个环节是「几十人」而非其他实验室的几百人。算力不撒胡椒面，按研究员人均高配。</li>
+<li>扁平到极端：Wang 名义上有近 200 个直接下属（实操有 team lead 分层），要点不是汇报关系，而是<strong>消灭非技术管理者</strong>——人一旦脱离细节，在这个领域很快就不再懂技术。他的 Muse 帮他管这些汇报。</li>
+<li>时间线：Llama 4 发布后约两周，扎克伯格开始四处打电话求教；核心圈是扎克伯格 + Nat Friedman + Wang + Daniel Gross。组建期「像超新星一样把一堆人砸在一起」，扎克伯格清空了约两个月日程只做招聘；公司明确告知「没有截止日期，按对的节奏来」。</li>
+<li>团队画像：「一群没有安全感的过度 achiever」——每次问「三个月后我们会在哪」，人人回答「糟透了、完蛋了」；Wang 把预测录下来，三个月后放给他们看。这个动态至今没变：对 MSL 整体乐观、对自己的项目极度自 critical，他认为这很健康。</li>
+<li>为什么必须全重启：Wang 入职初期的一次会议上，原团队一位负责人说「我们不需要推理模型，消费者需要推理模型吗？」——他当场心沉到底，给 Nat 打电话。结论是领导层必须大幅「AI-pilled」；且出去招顶尖研究员时发现，只有「从零重建」的叙事才足够有吸引力（同时大量吸纳 Llama/FAIR 的优秀成员）。</li>
+<li>Collison 总结扎克伯格四个非常规动作：①公开判定前任努力失败并重启；②为人才付天价（包括 Wang 与 Scale 的交易安排）；③押注一个从没训过前沿模型的人；④CEO 本人清空两个月日程只干这一件事。Wang 补充：扎克伯格的特点是<strong>一旦内化了某个信念，就以极快的速度、极大的幅度让全部行动与之保持一致</strong>——「非常贝叶斯」；而整间公司（基建、数据中心、各业务线）都要跟着转向，只有创始人 CEO 能推动这种全局最优压过局部最优。</li>
+<li>何时知道 Wonder 成了：预训练结束后争论「RL 要多久才能超过 Spark」，结果是立刻超过——那一刻就知道路走对了；兴奋已经持续几个月。</li>
+<li>外部新鲜血液：WhatsApp 新负责人 Kunal Shah（印度 CRED 创始人）是同类下注；但全公司级转向同时只能有一个最高优先级。</li>
+</ul>
+<h2>平台与智能体经济</h2>
+<ul>
+<li>扎克伯格：未来技术体验里模型是最重要的一层；能造前沿超级智能的公司只有一小撮，它们将定义议程。Meta 不是非有平台不可，关键是「不掌握端到端的超级智能，就做不出未来真正重要的东西」。</li>
+<li>为什么个人/消费这条 lane 是空的：别人痴迷于自动化知识工作，但超级智能的最高用途是发明与创造，不是自动化。</li>
+<li>商家接入的阶梯：Muse 先天有很强的浏览器操作能力，商家零集成就能被 Agent 使用（这是兜底与向后兼容层）；重要伙伴给直连 API，效率更高；长远看每家企业都会有自己的 Agent，Muse 与自家 Agent 之间会配合得最好。主动要求深度集成的商家远多于试图屏蔽的；屏蔽者大概率战略错误，护城河薄、靠消费者耗时或 overcharging 赚钱的生意会被颠覆。</li>
+<li>购买行为已在发生质变：用户开始把采购完全委托给 Agent。扎克伯格的 Instacart 账号「其实是给 Muse 开的」：他和三岁女儿 Aurelia 用语音模式聊周末烘焙（Muse 能分辨父女的声音），周六食材自动备齐；这次它知道 Watermelon 要上线，还往袋子里塞了个西瓜凑配送门槛——直播里吃的那个西瓜就是这么来的。他以前一年用 Instacart 不到两次，现在一周一两次。推论：商务的总可寻址市场会变大，因为 Agent 本身成了账户持有者。</li>
+<li>Stripe 侧数据（Collison）：2023 年扎克伯格就警告 Patrick Collison「你们在 agentic commerce 上已经落后了」——方向对了，早了三年。Stripe 5 月 Sessions 发布了一系列相关产品，数据到 9 月才开始垂直拉升；computer use 是最后缺的解锁。（节目中段插播了 Stripe 收购 OpenRouter 的广告：其日路由量超过 10 万亿 token。）</li>
+<li>语音：输入端已经爆发——研究员对着键盘小声说话、大学生 10–15 分钟意识流「呕吐式」口述再让 AI 整理；输出端朗读效率低；难点在对话动态（打断、停顿的判断）。能采取行动的 Agent 让语音第一次像「在跟人说话」。Muse 的「小人儿」具身形象成立，是因为记忆、行动力与人格同时到位。硬件：无显示/小显示眼镜已被验证有用，Muse Gadgets 生态开放给手机厂商与第三方形态，HomeLink 小配件可把 Muse 接进全屋设备（Sonos、灯光），扎克伯格用它每晚自动调暗全屋灯光。</li>
+</ul>
+<h2>钱从哪来：为 AI 基建买单</h2>
+<ul>
+<li>收入组合：订阅（Wonder 走付费层）、商务抽成（Muse 帮人赚钱省钱，抽一小部分）、API，以及新设的 Meta 企业平台（CJ Desai 加入负责，把模型按企业需要的方式交付）。</li>
+<li>底盘：核心广告业务是数千亿美元级且仍在高速增长的「世界第八大奇迹」，模型还能让它再快几个百分点——这本身就能供养很大一部分基建。</li>
+<li>会计错觉：数据中心是资本开支、可多年折旧；研究员薪水同样在造多年期资产却不能资本化。算力紧缺时连 H100 的价值都比去年更高。自建数据中心相对买云的厂商有财务优势。</li>
+<li>对 OpenRouter 的建议（Wang）：前沿模型之间的差异正在分化（各家有意为之），基准把这些「质地」抹平了；机会在于做模型界的侍酒师——帮开发者理解细微差异，并把开发者的真实体验反馈成信号。</li>
+</ul>
+<h2>为什么没有赢家通吃</h2>
+<ul>
+<li>2023 年的流行叙事是某一家靠递归自我改进一骑绝尘，实际至今多家并立前沿。Wang 给三条原因：①执行有周期，领先者总会在领先时犯错，长期互相平均；②<strong>蒸馏是反霸权的力量</strong>——没人计划让蒸馏这么好用，但它把强能力压进越来越小的模型，利好开源与整个生态；③行业里很多人与公司主观上就想要多元格局，并用入职与交易决策投票。扎克伯格：多元加制衡的配置比少数公司垄断少数模型更安全。</li>
+</ul>
+<h2>收尾</h2>
+<ul>
+<li>Collison 问怎么看 Wang 在 X 上「deranged posting」：扎克伯格说沟通最重要的是真实，真实的东西有时不完美，好过过度脚本化；而且大部分内容他看得直乐。Wang 的梗图心法是「Jolly（其伴侣）会怎么想」，但互联网代谢梗的速度极快——保持在前沿、保持技术、别掉队。散场喝的是 Wang 从都柏林带来的 Guinness。</li>
+</ul>
+<p><em>（字幕为 X 平台自动生成，个别专名有误转，如 OpenRouter 在后半段被转成 OpenRadar；本文已按上下文校正。）</em></p>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：<a href="https://x.com/collision/status/2109714250226905248">https://x.com/collision/status/2109714250226905248</a>（Cheeky Pint）· 嘉宾：Mark Zuckerberg、Alexandr Wang · 发布日期：2026-10-12 · 时长：2 小时 14 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>
