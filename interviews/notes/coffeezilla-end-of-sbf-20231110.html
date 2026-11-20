@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《SBF 的终局：庭审全程复盘》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>Coffeezilla：《SBF 的终局》——庭审全程复盘</h1>
+<blockquote>
+<p>片源：Coffeezilla《The END of Sam Bankman Fried》· 时长：约 50 分钟 · 2023-11-10 发布（判决后一周）
+说明：Coffeezilla 飞到纽约旁听了大部分庭审，本片按控辩双方叙事与证人出场顺序复盘，庭审引文为片中转引的法庭记录；他的立场明确站在控方，本纪要转述时保留其归属。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>七项罪名全部成立，陪审团只商议了约三小时。Coffeezilla 的复盘显示这场审判的胜负手有三：Gary Wang 的代码（allow_negative＝无限提款）、那个用「日交易量×随机数」算出来的假保险基金数字、以及检察官让 SBF 当庭朗读自己写下的「监管就是公关」。</p>
+<h2>两套叙事</h2>
+<p>控方：SBF 用两家公司搭建了精密骗局——FTX 收客户的钱，Alameda 把钱偷走，两家表面上独立、实际上都由他控制，Alameda 享有特权；等真相浮现，钱已经没了。辩方：FTX 是「边飞边造的飞机」，SBF 相信给 Alameda 的贷款是被允许且有合理担保的；真要怪，就怪当时的 Alameda CEO、他的前女友 Caroline Ellison，以及那些签了合作协议、有动机把一切说得最难听的证人。Coffeezilla 提醒：控方证人名单有好几页，辩方几乎没有——除了 SBF 本人。</p>
+<h2>证人链：控方如何钉死每一环</h2>
+<p><strong>客户 Marc Julliard</strong>：账户里有 10 万美元，看了 SBF「FTX 没问题、资产没问题」的推文后没有提款，随后钱被困住。辩方交叉询问他「读过服务条款吗、不知道加密有风险吗」，Coffeezilla 评价这完全跑题。</p>
+<p><strong>Adam Yedidia</strong>（SBF 的老朋友、前 FTX 员工）：客户法币入金进的是 Alameda 控制的 North Dimension 银行账户；内部 fiat@ 账户追踪 Alameda 对 FTX 的欠款，他 2022 年发现这个数字是 80 亿美元，质问 SBF 后辞职。SBF 当时的回应是：「去年我们刀枪不入，今年不是了。」</p>
+<p><strong>Paradigm 的 Matt Huang</strong>：Paradigm 投了近 3 亿美元，投前专门问过 Alameda 会不会有特殊待遇，得到的答复是「没有」。</p>
+<p><strong>Gary Wang</strong>：紧接着上场的联合创始人当庭打脸——「我们给了 Alameda 特殊权限，让它能从平台无限提款，我们还就此向公众撒了谎。」被问提款提的是谁的比特币，答：「客户的。」代码里的 allow_negative 开关只为 Alameda 打开。更荒诞的是保险基金：FTX 曾发推宣称保险基金超 1 亿美元，Wang 承认那个数字是假的——数据库里的数字是拿每日交易量乘以一个随机数、再除以十亿算出来的，与真实基金余额毫无关系。Coffeezilla 说，这是他决定立刻飞去纽约旁听的时刻。</p>
+<p>辩方的反击点是净资产（NAV）：Wang 承认按账面算，Alameda 的净资产直到 2022 年 11 月都是正的。但 Coffeezilla 用吧台小哥的比喻点破：资产端塞满了卖不掉的东西——Sam coins、风投股权、关联方贷款；负债端全是即时到期的真金白银。账面正净值，就这样破了产。</p>
+<h2>Ellison 作证：七版报表与庭上的眼泪</h2>
+<p>Ellison 承认参与欺诈与洗钱，并称是与 SBF 一起做的。她证词的关键事实：FTT、Serum、MAPS、OXY、Solana 等「Sam coins」最终被放进了 Alameda 资产负债表，纸面价值约 10 亿美元；高管们经 FTX 的关联贷款约 50 亿美元，花在早期投资与政治捐款上——SBF 说过政治花钱「回报率极高」。SBF 自称风险中性，她举的例子是：他愿意抛硬币，正面世界变得两倍好、反面世界毁灭，他也下注。Coffeezilla 评论：这不是风险中性，这是赌徒。</p>
+<p>最要命的一段是报表造假：2022 年 5 月 Terra/Luna 崩盘后，Genesis 等贷方抽贷（先召回 4 亿美元），Alameda 没有流动资产，只能继续从 FTX 客户资金里拿。Ellison 把真实报表给 SBF 看——总负债 140 亿美元（其中 90 亿是从 FTX 客户借的）、总资产 210 亿但大多是 Sam coins 和 45 亿美元收不回来的关联贷款——两人都觉得「不能发」。SBF 让她「准备几种替代的呈现方式」，她做了七版，SBF 挑中的那一版删掉了关联贷款、并同步扣减等额借款，效果是让 Alameda 看起来风险小得多、并隐藏了巨额客户借款。讽刺的是，这份美化过的报表后来泄露给 CoinDesk，依然难看到吓退所有人——CZ 的推文只是助燃剂，火药是 FTX 早就没钱了。到 2022 年 9 月，Alameda 从 FTX 的借款已升至 137 亿美元。</p>
+<p>庭审中最打动陪审团的可能不是数字：检方放出她与 SBF 的短信，她说自己「心情是一年来最好的」，因为「我对这一天有一种日益增长的恐惧，它等了我很久，现在它真的来了，无论如何都能结束了」，随后她在证人席上哭了起来。辩方交叉询问主攻她的合作协议动机，检方随即在再询问中放出 2022 年全员会议录音——早在认罪协议之前，她已亲口向员工承认挪用了客户资金。这一手基本封死了「她为减刑编故事」的说法。</p>
+<h2>资金追踪与最后的抗辩</h2>
+<p>BlockFi CEO Zac Prince 作证 FTX/Alameda 到处发假报表；两家公司的资金往来被另一位庭审博主概括成绕口令：FTX US 给 BlockFi 4 亿美元授信，BlockFi 借给 Alameda 8 亿，抵押品存在 FTX，FTX 把包括这笔抵押在内的客户存款借给 Alameda，Alameda 再拿这笔钱去还包括 BlockFi 在内的贷方。</p>
+<p>Nishad Singh 讲了阳台对峙：他告诉 SBF，Ellison 对净资产状况非常恐慌；SBF 答「NAV 按任何标准都好得不得了」，又承认 130 亿美元借款「确实还不全」，并说这件事「占了我今年 5–10% 的生产力」——这直接击穿了辩方「SBF 直到 2022 年 11 月才知道窟窿」的说法。台账还显示名人代言花了 11.3 亿美元。但 Singh 在交叉询问中也被击穿：他口口声声说挪用是「邪恶」的，自己却从 FTX 借了 370 万美元买房。</p>
+<p>会计教授 Peter Easton 的资金追踪是控方收官：Alameda 欠款峰值 113 亿美元，各实体账户之间资金混同，客户的钱流向四处——商业投资、政治捐款、慈善、买房；最后的饼图显示，只剩下 23 亿美元是留给客户的。总法律顾问 Can Sun 作证：崩塌时 Apollo 尽调发现约 70 亿美元客户资金缺口，SBF 让他「找一个法律上的 justification」，他的结论是没有；所谓「保证金借贷」抗辩（服务条款允许借出保证金用户的资产）数字根本对不上——但 SBF 事后在电视采访里仍在用这个说法。辩方专家 Pimbley 只查了 FTX 的数据库、没做资金追踪，称 78% 账户开通了现货保证金，算是替辩方把水搅浑了一点。</p>
+<h2>SBF 本人作证：被自己的话处决</h2>
+<p>SBF 还是上了证人席。他的版本：Signal 自动删除消息只是防患于未然的「纽约时报测试」；他不知道 fiat@ 账户的存在，直到 2022 年 10 月才听说那 80 亿美元的窟窿；一切违法行为都是 Ellison、Singh、Wang 在他不知情下做的。交叉询问中检察官 Sassoon 的打法是：他每否认一件事，就出示他的短信或原话。问他是否说过自己不参与 Alameda 的交易，他说「不记得」，检方随即放出他给 Ellison 发的买卖 OXY、MAPS 的具体指令。问到监管，他承认希望公众认为 FTX 重视消费者保护；检方让他当庭朗读自己写下的话——大意是：监管那一套，「就是公关」。Coffeezilla 说，这是全场最有力的一幕：从头到尾，SBF 相信自己能靠一张嘴脱身，最后处决他的正是他自己的话。</p>
+<p>判决：陪审团商议约三小时，七项罪名全部成立。量刑定于 2024 年 3 月。（后注：SBF 最终被判 25 年监禁。）</p>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：<a href="https://www.youtube.com/watch?v=Hzko-cjHhTg">https://www.youtube.com/watch?v=Hzko-cjHhTg</a>（Coffeezilla）· 嘉宾：庭审证人证词（转述） · 发布日期：2023-11-10 · 时长：50 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>
