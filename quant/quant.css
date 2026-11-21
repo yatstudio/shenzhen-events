@@ -71,7 +71,8 @@ td.dim{font-size:.8rem}
 .note li::marker{color:var(--ink-ter)}
 .note svg{display:block}
 .note svg line{stroke:var(--border-hover)}
-.note svg polyline{stroke:var(--good)}
+.note svg polyline[stroke="#4ade80"]{stroke:var(--good)}
+.note svg polyline[stroke="#f87171"]{stroke:var(--bad)}
 .foot{font-size:.8rem;color:var(--ink-ter);margin-top:34px;padding-top:14px;border-top:1px solid var(--border);line-height:1.8}
 @media (max-width:640px){
   .topbar .bwrap{padding:0 16px;gap:10px}
