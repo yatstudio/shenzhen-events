@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>英伟达是 AI 产业的中央银行 · Yat's Notes</title>
+<style>
+  :root{--bg:#f7f8f7;--panel:#fff;--ink:#17251e;--ink-sec:#5c6b62;--line:#e2e8e3;--green:#0a7a55;--green-bg:#e9f5ef}
+  @media (prefers-color-scheme:dark){:root{--bg:#0d1218;--panel:#131a21;--ink:#e6edf3;--ink-sec:#9db0a4;--line:#223028;--green:#2ee6a8;--green-bg:#12271e}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
+  .wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+  a{color:var(--green);text-decoration:none}
+  .back{font-size:.9rem;color:var(--ink-sec)}
+  .kicker{display:inline-block;margin-top:18px;padding:2px 10px;border-radius:999px;background:var(--green-bg);color:var(--green);font-size:.8rem;font-weight:700}
+  h1{font-size:1.7rem;line-height:1.35;margin:12px 0 6px}
+  .meta{color:var(--ink-sec);font-size:.88rem;margin-bottom:20px}
+  .hero{width:100%;border:1px solid var(--line);border-radius:12px;background:#fff}
+  .lede{font-size:1.05rem;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px;padding:14px 18px;margin:20px 0}
+  h2{font-size:1.15rem;margin:28px 0 8px}
+  p{margin:10px 0}
+  ul{margin:8px 0;padding-left:22px}
+  li{margin:6px 0}
+  b{color:var(--ink)}
+  .nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+  .num{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .num .v{font-size:1.35rem;font-weight:800;color:var(--green)}
+  .num .k{font-size:.85rem;color:var(--ink-sec)}
+  .src{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink-sec);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← Yat's Notes</a>
+  <div><span class="kicker">AI 解读 · 图表</span></div>
+  <h1>英伟达是 AI 产业的中央银行</h1>
+  <div class="meta">2026-11-21 · 原图：ZeroHedge《The Bank Of Nvidia》（2026-11-12）· 解读：大脚</div>
+
+  <img class="hero" src="https://img.yatslist.com/notes/nvidia-bank.png" alt="The Bank Of Nvidia：英伟达出资、担保与回购关系图">
+
+  <div class="lede">一句话：<b>Nvidia 已经不只是卖芯片的，它是整个 AI 产业的中央银行</b>——出资、出担保、出兜底，钱在生态里绕一圈，最后大部分又变回 GPU 订单回到它自己账上。</div>
+
+  <h2>先看中心那四个数（截至 2026 年 7 月 26 日）</h2>
+  <div class="nums">
+    <div class="num"><div class="v">$990 亿</div><div class="k">股权投资账面：投出去的钱</div></div>
+    <div class="num"><div class="v">$1,085 亿</div><div class="k">担保：替别人借钱做的保</div></div>
+    <div class="num"><div class="v">$560 亿</div><div class="k">云容量回购 + 第三方租赁：客户卖不掉的算力，它兜底买回</div></div>
+    <div class="num"><div class="v">$2,790 亿</div><div class="k">供应承诺：答应未来供货的量</div></div>
+  </div>
+
+  <h2>钱分三条线流出去</h2>
+  <p><b>1. 投客户</b>：OpenAI $300 亿股权、Anthropic 最高 $100 亿 + $100 亿 IPO 锚定单、xAI/SpaceX 约 $170–210 亿、SSI $50 亿、Poolside $10 亿 + $60 亿模型授权。被投的全是买 GPU 的人。</p>
+  <p><b>2. 给客户的融资做担保</b>：OpenAI 原本开口 $2,500 亿，被砍成 $1,050 亿担保（给它在俄亥俄 SB Energy 的 20 年租约兜底）；华尔街六家（Brookfield、Apollo、BlackRock、Blackstone、Goldman、KKR）搭了个 $5,000 亿融资平台，Nvidia 给到 $1,250 亿兜底——华尔街出钱，Nvidia 做保。</p>
+  <p><b>3. 给云厂商回购兜底</b>：CoreWeave $63 亿未售容量回购、Nebius $20 亿股权 + 5GW 部署、Lambda 的 GPU 租赁回购。CoreWeave、Nebius、IREN 这批 neocloud 本质上是靠 Nvidia 的信用才融得到资建机房。</p>
+
+  <h2>这张图为什么会被做出来——它画的是「循环融资」的质疑</h2>
+  <p>Nvidia 投客户 → 客户拿钱买 Nvidia 的卡 → Nvidia 确认收入 → 股价涨 → 再投更多。这跟 2000 年电信泡沫里朗讯、北电给运营商放贷买自己设备是同一个结构。图源是 ZeroHedge，天生偏空；而且图脚自己写了：带 * 的是媒体报道的意向、未证实，数字是「宣布的承诺或最大敞口」，别全当已落地的钱。</p>
+
+  <h2>Nvidia 这么干的理由也成立</h2>
+  <p>锁死需求、堵住 AMD 和客户自研芯片、把客户的融资能力直接变成自己的订单能见度；股权端还能吃客户上涨——投 Intel 的 $50 亿已经涨到约 $300 亿。</p>
+
+  <h2>风险点就两个</h2>
+  <ul>
+    <li>担保和回购全是同一种风险的 N 份拷贝——AI 需求真降温，这些兜底会同时被触发，不叫分散投资；</li>
+    <li>敞口高度集中在 OpenAI、Anthropic 两家身上，任何一家付不起租，传导链直接回到 Nvidia 的资产负债表。</li>
+  </ul>
+
+  <h2>对你的落点</h2>
+  <p>你碰的算力、云、托管生意，上游的钱很多就是从这张图里流出来的——跟 neocloud 这类玩家打交道时，先看清它的钱是谁担保的，它的信用本质上是 Nvidia 的信用。</p>
+
+  <div class="src">数据来源：ZeroHedge 整理 Nvidia 10-Q 与 CFO 口径（Q2 FY27，2026-07-26）、8-K 与 13F 文件、公司文件与新闻稿（Bloomberg、Reuters、CNBC、WSJ、The Information、Hunterbrook）。图中数字为已宣布的承诺或最大敞口，未标注的并非盯市价值。</div>
+</div>
+</body>
+</html>
