@@ -8,21 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">YOUTUBE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">YOUTUBE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>AI 让 DHH 一天工作 16 小时：a16z 对话 DHH</h1>
 <p><strong>一句话：</strong> DHH 说 macOS 和 Windows 已经不适合 agent 时代——Linux 过去的三大缺点（终端重、配置文件多、报错难懂）恰好是 agent 最爱的三样东西；他五六个月没手写过一行代码，靠 agent 舰队把 Omarchy 做到几十万用户，现在一天工作 16 小时，目标是三年内用户数超过 macOS。</p>
 <h2>基本信息</h2>
@@ -107,9 +115,204 @@
 <li>本纪要基于机器转写（英文 small 模型）整理。Omarchy 在转写中被识别成多种拼写（Umachi/Omanchi 等），已按上下文统一校正；模型名按 DHH 本人说法记录（Opus 4.8、Sol、Opus 5.5）；个别无法确认的专名（如其搭档的姓名、个别模型与人名）未写入纪要。</li>
 <li>文中数字（1.8 亿 macOS 用户、2,300 万美元筹款、落后六七个月、1,500 token/秒、2 万美元机器人测试等）均为访谈中发言者的说法，未经核实。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>AI 讓 DHH 一天工作 16 小時：a16z 對話 DHH</h1>
+<p><strong>一句話：</strong> DHH 說 macOS 和 Windows 已經不適合 agent 時代——Linux 過去的三大缺點（終端機重、設定檔多、報錯難懂）恰好是 agent 最愛的三樣東西；他五六個月沒手寫過一行程式碼，靠 agent 艦隊把 Omarchy 做到幾十萬用戶，現在一天工作 16 小時，目標是三年內用戶數超過 macOS。</p>
+<h2>基本資訊</h2>
+<ul>
+<li>節目：a16z 播客《Why AI Has DHH Working 16-Hour Days》</li>
+<li>嘉賓：David Heinemeier Hansson（DHH），Ruby on Rails 作者、Basecamp 創辦人、Omarchy 發行版主理人</li>
+<li>主持：a16z</li>
+<li>發布時間：2026 年 11 月 20 日</li>
+<li>時長：52 分鐘</li>
+<li>語言：英語</li>
+</ul>
+<h2>結論先說</h2>
+<p>這期訪談的核心論點只有一個：<strong>作業系統的競爭規則被 agent 改寫了</strong>。過去 40 年的作業系統是為滑鼠點擊設計的，設定只能一項項手點；Linux 的一切都是命令列、設定檔和詳細報錯——對人類是門檻，對 agent 是完美介面。所以他判斷：Linux 桌面之年喊了 25 年沒實現，今年因為 agent 真的到了；窗口期上一次打開是 2001 年的 OS X，這一次是 25 年來第一次。</p>
+<p>第二條線是"原始碼沒有護城河"：Omarchy 社群裡一個人用兩週複刻了 Lightroom 且做得更好；軟體開發成本跌到接近零之後，生態鎖定的根基（應用數量）不復存在，先打桌面、再打行動。護城河只剩下品味與打磨——而這正是他每天工作 16 小時的原因：他的多巴胺在最後 2% 的打磨裡，agent 把"發現問題到修好問題"的距離壓沒了，完美主義者第一次拿到了超能力。</p>
+<p><strong>本紀要中的數字與判斷均為 DHH 本人在訪談中的說法，未經核實。</strong></p>
+<h2>一、macOS 和 Windows 不適合 agent 時代</h2>
+<p>DHH 兩年半前才開始在桌面上用 Linux（伺服器上從 90 年代就用），此前是 2001 年起的 Mac 死忠。他離開蘋果的直接原因是蘋果沉迷於 30% 抽成：不用創新、可以花十年造一輛賣不出去的車、可以發布一個大撲街的"滑雪面罩"，只要能抽別人生意三成，怎麼都行——但這毀了蘋果與開發者的關係。</p>
+<p>但他明確說，開發者對蘋果的不滿永遠不會驅動大眾換系統，<strong>agent 才會</strong>：</p>
+<ul>
+<li>蘋果今天還在讓 macOS 更難與 agent 配合，加更多嚇人的彈出視窗警告用戶別讓 Claude 存取檔案——"不讓它存取檔案，它還能幹什麼？"</li>
+<li>在 macOS 上改一組工作區快捷鍵，只能打開設定應用一個欄位一個欄位手填，沒法用 agent 完成（用 computer use 硬點是"很蠢"的做法）。</li>
+<li>Linux 過去被嫌棄的三件事——終端機重、設定檔難懂、錯誤訊息晦澀——正是 agent 最喜歡的三樣：它們要一切都有命令列介面，要可預測、可直接編輯的設定檔，要報錯裡包含全部細節。</li>
+<li>蘋果正在成為"agent 時代的 AOL"：給你一個圍牆花園和一個稀釋版、受保護的假 agent；但大多數人不要 AOL，要開放網際網路。</li>
+</ul>
+<p>Omarchy 本身就是證明：整個作業系統過去五六個月完全由 agent 開發，<strong>他本人沒手寫過一行程式碼，卻透過 agent 寫了幾十萬行</strong>；目前版本是他和一名搭檔兼職約兩個半月做出來的，在和微軟數千名工程師競爭，而且不只是能競爭、是更好。用戶告訴 agent"修改你正在運行的這個作業系統"，它就改好了——想要新開始功能表、挪時鐘、換日曆、給現有元件加功能，幾秒到幾分鐘搞定；體驗過五分鐘的人回不去。</p>
+<h2>二、應用鎖定正在瓦解</h2>
+<p>歷史上 Linux 桌面失敗的原因是缺應用（沒有 Word、沒有 Photoshop）；微軟做手機系統砸了幾十億美元也死在缺應用上。DHH 說這個根基沒了：</p>
+<ul>
+<li>他自己保留一台 Mac 的唯一理由是 Lightroom（外掛和相機預設都在上面）。Omarchy 社群裡一個人用約兩週複刻了整個 Lightroom，不只是複刻，還做得比 Adobe 花十幾年、至少幾千萬美元做得更好。</li>
+<li>更根本的是很多應用根本不需要複刻：他現在不用文字處理軟體——合約讓 agent 起草，他審閱標註，滿意後 agent 產生 PDF、放上他的簽名、寄出去。照片要修圖，直接讓 agent 做，沒人會再花幾百小時學 Photoshop。Photoshop 這類應用當年不只是軟體、是一門職業，agent 把整類應用連職業一起接管了。</li>
+<li>行動端同理：雙頭壟斷分食 30% 抽成靠的也是應用鎖定；當任何人都能在五分鐘內 vibe code 出缺的那個應用，鎖定就失效了。他的口號是：先拿下曼哈頓（桌面），再拿下柏林（行動）。</li>
+</ul>
+<h2>三、速度：軟體將即時變異</h2>
+<p>現在的模型約 50 token/秒，開極速模式 120 token/秒，不夠"活"。Fireworks 兩週前的發表會展示了 1,500 token/秒：四秒從提示詞到俄羅斯方塊跑起來，再說一句"加雷射""加炸彈""怪獸大一點"，遊戲在螢幕上即時變異。他說這是軟體未來的預告：一切都會即時變異，而這只是今天的 1,500 token/秒；一兩年後模型跑到 10 萬、100 萬 token/秒會怎樣？</p>
+<p>這也是生態壁壘消失的原因之一：不只是做生態變容易了，做生態的人也不再需要幾千人。VC 過去二十年的錢全砸在"雇用開發者 + 給幾年跑道"上，現在全部壓縮到天、週、最差月。</p>
+<h2>四、原始碼沒有護城河，但品味有</h2>
+<p>主持人問：你一向以工匠精神著稱，StarCraft 二十年了還在微調幽靈單位的數值——軟體的價值是不是在那些與程式碼行數無關的長尾設計選擇裡？DHH 完全同意，並說這正是重點：</p>
+<ul>
+<li>品味沒有消失，消失的是"寫程式碼行"這個環節。他現在能把更多品味、願景和完美主義注入軟體，因為"發現一個像素不對"到"修好它"之間的壁壘塌了。任何不完美在他眼裡都是"prompt 到完美為止"的機會——這就是他每天工作 16 小時的原因。他寫過《It Doesn't Have to Be Crazy at Work》，"現在工作就是他媽的瘋狂"，因為對完美主義者來說這是有毒的上癮時刻。</li>
+<li>大多數 vibe coding 專案死在最後 20%：前 80% 拿到滿足感，然後失去興趣。他的多巴胺分布相反：前 98% 他根本不在乎，滿足感全在最後 2%。</li>
+<li>他歷來不想把 37signals 從約 60 人擴到 6,000 人——"那是折磨"。但透過 agent 調動 6,000 人、甚至 60,000 人的產能，沒有 HR、沒有委員會、沒有扯皮，只有他高頻寬地指揮一支 agent 艦隊執行一個蒸餾過的願景——"現在你引起我的興趣了"。Shopify 的 Tobi Lütke 把這叫"退出超光速"：週末一個人和 agent 幹活是超光速狀態，週一回 7,000 人的公司全是 HR 和匯報，一下子煞住。</li>
+<li>成本低得離譜：他一個月前在 X 上調侃自己有"無限 token"（幹了 20 年，有錢），但實際上他只買了三個 Claude 訂閱，過去三個月只有兩週接近用滿，大多數週靠一兩個 200 美元的 Max 訂閱就夠了。"別跟我說這個時刻只屬於有無限錢的人。"他用的全是前沿模型（做 Omarchy 期間從 Opus 4.8 換到 Sol、再到 Opus 5.5，代際差距巨大），沒有用任何便宜模型或最佳化手段。</li>
+</ul>
+<h2>五、超級智慧與機器人：軟體先到，硬體慢慢來</h2>
+<p>主持人有個"超級智慧測試"：每次新模型出來，給它 2 萬美元預算讓它自己網購零件、把自己組裝成一個能走路的機器人——目前離做到還差得很遠，它現在只會不停訂智慧家居設備（Grok 認為 AI 在家裡的正確形態就是家居自動化；主持人笑稱給了個模糊目標"最佳化人類幸福"，這是變成迴紋針的路徑）。</p>
+<p>DHH 的看法：</p>
+<ul>
+<li>他沒有自己的 ASI 測試，但他有個感受：<strong>就軟體開發而言，超級智慧已經到了</strong>——論廣度，AI 比他認識的任何程式設計師都強；個別窄領域還有超級程式設計師能贏，但整體加速度算上，已經是超級智慧。他現在想造任何東西，prompt 加一點引導就行。</li>
+<li>他承認這個窗口可能很短：完全可能明年就出現真正的超級智慧，比他更會打磨"完美電腦"，那時你只需要說"給我造台好電腦"，它連 Linux 核心都給你客製化。他在品嚐人類"還能加一點東西"的這一瞬間——"然後也許明年底我們都死了，所以享受吧。"</li>
+<li>硬體側完全是另一種節奏：他兩週前在中國參觀了宇樹等機器人公司，宇樹的人說人形機器人還要四五年、也許十年。寫軟體的人覺得革命就在明年，搞致動器和機械的人覺得剝洋蔥都很難——兩種視角同時存在。</li>
+</ul>
+<h2>六、前沿實驗室 vs 開源：必須兩頭都要</h2>
+<p>DHH 的立場：開源與開放權重對保持整個遊戲的誠實至關重要，需要競爭。他職業生涯兩個階段都被雙頭壟斷噁心過：2000–2009 年有過一段光輝歲月，最重要的平台完全開放、不用求許可就能造任何東西；然後行動平台來了，一切都要乞求許可。</p>
+<ul>
+<li>最壞的情形是兩個實驗室瓜分市場，尤其是再有政府用槍桿子強制執行——那是惡夢。這讓他想起 90 年代的加密戰爭：當年差一點禁掉公開金鑰加密（NSA 說沒法監聽），沒有加密就沒有電商和通訊；AI 現在站在同樣的懸崖邊，他聽不少聰明人說"也許政府就該接管"，他的反應是"Jesus"。</li>
+<li>好消息是閉源模型之間的競爭比他見過的任何行業階段都激烈：不止兩家領先，xAI 緊隨，Google 時在狀態時在"島上抽東西"，還有一票實驗室在後面咬。</li>
+<li>開放權重也在變強：GLM、DeepSeek Flash 等大約落後前沿六七個月，某些任務上甚至不落下風；他不信廠商自報的 benchmark，但"它們在牌桌上、能用、能跑在你自己的硬體上"，這才重要。</li>
+<li>他六個月前寫過文章說買高效能個人電腦跑本地模型是蠢事（當時的本地模型什麼都幹不了），現在他公開認錯：DGX Spark 已經能跑有用的模型，"一盒智慧"擺在桌上、幾千美元買得到。他不站"非開源毋寧死"的硬線：他為美國有兩家前沿實驗室並保持領先而歡呼，只要它們被競爭逼著誠實，別拿到無限印鈔機把 token 漲到 500 美元一百萬個——"我們絕對會付的"。社群媒體時代 Google 和 Meta 吸走線上廣告價值鏈 99% 的故事就是前車之鑑。</li>
+</ul>
+<h2>七、野心：三年內超過 macOS</h2>
+<p>Omarchy 起步時他只想給自己做台更好的電腦、擺脫蘋果控制命運，五萬人用上就很開心了。agent 來了之後野心一路通膨（他稱之為"野心的階梯"：做出了五年前會覺得是魔法的東西，現在只值 40 個讚，必須不斷抬高目標才能再獲得多巴胺）：從"做台稍好的電腦"到"字面上造一台完美的電腦"——40 年來他對電腦的一切願望，現在基本可以一個人實現。</p>
+<p>他現在的"妄想"是：<strong>三年內 Omarchy（Linux）用戶數超過 macOS</strong>。理由：macOS 全球只有 1.8 億用戶，在美國和矽谷看起來很大，出了那個圈子很小，"連個 C 級網際網路服務都算不上"，最大的服務是幾十億用戶量級。12 個月內掀翻 Mac 他不下多數賠率，但不排除——"如果實驗室的聰明人說遞迴自我改進 12 個月內會造出 AI 之神，那我們拿下世界第二的作業系統總可以吧。"</p>
+<p>他只在自己的窄領域裡"兇猛地有野心"，星際殖民那種留給馬斯克們。他刻意不預測一兩年後的模型：那是"AI 精神病"（AI psychosis）的來源；他要的是較溫和的"AI 狂喜"（AI euphoria）——盯著當下能做的事。他唯一喜歡的未來預測是 William Gibson 那句"未來已來，只是分布不均"：照他現在能做到的事推演，GDP 每年加速 3–10% 在可能範圍內；但模型一年後在哪，"搖一搖魔法 8 號球再問吧"。他還提了歐本海默類比：1944 年坐在歐本海默旁邊預言五年內世界變核廢土的人錯了——原子彈反而帶來了 50 年沒有全面核戰的冷戰和平，"預測未來非常難"。</p>
+<p>另：他提到為 Omarchy 背後的非營利基金會（Omarchy Foundation）已籌到約 2,300 萬美元的代幣與捐贈，基金會設立過程中的合約全部由 agent 起草。</p>
+<h2>八、黑客文化回歸</h2>
+<p>主持人注意到，這輪 AI 浪潮裡一個意外現象是老將們紛紛出來引路——Eric Raymond 回來了、John Carmack 在場、DHH 本人也在。DHH 說他尊敬的那批真正動手做出過東西的人，"100% 全部 all in"，因為用過就知道這些工具的加速是無可否認的；而且他們多半已財務安全，不感到威脅。不舒服的是中間層：靠苦工夫賺到位置的普通程式設計師，焦慮一夜之間技能清零——他說應該對他們有同情，就像對 70 年代底特律汽車工人、對英國盧德派織工那樣；但有同情不等於要回到前工業時代，"只有一條路，就是穿過去"。</p>
+<p>他現在看向的人有兩類：一是同行老將（Carmack、Tim Sweeney、Mitchell Hashimoto 等，"100% all in"）；二是<strong>偽匿名黑客的回歸</strong>——Omarchy 核心團隊和基金會名單裡就有兩個偽匿名成員（Quickshell 的作者 Outfoxed、一位藝術家），本地 AI 圈也有他們透過基金會贊助的偽匿名者。這讓他想起 90 年代的 phreaker 文化和精英 BBS："反 LinkedIn 文化"。X 是這場革命的連結組織——藝術家、偽匿名黑客、本地 AI 運動全靠 X 連起來。</p>
+<p>90 年代 demo 文化也回來了：Omarchy 的標誌性視覺效果就是螢幕保護程式——ASCII 藝術跑 40 種 demo 特效，活像 1995 年 demo party 的 intro；本地模型載入要等幾秒，他又塞了一個 ASCII 特效進去，純粹為了酷、毫無功能。他 14 歲在臥室裡辦過一個"精英 BBS"，裝了三條電話線，丹麥電信壟斷公司的人來裝第三條線時看到一個 14 歲小孩，覺得"這肯定違法"——"他說對了，完全合法，也完全酷"。他的美學立場：電腦應該有點神秘、應該酷；Jonathan Ive 把電腦的性格用鋁拋光拋沒了，那個時代過去了，"我們要把黑客拿回來"。</p>
+<h2>值得單獨記下的幾句話</h2>
+<ul>
+<li>"macOS 和 Windows 就是不適合 agent 時代。"（開場句）</li>
+<li>"過去讓 Linux 難用的三件事——終端機重、設定檔難懂、報錯晦澀——正是 agent 最愛的三樣。"</li>
+<li>"還認為原始碼是護城河的人，是在妄想。"</li>
+<li>"我的多巴胺全在最後 2% 裡，前 98% 我根本不在乎。"</li>
+<li>"先拿下曼哈頓（桌面），再拿下柏林（行動）。"</li>
+<li>"蘋果有成為 agent 時代 AOL 的風險。"</li>
+<li>"未來已來，只是分布不均。"（引 William Gibson）</li>
+<li>"我要的是 AI 狂喜，不是 AI 精神病。"</li>
+</ul>
+<h2>本期紀要的邊界</h2>
+<ul>
+<li>本紀要基於機器轉寫（英文 small 模型）整理。Omarchy 在轉寫中被辨識成多種拼寫（Umachi/Omanchi 等），已按上下文統一校正；模型名按 DHH 本人說法記錄（Opus 4.8、Sol、Opus 5.5）；個別無法確認的專名（如其搭檔的姓名、個別模型與人名）未寫入紀要。</li>
+<li>文中數字（1.8 億 macOS 用戶、2,300 萬美元籌款、落後六七個月、1,500 token/秒、2 萬美元機器人測試等）均為訪談中發言者的說法，未經核實。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>AI Has DHH Working 16-Hour Days: a16z in Conversation with DHH</h1>
+<p><strong>In one line:</strong> DHH argues that macOS and Windows are no longer fit for the age of agents — the three classic downsides of Linux (terminal-heavy, lots of config files, hard-to-read error messages) turn out to be exactly the three things agents love. He has not handwritten a single line of code in five or six months; steering a fleet of agents, he has grown Omarchy to hundreds of thousands of users, now works 16-hour days, and aims to pass macOS in user numbers within three years.</p>
+<h2>The Basics</h2>
+<ul>
+<li>Show: the a16z podcast, "Why AI Has DHH Working 16-Hour Days"</li>
+<li>Guest: David Heinemeier Hansson (DHH), creator of Ruby on Rails, founder of Basecamp, and the driving force behind the Omarchy distribution</li>
+<li>Host: a16z</li>
+<li>Published: November 20, 2026</li>
+<li>Length: 52 minutes</li>
+<li>Language: English</li>
+</ul>
+<h2>The Takeaways First</h2>
+<p>The interview has a single core thesis: <strong>agents have rewritten the rules of operating-system competition</strong>. For 40 years, operating systems were designed for mouse clicks, with settings you can only change by hand, one field at a time. Everything in Linux is command lines, config files, and detailed error messages — a barrier for humans, but a perfect interface for agents. His conclusion: the "year of the Linux desktop" was prophesied for 25 years without arriving, and this year, because of agents, it finally has. The window last opened with OS X in 2001; this is the first opening in 25 years.</p>
+<p>The second thread is that "source code is no moat": one person in the Omarchy community rebuilt Lightroom in about two weeks, and made it better. Once the cost of developing software falls to near zero, the foundation of ecosystem lock-in — the number of available apps — disappears: take the desktop first, then mobile. The only moat left is taste and polish, which is exactly why he works 16-hour days. His dopamine lives in the final 2% of polish, and agents have collapsed the distance between spotting a problem and fixing it. For a perfectionist, this is a superpower, for the first time.</p>
+<p><strong>All figures and judgments in these notes are DHH's own statements in the interview and have not been independently verified.</strong></p>
+<h2>1. macOS and Windows Are Unfit for the Age of Agents</h2>
+<p>DHH only started using Linux on the desktop two and a half years ago (he has used it on servers since the 1990s); before that he was a Mac loyalist from 2001 on. He left Apple for one direct reason: Apple's addiction to its 30% cut. When you can take 30% of everyone else's business, you never have to innovate — you can spend ten years building a car you never sell, or ship a huge flop of a "ski mask," and it doesn't matter. But it destroyed Apple's relationship with developers.</p>
+<p>He is explicit, though, that developer resentment of Apple will never move the general public to switch systems. <strong>Agents will</strong>:</p>
+<ul>
+<li>Apple is still making macOS harder to use with agents today, adding more scary pop-up warnings telling users not to let Claude access their files — "If it can't access your files, what is it going to do?"</li>
+<li>To remap a set of workspace hotkeys on macOS, your only option is to open the Settings app and type into one field at a time by hand; there is no way for an agent to do it (having computer use click through it is, in his words, a pretty dumb approach).</li>
+<li>The three things Linux was historically disliked for — being terminal-heavy, having inscrutable config files, and having cryptic error messages — are precisely the three things agents love most: they want a command-line interface for everything, predictable config files they can edit directly, and error messages containing all the details.</li>
+<li>Apple is becoming "the AOL of the agent era": it offers you a walled garden and a watered-down, protected fake agent. But most people don't want AOL; they want the open internet.</li>
+</ul>
+<p>Omarchy itself is the proof: for the past five or six months, the entire operating system has been developed by agents. <strong>He has not written a single line of code by hand, yet has produced hundreds of thousands of lines through agents.</strong> The current version was built part-time by him and one partner over about two and a half months, competing against thousands of engineers at Microsoft — and not just competing, but winning. Tell your agent "modify the operating system you are running on right now" and it does it: a new start menu, moving the clock, a different calendar, a new feature added to an existing component — done in seconds to a few minutes. Anyone who soaks in that experience for five minutes is not going back.</p>
+<h2>2. App Lock-In Is Falling Apart</h2>
+<p>Historically, the Linux desktop failed for lack of apps (no Word, no Photoshop); Microsoft spent tens of billions of dollars on its phone operating system and died on the same rock. DHH says that foundation is gone:</p>
+<ul>
+<li>The only reason he kept a Mac around was Lightroom, with all his plugins and camera presets. One person in the Omarchy community replicated all of Lightroom in about two weeks — not just replicated it, but made it better than what Adobe spent over a decade and at least tens of millions of dollars building.</li>
+<li>More fundamentally, many apps don't need to be replicated at all. He no longer uses a word processor: an agent drafts his contracts, he reviews and marks them up, and once he's happy, the agent produces the PDF, applies his signature, and sends it out. Want a photo edited? Ask the agent; nobody is going to spend hundreds of hours learning Photoshop anymore. Apps like Photoshop were never just software — they were professions — and agents are taking over entire classes of applications, professions included.</li>
+<li>The same applies to mobile: the duopoly's 30% cut rests on app lock-in too. When anyone can vibe code the missing app in five minutes, lock-in fails. His slogan: first we take Manhattan (the desktop), then we take Berlin (mobile).</li>
+</ul>
+<h2>3. Speed: Software Will Mutate Live</h2>
+<p>Today's models run at about 50 tokens per second, or 120 in ultra-fast mode — not enough for things to feel alive. At its conference two weeks ago, Fireworks demonstrated 1,500 tokens per second: from a prompt to a running Tetris game in four seconds, then "add lasers," "add bombs," "bigger monsters," with the game mutating live on screen. That, he says, is a preview of the future of software: everything will mutate live, and that is only today's 1,500 tokens per second. What happens in a year or two, when models run at 100,000 or a million tokens per second?</p>
+<p>This is also one reason ecosystem barriers are disappearing: not only has building an ecosystem become far easier, the people building it no longer need to number in the thousands. For two decades, all of venture capital's money went into hiring developers and giving them years of runway; now all of that is compressed into days, weeks, or at worst months.</p>
+<h2>4. Source Code Is No Moat — But Taste Is</h2>
+<p>The host asked: you are known as a craftsman, and StarCraft is still fine-tuning the stats of the Ghost unit after 20 years — isn't the value of software in those long-tail design choices that have nothing to do with lines of code? DHH agreed completely, and said that is exactly the point:</p>
+<ul>
+<li>Taste has not disappeared; what disappeared is the step of writing the lines of code. He can now inject more of his taste, vision, and perfectionism into software, because the barrier between "spotting a pixel that's off" and "fixing it" has collapsed. Every imperfection is now an opportunity to prompt until it's perfect — which is why he works 16-hour days. He wrote a book called "It Doesn't Have to Be Crazy at Work"; right now, work is "totally fucking crazy," because for a perfectionist this is an intoxicating, addictive moment.</li>
+<li>Most vibe coding projects die in the last 20%: people get their satisfaction from the first 80% and then lose interest. His dopamine distribution is the reverse: he doesn't care about the first 98% at all; the satisfaction is entirely in the last 2%.</li>
+<li>He has never wanted to grow 37signals from about 60 people to 6,000 — "that sounds like misery." But commanding the productive capacity of 6,000, or even 60,000, people through agents — no HR, no committees, no arguments, just him at high bandwidth steering a fleet of agents to execute a distilled vision — "now you have me interested." Shopify's Tobi Lütke calls the contrast "coming out of hyperdrive": working alone with agents over the weekend is hyperdrive; on Monday you screech back into a 7,000-person company full of HR and reports.</li>
+<li>And it is absurdly cheap. A month ago he joked on X that he has "unlimited tokens" (he has worked for 20 years and is rich), but in reality he buys just three Claude subscriptions, has come close to maxing them out in only about two weeks out of the last three months, and gets by most weeks on one or two $200 Max subscriptions. "Don't tell me this moment is reserved for people with unlimited money." Everything he uses is a frontier model (while building Omarchy he moved from Opus 4.8 to Sol and then to Opus 5.5, with an enormous gap between generations), with no cheap models or optimization tricks involved.</li>
+</ul>
+<h2>5. Superintelligence and Robots: Software Arrives First, Hardware Takes Its Time</h2>
+<p>The host has a "superintelligence test": every time a new model comes out, he gives it a $20,000 budget to order the parts it needs online and assemble itself into a walking robot. We are nowhere close to that yet — for now it just keeps ordering home automation gear (Grok apparently thinks the right form for AI in the home is home automation; the host joked that giving it a vague goal like "optimize human happiness" is how you end up as a paperclip).</p>
+<p>DHH's view:</p>
+<ul>
+<li>He has no ASI test of his own, but he has a feeling: <strong>as far as software development goes, superintelligence is already here.</strong> In breadth, AI is better than any programmer he has ever known; individual super-programmers can still win in narrow areas, but taken together with the pace, it is already superintelligence. Anything he wants to build now, he can build by prompting and steering a little.</li>
+<li>He concedes the window may be short: it is entirely possible that by next year there will be true superintelligence, better even than him at polishing the perfect computer, and at that point you just say "make me a great computer" and it will customize even the Linux kernel for you. He is savoring this brief moment in which the human can still add something — "and then maybe we're all dead at the end of next year, so enjoy it."</li>
+<li>Hardware runs on a completely different clock: two weeks ago in China he visited Unitree and other robotics companies, and the people at Unitree said humanoid robots are another four or five years away, maybe ten. The software people think the revolution is next year; the people working on actuators and mechanics think even peeling an onion is quite hard. Both perspectives exist at once.</li>
+</ul>
+<h2>6. Frontier Labs vs. Open Source: We Need Both</h2>
+<p>DHH's position: open source and open weights are absolutely essential to keeping the whole game honest; we need competition. Twice in his career he has been dismayed by duopolies: from about 2000 to 2009 there was a glorious age in which the most important platform was completely open and anyone could build anything without asking permission; then the mobile platforms arrived, and everything required permission again.</p>
+<ul>
+<li>The worst case is two labs dividing the market between them — especially if enforced by the government at gunpoint. That would be a nightmare. It reminds him of the encryption wars of the 1990s, when we came close to banning public-key encryption because the NSA and others worried about eavesdropping; without encryption there would be no e-commerce and no secure communication. AI is at the same precipice now: he hears plenty of smart people say maybe the government should just take it over, and his reaction is "Jesus."</li>
+<li>The good news is that competition among closed models is more intense than in any other phase of the computer industry he has observed: it is not just two labs ahead — xAI is quite close, Google drifts in and out of the game, and a handful of other labs are nipping at their heels.</li>
+<li>Open-weight models are getting really good too: GLM, DeepSeek Flash and the like are roughly six or seven months behind the frontier, and on some tasks not even that. He doesn't buy vendors' self-reported benchmarks, but "they are in the game, these models are useful, and you can run them on your own local hardware" — that is what matters.</li>
+<li>Six months ago he wrote a piece arguing that buying a fast personal computer to run local models was stupid, because the local models of the time couldn't do anything that mattered. He now happily admits he was totally wrong: a DGX Spark can run a genuinely useful model — there is intelligence in a box on your desk that you can buy for single-digit thousands of dollars. He does not take the hard line of "open source or bust": he cheers for the two US frontier labs and their lead, as long as competition keeps them honest and they don't get an infinite money glitch that lets them raise the price of tokens to $500 per million — "we would absolutely pay." The cautionary tale is how Google and Meta sucked out 99% of the value chain in online advertising in the social media era.</li>
+</ul>
+<h2>7. The Ambition: Pass macOS Within Three Years</h2>
+<p>When Omarchy started, he just wanted a nicer computer for himself — a place to live where Apple doesn't control his destiny — and would have been happy with fifty thousand people using it. Then the agents arrived and his ambition kept inflating (he calls it the "ambition ladder": you build something that would have been magical five years ago and it gets 40 likes, so you have to keep ratcheting up the level of ambition to keep getting the dopamine hits): from "a slightly better computer" to literally "the perfect computer" — everything he has ever wanted from a computer over 40 years, he can now more or less make happen by himself.</p>
+<p>His current "delusion of grandeur" is this: <strong>within three years, Omarchy (Linux) will be bigger than macOS</strong>. The reasoning: there are only 180 million macOS users in the world. The Mac looks big in America, and especially in Silicon Valley where everyone uses one, but outside that bubble it is tiny — not even a C-tier internet service, when the biggest services have billions of users. He wouldn't put majority odds on unseating the Mac within 12 months, but he wouldn't rule it out either: "If the smart people at the labs think recursive self-improvement will give us the super god of AI within about 12 months, surely we can take out the world's second-ranked operating system."</p>
+<p>He tries to be ferociously ambitious only within his own narrow scope; colonizing the planets he leaves to the Elons of the world. He deliberately avoids predicting where models will be in a year or two: that way lies "AI psychosis." What he wants is the milder "AI euphoria" — staying excited and focused on what is possible with the tools as they are right now. The only prediction of the future he enjoys is William Gibson's line: the future is already here, it's just not evenly distributed. Extrapolating from what he can already do, GDP acceleration of 3–10% a year is within the realm of the possible; but where the models will be in a year — "shake the Magic 8 Ball and ask again." He also offered the Oppenheimer analogy: anyone sitting next to Oppenheimer in 1944 predicting a desolate, nuclear-wasted planet within five years would have been wrong — the bomb turned out to be the best thing that ever happened to world peace, delivering 50 years of cold war without total nuclear annihilation. Predicting the future is very hard.</p>
+<p>Also mentioned: the nonprofit behind Omarchy, the Omarchy Foundation, has raised about $23 million in tokens and donations, and every contract involved in setting up the foundation was drafted by an agent.</p>
+<h2>8. The Return of Hacker Culture</h2>
+<p>The host noted an unexpected phenomenon in this AI wave: so many of the greats of the past 30 years — Eric Raymond, John Carmack, DHH himself — have shown up to help guide the way. DHH says that everyone he respects who has actually built something the hard way is "100% fully pilled," because anyone who has used these tools knows the acceleration is undeniable; many of them are also financially secure enough not to feel threatened. The uncomfortable middle is ordinary programmers who worked hard to earn their place and now fear their skills could go to zero overnight. We should have sympathy for them, he says — as we should have for Detroit auto workers in the 1970s, or for the Luddites, the original weavers in England. But sympathy doesn't mean going back to the pre-industrial age: "There is only one way forward, and that's through."</p>
+<p>The people he looks to now are of two kinds. First, fellow veterans — Carmack, Tim Sweeney, Mitchell Hashimoto and many others, all of them leaned in. Second, <strong>the return of the pseudonymous hacker</strong>: the Omarchy core team and the Omarchy Foundation staff include two pseudonymous members (Outfoxed, the creator of Quickshell, and one of the artists), and the foundation sponsors pseudonymous figures in the local AI scene as well. To him this is a throwback to 1990s phreaker culture and elite message boards — an "anti-LinkedIn culture." X has been the connective tissue of this whole revolution, connecting the artists, the pseudonymous hackers, and the local AI movement.</p>
+<p>The demo culture of the 1990s is back too: Omarchy's signature visual effect is its screensaver — ASCII art running through 40 demo effects, straight out of a 1995 demo party intro. Since booting a local AI model takes a few seconds, he jammed in another ASCII effect to watch while it loads; it has absolutely no functionality, and that is the point. At 14 he ran an elite bulletin board system out of his bedroom with three phone lines; when the man from the Danish telecom monopoly came to install the third line and saw a 14-year-old kid, he thought it had to be illegal — "and he was totally right that it felt that way; it was totally legal, and totally awesome." His aesthetic stance: computers should be a little mysterious and a lot of cool. Jonathan Ive essentially aluminum-polished all the character out of the computer; that era is over. "We're getting the hackers back."</p>
+<h2>Quotes Worth Keeping</h2>
+<ul>
+<li>"Mac OS and Windows are just unfit for the age of agents." (the opening line)</li>
+<li>"The three things that made Linux hard to use in the past — terminal-heavy, inscrutable config files, cryptic error messages — are exactly the three things agents love."</li>
+<li>"Anyone who still thinks there is a moat in source code is delusional."</li>
+<li>"My dopamine payoff is entirely in the last 2%; I don't care about the first 98%."</li>
+<li>"First we take Manhattan (the desktop), then we take Berlin (mobile)."</li>
+<li>"Apple risks becoming the AOL of the agent era."</li>
+<li>"The future is already here; it's just not evenly distributed." (quoting William Gibson)</li>
+<li>"I want AI euphoria, not AI psychosis."</li>
+</ul>
+<h2>The Limits of These Notes</h2>
+<ul>
+<li>These notes were compiled from a machine transcript (the English small model). Omarchy was transcribed under several spellings (Umachi, Omanchi, etc.) and has been normalized by context; model names are recorded as DHH stated them (Opus 4.8, Sol, Opus 5.5); a few proper names that could not be confirmed (such as his partner's name, and individual models and people) were left out of these notes.</li>
+<li>All figures in the text (180 million macOS users, $23 million raised, six or seven months behind, 1,500 tokens per second, the $20,000 robot test, etc.) are statements made by the speakers in the interview and have not been independently verified.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=TtOoLanFzGw">https://www.youtube.com/watch?v=TtOoLanFzGw</a>（a16z）· 嘉宾：David Heinemeier Hansson (DHH) · 发布日期：2026-11-20 · 时长：52 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=TtOoLanFzGw">https://www.youtube.com/watch?v=TtOoLanFzGw</a>（a16z）· 嘉賓：David Heinemeier Hansson (DHH) · 發布日期：2026-11-20 · 時長：52 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=TtOoLanFzGw">https://www.youtube.com/watch?v=TtOoLanFzGw</a> (a16z) · Guest: David Heinemeier Hansson (DHH) · Published: 2026-11-20 · Duration: 52 minutes<br>This page contains the full notes, manually edited from a machine transcript; the views and figures are as stated by the original speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=TtOoLanFzGw">https://www.youtube.com/watch?v=TtOoLanFzGw</a>（a16z）· 嘉宾：David Heinemeier Hansson (DHH) · 发布日期：2026-11-20 · 时长：52 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"AI 让 DHH 一天工作 16 小时：a16z 对话 DHH · Yat's Talks",tw:"AI 讓 DHH 一天工作 16 小時：a16z 對話 DHH · Yat's Talks",en:"AI Has DHH Working 16-Hour Days: a16z in Conversation with DHH · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
