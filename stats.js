@@ -5,13 +5,13 @@
   var U = {
     zh: { events: "场活动在列", hackathons: "场黑客松正在报名", talks: "场谈话", vps: "个套餐", xlist: "位", expat: "场活动", remote: "个岗位", nomadlist: "座城市",
       today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暂无新增",
-      hackTitle: "本站最大的清单：全球黑客松", hackSub: function (n) { return n + " 场正在报名，每天核实更新"; }, go: "去看 →" },
+      hackTitle: "全球黑客松", hackSub: function (n) { return n + " 场正在报名，每天核实更新"; }, go: "去看 →" },
     tw: { events: "場活動在列", hackathons: "場黑客松正在報名", talks: "場談話", vps: "個套餐", xlist: "位", expat: "場活動", remote: "個崗位", nomadlist: "座城市",
       today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暫無新增",
-      hackTitle: "本站最大的清單：全球黑客松", hackSub: function (n) { return n + " 場正在報名，每天核實更新"; }, go: "去看 →" },
+      hackTitle: "全球黑客松", hackSub: function (n) { return n + " 場正在報名，每天核實更新"; }, go: "去看 →" },
     en: { events: "events listed", hackathons: "hackathons open", talks: "talks", vps: "plans", xlist: "people", expat: "events", remote: "jobs", nomadlist: "cities",
       today: "New today", last: "Last added", week: "Last 7 days", none: "Nothing new yet today",
-      hackTitle: "Our biggest list: global hackathons", hackSub: function (n) { return n + " open for registration, verified daily"; }, go: "Browse →" }
+      hackTitle: "Global hackathons", hackSub: function (n) { return n + " open for registration, verified daily"; }, go: "Browse →" }
   };
   function lang() { var l; try { l = localStorage.getItem("szLang"); } catch (e) {} return l === "en" || l === "tw" ? l : "zh"; }
   function md(d, L) { var m = +d.slice(5, 7), dd = +d.slice(8, 10); return L === "en" ? ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m - 1] + " " + dd : m + "月" + dd + "日"; }
