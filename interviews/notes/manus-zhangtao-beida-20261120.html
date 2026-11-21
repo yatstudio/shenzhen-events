@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《Manus 是怎么诞生的：张涛北大分享的完整内幕（转述版）》 — Yat's List 访谈纪要全文</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 48px;line-height:1.75;color:#1a1a1a;background:#fff}
+a{color:#0b5cad}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+h1{font-size:24px;line-height:1.4}
+h2{font-size:20px;margin-top:1.6em}
+h3{font-size:17px;margin-top:1.4em}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid #ddd;color:#444;background:#fafafa}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 10px;text-align:left}
+hr{border:none;border-top:1px solid #e5e5e5;margin:2em 0}
+code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:12px;overflow-x:auto;border-radius:4px}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e5e5e5;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<a class="back" href="/talks/">← 返回 Yat's Talks · 谈话录</a>
+<article>
+<h1>Manus 是怎么诞生的：张涛北大分享的完整内幕（频道转述版）</h1>
+<ul>
+<li>视频：https://www.youtube.com/watch?v=i-5jWpZFFVU</li>
+<li>标题：《Manus 是怎么诞生的：张涛北大两小时完整内幕》</li>
+<li>频道：进藏人的思考空间</li>
+<li>上传日期：2026-11-20</li>
+<li>时长：13 分 40 秒（注意：视频本身只有约 14 分钟；「两小时」指的是张涛在北大 AI 创投课原分享的长度，本视频是频道主对那场分享的完整转述与拆解，不是原声录像）</li>
+<li>逐字稿：transcript.txt（30 段，[00:00:00]–[00:13:26]，来自 YouTube 中文字幕自动对齐轨）</li>
+</ul>
+<blockquote>
+<p>说明：本纪要按频道转述整理。内容是 Manus 联合创始人张涛在北大分享的观点，经第三人转述，引用语按转述归属张涛，未与原始录像逐字核对；数字均为分享口径。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>Manus 的诞生路径是：砍掉做了七个月的 AI 浏览器，转身押注「模型解锁的不是编程能力、而是 agent 能力」，用 400 道「实习生任务」当评测集，靠过程透明和 session replay 解决信任问题，再靠「面向六个月后的模型做产品」吃到模型升级的全部红利。</p>
+<h2>一、张涛其人</h2>
+<p>张涛是 Manus 联合创始人、首席产品官，1986 年生，是公司里年纪最大的合伙人。十几年职业生涯里只在腾讯和字节各干过一年，其余时间全在创业；产品从 C 端做到 B 端、从国内做到海外，自称「典型的古典产品经理」。他自嘲：2009 年同一批入行做产品的人，回头看只有他还在 AI 赛道一线——因为一直没有大成，所以一直还在坚持干。</p>
+<h2>二、从 Monica 到砍掉 AI 浏览器</h2>
+<ul>
+<li><strong>Monica（2023）</strong>：ChatGPT 刚出来时，用户写完邮件文案要在标签页间来回复制粘贴，他们做了活在侧边栏里的浏览器插件 Monica——框选一段文字直接改写或翻译，不用离开页面。同类功能 Google 过了一年半才加进 Gmail。Monica 一年增长很快，但 2024 年撞到天花板：世界上很多人一辈子不知道浏览器能装插件，市场就这么大。</li>
+<li><strong>AI 浏览器（2024 年 3–10 月）</strong>：组新团队做了七个月的 AI 原生浏览器，成熟度自称远超后来的 Arc Dia 和 Perplexity Comet，发布网站和视频全部做好——<strong>最后没发</strong>。原因很扎心：用户拿到 AI 浏览器的第一个问题永远是「我在 Chrome 里用的那个功能去哪找」，用户永远拿旧体验的基准线对标你；三十人的团队去跟苹果、谷歌对齐二十年的浏览器基础，几乎不可能；一旦发出去，团队要被拖进去三到六个月。CEO Red 最后拍板砍掉。张涛的总结是：<strong>创业里钱是最不值钱的，最浪费不起的是时间</strong>。回头看，这是最重要的决定。</li>
+</ul>
+<h2>三、Manus 的立项：解锁的是 agent，不是编程</h2>
+<ul>
+<li>浏览器砍掉后，五个人在小办公室里找方向。他们天天用 Cursor，但张涛用 Cursor 干的是报销、把 MP4 转 MP3、写小说这类杂事。2024 年 11 月 Anthropic 发布 Sonnet 3.5 V2，Cursor 和 Windsurf 的能力集体飞跃。全世界都在做 Cursor 的复制品，他们看到的是另一件事：<strong>这个模型解锁的不是编程能力，是 agent 能力</strong>——两个标志是长程规划（模型知道一个任务不该在一轮对话里完成）和工具调用。判断是：「这个世界不需要更多工程师，这个能力是给普通人的。」</li>
+<li>2024 年 12 月立项，团队慌得不行，怕被抢先。2025 年 3 月 5 日发布后发现，全世界只有他们在做这个。</li>
+<li><strong>评测集的来历</strong>：张涛在朋友圈发了一条——「如果你有一个本科水平的实习生，你会交代什么任务给他做」。一百多个朋友交来四百多个任务，去掉买奶茶这类需要具身智能的，剩三百多条，成了 Manus 最早的评测集。1 月 5 日调通第一版，此后每天这套题都给他惊喜，agent 用完全超出想象的方式完成任务。他的原话（转述）：「智能跳出屏幕拍在你脸上的那种感觉，你无法抗拒，你知道这就是未来。」</li>
+</ul>
+<h2>四、信任问题：把透明做成功能</h2>
+<ul>
+<li>冲击太强反而带来问题：直接交付结果，用户觉得是假的。发布第一周，很多人以为他们发的是假演示（fake demo）。</li>
+<li>解法是两个后来成为全行业标配的设计：一是<strong>把 agent 的工作过程一步步展示出来</strong>——它先怎么想、调用什么工具、访问哪个网页、写了什么笔记；二是 <strong>session replay</strong>——把任务分享出去，别人不用邀请码、不用充值，就能完整回看一遍执行过程。这两个设计完全是面向传播做的：很多人不信 agent，但看到它像人一样一步步工作，就开始信了。</li>
+</ul>
+<h2>五、发布视频：创始人自己拍的</h2>
+<p>2 月 28 日 CEO 看官网觉得有点素，问要不要加个视频。张涛打给北京几家视频公司，工期都是两周起。被逼无奈自己拍：索尼 A7C2 机身，镜头是从真格的投资人那借的，Peak 当演员，在共享办公园区找了两个背景干净的地方，3 月 1 日拍完，张涛自己用剪映剪了两天。唯一的开销是导出 4K 要会员，花十几美元买了一个月。那个「创始人坐沙发、背后两棵绿植」的视频后来被无数公司模仿。张涛的观点：真正重要的从来不是视频而是产品本身，但早期创业的营销必须创始人自己上，别人讲不出那个故事。</p>
+<h2>六、四个关键判断</h2>
+<ol>
+<li><strong>理解模型能力的边界：永远面向六个月后的模型做产品。</strong> 首席科学家 Peak 做了十几年 NLP，能从模型表现里感知前沿实验室在往哪走。2025 年 2 月中旬 Sonnet 3.7 发布那晚，张涛发了条朋友圈，四个字：「信仰充值」——整个系统一行代码没改，只是把模型接口从 3.5 V2 换成 3.7，剩下两三成没解决的难题全部解了。这就是 <strong>less structure, more intelligence</strong>：当年这是异端，共识是人教 AI 做事、写死流程；他们坚持把每一步决策交给模型。模型每升一级，你就白得一级红利。</li>
+<li><strong>为什么不做 Chatbot。</strong> Chatbot 的产品上限被用户的提问能力限制住了——用户不会提问题，产品价值就出不来。另一个反共识点：<strong>免费补贴是最大的陷阱</strong>，补贴吸来的是免费用户，给你一堆无效反馈、拖垮注意力；大厂尤其明显，一个总监做到一二十万免费日活就成了 KPI，没人敢转收费。Manus 上付费的第一个月 ARR 就冲到四千多万、接近五千万美元；核心用户一个月在平台上花四五千美元。「真智能，就有人付费。」</li>
+<li><strong>坚持 General。</strong> 发布时投资人都劝：你老演示稀奇古怪的长尾任务，能不能专注做个网站生成器。没听。回头看这是最重要的战略判断：<strong>品牌心智一辈子只有一次机会</strong>，因为一开始就叫出了 general agent，后来推什么子功能都顺理成章。他们内部有一张图：横轴付费金额、纵轴满意度，最右上角的用户是老板——公司里杂事最多的人，CEO 今天想这个明天想那个，只有什么都能干的 agent 能让他最爽。</li>
+<li><strong>理解用户：用户是普通人，不是工程师。</strong> 所以做了云沙箱——所有任务在云端跑，手机上布置完任务就可以揣兜里，不用开着电脑。一个有意思的数据：美国是最大收入来源，但旧金山和西雅图都不在用户前十，前十是洛杉矶、迈阿密、芝加哥这些城市——那不是天天切换工具的科技人群。张涛说：别老想着功能对功能的竞争，想清楚你到底服务谁。</li>
+</ol>
+<h2>七、邀请码的真相：不是饥饿营销，是烧不动</h2>
+<p>很多人以为邀请码是饥饿营销，其实是账上没钱：当时公司账上只有八九百万美元，有邀请码控制着，高峰一天还要烧五十万美元；没有邀请码，3 月 10 号就能关门。当时连付费系统都没做，是火了之后才紧急加上去的。更深层是算力问题：一个 agent 用户的 token 消耗是 Chatbot 的两百到一千倍；上线第三天就需要 800M 的 TPM，打电话给云厂商说要 500M，人家以为他在吹牛砍价。最后从一家没什么客户的厂商那捡漏，撑过了头一个月。等到五月取消邀请码，云厂商的储备也上来了——后来的 agent 创业者再没遇到过这个问题。</p>
+<h2>八、给创业者的三条建议</h2>
+<ol>
+<li><strong>全球化视野。</strong> 去年六月他去法国参加 VivaTech，出发前收到爱丽舍宫邮件说马克龙请他吃饭，第一反应是诈骗。晚宴上马克龙坐他右手边，黄仁勋坐对面。他听欧洲创业者和投资人聊天觉得不对劲：整个欧洲是防御心态，build in Europe、build for Europe。他想，如果当初只做中国市场，他不会坐在那个位置。大语言模型移除了语言这个最大障碍；他不准公司里说「国外」这个词——世界不是国内加国外的二元对立。Manus 最大收入来自美国，最大用户地区是巴西。</li>
+<li><strong>多实操，少读自媒体。</strong> 他面试 AI 产品经理的观感特别差：最夸张的手机上没装那个应用，次夸张的打开之后任务列表只有两三条，明显是面试前突击的。「AI 冲击行业四年了，还有这种事。」自媒体的问题是没有行业经验、靠流量思维刺激情绪；Manus 二十个月里被「颠覆」了无数次，业务一直增长。真正的产品感觉全在细节里，要自己上手。</li>
+<li><strong>观察生活。</strong> 技术过剩的时代，最缺的是发现和定义问题的能力，这个能力来自对生活的好奇心。</li>
+</ol>
+<h2>九、名字的来源，与现场问答</h2>
+<ul>
+<li><strong>Manus 来自 MIT 的校训 Mens et Manus（拉丁语：头脑和手）</strong>。所有大模型厂商都在做头脑；2024 年底那么强的头脑为什么产生不了那么大的影响？因为它只有大脑没有手。Manus 就是大模型的手，让大脑的思考作用到真实世界。这句话同样适用于创业本身：所有思考都需要实践，而不是停留在 PPT 推演上。</li>
+<li>现场问答里，有人问 Codex 和 Claude Code 的竞争，张涛说真实用户不用那些东西，旧金山满地的科技人群不是他们的用户；有人问通用 agent 还有没有机会，真格的 Tina 说：先跳进去开始做，别老想机会存不存在。</li>
+<li>频道主的收尾总结：七个月做完的浏览器说砍就砍是战略定力的教科书；一个 agent 用户两百到一千倍的 token 消耗，逼着整个云行业重估算力储备；less structure, more intelligence 从异端变成共识；四百道实习生考题成了最早的评测集。最后一句是张涛在北大的收尾——所有的大机会都在未知里，不在确定性里。</li>
+</ul>
+<h2>本期纪要的边界</h2>
+<ul>
+<li>本视频是频道主对张涛北大分享的<strong>转述与拆解</strong>，不是分享原声；张涛的「原话」均来自转述，措辞可能与原讲有出入，个别事实（如与 Dia、Comet 的成熟度对比）是张涛本人在分享中的自述口径。</li>
+<li>数字（ARR、烧钱速度、TPM、账上现金）均为分享口径，未经独立核实。</li>
+<li>字幕为 YouTube 自动对齐轨，个别词有识别误差（如「雾件」应为对 fake demo 的音译类说法），纪要已按上下文处理。</li>
+</ul>
+</article>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=i-5jWpZFFVU">https://www.youtube.com/watch?v=i-5jWpZFFVU</a>（进藏人的思考空间）· 嘉宾：张涛 · 发布日期：2026-11-20 · 时长：14 分钟<br>本页为频道转述内容经人工整理的纪要全文；观点、数字均为原分享者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</body>
+</html>

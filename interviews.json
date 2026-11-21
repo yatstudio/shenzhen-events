@@ -1,9 +1,34 @@
 {
-  "updated_at": "2026-11-21T02:22:39Z",
+  "updated_at": "2026-11-21T02:57:27Z",
   "title": "Yat's List 访谈清单",
   "note": "深度访谈与分享的全文纪要存档：每条含原视频链接、要点与全文纪要页（note_url）。内容为嘉宾在节目中的自述与观点，未经核实。人工整理、不定期更新。",
   "source_site": "https://yatslist.com/interviews/",
   "interviews": [
+    {
+      "date": "2026-11-20",
+      "duration": "14 分钟",
+      "duration_minutes": 14,
+      "guest": "张涛",
+      "highlights": [
+        "Manus 之前，团队花七个月做了一款完整的 AI 浏览器，发布网站和视频都做好了，最后被 CEO 拍板砍掉：用户永远拿 Chrome 的旧体验对标你，三十人的团队对不齐苹果谷歌二十年的浏览器基础。「创业里钱是最不值钱的，最浪费不起的是时间。」",
+        "立项的判断是：Sonnet 3.5 V2 解锁的不是编程能力，而是 agent 能力——长程规划加工具调用，「这个世界不需要更多工程师，这个能力是给普通人的」。最早的评测集来自一条朋友圈：向一百多个朋友征集「你会交给本科实习生什么任务」，收来四百多条。",
+        "less structure, more intelligence：系统一行代码没改，只把模型从 3.5 V2 换成 3.7，剩下两三成难题全部自解。张涛当晚的朋友圈只有四个字——「信仰充值」。",
+        "邀请码不是饥饿营销：当时账上只有八九百万美元，有码控制着高峰一天还烧五十万美元；一个 agent 用户的 token 消耗是 Chatbot 的两百到一千倍，上线第三天就要 800M TPM，云厂商以为他在吹牛。"
+      ],
+      "host": "进藏人的思考空间",
+      "id": "manus-zhangtao-beida-20261120",
+      "note_url": "/interviews/notes/manus-zhangtao-beida-20261120.html",
+      "series": "进藏人的思考空间",
+      "title": "《Manus 是怎么诞生的：张涛北大分享的完整内幕（转述版）》",
+      "topics": [
+        "Manus",
+        "张涛",
+        "通用 Agent",
+        "产品方法论",
+        "创业"
+      ],
+      "url": "https://www.youtube.com/watch?v=i-5jWpZFFVU"
+    },
     {
       "date": "2026-11-20",
       "duration": "1 小时 50 分",
