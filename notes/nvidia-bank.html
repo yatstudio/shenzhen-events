@@ -8,21 +8,28 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/">Talks</a>
     <a href="https://yatslist.com/notes/" class="nav-on">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/notes/">← 返回 Yat's Notes</a>
-<article>
+<a class="back" href="/notes/" data-ui="back">← 返回 Yat's Notes</a>
+<article class="langver" data-lang="zh">
   <span class="kicker">AI 解读 · 图表</span>
   <h1>英伟达是 AI 产业的中央银行</h1>
   <div class="meta">2026-11-21 · 原图：ZeroHedge《The Bank Of Nvidia》（2026-11-12）· 解读：大脚</div>
@@ -61,7 +68,101 @@
 
   <div class="src">数据来源：ZeroHedge 整理 Nvidia 10-Q 与 CFO 口径（Q2 FY27，2026-07-26）、8-K 与 13F 文件、公司文件与新闻稿（Bloomberg、Reuters、CNBC、WSJ、The Information、Hunterbrook）。图中数字为已宣布的承诺或最大敞口，未标注的并非盯市价值。</div>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+  <span class="kicker">AI 解讀 · 圖表</span>
+  <h1>英偉達是 AI 產業的中央銀行</h1>
+  <div class="meta">2026-11-21 · 原圖：ZeroHedge《The Bank Of Nvidia》（2026-11-12）· 解讀：大腳</div>
+
+  <img class="hero" src="https://img.yatslist.com/notes/nvidia-bank.png" alt="The Bank Of Nvidia：英偉達出資、擔保與回購關係圖">
+
+  <div class="lede">一句話：<b>Nvidia 已經不只是賣晶片的，它是整個 AI 產業的中央銀行</b>——出資、出擔保、出兜底，錢在生態裡繞一圈，最後大部分又變回 GPU 訂單回到它自己帳上。</div>
+
+  <h2>先看中心那四個數（截至 2026 年 7 月 26 日）</h2>
+  <div class="nums">
+    <div class="num"><div class="v">$990 億</div><div class="k">股權投資帳面：投出去的錢</div></div>
+    <div class="num"><div class="v">$1,085 億</div><div class="k">擔保：替別人借錢做的保</div></div>
+    <div class="num"><div class="v">$560 億</div><div class="k">雲容量回購 + 第三方租賃：客戶賣不掉的算力，它兜底買回</div></div>
+    <div class="num"><div class="v">$2,790 億</div><div class="k">供應承諾：答應未來供貨的量</div></div>
+  </div>
+
+  <h2>錢分三條線流出去</h2>
+  <p><b>1. 投客戶</b>：OpenAI $300 億股權、Anthropic 最高 $100 億 + $100 億 IPO 錨定單、xAI/SpaceX 約 $170–210 億、SSI $50 億、Poolside $10 億 + $60 億模型授權。被投的全是買 GPU 的人。</p>
+  <p><b>2. 給客戶的融資做擔保</b>：OpenAI 原本開口 $2,500 億，被砍成 $1,050 億擔保（給它在俄亥俄 SB Energy 的 20 年租約兜底）；華爾街六家（Brookfield、Apollo、BlackRock、Blackstone、Goldman、KKR）搭了個 $5,000 億融資平台，Nvidia 給到 $1,250 億兜底——華爾街出錢，Nvidia 做保。</p>
+  <p><b>3. 給雲廠商回購兜底</b>：CoreWeave $63 億未售容量回購、Nebius $20 億股權 + 5GW 部署、Lambda 的 GPU 租賃回購。CoreWeave、Nebius、IREN 這批 neocloud 本質上是靠 Nvidia 的信用才融得到資建機房。</p>
+
+  <h2>這張圖為什麼會被做出來——它畫的是「循環融資」的質疑</h2>
+  <p>Nvidia 投客戶 → 客戶拿錢買 Nvidia 的卡 → Nvidia 確認收入 → 股價漲 → 再投更多。這跟 2000 年電信泡沫裡朗訊、北電給運營商放貸買自己設備是同一個結構。圖源是 ZeroHedge，天生偏空；而且圖腳自己寫了：帶 * 的是媒體報導的意向、未證實，數字是「宣布的承諾或最大敞口」，別全當已落地的錢。</p>
+
+  <h2>Nvidia 這麼幹的理由也成立</h2>
+  <p>鎖死需求、堵住 AMD 和客戶自研晶片、把客戶的融資能力直接變成自己的訂單能見度；股權端還能吃客戶上漲——投 Intel 的 $50 億已經漲到約 $300 億。</p>
+
+  <h2>風險點就兩個</h2>
+  <ul>
+    <li>擔保和回購全是同一種風險的 N 份拷貝——AI 需求真降溫，這些兜底會同時被觸發，不叫分散投資；</li>
+    <li>敞口高度集中在 OpenAI、Anthropic 兩家身上，任何一家付不起租，傳導鏈直接回到 Nvidia 的資產負債表。</li>
+  </ul>
+
+  <h2>對你的落點</h2>
+  <p>你碰的算力、雲、託管生意，上游的錢很多就是從這張圖裡流出來的——跟 neocloud 這類玩家打交道時，先看清它的錢是誰擔保的，它的信用本質上是 Nvidia 的信用。</p>
+
+  <div class="src">數據來源：ZeroHedge 整理 Nvidia 10-Q 與 CFO 口徑（Q2 FY27，2026-07-26）、8-K 與 13F 文件、公司文件與新聞稿（Bloomberg、Reuters、CNBC、WSJ、The Information、Hunterbrook）。圖中數字為已宣布的承諾或最大敞口，未標註的並非盯市價值。</div>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+  <span class="kicker">AI Reading · Chart</span>
+  <h1>Nvidia Is the AI Industry's Central Bank</h1>
+  <div class="meta">2026-11-21 · Original chart: ZeroHedge, "The Bank Of Nvidia" (2026-11-12) · Commentary by DaJiao</div>
+
+  <img class="hero" src="https://img.yatslist.com/notes/nvidia-bank.png" alt="The Bank Of Nvidia: map of Nvidia's investments, guarantees and buybacks">
+
+  <div class="lede">In one line: <b>Nvidia is no longer just a chip seller — it is the AI industry's central bank.</b> It puts up equity, issues guarantees, and backstops capacity; money circles the ecosystem, and most of it comes back as GPU orders on its own books.</div>
+
+  <h2>Start with the four numbers in the center (as of July 26, 2026)</h2>
+  <div class="nums">
+    <div class="num"><div class="v">$99B</div><div class="k">Equity investments on the books: money put out</div></div>
+    <div class="num"><div class="v">$108.5B</div><div class="k">Guarantees: standing behind other people's borrowing</div></div>
+    <div class="num"><div class="v">$56B</div><div class="k">Cloud-capacity buybacks + third-party leases: compute customers can't sell, it buys back</div></div>
+    <div class="num"><div class="v">$279B</div><div class="k">Supply commitments: volumes promised for future delivery</div></div>
+  </div>
+
+  <h2>The money flows out along three lines</h2>
+  <p><b>1. Investing in customers</b>: OpenAI $30B equity, Anthropic up to $10B plus a $10B IPO anchor order, xAI/SpaceX roughly $17–21B, SSI $5B, Poolside $1B plus $6B in model licensing. Everyone invested in is a GPU buyer.</p>
+  <p><b>2. Guaranteeing customers' financing</b>: OpenAI originally asked for $250B, cut to a $105B guarantee (backstopping its 20-year lease with SB Energy in Ohio); six Wall Street firms (Brookfield, Apollo, BlackRock, Blackstone, Goldman, KKR) set up a $500B financing platform, with Nvidia backstopping up to $125B — Wall Street puts up the money, Nvidia provides the credit.</p>
+  <p><b>3. Buyback backstops for cloud providers</b>: CoreWeave's $6.3B unsold-capacity buyback, Nebius $2B equity plus 5GW deployment, Lambda's GPU lease buyback. Neoclouds like CoreWeave, Nebius and IREN can only raise money to build data centers because Nvidia's credit stands behind them.</p>
+
+  <h2>Why this chart got made — it draws the "circular financing" critique</h2>
+  <p>Nvidia invests in customers → customers spend the money on Nvidia cards → Nvidia books revenue → the stock rises → Nvidia invests more. Structurally the same as Lucent and Nortel lending to carriers to buy their own equipment in the 2000 telecom bubble. The source is ZeroHedge, bearish by nature; and the chart's own footnote says figures marked * are media-reported intentions, unconfirmed, and the numbers are announced commitments or maximum exposure — not all of it is money already out the door.</p>
+
+  <h2>Nvidia's reasons hold up, too</h2>
+  <p>Locking in demand, blocking AMD and customers' in-house chips, and turning customers' financing capacity directly into order visibility; on the equity side it also eats the upside — its $5B Intel stake is already worth roughly $30B.</p>
+
+  <h2>Just two risk points</h2>
+  <ul>
+    <li>The guarantees and buybacks are N copies of the same risk — if AI demand truly cools, these backstops get triggered all at once; that is not diversification;</li>
+    <li>Exposure is highly concentrated in OpenAI and Anthropic; if either can't pay its rent, the transmission chain runs straight back to Nvidia's balance sheet.</li>
+  </ul>
+
+  <h2>The takeaway for you</h2>
+  <p>Much of the money upstream of the compute, cloud and hosting businesses you touch flows out of this chart — when dealing with neocloud-type players, first work out whose guarantee stands behind their money; their credit is, in substance, Nvidia's credit.</p>
+
+  <div class="src">Sources: ZeroHedge's compilation of Nvidia's 10-Q and CFO statements (Q2 FY27, 2026-07-26), 8-K and 13F filings, company documents and press releases (Bloomberg, Reuters, CNBC, WSJ, The Information, Hunterbrook). Figures are announced commitments or maximum exposure; unmarked figures are not mark-to-market values.</div>
+</article>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"英伟达是 AI 产业的中央银行 · Yat's Notes",tw:"英偉達是 AI 產業的中央銀行 · Yat's Notes",en:"Nvidia Is the AI Industry's Central Bank · Yat's Notes"};
+var PUI={zh:{back:"← 返回 Yat's Notes",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Notes",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll(".langver").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,21 +8,28 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/">Talks</a>
     <a href="https://yatslist.com/notes/" class="nav-on">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/notes/">← 返回 Yat's Notes</a>
-<article>
+<a class="back" href="/notes/" data-ui="back">← 返回 Yat's Notes</a>
+<article class="langver" data-lang="zh">
   <div><span class="kicker">AI 解读 · 长文</span></div>
   <h1>45 天蒸发 6 万亿：AI 泡沫破了吗？</h1>
   <div class="orig">原文：-$6 Trillion In 45 Days: Is This A "Bubble" Or An Opportunity? — The Kobeissi Letter（@KobeissiLetter）</div>
@@ -66,7 +73,109 @@
 
   <div class="src">原文：<a href="https://x.com/KobeissiLetter/status/2123789428862660980">x.com/KobeissiLetter/status/2123789428862660980</a>（The Kobeissi Letter，2026-11-20）· 文中数字均为原文的统计与观点口径，未逐项独立核实 · 配图为原文封面图</div>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+  <span class="kicker">AI 解讀 · 長文</span>
+  <h1>45 天蒸發 6 兆美元：AI 泡沫破了嗎？</h1>
+  <div class="orig">原文：-$6 Trillion In 45 Days: Is This A "Bubble" Or An Opportunity? — The Kobeissi Letter（@KobeissiLetter）</div>
+  <div class="meta">2026-11-21 收錄 · 原文發表於 2026-11-20（X 長文）· 解讀：大腳</div>
+
+  <img class="hero" src="https://img.yatslist.com/notes/kobeissi-bubble.jpg" alt="標普 500、黃金與比特幣近 45 天走勢（原文配圖）">
+
+  <div class="stats">
+    <div class="stat"><div class="v">-$6 兆</div><div class="k">標普 500 市值蒸發（45 天）</div></div>
+    <div class="stat"><div class="v">-$2,250 億</div><div class="k">美股日均蒸發（連跌 31 個交易日）</div></div>
+    <div class="stat"><div class="v">+31.9%</div><div class="k">標普 500 三季度 EPS 同比</div></div>
+    <div class="stat"><div class="v">9 倍</div><div class="k">英偉達前瞻市盈率</div></div>
+  </div>
+
+  <div class="lede">一句話：<b>Kobeissi 的答案是——沒有泡沫破裂。</b>這 45 天是 AI 交易的一次正常回調：市場上能想到的壞消息，大半已經寫進價格裡了；高質量科技股的風險回報反而在變好。但他把話說得很穩：這不是見底斷言，只是「悲觀定價得比基本面還狠」。</div>
+
+  <h2>45 天裡發生了什麼</h2>
+  <p>標普 500 在 10 月 6 日見歷史高點之後一路向下：財報季開場、10 月 22 日 AI 股開始拋售、美聯儲會議、11 月 3 日中期選舉、11 月 12 日黃仁勳辭職風波，再疊上 Anthropic 的歷史級 IPO 在最近幾個交易日抽走市場流動性。45 天裡標普蒸發約 6 兆美元，同期黃金蒸發約 13 兆、比特幣約 5,500 億（均為原文統計口徑）。他的復盤方法是先問一句：什麼真的變了，什麼已經定價了？</p>
+
+  <h2>擔憂一：CapEx 與自由現金流——是真的，但已定價</h2>
+  <p>這輪拋售的源頭是市場開始算帳：亞馬遜、Alphabet、Meta、微軟四家三季度資本開支合計創下 2,019 億美元的紀錄，自由現金流卻轉成 -264 億美元，三年累計 CapEx 已達 1.6 兆。Kobeissi 不否認擔憂成立，但指出另一面：標普 500 三季度 EPS 同比增長 31.9%，是至少四年最強，且已連續 13 個季度超預期——「很少有市場同時這麼恐懼、又增長這麼強」。他的判斷是：這部分擔憂大半已經定價，真正的答案（投入資本回報率）要等到 2027 年一、二季度才會明朗。</p>
+
+  <h2>擔憂二：「Trump Put」終結</h2>
+  <p>他把最近科技股急跌的一個關鍵催化劑歸於中期選舉：民主黨橫掃之後，所謂「Trump Put」——市場跌狠了特朗普總會出手托底的預期——就此終結；11 月 4 日已有民主黨議員公開主張暫停先進 AI 研發、禁止超級智能，監管恐慌被市場提前定價。Kobeissi 認為這部分明顯誇大：美國真禁 AI 等於把全球 AI 競賽讓給中國，不會發生；監管和新稅會來，但市場定價的是比最終落地更極端的劇本。</p>
+
+  <h2>擔憂三：美聯儲還在升息</h2>
+  <p>伊朗戰爭打到近 300 天，美國通膨已連續 67 個月高於 2% 目標，美聯儲主席 Warsh 的口徑是通膨不回 2% 沒得商量，於是 AI 基建的錢只會更貴；11 月美國投資級公司債發行預計達 1,750 億美元、創歷年 11 月紀錄，等於大家都在搶貴的錢。但他也留了轉機：油價本月已跌約 22% 到 82.5 美元附近，戰爭接近尾聲，到 2027 年年中美聯儲政策轉鬆的概率在上升。</p>
+
+  <h2>晶片股被當成「出事了」在定價</h2>
+  <p>英偉達兩週內跌約 40%，AMD 被一份做空報告指控向中國走私晶片（原文亦註明未證實）。板塊前瞻市盈率已跌到 2020 年 3 月以來最低，英偉達前瞻市盈率只剩 9 倍——他的讀法是：市場不是在給增長定價，是根本不信那個「E」：哪怕英偉達給出約 7,500 億美元的 FY28 收入指引，市場也按「黃仁勳回不來、指引全作廢」在賣。這種定價方式本身，就留出了超預期上行的空間。</p>
+
+  <h2>情緒已經到危機級別</h2>
+  <p>VIX 從 10 月低點翻倍、11 月 5 日創下 2018 年 2 月以來最大單日漲幅並站上 30；Anthropic 的 IPO 認購總額約 5,000 億美元、約 7.8 倍超額，等於一次性從市場抽走巨額流動性；對沖基金過去 6 週（截至 11 月 13 日）的科技股淨流出創十年紀錄。他的結論是：價格的暴跌是情緒突變疊加流動性抽緊打出來的，等流動性回來，市場會自己穩住。</p>
+
+  <h2>結論，以及怎麼打折看這篇</h2>
+  <p>他的落點：這不是熊市開端，是正常回調——哪怕標普再跌 10%，也還在健康回調的範圍內；對「還要再跌 30%+」的流行敘事要保持警惕。2027 年之前，市場定價的是高利率、強監管、AI 投入回報不及預期、龍頭公司長期不確定性這一整套組合，任何一項落空都是正向驚喜。買跌資金會像 2025 年 4 月那樣快速輪回高質量科技股。需要打折的地方也要說清：這是一篇付費通訊的引流長文，文末照例曬了自家策略 2020 年以來 516% 對標普 112% 的戰績——立場天然偏多，結論當一家之言看。</p>
+
+  <h2>對你的落點</h2>
+  <p>這篇正好和這週 Space 里聽到的聲音構成對照：普達特喊「全面崩盤無處可逃」，賢者時間裡切哥他們在等 BTC 跌到 5 萬以下再抄。Kobeissi 這篇是美股版的第三種聲音——不喊底，只算「什麼已經定價了」。對你最有用的其實是這個方法而不是結論本身：你的倉位在加密不在美股科技，但恐慌期的動作紀律是通用的——先分清「基本面變了」和「情緒與流動性在殺人」，再決定動不動。你 11 月 2 日給自己定的調子（穩健、控風險、也抓機會）和這篇的落點其實合拍：不跟標題喊泡沫，也不急著證明自己敢抄底，等流動性回來，只看能把投入變成利潤的那批公司。</p>
+
+  <div class="src">原文：<a href="https://x.com/KobeissiLetter/status/2123789428862660980">x.com/KobeissiLetter/status/2123789428862660980</a>（The Kobeissi Letter，2026-11-20）· 文中數字均為原文的統計與觀點口徑，未逐項獨立核實 · 配圖為原文封面圖</div>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+  <span class="kicker">AI Reading · Longform</span>
+  <h1>$6 Trillion Gone in 45 Days: Did the AI Bubble Pop?</h1>
+  <div class="orig">Original: -$6 Trillion In 45 Days: Is This A "Bubble" Or An Opportunity? — The Kobeissi Letter (@KobeissiLetter)</div>
+  <div class="meta">Collected 2026-11-21 · Originally published 2026-11-20 (X longform) · Commentary by DaJiao</div>
+
+  <img class="hero" src="https://img.yatslist.com/notes/kobeissi-bubble.jpg" alt="S&P 500, gold and Bitcoin over the past 45 days (original cover chart)">
+
+  <div class="stats">
+    <div class="stat"><div class="v">-$6T</div><div class="k">S&P 500 market value erased (45 days)</div></div>
+    <div class="stat"><div class="v">-$225B</div><div class="k">Average daily loss in US stocks (31 straight trading days)</div></div>
+    <div class="stat"><div class="v">+31.9%</div><div class="k">S&P 500 Q3 EPS, year over year</div></div>
+    <div class="stat"><div class="v">9x</div><div class="k">Nvidia forward P/E</div></div>
+  </div>
+
+  <div class="lede">In one line: <b>Kobeissi's answer is — no bubble has burst.</b> These 45 days are a normal correction in the AI trade: most of the bad news anyone can think of is already written into prices, and the risk-reward on high-quality tech is actually improving. But he phrases it carefully: this is not a bottom call, just "pessimism priced in beyond what the fundamentals warrant."</div>
+
+  <h2>What happened in 45 days</h2>
+  <p>After the S&P 500 topped on October 6, it slid the whole way: earnings season opened, AI stocks started selling off on October 22, then the Fed meeting, the November 3 midterms, the November 12 Jensen Huang resignation turmoil, and on top of it all Anthropic's historic IPO draining market liquidity over the most recent sessions. In 45 days the S&P shed roughly $6 trillion; over the same stretch gold shed about $13 trillion and Bitcoin about $550 billion (all figures as stated in the original). His review method starts with one question: what actually changed, and what is already priced in?</p>
+
+  <h2>Worry #1: CapEx and free cash flow — real, but priced in</h2>
+  <p>The selloff began when the market started doing the math: Amazon, Alphabet, Meta and Microsoft together spent a record $201.9 billion on capex in Q3, while free cash flow swung to -$26.4 billion; cumulative capex over three years has reached $1.6 trillion. Kobeissi doesn't deny the concern, but points to the other side: S&P 500 Q3 EPS grew 31.9% year over year — the strongest in at least four years — with beats for 13 straight quarters. "Few markets are simultaneously this fearful and growing this strongly." His judgment: most of this worry is already priced in, and the real answer (return on invested capital) won't be clear until Q1–Q2 2027.</p>
+
+  <h2>Worry #2: The end of the "Trump Put"</h2>
+  <p>He ties a key catalyst for the recent tech plunge to the midterms: after the Democratic sweep, the so-called "Trump Put" — the expectation that Trump would step in to support the market if it fell hard — is over. On November 4 a Democratic lawmaker publicly called for pausing advanced AI development and banning superintelligence, and regulatory panic got priced in early. Kobeissi thinks this is clearly overdone: a real US AI ban would hand the global AI race to China and won't happen; regulation and new taxes will come, but the market is pricing a script more extreme than what will actually land.</p>
+
+  <h2>Worry #3: The Fed is still hiking</h2>
+  <p>The Iran war is nearing day 300, US inflation has now run above the 2% target for 67 straight months, and Fed Chair Warsh's line is that inflation comes back to 2%, no exceptions — so money for AI buildout only gets more expensive. November investment-grade corporate bond issuance is expected to hit $175 billion, a record for any November: everyone is competing for expensive money. But he leaves room for a turn: oil is down about 22% this month to around $82.50, the war is nearing its end, and the odds of Fed policy loosening by mid-2027 are rising.</p>
+
+  <h2>Chip stocks are priced as if something broke</h2>
+  <p>Nvidia fell about 40% in two weeks; AMD was accused by a short report of smuggling chips to China (unproven, as the original itself notes). The sector's forward P/E has dropped to its lowest since March 2020, and Nvidia's forward P/E is down to 9x. His reading: the market is not pricing growth — it simply doesn't believe the "E." Even with Nvidia guiding to roughly $750 billion of FY28 revenue, the market is selling as if "Huang isn't coming back and the guidance is void." Pricing like that is exactly what leaves room for upside surprises.</p>
+
+  <h2>Sentiment is at crisis levels</h2>
+  <p>The VIX has doubled from its October low, posted its biggest one-day gain since February 2018 on November 5, and broken above 30. Anthropic's IPO drew roughly $500 billion in orders — about 7.8x oversubscribed — a one-off drain of enormous liquidity. Hedge funds' net outflows from tech over the past six weeks (through November 13) hit a ten-year record. His conclusion: the price collapse was produced by a sentiment snap compounded by a liquidity squeeze; once liquidity returns, the market will stabilize on its own.</p>
+
+  <h2>His conclusion — and how to discount this piece</h2>
+  <p>His landing point: this is not the start of a bear market but a normal correction — even another 10% down on the S&P would still sit inside a healthy pullback — and readers should stay wary of the popular "another 30%+ to fall" narrative. Heading into 2027, the market is pricing a whole bundle: higher rates, aggressive regulation, disappointing AI returns, and long-term uncertainty around key tech leaders; any one of them failing to materialize is a positive surprise. Dip-buying will rotate back into high-quality tech quickly, like the April 2025 setup. The discount to apply: this is a paid newsletter's free teaser, and it closes by advertising the house strategy's 516% return since 2020 versus the S&P's 112% — structurally long-biased, so treat the conclusion as one house's view.</p>
+
+  <h2>The takeaway for you</h2>
+  <p>This piece forms a neat contrast with the voices in this week's Spaces: Predator was calling a "total collapse with nowhere to hide," while in Xianzhe Time, Qiege and others were waiting for BTC under $50K to buy. Kobeissi is the US-equity version of a third voice — no bottom call, just the accounting of "what is already priced in." For you, the method is worth more than the conclusion: your positions are in crypto, not US tech, but panic-period discipline transfers — first separate "the fundamentals changed" from "sentiment and liquidity are doing the killing," then decide whether to move. The stance you set for yourself on November 2 (steady, risk-controlled, but ready to take opportunities) actually matches this piece's landing point: don't shout "bubble" along with the headlines, don't rush to prove you dare to buy the dip — wait for liquidity to return, and only look at the companies that turn spending into profit.</p>
+
+  <div class="src">Original: <a href="https://x.com/KobeissiLetter/status/2123789428862660980">x.com/KobeissiLetter/status/2123789428862660980</a> (The Kobeissi Letter, 2026-11-20) · All figures are the original's statistics and opinions, not independently verified item by item · Image is the original cover chart</div>
+</article>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"45 天蒸发 6 万亿：AI 泡沫破了吗？ · Yat's Notes",tw:"45 天蒸發 6 兆美元：AI 泡沫破了嗎？ · Yat's Notes",en:"$6 Trillion Gone in 45 Days: Did the AI Bubble Pop? · Yat's Notes"};
+var PUI={zh:{back:"← 返回 Yat's Notes",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Notes",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll(".langver").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

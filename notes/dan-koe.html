@@ -8,21 +8,28 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/">Talks</a>
     <a href="https://yatslist.com/notes/" class="nav-on">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/notes/">← 返回 Yat's Notes</a>
-<article>
+<a class="back" href="/notes/" data-ui="back">← 返回 Yat's Notes</a>
+<article class="langver" data-lang="zh">
   <span class="kicker">AI 解读 · 长文</span>
   <h1>如何用一天修好你整个人生</h1>
   <div class="orig">原文：How to fix your entire life in 1 day — Dan Koe（@thedankoe）</div>
@@ -50,7 +57,79 @@
 
   <div class="src">原文：<a href="https://x.com/thedankoe/status/2010751592346030461">x.com/thedankoe/status/2010751592346030461</a> · 作者通讯：letters.thedankoe.com（文中 Human 3.0 模型链接同在其通讯站内）</div>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+  <span class="kicker">AI 解讀 · 長文</span>
+  <h1>如何用一天修好你整個人生</h1>
+  <div class="orig">原文：How to fix your entire life in 1 day — Dan Koe（@thedankoe）</div>
+  <div class="meta">2026-11-21 收錄 · 原文發表於 2026-01-13（X 長文）· 解讀：大腳</div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">2.5 億</div><div class="k">瀏覽</div></div>
+    <div class="stat"><div class="v">101 萬</div><div class="k">收藏</div></div>
+    <div class="stat"><div class="v">38 萬</div><div class="k">點讚</div></div>
+    <div class="stat"><div class="v">8 萬</div><div class="k">轉帖</div></div>
+  </div>
+
+  <div class="lede">一句話：<b>大多數人改人生的順序是反的——不是先逼自己改行為、再慢慢成為那種人，而是先定下「我是誰」，行為才會自己跟上。</b>這篇講的就是怎麼用一天完成這次切換。</div>
+
+  <h2>文章的三段</h2>
+  <p><b>1. 身分認同。</b>你不在想要的位置，不是因為不夠努力，而是因為你還不是「會處在那個位置」的那種人。目標定得再具體，一個覺得自己「不是做生意的人」的人，也會在每個關鍵動作上自動煞車。</p>
+  <p><b>2. 隱藏目標與拖延。</b>拖延往往不是懶，而是在保護某種東西：安全感、自我形象、或者「不用真的去試、也就不會真的失敗」的餘地。你嘴上說的目標，和你的行動暴露出來的真實目標，經常是兩個。先把隱藏目標挖出來，拖延才有解。</p>
+  <p><b>3. 一日重置。</b>用一整天做一次徹底審視：目標、環境、習慣、手頭的承諾全部過一遍，砍掉和新身分衝突的，留下的排成可執行的下一步。重點不是這一天做完多少事，是這一天之後你換了一套預設設定。</p>
+
+  <h2>為什麼這篇能爆</h2>
+  <p>數據結構很說明問題：收藏 101 萬，是點讚的 2.6 倍。人們收藏它不是因為同意，是打算「以後照著做」——這是工具型內容的典型長相。再加上標題把改變的門檻壓到最小單位「1 day」，低到無法拒絕。文末它導流去作者的 newsletter 和 Human 3.0 模型：免費長文是漏斗口，產品在後面。這篇本身就是 Dan Koe 一人公司的樣板間——內容即獲客。</p>
+
+  <h2>對你的落點</h2>
+  <p>這篇和你的真實接口很近：你 2026-11-02 給自己定的三條（麻煩事當天登記、24 小時內回應、按難度階梯清）就是「一日重置」的縮小版；他說的「拖延在保護自我形象」，和你自述的「怕麻煩、不怕風險」是同一件事的兩種說法。差別在於：他賣的是身分敘事，而你缺的不是敘事——規則已經有了，缺的是把規則跑滿 90 天。所以這篇值得收進來當鏡子，不必當新方法再學一遍。</p>
+
+  <div class="src">原文：<a href="https://x.com/thedankoe/status/2010751592346030461">x.com/thedankoe/status/2010751592346030461</a> · 作者通訊：letters.thedankoe.com（文中 Human 3.0 模型連結同在其通訊站內）</div>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+  <span class="kicker">AI Reading · Longform</span>
+  <h1>How to Fix Your Entire Life in One Day</h1>
+  <div class="orig">Original: How to fix your entire life in 1 day — Dan Koe (@thedankoe)</div>
+  <div class="meta">Collected 2026-11-21 · Originally published 2026-01-13 (X longform) · Commentary by DaJiao</div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">250M</div><div class="k">Views</div></div>
+    <div class="stat"><div class="v">1.01M</div><div class="k">Bookmarks</div></div>
+    <div class="stat"><div class="v">380K</div><div class="k">Likes</div></div>
+    <div class="stat"><div class="v">80K</div><div class="k">Reposts</div></div>
+  </div>
+
+  <div class="lede">In one line: <b>most people try to change their life in the wrong order — not by forcing new behavior first and slowly becoming that person, but by settling "who I am" first, after which behavior follows on its own.</b> This essay is about making that switch in a single day.</div>
+
+  <h2>The essay's three movements</h2>
+  <p><b>1. Identity.</b> You are not where you want to be not because you don't work hard enough, but because you are not yet the kind of person who would be in that position. However specific the goal, someone who believes "I'm not a business person" will automatically brake at every critical move.</p>
+  <p><b>2. Hidden goals and procrastination.</b> Procrastination is usually not laziness; it is protecting something — a sense of safety, a self-image, or the margin of "if I never really try, I never really fail." The goal you say out loud and the real goal your actions reveal are often two different things. Dig out the hidden goal first, and procrastination becomes solvable.</p>
+  <p><b>3. The one-day reset.</b> Spend one full day on a complete audit: goals, environment, habits, every commitment on your plate. Cut what conflicts with the new identity, and turn what remains into executable next steps. The point is not how much gets done that day — it is that after that day, you run on a new set of defaults.</p>
+
+  <h2>Why this essay exploded</h2>
+  <p>The data structure says a lot: 1.01 million bookmarks, 2.6 times the likes. People bookmark it not because they agree, but because they intend to "follow it later" — the classic shape of tool-type content. Add a title that compresses the threshold of change into its smallest unit, "1 day," too low to refuse. At the end it funnels readers to his newsletter and the Human 3.0 model: the free essay is the top of the funnel, the product sits behind it. The essay itself is a showroom for Dan Koe's one-person company — content as customer acquisition.</p>
+
+  <h2>The takeaway for you</h2>
+  <p>This one connects closely to your real situation: the three rules you set for yourself on 2026-11-02 (log trouble the same day, respond within 24 hours, clear it by a difficulty ladder) are a miniature version of the "one-day reset"; his claim that procrastination protects your self-image is the same thing you described as "afraid of trouble, not of risk," said another way. The difference: he sells an identity narrative, and what you lack is not a narrative — the rules already exist; what's missing is running them for a full 90 days. So this essay is worth keeping as a mirror, not as a new method to learn all over again.</p>
+
+  <div class="src">Original: <a href="https://x.com/thedankoe/status/2010751592346030461">x.com/thedankoe/status/2010751592346030461</a> · Author's newsletter: letters.thedankoe.com (the Human 3.0 model link lives on his newsletter site)</div>
+</article>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"如何用一天修好你整个人生 · Yat's Notes",tw:"如何用一天修好你整個人生 · Yat's Notes",en:"How to Fix Your Entire Life in One Day · Yat's Notes"};
+var PUI={zh:{back:"← 返回 Yat's Notes",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Notes",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll(".langver").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
