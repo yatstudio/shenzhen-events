@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=UCHsMVasxho ｜时长 61 分钟｜郭宇单向街系列分享，本期 keynote 由他与 GPT Live 共同「讲」（GPT 在他的东京服务器上读材料、接话、答问，中途还因语音会话 30 分钟上限断线过一次）
@@ -66,8 +73,114 @@
 <h2>收尾：智力的超额收益结束了</h2>
 <p>他把全系列的落点又讲了一遍，但这次最完整：东亚家庭的旧契约是「好好读书→用智力换取超额收益→经济独立」，2023–24 年这件事被攻克——机器获取知识比人快太多，你和 AI 之间能用的智力已完全不成比例，继续逼孩子走这条路是「妄想」。下一个能产生复利的东西是<strong>语言本身</strong>：故事、叙事、品牌——哈利·波特之于罗琳，马斯克的火星故事之于追随者。讲故事某种意义上就是「骗人」，而这恰是 AI 现在还不具备的能力（它能生成无穷视频，但还不知道以什么方式向人类讲述）；亚洲教育恰恰不培养这个，甚至惩罚它（没做成之前不许说、说了会被嘲笑）。他的结语克制而重：不管你是否打算改变孩子的教育，<strong>第一步是客观意识到世界已经变了</strong>。</p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=UCHsMVasxho">https://www.youtube.com/watch?v=UCHsMVasxho</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-09-26 · 时长：1 小时 01 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《郭宇：AI現在可以20分鐘做一件衣服，70毫秒做一個決定｜語言模型和世界模型之爭以及Jevons悖論》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=UCHsMVasxho ｜時長 61 分鐘｜郭宇單向街系列分享，本期 keynote 由他與 GPT Live 共同「講」（GPT 在他的東京伺服器上讀材料、接話、答問，中途還因語音會話 30 分鐘上限斷線過一次）
+⚠️ 語境說明：講述者在片中自稱時間為「2026 年 9 月」，片中提到的新版模型（如 GPT-6 Astro、快速分類模型 GEV/JEV）均為其講述口徑，無法核實，請按他的近未來框架來讀。
+說明：機器轉寫，專名多有誤聽（Tripo 轉寫為「Triple」，Marvelous Designer 轉寫為「Mobulist/Move designer」，WorldLabs 轉寫為「WordLab」，Jevons 轉寫為「jev」，均按上下文校正）；後半段為採樣通讀。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>表面講「語言模型與世界模型之爭」，實質是同一件事的兩條路：<strong>把物理世界搬進電腦（real-to-sim）</strong>。本月兩條路在一個點上撞上了——語言模型靠 computer use 伸手進了專業 3D 軟體，20 分鐘走完了一件衣服從概念圖到工廠打版文件的全流程；世界模型靠兩三張照片就能還原帶碰撞的虛擬空間。他真正的結論在最後：當機器獲取知識的速度碾壓人類，「靠智力換超額收益」的舊契約作廢，剩下的複利資產只有一樣——<strong>敘事</strong>。</p>
+<h2>兩條路線，一個目標</h2>
+<ul>
+<li>語言模型的先天缺陷是<strong>沒有因果</strong>：它的神經網路裡沒有時間維度，只能靠搜尋維基百科等人類知識沉澱來「借」因果關係。世界模型則自帶物理、重力、碰撞——疊床單要知道床單的重量、材質、拉伸受力，否則疊不平整。</li>
+<li>世界模型存在的理由是機器人：現實裡錄資料的速度太慢，必須用模擬世界生成海量影片餵給具身智慧（Figure 剛在舊金山租了 30 個 Airbnb 讓機器人練整理房間、洗衣服）。最終目的不是祖克柏的元宇宙，而是讓 AI 以更多維度理解真實世界。</li>
+<li>語言模型這邊，靠「寫程式碼」意外地先伸出了手：去年 10 月 Skill 讓程式碼變成即時生成；本月新版 GPT 的 computer use 讓這隻手伸進專業桌面軟體——到這裡，兩條路線在「生成可用的 3D 資產」這件事上正式相交。</li>
+</ul>
+<h2>主演示：20 分鐘做一件衣服</h2>
+<p>他給朋友的小狗做萬聖節衣服，全程由 GPT 操作軟體鏈完成：</p>
+<ol>
+<li>圖像生成出衣服的三個視圖 → 導入 Tripo 這類圖生 3D 模型，生成約 200 萬三角形的網格；</li>
+<li>導入 Blender 綁定骨骼，小狗動起來；</li>
+<li>導入 Marvelous Designer 做服裝打版——選布料（針織/硬挺）、自動把 3D 衣服展開成 2D 裁片、檢查並標註哪些部位用什麼工法縫製；</li>
+<li>產出的文件可以直接交給工廠製造。<strong>全程 20 分鐘。</strong></li>
+</ol>
+<p>人台也是生成的：把女友照片變成等身人台，在虛擬世界裡「量體裁衣」；布料克重、垂感在軟體裡有 90% 以上仿真度，試做之前就能看出明顯錯誤；設計褲子時可以讓虛擬模特蹲下、轉身錄影片檢查變形。但他明確指出<strong>人還剩一個不可替代的判斷點</strong>：打版對不對——布料的實物表現並沒有完全資料化，專業裁縫給西褲留的彈性冗餘是經驗，AI 未必懂（他做狗衣服時專門請了設計師朋友在旁把關）。「今天需要人把關，不代表永遠跨不過去」——把測量、模擬、實作回饋接進去即可，但今天還沒到。</p>
+<h2>操作軟體的兩種方式之爭（本期最有判斷含量的一段）</h2>
+<ul>
+<li><strong>視覺路線</strong>：像人一樣截圖看螢幕、逐步操作。慢、費 token，但能判斷「衣服哪裡破了個洞、走動時哪裡彆扭」這種無法用語言精確描述的設計問題。有個實操貼士：把專業軟體介面設成英文——模型識別英文更快、更省 token，「你看不懂沒關係，它能看懂」。</li>
+<li><strong>MCP 路線</strong>：與軟體後台直接通訊，只知邏輯對錯，不知美醜對錯。他判斷 MCP 已到生命週期尾端：你不可能指望模型在訓練時用遍世界上所有軟體，下一代 computer use 必然以視覺為主——和特斯拉拒絕光學雷達、用純視覺學開車是同一套哲學（他順帶誇了奧斯汀無方向盤的 Cybercab）。OSWorld 2.0 基準上，新版比上一代高約 10 個百分點。</li>
+<li>由此對比擴散影片路線：Seedance 生成的影片幀不可編輯、反覆參考會逐代失真、好效果背後是上千字提示詞——「提示詞工程肯定不是未來使用 AI 的方式」。可編輯的真實 3D 資產則可留存複用、即時修改（換帽子顏色走 UV 貼圖即可）、還能綁骨骼接語音 API 做成可對話的虛擬角色——日本創作者已經在拿它做 VTuber，一兩個小時做完一個。「今年會是內容爆發之年。」</li>
+<li>為什麼挑服裝開刀：女裝是全球消費品裡最大的一塊（僅次於吃）。個性化製造若吃掉大批量製造哪怕 10% 的份額，通關、物流、貿易格局都會被改寫——他留了句挑釁的話：沿這條路走下去，「未來製造業可能就不需要中國了，也是很有可能」。</li>
+</ul>
+<h2>世界模型側：WorldLabs 的 Atlas</h2>
+<p>李飛飛實驗室的新版本：兩三張照片還原整個空間的深度與點雲，且生成的世界<strong>帶碰撞網格</strong>（不會穿模），下一步是把重力等物理加進去（重力可調——月球基地的機器人沒法在地球上訓練，只能在模擬裡練）。手機螢幕上已難辨真假，廣角畸變也修好了。眼下用途：虛擬看房、給機器人批量生成訓練影片。他坦承不知道其技術細節，開源世界模型暫時都還沒做到這個程度。</p>
+<h2>70 毫秒做決定：快速通用分類器（GEV）</h2>
+<p>三四天前剛出現的新物種，他稱之為「超級通用分類器」：</p>
+<ul>
+<li>它不生成文字、只做<strong>選擇</strong>：把幾十萬上百萬個選項（圖片、商品、郵件）和你的特徵描述給它，零樣本、無需微調，60–300 毫秒出結果——比 GPT 快約 300 倍（兩個數量級），輸出成本為零，準確率與上一代大模型大體相當。</li>
+<li>定位是搭配：大模型負責需要「變」的部分（設計、創造），分類器負責從海量選項裡過濾挑選。使用圖景：語音購物時把 Amazon 全部日用品餵給它、你話音剛落商品已上屏；幾千封郵件兩三秒分揀出待辦；下載資料夾新文件自動分類命名（比 Spotlight 建索引快得多且免費）；倉儲物流分揀；遊戲裡做即時決策（馬里奧跳不跳）、給 DeepSeek 這類「看不見圖像」的模型當眼睛做全功能 AI 遊戲角色；FAL 把 MiniMax 影片模型特化後 7 秒生成 15 秒影片，有人拿它做了「無限電視台」（下期分享主題就是 MiniMax H3 實操）。</li>
+<li>他的提醒很實際：快速分類不是新需求——量化交易二十年前就在拚速度，而且有全世界最好的數學家和算力，你正面拚不過；要找量化還沒清場的縫隙，比如卡牌拍賣、日本抽選搶購這類長尾場景。普通人把策略交給 ChatGPT 定、讓分類器執行即可。接入方面：已可在 OpenRouter 上用；他預言一個月內 GLM、MiniMax、DeepSeek 都會跟進，成本可能只有 OpenAI 的千分之一。（另有一句未經證實的行業八卦：OpenAI 訓練 GPT-6 時在資料中心買了大量 Mac 跑專業軟體。）</li>
+</ul>
+<h2>收尾：智力的超額收益結束了</h2>
+<p>他把全系列的落點又講了一遍，但這次最完整：東亞家庭的舊契約是「好好讀書→用智力換取超額收益→經濟獨立」，2023–24 年這件事被攻克——機器獲取知識比人快太多，你和 AI 之間能用的智力已完全不成比例，繼續逼孩子走這條路是「妄想」。下一個能產生複利的東西是<strong>語言本身</strong>：故事、敘事、品牌——哈利·波特之於羅琳，馬斯克的火星故事之於追隨者。講故事某種意義上就是「騙人」，而這恰是 AI 現在還不具備的能力（它能生成無窮影片，但還不知道以什麼方式向人類講述）；亞洲教育恰恰不培養這個，甚至懲罰它（沒做成之前不許說、說了會被嘲笑）。他的結語克制而重：不管你是否打算改變孩子的教育，<strong>第一步是客觀意識到世界已經變了</strong>。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | Guo Yu: AI Can Now Make a Garment in 20 Minutes and a Decision in 70 Milliseconds | The Language Model vs. World Model Debate and the Jevons Paradox</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=UCHsMVasxho | Duration 61 minutes | Guo Yu's One-Way Street series talk; this keynote was "delivered" jointly by him and GPT Live (GPT, running on his Tokyo server, read materials, responded and answered questions, and at one point disconnected because of the 30-minute limit on a voice session)
+⚠️ Context note: The speaker refers to the time in the video as "September 2026," and the new model versions mentioned in the video (such as GPT-6 Astro and the fast classification models GEV/JEV) are as stated by him and cannot be verified; please read this within his near-future framing.
+Note: Machine transcription, with many proper names misheard (Tripo transcribed as "Triple," Marvelous Designer as "Mobulist/Move designer," WorldLabs as "WordLab," Jevons as "jev," all corrected according to context); the second half was read through on a sampled basis.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>On the surface this is about "the language model vs. world model debate," but in substance the two are two paths to the same thing: <strong>bringing the physical world into the computer (real-to-sim)</strong>. This month the two paths collided at one point — language models, through computer use, reached into professional 3D software and completed, in 20 minutes, the entire workflow for a garment from concept image to factory pattern-making files; world models, from just two or three photos, can reconstruct a virtual space with collision. His real conclusion comes at the end: when machines acquire knowledge at a speed that overwhelms humans, the old contract of "exchanging intelligence for excess returns" is void, and the only compounding asset left is one thing — <strong>narrative</strong>.</p>
+<h2>Two Routes, One Goal</h2>
+<ul>
+<li>The innate flaw of language models is that they <strong>have no causality</strong>: there is no time dimension in their neural networks, so they can only "borrow" causal relationships by searching Wikipedia and other deposits of human knowledge. World models, by contrast, come with physics, gravity and collision built in — to fold a bedsheet you need to know its weight, material and how it stretches under force, otherwise you cannot fold it flat.</li>
+<li>The reason world models exist is robots: recording data in reality is too slow, so simulated worlds must be used to generate vast amounts of video to feed embodied intelligence (Figure just rented 30 Airbnbs in San Francisco to let robots practice tidying rooms and doing laundry). The ultimate purpose is not Zuckerberg's metaverse, but to let AI understand the real world in more dimensions.</li>
+<li>On the language model side, it unexpectedly reached out a hand first through "writing code": last October, Skill turned code into something generated instantly; this month, the new GPT's computer use extended that hand into professional desktop software — and at that point, the two routes formally intersect on "generating usable 3D assets."</li>
+</ul>
+<h2>Main Demo: Making a Garment in 20 Minutes</h2>
+<p>He made a Halloween outfit for a friend's puppy, with the entire software chain operated by GPT:</p>
+<ol>
+<li>Image generation produced three views of the garment → imported into an image-to-3D model tool like Tripo, generating a mesh of about 2 million triangles;</li>
+<li>Imported into Blender and rigged with bones, so the puppy could move;</li>
+<li>Imported into Marvelous Designer for garment pattern-making — choosing fabrics (knit / structured), automatically unfolding the 3D garment into 2D pattern pieces, and checking and marking which parts should be sewn with which technique;</li>
+<li>The output files can be handed directly to a factory for manufacturing. <strong>The whole process took 20 minutes.</strong></li>
+</ol>
+<p>The mannequin was also generated: his girlfriend's photo was turned into a life-size mannequin, and "bespoke tailoring" was done in the virtual world; fabric weight and drape are simulated in the software at more than 90% fidelity, so obvious errors can be spotted before a trial garment is made; when designing trousers, the virtual model can squat and turn around while recording video to check for deformation. But he made clear that <strong>humans still have one irreplaceable judgment point</strong>: whether the pattern is right — the real-world behavior of fabric has not been fully turned into data, and the elastic allowance an experienced tailor leaves in suit trousers is experience that AI may not understand (when he made the dog outfit, he specifically asked a designer friend to be present to check). "Needing a human to check today does not mean it can never be crossed" — you just need to connect measurement, simulation and real-world feedback, but we are not there yet today.</p>
+<h2>The Debate Between Two Ways of Operating Software (the most judgment-rich segment of this episode)</h2>
+<ul>
+<li><strong>The vision route</strong>: Like a human, it takes screenshots to look at the screen and operates step by step. It is slow and token-hungry, but it can judge design problems that cannot be precisely described in language, such as "where is there a hole in the garment, and where does it pull awkwardly when walking." One practical tip: set professional software interfaces to English — models recognize English faster and use fewer tokens, "it doesn't matter if you can't read it, it can."</li>
+<li><strong>The MCP route</strong>: It communicates directly with the software backend, knowing only whether the logic is right or wrong, not whether it is beautiful or ugly. He judged that MCP has reached the end of its lifecycle: you cannot expect a model to have used every piece of software in the world during training, and the next generation of computer use will inevitably be vision-first — the same philosophy as Tesla rejecting LiDAR and learning to drive with pure vision (he also praised Austin's steering-wheel-free Cybercab in passing). On the OSWorld 2.0 benchmark, the new version is about 10 percentage points higher than the previous generation.</li>
+<li>From there he contrasted the diffusion video route: frames generated by Seedance cannot be edited, repeatedly referencing them causes generational degradation, and behind good results are prompts of thousands of words — "prompt engineering is definitely not the future way to use AI." Editable real 3D assets, by contrast, can be kept and reused, modified instantly (changing a hat's color is just a matter of UV mapping), and can also be rigged with bones and connected to a voice API to become conversational virtual characters — Japanese creators are already using this to make VTubers, finishing one in an hour or two. "This year will be a year of exploding content."</li>
+<li>Why start with clothing: womenswear is the largest segment of global consumer goods (second only to food). If personalized manufacturing takes even 10% of mass manufacturing's share, customs clearance, logistics and trade patterns will all be rewritten — he left a provocative line: following this path, "future manufacturing may no longer need China, which is quite possible."</li>
+</ul>
+<h2>The World Model Side: WorldLabs' Atlas</h2>
+<p>The new version from Fei-Fei Li's lab: two or three photos reconstruct the depth and point cloud of an entire space, and the generated world <strong>comes with a collision mesh</strong> (no clipping through objects); the next step is to add physics such as gravity (gravity is adjustable — robots for a lunar base cannot be trained on Earth, only in simulation). On a phone screen it is already hard to tell real from fake, and wide-angle distortion has been fixed. Current uses: virtual home viewings, and batch-generating training videos for robots. He admitted he does not know its technical details, and open-source world models have not yet reached this level for now.</p>
+<h2>Making a Decision in 70 Milliseconds: The Fast General Classifier (GEV)</h2>
+<p>A new species that appeared just three or four days ago, which he called a "super general classifier":</p>
+<ul>
+<li>It does not generate text, it only makes <strong>choices</strong>: give it hundreds of thousands to millions of options (images, products, emails) together with a description of your features, and with zero-shot, no fine-tuning, it returns a result in 60–300 milliseconds — about 300 times faster than GPT (two orders of magnitude), with zero output cost and accuracy broadly comparable to the previous generation of large models.</li>
+<li>Its positioning is as a pairing: large models handle the parts that need to "change" (design, creation), and the classifier handles filtering and selecting from vast numbers of options. Scenarios for use: in voice shopping, feed it all of Amazon's daily necessities, and the product is on screen the moment you finish speaking; a few thousand emails sorted into to-dos in two or three seconds; new files in the Downloads folder automatically classified and named (much faster than Spotlight indexing, and free); warehouse and logistics sorting; real-time decisions in games (whether Mario jumps), and serving as eyes for models like DeepSeek that "cannot see images," making fully functional AI game characters; FAL specialized the MiniMax video model so that it generates a 15-second video in 7 seconds, and someone used it to make an "infinite TV station" (the next sharing session's topic is a hands-on with MiniMax H3).</li>
+<li>His caution was very practical: fast classification is not a new need — quantitative trading has been competing on speed for twenty years, with the world's best mathematicians and computing power, and you cannot beat them head-on; you need to find gaps that quant trading has not yet cleared, such as long-tail scenarios like card auctions and Japanese lottery-style purchases. Ordinary people can just let ChatGPT set the strategy and let the classifier execute it. On access: it is already available on OpenRouter; he predicted that within a month GLM, MiniMax and DeepSeek would all follow, possibly at one-thousandth of OpenAI's cost. (There was also an unverified piece of industry gossip: when training GPT-6, OpenAI bought a large number of Macs in its data centers to run professional software.)</li>
+</ul>
+<h2>Closing: The Excess Returns on Intelligence Are Over</h2>
+<p>He restated the landing point of the whole series, but this time most completely: the old contract for East Asian families was "study hard → exchange intelligence for excess returns → financial independence," and in 2023–24 this was cracked — machines acquire knowledge far too much faster than humans, and the usable intelligence between you and AI is now completely disproportionate, so continuing to force children down this path is "delusional." The next thing that can produce compounding is <strong>language itself</strong>: stories, narrative, brands — Harry Potter for Rowling, Musk's Mars story for his followers. Storytelling in a sense is "deceiving people," and that is precisely an ability AI does not yet have (it can generate endless video, but does not yet know in what way to narrate to humans); Asian education, precisely, does not cultivate this, and even punishes it (you are not allowed to say it before you have done it, and if you say it you will be mocked). His closing was restrained and weighty: whether or not you intend to change your children's education, <strong>the first step is to objectively realize that the world has already changed</strong>.</p>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=UCHsMVasxho">https://www.youtube.com/watch?v=UCHsMVasxho</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-09-26 · 时长：1 小时 01 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=UCHsMVasxho">https://www.youtube.com/watch?v=UCHsMVasxho</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-09-26 · 時長：1 小時 01 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=UCHsMVasxho">https://www.youtube.com/watch?v=UCHsMVasxho</a> (Ginza Tsutaya Books / One-Way Street) · Guest: Guo Yu · Published: 2026-09-26 · Duration: 1 hour 01 minutes<br>This page contains the full notes, manually edited from a machine transcript; the views, figures and model names in the video are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interview List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《郭宇：AI现在可以20分钟做一件衣服，70毫秒做一个决定｜语言模型和世界模型之争以及Jevons悖论》 · Yat's Talks",tw:"紀要｜《郭宇：AI現在可以20分鐘做一件衣服，70毫秒做一個決定｜語言模型和世界模型之爭以及Jevons悖論》 · Yat's Talks",en:"Notes | Guo Yu: AI Can Now Make a Garment in 20 Minutes and a Decision in 70 Milliseconds | The Language Model vs. World Model Debate and the Jevons Paradox · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《郭宇关于AI的十次分享：AI做影片》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=BcMssIgsvdI ｜时长 2 小时 23 分｜郭宇 + 孙静涵主持，现场分享 + 实操演示 + 问答
@@ -81,8 +88,144 @@
 <li>「我们永远没有办法成为上帝，尤其在 AI 的当下更是这样。」</li>
 </ul>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=BcMssIgsvdI">https://www.youtube.com/watch?v=BcMssIgsvdI</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-23 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《郭宇關於AI的十次分享：AI做影片》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=BcMssIgsvdI ｜時長 2 小時 23 分｜郭宇 + 孫靜涵主持，現場分享 + 實操演示 + 問答
+說明：機器轉寫，繁簡混雜、個別專名有誤聽（如 C-Dance=Seedance、即夢轉寫為「寂夢」、Visio Studio 音近「VCO/Wesley」）；紀要按上下文校正。文中行業數字與傳聞均為講述者現場說法，未經核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>AI 影片已經越過「貓貓狗狗娛樂短片」階段，進入嚴肅影視生產：中國創作者用 Seedance 等工具做出的 3–5 分鐘短片已達串流媒體級品質，真人短劇行業大批從業者沒活幹、轉做 AI 漫劇。郭宇的判斷是：這相當於短影片史上的 2016 年——門檻被拉平之後，AI 原生內容會是 PGC+UGC 的百倍千倍；而人的位置只剩一個：做那個定故事、定世界觀、在無限生成結果裡做選擇的人。</p>
+<h2>行業現狀（他剛從國內回來的一手觀察）</h2>
+<ul>
+<li><strong>行業實況（他的現場觀察）</strong>：真人短劇劇組大批接不到生意、從業者紛紛轉向「AI 漫劇」（AI 做的真人劇/動漫劇）；字節的紅果短劇按流量分成，推著創作者用 AI 工具。</li>
+<li><strong>品質躍升點在今年 5 月</strong>：相當多「可上串流媒體」的嚴肅短片出現，幾乎都出自中國創作者，在 X、Instagram 上幾千萬播放。現場放了三部：音樂 MV 出身的創作者做的廢土風短片（對標 Netflix《愛死機》單集 100–300 萬美元成本，AI 版是幾千分之一）；署名「牛豆」的作品——一個人包辦導演、剪輯、音樂、美術；賈樟柯與字節合作的 Seedance 短片（賈樟柯與自己的 AI 數位人對談，全片生成）。</li>
+<li><strong>成本帳</strong>：一小時嚴肅 AI 影片，用 Seedance + 音樂生成、按 50% 容錯（抽兩條留一條）算，約 2,000 美元。對工作室不算錢，對個人創作者必須能回收；明後年還會大幅降。</li>
+<li><strong>Netflix 的動向（轉述）</strong>：他小姨在 Netflix 工作，據稱其團隊在做一個新平台——影視生產的框架全保留，但 90% 內容交給 AI，人類只留編劇角色負責講故事，小團隊負責用 AI 把故事呈現出來。郭宇稱未來會看到「全部 Powered by AI」的串流媒體平台。</li>
+<li><strong>版權收緊反而是好事</strong>：Seedance 2.0 後，迪士尼、美國作家協會發函，含版權角色（米老鼠等）和真人權限只開放給特定 API——普通人被迫不依賴現成 IP、創造自己的角色和故事。他預言一兩個月內會出現第一批受大眾喜歡的 AI 原生 IP，00 後、05 後的童年將伴隨 AI 動畫長大。</li>
+<li><strong>為什麼是中國創作者領先</strong>：中國科技公司把推理算力大量投給影片模型做消費娛樂，字節 Seedance 目前全球略微領先——贏在人物一致性、鏡頭語言和出錯率低。等 OpenAI/Anthropic 趕上，會在全球範圍爆發。</li>
+</ul>
+<h2>方法論：AI 做片的實際工作流（現場演示）</h2>
+<p>整條流水線已經不需要專業軟體，一個 Codex / Claude Code 就能跑：</p>
+<ol>
+<li><strong>故事與分鏡</strong>：把想法告訴 Codex，它給創意選項，生成分鏡腳本——先定世界觀、人物性格與情感基調（先定「四個點」：世界觀、人物、情感、衝突），再逐鏡頭拆解。</li>
+<li><strong>分鏡圖</strong>：GPT Image 2 生成分鏡圖片（15–20 秒一張），人物設定卡/三視圖保證一致性。</li>
+<li><strong>生成影片</strong>：分鏡圖 + 氛圍/音樂描述丟給 Seedance（或經字節 API 到即夢），10–15 秒一段；失敗率約一半，用參考圖/參考影片（比如指定「只拿一個行李箱」）能大幅降低失敗率。</li>
+<li><strong>自動質檢迭代</strong>：讓 Codex 對照分鏡檢查生成結果（哪裡不符合、為什麼），再重生成——「就像拍電影不斷 retake」；可以給它一筆預算（「今天把這 500 美元花完」）讓它無人值守地跑。</li>
+<li><strong>聲音</strong>：旁白/配音跨集保持一致；音樂用 Suno（它想做音樂界的平台/Spotify）。環境音、氛圍都要在提示詞裡寫明。</li>
+</ol>
+<p><strong>提示詞的顆粒度是核心手藝</strong>：不能只寫「依依不捨地道別」——要寫清誰先入鏡、鏡頭怎麼搖、握手還是擁抱、表情定幾個、幾秒、誰說話、說什麼、停頓在哪、什麼口音。抽象情緒詞對 AI 沒意義，必須翻譯成可見的畫面指令。</p>
+<p><strong>他自己的兩個實證</strong>：
+- 給翻譯電話產品 Tua 做廣告：全程沒找網紅，兩個影片廣告 10 分鐘做完掛上官網（有 bug 也懶得修，反而讓人直觀感到是 AI 生成）。
+- <strong>Visio Studio</strong>（今年 1 月起做）：起因是小姨（矽谷工程師、寫了十幾本小說，包括講 2000 年 dot-com 泡沫華人故事的《The Spring of Ice Age》和恐怖小說系列）的小說影視化版權賣給騰訊等平台後做得不滿意。產品把長篇小說自動拆解：7 萬字裡分析出全部角色、生成設定與三視圖、拆分鏡、統一配音——本質是把編劇的活產品化。</p>
+<h2>觀點交鋒</h2>
+<ul>
+<li><strong>「匠人精神/古法手搓」之爭</strong>：靜涵帶著偏見來（她自認），郭宇的回應：工具而已——從編輯器到 IDE 到 AI agent，他一直享受的是創造本身；先摘掉偏見、用起來，想法和視角自然會變。但他承認圈內人的創作慣性很難 think out of the box，這波領跑的恰恰多是行業外的人。</li>
+<li><strong>風格問題</strong>：觀眾問「我不想要賈樟柯 style，我想要我自己的風格怎麼辦」——答：風格 = 你到底想表達什麼，沒說出口的東西 AI 理解不了；你要先做「導演」：把世界觀、情感、表達全部定下來，讓 AI 當夥伴而不是替你決定。和 AI 協作的好處是更快意識到自己做得好或不好。</li>
+<li><strong>「無限解空間」的虛無</strong>：實拍有「上天給的禮物」（夕陽餘暉那種不可複製的瞬間）；AI 生成則什麼都能得到，於是問題反轉——當解無限多，如何在無限解裡找最優解、如何不麻木。這不止是做片，也是人生規劃問題：明天可以做任何事的第一反應是觸碰虛無。他把這留作今年後續專場的話題：<strong>IntentWare——人類如何產生意圖</strong>。</li>
+<li><strong>Vlog 的真實性</strong>：他的點子是拍照片、中間用 AI 填充影片，解決「拍攝侵蝕生活」的博主困境；靜涵質疑填充的不是真實發生的事。他回應：照片與足跡是真實記錄，而人的記憶本來就脆弱、會被重塑。</li>
+<li><strong>小眾語言的機會</strong>：聊到《給阿嬤的情書》時他想到——為什麼沒有客家語電影？因為以前拍不起。AI 讓任何語言（哪怕只剩極少使用者的語言）都能做成影視和音樂，這是只有 AI 能辦到的事。</li>
+<li><strong>教育</strong>：AI 不會「學導演」，但會讓所有人變成導演；想學任何東西直接問 AI 即可，電影學院式學校的存在理由只剩「環境塑造性格」；前提始終是動機——AI 原生代的孩子裡會出現拿學院獎的導演。</li>
+</ul>
+<h2>問答精選</h2>
+<ul>
+<li><strong>怎麼保持興趣廣泛又專注</strong>（他做了很多不同軟體）：興趣驅動的前提是財富自由——「不然我也不會放棄本科專業去寫程式」；沒錢時人被房租和家庭推著走，很難直面意圖。對世界的建議是：不要抱偏見、不要有上帝視角，固執地覺得「這事不該發生」只會讓你在很多年後被動接受。</li>
+<li><strong>跟 AI 溝通的本質</strong>：一位觀眾苦惱於「我說的它聽不懂」。郭宇：AI 沒體驗過真實世界，光從哪個角度打過來都要你告訴它；但人與人之間也一樣——語言靠的是極小的「公約數交集」和大量隱喻填充，聽不懂常常不是 AI 的問題，而是表達方式的問題。解法：把意圖約束到具體的語言空間裡，不加隱喻、非常具體；同時把 AI 當無所不知的夥伴而不是工具，更多地從它那裡學。</li>
+<li><strong>工程師的短板</strong>：對大陸工程師來說，與 AI 協作最吃虧的是母語表達——文理分科讓很多工程師不擅把想法說清楚，這成了使用 AI 的第一瓶頸。</li>
+<li><strong>「先賣不存在的產品」創業法</strong>（回應一位想創業的觀眾）：用 GPT Image 生成逼真產品圖、Seedance 做宣傳影片，先上架預售——有人下單（現場案例 300–400 單）再聯繫中國的 3D 列印/工廠生產發貨，沒有訂單就零成本放棄。「先把想法變成真實的銷售意向」，是近乎無風險的創業驗證。他順帶批評：華人社區「太缺乏想像力」，現在靠 AI 賺錢最顯眼的是賣課的，但真正的機會在把想像力變成產品。</li>
+<li><strong>小白焦慮</strong>：什麼都學、什麼都跟不上怎麼辦——主動性/意圖是另一個大話題（預告專場）；外部約束（比如豆瓣小組的叫醒電話）有用，但根本是內心有沒有強大的推動力。別把焦慮當行動。</li>
+<li><strong>在日本做產品、職人不信任 AI 怎麼辦</strong>：信任的建立不在「產品與人」這個層面，而在人與人之間——日本人做生意講信任感，過年過節送什麼、平時怎麼相處，比產品裡是不是 AI 更重要；何況很多日本本土程式設計師做出來的東西也很粗糙，成品夠好時多數人其實看不出來。</li>
+<li><strong>收尾的工具建議</strong>：別再造輪子——先把第一層 harness 用好：Codex / Claude Code 能控制你的電腦、伺服器上 24 小時跑著也不會停；買 $200 檔、算力隨便用就夠了。他自嘲：之前做的 Wanman（即時語音助手）現在意義不大了，因為優秀模型廠商把這些能力都內建了，簡單一個 API 請求就能調動。</li>
+</ul>
+<h2>值得記下的句子</h2>
+<ul>
+<li>「AI 不會取代導演，它會讓所有人都變成導演。」</li>
+<li>「故事如何設計、怎麼把拼接起來的東西變得有趣，意圖很難讓 AI 自己表達——你必須做那個 lead。」</li>
+<li>「當你什麼都能得到的時候，你會問：為什麼我什麼都做不出來？」</li>
+<li>「先把想法變成真實的銷售意向——這是毫無風險的創業。」</li>
+<li>「我們永遠沒有辦法成為上帝，尤其在 AI 的當下更是這樣。」</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | Guo Yu's Ten Talks on AI: Making Films with AI</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=BcMssIgsvdI | Duration 2 hours 23 minutes | Guo Yu + hosted by Sun Jinghan, live talk + hands-on demo + Q&amp;A
+Note: Machine transcript, with mixed simplified/traditional characters and some proper names misheard (e.g. C-Dance = Seedance, Jimeng transcribed as "Jimeng" variants, Visio Studio sounding like "VCO/Wesley"); the notes have been corrected in context. Industry figures and rumours in the text are as stated live by the speakers and have not been verified.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>AI video has moved past the "cute cats and dogs entertainment clips" stage and into serious film and TV production: 3–5 minute shorts made by Chinese creators with tools such as Seedance have reached streaming-level quality, while large numbers of people in the live-action short-drama industry have no work and are switching to AI comic dramas. Guo Yu's judgement is that this is the equivalent of 2016 in short-video history — once the barrier is levelled, AI-native content will be a hundred or a thousand times PGC+UGC; and only one role remains for humans: the person who sets the story and the worldview and makes choices among infinite generated results.</p>
+<h2>State of the industry (first-hand observations from his recent return to China)</h2>
+<ul>
+<li><strong>On-the-ground reality (his live observations)</strong>: Many live-action short-drama crews cannot get business, and practitioners are switching to "AI comic dramas" (AI-made live-action / animated dramas); ByteDance's Hongguo short-drama platform shares revenue by traffic, pushing creators to use AI tools.</li>
+<li><strong>The quality leap came in May this year</strong>: A considerable number of serious shorts "good enough for streaming" appeared, almost all by Chinese creators, with tens of millions of views on X and Instagram. Three were shown live: a post-apocalyptic short by a creator from a music-video background (benchmarked against Netflix's <em>Love, Death &amp; Robots</em> at US$1–3 million per episode, with the AI version costing a few thousandths of that); a work credited to "Niu Dou" — one person handling directing, editing, music and art; and a Seedance short by Jia Zhangke in collaboration with ByteDance (Jia Zhangke in conversation with his own AI digital human, fully generated).</li>
+<li><strong>The cost maths</strong>: One hour of serious AI video, using Seedance + music generation and allowing 50% tolerance (generate two, keep one), costs about US$2,000. That is nothing for a studio, but an individual creator must be able to recoup it; costs will fall sharply further in the next year or two.</li>
+<li><strong>Netflix's move (as relayed)</strong>: His aunt works at Netflix, and according to him her team is building a new platform — the framework of film and TV production is fully retained, but 90% of content is handed to AI, humans keep only the screenwriter role of telling the story, and a small team uses AI to present the story. Guo Yu said we will in future see streaming platforms that are "entirely Powered by AI".</li>
+<li><strong>Tighter copyright is actually a good thing</strong>: After Seedance 2.0, Disney and the Writers Guild of America sent letters, and copyrighted characters (Mickey Mouse, etc.) and real-person likenesses were opened only to specific APIs — ordinary people are forced not to rely on existing IP and to create their own characters and stories. He predicted that within a month or two the first AI-native IPs loved by the general public will appear, and children born after 2000 and 2005 will grow up accompanied by AI animation.</li>
+<li><strong>Why Chinese creators are ahead</strong>: Chinese tech companies have poured large amounts of inference compute into video models for consumer entertainment, and ByteDance's Seedance is currently slightly ahead globally — winning on character consistency, camera language and low error rates. Once OpenAI/Anthropic catch up, it will explode worldwide.</li>
+</ul>
+<h2>Methodology: The practical AI filmmaking workflow (live demo)</h2>
+<p>The whole pipeline no longer needs professional software; a single Codex / Claude Code can run it:</p>
+<ol>
+<li><strong>Story and storyboard</strong>: Tell Codex the idea, it offers creative options and generates a storyboard script — first set the worldview, character personalities and emotional tone (first set the "four points": worldview, characters, emotion, conflict), then break it down shot by shot.</li>
+<li><strong>Storyboard images</strong>: GPT Image 2 generates storyboard images (15–20 seconds per image), with character setting cards / three-view sheets ensuring consistency.</li>
+<li><strong>Generate video</strong>: Feed the storyboard image + atmosphere/music description to Seedance (or via the ByteDance API to Jimeng), 10–15 seconds per clip; the failure rate is about half, and using reference images / reference video (for example specifying "carry only one suitcase") can greatly reduce the failure rate.</li>
+<li><strong>Automatic quality-check iteration</strong>: Have Codex check the generated result against the storyboard (what does not match, and why), then regenerate — "like constantly retaking on a film set"; you can give it a budget ("spend this US$500 today") and let it run unattended.</li>
+<li><strong>Sound</strong>: Narration / voice acting stays consistent across episodes; music uses Suno (which wants to be the platform / Spotify of music). Ambient sound and atmosphere must all be spelled out in the prompt.</li>
+</ol>
+<p><strong>The granularity of the prompt is the core craft</strong>: You cannot just write "say a reluctant farewell" — you must specify who enters the frame first, how the camera pans, handshake or hug, how many facial expressions and for how many seconds, who speaks, what they say, where the pauses are, and what accent. Abstract emotion words mean nothing to AI; they must be translated into visible visual instructions.</p>
+<p><strong>His own two proofs</strong>:
+- An ad for the translation-call product Tua: He never hired an influencer at all; two video ads were finished in 10 minutes and put on the official website (he could not be bothered to fix the bugs, which actually made it intuitively clear they were AI-generated).
+- <strong>Visio Studio</strong> (built since January this year): It began because his aunt (a Silicon Valley engineer who has written more than a dozen novels, including <em>The Spring of Ice Age</em> about Chinese people in the 2000 dot-com bubble and a horror novel series) was dissatisfied with how platforms such as Tencent adapted her novels after buying the film/TV rights. The product automatically breaks down a long novel: from 70,000 characters it analyses all characters, generates settings and three-view sheets, splits storyboards, and unifies voice acting — in essence productising the screenwriter's work.</p>
+<h2>Clash of views</h2>
+<ul>
+<li><strong>The "craftsman spirit / old-school handcrafting" debate</strong>: Jinghan came with a bias (by her own admission). Guo Yu's response: It is just a tool — from editors to IDEs to AI agents, what he has always enjoyed is creation itself; drop the bias first and use it, and your ideas and perspective will naturally change. But he acknowledged that insiders' creative inertia makes it hard to think out of the box, and those leading this wave are often outsiders.</li>
+<li><strong>The style question</strong>: An audience member asked, "I don't want Jia Zhangke style, I want my own style, what should I do?" — Answer: Style = what you actually want to express; AI cannot understand what you have not said. You must first be the "director": set the worldview, emotion and expression completely, and let AI be a partner rather than deciding for you. The benefit of collaborating with AI is becoming aware faster of whether you are doing well or badly.</li>
+<li><strong>The nihilism of the "infinite solution space"</strong>: Live shooting has "gifts from heaven" (irreproducible moments like the afterglow of a sunset); with AI generation you can get anything, so the problem reverses — when there are infinitely many solutions, how do you find the optimal one among them, and how do you avoid going numb? This is not only about filmmaking, but also about life planning: the first reaction to being able to do anything tomorrow is to touch nihilism. He left this as a topic for a later session this year: <strong>IntentWare — how humans generate intent</strong>.</li>
+<li><strong>The authenticity of vlogs</strong>: His idea is to shoot photos and use AI to fill in the video in between, solving the creator's dilemma that "filming erodes life"; Jinghan questioned that what is filled in is not what really happened. He responded: Photos and traces are real records, and human memory is inherently fragile and can be reshaped.</li>
+<li><strong>The opportunity for minority languages</strong>: Talking about <em>Dear You</em> (a letter to Grandma) he thought — why is there no Hakka-language film? Because it used to be unaffordable to shoot. AI allows any language (even one with only very few remaining speakers) to be made into film/TV and music; this is something only AI can do.</li>
+<li><strong>Education</strong>: AI will not "learn directing", but it will turn everyone into a director; if you want to learn anything just ask AI, and the only remaining reason for film-school-type schools to exist is "environment shapes character"; the prerequisite is always motivation — among AI-native children there will be directors who win Academy Awards.</li>
+</ul>
+<h2>Selected Q&amp;A</h2>
+<ul>
+<li><strong>How to keep interests broad yet stay focused</strong> (he has made many different pieces of software): The prerequisite for interest-driven work is financial freedom — "otherwise I would not have given up my undergraduate major to write code"; when you have no money, rent and family push you along and it is hard to face your intent directly. His advice to the world is: do not hold biases, do not take a God's-eye view; stubbornly thinking "this should not happen" will only make you passively accept it many years later.</li>
+<li><strong>The essence of communicating with AI</strong>: An audience member was troubled that "it doesn't understand what I say". Guo Yu: AI has not experienced the real world; even the angle light comes from must be told by you. But it is the same between people — language relies on a tiny "common-divisor intersection" and a lot of metaphor to fill in; not being understood is often not AI's problem, but a problem of expression. The solution: constrain intent into a concrete language space, without metaphor, very specifically; at the same time treat AI as an omniscient partner rather than a tool, and learn more from it.</li>
+<li><strong>Engineers' weakness</strong>: For mainland engineers, the biggest disadvantage in collaborating with AI is expression in their mother tongue — the science/humanities streaming in education leaves many engineers not good at articulating ideas clearly, which has become the first bottleneck in using AI.</li>
+<li><strong>The start-up method of "selling a product that doesn't exist yet"</strong> (in response to an audience member who wanted to start a business): Use GPT Image to generate realistic product images, Seedance to make a promotional video, list it for pre-sale first — if someone orders (a live case had 300–400 orders) then contact 3D printing / factories in China to produce and ship; if there are no orders, abandon it at zero cost. "First turn an idea into real sales intent" is a nearly risk-free start-up validation. He also criticised in passing: the Chinese community "lacks imagination far too much"; the most conspicuous people making money from AI right now are those selling courses, but the real opportunity is in turning imagination into products.</li>
+<li><strong>Beginner anxiety</strong>: Learning everything and keeping up with nothing — what to do? Initiative / intent is another big topic (a dedicated session was trailed); external constraints (such as wake-up calls from a Douban group) help, but fundamentally it is whether you have a strong inner drive. Do not mistake anxiety for action.</li>
+<li><strong>Making products in Japan, what if craftspeople don't trust AI?</strong>: Trust is not built at the "product and person" level, but between people — Japanese business is about a sense of trust; what you give at New Year and festivals and how you get along day to day matter more than whether there is AI in the product. Besides, many things made by local Japanese programmers are also quite rough; when the finished product is good enough, most people actually cannot tell.</li>
+<li><strong>Closing tool advice</strong>: Stop reinventing the wheel — first make good use of the first-layer harness: Codex / Claude Code can control your computer and will keep running 24 hours on a server without stopping; buying the $200 tier and using compute freely is enough. He joked about himself: Wanman (a real-time voice assistant) he made before is not very meaningful now, because the excellent model vendors have built all these capabilities in, and a simple API request can invoke them.</li>
+</ul>
+<h2>Lines worth remembering</h2>
+<ul>
+<li>"AI will not replace directors; it will turn everyone into a director."</li>
+<li>"How a story is designed, how to make the spliced-together material interesting — intent is hard for AI to express on its own; you must be the lead."</li>
+<li>"When you can get anything, you will ask: why can I produce nothing?"</li>
+<li>"First turn an idea into real sales intent — this is risk-free entrepreneurship."</li>
+<li>"We can never become God, especially in the age of AI."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=BcMssIgsvdI">https://www.youtube.com/watch?v=BcMssIgsvdI</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-23 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=BcMssIgsvdI">https://www.youtube.com/watch?v=BcMssIgsvdI</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-05-23 · 時長：2 小時 23 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=BcMssIgsvdI">https://www.youtube.com/watch?v=BcMssIgsvdI</a> (Ginza One-Way Street Bookstore) · Guest: Guo Yu · Published: 2026-05-23 · Duration: 2 hours 23 minutes<br>This page is the full notes, manually edited from a machine transcript; the views, figures and model names in the video are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《郭宇关于AI的十次分享：AI做影片》 · Yat's Talks",tw:"紀要｜《郭宇關於AI的十次分享：AI做影片》 · Yat's Talks",en:"Notes | Guo Yu's Ten Talks on AI: Making Films with AI · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

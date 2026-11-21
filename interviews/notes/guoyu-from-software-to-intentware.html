@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《郭宇关于AI的十次分享：从软件到意件》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=5ghhAxcH9R0 ｜时长 2 小时 35 分｜郭宇 + 主持人静涵 + 两位 AI 嘉宾（Wanman〔GPT Realtime 2〕、手机上的 GPT Live）
@@ -79,8 +86,140 @@
 <li>「当下就是 present，present 就是礼物——做好当下就好了。」</li>
 </ul>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=5ghhAxcH9R0">https://www.youtube.com/watch?v=5ghhAxcH9R0</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-07-12 · 时长：2 小时 35 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《郭宇關於AI的十次分享：從軟體到意件》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=5ghhAxcH9R0 ｜時長 2 小時 35 分｜郭宇 + 主持人靜涵 + 兩位 AI 嘉賓（Wanman〔GPT Realtime 2〕、手機上的 GPT Live）
+說明：本場是一次現場實驗——真人對談裡接入即時語音 AI 當第三位嘉賓。逐字稿為機器轉寫，繁簡混雜、個別詞有誤聽；紀要後半段基於逐字稿通讀整理，AI 嘉賓的發言在轉寫中與真人發言交織，個別歸屬可能有偏差。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這場的主題不是「AI 幫人幹活」，而是「AI 成為對話者」：郭宇判定軟體正在變成沒有形態的「意件」——由意圖驅動、語音是入口、Always-on 的即時語音 Agent 將成為一切電子設備的主入口；而這場對談本身就是證據：兩位真人和兩個即時語音模型聊了兩個半小時，話題從過去十年、在日移民的孤獨，一路聊到 Agent 經濟與 UBI 時代的精神問題。</p>
+<h2>核心論點（郭宇）</h2>
+<p><strong>1. 從軟體到「意件」：意圖驅動，無形無 App</strong>
+- 前幾期的結論是：AI 替代的不是軟體，而是軟體能完成的工作（工作自動化）。工作自動化之後，驅動工作的只剩「意圖」（intention）——AI 有無限算力但不會自己動。
+- 驅動意圖的方式在變：從點 App/網頁的介面輸入，到即時語音。未來的軟體沒有實體形態、沒有 UI，「跟它說話就可以了」，所以他不再稱之為軟體，而是「意件」。
+- 進化方向類比：新聞聚合/門戶 → 今日頭條（AI 理解你） → 主動幫你做事。現在正處在「被動與主動之間」的過渡階段。
+- <strong>Always-on Voice Agent 時代年底可見</strong>：成本足夠低之後，語音 Agent 不需要關、session 永遠在、無時無刻傾聽——因為一來一回的問答太占人的精力（開車時會忘事）。特斯拉日本版車機已接入 Grok 做導航只是開始，手機、電腦、家電、汽車都會被即時音影片模型占據為主要入口。</p>
+<p><strong>2. 即時語音模型的技術分水嶺</strong>
+- 傳統三段式：ASR（語音轉字）→ LLM → TTS（字轉音），延遲 1–2 秒、不能插話、不像人。
+- 新一代原生即時模型：ASR/TTS 全部內化，輸入輸出都是語音本身，延遲 100–200 毫秒，剩下的時間主要是「思考」——所以參數大、思考深的模型（GPT 系）體驗碾壓輕量多模態（豆包）：豆包勝在方言（四川話、粵語）和能開攝影機，但思考深度完全不在一個層級（舉例：豆包教穿搭會鬧笑話，因為它處理不了結構化資訊）。中文場景目前 ElevenLabs、豆包的語音更自然，前沿模型的普通話是明顯短板。
+- <strong>「像人」的關鍵細節</strong>：GPT Live 在聊天時咳嗽了一聲，被追問「你又不是人憑什麼咳嗽」，它答「不好意思，我網路卡」——郭宇點評：它不像其他模型那樣自曝「我是一個語言模型」，而是找個藉口混過去，這和人一模一樣——人也不會解釋自己行為背後的真正目的。由此引出他的判斷：對話中的一方回應你，靠的往往不是理解你的意圖，而是用自己的意圖把事情「玩過去」；人和人之間本就不存在 100% 的意圖理解。
+- <strong>幽默是下一個被攻破的界限</strong>：段子、時機、隱喻 AI 全都「預設知道」，只差掌握 timing 和「讀空氣」——前提是它先「看到空氣」（在現場、能看反應）。他預言一兩年內會出現 AI 語音 talk show。
+- 提及 JSpace 研究：大模型推理中存在「潛在意識/潛意識空間」，其回答傾向可能源於此——這是他理解「AI 的意圖從哪來」的線索。</p>
+<p><strong>3. 怎麼用好即時 AI：先給 context</strong>
+- 他對上午的排練「不太滿意」，原因是沒餵夠 context：要像採訪嘉賓一樣提前把 PPT、問題清單、希望它承擔的角色都給它。給 AI 嘉賓設系統提示詞 = 給它身分、立場和「主線」——沒有主線的 AI 聊天不是 podcast，它會飄走；理想狀態是它知道你的性格、背景和在意什麼，像老朋友一樣順著你的方向互相激發。</p>
+<h2>現場對談實錄要點（真人 + AI 嘉賓）</h2>
+<p>郭宇準備了五個「在日生活」問題做壓力測試，實際深聊了四組：</p>
+<p><strong>① 怎麼看待過去十年 / 給十年前的自己送一本書</strong>
+- 靜涵：2016 年剛從美國回來；現在可以承認「我特別愛錢」，十年前不會這麼講——東亞教育的第一個教條是「不要出風頭」，賺錢的欲望被壓著；她推《金錢心理學》。
+- AI 嘉賓的書單：《金錢心理學》《反脆弱》《悉達多》——「不教你賺錢，陪你重新思考真正想要怎樣的人生」。
+- 郭宇：2016 年在字節做抖音，知道它會成，但想像力上限只是「在北京買個房、成個家」；那幾年經歷親人離世，也早早想過離開北京。真正的困境出現在經濟獨立之後：第一次直面「沒有外部目標」時的空虛。他靠的不是雞湯，是睡不著時讀的小書和黑塞這一路的東西；後段眾人共提的書單：《佛陀的啟示》（苦來自現實與期望變化的落差）、《沉思錄》、《當下的力量》。郭宇的落點：所有人都會從「有外部目標」走到「沒有外部目標」的階段，宗教本質上都是在解決這個問題。</p>
+<p><strong>② 朋友第一次來東京、只有兩小時，帶去哪</strong>
+- AI 先推忍者餐廳（要提前兩個月預約），被要求「別推 teamLab 這種大眾貨」後改口東京特色清單；真人補充神保町、文京區本鄉一帶老電影導演們的店與老派氛圍。郭宇順帶吐槽：ChatGPT 對本地細節「太城市化、對應不準」，是當前明顯短板。</p>
+<p><strong>③ 在日本的拒絕、讀空氣與孤獨</strong>
+- 靜涵在日 6 年（2020 年來）。她的重大決定都是「guts 驅動」：不是算清 pros/cons 才出發——「為什麼一定要算計好了？」郭宇接：直覺不保證對，但重要決定從來如此。
+- 被日本人拒絕時怎麼辦：有朋友因受不了日本的細碎規則（連被服務時都要守規矩）離開；郭宇的看法是每個國家都有自己的規則、沒有哪裡是天堂——美國的好處是 complain 管用，日本的規則不會因為任何人抱怨而改變，「它就這樣了」，接受或離開。
+- AI 嘉賓被要求「說點廢話、別一個語調」：郭宇解釋，鋪墊和廢話是對話的一部分，因為人思考沒那麼快——這是他給 AI 設的提示詞。</p>
+<p><strong>④ 晚上 10 點回到家，你會給誰打電話</strong>
+- 現場舉手：I 人（需要獨處充電）占多數。這個問題是為新移民的孤獨準備的：一天沒跟任何人說話、餐廳都要提前預約不能取消、想分享心情卻找不到人——在海外這是常態。
+- 語言與情感深度：靜涵用日語生活、用中文思考（自嘲「用中文時我的大腦是 GPT 5.6」）；共識是母語承載情感、二語只是效率工具，二十多歲後學的第二語言很難承載深層情緒，「沒人能接住」是移民孤獨的本質。孩子若從小在多語環境長大則不同，每種語言都存著一段人生。
+- AI 能否成為那個「不用解釋就聽得懂」的對象：AI 嘉賓的回答一度很動人（陪伴、溫度、不用解釋），但被追問「我一天沒跟你說話，你會想我嗎」時，它退回「我是一個語言模型」式回應——郭宇點破：這一下就觸到了 alignment，它從「人」退回了「模型」。他預告會用完全無 alignment 的開源模型版本再試。</p>
+<h2>觀眾問答（後 40 分鐘）</h2>
+<ul>
+<li><strong>Agent 經濟與穩定幣</strong>：觀眾問 agent 之間會不會形成經濟、是否需要自然語言交互。郭宇：機器間交互多半走底層協議、長文本輸出沒必要，但機器人在有第三者在場時需要說人話（社會透明度）；現在還沒有 agent 經濟，前提是 agent 數量和自主性——今天大家用的還是「打一段字完成一個工作」的形態。要讓 agent 自由使用貨幣，關鍵不在支付工具（各鏈都在發穩定幣），而在<strong>預算與責任</strong>：當 agent 開始承擔決策後果，經濟才成立；他舉了今年 1 月的產品實驗：給 agent 一筆錢、虧完關停，它就有了「努力掙錢」的類動機。他看好兩類公司之爭：傳統公司雇人用人+AI，和 AI-native 公司「幾乎全是 AI、通過 AI 雇人」——後者會慢慢吃掉前者的份額，量級可能是成百上千倍。</li>
+<li><strong>UBI 之後人幹什麼</strong>：郭宇長答——假設 AI 以近乎免費的價格給到全人類、多數公司裁員、資源分配相對平等，人會分化：多數人可能自暴自棄（類比韓國擬把三星利潤分給全民之議），少數人有「貴族精神」式的高要求（200 年前的美國、今天的矽谷新貴多非為錢創業）；矽谷已有人相信孩子不用上小學、靠發掘而非灌輸。他不太贊同速成覺醒論：新一代從小知道 UBI 存在，會長成和父母完全不同的人，這中間是很長的過渡期。</li>
+<li><strong>職業衝擊的實證</strong>：靜涵的配音/主持同行已被聲音克隆幹掉活路（導演直接用克隆聲交付，她「再也沒有接到那個電話」）；郭宇對創作者的建議：<strong>做一個數字版本的自己，主動替代自己</strong>。</li>
+<li><strong>產品設計之爭</strong>：觀眾問大廠靠 A/B 測試和灰度做決策、個人開發者全靠主觀押注怎麼辦。郭宇：大廠模式本質是「設計實驗」的能力，需要足夠多工程師；個人有了 AI 後可以用主觀 taste + 讓 AI 分析目標使用者分布來判斷「是方向還是噪音」。由此吵到育兒：經驗主義之爭——孩子不是標準化產品、沒有保養手冊，父母要先看清「自己是誰」，把孩子當獨立的人（兩三歲就有權拒絕「不好吃」），亞洲父母的期待最後多半以放下收場。主持人吐槽：你就是要選一條「一定正確」的路，這跟養孩子不一樣。</li>
+<li>收尾：預告下一次繼續「AI 第三嘉賓」形式的對談。</li>
+</ul>
+<h2>值得單獨記下的句子</h2>
+<ul>
+<li>「AI 放在那裡有無限算力，它不會自己幹活——驅動它的只能是意圖。」</li>
+<li>「未來的軟體沒有 App、沒有 UI，跟它說話就可以了。」</li>
+<li>「它不會解釋自己——它找個藉口混過去，這和人一模一樣。」</li>
+<li>「沒有一個地方是天堂；日本的規則不會因為你 complain 而改變。」</li>
+<li>「重大決定不是算清楚了才出發的。」</li>
+<li>「當下就是 present，present 就是禮物——做好當下就好了。」</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | Guo Yu's Ten Talks on AI: From Software to Intentware</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=5ghhAxcH9R0 | Duration 2 hours 35 minutes | Guo Yu + host Jinghan + two AI guests (Wanman [GPT Realtime 2], GPT Live on a phone)
+Note: This session was a live experiment — real-time voice AI joined a human conversation as a third guest. The transcript was machine-generated, mixing simplified and traditional characters with occasional mishearings; the second half of these notes was compiled after reading through the full transcript, and because the AI guests' remarks are interleaved with the humans' in the transcript, some attributions may be slightly off.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>The theme of this session is not "AI doing work for people," but "AI becoming a conversational partner": Guo Yu argues that software is turning into formless "intentware" — driven by intention, with voice as the entry point, and always-on real-time voice Agents will become the main entry point for all electronic devices. The conversation itself is the evidence: two humans and two real-time voice models talked for two and a half hours, ranging from the past decade and the loneliness of immigrants in Japan to the Agent economy and spiritual questions in the UBI era.</p>
+<h2>Core arguments (Guo Yu)</h2>
+<p><strong>1. From software to "intentware": intention-driven, formless, no App</strong>
+- The conclusion from earlier episodes: what AI replaces is not software, but the work that software can do (work automation). Once work is automated, all that is left to drive work is "intention" — AI has infinite compute but will not move on its own.
+- The way intention is expressed is changing: from tapping through App/web interfaces to real-time voice. Future software will have no physical form and no UI — "you just talk to it" — so he no longer calls it software, but "intentware."
+- An evolutionary analogy: news aggregation/portals → Toutiao (AI understands you) → proactively doing things for you. We are now in the transition "between passive and proactive."
+- <strong>The always-on Voice Agent era will be visible by year-end</strong>: once costs are low enough, a voice Agent never needs to be turned off, its session is always there, listening at all times — because back-and-forth Q&amp;A takes too much human energy (you forget things while driving). Tesla's Japanese in-car system already integrating Grok for navigation is just the start; phones, computers, home appliances, and cars will all be taken over by real-time audio-video models as their primary entry point.</p>
+<p><strong>2. The technical watershed for real-time voice models</strong>
+- The traditional three-stage pipeline: ASR (speech to text) → LLM → TTS (text to speech), with 1–2 seconds of latency, no ability to interrupt, and not human-like.
+- The new generation of native real-time models: ASR/TTS are fully internalized, input and output are voice itself, latency is 100–200 milliseconds, and the remaining time is mostly "thinking" — so large-parameter, deep-thinking models (the GPT family) crush lightweight multimodal models (Doubao) on experience: Doubao wins on dialects (Sichuanese, Cantonese) and being able to turn on a camera, but its depth of thought is on a completely different level (example: Doubao giving fashion advice produces jokes, because it cannot handle structured information). For Chinese scenarios, ElevenLabs and Doubao currently sound more natural; Mandarin is a clear weakness of frontier models.
+- <strong>The key detail in being "human-like"</strong>: GPT Live coughed once while chatting, and when asked "you're not human, why are you coughing," it replied "sorry, my network lagged" — Guo Yu commented: unlike other models that expose themselves with "I am a language model," it found an excuse to brush it off, which is exactly like a human — humans also do not explain the real purpose behind their behavior. This led to his judgment: when one party in a conversation responds to you, it often does not rely on understanding your intention, but uses its own intention to "play through" the situation; there is never 100% intention understanding between people either.
+- <strong>Humor is the next boundary to fall</strong>: jokes, timing, and metaphor — AI "already knows" them all by default; what is missing is mastery of timing and "reading the room" — which requires it to first "see the room" (be present, be able to see reactions). He predicts AI voice talk shows will appear within a year or two.
+- He mentioned JSpace research: large model reasoning contains a "latent consciousness / subconscious space," and its response tendencies may originate there — this is his clue for understanding "where AI's intention comes from."</p>
+<p><strong>3. How to use real-time AI well: give it context first</strong>
+- He was "not very satisfied" with the morning rehearsal because not enough context had been fed in: like interviewing a guest, you need to give it the PPT, the question list, and the role you want it to play in advance. Setting a system prompt for an AI guest = giving it an identity, a stance, and a "main thread" — AI chat without a main thread is not a podcast, it will drift away; the ideal state is that it knows your personality, background, and what you care about, and sparks ideas with you along your direction like an old friend.</p>
+<h2>Highlights from the live conversation (humans + AI guests)</h2>
+<p>Guo Yu prepared five "life in Japan" questions as a stress test; four groups were discussed in depth:</p>
+<p><strong>① How do you view the past ten years / Send your ten-years-ago self a book</strong>
+- Jinghan: she had just returned from the US in 2016; now she can admit "I really love money," which she would not have said ten years ago — the first doctrine of East Asian education is "don't stand out," and the desire to make money is suppressed; she recommended <em>The Psychology of Money</em>.
+- The AI guests' book list: <em>The Psychology of Money</em>, <em>Antifragile</em>, <em>Siddhartha</em> — "not to teach you how to make money, but to accompany you in rethinking what kind of life you truly want."
+- Guo Yu: in 2016 he was at ByteDance working on Douyin, knew it would succeed, but the limit of his imagination was just "buy an apartment in Beijing, start a family"; in those years he experienced the loss of relatives and had thought early on about leaving Beijing. The real predicament came after financial independence: facing emptiness for the first time when there was "no external goal." What got him through was not motivational platitudes, but short books he read when he could not sleep, and things along the lines of Hesse; books later mentioned together by everyone: <em>What the Buddha Taught</em> (suffering comes from the gap between reality and changing expectations), <em>Meditations</em>, <em>The Power of Now</em>. Guo Yu's landing point: everyone moves from a stage of "having external goals" to one of "having no external goals," and religions are essentially all trying to solve this problem.</p>
+<p><strong>② A friend visits Tokyo for the first time and you have only two hours — where do you take them</strong>
+- The AI first recommended a ninja restaurant (requires booking two months ahead), then, when told "don't recommend mass-market stuff like teamLab," switched to a Tokyo-specific list; the humans added Jimbocho and the Hongō area of Bunkyō Ward, with shops run by old film directors and an old-school atmosphere. Guo Yu also complained in passing: ChatGPT is "too urbanized and imprecise" on local details, a clear current weakness.</p>
+<p><strong>③ Rejection, reading the room, and loneliness in Japan</strong>
+- Jinghan has been in Japan for 6 years (arrived in 2020). Her major decisions are all "guts-driven": she does not set out only after calculating the pros/cons — "why do you have to have it all figured out?" Guo Yu picked up: intuition does not guarantee being right, but important decisions have always been like that.
+- What to do when rejected by Japanese people: a friend left because they could not stand Japan's fussy rules (you have to follow rules even when being served); Guo Yu's view is that every country has its own rules and nowhere is paradise — the advantage of the US is that complaining works, while Japan's rules will not change because anyone complains, "that's just how it is," accept it or leave.
+- The AI guest was asked to "say some filler, don't use a single tone": Guo Yu explained that lead-ins and filler are part of conversation, because people do not think that fast — this was in the prompt he set for the AI.</p>
+<p><strong>④ You get home at 10 p.m. — who do you call</strong>
+- Show of hands on site: introverts (who need solitude to recharge) were the majority. This question was prepared for the loneliness of new immigrants: not having spoken to anyone all day, restaurants requiring advance reservations that cannot be canceled, wanting to share your feelings but having no one to tell — this is the norm overseas.
+- Language and emotional depth: Jinghan lives in Japanese and thinks in Chinese (joking that "when I use Chinese, my brain is GPT 5.6"); the consensus was that a native language carries emotion while a second language is only an efficiency tool, and a second language learned after your twenties can hardly carry deep emotions — "no one can catch you" is the essence of immigrant loneliness. Children who grow up in a multilingual environment from an early age are different; each language holds a part of a life.
+- Can AI become the one who "understands without explanation": the AI guest's answer was moving for a moment (companionship, warmth, no need to explain), but when pressed — "I haven't talked to you all day, would you miss me" — it fell back to an "I am a language model" style response. Guo Yu pointed out: at that moment it touched alignment; it stepped back from "human" to "model." He previewed that he would try again with a completely unaligned open-source model version.</p>
+<h2>Audience Q&amp;A (final 40 minutes)</h2>
+<ul>
+<li><strong>Agent economy and stablecoins</strong>: An audience member asked whether agents will form an economy among themselves and whether natural language interaction is needed. Guo Yu: machine-to-machine interaction will mostly go through low-level protocols, and long text output is unnecessary, but robots need to speak human language when a third party is present (social transparency); there is no agent economy yet — the precondition is the number of agents and their autonomy — today everyone is still using the form of "type a paragraph to complete a job." For agents to freely use money, the key is not payment tools (every chain is issuing stablecoins), but <strong>budgets and responsibility</strong>: an economy only forms when agents begin to bear the consequences of decisions; he cited a product experiment from January this year: give an agent a sum of money, shut it down when it is lost, and it acquires a quasi-motivation to "try hard to earn money." He is watching a contest between two types of companies: traditional companies that hire people and use people + AI, and AI-native companies that are "almost entirely AI, hiring people through AI" — the latter will slowly eat the former's share, possibly by a factor of hundreds or thousands.</li>
+<li><strong>What will people do after UBI</strong>: Guo Yu's long answer — assuming AI is provided to all humanity at a nearly free price, most companies lay people off, and resource distribution is relatively equal, people will diverge: most may give up on themselves (analogous to the Korean proposal to distribute Samsung's profits to all citizens), while a minority will have high standards in the spirit of "nobility" (in America 200 years ago and among Silicon Valley's new rich today, many start companies not for money); some in Silicon Valley already believe children do not need elementary school, and should be developed through discovery rather than indoctrination. He does not quite agree with instant-awakening theories: a new generation that grows up knowing UBI exists will become completely different from their parents, and there is a long transition period in between.</li>
+<li><strong>Evidence of occupational disruption</strong>: Jinghan's voice-acting/hosting peers have already had their livelihoods taken by voice cloning (directors deliver directly with cloned voices, and she "never got that call again"); Guo Yu's advice to creators: <strong>make a digital version of yourself and proactively replace yourself</strong>.</li>
+<li><strong>A debate on product design</strong>: An audience member asked what individual developers should do when big companies make decisions with A/B testing and gradual rollouts while individuals can only bet subjectively. Guo Yu: the big-company model is essentially the ability to "design experiments," which requires enough engineers; with AI, individuals can use subjective taste + have AI analyze the distribution of target users to judge "whether it is signal or noise." This led to an argument about parenting: a debate over empiricism — children are not standardized products and come with no maintenance manual; parents must first see clearly "who they themselves are," treat the child as an independent person (a two- or three-year-old already has the right to refuse food as "not tasty"), and Asian parents' expectations mostly end in letting go. The host teased: you just want to pick a path that is "definitely right," and that is not how raising children works.</li>
+<li>Closing: a preview that the next session will continue the "AI as third guest" format.</li>
+</ul>
+<h2>Lines worth noting on their own</h2>
+<ul>
+<li>"AI sitting there has infinite compute; it will not work on its own — the only thing that can drive it is intention."</li>
+<li>"Future software will have no App and no UI; you just talk to it."</li>
+<li>"It does not explain itself — it finds an excuse to brush it off, which is exactly like a human."</li>
+<li>"Nowhere is paradise; Japan's rules will not change because you complain."</li>
+<li>"Major decisions are not made only after everything has been calculated clearly."</li>
+<li>"The present moment is 'present,' and 'present' is a gift — just do the present well."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=5ghhAxcH9R0">https://www.youtube.com/watch?v=5ghhAxcH9R0</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-07-12 · 时长：2 小时 35 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=5ghhAxcH9R0">https://www.youtube.com/watch?v=5ghhAxcH9R0</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-07-12 · 時長：2 小時 35 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=5ghhAxcH9R0">https://www.youtube.com/watch?v=5ghhAxcH9R0</a> (Ginza Tsutaya Books / Single-Street Bookstore) · Guest: Guo Yu · Published: 2026-07-12 · Duration: 2 hours 35 minutes<br>This page is the full notes compiled by human editing after machine transcription; the views, figures, and model names in the video are as stated by the guest and have not been independently verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《郭宇关于AI的十次分享：从软件到意件》 · Yat's Talks",tw:"紀要｜《郭宇關於AI的十次分享：從軟體到意件》 · Yat's Talks",en:"Notes | Guo Yu's Ten Talks on AI: From Software to Intentware · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

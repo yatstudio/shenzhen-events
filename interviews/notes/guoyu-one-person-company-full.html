@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《郭宇：用AI經營一人公司（全）》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=pDAmg04gXV4 ｜时长 2 小时 03 分｜与《AI做员工，开一人公司》（Prb_YPSdzH4，63 分钟）为<strong>同一场活动的完整版</strong>：前 63 分钟内容完全一致（回应质疑、协调者之辩、黄东旭「最终的软件」、Harness Engineering 与 Wanman 演示），本纪要只补记后 60 分钟新增的问答部分。完整论述见 Prb_YPSdzH4 纪要。
@@ -44,8 +51,68 @@
 <h2>与 63 分钟版的关系</h2>
 <p>若时间有限，看 Prb_YPSdzH4 的纪要即可掌握本场全部核心论点；本完整版的价值在问答密度——信任、隐私、企业落地、个人动力四个话题都只有这里展开过。</p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=pDAmg04gXV4">https://www.youtube.com/watch?v=pDAmg04gXV4</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-27 · 时长：2 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《郭宇：用AI經營一人公司（全）》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=pDAmg04gXV4 ｜時長 2 小時 03 分｜與《AI做員工，開一人公司》（Prb_YPSdzH4，63 分鐘）為<strong>同一場活動的完整版</strong>：前 63 分鐘內容完全一致（回應質疑、協調者之辯、黃東旭「最終的軟體」、Harness Engineering 與 Wanman 演示），本紀要只補記後 60 分鐘新增的問答部分。完整論述見 Prb_YPSdzH4 紀要。
+說明：機器轉寫，採樣通讀後半段，個別發言歸屬可能有偏差；數據為講述者現場自述，未經核實。</p>
+</blockquote>
+<h2>後半程新增內容（現場問答）</h2>
+<ol>
+<li><strong>信任與複核（與 diN 問答場同題，此處答得更細）</strong>：觀眾問——AI 產出的商業計畫書、財務預測，你沒有專業知識，怎麼判斷合理？他的做法分層：程式碼他能 review 就 review；作業系統、資料庫之外的領域（如商業計畫）他不假裝懂——SOTA 模型會自己連網查證、交叉對比後生成漂亮的 PDF，合理性最終由專業機構裁定（銀行放貸會審、律師會審）；隱私政策、使用者條款這類文件他全交 AI 寫、從沒逐條看過。早年 ChatGPT 的幻覺問題已經大為改觀。他重申自己的工作只有「調度」：讓 agent 把所有行業的工作寫成可執行的東西，他負責機會與方向。</li>
+<li><strong>Wanman 的兩個待解問題</strong>：一是隱私——接管模式理論上能拿到你全部數據，本地派（OpenClaw）強調數據不出本機；他的立場是能擴到雲端就盡量在雲端擴（效能與能力優先），後續會支援資料夾上傳匯入。二是很多人檔案本身就亂，匯入後 AI 也只能做到 30 分——數據整備是真實瓶頸。</li>
+<li><strong>企業場景預言</strong>：現在是混亂期。大公司不會想著「用 AI 接管員工」，他們更可能把 AI 裝進員工的電腦裡，記錄每個人的工作習慣與流程，讓系統自我進化、慢慢替代——美國公司乾脆直接裁員；日本公司因終身僱用傳統，會用更「平衡」的方式（員工 6 點下班後 AI 接著幹）。把 AI 當實習生用的公司，不會去做這種折衷。</li>
+<li><strong>交易員提問（與 diN 場同題）</strong>：做交易系統、想做漲跌幅提醒與定投 DCA——他答：不需要自己開發，開著券商網頁保持登入，讓 Computer Use 接管瀏覽器操作即可；這類需求的人很多。本地派的理由也成立：你電腦裡有全部上下文，AI 了解你的處境。</li>
+<li><strong>怎麼讓身邊人用起來</strong>：教不會的，靠內在動力。你每天用、越來越熟練，他無動於衷是他的事；焦慮可以轉化成動力，但對他來說動力很簡單——「我只在乎這件事好不好玩」。時代劇變對普通人反而是機會：一成不變的世界裡階層早就固化了，變化才讓你能分一杯羹。另一個建議反直覺：別太執著於目標，去跑步、衝浪、游泳，放鬆下來、不去想它的時候，事情反而成了。</li>
+<li><strong>權力終局（即興發揮）</strong>：AI 公司將是未來權力最大的公司；太空數據中心、月球基地這類事「毫無疑問是馬斯克來做」——那是極致的權力與極致的安全保障，人類可能被「變成神」，革命必然伴隨陣痛且越走越快。他說自己沒法對這些發表太多看法，但這是他反覆回到的話題。</li>
+<li><strong>現場任務演示</strong>：給 Wanman 一個目標（做百萬粉絲 YouTuber），它排出完整計畫與話題清單（沒做滿 60 個話題）、成本與收入測算（長影片廣告與 Shorts 廣告、10 萬粉量級現金流約 25,000 美元量級）——結論仍是：全用 AI 壓成本，否則 20–50 萬粉之前都在虧錢。（與 diN 問答場演示為同一案例的不同場次版本。）</li>
+<li><strong>寫作即遺產</strong>：他從小學寫日記、飯否時代寫起，大腦被 AI 佔據後，仍堅持把生活與思考寫下來發出去——「最終都會變成 AI 模型的一部分」，這是給世界留下的遺產；很多愛寫的人未必發出來，這是性格差異。公司不報銷、純業餘的人不必強迫自己為 AI 花錢。</li>
+<li><strong>最後一個問題（日本銷售崗觀眾）</strong>：在日本銷售導向的公司裡如何自處——他的建議是往 AI 暫時替代不了的方向走：金牌銷售靠的是多年累積的信任關係，這正是 AI 拿不走的；同時用 AI 提升自己在本職上的競爭力，雙向準備。</li>
+</ol>
+<h2>與 63 分鐘版的關係</h2>
+<p>若時間有限，看 Prb_YPSdzH4 的紀要即可掌握本場全部核心論點；本完整版的價值在問答密度——信任、隱私、企業落地、個人動力四個話題都只有這裡展開過。</p>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | Guo Yu: Running a One-Person Company with AI (Full Version)</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=pDAmg04gXV4 | Duration 2 hours 03 minutes | This is the <strong>complete version of the same event</strong> as "AI as Employees, Starting a One-Person Company" (Prb_YPSdzH4, 63 minutes): the first 63 minutes are exactly the same (responding to doubts, the coordinator debate, Huang Dongxu's "final software," Harness Engineering and the Wanman demo). These notes only add the new Q&amp;A from the following 60 minutes. For the full discussion, see the Prb_YPSdzH4 notes.
+Note: Machine transcription, with the second half sampled and read through; attribution of individual remarks may be slightly off; the data are the speaker's on-site account and have not been verified.</p>
+</blockquote>
+<h2>New Content in the Second Half (Live Q&amp;A)</h2>
+<ol>
+<li><strong>Trust and review (the same question as in the diN Q&amp;A session, answered in more detail here)</strong>: An audience member asked — for a business plan or financial forecast produced by AI, how do you judge whether it is reasonable when you have no specialist knowledge? His approach is layered: for code, he reviews it if he can; for fields beyond operating systems and databases (such as business plans), he does not pretend to understand — SOTA models will search online themselves, cross-check, and then generate a polished PDF, and reasonableness is ultimately decided by professional institutions (a bank will review it before lending, a lawyer will review it); documents such as privacy policies and terms of use he leaves entirely to AI to write and has never read item by item. The hallucination problem of the early ChatGPT has improved greatly. He reiterated that his only job is "orchestration": letting agents turn work from all industries into executable things, while he is responsible for opportunities and direction.</li>
+<li><strong>Two unsolved problems for Wanman</strong>: First, privacy — the takeover mode can in theory obtain all your data, while the local camp (OpenClaw) emphasizes that data never leaves the local machine; his position is to expand to the cloud wherever possible (performance and capability first), and folder upload and import will be supported later. Second, many people's files are messy to begin with, and after import AI can only reach 30 points — data preparation is the real bottleneck.</li>
+<li><strong>Prediction for enterprise scenarios</strong>: This is a period of chaos. Large companies will not think of "using AI to take over employees"; they are more likely to install AI into employees' computers, record each person's work habits and processes, let the system evolve itself and gradually replace them — American companies simply lay people off outright; Japanese companies, because of the lifetime employment tradition, will use a more "balanced" approach (after employees leave at 6 p.m., AI keeps working). Companies that treat AI as an intern will not make this kind of compromise.</li>
+<li><strong>A trader's question (the same as in the diN session)</strong>: Building a trading system, wanting price-change alerts and dollar-cost averaging (DCA) — he answered: there is no need to develop it yourself; just keep the broker's webpage open and logged in and let Computer Use take over the browser operations; many people have this kind of need. The local camp's reasoning also holds: your computer contains the full context, and AI understands your situation.</li>
+<li><strong>How to get people around you to start using it</strong>: You cannot teach them; it depends on inner motivation. You use it every day and become more and more proficient; if he remains unmoved, that is his business; anxiety can be turned into motivation, but for him motivation is simple — "I only care whether this is fun." Dramatic change in the times is actually an opportunity for ordinary people: in an unchanging world, social strata would long have solidified, and only change lets you get a share. Another counterintuitive suggestion: do not cling too tightly to the goal; go running, surfing or swimming, and when you relax and stop thinking about it, things actually come together.</li>
+<li><strong>The endgame of power (improvised remarks)</strong>: AI companies will be the most powerful companies of the future; things such as space data centers and lunar bases "will undoubtedly be done by Musk" — that is ultimate power and ultimate security, and humans may be "turned into gods"; revolution inevitably comes with pain and moves faster and faster. He said he could not comment too much on these things, but this is a topic he returns to repeatedly.</li>
+<li><strong>Live task demo</strong>: Give Wanman a goal (become a YouTuber with a million followers), and it lays out a complete plan and a list of topics (it did not fill all 60 topics), cost and revenue estimates (long-video ads and Shorts ads, cash flow at the 100,000-follower level on the order of about 25,000 US dollars) — the conclusion remains: use AI throughout to keep costs down, otherwise you will be losing money until you reach 200,000–500,000 followers. (This is a different session version of the same case as the demo in the diN Q&amp;A session.)</li>
+<li><strong>Writing as a legacy</strong>: He has kept a diary since primary school and has been writing since the Fanfou era; after his brain has been occupied by AI, he still insists on writing down his life and thoughts and posting them — "in the end it will all become part of AI models," and this is the legacy he leaves to the world; many people who love writing may not post what they write, which is a difference in personality. People whose companies do not reimburse them and who are purely amateurs do not need to force themselves to spend money on AI.</li>
+<li><strong>The last question (an audience member in a sales role in Japan)</strong>: How to position yourself in a sales-oriented company in Japan — his advice is to move in directions AI cannot yet replace: a top salesperson relies on trust relationships accumulated over many years, which is exactly what AI cannot take away; at the same time, use AI to improve your competitiveness in your own job, preparing in both directions.</li>
+</ol>
+<h2>Relationship to the 63-Minute Version</h2>
+<p>If time is limited, reading the Prb_YPSdzH4 notes is enough to grasp all the core arguments of this session; the value of this complete version lies in the density of the Q&amp;A — the four topics of trust, privacy, enterprise adoption and personal motivation are only developed here.</p>
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=pDAmg04gXV4">https://www.youtube.com/watch?v=pDAmg04gXV4</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-27 · 时长：2 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=pDAmg04gXV4">https://www.youtube.com/watch?v=pDAmg04gXV4</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-05-27 · 時長：2 小時 03 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=pDAmg04gXV4">https://www.youtube.com/watch?v=pDAmg04gXV4</a> (銀座單向街書店) · Guest: 郭宇 · Release date: 2026-05-27 · Duration: 2 hours 03 minutes<br>This page is the full notes, manually compiled after machine transcription; the views, figures and model names in the video are all as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《郭宇：用AI經營一人公司（全）》 · Yat's Talks",tw:"紀要｜《郭宇：用AI經營一人公司（全）》 · Yat's Talks",en:"Notes | Guo Yu: Running a One-Person Company with AI (Full Version) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

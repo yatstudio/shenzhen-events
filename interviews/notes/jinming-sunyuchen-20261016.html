@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>孙宇晨：量子风险下更看空 BTC，仓位先进入「掩体模式」</h1>
 <blockquote>
 <p>节目：《黄金时代》（金明 WilliamJoy）· 嘉宾：孙宇晨（波场 TRON 创始人）· 发布：2026-10-16（YouTube 版，为 47 分钟公开剪辑版）· 时长：47 分钟
@@ -94,9 +101,171 @@
 <li>TRON 转账费为何逆势涨价（现约 5–6 美元，竞品 Plasma 已零费用）：他先纠正——去年已削减约 60%，且通过 staking 等方式可以免费转账。定价逻辑看竞品的活动量与沉淀资金增长：波场沉淀资金已超 1000 亿美元，对方体量比不上，就不会把费用降得太低；用户为品牌、网络与安全付溢价，第三世界用户已形成使用习惯。生态内增值服务也在补齐：在波场生态里可以直接买 QQQ、S&amp;P 500；等 RWA 做得更成功，不排除再降手续费。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>孫宇晨：量子風險下更看空 BTC，倉位先進入「掩體模式」</h1>
+<blockquote>
+<p>節目：《黃金時代》（金明 WilliamJoy）· 嘉賓：孫宇晨（波場 TRON 創辦人）· 發布：2026-10-16（YouTube 版，為 47 分鐘公開剪輯版）· 時長：47 分鐘
+說明：本紀要據音訊轉寫整理（無官方字幕，轉寫有個別專名誤轉，已按上下文校正）。文中觀點、數字均為孫宇晨現場口徑，未經核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>孫宇晨這場最重的判斷：AI 與量子計算的進步讓 BTC 的密碼學根基面臨「Q-Day」衝擊，而市場完全沒有定價——他的應對不是賣幣，而是先把倉位轉進從未簽過名的冷地址（「掩體模式」）；同時他自曝去年已在 3600–4000 美元減掉八九成以太坊，至今未買回。</p>
+<h2>鏈與交易所：重倉仍在以太坊，Hyperliquid 是本週期最大發現</h2>
+<ul>
+<li>自家倉位以 DeFi 挖礦為主，流動性決定重心：主要重倉以太坊、看好以太坊生態；Solana 有正常合作，但其他鏈流動性太小，大資金只能以以太坊為主。挖礦收益與 ETH 價格本身關係不大。</li>
+<li>Hyperliquid 是「這個週期成長起來的最大發現」，其美股永續（Perps）思路為整個行業打開了想像空間，儘管現在全行業都在跟做美股 Perps。</li>
+<li>DEX 與 CEX 的終局取決於監管如何定性 Hyperliquid 這類「中間形態」：若美國給予類似 Uniswap 的完全豁免，大量 CEX 會轉向 DEX 形態以降低合規成本、全球展業，不轉型的 CEX 會被擠壓；若豁免條件苛刻，Hyperliquid 自身壓力也很大——它在監管與合規成熟度上無法與 Coinbase、Circle 相比。目前美國方面有「歡迎回來」的喊話，但細則未定。</li>
+</ul>
+<h2>BTC 與量子風險：他比兩年前更看空</h2>
+<ul>
+<li>觀點變化：上次見面他已提過礦工拋壓；現在他直言「相反，我有點更看空 BTC」，原因是 AI 演算法進步與量子計算（Q-Day）問題，「BTC 很難在這個市場全身而退，絕大多數行業的人低估了這件事」。</li>
+<li>為什麼市場沒定價：BTC 已是成熟 ETF 產品，BlackRock 等通路裡大量持有人根本不了解 BTC、更不懂 Q-Day 意味著什麼。他還提到一種可能性：甚至不必等量子計算，AI 在數學上的突破（如 OpenAI 近期展示的實力）可能先行實現經典方式的破解；交易所的熱錢包目前也普遍沒有基本防護。</li>
+<li>時間感：此前他保守估計 Q-Day 約兩年；看到 OpenAI 的數學實力後，他認為可能一年到一年半就要認真考慮。</li>
+<li>最棘手的不是技術而是存量：中本聰的幣、遺失私鑰的死幣（他舉例一位知名朋友有 5000 枚 BTC 忘掉私鑰）預設不會採取任何防護措施，將是最早被攻破的一批；他估計可能有近 200 萬枚以上「已退出流通」的 BTC 會因此復活流入市場。社群確有提案（對早期區塊範圍內的幣統一凍結/限制流通、配合硬分叉），但在比特幣的去中心化程度下，礦工、開發者與社群達成共識極難，歷史上也沒有先例，他認為協調成功可能性低。</li>
+<li>個人自保法（他仍持有 BTC 倉位）：把幣轉到一個<strong>從未簽名、從未轉出過</strong>的新地址做冷儲存——代價是功能受限，只能儲存，每次動用都要把餘額再轉到新地址。這是他說的第一步，成本幾乎為零，只是麻煩幾天。</li>
+<li>「掩體模式」：他們內部已把這一整套倉位隔離做法命名為「掩體模式」，先把自己的幣保起來，再密切觀察科技界進展——態度從「完全不關注」改為「密切關注」。BTC 本身生息收益低，放進冷隔離對整體收益率損傷不大；但以太坊是生息資產，隔離就沒法做 DeFi，收益傷害大得多——「現在對整個幣圈都是一個挑戰」。</li>
+<li>風險外溢：橢圓曲線等經典演算法是整個網際網路的根基（網站憑證、銀行、交易所皆然），密碼學被攻破不只是幣圈的事，有點像當年的千年蟲問題，是全民問題。</li>
+<li>波場側的準備：波場與火幣投入了大量資源做抗量子演算法，已有測試網、尚未上主網；計劃在他們判斷的 Q-Day 前一年左右把抗量子演算法部署到主網。極端情形下的交易所預案是先做危機前備份，危機後「共識性暫停」，再在新方案上恢復。</li>
+</ul>
+<h2>快問快答：人民幣、美債、老登資產</h2>
+<ul>
+<li>人民幣未來走強還是走弱：<strong>走強</strong>。</li>
+<li>美債信用危機：<strong>過度擔憂</strong>。美債可以無限續杯（發新債還舊債），核心是始終有人願意買新債，根源是美國的科技與軍事霸權；人類走向 AI，晶片產業鏈與 AI 技術仍在美國手裡。他同時承認這種統治力在緩慢消退（收益率越來越高是表徵），並提出一個新解釋：美債收益率走高 partly 是 AI 在與美債爭奪資金（權益資產與美債 compete）；但「孫悟空跳不出如來佛的手掌心」——只要美國保持對 AI 的終極控制，美債就不缺買家。</li>
+<li>不看好的產業：重申他的「老登/新登」理論——所有老登類資產都不看好，積極擁抱新登類資產。</li>
+</ul>
+<h2>個人題：失敗、口碑與「缺兩個 AI」</h2>
+<ul>
+<li>過去一年最大的失敗：「不講太多，就一個，談戀愛失敗。」但他補了一句：對 relationship 是失敗，對人生不一定是失敗，說不定是財富。</li>
+<li>口碑還重要嗎：重要，但口碑是變化的、來源隨人生階段而變；他的態度是了解輿情、與輿情保持良好相處。觀點不是永恆的，爭議多交流多激盪本身是好事，世俗成功之後黑紅與反噬某種程度上可以被解決。</li>
+<li>現在最缺什麼：「對 AI 的理解和應用」——隨即玩笑說愛情也稀缺，「缺兩個 AI（愛）」。</li>
+<li>終極理想：把 AI 與現有業務好好結合，在 AI 新時代找到屬於自己和公司的位置。</li>
+<li>怕死嗎：怕。他自述用了一整套 AI 監控身體數據的方法；但做多了之後反而不那麼怕——死亡是必達的終點，目標是在合理壽命內最大化壽命品質，「有尊嚴、有體面地死去」。</li>
+<li>希望後人記住什麼：人生是體驗的集合，他只管在自己感興趣的範圍內體驗，別人如何評價決定不了。</li>
+</ul>
+<h2>孫學：給普通年輕人的 bootstrap 系統</h2>
+<ul>
+<li>有年輕人不想學孫學，推薦學什麼：先練搏擊。</li>
+<li>想學孫學，最不建議學哪一點：都可以學，孫學挺「完美」；它最合適的一點是「零成本安裝系統」，像 AI 的 skill 一樣直接蒸餾、直接安裝。他明說孫學是寫給中國最普通的年輕人的；含著金鑰匙出生、條件極好的人不一定要按孫學的思路，可能已經超越孫學。</li>
+<li>回應「孫學過於精緻利己主義」的批評：孫學不是精緻利己主義——真要利己就不必另發明一套。孫學的第一步是對時代環境摸底，結合自身情況，選擇對個人利益最大化的博弈路徑；本質是博弈論加演化論，隨時代演化。例證：2016 年他喊年輕人不要結婚、不要買房，all in 輝達、特斯拉，「隨著時代的車輪，這十年你的財產就會獲得巨量性增值」。</li>
+<li>推薦三本書：安蘭德《源泉》（俄裔美國哲學家，孫學吸收了「安學」，可視為前身）；王小波《黃金時代》（以情色小說為外殼的時代畫卷）；第三本是他自己的《孫學》。</li>
+</ul>
+<h2>孫宇晨獎：奔著 AI 時代的諾貝爾獎去</h2>
+<ul>
+<li>為什麼只拿出財富的一小部分辦獎：打德撲的邏輯，「先看看牌」。他認為人類進入新一輪工業革命，數學與科技的光速進步讓「今年可能是人類最後一次拿諾貝爾獎」成為流行說法（以後可能一天產生 50 個諾獎級成果），傳統諾獎的設立方式必須調整，他還在迭代想法。</li>
+<li>規則設計：任何人用 AI 解出數學題、透過 Lean 形式化驗證、機器可讀機器統一，即可自動獲得孫宇晨獎——不需要本人到場領獎。第一批獲獎人已經產生（先發布數學命題懸賞，解題即自動獲獎）。</li>
+</ul>
+<h2>AI 產業鏈：最看好應用，儲存與光模組被高估</h2>
+<ul>
+<li>最看好的環節是<strong>應用層</strong>，尤其是能把 AI 用進真實生活的方向。理由：輝達這類巨頭已充分定價——「人類最大單一企業的上限不會超過美債的一半」，輝達最高也就再翻約四倍；而應用層有太多可以超過四倍的地方。</li>
+<li>他個人最看好 AI 健康管理整條賽道：數據埋點 → 數據採集 → 數據挖掘 → 健康決策。Oura 這類戒指只是採集器單點（他沒投，已上市可買）。未來的健康管理不是生病才去醫院：每年固定去醫院幾次採集必須驗血的數據，消費級設備採集其餘數據，AI 給決策，再加專家 second opinion；保險等所有相關產業都得跟著調整，「花更少的錢辦更大的事」。</li>
+<li>被高估的環節：儲存、光模組等硬體。邏輯是資金抱團求確定性——看不到大模型之外的應用，大家沒有安全感，把硬體股炒成了軟體股，估值已經非常高（動輒兆美元級）。馬斯克增發 400 億美元債券做晶片也是這種「囤晶片不會錯」心態的體現。他判斷最快明年主題就會從「處理數據」的角度開始分化，投資機會多樣化，不再是幾隻股票獨舞。</li>
+</ul>
+<h2>持倉自白：ETH 減了八九成，BTC 是底倉，中線微微看空</h2>
+<ul>
+<li>當前重倉（除創業資產外）：以太坊與比特幣是主要配置（減倉前 ETH 倉位遠大於 BTC），市值前十且有應用的代幣有部分配置；美股以那指為主、屬中倉；<strong>沒有 A 股</strong>（研究過一年：光模組是 A 股唯一能同時踩中美國 AI 與中國製造的抱團標的）。</li>
+<li>中線觀點：<strong>微微看空，但沒有做空</strong>，倉位還在。理由是資金抱團使大盤與 AI 呈現過高跡象；資金的源頭是美債，美債是「母雞」，股票的槓桿在數學約束上不可能無限放大；美債利率高到 7% 的無風險收益時，「你幹什麼搞權益」——高利率還會反噬自身。AI 內部的 looping（循環融資）也很嚴重，一出事大家一起出事。但長期他仍高度看好：類比 2000 年光纖泡沫，產能最終用得上，短期過剩不排除。</li>
+<li>去年減倉復盤：2024 年 11–12 月前後，在 ETH 3600–4000 美元區間把以太坊倉位的八九成減掉。判斷依據是純交易結構：ETH 此前已衝過一次 4400，第二次靠 ETF 與 Tom Lee 的敘事續命衝高，形成非常經典且脆弱的雙頂（強弩之末）。BTC 一分未減——BTC 是底倉配置，如同 AI 領域對輝達的底倉，「除非徹底不看 AI，否則一分不會減」。角色劃分：BTC 是底倉，以太坊是進攻倉位。</li>
+<li>減倉後近一年基本空倉（留了少量 ETH 底倉），資金轉去買了大量美股（判斷美股資金抱團較確定）；ETH 至今沒有買回。</li>
+</ul>
+<h2>RWA 與波場：下一步把美股搬上鏈</h2>
+<ul>
+<li>RWA 上鏈空間「非常大」：波場計劃在 11 月把大部分美股在波場鏈上上線。邏輯延續穩定幣打法：美元穩定幣的本質是給非美元國家提供美元 exposure，下一步是把美元裡最優質、最共識的資產（美股）上鏈，給發展中國家使用者接觸不到的美元資產配置機會。</li>
+<li>TRON 轉帳費為何逆勢漲價（現約 5–6 美元，競品 Plasma 已零費用）：他先糾正——去年已削減約 60%，且透過 staking 等方式可以免費轉帳。定價邏輯看競品的活動量與沉澱資金增長：波場沉澱資金已超 1000 億美元，對方體量比不上，就不會把費用降得太低；使用者為品牌、網路與安全付溢價，第三世界使用者已形成使用習慣。生態內增值服務也在補齊：在波場生態裡可以直接買 QQQ、S&amp;P 500；等 RWA 做得更成功，不排除再降手續費。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Justin Sun: More Bearish on BTC Under Quantum Risk, Positions Move into "Bunker Mode" First</h1>
+<blockquote>
+<p>Program: <em>Golden Age</em> (Jin Ming, WilliamJoy) · Guest: Justin Sun (founder of TRON) · Released: 2026-10-16 (YouTube version, a 47-minute public edited cut) · Duration: 47 minutes
+Note: These notes were compiled from an audio transcript (no official subtitles; a few proper names were mistranscribed and have been corrected based on context). All views and figures are as stated by Justin Sun live and have not been verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Sun's weightiest judgment in this episode: advances in AI and quantum computing are putting BTC's cryptographic foundations at risk of a "Q-Day" shock, and the market has not priced it in at all — his response is not to sell, but to first move positions into cold addresses that have never signed anything ("bunker mode"); he also revealed that last year he had already cut 80–90% of his Ethereum holdings at $3,600–$4,000 and has not bought back since.</p>
+<h2>Chains and Exchanges: Heavy Positions Still in Ethereum, Hyperliquid Is This Cycle's Biggest Discovery</h2>
+<ul>
+<li>His own positions are mainly in DeFi mining, with liquidity dictating the focus: heavily weighted to Ethereum and bullish on the Ethereum ecosystem; Solana has normal cooperation, but other chains have too little liquidity, so large capital can only center on Ethereum. Mining returns have little to do with the ETH price itself.</li>
+<li>Hyperliquid is "the biggest discovery to have grown up this cycle"; its US-stock perpetuals (Perps) idea opened up the imagination for the whole industry, even though the entire industry is now following suit with US-stock Perps.</li>
+<li>The endgame for DEXs vs. CEXs depends on how regulators classify "intermediate forms" like Hyperliquid: if the US grants a full exemption similar to Uniswap's, many CEXs will shift to DEX form to lower compliance costs and operate globally, and CEXs that do not transform will be squeezed; if exemption conditions are strict, Hyperliquid itself will also be under great pressure — it cannot compare with Coinbase and Circle on regulatory and compliance maturity. The US side has so far offered "welcome back" rhetoric, but the details are not yet set.</li>
+</ul>
+<h2>BTC and Quantum Risk: He Is More Bearish Than Two Years Ago</h2>
+<ul>
+<li>Change in view: at their last meeting he had already mentioned miner selling pressure; now he said plainly, "On the contrary, I'm a bit more bearish on BTC," because of advances in AI algorithms and the quantum computing (Q-Day) issue: "It will be hard for BTC to come through this market unscathed, and most people in the industry are underestimating this."</li>
+<li>Why the market has not priced it in: BTC is already a mature ETF product, and many holders through channels like BlackRock do not understand BTC at all, let alone what Q-Day means. He also raised another possibility: it may not even be necessary to wait for quantum computing — breakthroughs by AI in mathematics (such as the capability OpenAI has recently demonstrated) could achieve a classical break first; exchanges' hot wallets also generally lack basic protection at present.</li>
+<li>Sense of timing: he previously conservatively estimated Q-Day at about two years; after seeing OpenAI's mathematical capability, he thinks it may need to be taken seriously in as little as one to one-and-a-half years.</li>
+<li>The hardest part is not the technology but the existing stock: Satoshi's coins and dead coins whose private keys have been lost (he gave the example of a well-known friend who forgot the private key to 5,000 BTC) will by default take no protective measures and will be among the first to be breached; he estimated that more than close to 2 million "out of circulation" BTC could thus be revived and flow into the market. The community does have proposals (uniformly freezing / restricting circulation of coins within early block ranges, combined with a hard fork), but given Bitcoin's degree of decentralization, it is extremely hard for miners, developers and the community to reach consensus, and there is no historical precedent; he believes the chance of successful coordination is low.</li>
+<li>His personal self-protection method (he still holds a BTC position): move coins to a new address that has <strong>never signed and never sent anything out</strong> for cold storage — the cost is limited functionality, storage only, and every time you want to use it you must move the balance again to a new address. This is the first step he described, costing almost nothing, just a few days of hassle.</li>
+<li>"Bunker mode": internally they have named this whole set of position-isolation practices "bunker mode" — protect your own coins first, then closely watch progress in the tech world — the attitude has shifted from "paying no attention at all" to "watching closely." BTC itself yields little interest, so putting it in cold isolation does little damage to overall returns; but Ethereum is a yield-bearing asset, and isolating it means you cannot do DeFi, which hurts returns far more — "this is now a challenge for the whole crypto industry."</li>
+<li>Risk spillover: classical algorithms such as elliptic curves are the foundation of the entire internet (website certificates, banks and exchanges alike); a break of cryptography is not just a crypto problem — it is a bit like the Y2K problem, a problem for everyone.</li>
+<li>TRON's preparations: TRON and Huobi have invested substantial resources in quantum-resistant algorithms, with a testnet already live but not yet on mainnet; the plan is to deploy quantum-resistant algorithms to mainnet about a year before their judged Q-Day. The exchange contingency plan for an extreme scenario is to first make a pre-crisis backup, then after the crisis implement a "consensus pause," and then restore on the new scheme.</li>
+</ul>
+<h2>Rapid Fire: RMB, US Treasuries, "Old-Timer" Assets</h2>
+<ul>
+<li>Will the RMB strengthen or weaken in the future: <strong>Strengthen</strong>.</li>
+<li>US Treasury credit crisis: <strong>Over-worried</strong>. US Treasuries can be rolled over indefinitely (issuing new debt to repay old debt); the key is that there are always buyers for new debt, rooted in US technological and military hegemony; as humanity moves toward AI, the chip supply chain and AI technology remain in US hands. He also acknowledged that this dominance is slowly fading (rising yields are a sign), and offered a new explanation: rising Treasury yields are partly AI competing with Treasuries for capital (equity assets compete with Treasuries); but "the Monkey King cannot escape the Buddha's palm" — as long as the US maintains ultimate control over AI, Treasuries will not lack buyers.</li>
+<li>Sectors he is not bullish on: reiterating his "old-timer / newcomer" theory — he is bearish on all old-timer assets and actively embraces newcomer assets.</li>
+</ul>
+<h2>Personal Questions: Failure, Reputation and "Missing Two AIs"</h2>
+<ul>
+<li>Biggest failure of the past year: "I won't say too much, just one — failing at dating." But he added: it is a failure for the relationship, not necessarily a failure for life; it might even be wealth.</li>
+<li>Does reputation still matter: Yes, but reputation changes, and its sources change with life stages; his attitude is to understand public sentiment and get along well with it. Views are not eternal, and more controversy, exchange and clash is itself a good thing; after worldly success, being both praised and attacked, and the backlash, can to some extent be resolved.</li>
+<li>What he lacks most now: "Understanding and application of AI" — then joking that love is also scarce: "missing two AIs (ai, meaning love)."</li>
+<li>Ultimate ideal: combine AI well with his existing business and find his and his company's place in the new AI era.</li>
+<li>Afraid of death: Yes. He said he uses a whole AI-based system to monitor his body data; but after doing it a lot he became less afraid — death is an inevitable endpoint, and the goal is to maximize quality of life within a reasonable lifespan, "to die with dignity and decency."</li>
+<li>What he hopes posterity remembers: Life is a collection of experiences; he just experiences what interests him, and how others judge him is not his to decide.</li>
+</ul>
+<h2>Sun-ology: A Bootstrap System for Ordinary Young People</h2>
+<ul>
+<li>If a young person does not want to learn Sun-ology, what does he recommend instead: learn combat sports first.</li>
+<li>If you want to learn Sun-ology, which point does he least recommend learning: you can learn all of it — Sun-ology is quite "perfect"; its most fitting point is "zero-cost system installation," distilled and installed directly like an AI skill. He stated plainly that Sun-ology is written for the most ordinary young people in China; those born with a golden key and in excellent circumstances do not necessarily need to follow Sun-ology's approach and may already have surpassed it.</li>
+<li>Responding to criticism that "Sun-ology is overly refined egoism": Sun-ology is not refined egoism — if you truly wanted to be egoistic you would not need to invent a separate system. The first step of Sun-ology is to survey the era's environment, combine it with your own situation, and choose the game path that maximizes personal interest; in essence it is game theory plus evolution, evolving with the times. Example: in 2016 he told young people not to get married, not to buy a house, and to go all in on Nvidia and Tesla — "with the wheels of the era, over this decade your wealth would have grown enormously."</li>
+<li>Three recommended books: Ayn Rand's <em>The Fountainhead</em> (the Russian-American philosopher; Sun-ology absorbed "Rand-ology," which can be seen as its predecessor); Wang Xiaobo's <em>Golden Age</em> (a portrait of an era wrapped in an erotic novel); and the third is his own <em>Sun-ology</em>.</li>
+</ul>
+<h2>The Justin Sun Prize: Aiming for the Nobel Prize of the AI Era</h2>
+<ul>
+<li>Why put up only a small part of his wealth for the prize: the logic of playing poker — "take a look at the cards first." He believes humanity has entered a new industrial revolution, and the light-speed progress of mathematics and technology has made "this year may be the last time humans win a Nobel Prize" a popular saying (in the future, 50 Nobel-level results might be produced in a single day); the traditional Nobel setup must be adjusted, and he is still iterating on the idea.</li>
+<li>Rules design: anyone who uses AI to solve a math problem, passes Lean formal verification, in a machine-readable and machine-unified way, automatically receives the Justin Sun Prize — no need to attend in person to collect it. The first batch of winners has already been produced (math propositions were posted as bounties first; solving them automatically wins the prize).</li>
+</ul>
+<h2>AI Industry Chain: Most Bullish on Applications, Storage and Optical Modules Overvalued</h2>
+<ul>
+<li>The segment he is most bullish on is the <strong>application layer</strong>, especially directions that bring AI into real life. Reason: giants like Nvidia are already fully priced — "the ceiling for humanity's largest single company will not exceed half of US Treasuries," Nvidia can at most roughly quadruple again; while the application layer has many places that can exceed four times.</li>
+<li>Personally he is most bullish on the whole AI health-management track: data instrumentation → data collection → data mining → health decisions. Rings like Oura are only a single collection point (he has not invested; it is listed and can be bought). Future health management will not mean going to the hospital only when sick: go to the hospital a fixed few times a year to collect data that requires blood tests, let consumer devices collect the rest, let AI make decisions, plus an expert second opinion; insurance and all related industries will have to adjust accordingly — "spending less money to do bigger things."</li>
+<li>Overvalued segments: hardware such as storage and optical modules. The logic is capital crowding together for certainty — unable to see applications beyond large models, everyone feels insecure, and hardware stocks have been bid up like software stocks, with valuations already very high (routinely at the trillion-dollar level). Musk issuing $40 billion in bonds to make chips is also a manifestation of this "stockpiling chips can't be wrong" mentality. He judges that as early as next year the theme will begin to differentiate from the angle of "processing data," investment opportunities will diversify, and it will no longer be a dance of just a few stocks.</li>
+</ul>
+<h2>Holdings Confession: ETH Cut by 80–90%, BTC Is the Core Position, Mildly Bearish Medium-Term</h2>
+<ul>
+<li>Current heavy positions (excluding entrepreneurial assets): Ethereum and Bitcoin are the main allocations (before the cut, the ETH position was far larger than BTC), with some allocation to top-10 market-cap tokens that have applications; US stocks are mainly Nasdaq, a medium position; <strong>no A-shares</strong> (studied for a year: optical modules are the only A-share crowded trade that can step on both US AI and Chinese manufacturing at the same time).</li>
+<li>Medium-term view: <strong>Mildly bearish, but not shorting</strong>, positions still held. Reason: capital crowding has made the broader market and AI look overheated; the source of capital is US Treasuries — Treasuries are the "hen," and equity leverage cannot expand infinitely under mathematical constraints; when Treasuries offer a 7% risk-free yield, "why would you bother with equities" — high rates also backfire on themselves. Looping (circular financing) inside AI is also severe; if something goes wrong, everyone goes wrong together. But long-term he remains highly bullish: analogous to the 2000 fiber-optic bubble, the capacity will eventually be used, though short-term overcapacity cannot be ruled out.</li>
+<li>Review of last year's cut: Around Nov–Dec 2024, he cut 80–90% of his Ethereum position in the ETH $3,600–$4,000 range. The basis was purely trading structure: ETH had already surged once to 4,400, and the second surge, kept alive by the ETF and Tom Lee's narrative, formed a very classic and fragile double top (a spent force). BTC was not reduced by a cent — BTC is a core position, like the core position in Nvidia in the AI field: "unless you give up on AI entirely, you won't reduce a cent." Role division: BTC is the core position, Ethereum is the offensive position.</li>
+<li>For nearly a year after the cut he was basically in cash (keeping a small ETH core position), moving capital into buying a lot of US stocks (judging US-stock capital crowding as relatively certain); ETH has not been bought back to this day.</li>
+</ul>
+<h2>RWA and TRON: Next Step Is Bringing US Stocks On-Chain</h2>
+<ul>
+<li>The space for RWA on-chain is "very large": TRON plans in November to list most US stocks on the TRON chain. The logic continues the stablecoin playbook: the essence of USD stablecoins is to give non-USD countries USD exposure; the next step is to bring the highest-quality, most consensus USD assets (US stocks) on-chain, giving users in developing countries access to USD asset allocation they otherwise cannot reach.</li>
+<li>Why TRON transfer fees rose against the trend (now about $5–$6, while competitor Plasma is already zero-fee): he first corrected — they were already cut by about 60% last year, and transfers can be free through staking and other means. The pricing logic looks at competitors' activity levels and growth in funds settled: TRON's settled funds have exceeded $100 billion, the other side's scale cannot compare, so fees will not be cut too low; users pay a premium for brand, network and security, and users in the third world have already formed usage habits. Value-added services inside the ecosystem are also being filled in: within the TRON ecosystem you can directly buy QQQ and S&amp;P 500; once RWA is more successful, a further fee cut is not ruled out.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=o9Jn__LGGI4">https://www.youtube.com/watch?v=o9Jn__LGGI4</a>（黄金时代）· 嘉宾：孙宇晨 · 发布日期：2026-10-16 · 时长：47 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=o9Jn__LGGI4">https://www.youtube.com/watch?v=o9Jn__LGGI4</a>（黃金時代）· 嘉賓：孫宇晨 · 發布日期：2026-10-16 · 時長：47 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=o9Jn__LGGI4">https://www.youtube.com/watch?v=o9Jn__LGGI4</a> (Golden Age) · Guest: Justin Sun · Release date: 2026-10-16 · Duration: 47 minutes<br>This page is the full notes, manually compiled; all views and figures in the session are as stated by the speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=o9Jn__LGGI4">https://www.youtube.com/watch?v=o9Jn__LGGI4</a>（黄金时代）· 嘉宾：孙宇晨 · 发布日期：2026-10-16 · 时长：47 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"孙宇晨：量子风险下更看空 BTC，仓位先进入「掩体模式」 · Yat's Talks",tw:"孫宇晨：量子風險下更看空 BTC，倉位先進入「掩體模式」 · Yat's Talks",en:"Justin Sun: More Bearish on BTC Under Quantum Risk, Positions Move into \"Bunker Mode\" First · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

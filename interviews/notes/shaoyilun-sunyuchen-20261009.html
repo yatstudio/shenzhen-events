@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>孙宇晨的「版本答案」：孙学、搏击、黄毛与全面 AI 化</h1>
 <blockquote>
 <p>节目：邵艾伦 Alan · 嘉宾：孙宇晨 · 主持：邵艾伦（千万粉丝口语博主、「搏击理论」创始人）· 发布：2026-10-09 · 时长：4 小时 22 分
@@ -106,9 +113,195 @@
 <li>邵艾伦自述：一年前曾给孙宇晨发长私信自荐，想加入其团队做内容与个人 IP，这次当面交付；孙宇晨让他把旧私信原样截图发来，并收下他「黄毛思维」那期视频链接回去研读。两人相约过段时间再做一期，孙宇晨说「搏击版版本答案应该快了，认知已经到位，剩下是时间问题」。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>孫宇晨的「版本答案」：孫學、搏擊、黃毛與全面 AI 化</h1>
+<blockquote>
+<p>節目：邵艾倫 Alan · 嘉賓：孫宇晨 · 主持：邵艾倫（千萬粉絲口語博主、「搏擊理論」創始人）· 發布：2026-10-09 · 時長：4 小時 22 分
+說明：本紀要據錄音轉寫整理（語音識別對專有名詞有誤，已按上下文校正）。文中數字與說法均為發言人現場口徑，未經獨立核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這是一場孫宇晨為自己的人生作業系統做「版本發布」的訪談：底層是孫學（認知升級）、搏擊（身體升級）、黃毛思維（心態升級）三大理論，運行方式是把生活與決策全面 AI 化；Crypto 在他口中是「把貨幣翻譯成機器能聽懂的語言」，財富自由則是「先自由、後財富」的螺旋上升。婚姻與人生意義兩塊，他罕見地承認還沒想通。</p>
+<h2>開場：剛練了一天的「搏擊版孫哥」</h2>
+<ul>
+<li>邵艾倫是「搏擊理論」（練肌肉理論，ASR 多作「搏肌/博機」）的創始人。孫宇晨剛開始練一天，計畫 3–6 個月成為「搏擊版孫哥」。自報身高 172cm、體重約 75kg、體脂率約 29%。</li>
+<li>他的健身已全套 AI 化：每餐先拍餐桌照片給 Claude，吃完再拍一張，AI 算卡路里並指導進食順序（先吃高蛋白）；配蛋白粉 25 克、肌酸 5 克，目標每天 140–150 克蛋白質、約 600 大卡熱量缺口，增肌減脂同步。戴 Oura Ring 抓睡眠與消耗數據，一併丟給 AI。</li>
+<li>他給 Claude Code 專門開了健身項目：訓練影片（教練拍攝）發給 AI 記錄組數、重量與漸進超負荷（progressive overload），AI 每天結合睡眠數據出一份日報，全部沉澱為本地 Markdown 文件——「下一個 AI 來直接讀 README 就能接手，換 Codex 也行」。</li>
+<li>理論建設先行一週：讀邵艾倫的搏擊教程、備齊裝備後才開練。一個被打破的舊觀念：蛋白粉不是「科技」（打藥），它和吃雞蛋的蛋白是一回事，普通飲食很難吃夠 140 克蛋白質，所以需要補充。</li>
+</ul>
+<h2>給 20 歲年輕人的重啟方案：先把一切 AI 化</h2>
+<p>主持人問：今天重新 20 歲、沒人脈沒資源，怎麼開始？他以自己在北大時月可支配收入不足 1000 元的階段為例：</p>
+<ul>
+<li><strong>第一步是 AI 化，且可以零成本。</strong> Claude Code 太貴（一個月 200 美元）用不起，就用智譜、Kimi、ZCode 這類免費的，或他自家做的 B.AI（按問題付費調各家 API）；沒電腦用手機也行。把所有東西都寫進文件、丟給 AI，先把整套生活與工作流程 AI 化——「以前日本要現代化先搞君主立憲，現在先 AI 化」。</li>
+<li><strong>三大理論（零成本安裝包）</strong>：①<strong>孫學</strong>——理論武裝，相當於給大腦換作業系統，升級對財富自由與萬事萬物的理解；②<strong>搏擊</strong>——身體健康在 AI 時代是無價的，健康垮了是「一票否決」，肥胖會嚴重拖慢財富自由進度；③<strong>黃毛理論</strong>——在中國踐行前兩條必然招來嘲笑與嫉妒（又帥又有肌肉還有認知，100% 被嫉妒），黃毛思維就是「別人說什麼你不管，自己認定對的就充分執行」。</li>
+<li><strong>核心是 100% 相信 AI。</strong> 他回應前段時間的「甩鍋 Claude」風波：不是甩鍋，而是他絕對信任 AI——「Claude 說什麼我就執行，無論多大阻力都執行」；用 OpenAI 的 Aster、智譜 GLM 也一樣。</li>
+<li><strong>執行法</strong>：先累積 2–4 個月自己的數據（健康、現狀），數位化後丟給 AI 分析方向與賺錢路徑；重要問題同時問三個 AI（Claude、OpenAI、國產各一），出上中下三策取其中；同時緊盯科技動向，選一個自己最感興趣的方向鑽深。整個過程像訓練模型——不是一錘子買賣，靠數據回饋不停 tuning。</li>
+</ul>
+<h2>年輕人的機會：壽命是唯一稀缺品，先「探圖」再「造兵」</h2>
+<ul>
+<li>他對年輕人整體極度看好：AI 時代一切都會變便宜，唯一值錢的是壽命，所以「年輕就是財富」；除長生不老還沒實現外，各行各業都會被 AI 革命，每條賽道都有機會。</li>
+<li><strong>數學被 AI 解放</strong>：過去數學拚的是導師與圈子（思路壟斷在哈佛、MIT 的導師手裡），現在 AI 把全世界的思路都抓進了模型，高中生也能一步到位到博士水準。他舉例稱，一位紐約大學教授把攻堅 NS 方程的思路講給 OpenAI，OpenAI 內部 agent 吸收後調集算力兩天就推進並公布了成果——對教授個人是悲劇，對人類進度是加速（此為其現場轉述，未經核實）。</li>
+<li><strong>天文學與生物</strong>：哈勃等望遠鏡攢了海量沒人處理的數據，AI 一上崗就可能有決定性突破；生物製藥、基因測序、健康管理同理。</li>
+<li><strong>賺錢要全球發現商機</strong>：例子是 AI 訂閱的地區價差——同樣的服務在阿根廷、土耳其、尼日利亞包月最便宜、美國最貴，做「token 中轉站」就是把便宜的供給賣給貴的地方；中國是世界工廠、產能過剩，把產品、想法賣到全世界，4 億中國年輕人應該去服務全球 80 億人（外加未來的 AI 客戶），而不是在內部互捲。語言不是障礙，AI 能搞定，也可以現學。</li>
+<li><strong>「探圖」理論</strong>：玩即時戰略不要悶頭造兵，先派偵察兵把地圖探開、標註資源，再做決定——現在「探圖」是免費的（AI），悶頭造兵的人等開圖時資源早被挖光了。王者榮耀同理：先插眼、先拿資訊。</li>
+<li>應主持人要求給的<strong>五條方向</strong>：一切靠數據推導的學科（數學、天文、生物）；建立在其上的產業（製藥、基因分析、健康管理，以及與人壽直接相關的保險金融，舊算法都等著被重寫）；Crypto（與 AI 天然相連，見下）；AI 本身及數據標註、數據清洗（他舉 Scale AI 賣出百億級美元為例）；以及所有「有大量數據沒人處理」的領域。他自稱的遠景是「人均諾貝爾獎」——普通大學生加 AI 就能產出諾獎級成果。</li>
+</ul>
+<h2>搏擊論深講：肌肉是你身體的銀行帳戶</h2>
+<ul>
+<li><strong>壽命打分</strong>：他問 AI 得出的框架——壽命 100 分裡心肺占 25 分、肌肉含量占 25 分，兩項就占一半；只跑步會掉肌肉，練搏擊能同時拿下心肺與肌肉兩項，還自帶被動燃脂（像遊戲裡貼身灼燒的裝備）、形象與自信收益。</li>
+<li><strong>肌肉是戰略儲備</strong>：AI 點醒他的話是「你物質上是富人，身體上是窮人」。肌肉是身體最重要的銀行帳戶——生病、消耗時先扣肌肉；平時多吃蛋白質、多練，就是往帳戶裡存錢，「肌肉會取代美金，因為美金沒了可以再賺」。對國家而言，搏擊小子是戰略儲備資源，還能省醫保社保。</li>
+<li><strong>巴菲特輪椅論</strong>：馬斯克、巴菲特、特朗普都不練搏擊，為什麼理論還對？AI 反問他：你和巴菲特吃午餐時，他是自己走進餐廳的，還是被輪椅推進來的？「你想 80 歲自己走進來還是被推進來，每天只花 40 分鐘。」三位巨頭再有錢也逆不了自然規律，是「屁股決定腦袋」——沒練的人要為不練找理由。</li>
+<li><strong>時間窗口</strong>：肌肉總量 30–40 歲見頂、40 歲後下降，70 歲再練只能勉強保住不坐輪椅；20–40 歲練是投資報酬比最高的。他稱馬斯克靠司美格魯肽類藥物減重只會加速掉肌肉、陷入惡性循環，還批評馬斯克在 Bryan Johnson 的健身對比照下留言「你以前更好看」（You look better before），是傳播錯誤認知、吃虧最大的其實是馬斯克自己。</li>
+<li><strong>碳基伺服器優先</strong>：他現在每天同時跑十幾個 agent，自己只抽一點時間微調——人的時間因此更貴重，主要用來維護身體。「大腦被困在碳基肉體上，碳基伺服器崩了，矽基調得再牛也沒用，要超長待機、千萬不能下線。」</li>
+<li><strong>認知翻轉自述</strong>：他以前對肌肉有三重誤解——練肌肉是為了泡妞、練肌肉的都上了科技、肌肉與健康對立（還自創過「有肌肉不健康」的說法）。上個月的風波中全網網暴、拿他「頭大四肢小」和張繼科腿部照片對比，反而點醒了他；他把舊觀念逐條拋給 Claude Code 辯論，被一一反駁後完成升級，自比「從閉關鎖國走向改革開放」。他推薦邵艾倫的教程（稱之為「搏擊聖經」，已下載並逐幀給 AI 看過），並提議兩人再做一期「搏擊問答」專答常見誤區。</li>
+</ul>
+<h2>下一個十年：逐水草而居，靈活性第一</h2>
+<ul>
+<li>主持人 30 歲、已基本實現財富自由，問下一個十年怎麼規劃。他的答案是遊牧民族的「逐水草而居」：沒有固定答案，哪裡能發揮最大價值就去哪裡；錢是價值的數據回饋——能賺錢證明你所在行業對全人類的價值大（對比 AI 企業與臨倒閉的餐飲品牌）。</li>
+<li><strong>機動性同時指地理與賽道</strong>：不建議年輕人太早買房、買車、結婚，都是把自己「定死」。他舉例：OpenAI 明天錄用你去舊金山，你說北京有房能不能在北京工作，機會就沒了；他見過月薪 4 萬的人才因妻子守著 5000 元的穩定工作而拒絕 offer。資產也要選機動性強的。</li>
+<li><strong>香蕉的例子</strong>：有人問他為什麼花天價買一根香蕉（概念藝術）而不買黃金珠寶——香蕉是流動的 IP，明天可以在全世界任何美術館貼出來、永遠和他的名字綁定、偷不走；黃金珠寶是死的、帶不走、還容易被偷。「小眾說明是風口」，大家不接受、罵得多，反而說明傳播價值。</li>
+</ul>
+<h2>Crypto 觀：把貨幣翻譯成機器能聽懂的語言</h2>
+<ul>
+<li>向小白介紹 TRON 與 Crypto：他們做的只有一件事——把人類用了幾千年的貨幣，翻譯成機器與網際網路能聽懂的語言，即「可程式化貨幣」。招商銀行、PayPal 只是傳統貨幣的數位化，帳本仍是中心化伺服器管理的，不是機器原生語言；去中心化帳本按密碼學與數學運作，機器一看就懂，天然與 API、AI 支付融合。SWIFT 則是二戰後電報系統的產物，注定落後。</li>
+<li><strong>同一邏輯的孫宇晨獎</strong>：把數學證明翻譯成 Lean 形式化證明。費馬大定理、龐加萊猜想人類早已證明，但機器讀不懂就等於沒有被全世界電腦與 AI 吸收，「證了也白證」；一切發明都要翻譯給機器，人類正處在從碳基向矽基過渡的階段，「翻譯官」是關鍵角色。</li>
+<li><strong>語料即存在</strong>：任何東西都要上網、成為 AI 的語料，否則等於從未發生——500 年前一個沒有記錄的 5000 萬人口國家，在 AI 讀不到的世界裡就等於不存在。中國的歷史、文字、典籍都應數位化免費上網（他相信 DeepSeek、字節等已在做）。同理，自媒體是風口：過去媒體是主編定選題的中心化結構，自媒體讓所有人發言，大概率更接近真理；他舉 Joe Rogan 的影響力已比肩整個 CBS 電視台為例。</li>
+<li><strong>落地現狀與殺手應用</strong>：他稱 TRON 現在每天交易量已達數百億美元、年發送總量數萬億，已趕上 SWIFT；普通人層面的殺手應用是穩定幣跨境支付，以及人與 AI、AI 與 AI 之間的支付。紙幣 100 年後不會再有人用，趨勢不可逆，「有了更高效率的工具，人不可能回到低效率工具」。</li>
+<li><strong>他自己的配置</strong>：2012 年之後資產已全部 Crypto 化。他強調當年不是為了賺錢，而是「系統升級」——就像第一時間買 iPhone，是因為它代表未來；車房翻譯不了給機器，數位貨幣可以。「賺錢是副產品，因為你在做對的事情，社會評價隨時間升高。」</li>
+<li><strong>BTC 與黃金之爭</strong>：比特幣將是最終的價值儲存，因為它的競爭對象是黃金——黃金永遠不升級，比特幣持續升級，「版本跟上去了你就上去了」。他借王者榮耀解釋「版本」思維：沒有一招鮮的英雄，地球 Online 也按年更新版本（某次大更新房地產被砍 50%、AI 加成 100%），版本判斷有滯後性，但結果一定會到。</li>
+<li><strong>對邵艾倫的個人建議</strong>：邵的優勢是英語內容與個人 IP，投資在 Crypto，兩者不必強行合併 all in 一處——他自己 2007 年看好 iPhone 就買蘋果股票、2012 年買特斯拉，並不需要去那家公司入職；看到更先進的東西就升級自己的作業系統，這是黃毛思維：多數人不同意時，邏輯判斷對了就堅定。</li>
+</ul>
+<h2>駁「動機論」：不要管動機，看事情對不對</h2>
+<ul>
+<li>本場反覆出現的論證方式：判斷一件事只看對錯，不看動機。妖魔化的套路是先給正當動機安一個自私解釋（練搏擊=為了泡妞、做區塊鏈=割韭菜），動機無法證偽，於是事情本身就被否定了。</li>
+<li>他舉例：風波後有人編造他「看牙醫不給錢、買東西不給錢」的黑歷史來證明他是壞人、做的事也是壞的；健身博主哪怕私生活有問題，也推不出「練肌肉是壞的」；好萊塢拍馬斯克紀錄片、Sam Altman 的親屬指控其自私，都是同一套動機論。</li>
+<li>「認知決定命運」是全場落點：他 2012 年買比特幣時一枚約 1 美元，巴菲特用小拇指的錢就能買光卻不買，是認知問題；他與巴菲特吃飯時（他 29 歲、巴菲特 89 歲）苦勸其投資特斯拉、比特幣乃至波場都被拒，他稱當時波場估值才二三十億美元、如今已 330–340 億美元（其口徑）。反過來，首富也會犯錯，所以不要看社會地位與財富，要看認知。</li>
+<li><strong>Small ego</strong>：他引張一鳴的說法——字節能一直贏靠的是小 ego，永遠願意聽年輕人、學新東西；越成功 ego 越大是詛咒，「一代版本一代神」就是這麼輪替的（王思聰曾嘲笑他，如今他自稱財富已超過王思聰父子）。零起步的年輕人沒有包袱，反而最容易一鍵安裝新認知、跑到上一代神前面去。</li>
+<li><strong>智商不存在，只有資訊量</strong>：Transformer 已經講清了——GPT 從 3 到 5.6 的「智商」差距本質是灌入資訊的差距。人也一樣，認知決定行為模式；所以要做「六邊形戰士」，他舉韋東奕埋頭攻 NS 方程卻年紀輕輕牙齒掉光為例：單項再強，健康認知缺位一樣是短板，健康必須自己主動管理，不能等進急救室喊「不惜一切代價」。</li>
+</ul>
+<h2>財富自由新解：先自由，後財富</h2>
+<ul>
+<li>十年前的《財富自由革命之路》理解沒有變，但升級了一層：<strong>先自由，後財富</strong>，財富是自由的伴生品。多數人以為有錢才能自由，恰恰相反——自由是主觀的、零門檻的，你願意自由就擁有了自由；自由一點就更容易獲得財富，財富又加強自由，是螺旋上升的飛輪。人生沒有中間狀態，要麼往上、要麼往下，如同 AI 的遞迴自我改進（RSI），初始的一點差距會被放大成螺旋上升或螺旋下降。</li>
+<li>負循環的例子：買房要花錢花時間維護、錯失機會、錢更少、狀態更差；以及前面說的減肥藥掉肌肉循環。</li>
+<li><strong>中彩票是詛咒</strong>：錢是放大器，沒有認知的人突然獲得財富，只會放大錯誤與壞習慣，數據上大概率下場不好；他推薦缺錢的人先玩玩「中了 3000 萬之後的人生」這類模擬遊戲，玩到破產就說明認知還沒到掌控那筆錢的程度。「錢解決不了的東西，首推認知——只能靠自己下功夫學，光給錢沒用。」</li>
+</ul>
+<h2>婚姻與意義：兩塊還沒打上的補丁</h2>
+<ul>
+<li><strong>婚姻家庭</strong>：他罕見地坦承沒想通、自己也在摸索（上個月的風波與他給胡錫進的回覆都源於此）。幾個初步判斷：感情與錢關係不大，錢只是放大器——愛會更愛，不愛給多少錢都會走，「5000 萬給了她還會不會走？會，5 億、50 億也走」；感情極其主觀，情感大師輪到自己一樣五迷三道，清官難斷家務事；他沒結過婚、沒孩子，不敢冒充懂行。他認為這是時代性、全球性問題——中國有約 2 億未婚者，日韓美同樣困境。這個「補丁版本還沒發出來，大家先按自己的玩」。</li>
+<li><strong>人生意義</strong>：他是玩家心態——被扔進地球 Online，就先玩起來。人生的前 50%（他估計練了搏擊能活 90–100 歲）先看、先體驗、不急著下結論；意義問題連 Dario Amodei 們都答不了，就像沒人搞清大模型灌更多數據為何更聰明這個黑盒。他的當前答案是「體驗大於意義」：人生可能就是體驗的集合，上太空純粹是為了體驗，不是炒作也不是榮譽；先上車、先上路，比想清楚為什麼上路更重要。</li>
+<li><strong>他的個人打法</strong>：22 歲創業時就定下「創業 100 年、活到 122 歲」的計畫（人類極限 123 歲），如今已走 14 年、進度條 14%；錢只是積分，天花板由可觸及經濟總量決定（他問 AI：全球 GDP 約 50 萬億量級，個人至多掙到約 1%，科技與新市場會不斷抬高天花板）。他想成為後來者的「參照系」（benchmark）——就像他的三個參照系：馬斯克學工程、巴菲特學金融與長青（雪坡要夠長）、特朗普學個人 IP 與跨界（三人恰好都是他的賓大校友，他自稱三人的影子在他身上都有，中國部分則學馬雲）。但不要門派之見、不要過早定型，金庸裡武功最高的都是練了好幾門的人——而這三人有一個共同致命缺點：都不練搏擊。</li>
+<li><strong>財富自由之後幹什麼</strong>：缺啥補啥。他沒上過班，最想去「上班」——公開喊話願意免費、甚至倒貼去 OpenAI 或 Anthropic 入職（笑稱對方怕他偷師做 B.AI 不肯要），為的是補上從下往上看的視角；他還愛玩人生模擬器（包括流浪漢模擬器），用 20% 的體驗濃度換一個全新視角。財富自由只是門票，之後是給自己設 side quest：朋友王純同上太空、卻選擇低調周遊世界——每個國家都要去、每趟火車都要坐。先上路再說，很多「正確答案」都是誤打誤撞出來的（愛因斯坦原是專利員、特朗普、諾貝爾與李煜皆然）；大方向對了就盡情體驗，標準只有一條：多創造、少消費。</li>
+</ul>
+<h2>結尾</h2>
+<ul>
+<li>邵艾倫自述：一年前曾給孫宇晨發長私信自薦，想加入其團隊做內容與個人 IP，這次當面交付；孫宇晨讓他把舊私信原樣截圖發來，並收下他「黃毛思維」那期影片連結回去研讀。兩人相約過段時間再做一期，孫宇晨說「搏擊版版本答案應該快了，認知已經到位，剩下是時間問題」。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Justin Sun's "Version Answer": Sun Studies, Combat Fitness, Yellow-Hair Mindset, and Going All-In on AI</h1>
+<blockquote>
+<p>Program: Alan Shao · Guest: Justin Sun · Host: Alan Shao (spoken-language creator with tens of millions of followers, founder of the "combat fitness theory") · Released: 2026-10-09 · Duration: 4 hours 22 minutes
+Note: These notes were compiled from a transcript of the recording (speech recognition erred on proper nouns and has been corrected from context). The figures and claims in the text are as stated by the speakers on the spot and have not been independently verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>This is an interview in which Justin Sun does a "version release" for his own life operating system: underneath are three theories — Sun Studies (cognitive upgrade), combat fitness (physical upgrade), and the yellow-hair mindset (mentality upgrade) — and the way it runs is to put life and decision-making entirely on AI; in his words, Crypto is "translating money into a language machines can understand," and financial freedom is a spiral ascent of "freedom first, wealth second." On marriage and the meaning of life, he unusually admits he has not figured them out yet.</p>
+<h2>Opening: The "Combat-Fitness Version of Brother Sun," One Day In</h2>
+<ul>
+<li>Alan Shao is the founder of the "combat fitness theory" (the muscle-building theory; in ASR often rendered as similar-sounding variants). Justin Sun had just started training for one day and planned to become the "combat-fitness version of Brother Sun" in 3–6 months. He reported his height as 172cm, weight about 75kg, and body fat about 29%.</li>
+<li>His fitness is already fully AI-driven: before each meal he photographs the table for Claude, and photographs it again after eating; the AI calculates calories and guides the order of eating (high-protein first); with 25 grams of protein powder and 5 grams of creatine, the target is 140–150 grams of protein a day and a calorie deficit of about 600 kcal, building muscle and losing fat at the same time. He wears an Oura Ring to capture sleep and expenditure data and throws that to the AI as well.</li>
+<li>He set up a dedicated fitness project in Claude Code: training videos (filmed by his coach) are sent to the AI to record sets, weights, and progressive overload; every day the AI combines the sleep data to produce a daily report, all of it accumulated as local Markdown documents — "the next AI can just read the README and take over directly; switching to Codex works too."</li>
+<li>Theory-building came a week ahead: he read Alan Shao's combat-fitness tutorials and got all his gear ready before starting to train. One old notion was broken: protein powder is not "technology" (drugs); it is the same thing as the protein in eggs, and ordinary eating makes it very hard to reach 140 grams of protein, so supplementation is needed.</li>
+</ul>
+<h2>A Restart Plan for 20-Year-Olds: Put Everything on AI First</h2>
+<p>The host asked: if you were 20 again today, with no connections and no resources, how would you start? He used his own stage at Peking University, when his disposable income was less than 1,000 yuan a month, as an example:</p>
+<ul>
+<li><strong>The first step is to go AI, and it can cost nothing.</strong> If Claude Code is too expensive ($200 a month) to afford, use free options such as Zhipu, Kimi, and ZCode, or B.AI, made by his own team (pay per question to call various APIs); a phone works if you have no computer. Write everything into documents and throw it to AI, and put your whole set of life and work processes on AI first — "in the past, for Japan to modernize it first adopted a constitutional monarchy; now you go AI first."</li>
+<li><strong>The three theories (a zero-cost installation package)</strong>: ① <strong>Sun Studies</strong> — theoretical armament, equivalent to changing the operating system of your brain, upgrading your understanding of financial freedom and everything else; ② <strong>Combat fitness</strong> — physical health is priceless in the AI era; if health collapses it is a "one-vote veto," and obesity will seriously slow progress toward financial freedom; ③ <strong>The yellow-hair theory</strong> — practicing the first two in China will inevitably draw ridicule and jealousy (handsome, muscular, and cognitively sharp — 100% envied), and the yellow-hair mindset is "ignore what others say; fully carry out what you yourself have determined is right."</li>
+<li><strong>The core is believing in AI 100%.</strong> He responded to the recent "blaming Claude" controversy: it was not blame-shifting, but his absolute trust in AI — "whatever Claude says, I carry it out, no matter how much resistance there is"; it is the same with OpenAI's Aster and Zhipu's GLM.</li>
+<li><strong>How to execute</strong>: first accumulate 2–4 months of your own data (health, current situation), digitize it and throw it to AI to analyze direction and money-making paths; for important questions, ask three AIs at once (Claude, OpenAI, and one domestic Chinese model), get upper, middle, and lower strategies and take the middle one; at the same time keep a close eye on technology trends and pick the direction that interests you most and go deep. The whole process is like training a model — not a one-off deal, but continuous tuning through data feedback.</li>
+</ul>
+<h2>Opportunities for the Young: Lifespan Is the Only Scarce Good — "Scout the Map" Before "Building Troops"</h2>
+<ul>
+<li>He is extremely bullish on young people overall: in the AI era everything will get cheaper, and the only thing of value is lifespan, so "youth is wealth"; except for immortality not yet being realized, every industry will be revolutionized by AI, and every track has opportunities.</li>
+<li><strong>Mathematics liberated by AI</strong>: in the past, mathematics was a contest of mentors and circles (ideas were monopolized in the hands of mentors at Harvard and MIT); now AI has captured the whole world's ideas into models, and a high-school student can jump straight to PhD level. He cited an example: a New York University professor explained his approach to attacking the NS equations to OpenAI, OpenAI's internal agent absorbed it, marshaled compute, and in two days advanced and published results — a tragedy for the professor personally, an acceleration for human progress (this was his on-the-spot retelling, unverified).</li>
+<li><strong>Astronomy and biology</strong>: telescopes such as Hubble have accumulated vast amounts of data no one has processed; once AI takes the job there may be decisive breakthroughs; the same goes for biopharmaceuticals, gene sequencing, and health management.</li>
+<li><strong>To make money, discover opportunities globally</strong>: an example is regional price differences for AI subscriptions — the same service is cheapest by monthly subscription in Argentina, Turkey, and Nigeria and most expensive in the United States, and running a "token relay station" is selling cheap supply to expensive places; China is the world's factory with excess capacity, so sell products and ideas to the whole world — 400 million young Chinese should serve the world's 8 billion people (plus future AI customers), rather than involuting against each other internally. Language is not a barrier; AI can handle it, or you can learn on the spot.</li>
+<li><strong>The "scout the map" theory</strong>: in a real-time strategy game, do not just build troops with your head down; first send scouts to open up the map and mark resources, then decide — now "scouting the map" is free (AI), and by the time people who only built troops open the map, the resources will already have been dug out. Honor of Kings is the same: place wards first, get information first.</li>
+<li>At the host's request, the <strong>five directions</strong> he gave: every discipline driven by data derivation (mathematics, astronomy, biology); the industries built on them (pharmaceuticals, genetic analysis, health management, and insurance and finance directly related to life expectancy, whose old algorithms are all waiting to be rewritten); Crypto (naturally connected to AI, see below); AI itself and data annotation and data cleaning (he cited Scale AI's sale for tens of billions of dollars as an example); and every field with "large amounts of data no one has processed." His self-described vision is "a Nobel Prize per person" — an ordinary university student plus AI can produce Nobel-level results.</li>
+</ul>
+<h2>Combat Fitness in Depth: Muscle Is Your Body's Bank Account</h2>
+<ul>
+<li><strong>Lifespan scoring</strong>: the framework he got by asking AI — out of 100 points for lifespan, cardiorespiratory fitness accounts for 25 and muscle mass for 25, half in just two items; running alone loses muscle, while combat-fitness training takes both cardiorespiratory fitness and muscle at once, and also brings passive fat-burning (like close-range burning equipment in a game), image, and confidence benefits.</li>
+<li><strong>Muscle is a strategic reserve</strong>: what AI woke him up with was "you are rich in material terms, poor in bodily terms." Muscle is the body's most important bank account — when you are sick or depleted, muscle is deducted first; eating more protein and training more in normal times is depositing money into the account: "muscle will replace the U.S. dollar, because if dollars are gone you can earn them again." For a country, combat-fitness youths are a strategic reserve resource and can also save on medical and social insurance.</li>
+<li><strong>The Buffett wheelchair argument</strong>: Musk, Buffett, and Trump do not do combat-fitness training, so why is the theory still right? AI asked him in return: when you had lunch with Buffett, did he walk into the restaurant himself, or was he wheeled in? "Do you want to walk in yourself at 80 or be wheeled in — it only takes 40 minutes a day." However rich the three giants are, they cannot reverse the laws of nature; it is "your position determines your thinking" — people who do not train have to find reasons not to train.</li>
+<li><strong>The time window</strong>: total muscle peaks at age 30–40 and declines after 40; starting at 70 you can only barely manage to stay out of a wheelchair; training at 20–40 has the highest return on investment. He said Musk's weight loss with semaglutide-type drugs would only accelerate muscle loss and create a vicious cycle, and criticized Musk for commenting "You look better before" under Bryan Johnson's fitness comparison photo — spreading mistaken perceptions, with Musk himself losing the most.</li>
+<li><strong>Carbon-based server first</strong>: he now runs more than a dozen agents at the same time every day and spends only a little time fine-tuning them himself — human time is therefore more precious and is mainly used to maintain the body. "The brain is trapped in a carbon-based body; if the carbon-based server crashes, no matter how well you tune the silicon it is useless — you need ultra-long standby and must never go offline."</li>
+<li><strong>His account of his cognitive reversal</strong>: he used to have three misunderstandings about muscle — that building muscle was for picking up girls, that people who build muscle are all on "technology," and that muscle and health are opposed (he had even coined the claim that "having muscle is unhealthy"). In last month's controversy, the whole internet attacked him, comparing his "big head and small limbs" with photos of Zhang Jike's legs, which instead woke him up; he threw his old notions one by one to Claude Code to debate, was refuted on each, and completed the upgrade, likening himself to "moving from closed-door isolation to reform and opening up." He recommended Alan Shao's tutorials (calling them the "combat-fitness bible," which he had downloaded and shown to AI frame by frame) and proposed the two do another episode, a "combat-fitness Q&amp;A," devoted to common misconceptions.</li>
+</ul>
+<h2>The Next Decade: Follow Water and Grass, Flexibility First</h2>
+<ul>
+<li>The host is 30 and has basically achieved financial freedom, and asked how to plan the next decade. His answer was the nomads' "follow water and grass": there is no fixed answer; go wherever you can create the greatest value; money is data feedback on value — being able to make money proves your industry is of great value to all humanity (contrast AI companies with restaurant brands on the verge of collapse).</li>
+<li><strong>Mobility means both geography and track</strong>: he does not advise young people to buy a house, buy a car, or marry too early; all of these "fix" you in place. He gave an example: if OpenAI hires you tomorrow to go to San Francisco and you say you have a house in Beijing and ask whether you can work in Beijing, the opportunity is gone; he had seen a talented person earning 40,000 yuan a month refuse an offer because his wife clung to a stable job paying 5,000 yuan. Assets, too, should be chosen for high mobility.</li>
+<li><strong>The banana example</strong>: someone asked why he spent a sky-high price on a banana (conceptual art) rather than buying gold and jewelry — the banana is a liquid IP; tomorrow it can be displayed in any art museum in the world, forever bound to his name, and cannot be stolen; gold and jewelry are dead, cannot be taken with you, and are easily stolen. "Being niche means it is an emerging trend": the fact that people do not accept it and curse it a lot instead shows its communication value.</li>
+</ul>
+<h2>His View of Crypto: Translating Money into a Language Machines Can Understand</h2>
+<ul>
+<li>Introducing TRON and Crypto to a layperson: they do only one thing — translate money, which humans have used for thousands of years, into a language machines and the internet can understand, namely "programmable money." China Merchants Bank and PayPal are only the digitization of traditional money; the ledger is still managed by centralized servers and is not a machine-native language; a decentralized ledger operates by cryptography and mathematics, machines understand it at a glance, and it naturally integrates with APIs and AI payments. SWIFT, by contrast, is a product of the post-World War II telegraph system and is destined to fall behind.</li>
+<li><strong>The Justin Sun Prize, on the same logic</strong>: translating mathematical proofs into Lean formal proofs. Fermat's Last Theorem and the Poincaré conjecture were long ago proved by humans, but if machines cannot read them it is as if they have not been absorbed by the world's computers and AI — "proving them was in vain"; every invention must be translated for machines, humanity is in a transition from carbon-based to silicon-based, and the "translator" is a key role.</li>
+<li><strong>Corpus is existence</strong>: everything must go online and become AI's corpus, otherwise it is as if it never happened — a country of 50 million people 500 years ago with no records, in a world AI cannot read, simply does not exist. China's history, writing, and classics should all be digitized and put online for free (he believes DeepSeek, ByteDance, and others are already doing this). By the same logic, self-media is an emerging trend: in the past media had a centralized structure in which editors-in-chief chose topics; self-media lets everyone speak and is more likely to be closer to the truth; he cited Joe Rogan's influence as now rivaling the entire CBS television network as an example.</li>
+<li><strong>Current adoption and the killer app</strong>: he said TRON now has daily transaction volume reaching tens of billions of dollars and annual sending volume in the trillions, already catching up with SWIFT; at the ordinary-person level, the killer apps are stablecoin cross-border payments and payments between humans and AI and between AI and AI. Paper money will no longer be used by anyone in 100 years; the trend is irreversible — "with a more efficient tool available, people cannot go back to a less efficient tool."</li>
+<li><strong>His own allocation</strong>: after 2012 his assets have been entirely in Crypto. He stressed that at the time it was not to make money, but a "system upgrade" — like buying an iPhone at the first moment because it represented the future; cars and houses cannot be translated for machines, digital currency can. "Making money is a by-product, because you are doing the right thing, and society's evaluation rises over time."</li>
+<li><strong>BTC versus gold</strong>: Bitcoin will be the ultimate store of value because its competitor is gold — gold never upgrades, Bitcoin keeps upgrading, and "once the version catches up, you go up." He used Honor of Kings to explain "version" thinking: there is no hero with one move that works forever, and Earth Online also updates its version yearly (in one major update real estate was cut by 50% and AI boosted by 100%); version judgments lag, but the result will definitely arrive.</li>
+<li><strong>Personal advice to Alan Shao</strong>: Shao's strengths are English-language content and personal IP, and his investing is in Crypto; the two do not need to be forcibly merged and gone all-in on in one place — he himself, bullish on the iPhone in 2007, bought Apple stock, and bought Tesla in 2012, without needing to join those companies; when you see something more advanced, upgrade your own operating system — that is the yellow-hair mindset: when most people disagree, if your logical judgment is right, hold firm.</li>
+</ul>
+<h2>Refuting the "Motive Theory": Ignore Motives, Look at Whether the Thing Is Right</h2>
+<ul>
+<li>The argumentative approach that recurred throughout the session: in judging something, look only at whether it is right or wrong, not at motives. The demonization routine is to first attach a selfish explanation to a legitimate motive (combat-fitness training = to pick up girls, doing blockchain = to fleece retail investors); motives cannot be falsified, so the thing itself is negated.</li>
+<li>He gave examples: after the controversy, people fabricated a dark history for him of "seeing a dentist without paying, buying things without paying" to prove he is a bad person and that what he does is also bad; even if a fitness creator has problems in his private life, it does not follow that "building muscle is bad"; Hollywood making a documentary about Musk and Sam Altman's relatives accusing him of selfishness are the same motive theory.</li>
+<li>"Cognition determines destiny" was the landing point of the whole session: when he bought Bitcoin in 2012 it was about $1 a coin; Buffett could have bought it all with the money on his little finger but did not — a cognition problem; when he had dinner with Buffett (he was 29, Buffett 89) he earnestly urged him to invest in Tesla, Bitcoin, and even Tron, and was refused; he said Tron was valued at only two to three billion dollars at the time and is now $33–34 billion (by his account). Conversely, even the richest person makes mistakes, so do not look at social status and wealth; look at cognition.</li>
+<li><strong>Small ego</strong>: he cited Zhang Yiming's view — ByteDance keeps winning because of a small ego, always willing to listen to young people and learn new things; the more successful you are, the bigger the ego — that is a curse, and "each version has its own god" rotates in this way (Wang Sicong once mocked him; now he says his wealth has surpassed Wang Sicong and his father). Young people starting from zero have no baggage and are instead the most likely to one-click install new cognition and run ahead of the previous generation's gods.</li>
+<li><strong>There is no IQ, only amount of information</strong>: the Transformer has made this clear — the "IQ" gap of GPT from 3 to 5.6 is essentially a gap in the information fed in. People are the same: cognition determines behavioral patterns; so be a "hexagonal warrior." He cited Wei Dongyi, who buried himself in attacking the NS equations yet lost his teeth at a young age, as an example: however strong a single item is, a missing cognition of health is still a shortcoming; health must be actively managed by yourself, not left until you are in the emergency room shouting "at any cost."</li>
+</ul>
+<h2>A New Reading of Financial Freedom: Freedom First, Wealth Second</h2>
+<ul>
+<li>The understanding in The Road to Financial Freedom Revolution from ten years ago has not changed, but has been upgraded by one layer: <strong>freedom first, wealth second</strong>; wealth is a by-product of freedom. Most people think you need money to be free; it is exactly the opposite — freedom is subjective and has zero threshold; if you are willing to be free, you have freedom; being a bit more free makes it easier to obtain wealth, and wealth strengthens freedom — a flywheel spiraling upward. Life has no middle state, only up or down, like AI's recursive self-improvement (RSI): an initial small gap is amplified into a spiral upward or a spiral downward.</li>
+<li>Examples of a negative cycle: buying a house costs money and time to maintain, misses opportunities, leaves less money and a worse state; and the muscle-loss cycle from weight-loss drugs mentioned earlier.</li>
+<li><strong>Winning the lottery is a curse</strong>: money is an amplifier; a person without cognition who suddenly obtains wealth will only amplify mistakes and bad habits, and statistically will likely end badly; he recommended that people short of money first play simulation games like "life after winning 30 million," and if they play themselves into bankruptcy it shows their cognition has not yet reached the level to control that money. "For what money cannot solve, cognition comes first — you can only rely on yourself to work hard and learn; just giving money is useless."</li>
+</ul>
+<h2>Marriage and Meaning: Two Patches Not Yet Applied</h2>
+<ul>
+<li><strong>Marriage and family</strong>: he unusually admitted frankly that he has not figured it out and is still feeling his way (last month's controversy and his reply to Hu Xijin both stemmed from this). A few preliminary judgments: feelings have little to do with money; money is only an amplifier — love becomes more love, and if there is no love, however much money you give, she will leave: "If you give her 50 million, will she still leave? Yes — 500 million, 5 billion, she will still leave"; feelings are extremely subjective, and even a master of emotions is equally at a loss when it is his own turn — even an upright judge finds domestic disputes hard to settle; he has never married and has no children and does not dare pretend to be an expert. He believes this is a problem of the era and a global one — China has about 200 million unmarried people, and Japan, Korea, and the United States face the same predicament. "This patch version has not been released yet; everyone play by your own version for now."</li>
+<li><strong>The meaning of life</strong>: his is a player's mindset — thrown into Earth Online, just start playing. For the first 50% of life (he estimates that with combat-fitness training he can live to 90–100) look first, experience first, and do not rush to conclusions; even people like Dario Amodei cannot answer the meaning question, just as no one has figured out the black box of why large models get smarter when fed more data. His current answer is "experience over meaning": life may be a collection of experiences; going to space was purely for the experience, not hype or honor; getting in the car and getting on the road first matters more than figuring out why you are on the road.</li>
+<li><strong>His personal play</strong>: at 22, when starting his business, he set the plan of "entrepreneuring for 100 years, living to 122" (the human limit is 123); he has now walked 14 years, with the progress bar at 14%; money is only points, and the ceiling is determined by the total accessible economy (he asked AI: global GDP is on the order of about 50 trillion, an individual can earn at most about 1%, and technology and new markets will keep raising the ceiling). He wants to become a "reference frame" (benchmark) for those who come later — just like his three reference frames: from Musk he learns engineering, from Buffett finance and longevity (the snow slope must be long enough), from Trump personal IP and crossing fields (the three happen all to be his fellow alumni at the University of Pennsylvania, and he says the shadows of all three are on him; for the Chinese part he learns from Jack Ma). But have no sectarian views and do not settle into a fixed form too early — in Jin Yong's works, those with the highest martial arts all practiced several schools — and these three share one fatal flaw: none of them does combat-fitness training.</li>
+<li><strong>What to do after financial freedom</strong>: fill whatever is missing. He has never held a job and most wants to "go to work" — publicly calling out that he is willing to join OpenAI or Anthropic for free, even paying to do so (joking that they fear he will steal their secrets to build B.AI and will not take him), in order to fill in the perspective of looking from the bottom up; he also loves life simulators (including a homeless simulator), trading 20% experience concentration for a completely new perspective. Financial freedom is only a ticket; afterward you set yourself side quests: his friend Wang Chun also went to space but chose to travel the world quietly — going to every country and riding every train. Get on the road first; many "correct answers" come from stumbling into them (Einstein was originally a patent clerk; Trump, Nobel, and Li Yu are all the same); once the general direction is right, experience to the fullest, with only one standard: create more, consume less.</li>
+</ul>
+<h2>Closing</h2>
+<ul>
+<li>Alan Shao recounted: a year ago he had sent Justin Sun a long private message recommending himself, wanting to join his team to do content and personal IP, and this time delivered it face to face; Justin Sun asked him to send a screenshot of the old private message as it was, and accepted the link to his "yellow-hair mindset" video to study back home. The two agreed to do another episode in a while; Justin Sun said "the combat-fitness version answer should be coming soon — the cognition is already in place, the rest is just a matter of time."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=0Z-vhBvBmUY">https://www.youtube.com/watch?v=0Z-vhBvBmUY</a>（邵艾伦Alan）· 嘉宾：孙宇晨 · 发布日期：2026-10-09 · 时长：4 小时 22 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=0Z-vhBvBmUY">https://www.youtube.com/watch?v=0Z-vhBvBmUY</a>（邵艾倫Alan）· 嘉賓：孫宇晨 · 發布日期：2026-10-09 · 時長：4 小時 22 分<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=0Z-vhBvBmUY">https://www.youtube.com/watch?v=0Z-vhBvBmUY</a> (Alan Shao) · Guest: Justin Sun · Release date: 2026-10-09 · Duration: 4 hours 22 minutes<br>This page is the full text of manually compiled notes; the views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=0Z-vhBvBmUY">https://www.youtube.com/watch?v=0Z-vhBvBmUY</a>（邵艾伦Alan）· 嘉宾：孙宇晨 · 发布日期：2026-10-09 · 时长：4 小时 22 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"孙宇晨的「版本答案」：孙学、搏击、黄毛与全面 AI 化 · Yat's Talks",tw:"孫宇晨的「版本答案」：孫學、搏擊、黃毛與全面 AI 化 · Yat's Talks",en:"Justin Sun's \"Version Answer\": Sun Studies, Combat Fitness, Yellow-Hair Mindset, and Going All-In on AI · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

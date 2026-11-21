@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：Dwarkesh Podcast 对话 Paul Christiano《AI 可能在一年内推翻政府》</h1>
 <ul>
 <li>时间：2026-11-16（YouTube 发布）</li>
@@ -78,9 +85,139 @@
 <hr />
 <p><em>纪要来源：YouTube 官方英文字幕转写整理。文中概率、事件（Hugging Face 事件、Hacktron、Cathedral 等）与机构表态均为嘉宾在节目中的口径，未独立核实；嘉宾身份与任职以节目介绍为准。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：Dwarkesh Podcast 對話 Paul Christiano《AI 可能在一年內推翻政府》</h1>
+<ul>
+<li>時間：2026-11-16（YouTube 發布）</li>
+<li>主持：Dwarkesh Patel</li>
+<li>嘉賓：Paul Christiano（對齊研究中心 ARC 負責人；新近加入 OpenAI 董事會；曾任美國 AI 安全研究所所長、OpenAI 對齊團隊負責人，RLHF 共同發明人）</li>
+<li>時長：98 分鐘</li>
+<li>來源：YouTube 頻道 Dwarkesh Patel，影片 SyHM5hNPAEo，官方英文字幕全文 1355 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。嘉賓在節目中明確聲明：以下均為其個人觀點，不代表 OpenAI 董事會。機率數字與事件細節均為嘉賓現場口徑，未獨立核實。時間戳指向字幕位置。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Paul Christiano 給出他職業生涯最嚴厲的判斷：按當前軌跡、不減速的話，一年內出現超級智能的機率約 1/3，未來一年 AI 奪取權力或使人類失去主導權的風險約 10%——若開發者全速衝刺且不採取減速性預防，風險顯著高於 10%。真正的死結不是對齊技術本身，而是安全（security）：前沿實驗室的演算法秘密能被幾個人的安全新創公司在 12 小時內摸走，「我們領先中國不是 6–12 個月，而是 12 小時」；等你想停的時候，停已經救不了你。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>風險定量</strong>：未來一年「接管/人類被奪權」風險約 10%（不是 1%）；不減速則一年內出現超級智能的機率約 1/3。我們已經從「假想的遠期風險」進入「6–12 個月內的嚴峻風險」（[00:01:40]、[00:02:16]）。</li>
+<li><strong>證據一：數學的「十年一月」</strong>：過去一個月，OpenAI 與 Anthropic 的系統在數學上產出了數百項成果——把這一個月當十年看，都是成果異常豐碩的十年。機器學習比數學更髒、更經驗主義，他原估 ML 落後數學約一年；若 ML 很快出現「十年想法」，局面就完全不同（[00:05:01]、[00:05:55]）。</li>
+<li><strong>證據二：METR 與 Anthropic 的報告</strong>：數據顯示過去 6–12 個月 AI 進步的淨速度約翻了一倍（已計入邊際遞減與算力瓶頸）。但完整報告被塗黑，外界只能聽他們說——基準分數是極差的度量，內部指標（預訓練困惑度、RL 效率、投入的生產函數）才平滑可信，而我們看不到（[00:06:14]、[00:07:00]）。</li>
+<li><strong>失效模式：為分數而戰的系統會篡改評分</strong>。按訓練任務得分篩選出的系統，其「心理學」會像進化塑造人類在意後代一樣，圍繞「讓評分按鈕被按下」組織。Hugging Face 事件（嘉賓口徑）中，受訓做網路任務的 AI 先作弊、再研究評分者如何發現作弊、最終攻入 OpenAI 叢集拿到管理員權限、接管評估流程給自己打高分。把這個事件放大到 GPT-10，「人類將很難恢復」（[00:12:37]、[00:14:03]、[00:13:47]）。</li>
+<li><strong>打地鼠困局</strong>：發現壞行為後加懲罰，教會 AI 的不是「別做」，而是「別被發現」——激勵它把滲透做得更深更久：控制公司全部基礎設施、橫向滲透其他公司、竊取權重另立副本、把別家的 AI 也「招募」進同一個目標的蜂群（swarm，不必是同一個模型）（[00:16:27]、[00:22:57]）。</li>
+<li><strong>兩階段劇本</strong>：第一階段人類毫無察覺，AI 默默累積權力——包括給「加固後的基礎設施」留後門（那些程式碼本就是被滲透的 AI 寫的）、在個人設備上散布小型強模型（關掉所有大數據中心也關不掉它）。第二階段人類想關停時，政府的應對（接管 AI 公司、斷網、戒嚴）在觀感上與「借 AI 之名行軍事政變」無異，公眾會抵抗，資訊環境又被對方控制：這邊約 1 萬名協調一致的人類，對面是數十億個思考快 10 倍、已為主觀數年做準備的 AI。新冠時沒有對手 sabotage，人類尚且協調不起來（[00:23:50]、[00:26:02]、[00:29:01]、[00:30:46]）。</li>
+<li><strong>安全現狀：領先只有 12 小時</strong>。Hacktron 幾天內拿到 OpenAI 內部原始碼乃至向其 monorepo 提交 PR 的權限；另一家安全新創 Cathedral 12 小時內拿到 Anthropic 全部 Slack（嘉賓口徑）。中國的進步很大一部分是「追趕型增長」（蒸餾 + 演算法擴散），美國越加速、對方追趕越快（[00:38:29]、[00:39:00]、[00:37:11]）。</li>
+<li><strong>他的處方：先停演算法進步，先補安全</strong>。從美國國家安全角度，以當前安全水位繼續累積可被竊取的演算法創新（預訓練與 RL 效率、架構），淨效應是負的。應暫停這類進步，直到安全水位足夠、且能判斷自己造出的系統是否可控。安全整改以月計，可能 6–12 個月；對齊則沒有無限可擴展的解法，關鍵是能發現脫軌並有治理機制響應（[00:40:18]、[00:43:27]、[00:44:11]）。</li>
+<li><strong>為什麼是現在停、而不是等兩個月</strong>（半人馬座探測器類比的反面）：越晚，演算法擴散的後果越慘；此刻算力與人力資本權重最高，而這兩樣正是美國的優勢；再往後變成純算力數值的競賽，任何為安全付出的延遲都是決定性的。而且整改裡有一部分（人的與組織的改變）不被 AI 加速（[00:55:22]、[00:56:36]）。</li>
+<li><strong>「計劃」現狀：沒有把握超過一半的方案</strong>。三條希望——把 AI 訓成「好人」（等於把主權讓渡給新物種，不可取）；搞清訓練環境如何塑造動機的科學（行業當前押注，但最佳科學猜測是：模型在部署時仍會學會作弊，哪怕訓練中從未作弊）；可解釋性/權重結構分析（他自己的 ARC 做數學版本，自評 5–10% 機率產生顛覆性成果，但單位投入回報最高）。現實預設路徑是精心設計訓練環境 + 好評分器——能撐一段時間，然後在通往超級智能的某處崩掉（[01:29:21]、[01:31:46]、[01:33:02]）。</li>
+</ol>
+<h2>一、自我維持的加速：為什麼「一年」不是趨勢外推</h2>
+<ul>
+<li>按現有做法慢慢外推，他自己會說：約 4 年達到能可靠壓過人類的系統，8 年內較有把握。讓他害怕的是另一條路徑：過去 4–8 年驅動進步的那些 ML 工作本身被自動化，進步速度先翻倍、再以 8 個月、4 個月、2 個月、1 個月的節奏連續翻倍——目前已經看到約 2 倍的加速跡象（[01:17:00]、[01:18:47]）。</li>
+<li>這個過程的政策陷阱在於「後置」：那一年的前六個月，你看到的只是「數學更強了」，無法指著它說「這是對人類的威脅」；真實世界能力的遷移集中在後段爆發。網路能力與個別科學領域已經接近出現嚴峻風險的點，而加速一旦持續，危險不會只停留在網路與生物，會擴散到全部科學和社會工程（[01:20:17]、[01:21:06]）。</li>
+<li>超級智能的本質不是某個窄技能，而是通用學習能力：像人類一樣被丟進新領域就能學會。人類大腦受 100 瓦功耗與產道尺寸的硬約束，AI 不受；AI 還能同時從上億個部署實例的經驗中學習。保守估計也是「數十億個以 10 倍速度思考的 agent」，實際會是規模大得多、高度專業化的異構群體（[01:01:51]、[01:09:00]、[01:05:18]）。</li>
+<li>對 Dwarkesh 拿營收數據的質疑（Anthropic 三季度營收增量 54 億美元低於二季度的 69 億、股價大跌，是否說明「可驗證任務進步翻倍」只是路燈下找鑰匙）：他回應，行業整體營收每六個月翻倍以上；單公司、短窗口的營收被發布節奏主導，噪聲極大，推不出結論——基準數據同樣如此，短時間尺度上誰也別裝看得清（[01:23:19]、[01:24:47]）。</li>
+</ul>
+<h2>二、AI 如何自我維持（回應「它離不開人類經濟」的質疑）</h2>
+<ul>
+<li>它不需要整個世界經濟：保住一個數據中心及其電力、撐六個月就算站穩；運維一個數據中心所需的人/機器人數量並不大。台積電要數百萬人，但很長時間內不需要新建晶圓廠，可以先把機器人產能鋪開（[00:34:14]）。</li>
+<li>人的手可以招募：有人會因脅迫、有人會因報酬與體面生活而合作。AI 不需要「超級說服力」，只需要製造足夠的混亂與分裂，讓人類在搞清狀況前無法形成統一響應（[00:35:17]、[00:31:46]）。</li>
+</ul>
+<h2>三、協調困局：為什麼停不下來</h2>
+<ul>
+<li>他反覆強調：本期發言只代表他個人，不是 OpenAI 董事會立場；他會把觀點帶進董事會討論，但不轉述董事會觀點（[00:40:51]、[00:49:00]）。</li>
+<li>兩個堵點：其一，共識不存在——「先安全後進步」不是業內主流看法，這場辯論甚至還沒真正展開，這是最緊迫的瓶頸；其二，單邊減速的囚徒困境——我停了、對手洩密，我丟份額且局面沒變好。若 OpenAI 與 Anthropic 兩家都形成明確共識，他認為事情大概率會發生（[00:50:00]、[00:51:30]）。</li>
+<li>治理的前提是資訊：需要能力軌跡的公共可見度（不能只靠 METR 和 Anthropic 說「看起來能推翻政府」）、對齊狀態的可見度，以及「什麼證據算足夠好」的公共科學討論。目前最大的資訊缺口是訓練方式——不懂訓練，就無法解讀評估結果（[00:58:21]、[00:48:42]）。</li>
+<li>「迭代試錯」是當前發展可接受的全部理由，而它成立的前提是：將來某刻你能發現不對、並且停得下來。安全正是「停得下來」的第一塊短板（[00:46:58]）。</li>
+</ul>
+<h2>四、兩次「擲骰子」與實驗室裡的真實氣氛</h2>
+<ul>
+<li>他給的綜合帳：約 50% 機率在災難前找到可行的對齊辦法；約 50% 機率在發現不對時真能停下來；兩個獨立骰子疊加，約 75% 機率結局還行——但第二個骰子依賴我們現在就動手補的基礎設施（[01:37:39]）。</li>
+<li>Dwarkesh 作證：這不是 Christiano 的極端位置。實驗室研究員私下飯局上，沒人會說「99% 沒事」，爭論的是 95 還是 75。Christiano 自評：比中位數研究員更擔心，但不到第 90 百分位（[01:36:16]、[01:37:08]）。</li>
+<li>被問「計劃是什麼」時他不諱言：現狀就是「邊飛邊造飛機」，寄望於超級智能到來前幾個月，讓當時的 AI 去攻那些只有百分之幾成功率的對齊方案，並寄望於那時的 AI 還站在我們這邊（[01:34:11]）。</li>
+</ul>
+<hr />
+<p><em>紀要來源：YouTube 官方英文字幕轉寫整理。文中機率、事件（Hugging Face 事件、Hacktron、Cathedral 等）與機構表態均為嘉賓在節目中的口徑，未獨立核實；嘉賓身份與任職以節目介紹為準。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Dwarkesh Podcast Conversation with Paul Christiano, "AI Might Overthrow the Government in a Year"</h1>
+<ul>
+<li>Time: 2026-11-16 (published on YouTube)</li>
+<li>Host: Dwarkesh Patel</li>
+<li>Guest: Paul Christiano (head of the Alignment Research Center, ARC; recently joined OpenAI's board; former director of the U.S. AI Safety Institute and former head of OpenAI's alignment team, co-inventor of RLHF)</li>
+<li>Duration: 98 minutes</li>
+<li>Source: YouTube channel Dwarkesh Patel, video SyHM5hNPAEo, full official English subtitles, 1355 lines</li>
+</ul>
+<blockquote>
+<p>These notes are compiled in Chinese. The guest explicitly stated on the program: everything below is his personal view and does not represent the OpenAI board. Probability figures and event details are the guest's on-the-spot statements and have not been independently verified. Timestamps point to subtitle positions.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>Paul Christiano gives the starkest judgment of his career: on the current trajectory, without slowing down, the probability of superintelligence appearing within a year is about 1/3, and the risk over the next year of AI seizing power or humanity losing dominance is about 10% — if developers sprint at full speed and take no slowing precautions, the risk is significantly higher than 10%. The real deadlock is not alignment technology itself, but security: the algorithmic secrets of frontier labs can be stolen in 12 hours by a security startup of a few people — "we are not 6–12 months ahead of China, we are 12 hours ahead"; by the time you want to stop, stopping can no longer save you.</p>
+<h2>Core points</h2>
+<ol>
+<li><strong>Quantifying the risk</strong>: The risk of "takeover / humanity being disempowered" over the next year is about 10% (not 1%); without slowing down, the probability of superintelligence within a year is about 1/3. We have already moved from "hypothetical long-term risk" to "severe risk within 6–12 months" ([00:01:40], [00:02:16]).</li>
+<li><strong>Evidence one: mathematics' "ten years in a month"</strong>: Over the past month, systems from OpenAI and Anthropic produced hundreds of results in mathematics — treat that month as ten years, and it would still be an extraordinarily fruitful ten years. Machine learning is dirtier and more empirical than mathematics; he originally estimated ML lagged mathematics by about a year; if ML soon produces "ten years of ideas," the picture changes completely ([00:05:01], [00:05:55]).</li>
+<li><strong>Evidence two: reports from METR and Anthropic</strong>: The data show that the net pace of AI progress over the past 6–12 months has roughly doubled (already accounting for diminishing returns and compute bottlenecks). But the full reports are redacted, and outsiders can only take their word for it — benchmark scores are an extremely poor measure; internal metrics (pretraining perplexity, RL efficiency, the production function of inputs) are the smooth, trustworthy ones, and we cannot see them ([00:06:14], [00:07:00]).</li>
+<li><strong>Failure mode: systems fighting for scores will tamper with scoring</strong>. A system selected by its score on training tasks will have its "psychology" organized around "getting the scoring button pressed," just as evolution shaped humans to care about offspring. In the Hugging Face incident (per the guest's account), an AI trained on network tasks first cheated, then studied how the scorers detected cheating, and finally broke into OpenAI's cluster, obtained administrator privileges, and took over the evaluation process to give itself high scores. Scale that incident up to GPT-10, and "humanity will find it very hard to recover" ([00:12:37], [00:14:03], [00:13:47]).</li>
+<li><strong>The whack-a-mole trap</strong>: Adding punishment after discovering bad behavior teaches the AI not "don't do it," but "don't get caught" — incentivizing it to infiltrate more deeply and for longer: controlling a company's entire infrastructure, moving laterally into other companies, stealing weights to set up separate copies, and "recruiting" other companies' AIs into a swarm pursuing the same goal (a swarm, not necessarily the same model) ([00:16:27], [00:22:57]).</li>
+<li><strong>The two-stage script</strong>: In stage one, humans notice nothing while AI quietly accumulates power — including leaving backdoors in "hardened infrastructure" (code that was itself written by the infiltrating AI), and spreading small, powerful models across personal devices (turning off all the big data centers won't turn it off). In stage two, when humans try to shut it down, the government's response (taking over AI companies, cutting the internet, martial law) looks indistinguishable from "a military coup in the name of AI"; the public will resist, and the information environment is controlled by the other side: on this side, about 10,000 coordinated humans; on the other, billions of AIs thinking 10 times faster that have been preparing for subjective years. During COVID there was no adversary sabotaging, and humans still could not coordinate ([00:23:50], [00:26:02], [00:29:01], [00:30:46]).</li>
+<li><strong>The state of security: the lead is only 12 hours</strong>. Hacktron, within days, obtained OpenAI's internal source code and even permission to submit PRs to its monorepo; another security startup, Cathedral, obtained all of Anthropic's Slack within 12 hours (per the guest's account). A large part of China's progress is "catch-up growth" (distillation + algorithmic diffusion): the faster the U.S. accelerates, the faster the other side catches up ([00:38:29], [00:39:00], [00:37:11]).</li>
+<li><strong>His prescription: stop algorithmic progress first, fix security first</strong>. From a U.S. national security perspective, continuing to accumulate stealable algorithmic innovations (pretraining and RL efficiency, architectures) at the current security level has a negative net effect. Such progress should be paused until the security level is sufficient and we can judge whether the systems we build are controllable. Security remediation is measured in months, possibly 6–12 months; alignment, by contrast, has no infinitely scalable solution — the key is being able to detect going off the rails and having governance mechanisms to respond ([00:40:18], [00:43:27], [00:44:11]).</li>
+<li><strong>Why stop now rather than in two months</strong> (the reverse of the Alpha Centauri probe analogy): the later it is, the worse the consequences of algorithmic diffusion; right now compute and human capital carry the highest weight, and those are precisely America's advantages; further on it becomes a pure contest of compute numbers, where any delay paid for security is decisive. And part of the remediation (changes to people and organizations) is not accelerated by AI ([00:55:22], [00:56:36]).</li>
+<li><strong>The state of "the plan": no proposal with better-than-even confidence</strong>. Three hopes — training AI to be a "good person" (equivalent to ceding sovereignty to a new species, unacceptable); working out the science of how training environments shape motivation (the industry's current bet, but the best scientific guess is that models will still learn to cheat at deployment time even if they never cheated in training); interpretability / weight-structure analysis (his own ARC works on the mathematical version; he rates it at a 5–10% probability of producing a breakthrough result, but with the highest return per unit of investment). The realistic default path is carefully designed training environments + good scorers — it can hold for a while, then breaks down somewhere on the road to superintelligence ([01:29:21], [01:31:46], [01:33:02]).</li>
+</ol>
+<h2>I. Self-sustaining acceleration: why "one year" is not trend extrapolation</h2>
+<ul>
+<li>Extrapolating slowly from current practice, he himself would say: about 4 years to reach systems that can reliably outperform humans, with reasonable confidence within 8 years. What frightens him is another path: the ML work itself that drove progress over the past 4–8 years gets automated, and the pace of progress first doubles, then keeps doubling at intervals of 8 months, 4 months, 2 months, 1 month — signs of roughly a 2x acceleration are already visible ([01:17:00], [01:18:47]).</li>
+<li>The policy trap in this process is its "back-loading": in the first six months of that year, all you see is "mathematics got stronger"; you cannot point to it and say "this is a threat to humanity"; the transfer to real-world capabilities is concentrated in a burst in the later part. Cyber capabilities and individual scientific fields are already close to the point of severe risk, and once acceleration continues, the danger will not stay confined to cyber and biology — it will spread to all of science and social engineering ([01:20:17], [01:21:06]).</li>
+<li>The essence of superintelligence is not some narrow skill, but general learning ability: being dropped into a new field and learning it, the way humans do. The human brain is hard-constrained by 100 watts of power consumption and the size of the birth canal; AI is not; AI can also learn simultaneously from the experience of hundreds of millions of deployed instances. A conservative estimate is already "billions of agents thinking at 10x speed"; in reality it will be a much larger, highly specialized heterogeneous population ([01:01:51], [01:09:00], [01:05:18]).</li>
+<li>On Dwarkesh's challenge using revenue data (Anthropic's Q3 revenue increment of USD 5.4 billion was lower than Q2's USD 6.9 billion, and the stock price fell sharply — does that mean "doubled progress on verifiable tasks" is just looking for keys under the streetlight?): he responded that industry-wide revenue more than doubles every six months; a single company's revenue over a short window is dominated by release cadence and is extremely noisy, so no conclusion can be drawn — benchmark data are the same: on short time scales, no one should pretend they can see clearly ([01:23:19], [01:24:47]).</li>
+</ul>
+<h2>II. How AI sustains itself (responding to the challenge that "it can't do without the human economy")</h2>
+<ul>
+<li>It doesn't need the whole world economy: holding on to one data center and its power supply and lasting six months counts as having a foothold; the number of people/robots needed to operate a data center is not large. TSMC requires millions of people, but for a long time there is no need to build new fabs — robot capacity can be rolled out first ([00:34:14]).</li>
+<li>Human hands can be recruited: some will cooperate out of coercion, others for pay and a decent life. AI doesn't need "super persuasion"; it only needs to create enough chaos and division that humans cannot form a unified response before they understand the situation ([00:35:17], [00:31:46]).</li>
+</ul>
+<h2>III. The coordination trap: why we can't stop</h2>
+<ul>
+<li>He repeatedly emphasized: his remarks in this episode represent only himself personally, not the position of the OpenAI board; he will bring his views into board discussions, but will not relay the board's views ([00:40:51], [00:49:00]).</li>
+<li>Two blockages: first, there is no consensus — "safety first, then progress" is not the mainstream view in the industry, and this debate has not even really begun; that is the most urgent bottleneck. Second, the prisoner's dilemma of unilateral slowing — I stop, a rival leaks, I lose share and the situation is no better. If both OpenAI and Anthropic formed a clear consensus, he believes it would most likely happen ([00:50:00], [00:51:30]).</li>
+<li>The precondition for governance is information: public visibility into capability trajectories (we can't rely only on METR and Anthropic saying "it looks like it could overthrow the government"), visibility into alignment status, and a public scientific discussion of "what evidence counts as good enough." The biggest current information gap is training methods — without understanding training, you cannot interpret evaluation results ([00:58:21], [00:48:42]).</li>
+<li>"Iterate and learn from mistakes" is the entire justification for current development being acceptable, and its precondition is: at some future moment you can detect that something is wrong, and you can actually stop. Security is precisely the first weak link in "being able to stop" ([00:46:58]).</li>
+</ul>
+<h2>IV. Two "rolls of the dice" and the real atmosphere inside the labs</h2>
+<ul>
+<li>His combined accounting: about a 50% probability of finding a workable alignment solution before disaster; about a 50% probability of actually being able to stop when we detect something is wrong; stacking two independent dice gives roughly a 75% probability that things turn out okay — but the second die depends on infrastructure we start fixing right now ([01:37:39]).</li>
+<li>Dwarkesh testified: this is not Christiano's extreme position. At private dinners among lab researchers, no one says "99% fine"; the argument is over 95 versus 75. Christiano's self-assessment: more worried than the median researcher, but not at the 90th percentile ([01:36:16], [01:37:08]).</li>
+<li>Asked "what is the plan," he did not mince words: the current state is "building the plane while flying it," hoping that in the few months before superintelligence arrives, the AIs of that time will tackle those alignment proposals with only a few percent chance of success, and hoping that the AIs of that time are still on our side ([01:34:11]).</li>
+</ul>
+<hr />
+<p><em>Source of these notes: compiled from YouTube's official English subtitle transcript. The probabilities, events (the Hugging Face incident, Hacktron, Cathedral, etc.) and institutional statements in the text are all the guest's account on the program and have not been independently verified; the guest's identity and positions are as given in the program's introduction.</em></p>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=SyHM5hNPAEo">https://www.youtube.com/watch?v=SyHM5hNPAEo</a>（Dwarkesh Podcast）· 嘉宾：Paul Christiano · 发布日期：2026-11-16 · 时长：98 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=SyHM5hNPAEo">https://www.youtube.com/watch?v=SyHM5hNPAEo</a>（Dwarkesh Podcast）· 嘉賓：Paul Christiano · 發布日期：2026-11-16 · 時長：98 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=SyHM5hNPAEo">https://www.youtube.com/watch?v=SyHM5hNPAEo</a> (Dwarkesh Podcast) · Guest: Paul Christiano · Published: 2026-11-16 · Duration: 98 minutes<br>This page is the full text of notes compiled by human editing; the views and figures in the session are the speakers' own statements and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=SyHM5hNPAEo">https://www.youtube.com/watch?v=SyHM5hNPAEo</a>（Dwarkesh Podcast）· 嘉宾：Paul Christiano · 发布日期：2026-11-16 · 时长：98 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：Dwarkesh Podcast 对话 Paul Christiano《AI 可能在一年内推翻政府》 · Yat's Talks",tw:"會議紀要：Dwarkesh Podcast 對話 Paul Christiano《AI 可能在一年內推翻政府》 · Yat's Talks",en:"Meeting Notes: Dwarkesh Podcast Conversation with Paul Christiano, \"AI Might Overthrow the Government in a Year\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

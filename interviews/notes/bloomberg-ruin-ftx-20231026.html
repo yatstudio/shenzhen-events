@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Bloomberg 纪录片《RUIN：金钱、ego 与 FTX 的骗局》</h1>
 <blockquote>
 <p>片源：Bloomberg Originals《RUIN: Money, Ego and Deception at FTX》· 时长：约 1 小时 48 分 · 2023-10-26 发布（庭审期间）
@@ -48,9 +55,81 @@
 <p>破产后的一个月里，SBF 做了与所有律师建议相反的事：接受几乎所有媒体的采访。他显得后悔但不像忏悔，在一次 Twitter Space 上被追问「客户资金被送到 Alameda，这为什么不是电汇欺诈」时，他拒绝回答并封杀了提问者——五小时后，他在巴哈马被捕。八项指控公布：电汇欺诈、证券欺诈、商品欺诈与竞选财务违规。接管的 John Ray 在国会说，FTX「比安然还糟」：毫无记账，Slack 上走开票，一家数十亿美元公司用 QuickBooks。受害散户们在片中逐一报出自己的损失：50 万、150 万、18 万、10 万、200 多万美元。</p>
 <p>片尾一段来自 Tiffany Fong：2022 年 12 月 27 日，她在 Palo Alto 的 SBF 父母家见到软禁中的他——衣服扔在地上，他把毯子和枕头拖进书房睡在那里，醒来就打字、重建资产负债表；他自述长期处于抑郁与快感缺失状态，在用抗抑郁贴片。行业反思部分，一位投资人说 FTX 与安然「没有任何区别」，能源市场在安然之后也没改变，「这就是资本主义的本质，接受它」。全片以 SBF 自己的话收尾：「我不在乎我的 legacy，我在乎的是我对世界的影响。」</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Bloomberg 紀錄片《RUIN：金錢、ego 與 FTX 的騙局》</h1>
+<blockquote>
+<p>片源：Bloomberg Originals《RUIN: Money, Ego and Deception at FTX》· 時長：約 1 小時 48 分 · 2023-10-26 發布（庭審期間）
+說明：本片採訪了投資人、前員工、監管倡導者、受害散戶與 CZ 等多人，並穿插 SBF 本人歷年影像；本紀要據英文字幕整理、轉述片中敘述，人物評價均為受訪者口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>RUIN 是四部 FTX 片子裡視野最寬的一部：它不只講錢怎麼沒的，還講三件事如何互相餵養——有效利他主義如何給無底線逐利發了道德許可證、媒體與紅杉如何合謀造神、以及 SBF 如何一邊在華盛頓買影響力、一邊被 CZ 用一筆 21 億美元的回購抽乾現金。</p>
+<h2>從比特幣的原罪到 Jane Street 的解題少年</h2>
+<p>片子從 2008 年金融危機開場：比特幣生於對銀行體系的不信任，承諾一種政府管不著的點對點現金。SBF 的畫像則從另一端搭起來：史丹佛法學教授之子、富裕社區長大，MIT 畢業，在華爾街精英量化公司 Jane Street 實習並留下——那裡「痴迷於風險」，而他愛謎題、愛數學、敢冒險，「非常聰明、非常能幹，但非常獨特，而且下注很大」。</p>
+<p>2017 年他在柏克萊創立 Alameda，取個不起眼的名字以免引起某些國家的懷疑；創始團隊是數學夏令營、MIT 與 Jane Street 的熟人圈：CTO Gary Wang、工程負責人 Nishad Singh、聯席負責人 Sam Trabucco 與 Caroline Ellison。Alameda 的傳奇來自日韓價差套利。2018 年前後團隊移師香港，VC 開始上門。一位投資人的盡調回憶很有代表性：SBF 一邊虧錢一邊分心，因為他在偷偷做一家交易所；他想讓 Alameda 的投資人出錢辦 FTX，卻不給投資人任何股份與知情權——這位投資人說，那感覺「像在給一個嬰兒講商業倫理 101」，雙方根本不在一個頻道，交易告吹。但更多人投了：一位 VC 說 SBF 的策略「有些風險更大，但那是因為他永遠站在最前沿，這正是讓我們興奮的地方」。</p>
+<h2>造神機器：人設、媒體與體育行銷</h2>
+<p>FTX 2019 年上線，正趕上 2020 年疫情牛市的起點。一位同行指出，FTX 當時只有約 20 人，而 Kraken 光安全團隊就有 100 人——小團隊被當作美德，沒人追問背後有沒有東西。2021 年兩家公司遷往巴哈馬，入住 Albany 度假區那棟 3000 萬美元的頂層公寓；與此同時 SBF 對外維持著開卡羅拉、睡豆袋的「僧侶人設」。員工問他為什麼不剪頭髮，他答：「剪頭髮在財務上不划算。」同事們住在一起、工作在一起、互相戀愛，氛圍像大學兄弟會。</p>
+<p>片子花了很大篇幅講造神機制：FTX 拿下球館冠名、把標誌印上 MLB 裁判服，請來布雷迪與吉賽爾、柯瑞、奧尼爾、F1。柯瑞的廣告裡他反覆說「我對加密一無所知」，結尾是「我不需要懂，因為我有 FTX」——一位財經記者說，看著這支廣告她極度不適：這是風險極高的資產類別，卻在暗示你什麼都不用懂。媒體方面，SBF 刻意對記者全天候開放、從不給公關套話，「什麼都答」；紅杉投了 2 億美元後寫的軟文裡，作者說自己「正與一位未來的萬億富翁對坐」，還津津樂道他開會時在打《英雄聯盟》。一位加密圈內人則給出另一面：圈內對 SBF 的評價遠沒有主流媒體那麼好，2020 年就有人說他對弱勢交易對手刻薄無情，「但當一個人紅得太快、太有權力時，發聲的風險太大了」。</p>
+<p>有效利他主義在片中被單獨解剖：從買蚊帳防瘧疾的樸素版本，一路滑向長期主義——擔憂 AI 末日與大流行病，於是「為了拯救世界，今天的任何行為都可以被正當化」，包括不太在乎證券法。片中評論說，這套哲學「本質上是為科技與金融兄弟量身定做的恭維」：做金融不再需要愧疚，反而成了道德上更優越的選擇。巴哈馬大會上，SBF 請來布萊爾與柯林頓同台對話，自己腿抖個不停、問題毫無準備，柯林頓還安慰地拍了拍他的肩。</p>
+<h2>華盛頓的雙軌與 CZ 的毒丸</h2>
+<p>SBF 在華盛頓的打法是雙軌：一軌買人——2020 年大選後他是民主黨第二大捐助人、公開口徑約 4000 萬美元，而共和黨那邊的捐款全部走「暗錢」，他自己的解釋是怕超級自由派記者鬧起來；他還放話 2024 年大選要捐 10 億美元，「大約是史上最大捐助人的十倍」。另一軌是推動 CFTC 批准 FTX 的申請，拿到美國市場的入場券。非營利組織 Better Markets 的負責人說，FTX 想要的是「量身定制的監管」，其模式「掠奪性、激進而危險」；開會前兩週，有人開價 100 萬美元以上請他們支持申請。一位前監管者點明行銷與申請的聯動：超級盃廣告、球館冠名都是在給美國散戶「預熱」，申請一過，數百萬客戶就會湧進來。</p>
+<p>與 CZ 的關係是另一條暗線。幣安早年持有 FTX 約 20% 股份，片中受訪者稱之為「毒丸」：FTX 在各國申請牌照時必須披露股東 CZ 的資訊，CZ 拒絕配合，SBF 被逼回購——成交價 21 億美元，其中約 5.5 億以 FTT 支付，其餘大多是現金，等於把資產負債表的現金抽走大半。SBF 對外則把自己塑造成「美國的好人」、CZ 是「壞人」的對照組。FTT 的機制也被拆解：交易所發幣近乎零成本，FTX 承諾用三分之一收入回購 FTT，於是幣價與交易所的命運綁死——而幣是可以憑空增發的。</p>
+<h2>崩盤鏈條：從 Terra 到那條推文</h2>
+<p>2022 年 5 月 Terra/Luna 崩盤，600 億美元市值數日蒸發，重倉的 Three Arrows 倒下（Su Zhu 的「超級週期」論隨之破產），全行業貸方開始抽貸。Alameda 被要求償還數十億美元，它沒有錢。據其他高管的說法，Caroline、Sam、Nishad、Gary 開了一次會，面前只有兩個選項：讓 Alameda 破產，或者動用 FTX 客戶資金還債——他們選了後者。SBF 對片方承認確有此會，只說「當時沒覺得它有多重要」——因為 Alameda 本來就在持續從 FTX 借錢、拿 FTT 做抵押。隨後他反而以「加密界 JP Morgan」的姿態出面救市（包括與 BlockFi 的交易），而 Brett Harrison 與 Trabucco 等高管相繼離職，Trabucco 的說法是「只想去開快艇」。</p>
+<p>2022 年 11 月 CoinDesk 曝光 Alameda 資產負債表，CZ 隨即宣布出售約 5.5 億美元 FTT，擠兌發生。幣安一度宣布收購 FTX，盡調不到 24 小時便退出——其策略官說，看到的數字令人震驚；SBF 對投資人承認流動性缺口約 80 億美元。從 320 億美元估值到破產，只用了四天左右，破產涵蓋 134 家關聯公司。片中對 CZ 的評價兩極：有人稱這是「商業棋局的大師手筆」，也有人指出，即便沒有那條推文，SBF 本可以停牌重組——真正的火藥是帳上早就有的窟窿。SBF 事後發推「well played, you won」，片中一位受訪者說：「只有精神病態者寫得出這種推文。」</p>
+<h2>餘波：媒體巡演、被捕與 Tiffany 的客廳</h2>
+<p>破產後的一個月裡，SBF 做了與所有律師建議相反的事：接受幾乎所有媒體的採訪。他顯得後悔但不像懺悔，在一次 Twitter Space 上被追問「客戶資金被送到 Alameda，這為什麼不是電匯欺詐」時，他拒絕回答並封殺了提問者——五小時後，他在巴哈馬被捕。八項指控公布：電匯欺詐、證券欺詐、商品欺詐與競選財務違規。接管的 John Ray 在國會說，FTX「比安然還糟」：毫無記帳，Slack 上走開票，一家數十億美元公司用 QuickBooks。受害散戶們在片中逐一報出自己的損失：50 萬、150 萬、18 萬、10 萬、200 多萬美元。</p>
+<p>片尾一段來自 Tiffany Fong：2022 年 12 月 27 日，她在 Palo Alto 的 SBF 父母家見到軟禁中的他——衣服扔在地上，他把毯子和枕頭拖進書房睡在那裡，醒來就打字、重建資產負債表；他自述長期處於抑鬱與快感缺失狀態，在用抗抑鬱貼片。行業反思部分，一位投資人說 FTX 與安然「沒有任何區別」，能源市場在安然之後也沒改變，「這就是資本主義的本質，接受它」。全片以 SBF 自己的話收尾：「我不在乎我的 legacy，我在乎的是我對世界的影響。」</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Bloomberg Documentary "RUIN: Money, Ego and the FTX Fraud"</h1>
+<blockquote>
+<p>Source: Bloomberg Originals, "RUIN: Money, Ego and Deception at FTX" · Runtime: about 1 hour 48 minutes · Released 2023-10-26 (during the trial)
+Note: The film interviews investors, former employees, regulatory advocates, retail victims, CZ and many others, intercut with archival footage of SBF himself over the years. These notes are compiled from the English subtitles and relay the film's narration; all character judgments are the interviewees' own accounts.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>RUIN is the broadest in scope of the four FTX films: it does not only tell how the money vanished, but also how three things fed one another — how effective altruism issued a moral license for bottomless profit-seeking, how the media and Sequoia conspired to manufacture a god, and how SBF bought influence in Washington on one side while CZ drained his cash with a $2.1 billion buyback on the other.</p>
+<h2>From Bitcoin's Original Sin to the Puzzle-Solving Kid at Jane Street</h2>
+<p>The film opens with the 2008 financial crisis: Bitcoin was born of distrust in the banking system, promising peer-to-peer cash beyond the government's reach. SBF's portrait is built from the other end: son of Stanford law professors, raised in a wealthy community, an MIT graduate who interned at and stayed with Jane Street, the elite Wall Street quant firm — a place "obsessed with risk", while he loved puzzles, loved math and dared to take risks: "very smart, very capable, but very unique, and he bet big".</p>
+<p>In 2017 he founded Alameda in Berkeley, choosing an inconspicuous name so as not to arouse suspicion in certain countries; the founding team was a circle of acquaintances from math camps, MIT and Jane Street: CTO Gary Wang, engineering head Nishad Singh, and co-leads Sam Trabucco and Caroline Ellison. Alameda's legend came from Japan–Korea price-difference arbitrage. Around 2018 the team moved to Hong Kong, and VCs began knocking. One investor's due-diligence recollection is representative: SBF was losing money and distracted at the same time, because he was secretly building an exchange; he wanted Alameda's investors to fund FTX while giving them no equity and no right to know — the investor said it felt "like teaching Business Ethics 101 to a baby", the two sides were simply not on the same channel, and the deal fell through. But many more invested: one VC said SBF's strategy was "riskier in some ways, but that's because he's always on the cutting edge, and that's exactly what excites us".</p>
+<h2>The God-Making Machine: Persona, Media and Sports Marketing</h2>
+<p>FTX launched in 2019, right at the start of the 2020 pandemic bull market. A peer pointed out that FTX had only about 20 people at the time, while Kraken's security team alone had 100 — the small team was treated as a virtue, and nobody asked whether there was anything behind it. In 2021 the two companies moved to the Bahamas, into the $30 million penthouse at the Albany resort; meanwhile SBF maintained a "monk persona" of driving a Corolla and sleeping on a beanbag. When an employee asked why he didn't cut his hair, he answered: "Cutting hair doesn't make financial sense." Colleagues lived together, worked together and dated one another; the atmosphere was like a college fraternity.</p>
+<p>The film spends a great deal of time on the god-making mechanism: FTX secured stadium naming rights, printed its logo on MLB umpire uniforms, and brought in Brady and Gisele, Curry, O'Neal and F1. In Curry's ad he repeatedly says "I know nothing about crypto", ending with "I don't need to know, because I have FTX" — a financial journalist said watching the ad made her deeply uncomfortable: this is an extremely high-risk asset class, yet it implied you need to understand nothing at all. On the media side, SBF deliberately made himself available to reporters around the clock and never gave PR talking points — he "answered everything". In the puff piece Sequoia wrote after investing $200 million, the author said he was "sitting across from a future trillionaire", and fondly noted that SBF was playing League of Legends during meetings. A crypto insider offered the other side: within the industry, views of SBF were far less glowing than in the mainstream media; as early as 2020 people said he was ruthless toward weaker counterparties, "but when someone gets famous too fast and too powerful, speaking up is too risky".</p>
+<p>Effective altruism is dissected on its own in the film: from the plain version of buying mosquito nets to prevent malaria, it slid toward longtermism — worrying about AI doom and pandemics, so that "to save the world, any action today can be justified", including not caring much about securities law. A commentator in the film calls the philosophy "essentially flattery tailor-made for the tech and finance bros": working in finance no longer required guilt; it became the morally superior choice instead. At the Bahamas conference, SBF brought Blair and Clinton on stage for a conversation; his own leg shook nonstop, his questions were unprepared, and Clinton patted his shoulder reassuringly.</p>
+<h2>Washington's Two Tracks and CZ's Poison Pill</h2>
+<p>SBF's Washington playbook ran on two tracks. One track was buying people — after the 2020 election he was the Democratic Party's second-largest donor, publicly about $40 million, while all the Republican donations went through "dark money"; his own explanation was that he feared super-liberal journalists would make a fuss. He also boasted he would donate $1 billion in the 2024 election, "about ten times the largest donor in history". The other track was pushing the CFTC to approve FTX's application and win entry to the US market. The head of the nonprofit Better Markets said FTX wanted "regulation tailored to itself", and that its model was "predatory, aggressive and dangerous"; two weeks before a meeting, someone offered them over $1 million to support the application. A former regulator spelled out the linkage between marketing and the application: the Super Bowl ads and stadium naming rights were "warming up" US retail customers, so that once the application passed, millions of customers would flood in.</p>
+<p>The relationship with CZ is another undercurrent. Binance held about 20% of FTX in the early days, which interviewees in the film call a "poison pill": when FTX applied for licenses in various countries it had to disclose information about its shareholder CZ; CZ refused to cooperate, and SBF was forced into a buyback — the deal price was $2.1 billion, of which about $550 million was paid in FTT and most of the rest in cash, effectively draining the bulk of the cash on the balance sheet. Publicly, SBF cast himself as the "good guy from America" against CZ as the "bad guy". The FTT mechanism is also taken apart: an exchange can issue a token at nearly zero cost; FTX promised to buy back FTT with one-third of its revenue, so the token price was bound to the exchange's fate — and tokens can be minted out of thin air.</p>
+<h2>The Collapse Chain: From Terra to That Tweet</h2>
+<p>In May 2022 Terra/Luna collapsed, $60 billion in market value evaporating within days; the heavily exposed Three Arrows went down (Su Zhu's "supercycle" thesis went bankrupt with it), and lenders across the industry began calling in loans. Alameda was asked to repay billions of dollars, and it didn't have the money. According to other executives, Caroline, Sam, Nishad and Gary held a meeting with only two options in front of them: let Alameda go bankrupt, or use FTX customer funds to repay the debts — they chose the latter. SBF admitted to the filmmakers that the meeting did happen, saying only that he "didn't think it was that important at the time" — because Alameda had already been continuously borrowing from FTX, posting FTT as collateral. Afterwards he instead stepped forward in the posture of "crypto's JP Morgan" to rescue the market (including the deal with BlockFi), while executives such as Brett Harrison and Trabucco left one after another; Trabucco's explanation was that he "just wanted to go drive a speedboat".</p>
+<p>In November 2022 CoinDesk exposed Alameda's balance sheet, and CZ promptly announced the sale of about $550 million in FTT; a bank run ensued. Binance at one point announced it would acquire FTX, then pulled out after less than 24 hours of due diligence — its chief strategy officer said the numbers they saw were shocking; SBF admitted to investors a liquidity gap of about $8 billion. From a $32 billion valuation to bankruptcy took only about four days, and the bankruptcy covered 134 affiliated companies. The film's assessment of CZ is polarized: some call it "a masterstroke in the business chess game", while others point out that even without that tweet, SBF could have halted trading and restructured — the real powder was the hole that had long been on the books. Afterwards SBF tweeted "well played, you won"; one interviewee in the film said: "Only a psychopath could write a tweet like that."</p>
+<h2>Aftermath: The Media Tour, the Arrest, and Tiffany's Living Room</h2>
+<p>In the month after the bankruptcy, SBF did the opposite of what all his lawyers advised: he accepted interviews from almost every media outlet. He seemed regretful but not repentant; on a Twitter Space, pressed with the question "customer funds were sent to Alameda — why isn't that wire fraud?", he refused to answer and blocked the questioner — five hours later, he was arrested in the Bahamas. Eight charges were announced: wire fraud, securities fraud, commodities fraud and campaign-finance violations. John Ray, who took over, told Congress that FTX was "worse than Enron": no bookkeeping at all, invoices run over Slack, a multibillion-dollar company using QuickBooks. Retail victims in the film each state their losses: 500 thousand, 1.5 million, 180 thousand, 100 thousand, over 2 million dollars.</p>
+<p>A closing segment comes from Tiffany Fong: on December 27, 2022, she met the house-arrested SBF at his parents' home in Palo Alto — clothes thrown on the floor, he had dragged a blanket and pillow into the study to sleep there, and on waking he would type and rebuild the balance sheet; he described himself as chronically depressed and anhedonic, and was using antidepressant patches. In the industry-reflection section, one investor says FTX was "no different from Enron", and that energy markets didn't change after Enron either — "that's the nature of capitalism; accept it". The film ends with SBF's own words: "I don't care about my legacy; I care about my impact on the world."</p>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=3QpdU9LS540">https://www.youtube.com/watch?v=3QpdU9LS540</a>（Bloomberg Originals 纪录片）· 嘉宾：多位受访者 · 发布日期：2023-10-26 · 时长：1 小时 48 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=3QpdU9LS540">https://www.youtube.com/watch?v=3QpdU9LS540</a>（Bloomberg Originals 紀錄片）· 嘉賓：多位受訪者 · 發布日期：2023-10-26 · 時長：1 小時 48 分<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=3QpdU9LS540">https://www.youtube.com/watch?v=3QpdU9LS540</a> (Bloomberg Originals documentary) · Guests: multiple interviewees · Release date: 2023-10-26 · Duration: 1 hour 48 minutes<br>This page is the full text of notes compiled by hand; the views and figures in the session are the speakers' own accounts and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · Talk Records</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=3QpdU9LS540">https://www.youtube.com/watch?v=3QpdU9LS540</a>（Bloomberg Originals 纪录片）· 嘉宾：多位受访者 · 发布日期：2023-10-26 · 时长：1 小时 48 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Bloomberg 纪录片《RUIN：金钱、ego 与 FTX 的骗局》 · Yat's Talks",tw:"Bloomberg 紀錄片《RUIN：金錢、ego 與 FTX 的騙局》 · Yat's Talks",en:"Bloomberg Documentary \"RUIN: Money, Ego and the FTX Fraud\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

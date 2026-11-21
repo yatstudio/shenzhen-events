@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>郭宇：用AI做影片，人人都能当导演｜郭宇关于AI的十次分享：AI做影片（2026年5月场）</h1>
 <blockquote>
 <p>来源：YouTube《郭宇：用AI做影片，人人都能当导演》，郭宇关于AI的十次分享系列之 AI 做影片专场，2026 年 5 月东京线下分享，全长 1 小时 48 分。全文逐字稿 2,962 行。</p>
@@ -125,8 +132,232 @@
 <hr />
 <p><em>纪要整理：大脚。原始逐字稿见附件《全文-用AI做影片-人人都能当导演.txt》。</em></p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=LAhgDOGXH5A">https://www.youtube.com/watch?v=LAhgDOGXH5A</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-28 · 时长：1 小时 48 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>郭宇：用AI做影片，人人都能當導演｜郭宇關於AI的十次分享：AI做影片（2026年5月場）</h1>
+<blockquote>
+<p>來源：YouTube《郭宇：用AI做影片，人人都能當導演》，郭宇關於AI的十次分享系列之 AI 做影片專場，2026 年 5 月東京線下分享，全長 1 小時 48 分。全文逐字稿 2,962 行。</p>
+<p>注意：本紀要基於機器轉寫整理，轉寫中的人名與專有名詞已按上下文校正（賈樟柯、畢贛、《給阿嬤的情書》、Seedance、即夢等）。片中提到的 Netflix 內部情況為郭宇轉述其小姨的說法，未經證實，僅供參考。本場與同系列另一場《AI做影片》（BcMssIgsvdI，2 小時 23 分）主題相同但為不同場次，內容多有重疊，本紀要只記本場獨有的演示與問答。</p>
+</blockquote>
+<h2>結論先行</h2>
+<ul>
+<li><strong>AI 不會取代導演，但可以讓所有人都變成導演。</strong> 電影 = 故事 + 畫面 + 時間，地基是故事；技術門檻已經降到"訂閱 ChatGPT + 一張 PPT 就能寫出來的工作流"，剩下的瓶頸全在人：你想表達什麼、能不能把意圖說清楚。</li>
+<li><strong>提示詞的顆粒度就是導演功力。</strong> 抽象情緒詞對 AI 無效，"依依不捨"沒有意義，必須寫成可見的畫面指令；寫得越細失敗率越低，寫不細就只能抽卡。</li>
+<li><strong>工作流已經可以無人值守。</strong> Codex 列方案 → 你審批 → GPT Image 2 出分鏡圖 → Seedance/即夢生成影片 → Codex 自己看片、補提示詞、循環改進；給 500 美元預算，它能自己把錢花完交片。一小時嚴肅 AI 影片成本約 2,000 美元。</li>
+<li><strong>最難的兩樣東西：衝突與情緒。</strong> 3–5 分鐘短片沒有鋪墊情緒的時間，衝突是唯一抓手；情緒與音樂最難用語言描述，是目前 AI 做影片的短板。</li>
+<li><strong>無限解空間是祝福也是詛咒。</strong> AI 給了你無限選擇，你就失去了"命運垂青"的感覺——從被動的命運接受者變成探索者，必須自己在無限解裡找最優解，逼你更早思考"如何定位自己"。</li>
+</ul>
+<h2>一、行業正在發生什麼</h2>
+<ul>
+<li><strong>橫店真人短劇約九成從業者沒活幹，正在轉 AI 漫劇。</strong> 紅果短劇有流量分成機制，是目前 AI 漫劇最現實的變現口。</li>
+<li><strong>Netflix 平台傳聞（郭宇轉述其小姨的說法，未證實）：</strong> 框架保留、90% 內容 AI 生成、人類只管編劇。郭宇的判斷是：平台方已經在為 AI 內容時代做準備。</li>
+<li><strong>類比抖音 2016：</strong> 當年 PGC 轉 UGC，使用者泛化；現在是傳統內容向 AI 內容轉變的節點，2026 年 5 月 ≈ 抖音的 2016 年，明後年會爆發。</li>
+<li><strong>字節 Seedance 全球略領先：</strong> 人物一致性、鏡頭語言、出問題比率最低，是他目前的主力影片模型。</li>
+<li><strong>版權收緊逼出原創 IP：</strong> 與另一場相同的判斷——迪士尼、作家協會發函之後，靠 IP 改編的路收窄，原創 IP 反而有了機會。</li>
+</ul>
+<h2>二、地基是故事：電影 = 故事 + 畫面 + 時間</h2>
+<ul>
+<li>郭宇請 OpenAI 幫他做 PPT，第一頁就定調：<strong>電影由三件事構成——故事、畫面、時間。</strong></li>
+<li><strong>地基是故事。</strong> 技術會變，故事不會變；沒有好故事，畫面再精美也沒有意義。</li>
+<li><strong>"AI 不會取代導演，但可以讓我們所有人都變成導演。"</strong> 導演真正的活是表達自己的世界觀和視角，不是操作機器。</li>
+<li><strong>電影學院可以關了嗎？</strong> 他的回答是：學校更多是環境，環境塑造性格，性格塑造命運；AI 改變的是技術門檻，不是"成為導演"這件事本身。</li>
+</ul>
+<h2>三、好片子的四要素：世界觀、人物、衝突、情緒</h2>
+<p>這是 OpenAI 幫他總結的框架，現場幾個範例影片都有這四點的影子：</p>
+<ol>
+<li><strong>世界觀先定下來。</strong> 故事發生在什麼樣的世界，規則是什麼。</li>
+<li><strong>人物定下來。</strong> 主要人物、次要人物長什麼樣，在整個 3–5 分鐘影片裡必須完全一模一樣，無論從哪個視角看，包括情緒表達方式。<strong>人物一致性是目前最難的工程問題之一</strong>——人的面部表情太難用語言控制，所以很多人先做機器人當主角：只需要定幾個表情，不會出錯。</li>
+<li><strong>衝突是故事最重要的組成部分。</strong> 一小時影片成本 2,000 美元，你不知道觀眾喜不喜歡，所以必須從 3–5 分鐘入手；短片沒有鋪墊情緒的時間，衝突就是唯一的抓手。範例是 Netflix《愛，死亡和機器人》的〈Zima Blue〉（齊馬藍）：一個機器人慢慢變成宇宙中最偉大的藝術家，美術風格偏動畫，更適合 AI 講述。</li>
+<li><strong>畫面的情緒和音樂最難。</strong> 情緒很難用語言描述，尤其是非常微妙的情感——比如《請以你的名字呼喚我》裡的大量空鏡，你用空鏡的客觀存在去描述，AI 能生成類似的東西，但畫面風格、布光、layout 都不是你想要的。調完一個片段，下一個片段風格又不對。所以目前 AI 影片更多以"故事"為切入點，做得像好萊塢/寶萊塢電影，而不是用人導演擅長的情感片段去剪。</li>
+</ol>
+<h2>四、提示詞顆粒度：抽象詞無效，寫成畫面</h2>
+<ul>
+<li><strong>"依依不捨"對 AI 沒有任何意義。</strong> 現場教學案例是拍一場道別：你要告訴它"先給媽媽一個面部特寫，然後搖向兒子"，"你在這等會去買個橘子"（朱自清《背影》的梗）——寫成看得見的動作和畫面。</li>
+<li><strong>寫得越細，失敗率越低。</strong> 比如影片裡 BEN 有兩個行李箱，你希望他只拿一個，就必須寫進去；不寫，模型就按機率猜。</li>
+<li><strong>人物小傳要先寫。</strong> 人物性格、世界觀先定性，角色才有一致性；分鏡圖只是分鏡，影片是機率模型生成的，兩者之間永遠有 gap（現場演示就出現黑色西裝變白色、人物沒抬頭的情況）。</li>
+<li><strong>每兩秒一個分鏡。</strong> 這是他的實操節奏：先把分鏡全部做出來，再讓模型按分鏡生成。</li>
+</ul>
+<h2>五、完整工作流：簡單到一張 PPT 能寫完</h2>
+<p>GPT Image 2 出現之後，工作流簡化到一張 PPT 就能寫完：</p>
+<ol>
+<li><strong>把想法告訴 Codex</strong>，它列出方案供你審批；</li>
+<li>選定故事，<strong>用 ChatGPT 圖片生成出分鏡圖</strong>（四格分鏡）；</li>
+<li>把分鏡圖丟給影片模型（Seedance/即夢）生成；</li>
+<li><strong>50% 失敗率，抽二留一</strong>——不滿意的刪掉，滿意的留下；</li>
+<li><strong>Codex 可以自動看片</strong>：瀏覽生成的影片，對比分鏡，補充提示詞，循環改進，完全自動化。</li>
+</ol>
+<ul>
+<li><strong>成本：</strong> 給它 500 美元預算，它能自己把錢花完交片；一小時嚴肅 AI 影片約 2,000 美元；他的 Tua 翻譯電話兩條廣告（外國人訂東京餐廳、巴西旅遊丟東西求助）各不到 10 分鐘自做，兩條成本約 340 美元。</li>
+<li><strong>門檻：</strong> 首先訂閱一個 ChatGPT，圖片生成出分鏡圖，丟給即夢（國內的影片生成產品）就行；大部分人不會寫程式碼——就這麼簡單。</li>
+<li><strong>現場演示：</strong> 預設了一個有衝突的故事 → 四格分鏡 → 15–20 秒生成 5 秒短片（一個舊皮箱自己慢慢滑向車門，製造安靜懸念）；3–4 分鐘出一條；電腦自己跑，你只負責花錢。PPT 是公開的，現場可掃碼查看。</li>
+</ul>
+<h2>六、Visio Studio：為小姨的小說影視化而做</h2>
+<ul>
+<li><strong>來歷：</strong> 小姨是矽谷工程師，寫了十幾本書，包括講 2000 年網際網路泡沫時期華人工程師的《冰河世紀之春》，還有恐怖小說；版權賣給騰訊影片，做得不滿意。去年元旦她來東京吃飯，郭宇決定自己做一個工具幫她影視化，從 1 月開始做到現在（5 月）。</li>
+<li><strong>做法：</strong> 把十萬字、二十萬字的小說餵進去，自動分析章節、拆出角色（三視圖保證各鏡頭一致）、挑出值得做的場景、生成分鏡（含人物與對白）、給每個角色創造專屬聲音。</li>
+<li><strong>解決的痛點：</strong> 7 萬多字寫完作者自己都忘了；AI 幫你記住全部內容並挑出有衝突的場景。</li>
+</ul>
+<h2>七、無限解空間：好電影的"意外之美"去哪了</h2>
+<p>這是本場最精彩的一段思辨，現場觀眾提問"AI 做電影會不會失去那種意料之外的收穫"引發：</p>
+<ul>
+<li><strong>好電影常有設計不出來的鏡頭。</strong> 《給阿嬤的情書》結尾，男主回到街上、彷彿看到年輕時的樣子，夕陽餘暉照過來——導演在採訪中說，那是拍攝當天意外的陽光，是上天給的禮物，寫劇本、畫分鏡時完全沒有預計到。</li>
+<li><strong>郭宇的工程師式解讀：</strong> 這是"解空間大小"的問題。傳統拍片的解空間很小（那天、那個街角、下雨後天晴），隨機性自帶美感，你會覺得是命運垂青；AI 給了你無限解空間，你像神一樣可以得到任何想要的東西，反而失去了"被命運選中"的感覺。</li>
+<li><strong>從接受者變成探索者：</strong> 選擇有限時，大腦會騙自己接受一切（"所有東西都是最好的安排"，因為你沒法自己安排命運）；選擇無限時，你必須主動在無限解裡游泳、尋找最優解。AI 把一部分"神性"給了普通人，逼你更早思考"如何定位自己"——這件事適用於做電影、寫程式，也適用於規劃人生。</li>
+<li><strong>他的結論是好事：</strong> 工業革命之後的生活是"家—學校—上班"三點一線，框架讓人失去主體性，很少有思考自由；AI 讓你更早觸碰虛無——年輕時要想，年紀大了也要想，現在可能七八歲的小孩都在想這個問題。</li>
+</ul>
+<h2>八、風格參照：可以點名導演，但"自己的風格"沒有參照系</h2>
+<ul>
+<li><strong>語言模型本來就知道所有導演。</strong> 你說想要賈樟柯風格，它就按賈樟柯的風格拍；說喜歡畢贛，它就按"畢贛宇宙"（黔西南小鎮、鄉下愛情故事、強烈一致的情感模式）來。現場還演示了選導演風格生成 10 秒影片：庫布里克式對稱、費里尼式遊行、黑澤明式群像，任選其一。</li>
+<li><strong>但"自己的風格"沒有參照系。</strong> 觀眾追問：如果我不想要任何人的風格，只想要自己的風格怎麼辦？郭宇的回答是：那你就得把你到底想要表達什麼說得一清二楚——這很難，因為相當於你不是在做導演而是在做編劇。</li>
+<li><strong>AI 不能創作，只能幫你創作。</strong> 創作是更形而上的話題，不僅是電影，小說、文字、軟體都一樣：你必須有明確的意圖，或者讓 AI 幫你發掘明確的意圖，然後像夥伴一樣在相處中慢慢把作品做得越來越好。和自己做沒有本質差別，只是和 AI 一起做會更快意識到自己做得好還是不好。</li>
+</ul>
+<h2>九、小眾語言只有 AI 拍得起</h2>
+<ul>
+<li>《給阿嬤的情書》是閩南話電影，郭宇想問：怎麼沒有客家語的電影？他大部分時間聽不太懂客家話，但對客家語的語言節奏感興趣。</li>
+<li><strong>小眾語言的傳承都成問題，AI 是唯一的解法：</strong> 傳統拍片要為小眾語言找演員、找市場，成本收不回來；AI 可以低成本做出客家語電影，順帶傳播語言。</li>
+<li>同理：亞馬遜雨林裡有些語言甚至沒有某些概念（轉寫此處斷續，大意是語言本身決定了能表達什麼）——語言不只是工具，是世界觀。</li>
+</ul>
+<h2>十、問答精選</h2>
+<p><strong>長執行緒 Agent 會"情緒崩潰"嗎？</strong>
+觀眾觀察到很多人在長任務裡 Agent 會走偏、崩掉。郭宇的回答：把它想像成一個直男，不能指望它體會你的情緒；崩掉的原因更多是硬體限制（儲存股大漲、Agentic Coding 又開始搶 CPU）；模型內部正在解決這個問題，他自己的體驗是交付成果與期望不符的情況越來越少；更深層的原因是溝通技巧——<strong>中國文化裡比較缺失"把自己的想法表述清楚"的能力</strong>，很多人不知道怎麼用母語準確表達意圖。</p>
+<p><strong>非技術出身，想在日本創業，怎麼開始？</strong>
+先註冊一個 ChatGPT，跟它長聊你的想法；小紅書上已經有很多人用 AI 圖片生成"不存在的產品"做預售，先拿到訂單再生產——<strong>全部風險就是每月 20 美元的訂閱費</strong>。如果產品可以 3D 列印，就找 3D 列印；做不出來的，再找別的路。關鍵是先拿到訂單。</p>
+<p><strong>他為什麼不賣課？</strong>
+現場有人問他為什麼不賣課。他的回答：我特別討厭那種花幾千塊錢買課的模式，AI 時代更不需要這樣。主動性問題（沒有內在推力怎麼辦）他留到下次分享聊；他的看法是，外部約束（健身教練、豆瓣早起打卡小組早上五六點打電話叫起床）只能管一時，真正持久的推力來自興趣——<strong>很多事情用興趣驅動，你會不斷去做，產生很強大的推動力</strong>；字節本質上是 ROI 驅動，什麼都要立刻看到產出。</p>
+<p><strong>資訊篩選：只用 SOTA</strong>
+更新迭代太快，學了怕馬上過時怎麼辦？他的做法：<strong>只用最強的模型——Claude Code 和 Codex 用到極致</strong>，很少用中端模型；Codex 是最便宜的，200 美元檔根本用不完（一週大概 100 多美元的量）；給 Codex 一個目標，它可以跑十幾二十個小時。</p>
+<p><strong>在日本做產品，AI 只能打 50–60 分</strong>
+一位做咖啡相關產品的觀眾問：用 AI 做出來的東西只能給 50–60 分，細節打磨不夠，說服不了日本人。郭宇認同：日本人對軟體的理解不同，信任更多來自"人"而不是產品本身（過年過節送什麼、職人精神）；能做的是把產品品質打磨得更好。</p>
+<p><strong>樂趣三分法</strong>
+他把人生樂趣分成三類：享受（更好的車、更大的房子、徒手攀岩）、創造，以及介於兩者之間的東西；現在興趣愛好有可能變成工作，專注能力本身就是一種資產。他自認是非常不自律的人，靠外部約束（OpenClaw 的提醒等）協調自己一堆瘋狂的想法。</p>
+<h2>與另一場 AI 影片專場的區別</h2>
+<p>同系列另一場《AI做影片》（BcMssIgsvdI，2 小時 23 分）與本場主題相同、部分軼事重複（橫店、Netflix 傳聞、Tua 廣告），但為不同場次：那場更偏"行業全景 + 成本核算 + 工作流總覽"，本場更偏"導演手藝 + 現場演示 + 哲學思辨"（四要素、提示詞顆粒度、無限解空間、風格參照系均為本場獨有）。兩場都值得看，互為補充。</p>
+<hr />
+<p><em>紀要整理：大腳。原始逐字稿見附件《全文-用AI做影片-人人都能當導演.txt》。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Guo Yu: Making Films with AI — Everyone Can Be a Director | Guo Yu's Ten Talks on AI: AI Filmmaking (May 2026 Session)</h1>
+<blockquote>
+<p>Source: YouTube, "Guo Yu: Making Films with AI — Everyone Can Be a Director," the AI filmmaking session in Guo Yu's Ten Talks on AI series, an in-person talk in Tokyo in May 2026, 1 hour 48 minutes in total. Full verbatim transcript: 2,962 lines.</p>
+<p>Note: These notes are based on a machine transcription. Names and proper nouns in the transcript have been corrected in context (Jia Zhangke, Bi Gan, <em>Dear You</em> / <em>Gei A Ma De Qing Shu</em>, Seedance, Jimeng, etc.). The Netflix internal details mentioned in the talk were relayed by Guo Yu from his aunt and are unverified, for reference only. This session shares the same theme as another session in the same series, "AI Filmmaking" (BcMssIgsvdI, 2 hours 23 minutes), but is a different session with much overlapping content; these notes record only the demonstrations and Q&amp;A unique to this session.</p>
+</blockquote>
+<h2>Key Takeaways First</h2>
+<ul>
+<li><strong>AI will not replace directors, but it can turn everyone into a director.</strong> Film = story + visuals + time, and the foundation is story. The technical barrier has fallen to a workflow you can write as "subscribe to ChatGPT + one PPT slide"; the remaining bottlenecks are all human: what you want to express, and whether you can articulate your intent clearly.</li>
+<li><strong>The granularity of your prompts is your directing skill.</strong> Abstract emotion words are useless to AI — "reluctant to part" means nothing; you must write visible, visual instructions. The more detail you write, the lower the failure rate; without detail, you are just pulling the gacha.</li>
+<li><strong>The workflow can already run unattended.</strong> Codex drafts a plan → you approve it → GPT Image 2 produces storyboard images → Seedance/Jimeng generates the video → Codex watches the footage itself, adds prompts, and iterates. Give it a $500 budget and it can spend the money and deliver the film on its own. One hour of serious AI video costs about $2,000.</li>
+<li><strong>The two hardest things: conflict and emotion.</strong> A 3–5 minute short has no time to build up emotion, so conflict is the only hook; emotion and music are the hardest to describe in language, and are currently AI video's weak spot.</li>
+<li><strong>An infinite solution space is both a blessing and a curse.</strong> AI gives you infinite choices, and you lose the feeling of being "chosen by fate" — you shift from a passive recipient of fate to an explorer who must find the optimal solution within an infinite space yourself, forcing you to think earlier about "how to position yourself."</li>
+</ul>
+<h2>1. What Is Happening in the Industry</h2>
+<ul>
+<li><strong>About 90% of live-action short-drama workers in Hengdian have no work and are shifting to AI animated dramas.</strong> Hongguo Short Drama has a traffic revenue-sharing mechanism, currently the most realistic monetization channel for AI animated dramas.</li>
+<li><strong>Netflix platform rumor (relayed by Guo Yu from his aunt, unverified):</strong> the framework stays, 90% of content is AI-generated, and humans only handle screenwriting. Guo Yu's judgment: platforms are already preparing for the AI content era.</li>
+<li><strong>The Douyin 2016 analogy:</strong> back then PGC shifted to UGC and the user base generalized; now is the inflection point from traditional content to AI content — May 2026 ≈ Douyin's 2016, and it will explode in the next year or two.</li>
+<li><strong>ByteDance's Seedance is slightly ahead globally:</strong> character consistency, camera language, and the lowest problem rate — it is currently his main video model.</li>
+<li><strong>Tightening copyright is forcing out original IP:</strong> the same judgment as in the other session — after letters from Disney and the Writers Guild, the IP-adaptation route has narrowed, and original IP has gained an opening instead.</li>
+</ul>
+<h2>2. The Foundation Is Story: Film = Story + Visuals + Time</h2>
+<ul>
+<li>Guo Yu asked OpenAI to help him make the PPT, and the first slide set the tone: <strong>film consists of three things — story, visuals, and time.</strong></li>
+<li><strong>The foundation is story.</strong> Technology changes, story does not; without a good story, beautiful visuals mean nothing.</li>
+<li><strong>"AI will not replace directors, but it can turn all of us into directors."</strong> A director's real job is expressing their own worldview and perspective, not operating machines.</li>
+<li><strong>Can film schools close now?</strong> His answer: a school is mostly an environment; environment shapes character, and character shapes fate. AI changes the technical barrier, not what it means to "become a director."</li>
+</ul>
+<h2>3. Four Elements of a Good Film: Worldview, Characters, Conflict, Emotion</h2>
+<p>This framework was summarized for him by OpenAI, and traces of all four points appear in the example videos shown on site:</p>
+<ol>
+<li><strong>Fix the worldview first.</strong> What kind of world the story takes place in, and what its rules are.</li>
+<li><strong>Fix the characters.</strong> What the main and secondary characters look like must stay exactly the same throughout the entire 3–5 minute video, from any angle, including how they express emotion. <strong>Character consistency is one of the hardest engineering problems right now</strong> — human facial expressions are too hard to control with language, so many people start with a robot as the protagonist: you only need to define a few expressions, and it cannot go wrong.</li>
+<li><strong>Conflict is the most important component of a story.</strong> One hour of video costs $2,000 and you do not know whether the audience will like it, so you must start with 3–5 minutes; a short has no time to build emotion, so conflict is the only hook. The example is "Zima Blue" from Netflix's <em>Love, Death &amp; Robots</em>: a robot slowly becomes the greatest artist in the universe, with an animation-leaning art style better suited to AI storytelling.</li>
+<li><strong>Emotion in visuals and music is the hardest.</strong> Emotion is hard to describe in language, especially very subtle feelings — for example, the many empty shots in <em>Call Me by Your Name</em>: if you describe them by their objective presence, AI can generate something similar, but the visual style, lighting, and layout are not what you want. Fix one clip and the next clip's style is off again. So AI video currently leans on "story" as its entry point, made like Hollywood/Bollywood films, rather than being cut from the emotional fragments that human directors excel at.</li>
+</ol>
+<h2>4. Prompt Granularity: Abstract Words Don't Work — Write Visuals</h2>
+<ul>
+<li><strong>"Reluctant to part" means nothing to AI.</strong> The on-site teaching case was filming a farewell: you have to tell it "first give the mother a facial close-up, then pan to the son," "wait here, I'll go buy an orange" (the reference to Zhu Ziqing's <em>Beiying</em> / "The Sight of Father's Back") — write it as visible actions and images.</li>
+<li><strong>The more detail you write, the lower the failure rate.</strong> For example, BEN has two suitcases in the video; if you want him to take only one, you must write that in; if you don't, the model guesses by probability.</li>
+<li><strong>Write character bios first.</strong> Define character personality and worldview first, and only then will characters have consistency; a storyboard is just a storyboard, while video is generated by a probabilistic model, and there will always be a gap between the two (in the live demo, a black suit turned white and a character failed to raise his head).</li>
+<li><strong>One storyboard frame every two seconds.</strong> This is his practical rhythm: make all the storyboards first, then have the model generate from them.</li>
+</ul>
+<h2>5. The Complete Workflow: Simple Enough for One PPT Slide</h2>
+<p>After GPT Image 2 appeared, the workflow simplified to something that fits on one PPT slide:</p>
+<ol>
+<li><strong>Tell Codex your idea</strong>, and it lists options for your approval;</li>
+<li>Pick a story and <strong>use ChatGPT image generation to produce storyboard images</strong> (four-panel storyboards);</li>
+<li>Feed the storyboard images to a video model (Seedance/Jimeng) to generate;</li>
+<li><strong>50% failure rate, keep one of two draws</strong> — delete what you don't like, keep what you do;</li>
+<li><strong>Codex can watch the footage automatically</strong>: browse the generated videos, compare them against the storyboards, add prompts, and iterate — fully automated.</li>
+</ol>
+<ul>
+<li><strong>Cost:</strong> give it a $500 budget and it can spend the money and deliver the film on its own; one hour of serious AI video is about $2,000; his two ads for the Tua translation phone service (a foreigner booking a Tokyo restaurant, and a Brazil trip lost-item help request) each took under 10 minutes to make himself, and the two together cost about $340.</li>
+<li><strong>Barrier:</strong> first subscribe to ChatGPT, generate storyboard images, and feed them to Jimeng (the domestic video generation product) — that's it; most people don't need to write code — it's that simple.</li>
+<li><strong>Live demo:</strong> a preset story with conflict → four-panel storyboard → 15–20 seconds to generate a 5-second short (an old suitcase slowly sliding toward a car door by itself, creating quiet suspense); one clip in 3–4 minutes; the computer runs on its own and you only pay. The PPT is public and could be viewed by scanning a code on site.</li>
+</ul>
+<h2>6. Visio Studio: Built to Adapt His Aunt's Novels to Screen</h2>
+<ul>
+<li><strong>Origin:</strong> his aunt is a Silicon Valley engineer who has written more than a dozen books, including <em>The Spring of the Ice Age</em>, about Chinese engineers during the 2000 internet bubble, as well as horror novels; the rights were sold to Tencent Video and the adaptation was unsatisfying. Last New Year's Day she came to Tokyo for a meal, and Guo Yu decided to build a tool himself to help her adapt them to screen, working on it from January to now (May).</li>
+<li><strong>How it works:</strong> feed in a novel of 100,000 or 200,000 characters, and it automatically analyzes chapters, extracts characters (three-view sheets to keep them consistent across shots), picks scenes worth making, generates storyboards (with characters and dialogue), and creates a unique voice for each character.</li>
+<li><strong>Pain point solved:</strong> after writing 70,000-plus characters, even the author has forgotten them; AI remembers all the content for you and picks out the scenes with conflict.</li>
+</ul>
+<h2>7. Infinite Solution Space: Where Did Good Films' "Beauty of Accident" Go?</h2>
+<p>This was the most brilliant piece of reflection in the session, sparked by an audience question: "Will AI filmmaking lose those unexpected gains?"</p>
+<ul>
+<li><strong>Good films often have shots that cannot be designed.</strong> At the end of <em>Dear You</em>, the male lead returns to the street and seems to see his younger self, with the afterglow of sunset falling over him — the director said in an interview that it was unexpected sunlight on the day of shooting, a gift from heaven, completely unplanned when writing the script and drawing the storyboards.</li>
+<li><strong>Guo Yu's engineer's interpretation:</strong> this is a matter of "solution space size." Traditional filmmaking has a very small solution space (that day, that street corner, clearing skies after rain), and randomness carries its own beauty — you feel chosen by fate; AI gives you an infinite solution space, and like a god you can get anything you want, but you lose the feeling of being "chosen by fate."</li>
+<li><strong>From recipient to explorer:</strong> when choices are limited, the brain tricks itself into accepting everything ("everything is the best arrangement," because you cannot arrange fate yourself); when choices are infinite, you must actively swim through the infinite solutions and search for the optimal one. AI has given ordinary people a share of "divinity," forcing you to think earlier about "how to position yourself" — this applies to making films, writing programs, and planning a life.</li>
+<li><strong>His conclusion is that this is a good thing:</strong> life after the Industrial Revolution is a three-point line of "home — school — work," and frameworks make people lose agency, with little freedom to think; AI lets you touch nihilism earlier — you have to think about it when young, and when old, and now perhaps children of seven or eight are already thinking about this question.</li>
+</ul>
+<h2>8. Style References: You Can Name a Director, but "Your Own Style" Has No Reference Frame</h2>
+<ul>
+<li><strong>Language models already know all directors.</strong> Say you want Jia Zhangke's style and it shoots in Jia Zhangke's style; say you like Bi Gan and it follows the "Bi Gan universe" (small towns in southwestern Guizhou, rural love stories, a strongly consistent emotional pattern). On site he also demonstrated generating a 10-second video by picking a director's style: Kubrick-style symmetry, Fellini-style parades, Kurosawa-style ensemble scenes — pick any one.</li>
+<li><strong>But "your own style" has no reference frame.</strong> An audience member pressed: what if I don't want anyone else's style, only my own? Guo Yu's answer: then you have to articulate exactly what you want to express, crystal clear — which is hard, because it is equivalent to being a screenwriter rather than a director.</li>
+<li><strong>AI cannot create; it can only help you create.</strong> Creation is a more metaphysical topic, and not only for film — the same applies to novels, writing, and software: you must have a clear intent, or let AI help you uncover a clear intent, and then, like partners, slowly make the work better and better through working together. There is no essential difference from doing it yourself, except that working with AI makes you realize more quickly whether you are doing well or badly.</li>
+</ul>
+<h2>9. Minority Languages Can Only Be Filmed with AI</h2>
+<ul>
+<li><em>Dear You</em> is a Southern Min (Hokkien) film, and Guo Yu asked: why is there no Hakka-language film? He cannot understand Hakka most of the time, but he is interested in the rhythm of the Hakka language.</li>
+<li><strong>Even the transmission of minority languages is a problem, and AI is the only solution:</strong> traditional filmmaking must find actors and a market for a minority language, and the costs cannot be recovered; AI can make a Hakka-language film at low cost, spreading the language along the way.</li>
+<li>Likewise: some languages in the Amazon rainforest do not even have certain concepts (the transcription is broken here; the gist is that language itself determines what can be expressed) — language is not just a tool, it is a worldview.</li>
+</ul>
+<h2>10. Selected Q&amp;A</h2>
+<p><strong>Will long-thread Agents "emotionally break down"?</strong>
+An audience member observed that in long tasks many people's Agents drift off course and crash. Guo Yu's answer: imagine it as a straight man — you cannot expect it to empathize with your emotions; crashes are more often due to hardware limits (storage stocks surging, Agentic Coding grabbing CPU again); the models are working on this internally, and in his own experience, deliverables falling short of expectations are becoming rarer; the deeper reason is communication skill — <strong>Chinese culture is relatively lacking in the ability to "articulate one's own ideas clearly,"</strong> and many people do not know how to express intent accurately in their mother tongue.</p>
+<p><strong>Non-technical background, wanting to start a business in Japan — how to begin?</strong>
+First register for ChatGPT and have a long chat with it about your idea; on Xiaohongshu, many people already use AI image generation to presell "products that don't exist," taking orders first and producing afterward — <strong>the entire risk is the $20 monthly subscription fee</strong>. If the product can be 3D printed, find 3D printing; if it cannot be made, find another route. The key is to get orders first.</p>
+<p><strong>Why doesn't he sell courses?</strong>
+Someone on site asked why he doesn't sell courses. His answer: I really hate that model of spending thousands to buy a course, and the AI era needs it even less. He left the motivation question (what if there is no inner drive?) for a future talk; his view is that external constraints (a fitness coach, a Douban early-rising check-in group calling you at five or six in the morning) only work for a while, and truly lasting drive comes from interest — <strong>when many things are driven by interest, you keep doing them and generate a very strong impetus</strong>; ByteDance is essentially ROI-driven, wanting to see output immediately in everything.</p>
+<p><strong>Information filtering: use only SOTA</strong>
+Iteration is so fast — what if what you learn is soon obsolete? His approach: <strong>use only the strongest models — push Claude Code and Codex to the limit</strong>, rarely use mid-tier models; Codex is the cheapest, and the $200 tier cannot even be used up (about $100-plus of usage per week); give Codex a goal and it can run for a dozen or twenty hours.</p>
+<p><strong>Making products in Japan, AI can only score 50–60</strong>
+An audience member working on coffee-related products asked: things made with AI only score 50–60, the detail polish is not enough, and it cannot convince Japanese people. Guo Yu agreed: Japanese people understand software differently, and trust comes more from "people" than from the product itself (what to give at New Year and festivals, the craftsman spirit); what you can do is polish product quality even better.</p>
+<p><strong>A three-way split of pleasures</strong>
+He divides life's pleasures into three categories: enjoyment (a better car, a bigger house, free solo climbing), creation, and things in between; now hobbies can become work, and the ability to focus is itself an asset. He considers himself a very undisciplined person, relying on external constraints (reminders from OpenClaw, etc.) to coordinate his pile of crazy ideas.</p>
+<h2>How This Differs from the Other AI Filmmaking Session</h2>
+<p>The other session in the same series, "AI Filmmaking" (BcMssIgsvdI, 2 hours 23 minutes), shares the same theme and repeats some anecdotes (Hengdian, the Netflix rumor, the Tua ads), but is a different session: that one leans toward "industry panorama + cost accounting + workflow overview," while this one leans toward "directing craft + live demonstration + philosophical reflection" (the four elements, prompt granularity, infinite solution space, and style reference frames are unique to this session). Both are worth watching and complement each other.</p>
+<hr />
+<p><em>Notes compiled by: Dajiao. The original verbatim transcript is in the attachment "Full Text — Making Films with AI — Everyone Can Be a Director.txt."</em></p>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=LAhgDOGXH5A">https://www.youtube.com/watch?v=LAhgDOGXH5A</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-28 · 时长：1 小时 48 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=LAhgDOGXH5A">https://www.youtube.com/watch?v=LAhgDOGXH5A</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-05-28 · 時長：1 小時 48 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=LAhgDOGXH5A">https://www.youtube.com/watch?v=LAhgDOGXH5A</a> (Ginza Shanxiangjie Bookstore) · Guest: Guo Yu · Published: 2026-05-28 · Duration: 1 hour 48 minutes<br>This page is the full text of notes compiled by human editing after machine transcription; the views, figures, and model names in the talk are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interview List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"郭宇：用AI做影片，人人都能当导演｜郭宇关于AI的十次分享：AI做影片（2026年5月场） · Yat's Talks",tw:"郭宇：用AI做影片，人人都能當導演｜郭宇關於AI的十次分享：AI做影片（2026年5月場） · Yat's Talks",en:"Guo Yu: Making Films with AI — Everyone Can Be a Director | Guo Yu's Ten Talks on AI: AI Filmmaking (May 2026 Session) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

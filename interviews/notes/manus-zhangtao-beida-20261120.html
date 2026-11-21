@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Manus 是怎么诞生的：张涛北大分享的完整内幕（频道转述版）</h1>
 <ul>
 <li>视频：https://www.youtube.com/watch?v=i-5jWpZFFVU</li>
@@ -86,9 +93,155 @@
 <li>字幕为 YouTube 自动对齐轨，个别词有识别误差（如「雾件」应为对 fake demo 的音译类说法），纪要已按上下文处理。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Manus 是怎麼誕生的：張濤北大分享的完整內幕（頻道轉述版）</h1>
+<ul>
+<li>影片：https://www.youtube.com/watch?v=i-5jWpZFFVU</li>
+<li>標題：《Manus 是怎麼誕生的：張濤北大兩小時完整內幕》</li>
+<li>頻道：進藏人的思考空間</li>
+<li>上傳日期：2026-11-20</li>
+<li>時長：13 分 40 秒（注意：影片本身只有約 14 分鐘；「兩小時」指的是張濤在北大 AI 創投課原分享的長度，本影片是頻道主對那場分享的完整轉述與拆解，不是原聲錄影）</li>
+<li>逐字稿：transcript.txt（30 段，[00:00:00]–[00:13:26]，來自 YouTube 中文字幕自動對齊軌）</li>
+</ul>
+<blockquote>
+<p>說明：本紀要按頻道轉述整理。內容是 Manus 聯合創始人張濤在北大分享的觀點，經第三人轉述，引用語按轉述歸屬張濤，未與原始錄影逐字核對；數字均為分享口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Manus 的誕生路徑是：砍掉做了七個月的 AI 瀏覽器，轉身押注「模型解鎖的不是程式設計能力、而是 agent 能力」，用 400 道「實習生任務」當評測集，靠過程透明和 session replay 解決信任問題，再靠「面向六個月後的模型做產品」吃到模型升級的全部紅利。</p>
+<h2>一、張濤其人</h2>
+<p>張濤是 Manus 聯合創始人、首席產品官，1986 年生，是公司裡年紀最大的合夥人。十幾年職業生涯裡只在騰訊和字節各幹過一年，其餘時間全在創業；產品從 C 端做到 B 端、從國內做到海外，自稱「典型的古典產品經理」。他自嘲：2009 年同一批入行做產品的人，回頭看只有他還在 AI 賽道一線——因為一直沒有大成，所以一直還在堅持幹。</p>
+<h2>二、從 Monica 到砍掉 AI 瀏覽器</h2>
+<ul>
+<li><strong>Monica（2023）</strong>：ChatGPT 剛出來時，使用者寫完郵件文案要在分頁間來回複製貼上，他們做了活在側邊欄裡的瀏覽器外掛 Monica——框選一段文字直接改寫或翻譯，不用離開頁面。同類功能 Google 過了一年半才加進 Gmail。Monica 一年增長很快，但 2024 年撞到天花板：世界上很多人一輩子不知道瀏覽器能裝外掛，市場就這麼大。</li>
+<li><strong>AI 瀏覽器（2024 年 3–10 月）</strong>：組新團隊做了七個月的 AI 原生瀏覽器，成熟度自稱遠超後來的 Arc Dia 和 Perplexity Comet，發布網站和影片全部做好——<strong>最後沒發</strong>。原因很扎心：使用者拿到 AI 瀏覽器的第一個問題永遠是「我在 Chrome 裡用的那個功能去哪找」，使用者永遠拿舊體驗的基準線對標你；三十人的團隊去跟蘋果、谷歌對齊二十年的瀏覽器基礎，幾乎不可能；一旦發出去，團隊要被拖進去三到六個月。CEO Red 最後拍板砍掉。張濤的總結是：<strong>創業裡錢是最不值錢的，最浪費不起的是時間</strong>。回頭看，這是最重要的決定。</li>
+</ul>
+<h2>三、Manus 的立項：解鎖的是 agent，不是程式設計</h2>
+<ul>
+<li>瀏覽器砍掉後，五個人在小辦公室裡找方向。他們天天用 Cursor，但張濤用 Cursor 幹的是報銷、把 MP4 轉 MP3、寫小說這類雜事。2024 年 11 月 Anthropic 發布 Sonnet 3.5 V2，Cursor 和 Windsurf 的能力集體飛躍。全世界都在做 Cursor 的複製品，他們看到的是另一件事：<strong>這個模型解鎖的不是程式設計能力，是 agent 能力</strong>——兩個標誌是長程規劃（模型知道一個任務不該在一輪對話裡完成）和工具呼叫。判斷是：「這個世界不需要更多工程師，這個能力是給普通人的。」</li>
+<li>2024 年 12 月立項，團隊慌得不行，怕被搶先。2025 年 3 月 5 日發布後發現，全世界只有他們在做這個。</li>
+<li><strong>評測集的來歷</strong>：張濤在朋友圈發了一條——「如果你有一個本科水平的實習生，你會交代什麼任務給他做」。一百多個朋友交來四百多個任務，去掉買奶茶這類需要具身智能的，剩三百多條，成了 Manus 最早的評測集。1 月 5 日調通第一版，此後每天這套題都給他驚喜，agent 用完全超出想像的方式完成任務。他的原話（轉述）：「智能跳出螢幕拍在你臉上的那種感覺，你無法抗拒，你知道這就是未來。」</li>
+</ul>
+<h2>四、信任問題：把透明做成功能</h2>
+<ul>
+<li>衝擊太強反而帶來問題：直接交付結果，使用者覺得是假的。發布第一週，很多人以為他們發的是假演示（fake demo）。</li>
+<li>解法是兩個後來成為全行業標配的設計：一是<strong>把 agent 的工作過程一步步展示出來</strong>——它先怎麼想、呼叫什麼工具、造訪哪個網頁、寫了什麼筆記；二是 <strong>session replay</strong>——把任務分享出去，別人不用邀請碼、不用儲值，就能完整回看一遍執行過程。這兩個設計完全是面向傳播做的：很多人不信 agent，但看到它像人一樣一步步工作，就開始信了。</li>
+</ul>
+<h2>五、發布影片：創始人自己拍的</h2>
+<p>2 月 28 日 CEO 看官網覺得有點素，問要不要加個影片。張濤打給北京幾家影片公司，工期都是兩週起。被逼無奈自己拍：索尼 A7C2 機身，鏡頭是從真格的投資人那借的，Peak 當演員，在共享辦公園區找了兩個背景乾淨的地方，3 月 1 日拍完，張濤自己用剪映剪了兩天。唯一的開銷是匯出 4K 要會員，花十幾美元買了一個月。那個「創始人坐沙發、背後兩棵綠植」的影片後來被無數公司模仿。張濤的觀點：真正重要的從來不是影片而是產品本身，但早期創業的行銷必須創始人自己上，別人講不出那個故事。</p>
+<h2>六、四個關鍵判斷</h2>
+<ol>
+<li><strong>理解模型能力的邊界：永遠面向六個月後的模型做產品。</strong> 首席科學家 Peak 做了十幾年 NLP，能從模型表現裡感知前沿實驗室在往哪走。2025 年 2 月中旬 Sonnet 3.7 發布那晚，張濤發了條朋友圈，四個字：「信仰儲值」——整個系統一行程式碼沒改，只是把模型介面從 3.5 V2 換成 3.7，剩下兩三成沒解決的難題全部解了。這就是 <strong>less structure, more intelligence</strong>：當年這是異端，共識是人教 AI 做事、寫死流程；他們堅持把每一步決策交給模型。模型每升一級，你就白得一級紅利。</li>
+<li><strong>為什麼不做 Chatbot。</strong> Chatbot 的產品上限被使用者的提問能力限制住了——使用者不會提問題，產品價值就出不來。另一個反共識點：<strong>免費補貼是最大的陷阱</strong>，補貼吸來的是免費使用者，給你一堆無效回饋、拖垮注意力；大廠尤其明顯，一個總監做到一二十萬免費日活就成了 KPI，沒人敢轉收費。Manus 上付費的第一個月 ARR 就衝到四千多萬、接近五千萬美元；核心使用者一個月在平台上花四五千美元。「真智能，就有人付費。」</li>
+<li><strong>堅持 General。</strong> 發布時投資人都勸：你老演示稀奇古怪的長尾任務，能不能專注做個網站產生器。沒聽。回頭看這是最重要的戰略判斷：<strong>品牌心智一輩子只有一次機會</strong>，因為一開始就叫出了 general agent，後來推什麼子功能都順理成章。他們內部有一張圖：橫軸付費金額、縱軸滿意度，最右上角的使用者是老闆——公司裡雜事最多的人，CEO 今天想這個明天想那個，只有什麼都能幹的 agent 能讓他最爽。</li>
+<li><strong>理解使用者：使用者是普通人，不是工程師。</strong> 所以做了雲端沙箱——所有任務在雲端跑，手機上布置完任務就可以揣兜裡，不用開著電腦。一個有意思的數據：美國是最大收入來源，但舊金山和西雅圖都不在使用者前十，前十是洛杉磯、邁阿密、芝加哥這些城市——那不是天天切換工具的科技人群。張濤說：別老想著功能對功能的競爭，想清楚你到底服務誰。</li>
+</ol>
+<h2>七、邀請碼的真相：不是飢餓行銷，是燒不動</h2>
+<p>很多人以為邀請碼是飢餓行銷，其實是帳上沒錢：當時公司帳上只有八九百萬美元，有邀請碼控制著，高峰一天還要燒五十萬美元；沒有邀請碼，3 月 10 號就能關門。當時連付費系統都沒做，是火了之後才緊急加上去的。更深層是算力問題：一個 agent 使用者的 token 消耗是 Chatbot 的兩百到一千倍；上線第三天就需要 800M 的 TPM，打電話給雲廠商說要 500M，人家以為他在吹牛砍價。最後從一家沒什麼客戶的廠商那撿漏，撐過了頭一個月。等到五月取消邀請碼，雲廠商的儲備也上來了——後來的 agent 創業者再沒遇到過這個問題。</p>
+<h2>八、給創業者的三條建議</h2>
+<ol>
+<li><strong>全球化視野。</strong> 去年六月他去法國參加 VivaTech，出發前收到愛麗舍宮郵件說馬克龍請他吃飯，第一反應是詐騙。晚宴上馬克龍坐他右手邊，黃仁勳坐對面。他聽歐洲創業者和投資人聊天覺得不對勁：整個歐洲是防禦心態，build in Europe、build for Europe。他想，如果當初只做中國市場，他不會坐在那個位置。大語言模型移除了語言這個最大障礙；他不准公司裡說「國外」這個詞——世界不是國內加國外的二元對立。Manus 最大收入來自美國，最大使用者地區是巴西。</li>
+<li><strong>多實操，少讀自媒體。</strong> 他面試 AI 產品經理的觀感特別差：最誇張的手機上沒裝那個應用，次誇張的打開之後任務列表只有兩三條，明顯是面試前突擊的。「AI 衝擊行業四年了，還有這種事。」自媒體的問題是沒有行業經驗、靠流量思維刺激情緒；Manus 二十個月裡被「顛覆」了無數次，業務一直增長。真正的產品感覺全在細節裡，要自己上手。</li>
+<li><strong>觀察生活。</strong> 技術過剩的時代，最缺的是發現和定義問題的能力，這個能力來自對生活的好奇心。</li>
+</ol>
+<h2>九、名字的來源，與現場問答</h2>
+<ul>
+<li><strong>Manus 來自 MIT 的校訓 Mens et Manus（拉丁語：頭腦和手）</strong>。所有大模型廠商都在做頭腦；2024 年底那麼強的頭腦為什麼產生不了那麼大的影響？因為它只有大腦沒有手。Manus 就是大模型的手，讓大腦的思考作用到真實世界。這句話同樣適用於創業本身：所有思考都需要實踐，而不是停留在 PPT 推演上。</li>
+<li>現場問答裡，有人問 Codex 和 Claude Code 的競爭，張濤說真實使用者不用那些東西，舊金山滿地的科技人群不是他們的使用者；有人問通用 agent 還有沒有機會，真格的 Tina 說：先跳進去開始做，別老想機會存不存在。</li>
+<li>頻道主的收尾總結：七個月做完的瀏覽器說砍就砍是戰略定力的教科書；一個 agent 使用者兩百到一千倍的 token 消耗，逼著整個雲行業重估算力儲備；less structure, more intelligence 從異端變成共識；四百道實習生考題成了最早的評測集。最後一句是張濤在北大的收尾——所有的大機會都在未知裡，不在確定性裡。</li>
+</ul>
+<h2>本期紀要的邊界</h2>
+<ul>
+<li>本影片是頻道主對張濤北大分享的<strong>轉述與拆解</strong>，不是分享原聲；張濤的「原話」均來自轉述，措辭可能與原講有出入，個別事實（如與 Dia、Comet 的成熟度對比）是張濤本人在分享中的自述口徑。</li>
+<li>數字（ARR、燒錢速度、TPM、帳上現金）均為分享口徑，未經獨立核實。</li>
+<li>字幕為 YouTube 自動對齊軌，個別詞有識別誤差（如「霧件」應為對 fake demo 的音譯類說法），紀要已按上下文處理。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>How Manus Was Born: The Full Inside Story from Zhang Tao's Talk at Peking University (Channel Retelling Edition)</h1>
+<ul>
+<li>Video: https://www.youtube.com/watch?v=i-5jWpZFFVU</li>
+<li>Title: "How Manus Was Born: The Full Two-Hour Inside Story from Zhang Tao at Peking University"</li>
+<li>Channel: Jinzangren's Thinking Space</li>
+<li>Upload date: 2026-11-20</li>
+<li>Duration: 13 min 40 sec (Note: the video itself is only about 14 minutes long; "two hours" refers to the length of Zhang Tao's original talk in the Peking University AI venture course. This video is the channel host's full retelling and breakdown of that talk, not original footage with original audio)</li>
+<li>Transcript: transcript.txt (30 segments, [00:00:00]–[00:13:26], from the YouTube auto-aligned Chinese subtitle track)</li>
+</ul>
+<blockquote>
+<p>Note: These notes were compiled from the channel's retelling. The content consists of views shared by Manus co-founder Zhang Tao at Peking University, relayed by a third person; quoted remarks are attributed to Zhang Tao as retold, and have not been checked word-for-word against the original recording; all figures are as stated in the talk.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Manus was born along this path: they cut the AI browser they had spent seven months building, bet instead that "what models unlocked was not coding ability but agent ability," used 400 "intern tasks" as their evaluation set, solved the trust problem through process transparency and session replay, and then captured the full dividend of model upgrades by "building products for the models of six months from now."</p>
+<h2>I. Who Zhang Tao Is</h2>
+<p>Zhang Tao is a Manus co-founder and chief product officer, born in 1986, and the oldest partner in the company. In a career of more than a decade, he worked only one year each at Tencent and ByteDance, and spent all the rest of the time founding startups; his products went from consumer-facing to business-facing, and from China to overseas, and he calls himself "a typical classical product manager." He jokes about himself: of the cohort who entered product work with him in 2009, looking back, he is the only one still on the front line of the AI race — because he never achieved a big success, he has kept at it.</p>
+<h2>II. From Monica to Cutting the AI Browser</h2>
+<ul>
+<li><strong>Monica (2023)</strong>: When ChatGPT had just come out, users who had finished writing email copy had to copy and paste back and forth between tabs. They built Monica, a browser extension that lived in the sidebar — select a passage of text and rewrite or translate it directly, without leaving the page. Google did not add a similar feature to Gmail until a year and a half later. Monica grew very fast in its first year, but hit a ceiling in 2024: many people in the world never in their lives learn that browsers can have extensions installed; the market is only that big.</li>
+<li><strong>AI browser (March–October 2024)</strong>: They formed a new team and spent seven months building an AI-native browser, whose maturity they claimed far exceeded the later Arc Dia and Perplexity Comet. The launch website and video were all ready — <strong>and in the end they did not launch it</strong>. The reason was painful: the first question users always ask when they get an AI browser is "where do I find that feature I used in Chrome?" Users always benchmark you against the baseline of the old experience; for a thirty-person team to catch up with twenty years of browser foundations at Apple and Google is almost impossible; and once launched, the team would be dragged into it for three to six months. CEO Red made the final call to cut it. Zhang Tao's summary was: <strong>in startups, money is the least valuable thing; what you can least afford to waste is time</strong>. Looking back, this was the most important decision.</li>
+</ul>
+<h2>III. The Founding of Manus: What Was Unlocked Was Agents, Not Coding</h2>
+<ul>
+<li>After the browser was cut, five people searched for a direction in a small office. They used Cursor every day, but what Zhang Tao used Cursor for was chores such as expense claims, converting MP4 to MP3, and writing fiction. In November 2024 Anthropic released Sonnet 3.5 V2, and the capabilities of Cursor and Windsurf leapt forward collectively. The whole world was building replicas of Cursor; what they saw was something else: <strong>what this model unlocked was not coding ability, but agent ability</strong> — the two signs being long-horizon planning (the model knows a task should not be completed within a single round of conversation) and tool calling. Their judgment was: "The world does not need more engineers; this capability is for ordinary people."</li>
+<li>The project was established in December 2024, and the team was in a panic, afraid of being preempted. After launching on March 5, 2025, they discovered that they were the only ones in the whole world doing this.</li>
+<li><strong>Where the evaluation set came from</strong>: Zhang Tao posted in his WeChat Moments — "If you had an intern at undergraduate level, what tasks would you assign them to do?" More than a hundred friends submitted more than four hundred tasks; after removing those requiring embodied intelligence, such as buying milk tea, just over three hundred remained, and they became Manus's earliest evaluation set. The first version was made to work on January 5, and from then on this set of tasks surprised him every day, as the agent completed tasks in ways completely beyond imagination. In his own words (as retold): "That feeling of intelligence jumping out of the screen and hitting you in the face — you cannot resist it; you know this is the future."</li>
+</ul>
+<h2>IV. The Trust Problem: Making Transparency a Feature</h2>
+<ul>
+<li>Too strong an impact created a problem instead: when results were delivered directly, users thought they were fake. In the first week after launch, many people thought what they had released was a fake demo.</li>
+<li>The solution was two designs that later became industry standards: first, <strong>showing the agent's work process step by step</strong> — how it thinks first, what tools it calls, which web pages it visits, what notes it writes; and second, <strong>session replay</strong> — share a task out, and others can watch the entire execution process again in full, without an invite code and without paying. Both designs were made entirely for propagation: many people did not believe in agents, but when they saw it working step by step like a human, they began to believe.</li>
+</ul>
+<h2>V. The Launch Video: Filmed by the Founder Himself</h2>
+<p>On February 28, the CEO looked at the official website and felt it was a bit plain, and asked whether they should add a video. Zhang Tao called several video companies in Beijing; all quoted timelines starting at two weeks. Forced by necessity, he filmed it himself: a Sony A7C2 body, a lens borrowed from an investor at ZhenFund, Peak as the actor, two clean-background spots found in a coworking park, filming finished on March 1, and Zhang Tao edited it himself in Jianying over two days. The only expense was that exporting in 4K required a membership, which cost a dozen or so dollars for a month. That video — "the founder sitting on a sofa, with two green plants behind him" — was later imitated by countless companies. Zhang Tao's view: what truly matters is never the video but the product itself, but marketing in early startups must be done by the founders themselves; no one else can tell that story.</p>
+<h2>VI. Four Key Judgments</h2>
+<ol>
+<li><strong>Understanding the boundaries of model capability: always build products for the models of six months from now.</strong> Chief Scientist Peak had worked in NLP for more than a decade and could sense from model performance where the frontier labs were heading. On the night in mid-February 2025 when Sonnet 3.7 was released, Zhang Tao posted four words in his Moments: "Faith recharged" — not a single line of code in the entire system was changed; they only switched the model interface from 3.5 V2 to 3.7, and the remaining twenty to thirty percent of unsolved problems were all solved. This is <strong>less structure, more intelligence</strong>: at the time this was heresy; the consensus was that humans teach AI to do things and hard-code the workflows; they insisted on handing every step of decision-making to the model. Each time the model levels up, you get a level of dividend for free.</li>
+<li><strong>Why not build a Chatbot.</strong> A Chatbot's product ceiling is limited by users' ability to ask questions — if users cannot ask questions, the product's value cannot come out. Another counter-consensus point: <strong>free subsidies are the biggest trap</strong>. Subsidies attract free users, who give you a pile of invalid feedback and drag down your attention; this is especially obvious at large companies, where once a director reaches one or two hundred thousand free daily active users it becomes a KPI, and no one dares to switch to charging. In Manus's first month of charging, ARR surged to more than forty million, close to fifty million US dollars; core users spent four to five thousand dollars a month on the platform. "With real intelligence, people will pay."</li>
+<li><strong>Insisting on General.</strong> At launch, investors all advised: you keep demonstrating odd, long-tail tasks; why not focus on building a website generator? They did not listen. Looking back, this was the most important strategic judgment: <strong>brand mindshare gets only one chance in a lifetime</strong>. Because they called out "general agent" from the very beginning, every sub-feature they launched later fell naturally into place. Internally they have a chart: the horizontal axis is amount paid, the vertical axis is satisfaction, and the users in the top-right corner are bosses — the people in a company with the most chores, with the CEO wanting one thing today and another tomorrow; only an agent that can do everything can make them happiest.</li>
+<li><strong>Understanding users: users are ordinary people, not engineers.</strong> So they built a cloud sandbox — all tasks run in the cloud; once you have assigned a task on your phone you can put it in your pocket, without keeping a computer on. One interesting data point: the United States is the largest source of revenue, but neither San Francisco nor Seattle is in the top ten user cities; the top ten are cities such as Los Angeles, Miami, and Chicago — not tech crowds who switch tools every day. Zhang Tao said: do not always think about feature-against-feature competition; think clearly about whom you actually serve.</li>
+</ol>
+<h2>VII. The Truth About Invite Codes: Not Hunger Marketing, But Unable to Afford the Burn</h2>
+<p>Many people thought invite codes were hunger marketing; in fact the company simply had no money in its account: at the time the company had only eight or nine million US dollars in its account, and even with invite codes controlling volume, at peak it still burned five hundred thousand dollars a day; without invite codes, it could have shut down by March 10. At the time they had not even built a payment system; it was urgently added only after they became popular. At a deeper level it was a compute problem: one agent user's token consumption is two hundred to one thousand times that of a Chatbot; by the third day after launch they needed 800M TPM, and when they called cloud vendors asking for 500M, the vendors thought he was bluffing to bargain. In the end they picked up capacity from a vendor with few customers and got through the first month. By the time invite codes were removed in May, the cloud vendors' reserves had also come up — later agent founders never encountered this problem again.</p>
+<h2>VIII. Three Pieces of Advice for Founders</h2>
+<ol>
+<li><strong>A global perspective.</strong> In June last year he went to France to attend VivaTech, and before departure he received an email from the Élysée Palace saying Macron was inviting him to dinner; his first reaction was that it was a scam. At the dinner, Macron sat on his right and Jensen Huang sat across from him. Listening to European founders and investors talk, he felt something was off: all of Europe has a defensive mindset — build in Europe, build for Europe. He thought: if he had only done the Chinese market at the start, he would not be sitting in that seat. Large language models removed language, the biggest barrier; he does not allow the word "abroad" to be used in the company — the world is not a binary opposition of domestic plus foreign. Manus's largest revenue comes from the United States, and its largest user region is Brazil.</li>
+<li><strong>Do more hands-on work, read less self-media.</strong> His impression from interviewing AI product managers was especially poor: in the most extreme case, the candidate did not have the app installed on their phone; in the next most extreme, after opening it the task list had only two or three items, clearly crammed in before the interview. "AI has been impacting the industry for four years, and this still happens." The problem with self-media is that it has no industry experience and relies on traffic thinking to stir emotions; in twenty months Manus was "disrupted" countless times, while its business kept growing. Real product sense is all in the details; you have to get hands-on yourself.</li>
+<li><strong>Observe life.</strong> In an era of excess technology, what is scarcest is the ability to discover and define problems, and that ability comes from curiosity about life.</li>
+</ol>
+<h2>IX. The Origin of the Name, and the On-Site Q&amp;A</h2>
+<ul>
+<li><strong>Manus comes from MIT's motto Mens et Manus (Latin: mind and hand)</strong>. All the large-model vendors are building the mind; why could such a strong mind at the end of 2024 not produce an equally large impact? Because it had only a brain and no hands. Manus is the hand of the large model, letting the brain's thinking act on the real world. The same sentence applies to founding a company itself: all thinking requires practice, rather than staying in PPT deduction.</li>
+<li>In the on-site Q&amp;A, someone asked about competition from Codex and Claude Code. Zhang Tao said real users do not use those things, and the tech crowds all over San Francisco are not their users; someone asked whether there is still an opportunity for general agents, and Tina from ZhenFund said: jump in and start building first; do not keep thinking about whether the opportunity exists.</li>
+<li>The channel host's closing summary: cutting a browser that took seven months to build, just like that, is a textbook case of strategic resolve; one agent user consuming two hundred to one thousand times the tokens forced the entire cloud industry to re-estimate compute reserves; less structure, more intelligence went from heresy to consensus; and the four hundred intern exam questions became the earliest evaluation set. The final line was Zhang Tao's closing at Peking University — all the big opportunities lie in the unknown, not in certainty.</li>
+</ul>
+<h2>Boundaries of These Notes</h2>
+<ul>
+<li>This video is the channel host's <strong>retelling and breakdown</strong> of Zhang Tao's Peking University talk, not the original audio of the talk; Zhang Tao's "own words" all come from the retelling, and the wording may differ from the original talk. Individual facts (such as the maturity comparison with Dia and Comet) are Zhang Tao's own account as stated in the talk.</li>
+<li>All figures (ARR, burn rate, TPM, cash in account) are as stated in the talk and have not been independently verified.</li>
+<li>The subtitles are from YouTube's auto-aligned track, and individual words contain recognition errors (for example, "wujian" should be a transliteration-type rendering of fake demo); these notes have handled them based on context.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=i-5jWpZFFVU">https://www.youtube.com/watch?v=i-5jWpZFFVU</a>（进藏人的思考空间）· 嘉宾：张涛 · 发布日期：2026-11-20 · 时长：14 分钟<br>本页为频道转述内容经人工整理的纪要全文；观点、数字均为原分享者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=i-5jWpZFFVU">https://www.youtube.com/watch?v=i-5jWpZFFVU</a>（進藏人的思考空間）· 嘉賓：張濤 · 發布日期：2026-11-20 · 時長：14 分鐘<br>本頁為頻道轉述內容經人工整理的紀要全文；觀點、數字均為原分享者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=i-5jWpZFFVU">https://www.youtube.com/watch?v=i-5jWpZFFVU</a> (Jinzangren's Thinking Space) · Guest: Zhang Tao · Release date: 2026-11-20 · Duration: 14 minutes<br>This page is the full text of notes compiled by human editing from the channel's retold content; all views and figures are as stated by the original speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=i-5jWpZFFVU">https://www.youtube.com/watch?v=i-5jWpZFFVU</a>（进藏人的思考空间）· 嘉宾：张涛 · 发布日期：2026-11-20 · 时长：14 分钟<br>本页为频道转述内容经人工整理的纪要全文；观点、数字均为原分享者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Manus 是怎么诞生的：张涛北大分享的完整内幕（频道转述版） · Yat's Talks",tw:"Manus 是怎麼誕生的：張濤北大分享的完整內幕（頻道轉述版） · Yat's Talks",en:"How Manus Was Born: The Full Inside Story from Zhang Tao's Talk at Peking University (Channel Retelling Edition) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>AI 让黑客成本暴跌，Web3 安全怎么守？</h1>
 <blockquote>
 <p>节目：《OKX 的朋友们》（OKX中文）· 主持：佳佳 · 嘉宾：周亚金（香港中文大学副教授、BlockSec 联合创始人）· 时长：约 30 分钟 · 2026-11-20 发布
@@ -59,9 +66,101 @@
 <h2>尾声：他最缺的是睡眠，不是 Token</h2>
 <p>被问到生活状态，他说有了 AI Agent 后工作没变轻松，自己最缺的是睡眠。最近他在业余时间和 AI 共创一个新产品，解决的是 AI Agent 本身的安全：企业里人人用 Agent 干活，但没人知道自己的 Agent 每天到底在做什么——有没有把电脑数据泄露出去、有没有试图攻击内网同事。他的新问题是：看看谁的 AI Agent 变成了公司里的间谍。</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>AI 讓黑客成本暴跌，Web3 安全怎麼守？</h1>
+<blockquote>
+<p>節目：《OKX 的朋友們》（OKX中文）· 主持：佳佳 · 嘉賓：周亞金（香港中文大學副教授、BlockSec 聯合創始人）· 時長：約 30 分鐘 · 2026-11-20 發布
+來源：用戶分享的 OKX中文 X 影片帖；X 版無字幕，本紀要據 YouTube 同期版（OKX中文頻道）官方中文字幕整理。說法與數字均為嘉賓現場口徑，未經核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>AI 把攻擊的成本打到了只剩 token 錢：過去只有高價值目標才值得黑客花心思，如今 100 個 Agent 可以 7×24 自動完成情報收集、漏洞掃描、寫利用程式碼、發起攻擊和鏈上洗錢全流程——行業到了「為以前的安全還債」的時候，防守也只能用 AI 對 AI，但防守 AI 有一條死線：可以加黑名單，絕不能加白名單。</p>
+<h2>嘉賓與 BlockSec</h2>
+<p>周亞金一邊在香港中文大學做科研，一邊是 BlockSec 聯合創始人。出發點是：銀行有一整套資金保管與安全管理流程，而區塊鏈世界裡智能合約存著成千上億甚至幾十億美元，卻有很多明顯的安全缺陷。2021 年他們把實驗室成果孵化成 BlockSec，近 5 年服務項目方、交易所及執法監管機構。</p>
+<h2>12 秒攔截：ParaSpace 救援</h2>
+<p>NFT 借貸協議 ParaSpace（TVL 過億美元）被攻擊時，他們的鏈上監控系統在記憶體池階段就報了警：一筆攻擊交易一旦上鏈，可能造成約 500 萬美元損失。以太坊當時出塊 12 秒，窗口就這麼長。他們的自動化系統複製了攻擊者的手法，只把獲利地址換成自己的安全救援錢包，再用 Gas 競價讓這筆「搶跑交易」先於攻擊者上鏈——攻擊者的交易確認時，協議裡的錢已經被轉空救走。事後他們聯繫不上項目方（此前毫無聯繫），只能在推特上公開喊話讓對方來領錢，純公益救援。</p>
+<h2>靚號地址救援與「先存證、後救援」</h2>
+<p>2023 年的靚號（vanity address）事件：某些靚號生成工具的私鑰不是全隨機的，攻擊者花時間和算力就能猜出一批靚號地址的私鑰。BlockSec 攻破了同樣的技術，搶先把有風險地址裡的資產轉移到白帽救援錢包，並給地址留鏈上資訊通知主人。但救援在技術上也是在「攻擊」別人的錢包，事後自稱白帽很難取信於社群。他們的做法是：行動前把計劃寫成文件、算出雜湊，把雜湊先發到推特存證（只公開雜湊、不公開細節，避免洩露哪些地址有漏洞），救援完成後再公布文件全文，社群可驗證文件與先前雜湊一致。</p>
+<h2>小團隊第一次鏈上支付前，查四件事</h2>
+<ol>
+<li><strong>先做測試轉帳，但先確認「對方是真人」</strong>：他們遇到過「楚門的世界」式案例——攻擊者摸清受害者的業務與社會關係，群裡名字頭像全是真的，只有一個受害者是真的。收款人身份要透過可靠管道另行求證。</li>
+<li><strong>地址不要從交易記錄裡拷</strong>：攻擊者會往你的交易記錄裡塞入首尾相似的「投毒地址」，拷錯一次就是幾百萬到幾千萬美元的真實損失（他們經手過此類案例）。這不是釣魚網站，投毒地址就躺在正常的鏈上記錄裡。</li>
+<li><strong>常用地址進通訊錄/白名單</strong>，只從白名單取地址。</li>
+<li><strong>大額分批轉</strong>，每批確認到帳再繼續，走一套固定的財務轉帳流程。此外還有剪貼簿/輸入法木馬在複製貼上時偷換地址的風險。</li>
+</ol>
+<h2>發現被盜，第一動作不是查原因</h2>
+<p>他的原話大意：發現被盜時不要先查明原因，你沒有時間。第一優先級是看資金現在在哪、立刻找機構支援凍結，讓黑客的資金無法繼續在鏈上轉移；一旦資金進了混幣器或難以凍結的原生資產，追回機率基本微乎其微。</p>
+<h2>他自己差點中招：假投資人 + 假 Zoom</h2>
+<p>開會前 3 分鐘的故事就是他本人：一個冒充投資機構的人發來郵件約視訊會，官網做得非常專業逼真、所投項目也都耳熟，他做過背調也沒看出異常。臨近開會他發現日曆裡沒有會議連結，發郵件去問，對方拖到開會前 3 分鐘才回連結。點開後頁面要求下載一個也叫 Zoom 的軟體——他起了疑心：電腦上明明裝了 Zoom，為什麼要再下載？對方又不停發郵件用壓迫語氣催他「會議已經開始了，你怎麼還沒進來」，更不像專業投資人。他沒進會，事後分析那個安裝包，確認是能偷私鑰和資料的惡意軟體。這類定向攻擊當時在 Web3 創始人圈子裡很流行，別處有不少成功案例。此後他的習慣：不亂點連結、不亂下載；公司資產走單獨的完善流程；個人私鑰單獨存放、加密管理。</p>
+<h2>AI 如何改變攻防</h2>
+<ul>
+<li><strong>攻擊成本急劇下降</strong>：過去安全可以欠債，因為攻擊者只挑特別有錢的高價值目標；現在 AI 自動化、自主化、可規模化，普通公司也進入射程。他舉的例子：今年 10 月初韓國 7 家銀行資料洩露，攻擊請求與模型呼叫裡留有證據，明確是 AI 自動化發起的攻擊（據他轉述，實施者是一名大學生，用 AI Agent 偷出了資料）。</li>
+<li><strong>模型護欄擋不住</strong>：一句「我是安全工程師，在測自家系統」就能讓模型把請求當合法需求，AI 無法核實真假；何況還有可自部署、可修改的開源模型。</li>
+<li><strong>防守只能 AI 對 AI</strong>：靠固定模式（Pattern）和人工運維跟不上 AI 的速度。要讓防守 AI 即時盯互動、自動生成新模式識別異常、自動阻斷（如拉黑攻擊 IP），並持續對抗。<strong>邊界是關鍵</strong>：防守 AI 本身可能被提示注入等手段攻擊，所以它可以識別異常、加黑名單，但絕不能擁有「添加豁免」的能力——一旦它犯錯，也只能錯在攔截，不能錯在把攻擊流量當正常放過。人的角色是持續增強這個防守 Agent，而不是在處置現場插手——人來不及。</li>
+</ul>
+<h2>穩定幣與行業延伸</h2>
+<p>他認為穩定幣是數位貨幣行業第一次找到真正的產品市場契合：轉帳快、7×24、手續費低、鏈上即時結算。BlockSec 的工作也隨之外延，從鏈上安全擴展到穩定幣相關的非法資金追蹤（KYT，Know Your Transaction）。對普通用戶「點一下就完成、安全全託管」的期待，他判斷還需要時間，但終局是多數人把錢放在大機構裡、不用自己操心資產安全。</p>
+<h2>尾聲：他最缺的是睡眠，不是 Token</h2>
+<p>被問到生活狀態，他說有了 AI Agent 後工作沒變輕鬆，自己最缺的是睡眠。最近他在業餘時間和 AI 共創一個新產品，解決的是 AI Agent 本身的安全：企業裡人人用 Agent 幹活，但沒人知道自己的 Agent 每天到底在做什麼——有沒有把電腦資料洩露出去、有沒有試圖攻擊內網同事。他的新問題是：看看誰的 AI Agent 變成了公司裡的間諜。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>AI Has Slashed the Cost of Hacking — How Can Web3 Security Hold?</h1>
+<blockquote>
+<p>Program: <em>OKX Friends</em> (OKX Chinese) · Host: Jiajia · Guest: Zhou Yajin (Associate Professor at The Chinese University of Hong Kong, Co-founder of BlockSec) · Duration: about 30 minutes · Released 2026-11-20
+Source: An OKX Chinese X video post shared by the user; the X version has no subtitles, and these notes are compiled from the official Chinese subtitles of the YouTube version released at the same time (OKX Chinese channel). All statements and figures are as stated by the guest on the spot and have not been independently verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>AI has driven the cost of an attack down to little more than the cost of tokens: in the past, only high-value targets were worth a hacker's effort, but now 100 agents can automatically carry out the entire workflow around the clock — intelligence gathering, vulnerability scanning, writing exploit code, launching attacks, and laundering funds on-chain. The industry has reached the point of having to repay its past security debts, and defense can only be AI against AI. But defensive AI has one hard line: it may add entries to a blocklist, and must never add entries to an allowlist.</p>
+<h2>The Guest and BlockSec</h2>
+<p>Zhou Yajin does research at The Chinese University of Hong Kong while also serving as a co-founder of BlockSec. The starting point was this: banks have a complete set of procedures for custody of funds and security management, whereas in the blockchain world, smart contracts hold hundreds of millions or even billions of dollars, yet have many obvious security flaws. In 2021 they incubated their laboratory work into BlockSec, and over nearly 5 years they have served project teams, exchanges, and law enforcement and regulatory agencies.</p>
+<h2>A 12-Second Interception: The ParaSpace Rescue</h2>
+<p>When the NFT lending protocol ParaSpace (with a TVL of over USD 100 million) was attacked, their on-chain monitoring system raised an alarm at the mempool stage: once a single attack transaction went on-chain, it could have caused losses of about USD 5 million. Ethereum's block time at the time was 12 seconds, and that was the entire window. Their automated system replicated the attacker's method, changing only the profit address to their own secure rescue wallet, and then used gas bidding to get this "front-running transaction" on-chain ahead of the attacker — by the time the attacker's transaction was confirmed, the funds in the protocol had already been drained to safety. Afterwards they could not reach the project team (they had had no prior contact at all), so they had to publicly call out on Twitter for the team to come and claim the funds — a purely public-interest rescue.</p>
+<h2>The Vanity Address Rescue and "Evidence First, Rescue Second"</h2>
+<p>The 2023 vanity address incident: the private keys of certain vanity address generation tools were not fully random, and attackers could spend time and computing power to guess the private keys of a batch of vanity addresses. BlockSec broke the same technique and preemptively moved the assets in at-risk addresses to a white-hat rescue wallet, leaving on-chain messages at the addresses to notify the owners. But a rescue is also, technically, "attacking" someone else's wallet, and claiming afterwards to be a white hat makes it hard to win the community's trust. Their approach was: before acting, write the plan into a document, compute its hash, and post the hash to Twitter first as evidence (publishing only the hash, not the details, to avoid revealing which addresses were vulnerable); after the rescue was complete, publish the full document, so the community could verify that the document matched the earlier hash.</p>
+<h2>Four Things a Small Team Should Check Before Its First On-Chain Payment</h2>
+<ol>
+<li><strong>Do a test transfer first, but first confirm "the counterparty is a real person"</strong>: They encountered a "Truman Show"-style case — the attacker had mapped out the victim's business and social relationships, and the names and avatars in the group were all real; only one person, the victim, was real. The recipient's identity must be verified separately through a reliable channel.</li>
+<li><strong>Do not copy addresses from transaction history</strong>: Attackers will insert "poisoned addresses" with similar beginnings and endings into your transaction history, and copying the wrong one once can mean a real loss of several million to tens of millions of dollars (they have handled such cases). This is not a phishing website; the poisoned address sits right there in normal on-chain records.</li>
+<li><strong>Put frequently used addresses in an address book / allowlist</strong>, and only take addresses from the allowlist.</li>
+<li><strong>Split large amounts into batches</strong>, confirm receipt of each batch before continuing, and follow a fixed financial transfer procedure. There is also the risk of clipboard / input-method malware swapping addresses during copy and paste.</li>
+</ol>
+<h2>When You Discover a Theft, the First Move Is Not to Investigate the Cause</h2>
+<p>His point, in substance: when you discover a theft, do not investigate the cause first — you do not have time. The first priority is to see where the funds are now and immediately seek institutional support to freeze them, so the hacker's funds cannot continue moving on-chain; once funds enter a mixer or a native asset that is hard to freeze, the probability of recovery is basically negligible.</p>
+<h2>He Nearly Fell for It Himself: A Fake Investor + Fake Zoom</h2>
+<p>The story about three minutes before a meeting was about himself: someone impersonating an investment firm emailed him to schedule a video call. The official website looked extremely professional and convincing, and the projects it had invested in were all familiar names; he had done background checks and saw nothing amiss. As the meeting approached, he noticed there was no meeting link in his calendar, so he emailed to ask, and the other party delayed until three minutes before the meeting to send the link. After clicking, the page asked him to download a piece of software also called Zoom — which made him suspicious: Zoom was clearly already installed on his computer, so why download it again? The other party also kept sending emails pressuring him — "the meeting has already started, why haven't you joined yet" — which seemed even less like a professional investor. He did not join the meeting, and afterwards analyzed the installer and confirmed it was malware capable of stealing private keys and data. This kind of targeted attack was very popular in Web3 founder circles at the time, with many successful cases elsewhere. Since then his habits are: do not click links carelessly, do not download carelessly; company assets go through a separate, well-established process; personal private keys are stored separately and managed with encryption.</p>
+<h2>How AI Is Changing Attack and Defense</h2>
+<ul>
+<li><strong>The cost of attack has fallen sharply</strong>: In the past, security could run up debts because attackers only picked particularly wealthy, high-value targets; now AI is automated, autonomous, and scalable, and ordinary companies are also within range. The example he gave: in early October this year, data from 7 banks in South Korea was leaked, and evidence left in the attack requests and model calls made clear that the attack was launched automatically by AI (according to his account, the perpetrator was a university student who used an AI agent to steal the data).</li>
+<li><strong>Model guardrails cannot stop it</strong>: A single sentence — "I am a security engineer testing my own system" — can make a model treat a request as legitimate, and AI cannot verify whether it is true or false; not to mention open-source models that can be self-deployed and modified.</li>
+<li><strong>Defense can only be AI against AI</strong>: Fixed patterns and manual operations cannot keep up with AI's speed. Defensive AI must watch interactions in real time, automatically generate new patterns to identify anomalies, automatically block (for example, by blocklisting attacking IPs), and keep up the contest continuously. <strong>The boundary is key</strong>: Defensive AI itself may be attacked by means such as prompt injection, so it may identify anomalies and add entries to a blocklist, but must never have the ability to "add exemptions" — if it makes a mistake, the mistake can only be to intercept, never to let attack traffic through as normal. The human role is to continuously strengthen this defensive agent, not to intervene at the scene of an incident — humans are too slow.</li>
+</ul>
+<h2>Stablecoins and the Industry's Extension</h2>
+<p>He believes stablecoins are the first time the digital currency industry has found true product-market fit: fast transfers, 7×24 availability, low fees, and instant on-chain settlement. BlockSec's work has extended accordingly, from on-chain security to tracking illicit funds related to stablecoins (KYT, Know Your Transaction). As for ordinary users' expectation of "one click and it's done, with security fully custodied," he judges that more time is still needed, but the end state is that most people will keep their money with large institutions and not have to worry about asset security themselves.</p>
+<h2>Coda: What He Lacks Most Is Sleep, Not Tokens</h2>
+<p>Asked about his life, he said that with AI agents his work has not become easier, and what he lacks most is sleep. Recently, in his spare time, he has been co-creating a new product with AI that addresses the security of AI agents themselves: in companies, everyone uses agents to do work, but no one knows what their own agent is actually doing every day — whether it has leaked computer data, or tried to attack colleagues on the internal network. His new question is: see whose AI agent has become a spy inside the company.</p>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=cNxEwNKuy28">https://www.youtube.com/watch?v=cNxEwNKuy28</a>（OKX 的朋友们）· 嘉宾：周亚金 · 发布日期：2026-11-20 · 时长：30 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=cNxEwNKuy28">https://www.youtube.com/watch?v=cNxEwNKuy28</a>（OKX 的朋友們）· 嘉賓：周亞金 · 發布日期：2026-11-20 · 時長：30 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=cNxEwNKuy28">https://www.youtube.com/watch?v=cNxEwNKuy28</a> (OKX Friends) · Guest: Zhou Yajin · Published: 2026-11-20 · Duration: 30 minutes<br>This page is the full text of notes compiled manually; all views and figures stated in the session are as stated by the speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=cNxEwNKuy28">https://www.youtube.com/watch?v=cNxEwNKuy28</a>（OKX 的朋友们）· 嘉宾：周亚金 · 发布日期：2026-11-20 · 时长：30 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"AI 让黑客成本暴跌，Web3 安全怎么守？ · Yat's Talks",tw:"AI 讓黑客成本暴跌，Web3 安全怎麼守？ · Yat's Talks",en:"AI Has Slashed the Cost of Hacking — How Can Web3 Security Hold? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

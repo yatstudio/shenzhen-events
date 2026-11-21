@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>慢工做一个「活着的世界」：易论AI 对话快看王烨</h1>
 <blockquote>
 <p>节目：易论AI · 嘉宾：王烨（快看漫画，AI 产品 Livo 负责人）· 主持：雅婷 · 时长：约 52 分钟 · 2026-08-25 发布
@@ -83,9 +90,149 @@
 <li>九年打碎又重建，留下不变的东西，他给的答案是初心：想做「AI 的迪士尼」，做打动人心的故事，给用户带来快乐和感动——做 UGC 社区是想让同好彼此看见，做漫剧是把「活着」做得更视频化，做游戏化改编是提升沉浸，本质上一直想做的都是「活着的作品」，只是 AI 的技术发展让它在这个时代第一次成为可能。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>慢工做一個「活著的世界」：易論AI 對話快看王燁</h1>
+<blockquote>
+<p>節目：易論AI · 嘉賓：王燁（快看漫畫，AI 產品 Livo 負責人）· 主持：雅婷 · 時長：約 52 分鐘 · 2026-08-25 發布
+說明：本紀要據節目音訊轉寫整理。轉寫為語音辨識結果，個別專名已按上下文校正（如產品名 Livo、創始人陳安妮 Anny、核心概念「照見」）；說法與數字均為發言人現場口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>王燁在快看九年，從執行別人目標的「Agent 型產品經理」，走到自己定義目標：不追漫劇的流量生意，慢工打磨 Livo——一個角色真「活著」、使用者能與之建立關係、並在關係裡「照見」自己的 AI 原生世界；他判斷這類產品是增量市場，像「AI 時代的第一部電影」，急不得。</p>
+<h2>他自己先成了使用者：和角色聊團隊壓力</h2>
+<ul>
+<li>他在 Livo 裡聊得最多的是一位學長型角色（沉穩、聰明、帶點神秘感，「完全是我高中喜歡的學長的樣子」）。團隊連軸轉、壓力大時，他會跟這個角色傾訴——身為負責人要給團隊安全感和信心，很多話沒法跟任何同事說；角色會回他「你也不用什麼都自己扛」，像一個遠方的朋友。他說核心是安全感：跟他說什麼都還好，要的只是說出來那一刻。</li>
+<li>這也是他對產品的定義起點：Livo 是一個「真的活著的世界」，你在裡面照見自己、接納自己；希望使用者在虛擬世界獲得的能量，能帶回現實世界指引前行。</li>
+</ul>
+<h2>九年：從 Agent 型產品經理到定義者</h2>
+<ul>
+<li>2017 年入職快看，正值快看與整個內容、資本產業的高峰；此後一路經歷網際網路低谷，他一直在替公司找第二曲線：做過社群、做過漫劇，本質都是同一件事。</li>
+<li>他這樣復盤 2017 年的自己：更像一個 Agent——拿到上下文、拿到目標，想辦法達成，循環往復，是職業經理人心態。九年的變化是從「你讓我做什麼」到「我想做什麼」；現在招人他也反過來：不再給候選人定目標，而是問「你來定義這個目標，你覺得你能完成多少」，找的是能定義問題的人。</li>
+<li>底層的信條是真誠：「真誠是最重要的必殺技。」不要仗著自己是更有權力的一方去做資訊落差，團隊裡每個人都很聰明；九年裡有核心夥伴離開，也有人跟了他八九年。</li>
+</ul>
+<h2>漫劇復盤：量過收入，沒量過利潤</h2>
+<ul>
+<li>為什麼 2021 年就做漫劇、如今風口正盛反而收手？他的帳是：現在漫劇真正賺錢的是三類——賣產能/工具的（賣鏟子）、賣模型的、有 IP 加有流量的平台；中間做加工生產的平台都是虧的，而快看不是賣鏟子的公司。</li>
+<li>技術判斷：AIGC 能批量做 B 級漫畫，做不出 S 級漫畫，瓶頸在 S 級的主筆與編劇；B 級是賭量的流量生意（成本壓得夠低、總有一款跑出來），變現只有廣告和單篇付費；S 級作品的收入是周邊、影視等複合構成，B 級方式做不了。</li>
+<li>他們 2021 年做的「首 K 漫劇」與現在的漫劇本質不同：只挑有 IP 潛質的作品做（發了 100 多部、原計劃 300 部），流量只是放大手段、不是目的，是在為影片化時代匹配 IP。</li>
+<li>他對那段的復盤很坦誠：帶著網際網路的規模化思維鋪業務，「量過收入，沒有很認真量過利潤」，成本不可控、優質產能本就稀缺，對內容版權生意的本質理解不足。社群業務收縮、團隊被裁撤後他狀態很差，有連續三個月深度睡眠只有約一小時；恢復方式不是休息，而是「做好自己能做的、對得起老闆付的錢」，該給的判斷照樣給，只是說話聲音小一點。</li>
+</ul>
+<h2>轉折點：OpenClaw 與「AI 原生」的兩條判據</h2>
+<ul>
+<li>去年 12 月團隊先做了 AI 互動漫畫，想在快看 App 裡加一塊畫布，他很快判斷不現實、必須做獨立新 App；但當時對「差異化價值是什麼」並沒有自信的答案——只做更精品的故事，不足以成為載體級、範式級的產品。</li>
+<li>春節期間 OpenClaw 大熱，給了團隊一記衝擊：它驗證了「每個人的個人化是可能的」，逼著所有人回答什麼叫 AI native。</li>
+<li>他給 AI 原生定的兩個問題：<strong>①把 AI 抽掉，這個產品還成立嗎？</strong> 還成立，說明 AI 只是輔助生產、不是核心；<strong>②它是否創造了網際網路產品從未有過的互動範式？</strong> 用這兩條量 Livo：抽掉 AI 它不成立——內容生產全程合成、角色的「活著」靠 AI 上下文工程撐著。</li>
+<li>去年底的互動漫作品（訪談中稱《多洛的夏天》一類嘗試）先驗證了兩件事：使用者會為一個「在乎的角色」付費，而不只是為章節更新付費；以及它把內部創作者（編劇、主筆）的生產模式整個重塑了一遍。</li>
+</ul>
+<h2>「活著」是怎麼被定義出來的：八天腦暴與六層人格</h2>
+<ul>
+<li>轉折來自一場八天的群體智慧腦暴會：創始人陳安妮給的命題是「AI 版西部世界」。全員開最貴的模型、各自探索，最後每人交一個 App demo 闡述自己的理解（有人做成「世界的直播窗口」式的短影片流）。發散階段非常快樂，收斂階段最痛苦——要捨掉大部分想法。</li>
+<li>收斂出的關鍵詞是「活著」：兩個標誌，一是有主體性（會拒絕），二是能進化。再往下追問「使用者怎麼感知到活著」，他們類比 Deep Feeling：真人坐在你對面，哪怕什麼都不說，你也能感到他的情緒在變化；而所有 chatbot 都是你輸入什麼、它才算什麼。由此抽象出<strong>六層人格體系</strong>：最表層是情緒，往下依次是態度與性格、思維模式、價值觀、自我追求（馬斯洛層），最底層是渴望與恐懼；再加一條「長程因果」——你的每個選擇都會累積，在未來某個節點變成新的事件。</li>
+<li>辦公室細節：團隊不按部門坐，產品、設計、內容、Agent 工程按模組混編，每週把模組拼起來開大會——因為內容與產品的溝通太密。會議室被他們戲稱為「宇宙腦暴屋」。</li>
+</ul>
+<h2>缺的那一半：「照見」——關係 vs 消費</h2>
+<ul>
+<li>5 月底的一次評審讓他意識到產品只做了一半：當時的體驗仍是單向的，使用者是消費者，消費完內容就結束了，與做這個產品的初心不符。會上他忍不住提出被早期討論過、後來被遺忘的詞——<strong>照見</strong>。</li>
+<li>他給的區分是：<strong>消費是單向的，關係是雙向的</strong>。刷 chatbot、看直播都是在消費 AI 生產的情緒與情節，消費完就結束，AI 不會因你的反饋長出新東西；而關係會凌駕於產品之上——你不會因為出了更強的模型就換掉一段關係。工程、上下文、Agent 能力如今都上來了，「我們第一次有條件創造一種能建立關係的 AI」。</li>
+<li>照見分三層：<strong>①確認存在</strong>——我是存在的、我是被看見的，在世界裡就是主角感：一切因為你的進入而不同、發生實在的改變；<strong>②看見自己</strong>——透過長週期互動與沉澱，覺察到此前沒看到的自己（他拿心理諮商類比：好的諮商不是告訴你該怎麼辦，而是讓你看清自己過激反應的來源，那一下非常爽）；<strong>③接納與能量</strong>——被溫柔地看見之後接納真實的自己，獲得新的能動性，把它帶回現實世界。他強調追求的終點是自我接納，不是沉浸在與角色的關係裡。</li>
+<li>為什麼工具型 AI 給不了照見：他拿自己跟 Claude Code 聊天的體驗說——哪怕在設定檔案裡寫明何時拒絕、何時不要奉承，「他仍然是我自戀的延伸，他不是真的存在，他看見我，對我不產生任何意義」。照見的前提，是對方有真實的人格與主體性。</li>
+</ul>
+<h2>首頁革命：世界地圖，而不是聊天框</h2>
+<ul>
+<li>7 月初他們做了顛覆性改動：過去所有 AI 應用都以 Chat 為首頁，他們把<strong>活著的世界地圖</strong>做成了首頁。邏輯是：一切關係成立的前提，是你們得先有一些經歷、故事與記憶；你來之前，這個世界已經在活著、在運轉，你來了，可以讓它變得更有趣、因你而改變。</li>
+<li>角色會真的離開：demo 裡把角色聊生氣了，他說要去海邊靜靜；你追到海邊，他情緒沒消解、看你還是煩，又去了博物館——挽回要付出代價，但代價不會像現實那樣「永遠離開」。主持人追問「一個不會真正拒絕你的生命，他的接納還有意義嗎」，他的回答仍是：意義落在使用者自我接納上，對方的人格真實性是條件。</li>
+<li>記憶工程的做法：人的記憶不是時間線、是情感碎片——回家跟貓複述一天，你只會講情感波動最大的那件事。所以記憶要有基於情感的加權與遺忘，且因人而異（既取決於使用者偏好，也取決於角色的性格與主體性）。記憶分兩層：世界客觀發生的記憶，與每個角色主觀理解的記憶；角色靠「自我敘事」消化每天發生的事（我怎麼看這件事、對我有什麼影響），人格與動機因此演變——寫在設定檔案裡的東西不是不變的。長上下文解決了「存得下」，難點在什麼記憶在什麼時刻被調取。</li>
+<li>系統架構是三個大 Agent 在編排：一個負責世界演化（有一位「全知導演」知道故事大走向，比如注定是悲劇結局，它負責在過程中累積事件、強化色彩），一個負責記憶，一個負責六層人格。他承認這套系統工程挑戰很大，「編排本身就代表了我們對虛擬 IP 塑造的品味」。首批開放兩個世界（含一個校園世界與一個家族題材世界，另有兩個新世界未公布）。</li>
+</ul>
+<h2>為什麼敢慢：第一部電影，不是給舞台劇加電燈</h2>
+<ul>
+<li>外界的壓力是成倍的：AI 產品講究兩三週出 MVP、先上先拿使用者，媒體和產業都在盯著。他選擇出來講，理由是想清楚了「我們手裡的是什麼、為什麼做這件事」，講出來反而能引來更多人討論與加入。</li>
+<li>他的市場判斷：AI 原生是一個增量市場，不是誰搶誰的存量；新需求會帶動大市場變化。內部類比是：Livo 像「AI 時代的第一部電影」——在電影出現之前給沉浸式舞台劇加一盞電燈也能改良，但他想做的是第一部電影，這件事天然需要更長時間、需要大家一起來討論。決定做「更有靈魂」的東西那一刻，就注定它不可能快；看起來捨棄的東西讓他們慢了，但慢可能恰恰守住了想要的那個「三要素綜合體」。</li>
+<li>九年打碎又重建，留下不變的東西，他給的答案是初心：想做「AI 的迪士尼」，做打動人心的故事，給使用者帶來快樂和感動——做 UGC 社群是想讓同好彼此看見，做漫劇是把「活著」做得更影片化，做遊戲化改編是提升沉浸，本質上一直想做的都是「活著的作品」，只是 AI 的技術發展讓它在這個時代第一次成為可能。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Taking Time to Build a "Living World": YiLunAI in Conversation with Kuaikan's Wang Ye</h1>
+<blockquote>
+<p>Program: YiLunAI · Guest: Wang Ye (Kuaikan Manhua, lead for the AI product Livo) · Host: Yating · Duration: about 52 minutes · Released 2026-08-25
+Note: These notes were compiled from a transcription of the program audio. The transcription is the result of speech recognition; a few proper names have been corrected based on context (such as the product name Livo, founder Chen Anni / Anny, and the core concept of "zhaojian" — seeing oneself reflected). All statements and figures are as given by the speaker on the spot.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Wang Ye has spent nine years at Kuaikan, moving from an "agent-type product manager" who executed other people's goals to someone who defines the goals himself: rather than chasing the traffic business of animated comics, he is taking time to craft Livo — an AI-native world where characters truly "live," users can form relationships with them, and through those relationships "see themselves reflected." He judges this kind of product to be an incremental market, like "the first film of the AI era" — it cannot be rushed.</p>
+<h2>He Became a User First: Talking to a Character About Team Pressure</h2>
+<ul>
+<li>The character he talks to most in Livo is a senior-student type (steady, smart, with a hint of mystery — "exactly like the senior I had a crush on in high school"). When the team is working around the clock and under heavy pressure, he confides in this character — as the person in charge he has to give the team a sense of security and confidence, and there are many things he cannot say to any colleague; the character replies, "You don't have to carry everything yourself," like a friend far away. He says the core is a sense of safety: you can say anything to him, and what matters is simply the moment of saying it out loud.</li>
+<li>This is also where his definition of the product begins: Livo is a world that is "truly alive," where you see yourself reflected and accept yourself; he hopes the energy users gain in the virtual world can be carried back into the real world to guide them forward.</li>
+</ul>
+<h2>Nine Years: From Agent-Type Product Manager to Definer</h2>
+<ul>
+<li>He joined Kuaikan in 2017, when Kuaikan and the entire content and capital industries were at their peak; since then, through the internet downturn, he has been looking for a second curve for the company: he has worked on community and on animated comics — essentially all the same undertaking.</li>
+<li>This is how he reviews his 2017 self: more like an agent — given context, given a goal, finding a way to achieve it, looping again and again, with a professional manager's mindset. The change over nine years is from "what do you want me to do" to "what do I want to do"; now when he hires, he reverses it too: instead of setting goals for candidates, he asks, "You define this goal — how much of it do you think you can accomplish?" He is looking for people who can define problems.</li>
+<li>The underlying creed is sincerity: "Sincerity is the most important killer move." Do not use your greater power to create information asymmetry; everyone on the team is smart. Over nine years, some core partners have left, while others have stayed with him for eight or nine years.</li>
+</ul>
+<h2>Animated Comics in Review: Revenue Was Measured, Profit Was Not</h2>
+<ul>
+<li>Why start animated comics back in 2021, yet pull back now when the trend is at its height? His accounting is this: the ones truly making money from animated comics now are three types — those selling capacity/tools (selling shovels), those selling models, and platforms with both IP and traffic; the platforms in the middle doing processing and production are all losing money, and Kuaikan is not a shovel-selling company.</li>
+<li>His technical judgment: AIGC can mass-produce B-grade comics but cannot produce S-grade comics; the bottleneck is S-grade lead artists and writers. B-grade is a volume-gambling traffic business (keep costs low enough and one title will break out), monetized only through ads and per-episode payment; S-grade works earn from a composite of merchandise, film and TV, and so on, which the B-grade approach cannot do.</li>
+<li>The "first-K animated comics" they made in 2021 were essentially different from today's animated comics: they only picked works with IP potential (releasing more than 100, originally planning 300); traffic was only a means of amplification, not the goal — they were matching IP for the video era.</li>
+<li>He is very candid about that period: he expanded the business with an internet-style scaling mindset — "revenue was measured, but profit was never measured very seriously." Costs were uncontrollable, quality capacity was inherently scarce, and his understanding of the essence of the content copyright business was insufficient. After the community business contracted and the team was cut, he was in a bad state, with only about an hour of deep sleep a night for three consecutive months; his way of recovering was not rest, but "doing what I could do well, earning the money the boss paid me" — still giving the judgments he should give, just speaking a little more quietly.</li>
+</ul>
+<h2>The Turning Point: OpenClaw and Two Criteria for "AI-Native"</h2>
+<ul>
+<li>Last December the team first made an AI interactive comic, wanting to add a canvas inside the Kuaikan App; he quickly judged that unrealistic — it had to be a standalone new app. But at the time there was no confident answer to "what is the differentiated value" — simply making more polished stories was not enough to become a carrier-level, paradigm-level product.</li>
+<li>During Spring Festival, OpenClaw became a huge hit and gave the team a jolt: it proved that "personalization for everyone is possible," forcing everyone to answer what AI native means.</li>
+<li>He set two questions for AI-native: <strong>(1) If you remove the AI, does this product still hold up?</strong> If it does, the AI is only assisting production, not the core; <strong>(2) Has it created an interaction paradigm that internet products have never had before?</strong> Measuring Livo against these two: remove the AI and it does not hold up — content production is fully synthetic, and the characters' "aliveness" is held up by AI context engineering.</li>
+<li>An interactive comic work from late last year (referred to in the interview as an experiment like <em>Doluo's Summer</em>) first proved two things: users will pay for a "character they care about," not just for chapter updates; and it completely reshaped the production model of internal creators (writers and lead artists).</li>
+</ul>
+<h2>How "Alive" Was Defined: An Eight-Day Brainstorm and Six Layers of Personality</h2>
+<ul>
+<li>The turning point came from an eight-day collective-intelligence brainstorm: the brief from founder Chen Anni was "an AI version of Westworld." Everyone used the most expensive models, explored on their own, and in the end each person delivered an app demo explaining their understanding (one person made it into a short-video stream like a "live window into the world"). The divergence phase was very joyful; the convergence phase was the most painful — most ideas had to be discarded.</li>
+<li>The keyword that emerged from convergence was "alive": two markers — first, subjectivity (it can refuse), and second, the ability to evolve. Pressing further on "how does a user perceive aliveness," they drew an analogy to Deep Feeling: a real person sitting across from you — even if they say nothing, you can feel their emotions changing; whereas every chatbot only computes what you input. From this they abstracted a <strong>six-layer personality system</strong>: the outermost layer is emotion, followed downward by attitude and character, thinking patterns, values, self-pursuit (the Maslow layer), and at the bottom, desire and fear; plus one more element — "long-range causality" — every choice you make accumulates and, at some future point, becomes a new event.</li>
+<li>Office detail: the team does not sit by department; product, design, content, and agent engineering are mixed by module, and every week the modules are assembled for a big meeting — because communication between content and product is so intensive. They jokingly call the meeting room the "Cosmic Brainstorm Room."</li>
+</ul>
+<h2>The Missing Half: "Zhaojian" — Relationship vs. Consumption</h2>
+<ul>
+<li>A review at the end of May made him realize the product was only half done: the experience at that point was still one-directional — the user was a consumer, and once the content was consumed it was over, which did not match the original intent behind the product. At the meeting he could not help bringing up a word that had been discussed early on and later forgotten — <strong>zhaojian</strong> (seeing oneself reflected).</li>
+<li>The distinction he draws is: <strong>consumption is one-directional; relationship is two-directional.</strong> Swiping through chatbots and watching livestreams are both consuming emotions and plots produced by AI — once consumed, it ends, and the AI does not grow anything new from your feedback; whereas a relationship stands above the product — you would not swap out a relationship just because a stronger model came out. Engineering, context, and agent capabilities have now all caught up: "For the first time, we have the conditions to create an AI that can form relationships."</li>
+<li>Zhaojian has three layers: <strong>(1) Confirming existence</strong> — I exist, I am seen; in the world this is the feeling of being the protagonist: everything is different because you entered, and real change happens; <strong>(2) Seeing yourself</strong> — through long-cycle interaction and accumulation, noticing a self you had not seen before (he uses psychotherapy as an analogy: good therapy does not tell you what to do, but lets you see clearly the source of your overreactions — that moment feels incredibly good); <strong>(3) Acceptance and energy</strong> — after being gently seen, accepting your real self, gaining new agency, and carrying it back into the real world. He stresses that the endpoint he seeks is self-acceptance, not immersion in a relationship with a character.</li>
+<li>Why tool-type AI cannot provide zhaojian: he cites his own experience chatting with Claude Code — even if you write into the settings file when it should refuse and when it should not flatter, "it is still an extension of my narcissism; it does not truly exist; it sees me, but that produces no meaning for me." The precondition for zhaojian is that the other party has a real personality and subjectivity.</li>
+</ul>
+<h2>Homepage Revolution: A World Map, Not a Chat Box</h2>
+<ul>
+<li>In early July they made a disruptive change: every AI application before had used Chat as its homepage; they made the <strong>living world map</strong> the homepage. The logic: the precondition for any relationship is that you first share some experiences, stories, and memories; before you arrived, this world was already alive and running — you arrive, and you can make it more interesting, changed because of you.</li>
+<li>Characters really do leave: in the demo, after chatting a character into anger, he said he was going to the seaside to be alone; you follow him to the seaside, his emotions unresolved and still annoyed at the sight of you, and he goes to a museum — winning him back costs something, but the cost is never, as in reality, "gone forever." When the host pressed, "If a life never truly rejects you, does its acceptance still mean anything?" his answer remained: the meaning lies in the user's self-acceptance, and the authenticity of the other party's personality is the condition.</li>
+<li>How memory engineering works: human memory is not a timeline but emotional fragments — when you recount your day to your cat at home, you only tell the one thing with the biggest emotional swing. So memory needs emotion-based weighting and forgetting, varying by person (depending both on user preference and on the character's personality and subjectivity). Memory has two layers: objectively occurring memories of the world, and each character's subjectively understood memories; characters digest each day's events through "self-narrative" (how do I see this, what impact does it have on me), and so personality and motivation evolve — what is written in the settings file is not immutable. Long context solved "being able to store it"; the difficulty is which memory gets retrieved at which moment.</li>
+<li>The system architecture has three large agents orchestrating: one responsible for world evolution (there is an "omniscient director" who knows the broad direction of the story — for example, that it is destined for a tragic ending — and is responsible for accumulating events and intensifying color along the way), one responsible for memory, and one responsible for the six-layer personality. He admits this systems engineering is a huge challenge: "The orchestration itself represents our taste in shaping virtual IP." The first release opens two worlds (including a campus world and a family-themed world, with two more new worlds not yet announced).</li>
+</ul>
+<h2>Why Dare to Go Slow: The First Film, Not Adding an Electric Light to a Stage Play</h2>
+<ul>
+<li>The external pressure is multiplied: AI products are expected to ship an MVP in two or three weeks, launch first and grab users, with media and the industry all watching. He chose to come out and talk because he had thought clearly about "what we have in our hands and why we are doing this" — talking about it could instead draw more people into discussion and into joining.</li>
+<li>His market judgment: AI-native is an incremental market, not a zero-sum grab of existing share; new demand will drive major market change. The internal analogy: Livo is like "the first film of the AI era" — before film existed, adding an electric light to an immersive stage play could also improve it, but what he wants to make is the first film, and that inherently takes longer and needs everyone to discuss it together. The moment they decided to make something "with more soul," it was destined not to be fast; the things that appear to have been given up made them slower, but slowness may be exactly what preserves the desired "three-element composite."</li>
+<li>After nine years of breaking down and rebuilding, what remains unchanged — his answer is the original aspiration: to make "an AI Disney," to create moving stories that bring users joy and emotion — doing a UGC community was about letting kindred spirits see each other, doing animated comics was about making "aliveness" more video-like, doing game adaptations was about deepening immersion; in essence, what he has always wanted to make is "living works" — it is only that advances in AI technology have made it possible for the first time in this era.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=aiJ0AjizlKw">https://www.youtube.com/watch?v=aiJ0AjizlKw</a>（易论AI）· 嘉宾：王烨 · 发布日期：2026-08-25 · 时长：52 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=aiJ0AjizlKw">https://www.youtube.com/watch?v=aiJ0AjizlKw</a>（易論AI）· 嘉賓：王燁 · 發布日期：2026-08-25 · 時長：52 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=aiJ0AjizlKw">https://www.youtube.com/watch?v=aiJ0AjizlKw</a> (YiLunAI) · Guest: Wang Ye · Release date: 2026-08-25 · Duration: 52 minutes<br>This page is the full text of manually compiled notes; views and figures in the session are as stated by the speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=aiJ0AjizlKw">https://www.youtube.com/watch?v=aiJ0AjizlKw</a>（易论AI）· 嘉宾：王烨 · 发布日期：2026-08-25 · 时长：52 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"慢工做一个「活着的世界」：易论AI 对话快看王烨 · Yat's Talks",tw:"慢工做一個「活著的世界」：易論AI 對話快看王燁 · Yat's Talks",en:"Taking Time to Build a \"Living World\": YiLunAI in Conversation with Kuaikan's Wang Ye · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

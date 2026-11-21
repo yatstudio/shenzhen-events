@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《第5集｜郭宇谈财富、投资与退休》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=tWmNN87VvcE ｜时长 79 分钟｜播客《一代马之外》第 5 集，主持人 Randy、GeekPlux
@@ -58,8 +65,98 @@
 <h2>退休后的新事业：卖数据</h2>
 <p>录制时他在日本经营公司 Checks（与日本合伙人荒川等），招了不少国内朋友过去。做的事：把会员卡、消费小票、信用卡的消费数据（在日本法律框架与用户授权下）电子化，卖给需要消费数据的企业——他的判断是，NFT 定义了数字产权之后，「个人产生的数据值多少钱」会成为一个巨大的消费市场（日本已有拍小票换钱的产品，一天限五张；消费数据甚至能预测大宗商品走势）。他 2011 年在支付宝做年度账单时就意识到平台「比你自己更先知道你将要发生什么事」，只是大公司没把价值还给个人。选日本不选新加坡/美国的理由：新加坡太小、生活单调且对外国人区别对待；日本法律上对外国人和本国人一视同仁、会日语就基本等于本地人，加上生活品质与温泉。对想移居的人他的建议是：别仓促，先以居民身份来住一段，找一个和你处境相同（有孩/无孩差别巨大）的当地人一对一聊，博客和视频都有幸存者偏差。</p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=tWmNN87VvcE">https://www.youtube.com/watch?v=tWmNN87VvcE</a>（代码之外 Beyond Code（Randy、GeekPlux））· 嘉宾：郭宇 · 发布日期：2023-08-14 · 时长：1 小时 19 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《第5集｜郭宇談財富、投資與退休》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=tWmNN87VvcE ｜時長 79 分鐘｜播客《一代馬之外》第 5 集，主持人 Randy、GeekPlux
+⚠️ 時效提示：本集錄製於約 2023 年（談 NFT、其日本公司 Checks 營運中、疫情後初期），屬郭宇系列裡最「考古」的一集，觀點請按當時的語境讀。
+說明：機器轉寫，個別專名有誤聽（多說轉寫為「多數」，沈正宇轉寫為「鎮宇」，豌豆莢轉寫為「彎斗甲」等），已按上下文校正；後半段為採樣通讀。金額與收益均為其自述口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這是理解郭宇其餘所有影片的「前傳」：一個政治學出身、父親久病臥床的普通程式設計師，如何靠 2013 年一筆無心插柳的港股定投 + 一次「主動選擇不穩定人生」的跳槽，在 28 歲攢夠離開的底氣。他對財富自由的定義冷靜得近乎掃興：<strong>它是一道數學題——先量清楚你一年到底花多少錢，剩下的只是 10 倍與 4% 的事。</strong> 而財富帶來的最大苦惱不是沒錢花，是「你能去任何地方」的不確定性本身（本集標題即出於此）。</p>
+<h2>職業線：每一步都是「離開舒適區」</h2>
+<ul>
+<li>2008 年高考後第三天開始自學程式碼（家裡條件不好、父親生病臥床十幾年、後來成植物人，他必須能自己掙錢養家）。大二騰訊實習被刷，大三進支付寶體驗技術部（2011–2013），住同學宿舍苦練技術——那個年代一線工程師多非科班出身，因為頂尖學生都去投行和外企，網際網路公司是「成績沒那麼好的人」去的，機會反而公平。</li>
+<li>支付寶時期生活極其安逸：六點下班、西湖邊喝茶；同批同事兩年內買房（杭州房價六千多一平）結婚生子。他覺得「一眼望到頭」，2013 年辭職——父親當時還有意識，非常生氣。暑假去北京看了豌豆莢等公司，被中關村的氛圍擊中：他承認自己內心追逐的就是<strong>不穩定的生活</strong>——只有承擔風險才有更大收益，這是他和同批人最大的分野。</li>
+<li>加入沈正宇的多說（兼維護圖蟲），2014 年 12 月被字節收購。字節六年半是大小週、凌晨兩三點下班的日子（《百萬英雄》兩週三班倒趕出來）。2015 年頭條瓶頸期很多人走，他留下來的理由很特別：這家公司是 AI 驅動的——推薦工程師坦承「我們不知道引擎怎麼工作，只能做實驗調參數」，他覺得這種「工程師不知道自己程式碼如何運行」的範式酷到不行、必將改變所有網際網路產品。今天生成式 AI 時代人人如此，當年只有字節在這麼幹。</li>
+</ul>
+<h2>「酒店玩家」的真相：累出來的預算學</h2>
+<p>外人看他朋友圈天天飛、住酒店、泡日本溫泉，以為他沒在上班。真相：工作太累、休息太少，不安排就會抑鬱。他從 2013 年起研究常旅客體系（給一家常旅 App 做過技術顧問），每年做旅行預算、雙十一把下一年的機票全買完——假期固定、提前鎖定，再用各家 loyalty program 之間匯率不一致的套利把成本壓到最低，讓兩天假也能徹底切換到另一種生活方式（reset）。<strong>狀態管理不好，就做不了理性決策——找工作如此，投資也如此。</strong> 這是全集最被低估的一句。</p>
+<h2>退休決策：想了三年</h2>
+<ul>
+<li>2017 年動念：抖音 2016 年 12 月發布後，他判斷影片推薦是唯一能無文化障礙全球化的模式（此前頭條在巴西、日本推圖文產品都因語言推薦引擎太重而失敗），自己的股票「有一個非常確定大的 potential」。隨後進入漫長的糾結期：去哪個國家、要不要在北京置業——其間父親、奶奶相繼去世，不確定性最折磨人的地方在於「沒有家庭束縛的人，能去任何地方，所以必須非常謹慎地選」。</li>
+<li>2019 年提離職、交接半年，2020 年 2 月在日本遠端離職（疫情）。那篇退休信 2 月發時無人問津，6 月被知乎一個問題帶火。後來的事（字節不上市、中美交惡、阿里一度跌到 2000 多億美元）全不在他 2019 年的劇本裡，但因為生活方案已經定死，對他個人「沒什麼太大影響」——<strong>計畫的價值不是預測對，而是讓你對波動免疫。</strong></li>
+</ul>
+<h2>財富來源：糾正一個流行誤會</h2>
+<p>外界普遍以為他靠字節股權自由。他本人拆帳：字節工資很低、股權至今大部分沒賣。真正的積累來自投資——而且起點荒誕：2013 年在深圳高新園地鐵站，天天有人塞港股開戶傳單，他被煩到「開了個戶」了事，用招商證券每月把存下的錢扔進去定投騰訊，<strong>沒有任何策略</strong>，一投五年（騰訊從 30 多港元漲到 500 多）；另有 2013 年買入的比特幣。2018–19 年因為要靠投資生活才開始認真研究：300 多開始賣騰訊、最高 500 多出清，換倉美股，正好趕上疫情前完成轉移、又趕上 2021 年美股大漲——他反覆強調這是運氣。他的自由線：大幾百萬到小一千萬本金、年化 5–6%、一個人一年花幾十萬，綽綽有餘；實際結果已遠超。日本的幾處房產是 2018–19 年買的，在組合裡佔比不大，只圖每月日元租金現金流覆蓋當地生活費，不必從美股取錢換匯。他每年只花「賺到的利息」，但承認花錢會隨賺錢水漲船高。</p>
+<h2>給程式設計師的理財建議（本集最實用的部分）</h2>
+<ol>
+<li><strong>先看清自己的風險結構</strong>：多數工程師的收入靠薪資（大頭）、財富靠房產（大頭）——兩個集中度疊在一起極其危險。35 歲被裁員，可支配收入瞬間少一半甚至八成，再背著房貸、房子又賣不掉，就是流動性危機。日本發生過的事，可能在任何國家重演。</li>
+<li><strong>股市裡 90% 的人虧錢</strong>：長橋排行榜上年賺 15% 就能進前 10%。所以要像學寫程式碼一樣學投資：看文件、看影片、看前人經驗，用小錢真實下場找到自己的交易風格——「不然你永遠不知道自己是什麼樣的交易者」。</li>
+<li><strong>不想當 trader，就直接買指數</strong>，像大部分美國人一樣，別折騰。券商希望你頻繁交易（手續費、融資費），會不斷給你推期權期貨這類你根本不懂風險的東西——DeFi 和 CEX 的用戶教育之差也在這裡。</li>
+<li><strong>預測市場幾乎不可能</strong>：美國市場太深（特斯拉一天幾百億美元成交量），中國工程師不擅長玩西方人的遊戲、又沒經驗，老實承認這一點就是進步。</li>
+<li><strong>財務自由的操作定義</strong>：認真量自己過去兩年的年支出；如果對現在的生活已經滿意，年支出 ×10 左右的金融資產（哪怕買美債、按 4% 提取）就夠了。降支出靠地理套利：泰國、峇里島、日本鄉下（衝浪的人一週上兩天班打零工、不婚不育）；在鄉下你想花都花不出去多少。他給中國的「中產焦慮」降了溫：在小紅書語境外，有 5000 萬純金融資產（不含房子）絕對算富人。</li>
+</ol>
+<h2>退休後的新事業：賣數據</h2>
+<p>錄製時他在日本經營公司 Checks（與日本合夥人荒川等），招了不少國內朋友過去。做的事：把會員卡、消費小票、信用卡的消費數據（在日本法律框架與用戶授權下）電子化，賣給需要消費數據的企業——他的判斷是，NFT 定義了數位產權之後，「個人產生的數據值多少錢」會成為一個巨大的消費市場（日本已有拍小票換錢的產品，一天限五張；消費數據甚至能預測大宗商品走勢）。他 2011 年在支付寶做年度帳單時就意識到平台「比你自己更先知道你將要發生什麼事」，只是大公司沒把價值還給個人。選日本不選新加坡/美國的理由：新加坡太小、生活單調且對外國人區別對待；日本法律上對外國人和本國人一視同仁、會日語就基本等於本地人，加上生活品質與溫泉。對想移居的人他的建議是：別倉促，先以居民身分來住一段，找一個和你處境相同（有孩/無孩差別巨大）的當地人一對一聊，部落格和影片都有倖存者偏差。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | "Episode 5 | Guo Yu on Wealth, Investing and Retirement"</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=tWmNN87VvcE | Duration 79 minutes | Podcast <em>Beyond the Generation of Horses</em> (一代马之外), Episode 5, hosts Randy and GeekPlux
+⚠️ Timeliness note: This episode was recorded around 2023 (discussing NFTs, his Japanese company Checks in operation, the early post-pandemic period). It is the most "archaeological" episode in the Guo Yu series; please read the views in the context of that time.
+Note: Machine transcript; a few proper names were misheard (Duoshuo transcribed as "多數", Shen Zhengyu as "鎮宇", Wandoujia as "弯斗甲", etc.) and have been corrected by context; the second half was read through by sampling. All amounts and returns are as stated by him.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>This is the "prequel" to understanding all of Guo Yu's other videos: how an ordinary programmer — a political science graduate whose father was bedridden for years — built the confidence to leave at 28, through an unintentional 2013 Hong Kong stock regular investment in Tencent plus one deliberate leap to "choose an unstable life." His definition of financial freedom is calm to the point of being a letdown: <strong>it is a math problem — first measure clearly how much you actually spend in a year, and the rest is just a matter of 10x and 4%.</strong> And the greatest trouble wealth brings is not having no money to spend, but the uncertainty of "you can go anywhere" itself (the episode's title comes from this).</p>
+<h2>Career Line: Every Step Was "Leaving the Comfort Zone"</h2>
+<ul>
+<li>He began teaching himself to code on the third day after the 2008 college entrance exam (his family was not well off, his father was bedridden for over a decade and later became vegetative, so he had to be able to earn money to support the family). He was rejected from a Tencent internship in his sophomore year, joined Alipay's Experience Technology Department in his junior year (2011–2013), and lived in a classmate's dorm grinding his skills — in that era most frontline engineers were not computer-science graduates, because top students all went to investment banks and foreign companies, and internet companies were where "students with not-so-good grades" went, so opportunities were actually fair.</li>
+<li>Life at Alipay was extremely comfortable: off work at six, drinking tea by West Lake; peers from the same cohort bought homes within two years (Hangzhou housing was over 6,000 yuan per square meter) and got married and had children. He felt he could "see to the end at a glance," and quit in 2013 — his father was still conscious at the time and was very angry. During the summer break he went to Beijing and visited companies like Wandoujia, and was struck by the atmosphere in Zhongguancun: he admits what he was chasing inside was precisely <strong>an unstable life</strong> — only by taking risks could there be greater returns, and this was his biggest divergence from his cohort.</li>
+<li>He joined Shen Zhengyu's Duoshuo (while also maintaining Tuchong), which was acquired by ByteDance in December 2014. His six and a half years at ByteDance were days of big-week/small-week schedules and getting off work at two or three in the morning (<em>Million Heroes</em> was rushed out in two weeks on three shifts). During Toutiao's bottleneck period in 2015 many people left; his reason for staying was unusual: this company was AI-driven — recommendation engineers frankly admitted "we don't know how the engine works, we can only run experiments and tune parameters," and he thought this paradigm of "engineers not knowing how their own code runs" was incredibly cool and would inevitably change all internet products. Today in the generative AI era everyone is like this; back then only ByteDance worked that way.</li>
+</ul>
+<h2>The Truth About the "Hotel Player": Budgeting Learned from Exhaustion</h2>
+<p>Outsiders saw his Moments full of flights, hotels, and Japanese hot springs and assumed he wasn't working. The truth: work was too exhausting and rest too scarce, and without planning he would become depressed. From 2013 he studied frequent-traveler systems (he was a technical advisor for a frequent-travel app), made a travel budget every year, and bought all of the next year's flights during Double Eleven — holidays fixed and locked in early — then used arbitrage from inconsistent exchange rates between different loyalty programs to push costs to the minimum, so that even a two-day break could fully switch him to another way of life (a reset). <strong>If you don't manage your state well, you can't make rational decisions — true for job hunting, and true for investing.</strong> This is the most underrated line in the whole episode.</p>
+<h2>The Retirement Decision: Three Years of Thinking</h2>
+<ul>
+<li>The idea came in 2017: after Douyin launched in December 2016, he judged that video recommendation was the only model that could globalize without cultural barriers (before that, Toutiao's image-and-text products in Brazil and Japan had both failed because the language recommendation engine was too heavy), and his own stock had "a very certain, large potential." Then came a long period of agonizing: which country to go to, whether to buy property in Beijing — during which his father and grandmother passed away in succession. The most tormenting thing about uncertainty was that "a person with no family ties can go anywhere, so must choose very carefully."</li>
+<li>He submitted his resignation in 2019, handed over for half a year, and left remotely from Japan in February 2020 (the pandemic). His retirement letter drew no attention when posted in February, then went viral in June thanks to a Zhihu question. What happened later (ByteDance not going public, US-China tensions, Alibaba once falling to just over 200 billion US dollars) was all outside his 2019 script, but because his life plan was already fixed, it had "not much real impact" on him personally — <strong>the value of a plan is not predicting correctly, but making you immune to volatility.</strong></li>
+</ul>
+<h2>Source of Wealth: Correcting a Popular Misconception</h2>
+<p>It is widely assumed he achieved freedom through ByteDance equity. He breaks down the accounts himself: ByteDance pay was very low, and most of the equity still hasn't been sold to this day. The real accumulation came from investing — and the starting point was absurd: in 2013 at the Shenzhen High-Tech Park metro station, people stuffed Hong Kong stock account-opening flyers at him every day, until he was annoyed enough to "just open an account," using China Merchants Securities to throw his monthly savings into a regular investment in Tencent, <strong>with no strategy at all</strong>, for five years (Tencent rose from over 30 Hong Kong dollars to over 500); he also bought Bitcoin in 2013. Only in 2018–19, because he needed to live off investing, did he start studying seriously: he began selling Tencent from the 300s, cleared out at a high of over 500, rotated into US stocks, happening to complete the transfer just before the pandemic and catching the big 2021 US stock rally — he repeatedly stresses this was luck. His freedom line: a principal of several million to just under ten million, annualized 5–6%, one person spending a few hundred thousand a year, is more than enough; the actual result has far exceeded that. The several properties in Japan were bought in 2018–19 and are a small share of the portfolio, only for the monthly yen rental cash flow to cover local living costs, so he doesn't need to draw money from US stocks and convert currency. He only spends the "interest earned" each year, but admits spending rises as earnings rise.</p>
+<h2>Financial Advice for Programmers (The Most Practical Part of This Episode)</h2>
+<ol>
+<li><strong>First see your own risk structure clearly</strong>: Most engineers' income relies on salary (the bulk) and wealth on property (the bulk) — two concentrations stacked together are extremely dangerous. Laid off at 35, disposable income instantly drops by half or even 80%, while carrying a mortgage on a house that can't be sold — that is a liquidity crisis. What happened in Japan could repeat in any country.</li>
+<li><strong>90% of people lose money in the stock market</strong>: On Longbridge leaderboards, earning 15% in a year puts you in the top 10%. So learn investing the way you learn to code: read documentation, watch videos, read predecessors' experience, and use small amounts of real money to find your own trading style — "otherwise you'll never know what kind of trader you are."</li>
+<li><strong>If you don't want to be a trader, just buy the index</strong>, like most Americans, and don't tinker. Brokers want you to trade frequently (commissions, margin fees) and will keep pushing you things like options and futures whose risks you don't understand at all — the difference in user education between DeFi and CEXes is also here.</li>
+<li><strong>Predicting the market is almost impossible</strong>: The US market is too deep (Tesla trades tens of billions of US dollars a day); Chinese engineers are not good at playing Westerners' games and have no experience, and honestly admitting this is progress.</li>
+<li><strong>An operational definition of financial freedom</strong>: Carefully measure your annual spending over the past two years; if you are already satisfied with your current life, financial assets of about 10x your annual spending (even buying US Treasuries and withdrawing at 4%) are enough. Cut spending through geographic arbitrage: Thailand, Bali, rural Japan (surfers work odd jobs two days a week, unmarried and childless); in the countryside you couldn't spend much even if you wanted to. He cooled down China's "middle-class anxiety": outside the Xiaohongshu context, having 50 million yuan in pure financial assets (excluding a house) definitely counts as rich.</li>
+</ol>
+<h2>A New Venture After Retirement: Selling Data</h2>
+<p>At the time of recording he was running the company Checks in Japan (with Japanese partners including Arakawa), and had recruited quite a few friends from China to go over. What they do: digitize consumption data from membership cards, receipts, and credit cards (within Japan's legal framework and with user authorization) and sell it to companies that need consumer data — his judgment is that after NFTs defined digital property rights, "how much is the data an individual generates worth" will become a huge consumer market (Japan already has products that pay you for photographing receipts, limited to five a day; consumer data can even predict commodity price trends). Back in 2011, working on annual bills at Alipay, he realized platforms "know what is about to happen to you before you do yourself"; big companies just never returned the value to individuals. His reasons for choosing Japan over Singapore / the US: Singapore is too small, life is monotonous, and it treats foreigners differently; Japan treats foreigners and nationals equally under the law, speaking Japanese basically makes you a local, plus the quality of life and hot springs. His advice for people who want to emigrate: don't rush; first come and live for a while as a resident, find a local in the same situation as you (having children vs. not makes a huge difference) for a one-on-one chat; blogs and videos all have survivorship bias.</p>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=tWmNN87VvcE">https://www.youtube.com/watch?v=tWmNN87VvcE</a>（代码之外 Beyond Code（Randy、GeekPlux））· 嘉宾：郭宇 · 发布日期：2023-08-14 · 时长：1 小时 19 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=tWmNN87VvcE">https://www.youtube.com/watch?v=tWmNN87VvcE</a>（程式碼之外 Beyond Code（Randy、GeekPlux））· 嘉賓：郭宇 · 發布日期：2023-08-14 · 時長：1 小時 19 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=tWmNN87VvcE">https://www.youtube.com/watch?v=tWmNN87VvcE</a> (Beyond Code (Randy, GeekPlux)) · Guest: Guo Yu · Published: 2023-08-14 · Duration: 1 hour 19 minutes<br>This page is the full notes, edited by hand from a machine transcript; the views, figures and model names in the video are all as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《第5集｜郭宇谈财富、投资与退休》 · Yat's Talks",tw:"紀要｜《第5集｜郭宇談財富、投資與退休》 · Yat's Talks",en:"Notes | \"Episode 5 | Guo Yu on Wealth, Investing and Retirement\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

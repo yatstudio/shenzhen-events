@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>AP 直播《Anthropic 在纳斯达克开始交易》摘要</h1>
 <ul>
 <li>视频：LIVE: Anthropic begins trading on Nasdaq after largest IPO on record</li>
@@ -79,9 +86,141 @@
 <li>本视频不含发行价、开盘价、首日涨幅等数据；如需这些数字，要另查交易数据。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>AP 直播《Anthropic 在納斯達克開始交易》摘要</h1>
+<ul>
+<li>影片：LIVE: Anthropic begins trading on Nasdaq after largest IPO on record</li>
+<li>來源：Associated Press 官方 YouTube 頻道，直播回放（已結束）</li>
+<li>直播時間：2026-11-19 美東上午（開盤鐘儀式），全長 15 分 11 秒</li>
+<li>原影片：https://www.youtube.com/watch?v=cpIlQK6p9cY</li>
+<li>轉寫：YouTube 英文字幕（自動字幕）清洗去重稿，共 347 行、約 2100 詞；個別專有名詞有識別誤差，下文已按正確拼寫訂正</li>
+</ul>
+<blockquote>
+<p>說明：本影片是 Anthropic 上市首日的納斯達克開盤鐘儀式全程，三段致辭加敲鐘；儀式上沒有公布發行價、開盤價或漲幅等交易數據。以下均為致辭者現場發言的摘要，非逐字翻譯。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Anthropic 以代碼 ANT 正式登陸納斯達克；敲鐘儀式上，納斯達克主席 Adena Friedman 與 Amodei 姐弟三人致辭，通篇只講一件事：把"安全與公共利益"寫進公司章程的公司，如何向公眾市場證明使命與商業成功可以並存。</p>
+<h2>一、Jack Castle 開場（00:00–01:01）</h2>
+<p>納斯達克美西區上市業務負責人 Jack Castle 主持儀式。他稱 Anthropic 從一開始就以清晰的使命為指引、致力於負責任地建構先進 AI，這正是今天這場上市慶典的意義所在；隨後請出納斯達克主席兼 CEO Adena Friedman。</p>
+<h2>二、Adena Friedman 致辭（01:01–03:21）</h2>
+<ul>
+<li>她歡迎聯合創辦人兼 CEO Dario Amodei、聯合創辦人兼總裁 Daniela Amodei 及整個 Anthropic 團隊、投資人與嘉賓來到納斯達克。</li>
+<li>定性：人工智慧可能是我們這個時代最具決定性的技術，而 Anthropic 從第一天起就同時直面它的前景與風險。</li>
+<li>公司背景：Anthropic 2021 年以公益公司（public benefit corporation）形式創立，使命是為人類長期利益負責任地開發與維護先進 AI；其成果就是 Claude，已被全球科學家、開發者、企業與消費者用於做有意義的工作。</li>
+<li>上市意味著一種新的責任：公眾市場要求公司透明、問責、每一天都贏得投資人信任；對一家以信任立身的公司而言，這種紀律不是負擔，而是使命的延伸。</li>
+<li>納斯達克自稱"創新經濟之家"，表示很自豪能與 Anthropic 並肩，去面對這一代技術提出的最大問題。</li>
+</ul>
+<h2>三、Daniela Amodei 致辭（03:27–08:32）</h2>
+<ul>
+<li>開場定調：Anthropic 是一家"不尋常、甚至有點怪"的公司，而且是故意"反著建"的——在推出第一個產品之前就先有了 AI 安全團隊；Claude 發布後，拒絕了養活大半個網際網路的廣告模式；當一個新模型被發現特別擅長找安全漏洞時，他們先把它扣下，優先給關鍵系統的防禦方使用。</li>
+<li>公益公司身分意味著：法律上必須把公共利益與股東回報並列考量；他們同樣在意那些不用 Claude 的人。</li>
+<li>客戶面：超過半數財富 500 強在用 Claude（藥物發現、承保、防金融欺詐等）。</li>
+<li>三個小故事：</li>
+<li>聖保羅一位小學校長，過去手工在 40 頁的冊子裡登記學生成績、分析每個孩子需要什麼要花 30 天；本月她把冊頁拍照交給 Claude，幾分鐘就做完——對掉隊孩子來說，少等一個月才被注意到。</li>
+<li>麻薩諸塞州 Blackington 公司（1852 年創立，手工製作警徽、消防徽章），訂單交付原本要 6–10 週；生產計畫經理 Edgar 用 Claude 給公司 40 年的老系統做了新工具，交付週期砍半。</li>
+<li>Open Evidence（由 Claude 驅動的醫學研究工具）：美國臨床醫生僅今年 8 月就用了 4200 萬次；正與 Anthropic 合作免費擴展到海地、蒙古等約 100 個國家的臨床醫生。</li>
+<li>其他被點名的客戶：Walmart、Bristol Myers Squibb（研究人員 5 分鐘找到過去要花近兩個月才找到的答案）、一家社區餐廳。</li>
+<li>上市的理由之一：讓更多人"入股"參與建設 AI。</li>
+<li>對對 AI 不安的人：她說這項技術需要的是你們的聲音——不是信任、不是使用，而是發聲；故事的結局還沒寫定，智慧如今是人類可以建造的東西，用它來建什麼，由所有人共同決定。</li>
+</ul>
+<h2>四、Dario Amodei 致辭（08:41–13:38）</h2>
+<ul>
+<li>個人動機：他與 Daniela 的父親死於一種"幾年後就變得可治"的疾病；他職業生涯從生物學起步，想讓未來的療法來得更快。在實驗室裡他看到，基因編輯、基因合成、光控腦細胞等能劈開疾病複雜性的工具，最初都只是純粹的想法——來自思考、來自智慧。</li>
+<li>判斷：足夠強大的 AI 與人類協同，有可能把一個世紀的科學與醫學進步壓縮進十年；但他強調目前只有早期結果，實驗與臨床試驗仍需時間。</li>
+<li>Claude 的應用面：蛋白質折疊、藥物設計、癌症、遺傳學、臨床試驗管理；以及經濟增長、脫貧、保護民主與自由社會，甚至讓車管所（DMV）這類日常服務更好用。</li>
+<li>風險說得很直白：個人或國家行為體的濫用、經濟衝擊、人類失去對 AI 系統的控制。他說談這些風險不是因為它們不可避免，而是因為它們可以避免——取決於建造者的選擇；"對安全疏忽"與"對安全痴迷"會導向截然不同的 AI 未來。</li>
+<li>安全做法：防生物與網路風險的保障措施、對齊訓練與測試、像 X 光一樣"看進模型內部"（可解釋性），這些方法多由 Anthropic 開創。</li>
+<li>承諾（全場最硬的一句表態）：公司會按自己的節奏推進 AI 系統的訓練與部署，花多長時間都可以，只要能確信系統安全且始終處於人類控制之下；不會向商業壓力或政治壓力低頭。上市讓公司財務更強，只會強化這個決心。</li>
+<li>"向上競爭"（race to the top）：如果 Anthropic 能證明"在安全上做對的選擇"與"建成一家極其成功的公司"可以並存，行業裡其他人就會跟上；當向上競爭運轉起來，誰的模型最好就不重要了，因為所有人都在安全地建造。目標是讓整個行業變好，無論某個時點 Anthropic 是贏是輸。</li>
+<li>收尾：機器智慧的降臨是人類歷史上決定性的時刻之一，人類有難得的機會把它塑造成更好的樣子。</li>
+</ul>
+<h2>五、敲鐘與收尾（13:38–15:11）</h2>
+<p>致辭結束，音樂與掌聲中完成開盤鐘儀式，直播結束。畫面音訊裡沒有交易報價環節。</p>
+<h2>附註</h2>
+<ul>
+<li>股票代碼 ANT（Friedman 致辭中宣布，02:14–02:23；影片自動字幕誤寫為 NT，代碼以招股書與新聞報導為準），與 2026-11-19 晚 WalletV Space 中茄哥所說"NT 的 USDC / USDT 合約"對應；AP 標題稱本次為"有記錄以來最大 IPO"。</li>
+<li>本影片不含發行價、開盤價、首日漲幅等數據；如需這些數字，要另查交易數據。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Summary of AP Livestream "Anthropic Begins Trading on Nasdaq"</h1>
+<ul>
+<li>Video: LIVE: Anthropic begins trading on Nasdaq after largest IPO on record</li>
+<li>Source: Official Associated Press YouTube channel, livestream replay (ended)</li>
+<li>Livestream time: Morning of 2026-11-19 US Eastern (opening bell ceremony), total length 15 minutes 11 seconds</li>
+<li>Original video: https://www.youtube.com/watch?v=cpIlQK6p9cY</li>
+<li>Transcript: Cleaned and deduplicated draft from YouTube English subtitles (automatic captions), 347 lines in total, about 2,100 words; a few proper names have recognition errors and have been corrected to the proper spelling below</li>
+</ul>
+<blockquote>
+<p>Note: This video is the full Nasdaq opening bell ceremony on Anthropic's first day of listing, with three speeches plus the bell ringing; no trading data such as the issue price, opening price or gains were announced at the ceremony. The following are summaries of the speakers' live remarks, not verbatim translations.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>Anthropic officially listed on Nasdaq under the ticker ANT; at the bell-ringing ceremony, Nasdaq Chair Adena Friedman and the Amodei siblings gave speeches that addressed a single theme throughout: how a company that has written "safety and public benefit" into its charter proves to public markets that mission and commercial success can coexist.</p>
+<h2>1. Opening by Jack Castle (00:00–01:01)</h2>
+<p>Jack Castle, Nasdaq's head of listings for the western US, hosted the ceremony. He said Anthropic has from the start been guided by a clear mission and committed to building advanced AI responsibly, which is precisely the significance of today's listing celebration; he then introduced Nasdaq Chair and CEO Adena Friedman.</p>
+<h2>2. Speech by Adena Friedman (01:01–03:21)</h2>
+<ul>
+<li>She welcomed co-founder and CEO Dario Amodei, co-founder and President Daniela Amodei, the whole Anthropic team, investors and guests to Nasdaq.</li>
+<li>Framing: Artificial intelligence may be the most defining technology of our era, and Anthropic has from day one confronted both its promise and its risks head-on.</li>
+<li>Company background: Anthropic was founded in 2021 as a public benefit corporation, with a mission to responsibly develop and maintain advanced AI for the long-term benefit of humanity; its result is Claude, now used by scientists, developers, businesses and consumers worldwide to do meaningful work.</li>
+<li>Listing means a new kind of responsibility: public markets require a company to be transparent, accountable, and to earn investor trust every day; for a company built on trust, that discipline is not a burden but an extension of its mission.</li>
+<li>Nasdaq calls itself the "home of the innovation economy" and said it is proud to stand alongside Anthropic in facing the biggest questions this generation of technology raises.</li>
+</ul>
+<h2>3. Speech by Daniela Amodei (03:27–08:32)</h2>
+<ul>
+<li>Opening framing: Anthropic is an "unusual, even a bit weird" company, and deliberately "built backwards" — it had an AI safety team before launching its first product; after Claude was released, it refused the advertising model that sustains most of the internet; when a new model was found to be particularly good at finding security vulnerabilities, they held it back first and gave priority access to defenders of critical systems.</li>
+<li>Public benefit corporation status means: legally, public benefit must be weighed alongside shareholder returns; they care equally about people who do not use Claude.</li>
+<li>Customers: More than half of the Fortune 500 use Claude (drug discovery, underwriting, preventing financial fraud, etc.).</li>
+<li>Three short stories:</li>
+<li>An elementary school principal in São Paulo used to manually register student grades in a 40-page booklet, and analysing what each child needed took 30 days; this month she photographed the pages and gave them to Claude, which finished in a few minutes — for a child who is falling behind, that is one month less of waiting to be noticed.</li>
+<li>Blackington in Massachusetts (founded in 1852, hand-making police and fire badges) used to take 6–10 weeks to deliver orders; production planning manager Edgar used Claude to build new tools for the company's 40-year-old legacy system, cutting the delivery cycle in half.</li>
+<li>Open Evidence (a medical research tool powered by Claude): US clinicians alone used it 42 million times in August this year; it is working with Anthropic to expand free access to clinicians in about 100 countries, including Haiti and Mongolia.</li>
+<li>Other customers named: Walmart, Bristol Myers Squibb (researchers found in 5 minutes answers that used to take nearly two months to find), and a community restaurant.</li>
+<li>One reason for listing: to let more people "buy in" and take part in building AI.</li>
+<li>To people uneasy about AI: she said what this technology needs is your voices — not trust, not use, but speaking up; the ending of the story is not yet written, intelligence is now something humans can build, and what to build with it is decided by everyone together.</li>
+</ul>
+<h2>4. Speech by Dario Amodei (08:41–13:38)</h2>
+<ul>
+<li>Personal motivation: His and Daniela's father died of a disease that "became curable a few years later"; his career began in biology, wanting future therapies to arrive faster. In the lab he saw that tools able to cut through the complexity of disease — gene editing, gene synthesis, optogenetic control of brain cells — all began as pure ideas, from thought, from intelligence.</li>
+<li>Judgement: Sufficiently powerful AI working with humans could compress a century of scientific and medical progress into a decade; but he stressed that so far there are only early results, and experiments and clinical trials still take time.</li>
+<li>Where Claude is applied: protein folding, drug design, cancer, genetics, clinical trial management; as well as economic growth, poverty alleviation, protecting democracy and free societies, and even making everyday services such as the DMV work better.</li>
+<li>He was blunt about risks: misuse by individuals or nation-state actors, economic shocks, humans losing control of AI systems. He said he talks about these risks not because they are inevitable, but because they are avoidable — depending on the choices of the builders; "negligence on safety" and "obsession with safety" will lead to very different AI futures.</li>
+<li>Safety practices: safeguards against biological and cyber risks, alignment training and testing, "looking inside the model" like an X-ray (interpretability) — methods largely pioneered by Anthropic.</li>
+<li>Commitment (the hardest statement of the event): The company will advance the training and deployment of AI systems at its own pace, taking however long it takes, as long as it can be confident the systems are safe and remain under human control; it will not bow to commercial pressure or political pressure. Listing makes the company financially stronger, which will only reinforce that resolve.</li>
+<li>"Race to the top": If Anthropic can prove that "making the right choices on safety" and "building an extremely successful company" can coexist, others in the industry will follow; once the race to the top is working, it will not matter whose model is best, because everyone will be building safely. The goal is to make the whole industry better, regardless of whether Anthropic wins or loses at any given moment.</li>
+<li>Closing: The advent of machine intelligence is one of the defining moments in human history, and humanity has a rare opportunity to shape it into something better.</li>
+</ul>
+<h2>5. Bell ringing and close (13:38–15:11)</h2>
+<p>With the speeches over, the opening bell ceremony was completed amid music and applause, and the livestream ended. There was no trading quotation segment in the video audio.</p>
+<h2>Notes</h2>
+<ul>
+<li>Ticker ANT (announced in Friedman's speech, 02:14–02:23; the video's automatic captions mis-wrote it as NT, and the ticker should be taken from the prospectus and news reports), corresponding to what Qie Ge said in the WalletV Space on the evening of 2026-11-19 about "NT USDC / USDT contracts"; the AP headline called this the "largest IPO on record".</li>
+<li>This video contains no data such as the issue price, opening price or first-day gain; if you need those figures, you will need to look up trading data separately.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=cpIlQK6p9cY">https://www.youtube.com/watch?v=cpIlQK6p9cY</a>（Associated Press）· 嘉宾：Dario Amodei、Daniela Amodei · 发布日期：2026-11-19 · 时长：15 分钟<br>本页为机器转写后人工整理的纪要；致辞内容为现场发言口径。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=cpIlQK6p9cY">https://www.youtube.com/watch?v=cpIlQK6p9cY</a>（Associated Press）· 嘉賓：Dario Amodei、Daniela Amodei · 發布日期：2026-11-19 · 時長：15 分鐘<br>本頁為機器轉寫後人工整理的紀要；致辭內容為現場發言口徑。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=cpIlQK6p9cY">https://www.youtube.com/watch?v=cpIlQK6p9cY</a> (Associated Press) · Guests: Dario Amodei, Daniela Amodei · Published: 2026-11-19 · Duration: 15 minutes<br>This page is notes manually edited from a machine transcript; the remarks are as delivered on site. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=cpIlQK6p9cY">https://www.youtube.com/watch?v=cpIlQK6p9cY</a>（Associated Press）· 嘉宾：Dario Amodei、Daniela Amodei · 发布日期：2026-11-19 · 时长：15 分钟<br>本页为机器转写后人工整理的纪要；致辞内容为现场发言口径。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"AP 直播《Anthropic 在纳斯达克开始交易》摘要 · Yat's Talks",tw:"AP 直播《Anthropic 在納斯達克開始交易》摘要 · Yat's Talks",en:"Summary of AP Livestream \"Anthropic Begins Trading on Nasdaq\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

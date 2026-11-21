@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Coffeezilla：《SBF 的终局》——庭审全程复盘</h1>
 <blockquote>
 <p>片源：Coffeezilla《The END of Sam Bankman Fried》· 时长：约 50 分钟 · 2023-11-10 发布（判决后一周）
@@ -51,9 +58,85 @@
 <p>SBF 还是上了证人席。他的版本：Signal 自动删除消息只是防患于未然的「纽约时报测试」；他不知道 fiat@ 账户的存在，直到 2022 年 10 月才听说那 80 亿美元的窟窿；一切违法行为都是 Ellison、Singh、Wang 在他不知情下做的。交叉询问中检察官 Sassoon 的打法是：他每否认一件事，就出示他的短信或原话。问他是否说过自己不参与 Alameda 的交易，他说「不记得」，检方随即放出他给 Ellison 发的买卖 OXY、MAPS 的具体指令。问到监管，他承认希望公众认为 FTX 重视消费者保护；检方让他当庭朗读自己写下的话——大意是：监管那一套，「就是公关」。Coffeezilla 说，这是全场最有力的一幕：从头到尾，SBF 相信自己能靠一张嘴脱身，最后处决他的正是他自己的话。</p>
 <p>判决：陪审团商议约三小时，七项罪名全部成立。量刑定于 2024 年 3 月。（后注：SBF 最终被判 25 年监禁。）</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Coffeezilla：《SBF 的終局》——庭審全程複盤</h1>
+<blockquote>
+<p>片源：Coffeezilla《The END of Sam Bankman Fried》· 時長：約 50 分鐘 · 2023-11-10 發布（判決後一週）
+說明：Coffeezilla 飛到紐約旁聽了大部分庭審，本片按控辯雙方敘事與證人出場順序複盤，庭審引文為片中轉引的法庭紀錄；他的立場明確站在控方，本紀要轉述時保留其歸屬。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>七項罪名全部成立，陪審團只商議了約三小時。Coffeezilla 的複盤顯示這場審判的勝負手有三：Gary Wang 的程式碼（allow_negative＝無限提款）、那個用「日交易量×隨機數」算出來的假保險基金數字、以及檢察官讓 SBF 當庭朗讀自己寫下的「監管就是公關」。</p>
+<h2>兩套敘事</h2>
+<p>控方：SBF 用兩家公司搭建了精密騙局——FTX 收客戶的錢，Alameda 把錢偷走，兩家表面上獨立、實際上都由他控制，Alameda 享有特權；等真相浮現，錢已經沒了。辯方：FTX 是「邊飛邊造的飛機」，SBF 相信給 Alameda 的貸款是被允許且有合理擔保的；真要怪，就怪當時的 Alameda CEO、他的前女友 Caroline Ellison，以及那些簽了合作協議、有動機把一切說得最難聽的證人。Coffeezilla 提醒：控方證人名單有好幾頁，辯方幾乎沒有——除了 SBF 本人。</p>
+<h2>證人鏈：控方如何釘死每一環</h2>
+<p><strong>客戶 Marc Julliard</strong>：帳戶裡有 10 萬美元，看了 SBF「FTX 沒問題、資產沒問題」的推文後沒有提款，隨後錢被困住。辯方交叉詢問他「讀過服務條款嗎、不知道加密有風險嗎」，Coffeezilla 評價這完全跑題。</p>
+<p><strong>Adam Yedidia</strong>（SBF 的老朋友、前 FTX 員工）：客戶法幣入金進的是 Alameda 控制的 North Dimension 銀行帳戶；內部 fiat@ 帳戶追蹤 Alameda 對 FTX 的欠款，他 2022 年發現這個數字是 80 億美元，質問 SBF 後辭職。SBF 當時的回應是：「去年我們刀槍不入，今年不是了。」</p>
+<p><strong>Paradigm 的 Matt Huang</strong>：Paradigm 投了近 3 億美元，投前專門問過 Alameda 會不會有特殊待遇，得到的答覆是「沒有」。</p>
+<p><strong>Gary Wang</strong>：緊接著上場的聯合創辦人當庭打臉——「我們給了 Alameda 特殊權限，讓它能從平台無限提款，我們還就此向公眾撒了謊。」被問提款提的是誰的比特幣，答：「客戶的。」程式碼裡的 allow_negative 開關只為 Alameda 打開。更荒誕的是保險基金：FTX 曾發推宣稱保險基金超 1 億美元，Wang 承認那個數字是假的——資料庫裡的數字是拿每日交易量乘以一個隨機數、再除以十億算出來的，與真實基金餘額毫無關係。Coffeezilla 說，這是他決定立刻飛去紐約旁聽的時刻。</p>
+<p>辯方的反擊點是淨資產（NAV）：Wang 承認按帳面算，Alameda 的淨資產直到 2022 年 11 月都是正的。但 Coffeezilla 用吧台小哥的比喻點破：資產端塞滿了賣不掉的東西——Sam coins、風投股權、關聯方貸款；負債端全是即時到期的真金白銀。帳面正淨值，就這樣破了產。</p>
+<h2>Ellison 作證：七版報表與庭上的眼淚</h2>
+<p>Ellison 承認參與欺詐與洗錢，並稱是與 SBF 一起做的。她證詞的關鍵事實：FTT、Serum、MAPS、OXY、Solana 等「Sam coins」最終被放進了 Alameda 資產負債表，紙面價值約 10 億美元；高管們經 FTX 的關聯貸款約 50 億美元，花在早期投資與政治捐款上——SBF 說過政治花錢「回報率極高」。SBF 自稱風險中性，她舉的例子是：他願意拋硬幣，正面世界變得兩倍好、反面世界毀滅，他也下注。Coffeezilla 評論：這不是風險中性，這是賭徒。</p>
+<p>最要命的一段是報表造假：2022 年 5 月 Terra/Luna 崩盤後，Genesis 等貸方抽貸（先召回 4 億美元），Alameda 沒有流動資產，只能繼續從 FTX 客戶資金裡拿。Ellison 把真實報表給 SBF 看——總負債 140 億美元（其中 90 億是從 FTX 客戶借的）、總資產 210 億但大多是 Sam coins 和 45 億美元收不回來的關聯貸款——兩人都覺得「不能發」。SBF 讓她「準備幾種替代的呈現方式」，她做了七版，SBF 挑中的那一版刪掉了關聯貸款、並同步扣減等額借款，效果是讓 Alameda 看起來風險小得多、並隱藏了巨額客戶借款。諷刺的是，這份美化過的報表後來洩露給 CoinDesk，依然難看到嚇退所有人——CZ 的推文只是助燃劑，火藥是 FTX 早就沒錢了。到 2022 年 9 月，Alameda 從 FTX 的借款已升至 137 億美元。</p>
+<p>庭審中最打動陪審團的可能不是數字：檢方放出她與 SBF 的簡訊，她說自己「心情是一年來最好的」，因為「我對這一天有一種日益增長的恐懼，它等了我很久，現在它真的來了，無論如何都能結束了」，隨後她在證人席上哭了起來。辯方交叉詢問主攻她的合作協議動機，檢方隨即在再詢問中放出 2022 年全員會議錄音——早在認罪協議之前，她已親口向員工承認挪用了客戶資金。這一手基本封死了「她為減刑編故事」的說法。</p>
+<h2>資金追蹤與最後的抗辯</h2>
+<p>BlockFi CEO Zac Prince 作證 FTX/Alameda 到處發假報表；兩家公司的資金往來被另一位庭審博主概括成繞口令：FTX US 給 BlockFi 4 億美元授信，BlockFi 借給 Alameda 8 億，抵押品存在 FTX，FTX 把包括這筆抵押在內的客戶存款借給 Alameda，Alameda 再拿這筆錢去還包括 BlockFi 在內的貸方。</p>
+<p>Nishad Singh 講了陽台對峙：他告訴 SBF，Ellison 對淨資產狀況非常恐慌；SBF 答「NAV 按任何標準都好得不得了」，又承認 130 億美元借款「確實還不全」，並說這件事「佔了我今年 5–10% 的生產力」——這直接擊穿了辯方「SBF 直到 2022 年 11 月才知道窟窿」的說法。台帳還顯示名人代言花了 11.3 億美元。但 Singh 在交叉詢問中也被擊穿：他口口聲聲說挪用是「邪惡」的，自己卻從 FTX 借了 370 萬美元買房。</p>
+<p>會計教授 Peter Easton 的資金追蹤是控方收官：Alameda 欠款峰值 113 億美元，各實體帳戶之間資金混同，客戶的錢流向四處——商業投資、政治捐款、慈善、買房；最後的圓餅圖顯示，只剩下 23 億美元是留給客戶的。總法律顧問 Can Sun 作證：崩塌時 Apollo 盡調發現約 70 億美元客戶資金缺口，SBF 讓他「找一個法律上的 justification」，他的結論是沒有；所謂「保證金借貸」抗辯（服務條款允許借出保證金用戶的資產）數字根本對不上——但 SBF 事後在電視採訪裡仍在用這個說法。辯方專家 Pimbley 只查了 FTX 的資料庫、沒做資金追蹤，稱 78% 帳戶開通了現貨保證金，算是替辯方把水攪渾了一點。</p>
+<h2>SBF 本人作證：被自己的話處決</h2>
+<p>SBF 還是上了證人席。他的版本：Signal 自動刪除訊息只是防患於未然的「紐約時報測試」；他不知道 fiat@ 帳戶的存在，直到 2022 年 10 月才聽說那 80 億美元的窟窿；一切違法行為都是 Ellison、Singh、Wang 在他不知情下做的。交叉詢問中檢察官 Sassoon 的打法是：他每否認一件事，就出示他的簡訊或原話。問他是否說過自己不參與 Alameda 的交易，他說「不記得」，檢方隨即放出他給 Ellison 發的買賣 OXY、MAPS 的具體指令。問到監管，他承認希望公眾認為 FTX 重視消費者保護；檢方讓他當庭朗讀自己寫下的話——大意是：監管那一套，「就是公關」。Coffeezilla 說，這是全場最有力的一幕：從頭到尾，SBF 相信自己能靠一張嘴脫身，最後處決他的正是他自己的話。</p>
+<p>判決：陪審團商議約三小時，七項罪名全部成立。量刑定於 2024 年 3 月。（後注：SBF 最終被判 25 年監禁。）</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Coffeezilla: "The END of Sam Bankman-Fried" — A Full Recap of the Trial</h1>
+<blockquote>
+<p>Source video: Coffeezilla, "The END of Sam Bankman Fried" · Runtime: about 50 minutes · Released 2023-11-10 (one week after the verdict)
+Note: Coffeezilla flew to New York and sat through most of the trial. The video recaps the proceedings following the prosecution and defense narratives and the order in which witnesses appeared; trial quotations are court records quoted in the video. His stance is clearly aligned with the prosecution, and this summary preserves that attribution when relaying his account.</p>
+</blockquote>
+<h2>The One-Liner</h2>
+<p>Guilty on all seven counts, after the jury deliberated for only about three hours. Coffeezilla's recap shows the trial turned on three things: Gary Wang's code (allow_negative = unlimited withdrawals), the fake insurance fund figure computed from "daily trading volume × a random number," and the prosecutor making SBF read aloud, in court, his own written words: "regulation is just PR."</p>
+<h2>Two Narratives</h2>
+<p>The prosecution: SBF used two companies to build an elaborate fraud — FTX took in customers' money, Alameda stole it, the two were independent on the surface but both controlled by him, and Alameda enjoyed special privileges; by the time the truth surfaced, the money was gone. The defense: FTX was "a plane built while flying it," and SBF believed the loans to Alameda were permitted and reasonably collateralized; if anyone is to blame, it is the Alameda CEO at the time, his ex-girlfriend Caroline Ellison, and the witnesses who signed cooperation agreements and had every incentive to make everything sound as bad as possible. Coffeezilla points out: the prosecution's witness list ran to several pages; the defense had almost none — other than SBF himself.</p>
+<h2>The Witness Chain: How the Prosecution Nailed Down Every Link</h2>
+<p><strong>Customer Marc Julliard</strong>: He had $100,000 in his account; after seeing SBF's tweets that "FTX is fine, the assets are fine," he did not withdraw, and then his money was trapped. On cross-examination the defense asked him "did you read the terms of service, didn't you know crypto is risky" — Coffeezilla judged this completely beside the point.</p>
+<p><strong>Adam Yedidia</strong> (an old friend of SBF and a former FTX employee): Customers' fiat deposits went into a North Dimension bank account controlled by Alameda; the internal fiat@ account tracked what Alameda owed FTX, and in 2022 he discovered the figure was $8 billion; after confronting SBF, he resigned. SBF's response at the time: "Last year we were bulletproof; this year we aren't."</p>
+<p><strong>Matt Huang of Paradigm</strong>: Paradigm invested nearly $300 million, and before investing specifically asked whether Alameda would receive any special treatment; the answer was "no."</p>
+<p><strong>Gary Wang</strong>: The co-founder who took the stand right after delivered the blow in open court — "We gave Alameda special privileges that allowed it to withdraw unlimited amounts from the platform, and we lied to the public about it." Asked whose bitcoin was being withdrawn, he answered: "The customers'." The allow_negative switch in the code was turned on only for Alameda. Even more absurd was the insurance fund: FTX had tweeted that its insurance fund exceeded $100 million, and Wang admitted the figure was fake — the number in the database was computed by taking daily trading volume, multiplying it by a random number, and dividing by a billion, and had nothing to do with the fund's actual balance. Coffeezilla said this was the moment he decided to fly to New York immediately to attend the trial.</p>
+<p>The defense's counterpoint was net asset value (NAV): Wang conceded that on paper, Alameda's net assets remained positive through November 2022. But Coffeezilla punctured this with the bartender analogy: the asset side was stuffed with things that could not be sold — Sam coins, venture equity, related-party loans — while the liability side was all real money due immediately. A positive book net value, and bankrupt all the same.</p>
+<h2>Ellison Testifies: Seven Versions of the Balance Sheet and Tears in Court</h2>
+<p>Ellison admitted to participating in fraud and money laundering, and said she did it together with SBF. The key facts from her testimony: the "Sam coins" — FTT, Serum, MAPS, OXY, Solana and others — ultimately ended up on Alameda's balance sheet, with a paper value of about $1 billion; executives took roughly $5 billion in related-party loans through FTX, spent on early-stage investments and political donations — SBF had said political spending had "an extremely high return." SBF described himself as risk-neutral; her example was that he was willing to flip a coin where heads made the world twice as good and tails destroyed the world, and he would still take the bet. Coffeezilla's comment: that is not risk-neutrality, that is a gambler.</p>
+<p>The most damning part was the falsified balance sheet: after the Terra/Luna collapse in May 2022, lenders such as Genesis pulled their loans (recalling $400 million first); Alameda had no liquid assets and could only keep taking from FTX customer funds. Ellison showed SBF the real balance sheet — total liabilities of $14 billion (of which $9 billion was borrowed from FTX customers), total assets of $21 billion but mostly Sam coins and $4.5 billion in related-party loans that could not be recovered — and both of them felt it "couldn't be sent." SBF told her to "prepare a few alternative ways of presenting it"; she produced seven versions, and the one SBF picked deleted the related-party loans and simultaneously deducted an equal amount of borrowings, which made Alameda look far less risky and hid the enormous customer borrowings. The irony is that this beautified balance sheet later leaked to CoinDesk and was still ugly enough to scare everyone off — CZ's tweet was only the accelerant; the explosive was that FTX had long been out of money. By September 2022, Alameda's borrowings from FTX had risen to $13.7 billion.</p>
+<p>What may have moved the jury most at trial was not the numbers: the prosecution presented her texts with SBF, in which she said her "mood was the best it had been in a year," because "I had a growing dread of this day; it had waited for me for a long time, and now it has really come, and one way or another it can be over" — and then she cried on the witness stand. The defense's cross-examination attacked her cooperation-agreement motives; the prosecution then, on redirect, played the recording of the 2022 all-hands meeting — well before any plea agreement, she had already admitted to employees in her own words that customer funds had been misappropriated. That move essentially sealed off the "she invented a story to get a lighter sentence" line.</p>
+<h2>Following the Money and the Final Defenses</h2>
+<p>BlockFi CEO Zac Prince testified that FTX/Alameda had been sending out fake balance sheets everywhere; another trial blogger summed up the money flows between the two companies as a tongue-twister: FTX US extended a $400 million credit line to BlockFi, BlockFi lent Alameda $800 million with collateral held at FTX, FTX lent customer deposits — including that collateral — to Alameda, and Alameda used the money to repay lenders including BlockFi.</p>
+<p>Nishad Singh described the balcony confrontation: he told SBF that Ellison was extremely panicked about the net asset situation; SBF replied that "NAV is amazing by any standard," while conceding the $13 billion in borrowings "really couldn't all be repaid," and said the matter "took up 5–10% of my productivity this year" — which directly demolished the defense claim that "SBF did not know about the hole until November 2022." The ledgers also showed $1.13 billion spent on celebrity endorsements. But Singh was also punctured on cross-examination: for all his talk that the misappropriation was "evil," he himself had borrowed $3.7 million from FTX to buy a house.</p>
+<p>Accounting professor Peter Easton's tracing of the funds was the prosecution's closing act: Alameda's debt peaked at $11.3 billion, funds were commingled among the various entities' accounts, and customers' money flowed everywhere — business investments, political donations, charity, real estate; the final pie chart showed only $2.3 billion left for customers. General counsel Can Sun testified: during the collapse, Apollo's due diligence found a shortfall of about $7 billion in customer funds, and SBF asked him to "find a legal justification"; his conclusion was that there was none; the so-called "margin lending" defense (the terms of service allowed lending out margin users' assets) did not add up numerically at all — yet SBF was still using that line in television interviews afterwards. The defense expert Pimbley had only examined FTX's database and done no funds tracing; he said 78% of accounts had spot margin enabled, which muddied the waters somewhat for the defense.</p>
+<h2>SBF Testifies: Executed by His Own Words</h2>
+<p>SBF took the witness stand after all. His version: Signal's auto-deleting messages were just a precautionary "New York Times test"; he did not know the fiat@ account existed and only heard about the $8 billion hole in October 2022; all the illegal acts were done by Ellison, Singh and Wang without his knowledge. On cross-examination, prosecutor Sassoon's method was: every time he denied something, she produced his texts or his own words. Asked whether he had said he was not involved in Alameda's trading, he said "I don't recall," and the prosecution immediately produced the specific instructions he had sent Ellison to buy and sell OXY and MAPS. On regulation, he conceded he wanted the public to believe FTX valued consumer protection; the prosecution had him read aloud, in court, what he himself had written — to the effect that the whole regulation thing "is just PR." Coffeezilla said this was the most powerful moment of the entire trial: from beginning to end, SBF believed he could talk his way out; in the end, what executed him was his own words.</p>
+<p>The verdict: the jury deliberated for about three hours and found him guilty on all seven counts. Sentencing was set for March 2024. (Postscript: SBF was ultimately sentenced to 25 years in prison.)</p>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=Hzko-cjHhTg">https://www.youtube.com/watch?v=Hzko-cjHhTg</a>（Coffeezilla）· 嘉宾：庭审证人证词（转述） · 发布日期：2023-11-10 · 时长：50 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=Hzko-cjHhTg">https://www.youtube.com/watch?v=Hzko-cjHhTg</a>（Coffeezilla）· 嘉賓：庭審證人證詞（轉述） · 發布日期：2023-11-10 · 時長：50 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=Hzko-cjHhTg">https://www.youtube.com/watch?v=Hzko-cjHhTg</a> (Coffeezilla) · Guests: trial witness testimony (as recounted) · Release date: 2023-11-10 · Runtime: 50 minutes<br>This page is the full text of a manually compiled summary; the views and figures in the session are the speakers' own accounts and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=Hzko-cjHhTg">https://www.youtube.com/watch?v=Hzko-cjHhTg</a>（Coffeezilla）· 嘉宾：庭审证人证词（转述） · 发布日期：2023-11-10 · 时长：50 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Coffeezilla：《SBF 的终局》——庭审全程复盘 · Yat's Talks",tw:"Coffeezilla：《SBF 的終局》——庭審全程複盤 · Yat's Talks",en:"Coffeezilla: \"The END of Sam Bankman-Fried\" — A Full Recap of the Trial · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

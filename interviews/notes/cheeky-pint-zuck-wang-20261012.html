@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>「模型即产品」：Cheeky Pint 对话扎克伯格与 Alexandr Wang</h1>
 <blockquote>
 <p>节目：Cheeky Pint（主持 John Collison，Stripe 联合创始人）· 嘉宾：Mark Zuckerberg（Meta CEO）、Alexandr Wang（Meta 超级智能实验室 MSL 负责人）· 发布：2026-10-12（X 原生视频，另有 YouTube 版）· 时长：2 小时 14 分 · 主题：Meta 新一代前沿模型 Muse Wonder 发布
@@ -111,9 +118,203 @@
 </ul>
 <p><em>（字幕为 X 平台自动生成，个别专名有误转，如 OpenRouter 在后半段被转成 OpenRadar；本文已按上下文校正。）</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>「模型即產品」：Cheeky Pint 對話扎克伯格與 Alexandr Wang</h1>
+<blockquote>
+<p>節目：Cheeky Pint（主持 John Collison，Stripe 聯合創始人）· 嘉賓：Mark Zuckerberg（Meta CEO）、Alexandr Wang（Meta 超級智能實驗室 MSL 負責人）· 發布：2026-10-12（X 原生影片，另有 YouTube 版）· 時長：2 小時 14 分 · 主題：Meta 新一代前沿模型 Muse Wonder 發布
+說明：本紀要據 X 影片自帶英文字幕整理。文中觀點、數字均為發言人現場口徑，未經核實；字幕將 OpenRouter 多處誤轉，文中已統一。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Meta 在 Llama 4 翻車後用一年多時間重建團隊（MSL），押上千億美元級算力，在模型還沒影時就簽下支票，新模型 Muse Wonder 主打「個人與專業 Agent」：主動記憶、長程專注、領域專家能力——兩人的核心主張是：產品會越來越薄，模型本身就是產品。</p>
+<h2>Muse 這個產品：兩個當家用例</h2>
+<ul>
+<li>第三方報告稱 Muse 可能是有史以來增長最快的 Agent 應用（扎克伯格語）。Wang 的 Muse 名叫 Oiler，每週從台灣、日本的農場給他搜羅越來越冷門的茶並買回來。</li>
+<li>扎克伯格拿 Muse 當 MMA 教練：健身房裝攝影機，Muse 在回合間 1 分鐘休息內看影片給回饋（重心、髖位、underhook 等）。難點是速度——它自己寫整套影片/影像處理管線，還被不斷要求「你花了 30 秒，我只有 60 秒，自己優化自己」。這個用例後來成了產品內部評測（eval）之一。他最早在 Muse 之前的 OpenClaw 上就這麼用。</li>
+<li>為什麼多模態強：行業共識一度只盯程式設計，但個人超級智能靠感知——大多數人以多模態方式體驗世界。眼鏡最終可能是一個純多模態產品，甚至不需要應用商店，介面直接在視野裡生成。</li>
+</ul>
+<h2>「模型即產品」之爭</h2>
+<ul>
+<li>Collison 的觀察：AI 的制勝產品形態收斂得極快（transformer、聊天 UI、如今是帶專屬電腦的常駐 Agent），簡潔到一張明信片能寫完，不像支付那樣有幾十頁的產品空間。</li>
+<li>Wang 半反對：現在覺得產品簡單，是因為我們看待 AI 產品的維度錯了。Muse 的差異化不在 UI 規格，而在模型在每種情境下的行為、人格、工具使用方式——這些是訓練出來的。就像行動時代早期人人說「不就是個 App」，後來才發現 nuance 全在裡面。</li>
+<li>扎克伯格同意「產品變薄、模型變厚」：Muse 複雜的產品工作主要在隱私與安全模型，其餘能力、人格都訓進模型；產品負責人 Nat 真正操心的是後訓練，不是介面。Muse 刻意不設模型選擇器、也不設 effort 選擇器——普通用戶不該面對一堆編號倒置、名字混亂的模型選單。</li>
+<li>用戶能感知的差異：可靠性、主動性在什麼情境觸發、以什麼語氣找你說話——這些「產品決策」最終都落到訓練方法、資料與評測上。</li>
+</ul>
+<h2>Muse Wonder：新一檔模型</h2>
+<ul>
+<li>預訓練的階梯打法：每一檔訓得比上一檔大 4–5 倍，逐級往上爬。Muse Spark 一系基於去年底的首次預訓練（內部代號 Avocado 酪梨），團隊自己都驚訝於「其實沒那麼大」的模型能榨出多少能力。Wonder（代號 Watermelon 西瓜，水果名已用完，下一個只能是榴槤——玩笑）預訓練已完成、後訓練收尾，體量顯著更大，「思考的 nuance 會不一樣」。</li>
+<li>兩個版本：Muse Wonder 與 Muse Wonder Full（高配版，現場拿 "wonderful" 開了個爸爸玩笑）。</li>
+<li>主攻方向是「最強的個人與專業 Agent 模型」：①<strong>主動記憶（active memory）</strong>——記住你幾天、幾週、幾個月前提過的事並在後續任務裡調用；記憶是模型自身的能力（含何時、如何做上下文壓縮），不是外掛 harness；OpenClaw 用久了記憶「buggy AF」正是他們要解決的；內部有 Memory Bench 評測。②<strong>主動專注（active focus）</strong>——長程複雜任務的持續執行力，遇挫折能換解法。③<strong>領域專家能力</strong>——購物、個人建議、法律/健康/稅務問題；Wang 稱其在多項金融與法律評測上是 SOTA，這些能力從預訓練就要餵領域語料。④程式設計大幅躍升：稱在 DeepSWE、SWE-Marathon 上 SOTA，Terminal-Bench 4 等表現也很好。</li>
+<li>定位：Collison 問是否與 Astra、Fable 並列前沿，扎克伯格答「按基準看，結論就是這樣」；且為 Muse 這個產品形態專門優化，自稱是個人專業 Agent 場景的世界最佳。</li>
+<li>上線方式：Wonder 體量大、服務貴，Muse 裡先走付費訂閱（Spark 繼續免費、大額度）；API 經 Meta Model API 與 OpenRouter 提供；Muse Code 訂閱者可用，Wonder Full 面向 Muse Code 訂閱。</li>
+</ul>
+<h2>基準、Goodhart 與「大模型味」</h2>
+<ul>
+<li>基準飽和得太快，越往後 Meta 越靠內部評測定向。外部基準的供應鏈盡頭往往是某個博士生隨手做的網紅基準——「把產品思考外包給那個博士生顯然是錯的」。</li>
+<li>他們量化「大模型味（big model smell）」的方法：看模型在分布內任務（RL/後訓練覆蓋的）與分布外任務上的表現差距。Spark→Wonder 這一跳很大，源於底座模型本身變強。刷榜（benchmaxing）與「大模型味」互為反面。</li>
+<li>個人 Agent 特有的維度：<strong>分寸感（discretion）</strong>——Agent 知道你過敏、懷孕，才能幫你訂對餐廳，但不該把你的醫療狀況告訴餐廳。程式設計 Agent 的環境裡人人共享上下文，分寸感不重要；個人場景裡它至關重要。</li>
+</ul>
+<h2>前沿模型是怎麼做出的</h2>
+<ul>
+<li><strong>預訓練</strong>：海量多模態與領域資料；模型變大就必須同步擴資料，否則過擬合；某些資料有正遷移、某些有負遷移，全是科學問題。網際網路增速有限，「資料從哪來」是擴大模型的核心難題。</li>
+<li><strong>SFT</strong>：給問題與理想回答，初始化行為與人格——SFT 結束時模型可能只有 10% 的時候表現出目標行為。</li>
+<li><strong>RL</strong>：把行為的觸發率大幅拉高。RL 與預訓練的「手感」相反：資料常常少即是多，品質壓倒數量；版本迭代（Spark 1→1.3）的本質就是同一預訓練上繼續加 RL，配方改進帶來的體感差異「如晝夜之別」，用戶會以為換了預訓練。</li>
+<li><strong>對齊觀</strong>：高算力 RL 裡必須精心設計環境——不能讓「只有做不對齊的事才能成功」的場景存在；對齊是整個 RL 過程的屬性，不是外加的一步。Meta 的理論：Agent 是為某個人服務的，對齊首先是對使用者的指令與價值對齊，可靠執行、不說教式拒絕；只有災難性請求才優雅地拒絕。</li>
+<li><strong>週期</strong>：Wonder 從去年 8 月就開始規劃，Spark 從一開始就是通往 Wonder 的墊腳石。模型立項到見分曉超過一年，創業者要在資訊極度貧乏的環境裡下注——「精益創業的反面，類固醇版」。</li>
+</ul>
+<h2>一千億的支票：在發牌之前全押</h2>
+<ul>
+<li>開場原話（扎克伯格）：去年底「我們還沒見過模型，就要簽一張 1000 億、2000 億美元的支票。我問 Alex：你確定這能成嗎？」</li>
+<li>CFO Susan Li 多次把 Wang 拉到一邊強調：如果不成，財務上會非常、非常糟；成了就一切都好。</li>
+<li>帳算給你聽：一座 1GW 集群營運一年約 150 億美元，建造成本約 500–600 億美元；俄亥俄 Prometheus 集群超過 1GW，路易斯安那 Hyperion 規劃 5GW（規劃早於 MSL，2023–24 年就已啟動）。訓一個前沿模型全口徑是「數百億美元」級，且任一時刻帳面是多代模型的研發開支疊在一起。</li>
+<li>扎克伯格的對沖邏輯：風險沒聽上去那麼大——只要 AI 整體成立，算力不愁買家；要讓這筆投資歸零，得 Meta 失敗且 AI 整體失敗同時發生；退一步算力還能餵自家其他業務。Wang 總結他的思維：不看失敗率，看贏的時候能贏多大——冪律內化。</li>
+<li>產品側同樣要提前下注：為還不存在的產品（Muse）的推理需求提前幾年建資料中心。中途有人想保守一點，結論是「燒掉船隻，把它做成」。</li>
+</ul>
+<h2>MSL 的組織：人才密度與完全重啟</h2>
+<ul>
+<li>Alex 方案的第一條：不需要很多人，要人才密度。研究團隊不到 200 人、更接近 100 人；每個環節是「幾十人」而非其他實驗室的幾百人。算力不撒胡椒麵，按研究員人均高配。</li>
+<li>扁平到極端：Wang 名義上有近 200 個直接下屬（實操有 team lead 分層），要點不是匯報關係，而是<strong>消滅非技術管理者</strong>——人一旦脫離細節，在這個領域很快就不再懂技術。他的 Muse 幫他管這些匯報。</li>
+<li>時間線：Llama 4 發布後約兩週，扎克伯格開始四處打電話求教；核心圈是扎克伯格 + Nat Friedman + Wang + Daniel Gross。組建期「像超新星一樣把一堆人砸在一起」，扎克伯格清空了約兩個月行程只做招聘；公司明確告知「沒有截止日期，按對的節奏來」。</li>
+<li>團隊畫像：「一群沒有安全感的過度 achiever」——每次問「三個月後我們會在哪」，人人回答「糟透了、完蛋了」；Wang 把預測錄下來，三個月後放給他們看。這個動態至今沒變：對 MSL 整體樂觀、對自己的專案極度自 critical，他認為這很健康。</li>
+<li>為什麼必須全重啟：Wang 入職初期的一次會議上，原團隊一位負責人說「我們不需要推理模型，消費者需要推理模型嗎？」——他當場心沉到底，給 Nat 打電話。結論是領導層必須大幅「AI-pilled」；且出去招頂尖研究員時發現，只有「從零重建」的敘事才足夠有吸引力（同時大量吸納 Llama/FAIR 的優秀成員）。</li>
+<li>Collison 總結扎克伯格四個非常規動作：①公開判定前任努力失敗並重啟；②為人才付天價（包括 Wang 與 Scale 的交易安排）；③押注一個從沒訓過前沿模型的人；④CEO 本人清空兩個月行程只幹這一件事。Wang 補充：扎克伯格的特點是<strong>一旦內化了某個信念，就以極快的速度、極大的幅度讓全部行動與之保持一致</strong>——「非常貝葉斯」；而整間公司（基建、資料中心、各業務線）都要跟著轉向，只有創始人 CEO 能推動這種全局最優壓過局部最優。</li>
+<li>何時知道 Wonder 成了：預訓練結束後爭論「RL 要多久才能超過 Spark」，結果是立刻超過——那一刻就知道路走對了；興奮已經持續幾個月。</li>
+<li>外部新鮮血液：WhatsApp 新負責人 Kunal Shah（印度 CRED 創始人）是同類下注；但全公司級轉向同時只能有一個最高優先級。</li>
+</ul>
+<h2>平台與智能體經濟</h2>
+<ul>
+<li>扎克伯格：未來技術體驗裡模型是最重要的一層；能造前沿超級智能的公司只有一小撮，它們將定義議程。Meta 不是非有平台不可，關鍵是「不掌握端到端的超級智能，就做不出未來真正重要的東西」。</li>
+<li>為什麼個人/消費這條 lane 是空的：別人痴迷於自動化知識工作，但超級智能的最高用途是發明與創造，不是自動化。</li>
+<li>商家接入的階梯：Muse 先天有很強的瀏覽器操作能力，商家零整合就能被 Agent 使用（這是兜底與向後相容層）；重要夥伴給直連 API，效率更高；長遠看每家企業都會有自己的 Agent，Muse 與自家 Agent 之間會配合得最好。主動要求深度整合的商家遠多於試圖屏蔽的；屏蔽者大概率戰略錯誤，護城河薄、靠消費者耗時或 overcharging 賺錢的生意會被顛覆。</li>
+<li>購買行為已在發生質變：用戶開始把採購完全委託給 Agent。扎克伯格的 Instacart 帳號「其實是給 Muse 開的」：他和三歲女兒 Aurelia 用語音模式聊週末烘焙（Muse 能分辨父女的聲音），週六食材自動備齊；這次它知道 Watermelon 要上線，還往袋子裡塞了個西瓜湊配送門檻——直播裡吃的那個西瓜就是這麼來的。他以前一年用 Instacart 不到兩次，現在一週一兩次。推論：商務的總可尋址市場會變大，因為 Agent 本身成了帳戶持有者。</li>
+<li>Stripe 側資料（Collison）：2023 年扎克伯格就警告 Patrick Collison「你們在 agentic commerce 上已經落後了」——方向對了，早了三年。Stripe 5 月 Sessions 發布了一系列相關產品，資料到 9 月才開始垂直拉升；computer use 是最後缺的解鎖。（節目中段插播了 Stripe 收購 OpenRouter 的廣告：其日路由量超過 10 萬億 token。）</li>
+<li>語音：輸入端已經爆發——研究員對著鍵盤小聲說話、大學生 10–15 分鐘意識流「嘔吐式」口述再讓 AI 整理；輸出端朗讀效率低；難點在對話動態（打斷、停頓的判斷）。能採取行動的 Agent 讓語音第一次像「在跟人說話」。Muse 的「小人兒」具身形象成立，是因為記憶、行動力與人格同時到位。硬體：無顯示/小顯示眼鏡已被驗證有用，Muse Gadgets 生態開放給手機廠商與第三方形態，HomeLink 小配件可把 Muse 接進全屋設備（Sonos、燈光），扎克伯格用它每晚自動調暗全屋燈光。</li>
+</ul>
+<h2>錢從哪來：為 AI 基建買單</h2>
+<ul>
+<li>收入組合：訂閱（Wonder 走付費層）、商務抽成（Muse 幫人賺錢省錢，抽一小部分）、API，以及新設的 Meta 企業平台（CJ Desai 加入負責，把模型按企業需要的方式交付）。</li>
+<li>底盤：核心廣告業務是數千億美元級且仍在高速增長的「世界第八大奇蹟」，模型還能讓它再快幾個百分點——這本身就能供養很大一部分基建。</li>
+<li>會計錯覺：資料中心是資本開支、可多年折舊；研究員薪水同樣在造多年期資產卻不能資本化。算力緊缺時連 H100 的價值都比去年更高。自建資料中心相對買雲的廠商有財務優勢。</li>
+<li>對 OpenRouter 的建議（Wang）：前沿模型之間的差異正在分化（各家有意為之），基準把這些「質地」抹平了；機會在於做模型界的侍酒師——幫開發者理解細微差異，並把開發者的真實體驗回饋成信號。</li>
+</ul>
+<h2>為什麼沒有贏家通吃</h2>
+<ul>
+<li>2023 年的流行敘事是某一家靠遞迴自我改進一騎絕塵，實際至今多家並立前沿。Wang 給三條原因：①執行有週期，領先者總會在領先時犯錯，長期互相平均；②<strong>蒸餾是反霸權的力量</strong>——沒人計畫讓蒸餾這麼好用，但它把強能力壓進越來越小的模型，利好開源與整個生態；③行業裡很多人與公司主觀上就想要多元格局，並用入職與交易決策投票。扎克伯格：多元加制衡的配置比少數公司壟斷少數模型更安全。</li>
+</ul>
+<h2>收尾</h2>
+<ul>
+<li>Collison 問怎麼看 Wang 在 X 上「deranged posting」：扎克伯格說溝通最重要的是真實，真實的東西有時不完美，好過過度腳本化；而且大部分內容他看得直樂。Wang 的梗圖心法是「Jolly（其伴侶）會怎麼想」，但網際網路代謝梗的速度極快——保持在前沿、保持技術、別掉隊。散場喝的是 Wang 從都柏林帶來的 Guinness。</li>
+</ul>
+<p><em>（字幕為 X 平台自動生成，個別專名有誤轉，如 OpenRouter 在後半段被轉成 OpenRadar；本文已按上下文校正。）</em></p>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>"The Model Is the Product": Cheeky Pint with Zuckerberg and Alexandr Wang</h1>
+<blockquote>
+<p>Program: Cheeky Pint (host John Collison, co-founder of Stripe) · Guests: Mark Zuckerberg (CEO of Meta), Alexandr Wang (head of Meta Superintelligence Labs, MSL) · Published: 2026-10-12 (native video on X, also a YouTube version) · Duration: 2 hours 14 minutes · Topic: The launch of Muse Wonder, Meta's new-generation frontier model
+Note: This summary is compiled from the English subtitles provided with the X video. All views and figures are as stated by the speakers live and have not been verified; the subtitles mistranscribed OpenRouter in several places, which has been standardized in the text.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>After the Llama 4 flop, Meta spent more than a year rebuilding its team (MSL), bet compute on the order of hundreds of billions of dollars, and signed the checks before the model even existed. The new model, Muse Wonder, is built around "personal and professional agents": active memory, long-horizon focus, and domain-expert capabilities — and the two men's core claim is that products will get thinner and thinner, and the model itself is the product.</p>
+<h2>The Muse product: two flagship use cases</h2>
+<ul>
+<li>Third-party reports say Muse may be the fastest-growing agent application ever (per Zuckerberg). Wang's Muse is named Oiler; every week it scours farms in Taiwan and Japan for increasingly obscure teas for him and buys them.</li>
+<li>Zuckerberg uses Muse as an MMA coach: cameras are installed in the gym, and during the 1-minute breaks between rounds Muse watches the video and gives feedback (center of gravity, hip position, underhooks, etc.). The hard part is speed — it wrote the entire video/image processing pipeline itself, and was repeatedly told, "You took 30 seconds; I only have 60 seconds; optimize yourself." This use case later became one of the product's internal evaluations (evals). He first used it this way on OpenClaw, before Muse.</li>
+<li>Why multimodality is strong: the industry consensus once focused only on coding, but personal superintelligence depends on perception — most people experience the world multimodally. Glasses may ultimately be a purely multimodal product, perhaps not even needing an app store, with the interface generated directly in your field of view.</li>
+</ul>
+<h2>The "model is the product" debate</h2>
+<ul>
+<li>Collison's observation: the winning product forms in AI converge extremely fast (the transformer, the chat UI, and now the resident agent with its own dedicated computer) — simple enough to fit on a postcard, unlike payments, which has dozens of pages of product space.</li>
+<li>Wang half-disagrees: products seem simple now because we are looking at AI products along the wrong dimensions. Muse's differentiation is not in its UI specs, but in the model's behavior, personality, and way of using tools in each situation — these are trained in. It is like the early mobile era, when everyone said "it's just an app," and only later discovered that all the nuance was inside.</li>
+<li>Zuckerberg agrees that "products get thinner, models get thicker": Muse's complex product work is mainly in the privacy and safety model; everything else — capabilities and personality — is trained into the model; product lead Nat's real concern is post-training, not the interface. Muse deliberately has no model picker and no effort picker — ordinary users should not face a pile of model menus with inverted numbering and confusing names.</li>
+<li>The differences users can perceive — reliability, in what situations proactivity is triggered, in what tone it speaks to you — these "product decisions" ultimately all come down to training methods, data, and evaluations.</li>
+</ul>
+<h2>Muse Wonder: a new tier of model</h2>
+<ul>
+<li>The pretraining ladder approach: each tier is trained 4–5 times larger than the previous one, climbing step by step. The Muse Spark line is based on the first pretraining run at the end of last year (internal codename Avocado); even the team was surprised at how much capability could be squeezed out of a model that "actually wasn't that big." Wonder (codename Watermelon — the fruit names have run out, so the next one can only be Durian, as a joke) has finished pretraining and is wrapping up post-training; it is significantly larger, and "the nuance of its thinking will be different."</li>
+<li>Two versions: Muse Wonder and Muse Wonder Full (the high-spec version; on the spot they made a dad joke with "wonderful").</li>
+<li>The main push is toward "the strongest personal and professional agent model": ① <strong>Active memory</strong> — remembering things you mentioned days, weeks, or months ago and calling on them in later tasks; memory is a capability of the model itself (including when and how to do context compression), not an external harness; the fact that OpenClaw's memory gets "buggy AF" with prolonged use is exactly what they want to fix; internally there is a Memory Bench evaluation. ② <strong>Active focus</strong> — sustained execution on long-horizon complex tasks, able to switch approaches when it hits setbacks. ③ <strong>Domain-expert capabilities</strong> — shopping, personal advice, legal/health/tax questions; Wang says it is SOTA on multiple finance and legal evaluations, and these capabilities require feeding domain corpora starting from pretraining. ④ A big leap in coding: said to be SOTA on DeepSWE and SWE-Marathon, with strong performance on Terminal-Bench 4 and others as well.</li>
+<li>Positioning: when Collison asked whether it stands alongside Astra and Fable at the frontier, Zuckerberg replied, "By the benchmarks, that's the conclusion"; and it is specifically optimized for the Muse product form, claiming to be the world's best for personal professional agent scenarios.</li>
+<li>Rollout: Wonder is large and expensive to serve, so in Muse it starts with paid subscriptions (Spark stays free, with generous quotas); the API is offered through the Meta Model API and OpenRouter; Muse Code subscribers can use it, and Wonder Full is aimed at Muse Code subscriptions.</li>
+</ul>
+<h2>Benchmarks, Goodhart, and "big model smell"</h2>
+<ul>
+<li>Benchmarks saturate too quickly; the further along they get, the more Meta relies on internal evaluations for direction. At the end of the supply chain for external benchmarks is often some viral benchmark a PhD student threw together — "outsourcing your product thinking to that PhD student is obviously wrong."</li>
+<li>Their method for quantifying "big model smell": look at the gap between a model's performance on in-distribution tasks (covered by RL/post-training) and out-of-distribution tasks. The Spark→Wonder jump is large, because the base model itself got stronger. Benchmaxing and "big model smell" are opposites of each other.</li>
+<li>A dimension specific to personal agents: <strong>discretion</strong> — an agent that knows your allergies and that you are pregnant can book the right restaurant for you, but it should not tell the restaurant about your medical situation. In coding-agent environments everyone shares context, so discretion does not matter much; in personal scenarios it is crucial.</li>
+</ul>
+<h2>How frontier models are made</h2>
+<ul>
+<li><strong>Pretraining</strong>: massive multimodal and domain data; as models get bigger, data must scale in step, otherwise they overfit; some data has positive transfer, some negative transfer — all scientific questions. The internet grows at a limited rate, so "where does the data come from" is the core problem in scaling models.</li>
+<li><strong>SFT</strong>: given questions and ideal answers, it initializes behavior and personality — at the end of SFT, the model may exhibit the target behavior only 10% of the time.</li>
+<li><strong>RL</strong>: raises the trigger rate of behaviors dramatically. RL has the opposite "feel" from pretraining: with data, less is often more, and quality trumps quantity; version iteration (Spark 1→1.3) is essentially continuing to add RL on top of the same pretraining, and the felt difference from recipe improvements is "like night and day" — users will think the pretraining changed.</li>
+<li><strong>View on alignment</strong>: in high-compute RL, environments must be carefully designed — there must be no scenario where "the only way to succeed is to do something misaligned"; alignment is a property of the entire RL process, not an extra step bolted on. Meta's theory: an agent serves a particular person, so alignment is first of all alignment with the user's instructions and values — executing reliably, without preachy refusals; only catastrophic requests are gracefully refused.</li>
+<li><strong>Cycle</strong>: Wonder has been planned since August of last year, and Spark was a stepping stone toward Wonder from the very beginning. From project launch to verdict takes more than a year, and founders must place bets in an environment of extreme information scarcity — "the opposite of lean startup, on steroids."</li>
+</ul>
+<h2>The hundred-billion-dollar check: all in before the cards are dealt</h2>
+<ul>
+<li>Opening words (Zuckerberg): at the end of last year, "We hadn't even seen the model yet, and we were about to sign a check for 100 billion, 200 billion dollars. I asked Alex: are you sure this will work?"</li>
+<li>CFO Susan Li repeatedly pulled Wang aside to stress: if it doesn't work, financially it will be very, very bad; if it works, everything will be fine.</li>
+<li>Here is the math: a 1GW cluster costs about 15 billion dollars a year to operate and about 50–60 billion dollars to build; the Prometheus cluster in Ohio exceeds 1GW, and Hyperion in Louisiana is planned at 5GW (the planning predates MSL, having started in 2023–24). Training one frontier model, all-in, is on the order of "tens of billions of dollars," and at any given moment the books carry the stacked R&amp;D spending of multiple model generations at once.</li>
+<li>Zuckerberg's hedging logic: the risk is not as big as it sounds — as long as AI works overall, compute will not lack buyers; for this investment to go to zero, Meta would have to fail and AI as a whole would have to fail at the same time; and even in a fallback, the compute can feed Meta's other businesses. Wang summarized his thinking: don't look at the failure rate, look at how much you win when you win — the power law, internalized.</li>
+<li>The product side also requires betting ahead: building data centers years in advance for the inference needs of a product (Muse) that does not yet exist. Midway, some people wanted to be more conservative; the conclusion was "burn the boats and build it."</li>
+</ul>
+<h2>The MSL organization: talent density and a complete restart</h2>
+<ul>
+<li>The first item of Alex's plan: you don't need many people, you need talent density. The research team is under 200 people, closer to 100; each function is "dozens of people" rather than the hundreds at other labs. Compute is not sprinkled like pepper; it is allocated generously per researcher.</li>
+<li>Flat to the extreme: Wang nominally has nearly 200 direct reports (in practice layered with team leads); the point is not the reporting lines but <strong>eliminating non-technical managers</strong> — once a person is detached from the details, in this field they quickly stop understanding the technology. His Muse helps him manage those reports.</li>
+<li>Timeline: about two weeks after the Llama 4 launch, Zuckerberg began calling around for advice; the core circle was Zuckerberg + Nat Friedman + Wang + Daniel Gross. The formation period was "like a supernova smashing a bunch of people together"; Zuckerberg cleared about two months of his schedule just for recruiting; the company explicitly said, "There's no deadline; do it at the right pace."</li>
+<li>Team portrait: "a group of insecure overachievers" — every time they are asked "where will we be in three months," everyone answers "terrible, we're doomed"; Wang records the predictions and plays them back three months later. That dynamic has not changed to this day: optimistic about MSL overall, extremely self-critical about their own projects — which he considers healthy.</li>
+<li>Why a full restart was necessary: at a meeting early in Wang's tenure, a leader of the original team said, "We don't need reasoning models — do consumers need reasoning models?" — his heart sank on the spot, and he called Nat. The conclusion was that leadership had to become much more "AI-pilled"; and when recruiting top researchers, they found that only the narrative of "rebuilding from zero" was attractive enough (while also absorbing many excellent members from Llama/FAIR).</li>
+<li>Collison summarized Zuckerberg's four unconventional moves: ① publicly declaring the predecessor effort a failure and restarting; ② paying sky-high prices for talent (including the deal arrangements for Wang and Scale); ③ betting on someone who had never trained a frontier model; ④ the CEO himself clearing two months of his schedule to do just this one thing. Wang added: Zuckerberg's trait is that <strong>once he has internalized a belief, he aligns all of his actions with it at extremely high speed and extremely large magnitude</strong> — "very Bayesian"; and the whole company (infrastructure, data centers, every business line) has to pivot along, and only a founder-CEO can push that kind of global optimum over local optima.</li>
+<li>When did they know Wonder had worked: after pretraining ended, they debated "how long will RL take to surpass Spark," and the result was that it surpassed it immediately — at that moment they knew the path was right; the excitement has lasted for months.</li>
+<li>Fresh blood from outside: WhatsApp's new head Kunal Shah (founder of India's CRED) is the same kind of bet; but a company-wide pivot can have only one top priority at a time.</li>
+</ul>
+<h2>Platforms and the agent economy</h2>
+<ul>
+<li>Zuckerberg: in the future technology experience, the model is the most important layer; only a small handful of companies can build frontier superintelligence, and they will define the agenda. Meta does not absolutely need a platform; the key is that "without mastering end-to-end superintelligence, you cannot build the things that will truly matter in the future."</li>
+<li>Why the personal/consumer lane is empty: others are obsessed with automating knowledge work, but the highest use of superintelligence is invention and creation, not automation.</li>
+<li>The ladder for merchant access: Muse natively has strong browser-operating capability, so merchants can be used by agents with zero integration (this is the fallback and backward-compatibility layer); important partners get direct APIs, which are more efficient; in the long run every business will have its own agent, and Muse will work best with a business's own agent. Far more merchants proactively request deep integration than try to block it; blockers are most likely making a strategic mistake, and businesses with thin moats that make money from consuming consumers' time or overcharging will be disrupted.</li>
+<li>Purchasing behavior is already changing qualitatively: users are starting to delegate procurement entirely to agents. Zuckerberg's Instacart account "is really opened for Muse": he and his three-year-old daughter Aurelia chat in voice mode about weekend baking (Muse can tell father and daughter's voices apart), and Saturday's ingredients are automatically ready; this time it knew Watermelon was launching and slipped a watermelon into the bag to meet the delivery threshold — the watermelon eaten on the livestream came from exactly that. He used to use Instacart less than twice a year; now it is once or twice a week. The inference: the total addressable market for commerce will grow, because the agent itself has become the account holder.</li>
+<li>Stripe-side data (Collison): as early as 2023 Zuckerberg warned Patrick Collison, "You are already behind on agentic commerce" — the direction was right, three years early. Stripe released a series of related products at Sessions in May, and the data only started rising vertically in September; computer use was the final missing unlock. (Midway through the program there was an ad for Stripe's acquisition of OpenRouter: its daily routing volume exceeds 10 trillion tokens.)</li>
+<li>Voice: the input side has already exploded — researchers speaking quietly at their keyboards, college students dictating 10–15 minutes of stream-of-consciousness "vomit-style" narration and having AI organize it; the output side, reading aloud, is inefficient; the difficulty lies in conversational dynamics (judging interruptions and pauses). Agents that can take action make voice feel, for the first time, like "talking to a person." Muse's embodied "little person" persona works because memory, agency, and personality all arrived at the same time. Hardware: glasses with no display or a small display have been proven useful; the Muse Gadgets ecosystem is open to phone makers and third-party form factors; the small HomeLink accessory can connect Muse to devices throughout the home (Sonos, lights), and Zuckerberg uses it to automatically dim all the lights in his house every night.</li>
+</ul>
+<h2>Where the money comes from: paying for AI infrastructure</h2>
+<ul>
+<li>Revenue mix: subscriptions (Wonder goes to the paid tier), commerce commissions (Muse helps people make and save money, and takes a small cut), APIs, and the newly established Meta enterprise platform (CJ Desai joined to lead it, delivering models in the ways enterprises need).</li>
+<li>The base: the core advertising business is on the order of hundreds of billions of dollars and still growing fast — "the eighth wonder of the world" — and models can make it a few percentage points faster still, which alone can support a large part of the infrastructure.</li>
+<li>An accounting illusion: data centers are capital expenditure and can be depreciated over many years; researcher salaries likewise create multi-year assets but cannot be capitalized. When compute is scarce, even H100s are worth more than last year. Companies that build their own data centers have a financial advantage over those that buy cloud.</li>
+<li>Advice for OpenRouter (Wang): the differences between frontier models are diverging (deliberately, on each company's part), and benchmarks flatten out these "textures"; the opportunity is to be the sommelier of the model world — helping developers understand the subtle differences, and feeding developers' real experience back as signal.</li>
+</ul>
+<h2>Why there is no winner-take-all</h2>
+<ul>
+<li>The popular narrative in 2023 was that one company would pull away through recursive self-improvement; in reality, several companies still stand at the frontier together. Wang gave three reasons: ① execution is cyclical — leaders always make mistakes while they are ahead, and over the long run things average out; ② <strong>distillation is an anti-hegemony force</strong> — nobody planned for distillation to work this well, but it compresses strong capabilities into ever-smaller models, which benefits open source and the whole ecosystem; ③ many people and companies in the industry subjectively want a pluralistic landscape, and vote with their employment and deal decisions. Zuckerberg: a configuration of plurality plus checks and balances is safer than a few companies monopolizing a few models.</li>
+</ul>
+<h2>Closing</h2>
+<ul>
+<li>Collison asked what he makes of Wang's "deranged posting" on X: Zuckerberg said the most important thing in communication is authenticity; authentic things are sometimes imperfect, which beats being over-scripted; and most of the content makes him laugh out loud. Wang's meme philosophy is "what would Jolly (his partner) think," but the internet metabolizes memes extremely fast — stay at the frontier, stay technical, don't fall behind. The closing drink was the Guinness Wang brought from Dublin.</li>
+</ul>
+<p><em>(The subtitles were auto-generated by the X platform, and a few proper names were mistranscribed — for example, OpenRouter was transcribed as OpenRadar in the second half; this text has been corrected based on context.)</em></p>
+</article>
+<footer data-lang="zh">来源：<a href="https://x.com/collision/status/2109714250226905248">https://x.com/collision/status/2109714250226905248</a>（Cheeky Pint）· 嘉宾：Mark Zuckerberg、Alexandr Wang · 发布日期：2026-10-12 · 时长：2 小时 14 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://x.com/collision/status/2109714250226905248">https://x.com/collision/status/2109714250226905248</a>（Cheeky Pint）· 嘉賓：Mark Zuckerberg、Alexandr Wang · 發布日期：2026-10-12 · 時長：2 小時 14 分<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://x.com/collision/status/2109714250226905248">https://x.com/collision/status/2109714250226905248</a> (Cheeky Pint) · Guests: Mark Zuckerberg, Alexandr Wang · Published: 2026-10-12 · Duration: 2 hours 14 minutes<br>This page is a full, manually compiled summary; all views and figures expressed in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://x.com/collision/status/2109714250226905248">https://x.com/collision/status/2109714250226905248</a>（Cheeky Pint）· 嘉宾：Mark Zuckerberg、Alexandr Wang · 发布日期：2026-10-12 · 时长：2 小时 14 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"「模型即产品」：Cheeky Pint 对话扎克伯格与 Alexandr Wang · Yat's Talks",tw:"「模型即產品」：Cheeky Pint 對話扎克伯格與 Alexandr Wang · Yat's Talks",en:"\"The Model Is the Product\": Cheeky Pint with Zuckerberg and Alexandr Wang · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

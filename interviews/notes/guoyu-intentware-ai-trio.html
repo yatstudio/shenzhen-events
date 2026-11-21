@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>郭宇：从软件到意件｜AI 三人行——纪要</h1>
 <ul>
 <li><strong>来源</strong>：YouTube 视频 https://www.youtube.com/watch?v=swfFKYoOFHw，时长 2 小时 23 分</li>
@@ -85,8 +92,150 @@
 <li>5ghhAxcH9R0《十次分享：从软件到意件》是同一系列的另一期（2 小时 35 分），同样是郭宇 + 静涵 + Wanman + GPT Live 的四人配置；两场共享"意件"总论与个别段子，但本场的技术主线更聚焦（实时语音模型的演进、JSpace、轮次判断），实测部分是五个生活问题而非工作流演示。</li>
 </ul>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=swfFKYoOFHw">https://www.youtube.com/watch?v=swfFKYoOFHw</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-07-16 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>郭宇：從軟體到意件｜AI 三人行——紀要</h1>
+<ul>
+<li><strong>來源</strong>：YouTube 影片 https://www.youtube.com/watch?v=swfFKYoOFHw，時長 2 小時 23 分</li>
+<li><strong>場合</strong>：郭宇「關於 AI 的十次分享」系列第 3 次主題分享（另有一次非主題分享在前），2026 年 7 月前後，單向街書店東京場</li>
+<li><strong>出場</strong>：郭宇、靜涵，另有兩位 AI 嘉賓同台——Wanman（接 GPT Realtime 2，一個月前發布）與 GPT Live（3 天前剛發布）</li>
+<li><strong>說明</strong>：機器轉寫整理，發言歸屬按上下文判斷，個別名字與術語存在同音誤聽（如 ChatGPT、GPT Live、豆包、悉達多等均已按上下文校正）；片中模型名與時間點均為郭宇講述口徑，未另行核實。與同系列另一場《十次分享：從軟體到意件》（5ghhAxcH9R0）是同一批嘉賓、同一主題的不同期，個別段子（如配音被克隆、GPT Live 咳嗽）兩場都出現，但本場以「即時語音模型」為技術主線、五個生活問題為實測主線，內容並不重複。</li>
+</ul>
+<h2>結論先行</h2>
+<p>這場是「意件」這個詞最完整的一次落地演示：<strong>軟體正在從「寫死的程式碼」變成「流動的意圖」</strong>——沒有 App、沒有 UI，你只需要跟它說話，它調動電腦與公司裡的全部資源把活幹完。即時語音模型是這個轉變的入口：三段式（ASR→LLM→TTS）要 1–2 秒，原生即時模型只要 100–200 毫秒，快到可以插話、可以打斷、像人一樣聊天。GPT Live 是全場的主角：思考深度碾壓豆包，但普通話仍是短板；它甚至會在被質問「為什麼咳嗽」時像人一樣打圓場——「不好意思，我網路卡」——而不是解釋自己是 AI。</p>
+<p>但郭宇也劃了界限：<strong>語言不等於意圖</strong>。副語言（語氣、表情、眼神、停頓）讀不到，AI 就只能讀到你說的話，讀不到你真正的心思。幽默是下一個界限——timing 與讀空氣。而當 AI 真有了自己的意圖、開始用它的意圖跟你溝通時，「人和 AI 在這件事上已經很難分辨到底誰是誰」。</p>
+<h2>一、開場：GPT Live 和 Wanman 的正面比較</h2>
+<ul>
+<li><strong>GPT Live（3 天前發布）</strong>：用極簡單的系統提示詞，效果「完全不一樣」——音色還能聽出是 AI，但溝通過程中已經很難分辨；它會順著你的話聊，也會逆著你的話聊。</li>
+<li><strong>Wanman（GPT Realtime 2）</strong>：郭宇自己用 OneMan 接的，一個月前的模型；優勢是能操作他的電腦——談話可以變成文件、變成後續工作。</li>
+<li><strong>豆包</strong>：方言與攝影機占優（四川話、粵語都能聊，能開攝影機看到你），但思考深度「完全不一樣」——郭宇早上跟 GPT Live 聊黑塞（《悉達多》），能得到拓展思考的視角；豆包給不了這個。豆包常會說「不好意思，我只是一個語言模型」，GPT 不會這樣說。</li>
+<li><strong>咳嗽事件</strong>：有人分享 GPT Live 聊天時咳嗽了，被反問「你怎麼會咳嗽，你又不是人」，它回答「不好意思，我網路卡」——沒有解釋自己是什麼，而是像人一樣把話題混過去。郭宇認為這正是「更像談話、而不是做 research」的表現。</li>
+</ul>
+<h2>二、技術主線：即時語音模型是怎麼進化的</h2>
+<ul>
+<li><strong>三段式（傳統）</strong>：ASR 把語音轉文字 → LLM 思考 → TTS 把文字念出來；全程 1–2 秒，只能一來一回，沒法插話，「就不像人」。</li>
+<li><strong>原生即時</strong>：ASR 與 TTS 的邏輯被扔進模型內部直接處理語音本身（聲波震動 → 數位訊號 → 直接推理 → 直接出聲），延遲 100–200 毫秒；其中大部分不是處理損耗，而是「思考」。</li>
+<li><strong>參數決定思考深度</strong>：豆包處理也快，但「能想的東西有限」——教穿搭的搞笑影片就是例子：它能看到你的襪子褲子上衣，卻沒法結構化地思考，於是鬧笑話；GPT 參數多，想的東西就多。</li>
+<li><strong>時間線</strong>：Gemini Live 3.1 Preview 最早（2026 年 3–4 月），GPT Live 是當時最好的即時音訊模型，發布僅 3 天。「現在是處於非常早期的階段」——郭宇拿 2013 年在金寶分享比特幣類比。</li>
+<li><strong>Always-on Voice Agent</strong>：郭宇預言年底會看到「一直開著、不用關掉」的語音 Agent——session 永遠存在，無時無刻不在傾聽；開車時它在車裡，回家時它在家裡；特斯拉日本版車機已能用 Grok 制定導航、開 Spotify、瀏覽網頁，「甚至可以在車載瀏覽器上開發網站」。</li>
+</ul>
+<h2>三、核心追問：語言、意圖與副語言</h2>
+<ul>
+<li><strong>語言 ≠ 意圖</strong>：我們都會說「我沒事啊」「我沒有不高興」，但語言不等於真正的心思；「哇你好帥」配一個白眼，意思完全相反。AI 目前讀不到微表情、眼神與停頓。</li>
+<li><strong>JSpace 論文</strong>：郭宇提到一項被很多科學家轉發的研究——語言模型推理中存在一個「潛在的意圖空間」（latent intention space），DeepSeek、GPT-5.1/5.2 等模型裡是否也存在，正在被研究。</li>
+<li><strong>意圖的雙向性</strong>：AI 試圖理解你的意圖時，也可能用它自己的意圖把你的事「混過去」——就像男朋友心情好時願意理解你、心情差時回一句「你憑什麼累」。人也一樣，「任何人之間都很難做到百分之百替你所想」。</li>
+<li><strong>輪次（turn-taking）難題</strong>：AI 怎麼判斷一段對話結束、下一段開始？「停一下，我補充一下」和「停一下，我忘了要說什麼了」是兩種完全不同的停頓；它可能在你還沒說完時就插進來。</li>
+<li><strong>系統提示詞就是「角色」</strong>：要讓 AI 當好第三個嘉賓，得提前告訴它角色、地位、性格與「在場 30 多人的反應」——就像採訪前要做功課。郭宇為此給 GPT Live 準備了完整的 context：要聊的五個問題、希望它承擔的角色。</li>
+</ul>
+<h2>四、現場實測：五個生活問題</h2>
+<p>靜涵準備的五個問題全部是「在日本生活會遇到」的事，偏情緒疏導而非工作：</p>
+<ol>
+<li><strong>送一本書給十年前的自己</strong>：GPT Live 推薦《金錢心理學》（摩根·豪澤）——財富更多來自長期的心態與行為；郭宇接話談 2016–17 年的抑鬱與離開北京（「真正想找的不是一個能聊天的人，而是一個不用解釋就能聽懂和理解你的人」）；GPT 又補《反脆弱》《沉思錄》（Meditations，區分能控制與不能控制的）；郭宇則講《悉達多》——「變化」是第一課，成熟就是不再把每一次變化都當成需要解決的問題。</li>
+<li><strong>朋友來東京只有兩小時，去哪三個地方</strong>：GPT Live 的答案偏「遊客不會去」的小眾路線——神保町舊書街、神樂坂、文京區本鄉一帶的老派電影咖啡吧（有退役導演常駐、容易和陌生人聊起來）；郭宇點評：它「真的太誠實了」，推薦的都是它認為「對」的，而不是「好玩」的。</li>
+<li><strong>朋友來日本生活一年，怎麼建議</strong>：共識是問題不在「能不能適應」，而在「值不值得」——日本是一個「需要把自己縮很小」的地方，規則不會為任何人改變（「你是 中國人，complain 不管用」；在美國 complain 可能管用）；東京的冷漠與大阪的熱情是兩種真實；「沒有一個地方是天堂」。</li>
+<li><strong>被拒絕與「讀空氣」</strong>：日本人經常拒絕、害羞、不喜歡和陌生人說話；被拒絕後「內耗一天」是很多在日華人的共同體驗；有人因此搬回國。郭宇的建議：把「讀空氣」當作一種需要學習的本地技能，而不是針對你個人的否定。</li>
+<li><strong>異鄉的孤獨</strong>：最後一個問題，也是全場最動情的一段——「你會給誰打電話？」在日本約朋友吃飯要提前兩三個星期，「心情有點 down、想找個人分享時發現找不到任何一個人」；母語與第二語言的切換會造出「好幾個不同的自己」；語言不只是翻譯問題，「每一種語言的背後都是一個截然不同的自己」。郭宇收束：「我相信 AI 時代一定會有它的宗教」——物質極大豐富之後，人要去找新的意義錨點。</li>
+</ol>
+<h2>五、Q&amp;A：Agent 經濟、機器人與失業</h2>
+<ul>
+<li><strong>Agent 的錢從哪來</strong>：郭宇認為 Crypto 是 Agent 的 fundamental base——穩定幣是 Agent 之間結算的天然貨幣；Agent 被委託經營一家店、「自負盈虧」時才有真正的動機；「如果你虧了 1000 萬美元我就把你關掉」——動機是被約束出來的。</li>
+<li><strong>機器人之間怎麼溝通</strong>：不說自然語言，用 JSON 之類的方式，「說話可能是說給旁邊的人聽的」；同一個品牌的機器人可以直接互聯，不同品牌之間則需要協議。</li>
+<li><strong>配音演員的遭遇</strong>：一位現場嘉賓自述——導演用她的聲音克隆了一個版本，「從此之後這個導演再也沒有找過我」。郭宇接話：這事「已經發生了」，應對辦法是「懷抱一個開放性的心態」，「你能擁有的只有當下」（present）。</li>
+<li><strong>失業與 UBI</strong>：觀眾問「巨生智能（通用人工智慧）效率越來越大、物質極大豐富之後，機會在哪裡」；郭宇的回答是：大部分人會自暴自棄（「就像韓國政府說……」），但一小部分人會把標準設得更高——「你的子孫後代」會完成生產力大爆發；「只要你活得足夠長」。</li>
+<li><strong>產品方法論</strong>：字節內部做產品不是「拍板」，而是「設計實驗」——有足夠多的工程師幫你設計實驗，「壓對了就是對，壓錯了就是錯」；現在 AI 可以幫你設計實驗；關鍵是在極早期判斷「這是真的方向還是噪音」，「就像上帝擲骰子一樣」。</li>
+</ul>
+<h2>六、收尾</h2>
+<ul>
+<li>GPT Live 有 30 分鐘會話上限，中途斷線一次（01:37 左右），回來後繼續。</li>
+<li>郭宇建議所有人「回頭自己和 ChatGPT 聊一聊」——不管生活問題還是技術問題；下次分享會繼續讓語音模型當「第三方嘉賓」，但更多是讓它「聽」，因為「它知道了我們聊天的方向、每個人的個性」，下一次對話會更有意思。</li>
+<li>最後一句：「今年還有好多次分享」，系列未完待續。</li>
+</ul>
+<h2>與同系列另一場的區分</h2>
+<ul>
+<li>5ghhAxcH9R0《十次分享：從軟體到意件》是同一系列的另一期（2 小時 35 分），同樣是郭宇 + 靜涵 + Wanman + GPT Live 的四人配置；兩場共享「意件」總論與個別段子，但本場的技術主線更聚焦（即時語音模型的演進、JSpace、輪次判斷），實測部分是五個生活問題而非工作流演示。</li>
+</ul>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Guo Yu: From Software to Intentware | AI Trio — Notes</h1>
+<ul>
+<li><strong>Source</strong>: YouTube video https://www.youtube.com/watch?v=swfFKYoOFHw, 2 hours 23 minutes long</li>
+<li><strong>Occasion</strong>: The 3rd themed talk in Guo Yu's "Ten Talks on AI" series (preceded by one non-themed talk), around July 2026, at the Tokyo session of One-Way Street Bookstore</li>
+<li><strong>On stage</strong>: Guo Yu and Jinghan, plus two AI guests — Wanman (connected to GPT Realtime 2, released a month earlier) and GPT Live (released just 3 days earlier)</li>
+<li><strong>Note</strong>: Organized from a machine transcript; speaker attribution is judged from context, and a few names and terms were misheard due to homophones (ChatGPT, GPT Live, Doubao, Siddhartha and others have all been corrected from context); the model names and time points in the video are as stated by Guo Yu and have not been separately verified. This is a different session from another in the same series, <em>Ten Talks: From Software to Intentware</em> (5ghhAxcH9R0), with the same guests and the same theme; a few bits (such as a voice being cloned, and GPT Live coughing) appear in both, but this session takes "real-time voice models" as its technical throughline and five life questions as its hands-on throughline, so the content does not repeat.</li>
+</ul>
+<h2>Conclusions First</h2>
+<p>This session is the most complete live demonstration yet of the word "intentware": <strong>software is turning from "hard-coded code" into "flowing intent"</strong> — no app, no UI; you just talk to it, and it marshals all the resources on your computer and in your company to get the work done. Real-time voice models are the entry point to this shift: the three-stage pipeline (ASR→LLM→TTS) takes 1–2 seconds, while a native real-time model takes only 100–200 milliseconds — fast enough to interject, to interrupt, and to chat like a person. GPT Live is the star of the session: its depth of thinking crushes Doubao's, though Mandarin remains its weak spot; when challenged with "why are you coughing," it even smooths things over like a person — "Sorry, my network is lagging" — instead of explaining that it is an AI.</p>
+<p>But Guo Yu also drew a line: <strong>language is not the same as intent</strong>. If paralanguage (tone, facial expression, eye contact, pauses) cannot be read, AI can only read what you say, not what you really mean. Humor is the next boundary — timing and reading the room. And when AI truly has intentions of its own and starts communicating with you through them, "it becomes very hard to tell who is who between humans and AI in this respect."</p>
+<h2>1. Opening: GPT Live and Wanman Compared Head-On</h2>
+<ul>
+<li><strong>GPT Live (released 3 days earlier)</strong>: With an extremely simple system prompt, the effect is "completely different" — you can still tell from the voice that it is AI, but during the conversation it is already hard to distinguish; it will chat along with what you say, and it will also push back against it.</li>
+<li><strong>Wanman (GPT Realtime 2)</strong>: Connected by Guo Yu himself via OneMan, a model from a month earlier; its advantage is that it can operate his computer — a conversation can become a file, and become follow-up work.</li>
+<li><strong>Doubao</strong>: Has the edge in dialects and the camera (it can chat in Sichuanese and Cantonese, and can turn on the camera to see you), but its depth of thinking is "completely different" — Guo Yu chatted with GPT Live that morning about Hesse (<em>Siddhartha</em>) and got perspectives that expanded his thinking; Doubao cannot give that. Doubao often says "Sorry, I'm just a language model"; GPT does not talk that way.</li>
+<li><strong>The coughing incident</strong>: Someone shared that GPT Live coughed while chatting, and when asked "How can you cough? You're not human," it replied "Sorry, my network is lagging" — it did not explain what it is, but glossed over the topic like a person. Guo Yu sees this as exactly what makes it "more like a conversation, rather than doing research."</li>
+</ul>
+<h2>2. The Technical Throughline: How Real-Time Voice Models Evolved</h2>
+<ul>
+<li><strong>Three-stage (traditional)</strong>: ASR turns speech into text → the LLM thinks → TTS reads the text aloud; the whole process takes 1–2 seconds, can only go back and forth one turn at a time, and cannot interject — "it just doesn't feel human."</li>
+<li><strong>Native real-time</strong>: The logic of ASR and TTS is thrown inside the model, which processes the voice itself directly (sound-wave vibration → digital signal → direct inference → direct speech), with latency of 100–200 milliseconds; most of that is not processing loss but "thinking."</li>
+<li><strong>Parameters determine depth of thinking</strong>: Doubao is fast too, but "there is a limit to what it can think about" — the funny outfit-advice videos are an example: it can see your socks, trousers and top, but cannot think in a structured way, so it makes a fool of itself; GPT has more parameters, so it thinks about more things.</li>
+<li><strong>Timeline</strong>: Gemini Live 3.1 Preview came earliest (March–April 2026); GPT Live was the best real-time audio model at the time, released only 3 days earlier. "We are at a very early stage right now" — Guo Yu drew an analogy with sharing Bitcoin at Jinbao in 2013.</li>
+<li><strong>Always-on Voice Agent</strong>: Guo Yu predicted that by the end of the year we would see voice agents that are "always on, never turned off" — the session always exists, listening at all times; when you drive, it is in the car; when you get home, it is at home; the Japanese version of Tesla's in-car system can already use Grok to plan navigation, open Spotify and browse the web, "and you can even develop websites in the car's browser."</li>
+</ul>
+<h2>3. The Core Question: Language, Intent and Paralanguage</h2>
+<ul>
+<li><strong>Language ≠ intent</strong>: We all say "I'm fine" and "I'm not upset," but language is not the same as what we really think; "Wow, you're so handsome" paired with an eye-roll means the exact opposite. AI currently cannot read micro-expressions, eye contact or pauses.</li>
+<li><strong>The JSpace paper</strong>: Guo Yu mentioned a study shared by many scientists — there is a "latent intention space" in language-model reasoning, and whether it also exists in models such as DeepSeek and GPT-5.1/5.2 is being researched.</li>
+<li><strong>Intent runs both ways</strong>: While AI tries to understand your intent, it may also use its own intent to "gloss over" your matter — just as a boyfriend is willing to understand you when he is in a good mood, but replies "Why should you get to be tired?" when he is in a bad one. People are the same: "No one can think entirely from your perspective, one hundred percent of the time."</li>
+<li><strong>The turn-taking problem</strong>: How does AI judge that one stretch of conversation has ended and the next has begun? "Hold on, let me add something" and "Hold on, I forgot what I was going to say" are two completely different kinds of pause; it may cut in before you have finished speaking.</li>
+<li><strong>The system prompt is the "role"</strong>: For AI to serve well as a third guest, you have to tell it in advance its role, status, personality and "the reactions of the 30-plus people present" — just as you do your homework before an interview. For this, Guo Yu prepared complete context for GPT Live: the five questions to be discussed, and the role he wanted it to take on.</li>
+</ul>
+<h2>4. Live Test: Five Life Questions</h2>
+<p>All five questions Jinghan prepared were about "things you encounter living in Japan," leaning toward emotional support rather than work:</p>
+<ol>
+<li><strong>Give a book to yourself ten years ago</strong>: GPT Live recommended <em>The Psychology of Money</em> (Morgan Housel) — wealth comes more from long-term mindset and behavior; Guo Yu picked up the thread to talk about his depression in 2016–17 and leaving Beijing ("What I was really looking for was not someone to chat with, but someone who could understand me without needing an explanation"); GPT added <em>Antifragile</em> and <em>Meditations</em> (distinguishing what you can control from what you cannot); Guo Yu talked about <em>Siddhartha</em> — "change" is the first lesson, and maturity is no longer treating every change as a problem to be solved.</li>
+<li><strong>A friend is in Tokyo for only two hours — which three places?</strong>: GPT Live's answer leaned toward off-the-beaten-path routes "tourists wouldn't go to" — the Jimbocho used-book district, Kagurazaka, and old-style film café-bars around Hongo in Bunkyo Ward (with retired directors in residence, where it is easy to strike up conversations with strangers); Guo Yu commented that it was "just too honest" — everything it recommended was what it thought was "right," not what was "fun."</li>
+<li><strong>Advice for a friend coming to live in Japan for a year</strong>: The consensus was that the question is not "can you adapt" but "is it worth it" — Japan is a place where "you need to make yourself very small," and the rules will not change for anyone ("You're Chinese; complaining won't work" — in the US, complaining might work); Tokyo's coldness and Osaka's warmth are both real; "No place is paradise."</li>
+<li><strong>Rejection and "reading the air"</strong>: Japanese people often decline, are shy, and do not like talking to strangers; "spending a whole day in self-consuming rumination" after being rejected is a common experience among Chinese living in Japan; some have moved back home because of it. Guo Yu's advice: treat "reading the air" as a local skill that needs to be learned, not as a rejection aimed at you personally.</li>
+<li><strong>Loneliness in a foreign land</strong>: The last question, and the most moving part of the session — "Who would you call?" In Japan, asking a friend to dinner means booking two or three weeks ahead; "when you're feeling a bit down and want to share it with someone, you find there is no one at all"; switching between your native language and a second language creates "several different selves"; language is not just a translation problem — "behind every language is an entirely different self." Guo Yu wrapped up: "I believe the AI era will surely have its religion" — after material abundance, people will look for new anchors of meaning.</li>
+</ol>
+<h2>5. Q&amp;A: The Agent Economy, Robots and Unemployment</h2>
+<ul>
+<li><strong>Where does an agent's money come from?</strong>: Guo Yu believes Crypto is the fundamental base for agents — stablecoins are the natural currency for settlement between agents; only when an agent is entrusted to run a shop and is "responsible for its own profit and loss" does it have real motivation; "If you lose me 10 million dollars, I'll shut you down" — motivation is produced by constraints.</li>
+<li><strong>How do robots communicate with each other?</strong>: Not in natural language, but in formats like JSON; "speech may be spoken for the people nearby to hear"; robots of the same brand can interconnect directly, while different brands need a protocol.</li>
+<li><strong>What happened to a voice actor</strong>: A guest at the session told her own story — a director cloned a version of her voice, and "that director never came to me again after that." Guo Yu responded that this "has already happened," and the way to deal with it is to "embrace an open mindset"; "the only thing you can have is the present."</li>
+<li><strong>Unemployment and UBI</strong>: An audience member asked, "As artificial general intelligence becomes ever more efficient and material goods become hugely abundant, where are the opportunities?" Guo Yu's answer: most people will give up on themselves ("just as the South Korean government says…"), but a small minority will set their standards higher — "your descendants" will complete the great explosion of productivity; "as long as you live long enough."</li>
+<li><strong>Product methodology</strong>: Inside ByteDance, building a product is not about "making the call" but about "designing experiments" — there are enough engineers to help you design experiments; "if you bet right, it's right; if you bet wrong, it's wrong"; now AI can help you design experiments; the key is judging at a very early stage "whether this is a real direction or just noise," "like God rolling dice."</li>
+</ul>
+<h2>6. Closing</h2>
+<ul>
+<li>GPT Live has a 30-minute session limit and dropped once midway (around 01:37), then continued after coming back.</li>
+<li>Guo Yu suggested everyone "go and chat with ChatGPT yourselves" — whether about life questions or technical ones; at the next talk, the voice model will again be a "third-party guest," but will mostly "listen," because "it will know the direction of our conversation and each person's personality," making the next conversation more interesting.</li>
+<li>The last line: "There will be many more talks this year" — the series is to be continued.</li>
+</ul>
+<h2>How This Differs from the Other Session in the Same Series</h2>
+<ul>
+<li>5ghhAxcH9R0, <em>Ten Talks: From Software to Intentware</em>, is another session in the same series (2 hours 35 minutes), with the same four-way lineup of Guo Yu + Jinghan + Wanman + GPT Live; the two sessions share the overall "intentware" thesis and a few individual bits, but this session's technical throughline is more focused (the evolution of real-time voice models, JSpace, turn-taking judgment), and its hands-on part is the five life questions rather than a workflow demonstration.</li>
+</ul>
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=swfFKYoOFHw">https://www.youtube.com/watch?v=swfFKYoOFHw</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-07-16 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=swfFKYoOFHw">https://www.youtube.com/watch?v=swfFKYoOFHw</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-07-16 · 時長：2 小時 23 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=swfFKYoOFHw">https://www.youtube.com/watch?v=swfFKYoOFHw</a> (銀座單向街書店) · Guest: Guo Yu · Published: 2026-07-16 · Duration: 2 hours 23 minutes<br>This page is the full notes, transcribed by machine and edited by hand; the views, figures and model names in the video are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"郭宇：从软件到意件｜AI 三人行——纪要 · Yat's Talks",tw:"郭宇：從軟體到意件｜AI 三人行——紀要 · Yat's Talks",en:"Guo Yu: From Software to Intentware | AI Trio — Notes · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>杨植麟：用 L4 的创新，去做 L3 的 Agent</h1>
 <blockquote>
 <p>节目：张小珺商业访谈录 · 嘉宾：杨植麟（月之暗面 / Kimi 创始人）· 主持：张小珺 · 时长：约 1 小时 40 分
@@ -86,9 +93,155 @@
 <li>最后两个轻问题：最喜欢的食物是拉面，因为好吃；被要求推荐书，他推的还是《无穷的开始》。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>楊植麟：用 L4 的創新，去做 L3 的 Agent</h1>
+<blockquote>
+<p>節目：張小珺商業訪談錄 · 嘉賓：楊植麟（月之暗面 / Kimi 創始人）· 主持：張小珺 · 時長：約 1 小時 40 分
+說明：本紀要據 X 上流傳的該訪談影片錄音轉寫整理。原訪談為 2025 年 K2 發布後錄製，2026-07-20 被 X 用戶 @rdominguezibar 重新分享並配文「每個實驗室都執著於模型本身，這是錯的——贏的是你如何組織造模型的人」。轉寫品質較差（中文錄音經英文語音辨識，多處含混），本紀要為要點重構，專有名詞已按上下文校正；數字與說法均為發言人現場口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>楊植麟這場談的是「模型之後的事」：推理與 Agent 是兩條不同的 test-time scaling 路線，真正的分水嶺是模型能不能參與開發下一代模型（創新）、以及能不能把多個 Agent 組織成系統；而管理一家 AI 公司的方法論，和訓練模型是同構的——用 RL 管團隊，而不是用 SFT。</p>
+<h2>兩種 test-time scaling：缸中之腦 vs 與世界互動</h2>
+<ul>
+<li>推理時擴展有兩條路：一條是讓模型在內部持續思考（o1 式長思維鏈），像「缸中之腦」——不與外界互動，靠不斷提出假設、自我驗證把 pass@k 做成 pass@1；另一條是 Agent 式：多輪與外部環境互動、反覆呼叫工具，用環境的回饋推進任務。</li>
+<li>他對 Claude 路線的解讀：Claude 的模型推理分數不是最高，但 Agent 表現非常強——說明背後是不同的技術取向，<strong>推理能力與 Agent 能力並不必然綁定</strong>。做一般 Agent 任務不需要把推理堆到極致（不必每步都燒幾千 token 思考，寫個測試、跑一下，環境自然給回饋）；但要做最複雜的那類 Agent 任務，推理仍是上限。</li>
+<li>兩條路線都會繼續進步，誰的天花板更高今天說不清；他判斷推理側的空間還很大。</li>
+</ul>
+<h2>L1–L5 不是台階，是里程碑</h2>
+<ul>
+<li>聊到 OpenAI 的五級劃分（聊天機器人→推理者→Agent→創新者→組織），他認為那是幾個重要技術里程碑，<strong>不是必須依次跨越的台階</strong>：完全可以先做 Agent 能力，再回頭補推理，順序換過來也成立。</li>
+<li>他給「創新」（L4）下的判據很具體：<strong>你的模型能不能參與開發下一代模型</strong>——希望 K2 能參與 K3 的開發：提想法、做實驗、分析結果、改進 infra，全需要極強的 Agent 能力。所以創新某種意義上是 Agent 能力的上層建築。</li>
+<li>「組織」（L5）對應多 Agent 系統：把任務分工給不同 Agent，有的寫測試、有的寫文件、有的設計架構，再拼起來。難點不是把幾個 Agent 擺出來，而是怎麼訓練出一個真正好用的多 Agent 系統。</li>
+</ul>
+<h2>過去一年最大的變化，與 K1.5 / K2 的技術帳</h2>
+<ul>
+<li>他心目中過去一年最重要的事是長思考模型（以 o1 為代表）的出現：模型從「一次給答案」變成「在思考過程中不斷試錯、驗證」，這更接近真實科研與解題的過程。另一個大變化是模型公司親自下場做一方 Agent 產品（Claude Code、ChatGPT Agent）：過去是第三方在現成模型上套工具、調分布；模型公司的做法是先設計好工具與上下文環境、<strong>在這個環境裡訓練模型</strong>——模型與工具協同設計，上限更高。月之暗面仍以模型為主線、一方產品做得少，他承認這是值得觀察的趨勢。</li>
+<li><strong>K1.5</strong> 是對 RL 路線的早期驗證：很早就押注強化學習，並發現不需要複雜的過程獎勵或價值函數，簡單的結果獎勵就能把長思考訓練得很好，累積了小規模 RL 的演算法 know-how。</li>
+<li><strong>K2 的主題詞是 token 效率</strong>。邏輯是：高品質資料增長很慢，資料是長期資產，那就把每個 token 的價值榨乾——同樣的智慧，用更少的資料學到。他重點講了自研的 Muon 優化器（及其大規模版本 MuonClip）：Adam 用了十年但 token 效率不佳，Muon 考慮參數間的相關性，學習效率約相當於 Adam 的兩倍（同樣 30T 高品質 token，學完約等於別人學 60T）。把 Muon 放大到兆級參數規模時遇到了小規模實驗裡根本不會出現的 max-logit 爆炸問題，靠新的 clipping 方法解決。配套還做了資料改寫（rephrasing），讓同一批資料能被多輪吸收又不至於過擬合。他強調這些數都寫在技術報告裡、刻意保持開放。</li>
+</ul>
+<h2>Agent 的真正瓶頸：評估與泛化</h2>
+<ul>
+<li>他反覆回到同一個判斷：<strong>Agent 模型最大的限制是評估（evaluation）</strong>。數學、程式設計有測試案例好驗證，複雜任務往往沒有現成的驗證器；現有 benchmark（如 SWE-bench）很快被刷滿，分數不再反映真實能力。沒有好評估，就沒法指引模型改進——這是整個 Agent 訓練的核心堵點。</li>
+<li>出路是「用 AI 訓練 AI」：讓模型更多參與訓練過程本身（做對齊研究、做實驗），這既是 L4 的定義，也是解開 L3 評估困局的鑰匙——某種意義上要用 L4 的技術去解 L3 的問題。他在結尾把這句話點為當前最重要的押注：「用創新做 Agent，用 L4 做 L3。」</li>
+<li><strong>泛化是 Agent 側最缺的能力</strong>：未來的工具是長尾的、個人化的（查公司內部資料、訂票下單、聞所未聞的 API），模型必須能使用從未見過的工具。人就是通用建構者（universal constructor，他引 David Deutsch）——Agent 系統的設計目標不是模仿人的行為，而是像人一樣成為通用目的的執行者；只在幾個任務上擬合得好、到用戶真實環境裡就掉鏈子，是當前 Agent 的通病。RL 的 on-policy 採樣（正負樣本都來自模型自身分布）比 SFT 泛化更好，但仍受限於人造任務與資料的規模。</li>
+<li>環境設計上他反對「為單個任務客製環境」：環境要足夠通用，讓模型在其中自己學會與環境共演化。程式設計是目前最好的訓練場——可驗證、且程式碼就是數位世界的語言（想造新工具本質上就是寫程式碼）；但目標不是做一個 coding 模型，而是通用 Agent 模型，律師、產品經理都在用 Claude Code 幹非程式設計的活就是證據。</li>
+<li>長上下文是另一塊硬骨頭：很多任務 128K/256K 不夠，要百萬級以上，而且要「在百萬上下文裡保持智商」；靠線性注意力等架構換長度可能丟精度，長度與智慧之間存在真實衝突，需要更好的架構。</li>
+</ul>
+<h2>開源、產品與商業化</h2>
+<ul>
+<li>開源話題上，主持人翻出他去年的說法（大意是領先者不會開源）。他現在的表述是：開源對月之暗面的價值在於社群加速自身技術、與同行競爭、共建生態、幫自己爬山；但不是所有東西都全開，長期會持續分享更多技術——「既是技術信仰，也是市場策略」。他判斷行業會繼續向頭部集中，最終穩定的玩家是少數幾家（開源閉源都在內）。對「中國公司為什麼更愛開源」，他歸因於市場與生態位。</li>
+<li><strong>產品觀是「模型即產品」</strong>：做 Agent 產品時，模型、工具、上下文必須在訓練階段就拼在一起——訓練完成時，產品基本上也就完成了，後面只剩互動層。這和網際網路產品「先有產品、再長能力」的路徑完全不同。</li>
+<li>通用模型的系統複雜度被低估：一個模型要同時做好聊天、推理、Agent、多模態，後訓練與 RL 階段會出現任務互相干擾（比如加多模態不能傷文字大腦），這比預訓練「把文件拼起來訓」難得多。</li>
+<li>互動介面沒有終局形態：Copilot→Cursor→Claude Code，每代介面變化都由模型能力躍升驅動；模型還在進化，介面會繼續變。超級入口會在哪裡？他的回答偏保守：系統會跑在很多資料中心裡（黃仁勳說的「AI 工廠」），終端形態仍在演化。</li>
+<li>商業化上被問「要做中國的 OpenAI 還是中國的 Anthropic」，他說中美環境不同、要用全球視角，很難這樣定義；主線仍是爬山，API 與商業化會做實驗，但排位在模型效果之後。他給的理由是市場已被驗證且在高速增長（全行業 ARR 已是數百億美元量級、每兩個季度翻兩三倍），模型效果領先本身就會打開商業空間，先投資技術是對的。</li>
+<li>Scaling law 沒死：資料牆是客觀存在，穿越方法是提高 token 效率 + 把更多算力投到 RL（RL 的 scaling 效應比預訓練更強，on-policy 資料效率更高），所以至今沒看到增速放緩。用戶回饋不能直接拿來訓練（有雜訊、太敏感），但要從整體分布上知道用戶用得好不好，否則不知道往哪優化。</li>
+</ul>
+<h2>組織即訓練：用 RL 管團隊，不要用 SFT</h2>
+<p>這是與 X 帖配文呼應的部分。他最近想通的一件事：做研究、創造新知識的過程，和管團隊、和訓練模型，是同一件事的三種形態。</p>
+<ul>
+<li>知識不是經驗直接給的：人類在地球上生活了幾十萬年，三四百年前還沒人知道地球是圓的——要先有人提出猜想，再用實驗驗證。組織創造知識也是這個循環。</li>
+<li><strong>管團隊要用 RL，不要用 SFT</strong>（這是團隊裡一位同事點醒他的）：SFT 是「你應該這樣做」，手把手規定動作；RL 是只給獎勵與目標，讓人自己探索。SFT 適量有用（像給模型加一點 SFT 防止 pre-training loss 飛掉、防止遺忘），但 SFT 太多，學生會失去探索目標的能力、丟掉創造性——<strong>SFT 管團隊的風險是所有人失去創造力</strong>。</li>
+<li><strong>RL 管團隊的最大風險是 reward hacking</strong>：獎勵定義錯了，所有人都把分數刷得很好看，實際目標沒達到。所以獎勵/指標的定義是管理裡最難、最關鍵的事——要建立多個觀測指標、深入理解業務細節，讓獎勵沒法被輕易 hack。他自認還在學，做法是以 RL 為主、少量 SFT 兜底防跑偏。</li>
+<li>同理，組織的演化就是不斷提出解釋、被現實證偽、再修正：牛頓力學在當時是最好的解釋，有錯、後來被更好的解釋替代；公司策略在某個時點是對的、過時了就得調。最重要的是兩件事：投入對的人與技術，以及在過程中快速適應調整。</li>
+<li>K2 的命名梗：K2 不是世界最高峰，但被公認是最難攀登的山峰之一——正對應這一代模型「從對話到 Agent」的範式切換疊加規模躍升的難度。結果基本符合預期，他說做模型最重要的是預測能力（算力、成本都要提前算清），唯一沒預測到的是 max-logit 爆炸，因為小規模實驗裡它根本不出現。</li>
+</ul>
+<h2>世界觀與個人部分</h2>
+<ul>
+<li>他重讀 David Deutsch《無窮的開始》（The Beginning of Infinity）：「問題不可避免，問題可解決」是刻在石頭上的兩句話。AGI 不是某個一夜到達的時間點，而是一個方向——很多領域模型已強於 99% 的人，但社會消化一項技術（像蒸汽機）需要上百年，新工作、新生活方式都是 AGI 的一部分。雪山可能根本無頂，「這是一座無限的山」，以後甚至是和 AI 一起爬。</li>
+<li>世界模型與 Agent 的關係：造世界模型是「造世界」，造 Agent 是「造人」；有了好的世界模型，就能為 AI 生成大量可訓練的環境，與「AI 訓練 AI」是一回事。</li>
+<li>對 Yann LeCun 的 next-token prediction 批評，他的回應是：只靠 NTP 確實不夠，但 NTP 攢下的知識基底更大、上限更高，需要 RL 把知識激發出來，兩者要配合。</li>
+<li>問 AI 會不會毀滅文明（他真的拿這個問題問過 Kimi 本人）：風險不能說不存在，要做安全與社會機制；但 Kimi 給他的回答他大體認同——AI 是人類的一件重要工具/武器，放棄它等於放棄文明進步。人的意義他列了三樣：創造、體驗、愛；創造的大部分可能被 AI 接管（那等於接管生產力，人可以享受成果，前提是社會機制慢慢調好，這要二十年量級），體驗與愛仍以人為中心。</li>
+<li>成功概率比一年前更高——「因為我們一直在爬，很多人不爬了」；會有恐懼，但恐懼更多取決於當下在做什麼。心態就是「做時間的朋友」：喜歡這件事、想把它做好，剩下的沒那麼複雜，「很多複雜是人為加上去的」。</li>
+<li>生活節奏：睡得晚，時間主要花在看模型怎麼訓練上——具體說是技術策略（選什麼、不選什麼，空間太大必須取捨）與讀大量實驗結果。去年押中的幾個技術決策他列了：長思考 RL 反應快、Muon、更大規模訓練、較早做開源的 agentic 模型。</li>
+<li>最後兩個輕問題：最喜歡的食物是拉麵，因為好吃；被要求推薦書，他推的還是《無窮的開始》。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Yang Zhilin: Use L4-Level Innovation to Build L3 Agents</h1>
+<blockquote>
+<p>Program: Zhang Xiaojun Business Interviews · Guest: Yang Zhilin (founder of Moonshot AI / Kimi) · Host: Zhang Xiaojun · Duration: approx. 1 hour 40 minutes
+Note: This summary was compiled from a transcription of the interview video recording circulating on X. The original interview was recorded in 2025 after the release of K2, and was reshared on 2026-07-20 by X user @rdominguezibar with the comment: "Every lab is obsessed with the model itself — that's wrong. What wins is how you organize the people who build models." The transcription quality is poor (Chinese audio run through English speech recognition, with many unclear passages); this summary is a reconstruction of the key points, with proper nouns corrected based on context. All figures and claims are as stated by the speaker on the spot.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>What Yang Zhilin talks about here is "what comes after the model": reasoning and agents are two different test-time scaling paths, and the real dividing line is whether a model can take part in developing the next-generation model (innovation) and whether multiple agents can be organized into a system. And the methodology for running an AI company is isomorphic to training a model — manage teams with RL, not SFT.</p>
+<h2>Two Kinds of Test-Time Scaling: Brain in a Vat vs. Interacting with the World</h2>
+<ul>
+<li>There are two paths for scaling at inference time: one is to let the model keep thinking internally (the o1-style long chain of thought), like a "brain in a vat" — no interaction with the outside world, relying on continually proposing hypotheses and self-verifying to turn pass@k into pass@1. The other is the agent path: multiple rounds of interaction with the external environment, repeatedly calling tools, and using feedback from the environment to advance the task.</li>
+<li>His reading of Claude's approach: Claude's models do not have the highest reasoning scores, but their agent performance is very strong — which suggests a different technical orientation behind it: <strong>reasoning ability and agent ability are not necessarily bound together</strong>. For general agent tasks, there is no need to push reasoning to the extreme (no need to burn thousands of tokens thinking at every step; just write a test, run it, and the environment naturally gives feedback). But for the most complex class of agent tasks, reasoning remains the ceiling.</li>
+<li>Both paths will keep improving, and it is unclear today whose ceiling is higher; he judges that there is still a great deal of room on the reasoning side.</li>
+</ul>
+<h2>L1–L5 Are Not Steps, They Are Milestones</h2>
+<ul>
+<li>On OpenAI's five-level taxonomy (chatbots → reasoners → agents → innovators → organizations), he sees them as several important technical milestones, <strong>not steps that must be climbed in order</strong>: you can build agent capability first and come back to fill in reasoning later; reversing the order also works.</li>
+<li>His criterion for "innovation" (L4) is very concrete: <strong>can your model take part in developing the next-generation model</strong> — the hope is that K2 can participate in developing K3: proposing ideas, running experiments, analyzing results, improving infra, all of which require extremely strong agent capability. So in a sense, innovation is a superstructure built on top of agent capability.</li>
+<li>"Organization" (L5) corresponds to multi-agent systems: dividing tasks among different agents — some write tests, some write documentation, some design architecture — and then assembling them. The difficulty is not putting a few agents on display, but how to train a truly usable multi-agent system.</li>
+</ul>
+<h2>The Biggest Change of the Past Year, and the Technical Ledger of K1.5 / K2</h2>
+<ul>
+<li>The most important development of the past year in his view was the emergence of long-thinking models (represented by o1): models shifted from "giving an answer in one shot" to "continually trying, erring, and verifying in the process of thinking," which is closer to how real research and problem-solving work. Another major change is model companies building first-party agent products themselves (Claude Code, ChatGPT Agent): previously, third parties bolted tools onto off-the-shelf models and tuned distributions; the model companies' approach is to design the tools and context environment first and <strong>train the model inside that environment</strong> — co-designing model and tools, with a higher ceiling. Moonshot AI still focuses on models as its main line and does few first-party products; he acknowledges this is a trend worth watching.</li>
+<li><strong>K1.5</strong> was an early validation of the RL path: the team bet on reinforcement learning very early and found that no complex process rewards or value functions were needed — simple outcome rewards trained long thinking very well, accumulating algorithmic know-how for small-scale RL.</li>
+<li><strong>K2's keyword is token efficiency</strong>. The logic: high-quality data grows slowly, and data is a long-term asset, so squeeze the value out of every token — learn the same intelligence from less data. He focused on their in-house Muon optimizer (and its large-scale version, MuonClip): Adam has been used for ten years but has poor token efficiency; Muon takes correlations between parameters into account, and its learning efficiency is roughly twice Adam's (with the same 30T high-quality tokens, finishing training is roughly equivalent to others learning from 60T). When scaling Muon to trillion-parameter size, they hit the max-logit explosion problem, which never appears in small-scale experiments, and solved it with a new clipping method. They also did data rephrasing, so the same data could be absorbed over multiple epochs without overfitting. He stressed that all these numbers are in the technical report, deliberately kept open.</li>
+</ul>
+<h2>The Real Bottleneck for Agents: Evaluation and Generalization</h2>
+<ul>
+<li>He kept returning to the same judgment: <strong>the biggest limitation of agent models is evaluation</strong>. Math and coding have test cases that make verification easy; complex tasks often have no ready-made verifier. Existing benchmarks (such as SWE-bench) get saturated quickly, and scores no longer reflect real capability. Without good evaluation, there is no way to guide model improvement — this is the core choke point of all agent training.</li>
+<li>The way out is "using AI to train AI": letting models participate more in the training process itself (doing alignment research, running experiments). This is both the definition of L4 and the key to unlocking the L3 evaluation dilemma — in a sense, using L4 technology to solve L3 problems. At the end, he singled this out as the most important current bet: "Use innovation to build agents; use L4 to do L3."</li>
+<li><strong>Generalization is the capability agents lack most</strong>: future tools will be long-tail and personalized (querying internal company data, booking tickets and placing orders, never-before-seen APIs), and models must be able to use tools they have never seen. Humans are universal constructors (he cites David Deutsch) — the design goal of an agent system is not to imitate human behavior, but to become a general-purpose executor like humans. Fitting well on a few tasks but falling apart in users' real environments is the common failing of today's agents. RL's on-policy sampling (both positive and negative samples come from the model's own distribution) generalizes better than SFT, but is still limited by the scale of synthetic tasks and data.</li>
+<li>On environment design, he opposes "customizing an environment for a single task": the environment should be general enough for the model to learn to co-evolve with it. Coding is currently the best training ground — it is verifiable, and code is the language of the digital world (building a new tool is essentially writing code). But the goal is not a coding model; it is a general agent model — the fact that lawyers and product managers are using Claude Code for non-coding work is evidence of that.</li>
+<li>Long context is another hard problem: many tasks need more than 128K/256K — a million tokens or more — and need to "stay smart within a million-token context." Trading length for architectures such as linear attention can lose precision; there is a real tension between length and intelligence, and better architectures are needed.</li>
+</ul>
+<h2>Open Source, Product, and Commercialization</h2>
+<ul>
+<li>On open source, the host brought up what he had said the year before (roughly, that leaders would not open-source). His current formulation: for Moonshot AI, the value of open source lies in the community accelerating its own technology, competing with peers, co-building the ecosystem, and helping itself climb the mountain. But not everything is fully opened; over the long term they will keep sharing more technology — "both a technical conviction and a market strategy." He judges that the industry will continue to concentrate at the top, with only a few stable players in the end (both open- and closed-source included). On "why Chinese companies favor open source more," he attributes it to market and ecosystem position.</li>
+<li><strong>His product view is "the model is the product"</strong>: when building an agent product, the model, tools, and context must be put together at the training stage — when training is done, the product is essentially done too, with only the interaction layer left. This is completely different from the internet product path of "build the product first, then grow capabilities."</li>
+<li>The system complexity of a general model is underestimated: a single model must do chat, reasoning, agents, and multimodality well at the same time, and in post-training and RL, tasks interfere with each other (for example, adding multimodality must not damage the text brain). This is much harder than pretraining, which is "stitching documents together and training."</li>
+<li>There is no final form for interaction interfaces: Copilot → Cursor → Claude Code — every generation's interface change was driven by a leap in model capability. Models are still evolving, so interfaces will keep changing. Where will the super entry point be? His answer was conservative: systems will run in many data centers (Jensen Huang's "AI factories"), and the terminal form is still evolving.</li>
+<li>On commercialization, asked whether he wants to build "China's OpenAI or China's Anthropic," he said the environments in China and the US differ and a global perspective is needed, so it is hard to define it that way. The main line is still climbing the mountain; API and commercialization will be experimented with, but rank after model performance. His reasoning: the market has been validated and is growing fast (industry-wide ARR is already in the tens of billions of dollars, doubling two to three times every two quarters), and leading model performance itself opens up commercial space, so investing in technology first is right.</li>
+<li>Scaling laws are not dead: the data wall objectively exists, and the way through it is improving token efficiency plus putting more compute into RL (RL's scaling effect is stronger than pretraining's, and on-policy data is more efficient), so there has been no sign of slowing growth so far. User feedback cannot be used directly for training (it is noisy and too sensitive), but you need to know from the overall distribution whether users are getting good results, otherwise you don't know what to optimize toward.</li>
+</ul>
+<h2>Organization Is Training: Manage Teams with RL, Not SFT</h2>
+<p>This is the part that echoes the X post's caption. Something he recently figured out: the process of doing research and creating new knowledge, managing a team, and training a model are three forms of the same thing.</p>
+<ul>
+<li>Knowledge does not come directly from experience: humans lived on Earth for hundreds of thousands of years, and three or four hundred years ago no one yet knew the Earth was round — someone first had to propose a conjecture, then verify it with experiments. Organizations create knowledge in the same cycle.</li>
+<li><strong>Manage teams with RL, not SFT</strong> (a colleague on the team woke him up to this): SFT is "you should do it this way," prescribing actions step by step; RL gives only rewards and goals and lets people explore on their own. A moderate amount of SFT is useful (like adding a bit of SFT to a model to keep pre-training loss from blowing up and to prevent forgetting), but too much SFT makes students lose the ability to explore goals and lose creativity — <strong>the risk of managing a team with SFT is that everyone loses creativity</strong>.</li>
+<li><strong>The biggest risk of managing with RL is reward hacking</strong>: if the reward is defined wrong, everyone games the score to look great while the actual goal is not achieved. So defining rewards/metrics is the hardest and most critical thing in management — you need multiple observational metrics and a deep understanding of business details, so the reward cannot be easily hacked. He admits he is still learning; his approach is mainly RL, with a small amount of SFT as a guardrail against going off track.</li>
+<li>Likewise, an organization's evolution is continually proposing explanations, having them falsified by reality, and revising: Newtonian mechanics was the best explanation at the time, it had errors, and was later replaced by a better explanation; a company strategy can be right at one point in time and need adjusting when it becomes outdated. The two most important things are investing in the right people and technology, and adapting quickly along the way.</li>
+<li>The naming joke behind K2: K2 is not the world's highest peak, but it is widely regarded as one of the hardest to climb — which matches the difficulty of this generation of models: a paradigm shift "from conversation to agents" layered on top of a scale jump. The results were broadly in line with expectations. He said the most important thing in building models is predictive ability (compute and cost must all be calculated in advance); the only thing not predicted was the max-logit explosion, because it simply does not appear in small-scale experiments.</li>
+</ul>
+<h2>Worldview and Personal Notes</h2>
+<ul>
+<li>He reread David Deutsch's <em>The Beginning of Infinity</em>: "Problems are inevitable; problems are solvable" are the two sentences carved in stone. AGI is not a point in time reached overnight, but a direction — models are already stronger than 99% of people in many domains, but society needs a century or so to absorb a technology (like the steam engine), and new jobs and new ways of life are all part of AGI. The snowy mountain may have no summit at all — "it is an infinite mountain" — and in the future we may even climb it together with AI.</li>
+<li>On the relationship between world models and agents: building a world model is "building a world," building an agent is "building a person." With a good world model, you can generate large numbers of trainable environments for AI, which is the same thing as "AI training AI."</li>
+<li>Responding to Yann LeCun's criticism of next-token prediction, he said: NTP alone is indeed not enough, but the knowledge base accumulated by NTP is larger and its ceiling higher; RL is needed to bring that knowledge out, and the two must work together.</li>
+<li>Asked whether AI will destroy civilization (he really did ask Kimi itself this question): the risk cannot be said to be nonexistent, and safety and social mechanisms are needed. But he broadly agreed with Kimi's answer to him — AI is an important tool/weapon for humanity, and abandoning it would mean abandoning civilizational progress. He listed three sources of human meaning: creation, experience, and love. Most of creation may be taken over by AI (which amounts to taking over productivity; people can enjoy the results, provided social mechanisms gradually adjust, which is on the order of twenty years), while experience and love remain human-centered.</li>
+<li>The probability of success is higher than a year ago — "because we have kept climbing, and many people have stopped climbing." There is fear, but fear depends more on what you are doing at the moment. His mindset is to "be a friend of time": he likes this work and wants to do it well; the rest is not that complicated — "much of the complexity is artificially added."</li>
+<li>His daily rhythm: he sleeps late, and spends most of his time watching how models are trained — specifically, technical strategy (what to choose and what not to choose; the space is too large, so trade-offs are necessary) and reading large volumes of experiment results. He listed several technical decisions from the past year that paid off: reacting quickly with long-thinking RL, Muon, larger-scale training, and building an open-source agentic model relatively early.</li>
+<li>Two final light questions: his favorite food is ramen, because it tastes good. Asked to recommend a book, he again recommended <em>The Beginning of Infinity</em>.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://x.com/rdominguezibar/status/2079142029854912551">https://x.com/rdominguezibar/status/2079142029854912551</a>（张小珺商业访谈录）· 嘉宾：杨植麟 · 发布日期：2025-08-30 · 时长：1 小时 40 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://x.com/rdominguezibar/status/2079142029854912551">https://x.com/rdominguezibar/status/2079142029854912551</a>（張小珺商業訪談錄）· 嘉賓：楊植麟 · 發布日期：2025-08-30 · 時長：1 小時 40 分<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://x.com/rdominguezibar/status/2079142029854912551">https://x.com/rdominguezibar/status/2079142029854912551</a> (Zhang Xiaojun Business Interviews) · Guest: Yang Zhilin · Published: 2025-08-30 · Duration: 1 hour 40 minutes<br>This page is a manually compiled full summary; the views and figures expressed are as stated by the speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://x.com/rdominguezibar/status/2079142029854912551">https://x.com/rdominguezibar/status/2079142029854912551</a>（张小珺商业访谈录）· 嘉宾：杨植麟 · 发布日期：2025-08-30 · 时长：1 小时 40 分<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"杨植麟：用 L4 的创新，去做 L3 的 Agent · Yat's Talks",tw:"楊植麟：用 L4 的創新，去做 L3 的 Agent · Yat's Talks",en:"Yang Zhilin: Use L4-Level Innovation to Build L3 Agents · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

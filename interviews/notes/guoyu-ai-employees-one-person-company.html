@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《郭宇｜AI做员工，开一人公司》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=Prb_YPSdzH4 ｜时长 63 分钟｜郭宇 × 主持人（前青也/新足多背景，现中日两地跑的短视频创作者，同为一人公司实践者）对谈 + Wanman 系统讲解
@@ -70,8 +77,122 @@
 <h2>收束</h2>
 <p>主持人也是单向街的常客、同样在做一人公司，两人最后对了一句：这场变化替代的不是某个软件，而是人的工作本身；Harness Engineering 迟早会内置进所有企业、组织和学校。区别只在于，你是先上车、先把磨合期熬完的那批人，还是等它成熟后再花更长时间追赶的那批人。</p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=Prb_YPSdzH4">https://www.youtube.com/watch?v=Prb_YPSdzH4</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-19 · 时长：1 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《郭宇｜AI做員工，開一人公司》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=Prb_YPSdzH4 ｜時長 63 分鐘｜郭宇 × 主持人（前青也/新足多背景，現中日兩地跑的短影片創作者，同為一人公司實踐者）對談 + Wanman 系統講解
+說明：機器轉寫，繁簡混雜、個別專名有誤聽（Wanman 轉寫為「萬萬/彎慢」，OpenClaw 轉寫為「OpenCloud」，Elemis 疑為某 Harness 產品名，轉寫不確）；紀要按上下文校正，部分後半段為採樣通讀。產品數據為講述者現場自述，未經核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這場把「一人公司」講到了定義層：它與普通用法的根本區別不在工具，而在<strong>誰是協調者</strong>。大多數人是「人當協調者、AI 當工具」，瓶頸永遠在人身上；他主張倒過來——<strong>AI 當協調者，人退居二線做觀察者</strong>，只在它遇到明確阻塞點、不得不請示時才干預。人剩下的工作只有兩件：用聊天把自己的品味教給它，以及在它跑出的無數方案裡做選擇。</p>
+<h2>開場：回應「製造焦慮」的質疑</h2>
+<p>主持人先替網友發問：網上有人說你販賣焦慮、說你「沒正經上過班」。他回應：</p>
+<ul>
+<li>「享受最後一年的有意義的工作」是 YouTube 一位創始人（Jawed Karim 式洞察）的話，他認同其中技術主義者的悲觀色彩。這話對技術工作者是內在動力（我們本來就想改造世界），傳到大眾那裡就變成了外在壓力、變成焦慮——壓力的方向完全不同。短影片只能截取一個半小時分享的一小部分，誤會由此而來。他現在盡量不看自己影片下面的評論。</li>
+<li>意思的澄清：超級 AI 出現在資料中心之後，很多工作會失去意義（在美國、中國被裁員是大機率，在日本有社會保障緩衝）；但這句話主要談的是<strong>重新定位自己</strong>，而不是失業倒計時。</li>
+<li>標籤問題：別人眼中的他是「在日本泡溫泉、退休變現幾個億的知名程式設計師」，他給自己的 title 只是「退休程式設計師」。自我介紹永遠只是人的一部分，認知隔閡很正常。</li>
+</ul>
+<h2>他為什麼從躺平變回不睡覺</h2>
+<p>主持人問得很直接：你遊山玩水了好幾年，為什麼突然站起來狂奔？他的敘述：</p>
+<ul>
+<li>溫泉旅行社是 2017 年就開始做的項目，疫情期間暫停；退休後他的 to-do list 越攢越多（已發布 15 個產品，三個月內想做的事超過 36 件），這正是他要做 Wanman 的原因。</li>
+<li>轉折點在去年 10 月：Claude 推出 Skill 模式後，他和程式設計師朋友們在 vibe coding 中意識到，軟體正在經歷圖靈機發明以來最大的變化——從「預先定義功能和介面」轉向「語言模型讀文件、現寫程式碼、現用現丟」，開發週期從幾個月到一年壓縮成一天（雖然還不夠精確）。「如果不去做一個東西，我覺得很可惜。」</li>
+<li>壓垮他的最後一根稻草是一個深夜對話：TiDB/PingCAP 創始人黃東旭告訴他，自己在做「最終的軟體」——輸入一個意圖，它在電腦裡並發開 100 來個沙箱、把軟體的所有可能分支全部實現，一夜跑了 10 億 token 量級；兩三天可以造出一個納斯達克股票交易系統級別的東西。那晚他沒睡，七八點泡著咖啡看窗外的樹和陽光，想的是：「從今天開始，我的人生徹底變化了。」Wanman 本質上就是同類東西。</li>
+</ul>
+<h2>核心論點：協調者是誰，決定一切</h2>
+<ul>
+<li>對話式 AI（ChatGPT、Claude Chat、豆包）像雇了個實習生拉進微信群：你必須想清楚每件事再交代，溝通摩擦巨大，而且<strong>阻塞點在實習生和你之間來回彈，最終瓶頸是你</strong>。哪怕工具再強，你依然是全公司唯一的協調者，精力先耗盡。</li>
+<li>一人公司的本質是把協調權交出去：AI 寫郵件、整理資料、做 PDF、打電話、協調所有需要溝通的事；他為此做了一串基礎設施產品（轉寫裡提到吃瓜、Wanman、Agent Mail 等，都是他做的，讓 AI 能自動化協調工作的組件）。</li>
+<li>兩類人的分化：AI 替代工作後，一類人拿回時間去享受生活（他稱之為 classic real life，很多在日本生活的人選這個）；另一類人慾望多，要讓 AI 24 小時把想做的事全做完——「像成年人一樣全部都要」。他自認介於兩者之間：想做的事太多，又想保留閒暇生活，所以痛苦，所以急著把 Wanman 做出來——讓它無監督地替他把那些「值得做、但不值得我盯著做」的事做完。</li>
+</ul>
+<h2>觀察者怎麼參與：品味與否決權</h2>
+<ul>
+<li>你不是撒手不管。AI 通過 Chat UI（微信/Telegram/WhatsApp）和你聊天，聊得越多，它對你的記憶、審美傾向理解越深，做出的東西越合你的傾向——像交朋友，也像帶孩子：你不盯他每天刷多久抖音，你在更宏觀的層面影響他。這正是黃仁勳說 taste 重要的原因：<strong>審美是你影響 AI 產出的主要槓桿</strong>。</li>
+<li>否決權隨時可用：它給出很多方案，有你不喜歡的（比如不想走滑稽路線）就否決；AI 沒有「不可能」的包袱，這點和人不同。</li>
+<li>他贊同推特上一種更激進的用法：先把「能 100% 完成的事」按從易到難、從快到慢全部讓 AI 做一遍，把選擇空間填滿，再來挑——因為反過來，AI 10 分鐘給你 100 個選題、你花三天看完還下不了決定，AI 對你就毫無意義，阻塞點全卡在人身上徒增煩惱。</li>
+<li>授權決定自動化程度：網際網路上能做的知識工作，AI 已能覆蓋 90% 以上；剩下的暫停點多是「需要在場」的事（在日本拿在留卡去區役所之類）。去年底已經出現「AI 雇用人類打零工」的網站來補這一環——AI 有預算、能花錢，就能把暫停點也自動化。所以問題只剩：你給它多少授權、多少權力。</li>
+</ul>
+<h2>Harness Engineering 講解（後半程）</h2>
+<ul>
+<li><strong>詞源梗</strong>：Harness 是韁繩/馬具——把 AI 想成瘋跑的馬，你一個人牽著三匹馬，像馬車夫一樣控制方向；最近流行的一個產品乾脆取名向愛馬仕致敬（轉寫作「Elemis/愛馬仕」）。</li>
+<li><strong>譜系</strong>：Claude Code 本是 Anthropic 的 side project，現在用 Opus 4.6/4.7 直接調動模型能力；OpenClaw 是編排層，協調不同模型與具體的 agent；再往上是更高度的協調系統與 auto research。它們的目標都一樣：<strong>把人從工作裡拆出來</strong>。OpenClaw 的起源印證了這一點：其創始人賣公司拿了幾億美元、退休五年、迷茫抑鬱後靠健身走出來，2025 年寫了 100 來個開源項目，龍蝦最初只是「用 Telegram 連上我筆電的 Claude Code」的小工具——因為他也不想整天抱著電腦看 AI 幹活。今年 3 月它的 GitHub star 數超過 Linux，成為全球 star 最高的軟體，黃仁勳稱之為 game changing。但他不滿本地派：需要一台專門的電腦、性能有限、動你的真實系統有風險；他主張雲端派：沙箱是隔離環境、性能更強、用完即棄（像臨時工，「很殘忍」），且資料中心有最快的推理速度。</li>
+<li><strong>先發優勢論</strong>：誰先採用這套系統，誰的摩擦與協調都沉澱在 AI 的記憶裡；晚入場者要花長得多的磨合期，競爭力此消彼長。AI 員工和實習生一樣：第一週做得一塌糊塗，靠正反饋、導師制和不斷改進的技能文件變強——所有 Harness 系統都帶記憶與技能自我改善機制。</li>
+<li><strong>記憶的分寸</strong>：他順帶吐槽了 ChatGPT 式記憶的黑色幽默——你告訴它你失戀了，幾個月後它在不相干的對話裡突然提起「考慮到你失戀這個事實……」，它不懂關係建立的場合，所以需要「乾淨模式」：無關的話題不要亂建立關聯。人的記憶會被情緒影響、會主動丟掉無意義的對話，AI 不會。</li>
+<li><strong>Wanman 的運行形態</strong>（現場演示解說）：給一個大目標（例：運行一個數字出版社、一個遊戲工作室），它先按任務組建團隊、安排寫手、去網上找素材下載；AI-CEO 不寫具體文件，只對齊目標；每個「虛擬工作日」約 5–8 分鐘，員工們在左側的聊天流裡彼此對齊、自動推進，CEO 每輪複核評分、把完成的故事標記為完成；遇到障礙它不會停——比如實拍太貴，第二天 CEO 會自己發散想到用 Seedance 2.0 生成素材繞過去。系統內置 40 多個 agent 角色（連「給釣魚人群賣東西」這種垂直場景，它都知道釣友在哪些社區、該怎麼賣）。通過 webhook/hook 可以接入現實：他的電話工具自動接聽來電、把對方意圖記成備忘錄，AI 員工據此發起預約連結，對方點開約好時間後自動生成日曆提醒。</li>
+<li><strong>最後的暫停點</strong>：AI 跑出的卡片速度太快、創造的東西太多，人根本看不過來——這正是開場那個不信任問題的來源。有些新產品更激進：用你一生的經驗、美學和價值觀替你做選擇，把人最後的暫停點也摘掉。他對此未置可否地留了一句：模型也許有一天比你還了解你（人腦記憶不過百來 TB 量級），但那一天是否該來，他沒有下結論。</li>
+</ul>
+<h2>收束</h2>
+<p>主持人也是單向街的常客、同樣在做一人公司，兩人最後對了一句：這場變化替代的不是某個軟體，而是人的工作本身；Harness Engineering 遲早會內置進所有企業、組織和學校。區別只在於，你是先上車、先把磨合期熬完的那批人，還是等它成熟後再花更長時間追趕的那批人。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | "Guo Yu | AI as Employees, Running a One-Person Company"</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=Prb_YPSdzH4 | Length 63 minutes | Guo Yu × the host (formerly with a Qingye / Shinzutoku background, now a short-video creator traveling between China and Japan, also a one-person company practitioner) in conversation + an explanation of the Wanman system
+Note: Machine transcription, with simplified and traditional characters mixed and some proper names misheard (Wanman transcribed as "wanwan / wanman," OpenClaw transcribed as "OpenCloud," Elemis suspected to be the name of a Harness product, transcription uncertain); the notes have been corrected from context, and part of the second half was read through by sampling. Product data are the speaker's own on-the-spot accounts and have not been verified.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>This session took the "one-person company" down to the level of definition: its fundamental difference from the ordinary usage is not the tools, but <strong>who the coordinator is</strong>. Most people are "the person as coordinator, AI as tool," and the bottleneck is always on the person; he argues for reversing it — <strong>AI as coordinator, the person stepping back to the second line as an observer</strong>, intervening only when it hits a clear blocking point and has no choice but to ask for instructions. The person is left with only two jobs: teaching it your taste through chat, and choosing among the countless proposals it runs out.</p>
+<h2>Opening: responding to the charge of "manufacturing anxiety"</h2>
+<p>The host first asked on behalf of netizens: some people online say you are selling anxiety, and say you "have never properly held a job." He responded:</p>
+<ul>
+<li>"Enjoy the last year of meaningful work" is a line from a YouTube founder (a Jawed Karim-style insight), and he identifies with the technologist's pessimism in it. For technical workers, the line is an inner drive (we wanted to change the world in the first place); when it reaches the general public it becomes external pressure, becomes anxiety — the direction of the pressure is completely different. A short video can only excerpt a small part of an hour-and-a-half talk, and misunderstandings arise from that. He now tries not to look at the comments under his own videos.</li>
+<li>A clarification of meaning: after super AI appears in data centers, many jobs will lose meaning (in the US and China, being laid off is highly likely; in Japan there is a social security buffer); but the line is mainly about <strong>repositioning yourself</strong>, not a countdown to unemployment.</li>
+<li>The label problem: in others' eyes he is "a famous programmer soaking in hot springs in Japan who cashed out several hundred million in retirement," while the title he gives himself is just "retired programmer." A self-introduction is always only part of a person, and a gap in perception is normal.</li>
+</ul>
+<h2>Why he went from lying flat to not sleeping again</h2>
+<p>The host asked very directly: you traveled and enjoyed yourself for several years, why did you suddenly stand up and sprint? His account:</p>
+<ul>
+<li>The hot-spring travel agency was a project he started back in 2017, paused during the pandemic; after retiring, his to-do list kept piling up (15 products already released, more than 36 things he wants to do within three months), and that is exactly why he wants to build Wanman.</li>
+<li>The turning point was last October: after Claude launched its Skill mode, he and his programmer friends realized in vibe coding that software is undergoing the biggest change since the invention of the Turing machine — shifting from "predefining functions and interfaces" to "the language model reads documents, writes code on the spot, uses it and discards it," with development cycles compressed from months to a year down to a day (although not yet precise enough). "If I don't go build something, I think it would be a pity."</li>
+<li>The last straw was a late-night conversation: Huang Dongxu, founder of TiDB/PingCAP, told him he was building "the final software" — you input an intent, and it concurrently opens about 100 sandboxes in the computer and implements all possible branches of the software, running on the order of 1 billion tokens in a night; in two or three days it can build something at the level of a Nasdaq stock trading system. That night he did not sleep; at seven or eight, sipping coffee and looking at the trees and sunlight outside the window, what he thought was: "From today on, my life has completely changed." Wanman is essentially the same kind of thing.</li>
+</ul>
+<h2>Core argument: who the coordinator is decides everything</h2>
+<ul>
+<li>Conversational AI (ChatGPT, Claude Chat, Doubao) is like hiring an intern and pulling them into a WeChat group: you have to think everything through clearly before explaining it, communication friction is enormous, and <strong>the blocking point bounces back and forth between the intern and you, with you as the ultimate bottleneck</strong>. No matter how strong the tool, you are still the company's sole coordinator, and your energy runs out first.</li>
+<li>The essence of a one-person company is handing over the right to coordinate: AI writes emails, organizes materials, makes PDFs, makes phone calls, and coordinates everything that needs communicating; for this he built a string of infrastructure products (the transcript mentions Chigua, Wanman, Agent Mail and others, all built by him, components that let AI coordinate work automatically).</li>
+<li>The divergence of two kinds of people: after AI replaces work, one kind of person takes back time to enjoy life (he calls it classic real life, and many people living in Japan choose this); another kind has many desires and wants AI to do everything they want to do, 24 hours a day — "want it all, like an adult." He counts himself as in between: too many things he wants to do, yet he also wants to keep a leisurely life, so it is painful, so he is rushing to build Wanman — to let it, unsupervised, finish for him those things that are "worth doing, but not worth me watching it do."</li>
+</ul>
+<h2>How the observer participates: taste and the power of veto</h2>
+<ul>
+<li>You are not letting go completely. AI chats with you through a Chat UI (WeChat/Telegram/WhatsApp); the more you chat, the deeper its understanding of your memory and aesthetic tendencies, and the more what it makes aligns with your tendencies — like making a friend, and like raising a child: you do not watch how long he scrolls Douyin every day, you influence him at a more macro level. That is exactly why Jensen Huang says taste matters: <strong>aesthetics is your main lever for influencing AI's output</strong>.</li>
+<li>The power of veto is available at any time: it gives many proposals, and if there is one you do not like (for example, not wanting to go down a comical route) you veto it; AI does not carry the baggage of "impossible," which is different from people.</li>
+<li>He agrees with a more radical usage on Twitter: first have AI do all the "things that can be 100% completed," ordered from easy to hard and from fast to slow, filling up the space of choices, and only then pick — because in reverse, AI gives you 100 topics in 10 minutes, you spend three days looking through them and still cannot decide, and AI is meaningless to you, with all the blocking points stuck on the person, only adding vexation.</li>
+<li>Authorization decides the degree of automation: for knowledge work that can be done on the internet, AI can already cover more than 90%; the remaining pause points are mostly things that "require a person to be present" (such as taking a residence card to the ward office in Japan). At the end of last year, websites for "AI hiring humans for gig work" already appeared to fill this link — if AI has a budget and can spend money, it can automate the pause points too. So the only question left is: how much authorization, how much power, you give it.</li>
+</ul>
+<h2>Explaining Harness Engineering (second half)</h2>
+<ul>
+<li><strong>The etymology joke</strong>: A harness is reins / horse tack — think of AI as a madly running horse, and you alone holding three horses, controlling direction like a coachman; a recently popular product simply took its name as a tribute to Hermès (transcribed as "Elemis / Hermès").</li>
+<li><strong>The lineage</strong>: Claude Code was originally Anthropic's side project, and now uses Opus 4.6/4.7 to directly mobilize model capabilities; OpenClaw is the orchestration layer, coordinating different models and specific agents; above that are higher-level coordination systems and auto research. Their goal is all the same: <strong>to take the person out of the work</strong>. OpenClaw's origin confirms this: its founder sold his company for several hundred million dollars, retired for five years, came out of confusion and depression through fitness, wrote about 100 open-source projects in 2025, and the lobster was originally just a small tool for "connecting to the Claude Code on my laptop via Telegram" — because he also did not want to hold his computer all day watching AI work. This March its GitHub star count surpassed Linux, making it the highest-starred software in the world, and Jensen Huang called it game changing. But he is dissatisfied with the local camp: it needs a dedicated computer, has limited performance, and risks touching your real system; he advocates the cloud camp: the sandbox is an isolated environment, performance is stronger, it is discarded after use (like a temp worker, "very cruel"), and data centers have the fastest inference speed.</li>
+<li><strong>The first-mover advantage argument</strong>: whoever adopts this system first will have their friction and coordination deposited in AI's memory; late entrants will need a much longer breaking-in period, and competitiveness will shift accordingly. AI employees are like interns: in the first week they do a terrible job, and they get stronger through positive feedback, a mentorship system and constantly improving skill documents — all Harness systems come with memory and skill self-improvement mechanisms.</li>
+<li><strong>The sense of proportion in memory</strong>: He also poked fun at the black humor of ChatGPT-style memory — you tell it you have broken up, and months later, in an unrelated conversation, it suddenly brings up "considering the fact that you have broken up…"; it does not understand the occasion for building a relationship, so it needs a "clean mode": do not randomly build associations for unrelated topics. Human memory is influenced by emotion and actively discards meaningless conversations; AI's does not.</li>
+<li><strong>How Wanman runs</strong> (live demonstration commentary): Give it a big goal (for example, running a digital publishing house, a game studio), and it first forms a team by task, arranges writers, goes online to find materials and download them; the AI-CEO does not write specific files, it only aligns goals; each "virtual workday" is about 5–8 minutes, employees align with each other in the chat stream on the left and advance automatically, the CEO reviews and scores each round and marks completed stories as complete; when it encounters an obstacle it does not stop — for example, if live shooting is too expensive, the next day the CEO will itself diverge and think of using Seedance 2.0 to generate materials to get around it. The system has more than 40 built-in agent roles (even for a vertical scenario like "selling things to fishing enthusiasts," it knows which communities anglers are in and how to sell). Through webhooks/hooks it can connect to reality: his phone tool automatically answers incoming calls, records the other party's intent as a memo, AI employees initiate a booking link based on it, and after the other party clicks and books a time, it automatically generates a calendar reminder.</li>
+<li><strong>The final pause point</strong>: AI runs out cards too fast and creates too many things for a person to possibly look through — that is exactly the source of the distrust question at the opening. Some new products are more radical: using your lifetime of experience, aesthetics and values to choose for you, removing even the person's final pause point. He left a noncommittal line on this: a model may one day know you better than you know yourself (human brain memory is only on the order of a hundred-odd TB), but whether that day should come, he drew no conclusion.</li>
+</ul>
+<h2>Closing</h2>
+<p>The host is also a regular at One Way Street and is also running a one-person company, and the two ended by agreeing on a line: what this change replaces is not some piece of software, but human work itself; Harness Engineering will sooner or later be built into all enterprises, organizations and schools. The only difference is whether you are among those who get on board first and get through the breaking-in period first, or those who wait until it matures and then spend even longer catching up.</p>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=Prb_YPSdzH4">https://www.youtube.com/watch?v=Prb_YPSdzH4</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-19 · 时长：1 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=Prb_YPSdzH4">https://www.youtube.com/watch?v=Prb_YPSdzH4</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-05-19 · 時長：1 小時 03 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube original video <a href="https://www.youtube.com/watch?v=Prb_YPSdzH4">https://www.youtube.com/watch?v=Prb_YPSdzH4</a> (Ginza One Way Street Bookstore) · Guest: Guo Yu · Release date: 2026-05-19 · Length: 1 hour 03 minutes<br>This page is the full text of notes compiled by human editing after machine transcription; the views, figures and model names in the video are all as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《郭宇｜AI做员工，开一人公司》 · Yat's Talks",tw:"紀要｜《郭宇｜AI做員工，開一人公司》 · Yat's Talks",en:"Notes | \"Guo Yu | AI as Employees, Running a One-Person Company\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

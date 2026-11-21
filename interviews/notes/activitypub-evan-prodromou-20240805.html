@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>ActivityPub 是 Fediverse 的心脏：对话协议共同作者 Evan Prodromou</h1>
 <blockquote>
 <p>节目：The Fediverse Files（WordPress.com）· 嘉宾：Evan Prodromou（ActivityPub 共同作者、现任标准编辑）· 发布：2024-08-05 · 时长：11 分钟
@@ -53,9 +60,91 @@
 <li>Fediverse 主账号：evan@cosocial.ca（加拿大 CoSocial 服务器，他在那里发帖，订阅者分布在 Threads、Pleroma、Pixelfed 等各服务上）；博客 Evanp.me（WordPress，已启用 Fediverse）；Threads：evanprodromou@threads.net。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>ActivityPub 是 Fediverse 的心臟：對話協議共同作者 Evan Prodromou</h1>
+<blockquote>
+<p>節目：The Fediverse Files（WordPress.com）· 嘉賓：Evan Prodromou（ActivityPub 共同作者、現任標準編輯）· 發布：2024-08-05 · 時長：11 分鐘
+說明：本紀要據 YouTube 英文字幕整理。文中觀點為發言人現場口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>ActivityPub 之於聯邦宇宙（Fediverse），就像 RSS 之於播客：它是讓 Threads、Mastodon、WordPress、Ghost 等不同服務在後台互通的開放協議，目標是讓用戶能帶著自己的內容和關注關係在服務之間自由遷徙，把社交關係的控制權從大公司手裡拿回來。</p>
+<h2>什麼是 Fediverse</h2>
+<ul>
+<li>定義：一組透過開放協議（主要是 ActivityPub）自由連接的網站與應用的集合。已接入的包括 Threads、Flipboard、WordPress、Ghost、Mastodon、Pleroma、Pixelfed 等。</li>
+<li>「聯邦」的含義：沒有哪一個組織說了算。光 Mastodon 伺服器就有數萬台，加上無數 WordPress 部落格，每個節點都有自己的管理員與審核者——社交關係由一大群人分布地維護，而不是一家公司掌控。這是一種更分布式、更民主的社交網路形態。</li>
+<li>類比 RSS 與播客：大多數播客用戶從不去想「RSS」這個詞，只知道任何播客 App 都能訂閱任何播客源。ActivityPub 想為開放社交網路做同樣的事——成為用戶無需感知的基礎管道。網際網路本就是這樣設計的：電子郵件、全球資訊網都靠開放標準讓任意系統互通。</li>
+</ul>
+<h2>遷徙自由：像攜號轉網之前的電話號碼</h2>
+<ul>
+<li>在 Fediverse 裡，如果你不滿意目前的 Mastodon 伺服器，可以搬到另一台，粉絲能跟著你走，內容理論上也能遷移（Prodromou 承認這還不完美，但方向如此）。這會形成一個服務之間的自由市場，逼平台把服務做好。</li>
+<li>主持人提到他常用的類比：早年的電話公司控制一切，換營運商就丟掉電話號碼——對做了招牌推廣號碼的商家是災難；這正像今天想離開 Twitter 或在平台間搬家。是否需要靠國會立法來解決？Prodromou 不自稱政策專家，但強調：用戶現在就已經有選擇——部落格、Threads、Mastodon 都很容易開通；想要那種有選擇權的社交體驗，就得真的去行使選擇。</li>
+</ul>
+<h2>真正革命性的部分：把控制權拿回來</h2>
+<ul>
+<li>很多人都有這種經歷：在一個平台上投入大量心血建社群、攢粉絲、寫內容，某天早上醒來看到一篇「感謝陪伴，我們將於月底關停」的部落格。平台把用戶的連接與關係當作商品，不再相關時就隨手丟棄。</li>
+<li>Fediverse 的革命性在於：用戶重新掌控自己的社交連接、圖片、文字與影片——不會因為某家公司被收購、某個產品被關停就憑空消失。這是對用戶與大平台之間權力關係的一次再平衡。</li>
+<li>關於體驗層面的訴求（演算法控制權、無廣告、更好的審核、數據自主）：這些不是協議層要解決的，而是平台層的事；但 ActivityPub 讓這類平台更容易被建出來、更容易互聯，用戶因此能找到無廣告、無演算法、審核良好的社群。「選擇」是內建的。反過來協議也不禁止廣告模式——想要更大上傳量、願意用廣告換體驗的人，同樣可以自己選客戶端和伺服器加入。</li>
+</ul>
+<h2>怎麼找到他</h2>
+<ul>
+<li>Fediverse 主帳號：evan@cosocial.ca（加拿大 CoSocial 伺服器，他在那裡發帖，訂閱者分布在 Threads、Pleroma、Pixelfed 等各服務上）；部落格 Evanp.me（WordPress，已啟用 Fediverse）；Threads：evanprodromou@threads.net。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>ActivityPub Is the Heart of the Fediverse: A Conversation with Protocol Co-author Evan Prodromou</h1>
+<blockquote>
+<p>Program: The Fediverse Files (WordPress.com) · Guest: Evan Prodromou (co-author of ActivityPub, current standards editor) · Published: 2024-08-05 · Duration: 11 minutes
+Note: These notes were compiled from the YouTube English subtitles. The views expressed are those stated by the speaker.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>ActivityPub is to the Fediverse what RSS is to podcasts: it is the open protocol that lets different services such as Threads, Mastodon, WordPress, and Ghost interoperate behind the scenes, with the goal of letting users move freely between services while taking their content and follow relationships with them, and taking control of social relationships back from large companies.</p>
+<h2>What Is the Fediverse</h2>
+<ul>
+<li>Definition: a collection of websites and applications freely connected through open protocols (primarily ActivityPub). Services already connected include Threads, Flipboard, WordPress, Ghost, Mastodon, Pleroma, Pixelfed, and others.</li>
+<li>The meaning of "federated": no single organization is in charge. Mastodon alone has tens of thousands of servers, plus countless WordPress blogs, and each node has its own administrators and moderators — social relationships are maintained in a distributed way by a large group of people, rather than controlled by a single company. This is a more distributed, more democratic form of social networking.</li>
+<li>The RSS and podcast analogy: most podcast users never think about the word "RSS"; they just know that any podcast app can subscribe to any podcast feed. ActivityPub aims to do the same for open social networking — to become the underlying plumbing that users do not need to be aware of. The internet was designed this way from the start: email and the World Wide Web both rely on open standards to let any systems interoperate.</li>
+</ul>
+<h2>Freedom to Migrate: Like Phone Numbers Before Number Portability</h2>
+<ul>
+<li>In the Fediverse, if you are dissatisfied with your current Mastodon server, you can move to another one, your followers can come with you, and your content can in theory migrate as well (Prodromou acknowledges this is not yet perfect, but that is the direction). This creates a free market among services, forcing platforms to do a better job.</li>
+<li>The host mentioned an analogy he often uses: in the early days, phone companies controlled everything, and switching carriers meant losing your phone number — a disaster for businesses that had promoted their number on their signage; this is exactly like wanting to leave Twitter today or move between platforms. Does solving this require legislation from Congress? Prodromou does not claim to be a policy expert, but emphasizes: users already have choices right now — blogs, Threads, and Mastodon are all easy to start; if you want a social experience where you have that choice, you have to actually exercise it.</li>
+</ul>
+<h2>The Truly Revolutionary Part: Taking Control Back</h2>
+<ul>
+<li>Many people have had this experience: you invest a great deal of effort in a platform building a community, gathering followers, and writing content, then one morning you wake up to a blog post saying "Thank you for being with us; we will shut down at the end of the month." Platforms treat users' connections and relationships as commodities, discarding them when they are no longer relevant.</li>
+<li>What is revolutionary about the Fediverse is that users regain control over their own social connections, images, text, and video — they will not vanish into thin air just because a company is acquired or a product is shut down. This is a rebalancing of the power relationship between users and large platforms.</li>
+<li>On experience-level demands (control over algorithms, no ads, better moderation, data autonomy): these are not things the protocol layer is meant to solve, but rather matters for the platform layer; however, ActivityPub makes such platforms easier to build and easier to interconnect, so users can find communities with no ads, no algorithms, and good moderation. "Choice" is built in. Conversely, the protocol does not prohibit advertising models either — people who want larger upload allowances and are willing to trade ads for the experience can likewise choose their own client and server to join.</li>
+</ul>
+<h2>How to Find Him</h2>
+<ul>
+<li>Primary Fediverse account: evan@cosocial.ca (the Canadian CoSocial server, where he posts, with subscribers spread across services such as Threads, Pleroma, and Pixelfed); blog: Evanp.me (WordPress, with the Fediverse enabled); Threads: evanprodromou@threads.net.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=nLqwKph7Sxk">https://www.youtube.com/watch?v=nLqwKph7Sxk</a>（The Fediverse Files）· 嘉宾：Evan Prodromou · 发布日期：2024-08-05 · 时长：11 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=nLqwKph7Sxk">https://www.youtube.com/watch?v=nLqwKph7Sxk</a>（The Fediverse Files）· 嘉賓：Evan Prodromou · 發布日期：2024-08-05 · 時長：11 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=nLqwKph7Sxk">https://www.youtube.com/watch?v=nLqwKph7Sxk</a> (The Fediverse Files) · Guest: Evan Prodromou · Published: 2024-08-05 · Duration: 11 minutes<br>This page is the full text of manually compiled notes; the views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=nLqwKph7Sxk">https://www.youtube.com/watch?v=nLqwKph7Sxk</a>（The Fediverse Files）· 嘉宾：Evan Prodromou · 发布日期：2024-08-05 · 时长：11 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"ActivityPub 是 Fediverse 的心脏：对话协议共同作者 Evan Prodromou · Yat's Talks",tw:"ActivityPub 是 Fediverse 的心臟：對話協議共同作者 Evan Prodromou · Yat's Talks",en:"ActivityPub Is the Heart of the Fediverse: A Conversation with Protocol Co-author Evan Prodromou · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

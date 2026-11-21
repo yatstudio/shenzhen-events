@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：MLST 对话 Michael Tomasello《松鼠知道而语言模型跳过的东西》</h1>
 <ul>
 <li>时间：2026-11-19（YouTube 发布）</li>
@@ -78,9 +85,139 @@
 <hr />
 <p><em>纪要来源：YouTube 官方英文字幕转写整理。嘉宾学术观点与实验结论为其本人著作《The Evolution of Agency》及节目口径，未独立核实。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：MLST 對話 Michael Tomasello《松鼠知道而語言模型跳過的東西》</h1>
+<ul>
+<li>時間：2026-11-19（YouTube 發布）</li>
+<li>主持：Tim Scarfe（Machine Learning Street Talk）</li>
+<li>嘉賓：Michael Tomasello（杜克大學心理學教授；曾在馬克斯·普朗克研究所工作 20 年，主持兒童與大猿類比較研究；著有《The Evolution of Agency》）</li>
+<li>時長：66 分鐘</li>
+<li>來源：YouTube 頻道 Machine Learning Street Talk，影片 io7qhEjJoik，官方英文字幕全文 1943 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。觀點均為嘉賓現場口徑，未獨立核實。時間戳指向字幕位置。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>發展心理學家 Michael Tomasello 用一生的黑猩猩與兒童對比研究回答「機器要怎樣才算有能動性（agency）」：能動性不是聰明，而是一套分層進化出來的控制組織——感知、目標、決策，再往上是執行監控、元認知，最後是人類獨有的「共享能動性」。今天的 LLM 從金字塔尖（語言）往下搭，跳過了語言賴以成立的全部基礎設施；他不怕 AI 接管世界（「70 年代就有人這麼喊」），但認為想做出真正有能動性的機器，應該照著自然界的 agent 自下而上地建。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>能動性是為不可預測性準備的</strong>：環境可預測且事關生死時，進化直接把行為寫死（呼吸、吞嚥）；需要決策型 agent，是因為環境不可預測——而最不可預測的東西就是其他 agent：獵物、捕食者、競爭者、合作者。大自然沒法預先寫好所有應對，只能派一個「現場決策者」（[00:02:29]、[00:02:54]）。</li>
+<li><strong>最小模型是控制系統，不是刺激-反應</strong>：恆溫器有感知、有目標、有決策機制——想讓紅綠燈變聰明，唯一解法就是給它這三樣。行為主義的「刺激-反應」框架早該扔掉：有機體是主動追逐目標的，達不到就換辦法（[00:08:00]、[00:05:44]）。</li>
+<li><strong>能動性 ≠ 複雜 ≠「智能」</strong>：織網複雜，但蜘蛛並不「控制」自己的行為。他在書裡給 intelligence 一詞打引號：這個概念源於比奈為法國政府篩選學生而設計的測驗，本質是學校型、言語型的智能，被物化成了 IQ。松鼠記得比我們多得多的藏食地點，鳥類能分辨的聲音比我們多——自然界到處是專長。他寧願談具體的認知能力（知識、規劃、預見、假設檢驗）（[00:09:42]、[00:28:58]）。</li>
+<li><strong>學習只是子過程</strong>：學習存在的意義是幫 agent 做適應性決策；恆溫器不學習也能行動。他對強化學習的保留正在於此：它幾乎全在講學習，能動性含量很低（[00:18:16]、[00:19:03]）。</li>
+<li><strong>能動性的四層進化</strong>（只談通往人類的這一支，鳥類另走一條線）：
+   - <strong>基礎能動性</strong>——早期陸生脊椎動物（以爬行類為模型）：簡單的控制系統，不可預測性主要來自獵物；
+   - <strong>目標導向/意向能動性</strong>——哺乳動物：多出「執行層」，能形成對不存在狀態的想像性表徵，做規劃與假設檢驗——用 Dennett 的話，讓假設替自己去死。松鼠面對人類防松鼠餵鳥器不斷發明新招，就是這一層在工作；
+   - <strong>元認知/理性能動性</strong>——大猿類：能反思自己的計畫、判斷資訊不足就去找更多資訊、覺得題太難會主動退出換一道；驅動力是「競賽型競爭」——必須智勝同類，而不是比誰先到；
+   - <strong>共享能動性</strong>——人類獨有的一層（見下）（[00:32:15]、[00:34:00]、[00:35:27]、[00:37:04]）。</li>
+<li><strong>執行層即意識的開端</strong>：執行層觀察、監控行動層，能提前預見錯誤——他認為這是意識的起點；元認知再在其上疊一層：「這個計畫好嗎？我是不是在浪費力氣？」（[00:13:19]、[00:14:29]）。</li>
+<li><strong>共享能動性：人類與黑猩猩的分界線</strong>。兩個人可以組成一個「共享 agent」：共同目標、互補角色、聯合承諾——你沒演好你的角色，我會出聲糾正你，因為你的失誤會讓我們一起失敗。黑猩猩不會這樣：它們不公平分配合作成果、不糾正搭檔、自己拿到獎勵就散伙；人類兒童會堅持合作到同伴也拿到獎勵為止。聯合注意進一步生出「視角」：同一個東西可以是狗、動物、寵物——這種靈活切換視角的能力，其他動物沒有（[00:37:20]、[00:38:28]、[00:41:38]）。</li>
+<li><strong>文化是集體能動性</strong>：語言慣例、規範、制度都是文化這個集體 agent 的產物，對個體既約束又賦能——你不必自己發明語言，卻能用它寫詩。塞爾（Searle）的「地位功能」：紙變錢、人變總統、公司這種虛構個體，反而是地球上最強大的力量（[00:40:18]、[00:56:41]）。</li>
+<li><strong>對 LLM 的核心批評：從終點起步</strong>。語言建立在聯合注意、視角採擇、協調等一整套更基礎的能力之上；LLM 直接從人類成就的巔峰（語言）出發想倒推出通用智能，「能不能跳過中間層，我不確定」。兩個具體缺失：LLM 不創造語言慣例——兒童在實驗裡被切斷聲音後會自創手勢並約定俗成，世界上 6000 種語言都是這麼來的；而語篇連貫性至關重要：把網際網路文本打散成隨機句子再訓練，LLM 會差得多（[00:19:18]、[00:42:21]、[00:52:12]）。</li>
+<li><strong>圖靈測試遠遠不夠</strong>：「not even close, not even sorta close。」但若一台機器真的具備上述全部品質，按鴨子測試他會承認它是某種 agent；至於「肉身（meat）是否重要」——情緒、激素、神經元——哲學家 Ned Block 的這場討論沒有共識，他也沒有答案（[01:04:51]、[01:05:41]）。</li>
+</ol>
+<h2>一、機器缺的是哪一層</h2>
+<ul>
+<li>自動駕駛汽車、無人機在結構上已經和動物 agent 非常相似；目標由人內建也不構成障礙——人類最基本的欲望（吃、繁衍）同樣是大自然內建的。真正缺的是執行層：機器還沒有以正確的方式「知道自己在做什麼」，也還不能在無路可走時<strong>自創一個新目標</strong>（[00:13:01]、[00:15:13]、[00:15:41]）。</li>
+<li>他的研究處方：別只盯著成熟的人類語言做模型；應該有人自下而上地做——從動物式的協調、視角採擇、創造慣例開始，把這套基礎設施建出來，再把語言放上去（[00:55:25]）。</li>
+</ul>
+<h2>二、共享能動性的起源：協調問題</h2>
+<ul>
+<li>進化起點不是語言，而是協調問題（謝林）：獵鹿博弈裡，我去不去取決於你去不去，你去不去取決於我去不去——需要的是「我站在你的視角看你站在我的視角」這種遞迴。哲學家 David Lewis 說得更直白：慣例就是一種協調裝置，語言慣例是人類為了協調行動創造出來的（[00:45:31]、[00:46:48]）。</li>
+<li>語法本身也是視角的：分裂句「是 Fred 打破了窗戶」之所以存在，是因為我認為你以為是別人打的，我在糾正你的視角；主動與被動語態，就是取狗的視角還是貓的視角。兒童開口說話之前先學會「指」——我指著那邊，你就懂我的意思，靠的正是共享語境（[00:50:13]、[00:53:59]）。</li>
+</ul>
+<h2>三、決定論的兩種手指</h2>
+<ul>
+<li>達爾文（自然）與馬克思（文化）各講了一種決定論；他的立場是：這些力量只是「把手指放在天平上」，不決定結果。情緒就是自然的手指——怕蛇讓你放下一切逃走，但槍頂著頭時你仍可能讓蛇爬過腳背。飲食與冰淇淋、承諾與女兒出車禍，衝突必須由 agent 本人裁決（[00:22:01]、[00:27:16]、[00:23:28]）。</li>
+<li>對 Tooby 與 Cosmides「大規模模組化」的分歧：專用模組（擇偶、覓食各有啟發式）確實存在，但當兩個模組同時點火時，必須有跨域的通用過程（感知、注意、記憶）和一個裁決者——這正是哺乳動物起就有的 agent 層（[00:24:46]、[00:25:56]）。</li>
+</ul>
+<h2>四、合作的陰暗面</h2>
+<ul>
+<li>說謊之所以有效，恰恰因為我們默認合作：黑猩猩之間沒有謊言，因為它們根本不會假設對方在說真話。奧威爾筆下的操縱、反覆念叨「大家都這麼說」，利用的都是同一套共同知識機制（[00:58:40]、[00:59:26]）。</li>
+<li>集體意向性的陰暗面是「我們 vs 他們」：進化給我們的「我們」是同吃同住同語言的小群體；農業與城市之後世界變了，共享能動性能否在把自己炸掉之前適應這個新世界，是開放問題（[01:00:17]、[01:01:18]）。</li>
+<li>市場、資本算不算 agent？他謹慎：通膨、股災、塞車這類「第三類現象」無人意圖卻由無數意向行動湧現——把市場當 agent 談可以，但真說它「有目標、會調整」，他會緊張。政策制定者的工作是看清個體決策與湧現結果之間的連線（[01:01:36]、[01:04:09]）。</li>
+</ul>
+<hr />
+<p><em>紀要來源：YouTube 官方英文字幕轉寫整理。嘉賓學術觀點與實驗結論為其本人著作《The Evolution of Agency》及節目口徑，未獨立核實。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: MLST Conversation with Michael Tomasello — "What Squirrels Know and Language Models Skip"</h1>
+<ul>
+<li>Time: 2026-11-19 (published on YouTube)</li>
+<li>Host: Tim Scarfe (Machine Learning Street Talk)</li>
+<li>Guest: Michael Tomasello (Professor of Psychology at Duke University; worked at the Max Planck Institute for 20 years, leading comparative research on children and great apes; author of <em>The Evolution of Agency</em>)</li>
+<li>Duration: 66 minutes</li>
+<li>Source: YouTube channel Machine Learning Street Talk, video io7qhEjJoik, full official English subtitles, 1943 lines</li>
+</ul>
+<blockquote>
+<p>These notes are a Chinese-language compilation. All views are as stated by the guest on the program and have not been independently verified. Timestamps point to subtitle positions.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Developmental psychologist Michael Tomasello uses a lifetime of comparative research on chimpanzees and children to answer "what would it take for a machine to count as having agency": agency is not cleverness but a layered control organization evolved over time — perception, goals, decisions, and above that executive monitoring, metacognition, and finally the uniquely human "shared agency." Today's LLMs build downward from the tip of the pyramid (language), skipping all the infrastructure on which language depends; he is not afraid of AI taking over the world ("people were shouting that in the 1970s"), but believes that to build a machine with genuine agency, one should build bottom-up, the way nature builds agents.</p>
+<h2>Key Points</h2>
+<ol>
+<li><strong>Agency exists for unpredictability</strong>: when the environment is predictable and survival is at stake, evolution simply hard-wires behavior (breathing, swallowing); decision-making agents are needed because the environment is unpredictable — and the most unpredictable things of all are other agents: prey, predators, competitors, collaborators. Nature cannot pre-write every response, so it dispatches an "on-the-spot decision-maker" ([00:02:29], [00:02:54]).</li>
+<li><strong>The minimal model is a control system, not stimulus–response</strong>: a thermostat has perception, a goal, and a decision mechanism — if you want to make a traffic light smart, the only solution is to give it those three things. The behaviorist "stimulus–response" framework should have been discarded long ago: organisms actively pursue goals, and if one approach fails, they try another ([00:08:00], [00:05:44]).</li>
+<li><strong>Agency ≠ complexity ≠ "intelligence"</strong>: web-spinning is complex, but the spider does not "control" its own behavior. In his book he puts the word intelligence in quotation marks: the concept originates in the test Binet designed to screen students for the French government — essentially school-type, verbal intelligence, reified into IQ. Squirrels remember far more food-cache locations than we do, and birds can distinguish more sounds than we can — nature is full of specializations. He prefers to talk about specific cognitive abilities (knowledge, planning, foresight, hypothesis testing) ([00:09:42], [00:28:58]).</li>
+<li><strong>Learning is only a subprocess</strong>: learning exists to help an agent make adaptive decisions; a thermostat can act without learning. This is precisely his reservation about reinforcement learning: it is almost entirely about learning, with very little agency content ([00:18:16], [00:19:03]).</li>
+<li><strong>The four layers of agency's evolution</strong> (covering only the lineage leading to humans; birds took a separate line):
+   - <strong>Basic agency</strong> — early terrestrial vertebrates (with reptiles as the model): a simple control system, with unpredictability coming mainly from prey;
+   - <strong>Goal-directed / intentional agency</strong> — mammals: an added "executive layer" that can form imaginative representations of non-existent states, do planning and hypothesis testing — in Dennett's phrase, letting hypotheses die in one's stead. A squirrel constantly inventing new tricks against human squirrel-proof bird feeders is this layer at work;
+   - <strong>Metacognitive / rational agency</strong> — great apes: able to reflect on their own plans, to seek more information when judging their information insufficient, and to opt out of a problem that feels too hard and switch to another; the driver is "contest competition" — having to outsmart conspecifics, not merely arrive first;
+   - <strong>Shared agency</strong> — the uniquely human layer (see below) ([00:32:15], [00:34:00], [00:35:27], [00:37:04]).</li>
+<li><strong>The executive layer is the beginning of consciousness</strong>: the executive layer observes and monitors the action layer and can foresee errors in advance — he takes this to be the starting point of consciousness; metacognition adds another layer on top: "Is this a good plan? Am I wasting my effort?" ([00:13:19], [00:14:29]).</li>
+<li><strong>Shared agency: the dividing line between humans and chimpanzees</strong>. Two people can form a "shared agent": a joint goal, complementary roles, a joint commitment — if you don't play your role well, I will speak up and correct you, because your mistake will make us fail together. Chimpanzees do not do this: they do not share the fruits of collaboration fairly, do not correct their partners, and disperse once they have their own reward; human children will persist in collaborating until their partner also gets a reward. Joint attention further gives rise to "perspective": the same thing can be a dog, an animal, a pet — no other animal has this ability to flexibly switch perspectives ([00:37:20], [00:38:28], [00:41:38]).</li>
+<li><strong>Culture is collective agency</strong>: linguistic conventions, norms, and institutions are all products of culture as a collective agent, both constraining and enabling individuals — you don't have to invent language yourself, yet you can use it to write poetry. Searle's "status functions": paper becoming money, a person becoming a president, fictional individuals like companies turning out to be the most powerful forces on Earth ([00:40:18], [00:56:41]).</li>
+<li><strong>The core criticism of LLMs: starting from the endpoint</strong>. Language rests on a whole set of more basic abilities — joint attention, perspective-taking, coordination; LLMs start directly from the pinnacle of human achievement (language) and try to reverse-engineer general intelligence: "whether the middle layers can be skipped, I'm not sure." Two specific gaps: LLMs do not create linguistic conventions — children in experiments, when their voices are cut off, invent gestures and conventionalize them, and that is how the world's 6,000 languages came to be; and discourse coherence matters crucially: scramble internet text into random sentences and train on that, and an LLM would be much worse ([00:19:18], [00:42:21], [00:52:12]).</li>
+<li><strong>The Turing test is nowhere near enough</strong>: "not even close, not even sorta close." But if a machine truly possessed all the qualities above, by the duck test he would concede it is some kind of agent; as for whether "meat matters" — emotions, hormones, neurons — there is no consensus in philosopher Ned Block's discussion of this, and he has no answer either ([01:04:51], [01:05:41]).</li>
+</ol>
+<h2>I. Which Layer Are Machines Missing?</h2>
+<ul>
+<li>Self-driving cars and drones are already structurally very similar to animal agents; having goals built in by humans is no obstacle either — humans' most basic desires (eating, reproducing) are likewise built in by nature. What is truly missing is the executive layer: machines do not yet "know what they are doing" in the right way, nor can they <strong>invent a new goal for themselves</strong> when there is no way forward ([00:13:01], [00:15:13], [00:15:41]).</li>
+<li>His research prescription: don't model only on mature human language; someone should build bottom-up — starting from animal-like coordination, perspective-taking, and convention-creation, building out that infrastructure, and only then putting language on top ([00:55:25]).</li>
+</ul>
+<h2>II. The Origin of Shared Agency: The Coordination Problem</h2>
+<ul>
+<li>The evolutionary starting point is not language but the coordination problem (Schelling): in the stag hunt, whether I go depends on whether you go, and whether you go depends on whether I go — what is needed is the recursion of "me standing in your perspective, seeing you standing in mine." Philosopher David Lewis put it more bluntly: a convention is a coordination device, and linguistic conventions were created by humans to coordinate action ([00:45:31], [00:46:48]).</li>
+<li>Grammar itself is also perspectival: the cleft sentence "It was Fred who broke the window" exists because I think you believe someone else broke it, and I am correcting your perspective; active and passive voice are a matter of taking the dog's perspective or the cat's. Children learn to "point" before they speak — I point over there and you understand what I mean, relying precisely on shared context ([00:50:13], [00:53:59]).</li>
+</ul>
+<h2>III. The Two Fingers of Determinism</h2>
+<ul>
+<li>Darwin (nature) and Marx (culture) each told a kind of determinism; his position is that these forces merely "put a finger on the scale" and do not decide the outcome. Emotion is nature's finger — fear of snakes makes you drop everything and flee, but with a gun to your head you might still let a snake crawl over your foot. Diet versus ice cream, a promise versus your daughter being in a car accident — conflicts must be adjudicated by the agent itself ([00:22:01], [00:27:16], [00:23:28]).</li>
+<li>His disagreement with Tooby and Cosmides' "massive modularity": dedicated modules (heuristics for mate choice, foraging, and so on) do exist, but when two modules fire at once, there must be cross-domain general processes (perception, attention, memory) and an adjudicator — precisely the agent layer present since mammals ([00:24:46], [00:25:56]).</li>
+</ul>
+<h2>IV. The Dark Side of Cooperation</h2>
+<ul>
+<li>Lying works precisely because we default to cooperation: there are no lies among chimpanzees, because they never assume the other party is telling the truth in the first place. Orwellian manipulation, endlessly repeating "everyone says so," exploits the same common-knowledge mechanism ([00:58:40], [00:59:26]).</li>
+<li>The dark side of collective intentionality is "us vs. them": the "we" evolution gave us is the small group that eats, lives, and speaks the same language together; after agriculture and cities the world changed, and whether shared agency can adapt to this new world before blowing itself up is an open question ([01:00:17], [01:01:18]).</li>
+<li>Do markets and capital count as agents? He is cautious: "third-kind phenomena" like inflation, stock crashes, and traffic jams are intended by no one yet emerge from countless intentional actions — talking about the market as an agent is fine, but to actually say it "has goals and adjusts," he would get nervous. The policymaker's job is to see the lines connecting individual decisions to emergent outcomes ([01:01:36], [01:04:09]).</li>
+</ul>
+<hr />
+<p><em>Source of these notes: compiled from the official English subtitles on YouTube. The guest's academic views and experimental conclusions are as presented in his book <em>The Evolution of Agency</em> and on the program, and have not been independently verified.</em></p>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=io7qhEjJoik">https://www.youtube.com/watch?v=io7qhEjJoik</a>（Machine Learning Street Talk）· 嘉宾：Michael Tomasello · 发布日期：2026-11-19 · 时长：66 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=io7qhEjJoik">https://www.youtube.com/watch?v=io7qhEjJoik</a>（Machine Learning Street Talk）· 嘉賓：Michael Tomasello · 發布日期：2026-11-19 · 時長：66 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=io7qhEjJoik">https://www.youtube.com/watch?v=io7qhEjJoik</a> (Machine Learning Street Talk) · Guest: Michael Tomasello · Published: 2026-11-19 · Duration: 66 minutes<br>This page is the full text of manually compiled notes; the views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=io7qhEjJoik">https://www.youtube.com/watch?v=io7qhEjJoik</a>（Machine Learning Street Talk）· 嘉宾：Michael Tomasello · 发布日期：2026-11-19 · 时长：66 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：MLST 对话 Michael Tomasello《松鼠知道而语言模型跳过的东西》 · Yat's Talks",tw:"會議紀要：MLST 對話 Michael Tomasello《松鼠知道而語言模型跳過的東西》 · Yat's Talks",en:"Meeting Notes: MLST Conversation with Michael Tomasello — \"What Squirrels Know and Language Models Skip\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

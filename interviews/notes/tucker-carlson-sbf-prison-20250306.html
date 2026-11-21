@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>狱中的 SBF：Tucker Carlson 采访 Sam Bankman-Fried</h1>
 <blockquote>
 <p>片源：Tucker Carlson 采访《Sam Bankman-Fried on Life in Prison With Diddy, and How Democrats Stole His Money and Betrayed Him》· 时长：约 44 分钟 · 2025-03-06 发布
@@ -43,9 +50,71 @@
 <p>对有效利他主义，他说自己没有改变信念：「我显然为发生的一切感到难受，这完全不是我的本意。」客户最终以美元计价拿回了钱、而非实物，且等了痛苦的两年。Tucker 质疑为何帮远方陌生人比帮身边人更高尚，他回应了一个限定：对不了解的人行善容易犯家长式错误——比如给不缺水的村子送一堆没人要的水泵；但疟疾这样的事，私人慈善已在撒哈拉以南非洲和印度大幅削减死亡、每条生命成本数千美元，「因为它在某种意义上容易，不该成为不做的理由」。</p>
 <p>采访时他 32 岁，第二天是 33 岁生日（不打算庆祝，也「不打算告诉 Diddy」）。25 年刑期按字面算，他出狱时 57 岁；计入各种减刑可能在 40 多岁末。他提到有研究说人在狱中以约三倍速度衰老。被问能否撑完，他说不确定，最难的还是「没有有意义的事可做」。谈到 AI 与世界加速向前，他说那种「世界在没有你的情况下继续前进」的感觉，他感受得很尖锐。</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>獄中的 SBF：Tucker Carlson 採訪 Sam Bankman-Fried</h1>
+<blockquote>
+<p>片源：Tucker Carlson 採訪《Sam Bankman-Fried on Life in Prison With Diddy, and How Democrats Stole His Money and Betrayed Him》· 時長：約 44 分鐘 · 2025-03-06 發布
+說明：這是 SBF 在布魯克林 MDC 監獄服刑期間透過視訊連線接受的採訪（未經監獄批准，採訪公開後他隨即被轉押至奧克拉荷馬）。以下均為 SBF 本人自述口徑，未經核實；Tucker 的提問明顯友善，未就案件事實追問。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>入獄約兩年、25 年刑期在身的 SBF 說：自己不是罪犯，FTX 本來有錢還所有人——約 150 億美元負債對約 930 億美元資產——是破產處置把一切毀了；而當年收了他大筆捐款的民主黨人，在他出事後六個月內全部消失。</p>
+<h2>獄中日常：與 Diddy 同監區</h2>
+<p>他說自己在 MDC 不在人身危險中，工作人員「在約束內盡量幫忙」，但把 40 個被指控犯罪的人關在一個房間裡幾年，最瑣碎的事都會變成人們唯一在乎的東西。審判期間是最難熬的：凌晨 4 點被叫醒，五小時耗在巴士、囚車和候審室裡，晚上 9 點多才回到監區，當天已無任何處理法律文件的時間。日常就是看書（重新開始讀小說）、下棋、力所能及地推進自己的上訴；「沒有有意義的事可做，是監獄最消磨靈魂的地方」。</p>
+<p>饒舌歌手 Diddy 與他同監區，他說 Diddy「對監區裡的人友善，對我也友善」。他還發現一件意外的事：不少前武裝劫匪——有些不說英語、可能沒讀完國中——國際象棋下得出乎意料地好。監獄的流通貨幣是獨立包裝的小瑪芬蛋糕：勉強可互換，但規模一大就行不通，「你沒法用瑪芬做一筆 200 美元的交易」。人們會為一根香蕉打架，不是因為多在乎香蕉，而是沒有別的東西可寄託。他自己主要吃米飯、豆子和泡麵；沒刺青，因為聽獄友說了針頭的消毒流程（四個人才消毒一次）之後「治好了這個念頭」。</p>
+<h2>政治：捐款買不來的救援</h2>
+<p>他說自己 2020 年是中間偏左、捐了拜登競選，之後幾年頻繁去華盛頓，「震驚於所見」：Gensler 領導的 SEC 是「一場噩夢」——要求公司註冊，卻根本沒有可供註冊的類別，「他們從未成功註冊過任何一個人」。他猜 Gensler 的動機是權力與曝光：讓所有人向他註冊，機構擴權，本人則志在財政部長，「關乎自我晉升，沒有別的信念」。</p>
+<p>到 2022 年底，他私下給共和黨的錢已與給民主黨一樣多，而這件事在 FTX 崩塌前後正變得為人所知——他猜這也是民主黨沒人救他的原因之一。他說自己從未打電話向任何受捐者求助：一是不想做不當的事，二是對方「跑得盡可能快」；而且在他交出 FTX 控制權、破產申請之前，司法部就已經拿定了主意。他還含糊提到，一家律所在此案中扮演了「異常積極」的角色。</p>
+<p>談到人情：崩塌剛發生時，包括華盛頓的人在內，他收到不少暖心訊息；六個月後，歸零。「政治上變得有毒了」，甚至有人透過第三方轉達善意，但沒人願意直接聯繫他。留下來的人「非常非常少」——他說他理解，任何與他親近的人都被「槍指著頭」，給了兩個選項，其中一個是幾十年監禁。他用最激烈的措辭為 Ryan Salame 鳴不平：檢方以起訴其懷孕的妻子施壓，Salame 認罪後仍被判 7.5 年（其他認罪者的約四倍），因為他拒絕在庭上按政府的說法作證；而檢方事後還是起訴了他的妻子。他那 300 名員工，他說曾感覺像自己的 300 個孩子，但沒有一個來探過監。</p>
+<h2>他的財務版本與人生帳</h2>
+<p>關於錢，他的核心主張是：如果什麼都不干預，公司以今天計約有 150 億美元負債、約 930 億美元資產，本可以實物全額償還客戶、還帶利息，投資者還能剩幾百億；但破產接管後資產被「極其迅速地吸走數百億美元」，是「一場 colossal 的災難」——「沒能阻止這件事，是我一生最大的遺憾」。問他是不是加密行業最大的罪犯，他答：「我認為我不是罪犯，所以答案當然是否定的。」他承認十年前行業裡灰色行為的比例高得多，如今已大幅下降。</p>
+<p>對有效利他主義，他說自己沒有改變信念：「我顯然為發生的一切感到難受，這完全不是我的本意。」客戶最終以美元計價拿回了錢、而非實物，且等了痛苦的兩年。Tucker 質疑為何幫遠方陌生人比幫身邊人更高尚，他回應了一個限定：對不了解的人行善容易犯家長式錯誤——比如給不缺水的村子送一堆沒人要的水泵；但瘧疾這樣的事，私人慈善已在撒哈拉以南非洲和印度大幅削減死亡、每條生命成本數千美元，「因為它在某種意義上容易，不該成為不做的理由」。</p>
+<p>採訪時他 32 歲，第二天是 33 歲生日（不打算慶祝，也「不打算告訴 Diddy」）。25 年刑期按字面算，他出獄時 57 歲；計入各種減刑可能在 40 多歲末。他提到有研究說人在獄中以約三倍速度衰老。被問能否撐完，他說不確定，最難的還是「沒有有意義的事可做」。談到 AI 與世界加速向前，他說那種「世界在沒有你的情況下繼續前進」的感覺，他感受得很尖銳。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>SBF in Prison: Tucker Carlson Interviews Sam Bankman-Fried</h1>
+<blockquote>
+<p>Source: Tucker Carlson interview "Sam Bankman-Fried on Life in Prison With Diddy, and How Democrats Stole His Money and Betrayed Him" · Duration: about 44 minutes · Released 2025-03-06
+Note: This interview was conducted by video link while SBF was serving his sentence at Brooklyn's MDC prison (it was not approved by the prison, and after it became public he was promptly transferred to Oklahoma). Everything below is SBF's own account, unverified; Tucker's questions were noticeably friendly and did not press him on the facts of the case.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>About two years into a 25-year sentence, SBF says: he is not a criminal, and FTX had the money to repay everyone — about $15 billion in liabilities against about $93 billion in assets — it was the bankruptcy process that destroyed everything; and the Democrats who had taken his large donations all disappeared within six months of his downfall.</p>
+<h2>Daily life in prison: in the same unit as Diddy</h2>
+<p>He says he is not in physical danger at MDC, and that staff "help as much as they can within the constraints," but when you keep 40 people accused of crimes in one room for years, the most trivial things become the only things people care about. The trial period was the hardest: woken at 4 a.m., five hours spent on buses, prison vans and holding cells, not back in the unit until after 9 p.m., with no time left that day to deal with legal documents. His daily life is reading (he has started reading novels again), playing chess, and advancing his appeal as best he can; "having nothing meaningful to do is the most soul-crushing part of prison."</p>
+<p>Rapper Diddy is in the same unit, and he says Diddy "is kind to people in the unit, and kind to me too." He also discovered something unexpected: quite a few former armed robbers — some of whom don't speak English and may not have finished middle school — are surprisingly good at chess. The prison's circulating currency is individually wrapped mini muffins: they are barely interchangeable, but the system breaks down at any scale — "you can't do a $200 transaction in muffins." People will fight over a banana, not because they care that much about the banana, but because there is nothing else to fixate on. He himself mainly eats rice, beans and instant noodles; he has no tattoos, because after fellow inmates described the needle disinfection process (disinfected only once every four people) it "cured him of the idea."</p>
+<h2>Politics: the rescue donations couldn't buy</h2>
+<p>He says that in 2020 he was center-left and donated to Biden's campaign, and that in the following years he went to Washington frequently and was "shocked by what he saw": the SEC under Gensler was "a nightmare" — it required companies to register, yet there was simply no category under which to register, "they never successfully registered a single person." He guesses Gensler's motives were power and exposure: get everyone to register with him, expand the agency's authority, and position himself for Treasury Secretary — "it's about self-promotion, with no other beliefs."</p>
+<p>By the end of 2022, the money he was quietly giving Republicans was already as much as what he gave Democrats, and that fact was becoming known around the time of FTX's collapse — he guesses this was one reason no Democrat came to his rescue. He says he never called any recipient of his donations for help: first, he didn't want to do anything improper, and second, they "ran as fast as they could"; moreover, the Department of Justice had already made up its mind before he handed over control of FTX and before the bankruptcy filing. He also vaguely mentioned that a law firm played an "unusually active" role in the case.</p>
+<p>On personal loyalty: right after the collapse, he received many warm messages, including from people in Washington; six months later, zero. "It became politically toxic," and while some people conveyed goodwill through third parties, no one was willing to contact him directly. Those who stayed were "very, very few" — he says he understands, because anyone close to him had "a gun to their head," given two options, one of which was decades in prison. He spoke up for Ryan Salame in the strongest terms: prosecutors pressured Salame by threatening to indict his pregnant wife, and after pleading guilty Salame was still sentenced to 7.5 years (about four times what other cooperators who pleaded guilty received), because he refused to testify in court as the government wanted; and prosecutors went ahead and indicted his wife anyway afterward. As for his 300 employees, he says they once felt like his 300 children, but not one of them has visited him in prison.</p>
+<h2>His version of the finances and the account of his life</h2>
+<p>On the money, his core claim is this: if there had been no intervention, the company would today have about $15 billion in liabilities and about $93 billion in assets, and could have repaid customers in full in kind, with interest, leaving investors with tens of billions to spare; but after the bankruptcy takeover, assets were "siphoned off extremely quickly to the tune of tens of billions of dollars," in what was "a colossal disaster" — "failing to stop that is the greatest regret of my life." Asked whether he is the biggest criminal in crypto, he replied: "I don't think I'm a criminal, so the answer is of course no." He acknowledged that a much higher proportion of the industry operated in gray areas ten years ago, and that this has fallen sharply since.</p>
+<p>On effective altruism, he says his beliefs have not changed: "I obviously feel terrible about everything that happened; none of it was my intention at all." Customers ultimately got their money back denominated in dollars rather than in kind, and waited a painful two years for it. Tucker questioned why helping distant strangers should be nobler than helping those nearby, and he offered a qualification: doing good for people you don't understand can easily lead to paternalistic mistakes — for example, sending a village that doesn't lack water a pile of water pumps nobody wants; but with something like malaria, private philanthropy has already sharply reduced deaths in sub-Saharan Africa and India, at a cost of a few thousand dollars per life, and "the fact that it is in some sense easy should not be a reason not to do it."</p>
+<p>At the time of the interview he was 32, and the next day was his 33rd birthday (he did not plan to celebrate, and "did not plan to tell Diddy"). Taken literally, a 25-year sentence means he would be 57 on release; factoring in various sentence reductions, it could be his late 40s. He mentioned research suggesting people age at about three times the normal rate in prison. Asked whether he can endure it to the end, he said he was not sure, and that the hardest part remains "having nothing meaningful to do." Talking about AI and the world accelerating forward, he said he feels very acutely that sense of "the world moving on without you."</p>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=dN1CR2dyfo8">https://www.youtube.com/watch?v=dN1CR2dyfo8</a>（Tucker Carlson）· 嘉宾：Sam Bankman-Fried · 发布日期：2025-03-06 · 时长：44 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=dN1CR2dyfo8">https://www.youtube.com/watch?v=dN1CR2dyfo8</a>（Tucker Carlson）· 嘉賓：Sam Bankman-Fried · 發布日期：2025-03-06 · 時長：44 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=dN1CR2dyfo8">https://www.youtube.com/watch?v=dN1CR2dyfo8</a> (Tucker Carlson) · Guest: Sam Bankman-Fried · Release date: 2025-03-06 · Duration: 44 minutes<br>This page is the full text of notes compiled manually; all views and figures are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=dN1CR2dyfo8">https://www.youtube.com/watch?v=dN1CR2dyfo8</a>（Tucker Carlson）· 嘉宾：Sam Bankman-Fried · 发布日期：2025-03-06 · 时长：44 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"狱中的 SBF：Tucker Carlson 采访 Sam Bankman-Fried · Yat's Talks",tw:"獄中的 SBF：Tucker Carlson 採訪 Sam Bankman-Fried · Yat's Talks",en:"SBF in Prison: Tucker Carlson Interviews Sam Bankman-Fried · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

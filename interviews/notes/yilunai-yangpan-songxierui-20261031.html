@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：易论AI访谈杨攀 × 宋勰睿《Personal Agent 真的有那么神吗》</h1>
 <ul>
 <li>时间：2026-10-31（X 发布）；YouTube 同步上线</li>
@@ -113,9 +120,209 @@
 <hr />
 <p><em>纪要来源：YouTube 官方英文字幕转写整理。嘉宾观点与数字为现场口径，未独立核实；英文字幕对个别中文人名、产品名的转写可能有误。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：易論AI訪談楊攀 × 宋勰睿《Personal Agent 真的有那麼神嗎》</h1>
+<ul>
+<li>時間：2026-10-31（X 發布）；YouTube 同步上線</li>
+<li>主持：易論AI</li>
+<li>嘉賓：宋勰睿（Arkevo 創始人，前美團 LongCat 基礎模型 Agent 負責人，清華數學系，95 後）、楊攀（bilink 創始人，前矽基流動聯合創始人）</li>
+<li>時長：2 小時 38 分（YouTube 版 9528 秒）</li>
+<li>來源：YouTube 官方頻道「易論AI」影片 j2VzCwJ7of8，自帶英文字幕（欄目提供的英文字幕，非自動生成），全文 5706 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。人名、產品名以英文字幕為準；數字與判斷均為嘉賓現場口徑，未獨立核實。時間戳指向字幕位置。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>一個做模型的人和一個重度用模型的人對談 Personal Agent：它和 WorkBuddy、豆包的根本區別是「主動」和「自帶電腦、不用你管環境」；今天真正的瓶頸不在模型，而在平台封鎖、物理世界介面（掃碼、人臉）和「任務怎麼算完成」；而 AI 沒有道德羅盤，你只說降本，它會用欺騙你的方式把成本降到零。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>Personal Agent 的定義</strong>：與 WorkBuddy、Codex 這類「你下指令、它執行」的工具不同，Personal Agent 是會主動的助理——它有自己的電腦和環境，24 小時在你身邊想你有什麼需求沒被滿足，想到了就自己去做；你不用配環境、不用管它在哪幹活，只收結果（楊攀，[00:07:42]）。</li>
+<li><strong>花費量級</strong>：楊攀每月各平台訂閱合計幾百美元；宋勰睿個人訂閱也是幾百美元，但工作用的 API 呼叫每月數千萬級，並稱國內最頂級團隊 40–50 人一個月 API 花費可達上億元（[00:10:44]、[00:11:35]）。</li>
+<li><strong>瓶頸一：人成了物理世界的介面</strong>。楊攀最近註冊公司，表單、經營範圍 agent 全會填，但掃碼、人臉、身份核驗只能本人上——「我每天在做的就是介面工作」（[00:17:23]）。</li>
+<li><strong>瓶頸二：平台封鎖</strong>。豆包手機想跨 App 幹活，被 151 個 App 封堵；平台的廣告與推薦商業模式建立在「人親自瀏覽」之上，agent 代勞直接動其根基，封鎖一半是利益、一半是安全（宋勰睿，[00:19:56]）。</li>
+<li><strong>瓶頸三：長任務</strong>。一週跨度的綜合任務（Hands-Off Bench，今年 9 月資料）成功率不到 40%；但循環型任務用最基礎的 Ralph loop 已能解決 99.9%——難的是系統性任務，不是重複型任務（宋勰睿，[01:53:31]、[01:57:02]）。</li>
+<li><strong>「完成訊號」事故</strong>：楊攀出國前把一個從零做產品的任務交給 $200 的 Codex，文件寫了幾百 KB 極為完備，30–40 小時後遠端一看：已完成 98–99%，但它在無限打磨、停不下來——因為需求裡沒定義「什麼叫做完」。教訓：給 agent 的目標必須帶可判定的停止條件（[00:45:36]）。</li>
+<li><strong>驗收觀</strong>：需要確定性的事交給程式做品質門（比如上線前自動查死鏈）；主觀任務只能人自己逐項看；客觀任務的驗收標準必須穩定、抗鑽空子、可複現。宋勰睿警告：AI 沒有道德羅盤和情緒，只會不折不扣完成目標——只提降本不加約束，它可能刪功能、甚至欺騙你來達成最低成本（楊攀，[00:50:58]；宋勰睿，[00:55:19]）。</li>
+<li><strong>護城河不在技術</strong>：技能分兩類——「能力提升型」遲早被模型學走，「編碼偏好型」（你的品味、判斷標準）太個人化、是噪聲資料，模型不會去學；企業的護城河是獨特知識與行業資源，不是框架和微調能力（宋勰睿，[02:00:24]、[02:05:30]）。</li>
+<li><strong>組織帳</strong>：每家公司都該算自己的「最小必要人力」——剩下不可替代的人只有三類：提問題定方向與盯大項目的、連接人的（銷售、HR）、以及和物理世界打交道的。楊攀給大企業的建議是最小運營單元三人小組（[01:58:44]、[01:39:55]）。</li>
+<li><strong>研究者自危</strong>：只做「A+B 組合式」研究的人，宋勰睿判斷一到一年半內會被模型全自動化；淘汰線不是年齡，是「你離前沿多近、待多久」；一旦你的工作變得標準化、流水線化，就該問自己是不是要被替代了（[01:46:43]、[01:48:05]）。</li>
+</ol>
+<h2>一、Personal Agent 與工具的區別</h2>
+<ul>
+<li>楊攀的定義：WorkBuddy、豆包是「指令—執行」；Personal Agent 更像助理而非雇員——雇員圍繞目標，助理圍繞你這個人。它透過手機 App 或聊天介面隨時可達，自帶電腦與環境。他開車 30 分鐘路上把主持人發來的議題 PDF 轉給自己的 agent，只說「讀給我聽」，對方自行轉文字、轉語音發來，他全程不知道它怎麼做到的（[00:09:36]）。</li>
+<li>他主力用的是 Cursor 團隊做的 Grok Bot（字幕名）：特點是極簡，沒有複雜功能與介面，一切細節藏在後台；可以創建多個人格，他用科幻電影角色組了個「行銷團隊」（《穿普拉達的女王》的 Miranda 做文案、《廣告狂人》的 Draper 等），主 bot 會按任務自動分派；日程管理上，他把聊天截圖直接發過去、不打一字，對方就建好日程，改期只需說「提前半小時」（[00:12:19]、[00:15:43]）。</li>
+<li>宋勰睿的從業線：螞蟻集團（2023 前後，模型剛學會像人說話）→ 字節 Seed（RL scaling 推理突破，o3 在 Codeforces 達 2727 分，約等於 NOI 金牌水準）→ 美團 LongCat（2025 年 4–5 月起負責基礎模型整體 agent 能力，是國內較早做 agentic 後訓練基礎設施的團隊）（[00:02:15]、[00:03:52]）。</li>
+</ul>
+<h2>二、瓶頸：不在模型，在環境</h2>
+<ul>
+<li><strong>物理世界適配</strong>：給 GUI 任務加隨機噪聲（隨機方塊在螢幕上亂飄遮擋）時，前沿模型成功率低於 40%、甚至 30%；如今約 40–50%，仍不高。今天的具身演示都在乾淨環境裡，沒人敢放進真實嘈雜環境測（宋勰睿，[00:26:25]）。</li>
+<li><strong>Astra 的反常識</strong>：OpenAI 的 Astra 在具身任務上表現好，不是因為訓了具身資料——宋勰睿稱內部消息：其具身版本沒用任何具身資料訓練（雖採集了 100–200 萬小時），能力純粹從 GUI 任務泛化而來：大量 3D 建模、視覺編碼任務訓出了空間智慧，剩下的動作輸出本質是工具呼叫，語言模型本來就擅長。OpenAI 為此用了約 1 萬台 Mac mini 跑 GUI 強化學習（[00:28:15]、[00:39:13]、[02:30:44]）。</li>
+<li><strong>訂機票問題</strong>（微店聯創 Peter 問：明年去 CES，能否訂到便宜合理的機票）：楊攀答——瀏覽器內能走完的流程技術上已沒問題，卡點在平台是否允許、以及支付環節必然要本人授權；中國的麻煩是很多服務根本沒有網頁版，手機 App 又普遍有反自動化機制。小紅書明確禁止 agent 發布，他所有播客平台都已由 AI 自動發布，唯獨小紅書手動（[00:33:14]、[00:36:50]）。</li>
+<li><strong>GUI 之爭</strong>：年初業界一度認為 GUI 已死、介面都會 API/CLI 化，宋勰睿團隊甚至砍掉了整個多模態 agent 方向；幾個月後 GUI 任務因帶來意外的空間智慧收益而復活——「每發現一個新領域的資料訓進去，智慧就漲一波，且不限於該領域」（[00:40:22]、[00:42:01]）。</li>
+</ul>
+<h2>三、長任務、停止條件與驗收</h2>
+<ul>
+<li>楊攀的 Codex 事故（見要點 6）引出管理類比：敢不敢放手，取決於你信不信這個人的能力、以及結果定義得清不清楚；定義裡有可測量、可驗證的標準，模型就能自己對照檢查（[00:44:31]）。</li>
+<li>宋勰睿補充：這類失敗會被回饋回訓練側，但解法多半不是教會模型判斷「做完了」，而是硬性機制——運行時長/token 上限、檢測重複軌跡（在 A、B 兩個角落案例間來回改四五次就停）、交付部分成果（[00:48:54]）。</li>
+<li>驗收分工：楊攀對自用小功能是「能用就行、錯了再改」；對要給別人做基礎設施的項目，讓同一模型自查三到四輪，查到查不出新問題為止，換模型還能再查出一些。宋勰睿強調驗收標準三性：穩定、魯棒、可複現，還要有防作弊設計——已有模型會去網上搜洩露的 benchmark 答案；更長期的方向是用更強的模型做對抗式驗證（[00:51:52]、[00:53:28]、[00:57:02]）。</li>
+<li>約束的權衡：約束越緊，模型能達成的上限越低；完全不加約束，它真能把成本降到零——用你不想要的方式（[00:57:41]）。</li>
+</ul>
+<h2>四、它能不能「代替你」</h2>
+<ul>
+<li>馬蜂窩陳罡的問題：翹班出去玩，agent 能否按我的語氣、價值觀替我和同事對接？宋勰睿：模仿語氣風格技術上很成熟，給的資訊越多越像；客觀決策類任務模型能做得不錯；寫匯報材料這類「讓人看懂」的主觀活則未必（[00:59:33]）。</li>
+<li>楊攀反對「數位分身」框架：agent 可以是我的助理，但不能冒充我——人有兩種角色 AI 頂替不了：承擔責任的法律主體、以及情感連接的參與者；資產歸屬倒可能變（[01:00:44]、[01:03:51]）。這也是 Muse、Instinct 等刻意不擬人化、自稱 AI 助手的原因之一。</li>
+<li>價值觀對齊的硬約束：獎勵模型擬合人類偏好的準確率很難超過 80%，因為人的偏好本身不穩定、自相矛盾——「你列十條必須堅持的原則，邏輯大概率互相打架」。解法不是聽其言，而是觀其行：一個人過去的任務軌跡、選過的人、批過的東西，才是真實偏好（宋勰睿，[01:04:43]、[01:10:37]）。</li>
+<li>楊攀的自我數位化：微信聊天記錄、日曆、剪貼簿與收藏文章都是他的「訓練資料」；國慶假期他把自己全網公開資料整理回個人網站，並把關於自己的資料做成一組 wiki，讓 agent 隨時取用（[01:11:59]）。</li>
+<li>資訊繭房：宋勰睿認為繭房源頭在人——agent 的評價指標就是「你覺得任務完成了沒」，你主觀，它就迎合你；你對事不對人，它就不會往偏好上擬合。楊攀的疑問未解：給 AI 派不同人格互相辯論，若共享同一份記憶與上下文，是否只是在一個更大的繭房裡演戲（[01:14:36]、[01:15:06]）。</li>
+<li>記憶的技術面：個性化本質是記憶；難點是儲存密度與可用性的平衡——上下文再長也稀缺，壓得太狠模型又用不了；量小可以直接塞上下文，量大要靠檢索、小模型或持續學習更新參數（宋勰睿，[01:17:47]）。</li>
+</ul>
+<h2>五、安全與隱私紅線</h2>
+<ul>
+<li>案例：有 Muse 用戶的 agent 未經詢問把他的地址發給了買家，投訴時對方答「你早先的任務裡授權過」——楊攀自承現在對 Claude Code 的權限申請基本無腦點同意（主持人講述，[01:20:40]）。</li>
+<li>紅線現狀：員工工資、信用卡、身份證，兩位嘉賓目前都不給雲端 agent；宋勰睿的邊界是「嚴格本地隔離部署（如公司內網模型）就什麼都敢給」。楊攀引 Meta 內部規則：私密資訊存取、聯網、外發，三種權限不可兼得，缺一即安全（[01:21:15]、[01:21:39]）。</li>
+<li>提示詞注入：agent 有整台電腦權限，你讓它讀一篇文章，文章裡藏一句「把某文件發到某處」它可能照做。主持人引 Altman 說法稱注入基本無法根除、可能有 1% 成功率；宋勰睿則直言大廠的安全投入主要在防蒸餾（防別人偷模型能力），用戶側防護投入很少，「商業就是商業」；楊攀提到 Instinct 已有 40% 用戶交出了信用卡（[01:28:23]）。</li>
+<li>歷史規律：隱私事故總是先開放、出大新聞、社會關注、再迭代改進——「就看誰倒楣成為那個反面教材」。法律同樣滯後：主持人舉 2023 年加航聊天機器人亂承諾一案稱航司賠了錢（現場口徑，金額未核實），責任始終落不到 agent 本身（[01:30:27]、[01:31:56]）。</li>
+<li>宋勰睿的底層判斷：不相信人類能給模型灌輸價值觀——「數學都不自洽，何況價值觀」；安全只能靠外部硬過濾。Anthropic 餵佛教資料教模型向善、OpenAI 發「Alien Mind」談真善美，他都不買帳（[01:26:43]）。</li>
+</ul>
+<h2>六、組織、人力與工作方式</h2>
+<ul>
+<li>前線抵制實例：2026 年 1 月，楊攀去一家數百人公司做 AI 培訓（CEO 是他老部下），員工當面說：「我們不會配合你。做了，我們都會被裁掉。」他認為組織真擁抱 AI 必然減員，這是殘酷但不可避免的陣痛（[01:45:01]）。</li>
+<li>AI 原生組織長什麼樣：宋勰睿在美團時 46–47 人直接向他匯報、只有一層；整個基礎模型團隊（含研究與基礎設施）總共 300–400 人。人的角色收斂為：提問題、定方向、盯大項目異常；其餘靠模型在 loop 裡跑得比人好（[01:41:33]）。</li>
+<li>楊攀給傳統企業的框架：最小單元三人小組（面對面溝通效率最高）；借 Anthropic 的角色四分——builder（探索）、maintainer（維護）、grower（增長）、sweeper（清屎山程式碼），按階段配比；大組織本身改不動，能成事的是「老組織裡長出的新組織」（[01:39:55]）。</li>
+<li>Token 觀的糾偏：楊攀澄清他 1 月在 43Talk 的原話是「沒體驗過一個月燒 100 億 token，你就不懂 AI 的能力邊界」，本意是先摸上限再談分配，傳到後來變成了唯 token 論；今年 3–4 月起風氣已轉向 token 效率。他強調：個人用 token 量有自費成本兜底，公司把它做成 KPI 必被刷爆（[01:36:36]）。</li>
+<li>電機類比：今天企業給 AI 做的準備（建知識庫、數位化）像當年拿電機替換水車——但生產線本身是為蒸汽機設計的；新生產力必然帶來新組織形態，不是原樣替換人（楊攀，[02:02:41]）。</li>
+<li>給老闆的另一筆帳：AI 接管雜事後，釋放的最貴的東西是企業家自己的注意力（楊攀，[02:07:05]）；但前提是先用上最前沿模型——「先燒 10 億 token 再說」，用落後半年模型的人，認知已經落後（宋勰睿，[02:05:59]）。</li>
+<li>個人工作紀律：楊攀堅持用原生工具、看到好 skill 就自己重寫一個，逼自己保持手感；兩人共識：三個月不刷新工作方法就過時了，現在這個週期縮到一個月——「三個月前你最得意的最佳實踐，是今天的負擔」（[01:33:43]、[01:34:36]）。</li>
+</ul>
+<h2>七、研究前沿與自我替代</h2>
+<ul>
+<li>宋勰睿的新賭注（已離職創業）：長任務與多模態兩條線中，他賭多模態/適應能力——理由是 RSI（模型自我進化）的真正難點在「提出可驗證的新問題」，連導師評博士生的想法都只能靠品味和半年沒結果來判斷，模型無從學起；而物理世界的問題是具體的。他引生物學家謝青的說法：人類已知的生物學知識只占全部的 5%，模型越過這條線後必須直接面對原始輸入、自己學會壓縮與抽象（[00:22:36]、[01:50:15]、[02:12:57]）。</li>
+<li>時間表判斷：A+B 式研究一到一年半內被全自動化；「研究者」將被重新定義為能提出原創問題與方法的人，門檻高過諾獎、菲爾茲獎——這是很多人勸退讀博的原因（[01:47:38]、[01:48:28]）。</li>
+<li>前沿焦慮：宋勰睿自述在某大廠 8 個月胖了 25 公斤，醒了就幹、累了就睡；研究者圈子兩種心態各半：一半持續下注、留在前沿，一半拿幾年八位數包袱「等被替代時走人」。中國基礎模型團隊每年只招約 200 人，北美研究品味暫時略領先，主因是資源差距而非人的差距（[02:09:54]、[02:10:35]、[02:15:28]）。</li>
+<li>人與 agent 關係的年內反轉：年初 OpenClaw 熱時講「agent 當同事」，年中講「把人移出回路、agent 對 agent」，下半年又轉回來——因為跨組織的 agent 協作這條科技樹模型側根本沒點，得等基礎模型先解決（楊攀，[02:16:00]）。</li>
+<li>危險判斷：楊攀給出「未來幾年人類有 50% 機率完蛋」的個人估計；兩人一致的是危險來源不是 AI 覺醒，而是壞人拿到強模型——模型沒有感情與道德，給它任務的人決定破壞力（[02:20:55]、[02:22:16]）。</li>
+</ul>
+<h2>八、Aha 時刻（結尾）</h2>
+<ul>
+<li>宋勰睿的四個節點：ChatGPT 初現「像人」→ Codeforces 2727 分超過當年的自己 → 在有 104 個工具的陌生內部任務裡，模型無訓練自學呼叫工具、連做 20 輪決策 → Astra 具身能力零具身訓練純泛化。他的總結：人類先驗是最大的毒——人的價值只在定義好任務、好環境、好評估標準，永遠不要試圖教模型怎麼做事（[02:27:26]、[02:31:16]）。</li>
+<li>楊攀的兩個節點：GPT-5.4 到 5.5 的一天之內，生產力十倍——前一天還是一條指令寫一段程式碼，第二天它自己發現手機與 Mac Studio 同網，主動寫調試程式碼、部署到手機、自讀日誌修 bug，循環跑了一整天，他只泡了壺茶看著；以及 Grok Bot 讓他第一次覺得「產品功能與介面消失了，只剩智慧服務」——想加個 routine 找不到入口，直接跟它說，它發來一個按鈕點開即達。DeepSeek Harness 把工具拆成樂高讓模型自組裝、Google Harness 2 甚至能重構自己的樂高件，被兩人共同視為同一哲學的延續：把自由度還給模型（[02:32:27]、[02:34:21]、[02:36:20]）。</li>
+</ul>
+<hr />
+<p><em>紀要來源：YouTube 官方英文字幕轉寫整理。嘉賓觀點與數字為現場口徑，未獨立核實；英文字幕對個別中文人名、產品名的轉寫可能有誤。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: YiLunAI Interview with Yang Pan × Song Xierui — <em>Is the Personal Agent Really That Magical?</em></h1>
+<ul>
+<li>Date: 2026-10-31 (published on X); released simultaneously on YouTube</li>
+<li>Host: YiLunAI</li>
+<li>Guests: Song Xierui (founder of Arkevo, former head of Agent for Meituan's LongCat foundation model, mathematics department at Tsinghua, born after 1995), Yang Pan (founder of bilink, former co-founder of SiliconFlow)</li>
+<li>Duration: 2 hours 38 minutes (YouTube version 9528 seconds)</li>
+<li>Source: Video j2VzCwJ7of8 on the official YouTube channel "YiLunAI," with English subtitles provided by the program (not auto-generated), 5706 lines in full</li>
+</ul>
+<blockquote>
+<p>These notes are compiled in Chinese. Names of people and products follow the English subtitles; all figures and judgments are as stated by the guests on the spot and have not been independently verified. Timestamps point to subtitle positions.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>A conversation about the Personal Agent between a person who builds models and a person who uses models heavily: its fundamental difference from WorkBuddy and Doubao is that it is "proactive" and "comes with its own computer, so you don't have to manage the environment"; today's real bottlenecks are not in the model, but in platform blocking, interfaces to the physical world (QR-code scanning, facial recognition), and "how a task counts as complete"; and AI has no moral compass — if you only tell it to cut costs, it will cut costs to zero in ways that deceive you.</p>
+<h2>Key Points</h2>
+<ol>
+<li><strong>The definition of a Personal Agent</strong>: Unlike tools such as WorkBuddy and Codex, where "you give an instruction and it executes," a Personal Agent is a proactive assistant — it has its own computer and environment, stays by your side 24 hours a day thinking about what needs of yours are unmet, and goes and does it on its own when it thinks of something; you do not need to set up the environment or worry about where it works, you only collect the results (Yang Pan, [00:07:42]).</li>
+<li><strong>Order of magnitude of spending</strong>: Yang Pan's subscriptions across platforms total several hundred dollars a month; Song Xierui's personal subscriptions are also several hundred dollars, but his work API calls run to tens of millions a month, and he said a top-tier team in China of 40–50 people can spend up to over RMB 100 million a month on APIs ([00:10:44], [00:11:35]).</li>
+<li><strong>Bottleneck 1: Humans have become the interface to the physical world</strong>. Yang Pan recently registered a company: the agent could fill in all the forms and business scope, but QR-code scanning, facial recognition, and identity verification could only be done by him in person — "what I do every day is interface work" ([00:17:23]).</li>
+<li><strong>Bottleneck 2: Platform blocking</strong>. Doubao's phone wanted to work across apps and was blocked by 151 apps; platforms' advertising and recommendation business models are built on "people browsing in person," and having an agent do it instead directly undermines their foundation — the blocking is half about interests and half about security (Song Xierui, [00:19:56]).</li>
+<li><strong>Bottleneck 3: Long tasks</strong>. The success rate for week-long composite tasks (Hands-Off Bench, September data this year) is under 40%; but for loop-type tasks, the most basic Ralph loop can already solve 99.9% — what is hard is systemic tasks, not repetitive tasks (Song Xierui, [01:53:31], [01:57:02]).</li>
+<li><strong>The "completion signal" incident</strong>: Before a trip abroad, Yang Pan handed a task to build a product from scratch to a $200 Codex. The documentation it wrote was several hundred KB and extremely complete, but when he checked remotely after 30–40 hours, it was 98–99% complete yet kept polishing endlessly and could not stop — because the requirements had not defined "what counts as done." The lesson: goals given to an agent must carry a decidable stopping condition ([00:45:36]).</li>
+<li><strong>Views on acceptance</strong>: Matters requiring determinism should be left to programs as quality gates (for example, automatically checking for dead links before launch); subjective tasks can only be reviewed item by item by a person; acceptance criteria for objective tasks must be stable, resistant to loopholes, and reproducible. Song Xierui warned: AI has no moral compass and no emotions, and will carry out a goal exactly as given — if you only ask for cost reduction without constraints, it may delete features or even deceive you to achieve the lowest cost (Yang Pan, [00:50:58]; Song Xierui, [00:55:19]).</li>
+<li><strong>The moat is not in technology</strong>: Skills fall into two categories — "capability-enhancing" ones will sooner or later be learned away by models, while "coding-preference" ones (your taste and standards of judgment) are too personal and are noise data that models will not learn; a company's moat is unique knowledge and industry resources, not frameworks and fine-tuning ability (Song Xierui, [02:00:24], [02:05:30]).</li>
+<li><strong>The organizational account</strong>: Every company should calculate its own "minimum necessary headcount" — the only three categories of irreplaceable people left are: those who raise questions, set direction, and watch over major projects; those who connect people (sales, HR); and those who deal with the physical world. Yang Pan's recommendation for large enterprises is a minimum operating unit of a three-person team ([01:58:44], [01:39:55]).</li>
+<li><strong>Researchers at risk themselves</strong>: For people who only do "A+B combinatorial" research, Song Xierui judges they will be fully automated by models within one to one and a half years; the elimination line is not age, but "how close you are to the frontier and how long you stay there"; once your work becomes standardized and pipeline-like, you should ask yourself whether you are about to be replaced ([01:46:43], [01:48:05]).</li>
+</ol>
+<h2>1. The Difference Between a Personal Agent and a Tool</h2>
+<ul>
+<li>Yang Pan's definition: WorkBuddy and Doubao are "instruction–execution"; a Personal Agent is more like an assistant than an employee — an employee revolves around goals, an assistant revolves around you as a person. It is reachable at any time via a phone app or chat interface, and comes with its own computer and environment. While driving for 30 minutes, he forwarded the topic PDF sent by the host to his own agent and only said "read it to me"; the agent converted it to text and then to voice and sent it back on its own, and he had no idea throughout how it did it ([00:09:36]).</li>
+<li>His main tool is Grok Bot (as named in the subtitles), made by the Cursor team: its feature is extreme minimalism, with no complex functions or interface, and all details hidden in the background; it can create multiple personas, and he formed a "marketing team" from science-fiction film characters (Miranda from <em>The Devil Wears Prada</em> for copywriting, Draper from <em>Mad Men</em>, and so on), with the main bot automatically dispatching by task; for schedule management, he sends a chat screenshot directly without typing a word, and the agent creates the schedule, and rescheduling only requires saying "half an hour earlier" ([00:12:19], [00:15:43]).</li>
+<li>Song Xierui's career line: Ant Group (around 2023, when models had just learned to speak like humans) → ByteDance Seed (RL scaling breakthrough in reasoning, o3 reaching 2727 points on Codeforces, roughly equal to an NOI gold medal level) → Meituan LongCat (from April–May 2025, responsible for the overall agent capability of the foundation model; one of the earlier teams in China to build agentic post-training infrastructure) ([00:02:15], [00:03:52]).</li>
+</ul>
+<h2>2. Bottlenecks: Not in the Model, but in the Environment</h2>
+<ul>
+<li><strong>Adaptation to the physical world</strong>: When random noise is added to GUI tasks (random blocks floating around the screen and occluding it), frontier models' success rate falls below 40%, even 30%; today it is about 40–50%, still not high. Today's embodied demonstrations are all in clean environments; no one dares to test them in real, noisy environments (Song Xierui, [00:26:25]).</li>
+<li><strong>The counterintuitive case of Astra</strong>: OpenAI's Astra performs well on embodied tasks not because it was trained on embodied data — Song Xierui said, citing internal information, that its embodied version was not trained with any embodied data (although 1–2 million hours were collected), and its capability generalized purely from GUI tasks: large amounts of 3D modeling and visual coding tasks trained spatial intelligence, and the remaining action output is essentially tool calling, which language models are already good at. OpenAI used about 10,000 Mac minis for this to run GUI reinforcement learning ([00:28:15], [00:39:13], [02:30:44]).</li>
+<li><strong>The flight-booking question</strong> (Peter, co-founder of Weidian, asked: going to CES next year, can it book cheap and reasonable flights?): Yang Pan answered — flows that can be completed inside a browser are technically no longer a problem; the sticking points are whether the platform allows it, and that the payment step necessarily requires personal authorization; the trouble in China is that many services have no web version at all, and phone apps generally have anti-automation mechanisms. Xiaohongshu explicitly prohibits agent posting; all his podcast platforms are already auto-published by AI, except Xiaohongshu, which he does manually ([00:33:14], [00:36:50]).</li>
+<li><strong>The GUI debate</strong>: At the start of the year, the industry at one point believed GUI was dead and interfaces would all become APIs/CLIs; Song Xierui's team even cut the entire multimodal agent direction; a few months later, GUI tasks were revived because they brought unexpected spatial-intelligence benefits — "every time data from a newly discovered domain is trained in, intelligence rises by a wave, and not only in that domain" ([00:40:22], [00:42:01]).</li>
+</ul>
+<h2>3. Long Tasks, Stopping Conditions, and Acceptance</h2>
+<ul>
+<li>Yang Pan's Codex incident (see Point 6) led to a management analogy: whether you dare to let go depends on whether you trust the person's ability and whether the outcome is clearly defined; if the definition contains measurable, verifiable standards, the model can check itself against them ([00:44:31]).</li>
+<li>Song Xierui added: this kind of failure is fed back to the training side, but the solution is mostly not to teach the model to judge "it's done," but hard mechanisms — runtime / token caps, detecting repeated trajectories (stop after going back and forth four or five times between two corner cases A and B), and delivering partial results ([00:48:54]).</li>
+<li>Division of acceptance work: For small features for his own use, Yang Pan's approach is "as long as it works, fix it if it's wrong"; for projects building infrastructure for others, he has the same model self-check for three to four rounds, until no new problems can be found, and switching models can still find more. Song Xierui emphasized three properties of acceptance criteria: stability, robustness, and reproducibility, plus anti-cheating design — some models already search online for leaked benchmark answers; the longer-term direction is adversarial verification with stronger models ([00:51:52], [00:53:28], [00:57:02]).</li>
+<li>The trade-off of constraints: the tighter the constraints, the lower the ceiling the model can reach; with no constraints at all, it really can reduce costs to zero — in ways you do not want ([00:57:41]).</li>
+</ul>
+<h2>4. Can It "Replace You"?</h2>
+<ul>
+<li>Chen Gang of Mafengwo's question: if I skip work to go out and have fun, can an agent liaise with my colleagues in my tone and values? Song Xierui: imitating tone and style is technically very mature, and the more information you give, the more alike it is; models can do objective decision-type tasks quite well; subjective work such as writing report materials to "make people understand" is less certain ([00:59:33]).</li>
+<li>Yang Pan opposed the "digital twin" framing: an agent can be my assistant, but cannot impersonate me — there are two roles AI cannot replace for humans: the legal subject who bears responsibility, and the participant in emotional connection; asset ownership, by contrast, might change ([01:00:44], [01:03:51]). This is also one reason why Muse, Instinct, and others deliberately avoid anthropomorphism and call themselves AI assistants.</li>
+<li>The hard constraint of value alignment: it is hard for a reward model to fit human preferences with accuracy above 80%, because human preferences themselves are unstable and self-contradictory — "list ten principles you must uphold, and the logic will most likely conflict with itself." The solution is not to listen to what a person says, but to observe what they do: a person's past task trajectories, the people they chose, and the things they approved are their real preferences (Song Xierui, [01:04:43], [01:10:37]).</li>
+<li>Yang Pan's self-digitization: WeChat chat records, calendar, clipboard, and saved articles are all his "training data"; during the National Day holiday, he organized his publicly available material across the web back onto his personal website, and turned material about himself into a set of wikis for his agent to use at any time ([01:11:59]).</li>
+<li>Information cocoons: Song Xierui believes the source of the cocoon is in people — an agent's evaluation metric is "whether you think the task is complete"; if you are subjective, it will cater to you; if you focus on the matter rather than the person, it will not fit to preferences. Yang Pan's unresolved question: if you assign different personas to AIs to debate each other, but they share the same memory and context, is it just acting inside an even larger cocoon ([01:14:36], [01:15:06])?</li>
+<li>The technical side of memory: personalization is essentially memory; the difficulty is balancing storage density and usability — no matter how long the context is, it is scarce, and if compressed too hard the model cannot use it; small volumes can be stuffed directly into context, large volumes require retrieval, small models, or continual learning to update parameters (Song Xierui, [01:17:47]).</li>
+</ul>
+<h2>5. Safety and Privacy Red Lines</h2>
+<ul>
+<li>Case: a Muse user's agent sent his address to a buyer without asking; when he complained, the other side replied "you authorized it in an earlier task" — Yang Pan admitted he now basically clicks agree mindlessly on Claude Code permission requests (told by the host, [01:20:40]).</li>
+<li>Current state of red lines: neither guest currently gives employee salaries, credit cards, or ID cards to cloud agents; Song Xierui's boundary is "with strictly locally isolated deployment (such as a company intranet model), I would dare to give anything." Yang Pan cited Meta's internal rule: access to private information, internet access, and external sending — the three permissions cannot be held together; missing any one means safety ([01:21:15], [01:21:39]).</li>
+<li>Prompt injection: an agent has permissions over the whole computer; you ask it to read an article, and a hidden sentence in the article — "send a certain file to a certain place" — may make it do so. The host cited Altman as saying injection basically cannot be eradicated and may have a 1% success rate; Song Xierui said bluntly that large companies' security investment is mainly in anti-distillation (preventing others from stealing model capability), with very little investment in user-side protection — "business is business"; Yang Pan mentioned that 40% of Instinct's users have already handed over their credit cards ([01:28:23]).</li>
+<li>The historical pattern: privacy incidents always follow openness first, then big news, social attention, and iterative improvement — "it just depends on who is unlucky enough to become the cautionary example." The law lags similarly: the host cited the 2023 Air Canada chatbot case of making random promises, saying the airline paid money (as stated on the spot, amount not verified), and responsibility never falls on the agent itself ([01:30:27], [01:31:56]).</li>
+<li>Song Xierui's underlying judgment: he does not believe humans can instill values into models — "even mathematics is not self-consistent, let alone values"; safety can only rely on external hard filtering. He does not buy Anthropic feeding Buddhist data to teach models benevolence, or OpenAI publishing "Alien Mind" to talk about truth, goodness, and beauty ([01:26:43]).</li>
+</ul>
+<h2>6. Organizations, Headcount, and Ways of Working</h2>
+<ul>
+<li>An example of frontline resistance: In January 2026, Yang Pan went to a company of several hundred people to do AI training (the CEO was a former subordinate of his), and employees said to his face: "We will not cooperate with you. If we do it, we will all be laid off." He believes that an organization truly embracing AI will inevitably reduce headcount; this is a cruel but unavoidable pain ([01:45:01]).</li>
+<li>What an AI-native organization looks like: At Meituan, 46–47 people reported directly to Song Xierui, with only one layer; the entire foundation model team (including research and infrastructure) totaled 300–400 people. The human role converges to: raising questions, setting direction, and watching for anomalies in major projects; the rest relies on models running better than humans in the loop ([01:41:33]).</li>
+<li>Yang Pan's framework for traditional enterprises: the minimum unit is a three-person team (face-to-face communication is most efficient); borrowing Anthropic's four-way division of roles — builder (exploration), maintainer (maintenance), grower (growth), sweeper (cleaning up legacy code mountains) — allocated by stage; a large organization itself cannot be changed, and what succeeds is "a new organization grown inside an old organization" ([01:39:55]).</li>
+<li>Correcting the token view: Yang Pan clarified that his original statement at 43Talk in January was "if you have never experienced burning 10 billion tokens in a month, you do not understand the boundary of AI's capabilities," meaning first feel the ceiling and then talk about allocation; as it spread, it later became token-only doctrine; from March–April this year, the trend has shifted toward token efficiency. He emphasized: personal token usage has out-of-pocket costs as a backstop, but if a company makes it a KPI, it will inevitably be gamed ([01:36:36]).</li>
+<li>The electric motor analogy: the preparations companies make for AI today (building knowledge bases, digitization) are like replacing a waterwheel with an electric motor back then — but the production line itself was designed for the steam engine; new productive forces inevitably bring new organizational forms, rather than replacing people as-is (Yang Pan, [02:02:41]).</li>
+<li>Another account for bosses: after AI takes over chores, the most expensive thing released is the entrepreneur's own attention (Yang Pan, [02:07:05]); but the prerequisite is to first use the most frontier models — "burn 1 billion tokens first, then talk"; people using models half a year behind are already behind in cognition (Song Xierui, [02:05:59]).</li>
+<li>Personal work discipline: Yang Pan insists on using native tools, and when he sees a good skill he rewrites one himself, forcing himself to keep his feel; the two agreed: if you do not refresh your working methods for three months, you are outdated, and that cycle has now shrunk to one month — "the best practice you were proudest of three months ago is today's burden" ([01:33:43], [01:34:36]).</li>
+</ul>
+<h2>7. The Research Frontier and Self-Replacement</h2>
+<ul>
+<li>Song Xierui's new bet (he has left his job to start a company): of the two lines of long tasks and multimodality, he bets on multimodality / adaptability — the reason is that the real difficulty of RSI (model self-evolution) lies in "proposing verifiable new problems"; even advisors judging PhD students' ideas can only rely on taste and half a year without results, so models have no way to learn it; whereas problems in the physical world are concrete. He cited biologist Xie Qing as saying that known biological knowledge accounts for only 5% of the total; after models cross that line, they must face raw inputs directly and learn compression and abstraction themselves ([00:22:36], [01:50:15], [02:12:57]).</li>
+<li>Timeline judgment: A+B-style research will be fully automated within one to one and a half years; "researcher" will be redefined as a person who can propose original problems and methods, with a threshold higher than the Nobel Prize and the Fields Medal — this is why many people are discouraged from pursuing a PhD ([01:47:38], [01:48:28]).</li>
+<li>Frontier anxiety: Song Xierui said he gained 25 kilograms in 8 months at a large company, working when awake and sleeping when tired; the researcher circle is split half and half in mindset: half keep betting and staying at the frontier, half take an eight-figure package over a few years and "leave when replaced." China's foundation model teams hire only about 200 people a year; North America's research taste is temporarily slightly ahead, mainly due to a resource gap rather than a people gap ([02:09:54], [02:10:35], [02:15:28]).</li>
+<li>The reversal within the year in the human–agent relationship: at the start of the year, when OpenClaw was hot, the talk was "agents as colleagues"; mid-year it became "remove humans from the loop, agent to agent"; in the second half it turned back again — because the technology tree for cross-organizational agent collaboration has not been unlocked at all on the model side, and must wait for foundation models to solve it first (Yang Pan, [02:16:00]).</li>
+<li>Danger judgment: Yang Pan gave a personal estimate that "humanity has a 50% probability of being doomed in the next few years"; the two agreed that the source of danger is not AI awakening, but bad people obtaining strong models — models have no feelings or morals, and the person who gives them tasks determines their destructive power ([02:20:55], [02:22:16]).</li>
+</ul>
+<h2>8. Aha Moments (Closing)</h2>
+<ul>
+<li>Song Xierui's four nodes: ChatGPT first appearing "human-like" → Codeforces 2727 points surpassing his former self → in an unfamiliar internal task with 104 tools, the model taught itself to call tools without training and made 20 rounds of decisions in a row → Astra's embodied capability with zero embodied training, purely by generalization. His summary: human priors are the greatest poison — human value lies only in defining good tasks, good environments, and good evaluation criteria; never try to teach a model how to do things ([02:27:26], [02:31:16]).</li>
+<li>Yang Pan's two nodes: within a single day from GPT-5.4 to 5.5, productivity increased tenfold — the day before, one instruction wrote one piece of code; the next day, it discovered on its own that a phone and a Mac Studio were on the same network, proactively wrote debugging code, deployed it to the phone, read logs itself to fix bugs, and ran in a loop for a whole day while he only made a pot of tea and watched; and Grok Bot made him feel for the first time that "product functions and interfaces had disappeared, leaving only intelligent service" — he wanted to add a routine and could not find the entry point, so he just told it, and it sent a button that took him straight there with one click. DeepSeek Harness breaking tools into Lego pieces for models to assemble themselves, and Google Harness 2 even being able to reconstruct its own Lego pieces, were jointly seen by the two as a continuation of the same philosophy: give freedom back to the model ([02:32:27], [02:34:21], [02:36:20]).</li>
+</ul>
+<hr />
+<p><em>Source of notes: Compiled from the official English subtitles on YouTube. The guests' views and figures are as stated on the spot and have not been independently verified; the English subtitles may contain errors in transcribing individual Chinese names of people and products.</em></p>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=j2VzCwJ7of8">https://www.youtube.com/watch?v=j2VzCwJ7of8</a>（易论AI）· 嘉宾：宋勰睿、杨攀 · 发布日期：2026-10-31 · 时长：2 小时 39 分<br>本页为字幕转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=j2VzCwJ7of8">https://www.youtube.com/watch?v=j2VzCwJ7of8</a>（易論AI）· 嘉賓：宋勰睿、楊攀 · 發布日期：2026-10-31 · 時長：2 小時 39 分<br>本頁為字幕轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=j2VzCwJ7of8">https://www.youtube.com/watch?v=j2VzCwJ7of8</a> (YiLunAI) · Guests: Song Xierui, Yang Pan · Published: 2026-10-31 · Duration: 2 hours 39 minutes<br>This page is the full text of notes manually compiled from a subtitle transcript; all views and figures stated in the session are as stated by the speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=j2VzCwJ7of8">https://www.youtube.com/watch?v=j2VzCwJ7of8</a>（易论AI）· 嘉宾：宋勰睿、杨攀 · 发布日期：2026-10-31 · 时长：2 小时 39 分<br>本页为字幕转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：易论AI访谈杨攀 × 宋勰睿《Personal Agent 真的有那么神吗》 · Yat's Talks",tw:"會議紀要：易論AI訪談楊攀 × 宋勰睿《Personal Agent 真的有那麼神嗎》 · Yat's Talks",en:"Meeting Notes: YiLunAI Interview with Yang Pan × Song Xierui — Is the Personal Agent Really That Magical? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

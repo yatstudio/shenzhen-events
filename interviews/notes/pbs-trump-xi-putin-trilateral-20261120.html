@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>特朗普归国记者会：中美俄三方会谈、超级智能护栏与黄仁勋</h1>
 <ul>
 <li>视频：https://www.youtube.com/watch?v=XBt_02mMN7U（PBS NewsHour 直播回放）</li>
@@ -120,9 +127,223 @@
 <li>逐字稿为 whisper-small 自动识别："Harmost Rate" 应为霍尔木兹海峡，"Mundami" 应为纽约市长马姆达尼，"Kotton" 应为参议员科顿，"Ludnick" 应为卢特尼克，均已按上下文归并；鲁比奥发言中的 "Ocean" 应为 ASEAN（东盟）。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>特朗普歸國記者會：中美俄三方會談、超級智能護欄與黃仁勳</h1>
+<ul>
+<li>影片：https://www.youtube.com/watch?v=XBt_02mMN7U（PBS NewsHour 直播回放）</li>
+<li>標題：WATCH LIVE: Trump hosts news conference after meeting with Xi, Putin</li>
+<li>時間：2026-11-20（特朗普結束亞洲行返美後次日舉行；影片前約 21 分鐘為會前環境聲，記者會正文自 00:21 開始）</li>
+<li>發言：特朗普主講，副總統萬斯、國務卿魯比奧先後補充，隨後記者問答；白宮幕僚長斯蒂芬·米勒在結尾做了一段總結發言</li>
+<li>總時長：1 小時 50 分</li>
+<li>逐字稿：transcript.txt（2099 行，末尾時間戳 [01:50:20]，與影片總時長吻合；whisper-small 英文識別，專名有個別識別錯誤，文中已按上下文歸併）</li>
+</ul>
+<blockquote>
+<p>說明：本紀要按逐字稿整理。記者會上的數字與說法均為特朗普及其團隊的公開表述，未經獨立核實；涉及他國內政與人事的部分，只作轉述。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>特朗普用一場近 90 分鐘的記者會給亞洲行定調：深圳舉行了史上首次美俄中三方領導人會談，三國發表「核衝突永不發生」的三邊和平宣言、中國首次同意參加三邊核風險討論；他同時宣布美國公司不得再去海外建資料中心，並公開喊話英偉達——希望黃仁勳道歉、希望公司給他第二次機會回去。</p>
+<h2>一、核心事件：深圳三方會談</h2>
+<ul>
+<li>這是<strong>美、俄、中三國領導人史上首次三方會談</strong>，在深圳 APEC 期間舉行。特朗普自述事先沒想過歷史意義，「去了才發現有多大」，並類比雅爾塔會議（丘吉爾、斯大林、羅斯福）。</li>
+<li>會談成果（特朗普口徑）：三國發表首份<strong>三邊和平宣言</strong>，正式同意核衝突絕不能發生；<strong>中國首次同意就降低核風險舉行三邊討論</strong>——特朗普說中方原本不願意，因為中國核武庫明顯落後：美約 4,000 件、俄第二、中國約 600 件，但中國十年內會追上。三國合計擁有全球 92% 的核武器。</li>
+<li>三方還談了：伊朗永不得擁有核武器；朝鮮半島危險；共同增產石油、汽油與柴油以緩解全球價格壓力；<strong>中國首次同意譴責國際刑事法院（ICC）的濫權</strong>。</li>
+<li>烏克蘭議題上是「二對一」：特朗普稱習近平與他一起向普京施壓。普京在雙邊會談中明確表示希望以外交方式結束戰爭；障礙是澤連斯基與普京之間「巨大的仇恨」。特朗普稱戰爭每月造成 25,000–30,000 人死亡（他給的平均數是 25,933 人）。記者追問安全保障與「類第五條」安排時，他拒絕細談：「先達成協議再說。」</li>
+</ul>
+<h2>二、習近平機場迎接與深圳印象</h2>
+<ul>
+<li>特朗普反覆強調：習近平親自到機場、到飛機邊迎接他，「他從沒為任何人這樣做過」，也沒有這樣迎接過拜登；他解讀為這是對美國的尊重。</li>
+<li>他稱習近平當面祝賀他：「我以為你們國家已經完了……你們現在在各個方面都領先我們。」他特別提到習近平祝賀美國在「超級智能」上的領先。</li>
+<li>對深圳的評價極高：乾淨、無可挑剔，40 年（實際主要是近 20 年）從漁村建成；他仔細看了一路的護欄與路面，「連一個補過的坑都沒有」，並反襯芝加哥、洛杉磯等美國城市的破敗。</li>
+</ul>
+<h2>三、超級智能（SI）：改名、護欄與資料中心新政</h2>
+<ul>
+<li>特朗普在記者會上把 AI 改稱 <strong>「超級智能」（super intelligence, SI）</strong>：「它不是 artificial（人工的），它是 super 的。」他稱習近平也喜歡這個名字，並說<strong>兩人同意就超級智能設「聯合護欄」（joint guardrails）</strong>，理由是美中是僅有的兩個玩家、沒有第三名。</li>
+<li>馬尼拉四方峰會（美、印、澳、日）宣布了首個「四方經濟安全與供應鏈論壇」與「四方 SI 加速器」，但他明確說 SI 合作只會有限度推進，技術要留在美國國內。</li>
+<li><strong>現場宣布的新政策：不允許美國公司去其他國家建資料中心</strong>，違者將課以重稅與重罰（他舉例已叫停一個芬蘭項目）。邏輯是：當年放任晶片外流是教訓，資料中心若出去，「中國會把它們全拿走」。他同時勸地方社區歡迎資料中心：讓它們付錢給社區、自建電力，電價反而會下降（舉例：路易斯安那一地為獲批給教師發 5 萬美元，另一地給居民每人 1 萬美元）。</li>
+<li>他點名表揚了 Anthropic 剛完成的上市：「非常成功的一次發行，對 Dario 很尊重」，並說要把這類公司留在美國——不能因為審批不給過，人家就跑去別國建，「下一步他們就要去太空建了」。</li>
+</ul>
+<h2>四、黃仁勳：公開喊話「道歉、回去」</h2>
+<p>這是與晶片出口問題連在一起的一段，也是全場資訊量最高的國內人事表態（以下均為特朗普原話口徑）：</p>
+<ul>
+<li>記者問是否會放寬對華晶片出口禁令，特朗普答：<strong>只賣舊晶片</strong>，最新的一律不賣；中國自己也會造晶片，不賣他們就自研——他說這正是黃仁勳過去遊說的理由之一。</li>
+<li>他稱黃仁勳是「世界上最聰明的頭腦之一」，但「做了一些壞決定」（made some bad decisions）。他希望看到的是：<strong>黃仁勳做一個大的道歉（big apology），然後回去工作</strong>；他甚至說自己推薦過蒂姆·庫克（作為人選），但在那之前，他更想看到黃仁勳獲得第二次機會——「我們是一個給人第二次機會的國家」。</li>
+<li>Blackwell 是最新晶片，<strong>絕不能讓中國或任何人拿到</strong>；但兩年後 Blackwell 就會過時。他稱美國在晶片製造上領先中國 10 年，且晶片複雜到無法仿製，不像電影、地墊等產品容易被盜版。</li>
+<li>他說自己與習近平談過黃仁勳，習近平評價黃「brilliant（才華橫溢）」。</li>
+<li>他還順帶為馬斯克辯護：第一任期內他強力保護過馬斯克，「我們必須保護我們的天才，這個國家的天才並不多」。</li>
+</ul>
+<blockquote>
+<p>對照：昨晚普達特 Space 裡「黃仁勳被董事會逼宮」的說法全程無任何公開來源；今天特朗普在記者會上公開說希望英偉達接受黃仁勳道歉、讓他回去工作——黃仁勳當前不在位的事實，第一次有了總統本人的公開表述背書，但「被逼宮」的原因與細節仍無官方說法。</p>
+</blockquote>
+<h2>五、貿易清單：泰國、菲律賓、墨西哥、加拿大、中國</h2>
+<ul>
+<li><strong>泰國</strong>：簽署協議，取消對美國產品的全部關稅、移除非關稅壁壘，每年購買 26 億美元美國農產品（特朗普說這只是初步數字，還要加）。泰國總理與柬埔寨首相洪瑪奈都當面感謝他叫停了泰柬戰爭（他自嘲：沒有諾貝爾獎，但救了很多命；「我停了八場戰爭」，媒體說只有六場）。</li>
+<li><strong>菲律賓</strong>：東盟峰會期間達成 170 多億美元商業交易。菲律賓航空改買 20 架波音 787（通用電氣發動機），支撐 47,000 個美國崗位；與菲律賓達成框架貿易協議——菲律賓農產品與能源** 100% 從美國採購**（此前農產品多從巴西買、能源多從中東買），另採購 20 多億美元美國軍備。他的談判邏輯是當面問馬科斯：「中國若攻擊你們，巴西和中東會來救嗎？」</li>
+<li><strong>墨西哥</strong>：與辛鮑姆總統的會談接近達成協議；他當面告訴她墨西哥對美順差太大、販毒集團在「統治墨西哥」，兩件事都要解決。</li>
+<li><strong>加拿大</strong>：卡尼總理「人很好」，但加拿大「佔了美國 50 年便宜」，對美逆差約 800 億美元；加方想為美國建 Keystone 管道，「但要做的遠不止這個」；他的開價是：逆差降到零，再來談。</li>
+<li><strong>中國</strong>：他稱中國現在是給美國付錢最多的國家；對華關稅一度加到 145%（「船隻在大洋中間掉頭返航」），芬太尼懲罰關稅 20%；海運芬太尼流入已下降 97%（他的口徑）。</li>
+</ul>
+<h2>六、經濟與美聯儲</h2>
+<ul>
+<li>他給的成績單：上任以來創造 25 萬億美元新財富（紀錄），但中期選舉結果出來後又蒸發了 4 萬億——「我又不在選票上」；製造業連續 10 個月增長（紀錄）；新設備投資今年增長 21%（紀錄）；貧困率歷史最低；就業人數歷史最高。</li>
+<li>油價：11 月初以來原油跌 20%，現接近每桶 80 美元，「史上最大跌幅之一」；汽油一個月跌了 60 美分，還會再跌。</li>
+<li>對美聯儲的批評是整段最長的政策抱怨之一：美聯儲「太政治化」，數據好就加息，邏輯應該反過來——數據好說明信用好、應該降息；若降息，美國 GDP 可以到 15–20% 而不是 4%，債務也能快速還清；每個百分點的利率約對應 6,500 億美元。他拿印度作對比：低利率、7% 增長。</li>
+<li>關稅帶來工廠回流：奧迪宣布 40 億美元新廠、豐田 50 億美元新廠；福特底特律那座 1906 年的老廠原定關閉，現在改為 7×24 運轉並擴建；汽車工人工會主席肖恩·費恩（原是反對他的激進民主黨人）打電話來道謝。</li>
+</ul>
+<h2>七、中期選舉餘波：萬斯聲明與伊朗戰爭</h2>
+<ul>
+<li>共和黨剛輸掉中期選舉。記者問：有報道說他不滿萬斯把敗選歸因於伊朗戰爭的聲明。特朗普否認不滿：「聲明沒問題、很準確」，只補一句——如果再問一次「你還會打嗎」，答案是絕對會，因為伊朗絕不能擁有核武器。</li>
+<li>他復盤油價：原以為戰爭會把油價推到每桶 300 美元，結果只漲了一點、現在回到 80 美元附近；美軍對霍爾木茲海峽實施封鎖、「完全控制」，上周從海峽運出的石油創紀錄。他稱伊朗政權 51 年來作惡，「過去八個月殺了 75,000 名抗議者」（他的口徑）。</li>
+<li>萬斯在問答中被直接問到「為伊朗戰爭丟掉參議院六年值不值」：他答，防止伊朗獲得核武器是壓倒一切的目標，決定由總統做、總統說會再做一次，他的職責是支持總統。</li>
+<li>記者還問萬斯與魯比奧誰更適合當下任總統，特朗普沒有正面回答。</li>
+</ul>
+<h2>八、國內議程：一串法案與人事</h2>
+<ul>
+<li><strong>許可改革</strong>：參議院昨晚通過里程碑式的許可改革法案，眾議院通過後預計每年給每個美國人省回至少 1,300 美元，並帶動新一輪建設潮。</li>
+<li><strong>空管系統</strong>：系統已有 55 年歷史、安全靠「慢速運行」維持；已拿到 120 億美元（只是零頭），他讓交通部長達菲別到處打補丁，正向參議院要 500 億美元整體重建，要求單一總承包商協調。近期銀行、機場等一系列系統宕機，他稱都是各家升級造成的<strong>孤立事件</strong>，不是協同攻擊，民眾不必擠兌或恐慌。</li>
+<li><strong>格陵蘭</strong>：「昨天剛批准，我們拿到格陵蘭了」，他感謝丹麥與北約方面（逐字稿作 "Mark Ruda"，應為北約秘書長呂特）。</li>
+<li><strong>新國會相處之道</strong>：民主黨將控制國會（眾議長當選人傑弗里斯）。他的策略是亮出否決權：「他們送什麼我否決什麼」，耗一兩個月後對方會帶著條件來談；他點名傑弗里斯與舒默「都是聰明人」，尤其看好在<strong>醫保</strong>上與民主黨達成交易。他還提了兩件跨黨派事項：影視娛樂激勵法案（把跑去加拿大、英國、澳大利亞的拍攝拉回來，連亞當·希夫都誇好）與大學體育 NIL 法案（四分衛年薪 1,200 萬美元、大學要破產，薩班教練與洋基隊的蘭迪·萊文都在推）。</li>
+<li><strong>移民</strong>：他稱過去 18 個月「沒有一個人非法入境」；民主黨方面已有人來電，想談醫保與移民兩件事；對薩拉查議員推動的大赦類法案，他強調先把「最壞的人」清出去。</li>
+<li><strong>人事</strong>：網絡安全主管被解職，理由只有一句「不夠好」；參議員科頓放話稱他對商務部長盧特尼克失去信心，他明確否認：「我沒有失去信心」，並誇盧特尼克是天生的生意人、政府買入英特爾股票賺了幾百億他有份參與（「老實說我那份更大」）。</li>
+<li><strong>治安</strong>：華盛頓特區犯罪率降 87%、謀殺率降至 125 年最低（他的口徑）；有記者問伊朗「髒彈」威脅華盛頓的傳聞，他說「我們對伊朗了如指掌，不會讓它發生」。</li>
+</ul>
+<h2>九、萬斯與魯比奧的補充發言</h2>
+<ul>
+<li>萬斯自嘲留守白宮是「一個人在家，但吃得更好、黃金更多」。他把兩件事連起來：總統在海外拿貿易協議，參議院在國內通過許可改革——全球激勵與國內建設能力對上，美國才能「像從沒建過那樣大建」。</li>
+<li>魯比奧的版本更系統：東盟是美國與東南亞打交道的主渠道，那些國家是美國產品的市場；四方機制明年初要辦四國企業論壇；對菲律賓的邏輯是「我們是它的主要防務提供者，經濟關係應當反映這一點」，協議是總統親自談的；對三方會談，他強調三國擁有全球絕大多數核武器，三國領導人不能定期接觸「不只是荒謬，而是危險」，元首關係定調，談判與外交才有往下走的環境。</li>
+</ul>
+<h2>十、收尾：米勒演說與一場音樂會</h2>
+<ul>
+<li>特朗普臨時點名幕僚長斯蒂芬·米勒發言。米勒列了一長串「史無前例」：首位實現淨放鬆管制的總統（每增 1 條新規、刪 10 條舊規）、邊境完全封控、創紀錄驅逐、犯罪率與謀殺率歷史最低、化石燃料與煤炭產量紀錄、1970 年代以來首批新核反應堆臨界、「不到一小時拿下委內瑞拉、一夜之間讓美國石油儲量翻倍」、與俄中關係重構、最強經濟與最快工資增長，並預言「接下來兩年將是美國歷史上最偉大的兩年」。</li>
+<li>記者會最後變成一場邀請：當天下午 2 點左右，白宮新停機坪上要給軍樂團的約 80 名樂手發獎金並辦小型音樂會——他們曾在白宮 250 周年 UFC 之夜演奏，達納·懷特將到場。特朗普誇這些樂手「本可以去卡內基音樂廳，是因為熱愛國家才留在這裡」，並邀請在場記者參加。記者會在道謝聲中結束。</li>
+</ul>
+<h2>本期紀要的邊界</h2>
+<ul>
+<li>這是特朗普單方表述的記者會：三方會談的內容、習近平的原話、各項數字（核武器數量、傷亡、油價、犯罪率、財富增減）均只有他一方的口徑，紀要只作轉述，未做交叉核實。</li>
+<li>黃仁勳部分同理：特朗普說的是「希望」與「建議」，英偉達是否接受、黃仁勳離任的原因與經過，均無公司方面的公開說法。</li>
+<li>影片前約 21 分鐘是記者會開始前的直播環境聲（人群雜談與靜默），沒有實質內容；逐字稿該段的零碎句子不具資訊量，紀要未採用。</li>
+<li>逐字稿為 whisper-small 自動識別："Harmost Rate" 應為霍爾木茲海峽，"Mundami" 應為紐約市長馬姆達尼，"Kotton" 應為參議員科頓，"Ludnick" 應為盧特尼克，均已按上下文歸併；魯比奧發言中的 "Ocean" 應為 ASEAN（東盟）。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Trump's Homecoming Press Conference: The US-China-Russia Trilateral, Super Intelligence Guardrails and Jensen Huang</h1>
+<ul>
+<li>Video: https://www.youtube.com/watch?v=XBt_02mMN7U (PBS NewsHour live replay)</li>
+<li>Title: WATCH LIVE: Trump hosts news conference after meeting with Xi, Putin</li>
+<li>Date: 2026-11-20 (held the day after Trump returned to the US from his Asia trip; the first roughly 21 minutes of the video are ambient sound before the event, and the press conference proper begins at 00:21)</li>
+<li>Speakers: Trump as the main speaker, with additional remarks from Vice President Vance and Secretary of State Rubio, followed by questions from reporters; White House Chief of Staff Stephen Miller gave a concluding summary at the end</li>
+<li>Total length: 1 hour 50 minutes</li>
+<li>Transcript: transcript.txt (2,099 lines, ending timestamp [01:50:20], matching the total video length; English recognition by whisper-small, with a few proper names misrecognized and merged here based on context)</li>
+</ul>
+<blockquote>
+<p>Note: This summary is compiled from the transcript. The figures and claims made at the press conference are the public statements of Trump and his team and have not been independently verified; material concerning the domestic affairs and personnel of other countries is reported only as relayed.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Trump used a nearly 90-minute press conference to set the tone for his Asia trip: Shenzhen hosted the first-ever trilateral meeting of US, Russian and Chinese leaders, the three countries issued a trilateral peace declaration that "a nuclear conflict must never happen," and China agreed for the first time to take part in trilateral nuclear-risk discussions; at the same time he announced that US companies would no longer be allowed to build data centers overseas, and publicly called out to Nvidia — hoping Jensen Huang would apologize and hoping the company would give him a second chance to return.</p>
+<h2>1. The Core Event: The Shenzhen Trilateral Meeting</h2>
+<ul>
+<li>This was the <strong>first-ever trilateral meeting of the leaders of the US, Russia and China</strong>, held in Shenzhen during APEC. Trump said he had not thought about its historic significance beforehand — "I only realized how big it was once I got there" — and compared it to the Yalta Conference (Churchill, Stalin, Roosevelt).</li>
+<li>Outcomes of the meeting (as stated by Trump): the three countries issued their first <strong>trilateral peace declaration</strong>, formally agreeing that a nuclear conflict must never happen; <strong>China agreed for the first time to hold trilateral discussions on reducing nuclear risk</strong> — Trump said China had originally been unwilling because its nuclear arsenal clearly lags behind: the US has about 4,000 weapons, Russia is second, and China has about 600, though China will catch up within ten years. Together the three countries hold 92% of the world's nuclear weapons.</li>
+<li>The three sides also discussed: Iran must never possess nuclear weapons; the danger on the Korean Peninsula; jointly increasing production of oil, gasoline and diesel to ease global price pressure; and <strong>China agreed for the first time to condemn the abuse of power by the International Criminal Court (ICC)</strong>.</li>
+<li>On Ukraine it was "two against one": Trump said Xi Jinping joined him in pressuring Putin. In their bilateral meeting, Putin stated clearly that he hoped to end the war through diplomacy; the obstacle is the "enormous hatred" between Zelensky and Putin. Trump said the war kills 25,000–30,000 people per month (the average he gave was 25,933). When reporters pressed him on security guarantees and an "Article 5-like" arrangement, he declined to go into detail: "Let's reach an agreement first."</li>
+</ul>
+<h2>2. Xi Jinping's Airport Welcome and Impressions of Shenzhen</h2>
+<ul>
+<li>Trump repeatedly emphasized that Xi Jinping personally came to the airport, right up to the plane, to greet him — "he has never done this for anyone" — and had not greeted Biden that way either; he interpreted it as a sign of respect for the United States.</li>
+<li>He said Xi congratulated him face to face: "I thought your country was finished... you now lead us in every respect." He particularly noted that Xi congratulated the US on its lead in "super intelligence."</li>
+<li>His assessment of Shenzhen was extremely high: clean and impeccable, built from a fishing village over 40 years (in reality mainly the last 20 years); he carefully observed the guardrails and road surfaces along the way — "not a single patched pothole" — and contrasted it with the decay of US cities such as Chicago and Los Angeles.</li>
+</ul>
+<h2>3. Super Intelligence (SI): The New Name, Guardrails and the New Data Center Policy</h2>
+<ul>
+<li>At the press conference Trump renamed AI as <strong>"super intelligence" (SI)</strong>: "It is not artificial, it is super." He said Xi also liked the name, and that <strong>the two agreed to set "joint guardrails" for super intelligence</strong>, on the grounds that the US and China are the only two players, with no third.</li>
+<li>The Manila Quad summit (US, India, Australia, Japan) announced the first "Quad Forum on Economic Security and Supply Chains" and a "Quad SI Accelerator," but he made clear that SI cooperation would advance only to a limited extent and that the technology must stay inside the United States.</li>
+<li><strong>New policy announced on the spot: US companies are not allowed to build data centers in other countries</strong>, and violators will face heavy taxes and heavy penalties (he cited a Finnish project he had already halted as an example). The logic: letting chips flow out in the past was the lesson; if data centers go abroad, "China will take them all." At the same time he urged local communities to welcome data centers: let them pay the community and build their own power, and electricity prices will actually fall (examples: one place in Louisiana paid teachers $50,000 to win approval, another paid residents $10,000 each).</li>
+<li>He singled out Anthropic's just-completed listing for praise: "a very successful offering, I have great respect for Dario," and said such companies must be kept in the US — they cannot be driven to build in other countries because approvals are withheld: "Next they'll be building in space."</li>
+</ul>
+<h2>4. Jensen Huang: A Public Call to "Apologize and Go Back"</h2>
+<p>This segment was tied to the chip export issue and was also the most information-dense domestic personnel statement of the entire event (all of the following is in Trump's own words as stated):</p>
+<ul>
+<li>Asked whether he would ease the ban on chip exports to China, Trump answered: <strong>only old chips will be sold</strong>, the newest ones will not be sold at all; China can also make its own chips, and if they are not sold chips they will develop their own — he said this was precisely one of the arguments Jensen Huang had used in his lobbying in the past.</li>
+<li>He called Huang "one of the smartest minds in the world," but said he had "made some bad decisions." What he hopes to see is: <strong>Huang makes a big apology, and then goes back to work</strong>; he even said he had recommended Tim Cook (as a candidate), but before that, he would rather see Huang given a second chance — "we are a country of second chances."</li>
+<li>Blackwell is the newest chip and <strong>must absolutely not fall into the hands of China or anyone else</strong>; but in two years Blackwell will be outdated. He said the US leads China by 10 years in chip manufacturing, and that chips are too complex to copy, unlike products such as movies and floor mats that are easily pirated.</li>
+<li>He said he had discussed Huang with Xi Jinping, and that Xi described Huang as "brilliant."</li>
+<li>He also took the opportunity to defend Musk: during his first term he strongly protected Musk — "we must protect our geniuses; this country does not have many geniuses."</li>
+</ul>
+<blockquote>
+<p>For comparison: the claim circulating in last night's Pudate Space that "Jensen Huang was forced out by the board" had no public source whatsoever throughout; today, at the press conference, Trump publicly said he hoped Nvidia would accept Huang's apology and let him return to work — the fact that Huang is currently not in his post received, for the first time, backing from a public statement by the president himself, but the reasons and details behind the alleged "board coup" still have no official account.</p>
+</blockquote>
+<h2>5. The Trade List: Thailand, the Philippines, Mexico, Canada, China</h2>
+<ul>
+<li><strong>Thailand</strong>: An agreement was signed eliminating all tariffs on US products and removing non-tariff barriers, with purchases of $2.6 billion in US agricultural products per year (Trump said this was only a preliminary figure and would increase). Both the Thai prime minister and Cambodian Prime Minister Hun Manet thanked him in person for stopping the Thailand-Cambodia war (he joked: no Nobel Prize, but many lives saved; "I stopped eight wars," while the media says only six).</li>
+<li><strong>The Philippines</strong>: More than $17 billion in commercial deals were reached during the ASEAN summit. Philippine Airlines switched to buying 20 Boeing 787s (with GE engines), supporting 47,000 US jobs; a framework trade agreement was reached with the Philippines — Philippine agricultural products and energy will be** 100% sourced from the United States** (previously agricultural products mostly came from Brazil and energy mostly from the Middle East), plus purchases of more than $2 billion in US military equipment. His negotiating logic was to ask Marcos face to face: "If China attacks you, will Brazil and the Middle East come to save you?"</li>
+<li><strong>Mexico</strong>: His meeting with President Sheinbaum was close to reaching an agreement; he told her face to face that Mexico's trade surplus with the US is too large and that drug cartels are "running Mexico," and both issues must be resolved.</li>
+<li><strong>Canada</strong>: Prime Minister Carney is "a very nice person," but Canada has "taken advantage of the US for 50 years," with a deficit against the US of about $80 billion; Canada wants to build the Keystone pipeline for the US, "but far more than that needs to be done"; his opening price was: bring the deficit to zero, then we can talk.</li>
+<li><strong>China</strong>: He said China is now the country paying the US the most; tariffs on China were at one point raised to 145% ("ships turned around in the middle of the ocean"), with a 20% fentanyl penalty tariff; the inflow of fentanyl by sea has fallen by 97% (by his account).</li>
+</ul>
+<h2>6. The Economy and the Federal Reserve</h2>
+<ul>
+<li>The report card he gave: $25 trillion in new wealth created since taking office (a record), but $4 trillion evaporated after the midterm results came out — "I'm not on the ballot"; manufacturing has grown for 10 consecutive months (a record); investment in new equipment is up 21% this year (a record); the poverty rate is at a historic low; employment is at a historic high.</li>
+<li>Oil prices: crude has fallen 20% since early November and is now near $80 per barrel, "one of the largest drops in history"; gasoline has fallen 60 cents in a month and will fall further.</li>
+<li>His criticism of the Federal Reserve was one of the longest policy complaints in the entire event: the Fed is "too political," raising rates when the data is good, when the logic should be the opposite — good data means good credit and rates should be cut; if rates were cut, US GDP could reach 15–20% instead of 4%, and the debt could be paid off quickly; each percentage point of interest corresponds to roughly $650 billion. He used India as a comparison: low interest rates and 7% growth.</li>
+<li>Tariffs are bringing factories back: Audi announced a new $4 billion plant and Toyota a new $5 billion plant; Ford's 1906 Detroit plant, originally slated for closure, will now run 24/7 and expand; UAW president Shawn Fain (originally a radical Democrat who opposed him) called to thank him.</li>
+</ul>
+<h2>7. Midterm Aftershocks: Vance's Statement and the Iran War</h2>
+<ul>
+<li>The Republicans had just lost the midterms. A reporter asked: there are reports that he was unhappy with Vance's statement attributing the loss to the Iran war. Trump denied being unhappy: "The statement is fine, very accurate," adding only one line — if asked again "would you do it again," the answer is absolutely yes, because Iran must never possess nuclear weapons.</li>
+<li>He reviewed oil prices: he had originally thought the war would push oil to $300 per barrel, but it rose only slightly and is now back near $80; the US military has imposed a blockade on the Strait of Hormuz and has "complete control," and a record amount of oil was shipped out of the strait last week. He said the Iranian regime has done evil for 51 years and "killed 75,000 protesters in the past eight months" (by his account).</li>
+<li>In the Q&amp;A, Vance was asked directly whether "losing six years of the Senate over the Iran war was worth it": he answered that preventing Iran from obtaining nuclear weapons is the overriding goal, the decision is made by the president, the president says he would do it again, and his duty is to support the president.</li>
+<li>Reporters also asked whether Vance or Rubio would make a better next president; Trump did not answer directly.</li>
+</ul>
+<h2>8. The Domestic Agenda: A String of Bills and Personnel Matters</h2>
+<ul>
+<li><strong>Permitting reform</strong>: The Senate passed a landmark permitting reform bill last night; once the House passes it, it is expected to save every American at least $1,300 per year and spur a new wave of construction.</li>
+<li><strong>Air traffic control system</strong>: The system is 55 years old and safety is maintained by "running slowly"; $12 billion has been secured (just a fraction), and he told Transportation Secretary Duffy not to patch things up piecemeal, and is asking the Senate for $50 billion for a full rebuild with a single general contractor coordinating. The recent series of system outages at banks, airports and elsewhere, he said, were all <strong>isolated incidents</strong> caused by each operator's own upgrades, not a coordinated attack, and the public need not panic or rush to withdraw money.</li>
+<li><strong>Greenland</strong>: "It was approved just yesterday, we got Greenland," he said, thanking Denmark and NATO (the transcript renders it as "Mark Ruda," which should be NATO Secretary General Rutte).</li>
+<li><strong>Working with the new Congress</strong>: The Democrats will control Congress (Speaker-elect Jeffries). His strategy is to brandish the veto: "Whatever they send me, I veto," and after a month or two of stalemate they will come to negotiate with conditions; he named Jeffries and Schumer as "both smart people," and is especially optimistic about reaching a deal with the Democrats on <strong>healthcare</strong>. He also mentioned two bipartisan items: a film and entertainment incentive bill (to bring back productions that have fled to Canada, the UK and Australia — even Adam Schiff praised it) and a college sports NIL bill (quarterbacks earning $12 million a year, universities going bankrupt, with Coach Saban and the Yankees' Randy Levine both pushing it).</li>
+<li><strong>Immigration</strong>: He said that over the past 18 months "not a single person has entered illegally"; people on the Democratic side have already called, wanting to discuss healthcare and immigration; regarding the amnesty-type bill pushed by Representative Salazar, he stressed first getting "the worst people" out.</li>
+<li><strong>Personnel</strong>: The cybersecurity chief was dismissed, with only one reason given: "not good enough"; Senator Cotton had said publicly that Trump had lost confidence in Commerce Secretary Lutnick, which he explicitly denied: "I have not lost confidence," praising Lutnick as a natural businessman who had a part in the government making tens of billions from buying Intel stock ("to be honest, my share was bigger").</li>
+<li><strong>Public safety</strong>: The crime rate in Washington, DC is down 87% and the murder rate is at a 125-year low (by his account); asked by a reporter about rumors of an Iranian "dirty bomb" threat against Washington, he said "we know Iran inside out, we will not let it happen."</li>
+</ul>
+<h2>9. Additional Remarks by Vance and Rubio</h2>
+<ul>
+<li>Vance joked that staying behind at the White House was like being "home alone, but eating better and with more gold." He linked two things together: the president secures trade deals overseas while the Senate passes permitting reform at home — only when global incentives line up with domestic building capacity can America "build like it has never built before."</li>
+<li>Rubio's version was more systematic: ASEAN is the main channel for the US to engage Southeast Asia, and those countries are markets for US products; the Quad mechanism will hold a four-country business forum early next year; on the Philippines, the logic is "we are its main defense provider, and the economic relationship should reflect that," and the agreement was negotiated by the president personally; on the trilateral meeting, he stressed that the three countries hold the vast majority of the world's nuclear weapons, and for the three leaders not to be in regular contact is "not just absurd, but dangerous" — leader-level relations set the tone, and only then is there an environment for negotiations and diplomacy to move forward.</li>
+</ul>
+<h2>10. The Close: Miller's Speech and a Small Concert</h2>
+<ul>
+<li>Trump called on Chief of Staff Stephen Miller to speak on the spot. Miller listed a long string of "unprecedented" achievements: the first president to achieve net deregulation (for every 1 new regulation added, 10 old ones deleted), complete border sealing, record deportations, crime and murder rates at historic lows, record fossil fuel and coal production, the first new nuclear reactors to reach criticality since the 1970s, "taking Venezuela in under an hour and doubling US oil reserves overnight," a restructuring of relations with Russia and China, the strongest economy and fastest wage growth, and he predicted that "the next two years will be the greatest two years in American history."</li>
+<li>The press conference ended as an invitation: at around 2 p.m. that afternoon, on the White House's new helipad, bonuses would be given to about 80 members of the military band and a small concert held — they had performed at the White House's 250th anniversary UFC night, and Dana White would attend. Trump praised the musicians — "they could have gone to Carnegie Hall; they stayed here because they love this country" — and invited the reporters present to attend. The press conference ended amid thanks.</li>
+</ul>
+<h2>Scope of This Summary</h2>
+<ul>
+<li>This was a press conference presenting Trump's side alone: the content of the trilateral meeting, Xi Jinping's remarks as quoted, and the various figures (numbers of nuclear weapons, casualties, oil prices, crime rates, changes in wealth) all come from his account alone; the summary only relays them and has not cross-verified them.</li>
+<li>The same applies to the Jensen Huang segment: what Trump expressed were "hopes" and "suggestions"; whether Nvidia will accept them, and the reasons and course of Huang's departure, have no public account from the company.</li>
+<li>The first roughly 21 minutes of the video are live ambient sound before the press conference began (crowd chatter and silence), with no substantive content; the fragmentary sentences in that part of the transcript carry no information and were not used in this summary.</li>
+<li>The transcript was automatically recognized by whisper-small: "Harmost Rate" should be the Strait of Hormuz, "Mundami" should be New York Mayor Mamdani, "Kotton" should be Senator Cotton, and "Ludnick" should be Lutnick, all merged here based on context; the "Ocean" in Rubio's remarks should be ASEAN.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=XBt_02mMN7U">https://www.youtube.com/watch?v=XBt_02mMN7U</a>（PBS NewsHour）· 嘉宾：特朗普 · 发布日期：2026-11-20 · 时长：1 小时 50 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=XBt_02mMN7U">https://www.youtube.com/watch?v=XBt_02mMN7U</a>（PBS NewsHour）· 嘉賓：特朗普 · 發布日期：2026-11-20 · 時長：1 小時 50 分<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=XBt_02mMN7U">https://www.youtube.com/watch?v=XBt_02mMN7U</a> (PBS NewsHour) · Guest: Trump · Published: 2026-11-20 · Duration: 1 hour 50 minutes<br>This page is the full summary, manually edited from machine transcription; the views and figures stated in the session are as given by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · Talk Records</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=XBt_02mMN7U">https://www.youtube.com/watch?v=XBt_02mMN7U</a>（PBS NewsHour）· 嘉宾：特朗普 · 发布日期：2026-11-20 · 时长：1 小时 50 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"特朗普归国记者会：中美俄三方会谈、超级智能护栏与黄仁勋 · Yat's Talks",tw:"特朗普歸國記者會：中美俄三方會談、超級智能護欄與黃仁勳 · Yat's Talks",en:"Trump's Homecoming Press Conference: The US-China-Russia Trilateral, Super Intelligence Guardrails and Jensen Huang · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

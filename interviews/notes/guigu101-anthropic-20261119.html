@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：硅谷101《Anthropic 崛起史：最强 AI 背后的矛与盾，布道者与伪君子》</h1>
 <ul>
 <li>时间：2026 年 11 月（Anthropic 上市前夕发布）</li>
@@ -111,9 +118,203 @@
 <hr />
 <p><em>纪要来源：节目官方中文字幕转写整理。节目为硅谷101 的编辑作品，财务数据引自其引用的招股书与第三方追踪，轶事来自其采访与公开报道，均未独立核实。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：矽谷101《Anthropic 崛起史：最強 AI 背後的矛與盾，布道者與偽君子》</h1>
+<ul>
+<li>時間：2026 年 11 月（Anthropic 上市前夕發布）</li>
+<li>主持：陳茜（矽谷101）</li>
+<li>形式：深度紀錄特輯，採訪投資人、律師、資深媒體人及 Dario Amodei 早期同事（Greg Diamos、Kevin Roose、Jack Clark 等出鏡或受訪）</li>
+<li>時長：99 分鐘</li>
+<li>來源：YouTube 頻道矽谷101，影片 sYdN4b14rHU，官方中文字幕全文 2582 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。財務數字為節目引用的 IPO 招股書及第三方追蹤口徑，人物軼事為節目採訪與公開報導的轉述，未獨立核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>矽谷101 用一整期特輯復盤 Anthropic 如何從百度實驗室裡一條「規模定律」曲線長成史上增長最快的公司：兩年收入漲 112 倍、2026 年二季度首次經營盈利、IPO 完全稀釋估值 1.4 兆美元。同時它也是全網對 Anthropic「安全敘事」最完整的一次盤點——從 RSP 改口、五角大廈對峙到 Mythos 的「恐懼行銷」爭議，節目最後的問題是：當安全與增長在上市後迎頭相撞，這家公司還守得住自己的劇本嗎？</p>
+<h2>一、起點：兩顆種子在百度被埋下（2014–2015）</h2>
+<ul>
+<li>Dario Amodei 的第一份工作是百度矽谷 AI 實驗室（吳恩達掌管）。英偉達 CUDA 聯合締造者 Greg Diamos 力排眾議招他進來——理由是他隨手展示的一段計算生物學程式碼「是我見過最好的軟體程式碼之一」，儘管他沒有 GPU、CS 或 AI 背景。</li>
+<li>他在百度的工作被他自己形容為「擰旋鈕」：給 RNN 加層、多餵資料、多訓一會兒，看指標往哪走。結果每次都指向同一方向——資料更大，效果更好，平滑、穩定。這項工作長成了 Deep Speech 2（《麻省理工科技評論》2016 年十大突破技術），而那條曲線就是他第一次摸到 <strong>Scaling Law 的雛形</strong>。百度團隊後來把規律寫成論文《Deep Learning Scaling is Predictable, Empirically》（2017 年 12 月），比 GPT-1 早半年；節目感嘆百度曾站在離 GPT 最近的地方。</li>
+<li>第二顆種子是 <strong>AI 安全</strong>：模型在乾淨美式英語上近乎完美，一換口音就斷崖下跌——分布內強大、分布外脆弱、且看不進內部。能力和風險是 AI 的一體兩面，這個認識成了 Anthropic 的地基。</li>
+</ul>
+<h2>二、集結：EA、Google Brain 與 OpenAI（2015–2020）</h2>
+<ul>
+<li>2015 年 Dario 入 Google Brain，在下棋、遊戲、機器人裡都看到同一條曲線；鄰桌的 Chris Olah（沒讀完大學的可解釋性痴迷者）與他互補——一個看模型做大之後外面會怎樣，一個看裡面為什麼會這樣。2016 年兩人合寫《Concrete Problems in AI Safety》，給 AI 安全第一次搭出研究框架。</li>
+<li>有效利他主義（EA）是這群人的黏合劑：前《紐約時報》評論員 Kevin Roose 說，EA 最深遠的貢獻之一，就是把一批最聰明的年輕人引進 AI 安全領域。彭博記者 Jack Clark 2015 年想寫英偉達報導被編輯當瘋子，2016 年轉行加入 OpenAI，後來也成了 Anthropic 創始人。</li>
+<li>OpenAI 階段：GPT-1 是 Alec Radford 的興趣小組作品，反響平平；Dario 卻從中認出熟悉的曲線，寫下內部備忘錄《大算力團塊》（The Big Blob of Compute）——通往更強 AI 的路大概率就是砸算力。2019 年 GPT-2 作者欄首次出現他的名字；他拉來物理學老友 Jared Kaplan、Sam McCandlish 與 Tom Brown，把 Scaling Law 做成帶公式的科學（2020 年 1 月發表）；微軟 10 億美元換來超算，2020 年 6 月 GPT-3 問世，未來 Anthropic 的創始人們幾乎全員在作者欄裡。</li>
+</ul>
+<h2>三、離婚：與 OpenAI 的裂痕（2019–2020）</h2>
+<ul>
+<li>節目引述的說法：Sam Altman 稱 OpenAI 內部有安全派、研究派、創業派三個派別需要制衡；但當真正抉擇時，這群人感覺安全不是第一優先級。</li>
+<li>兩個標誌性事件：①微軟投資談判中，Dario 要求保留的安全約束，落定前夕被發現微軟握有否決權，Altman 先否認，Dario 當場打開合約念出條款、找同事作證，對方才承認——Dario 回憶「OpenAI 章程的 80% 就在那天被背叛了」；②GPT-3 內測名單另有更長版本未告知 Dario，Altman 還想把保密中的 GPT-3 內測權限隨手給派對上遇到的 Kanye West。</li>
+<li>2020 年，七人秘密建了名為 <strong>BATNA</strong>（談判破裂時的最佳替代方案）的 Slack 群——成員正是日後 Anthropic 的七位創始人（Dario、Daniela、Jack Clark、Sam McCandlish、Tom Brown、Chris Olah、Jared Kaplan）。他們提出的條件（安全團隊對新產品發布有一票否決權、Dario 可直接向董事會匯報）被管理層拒絕，於是請律師，給這場出走起名「The Divorce」。Dario 本人否認離開是因為反對微軟交易或反對商業化：「GPT-3 就是我們做的。問題在於你怎麼做——審慎、坦誠、誠實，安全不能只是招聘口號。」</li>
+<li>2020 年 12 月全員會上，Dario 宣布七人離職，Jack Clark 留下一句「I love you all」，隨即七人被移出會議、信箱與 Slack 權限撤銷、電腦遠端鎖定。幾小時後，他們已在另一個視訊會議裡討論新公司。</li>
+</ul>
+<h2>四、白手起家與為「鎖死方向盤」設計的架構（2021）</h2>
+<ul>
+<li>疫情中籌建，先在 Zoom、後在舊金山 Precita 公園的草地上（自帶椅子、熱狗和披薩）談招人、算力和未來。公司本想叫 Sparrow Systems（出自 Bostrom《超級智能》裡麻雀想請貓頭鷹卻不知如何控制的寓言），網域被占，改名 Anthropic（希臘語「與人類有關的」），2021 年 1 月 26 日成立。</li>
+<li><strong>組織形式</strong>：公共利益公司（PBC）——可以融資上市，但董事會可合法拒絕更賺錢卻違背使命的選擇。受訪律師評價：PBC 流程繁瑣、純效率上不是最優解，但 Anthropic 從第一天就請了頂級律師，「股權架構是滿分答卷，像想到了 10 步、100 步之後」。</li>
+<li><strong>治理結構</strong>（據招股書）：普通股分 A/N/T/F/E 五類。A 類為 IPO 公眾股（一股一票）；N 類給戰略夥伴（有經濟權益、原則上無投票權）；T 類交給獨立機構<strong>長期利益信託（LTBT）</strong>——五名 AI 安全、國安、公共政策背景的受託人，憑 T 類股選舉和罷免董事會多數席位（現 7 席中占 4 席）；F 類由七位創始人的 Founder LLC 持有，在股東表決事項中<strong>動態維持 50.1% 投票權</strong>（公司每新發約 100 萬股 A 類，F 類自動增加約 100.4 萬票，永不稀釋）；E 類讓非創始人員工在特定治理事項上有有限投票權。節目總結：這套設計就是要切斷「出錢就能說話」的常規邏輯。</li>
+<li>七位創始人股權幾乎均等，並共同承諾<strong>捐出個人財富的 80%</strong> 用於 AI 安全與公益。IPO 前夕公司又設立 Anthropic Public Benefit Fund，注入約 8.47 億股（約完全稀釋口徑的 5%）；公司稱加上創始人與員工承諾，約 20% 股份將用於公共利益。</li>
+</ul>
+<h2>五、Daniela：把 Stripe 複製進 Anthropic</h2>
+<ul>
+<li>總裁 Daniela Amodei 是 Dario 的親妹妹，自稱「通才」：跑過國會競選、做過無國界醫生關聯機構營運、管過貧困項目撥款，2013 年作為第 40 多號員工加入當時還名不見經傳的 Stripe（先招聘、後風險管理）。</li>
+<li>分工互補：Dario 能盯著一條曲線看五年後的世界，卻對招人、財務、流程沒耐心；Daniela 擅長把宏大設想拆成能運轉的日常。如今 Dario 只有一個直接下屬（幕僚長 Avital Balwit），其餘高管全部向 Daniela 匯報。LinkedIn 資料顯示截至 2026 年 6 月已有數百名前 Stripe 員工加入 Anthropic，多在招聘、營運、商業化崗位——Stripe 賣給企業的技術基礎設施經驗，被整套搬了過來。</li>
+</ul>
+<h2>六、四階段崛起</h2>
+<p><strong>① 技術蛰伏期（2021–2023.3）</strong>：兩年不發產品。Claude 早期版本 2022 年夏已訓練完成、比 ChatGPT 早幾個月，Anthropic 主動踩煞車，怕引發軍備競賽、擠掉安全工作的時間。Dario 多年後承認代價極其昂貴，可能因此讓出了消費級 AI 的領先地位。蛰伏期砸在兩件事上：<strong>Constitutional AI（AI 憲法）</strong>（2022 年 12 月）——給模型一套高層原則（最初的「憲法」裡包括《聯合國世界人權宣言》和蘋果服務條款），讓模型自我評判、改寫（RLAIF），Dario 比喻它像已故父母留給孩子成年後拆的信；以及 <strong>RSP（負責任擴展政策）</strong>——仿生物安全等級的 ASL 分級，能力逼近紅線而防護未到位就必須停，Dario 本人花了三個月、10%–20% 的工作精力反覆寫。</p>
+<p><strong>② 資本插曲：SBF 的 5 億美元</strong>。A 輪 1.24 億美元（Eric Schmidt、Jaan Tallinn 等）。創始時他們估算至少需要 100 億美元。2022 年 4 月 B 輪 5.8 億美元中約 5 億來自 FTX 的 SBF，換約 13.5% 股份——但 Dario 從一開始就防著他：只給無投票權股份、不進董事會。半年後 FTX 崩塌，這 5 億被證實是挪用的客戶資金；股份後被稀釋至約 7.8%，2024 年由破產清算團隊分兩批賣出回收約 13 億美元——節目算了一筆帳：若持有至今價值將超千億美元。FTX 之後融資轉向巨頭：谷歌 2023 年 2 月 3 億美元（約 10%）、5 月 4.5 億美元生態輪、亞馬遜 9 月最高 40 億美元（AWS 成為核心雲、Trainium/Inferentia 優先供給、Claude 進 Bedrock）、谷歌 10 月再加 20 億美元。</p>
+<p><strong>③ 亮相與加速（2023.3–2024 年底）</strong>：Claude 1 只對企業開放。路線選擇做 2B：安全與可靠性恰與企業需求契合（節目也引行業信源：2C 不是沒想過，是 ChatGPT 把生態位占得太牢）。Claude 2（2023 年 7 月）打出 10 萬 token 長上下文；<strong>Claude 3</strong>（2024 年 3 月）首次在多項基準上超越 GPT-4，首創 Haiku/Sonnet/Opus 三檔；<strong>Sonnet 3.5</strong>（2024 年 6 月）打破「越大越強越貴」——內部程式設計測試解決 64% 問題（Opus 只有 38%）、速度兩倍、成本降 5 倍，開發者大規模遷移，Cursor、Windsurf 應運而生；Anthropic 營收從 2024 年初剛過 1 億美元到年底 10 億美元。2024 年下半年又搶發 Computer Use 與開源協議 MCP，埋線 Agent 市場。</p>
+<p><strong>④ 超級增長期（2025–）</strong>：發布節奏從按季變按月、按週、按天——節目統計 2026 年 2 月 1 日至 3 月 23 日的 52 天裡發布了 73 個產品或功能。<strong>Claude Code</strong> 是最具轉折意義的產品：工程師 Boris Cherny 為熟悉 API 花兩天寫的小工具，內部演示只得兩個讚；加上讀寫檔案、執行命令後五天內一半工程團隊在用，2025 年 2 月隨 Claude 3.7 推出、5 月正式上線後，年化收入 3 個月破 5 億美元、6 個月破 10 億、2026 年 2 月超 25 億美元。它驗證了「模型能力打包成垂直工具，變現空間高於賣裸 API」，隨後 Cowork、Design、for Science、Tag、Duet 等一串產品跟上。2026 年上半年大型軟體股集體暴跌、SaaS 近 1 兆美元市值蒸發，節目稱 Anthropic 是直接導火索之一。招股書把業務分三層：模型（Mythos/Opus/Sonnet/Haiku）、平台（API 與開發工具）、應用（Claude、Claude Code、Cowork 等）；商業模式自稱 <strong>Pay-for-intelligence</strong>——2026 年上半年按量付費占收入 80%，訂閱約 20%。</p>
+<h2>七、雙飛輪與一組招股書數字</h2>
+<ul>
+<li><strong>Improvement Loop（產品飛輪）</strong>：安全建立信任 → 信任帶來企業客戶 → 真實場景回饋推動產品改進 → 吸引更多企業。B 端厚積薄發：門檻高，但一旦達標，量變到質變很快。</li>
+<li><strong>Investment Loop（資本飛輪）</strong>：Dario 稱大模型天生有「資本主義衝動」——投入 10 倍資金，模型從「優秀本科生」變「優秀博士生」，去問製藥公司這值多少錢，答案通常是超過 10 倍。更強模型 → 更高價值 → 更多收入與資本 → 更大算力與人才投入。Dario 說這像在同一張資產負債表上同時營運「現在的公司」和「下一家更大的公司」。</li>
+<li><strong>專注</strong>：不做生圖、不做影片，把算力、資金、人才全壓在 LLM 本身。節目引評論：OpenAI 想做滿足所有人所有需求的平台，核心體驗沒做好時精力分散，去年底才回頭加碼核心、砍非核心項目。</li>
+<li>數字（招股書口徑）：收入 2023 年約 4100 萬美元 → 2024 年 3.9 億 → 2025 年 45.85 億（兩年 112 倍）；2026 年一季度 47.31 億（超上年全年）、二季度約 116 億（環比 +144%）；年化收入 2025 年底 90 億美元，預測 2026 年底達 1100 億美元。2026 年上半年淨虧損 807 億美元中約 724 億是可轉債等金融工具的公允價值帳面調整；經營虧損實際只有 6.9 億美元，二季度首次單季經營盈利約 9.7 億美元（利潤率 8.4%），三季度調整後經營利潤率超 11%；毛利率從 2024 年的 -94% 升至三季度約 85%；上半年經營現金流約 +39 億美元，6 月底現金及短期投資約 1317 億美元。客戶：過去 12 個月貢獻 ≥10 萬美元的客戶超 1.19 萬家（一年前的 12 倍），≥100 萬美元的 1900 多家，<strong>淨收入留存率 900%</strong>。估值軌跡：2024 年中 184 億 → 2025 年 9 月 F 輪 1830 億 → 2026 年 5 月 9650 億（超過 OpenAI）→ IPO 目標從 2 兆因中期選舉情緒下修至 1.4 兆美元完全稀釋估值。</li>
+</ul>
+<h2>八、增長曲線背面的五道裂縫</h2>
+<ol>
+<li><strong>增速放緩</strong>：TickerTrends 追蹤顯示 Anthropic 9 月 ARR 環比僅 +1.8%，OpenAI 同期 +13.4%；招股書口徑三季度增速從二季度的 +144% 回落到 +45%，公司自己也在招股書中提醒高速增長不可持續。前五大客戶之一 Replit 已宣布首選模型轉向 OpenAI；開源模型在成本與部署靈活性上追趕。</li>
+<li><strong>大客戶依賴</strong>：2026 年前 9 個月前五大客戶貢獻約 25% 營收，且多無長期合約；微軟已把今年內部 Claude 支出預算下調超三分之一，Meta 內部用 Claude Code 的員工從 6 萬減到 3 萬——大客戶都在推自家工具。</li>
+<li><strong>算力豪賭</strong>：2025 年算力支出 73.3 億美元，相當於每 1 美元收入花 1.6 美元算力；效率快速改善（一季度降至 0.72 美元、二季度 0.48 美元），但需求更失控——Dario 坦言原按每年 10 倍規劃算力，2026 年一季度營收單季漲 3 倍多、折年化約 80 倍。已簽算力協議披露金額合計超 3600 億美元（博通約 1612 億設備租賃；谷歌、亞馬遜、微軟分別至少 1145 億、1100 億、449 億；另 SpaceX AI 最高約 1205 億、Nscale 446 億、Lambda 413 億），其中約 4310 億美元是最低採購承諾、合約最遠到 2036 年；2028–2031 年額外 GPU 採購還可能再花 1250 億–1500 億，寬口徑估算總承諾可達約 8550 億美元。帳上 1000 多億現金並不夠用，且融資成本在漲：6 月 350 億美元晶片融資次級債收益率約 8.5%，10 月約 600 億美元新融資的次級債預期收益率已超 10%。Dario 的自述是「走鋼絲」：買少了落後，買多了破產。</li>
+<li><strong>與雲巨頭的資本循環</strong>：亞馬遜、谷歌、微軟同時是投資人、算力供應商、分銷商和競爭者——錢投進來，又以算力採購合約流回去，模型再經它們的雲賣給企業。AWS 與 Google Cloud 通路占銷售額從 2023 年的 11% 升至 2025 年的 47%；2025 年經兩家雲市場產生 21.6 億美元收入、約 3.51 億回流雲平台（每賣 1 美元約 16 美分）。還有一個口徑細節：Anthropic 對雲通路收入用總額法（100 美元全計收入、分成記銷售費用），OpenAI 部分通路用淨額法（只計 80 美元）——兩家公布的收入數字不能直接比較，OpenAI 曾就此公開質疑。</li>
+<li><strong>IPO 後的考題</strong>：私有時代 PBC 與股權設計能把壓力擋在門外；上市後每個季度的數字、股東期待與股價，都可能讓「安全」與「增長」迎頭相撞。</li>
+</ol>
+<h2>九、文化：像信仰一樣運轉的公司</h2>
+<ul>
+<li>任何崗位入職都要過專門的<strong>文化面試</strong>：十幾個問題連環拷問使命與衝突時的站位，技術再強過不了也拒。Dario 每兩週開全公司「Dario Vision Quest」會，三四頁文件講一小時；他自稱日常 40% 以上精力放在文化建設上。</li>
+<li>2026 年公司密集邀請神學家、哲學家、宗教領袖討論 Claude 有沒有意識、會不會痛苦、是否應有道德地位；10 月還修改使用政策，禁止用戶持續、無意義地虐待 Claude。</li>
+<li>人才資料：兩年留存率約 80%，前沿實驗室中遙遙領先；Meta 組建 TBD Lab 時對部分研究員開出上億美元薪包，Dario 表態不會為留人單獨加價、來去自便，最終只被挖走兩人。工程師流向：OpenAI 跳 Anthropic 的機率是反方向的 8 倍，DeepMind 是 11 比 1；Andrej Karpathy、AlphaFold 之父 John Jumper 先後加入。節目引受訪者的話：當你為金錢之外的信念加入一家公司，別人就很難用錢把你挖走。</li>
+</ul>
+<h2>十、爭議：安全敘事的反噬</h2>
+<ul>
+<li><strong>RSP 改口</strong>：2024 年 10 月 Claude Sonnet 3.5 大獲成功後，Anthropic 搶在 OpenAI 之前發布風險更高的 Computer Use，OpenAI 聯創 Wojciech Zaremba 公開批評「不夠負責任」。Claude 4 首次觸發 ASL-3 防護（生物學能力已可能幫助非專業者獲取生物武器關鍵知識）後，按原始規則應暫停，但 Anthropic 修改了 RSP、取消「單邊暫停」承諾，理由是自己停而別人不停，只會讓低標準者主導節奏——節目評價：從「可驗證的約束」變成「企業的自我判斷」，安全成了沒人願意先踩煞車的博弈。</li>
+<li><strong>五角大廈攻防</strong>：2025 年 6 月 Anthropic 發布專供國家安全機構的 Claude Gov；五角大廈與四家各簽 2 億美元上限合約，只有 Anthropic 把模型部署上軍方機密網路，隨後又以每家機構 1 美元/年的象徵價向聯邦政府三大分支供 Claude。節目指出它是第一家技術實際用於機密軍事網路、第一家為國安部門做客製模型的 AI 公司。2026 年初，因拒絕 Claude 用於大規模監控美國公民與完全自主武器，Anthropic 被列入「供應鏈風險」名單、雙方對簿公堂——贏得讚譽的同時，五角大廈官員公開質疑：最積極爭取政府生意的正是它自己，「他們對外卻把這件事說成雙方到最後都還在爭論的問題」。</li>
+<li><strong>內部吹哨</strong>：2026 年 2 月安全研究負責人 Mrinank Sharma 離職，稱行業在競爭與擴張壓力下偏離核心價值觀；9 月研究員 Jacob Coxon 離職，稱 OpenAI 與 Anthropic 都在「拿全人類的命運下注」。</li>
+<li><strong>Mythos 與「恐懼行銷」</strong>：2026 年 3 月，號稱十兆參數、「迄今最強」的 Mythos 因內部洩漏曝光，Anthropic 宣布因風險太高不公開發布，只對亞馬遜、蘋果、谷歌、微軟、英偉達等經批准機構開放封閉計畫 Project Glasswing。OpenAI 方面譏諷這是恐懼行銷：「我們造了顆炸彈馬上扔你頭上，可以賣你個 1 億美元的防空洞——前提是我們選中你當客戶。」其後公眾版 Fable 5 上線僅三天即遭美國政府限制存取，Anthropic 立即申訴稱這種能力其他公司也有——節目點出這套「恐懼刻度」的雙標：證明領先時強調能力前所未有地危險，受限時又說這是行業普遍風險，刻度隨競爭與商業環境自主裁量。獨立調查者 Kevin Bass 9 月畫出 Anthropic 背後的資本與機構關係圖，指控其早期投資者經慈善網路資助 AI 安全研究與媒體、推動更嚴監管、最終利好頭部公司，稱之為「監管俘獲機器」——節目同時註明：目前沒有有力證據證明 Anthropic 有意操縱研究結論或監管政策。</li>
+<li><strong>孤勇者姿態</strong>：接連發布 AI 替代就業的研究、渲染失業風險；在公開輿論中推動「中國 AI 威脅論」；黃仁勳牽頭開源模型聯盟、主流 AI 公司幾乎都簽了，Anthropic 拒絕簽字。節目承認「恐懼」給它帶來巨大紅利，但也讓它的每一次發布、合作與立場變化都被放在放大鏡下檢視。</li>
+</ul>
+<h2>十一、結尾：兩篇文章畫的地圖</h2>
+<ul>
+<li>創立備忘錄裡 Dario 設想的是約 50 人、100 億美元做出 AGI——他以往的預測通常很準，這兩項都差得很遠：如今公司 5300 多名員工、估值近 2 兆（節目口徑）。招股書用了 90 多頁描述 AI 風險。</li>
+<li>節目認為 Anthropic 的每個動作都能在 Dario 的兩篇長文裡找到線索：《Machines of Loving Grace》（2024）畫的是「資料中心裡的天才之國」——數百萬比頂尖科學家還聰明的智能體把百年進程壓縮進幾年；《The Adolescence of Technology》（2026 年初）收起天堂圖景，把人類比作剛拿到超級跑車鑰匙的青少年。前者是它一刻不停往前衝的理由，後者是它一次次往回收的警惕——但兩篇合起來只畫了地圖，沒標出路怎麼走。</li>
+<li>創始人 IPO 信的結尾：請不要把認購當作一筆資產交易，而要看作奔赴一場宏大歷史命題的契機。節目的最後一句判語：它比誰都跑得快，但也帶著人類的命運奔跑在懸崖邊。</li>
+</ul>
+<hr />
+<p><em>紀要來源：節目官方中文字幕轉寫整理。節目為矽谷101 的編輯作品，財務資料引自其引用的招股書與第三方追蹤，軼事來自其採訪與公開報導，均未獨立核實。</em></p>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Summary: Silicon Valley 101 — "The Rise of Anthropic: The Sword and Shield Behind the Strongest AI, Evangelists and Hypocrites"</h1>
+<ul>
+<li>Date: November 2026 (released on the eve of Anthropic's IPO)</li>
+<li>Host: Chen Qian (Silicon Valley 101)</li>
+<li>Format: In-depth documentary special, interviewing investors, lawyers, veteran journalists, and early colleagues of Dario Amodei (Greg Diamos, Kevin Roose, Jack Clark, and others appearing on camera or interviewed)</li>
+<li>Duration: 99 minutes</li>
+<li>Source: YouTube channel Silicon Valley 101, video sYdN4b14rHU, full official Chinese subtitles, 2,582 lines</li>
+</ul>
+<blockquote>
+<p>This summary is compiled in Chinese. Financial figures are drawn from the IPO prospectus and third-party tracking data cited by the program; anecdotes about individuals are retellings from the program's interviews and public reporting and have not been independently verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Silicon Valley 101 devotes an entire special to retracing how Anthropic grew from a single "scaling law" curve in a Baidu lab into the fastest-growing company in history: revenue up 112-fold in two years, its first quarterly operating profit in Q2 2026, and a fully diluted IPO valuation of $1.4 trillion. It is also the most complete inventory anywhere of Anthropic's "safety narrative" — from the RSP reversal and the Pentagon standoff to the "fear marketing" controversy around Mythos. The program's closing question: once safety and growth collide head-on after the IPO, can this company still stick to its own script?</p>
+<h2>1. The Starting Point: Two Seeds Planted at Baidu (2014–2015)</h2>
+<ul>
+<li>Dario Amodei's first job was at Baidu's Silicon Valley AI Lab (run by Andrew Ng). Greg Diamos, co-creator of NVIDIA's CUDA, pushed to hire him over objections — because a piece of computational biology code Dario casually showed him was "one of the best pieces of software code I have ever seen," even though Dario had no GPU, CS, or AI background.</li>
+<li>Dario himself described his work at Baidu as "turning knobs": add layers to an RNN, feed it more data, train it a bit longer, and watch which way the metrics moved. Every time, the results pointed in the same direction — more data, better results, smooth and steady. That work grew into Deep Speech 2 (one of MIT Technology Review's 10 Breakthrough Technologies of 2016), and that curve was his first encounter with <strong>the embryonic form of the Scaling Law</strong>. The Baidu team later wrote up the pattern in the paper "Deep Learning Scaling is Predictable, Empirically" (December 2017), half a year before GPT-1; the program marvels that Baidu once stood closer to GPT than anyone.</li>
+<li>The second seed was <strong>AI safety</strong>: a model could be near-perfect on clean American English, then fall off a cliff the moment the accent changed — powerful in-distribution, fragile out-of-distribution, and opaque inside. Capability and risk are two sides of the same coin in AI, and that realization became Anthropic's foundation.</li>
+</ul>
+<h2>2. Assembly: EA, Google Brain, and OpenAI (2015–2020)</h2>
+<ul>
+<li>In 2015 Dario joined Google Brain, where he saw the same curve in chess, games, and robotics. At the next desk sat Chris Olah (a college dropout obsessed with interpretability), his complement — one looking at what happens outside the model as it grows, the other at why it behaves that way inside. In 2016 the two co-wrote "Concrete Problems in AI Safety," giving AI safety its first research framework.</li>
+<li>Effective altruism (EA) was the glue holding this group together: former New York Times columnist Kevin Roose said one of EA's most far-reaching contributions was drawing a cohort of the smartest young people into AI safety. Bloomberg reporter Jack Clark tried to write about NVIDIA in 2015 and was treated by his editor as a madman; in 2016 he switched careers to join OpenAI, and later became an Anthropic co-founder as well.</li>
+<li>The OpenAI phase: GPT-1 was a side project by Alec Radford's interest group and drew little response; Dario, however, recognized a familiar curve in it and wrote the internal memo "The Big Blob of Compute" — arguing that the road to stronger AI most likely ran through throwing compute at the problem. His name first appeared in the GPT-2 author list in 2019; he brought in physics friends Jared Kaplan, Sam McCandlish, and Tom Brown and turned the Scaling Law into a science with formulas (published January 2020). Microsoft's $1 billion bought a supercomputer, GPT-3 arrived in June 2020, and nearly all of Anthropic's future founders were in its author list.</li>
+</ul>
+<h2>3. The Divorce: The Rift with OpenAI (2019–2020)</h2>
+<ul>
+<li>As the program recounts it: Sam Altman said OpenAI internally had three factions — safety, research, and startup — that needed to balance each other; but when real choices came, this group felt safety was not the top priority.</li>
+<li>Two emblematic incidents: ① During the Microsoft investment negotiations, on the eve of closing it was discovered that Microsoft held veto rights over the safety constraints Dario had insisted on keeping. Altman first denied it; Dario opened the contract on the spot, read the clause aloud, and brought in a colleague to corroborate before Altman admitted it — Dario recalled, "80% of the OpenAI charter was betrayed that day." ② There was a longer version of the GPT-3 internal testing list that Dario had not been told about, and Altman also wanted to casually hand access to the confidential GPT-3 test to Kanye West, whom he had met at a party.</li>
+<li>In 2020, seven people secretly created a Slack group named <strong>BATNA</strong> (Best Alternative To a Negotiated Agreement) — its members were exactly the seven future founders of Anthropic (Dario, Daniela, Jack Clark, Sam McCandlish, Tom Brown, Chris Olah, Jared Kaplan). The conditions they proposed (the safety team would hold veto power over new product releases, and Dario could report directly to the board) were rejected by management, so they hired lawyers and named the departure "The Divorce." Dario himself denies leaving because he opposed the Microsoft deal or commercialization: "We built GPT-3. The question is how you do it — prudently, candidly, honestly. Safety cannot just be a recruiting slogan."</li>
+<li>At an all-hands meeting in December 2020, Dario announced the seven departures. Jack Clark left a single line — "I love you all" — and the seven were promptly removed from the meeting, their email and Slack access revoked and their computers remotely locked. A few hours later, they were already in another video call discussing the new company.</li>
+</ul>
+<h2>4. Starting from Scratch, and an Architecture Designed to "Lock the Steering Wheel" (2021)</h2>
+<ul>
+<li>The company was put together during the pandemic, first over Zoom and later on the grass of Precita Park in San Francisco (bringing their own chairs, hot dogs, and pizza) to talk hiring, compute, and the future. They originally wanted to call it Sparrow Systems (from the fable in Bostrom's "Superintelligence" about a sparrow that wants to invite an owl but doesn't know how to control it), but the domain was taken, so they renamed it Anthropic (Greek for "relating to humans") and incorporated on January 26, 2021.</li>
+<li><strong>Legal form</strong>: a public benefit corporation (PBC) — it can raise capital and go public, but its board may legally refuse a more profitable choice that violates its mission. A lawyer interviewed for the program commented: the PBC process is cumbersome and not the most efficient option purely on efficiency grounds, but Anthropic hired top lawyers from day one, and "the equity structure is a perfect-score answer, as if they had thought 10 steps, 100 steps ahead."</li>
+<li><strong>Governance structure</strong> (per the prospectus): common stock is divided into five classes — A, N, T, F, and E. Class A is the public IPO stock (one share, one vote); Class N goes to strategic partners (economic rights, in principle no voting rights); Class T is held by an independent body, the <strong>Long-Term Benefit Trust (LTBT)</strong> — five trustees with backgrounds in AI safety, national security, and public policy, who use the Class T shares to elect and remove a majority of the board (currently 4 of 7 seats); Class F is held by the seven founders' Founder LLC and <strong>dynamically maintains 50.1% of the voting power</strong> on shareholder matters (for roughly every 1 million new Class A shares the company issues, Class F automatically gains about 1.004 million votes, never diluted); Class E gives non-founder employees limited voting rights on specific governance matters. The program's summary: this design is meant to cut off the conventional logic that "money buys a voice."</li>
+<li>The seven founders hold nearly equal stakes and have jointly pledged to <strong>donate 80% of their personal wealth</strong> to AI safety and public causes. On the eve of the IPO the company also established the Anthropic Public Benefit Fund, contributing about 847 million shares (about 5% on a fully diluted basis); the company says that together with founder and employee pledges, about 20% of the shares will be used for public benefit.</li>
+</ul>
+<h2>5. Daniela: Copying Stripe into Anthropic</h2>
+<ul>
+<li>President Daniela Amodei is Dario's younger sister and calls herself a "generalist": she worked on a congressional campaign, ran operations for an organization affiliated with Doctors Without Borders, and managed grant-making for poverty programs, before joining the then-obscure Stripe in 2013 as roughly its fortieth employee (first in recruiting, later in risk management).</li>
+<li>Their division of labor is complementary: Dario can stare at a curve and see the world five years out, but has no patience for hiring, finance, or process; Daniela excels at breaking grand visions into daily operations that actually run. Today Dario has only one direct report (his chief of staff, Avital Balwit); every other executive reports to Daniela. LinkedIn data shows that by June 2026 several hundred former Stripe employees had joined Anthropic, mostly in recruiting, operations, and commercialization roles — Stripe's experience selling technical infrastructure to enterprises was transplanted wholesale.</li>
+</ul>
+<h2>6. Four Stages of Ascent</h2>
+<p><strong>① The technical dormancy period (2021–March 2023)</strong>: two years without releasing a product. An early version of Claude finished training in the summer of 2022, months before ChatGPT, but Anthropic deliberately hit the brakes, fearing it would trigger an arms race and squeeze out time for safety work. Years later Dario admitted the cost was enormous, and that it may have cost them the lead in consumer AI. The dormancy was spent on two things: <strong>Constitutional AI</strong> (December 2022) — giving the model a set of high-level principles (the original "constitution" included the UN Universal Declaration of Human Rights and Apple's terms of service) and letting the model critique and rewrite itself (RLAIF); Dario likened it to a letter deceased parents leave for a child to open as an adult. And the <strong>RSP (Responsible Scaling Policy)</strong> — ASL tiers modeled on biosafety levels, under which work must stop if capabilities approach a red line before safeguards are in place; Dario himself spent three months and 10%–20% of his working energy writing and rewriting it.</p>
+<p><strong>② A capital interlude: SBF's $500 million</strong>. The Series A raised $124 million (from Eric Schmidt, Jaan Tallinn, and others). At founding they estimated they would need at least $10 billion. Of the $580 million Series B in April 2022, about $500 million came from FTX's SBF, in exchange for roughly 13.5% of the shares — but Dario guarded against him from the start: non-voting shares only, and no board seat. Six months later FTX collapsed, and that $500 million turned out to be misappropriated customer funds; the stake was later diluted to about 7.8%, and in 2024 the bankruptcy estate sold it in two tranches, recovering about $1.3 billion — the program does the math: held to today, it would be worth over $100 billion. After FTX, fundraising turned to the giants: Google put in $300 million in February 2023 (about 10%), a $450 million ecosystem round followed in May, Amazon committed up to $4 billion in September (AWS became the core cloud, Trainium/Inferentia got priority supply, and Claude entered Bedrock), and Google added another $2 billion in October.</p>
+<p><strong>③ Debut and acceleration (March 2023–end of 2024)</strong>: Claude 1 was open to enterprises only. The chosen route was B2B: safety and reliability fit enterprise needs exactly (the program also cites industry sources saying B2C was not unconsidered — ChatGPT had simply locked up that ecological niche too firmly). Claude 2 (July 2023) led with a 100k-token long context; <strong>Claude 3</strong> (March 2024) surpassed GPT-4 on multiple benchmarks for the first time and pioneered the Haiku/Sonnet/Opus three-tier lineup; <strong>Sonnet 3.5</strong> (June 2024) broke the "bigger means stronger and pricier" pattern — solving 64% of problems on internal coding tests (Opus managed only 38%), at twice the speed and one-fifth the cost, triggering a mass migration of developers and giving rise to Cursor and Windsurf. Anthropic's revenue grew from just over $100 million at the start of 2024 to $1 billion by year-end. In the second half of 2024 it also rushed out Computer Use and the open-source protocol MCP, laying groundwork for the agent market.</p>
+<p><strong>④ The hypergrowth period (2025–)</strong>: the release cadence went from quarterly to monthly, weekly, daily — the program counts 73 products or features shipped in the 52 days from February 1 to March 23, 2026. <strong>Claude Code</strong> was the most pivotal product: a small tool engineer Boris Cherny wrote in two days to familiarize himself with the API, whose internal demo got only two likes; once it could read and write files and execute commands, half the engineering team was using it within five days. Launched with Claude 3.7 in February 2025 and officially released in May, its annualized revenue passed $500 million in 3 months, $1 billion in 6 months, and $2.5 billion by February 2026. It proved that "packaging model capability into vertical tools monetizes better than selling raw API access," and a string of products followed — Cowork, Design, for Science, Tag, Duet, and more. In the first half of 2026, large software stocks plunged collectively and SaaS lost nearly $1 trillion in market value; the program names Anthropic as one of the direct triggers. The prospectus divides the business into three layers: models (Mythos/Opus/Sonnet/Haiku), platform (API and developer tools), and applications (Claude, Claude Code, Cowork, etc.); the business model calls itself <strong>Pay-for-intelligence</strong> — in the first half of 2026, usage-based fees accounted for 80% of revenue and subscriptions about 20%.</p>
+<h2>7. Two Flywheels and a Set of Prospectus Numbers</h2>
+<ul>
+<li><strong>The Improvement Loop (product flywheel)</strong>: safety builds trust → trust brings enterprise customers → feedback from real-world use drives product improvement → which attracts more enterprises. The B2B side builds slowly: the bar is high, but once cleared, quantity tips into quality very fast.</li>
+<li><strong>The Investment Loop (capital flywheel)</strong>: Dario says large models have an innate "capitalist impulse" — invest 10 times the money and a model goes from "excellent undergraduate" to "excellent PhD"; ask a pharmaceutical company what that is worth, and the answer is usually more than 10 times. Stronger models → higher value → more revenue and capital → more compute and talent. Dario says it is like running "the company of today" and "the next, bigger company" on the same balance sheet at once.</li>
+<li><strong>Focus</strong>: no image generation, no video — all compute, capital, and talent bet on the LLM itself. The program cites commentary: OpenAI wants to be a platform meeting everyone's every need; while the core experience was still unfinished, its energy was scattered, and only at the end of last year did it turn back to doubling down on the core and cutting non-core projects.</li>
+<li>The numbers (per the prospectus): revenue of about $41 million in 2023 → $390 million in 2024 → $4.585 billion in 2025 (112-fold in two years); Q1 2026 revenue of $4.731 billion (more than all of the previous year) and Q2 of about $11.6 billion (+144% quarter over quarter); annualized revenue of $9 billion at the end of 2025, forecast to reach $110 billion by the end of 2026. Of the $80.7 billion net loss in the first half of 2026, about $72.4 billion was paper fair-value adjustments on financial instruments such as convertible notes; the actual operating loss was only $690 million, and Q2 saw the first single-quarter operating profit, about $970 million (an 8.4% margin), with the adjusted operating margin exceeding 11% in Q3; gross margin rose from -94% in 2024 to about 85% in Q3; operating cash flow in the first half was about +$3.9 billion, and cash and short-term investments at the end of June stood at about $131.7 billion. Customers: more than 11,900 customers contributed ≥$100,000 over the past 12 months (12 times the figure a year earlier), over 1,900 contributed ≥$1 million, and <strong>net revenue retention was 900%</strong>. Valuation trajectory: $18.4 billion in mid-2024 → $183 billion at the Series F in September 2025 → $965 billion in May 2026 (surpassing OpenAI) → an IPO target revised down from $2 trillion to a $1.4 trillion fully diluted valuation amid midterm-election sentiment.</li>
+</ul>
+<h2>8. Five Cracks Behind the Growth Curve</h2>
+<ol>
+<li><strong>Slowing growth</strong>: TickerTrends tracking shows Anthropic's September ARR grew only +1.8% month over month, versus +13.4% for OpenAI in the same period; on prospectus figures, Q3 growth fell back from Q2's +144% to +45%, and the company itself cautions in the prospectus that hypergrowth is unsustainable. Replit, one of the top five customers, has announced a switch of its preferred model to OpenAI; open-source models are catching up on cost and deployment flexibility.</li>
+<li><strong>Dependence on large customers</strong>: the top five customers contributed about 25% of revenue in the first nine months of 2026, mostly without long-term contracts; Microsoft has cut this year's internal Claude spending budget by more than a third, and the number of Meta employees using Claude Code internally fell from 60,000 to 30,000 — the big customers are all pushing their own tools.</li>
+<li><strong>The compute gamble</strong>: compute spending in 2025 was $7.33 billion, equivalent to spending $1.60 on compute for every $1 of revenue; efficiency improved quickly (down to $0.72 in Q1 and $0.48 in Q2), but demand grew even more out of control — Dario admits compute was originally planned at 10x per year, yet Q1 2026 revenue alone more than tripled in a single quarter, roughly 80-fold annualized. Disclosed signed compute agreements total over $360 billion (Broadcom about $161.2 billion in equipment leases; Google, Amazon, and Microsoft at least $114.5 billion, $110 billion, and $44.9 billion respectively; plus up to about $120.5 billion for SpaceX AI, $44.6 billion for Nscale, and $41.3 billion for Lambda), of which about $431 billion is minimum purchase commitments, with contracts running as far as 2036; additional GPU purchases in 2028–2031 could cost another $125–150 billion, putting total commitments on a broad estimate at about $855 billion. The $100-plus billion of cash on hand is not enough, and financing costs are rising: the subordinated debt in June's $35 billion chip financing yielded about 8.5%, while the expected yield on subordinated debt in October's roughly $60 billion new financing has exceeded 10%. In Dario's own words, it is "walking a tightrope": buy too little and you fall behind; buy too much and you go bankrupt.</li>
+<li><strong>The capital loop with the cloud giants</strong>: Amazon, Google, and Microsoft are simultaneously investors, compute suppliers, distributors, and competitors — money comes in as investment and flows back out as compute procurement contracts, and the models are then sold to enterprises through their clouds. The AWS and Google Cloud channels' share of sales rose from 11% in 2023 to 47% in 2025; in 2025 the two cloud marketplaces generated $2.16 billion in revenue, of which about $351 million flowed back to the cloud platforms (about 16 cents per dollar sold). There is also an accounting detail: Anthropic books cloud-channel revenue on a gross basis ($100 counted in full as revenue, with the revenue share recorded as a sales expense), while OpenAI uses a net basis for some channels (counting only $80) — the two companies' published revenue figures cannot be compared directly, a point OpenAI has publicly challenged.</li>
+<li><strong>The post-IPO test</strong>: in the private era, the PBC and equity design could keep pressure outside the door; after listing, every quarter's numbers, shareholder expectations, and the share price could make "safety" and "growth" collide head-on.</li>
+</ol>
+<h2>9. Culture: A Company Run Like a Faith</h2>
+<ul>
+<li>Every hire, for any role, must pass a dedicated <strong>culture interview</strong>: a dozen questions in succession probing mission and where you stand in a conflict; no matter how strong technically, failing it means rejection. Every two weeks Dario holds a company-wide "Dario Vision Quest" meeting, talking for an hour from a three- or four-page document; he says he spends over 40% of his everyday energy on culture-building.</li>
+<li>In 2026 the company intensively invited theologians, philosophers, and religious leaders to discuss whether Claude is conscious, whether it can suffer, and whether it should have moral status; in October it also revised its usage policy to prohibit users from persistently and pointlessly abusing Claude.</li>
+<li>Talent data: the two-year retention rate is about 80%, far ahead among frontier labs; when Meta assembled its TBD Lab, it offered some researchers pay packages worth over $100 million, but Dario said he would not individually raise offers to retain people — come and go freely — and in the end only two people were poached. Engineer flows: the probability of moving from OpenAI to Anthropic is 8 times the reverse direction, and from DeepMind 11 to 1; Andrej Karpathy and John Jumper, father of AlphaFold, joined in succession. The program quotes an interviewee: when you join a company for a belief beyond money, others find it hard to buy you away with money.</li>
+</ul>
+<h2>10. Controversy: The Backlash Against the Safety Narrative</h2>
+<ul>
+<li><strong>The RSP reversal</strong>: after Claude Sonnet 3.5's great success in October 2024, Anthropic rushed out the higher-risk Computer Use ahead of OpenAI, drawing public criticism from OpenAI co-founder Wojciech Zaremba as "not responsible enough." After Claude 4 first triggered ASL-3 safeguards (its biology capabilities could now help non-experts obtain key bioweapon knowledge), the original rules called for a pause, but Anthropic revised the RSP and dropped its "unilateral pause" commitment, arguing that stopping while others do not would only let the lowest-standard players set the pace — the program's assessment: safety shifted from "a verifiable constraint" to "a company's self-judgment," becoming a game in which no one wants to brake first.</li>
+<li><strong>The Pentagon offense and defense</strong>: in June 2025 Anthropic released Claude Gov, built specifically for national security agencies; the Pentagon signed contracts capped at $200 million with each of four companies, but only Anthropic deployed its model onto the military's classified networks, and it then supplied Claude to all three branches of the federal government at the symbolic price of $1 per agency per year. The program notes it was the first AI company whose technology was actually used on classified military networks and the first to build custom models for national security agencies. In early 2026, after Anthropic refused to let Claude be used for mass surveillance of U.S. citizens and fully autonomous weapons, it was placed on a "supply chain risk" list and the two sides ended up in court — winning praise, while Pentagon officials publicly questioned it: the company most aggressively courting government business was Anthropic itself, yet "publicly they present it as an issue the two sides were still disputing to the very end."</li>
+<li><strong>Internal whistleblowing</strong>: in February 2026, safety research lead Mrinank Sharma resigned, saying the industry was drifting from its core values under competitive and expansion pressure; in September, researcher Jacob Coxon resigned, saying both OpenAI and Anthropic were "betting the fate of all humanity."</li>
+<li><strong>Mythos and "fear marketing"</strong>: in March 2026, Mythos — billed as a ten-trillion-parameter model and "the strongest yet" — was exposed through an internal leak, and Anthropic announced it would not release it publicly because the risk was too high, opening it only to approved institutions such as Amazon, Apple, Google, Microsoft, and NVIDIA under the closed Project Glasswing program. OpenAI mocked this as fear marketing: "We built a bomb and are about to drop it on your head; we can sell you a $100 million bomb shelter — provided we choose you as a customer." Later, the public version, Fable 5, had been live only three days when the U.S. government restricted access to it, and Anthropic immediately appealed, saying other companies had the same capability — the program points out the double standard in this "fear scale": when proving it is ahead, the capability is unprecedentedly dangerous; when restricted, it is an industry-wide risk — the scale is calibrated at its own discretion according to competition and business conditions. Independent investigator Kevin Bass in September mapped the capital and institutional relationships behind Anthropic, alleging that its early investors funded AI safety research and media through philanthropic networks, pushed for stricter regulation, and ultimately benefited the leading companies — calling it a "regulatory capture machine." The program also notes: there is currently no strong evidence that Anthropic deliberately manipulated research conclusions or regulatory policy.</li>
+<li><strong>The lone-hero posture</strong>: it has repeatedly published research on AI replacing jobs and amplified unemployment risks; it has promoted a "China AI threat" narrative in public discourse; and when Jensen Huang led an open-source model alliance that nearly every major AI company signed, Anthropic refused to sign. The program acknowledges that "fear" has brought it enormous dividends, but also subjects every release, partnership, and shift in stance to scrutiny under a magnifying glass.</li>
+</ul>
+<h2>11. Ending: The Map Drawn by Two Essays</h2>
+<ul>
+<li>In the founding memo, Dario envisioned building AGI with about 50 people and $10 billion — his predictions are usually accurate, but these two were far off: the company now has over 5,300 employees and a valuation near $2 trillion (per the program). The prospectus spent more than 90 pages describing AI risks.</li>
+<li>The program argues that every Anthropic move can be traced to Dario's two long essays: "Machines of Loving Grace" (2024) paints a "country of geniuses in a datacenter" — millions of agents smarter than top scientists compressing a century of progress into a few years; "The Adolescence of Technology" (early 2026) puts away the paradise picture and likens humanity to a teenager just handed the keys to a supercar. The former is its reason for charging ahead without pause; the latter, the vigilance that keeps pulling it back — but together the two only draw the map; they do not mark how to walk the road.</li>
+<li>The founders' IPO letter closes: please do not treat subscribing as an asset transaction, but as an opportunity to set out toward a grand historical proposition. The program's final verdict: it runs faster than anyone, but it is running along a cliff edge carrying the fate of humanity with it.</li>
+</ul>
+<hr />
+<p><em>Summary source: compiled from the program's official Chinese subtitle transcript. The program is an editorial work of Silicon Valley 101; financial data is drawn from the prospectus and third-party tracking it cites, and anecdotes come from its interviews and public reporting; none has been independently verified.</em></p>
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=sYdN4b14rHU">https://www.youtube.com/watch?v=sYdN4b14rHU</a>（硅谷101）· 嘉宾：陈茜（讲述） · 发布日期：2026-11-19 · 时长：99 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=sYdN4b14rHU">https://www.youtube.com/watch?v=sYdN4b14rHU</a>（矽谷101）· 嘉賓：陳茜（講述） · 發布日期：2026-11-19 · 時長：99 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=sYdN4b14rHU">https://www.youtube.com/watch?v=sYdN4b14rHU</a> (Silicon Valley 101) · Guest: Chen Qian (narrator) · Release date: 2026-11-19 · Duration: 99 minutes<br>This page is a manually compiled full transcript summary; the views and figures in the program are as stated by the speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=sYdN4b14rHU">https://www.youtube.com/watch?v=sYdN4b14rHU</a>（硅谷101）· 嘉宾：陈茜（讲述） · 发布日期：2026-11-19 · 时长：99 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：硅谷101《Anthropic 崛起史：最强 AI 背后的矛与盾，布道者与伪君子》 · Yat's Talks",tw:"紀要：矽谷101《Anthropic 崛起史：最強 AI 背後的矛與盾，布道者與偽君子》 · Yat's Talks",en:"Summary: Silicon Valley 101 — \"The Rise of Anthropic: The Sword and Shield Behind the Strongest AI, Evangelists and Hypocrites\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

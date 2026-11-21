@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《郭宇｜关于AI一人公司，大家最想知道的都在这里》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=diN1fiE52aI ｜时长 63 分钟｜郭宇一人公司/Wanman 主题分享后的集中问答
@@ -64,8 +71,110 @@
 <p>另有一段现场演示：他让 Wanman 跑「成为百万粉丝 YouTuber」的任务，AI 先算海外中文用户规模、对标频道、内容定位（不是做中文新闻台，而是帮海外华人解决身份、关系、家庭问题），排了每周两条长视频的更新表，并做了成本-收入模型——结论是 20 万到 50 万粉之前都是亏的，所以千万别请人，全用 AI 做。</p>
 <p>以及关于记录：他从小写日记，现在愿意把生活公开发出来——在 AI 时代这格外有价值：你发到互联网上的一切，最终都会成为 AI 模型的一部分，是你留给世界的 legacy。</p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=diN1fiE52aI">https://www.youtube.com/watch?v=diN1fiE52aI</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-21 · 时长：1 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《郭宇｜關於AI一人公司，大家最想知道的都在這裡》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=diN1fiE52aI ｜時長 63 分鐘｜郭宇一人公司/Wanman 主題分享後的集中問答
+說明：機器轉寫，繁簡混雜、個別專名有誤聽（Wanman 轉寫為「萬萬/彎慢/One慢」，OpenClaw 轉寫為「OpenCloud」，SOTA 轉寫為「sortar」等）；紀要按上下文校正。產品數據為講述者現場自述，未經核實。本片由若干段問答剪輯而成，開場的太空資料中心話題在片尾又出現了一次，紀要只記一遍。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這一場是「一人公司」主題的問答合集，核心資訊只有三條：①用 AI 的心法是「不要把 AI 當工具，把它當人」——信任靠把你的審美寫成文件 + 花時間長談來建立；②Wanman 的真實用法曝光：它最大的價值不是從零創業，而是「接管模式」——接管你已有的程式碼倉庫、自動修 bug、補測試，24 小時不停，這是他做這個產品 80% 的動機；③成本結構：不用 API、用訂閱制，Codex Max 每月 200 美元跑滿額度，API 貴 10–12 倍。</p>
+<h2>信任問題：怎麼敢把活全交給 AI</h2>
+<p>觀眾最集中的焦慮（尤其是程式設計師）：程式碼我能 review，商業計劃書、財務模型我看不懂，怎麼知道它不是幻覺？</p>
+<p>他的回答分三層：
+- <strong>寫下來</strong>：如果你有強烈的主觀意願和審美，就把它寫成文件、寫成 Skill 檔案，AI 才可能穩定複現你的風格；你想控制每個細節，前提是先把細節說清楚。
+- <strong>用時間換信任</strong>：「你有沒有和 AI 徹夜長談三個小時？」沒有的話，它不理解你要控制的距離和細節，你也不理解它。本質和人與人建立信任一樣。
+- <strong>讓市場裁定</strong>：AI 做的財務計劃會聯網檢索、交叉對比並附參考文件；至於計劃本身合不合理，他沒有專業能力評判——拿去銀行談融資，銀行經理認可，它就是合理。隱私政策、用戶條款他全部交給 Codex/Claude 寫，自己從沒逐條看過。他的底層立場：對 SOTA 模型有基本信任（做不到 99 分，60–70 分是有的），兩三年前還要頻繁做事實確認，現在頂尖模型（他舉例 GPT-5.5、Opus 4.7）已經不會再編造一個打開是 404 的論文連結。</p>
+<p>他明確不做的事：省 token 的記憶壓縮、各種成本優化技巧——「那是模型公司該幹的事」。他做的只有「調度」：讓 agent ①懂各行各業怎麼做事，②有協調能力（發簡訊、發郵件、打電話），兩點齊了產生廣泛可組合性，就是超級個體。算力成本問題留給模型進化解決。</p>
+<h2>Wanman 現狀（自述）</h2>
+<ul>
+<li>發布 3 天，沙箱被打滿；東京一台 128 核伺服器，用戶約 4,000–5,000 人（他沒看 DAU，估算）。瓶頸不在模型，在虛擬化技術——支撐上萬人、百萬級在線的沙箱基礎設施還沒有。</li>
+<li>從今年 1 月做到現在，自評 80 分：整個產品像樂高，每個小方塊（包括沙箱基礎設施）都是他自己搭的。</li>
+<li>免費、部分開源，<strong>不掙錢</strong>：「還沒到足夠高的品質。」他把這歸為開源文化：早期階段先把東西做得足夠好、變成公共領域的知識，收費和持續運營是後面的事（對比日本社會更傾向先申請專利）。</li>
+</ul>
+<h2>兩個模式</h2>
+<p><strong>從零模式——蘋果農場案例</strong>：一個真實任務，用戶只給了一句話：「運營一個觀光蘋果農場，幫我做好對應的 IT 系統和所有基礎設施（並制定持續盈利方案）。」AI 員工團分工：CEO 不寫程式碼、只覆核每輪任務是否完成；開發做實施計劃與選型；財務出 36 個月財務預測（種多少樹、多久收穫、回本前投多少、門票定價、靠什麼產品賺錢）；市場只產出一份增長策略報告。給了預算（例：5,000 萬日元封頂）它會自己找地、查去哪買樹、查 JA 貸款渠道。40 多分鐘出完整計劃。<strong>人類阻斷點</strong>是刻意設計的：需要人出面時它停下來，把合約等檔案全部備齊，甚至可以用他的翻譯電話產品（車點 AI）自動打電話預約時間，然後明確告訴你「這一步你不做完，我沒法繼續」。</p>
+<p><strong>接管模式——他自稱這是做 Wanman 80% 的原因</strong>：接管任意已有程式碼倉庫，給目標即可，例如「把測試覆蓋率提到 100%，不到不許結束」，它自動跑到達標。他名下約 15 個上線項目，所有 bug 走 webhook 進 Wanman 由 AI 員工自動修、自動跑；沒有 bug 就暫停，有新 bug 再啟動。他早上起來常看到 100 來個分支、幾十個 PR，自己看不過來，就交給本地的 Claude Code / Codex 審閱合併，也可以新開一個 Story 讓 Wanman 自己審 PR、自動合併。</p>
+<p>另一個接管案例（日本藍莓農場）：為農場主做自動灌溉/施肥系統的完整調研——感測器選型（土壤水分、pH、樹齡與生育階段）、300 棵樹 10 個區域的物料清單、數據表設計、現地調查報告模板。他的判斷：這本質上是諮詢公司幹的活，日本中小企業極度依賴諮詢公司把想法變成文件再找 IT 團隊，Wanman 把這條鏈壓縮了。</p>
+<p><strong>成本</strong>：訂閱制而非 API——Codex 在訂閱 plan 裡跑到 5 小時額度/週額度為止，他的 Codex Max 和 Claude 都是 200 美元/月；接 API 約貴 10–12 倍。他提到 Claude 在他的 Wanman 接入裡試過、很快被封號，所以主力用 Codex。（此為他個人經歷自述。）</p>
+<h2>新手與組織</h2>
+<ul>
+<li><strong>完全不會程式設計的人從哪開始</strong>：從你去年的工作開始、從小事開始——先讓它做採訪提綱，再到剪輯、素材搜尋，在建立信任的過程裡逐步給它宏大目標。他現場建議：打開 wanman.ai，註冊 Codex 帳戶授權後，把自己的 YouTube 頻道連結發給它，說「幫我安排接下來 17 個採訪計劃」，它會自己去查、自己安排。對宏大目標（比如「做到百萬粉絲」），AI 給出的方案會有很多你不認同的東西，但也會有意想不到的思路，有助於重新思考自己想做的事。</li>
+<li><strong>本地派 vs 雲端派</strong>：OpenClaw 式 local-first 在你電腦裡跑，能拿到你全部數據（包括隱私、信用卡），高效但危險；雲端派算力更多、連結性更廣，但上下文要靠上傳補齊。Wanman 是雲端派。他預告資料夾上傳功能很容易補上。</li>
+<li><strong>大公司現狀</strong>：非常混亂，第一反應普遍是裁員替換；矽谷有些公司把 AI 裝進每個員工的電腦進行監控，讓它在員工的工作裡自我進化。他認為轉型期人的位置更像觀察者。</li>
+<li><strong>股票盯盤需求</strong>：定投 DCA 券商（如長橋）默認支援，不必自己造；真要自動化，用 OpenClaw/Codex 操作已登入的券商網頁即可，但強烈建議放在一台單獨設備上，安全得多——它對你電腦裡的事無所不知。</li>
+<li><strong>怎麼讓別人（比如女友）用起來</strong>：沒有技巧。先讓他親身感受它有多厲害，動力只能從內心湧現，逼不出來；很多人還沒緊迫到要考慮生計。七八歲的小孩和成年人的差距，很多就在這件事上。</li>
+<li><strong>付費建議</strong>：公司不報銷、純業餘興趣的人，沒有必要強花這筆錢；但想用 AI 武裝自己的人，從今天就該開始。有些東西 AI 替代不了：金牌銷售的資源、體力勞動。</li>
+</ul>
+<h2>收尾的兩個大話題</h2>
+<p><strong>退休後要「足夠放鬆」</strong>：有觀眾問，如果還在字節、會不會為競爭力焦慮。他說自己從來不是好員工，只在乎事情好不好玩。混亂中才會建立新秩序，時代一成不變，普通人就沒有機會——現在沒錢，反而有機會分一杯羹。太執著於目標肌肉會緊繃，事情做不好；所有目標都需要你足夠放鬆。</p>
+<p><strong>權力終局</strong>（開場與結尾同一段論述）：放鬆的前提是看清本質——誰擁有能源與計算能力。馬斯克要把資料中心建到太空、美國要在月球建永久基地，先建通訊和太空推理資料中心，有持續且絕對安全的能源後，超級 AI 可以全自動運行一個文明（比如月球），製造在月球、推理回德州——這種權力集中度是人類沒遇到過的。他的判語：「我個人覺得所有的科技主義者都是反人類主義者，他們想把人變成神、變成萬能的東西」；這條路從工業革命起就埋在所有人心裡、越走越快，不會停。結論落在生活層面：安穩的小日子會越來越難、也越來越值得珍惜。</p>
+<p>另有一段現場演示：他讓 Wanman 跑「成為百萬粉絲 YouTuber」的任務，AI 先算海外中文用戶規模、對標頻道、內容定位（不是做中文新聞台，而是幫海外華人解決身分、關係、家庭問題），排了每週兩條長影片的更新表，並做了成本-收入模型——結論是 20 萬到 50 萬粉之前都是虧的，所以千萬別請人，全用 AI 做。</p>
+<p>以及關於記錄：他從小寫日記，現在願意把生活公開出來——在 AI 時代這格外有價值：你發到網際網路上的一切，最終都會成為 AI 模型的一部分，是你留給世界的 legacy。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Summary | "Guo Yu | Everything You Most Want to Know About the AI One-Person Company"</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=diN1fiE52aI | Length 63 minutes | A focused Q&amp;A following Guo Yu's talk on the one-person company / Wanman theme
+Note: Machine transcription, mixing simplified and traditional characters, with a few proper names misheard (Wanman transcribed as "萬萬/彎慢/One慢," OpenClaw as "OpenCloud," SOTA as "sortar," etc.); the summary has been corrected based on context. Product figures are the speaker's own account given on site and have not been verified. The video is edited from several Q&amp;A segments; the space data center topic from the opening appears again at the end, and the summary records it only once.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>This session is a compilation of Q&amp;A on the "one-person company" theme, and its core information comes down to just three points: (1) The mindset for using AI is "don't treat AI as a tool, treat it as a person" — trust is built by writing your taste into documents + spending time in long conversations; (2) Wanman's real use is revealed: its greatest value is not starting a business from zero, but "takeover mode" — taking over your existing code repositories, automatically fixing bugs and adding tests, running 24 hours without stopping, which accounts for 80% of his motivation for building the product; (3) The cost structure: no API, subscription only — Codex Max at $200 per month used to its full quota, while the API costs 10–12 times more.</p>
+<h2>The Trust Question: How Do You Dare Hand All the Work to AI?</h2>
+<p>The audience's most concentrated anxiety (especially among programmers): I can review code, but I can't read business plans or financial models — how do I know it isn't hallucinating?</p>
+<p>His answer has three layers:
+- <strong>Write it down</strong>: If you have strong subjective preferences and taste, write them into documents, into Skill files, and only then can AI stably reproduce your style; if you want to control every detail, the prerequisite is to spell the details out clearly first.
+- <strong>Trade time for trust</strong>: "Have you ever had a three-hour all-night conversation with AI?" If not, it doesn't understand the distance and details you want to control, and you don't understand it either. In essence it is the same as building trust between people.
+- <strong>Let the market decide</strong>: The financial plans AI makes will search online, cross-check and attach reference documents; as for whether the plan itself is reasonable, he has no professional ability to judge — take it to a bank to discuss financing, and if the bank manager approves it, it is reasonable. He hands his privacy policy and user terms entirely to Codex/Claude to write and has never read them line by line himself. His underlying stance: he has basic trust in SOTA models (they may not score 99, but 60–70 is there); two or three years ago frequent fact-checking was still needed, but today's top models (he cites GPT-5.5 and Opus 4.7 as examples) no longer fabricate a paper link that opens to a 404.</p>
+<p>What he explicitly does not do: memory compression to save tokens, and various cost-optimization tricks — "that is the model companies' job." What he does is only "orchestration": making agents (1) understand how work is done in different industries, and (2) have coordination ability (sending texts, sending emails, making phone calls); when both are in place, broad composability emerges, and that is the super individual. The compute cost problem is left for model evolution to solve.</p>
+<h2>Wanman's Current State (His Account)</h2>
+<ul>
+<li>Three days after release, the sandbox was maxed out; one 128-core server in Tokyo, with about 4,000–5,000 users (he hasn't checked DAU; this is an estimate). The bottleneck is not the model but virtualization technology — sandbox infrastructure supporting tens of thousands of users and millions online does not yet exist.</li>
+<li>Built from January this year to now, he rates it 80 points: the whole product is like Lego, and every small block (including the sandbox infrastructure) was built by himself.</li>
+<li>Free, partially open source, <strong>not making money</strong>: "It hasn't reached a high enough quality yet." He attributes this to open-source culture: in the early stage, first make the thing good enough and turn it into public-domain knowledge; charging and sustained operation come later (in contrast, Japanese society tends more toward filing patents first).</li>
+</ul>
+<h2>Two Modes</h2>
+<p><strong>From-zero mode — the apple farm case</strong>: A real task where the user gave only one sentence: "Run a sightseeing apple farm, and build the corresponding IT system and all the infrastructure for me (and develop a plan for sustained profitability)." The AI employee team divided the work: the CEO writes no code and only checks whether each round of tasks is complete; development handles implementation plans and technology selection; finance produced a 36-month financial forecast (how many trees to plant, how long until harvest, how much to invest before breaking even, ticket pricing, and which products make money); marketing produced only a growth strategy report. Given a budget (e.g., capped at 50 million yen), it finds land itself, checks where to buy trees, and checks JA loan channels. A complete plan in just over 40 minutes. <strong>Human blocking points</strong> are deliberately designed: when a person needs to step in, it stops, prepares all the documents such as contracts, and can even use his translation phone product (Chedian AI) to automatically call and book an appointment time, then tells you clearly, "If you don't finish this step, I can't continue."</p>
+<p><strong>Takeover mode — he says this is 80% of the reason he built Wanman</strong>: Take over any existing code repository and just give it a goal, for example "raise test coverage to 100%, and don't stop until you get there," and it runs automatically until the target is met. He has about 15 live projects under his name; all bugs flow into Wanman via webhook and are automatically fixed and run by AI employees; when there are no bugs it pauses, and when new bugs appear it starts again. In the morning he often wakes up to see over 100 branches and dozens of PRs, more than he can review himself, so he hands them to local Claude Code / Codex to review and merge, or he can open a new Story and let Wanman review and auto-merge PRs itself.</p>
+<p>Another takeover case (a Japanese blueberry farm): a complete research project for the farm owner on an automatic irrigation/fertilization system — sensor selection (soil moisture, pH, tree age and growth stage), a bill of materials for 300 trees across 10 zones, data table design, and an on-site survey report template. His judgment: this is essentially the work consulting firms do; Japanese SMEs rely heavily on consulting firms to turn ideas into documents and then find IT teams, and Wanman compresses that chain.</p>
+<p><strong>Cost</strong>: Subscription rather than API — Codex runs within the subscription plan until the 5-hour quota / weekly quota is used up; his Codex Max and Claude are both $200/month; using the API costs about 10–12 times more. He mentioned that he tried connecting Claude into his Wanman setup and the account was banned very quickly, so Codex is the main tool. (This is his personal experience as recounted by him.)</p>
+<h2>Beginners and Organizations</h2>
+<ul>
+<li><strong>Where should someone who can't program at all start</strong>: Start from your work last year, start from small things — first have it make interview outlines, then move to editing and material search, and gradually give it grander goals in the process of building trust. His on-site suggestion: open wanman.ai, register and authorize a Codex account, then send it the link to your own YouTube channel and say "help me arrange my next 17 interview plans," and it will research and arrange them itself. For grand goals (such as "reach a million followers"), the plans AI gives will contain many things you disagree with, but also unexpected ideas that help you rethink what you want to do.</li>
+<li><strong>Local camp vs. cloud camp</strong>: OpenClaw-style local-first runs inside your computer and can access all your data (including privacy and credit cards) — efficient but dangerous; the cloud camp has more compute and broader connectivity, but context has to be filled in through uploads. Wanman is in the cloud camp. He previewed that a folder upload feature would be very easy to add.</li>
+<li><strong>The state of large companies</strong>: Very chaotic, with the first reaction generally being layoffs and replacement; some Silicon Valley companies install AI on every employee's computer for monitoring, letting it self-evolve within employees' work. He believes that in the transition period, people's position is more like that of observers.</li>
+<li><strong>Stock-watching needs</strong>: Brokers supporting DCA regular investment (such as Longbridge) support it by default, so there is no need to build it yourself; if you really want automation, just use OpenClaw/Codex to operate the already-logged-in broker webpage, but it is strongly recommended to put it on a separate device, which is much safer — it knows everything about what is on your computer.</li>
+<li><strong>How to get someone else (e.g., a girlfriend) to start using it</strong>: There is no trick. First let them experience firsthand how powerful it is; motivation can only emerge from within and cannot be forced; many people are not yet pressed enough to think about their livelihood. Much of the gap between a seven- or eight-year-old child and an adult lies in exactly this.</li>
+<li><strong>Spending advice</strong>: For people whose company won't reimburse it and who are purely hobbyists, there is no need to force themselves to spend this money; but people who want to arm themselves with AI should start today. Some things AI cannot replace: a top salesperson's resources, and physical labor.</li>
+</ul>
+<h2>Two Big Topics at the Close</h2>
+<p><strong>After retirement, you need to be "relaxed enough"</strong>: An audience member asked whether, if he were still at ByteDance, he would feel anxious about competitiveness. He said he was never a good employee and only cares whether something is fun. New order is only built amid chaos; if the era never changes, ordinary people have no opportunity — having no money now actually gives you a chance to get a share. Being too fixated on a goal tenses your muscles and things go badly; every goal requires you to be relaxed enough.</p>
+<p><strong>The endgame of power</strong> (the same argument at the opening and the close): The prerequisite for relaxation is seeing the essence clearly — who owns energy and computing power. Musk wants to build data centers in space, the US wants to build a permanent base on the Moon, first building communications and space inference data centers; once there is a continuous and absolutely secure energy supply, a super AI can fully automatically run a civilization (for example on the Moon), with manufacturing on the Moon and inference back in Texas — this degree of power concentration is something humanity has never encountered. His verdict: "Personally, I think all technologists are anti-humanists; they want to turn people into gods, into omnipotent beings"; this path has been buried in everyone's heart since the Industrial Revolution, moving faster and faster, and it will not stop. The conclusion lands at the level of daily life: a stable, quiet life will become harder and harder, and also more and more worth cherishing.</p>
+<p>There was also a live demonstration: he had Wanman run the task of "becoming a YouTuber with a million followers," and the AI first calculated the scale of overseas Chinese users, benchmark channels, and content positioning (not running a Chinese news channel, but helping overseas Chinese solve problems of identity, relationships and family), scheduled an update calendar of two long videos per week, and built a cost-revenue model — concluding that it loses money all the way until 200,000 to 500,000 followers, so never hire people, do it all with AI.</p>
+<p>And on recording: he has kept a diary since childhood and is now willing to make his life public — in the AI era this is especially valuable: everything you post on the internet will ultimately become part of AI models; it is the legacy you leave to the world.</p>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=diN1fiE52aI">https://www.youtube.com/watch?v=diN1fiE52aI</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-05-21 · 时长：1 小时 03 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=diN1fiE52aI">https://www.youtube.com/watch?v=diN1fiE52aI</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-05-21 · 時長：1 小時 03 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=diN1fiE52aI">https://www.youtube.com/watch?v=diN1fiE52aI</a> (Ginza One-Way Street Bookstore) · Guest: Guo Yu · Published: 2026-05-21 · Duration: 1 hour 03 minutes<br>This page is the full summary, manually edited from machine transcription; the views, figures and model names in the video are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interview List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《郭宇｜关于AI一人公司，大家最想知道的都在这里》 · Yat's Talks",tw:"紀要｜《郭宇｜關於AI一人公司，大家最想知道的都在這裡》 · Yat's Talks",en:"Summary | \"Guo Yu | Everything You Most Want to Know About the AI One-Person Company\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

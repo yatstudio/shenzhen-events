@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《留守儿童，孤独少年，提前到来的成年｜郭宇的故事①》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=3cgBV3WkjIg ｜时长 22 分钟｜郭宇自述、他人采访
@@ -47,8 +54,78 @@
 <p><strong>性格注脚</strong>
 - 小学三四年级脾气火爆：同桌在墙上画画、班主任冤枉是他画的，他掀了课桌在教室里和老师打起来；成绩好但混的是乡下小混混圈子。他说这种直脾气在字节「对事不对人」的环境里倒常见——程序员在会议室跟老板大嗓门吵架是常态；如今生活简单、不依赖别人，冲突才少了。</p>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=3cgBV3WkjIg">https://www.youtube.com/watch?v=3cgBV3WkjIg</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-11-03 · 时长：22 分钟<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《留守兒童，孤獨少年，提前到來的成年｜郭宇的故事①》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=3cgBV3WkjIg ｜時長 22 分鐘｜郭宇自述、他人採訪
+說明：逐字稿為雅加達伺服器 faster-whisper 機器轉寫，個別詞有誤聽（如「同逛/同胖」為銅礦、「輔州市」疑為撫州市、「青紅」為電影《青紅》），紀要已按上下文校正。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這是郭宇的童年自述：1991 年生於江西銅礦子弟家庭，父母下海南下後做了四五年留守兒童——單調、孤獨、靠讀書和寫日記打發時間，而正是這段經歷埋下了他日後寫作、在網上記錄自己、以及「不想管人、只想自己做事」的性格底色。</p>
+<h2>內容要點</h2>
+<p><strong>出身：三線銅礦子弟</strong>
+- 出生在江西一個偏僻的銅礦（同江銅礦一類的國營礦山，類似電影《青紅》裡的三線工廠），去縣城要開車兩小時。外公外婆從江蘇遷來，父親是江西南部客家人，在子弟小學上學，同學多是礦工子弟和附近農村孩子。
+- 礦挖完就破產，如同東北國企下崗潮：職工返原籍或南下。父親原是電工，他小學二三年級時父親遭高壓電擊、從高處墜落進 ICU，雖救回但體力大損、腦血管留下隱患（家族有腦血管基因，父親後來腦梗、臥床十幾年成植物人，與此有關）。</p>
+<p><strong>留守的四五年</strong>
+- 父親先辦「停薪留職」去東莞，自學日語（家裡至今留著 NHK 寄來的廣播日語教材），轉做機床維修與銷售，趕上南方小廠進口德日機床的窗口賺到了錢，在深圳買房；母親隨後也南下。郭宇由外公外婆帶大，從小學到初一下學期末（快要到初二）才被接到深圳。
+- 童年關鍵詞是「單調」：沒有商店書店，騎車幾小時去縣城書店看一下午；小姨、舅舅在上海工作、1998 年小姨公派留學去美國前常寄書和巧克力，格林童話借給同學「有借無回」翻爛為止。
+- 1998 年（7 歲）第一次去上海送小姨出國：小姨答應帶他吃必勝客卻沒時間，他自己帶外婆坐地鐵找店、坐過站到外灘，最後吃了麥當勞，一個外國大爺送了他開心樂園餐的藍色小玩具——記到今天。
+- 暑假最無聊：同學要麼出去玩、要麼幫農活帶弟妹，他不睡午覺，一個人在礦山裡轉、自己跟自己打籃球；寄住上海親戚家體驗也不好（被城裡小孩看不起、住房擠、矛盾多），寧願自己在鄉下待著。冬天幫父親看鐵皮板車小攤，手凍傷留疤、不敢跟父母說。</p>
+<p><strong>三件影響一生的事</strong>
+1. <strong>讀書與作家夢</strong>：第一本長篇是 1998 年在上海看的《海底兩萬里》，之後看「書蟲」雙語縮寫本、萌芽系的韓寒郭敬明——小鎮青年靠寫作改變命運的路徑讓他幻想自己也能靠寫作走出去，作文常拿範文。
+2. <strong>寫日記</strong>：因為「沒有人可以說話」，從小每天寫日記，寫滿很多本子；有網路後轉到網上發（最早飯否，高中時），延續成今天在 X 上把生活和想法當記錄寫下來的習慣。
+3. <strong>遊戲與程式設計的入口</strong>：父母離開後成績下滑、沉迷網咖（先區域網路、後網路遊戲），在深圳黑網咖還遇過警察、從後門跑。學校暑期機房興趣班本是衝著玩電腦去的，卻學了 QBasic、Pascal——這是程式設計的種子；真正下決心學程式碼是高三畢業後：父親病重、母親沒學歷沒文憑、什麼活都幹（做家政時帶他一起，手把手教他打掃衛生的講究，後來靠認真被推薦去龍崗區政府後勤管幾十人，卻說管人太麻煩——「不想管人」這一點他說像母親，也像他自己），他必須儘快經濟獨立，大學起就靠寫程式碼自己賺錢。</p>
+<p><strong>性格註腳</strong>
+- 小學三四年級脾氣火爆：同桌在牆上畫畫、班主任冤枉是他畫的，他掀了課桌在教室裡和老師打起來；成績好但混的是鄉下小混混圈子。他說這種直脾氣在字節「對事不對人」的環境裡倒常見——程式設計師在會議室跟老闆大嗓門吵架是常態；如今生活簡單、不依賴別人，衝突才少了。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | "A Left-Behind Child, a Lonely Teenager, Adulthood Arriving Early | Guo Yu's Story ①"</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=3cgBV3WkjIg | Length: 22 minutes | Guo Yu's own account, interviewed by others
+Note: The transcript was machine-generated with faster-whisper on a Jakarta server, and a few words were misheard (e.g. "同逛/同胖" should be "copper mine", "辅州市" is likely Fuzhou City, and "青红" refers to the film <em>Shanghai Dreams</em>); the notes have been corrected based on context.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>This is Guo Yu's account of his childhood: born in 1991 into a copper-mine workers' family in Jiangxi, he spent four or five years as a left-behind child after his parents went south to Hainan — a monotonous, lonely time passed by reading and keeping a diary; and it was precisely this experience that planted the seeds of his later writing, of recording his life online, and of his disposition of "not wanting to manage people, only wanting to do things on his own".</p>
+<h2>Key Points</h2>
+<p><strong>Background: a child of a Third Front copper mine</strong>
+- He was born at a remote copper mine in Jiangxi (a state-run mine like the Tongjiang Copper Mine, similar to the Third Front factories in the film <em>Shanghai Dreams</em>), a two-hour drive from the county town. His maternal grandparents had migrated from Jiangsu; his father was a Hakka from southern Jiangxi. He attended the mine's school for employees' children, and his classmates were mostly miners' children and kids from nearby villages.
+- When the ore ran out, the mine went bankrupt, much like the wave of layoffs at state-owned enterprises in Northeast China: employees returned to their hometowns or headed south. His father had been an electrician; when Guo Yu was in second or third grade of primary school, his father suffered a high-voltage electric shock, fell from a height, and ended up in the ICU. He survived, but his physical strength was greatly diminished and his cerebral blood vessels were left with hidden damage (the family has a genetic predisposition to cerebrovascular problems; his father later had a cerebral infarction and spent over a decade bedridden in a vegetative state, which was related to this).</p>
+<p><strong>Four or five years left behind</strong>
+- His father first took "unpaid leave while keeping his post" and went to Dongguan, taught himself Japanese (the family still keeps the radio Japanese textbooks NHK mailed to him), and switched to machine-tool repair and sales, making money during the window when small factories in the south were importing German and Japanese machine tools; he bought a home in Shenzhen. His mother then also went south. Guo Yu was raised by his maternal grandparents, and only in the second semester of his first year of junior high (nearly his second year) was he brought to Shenzhen.
+- The keyword of his childhood was "monotony": there were no shops or bookstores, and he would cycle for hours to a bookstore in the county town to read for an afternoon. His aunt and uncle worked in Shanghai, and before his aunt was sent to study in the US on a government program in 1998, she often mailed him books and chocolates; he lent his copy of Grimm's Fairy Tales to classmates and it was passed around until it fell apart, never returned.
+- In 1998 (aged 7), he went to Shanghai for the first time to see his aunt off abroad: his aunt had promised to take him to Pizza Hut but had no time, so he took his grandmother on the subway by himself to find the restaurant, rode past their stop to the Bund, and ended up eating at McDonald's, where a foreign man gave him the little blue toy from his Happy Meal — he remembers it to this day.
+- Summer holidays were the most boring: classmates were either out playing or helping with farm work and looking after younger siblings, while he didn't nap and wandered around the mine alone, playing basketball by himself. Staying with relatives in Shanghai was not a good experience either (looked down on by city kids, cramped housing, lots of friction), so he preferred staying in the countryside on his own. In winter he helped his father watch a small tin-cart stall; his hands got frostbite that left scars, and he didn't dare tell his parents.</p>
+<p><strong>Three things that shaped his life</strong>
+1. <strong>Reading and the dream of becoming a writer</strong>: The first full-length novel he read was <em>Twenty Thousand Leagues Under the Seas</em>, read in Shanghai in 1998; afterwards he read the abridged bilingual "Bookworm" editions and the Mengya-circle writers Han Han and Guo Jingming — the path of small-town youths changing their fate through writing made him fantasize that he too could write his way out, and his school essays were often used as model compositions.
+2. <strong>Keeping a diary</strong>: Because there was "no one to talk to", he wrote in a diary every day from a young age, filling many notebooks; once he had internet access he moved it online (first on Fanfou, in high school), which developed into his present-day habit of recording his life and thoughts on X.
+3. <strong>The gateway to games and programming</strong>: After his parents left, his grades slipped and he became addicted to internet cafés (first LAN games, then online games); at a black internet café in Shenzhen he once ran into the police and escaped through the back door. He joined the school's summer computer-room interest class just to play on computers, but ended up learning QBasic and Pascal — the seed of his programming. He truly resolved to learn coding after graduating from high school: his father was seriously ill, his mother had no education or credentials and did whatever work she could find (when doing domestic work she took him along and taught him the finer points of cleaning by hand; later, because of her conscientiousness, she was recommended to manage dozens of people in the logistics department of the Longgang District government, but said managing people was too much trouble — he says this "not wanting to manage people" trait of his is like his mother's, and like himself too). He had to become financially independent as soon as possible, and from university onward he earned his own money by writing code.</p>
+<p><strong>A note on his temperament</strong>
+- In third and fourth grade of primary school he had a fiery temper: his deskmate drew on the wall, the head teacher wrongly blamed him for it, and he flipped over his desk and got into a fight with the teacher in the classroom; he had good grades but ran with a crowd of small-time rural delinquents. He says this kind of direct temper is actually common in ByteDance's "focus on the matter, not the person" environment — programmers shouting at their bosses in meeting rooms is routine; nowadays his life is simple and he doesn't depend on others, so there are fewer conflicts.</p>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=3cgBV3WkjIg">https://www.youtube.com/watch?v=3cgBV3WkjIg</a>（銀座單向街書店）· 嘉宾：郭宇 · 发布日期：2026-11-03 · 时长：22 分钟<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=3cgBV3WkjIg">https://www.youtube.com/watch?v=3cgBV3WkjIg</a>（銀座單向街書店）· 嘉賓：郭宇 · 發布日期：2026-11-03 · 時長：22 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=3cgBV3WkjIg">https://www.youtube.com/watch?v=3cgBV3WkjIg</a> (銀座單向街書店) · Guest: Guo Yu · Published: 2026-11-03 · Length: 22 minutes<br>This page is the full text of the notes, compiled by hand from a machine transcript; the views, figures and model names in the video are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews</a></footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《留守儿童，孤独少年，提前到来的成年｜郭宇的故事①》 · Yat's Talks",tw:"紀要｜《留守兒童，孤獨少年，提前到來的成年｜郭宇的故事①》 · Yat's Talks",en:"Notes | \"A Left-Behind Child, a Lonely Teenager, Adulthood Arriving Early | Guo Yu's Story ①\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

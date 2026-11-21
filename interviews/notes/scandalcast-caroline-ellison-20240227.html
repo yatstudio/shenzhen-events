@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Caroline Ellison：SBF 的前女友与 Alameda 的末任 CEO</h1>
 <blockquote>
 <p>片源：纪录片《Caroline Ellison: Sam Bankman-Fried's Ex-Girlfriend》（Scandalcast 频道，FTX Documentary 系列）· 时长：约 23 分钟 · 2024-02-27 发布
@@ -50,9 +57,85 @@
 <h2>后记（片外进展）</h2>
 <p>影片发布后：SBF 已于 2023 年 11 月被判全部罪名成立，2024 年 3 月被判处 25 年监禁；Ellison 于 2024 年 9 月被判处 2 年监禁。</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Caroline Ellison：SBF 的前女友與 Alameda 的末任 CEO</h1>
+<blockquote>
+<p>片源：紀錄片《Caroline Ellison: Sam Bankman-Fried's Ex-Girlfriend》（Scandalcast 頻道，FTX Documentary 系列）· 時長：約 23 分鐘 · 2024-02-27 發布
+說明：本片為旁白紀錄片，大量材料取自 Michael Lewis 的《Going Infinite》；本紀要據英文字幕整理、轉述片中敘述，人物心理與動機多為片方與書方的呈現口徑，並非定論。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這部片子講的是 FTX 崩塌裡最特殊的一對關係：Alameda 的 CEO Caroline Ellison 是創辦人 SBF 的前女友——客戶資金被挪用的決策鏈、兩人分手的時間點、以及事後 SBF 把崩塌歸咎於她的敘事糾纏在一起；而檢方手裡最關鍵的一段錄音顯示，用 FTX 客戶資金填 Alameda 窟窿的決定，出自 SBF 本人。</p>
+<h2>數學神童與有效利他主義</h2>
+<p>Ellison 1994 年生於波士頓，父親是 MIT 經濟系主任、母親是同系講師，她是三個女兒中的老大。自幼參加全國數學競賽，史丹佛數學系畢業，安靜、愛《哈利·波特》、自認是雷文克勞，大學時在 Tumblr 寫部落格《World Optimization》，既寫珍·奧斯汀和 Taylor Swift，也寫過「性革命是個錯誤、女性更適合做家庭主婦」這類與日後女 CEO 形象反差很大的觀點——她的史丹佛教授說，很難把認識的那個「很數學」的她與一樁數十億美元的詐欺聯繫起來。</p>
+<p>畢業後她進了量化交易公司 Jane Street，自稱是誤打誤撞進了華爾街，年薪約 20 萬美元，卻總覺得自己工作平庸。在 Jane Street 她認識了 SBF——MIT 出身、父母都是史丹佛法學教授——兩人因有效利他主義結緣：先賺大錢、再把錢捐出去改變世界。2017 年 SBF 離職創立做套利的 Alameda；一次咖啡館見面時她正打扮成林地仙子準備去參加角色扮演派對，SBF 向她發出了邀請。她先去問當時的男友是否愛她，得到否定答覆後，辭掉 Jane Street 的工作加入了加密世界。她在部落格裡把自己比作科幻小說女主角：為一家讓受壓制政權下的人能自由轉移資金的數位貨幣公司工作。</p>
+<h2>四頁紙告白與聯席 CEO</h2>
+<p>核心圈還有 Gary Wang（聯合創辦人兼 CTO）、Nishad Singh（工程負責人）和 Sam Trabucco。入職第一年，23 歲的 Ellison 給老闆 SBF 寫了一封四頁紙、公文式的備忘錄，坦白自己對他有感情、這些感情佔據了她大量腦力並影響工作。兩人此後多年分分合合。SBF 創立 FTX 並全職去管交易所後，任命 Ellison 與 Trabucco 為 Alameda 聯席 CEO——原設想是 Trabucco 管交易風險、Ellison 管人。2022 年兩人同登 Forbes 30 Under 30（她 27 歲）。Trabucco 後來辭職離開，Ellison 獨自接下人和風險兩攤，成為末任 CEO。</p>
+<p>FTX 此時如日中天：紅杉等頂級機構入股，交易所旱澇保收的模式被投資人比作「押注賭場本身」；2021 年收入超 10 億美元，SBF 花 2000 多萬美元買超級盃廣告、請庫里和布雷迪代言，29 歲身家約 220 億美元（峰值約 265 億），是 30 歲以下全球首富。核心十人住在巴哈馬一棟 3000 萬美元的頂層公寓裡，Ellison 始終待在幕後。</p>
+<h2>分手、寒冬與 140 億美元的窟窿</h2>
+<p>SBF 長期堅持對戀情保密，理由是怕公關與職場偏袒的觀感；Ellison 在備忘錄裡寫，她感覺他以她為恥。2022 年 4 月，兩人最終分手，她把他趕出了共住的房間——分手正撞上加密寒冬：4 到 6 月比特幣跌去一半以上，Alameda 持倉大幅縮水，而它此前從借貸機構借了數十億美元做交易和非流動性投資（包括回購 FTX 股份、投新創公司），抽貸潮中根本還不上。兩人當時幾乎不說話。SBF 後來把 Alameda 的虧損歸咎於她：分手後溝通變少、且沒聽他的建議對沖頭寸；Ellison 後來承認對沖本會有幫助，但指出 SBF 做了太多無法快速變現的投資也是問題的一部分。</p>
+<p>真正的罪在於補窟窿的方式：SBF 決定用 FTX 客戶資金替 Alameda 還債。而實際上從公司成立之初，FTX 客戶存款就被持續導入 Alameda 帳戶，用於交易、投資、奢華生活和政治捐款，SBF 還批准了給高管、給父母、甚至給自己 10 億美元的貸款。Wang 與 Singh 寫了軟體，讓 Alameda 在 FTX 的帳戶可以保持負餘額，等於一條無限信用額度——最初設想上限是不超過 FTX 的收入，很快就開始直接侵蝕客戶資金。Alameda 累計從客戶資金中借走約 140 億美元，後來還回一部分、降到約 90 億，他們盤算著等市場平穩後融資把錢補回去。與此同時，SBF 對外保證 Alameda 在 FTX 平台上沒有任何特權、客戶資金絕不會被拿去交易。</p>
+<p>2022 年 9 月，SBF 寫了一份 Google 文件論證應當關掉 Alameda，只分享給 Wang 和 Singh，把 Ellison 排除在外。文件裡他評價 Ellison「不是天生的領導者，大概永遠也不會是」，主張轉而扶持另一家成立不到一年的交易公司 Modulo Capital——其創辦人是他的另一位前女友、同為 Jane Street 出身的 Lily Zhang。2022 年第三、四季度，SBF 向 Modulo 投入 4 億美元，打算用它取代 Alameda。Ellison 在自己的文字裡留下了被邊緣化的嫉妒與怨氣。</p>
+<h2>九天崩塌</h2>
+<p>2022 年 11 月 2 日，CoinDesk 曝光 Alameda 的資產負債表：其持倉大頭是 FTX 自己發行的 FTT——相當於把自家股票當資產計入帳面，對 FTT 價格毫無抵抗力。11 月 6 日，幣安 CEO 趙長鵬宣布出售約 5 億美元 FTT，拋售隨即失控，FTT 跌去 75%，擠兌發生；90 億美元的窟窿讓 FTX 無力兌付。11 月 11 日，距曝光僅 9 天，FTX 與 Alameda 雙雙申請破產，Ellison、SBF、Wang、Singh 均被控詐欺。</p>
+<h2>認罪、錄音與日記之戰</h2>
+<p>FBI 一度找不到 Ellison，外界傳言她要逃往與美國無引渡條約的迪拜；一個月後她在紐約出現，2022 年 12 月對共謀電匯詐欺、商品詐欺、證券詐欺和洗錢等指控認罪，同意配合檢方指證 SBF 以換取輕判，Wang 與 Singh 隨後也認罪。認罪時她對法官說，她真心為欺騙 FTX 客戶感到抱歉，她知道那是錯的。她面臨的指控合計最高可達 110 年監禁，合作預計將大幅減刑。</p>
+<p>SBF 則堅稱自己不參與 Alameda 的日常營運，並持續把崩塌往 Ellison 身上推：他給一位加密 YouTuber 發去長篇材料，細數她未按建議對沖、迴避他的風險詢問；他還把 Ellison 私人日記的頁面洩露給《紐約時報》記者——法官認定此舉構成干預證人，撤銷了他的保釋，他從軟禁轉入看守所候審。洩露的日記（存在 Google 文件裡）呈現了另一個 Ellison：她自覺不勝任 CEO、熱情早已消退，在 SBF 面前有一種「本能地縮小自己、變得安靜、順從他人」的傾向；她也承認分手後是故意減少與他的聯繫，因為「不給你想要的聯繫，是我奪回一點掌控感的唯一方式」。</p>
+<p>但檢方握有決定性的一段錄音：在一次內部會議上，Ellison 親口告訴 Alameda 員工，用 FTX 客戶資金去填那個窟窿，是 SBF 的決定。片尾時點（2024 年 2 月），SBF 31 歲，面臨數十年監禁；核心圈中唯一未被起訴的是 Trabucco——他在 2022 年 4 月辭去聯席 CEO、8 月徹底離開，趕在一切崩壞之前。</p>
+<h2>後記（片外進展）</h2>
+<p>影片發布後：SBF 已於 2023 年 11 月被判全部罪名成立，2024 年 3 月被判處 25 年監禁；Ellison 於 2024 年 9 月被判處 2 年監禁。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Caroline Ellison: SBF's Ex-Girlfriend and Alameda's Last CEO</h1>
+<blockquote>
+<p>Source: the documentary <em>Caroline Ellison: Sam Bankman-Fried's Ex-Girlfriend</em> (Scandalcast channel, FTX Documentary series) · Runtime: about 23 minutes · Released 2024-02-27
+Note: This is a narrated documentary, and much of its material is drawn from Michael Lewis's <em>Going Infinite</em>. These notes are compiled from the English subtitles and retell the film's narration; the portrayals of the characters' psychology and motives reflect the framing of the film and the book, and are not settled conclusions.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>The film is about the most unusual relationship at the heart of the FTX collapse: Alameda CEO Caroline Ellison was the ex-girlfriend of founder SBF — and the chain of decisions that misappropriated customer funds, the timing of their breakup, and SBF's later narrative blaming the collapse on her are all tangled together. Yet the prosecution's most crucial recording shows that the decision to use FTX customer funds to plug Alameda's hole was SBF's own.</p>
+<h2>A math prodigy and effective altruism</h2>
+<p>Ellison was born in Boston in 1994. Her father was the chair of MIT's economics department and her mother a lecturer in the same department; she was the eldest of three daughters. She competed in national math competitions from childhood, graduated from Stanford with a degree in mathematics, was quiet, loved <em>Harry Potter</em>, and identified as a Ravenclaw. At university she wrote a Tumblr blog called <em>World Optimization</em>, writing about Jane Austen and Taylor Swift, but also views starkly at odds with her later image as a female CEO, such as "the sexual revolution was a mistake and women are better suited to being housewives." Her Stanford professor said it was hard to connect the "very mathematical" person he knew with a fraud of billions of dollars.</p>
+<p>After graduating she joined the quantitative trading firm Jane Street, saying she had stumbled into Wall Street by accident. Her salary was about $200,000 a year, yet she always felt her work was mediocre. At Jane Street she met SBF — MIT-educated, with both parents Stanford law professors — and the two bonded over effective altruism: make a lot of money first, then give it away to change the world. In 2017 SBF left to found Alameda, an arbitrage trading firm. At one coffee-shop meeting, when she was dressed as a woodland fairy on her way to a live-action role-playing party, SBF invited her to join. She first asked her then-boyfriend whether he loved her; when he said no, she quit Jane Street and joined the crypto world. On her blog she compared herself to the heroine of a science-fiction novel: working for a digital-currency company that lets people living under oppressive regimes move their money freely.</p>
+<h2>A four-page confession and co-CEO</h2>
+<p>The inner circle also included Gary Wang (co-founder and CTO), Nishad Singh (head of engineering), and Sam Trabucco. In her first year on the job, the 23-year-old Ellison wrote her boss SBF a formal, four-page memo confessing that she had feelings for him, and that those feelings occupied a great deal of her mental bandwidth and affected her work. The two were on and off for years afterward. After SBF founded FTX and went to run the exchange full-time, he appointed Ellison and Trabucco as co-CEOs of Alameda — the original plan being that Trabucco would handle trading risk and Ellison would handle people. In 2022 both made the Forbes 30 Under 30 list (she was 27). Trabucco later resigned, leaving Ellison to take on both people and risk alone, becoming the firm's last CEO.</p>
+<p>FTX was then at its zenith: top-tier firms such as Sequoia had invested, and investors likened the exchange's can't-lose business model to "betting on the casino itself." Revenue exceeded $1 billion in 2021. SBF spent more than $20 million on a Super Bowl ad and hired Curry and Brady as endorsers; at 29 his net worth was about $22 billion (peaking at roughly $26.5 billion), making him the richest person in the world under 30. The ten-person inner circle lived in a $30 million penthouse in the Bahamas, with Ellison always staying behind the scenes.</p>
+<h2>Breakup, crypto winter, and a $14 billion hole</h2>
+<p>SBF long insisted on keeping the relationship secret, fearing the appearance of PR problems and workplace favoritism; Ellison wrote in her memo that she felt he was ashamed of her. In April 2022 the two finally broke up, and she threw him out of the room they shared — just as the breakup collided with the crypto winter: from April to June, bitcoin lost more than half its value and Alameda's positions shrank sharply, while the firm had borrowed billions of dollars from lenders for trading and illiquid investments (including buying back FTX shares and investing in startups), which it simply could not repay amid the wave of loan recalls. The two were barely speaking at the time. SBF later blamed Alameda's losses on her: after the breakup they communicated less, and she had not followed his advice to hedge the firm's positions. Ellison later admitted that hedging would have helped, but pointed out that SBF's many investments that could not be quickly converted to cash were also part of the problem.</p>
+<p>The real crime lay in how the hole was plugged: SBF decided to use FTX customer funds to repay Alameda's debts. In fact, from the very beginning of the company, FTX customer deposits were continuously funneled into Alameda's accounts to fund trading, investments, a lavish lifestyle, and political donations, and SBF also approved loans to executives, to his parents, and even a $1 billion loan to himself. Wang and Singh wrote software that let Alameda's account at FTX run a negative balance — effectively an unlimited line of credit. The original idea was that the cap would not exceed FTX's revenue, but the firm soon began eating directly into customer funds. In total, Alameda borrowed about $14 billion from customer funds; part was later repaid, bringing the figure down to about $9 billion, and they planned to raise money once the market stabilized to make up the difference. All the while, SBF assured the public that Alameda enjoyed no special privileges on the FTX platform and that customer funds would never be used for trading.</p>
+<p>In September 2022, SBF wrote a Google Doc arguing that Alameda should be shut down, sharing it only with Wang and Singh and excluding Ellison. In it he assessed Ellison as "not a natural leader, and probably never will be," and instead advocated backing Modulo Capital, a trading firm less than a year old — whose founder was another of his ex-girlfriends, Lily Zhang, also formerly of Jane Street. In the third and fourth quarters of 2022, SBF put $400 million into Modulo, intending to use it to replace Alameda. Ellison's own writings preserve the jealousy and resentment of being sidelined.</p>
+<h2>Nine days of collapse</h2>
+<p>On November 2, 2022, CoinDesk exposed Alameda's balance sheet: the bulk of its holdings consisted of FTT, the token issued by FTX itself — in effect counting its own stock as an asset, leaving it defenseless against a fall in FTT's price. On November 6, Binance CEO Changpeng Zhao announced the sale of about $500 million worth of FTT; the sell-off spiraled out of control, FTT lost 75%, and a bank run ensued; the $9 billion hole left FTX unable to pay out. On November 11, just nine days after the exposure, FTX and Alameda both filed for bankruptcy, and Ellison, SBF, Wang, and Singh were all charged with fraud.</p>
+<h2>Guilty plea, the recording, and the diary war</h2>
+<p>For a time the FBI could not locate Ellison, and rumors circulated that she would flee to Dubai, which has no extradition treaty with the United States. A month later she surfaced in New York, and in December 2022 she pleaded guilty to charges including conspiracy to commit wire fraud, commodities fraud, securities fraud, and money laundering, agreeing to cooperate with prosecutors against SBF in exchange for a lighter sentence; Wang and Singh pleaded guilty soon after. When entering her plea she told the judge that she was truly sorry for deceiving FTX customers and that she knew it was wrong. The charges she faced carried a combined maximum of up to 110 years in prison, with cooperation expected to reduce the sentence substantially.</p>
+<p>SBF, for his part, insisted he was not involved in Alameda's day-to-day operations and kept shifting blame for the collapse onto Ellison: he sent a crypto YouTuber a lengthy dossier detailing how she had failed to hedge as advised and had dodged his questions about risk; he also leaked pages of Ellison's private diary to a <em>New York Times</em> reporter — a move the judge found amounted to witness tampering, revoking his bail and sending him from house arrest to jail to await trial. The leaked diary (kept in a Google Doc) revealed a different Ellison: she felt inadequate as CEO and her enthusiasm had long faded, and around SBF she had a tendency to "instinctively shrink herself, become quiet, and defer to others." She also admitted she had deliberately reduced contact with him after the breakup, because "not giving you the contact you want was the only way I could take back a little bit of control."</p>
+<p>But prosecutors held a decisive recording: at an internal meeting, Ellison told Alameda staff in her own words that using FTX customer funds to fill the hole had been SBF's decision. At the film's closing point in time (February 2024), SBF was 31 and facing decades in prison; the only member of the inner circle not charged was Trabucco — he had resigned as co-CEO in April 2022 and left entirely in August, before everything fell apart.</p>
+<h2>Afterword (developments after the film)</h2>
+<p>After the film's release: SBF was convicted on all counts in November 2023 and sentenced to 25 years in prison in March 2024; Ellison was sentenced to 2 years in prison in September 2024.</p>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=Bq9QyOLv2PI">https://www.youtube.com/watch?v=Bq9QyOLv2PI</a>（Scandalcast 纪录片）· 嘉宾：Caroline Ellison · 发布日期：2024-02-27 · 时长：23 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=Bq9QyOLv2PI">https://www.youtube.com/watch?v=Bq9QyOLv2PI</a>（Scandalcast 紀錄片）· 嘉賓：Caroline Ellison · 發布日期：2024-02-27 · 時長：23 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=Bq9QyOLv2PI">https://www.youtube.com/watch?v=Bq9QyOLv2PI</a> (Scandalcast documentary) · Guest: Caroline Ellison · Release date: 2024-02-27 · Runtime: 23 minutes<br>This page is the full text of notes compiled by hand; the views and figures expressed are the speakers' own, as stated, and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=Bq9QyOLv2PI">https://www.youtube.com/watch?v=Bq9QyOLv2PI</a>（Scandalcast 纪录片）· 嘉宾：Caroline Ellison · 发布日期：2024-02-27 · 时长：23 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Caroline Ellison：SBF 的前女友与 Alameda 的末任 CEO · Yat's Talks",tw:"Caroline Ellison：SBF 的前女友與 Alameda 的末任 CEO · Yat's Talks",en:"Caroline Ellison: SBF's Ex-Girlfriend and Alameda's Last CEO · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

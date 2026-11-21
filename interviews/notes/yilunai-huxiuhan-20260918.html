@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：易论AI访谈胡修涵《被 AI 淘汰的人，才是 AI 最大的市场》</h1>
 <ul>
 <li>时间：2026-09-18（YouTube 发布）</li>
@@ -110,9 +117,201 @@
 <hr />
 <p><em>纪要来源：YouTube 官方英文字幕转写整理。嘉宾观点与数字为现场口径，未独立核实；英文字幕对个别中文人名、术语的转写可能有误（如嘉宾前雇主 Tezign 特赞、主持人提及的机构名等）。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：易論AI訪談胡修涵《被 AI 淘汰的人，才是 AI 最大的市場》</h1>
+<ul>
+<li>時間：2026-09-18（YouTube 發布）</li>
+<li>主持：易論AI</li>
+<li>嘉賓：胡修涵（捏Ta 創始人；北大 → 阿里 P8 → 哥倫比亞大學機器人實驗室 → Meta）</li>
+<li>時長：2 小時 03 分（YouTube 版 7403 秒）</li>
+<li>來源：YouTube 官方頻道「易論AI」影片 D03SRcFtm7w，自帶英文字幕（欄目提供），全文 3034 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。數字與判斷均為嘉賓現場口徑，未獨立核實。時間戳指向字幕位置。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>胡修涵的核心判斷：指望 AI 像工業革命那樣「消滅舊崗位、再造新崗位」是低估了 AI——按現有經濟價值算，大批人會成為「無用之人」；但人的長期勞動價值不在生產端而在消費端：消費形成審美、審美最終變現，創作即消費。被 AI 淘汰的人不是包袱，而是下一個時代最大的市場；捏Ta 做的就是讓他們在「第二世界」裡塑造另一種人生。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>「無用之人」要拆開看</strong>：按現有分工的經濟價值，他們確實無用（做的事不經濟）；但長期勞動價值不為零——時尚買手就是例子：純功利看完全多餘，可消費投票賦予審美以意義，審美最終能變現，青山資本稱之為「消費是新時代的生產」（[00:04:25]、[00:06:11]）。</li>
+<li><strong>新崗位≠好崗位</strong>：AI 短劇製作這類新職業更像被演算法精確控制的流水線——生產資料與分發主動權全在系統手裡，他稱之為「佃農階級」，和外送騎手同構（[00:03:09]、[00:04:02]）。</li>
+<li><strong>創作即消費</strong>：看影片時發的一條彈幕，若成為世界模型的輸入，消費行為就轉化成了創作行為。未來人真正願意花時間的，是創作過程本身（[00:00:26]）。</li>
+<li><strong>平台網路結構論</strong>：抖音、Facebook、Instagram 本質是雙邊結構（二部圖：少數創作者輻射多數消費者），長期必然壓制 UGC 利益；健康的社群是多邊網狀結構。祖克柏早年在 Facebook 內部最擔心的就是這個，提「有意義的社交互動」正源於此（[00:10:07]、[00:11:51]）。</li>
+<li><strong>代際反叛才致命</strong>：雙邊生態的問題一代人之內不致命，可怕的是代際更替時下一代創作者問「我為什麼要看你們這幫精英老頭」——生態的死法是新人不再進來（[00:12:48]）。</li>
+<li><strong>社群的定義是連接邊的數量與深度</strong>：按讚最淺，留言轉發次之，用別人的東西再創作更深，共同經歷（如一起看直播）最深；只有發布、沒有彼此交換，就不構成社群（[00:54:55]）。</li>
+<li><strong>冷啟動紀律</strong>：絕不在早期花錢從別的平台挖成熟創作者——外部創作者占比一旦過高（他舉 70% 為戒），自家原生創作者會被歧視、社群自身價值歸零；要像入世前的保護期一樣，先讓原生創作者強到能出去競爭，再開閘（[01:01:39]、[01:03:19]）。</li>
+<li><strong>Aha 時刻的物理約束</strong>：行動網際網路的金標準是新用戶 15 秒見到第一個驚喜，但 AI 生圖要 40–50 秒——所以捏Ta 的 aha 只能存在於「生成過程之中」，這是這代 AI 產品對普通用戶的根本限制（[01:05:53]、[01:07:03]）。</li>
+<li><strong>反對一句話生成（AIGC），主張 AIUGC</strong>：創作的本質是多輪校準，一句話生成假設 AI 能直接猜中你腦中所想，那是腦機介面才有的語境；降低操作門檻不等於降低參與門檻，用戶一旦覺得自己只是 AI 的橡皮圖章，就會離開（[01:19:30]、[01:24:31]）。</li>
+<li><strong>今年最大的訊號與噪音</strong>：訊號是「全民 Claude Code」——組織內部不用起 agent 這一波，會被甩下；噪音是「只談現金流」——套殼 harness 做分發是最容易變現的路，但不是這個時代唯一能做的事（[01:50:32]）。</li>
+</ol>
+<h2>一、為什麼他不信「工業革命敘事」</h2>
+<ul>
+<li>主持人問：AI 淘汰的人會像工業革命後那樣重新找到工作嗎？胡修涵：這種期待本身就是低估 AI，「好比指望三體人善待地球人」。腦力勞動的效率提升太強、太全面，即使創造新崗位，也裝不下被擠出的人（[00:00:12]、[00:02:42]）。</li>
+<li>出路在消費端完成閉環：消費 → 形成審美 → 審美被他人認可 → 變現。人在消費過程中的回饋、彈幕、投票，會成為對他人有價值的勞動，生產與消費的邊界就此打破（[00:07:19]）。</li>
+<li>他自稱的立場不是「反精英」：精英是客觀存在，他信的是「連接」——連接精英與普通人，別走向生殖隔離式的分化（[00:09:35]）。</li>
+</ul>
+<h2>二、他這個人：三次壓線過關</h2>
+<ul>
+<li><strong>北大</strong>：資訊學競賽關鍵一場，滿分 320 他考 310（一道題 10 分之差）；當年 NOI 委員會定「寧缺毋濫」，50 人名額只取 49 人，後改為並列、一次拉進 10 人，他就這麼被拉了進去（[00:16:15]）。</li>
+<li><strong>Meta</strong>：同批同學裡最晚拿到實習 offer 的人（4 月才給，他主動要求面試官加了一輪）；實習結束卻成了那屆的 rock star，return offer 是同批最好的（約他人的 1.5–2 倍）（[00:17:55]）。</li>
+<li>他的解釋：壓線過關的人會因為珍惜機會或「知恥後勇」而超常發揮；人生常態不是明星前鋒隊，而是沒有球星但後防扎實的隊最後贏。投資人問他算不算幸運的人，他說：不相信自己幸運，就會變成不幸運的那個（[00:15:57]）。</li>
+<li>北大期間：成績約前 30%，不焦慮；創辦「網路社團」傳播 Ruby on Rails（那代人的偶像是 DHH），給全校新生做了個 QQ 遊戲大廳式的選宿舍工具，被團委老師相中。教訓是技術太新沒人接手維護——老師說要用 PHP 重寫才能傳給下一屆（[00:20:04]、[00:23:26]）。</li>
+<li>哥倫比亞讀機器人：畢業論文是「機器人熨衣服」——可變形物體至今仍是靈巧手的演示難題，當年手上幾乎沒有感測器，只能純靠視覺（[00:28:14]）。</li>
+</ul>
+<h2>三、2022 年 7 月為什麼出來做捏Ta</h2>
+<ul>
+<li>觸發點是 Disco Diffusion（2022 年 2 月，Colab 上跑個腳本、五分鐘出一張藝術圖）與 Stable Diffusion，ChatGPT 還沒發布（11 月）。他當時在 Tezign（特贊）做 VP，回國已降薪 30%，創業再降 30%，職業生涯最高薪是工作第三年（[00:32:15]、[00:42:47]）。</li>
+<li>內容理論：一切內容都是積木，生產是「解構—重構」（即壓縮—解壓）。過去組織圖片靠圖層排版，擴散模型第一次讓「用語言組織視覺」成為可能，重組速度提升兩個數量級以上——改一句 prompt、立刻看市場回饋。他在特贊研究 Adobe 時把這件事抽象為「內容速度」：誰能讓資訊在人之間的時間速度更快，誰就是更好的內容組織（[00:36:40]、[00:41:15]）。</li>
+<li>為什麼不等財務自由：他給人生排第一位的指標是「生命體驗的豐富度」；沿著大廠路走下去，像在虛擬遊戲裡拿了高排名，代價是放棄大量真實世界的可能性（[00:44:29]）。</li>
+</ul>
+<h2>四、放棄的那條路：LoRA / ComfyUI 平台</h2>
+<ul>
+<li>2023 年 4 月他們訓了第一個廣泛傳播的 LoRA（黑神話悟空題材），AutoDL 上最常用的 ComfyUI 映像與啟動器就是他團隊做的，一度站在成為國內 ComfyUI/LoRA 分享平台的位置上（[00:47:27]）。</li>
+<li>放棄的理由是第一性原理：把語言和一大堆小微調模型、工作流綁死，資產會重新變重，與這一代技術「解放、輕量化」的方向相反；他賭的是這些東西最終會被世界模型式的系統收編，而不是每個角色單獨訓一個模型（[00:48:40]）。</li>
+<li>順帶談創始人注意力：資源多不是好事，資源多的團隊容易變成「基金孵化器」——創始人怕單點出事，自然想多押四五個方向；單點創新要求創始人 80–90% 精力壓在一處，用 20% 精力不可能贏一個同樣全力以赴的對手（[00:45:54]）。</li>
+<li>對同行（Liblib、海藝、MaFei 等）的觀察：活下來的都不是純工具、都加了社群；差異在基因——商業化驅動的團隊敢補貼、敢投流、長得快，他們是系統型團隊，先問「積木問題解沒解好」，更守紀律（[00:51:09]）。</li>
+</ul>
+<h2>五、捏Ta 的產品演化：從漫畫到角色到世界</h2>
+<ul>
+<li>第一版是最複雜的設計：一鍵生成漫畫的小程式。做不成——技術上故事補全太難（四格漫畫對故事的要求不低於編一個成語典故），語言模型當時也沒有拆解結構化內容的 agent 能力（[01:08:43]）。</li>
+<li>轉向「塑造角色」：門檻低得多，且角色之間天然長出關係（兄弟、姐妹、CP、正邪），兩個朋友各捏一個角色就能玩「扮家家酒」，社交連接自然形成。第二波嘗試把角色放進現成小說劇情（冒險模式）曾被競品模仿，但多模態延遲太大，用戶開始抱怨「能不能別生圖了、太費錢費時」，純文字又和星野、貓箱沒區別（[00:57:59]、[01:10:50]）。</li>
+<li>「庇護所效應」：捏Ta 的原住民是原創角色（OC）圈層——一批在別的平台被排斥的畫手（有人頭像上直接寫 Anti-AI），越被反對、暗地裡支持的人越多，他們無處可去，捏Ta 給了土壤。他刻意不迎合「反 AI 就不給 AI 功能」的捷徑，而是先給這群人一個能交流的地方（[00:59:34]）。</li>
+<li>工具與社群的回饋差：工具只收到淺回饋（「圖再好看點、字再大點」），那不是真實需求；真實需求只在社群討論裡冒出來——做婚禮請柬的人真正在意的是儀式感和賓客出席意願，沒人會跟一個工具聊這個（[00:53:30]）。</li>
+<li>強互動創作聚合不了 feed：要求用戶做同款、二創，行為就按主題聚成社團，而不是資訊流——像他大學時的社團（[00:57:29]）。</li>
+<li>成本帳：DeepSeek V2（2024）把同級文字價格打下來數百倍（現場口徑），但影片至今沒便宜下來，因為全行業追 SOTA、不追普惠。他的臨界點預測已接近：5–15 秒影片做到幾分錢人民幣、Seedance/海螺 H3 級品質，海螺新一代 H3 已經逼近這個點（[01:14:52]、[01:17:39]）。捏Ta 的工程優化不追生成品質本身，追的是協作網路——用戶把自己的設定、角色打包成「元素」供他人調用，平台做資源型與交換型兩種供給（[01:18:31]）。</li>
+</ul>
+<h2>六、第二世界：語境、四象限與可塑軟體</h2>
+<ul>
+<li>捏Ta 現在的定義：一個讓用戶塑造「另一種人生」的社群。年輕用戶自己最常用的詞是「世界」——「我和朋友的小世界」。數位原住民的手機裡所有 App 就是他的世界（[01:26:44]、[01:27:42]）。</li>
+<li>世界的構成是語境（context）：環境、化身（avatar/角色）、關係三樣。先把語境做厚、可治理，後面的體驗才能反覆做好——像空白記憶的 agent 進入第一個遊戲就有了第一份記憶（[01:31:43]、[01:33:19]）。</li>
+<li>Fork 機制：世界觀必然分化，如宗教分教派、開源專案分叉，分化與匯流都是做大的方式；他糾正主持人「先做角色」的直覺——深度之後，場域比角色更重要，迪士尼樂園的本質不是 IP 周邊，而是人結伴而來、以居民身分改變點什麼（[01:34:15]、[01:30:17]）。</li>
+<li>內容四象限框架：橫軸人 ↔ 世界，縱軸被動觀看 ↔ 主動參與；長期所有內容向「世界 × 主動參與」遷移。AI 短劇是「看一個新世界」，AI 陪伴是「單角色互動」，都只是分區解（[01:47:58]、[01:50:21]）。</li>
+<li>可塑軟體的自我批評：他們最近重度反思——給這一代 AI 預設單一模態、固定介面，違背技術本身的可塑性（DeepSeek Harness 就是可塑作業系統）；底層是命令列與語言模型（LUI），上層介面應由 AI 按場景現場生成。未來限制參與的不再是形式，而是語境的豐富程度（[01:44:24]、[01:46:47]）。</li>
+<li>孤獨問題他換了個說法：不是孤獨，是「更豐富體驗的時間」問題——人活久了會無聊，要麼延長時間、要麼多開幾局（[01:43:33]）。</li>
+</ul>
+<h2>七、公司光譜與不後悔</h2>
+<ul>
+<li>公司光譜：最左端是亞馬遜式用戶驅動（customer obsession、被用戶說服），最右端是 Google 式技術願景驅動（最不聽勸，但能招到最好的技術人），Uber、Facebook 體量感依次，Canva、Figma 居中。創業第一天就要想清楚自己落在光譜哪一格，否則會長成一家自己不想成為的公司（[01:53:58]、[01:58:12]）。</li>
+<li>主持人問：第一年本可以成為 Liblib，現在選會不會改？他答：人只能做一件事，我們天生不是商業化效率驅動整個團隊的那種公司，不後悔。市面上橫向比較只看活得好的，沒看見兩三年裡大批速死名單——這很公平：不夠好就是不夠好，但也要尊重當時的技術條件（[01:56:51]、[01:58:32]）。</li>
+<li>為 Manus 說話：他不認為 Manus 是套殼——很多產品創新很強，商業化、投流、增長效率都有其所長，最後跑出來的產品品質不差（[01:52:48]）。</li>
+<li>組織訊號：今年他們內部也在全員用 Claude Code 式的 agent 工作法；技術審美上他偏愛最新一代技術，但成本又貴到與普惠衝突——「兩害相權，必須撕開一道口子」（[01:50:46]）。</li>
+</ul>
+<h2>八、最後一個問題：第二世界的世界觀</h2>
+<ul>
+<li>主持人問：當人被擠出（第一）世界，你們要造一個什麼樣的世界觀？胡修涵：人不會覺得被擠出，他會主動選擇在那個世界裡建更有意義的東西——就像人類歷史上為信仰眾籌建聖家堂：無數人奮鬥一生、沒有經濟回報，最終成了世界上最稀缺的東西，即人的精神本身。虛擬世界裡同樣可以建這樣的「教堂」，它本質是表達「我存在」的紀念碑（[02:01:08]）。</li>
+<li>那你會自己建教堂，還是只提供土地？他笑答：還不知道，也許都會——但眼下打地基和施工隊的責任已經夠重，沒時間想（[02:02:56]）。</li>
+</ul>
+<hr />
+<p><em>紀要來源：YouTube 官方英文字幕轉寫整理。嘉賓觀點與數字為現場口徑，未獨立核實；英文字幕對個別中文人名、術語的轉寫可能有誤（如嘉賓前雇主 Tezign 特贊、主持人提及的機構名等）。</em></p>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: YiLunAI Interviews Hu Xiuhan — "The People AI Displaces Are AI's Biggest Market"</h1>
+<ul>
+<li>Date: 2026-09-18 (published on YouTube)</li>
+<li>Host: YiLunAI</li>
+<li>Guest: Hu Xiuhan (founder of Neta; Peking University → Alibaba P8 → Columbia University robotics lab → Meta)</li>
+<li>Duration: 2 h 03 min (YouTube version: 7,403 seconds)</li>
+<li>Source: Video D03SRcFtm7w on the official YouTube channel "YiLunAI," with English subtitles provided by the program; full transcript of 3,034 lines</li>
+</ul>
+<blockquote>
+<p>These notes were compiled in Chinese. All figures and judgments are as stated by the guest on the spot and have not been independently verified. Timestamps point to positions in the subtitles.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Hu Xiuhan's core judgment: expecting AI to work like the Industrial Revolution — "destroy old jobs, then create new ones" — underestimates AI. Measured by current economic value, large numbers of people will become "useless people"; but the long-term value of human labor lies not on the production side but on the consumption side: consumption forms taste, taste eventually monetizes, and creation is consumption. The people displaced by AI are not a burden — they are the biggest market of the next era; what Neta does is let them shape an alternative life in a "second world."</p>
+<h2>Key Points</h2>
+<ol>
+<li><strong>"Useless people" needs unpacking</strong>: by the economic value of the current division of labor, they are indeed useless (what they do is uneconomical); but their long-term labor value is not zero — fashion buyers are the example: purely utilitarian, they look completely superfluous, yet consumption votes give taste meaning, and taste can ultimately be monetized. Qingshan Capital calls this "consumption is the production of the new era" ([00:04:25], [00:06:11]).</li>
+<li><strong>New jobs ≠ good jobs</strong>: new occupations like AI short-drama production are more like assembly lines precisely controlled by algorithms — the means of production and the initiative in distribution are entirely in the system's hands. He calls this the "tenant-farmer class," structurally identical to food-delivery riders ([00:03:09], [00:04:02]).</li>
+<li><strong>Creation is consumption</strong>: if a bullet comment you post while watching a video becomes input to a world model, the act of consumption has turned into an act of creation. What people will truly want to spend time on in the future is the creative process itself ([00:00:26]).</li>
+<li><strong>A theory of platform network structure</strong>: Douyin, Facebook and Instagram are essentially two-sided structures (a bipartite graph: a few creators radiating to many consumers), which in the long run inevitably suppress the interests of UGC; a healthy community is a multi-sided mesh structure. This is what Zuckerberg worried about most inside Facebook in the early years, and his call for "meaningful social interactions" came from exactly this ([00:10:07], [00:11:51]).</li>
+<li><strong>Generational rebellion is what kills</strong>: the problems of a two-sided ecosystem are not fatal within one generation; the scary part is generational turnover, when the next generation of creators asks "why should I watch you elite old-timers?" — an ecosystem dies when newcomers stop coming in ([00:12:48]).</li>
+<li><strong>A community is defined by the number and depth of its connecting edges</strong>: likes are the shallowest, comments and reposts next, remixing other people's work is deeper, and shared experiences (such as watching a livestream together) are the deepest; if there is only publishing and no exchange between people, it is not a community ([00:54:55]).</li>
+<li><strong>Cold-start discipline</strong>: never spend money early on poaching mature creators from other platforms — once external creators make up too high a share (he cites 70% as the danger line), your own native creators get discriminated against and the community's own value goes to zero; like a protection period before opening up, first let native creators grow strong enough to compete outside, then open the gates ([01:01:39], [01:03:19]).</li>
+<li><strong>The physical constraint on the aha moment</strong>: the gold standard of the mobile internet is that a new user sees the first delight within 15 seconds, but AI image generation takes 40–50 seconds — so Neta's aha can only exist "within the generation process itself," which is this generation of AI products' fundamental limitation for ordinary users ([01:05:53], [01:07:03]).</li>
+<li><strong>Against one-sentence generation (AIGC); for AIUGC</strong>: the essence of creation is multi-round calibration. One-sentence generation assumes AI can directly guess what is in your head — a context only a brain-computer interface could provide. Lowering the operational barrier is not the same as lowering the participation barrier; once users feel they are merely AI's rubber stamp, they leave ([01:19:30], [01:24:31]).</li>
+<li><strong>The year's biggest signal and noise</strong>: the signal is "Claude Code for everyone" — organizations that don't get on this wave of agents internally will be left behind; the noise is "only talking about cash flow" — wrapping a harness and doing distribution is the easiest path to monetization, but it is not the only thing worth doing in this era ([01:50:32]).</li>
+</ol>
+<h2>I. Why He Doesn't Believe the "Industrial Revolution Narrative"</h2>
+<ul>
+<li>The host asked: will the people AI displaces find work again, as after the Industrial Revolution? Hu Xiuhan: that expectation itself underestimates AI — "it's like expecting the Trisolarians to treat Earthlings kindly." The efficiency gains in mental labor are too strong and too comprehensive; even if new jobs are created, they cannot hold all the people squeezed out ([00:00:12], [00:02:42]).</li>
+<li>The way out is to close the loop on the consumption side: consumption → taste is formed → taste is recognized by others → monetization. People's feedback, bullet comments and votes during consumption become labor that is valuable to others, and the boundary between production and consumption dissolves ([00:07:19]).</li>
+<li>His self-described stance is not "anti-elite": elites objectively exist; what he believes in is "connection" — connecting elites and ordinary people, rather than drifting toward a reproductive-isolation-style split ([00:09:35]).</li>
+</ul>
+<h2>II. The Man Himself: Three Times Squeaking Through</h2>
+<ul>
+<li><strong>Peking University</strong>: in a key informatics competition, he scored 310 out of 320 (a single 10-point problem made the difference); that year the NOI committee insisted on "quality over quantity," taking only 49 of 50 slots, then switched to ties and pulled in 10 more at once — that is how he got in ([00:16:15]).</li>
+<li><strong>Meta</strong>: he was the last in his cohort to receive an internship offer (it only came in April, after he proactively asked the interviewer to add another round); yet by the end of the internship he had become that cohort's rock star, and his return offer was the best of the group (about 1.5–2× the others') ([00:17:55]).</li>
+<li>His explanation: people who squeak through cherish the opportunity, or rise out of shame, and overperform; the norm in life is not a team of star forwards, but the team with no stars and a solid defense that wins in the end. When an investor asked whether he counts as a lucky person, he said: if you don't believe you are lucky, you become the unlucky one ([00:15:57]).</li>
+<li>At Peking University: his grades were around the top 30%, and he wasn't anxious; he founded an "online society" to spread Ruby on Rails (that generation's idol was DHH), and built a QQ-game-hall-style dormitory-selection tool for all incoming freshmen, which caught the eye of a Youth League teacher. The lesson was that the technology was too new for anyone to take over maintenance — the teacher said it would have to be rewritten in PHP to be passed to the next class ([00:20:04], [00:23:26]).</li>
+<li>Robotics at Columbia: his thesis was "a robot ironing clothes" — deformable objects remain a demonstration challenge for dexterous hands to this day; back then he had almost no sensors at hand and had to rely purely on vision ([00:28:14]).</li>
+</ul>
+<h2>III. Why He Left in July 2022 to Build Neta</h2>
+<ul>
+<li>The trigger was Disco Diffusion (February 2022 — run a script on Colab, get an art image in five minutes) and Stable Diffusion; ChatGPT had not yet been released (November). He was then a VP at Tezign, having already taken a 30% pay cut to return to China; starting the company meant another 30% cut, and the highest salary of his career was in his third year of work ([00:32:15], [00:42:47]).</li>
+<li>His content theory: all content is building blocks, and production is "deconstruction–reconstruction" (i.e., compression–decompression). Images used to be organized by layer layout; diffusion models for the first time made it possible to "organize vision with language," speeding up recombination by more than two orders of magnitude — change one line of a prompt and immediately see the market's feedback. While studying Adobe at Tezign, he abstracted this into "content velocity": whoever makes information move faster between people is the better organizer of content ([00:36:40], [00:41:15]).</li>
+<li>Why not wait for financial freedom: the metric he ranks first in life is "richness of lived experience"; continuing down the big-company path is like holding a high rank in a virtual game, at the cost of giving up a great many possibilities in the real world ([00:44:29]).</li>
+</ul>
+<h2>IV. The Road Not Taken: A LoRA / ComfyUI Platform</h2>
+<ul>
+<li>In April 2023 they trained the first widely circulated LoRA (on a Black Myth: Wukong theme); the most commonly used ComfyUI image and launcher on AutoDL were built by his team, and for a time they stood on the verge of becoming China's ComfyUI/LoRA sharing platform ([00:47:27]).</li>
+<li>The reason for giving it up was first principles: tying language to a pile of small fine-tuned models and workflows would make assets heavy again, running against this generation of technology's direction of "liberation and lightness"; his bet was that these things would ultimately be absorbed into world-model-style systems, rather than training a separate model for every character ([00:48:40]).</li>
+<li>On founders' attention, in passing: having more resources is not a good thing — resource-rich teams easily turn into "fund incubators," because founders fear a single-point failure and naturally want to bet on four or five directions; single-point innovation requires the founder to put 80–90% of their energy in one place, and you cannot beat an equally all-in competitor with 20% of your energy ([00:45:54]).</li>
+<li>His observations on peers (Liblib, Haiyi, MaFei, etc.): the survivors are none of them pure tools — all added a community; the difference is in the genes — commercially driven teams dare to subsidize and buy traffic and grow fast, while his is a systems team that first asks "have we solved the building-block problem properly" and keeps stricter discipline ([00:51:09]).</li>
+</ul>
+<h2>V. Neta's Product Evolution: From Comics to Characters to Worlds</h2>
+<ul>
+<li>The first version was the most complex design: a mini-program for one-click comic generation. It didn't work — technically, completing a story was too hard (a four-panel comic demands no less of a story than coining an idiom), and language models at the time had no agent capability for breaking down structured content ([01:08:43]).</li>
+<li>The pivot to "shaping characters": the barrier is far lower, and relationships grow naturally between characters (siblings, couples, good vs. evil); two friends each shaping a character can play "house" together, and social connection forms naturally. A second wave of attempts put characters into ready-made novel plots (adventure mode) and was copied by competitors, but multimodal latency was too high — users began complaining "can you stop generating images, it's too expensive and slow," while pure text was no different from Xingye or Maoxiang ([00:57:59], [01:10:50]).</li>
+<li>The "sanctuary effect": Neta's natives are the original-character (OC) community — a group of artists rejected on other platforms (some wrote "Anti-AI" right on their avatars); the more they were opposed, the more quiet supporters they had; they had nowhere to go, and Neta gave them soil. He deliberately did not take the shortcut of catering to "if you're anti-AI we won't give you AI features," but first gave these people a place to communicate ([00:59:34]).</li>
+<li>The feedback gap between tools and communities: tools only receive shallow feedback ("make the image prettier, the text bigger"), which is not real demand; real demand only surfaces in community discussion — people making wedding invitations truly care about the sense of ceremony and guests' willingness to attend, and nobody talks to a tool about that ([00:53:30]).</li>
+<li>Strongly interactive creation cannot aggregate into a feed: asking users to make the same thing or remix turns behavior into theme-based clubs rather than an information feed — like the societies from his university days ([00:57:29]).</li>
+<li>The cost ledger: DeepSeek V2 (2024) cut the price of comparable text models by several hundred times (as stated on the spot), but video has not gotten cheaper, because the whole industry chases SOTA rather than affordability. His predicted tipping point is close: 5–15-second video at a few Chinese cents, at Seedance / Hailuo H3-level quality — Hailuo's new-generation H3 is already approaching that point ([01:14:52], [01:17:39]). Neta's engineering optimization does not chase generation quality itself but the collaboration network — users package their settings and characters into "elements" for others to invoke, and the platform provides both resource-type and exchange-type supply ([01:18:31]).</li>
+</ul>
+<h2>VI. The Second World: Context, the Four Quadrants, and Malleable Software</h2>
+<ul>
+<li>Neta's current definition: a community that lets users shape "an alternative life." The word young users themselves use most is "world" — "the little world of me and my friends." For digital natives, all the apps on their phone are their world ([01:26:44], [01:27:42]).</li>
+<li>A world is composed of context: environment, avatar/character, and relationships. Make the context thick and governable first, and the experiences on top can be done well again and again — like a blank-memory agent entering its first game and gaining its first memory ([01:31:43], [01:33:19]).</li>
+<li>The fork mechanism: worldviews inevitably diverge, as religions split into sects and open-source projects fork; both divergence and convergence are ways to grow. He corrected the host's "characters first" intuition — beyond a certain depth, the field matters more than the character; the essence of Disneyland is not IP merchandise, but people arriving together and changing something as residents ([01:34:15], [01:30:17]).</li>
+<li>The four-quadrant framework for content: the horizontal axis runs from person ↔ world, the vertical from passive viewing ↔ active participation; in the long run, all content migrates toward "world × active participation." AI short dramas are "watching a new world," AI companionship is "single-character interaction" — both are only partial solutions ([01:47:58], [01:50:21]).</li>
+<li>Self-criticism on malleable software: they have recently reflected deeply — presetting a single modality and a fixed interface for this generation of AI violates the technology's inherent malleability (DeepSeek Harness is a malleable operating system); underneath are the command line and language models (LUI), and the upper interface should be generated by AI on the spot, per scenario. In the future, what limits participation will no longer be form, but the richness of context ([01:44:24], [01:46:47]).</li>
+<li>He reframed the loneliness problem: it is not loneliness, but a question of "time for richer experiences" — people who live long get bored; either extend the time, or start a few more games ([01:43:33]).</li>
+</ul>
+<h2>VII. The Company Spectrum, and No Regrets</h2>
+<ul>
+<li>The company spectrum: at the far left is the Amazon-style user-driven company (customer obsession, persuaded by users); at the far right is the Google-style technology-vision-driven company (least willing to listen, but able to recruit the best technical people); Uber and Facebook follow in scale, with Canva and Figma in the middle. From day one of a startup you must be clear about which cell of the spectrum you fall into, or you will grow into a company you never wanted to be ([01:53:58], [01:58:12]).</li>
+<li>The host asked: in the first year you could have become Liblib — would you choose differently now? He answered: a person can only do one thing; we are innately not the kind of company whose whole team is driven by commercialization efficiency, and he has no regrets. Horizontal comparisons in the market only look at those living well and don't see the long list of quick deaths over two or three years — that is fair: not good enough is not good enough, but one should also respect the technical conditions of the time ([01:56:51], [01:58:32]).</li>
+<li>Speaking up for Manus: he does not consider Manus a mere wrapper — many of its product innovations are strong, and its commercialization, traffic buying and growth efficiency have their strengths; the product that ultimately emerged is of decent quality ([01:52:48]).</li>
+<li>An organizational signal: this year his team, too, is all working in the Claude Code-style agent way; aesthetically he favors the newest generation of technology, but its cost is so high it conflicts with affordability — "between two harms, you have to tear open a gap" ([01:50:46]).</li>
+</ul>
+<h2>VIII. The Last Question: The Worldview of the Second World</h2>
+<ul>
+<li>The host asked: when people are squeezed out of the (first) world, what kind of worldview do you want to build? Hu Xiuhan: people won't feel squeezed out; they will actively choose to build more meaningful things in that world — just as, in human history, people built the Sagrada Família through faith-driven crowdfunding: countless people striving their whole lives with no economic return, ultimately creating the scarcest thing in the world, the human spirit itself. The same kind of "cathedral" can be built in a virtual world; it is essentially a monument expressing "I exist" ([02:01:08]).</li>
+<li>So will you build the cathedral yourself, or only provide the land? He laughed: he doesn't know yet, maybe both — but right now the responsibility for the foundation and the construction crew is heavy enough that there's no time to think about it ([02:02:56]).</li>
+</ul>
+<hr />
+<p><em>Source of these notes: compiled from YouTube's official English subtitle transcript. The guest's views and figures are as stated on the spot and have not been independently verified; the English subtitles may contain errors in transcribing individual Chinese names and terms (such as the guest's former employer Tezign, and institution names mentioned by the host).</em></p>
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=D03SRcFtm7w">https://www.youtube.com/watch?v=D03SRcFtm7w</a>（易论AI）· 嘉宾：胡修涵 · 发布日期：2026-09-18 · 时长：2 小时 03 分<br>本页为字幕转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=D03SRcFtm7w">https://www.youtube.com/watch?v=D03SRcFtm7w</a>（易論AI）· 嘉賓：胡修涵 · 發布日期：2026-09-18 · 時長：2 小時 03 分<br>本頁為字幕轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=D03SRcFtm7w">https://www.youtube.com/watch?v=D03SRcFtm7w</a> (YiLunAI) · Guest: Hu Xiuhan · Published: 2026-09-18 · Duration: 2 h 03 min<br>This page is the full notes, edited by hand from a subtitle transcription; all views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=D03SRcFtm7w">https://www.youtube.com/watch?v=D03SRcFtm7w</a>（易论AI）· 嘉宾：胡修涵 · 发布日期：2026-09-18 · 时长：2 小时 03 分<br>本页为字幕转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：易论AI访谈胡修涵《被 AI 淘汰的人，才是 AI 最大的市场》 · Yat's Talks",tw:"會議紀要：易論AI訪談胡修涵《被 AI 淘汰的人，才是 AI 最大的市場》 · Yat's Talks",en:"Meeting Notes: YiLunAI Interviews Hu Xiuhan — \"The People AI Displaces Are AI's Biggest Market\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

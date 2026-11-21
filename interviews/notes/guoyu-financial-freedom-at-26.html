@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜《26岁财富自由的程序员郭宇：很多人起点虽然高，但生活得一团糟》</h1>
 <blockquote>
 <p>视频：https://www.youtube.com/watch?v=mf13n8Fl7FM ｜时长 49 分钟｜对谈：主持人（金融学/经济学博士背景，频道主）× 郭宇
@@ -65,8 +72,113 @@
 <li>「市场是一个完美的赌场，你要做的只是把空位置占出来。」</li>
 </ul>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=mf13n8Fl7FM">https://www.youtube.com/watch?v=mf13n8Fl7FM</a>（课代表立正）· 嘉宾：郭宇 · 发布日期：2025-03-12 · 时长：49 分钟<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜《26歲財富自由的程式設計師郭宇：很多人起點雖然高，但生活得一團糟》</h1>
+<blockquote>
+<p>影片：https://www.youtube.com/watch?v=mf13n8Fl7FM ｜時長 49 分鐘｜對談：主持人（金融學/經濟學博士背景，頻道主）× 郭宇
+說明：機器轉寫，繁簡混雜、個別詞語有誤聽（「錨點」轉寫為「毛點」，CX 抄錄處多有音近字）；紀要按上下文校正。投資數字為講述者現場自述（口徑見正文），未經核實；本文不構成投資建議。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>上半場聊「沒有財務壓力之後，人靠什麼活」：他的答案是<strong>錨點</strong>——工作的人靠職場和家庭獲得八九成的人生意義，財富自由後錨點消失才是最危險的階段；意義不必先找到再行動，他自己辭職時也沒有清晰計畫。下半場聊投資：不跟指數比、不跟別人比，目標只是「賺的錢覆蓋自己的開支」；股價只定價未來幾個季度的現金流，所以邏輯只占兩成、八成是情緒，而散戶唯一能練的是心態——<strong>要賠錢就早賠</strong>，不提前經歷波動，泡沫真來的時候你沒有勇氣買。</p>
+<h2>上半場：財富自由後的意義問題</h2>
+<ul>
+<li><strong>他的現狀</strong>：2020 年從字節離職後在東京生活 4 年多。字節時代是上午 11 點半上班、凌晨兩三點回家，基本沒有個人生活。退休頭兩年想多玩、多體驗；這兩年穩定下來，大部分時間一個人過，對家裡潔淨要求很高，每天大量時間在打掃、做家務。在日本有四個住處：東京兩處、長野一處、沖繩宮古島一處，按溫泉、滑雪、衝浪選址。現在 80% 時間圍繞自己的生活，20% 給生活圈裡的人。</li>
+<li><strong>錨點論</strong>：靠出賣時間換收入的人，意義的錨點只有兩個——職場（上司、同事、職業路徑）和家庭（含雙方原生家庭），合計提供 80–90% 的意義，剩下 5–10% 給愛好和副業。一旦脫離這個環境，錨點消失，人會陷入「每天到底要做什麼」的近憂。他認識的一些老員工有錢之後花天酒地，就是錨點丟了。對他這樣的 I 人（自測 INTJ），錨點可以是自己和伴侶，所以他需要一段長期關係提供情緒與意義支持。</li>
+<li><strong>關係觀</strong>：他明確不結婚、是開放式關係，但每段關係都維持約四年，現在這段三年半。他認為這種穩定戀情在意義上與婚姻等價，區別是不綁定兩個家庭，只關乎兩個人的感情與性格是否相合。不管內向外向，人都需要一個長期關係作錨；傳統家庭生活方式對多數人反而是更合適的意義支撐。「自由有時候是個 curse——你得自己給自己找意義。」</li>
+<li><strong>Passion 與 calling</strong>：不是所有人都有運氣找到自己的 passion。體驗新東西只會把不熟悉變熟悉、增加對世界的感受，不會變成討厭，但能不能成為 passion 是另一回事；而執念型的 passion 代價極大——馬斯克、嬉皮士們做了常人做不了的事，代價是沒有穩定關係、沒有穩定家庭、被很多人不理解。主持人補充了「無限遊戲」的說法：找到屬於自己的無限遊戲，就能一直玩下去，似乎就是找到了意義。</li>
+<li><strong>他辭職時並沒有想清楚</strong>：2017 年抖音勢頭已起、他確信模式能複製到海外（TikTok），開始意識到可以不上班；2019 年正式提離職，因為國內能做的都做過了、沒有成長空間；2020 年離開正趕上疫情。退休的預期與現實差很多：原以為是環遊世界式的自由，實際頭兩年被疫情困住，是一個不斷下調期望的過程。</li>
+<li><strong>FIRE 的帳</strong>：主持人質疑「無風險利率 5% 覆蓋開支就能退休」是不是偽命題（通膨、不確定性）。他認為靠譜且足夠：不上班之後根本花不了多少錢，最重要的變數不是社會如何變、通膨多厲害，而是你自己的開支有多少。2017–2019 年他算過：長債約 4.5–5% 年化，一個人一年花 50 萬人民幣，在當前高無風險利率下不需要太多本金就能 FIRE。他曾在新加坡（賣股票免稅，能省一大筆）和日本之間糾結很久，最終因為喜歡四季、喜歡溫泉、日本開支低而選了日本。當年還設想過靠房租覆蓋生活、開旅行社、當房東——都是很確定性的計畫。</li>
+<li><strong>兩件事改寫了他的退休</strong>：一是 COVID，讓所有人反思要過什麼樣的生活，他在鄉下住了兩年多也住夠了；二是 2022 年底 ChatGPT。他判斷 2018–2020 年科技產業異常沉悶：沒有新東西、獲客成本極高、連字節的獲客成本都高得嚇人，不知道在卷什麼——這也是他離開產業的原因之一，上一個科技週期已到尾部。AI 出現後他重新下場：自己做了一家公司（自承不擅長做公司，但還是試），並把相當一部分錢從被動挪到主動倉位——2013 年起他一直是被動投資（定投、私行託管，基本不管），因為 AI 的敘事像 2006–2008 年的行動網際網路，不參與一下太可惜。</li>
+<li><strong>「先知道自己討厭什麼」</strong>：年輕人大多不知道自己喜歡什麼，但清楚自己討厭什麼；主動遠離討厭的東西，最終會歪打正著找到適合自己的事，就算找不到，也能活得比較好。他坦承原生家庭很糟：父親生病臥床十幾年、後來成植物人、幾年前去世，他一直想逃離這個家庭——「每個人都有一些非常原始的動機，決定你有沒有足夠欲望去做某件事」。</li>
+<li><strong>人生選擇是被動的</strong>：理性的選擇最多提供 20–30% 的推力，剩下 70–80% 是事件的連鎖反應。2013 年暑假他去北京考察過創業環境、也知道行動網際網路要爆發，但沒有動；真正推他 2014 年去北京的，是交往的女友（有憂鬱）某天突然帶著東西和貓消失，他覺得沒法在杭州待下去了。2014 年 12 月團隊被今日頭條收購純屬運氣——當時他根本不知道頭條是做什麼的，很多投資人也錯過了張一鳴。反例是他深圳的高中同學和灣區的 ABC 們：起點極高、資源極好，仍有大量人沒有獲得世俗成功，有的毀於藥物。「命運裡很多東西你沒法控制」，與其糾結運氣，不如隨遇而安、少些執念（他引佛學），加上財務上能自足，就已經非常完美。</li>
+</ul>
+<h2>下半場：投資哲學（回應有效市場假說）</h2>
+<p>主持人是 EMH（有效市場）訓練出身：市場已經定價了一切，個人投資者憑什麼有超額收益？他的回應：</p>
+<ul>
+<li><strong>先把預期放平</strong>：他不保證能持續獲得超額收益。他主要做小盤科技股，波動極大——以 2024 年為例，年內最高做到 +78%，但年末收在 -2.6%（他的自述口徑）。跑輸不用灰心，跑贏也別自封股神，股價本來就在區間裡波動。</li>
+<li><strong>目標函數換掉</strong>：不要和指數比、不要和別人比。散戶投資最重要的事，是讓賺到的錢和自己的生活開支達到平衡——「今年賺的錢夠不夠覆蓋信用卡開支，老婆想買個包你能不能立馬拿錢出來」，這就夠了。目標定得低，心理策略層面完全不同，動作不容易變形。Crypto 圈很多人的目標不現實，帳面財富是紙面錢。</li>
+<li><strong>股價定價的是近端現金流</strong>：教科書的 DCF 是幾十年現金流折現；他的經驗是，市場實際上只定價未來 8–12 個月、下幾次財報的現金流。所以邏輯部分只占約 20%，且人人幾分鐘就能看懂（以蘋果為例），不存在誰比市場知道更多資訊；剩下的 80% 是情緒、是執行——同樣的邏輯，你在什麼點位下買單賣單，結果天差地別。這部分沒有捷徑，只能自己實踐。</li>
+<li><strong>倉位紀律</strong>：不能把所有錢拿去做主動投資；忍耐的時間越長，勝率越高。他自己的比特幣持倉一直沒動過。</li>
+<li><strong>要賠錢就早賠</strong>（開場金句的展開）：他 2024 年才開始做小盤股，先在差行情裡經歷波動（他提到 2023 年 10 月前後市場連跌三個月的一段），把心態建起來。就像朋友第一次進賭場手會發抖，打兩次就好了。邏輯是：如果你確信某種泡沫一定會再發生，泡沫破裂後的買入點是最好的時機，但前提是你提前經歷過波動、做好了準備——沒早賠過錢的人，在泡沫真正產生時沒有勇氣買入。</li>
+<li><strong>他確信會發生什麼</strong>：錢在持續貶值，美國股市債市雙高，有約 7 萬億美元躺在貨幣市場基金裡。AI 是人類歷史級別的機會（類比智慧型手機：一個小設備長出無數新業態；更進一步，AI 的最後一站是物理世界——世界模型餵給機器人，特斯拉本質上是最大的機器人公司）。但盛宴的主角未必是現在的上市公司——就像 2008 年時 Facebook 還不在場內，熱錢最終會湧向小型和中型公司。他引了段永平的一句「（某件事）一定會發生，不知道下一次是什麼時候」式的話作註腳：他不知道時點，但確信會發生，所以提前把倉位挪過去、留出空倉位等人人恐慌時進場。</li>
+<li><strong>機器人與中國硬體</strong>：智慧機器人有強大的外部性，可能重演 2012 年式的衝擊——中國的科技公司在硬體層面很難守住資本市場的溢價、利潤分不到自己手裡，這是國家之間的競爭問題，他聊過的工程師普遍悲觀。突破的難點不是算力和資料量本身，而是資料的結構（自動駕駛的資料其實很多），世界模型是鑰匙；這類突破要以五年、十年計。他提到可關注一隻機器人方向的標的（轉寫含糊，名稱與數字不清，此處不臆測）。</li>
+<li><strong>收尾</strong>：市場不可預測，沒有人能知道明天開獎的是哪支股票；市場是一個所有人情緒的放大器、一個混沌系統。對他而言投資是 50% 邏輯 + 50% 心理學，小盤投機股裡情緒占到 80%。能做的就是把空位置占出來，等事情發生——賺錢反而是不請自來的事。</li>
+</ul>
+<h2>值得記下的句子</h2>
+<ul>
+<li>「自由有時候是個 curse。」</li>
+<li>「先知道自己討厭什麼，遠離它——就算找不到喜歡做的事，也能活得比較好。」</li>
+<li>「理性的選擇最多給你 20–30% 的推力，剩下的 70–80% 是事件在推你。」</li>
+<li>「不要跟別人比，也不要跟大盤比；今年賺的錢能覆蓋你的開支，就是最棒的。」</li>
+<li>「要賠錢就要早賠；你不早賠，泡沫真正來的時候你沒有勇氣買。」</li>
+<li>「市場是一個完美的賭場，你要做的只是把空位置占出來。」</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | "Guo Yu, the Programmer Who Achieved Financial Freedom at 26: Many People Start High, but Live in a Mess"</h1>
+<blockquote>
+<p>Video: https://www.youtube.com/watch?v=mf13n8Fl7FM | Duration 49 minutes | Conversation: Host (PhD background in finance/economics, channel owner) × Guo Yu
+Note: Machine transcription, with mixed simplified and traditional characters and some misheard words ("anchor" transcribed as "mao dian"; the CX transcript contains many homophone errors); these notes have been corrected based on context. Investment figures are as stated by the narrator on the spot (see the main text for the basis), and have not been verified; this article does not constitute investment advice.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>The first half discusses "once there is no financial pressure, what does a person live on": his answer is the <strong>anchor</strong> — people who work get 80–90% of life's meaning from the workplace and family, and the stage after financial freedom, when the anchor disappears, is the most dangerous; meaning does not have to be found before acting — he himself had no clear plan when he resigned. The second half discusses investing: do not compare against an index, do not compare against others; the goal is simply for "the money earned to cover your own expenses"; stock prices only price cash flows for the next few quarters, so logic accounts for only 20% and emotion for 80%, and the only thing a retail investor can train is mindset — <strong>if you are going to lose money, lose it early</strong>; if you do not experience volatility in advance, you will not have the courage to buy when a bubble truly arrives.</p>
+<h2>First Half: The Question of Meaning After Financial Freedom</h2>
+<ul>
+<li><strong>His current situation</strong>: After leaving ByteDance in 2020, he has lived in Tokyo for more than four years. In the ByteDance era he started work at 11:30 a.m. and got home at two or three in the morning, with basically no personal life. In the first two years of retirement he wanted to play more and experience more; in the past two years things have stabilized — he spends most of his time alone, has very high standards for cleanliness at home, and spends a large amount of time each day cleaning and doing housework. He has four residences in Japan: two in Tokyo, one in Nagano, and one on Miyako Island in Okinawa, chosen for hot springs, skiing, and surfing. Now 80% of his time revolves around his own life, and 20% goes to people in his circle.</li>
+<li><strong>The anchor theory</strong>: For people who trade time for income, there are only two anchors of meaning — the workplace (boss, colleagues, career path) and family (including both partners' families of origin), together providing 80–90% of meaning, with the remaining 5–10% going to hobbies and side projects. Once you leave that environment, the anchor disappears and a person falls into the immediate worry of "what exactly am I supposed to do every day." Some veteran employees he knows indulged in pleasure after getting rich — that is what losing the anchor looks like. For an introvert like him (self-tested INTJ), the anchor can be himself and his partner, so he needs a long-term relationship to provide emotional and meaning support.</li>
+<li><strong>His view of relationships</strong>: He is explicit that he will not marry and is in an open relationship, but each relationship lasts about four years; the current one has lasted three and a half years. He believes such a stable romance is equivalent to marriage in terms of meaning; the difference is that it does not bind two families together and concerns only whether the two people's feelings and personalities are compatible. Whether introverted or extroverted, everyone needs a long-term relationship as an anchor; for most people, the traditional family lifestyle is actually a more suitable support for meaning. "Freedom is sometimes a curse — you have to find meaning for yourself."</li>
+<li><strong>Passion and calling</strong>: Not everyone is lucky enough to find their passion. Experiencing new things only turns the unfamiliar into the familiar and increases your feel for the world; it will not turn into dislike, but whether it can become a passion is another matter; and obsession-type passion comes at a huge cost — Musk and the hippies did things ordinary people cannot do, at the cost of no stable relationships, no stable family, and being misunderstood by many. The host added the idea of the "infinite game": find your own infinite game and you can keep playing it forever — that seems to be finding meaning.</li>
+<li><strong>He had not thought it through when he resigned</strong>: By 2017 Douyin's momentum was already rising and he was convinced the model could be replicated overseas (TikTok), and he began to realize he might not need to work; he formally resigned in 2019 because he had done everything he could do domestically and there was no room for growth; he left in 2020, right as the pandemic hit. Retirement differed greatly from expectations: he had imagined world-traveling freedom, but in reality the first two years were trapped by the pandemic — a process of continually lowering expectations.</li>
+</ul>
+<li><strong>The FIRE math</strong>: The host questioned whether "a 5% risk-free rate covering expenses means you can retire" is a false proposition (inflation, uncertainty). He thinks it is sound and sufficient: once you stop working you simply cannot spend that much money; the most important variable is not how society changes or how severe inflation is, but how much you yourself spend. He calculated in 2017–2019: long-term bonds yielded about 4.5–5% annualized, and one person spending RMB 500,000 a year would not need much principal to FIRE at today's high risk-free rates. He deliberated for a long time between Singapore (selling stocks is tax-free, saving a large amount) and Japan, and finally chose Japan because he likes the four seasons, likes hot springs, and living costs in Japan are low. Back then he also imagined covering living costs with rent, running a travel agency, being a landlord — all very deterministic plans.</li>
+<li><strong>Two things rewrote his retirement</strong>: First, COVID, which made everyone reflect on what kind of life to live; he also lived in the countryside for more than two years and had had enough of it. Second, ChatGPT at the end of 2022. He judges that the tech industry in 2018–2020 was unusually dull: nothing new, extremely high customer acquisition costs — even ByteDance's acquisition costs were frighteningly high — and no one knew what they were competing over — which was also one reason he left the industry; the previous tech cycle had reached its tail. After AI appeared, he re-entered: he started a company himself (admitting he is not good at running a company, but tried anyway), and moved a considerable portion of his money from passive to active positions — since 2013 he had always invested passively (regular investments, private-bank custody, basically hands-off), because the AI narrative resembled mobile internet in 2006–2008, and it would be a pity not to participate.</li>
+<li><strong>"First know what you hate"</strong>: Most young people do not know what they like, but they are clear about what they hate; actively moving away from what you hate will eventually, by accident, lead you to what suits you — and even if you do not find it, you can still live relatively well. He admits his family of origin was terrible: his father was bedridden with illness for more than a decade, later became vegetative, and passed away a few years ago; he had always wanted to escape that family — "Everyone has some very primal motivations that determine whether you have enough desire to do something."</li>
+<li><strong>Life choices are passive</strong>: Rational choice provides at most 20–30% of the push; the remaining 70–80% is a chain reaction of events. In the summer of 2013 he went to Beijing to investigate the startup environment and knew mobile internet was about to explode, but did not act; what truly pushed him to Beijing in 2014 was that his girlfriend at the time (who had depression) suddenly disappeared one day with her things and her cat, and he felt he could no longer stay in Hangzhou. The team's acquisition by Toutiao in December 2014 was pure luck — at the time he had no idea what Toutiao did, and many investors also missed Zhang Yiming. Counterexamples are his high school classmates in Shenzhen and the ABCs in the Bay Area: extremely high starting points and excellent resources, yet many still did not achieve worldly success, some ruined by drugs. "Many things in fate you cannot control"; rather than obsessing over luck, it is better to go with the flow and have fewer attachments (he cites Buddhism) — plus being financially self-sufficient, and that is already very perfect.</li>
+</ul>
+<h2>Second Half: Investment Philosophy (Responding to the Efficient Market Hypothesis)</h2>
+<p>The host was trained in EMH (the efficient market hypothesis): the market has already priced in everything, so on what basis can an individual investor earn excess returns? His response:</p>
+<ul>
+<li><strong>Level expectations first</strong>: He does not guarantee he can consistently earn excess returns. He mainly trades small-cap tech stocks, which are extremely volatile — in 2024, for example, he was up as much as +78% during the year but closed the year at -2.6% (by his own account). Do not be discouraged if you underperform, and do not crown yourself a stock god if you outperform; stock prices inherently fluctuate within a range.</li>
+<li><strong>Change the objective function</strong>: Do not compare against an index and do not compare against others. The most important thing for a retail investor is to balance the money earned against your own living expenses — "Is this year's earnings enough to cover credit card spending? If your wife wants to buy a bag, can you immediately take out the money?" That is enough. With a low-set goal, the psychological strategy is completely different and your actions are less likely to deform. Many people in the crypto circle have unrealistic goals; book wealth is paper money.</li>
+<li><strong>Stock prices price near-term cash flows</strong>: Textbook DCF discounts decades of cash flows; his experience is that the market actually only prices cash flows for the next 8–12 months, the next few earnings reports. So the logic part accounts for only about 20%, and anyone can understand it in a few minutes (Apple as an example) — no one knows more information than the market; the remaining 80% is emotion and execution — with the same logic, at what price level you buy and sell makes a world of difference in the outcome. There is no shortcut to this part; you can only practice it yourself.</li>
+<li><strong>Position discipline</strong>: You cannot put all your money into active investing; the longer you endure, the higher the win rate. His own Bitcoin position has never been touched.</li>
+<li><strong>If you are going to lose money, lose it early</strong> (expanding on the opening line): He only started trading small-cap stocks in 2024, first experiencing volatility in a poor market (he mentioned a stretch around October 2023 when the market fell for three consecutive months), building up his mindset. It is like a friend whose hands shake the first time in a casino — after a couple of times it is fine. The logic: if you are convinced a certain kind of bubble will definitely happen again, the buying point after the bubble bursts is the best timing, but the precondition is that you have experienced volatility in advance and are prepared — someone who has never lost money early will not have the courage to buy when a bubble truly forms.</li>
+<li><strong>What he is convinced will happen</strong>: Money keeps depreciating, U.S. stocks and bonds are both high, and about $7 trillion is sitting in money market funds. AI is a human-history-level opportunity (analogous to the smartphone: one small device spawning countless new business forms; further still, AI's final stop is the physical world — world models fed to robots, and Tesla is essentially the largest robotics company). But the protagonists of the feast may not be today's listed companies — just as Facebook was not yet in the arena in 2008, hot money will ultimately flow toward small and mid-sized companies. He cited a line from Duan Yongping to the effect of "(something) will definitely happen; I just don't know when the next time will be" as a footnote: he does not know the timing, but he is convinced it will happen, so he moved his position over in advance and left empty positions to enter when everyone panics.</li>
+<li><strong>Robots and Chinese hardware</strong>: Intelligent robots have powerful externalities and could repeat a 2012-style shock — Chinese tech companies will find it hard to defend capital-market premiums at the hardware level, with profits not ending up in their own hands; this is a competition issue between nations, and the engineers he has talked to are generally pessimistic. The difficulty of a breakthrough is not computing power and data volume themselves, but the structure of the data (autonomous driving actually has a lot of data); the world model is the key; such breakthroughs are measured in five or ten years. He mentioned one robotics-related ticker worth watching (the transcription is vague, with the name and figures unclear, so no speculation here).</li>
+<li><strong>Closing</strong>: The market is unpredictable; no one can know which stock will win the lottery tomorrow; the market is an amplifier of everyone's emotions, a chaotic system. For him, investing is 50% logic + 50% psychology, and in small-cap speculative stocks emotion accounts for 80%. What you can do is set aside the empty positions and wait for things to happen — making money turns out to be something that comes uninvited.</li>
+</ul>
+<h2>Lines Worth Remembering</h2>
+<ul>
+<li>"Freedom is sometimes a curse."</li>
+<li>"First know what you hate, and move away from it — even if you cannot find something you love to do, you can still live relatively well."</li>
+<li>"Rational choice gives you at most 20–30% of the push; the remaining 70–80% is events pushing you."</li>
+<li>"Do not compare against others, and do not compare against the market; if this year's earnings can cover your expenses, that is the best."</li>
+<li>"If you are going to lose money, lose it early; if you do not lose early, you will not have the courage to buy when a bubble truly arrives."</li>
+<li>"The market is a perfect casino; all you need to do is set aside the empty positions."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=mf13n8Fl7FM">https://www.youtube.com/watch?v=mf13n8Fl7FM</a>（课代表立正）· 嘉宾：郭宇 · 发布日期：2025-03-12 · 时长：49 分钟<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=mf13n8Fl7FM">https://www.youtube.com/watch?v=mf13n8Fl7FM</a>（課代表立正）· 嘉賓：郭宇 · 發布日期：2025-03-12 · 時長：49 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=mf13n8Fl7FM">https://www.youtube.com/watch?v=mf13n8Fl7FM</a> (Ke Daibiao Lizheng) · Guest: Guo Yu · Release date: 2025-03-12 · Duration: 49 minutes<br>This page is the full text of notes compiled manually after machine transcription; views, figures, and model names in the video are as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interviews</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜《26岁财富自由的程序员郭宇：很多人起点虽然高，但生活得一团糟》 · Yat's Talks",tw:"紀要｜《26歲財富自由的程式設計師郭宇：很多人起點雖然高，但生活得一團糟》 · Yat's Talks",en:"Notes | \"Guo Yu, the Programmer Who Achieved Financial Freedom at 26: Many People Start High, but Live in a Mess\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

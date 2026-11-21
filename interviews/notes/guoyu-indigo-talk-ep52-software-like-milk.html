@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要｜Indigo Talk EP52《当软件像牛奶一样便宜，我们还要交付什么》</h1>
 <blockquote>
 <p>与郭宇聊 Agent 时代与 Vibe Coding 之后的路
@@ -105,8 +112,192 @@
 <li>抖音内容 hack 算法的经典技巧：在视频字幕里<strong>故意加错别字</strong>能显著提高完播率——因为观众会回看确认字是不是错了；字节内部有专门团队对抗这类 hack，识别后很快屏蔽。</li>
 </ul>
 </article>
-<footer>来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=WkmbKwcJk7k">https://www.youtube.com/watch?v=WkmbKwcJk7k</a>（Indigo（INDIGO 数字镜像））· 嘉宾：郭宇 · 发布日期：2026-10-09 · 时长：1 小时 12 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要｜Indigo Talk EP52《當軟體像牛奶一樣便宜，我們還要交付什麼》</h1>
+<blockquote>
+<p>與郭宇聊 Agent 時代與 Vibe Coding 之後的路
+頻道：INDIGO 數位鏡像｜主持：Indigo｜嘉賓：郭宇（前字節跳動工程師，現居日本）
+時長：72 分鐘｜來源：YouTube https://www.youtube.com/watch?v=WkmbKwcJk7k
+說明：逐字稿為本地 faster-whisper 機器轉寫，繁簡混雜、個別詞有誤聽（如「貪心」疑為口誤/誤聽、「Cdance」=Seedance、「莫斯特」=Meta 的 Muse），紀要已按上下文校正。</p>
+</blockquote>
+<h2>一句話結論</h2>
+<p>軟體的成本會像牛奶一樣便宜，「做軟體、賣軟體」這件事本身正在失去意義——接下來真正要交付的不是軟體，而是軟體要達成的目的：目標、媒體和「活人感」。工程師的執行工作被 AI 接管，人被推到產品經理和決策者的位置上，半天能幹完過去兩週的活，但思考負擔反而更重了。</p>
+<h2>郭宇其人（本期自述）</h2>
+<ul>
+<li>2011 年在支付寶工作；2013 年 4 月在支付寶分享會上第一次接觸 Bitcoin（當時約 100 美元）。</li>
+<li>2014 年去北京加入朋友的創業公司（多說/圖蟲系，微博基金投過），同年 12 月公司被今日頭條收購，就此加入字節。</li>
+<li>在字節長期做中台，後做跑在抖音/TikTok 上的小程式引擎（micro runtime），自述是「技術執行者」角色，從沒帶過團隊、也不想帶。</li>
+<li>2019 年底決定離職：當時字節從外部拉一個新用戶成本高達 50 多元人民幣，「應用工廠都很難拿到新用戶」，他判斷行動網際網路週期基本結束。交接半年，2020 年過年去日本旅行遇上疫情，回不了北京，索性留在日本，拿到長期簽證乃至永駐至今。</li>
+<li>本想徹底離開科技行業休息，結果只休息了兩三年就被 2022 年底的 AI 浪潮拉回來；目前用 Vibe Coding 做了 30 多個產品（很多沒發布），同時管上百台 agent server。</li>
+</ul>
+<h2>核心觀點</h2>
+<h3>1. 工程師的角色翻轉：從執行者變成提問者和決策者</h3>
+<ul>
+<li>過去兩週的迭代週期（定目標→開發→設計→測試→發布→觀察實驗），現在 1–2 個人半天就能跑完一輪。</li>
+<li>但人沒有變輕鬆：你要同時扮演架構師、設計師、產品經理，最重要的是產品經理——善於提問題、能約束語言模型的「語言空間」，知道用什麼語言、什麼結構讓它持續推進並根據實驗結果調整方向。</li>
+<li>AI 做不了完全自動化的決策，不是因為缺上下文，而是因為它<strong>沒有主動的意圖（intent）</strong>，所以全部決策的心理負擔都壓回人身上。</li>
+<li>後果：2025 年 10 月到 2026 年初，他看到很多工程師朋友 burnout——兩三個月幹了過去一兩年的活，大腦跟不上 AI 的速度，人變得焦慮，開始重新思考「到底什麼事情真的值得做」。</li>
+<li>工作方式的變化：他自己已經很少用「計畫模式」了，先和模型聊半小時把 spec 聊透，讓它一次性朝目標跑；隨著 SOTA 模型和 harness 不斷進化，人還要不斷適應新工具，這本身也是 burnout 來源之一。</li>
+</ul>
+<h3>2. 軟體形態變了：即時生成、用完可丟、不再需要分發</h3>
+<ul>
+<li>軟體不再是寫死的程式碼：可以即時編碼完成任務，用完就丟，只給自己或很小的組織用；每個人的軟體互不相容，也沒必要相容。</li>
+<li>出現「first-class harness」：模型廠商自己做的第一層 harness（Claude Code、Codex、DeepSeek Harness），進步已經把大量傳統軟體功能「內化」了——用它做 CRM、管理系統是兩分鐘、五分鐘的事，這類軟體作為獨立產品已無存在必要。</li>
+<li>下一步是作業系統層面的變化：把 Agent 而非 Application 當一等公民。已經有人在做基於 Linux 的 Agent OS；OpenAI 走了另一條務實的路——買大量 Mac 讓下一代模型直接使用 Mac（成熟的 Unix + 成熟的創意/影視軟體生態）。</li>
+<li>他的判斷：未來我們租用的所有計算資源都會變成「Virtual Agent Server」——一台由 Agent 操作整個系統的虛擬機；人在手機上發指令，遠端連回家裡或機房的機器。</li>
+<li>安全警告：當所有人用 Agent 管理電腦，Agent 的連線一旦被劫持，就等於世界上最大的殭屍網路集群。他自己第一次讓 Agent 全自動買伺服器、裝金鑰、刪初始密碼時，第一反應就是這個風險。</li>
+</ul>
+<h3>3. 模型分層：不需要最強的，只需要最合適的</h3>
+<p>主持人提出、郭宇大體認同的五層劃分：
+1. <strong>個人便利型</strong>：處理打電話、訂餐廳、管資訊等日常需求，如 Meta 的 Muse，整合在 Messenger/WhatsApp/Instagram 裡，不需要單獨 App；
+2. <strong>個人生產力型</strong>：寫程式碼、做創作，用 Claude、Codex 這類 SOTA 模型；
+3. <strong>企業協作型</strong>：讓 Agent 學會用 Mac/電腦串起企業工作流，要求更高；
+4. <strong>娛樂生成型</strong>：字節占優勢——Seedance 生成 + 紅果平台消費已形成閉環，加上創作者工具；
+5. <strong>科研前沿型</strong>：需要最頂尖的模型，模型公司未必公開發布，而是與研究所、國防訂單簽框架、利潤分成。
+- 郭宇補充第六類「現場 AI」：農場、工廠、攝影機這類場景資訊量巨大，必須用邊緣計算 + 極便宜的模型 24 小時跑，不可能把圖片都傳給 OpenAI。</p>
+<h3>4. 企業採用還非常早期，整體只完成了 2%–3%</h3>
+<ul>
+<li>大企業（包括日本企業）顧慮重重：沒人能為 AI 的決策負責，中層看到機會也不敢拍板，只有董事會能做這種決策；也有資料外洩顧慮，不敢用別國模型。</li>
+<li>微軟把 Copilot 改造成以 Agent 為核心、讓 Agent 操作 Office 的「作業系統」，就是在催企業採用。</li>
+<li>小公司和一人公司會自然轉向新方案；以投資視角定位：AI 對組織和商業的影響雖然在加速，但只完成了 2%–3%，大量事情沒被解決。</li>
+</ul>
+<h3>5. 智慧會變成「公共品」，軟體像牛奶一樣便宜（標題出處）</h3>
+<ul>
+<li>娛樂生成市場是完全競爭市場：總有人用更便宜的 token 做更多實驗，定價最終被壓到接近模型生成成本，利潤微薄到近似於無——智慧會像牛奶一樣，因為集中化大規模生產而極便宜，成為一種 public goods（準公共品），極大提升社會生產力。</li>
+<li>因此他自己的重心已經從「創造軟體」移到下一階段——「創造軟體本身要達成的目的」。他承認目前處於迷茫觀察期：打算先觀察三到六個月再決定把精力放在哪，並提到朋友（公司賣給 Cloudflare 的小佑）也 burnout 在想下一階段——當年字節 2012 年成立後也用了兩年驗證第一個想法、等到環境成熟才起飛，環境沒成熟時硬按舊創業思路做軟體分發，可能沒有意義。</li>
+</ul>
+<h3>6. 人群分化：2%–3% 的 Pro user 被放大，大眾靠娛樂填充時間</h3>
+<ul>
+<li>只有約 2%–3% 的人能成為被 AI 放大的 Pro user：一人等於過去 5–60 人的公司，可以管一支 agent「軍隊」。</li>
+<li>大眾沒有想法、也不願提需求（上班聽派活、下班看電視），他們的時間將被娛樂型 AI 填充；所有娛樂產品競爭的本質都是對用戶時間的直接競爭，產品形態不重要。</li>
+<li>年輕一代沒有包袱：物質壓力小後更順著興趣社群走，像日本泡沫破裂後的「平成廢宅」——做三天零工、四天去衝浪，興趣累積到專業水準甚至去參加奧運會。他判斷這可能不是壞事。</li>
+</ul>
+<h3>7. Everything is Media：交付的是「活人感」</h3>
+<ul>
+<li>AI 內容（slop）泛濫後信噪比極低，差異化只能靠<strong>真人出鏡</strong>：真人內容在全網占比小且最出挑（有博主總結：想讓產品有流量，唯一要做的就是真人出鏡介紹產品）。</li>
+<li>主持人的提法：把「自己」產品化——把自己的思考經 AI Agent 整理成可閱讀、可訂閱、甚至提供 API 的內容，讓別人與你產生思維連接；「software 即 media，Everything is Media」，你 vibe code 出來的東西，其動作和結果本身就是媒體，用戶消化完還想看你下一篇，如同刷影片。</li>
+<li>郭宇補充：不管分發 AI 內容還是真人內容，本質都是在 hack 新的推薦/流量機制；真人內容稀缺，做得好就會被投進更大的流量池。</li>
+</ul>
+<h3>8. 給年輕人的建議：別把「一份穩定工作」當人生錨點</h3>
+<ul>
+<li>「上班」是工業革命的產物，只有 100 多年歷史，會在智慧革命之後消失或大幅變形。</li>
+<li>用投資思維看工作：如果一份工作像被套牢的股票、處在很長的下坡道上，關鍵不是糾結「虧多少離場」，而是看有沒有更好的機會——機會成本最貴。他父親當年下海時每月花幾百塊「停薪留職」保工齡，結果幾年後礦就倒閉了；東北下崗是同理。</li>
+<li>具體建議：不要再追尋穩定工作，可以去南方、去深圳看看——潮汕、福建家族「寧可做小老闆也不打工」的觀念在 AI 時代反而受用，做自己的 OPC（一人公司）；不知道怎麼做就先去看、去跟有經驗的人學。但如果能去前沿 AI 工作室成為「創造的那部分人」，這種工作仍然值得做。</li>
+<li>主持人收尾定性：這不是又一次工業革命，而是一次<strong>文藝復興</strong>——「你只要有無限可能的想法，就有無限可能的工具去做無限可能的事情」。</li>
+</ul>
+<h2>值得記的字節往事</h2>
+<ul>
+<li>2015 年的字節已經是 AI 驅動的公司：產品靠神經網路推薦，演算法工程師自稱「調參工程師」，連他們自己也不完全知道系統怎麼工作，只能靠實驗逼近效果——郭宇當時第一次意識到程式碼跑在黑盒裡，和今天的大模型如出一轍。</li>
+<li>2015 年是字節的 tough 年：頭條 DAU/MAU 到瓶頸、員工流失嚴重；2016 年 12 月抖音、火山做了十幾個月出來，2017 年局面才改善。</li>
+<li>資源最初押在火山小影片（定位大眾），抖音起初是小團隊、名字都不叫抖音，形態像 Musical.ly；收購 Musical.ly 後抖音靠「用戶泛化」（從 18–20 多歲擴展到 7 歲到 70 歲）反超，最終完成火山的歷史任務，兩者合併。</li>
+<li>微博當年做推薦流的教訓：關係網路在前，用戶投訴「我關注的人看不到了」，推薦與關注之爭鬥了很多年沒做好。</li>
+<li>抖音內容 hack 演算法的經典技巧：在影片字幕裡<strong>故意加錯別字</strong>能顯著提高完播率——因為觀眾會回看確認字是不是錯了；字節內部有專門團隊對抗這類 hack，識別後很快屏蔽。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes | Indigo Talk EP52 "When Software Is as Cheap as Milk, What Do We Still Need to Deliver?"</h1>
+<blockquote>
+<p>A conversation with Guo Yu on the road after the Agent era and Vibe Coding
+Channel: INDIGO Digital Mirror | Host: Indigo | Guest: Guo Yu (former ByteDance engineer, now living in Japan)
+Duration: 72 minutes | Source: YouTube https://www.youtube.com/watch?v=WkmbKwcJk7k
+Note: The transcript was machine-transcribed locally with faster-whisper, mixing simplified and traditional characters, with a few words misheard (for example "greedy" is suspected to be a slip of the tongue / mishearing, "Cdance" = Seedance, "Most" = Meta's Muse); the notes have been corrected according to context.</p>
+</blockquote>
+<h2>One-Sentence Conclusion</h2>
+<p>The cost of software will become as cheap as milk, and "making software and selling software" itself is losing its meaning — what truly needs to be delivered next is not software, but the purpose software is meant to achieve: goals, media, and a "sense of a real person." Engineers' execution work is being taken over by AI, and people are being pushed into the positions of product manager and decision-maker; half a day can now accomplish what used to take two weeks, but the burden of thinking has actually grown heavier.</p>
+<h2>About Guo Yu (as recounted in this episode)</h2>
+<ul>
+<li>Worked at Alipay in 2011; first encountered Bitcoin at an Alipay sharing session in April 2013 (it was about US$100 at the time).</li>
+<li>Went to Beijing in 2014 to join a friend's startup (from the Duoshuo / Tuchong lineage, backed by the Weibo fund); in December of the same year the company was acquired by Toutiao, and he thereby joined ByteDance.</li>
+<li>At ByteDance he worked for a long time on the middle platform, and later on the mini-program engine (micro runtime) running on Douyin / TikTok; he describes himself as a "technical executor" who has never led a team and does not want to.</li>
+<li>He decided to leave at the end of 2019: at that time ByteDance's cost of acquiring a new user externally was as high as more than RMB 50, and "even app factories found it hard to get new users"; he judged that the mobile internet cycle was basically over. After a six-month handover, he traveled to Japan for the New Year in 2020, ran into the pandemic, could not return to Beijing, and simply stayed in Japan, obtaining a long-term visa and eventually permanent residency, where he remains to this day.</li>
+<li>He had intended to leave the tech industry entirely to rest, but after only two or three years of rest he was pulled back by the AI wave at the end of 2022; he has now built more than 30 products with Vibe Coding (many unpublished), while managing over a hundred agent servers.</li>
+</ul>
+<h2>Core Views</h2>
+<h3>1. The Engineer's Role Flips: From Executor to Questioner and Decision-Maker</h3>
+<ul>
+<li>The iteration cycle that used to take two weeks (set goals → develop → design → test → release → observe experiments) can now be run through in half a day by 1–2 people.</li>
+<li>But people have not become more relaxed: you have to play architect, designer and product manager at the same time — most importantly product manager — being good at asking questions, able to constrain the language model's "language space," and knowing what language and what structure to use to keep it moving forward and adjust direction based on experimental results.</li>
+<li>AI cannot make fully automated decisions, not because it lacks context, but because it <strong>has no proactive intent</strong>, so the entire psychological burden of decision-making falls back on the person.</li>
+<li>The consequence: from October 2025 to early 2026, he saw many engineer friends burn out — doing in two or three months what used to take one or two years, their brains unable to keep up with AI's speed, becoming anxious and starting to rethink "what is actually worth doing."</li>
+<li>Changes in working style: he himself now rarely uses "planning mode"; he first talks with the model for half an hour to talk the spec through thoroughly, then lets it run toward the goal in one go; as SOTA models and harnesses keep evolving, people also have to keep adapting to new tools, which is itself one of the sources of burnout.</li>
+</ul>
+<h3>2. The Form of Software Has Changed: Generated Instantly, Disposable After Use, No Longer Needing Distribution</h3>
+<ul>
+<li>Software is no longer hard-coded code: it can be coded instantly to complete a task, discarded after use, and used only by oneself or a very small organization; each person's software is incompatible with everyone else's, and there is no need for it to be compatible.</li>
+<li>"First-class harnesses" have appeared: the first-layer harnesses made by the model vendors themselves (Claude Code, Codex, DeepSeek Harness), whose progress has already "internalized" a large number of traditional software functions — using them to build a CRM or a management system is a matter of two minutes or five minutes, and software of this kind no longer needs to exist as an independent product.</li>
+<li>The next step is change at the operating system level: treating the Agent, rather than the Application, as a first-class citizen. Some people are already building Linux-based Agent OSes; OpenAI took a different, pragmatic path — buying large numbers of Macs so the next generation of models can directly use Macs (a mature Unix + a mature creative / film and television software ecosystem).</li>
+<li>His judgment: all the computing resources we rent in the future will become "Virtual Agent Servers" — a virtual machine in which an Agent operates the entire system; a person issues instructions from a phone and remotely connects back to a machine at home or in a data center.</li>
+<li>Security warning: when everyone uses Agents to manage computers, once an Agent's connection is hijacked, it amounts to the world's largest botnet cluster. The first time he let an Agent fully automatically buy a server, install keys and delete the initial password, his first reaction was precisely this risk.</li>
+</ul>
+<h3>3. Model Tiering: You Don't Need the Strongest, Only the Most Suitable</h3>
+<p>A five-tier division proposed by the host and broadly endorsed by Guo Yu:
+1. <strong>Personal convenience type</strong>: handling everyday needs such as making phone calls, booking restaurants and managing information, e.g. Meta's Muse, integrated into Messenger / WhatsApp / Instagram, with no need for a separate app;
+2. <strong>Personal productivity type</strong>: writing code and creating content, using SOTA models such as Claude and Codex;
+3. <strong>Enterprise collaboration type</strong>: getting Agents to learn to use Macs / computers to string together enterprise workflows, with higher requirements;
+4. <strong>Entertainment generation type</strong>: where ByteDance has the advantage — Seedance generation + consumption on the Hongguo platform have already formed a closed loop, plus creator tools;
+5. <strong>Research frontier type</strong>: requiring the very top models, which model companies may not release publicly, but instead sign framework agreements and profit-sharing arrangements with research institutes and defense orders.
+- Guo Yu added a sixth category, "on-site AI": scenarios such as farms, factories and cameras involve enormous volumes of information and must run 24 hours a day using edge computing + extremely cheap models; it is impossible to send all the images to OpenAI.</p>
+<h3>4. Enterprise Adoption Is Still Very Early, Only 2%–3% Complete Overall</h3>
+<ul>
+<li>Large enterprises (including Japanese enterprises) have many concerns: no one can take responsibility for AI's decisions, middle managers who see opportunities do not dare to sign off, and only the board can make decisions of this kind; there are also concerns about data leakage, and reluctance to use models from other countries.</li>
+<li>Microsoft's transformation of Copilot into an "operating system" centered on Agents, letting Agents operate Office, is precisely aimed at pushing enterprise adoption.</li>
+<li>Small companies and one-person companies will naturally shift to the new solutions; positioned from an investment perspective: although AI's impact on organizations and business is accelerating, it is only 2%–3% complete, and a great many things remain unsolved.</li>
+</ul>
+<h3>5. Intelligence Will Become a "Public Good," and Software Will Be as Cheap as Milk (Source of the Title)</h3>
+<ul>
+<li>The entertainment generation market is a perfectly competitive market: there will always be someone using cheaper tokens to run more experiments, and pricing will ultimately be pushed down close to the model's generation cost, with profits so thin as to be almost nonexistent — intelligence will, like milk, become extremely cheap through centralized, large-scale production, becoming a kind of public goods (quasi-public good) and greatly raising social productivity.</li>
+<li>For that reason his own focus has already shifted from "creating software" to the next stage — "creating the purpose that software itself is meant to achieve." He admits he is currently in a period of perplexed observation: he plans to observe for three to six months first before deciding where to put his energy, and mentioned that a friend (Xiaoyou, whose company was sold to Cloudflare) is also burned out and thinking about the next stage — back then, after ByteDance was founded in 2012, it also took two years to validate its first idea and only took off once the environment had matured; when the environment is not yet mature, forcing software distribution along the old startup mindset may be meaningless.</li>
+</ul>
+<h3>6. Population Divergence: The 2%–3% of Pro Users Are Amplified, While the Masses Fill Their Time with Entertainment</h3>
+<ul>
+<li>Only about 2%–3% of people can become Pro users amplified by AI: one person equal to a company of 5–60 people in the past, able to manage an "army" of agents.</li>
+<li>The masses have no ideas and are unwilling to raise demands (taking assignments at work, watching TV after work); their time will be filled by entertainment AI; the essence of competition among all entertainment products is direct competition for users' time, and the product form does not matter.</li>
+<li>The younger generation carries no baggage: with less material pressure, they follow interest communities more, like the "Heisei otaku" after Japan's bubble burst — working odd jobs three days a week and surfing four days, accumulating their interests to a professional level and even going to compete in the Olympics. He judges that this may not be a bad thing.</li>
+</ul>
+<h3>7. Everything is Media: What Is Delivered Is a "Sense of a Real Person"</h3>
+<ul>
+<li>After AI content (slop) flooded in, the signal-to-noise ratio became extremely low, and differentiation can only rely on <strong>real people appearing on camera</strong>: real-person content accounts for a small share of the whole internet and stands out the most (as one blogger summarized: if you want your product to get traffic, the only thing you need to do is appear on camera in person to introduce the product).</li>
+<li>The host's formulation: productize "yourself" — have your own thinking organized by an AI Agent into content that can be read, subscribed to, and even provided via API, so that others form a mental connection with you; "software is media, Everything is Media" — the thing you vibe code, its actions and results are themselves media, and after users finish digesting it they want to see your next piece, just like swiping through videos.</li>
+<li>Guo Yu added: whether distributing AI content or real-person content, the essence is hacking the new recommendation / traffic mechanisms; real-person content is scarce, and if done well it will be thrown into a larger traffic pool.</li>
+</ul>
+<h3>8. Advice for Young People: Don't Treat "a Stable Job" as the Anchor of Your Life</h3>
+<ul>
+<li>"Going to work" is a product of the Industrial Revolution, with only a little over 100 years of history, and will disappear or change drastically after the intelligence revolution.</li>
+<li>View work with an investment mindset: if a job is like a stock you are trapped in, on a very long downhill slope, the key is not agonizing over "how much loss to take before exiting," but whether there is a better opportunity — opportunity cost is the most expensive. When his father went into business back then, he spent a few hundred yuan a month on "unpaid leave with job retention" to preserve his seniority, and a few years later the mine went bankrupt anyway; the layoffs in Northeast China were the same logic.</li>
+<li>Concrete advice: stop pursuing a stable job; you can go south, go and look around Shenzhen — the ethos of Chaoshan and Fujian families, "rather be a small boss than work for someone else," turns out to be advantageous in the AI era; become your own OPC (one-person company); if you don't know how, go and look first, and learn from experienced people. But if you can join a frontier AI studio and become one of "the people who create," that kind of work is still worth doing.</li>
+<li>The host's closing characterization: this is not another industrial revolution, but a <strong>Renaissance</strong> — "as long as you have ideas with infinite possibilities, you have tools with infinite possibilities to do things with infinite possibilities."</li>
+</ul>
+<h2>ByteDance Stories Worth Remembering</h2>
+<ul>
+<li>ByteDance in 2015 was already an AI-driven company: products relied on neural network recommendations, algorithm engineers called themselves "parameter-tuning engineers," and even they did not fully know how the system worked, relying on experiments to approach the desired effect — that was when Guo Yu first realized code runs inside a black box, exactly like today's large models.</li>
+<li>2015 was a tough year for ByteDance: Toutiao's DAU/MAU hit a bottleneck and employee attrition was severe; Douyin and Huoshan, built over more than ten months, came out in December 2016, and the situation only improved in 2017.</li>
+<li>Resources were initially bet on Huoshan's short videos (positioned for the mass market); Douyin started as a small team, was not even called Douyin, and took a form like Musical.ly; after acquiring Musical.ly, Douyin overtook it through "user generalization" (expanding from 18–20-somethings to ages 7 to 70), ultimately completing Huoshan's historical mission, and the two were merged.</li>
+<li>The lesson from Weibo's recommendation feed back then: with the relationship network in front, users complained "I can't see the people I follow anymore," and the fight between recommendations and following went on for many years without being done well.</li>
+<li>A classic trick for hacking Douyin's content algorithm: <strong>deliberately adding typos</strong> in video subtitles could significantly raise the completion rate — because viewers would rewatch to confirm whether the characters were wrong; ByteDance had a dedicated team fighting such hacks, and would block them quickly once identified.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube 原视频 <a href="https://www.youtube.com/watch?v=WkmbKwcJk7k">https://www.youtube.com/watch?v=WkmbKwcJk7k</a>（Indigo（INDIGO 数字镜像））· 嘉宾：郭宇 · 发布日期：2026-10-09 · 时长：1 小时 12 分<br>本页为机器转写后人工整理的纪要全文；片中观点、数字与模型名均为嘉宾讲述口径，未经核实。 · <a href="https://yatslist.com/interviews/">Yat's List 访谈清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube 原影片 <a href="https://www.youtube.com/watch?v=WkmbKwcJk7k">https://www.youtube.com/watch?v=WkmbKwcJk7k</a>（Indigo（INDIGO 數位鏡像））· 嘉賓：郭宇 · 發布日期：2026-10-09 · 時長：1 小時 12 分<br>本頁為機器轉寫後人工整理的紀要全文；片中觀點、數字與模型名均為嘉賓講述口徑，未經核實。 · <a href="https://yatslist.com/interviews/">Yat's List 訪談清單</a></footer>
+<footer data-lang="en" style="display:none">Source: Original YouTube video <a href="https://www.youtube.com/watch?v=WkmbKwcJk7k">https://www.youtube.com/watch?v=WkmbKwcJk7k</a> (Indigo (INDIGO Digital Mirror)) · Guest: Guo Yu · Publication date: 2026-10-09 · Duration: 1 hour 12 minutes<br>This page contains the full notes, manually compiled after machine transcription; the views, figures and model names in the video are all as stated by the guest and have not been verified. · <a href="https://yatslist.com/interviews/">Yat's List Interview List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要｜Indigo Talk EP52《当软件像牛奶一样便宜，我们还要交付什么》 · Yat's Talks",tw:"紀要｜Indigo Talk EP52《當軟體像牛奶一樣便宜，我們還要交付什麼》 · Yat's Talks",en:"Notes | Indigo Talk EP52 \"When Software Is as Cheap as Milk, What Do We Still Need to Deliver?\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

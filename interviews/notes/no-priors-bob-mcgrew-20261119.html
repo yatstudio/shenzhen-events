@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：No Priors 对话 Bob McGrew《超级智能需要物理世界》</h1>
 <ul>
 <li>时间：2026-11-19（YouTube 发布）</li>
@@ -86,9 +93,159 @@
 <hr />
 <p><em>纪要来源：YouTube 官方英文字幕转写整理。嘉宾观点与数字为现场口径，未独立核实；「背景」一段来自 a16z、LinkedIn 与财经报道，与节目内容分开标注。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：No Priors 對話 Bob McGrew《超級智能需要物理世界》</h1>
+<ul>
+<li>時間：2026-11-19（YouTube 發布）</li>
+<li>主持：Sarah Guo、Elad Gil（No Priors）</li>
+<li>嘉賓：Bob McGrew（Arda 聯合創始人兼 CEO；前 OpenAI 首席研究官、前 Palantir 工程與產品負責人）</li>
+<li>時長：59 分鐘</li>
+<li>來源：YouTube 頻道 No Priors，影片 _wLzJINt9iQ，官方英文字幕全文 1294 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。觀點與數字均為嘉賓現場口徑，未獨立核實。時間戳指向字幕位置。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Bob McGrew 的核心論點：只靠自動化研究員換不來超級智能——研究員從來不是瓶頸，實驗與算力這些物理環節才是；「硬起飛」（hard takeoff）論是直接錯的，自動化研究只是一次性躍升而非自我改進循環。智能變便宜之後，稀缺的是它的互補品：感知與行動。他離開 OpenAI 創辦 Arda，就是去補物理世界這一課：讓自動化產線像換工人一樣在 7 天內隨設計變更而重構。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>RSI（遞歸自我改進）論證錯在哪</strong>：自動化研究員的時間占比從 10% 到 99%，看似速度 100 倍，但發現的速度不由研究員數量決定，而由實驗吞吐決定。2024 年他在 OpenAI 任首席研究官時，真正的限制是手上有多少 GPU、算力是否連對網路（[00:03:21]、[00:04:17]）。</li>
+<li><strong>正確的模型是 S 曲線</strong>：今天 GPU 產出發現的效率約在最適值的 35%，自動化能推到 90%，但 90% 到 99% 之間沒多少差距。自動化研究是一次性大加速（量級類似從無推理的 GPT-4o 到帶工具的 o3），不是自我改進循環（[00:05:27]）。</li>
+<li><strong>假設變便宜，物理變稀缺</strong>：實驗室在生產廉價智能；智能的互補品是物理層——濕實驗室、GPU 部署。即使模擬好到只需做 1/10 的實驗，那也只是一次性紅利，吃完之後重新卡在物理世界（[00:07:08]、[00:11:21]）。</li>
+<li><strong>Ilya 的一句話</strong>：深度學習看似純數學，實則是實驗科學。他當年拿著論文去講方法多酷，Ilya 聽完只問：「結果怎麼樣？」（So what are the results?）想法再好，也得跑實驗（[00:12:14]）。</li>
+<li><strong>美國製造的真正卡點</strong>：不是設計（美國很強），是勞動力成本與產線的僵化。iPhone 每年約 75% 零部件變更，只有約 25% 能上自動化線，其餘手工組裝；亞洲約 100 萬組裝工人背後，只有約 1 萬名製造工程師在設計產線。汽車可以花 2 億美元建線、用 7 年攤銷，手機不行（[00:13:32]、[00:14:31]、[00:15:54]）。</li>
+<li><strong>Arda 的解法</strong>：先造「製造工程的 IDE + Git」——把散落在上百份文件裡的製造流程收成單一事實源，讓 AI agent 能在其上工作，再往左給設計端回 DFM（可製造性設計）回饋、往右生成自動化工位。他自比「製造工程界的 Cursor」：Cursor 是在現成 IDE 上加 agent，而製造工程連 IDE 都沒有，得先補這一課（[00:26:55]、[00:28:08]）。</li>
+</ol>
+<ol start="7">
+<li><strong>形態之爭</strong>：產線是封閉世界問題，不需要人形機器人——一到兩條機械臂加一個攝影機就夠。傳統自動化的本質是魯布·戈德堡式的確定性裝置，一半工作量在設計、一半在校準；引入感知與 RL 後，校準可以放鬆，但封閉世界要求 99.9% 的成功率（[00:20:00]、[00:24:03]、[00:25:34]）。</li>
+<li><strong>不訓自己的大模型</strong>：前沿模型當編排者（orchestrator），呼叫運動規劃、CAD 檢查等專用工具；為特定場景訓小模型，和寫一個軟體包是同一類動作。Palantir 式「問題優先」對 OpenAI 式「技術優先」——GPT-3 之後他建議按標準創業法找客戶驗證，Ilya 答：跟一個人聊能學到的，不如把訓練資料放大 10 倍學到的多（[00:30:49]、[00:31:55]）。</li>
+<li><strong>FDE（前線部署工程）不是諮詢</strong>：Palantir 2005 年摸索出的打法是產品策略——工程師嵌入客戶，但必須把現場學到的東西產品化回寫進產品，否則沒有槓桿。落地一家大企業要同時找到「贊助人」和真正用產品的「強使用者」：《跨越鴻溝》只講了前者（[00:45:19]、[00:48:40]、[00:50:27]）。</li>
+<li><strong>費米悖論的新解</strong>：最高效的文明擴張是以光速推進的自複製探測器波前——正因為它以光速擴散，我們只會在它到達前幾分鐘到幾年才看見它。也許我們就是那道波（[00:57:34]）。</li>
+</ol>
+<h2>一、為什麼超級智能繞不開物理世界</h2>
+<ul>
+<li>開場之問：AI 鬧了這麼多年，窗外世界和 10 年前有什麼不同？幾乎沒有。第一次坐 Waymo 會驚嘆，第三次只會抱怨堵車——自動駕駛只走完了通往物理世界的一半，車本身沒變、不會飛（[00:01:52]）。</li>
+<li>「豐裕」（abundance）是個物理詞：食物、住房都是原子的事，沒人會說自己「數位工作很豐裕」。建房子的難點在許可證和施工，agent 再多也幫不上——經濟學上這叫 O 型環生產函數：所有環節都得做完，缺一不可（[00:08:44]、[00:09:12]）。</li>
+<li>推土機悖論：說 AI 幾年內能造戴森球，可現實是資料中心建得太慢。缺推土機？AI 說建個推土機工廠。建工廠第一步要平整土地——又需要更多推土機。物理世界的遞歸，每一層都是真活（[00:09:49]）。</li>
+<li>實驗室會不會順手把機器人、生物都收了？他認為未必：大模型公司在建濕實驗室上沒有比較優勢。智能與物理層是互補關係，不是替代關係（[00:07:51]）。</li>
+</ul>
+<h2>二、Arda 在 Anduril 的第一年</h2>
+<ul>
+<li>離開 OpenAI 後他花了一年訪談製造業負責人，結論收斂到勞動力成本與產線換型速度。Arda 的目標：把產品設計上傳雲端，7 天內完成自動化產線的設計與重構——和給工人再培訓一樣快（[00:13:55]、[00:16:41]）。</li>
+<li>最需要這種能力的行業：國防（烏克蘭戰場上從戰場變化到設計變更再到回戰場，只有幾週）、消費電子、資料中心及其供應鏈（晶片換代太快）——共同點是高創新、高變更，所以幾乎全靠手工（[00:17:22]）。</li>
+<li>與 Anduril 的合作：公司註冊前一天就去談，對方提出兩個需求——製造工程的單一事實源、可隨需求開停產線的可重構工廠。Arda 把這兩條定為北極星。1 月拿到系統權限，4 月有了第一個使用者：一位製造工程師用 Arda 做執行器的虛擬構建，原本幾天的活 90 分鐘完成。如今已鋪到 Anduril 全部產品部門，從無人機、導彈做到 Fury 協同作戰飛機（[00:25:53]、[00:26:55]）。</li>
+<li>第一個使用者背後的細節：過程極其痛苦，Arda 的產品負責人就坐在他旁邊記筆記，兩週後他提的問題全修好了。這就是 FDE 的日常（[00:47:22]）。</li>
+</ul>
+<h2>三、機器人形態與資料</h2>
+<ul>
+<li>他對機械手的「一生之敵」：2002–2005 年在史丹佛讀博時，整個組都在嘲笑神經網路（沒有可證明的保證）；2005 年他判斷 AI 沒戲去了 Palantir。2015 年左右回來試機器人創業，自學深度學習（看 Karpathy 的影片），教機器人下跳棋，然後承認「太難了、時機不對」，轉身加入了那個「目標有點戲劇化、要造 AGI 的非營利組織」——OpenAI（[00:34:15]、[00:35:40]）。</li>
+<li>在 OpenAI 機器人組做了兩年影子手（Shadow Hand）解魔方——這是 Zaremba 在機器人大會上問「什麼成果會讓你們震驚」問出來的選題。做成了，但他自稱從此永久不信機械手（[00:36:49]、[00:37:27]）。</li>
+<li>通用模型為什麼突然能做機器人：關鍵不是機器人資料變多了，而是模型從網際網路影片等真實資料裡學到了足夠好的世界表徵，再針對具體問題微調。遙操作資料的稀缺程度，相當於雇 Scale AI 的人手寫 GPT-4 的全部訓練資料（[00:38:13]）。</li>
+<li>生態判斷：Astra、Fable 這類通用模型（字幕口徑）開箱即用但慢、且不可微調；Pi、Generalist 這類玩家用「可微調」切具體場景，是結構性機會。端側小模型靠蒸餾解決速度與安全，agentic robotics（把大模型當工具箱中的一件）是中間路線（[00:41:40]、[00:42:27]、[00:44:07]）。</li>
+</ul>
+<h2>四、組織：沒有「大組織」這回事</h2>
+<ul>
+<li>「OpenAI 想要什麼？OpenAI 什麼都不想要——是 Sam 想要、Greg 想要、某個研究員想要。」大組織只是小團隊的集合，只能一個問題一個問題、一個團隊一個團隊地啃。每攻下一個結果，就贏得做更大事情的資格：執行器 → 導彈 → 飛機（[00:49:07]、[00:49:47]）。</li>
+<li>Palantir 往事：早年他在維吉尼亞北部的保密場所裡給不能透露工作內容的人做產品——這是給任何企業做產品的最好訓練，因為能運轉的企業都有自己的秘密。FDE 模式主要歸功於現任 CTO Shyam Sankar；情報機構裡第一位強使用者 Sarah Adams 獨自用了一年 Palantir（[00:45:27]、[00:46:52]）。</li>
+</ul>
+<h2>五、終局：走出資料中心的智能</h2>
+<ul>
+<li>Dario 說「資料中心裡的天才之國」，但如果天才們只能坐在資料中心裡收發郵件，他們什麼也做不了。智能的互補品一頭是感知、一頭是行動；現在人類充當資料中心智能的眼睛和手，未來十年會長出形態各異的感知與操作體——無人機、人行道機器人、會飛的、四條腿的、負重的、耕田的，不是清一色人形（[00:51:55]、[00:52:30]）。</li>
+<li>工廠造工廠並不新鮮（那就是機床），區別在於智能化：數位奇點的一部分，就是把越來越多的地殼變成資料中心，這個物理過程將由 AI 指揮。機器是比人類更適合在星際間自我複製的形態，「幾乎肯定會發生」——要確保它解放人類、而非讓人類淪為在地球上看 AI 生成影片的旁觀者（[00:54:47]、[00:56:14]）。</li>
+</ul>
+<h2>背景（非本期內容，來自公開報導）</h2>
+<p>Arda Industries 2025 年創立，2026 年 10 月公開亮相：累計融資 2.32 億美元（其中 A 輪 1.6 億美元、估值 15 億美元，Accel、Altimeter、Khosla 等領投），已部署於 Anduril 的 ArsenalOS 製造軟體；Anduril 稱其把基礎工作指令的製作從約 10 小時壓到約 15 分鐘。聯合創始人包括 Augustus Odena（Adept 聯合創始人）、Alex Mark、Jakob Frick。</p>
+<hr />
+<p><em>紀要來源：YouTube 官方英文字幕轉寫整理。嘉賓觀點與數字為現場口徑，未獨立核實；「背景」一段來自 a16z、LinkedIn 與財經報導，與節目內容分開標註。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: No Priors Conversation with Bob McGrew — Superintelligence Needs the Physical World</h1>
+<ul>
+<li>Date: 2026-11-19 (published on YouTube)</li>
+<li>Hosts: Sarah Guo, Elad Gil (No Priors)</li>
+<li>Guest: Bob McGrew (Co-founder and CEO of Arda; former Chief Research Officer at OpenAI, former head of engineering and product at Palantir)</li>
+<li>Duration: 59 minutes</li>
+<li>Source: YouTube channel No Priors, video _wLzJINt9iQ, official English subtitles, 1294 lines in full</li>
+</ul>
+<blockquote>
+<p>These notes are an English compilation. Views and figures are as stated by the guest live and have not been independently verified. Timestamps point to subtitle positions.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>Bob McGrew's core argument: automated researchers alone will not deliver superintelligence — researchers were never the bottleneck; physical steps such as experiments and compute are. The "hard takeoff" thesis is simply wrong: automated research is a one-time jump, not a self-improving loop. Once intelligence becomes cheap, what is scarce is its complement: perception and action. He left OpenAI to found Arda to tackle that physical-world lesson: enabling automated production lines to be reconfigured within 7 days as designs change, as quickly as swapping workers.</p>
+<h2>Key points</h2>
+<ol>
+<li><strong>Where the RSI (recursive self-improvement) argument goes wrong</strong>: Raising automated researchers' share of time from 10% to 99% looks like a 100x speedup, but the speed of discovery is determined not by the number of researchers but by experimental throughput. When he was Chief Research Officer at OpenAI in 2024, the real constraint was how many GPUs were on hand and whether compute was connected to the right network ([00:03:21], [00:04:17]).</li>
+<li><strong>The correct model is an S-curve</strong>: Today GPUs produce discoveries at about 35% of optimal efficiency; automation can push that to 90%, but there is not much difference between 90% and 99%. Automated research is a one-time large acceleration (on the order of going from GPT-4o without reasoning to o3 with tools), not a self-improving loop ([00:05:27]).</li>
+<li><strong>Hypotheses get cheap, the physical gets scarce</strong>: Labs are producing cheap intelligence; intelligence's complement is the physical layer — wet labs, GPU deployment. Even if simulation becomes good enough that only 1/10 of experiments are needed, that is only a one-time dividend; once it is used up, you are stuck on the physical world again ([00:07:08], [00:11:21]).</li>
+<li><strong>A line from Ilya</strong>: Deep learning looks like pure mathematics, but it is actually an experimental science. When he once brought a paper to talk about how cool the method was, Ilya listened and asked only: "So what are the results?" No matter how good an idea is, you still have to run the experiment ([00:12:14]).</li>
+<li><strong>The real bottleneck for US manufacturing</strong>: It is not design (the US is strong), but labor costs and rigid production lines. The iPhone changes about 75% of its components each year, only about 25% can go on automated lines, and the rest is assembled by hand; behind roughly 1 million assembly workers in Asia, there are only about 10,000 manufacturing engineers designing the lines. Cars can spend $200 million to build a line and amortize it over 7 years; phones cannot ([00:13:32], [00:14:31], [00:15:54]).</li>
+<li><strong>Arda's solution</strong>: First build "the IDE + Git for manufacturing engineering" — consolidate manufacturing processes scattered across hundreds of documents into a single source of truth so AI agents can work on top of it, then feed DFM (design for manufacturability) feedback back to the design side on the left, and generate automated workstations on the right. He compares himself to "the Cursor of manufacturing engineering": Cursor adds an agent on top of an existing IDE, whereas manufacturing engineering does not even have an IDE yet, so that missing piece has to be built first ([00:26:55], [00:28:08]).</li>
+</ol>
+<ol start="7">
+<li><strong>The form-factor debate</strong>: A production line is a closed-world problem and does not need humanoid robots — one or two robotic arms plus a camera are enough. Traditional automation is essentially a Rube Goldberg-style deterministic device, with half the work in design and half in calibration; with perception and RL introduced, calibration can be relaxed, but the closed world demands a 99.9% success rate ([00:20:00], [00:24:03], [00:25:34]).</li>
+<li><strong>Not training its own large model</strong>: Frontier models act as orchestrators, calling specialized tools such as motion planning and CAD checking; training a small model for a specific scenario is the same kind of act as writing a software package. Palantir-style "problem first" versus OpenAI-style "technology first" — after GPT-3 he suggested following standard startup practice to find customers and validate, and Ilya replied: you learn more from scaling the training data 10x than from talking to one person ([00:30:49], [00:31:55]).</li>
+<li><strong>FDE (Forward Deployed Engineering) is not consulting</strong>: The playbook Palantir worked out in 2005 is a product strategy — engineers embed with the customer, but what is learned in the field must be productized and written back into the product, otherwise there is no leverage. Landing a large enterprise requires finding both a "sponsor" and a "power user" who actually uses the product: <em>Crossing the Chasm</em> only talks about the former ([00:45:19], [00:48:40], [00:50:27]).</li>
+<li><strong>A new solution to the Fermi paradox</strong>: The most efficient way for a civilization to expand is a wavefront of self-replicating probes advancing at the speed of light — precisely because it spreads at light speed, we would only see it minutes to years before it arrives. Perhaps we are that wave ([00:57:34]).</li>
+</ol>
+<h2>I. Why superintelligence cannot bypass the physical world</h2>
+<ul>
+<li>Opening question: after all these years of AI hype, what outside the window is different from 10 years ago? Almost nothing. The first Waymo ride is amazing; by the third you are just complaining about traffic — autonomous driving has only completed half the journey to the physical world; the car itself has not changed and cannot fly ([00:01:52]).</li>
+<li>"Abundance" is a physical word: food and housing are matters of atoms, and no one says their "digital work is abundant." The difficulty in building houses lies in permits and construction, and more agents cannot help — in economics this is called an O-ring production function: every step must be completed, none can be missing ([00:08:44], [00:09:12]).</li>
+<li>The bulldozer paradox: it is said AI can build a Dyson sphere in a few years, yet in reality data centers are being built too slowly. Short of bulldozers? AI says build a bulldozer factory. The first step in building a factory is leveling the land — which needs more bulldozers. Recursion in the physical world is real work at every layer ([00:09:49]).</li>
+<li>Will labs also take over robotics and biology along the way? He thinks not necessarily: large model companies have no comparative advantage in building wet labs. Intelligence and the physical layer are complements, not substitutes ([00:07:51]).</li>
+</ul>
+<h2>II. Arda's first year at Anduril</h2>
+<ul>
+<li>After leaving OpenAI he spent a year interviewing manufacturing leaders, and the conclusions converged on labor costs and line changeover speed. Arda's goal: upload a product design to the cloud and complete the design and reconfiguration of an automated production line within 7 days — as fast as retraining workers ([00:13:55], [00:16:41]).</li>
+<li>Industries that need this capability most: defense (on the Ukrainian battlefield, from battlefield change to design change and back to the battlefield takes only weeks), consumer electronics, data centers and their supply chains (chip generations turn over too fast) — the common thread is high innovation and high change, so they rely almost entirely on manual work ([00:17:22]).</li>
+<li>Collaboration with Anduril: they went to talk the day before the company was incorporated, and Anduril raised two needs — a single source of truth for manufacturing engineering, and reconfigurable factories whose lines can be started and stopped as demand requires. Arda set those two as its North Star. System access was granted in January, and by April there was a first user: a manufacturing engineer used Arda for a virtual build of an actuator, finishing in 90 minutes work that originally took days. It has now rolled out to all of Anduril's product divisions, from drones and missiles to the Fury collaborative combat aircraft ([00:25:53], [00:26:55]).</li>
+<li>Detail behind the first user: the process was extremely painful; Arda's product lead sat next to him taking notes, and two weeks later every issue he had raised was fixed. That is the daily reality of FDE ([00:47:22]).</li>
+</ul>
+<h2>III. Robot form factors and data</h2>
+<ul>
+<li>His "lifelong nemesis," the robotic hand: during his PhD at Stanford in 2002–2005, the whole group mocked neural networks (no provable guarantees); in 2005 he judged AI hopeless and went to Palantir. Around 2015 he came back to try a robotics startup, taught himself deep learning (watching Karpathy's videos), taught a robot to play checkers, then admitted "it's too hard, the timing isn't right," and joined that "somewhat dramatic nonprofit aiming to build AGI" — OpenAI ([00:34:15], [00:35:40]).</li>
+<li>He spent two years in OpenAI's robotics group on the Shadow Hand solving a Rubik's Cube — a topic that came from Zaremba asking at a robotics conference, "what result would shock you?" It succeeded, but he says he has permanently distrusted robotic hands ever since ([00:36:49], [00:37:27]).</li>
+<li>Why general models can suddenly do robotics: the key is not that robot data increased, but that models learned sufficiently good world representations from real data such as internet video, then fine-tune for specific problems. Teleoperation data is as scarce as hiring Scale AI people to hand-write all of GPT-4's training data ([00:38:13]).</li>
+<li>Ecosystem judgment: general models like Astra and Fable (per the subtitles) work out of the box but are slow and not fine-tunable; players like Pi and Generalist use "fine-tunability" to target specific scenarios, which is a structural opportunity. Small on-device models use distillation to solve speed and safety, and agentic robotics (treating a large model as one tool in the toolbox) is a middle path ([00:41:40], [00:42:27], [00:44:07]).</li>
+</ul>
+<h2>IV. Organizations: there is no such thing as a "large organization"</h2>
+<ul>
+<li>"What does OpenAI want? OpenAI wants nothing — Sam wants, Greg wants, some researcher wants." A large organization is just a collection of small teams, and can only chew one problem at a time, one team at a time. Each result conquered earns the right to do bigger things: actuator → missile → aircraft ([00:49:07], [00:49:47]).</li>
+<li>Palantir memories: in the early days he built products in a secure facility in Northern Virginia for people who could not disclose what they worked on — the best training for building products for any enterprise, because every functioning enterprise has its own secrets. The FDE model is mainly credited to current CTO Shyam Sankar; the first power user in the intelligence community, Sarah Adams, used Palantir alone for a year ([00:45:27], [00:46:52]).</li>
+</ul>
+<h2>V. Endgame: intelligence leaving the data center</h2>
+<ul>
+<li>Dario speaks of a "country of geniuses in a data center," but if the geniuses can only sit in the data center sending and receiving email, they can do nothing. Intelligence's complements are perception on one end and action on the other; today humans act as the eyes and hands of data-center intelligence, and over the next decade perception and manipulation bodies of many forms will emerge — drones, sidewalk robots, flying ones, four-legged ones, load-carrying ones, farming ones, not uniformly humanoid ([00:51:55], [00:52:30]).</li>
+<li>Factories building factories is nothing new (that is what machine tools are); the difference is intelligence: part of the digital singularity is turning more and more of the Earth's crust into data centers, and that physical process will be directed by AI. Machines are a form better suited than humans to self-replicate among the stars, and it will "almost certainly happen" — the task is to ensure it liberates humanity rather than leaving humans as bystanders on Earth watching AI-generated videos ([00:54:47], [00:56:14]).</li>
+</ul>
+<h2>Background (not from this episode, from public reporting)</h2>
+<p>Arda Industries was founded in 2025 and publicly launched in October 2026: it has raised $232 million in total (including a $160 million Series A at a $1.5 billion valuation, led by Accel, Altimeter, Khosla, and others), and has been deployed in Anduril's ArsenalOS manufacturing software; Anduril says it has cut the production of basic work instructions from about 10 hours to about 15 minutes. Co-founders include Augustus Odena (co-founder of Adept), Alex Mark, and Jakob Frick.</p>
+<hr />
+<p><em>Source of these notes: compiled from the official English subtitles on YouTube. The guest's views and figures are as stated live and have not been independently verified; the "Background" paragraph comes from a16z, LinkedIn, and financial reporting, and is labeled separately from the program content.</em></p>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=_wLzJINt9iQ">https://www.youtube.com/watch?v=_wLzJINt9iQ</a>（No Priors）· 嘉宾：Bob McGrew · 发布日期：2026-11-19 · 时长：59 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=_wLzJINt9iQ">https://www.youtube.com/watch?v=_wLzJINt9iQ</a>（No Priors）· 嘉賓：Bob McGrew · 發布日期：2026-11-19 · 時長：59 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=_wLzJINt9iQ">https://www.youtube.com/watch?v=_wLzJINt9iQ</a> (No Priors) · Guest: Bob McGrew · Published: 2026-11-19 · Duration: 59 minutes<br>This page is the full notes compiled by human editing; the views and figures in the session are as stated by the speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=_wLzJINt9iQ">https://www.youtube.com/watch?v=_wLzJINt9iQ</a>（No Priors）· 嘉宾：Bob McGrew · 发布日期：2026-11-19 · 时长：59 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：No Priors 对话 Bob McGrew《超级智能需要物理世界》 · Yat's Talks",tw:"會議紀要：No Priors 對話 Bob McGrew《超級智能需要物理世界》 · Yat's Talks",en:"Meeting Notes: No Priors Conversation with Bob McGrew — Superintelligence Needs the Physical World · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

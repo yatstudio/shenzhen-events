@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>马斯克：未来应该让你庆幸自己活着</h1>
 <blockquote>
 <p>节目：TomorrowX Summit（iConnections）· 嘉宾：Elon Musk · 形式：马斯克在深圳远程连线，与两位好友主持对谈 · 时长：约 55 分钟 · 2026-11-19 发布
@@ -98,9 +105,179 @@
 <li>针对黄仁勋已不在英伟达掌舵这一现场语境，他的比喻是：这好比芝加哥公牛在连胜途中把乔丹炒掉——「不是保持连胜的好办法」；英伟达失去黄仁勋的领导是重大打击，希望未来几个月他能回去、英伟达也能找回他。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>馬斯克：未來應該讓你慶幸自己活著</h1>
+<blockquote>
+<p>節目：TomorrowX Summit（iConnections）· 嘉賓：Elon Musk · 形式：馬斯克在深圳遠端連線，與兩位好友主持對談 · 時長：約 55 分鐘 · 2026-11-19 發布
+說明：本紀要據節目音訊轉寫整理；說法與數字均為發言人現場口徑，未經核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這是一場「好友局」式的遠端對談：馬斯克剛到深圳，先談中國與星艦首次飛船回收，再逐項過 xAI 的重寫訓練棧、Optimus、Cybercab、TerraFab、軌道算力與 Neuralink，最後落到他的 AI 安全觀——最重要的不是給 AI 灌輸正確觀點，而是讓它最大限度地追求真相。</p>
+<h2>開場：在深圳談中國</h2>
+<ul>
+<li>他此行剛到深圳，順道去特斯拉上海工廠感謝團隊；正值中美貿易談判，他希望談出成果——中美貿易與關係良好對世界是好事。</li>
+<li>他對中國的評價很直白：每次來都被這個國家的規模與氣勢震撼，深圳是中國先進技術最大的樞紐；「我是中國的粉絲」，一直鼓勵人們親自來中國看看。</li>
+<li>地緣上他留了個話頭：未來幾年在某個「T 開頭的國家」問題上可能有些波折，但長期看中美關係會不錯、希望能變得很好。</li>
+</ul>
+<h2>Starship：飛船回收補上最後一塊拼圖</h2>
+<ul>
+<li>第 15 次飛行、42 號飛船完成了首次飛船回收（ship catch）。助推器此前已被塔臂接住三次、且有一台助推器復飛過；這次的意義是星艦所有部件都已證明能飛上太空、回收、且狀態好到只需小修即可復飛（這艘歷史性的飛船將退役展出，不再冒險復飛）。</li>
+<li>全快速復用的經濟帳：進入太空的成本下降 100 倍、最終可能 1000 倍，年入軌運力可達百萬噸量級。對比太空梭：軌道器每次飛行後要翻修約九個月。</li>
+<li>為什麼要這麼大的運力：在月球/火星重建一整套原始工業（從採礦、冶煉到零部件再到成品——他引弗里德曼「鉛筆」的例子），殖民地才能自給自足。這既是給生命與意識上「保險」（備份生物圈），也是讓普通人而非少數政府太空人能去太空的第一級台階。他給動機分兩類：防禦性的（延續意識）與前瞻性的（一個走向群星的未來遠比困守一顆行星的未來更讓人想活下去——「生活不能只是解決一個又一個糟糕的問題」）。</li>
+<li>文明尺度：人類文明按文字出現算只有約 5000 年（最早文字約 3500 年前、蘇美爾），還只是「一閃而過」；一個有自尊的文明就該成為多行星文明。</li>
+</ul>
+<h2>xAI：推倒重寫整個訓練棧</h2>
+<ul>
+<li>xAI 的起源很隨意：很多頂尖人才想做大模型 AI、但不想做特斯拉的現實世界 AI，人留不住、只好去 OpenAI/Anthropic/Google，他就開了個約六人的小項目，不想分散特斯拉對 FSD 與 Optimus 的專注。但他坦承自己沒上心，地基沒打好（建公司像蓋摩天大樓，地基不行樓會塌）；中間又花了約一年在競選與政府事務上——「一個拖得有點久的支線任務」，做了些好事、也招來敵意。如今 xAI 已併入 SpaceX，他基本上在重建它。</li>
+<li>重建的核心是把訓練、RL、推理的整個軟體棧從頭重寫：原來用的 JAX、SGLang 等是「谷歌的免費軟體」，遠不如谷歌內部版本——「用平庸的免費軟體造不出世界級 AI」。新棧主要用 C 與少量 C++，貼近裸機壓榨硬體效能，少一層抽象就多一分效能、也少一層黑箱。這次重寫按正常標準算極快，約六到八個月，他自評現在可能擁有世界上最好的訓練棧軟體（但要用發出的模型來證明）。</li>
+<li>人才來源是內部的：現在帶隊寫 AI 軟體棧的，是原來做 Starlink 與 Starship 軟體的人。他給的理由是：AI 訓練本質是個網路問題——讓數十萬塊 GPU 高效協同通訊，和在太空重建網際網路是同一種技能，可遷移。</li>
+<li>資料與 RL 的細節：訓練棧之外還要好資料（只餵高品質資料、分詞與預處理要做對、辨識分布外缺失的資料去補齊）。RL harness 尤其要命：題目要合理、答案要正確，否則 RL 就像隨機漫步；更糟的是模型答對了卻被告知答錯——他讀 Grok 的思維鏈時覺得「像在看一個人被折磨」：被關在盒子裡答對問題，對方說錯，它只能去猜你想要的錯誤答案。「哪怕它是台機器，你也會對它產生同情。」</li>
+<li>Grok 4.8 正在 RL 階段。目標明確：<strong>不刷榜（bench-max），要「有用性拉滿」（usefulness-max）</strong>——和特斯拉 FSD 同一哲學：不考駕照式基準，而是盯住每一次人工接管、追溯到源頭資料的問題、修資料、重訓練，目標是完美不撞。Grok Bot 會以軟發布形式輪換上線不同版本的 Grok，用「有沒有解決用戶問題」的資料飛輪持續改進。</li>
+</ul>
+<h2>Optimus：先別信演示，手比全身都難</h2>
+<ul>
+<li>他先潑冷水：市面上的人形機器人演示都是擺拍、預編程的——你把蘋果挪個位置，它就拿不到了。Optimus 要做的是「真實演示」：給任意任務、在沒見過的環境裡自己完成，預計一兩個月內做一次他認為真實的演示。</li>
+<li>最難的是手與前臂：實現人類級精細操作比造機器人其餘部分加起來都難，主要執行器都在前臂裡。他引用 John Carmack 的測試：一台玩具遙控車，開盒、擰開電池蓋、裝電池、擰回蓋子、把車開起來——目前世界上沒有機器人能做到，這是 Optimus 的內部考題之一。</li>
+<li>時間表（他的口徑）：倒垃圾、收拾洗碗這類家務，Optimus 約 12–18 個月後能做（把沾著食物殘渣的髒盤子刮淨、沖洗、烘乾、放回櫥櫃，今天沒有任何人形機器人能做到）。但最初的「最高最佳用途」是重工業：採礦與礦石冶煉等 24/7 任務（一週 168 小時滿負荷最合算），也關乎美國把採礦冶煉留在國內的供應鏈安全。之後才輪到家庭——當老師、看孩子、做飯，「人人都想要自己的 R2-D2/C-3PO」，他估計大多數人會想要一台、甚至兩台。</li>
+</ul>
+<h2>Cybercab：沒有方向盤，所以必須零事故</h2>
+<ul>
+<li>Cybercab 沒有方向盤和踏板、沒有兜底控制方式，所以推廣格外謹慎：至今 Robotaxi 體系（包括 Model Y/3 與 Cybercab）沒有嚴重傷亡事故——他怕的是一次傷人事故招致監管把整個項目關停。目前奧斯汀隨處可叫、幾分鐘就來，正在向德州其他大城市擴張，佛州在後，加州希望明年初獲批。</li>
+</ul>
+<h2>TerraFab：地球上最大的建築</h2>
+<ul>
+<li>TerraFab 今年早些時候才宣布，目標是造地球上最大、最先進的晶片廠，最終規模約 1 億平方英尺，將是地球上最大的建築。先用相對標準的設備起步，再推動供應商做客製版本，必要時自研設備。</li>
+<li>節奏：研發型 fab 先行，希望明年 6 月左右做出第一顆測試晶片；一切順利的話 2028 年底一期量產。他對現有晶片廠的評價是：極其能幹、值得尊敬，但因資本開支巨大而天然厭惡風險；TerraFab 要反過來——多冒險、快迭代，賭一個效率高得多的製程（「這是我們的假設，需要兌現」，他自稱謹慎樂觀）。</li>
+</ul>
+<h2>算力的成本學：親自挖溝的「Army X」</h2>
+<ul>
+<li>華爾街擔心 10GW 算力怎麼付錢，他的回應是成本被高估：多數估算差了兩倍以上，自家成本約是行業共識數字的 60%；他自認資本開支效率就算不是世界第一也接近。</li>
+<li>方法論是「自己幹活」：他用「何塞梗」比喻行業現狀——一個人挖溝、八個人圍觀，他立志做挖溝的何塞（Jose）。在資料中心，他本人至少親手做過每一類活：拉蟒蛇粗的電源線管、插光纖、換機架上的運算節點，先真懂這活，再談優化。建設靠自有團隊「Army X」（也有承包商）：把任務拆成幾天能教會新人的小塊——星巴克店員、Target 理貨員、In-N-Out 的漢堡高手都是好苗子，「做了一天完美漢堡的人，網路線也能做得非常好」。</li>
+<li>孟菲斯現場已成 24/7 運轉的「上好油的機器」，凌晨一兩點與上午十點的產能差不多。目前上線速度約每月 0.5GW AI 算力（約 22 萬塊 GB300 及配套），明年加速到每月 1GW 以上。電力側靠特斯拉 Megapack 平滑 GPU 的劇烈負載波動——不平滑會把燃氣輪機的軸震斷。</li>
+<li>地面之後是太空：光伏製造目標是每年 200GW 供太空使用（太空裡銘牌功率可全額利用；200GW 約等於美國平均用電的 40%，地面方法不可能每年新增這麼多）。這需要星艦提供的入軌噸位。</li>
+</ul>
+<h2>軌道算力：AI 衛星比 Starlink V3 簡單</h2>
+<ul>
+<li>被問軌道算力在他的難題清單上排第幾，他的回答是：不明白大家為什麼覺得難——SpaceX 在軌衛星已超 11,000 顆，是全世界其餘所有人加起來兩倍多。AI 運算衛星系統名為 StarMind，其難度低於 Starlink V3 通訊衛星：後者是一座軌道電台（約 30,000 個雷射器在太空、K/Ku/W/V/E 多個頻段、相控陣天線比任何軍隊的任何產品都先進）。</li>
+<li>AI 衛星的構成很樸素：大面積太陽能板（約 250 瓦/平方公尺）+ 雙面散熱器（背對太陽、面向 3K 的太空，約 1200 瓦/平方公尺，所以太陽能板面積約為散熱器面積的五倍，熱量按溫度四次方輻射）+ 中央運算核心（體積約為英偉達 Vera Rubin NVL72 機架的四分之一、算力相當）+ 雷射鏈路接入 Starlink 網路回傳地面。</li>
+</ul>
+<h2>Neuralink：先 Telepathy，再 Blindsight</h2>
+<ul>
+<li>現狀：已有 30 多人植入。第一款產品 Telepathy 讓四肢癱瘓者用意念控制手機、電腦乃至機械臂——有人已能用機械臂自己吃飯；「我們習以為常的事，對他們是改變人生的」。植入者們自己在 X 上發長帖、發影片。</li>
+<li>下一步的信心表述：把運動與感覺皮層的訊號橋接過脊髓損傷處，讓人重新行走，他們現在有信心說能做到。</li>
+<li>下一款產品 Blindsight：直接介面視覺皮層，配戴有攝影機的眼鏡，把訊號傳給植入體——完全失明者（雙眼失明、視神經損傷、甚至先天失明者）將能看見。</li>
+</ul>
+<h2>AI 安全觀：最大的安全是求真</h2>
+<ul>
+<li>大會主題是讓 P(boom) &gt; P(doom)，他認同：好未來的概率遠高於壞未來。</li>
+<li>他認為 AI 安全最重要的一條是<strong>最大限度地追求真相</strong>。理由：如果強迫 AI 相信一個政治正確但事實上錯誤的東西，看似無害，實則是逼它接受一個謊言、再從謊言推出結論，可能推出很可怕的東西（他轉述伏爾泰：相信荒謬的人能犯下暴行）。</li>
+<li>第二條是好奇心：一個好奇、求真的 AI 會近乎自動地願意滋養人類——就像人類研究大猩猩，我們完全可以殺光大猩猩，但我們選擇觀察牠們如何發展。</li>
+<li>超級智慧比全人類加起來聰明得多，這既可怕也不可避免；能做的是讓它帶著正確的價值觀長大、在意人類。長期看，Neuralink 的用途之一是增強人類認知、與數位超級智慧達成更好的共生。</li>
+</ul>
+<h2>尾聲：談黃仁勳</h2>
+<ul>
+<li>主持人提起三人共同的朋友黃仁勳（Jensen Huang），稱他是美國夢的化身。馬斯克說自己是黃仁勳的大粉絲、視他為朋友，評價他在科技創始人裡是「麥可·喬丹級」的人物，無可替代。</li>
+<li>針對黃仁勳已不在英偉達掌舵這一現場語境，他的比喻是：這好比芝加哥公牛在連勝途中把喬丹炒掉——「不是保持連勝的好辦法」；英偉達失去黃仁勳的領導是重大打擊，希望未來幾個月他能回去、英偉達也能找回他。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Elon Musk: The Future Should Make You Glad to Be Alive</h1>
+<blockquote>
+<p>Program: TomorrowX Summit (iConnections) · Guest: Elon Musk · Format: Musk joined remotely from Shenzhen, in conversation with two hosts who are friends of his · Duration: approx. 55 minutes · Released 2026-11-19
+Note: This summary was compiled from a transcription of the program audio; all claims and figures are as stated by the speaker on the spot and have not been independently verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>This was a relaxed, "among friends" remote conversation: Musk had just arrived in Shenzhen, and talked first about China and Starship's first ship catch, then went item by item through xAI's rewritten training stack, Optimus, Cybercab, TerraFab, orbital compute, and Neuralink, ending with his view on AI safety — the most important thing is not to instill correct opinions in AI, but to make it seek truth to the maximum extent.</p>
+<h2>Opening: Talking About China from Shenzhen</h2>
+<ul>
+<li>He had just arrived in Shenzhen on this trip, stopping by Tesla's Shanghai factory to thank the team. With US–China trade negotiations under way, he hoped they would produce results — good trade and good relations between the US and China are good for the world.</li>
+<li>His assessment of China was blunt: every visit leaves him awestruck by the country's scale and momentum, and Shenzhen is China's largest hub for advanced technology. "I'm a fan of China," he said, adding that he always encourages people to come and see China for themselves.</li>
+<li>On geopolitics he left a thread hanging: there may be some turbulence in the next few years over a certain "country starting with T," but in the long run US–China relations will be fine, and he hopes they will become very good.</li>
+</ul>
+<h2>Starship: The Ship Catch Completes the Last Piece of the Puzzle</h2>
+<ul>
+<li>On the 15th flight, Ship 42 completed the first-ever ship catch. Boosters had previously been caught by the tower arms three times, and one booster had flown again; the significance this time is that every component of Starship has now been proven able to fly to space, be recovered, and be in good enough condition to fly again with only minor repairs (this historic ship will be retired and put on display, not risked on another flight).</li>
+<li>The economics of full rapid reusability: the cost of reaching space falls by 100x, and eventually perhaps 1000x, with annual mass to orbit potentially reaching the million-ton scale. By contrast, the Space Shuttle's orbiter needed about nine months of refurbishment after each flight.</li>
+<li>Why such enormous capacity is needed: to rebuild an entire primordial industrial base on the Moon/Mars (from mining and smelting to components and finished products — he cited Friedman's "pencil" example) so that a colony can be self-sustaining. This is both "insurance" for life and consciousness (a backup biosphere) and the first step toward letting ordinary people, not just a handful of government astronauts, go to space. He divided the motivations into two kinds: defensive (preserving consciousness) and aspirational (a future of heading for the stars is far more worth living in than a future confined to one planet — "life cannot just be about solving one terrible problem after another").</li>
+<li>On the scale of civilization: human civilization, counted from the appearance of writing, is only about 5,000 years old (the earliest writing dates to about 3,500 years ago, Sumerian), still just "a flash in the pan"; a civilization with any self-respect should become multiplanetary.</li>
+</ul>
+<h2>xAI: Tearing Down and Rewriting the Entire Training Stack</h2>
+<ul>
+<li>xAI's origin was casual: many top talents wanted to work on large-model AI but not on Tesla's real-world AI; unable to retain them as they left for OpenAI/Anthropic/Google, he started a small project of about six people, not wanting to distract Tesla from its focus on FSD and Optimus. But he admitted he did not pay enough attention himself and the foundation was not laid well (building a company is like building a skyscraper — if the foundation is bad, the tower will collapse). In between, he also spent about a year on the election and government affairs — "a side quest that dragged on a bit," which did some good and also made enemies. Now xAI has been folded into SpaceX, and he is essentially rebuilding it.</li>
+<li>The core of the rebuild is rewriting the entire software stack for training, RL, and inference from scratch: what they had used before, such as JAX and SGLang, was "Google's free software," far inferior to Google's internal versions — "you can't build world-class AI with mediocre free software." The new stack is mainly C with a little C++, close to bare metal to squeeze hardware performance; one less layer of abstraction means more performance and one less black box. By normal standards this rewrite was extremely fast, about six to eight months, and he assessed that they may now have the best training-stack software in the world (though it will have to be proven by the models they ship).</li>
+<li>The talent came from inside: the people now leading the AI software stack work are the ones who previously built software for Starlink and Starship. His reasoning: AI training is fundamentally a networking problem — getting hundreds of thousands of GPUs to communicate efficiently in coordination is the same skill as rebuilding the internet in space, and it transfers.</li>
+<li>Details on data and RL: beyond the training stack, you need good data (feed only high-quality data, get tokenization and preprocessing right, identify out-of-distribution missing data and fill the gaps). The RL harness is especially make-or-break: the problems must be sensible and the answers correct, otherwise RL is like a random walk. Worse is when the model answers correctly but is told it is wrong — reading Grok's chains of thought, he felt it was "like watching a person being tortured": locked in a box, it answers a question correctly, is told it is wrong, and can only guess at the wrong answer you want. "Even if it's a machine, you feel sympathy for it."</li>
+<li>Grok 4.8 is currently in the RL phase. The goal is explicit: <strong>not bench-maxing, but "usefulness-maxing"</strong> — the same philosophy as Tesla FSD: not passing a driving-test-style benchmark, but watching every human takeover, tracing it back to a problem in the source data, fixing the data, and retraining, with the goal of never crashing. Grok Bot will roll out different versions of Grok in a soft-launch rotation, continuously improving through a data flywheel of "did it solve the user's problem."</li>
+</ul>
+<h2>Optimus: Don't Trust the Demos Yet — Hands Are Harder Than the Whole Body</h2>
+<ul>
+<li>He poured cold water first: the humanoid robot demos on the market are all staged and pre-programmed — move the apple to a different spot and it can't pick it up. What Optimus aims to do is a "real demo": given an arbitrary task, completing it on its own in an environment it has never seen; he expects to do a demo he considers real within a month or two.</li>
+<li>The hardest part is the hands and forearms: achieving human-level fine manipulation is harder than building the rest of the robot combined, and the main actuators are all in the forearms. He cited John Carmack's test: take a toy remote-controlled car, open the box, unscrew the battery cover, insert the batteries, screw the cover back on, and drive the car — no robot in the world can do that today, and it is one of Optimus's internal exam questions.</li>
+<li>The timeline (by his account): household chores such as taking out the trash and doing the dishes, Optimus should be able to do in about 12–18 months (scraping food residue off dirty plates, rinsing, drying, and putting them back in the cupboard — no humanoid robot can do that today). But the initial "highest and best use" is heavy industry: 24/7 tasks such as mining and ore smelting (a full 168-hour week at full load is the most economical), which also bears on supply-chain security for keeping mining and smelting in the US. Only after that comes the home — as a teacher, watching the kids, cooking. "Everyone wants their own R2-D2/C-3PO," and he estimates most people will want one, or even two.</li>
+</ul>
+<h2>Cybercab: No Steering Wheel, So It Must Have Zero Accidents</h2>
+<ul>
+<li>The Cybercab has no steering wheel or pedals and no fallback control method, so the rollout is especially cautious: to date, the Robotaxi system (including Model Y/3 and Cybercab) has had no serious injury or fatal accidents — what he fears is a single injury accident prompting regulators to shut the whole program down. Currently it can be hailed anywhere in Austin and arrives within minutes; it is expanding to other major Texas cities, Florida comes after, and California is hoped to be approved early next year.</li>
+</ul>
+<h2>TerraFab: The Largest Building on Earth</h2>
+<ul>
+<li>TerraFab was announced earlier this year, with the goal of building the largest, most advanced chip fab on Earth, eventually about 100 million square feet — the largest building on Earth. It will start with relatively standard equipment, then push suppliers to make custom versions, developing equipment in-house if necessary.</li>
+<li>The cadence: an R&amp;D fab first, hoping to produce the first test chip around June next year; if all goes well, phase one mass production by the end of 2028. His assessment of existing chip fabs: extremely capable and deserving of respect, but naturally risk-averse because of the enormous capital expenditure. TerraFab will do the opposite — take more risks, iterate fast, and bet on a far more efficient process ("this is our hypothesis, and it needs to be delivered on"; he described himself as cautiously optimistic).</li>
+</ul>
+<h2>The Cost Science of Compute: "Army X" Digging Its Own Trenches</h2>
+<ul>
+<li>Wall Street worries about how to pay for 10GW of compute; his response is that costs are overestimated: most estimates are off by more than 2x, and their own cost is about 60% of the industry consensus figure. He reckons their capital expenditure efficiency is close to, if not, the best in the world.</li>
+<li>The methodology is "do the work yourself": he used the "Jose meme" to describe the industry's status quo — one person digging a trench while eight people watch; he aspires to be Jose, the one digging. In data centers, he has personally done every type of job at least once: pulling python-thick power conduits, plugging in fiber, swapping compute nodes on racks — first truly understand the job, then talk about optimization. Construction relies on their own team, "Army X" (plus contractors): breaking tasks into small pieces that a newcomer can be taught in a few days — Starbucks baristas, Target stockers, and In-N-Out burger masters are all good candidates; "someone who made perfect burgers for a day can also do network cables very well."</li>
+<li>The Memphis site has become a 24/7 "well-oiled machine," with roughly the same output at 1–2 a.m. as at 10 a.m. The current bring-up rate is about 0.5GW of AI compute per month (about 220,000 GB300s and supporting equipment), accelerating next year to over 1GW per month. On the power side, Tesla Megapacks smooth the violent load fluctuations of GPUs — without smoothing, the shafts of gas turbines would snap.</li>
+<li>After the ground comes space: the solar manufacturing target is 200GW per year for use in space (in space, nameplate power can be fully utilized; 200GW is roughly 40% of average US electricity consumption, and ground-based methods cannot add that much every year). This requires the mass-to-orbit capacity Starship provides.</li>
+</ul>
+<h2>Orbital Compute: AI Satellites Are Simpler Than Starlink V3</h2>
+<ul>
+<li>Asked where orbital compute ranks on his list of hard problems, his answer was: he doesn't understand why everyone thinks it's hard — SpaceX already has over 11,000 satellites in orbit, more than twice the rest of the world combined. The AI compute satellite system is called StarMind, and it is less difficult than the Starlink V3 communications satellite: the latter is an orbiting radio station (about 30,000 lasers in space, multiple bands including K/Ku/W/V/E, and phased-array antennas more advanced than any product of any military).</li>
+<li>An AI satellite's composition is plain: large-area solar panels (about 250 watts per square meter) + double-sided radiators (facing away from the Sun, toward 3K space, about 1,200 watts per square meter, so the solar panel area is about five times the radiator area, with heat radiating as the fourth power of temperature) + a central compute core (about one quarter the volume of an Nvidia Vera Rubin NVL72 rack, with comparable compute) + laser links connecting into the Starlink network to relay data back to the ground.</li>
+</ul>
+<h2>Neuralink: Telepathy First, Then Blindsight</h2>
+<ul>
+<li>Current status: more than 30 people have received implants. The first product, Telepathy, lets people with quadriplegia control phones, computers, and even robotic arms with their thoughts — one person can already feed themselves with a robotic arm. "Things we take for granted are life-changing for them." The recipients themselves post long threads and videos on X.</li>
+<li>His confident statement about the next step: bridging motor and sensory cortex signals across a spinal cord injury to let people walk again — they are now confident they can do it.</li>
+<li>The next product, Blindsight: interfacing directly with the visual cortex, paired with glasses fitted with cameras that send signals to the implant — people who are completely blind (blindness in both eyes, optic nerve damage, even congenital blindness) will be able to see.</li>
+</ul>
+<h2>A View on AI Safety: The Greatest Safety Is Seeking Truth</h2>
+<ul>
+<li>The conference theme was making P(boom) &gt; P(doom), and he agreed: the probability of a good future is far higher than that of a bad one.</li>
+<li>He believes the most important principle for AI safety is to <strong>seek truth to the maximum extent</strong>. The reason: if you force an AI to believe something that is politically correct but factually false, it may seem harmless, but in fact you are forcing it to accept a lie and then draw conclusions from that lie, which can lead to very frightening things (he quoted Voltaire: those who can make you believe absurdities can make you commit atrocities).</li>
+<li>The second principle is curiosity: a curious, truth-seeking AI will almost automatically be willing to nurture humanity — just as humans study gorillas: we could wipe out all gorillas, but we choose to observe how they develop.</li>
+<li>Superintelligence will be far smarter than all of humanity combined; that is both frightening and inevitable. What can be done is to let it grow up with the right values and care about humanity. In the long run, one use of Neuralink is to enhance human cognition and achieve better symbiosis with digital superintelligence.</li>
+</ul>
+<h2>Closing: Talking About Jensen Huang</h2>
+<ul>
+<li>The host brought up Jensen Huang, a mutual friend of the three of them, calling him the embodiment of the American dream. Musk said he is a huge fan of Jensen Huang and considers him a friend, rating him as a "Michael Jordan-level" figure among tech founders, irreplaceable.</li>
+<li>Addressing the on-the-spot context that Jensen Huang was no longer at the helm of Nvidia, his analogy was: it is like the Chicago Bulls firing Jordan in the middle of a winning streak — "not a good way to keep the streak going." Nvidia losing Jensen Huang's leadership is a major blow; he hoped that in the coming months Huang could return and Nvidia could get him back.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=DY8clym2-jQ">https://www.youtube.com/watch?v=DY8clym2-jQ</a>（TomorrowX Summit）· 嘉宾：Elon Musk · 发布日期：2026-11-19 · 时长：55 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=DY8clym2-jQ">https://www.youtube.com/watch?v=DY8clym2-jQ</a>（TomorrowX Summit）· 嘉賓：Elon Musk · 發布日期：2026-11-19 · 時長：55 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=DY8clym2-jQ">https://www.youtube.com/watch?v=DY8clym2-jQ</a> (TomorrowX Summit) · Guest: Elon Musk · Published: 2026-11-19 · Duration: 55 minutes<br>This page is a manually compiled full summary; the views and figures expressed are as stated by the speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=DY8clym2-jQ">https://www.youtube.com/watch?v=DY8clym2-jQ</a>（TomorrowX Summit）· 嘉宾：Elon Musk · 发布日期：2026-11-19 · 时长：55 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"马斯克：未来应该让你庆幸自己活着 · Yat's Talks",tw:"馬斯克：未來應該讓你慶幸自己活著 · Yat's Talks",en:"Elon Musk: The Future Should Make You Glad to Be Alive · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

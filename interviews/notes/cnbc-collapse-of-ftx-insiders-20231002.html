@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">TALK · 访谈纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">TALK · 访谈纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>CNBC 纪录片《FTX 的崩塌：内部人全盘托出》</h1>
 <blockquote>
 <p>片源：CNBC Documentary《The Collapse Of FTX: Insiders Tell All》· 时长：约 39 分钟 · 2023-10-02 发布（SBF 庭审开庭前夕）
@@ -44,9 +51,71 @@
 <p>片时（2023 年 10 月）John Ray 团队已追回 73 亿美元资产，加密价格上涨帮了忙。但普通 Chapter 11、尤其是交易所破产，客户拿回钱的比例通常很低：当时只有日本客户凭当地严格监管先行取回约 66 亿日元（近 5000 万美元），其他人遥遥无期。等不及的人去卖债权：一位客户 17.4 万美元的债权经尽调后以约 11% 的价格卖出，到手约 1.9 万美元——他说哪怕十年后债权全额兑付也不后悔，他要拿现金重新投资加密。而破产本身在烧钱：七个月里专业团队申请的费用已超 2 亿美元、约每天 150 万美元，John Ray 时薪 1300 美元、律所 Sullivan &amp; Cromwell 平均时薪 1800 美元，费用排在客户受偿之前。一位客户的总结被多人呼应：「这场破产真正的赢家只有律师。」</p>
 <p>不过受访客户几乎都没对加密本身失去信心——他们的共识是：「错的不是比特币，不是加密，错的是一个坏人。」片尾，他们对 SBF 的留言出奇一致：服你的刑、付你的罚，想办法帮帮那些被你毁掉的人。</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>CNBC 紀錄片《FTX 的崩塌：內部人全盤托出》</h1>
+<blockquote>
+<p>片源：CNBC Documentary《The Collapse Of FTX: Insiders Tell All》· 時長：約 39 分鐘 · 2023-10-02 發布（SBF 庭審開庭前夕）
+說明：本片為 CNBC 採訪受害客戶、投資人與前高管的紀錄片，本紀要據英文字幕整理、轉述片中敘述；數字為片中人物與訴狀口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>CNBC 這集的價值在「內部人」三個字：FTX 美國總裁在崩塌前兩個月辭職、破產清算人 John Ray 親口說「這是老式挪用」、幣安盡調團隊說連「有多少現金、欠多少債」都問不出來——再加上至今沒拿回錢的客戶，拼出了一幅連最內層的人都被蒙在鼓裡的圖景。</p>
+<h2>造神：為什麼所有人都信了</h2>
+<p>FTX 兩年不到做到 500 多萬用戶、日交易量 100–150 億美元，紅杉、Paradigm 等頂級機構累計投入近 20 億美元——其中一輪約 9 億美元。散戶 Sunil Kavuri（前摩根士丹利/摩根大通）說，正是這些機構的名字讓他覺得 FTX 是「機構背書的安全交易所」，於是把數百萬資金放了進去。行銷則把信任感拉滿：布雷迪出演廣告、庫里代言、Larry David 的超級碗廣告（花費數百萬美元），一位客戶說他第一次聽說 FTX 就是超級碗廣告。片中點破了 VC 與客戶的不對稱：VC 玩的是「十個裡中一個」的組合遊戲，客戶押上的卻是買房的錢——一位女性客戶說，那筆錢本是用來買房的，現在沒了。</p>
+<h2>崩塌的十天</h2>
+<p>引信是 CoinDesk：記者 Ian Allison 拿到洩露的 Alameda 資產負債表，2022 年 11 月 2 日發文——其 146 億美元資產裡近一半是 FTT，FTX 自家發的幣。FTT 2019 年發行時約 2 美元，2021 年衝到近 80 美元，2022 年 11 月約 22 美元；問題在於 FTT 絕大部分握在 Alameda 手裡，根本賣不掉而不砸盤。刑事訴狀稱，SBF 指使 Alameda 大量買入 FTT 以維持價格；Alameda 又拿 FTT 做抵押向第三方借了數十億美元。2022 年夏天加密市場蒸發約 2 萬億美元、多家借貸機構破產後，Alameda 按 CFTC 的說法「大幅增加」了對 FTX 客戶資金的使用來償還外部債務——而客戶對此一無所知。片中一位評論者說，2022 年夏天本是 SBF 的最後機會：關掉 Alameda、專注 FTX，事情或許不會走到這一步。</p>
+<p>11 月 6 日，幣安 CEO CZ 發推宣布清倉 FTT，擠兌開始，每天約 40 億美元提款。11 月 7 日 SBF 發推「FTX 沒問題、資產沒問題」，Kavuri 等人因此留了下來；第二天他刪掉推文，FTT 跌超 75%。投資人 Anthony Scaramucci 11 月 8 日飛到巴哈馬，形容 SBF 神情恍惚，「像《拯救大兵瑞恩》裡抱著自己斷臂的人」。幣安戰略官 Patrick Hillmann 回憶盡調現場：「像炸彈爆炸，人們在哭」——他們問最基本的「儲備有多少現金、負債是多少」，對方答不上來，交易在 48 小時內告吹。客戶們的提款請求無一到帳。11 月 9 日上午的全員會上，Alameda CEO Caroline Ellison 告訴員工：年內早些時候，SBF 等人決定用 FTX 客戶資金替 Alameda 填缺口。11 月 11 日，兩家公司申請破產。</p>
+<h2>內部人的證詞</h2>
+<p>John Ray（曾負責安然清算）接手後說，這是「老式的、地下室式的挪用——就是把客戶的錢拿走為己所用」：公司沒有記帳，員工在 Slack 上溝通開票，用 QuickBooks 管一家數十億美元的公司，沒有獨立董事會，「實際上只有一個人控制一切」。</p>
+<p>FTX 美國總裁 Brett Harrison（崩塌前不到兩個月辭職）說，美國團隊對真實財務狀況「完全無知」：SBF 在內部全員會和對外場合都宣稱 FTX 有 20 億美元超額資本、FTX US 有 6–7 億美元，「狀態驚人地好」。他反問：當 CEO 在國會作證、被頂級機構公開背書時，一個不是 CEO 的高管，憑什麼去翻出所有銀行對帳單逐一核對？他還透露，離職前他曾致信 SBF，指出 Gary Wang 與 Nishad Singh 寫了交易所 90% 以上的程式碼、知識毫無分散——兩人中任何一個出事，交易所就完了。</p>
+<p>Gary Wang 在法庭上承認，他按指示修改程式碼、給 Alameda 開了特殊權限，他知道這是違法的。Ellison 的認罪陳述則說：她明白 FTX 需要用客戶資金來為給 Alameda 的貸款融資，也明白大多數客戶並不預期自己的數位資產和法幣存款會被借出去。片中還放了崩塌前幾個月 Ellison 上播客的片段，她笑著說 Alameda 做交易「基本不用數學，用很多小學數學」「我們往往不設止損」。</p>
+<h2>錢還能回來嗎</h2>
+<p>片時（2023 年 10 月）John Ray 團隊已追回 73 億美元資產，加密價格上漲幫了忙。但普通 Chapter 11、尤其是交易所破產，客戶拿回錢的比例通常很低：當時只有日本客戶憑當地嚴格監管先行取回約 66 億日元（近 5000 萬美元），其他人遙遙無期。等不及的人去賣債權：一位客戶 17.4 萬美元的債權經盡調後以約 11% 的價格賣出，到手約 1.9 萬美元——他說哪怕十年後債權全額兌付也不後悔，他要拿現金重新投資加密。而破產本身在燒錢：七個月裡專業團隊申請的費用已超 2 億美元、約每天 150 萬美元，John Ray 時薪 1300 美元、律所 Sullivan &amp; Cromwell 平均時薪 1800 美元，費用排在客戶受償之前。一位客戶的總結被多人呼應：「這場破產真正的贏家只有律師。」</p>
+<p>不過受訪客戶幾乎都沒對加密本身失去信心——他們的共識是：「錯的不是比特幣，不是加密，錯的是一個壞人。」片尾，他們對 SBF 的留言出奇一致：服你的刑、付你的罰，想辦法幫幫那些被你毀掉的人。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>CNBC Documentary "The Collapse of FTX: Insiders Tell All"</h1>
+<blockquote>
+<p>Source: CNBC Documentary "The Collapse Of FTX: Insiders Tell All" · Duration: about 39 minutes · Released 2023-10-02 (on the eve of SBF's trial)
+Note: This is a CNBC documentary interviewing affected customers, investors and former executives. These notes were compiled from the English subtitles and recount the narration in the film; the figures are as stated by the people in the film and in the complaint.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>The value of this CNBC episode lies in the word "insiders": the president of FTX US resigned less than two months before the collapse, bankruptcy administrator John Ray said in his own words that "this is old-fashioned embezzlement," and Binance's due diligence team said they could not even get an answer to "how much cash is there, and how much debt is owed" — together with customers who still have not gotten their money back, it paints a picture in which even the innermost circle was kept in the dark.</p>
+<h2>Creating a God: Why Everyone Believed</h2>
+<p>In less than two years, FTX reached more than 5 million users and daily trading volume of $10–15 billion, and top firms such as Sequoia and Paradigm invested nearly $2 billion in total — about $900 million in one round alone. Retail investor Sunil Kavuri (formerly of Morgan Stanley / JPMorgan) said it was precisely the names of those institutions that made him feel FTX was "a safe exchange backed by institutions," so he put millions of dollars into it. Marketing maxed out the sense of trust: Brady appeared in ads, Curry endorsed it, and Larry David's Super Bowl ad cost millions of dollars; one customer said the Super Bowl ad was the first place he heard of FTX. The film points out the asymmetry between VCs and customers: VCs are playing a portfolio game of "one in ten hits," while customers were staking the money to buy a home — one female customer said that money was meant to buy a house, and now it was gone.</p>
+<h2>The Ten Days of Collapse</h2>
+<p>The fuse was CoinDesk: reporter Ian Allison obtained a leaked Alameda balance sheet and published on November 2, 2022 — of its $14.6 billion in assets, nearly half was FTT, the token issued by FTX itself. FTT was about $2 when issued in 2019, surged to nearly $80 in 2021, and was about $22 in November 2022; the problem was that the vast majority of FTT was held by Alameda and simply could not be sold without crashing the price. The criminal complaint alleged that SBF directed Alameda to buy large amounts of FTT to maintain its price; Alameda in turn pledged FTT as collateral to borrow billions of dollars from third parties. After the crypto market lost about $2 trillion in the summer of 2022 and several lending firms went bankrupt, Alameda, according to the CFTC, "substantially increased" its use of FTX customer funds to repay external debts — while customers knew nothing about it. One commentator in the film said the summer of 2022 was SBF's last chance: shut down Alameda and focus on FTX, and things might not have come to this.</p>
+<p>On November 6, Binance CEO CZ tweeted that he would liquidate FTT, and the bank run began, with about $4 billion in withdrawals a day. On November 7, SBF tweeted "FTX is fine, assets are fine," and Kavuri and others therefore stayed; the next day he deleted the tweet, and FTT fell more than 75%. Investor Anthony Scaramucci flew to the Bahamas on November 8 and described SBF as dazed, "like the man in Saving Private Ryan holding his own severed arm." Binance Chief Strategy Officer Patrick Hillmann recalled the due diligence scene: "It was like a bomb had gone off, people were crying" — they asked the most basic questions, "how much cash is in reserve, how much are the liabilities," and the other side could not answer; the deal fell apart within 48 hours. None of the customers' withdrawal requests arrived. At the all-hands meeting on the morning of November 9, Alameda CEO Caroline Ellison told employees: earlier in the year, SBF and others had decided to use FTX customer funds to fill Alameda's hole. On November 11, both companies filed for bankruptcy.</p>
+<h2>Testimony from Insiders</h2>
+<p>After taking over, John Ray (who had overseen the Enron liquidation) said this was "old-fashioned, basement-style embezzlement — just taking customers' money and using it for your own purposes": the company kept no books, employees communicated about invoicing on Slack, used QuickBooks to run a multibillion-dollar company, had no independent board, and "effectively one person controlled everything."</p>
+<p>Brett Harrison, president of FTX US (who resigned less than two months before the collapse), said the U.S. team was "completely ignorant" of the true financial position: SBF claimed at internal all-hands meetings and in public that FTX had $2 billion in excess capital and FTX US had $600–700 million, and that things were "astonishingly good." He asked in return: when the CEO is testifying before Congress and being publicly endorsed by top institutions, on what basis would an executive who is not the CEO dig out all the bank statements and check them one by one? He also revealed that before leaving he had written to SBF pointing out that Gary Wang and Nishad Singh had written more than 90% of the exchange's code and that knowledge was not dispersed at all — if anything happened to either of them, the exchange would be finished.</p>
+<p>Gary Wang admitted in court that he had modified the code as instructed and given Alameda special privileges, and that he knew it was illegal. Ellison's guilty plea statement said: she understood that FTX needed to use customer funds to finance loans to Alameda, and she understood that most customers did not expect their digital assets and fiat deposits to be lent out. The film also showed a clip of Ellison on a podcast a few months before the collapse, in which she said with a laugh that Alameda's trading "basically doesn't use math, uses a lot of elementary-school math" and "we often don't set stop-losses."</p>
+<h2>Can the Money Come Back?</h2>
+<p>At the time of the film (October 2023), John Ray's team had recovered $7.3 billion in assets, helped by rising crypto prices. But in an ordinary Chapter 11, especially an exchange bankruptcy, the proportion customers recover is usually very low: at that time only Japanese customers, thanks to strict local regulation, had been able to withdraw first, about ¥6.6 billion (nearly $50 million), while everyone else faced an indefinite wait. Those who could not wait sold their claims: one customer's $174,000 claim was, after due diligence, sold at about 11% of its value, yielding about $19,000 — he said even if the claim were paid in full ten years later he would not regret it; he wanted the cash to reinvest in crypto. And the bankruptcy itself was burning money: in seven months the professional teams had applied for more than $200 million in fees, about $1.5 million a day; John Ray's hourly rate was $1,300, and law firm Sullivan &amp; Cromwell's average hourly rate was $1,800, with fees ranking ahead of customers' recovery. One customer's summary was echoed by many: "The only real winners in this bankruptcy are the lawyers."</p>
+<p>Yet almost none of the customers interviewed had lost faith in crypto itself — their consensus was: "What was wrong was not Bitcoin, not crypto; what was wrong was one bad person." At the end of the film, their messages to SBF were remarkably consistent: serve your sentence, pay your penalty, and find a way to help the people you ruined.</p>
+
+</article>
+<footer data-lang="zh">来源：<a href="https://www.youtube.com/watch?v=XqwGt69pDXQ">https://www.youtube.com/watch?v=XqwGt69pDXQ</a>（CNBC 纪录片）· 嘉宾：Brett Harrison、John Ray、Sunil Kavuri 等 · 发布日期：2023-10-02 · 时长：39 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：<a href="https://www.youtube.com/watch?v=XqwGt69pDXQ">https://www.youtube.com/watch?v=XqwGt69pDXQ</a>（CNBC 紀錄片）· 嘉賓：Brett Harrison、John Ray、Sunil Kavuri 等 · 發布日期：2023-10-02 · 時長：39 分鐘<br>本頁為人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: <a href="https://www.youtube.com/watch?v=XqwGt69pDXQ">https://www.youtube.com/watch?v=XqwGt69pDXQ</a> (CNBC Documentary) · Guests: Brett Harrison, John Ray, Sunil Kavuri, et al. · Release date: 2023-10-02 · Duration: 39 minutes<br>This page is the full text of manually compiled notes; the views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：<a href="https://www.youtube.com/watch?v=XqwGt69pDXQ">https://www.youtube.com/watch?v=XqwGt69pDXQ</a>（CNBC 纪录片）· 嘉宾：Brett Harrison、John Ray、Sunil Kavuri 等 · 发布日期：2023-10-02 · 时长：39 分钟<br>本页为人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"CNBC 纪录片《FTX 的崩塌：内部人全盘托出》 · Yat's Talks",tw:"CNBC 紀錄片《FTX 的崩塌：內部人全盤托出》 · Yat's Talks",en:"CNBC Documentary \"The Collapse of FTX: Insiders Tell All\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"TALK · 访谈纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"TALK · 訪談紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"TALK · Full interview notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
