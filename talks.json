@@ -1,9 +1,61 @@
 {
   "updated_at": "2026-11-21",
   "title": "Yat's Talks · 谈话录",
-  "note": "Yat's List 谈话纪要清单：X Space、X 直播与 YouTube 访谈合并清单，人工整理、不定期更新；每条含要点与 note_url 全文纪要页。原 spaces.json 与 interviews.json 继续保留兼容。每条含 added_at（加入本清单的时间，ISO 8601 带时区）；网页默认按 added_at 倒序（最新收录在前），也可切换按 date（谈话当天）排序。新增条目时请写入 added_at。全文纪要页（spaces/notes、interviews/notes）共用 /article.css 与 /article.js，新页面请复制现有纪要页的 head 和顶栏。",
+  "note": "Yat's List 谈话纪要清单：X Space、X 直播与 YouTube 访谈合并清单，人工整理、不定期更新；每条含要点与 note_url 全文纪要页。原 spaces.json 与 interviews.json 继续保留兼容。",
   "source_site": "https://yatslist.com/talks/",
   "talks": [
+    {
+      "id": "ai-jam-house-of-jammers-20261121",
+      "title": "《AI Jam | House of Jammers：14 小时马拉松》",
+      "title_en": "AI Jam | House of Jammers: A 14-Hour Marathon",
+      "title_tw": "《AI Jam｜House of Jammers：14 小時馬拉松》",
+      "series": "AI Jam",
+      "episode": null,
+      "date": "2026-11-21",
+      "host": "Dominick Romano",
+      "guests": [
+        "Robert Scoble",
+        "Marco",
+        "Peter",
+        "Ed",
+        "Donnie",
+        "Webb",
+        "Polly"
+      ],
+      "duration": "14 小时 36 分",
+      "duration_minutes": 876,
+      "url": "https://x.com/i/spaces/1evOEWAnZqpovz",
+      "note_url": "/spaces/notes/ai-jam-house-of-jammers-20261121.html",
+      "topics": [
+        "AI",
+        "崩盘",
+        "比特币",
+        "英伟达",
+        "黄仁勋",
+        "黎曼猜想",
+        "Boardy",
+        "再生农业"
+      ],
+      "highlights": [
+        "14 个半小时的开放麦马拉松：BTC 从 12.6 万美元连跌七周到 5.8 万美元，NVDA 一天跌 8%、自 10 月高点跌约 45%，VIX 当日一度涨 40%；房间里的人一边看盘一边聊，话题在 AI、市场、政治和闲聊之间来回跳。",
+        "黄仁勋去留传闻全场反复出现、版本不断变化：先是场内朗读 Wired 报道称董事会因「缺乏坦诚」将其赶走，随后有人称国家安全角度已被 NYT/CNN 撤回、只剩婚外情与常规 SEC 审计，尾盘又传出 SEC 调查与股价跌 14%——三个版本互相冲突，均无公开来源证实。",
+        "黎曼猜想传闻：场内称 Anthropic 一名研究员用 Claude 做出证明，Lean 初步校验通过、全文 25 万页，二阶校验待数日完成；场内也有人直接质疑是宣传造势。Thinking Machines 的 Inkling 2 mini 模型传闻也同时出现，两者都未经证实。",
+        "Scoble 的四小时开场：Drain Pipe 新 SaaS 是云端知识图谱加「agent 即应用」；Boardy 每天与数千创始人对话撮合人脉，被他称为「新型约会 app」「未来的老板」；Ed 的再生农业长段讲食物即药与根噬循环；Polly 介绍了用 Claude 100% 编码的游戏《Strip Club Empire》。"
+      ],
+      "highlights_en": [
+        "A 14.5-hour open-mic marathon: BTC slid seven straight weeks from $126,000 to around $58,000, NVIDIA fell 8% in a day and about 45% from its October 6 high, and the VIX spiked as much as 40% intraday — the room watched the tape live while the conversation jumped between AI, markets, politics and small talk.",
+        "The Jensen Huang saga kept resurfacing with shifting versions: first a Wired report read aloud claiming the board ousted him over a lack of candor, then a claim that NYT/CNN had retracted the national-security angle leaving only an affair and a routine SEC audit, then late rumors of an SEC probe and a 14% drop — three conflicting versions, none backed by a public source.",
+        "The Riemann hypothesis rumor: an Anthropic researcher allegedly proved it with Claude, with a first Lean check passed and a 250,000-page proof awaiting a second-order check over several days; others in the room called it propaganda outright. A Thinking Machines Inkling 2 mini rumor surfaced alongside it — neither is verified.",
+        "Scoble's four-hour opening: Drain Pipe's new SaaS is a cloud knowledge graph plus agent-as-application; Boardy talks to thousands of founders daily to matchmake, which he called a new dating app and a future boss; Ed's regenerative-agriculture segment covered food-as-medicine and rhizophagy cycling; Polly introduced Strip Club Empire, a game coded 100% with Claude."
+      ],
+      "highlights_tw": [
+        "14 個半小時的開放麥馬拉松：BTC 從 12.6 萬美元連跌七週到 5.8 萬美元，NVDA 一天跌 8%、自 10 月高點跌約 45%，VIX 當日一度漲 40%；房間裡的人一邊看盤一邊聊，話題在 AI、市場、政治和閒聊之間來回跳。",
+        "黃仁勳去留傳聞全場反覆出現、版本不斷變化：先是場內朗讀 Wired 報導稱董事會因「缺乏坦誠」將其趕走，隨後有人稱國家安全角度已被 NYT/CNN 撤回、只剩婚外情與常規 SEC 審計，尾盤又傳出 SEC 調查與股價跌 14%——三個版本互相衝突，均無公開來源證實。",
+        "黎曼猜想傳聞：場內稱 Anthropic 一名研究員用 Claude 做出證明，Lean 初步校驗通過、全文 25 萬頁，二階校驗待數日完成；場內也有人直接質疑是宣傳造勢。Thinking Machines 的 Inkling 2 mini 模型傳聞也同時出現，兩者都未經證實。",
+        "Scoble 的四小時開場：Drain Pipe 新 SaaS 是雲端知識圖譜加「agent 即應用」；Boardy 每天與數千創始人對話撮合人脈，被他稱為「新型約會 app」「未來的老闆」；Ed 的再生農業長段講食物即藥與根噬循環；Polly 介紹了用 Claude 100% 編碼的遊戲《Strip Club Empire》。"
+      ],
+      "source": "space"
+    },
     {
       "id": "zaoyinzhihou-cara-aigc-20261120",
       "title": "《噪音之后 Cara 专场：从好莱坞到 AIGC，我的转型之路》",
@@ -12,7 +64,6 @@
       "series": "噪音之后",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-21T10:11:22+08:00",
       "host": "Adrian Punk",
       "guests": [
         "Cara"
@@ -57,7 +108,6 @@
       "series": "普达特金融夜话",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-21T10:11:22+08:00",
       "host": "普达特",
       "guests": [
         "老黑"
@@ -102,7 +152,6 @@
       "series": "贤者时间",
       "episode": 28,
       "date": "2026-11-20",
-      "added_at": "2026-11-21T10:11:22+08:00",
       "host": "Lacey",
       "guests": [
         "切哥",
@@ -150,7 +199,6 @@
       "series": "FX中文FANS Space",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-20T23:46:17+08:00",
       "host": "FX中文FANS",
       "guests": [
         "真诚小道士",
@@ -196,7 +244,6 @@
       "series": "Meet at the Clubhouse",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-20T11:42:02+08:00",
       "host": "Bored Ape Yacht Club",
       "guests": [
         "TheeHustleHouse",
@@ -245,7 +292,6 @@
       "series": "进藏人的思考空间",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-21T10:59:28+08:00",
       "host": "进藏人的思考空间",
       "guests": [
         "张涛"
@@ -289,7 +335,6 @@
       "series": "PBS NewsHour",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-21T10:24:20+08:00",
       "host": "PBS NewsHour",
       "guests": [
         "特朗普"
@@ -334,7 +379,6 @@
       "series": "OKX 的朋友们",
       "episode": null,
       "date": "2026-11-20",
-      "added_at": "2026-11-20T22:58:40+08:00",
       "host": "佳佳",
       "guests": [
         "周亚金"
@@ -375,7 +419,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-19T23:12:49+08:00",
       "host": "WalletV中文 @WalletV_CN",
       "guests": [
         "茄哥 @qg7777",
@@ -439,7 +482,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-19T22:35:02+08:00",
       "host": "立党 @lidangzzz",
       "guests": [
         "masalachopra123",
@@ -512,7 +554,6 @@
       "series": "Anthropic 上市",
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-20T09:30:14+08:00",
       "host": "Associated Press",
       "guests": [
         "Dario Amodei、Daniela Amodei"
@@ -552,7 +593,6 @@
       "series": "易论AI",
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "易论AI",
       "guests": [
         "许丹青、马春荃"
@@ -593,7 +633,6 @@
       "series": "No Priors",
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "Sarah Guo、Elad Gil",
       "guests": [
         "Bob McGrew"
@@ -633,7 +672,6 @@
       "series": "Machine Learning Street Talk",
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "Tim Scarfe",
       "guests": [
         "Michael Tomasello"
@@ -673,7 +711,6 @@
       "series": "硅谷101",
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "硅谷101",
       "guests": [
         "陈茜（讲述）"
@@ -713,7 +750,6 @@
       "series": "TomorrowX Summit",
       "episode": null,
       "date": "2026-11-19",
-      "added_at": "2026-11-20T21:41:48+08:00",
       "host": "iConnections",
       "guests": [
         "Elon Musk"
@@ -755,7 +791,6 @@
       "series": "Stocks BTC Talk",
       "episode": null,
       "date": "2026-11-18",
-      "added_at": "2026-11-19T15:31:47+08:00",
       "host": "茄哥 @qg7777",
       "guests": [
         "老唐 @0xDonaldGao",
@@ -812,7 +847,6 @@
       "series": "Solana Breakpoint 2026",
       "episode": null,
       "date": "2026-11-17",
-      "added_at": "2026-11-18T09:20:50+08:00",
       "host": "Solana 官方直播（主持 Vibhu Norby、Amira Valiani、Ellie Platisse）",
       "guests": [
         "Martin Gilbert（Revolut）",
@@ -880,7 +914,6 @@
       "series": "tapeout 咖啡馆",
       "episode": null,
       "date": "2026-11-17",
-      "added_at": "2026-11-18T09:18:22+08:00",
       "host": "周红衣 @Kakabong08",
       "guests": [
         "新帅",
@@ -938,7 +971,6 @@
       "series": "Misa 社区",
       "episode": null,
       "date": "2026-11-17",
-      "added_at": "2026-11-18T09:14:49+08:00",
       "host": "Misa（Misa 社区）",
       "guests": [
         "区块链日记",
@@ -990,7 +1022,6 @@
       "series": "Solana Breakpoint 2026",
       "episode": null,
       "date": "2026-11-17",
-      "added_at": "2026-11-18T09:13:49+08:00",
       "host": "CoinDesk（主持人 Will 等）",
       "guests": [
         "Peter Moore",
@@ -1049,7 +1080,6 @@
       "series": "WayToBot 社区",
       "episode": null,
       "date": "2026-11-17",
-      "added_at": "2026-11-17T23:26:46+08:00",
       "host": "蓝哥AI @0xlangeai",
       "guests": [
         "Kim @KinGao476942",
@@ -1111,7 +1141,6 @@
       "series": "Stocks BTC Talk",
       "episode": null,
       "date": "2026-11-17",
-      "added_at": "2026-11-17T22:19:04+08:00",
       "host": "茄哥 @qg7777",
       "guests": [],
       "duration": "56 分 27 秒",
@@ -1159,7 +1188,6 @@
       "series": "Solana Breakpoint 2026",
       "episode": null,
       "date": "2026-11-16",
-      "added_at": "2026-11-17T22:01:48+08:00",
       "host": "Solana 官方直播（主持 Lily Liu、Rachel Conlon）",
       "guests": [
         "Zach Abrams（Open Standard）",
@@ -1222,7 +1250,6 @@
       "series": "Stocks BTC Talk",
       "episode": null,
       "date": "2026-11-16",
-      "added_at": "2026-11-17T21:59:54+08:00",
       "host": "茄哥 @qg7777",
       "guests": [
         "红毛",
@@ -1280,7 +1307,6 @@
       "series": "Dwarkesh Podcast",
       "episode": null,
       "date": "2026-11-16",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "Dwarkesh Patel",
       "guests": [
         "Paul Christiano"
@@ -1320,7 +1346,6 @@
       "series": "贤者时间",
       "episode": 24,
       "date": "2026-11-15",
-      "added_at": "2026-11-17T21:58:19+08:00",
       "host": "AZ @AZ77678",
       "guests": [
         "茄哥 @qg7777",
@@ -1382,7 +1407,6 @@
       "series": "贤者时间",
       "episode": 22,
       "date": "2026-11-13",
-      "added_at": "2026-11-14T09:05:00+08:00",
       "host": "AZ @AZ77678",
       "guests": [
         "茄哥 @qg7777",
@@ -1445,7 +1469,6 @@
       "series": "噪音之后",
       "episode": null,
       "date": "2026-11-13",
-      "added_at": "2026-11-13T23:53:29+08:00",
       "host": "蜗牛King @isnail",
       "guests": [
         "西堂 @xitang_ai"
@@ -1503,7 +1526,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-13",
-      "added_at": "2026-11-13T20:02:54+08:00",
       "host": "E2M Research @E2mResearch",
       "guests": [
         "董珍",
@@ -1559,7 +1581,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-11",
-      "added_at": "2026-11-11T20:30:59+08:00",
       "host": "Phyrex @PhyrexNi",
       "guests": [
         "谢家印 @xiejiayinBitget（Bitget）"
@@ -1607,7 +1628,6 @@
       "series": "贤者时间",
       "episode": 19,
       "date": "2026-11-10",
-      "added_at": "2026-11-11T06:56:05+08:00",
       "host": "AZ @AZ77678",
       "guests": [
         "茄哥 @qg7777（联合主持）",
@@ -1658,7 +1678,6 @@
       "series": "Coin Bureau News Live",
       "episode": null,
       "date": "2026-11-09",
-      "added_at": "2026-11-10T07:10:54+08:00",
       "host": "Guy 与 Nic @coinbureau（Coin Bureau）",
       "guests": [
         "Lewis（技术分析嘉宾）"
@@ -1717,7 +1736,6 @@
       "series": "Stocks BTC Talk",
       "episode": null,
       "date": "2026-11-09",
-      "added_at": "2026-11-10T07:10:55+08:00",
       "host": "茄哥 @qg7777",
       "guests": [
         "陈冬冬 @chenkaide73",
@@ -1772,7 +1790,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-09",
-      "added_at": "2026-11-09T23:06:29+08:00",
       "host": "Jessica Walker @jessicasmw（币安团队）",
       "guests": [
         "Richard Teng @_RichardTeng（币安联席 CEO）",
@@ -1826,7 +1843,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-08",
-      "added_at": "2026-11-09T22:38:09+08:00",
       "host": "Godfroy @g0dfr0y",
       "guests": [
         "Dr. Strange",
@@ -1888,7 +1904,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-08",
-      "added_at": "2026-11-09T08:15:13+08:00",
       "host": "茄哥 | Pod @qg7777",
       "guests": [
         "樑枝 @liangyiwei11",
@@ -1937,7 +1952,6 @@
       "series": "贤者时间",
       "episode": 16,
       "date": "2026-11-07",
-      "added_at": "2026-11-08T16:20:51+08:00",
       "host": "AZ @AZ77678",
       "guests": [
         "茄哥 @qg7777（联合主持）",
@@ -1992,7 +2006,6 @@
       "series": "普达特加密夜话",
       "episode": null,
       "date": "2026-11-06",
-      "added_at": "2026-11-08T16:20:51+08:00",
       "host": "普达特 @Predator_fund",
       "guests": [],
       "duration": "2 小时 33 分",
@@ -2031,7 +2044,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-05",
-      "added_at": "2026-11-08T16:20:51+08:00",
       "host": "@WalletV_CN（WalletV中文）",
       "guests": [
         "@Paris13Jeanne（K线教主）",
@@ -2081,7 +2093,6 @@
       "series": null,
       "episode": null,
       "date": "2026-11-04",
-      "added_at": "2026-11-09T17:42:06+08:00",
       "host": "Sulaiman Ahmed @ShaykhSulaiman",
       "guests": [
         "Dr. Michael",
@@ -2140,7 +2151,6 @@
       "series": "美国新音",
       "episode": null,
       "date": "2026-11-03",
-      "added_at": "2026-11-09T00:17:59+08:00",
       "host": "Geopolitics = Ethnopolitics @geo_ethno_wars",
       "guests": [
         "Jack Steel @JackSteelAU",
@@ -2210,7 +2220,6 @@
       "series": "郭宇的故事",
       "episode": null,
       "date": "2026-11-03",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -2250,7 +2259,6 @@
       "series": "易论AI",
       "episode": null,
       "date": "2026-10-31",
-      "added_at": "2026-11-20T13:58:41+08:00",
       "host": "易论AI",
       "guests": [
         "宋勰睿、杨攀"
@@ -2290,7 +2298,6 @@
       "series": "Wen Alt Season",
       "episode": null,
       "date": "2026-10-29",
-      "added_at": "2026-11-09T14:16:26+08:00",
       "host": "Justin Roberty @wenaltseason",
       "guests": [
         "Kevin @ Palladium",
@@ -2351,7 +2358,6 @@
       "series": null,
       "episode": null,
       "date": "2026-10-29",
-      "added_at": "2026-11-08T16:20:51+08:00",
       "host": "@ChandlerGuo（宝二爷）",
       "guests": [
         "@qg7777（茄哥，共同主持）",
@@ -2398,7 +2404,6 @@
       "series": null,
       "episode": null,
       "date": "2026-10-27",
-      "added_at": "2026-11-09T08:13:24+08:00",
       "host": "立党 @lidangzzz",
       "guests": [
         "rachel_185 @chao43427774",
@@ -2450,7 +2455,6 @@
       "series": null,
       "episode": null,
       "date": "2026-10-27",
-      "added_at": "2026-11-08T16:20:51+08:00",
       "host": "Adrian Punk（@AdrianPunk115）",
       "guests": [
         "麦当（@mdldm，主讲）",
@@ -2494,7 +2498,6 @@
       "series": "Lex Fridman Podcast",
       "episode": null,
       "date": "2026-10-26",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "Lex Fridman",
       "guests": [
         "Steven Brunton、Ankur Moitra、Alex Kontorovich"
@@ -2534,7 +2537,6 @@
       "series": "Trader Roundup",
       "episode": null,
       "date": "2026-10-24",
-      "added_at": "2026-11-09T12:44:21+08:00",
       "host": "Kitt @ICT_Concepts",
       "guests": [
         "Pit Munch",
@@ -2600,7 +2602,6 @@
       "series": "Wen Alt Season",
       "episode": null,
       "date": "2026-10-22",
-      "added_at": "2026-11-09T10:36:31+08:00",
       "host": "Justin Roberty @wenaltseason",
       "guests": [
         "Zach Prater @ Pop DEX",
@@ -2663,7 +2664,6 @@
       "series": "黄金时代",
       "episode": null,
       "date": "2026-10-16",
-      "added_at": "2026-11-20T19:13:53+08:00",
       "host": "金明",
       "guests": [
         "孙宇晨"
@@ -2703,7 +2703,6 @@
       "series": null,
       "episode": null,
       "date": "2026-10-15",
-      "added_at": "2026-11-09T10:37:10+08:00",
       "host": "Justin Roberty @wenaltseason",
       "guests": [
         "Joel @Dashpay",
@@ -2764,7 +2763,6 @@
       "series": null,
       "episode": null,
       "date": "2026-10-15",
-      "added_at": "2026-11-09T00:16:04+08:00",
       "host": "自己造船的路飞 @CaptainLufei999",
       "guests": [
         "DD 滴滴 @rtk17025（联合主持）",
@@ -2823,7 +2821,6 @@
       "series": "Cheeky Pint",
       "episode": null,
       "date": "2026-10-12",
-      "added_at": "2026-11-20T19:13:53+08:00",
       "host": "John Collison",
       "guests": [
         "Mark Zuckerberg、Alexandr Wang"
@@ -2863,7 +2860,6 @@
       "series": "Indigo Talk",
       "episode": null,
       "date": "2026-10-09",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "Indigo（INDIGO 数字镜像）",
       "guests": [
         "郭宇"
@@ -2903,7 +2899,6 @@
       "series": "邵艾伦Alan",
       "episode": null,
       "date": "2026-10-09",
-      "added_at": "2026-11-20T19:13:53+08:00",
       "host": "邵艾伦",
       "guests": [
         "孙宇晨"
@@ -2944,7 +2939,6 @@
       "series": "银座单向街分享",
       "episode": null,
       "date": "2026-09-27",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -2984,7 +2978,6 @@
       "series": "银座单向街分享",
       "episode": null,
       "date": "2026-09-26",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3025,7 +3018,6 @@
       "series": "易论AI",
       "episode": null,
       "date": "2026-09-18",
-      "added_at": "2026-11-20T13:58:41+08:00",
       "host": "易论AI",
       "guests": [
         "胡修涵"
@@ -3065,7 +3057,6 @@
       "series": "易论AI",
       "episode": null,
       "date": "2026-09-11",
-      "added_at": "2026-11-20T15:33:39+08:00",
       "host": "易论AI",
       "guests": [
         "马杰"
@@ -3105,7 +3096,6 @@
       "series": "易论AI",
       "episode": null,
       "date": "2026-08-25",
-      "added_at": "2026-11-20T20:03:16+08:00",
       "host": "雅婷",
       "guests": [
         "王烨"
@@ -3146,7 +3136,6 @@
       "series": "郭宇关于AI的十次分享",
       "episode": null,
       "date": "2026-07-16",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3187,7 +3176,6 @@
       "series": "郭宇关于AI的十次分享",
       "episode": null,
       "date": "2026-07-12",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3228,7 +3216,6 @@
       "series": "郭宇关于AI的十次分享",
       "episode": null,
       "date": "2026-05-28",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3269,7 +3256,6 @@
       "series": "银座单向街分享",
       "episode": null,
       "date": "2026-05-27",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3310,7 +3296,6 @@
       "series": "郭宇关于AI的十次分享",
       "episode": null,
       "date": "2026-05-23",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3351,7 +3336,6 @@
       "series": "银座单向街分享",
       "episode": null,
       "date": "2026-05-21",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3392,7 +3376,6 @@
       "series": "银座单向街分享",
       "episode": null,
       "date": "2026-05-19",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3433,7 +3416,6 @@
       "series": "银座单向街分享",
       "episode": null,
       "date": "2026-04-26",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "銀座單向街書店",
       "guests": [
         "郭宇"
@@ -3474,7 +3456,6 @@
       "series": "张小珺商业访谈录",
       "episode": null,
       "date": "2025-08-30",
-      "added_at": "2026-11-20T20:03:16+08:00",
       "host": "张小珺",
       "guests": [
         "杨植麟"
@@ -3515,7 +3496,6 @@
       "series": "播客对谈",
       "episode": null,
       "date": "2025-03-12",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "课代表立正",
       "guests": [
         "郭宇"
@@ -3556,7 +3536,6 @@
       "series": "Tucker Carlson",
       "episode": null,
       "date": "2025-03-06",
-      "added_at": "2026-11-20T23:19:19+08:00",
       "host": "Tucker Carlson",
       "guests": [
         "Sam Bankman-Fried"
@@ -3597,7 +3576,6 @@
       "series": "The Fediverse Files",
       "episode": null,
       "date": "2024-08-05",
-      "added_at": "2026-11-20T19:13:53+08:00",
       "host": "WordPress.com",
       "guests": [
         "Evan Prodromou"
@@ -3637,7 +3615,6 @@
       "series": "Scandalcast 纪录片",
       "episode": null,
       "date": "2024-02-27",
-      "added_at": "2026-11-20T23:11:53+08:00",
       "host": "Scandalcast",
       "guests": [
         "Caroline Ellison"
@@ -3678,7 +3655,6 @@
       "series": "Coffeezilla",
       "episode": null,
       "date": "2023-11-10",
-      "added_at": "2026-11-20T23:19:19+08:00",
       "host": "Coffeezilla",
       "guests": [
         "庭审证人证词（转述）"
@@ -3719,7 +3695,6 @@
       "series": "Bloomberg Originals 纪录片",
       "episode": null,
       "date": "2023-10-26",
-      "added_at": "2026-11-20T23:19:19+08:00",
       "host": "Bloomberg Originals",
       "guests": [
         "多位受访者"
@@ -3760,7 +3735,6 @@
       "series": "CNBC 纪录片",
       "episode": null,
       "date": "2023-10-02",
-      "added_at": "2026-11-20T23:19:19+08:00",
       "host": "CNBC",
       "guests": [
         "Brett Harrison、John Ray、Sunil Kavuri 等"
@@ -3801,7 +3775,6 @@
       "series": "播客《一代马之外》",
       "episode": null,
       "date": "2023-08-14",
-      "added_at": "2026-11-11T06:35:58+08:00",
       "host": "代码之外 Beyond Code（Randy、GeekPlux）",
       "guests": [
         "郭宇"
@@ -3842,7 +3815,6 @@
       "series": "Netflix 纪录片",
       "episode": null,
       "date": "2022-09-06",
-      "added_at": "2026-11-20T19:13:53+08:00",
       "host": "Netflix",
       "guests": [
         "Paula Pant、Tiffany Aliche、Mr. Money Mustache、Ross Mac"
