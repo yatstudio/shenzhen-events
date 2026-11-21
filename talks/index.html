@@ -621,6 +621,12 @@ input[type=search]{font-size:16px}
 .dlist .hls div:nth-child(n+3){display:none}
 .dlist .rail .t2{color:var(--ink-ter)}
 @media (max-width:820px){.dlist .hls{display:none}}
+.sortrow{display:flex;align-items:center;gap:6px;margin:14px 0 0;font-size:.82rem}
+.sortlbl{color:var(--ink-ter);margin-right:2px}
+.sortbtn{background:none;border:1px solid var(--border);color:var(--ink-sec);border-radius:999px;padding:3px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+.sortbtn:hover{color:var(--ink);border-color:var(--border-hover)}
+.sortbtn.on{background:var(--tint);color:var(--green);border-color:var(--green)}
+.dayhead .dtag{font-size:.74rem;font-weight:600;color:var(--green);border:1px solid var(--green);border-radius:999px;padding:0 8px;line-height:1.6;align-self:center}
 @media (max-width:820px){.talk-block .actions .btn{white-space:normal;max-width:100%;text-align:center}}
 </style>
 <style>
@@ -713,6 +719,8 @@ input[type=search]{font-size:16px}
 </div>
 </div>
     </div>
+
+    <div class="sortrow" id="sortrow" role="group" aria-label="Sort"><span class="sortlbl" id="sort-lbl">排序</span><button type="button" class="sortbtn on" data-sort="added">最新收录</button><button type="button" class="sortbtn" data-sort="date">谈话日期</button></div>
 
     <!-- Welcome (first visit only): inline bar, never covers the list -->
     <div class="welc" id="welc"><span id="welc-body"><b>第一次来？</b>30 秒导览带你看懂怎么用</span><button type="button" class="welc-tour" id="welc-tour" onclick="dismissWelc();startTour()">开始导览</button><button type="button" class="welc-x" id="welc-x" aria-label="关闭" onclick="dismissWelc()">✕</button></div>
@@ -1163,11 +1171,18 @@ if(!txt.includes(q))return false;
 }
 return true;
 }
+let SORT="added";
+const _LOADED=new Date().toISOString();
+function addedAt(e){return e.added_at||_LOADED}
+function addedDay(e){const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date(addedAt(e)));const g=t=>p.find(x=>x.type===t).value;return g("year")+"-"+g("month")+"-"+g("day")}
+function fmtTalkDate(d){return LANG==="en"?new Date(d+"T12:00:00+08:00").toLocaleDateString("en-US",{timeZone:"Asia/Shanghai",year:"numeric",month:"short",day:"numeric"}):(+d.slice(0,4))+"年"+(+d.slice(5,7))+"月"+(+d.slice(8,10))+"日"}
+function syncSortUI(){const r=document.getElementById("sortrow");if(!r)return;r.querySelectorAll(".sortbtn").forEach(b=>{const on=b.dataset.sort===SORT;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");b.textContent=b.dataset.sort==="added"?L3("最新收录","Recently added","最新收錄"):L3("谈话日期","Talk date","談話日期")});const l=document.getElementById("sort-lbl");if(l)l.textContent=L3("排序","Sort","排序")}
+document.addEventListener("click",ev=>{const b=ev.target.closest&&ev.target.closest(".sortbtn");if(!b)return;SORT=b.dataset.sort;syncSortUI();render()});
 function cardOf(e){
 const hl=fL(e,"highlights")||[];
 const guests=(e.guests||[]).filter(Boolean);
 const fav=FAVS.has(e.url);
-const meta=[e.source?srcLabel(e.source):"",e.series||"",e.host||"",guests.join("、")].filter(Boolean).join('<i class="sep"> · </i>');
+const meta=[SORT==="added"&&e.date?fmtTalkDate(e.date):"",e.source?srcLabel(e.source):"",e.series||"",e.host||"",guests.join("、")].filter(Boolean).join('<i class="sep"> · </i>');
 const menu=[
 e.note_url?`<a role="menuitem" href="${e.note_url}">${L3("全文纪要","Full notes","全文紀要")}</a>`:"",
 `<button type="button" role="menuitem" data-fav="${encodeURIComponent(e.url)}">${fav?tr("mFavOn"):tr("mFavOff")}</button>`,
@@ -1191,7 +1206,9 @@ ${e.note_url?`<a class="reg" href="${e.note_url}">${L3("全文纪要","Notes","�
 </div>`;
 }
 function render(){
-const evs=DATA.filter(pass).slice().sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
+syncSortUI();
+const _k=e=>SORT==="added"?addedAt(e):(e.date||"");
+const evs=DATA.filter(pass).slice().sort((a,b)=>{const x=_k(a),y=_k(b);return x<y?1:x>y?-1:(a.date<b.date?1:a.date>b.date?-1:0)});
 const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
 const total=DATA.length;
 const st=$("#st-total");if(st)st.textContent=total;
@@ -1208,12 +1225,13 @@ return;
 if(!evs.length){$("#list").innerHTML='<div class="empty">'+tr("noResults")+'</div>';return}
 let html="";
 const groups=new Map();
-for(const e of evs){if(!groups.has(e.date))groups.set(e.date,[]);groups.get(e.date).push(e)}
+for(const e of evs){const g=SORT==="added"?addedDay(e):e.date;if(!groups.has(g))groups.set(g,[]);groups.get(g).push(e)}
 for(const [dk,items] of groups){
 const ts=new Date(dk+"T12:00:00+08:00");
 const wd=ts.toLocaleDateString(LOC(),{timeZone:TZ,weekday:"long"});
 const ds=LANG==="en"?ts.toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):(+dk.slice(5,7))+"月"+(+dk.slice(8,10))+"日";
-html+=`<div class="dayhead"><span class="dnum">${ds}</span><span class="dmeta">${wd}</span><span class="dcnt">${items.length} ${L3("场","talks","場")}</span></div><div class="dlist">${items.map(cardOf).join("")}</div>`;
+const _today=addedDay({added_at:new Date().toISOString()});const _lead=SORT==="added"?`<span class="dtag">${dk===_today?L3("今日新增","New today","今日新增"):L3("收录","Added","收錄")}</span>`:"";
+html+=`<div class="dayhead">${_lead}<span class="dnum">${ds}</span><span class="dmeta">${wd}</span><span class="dcnt">${items.length} ${L3("场","talks","場")}</span></div><div class="dlist">${items.map(cardOf).join("")}</div>`;
 }
 $("#list").innerHTML=html;
 }
