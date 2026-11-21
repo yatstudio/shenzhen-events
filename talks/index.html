@@ -6,6 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's Talks · 谈话录 — Space、直播与访谈全文纪要 | Yat's List</title>
+<link rel="alternate" hreflang="zh-CN" href="https://yatslist.com/talks/"><link rel="alternate" hreflang="zh-TW" href="https://yatslist.com/talks/tw/"><link rel="alternate" hreflang="en" href="https://yatslist.com/talks/en/"><link rel="alternate" hreflang="x-default" href="https://yatslist.com/talks/">
 <meta name="description" content="Yat's Talks 谈话录：X Space、X 直播与 YouTube 访谈的全文纪要、原链接与要点存档，人工整理、不定期更新；可搜索、按来源/系列/主题筛选，也可让你的 Agent 订阅 talks.json。">
 <style>
 :root{
@@ -318,6 +319,7 @@ select{font-size:16px}
 .langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
 .langsw button:hover{color:var(--ink)}
 .langsw button.on{color:var(--green)}
+.langsw a{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;letter-spacing:.02em;text-decoration:none}.langsw a:hover{color:var(--ink)}.langsw a.on{color:var(--green)}
 .langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .themesw{display:inline-flex;align-items:center;gap:8px}
 .themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
@@ -660,7 +662,7 @@ input[type=search]{font-size:16px}
       <a href="https://yatslist.com/szevents/" id="nav-events">活动</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
       <a href="https://yatslist.com/talks/" id="nav-spaces" class="nav-on" aria-current="page">Talks</a>
-      <span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
+      <span class="prefs"><select class="langsel" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="https://yatslist.com/talks/" selected>简体</option><option value="https://yatslist.com/talks/tw/">繁體</option><option value="https://yatslist.com/talks/en/">EN</option></select><span class="langsw" role="group" aria-label="Language"><a href="https://yatslist.com/talks/" class="on" aria-current="page">简体</a><span class="lsep">|</span><a href="https://yatslist.com/talks/tw/">繁體</a><span class="lsep">|</span><a href="https://yatslist.com/talks/en/">EN</a></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
       <button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">投稿</button>
     </nav></div>
   </div>
@@ -882,7 +884,7 @@ input[type=search]{font-size:16px}
 /* ===== i18n: zh (default) / tw / en — preference stored in localStorage "szLang" ===== */
 let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
 if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
-if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+LANG="zh";/* independent zh page: language fixed by URL */
 const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","在线Space":"在线Space"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","在线Space":"在線Space"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","在线Space":"Online Spaces"}};
 const STR={
 zh:{
