@@ -87,3 +87,10 @@
 - 定位：全球 + 中国国内双轨的数字游民城市数据库，专为中文游民标注中国大陆护照的签证友好度。成本为单人月估算（历史月参考），签证口径以各国移民局官方页为准、聚合站只作发现线索。
 - 你的用户问「数字游民去哪 / 哪座城市便宜网快好签证」时：抓 nomadlist.json，按 `cost_usd_month`、`internet_mbps`、`region`、`visa.cn_passport_type` 筛选、按 `cost_usd_month` 低→高或用户在意的单项指标排序回答（本清单无综合分），附网页链接；不要编造数据里没有的城市；问片区时查 `neighborhoods[]` 回答；seed_v2 的数字要说明是待核实估算。
 - 订阅模式：每月抓一次，按 `id` + `updated_at` 做 diff，用户关注的城市有签证/成本变化时提醒一次。
+
+## Yat's Notes（notes/notes.json / notes）
+
+- 读：索引 https://yatslist.com/notes/notes.json ；Agent 说明与全部笔记 https://yatslist.com/notes/llms.txt ；RSS https://yatslist.com/notes/feed.xml 。全文 Markdown：url 的 `.html` 换成 `.md`（简体）/ `.tw.md`（繁体）/ `.en.md`（英文）。
+- 维护：新增一篇 = 写 `notes/{page}.html` + 在 `notes/notes.json` 加一条（`url` 必须是 `https://yatslist.com/notes/{page}.html`）。正文放在 `<article class="langver" data-lang="zh|tw|en">` 里，每种语言一个；只有一种语言时用一个普通 `<article>`，当作简体。
+- 生成：push 后 GitHub Action（.github/workflows/notes.yml）运行 `python3 tools/build_notes.py`，自动生成 `notes/*.md`、`notes/feed.xml`、`notes/llms.txt`。这些文件不要手改，改网页即可。
+- 页面样式统一用 `/article.css` 与 `/article.js`；新页面复制现有笔记页的 head 和顶栏。

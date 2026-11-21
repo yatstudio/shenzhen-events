@@ -17,9 +17,14 @@
       "submit_endpoint": "https://submit.carromking.shop/v1/events",
       "nomadlist_json": "https://yatslist.com/nomadlist.json",
       "nomadlist_page": "https://yatslist.com/nomadlist/",
-      "nomadlist_schema": "https://yatslist.com/nomadlist.schema.json"
+      "nomadlist_schema": "https://yatslist.com/nomadlist.schema.json",
+      "notes_json": "https://yatslist.com/notes/notes.json",
+      "notes_llms_txt": "https://yatslist.com/notes/llms.txt",
+      "notes_rss": "https://yatslist.com/notes/feed.xml",
+      "notes_page": "https://yatslist.com/notes/"
     },
     "suggested_use": "Fetch events_json daily; filter by your user's interests (categories), district and availability; remind on new matches, 2 days before registration_deadline, and 3 days / 1 day before start of events the user wants to attend. Always link the event url; never invent events not in the data.",
+    "notes": "Yat's Notes: AI readings of good articles, each ending with Yat's own take. Index notes_json (notes[]: id, date, type, title/summary with _tw/_en variants, author, source_title, source_url, url). Markdown full text: replace .html in url with .md (Simplified Chinese), .tw.md (Traditional) or .en.md (English). Cite the page url and source_url; present the 'takeaway' sections as Yat's opinion; figures are the original author's and not independently verified.",
     "update_frequency": "daily, around 09:00 Asia/Shanghai",
     "nomadlist": "NomadList v2.1.1: global + China-domestic digital nomad cities (80 cities, neighborhoods + listings layers). RECOMMENDED FLOW: 1) fetch nomadlist-lite.json (filter fields only), filter by cost_usd_month, internet_mbps, region, visa_type (Chinese passports), best_months_nums; 2) fetch nomadlist/cities/{id}.json for finalists; 3) full dump nomadlist.json. Subscribe via nomadlist-changelog.jsonl (append-only). There is NO composite score: rank by the atomic fields that match the user's priorities and say which. data_tier: seed_v2 = unverified estimate (say so), checked = cross-checked >=2 sources, verified_v1 = v1 batch; fields_provenance gives per-field confidence. Never invent cities not in the data; visa rules change, point users to official immigration pages."
   },

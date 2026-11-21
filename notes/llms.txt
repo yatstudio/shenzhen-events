@@ -1,0 +1,36 @@
+# Yat's Notes · 给 Agent 的说明
+
+Yat's Notes 是 Yat's List 的一个清单：好文章的 AI 解读，每篇最后都有 Yat 本人的见解。网页 https://yatslist.com/notes/ ，免登录、无钥匙。
+
+## 怎么读
+- 索引：https://yatslist.com/notes/notes.json（顶层 `notes[]`；每条有 id、date、type、title/summary 及 _tw/_en 版本、author、source_title、source_url、url、image）
+- 全文：把 url 的 `.html` 换成 `.md` 是简体全文，`.tw.md` 繁体，`.en.md` 英文。Markdown 由网页自动生成，内容与网页一致。
+- 订阅：RSS https://yatslist.com/notes/feed.xml ；或每天抓一次 notes.json，按 id 判断新增。
+
+## 使用规矩
+- 转述时附网页链接；引用原文观点时附 source_url。
+- 文中「对你的落点」等段落是 Yat 写给自己读者的见解，转述时说明是 Yat 的观点。
+- 文中数字多为原文作者口径，页面已注明未逐项核实；不要当成已核实的事实。
+- 数据里没有的笔记不要编造。
+
+## 全部笔记（3 篇，新的在前）
+
+### 45 天蒸发 6 万亿：AI 泡沫破了吗？
+- 2026-11-21 · AI 解读 · 长文 · 原文：The Kobeissi Letter
+- 摘要：45 天蒸发 6 万亿之后，Kobeissi 的答案是：没有泡沫破裂。坏消息大半已经定价，情绪和流动性才是这轮急跌的主角——但这不是见底断言。
+- 网页：https://yatslist.com/notes/kobeissi-bubble.html
+- Markdown：简体 https://yatslist.com/notes/kobeissi-bubble.md · 繁體 https://yatslist.com/notes/kobeissi-bubble.tw.md · English https://yatslist.com/notes/kobeissi-bubble.en.md
+- 原文：https://x.com/KobeissiLetter/status/2123789428862660980
+
+### 如何用一天修好你整个人生
+- 2026-11-21 · AI 解读 · 长文 · 原文：Dan Koe
+- 摘要：改变的顺序是反的：先定下「我是谁」，行为才会自己跟上。讲身份认同、隐藏目标与拖延，和一次一日重置。
+- 网页：https://yatslist.com/notes/dan-koe.html
+- Markdown：简体 https://yatslist.com/notes/dan-koe.md · 繁體 https://yatslist.com/notes/dan-koe.tw.md · English https://yatslist.com/notes/dan-koe.en.md
+- 原文：https://x.com/thedankoe/status/2010751592346030461
+
+### 英伟达是 AI 产业的中央银行
+- 2026-11-21 · AI 解读 · 图表 · 原文：ZeroHedge
+- 摘要：出资、出担保、出兜底：钱在生态里绕一圈，最后大部分又变回 GPU 订单。一张图看懂 Nvidia 的循环融资，和它的风险在哪。
+- 网页：https://yatslist.com/notes/nvidia-bank.html
+- Markdown：简体 https://yatslist.com/notes/nvidia-bank.md · 繁體 https://yatslist.com/notes/nvidia-bank.tw.md · English https://yatslist.com/notes/nvidia-bank.en.md

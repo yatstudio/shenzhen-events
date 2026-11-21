@@ -1,0 +1,31 @@
+# Yat's Notes: rebuild the agent-readable files (Markdown full text, RSS, notes/llms.txt)
+# whenever a note page or notes.json changes.
+name: notes
+on:
+  push:
+    branches: [main]
+    paths:
+      - notes/*.html
+      - notes/notes.json
+      - tools/build_notes.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: notes
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/build_notes.py
+      - name: Commit generated files if they changed
+        run: |
+          git config user.name "yatslist-notes[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A notes
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "notes: rebuild Markdown, RSS and llms.txt [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

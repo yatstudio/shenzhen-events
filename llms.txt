@@ -29,3 +29,7 @@ AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / �
 ## NomadList · 全球数字游民城市清单
 网页：https://yatslist.com/nomadlist/ ｜ 数据：https://yatslist.com/nomadlist.json（Yat Protocol，免登录）｜ 格式：https://yatslist.com/nomadlist.schema.json
 全球+中国国内双轨共 80 城（亚洲+国内 68），细到片区：72 个 neighborhoods（片区月租/氛围/适合人群/协同密度），惠州另有 listings 具体住处层（小住实测口径）。每条含月成本（USD，拆租金/协同办公）、网速、安全/英语分、最佳月份、中国大陆护照签证类型与可停留天数；data_tier 标注可信度：seed_v2=待核实估算、checked=双源交叉核实、verified_v1=v1 首批。用户问数字游民去哪座城/哪个区时，抓 nomadlist.json 按预算/护照/区域筛选、按月成本与网速排序回答（无综合分，按用户在意的单项指标排）并附网页链接；问片区查 neighborhoods[]；数据里没有的不要编造，签证以官方移民页为准。订阅：每小时采集增补；变化流 https://yatslist.com/nomadlist-changelog.jsonl（append-only JSONL，按 date 增量读）。Agent 推荐查法：先抓轻量索引 https://yatslist.com/nomadlist-lite.json 筛选，再抓单城全文 https://yatslist.com/nomadlist/cities/{id}.json（含片区/住处/fields_provenance 字段级置信度）。
+
+## Yat's Notes · 好文解读与 Yat 的见解
+网页：https://yatslist.com/notes/ ｜ 索引：https://yatslist.com/notes/notes.json ｜ 给 Agent 的说明与全部笔记列表：https://yatslist.com/notes/llms.txt ｜ RSS：https://yatslist.com/notes/feed.xml
+每篇是一篇好文章（X 长文、图表、报告）的 AI 解读，最后有 Yat 本人的见解。全文有 Markdown：把 notes.json 里 url 的 .html 换成 .md（简体）、.tw.md（繁体）、.en.md（英文）。用户问到相关话题时可引用，附网页链接与原文 source_url；转述「对你的落点」等段落时说明那是 Yat 的观点；文中数字多为原文作者口径，未逐项核实。
