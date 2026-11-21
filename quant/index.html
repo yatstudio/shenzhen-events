@@ -4,38 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crypto 量化纸面盘看板 · Yat's List</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; padding: 20px 16px 40px; }
-  .wrap { max-width: 880px; margin: 0 auto; }
-  h1 { font-size: 22px; font-weight: 700; }
-  h2 { font-size: 15px; margin: 26px 0 10px; color: #f0f6fc; }
-  .sub { color: #8b949e; font-size: 13px; margin-top: 6px; line-height: 1.6; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 16px; }
-  .card { background: #161b22; border: 1px solid #2a3240; border-radius: 10px; padding: 14px; }
-  .card .k { color: #8b949e; font-size: 12px; }
-  .card .v { font-size: 21px; font-weight: 700; margin-top: 5px; font-variant-numeric: tabular-nums; }
-  .card .d { font-size: 12px; color: #8b949e; margin-top: 4px; }
-  .pos { color: #4ade80; } .neg { color: #f87171; }
-  .dim { color: #8b949e; font-size: 12px; }
-  table { width: 100%; border-collapse: collapse; background: #161b22; border: 1px solid #2a3240; border-radius: 10px; overflow: hidden; font-size: 13px; font-variant-numeric: tabular-nums; }
-  th, td { padding: 9px 10px; text-align: right; border-bottom: 1px solid #232a35; white-space: nowrap; }
-  th { color: #8b949e; font-weight: 500; font-size: 12px; }
-  td:first-child, th:first-child { text-align: left; }
-  tr:last-child td { border-bottom: none; }
-  .tblwrap { overflow-x: auto; border-radius: 10px; }
-  .bar { background: #232a35; border-radius: 6px; height: 12px; margin-top: 8px; }
-  .bar > div { background: #4ade80; height: 12px; border-radius: 6px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-  .chip { background: #161b22; border: 1px solid #2a3240; border-radius: 999px; padding: 6px 12px; font-size: 12.5px; }
-  .note { background: #161b22; border: 1px solid #2a3240; border-radius: 10px; padding: 14px; font-size: 13.5px; line-height: 1.75; }
-  ul { padding-left: 18px; } li { margin: 3px 0; }
-  .foot { color: #6e7681; font-size: 12px; margin-top: 30px; line-height: 1.7; }
-  a { color: #58a6ff; text-decoration: none; }
-</style>
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<meta name="theme-color" content="#0d1218">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<link rel="stylesheet" href="/quant/quant.css">
 </head>
 <body>
+<div class="topbar"><div class="bwrap">
+  <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+  <nav class="topbar-nav">
+    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
+    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/btc/">BTC</a>
+    <a href="https://yatslist.com/quant/" class="nav-on" aria-current="page">量化</a>
+  </nav>
+  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+</div></div>
 <div class="wrap">
+  <p class="section-tagline">QUANT · PAPER TRADING</p>
   <h1>Crypto 量化纸面盘 · 策略 v2 看板</h1>
   <div class="sub">Binance 4h MACD 趋势策略的纸面（模拟）验证盘。虚拟本金 10,000 USDT，<b>不动真钱、不下单</b>，只验证策略期望是否为正。策略状态每 4 小时随迭代更新（最近：2026-11-21 09:52 CST，第 50 轮，2026-11-21 17:49）；现价与浮盈由浏览器直连 Binance 公开行情<b>每 30 秒实时刷新</b>，持仓与成交以每 4 小时引擎结算为准。实时价更新于 <span id="liveclock">—</span>。</div>
 
@@ -162,5 +148,6 @@ async function tick() {
 }
 tick(); setInterval(tick, 30000);
 </script>
+<script src="/article.js" defer></script>
 </body>
 </html>
