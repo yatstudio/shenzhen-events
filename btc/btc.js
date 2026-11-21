@@ -164,6 +164,8 @@
       var c = D.cm[D.cm.length - 1], pd = null;
       if (D.days) { var key = c.d; for (var i = D.days.length - 1; i >= 0 && i > D.days.length - 10; i--) if (ymd(D.days[i]) === key) { pd = D.px[i]; break; } }
       M.mvrv = c.mvrv; M.mvrvDate = c.d;
+      var below = 0; D.cm.forEach(function (o) { if (o.mvrv < c.mvrv) below++; });
+      M.mvrvPct = Math.round(below / D.cm.length * 100); M.mvrvFrom = D.cm[0].d.slice(0, 4);
       if (pd) { M.rp = pd / c.mvrv; M.rpX = p / M.rp; }
       var mcs = D.cm.map(function (o) { return o.mc; }), mu = mean(mcs), sd = Math.sqrt(mean(mcs.map(function (v) { return (v - mu) * (v - mu); })));
       M.z = (c.mc - c.mc / c.mvrv) / sd;
@@ -202,6 +204,7 @@
       desc: "现价 ÷ 200 日简单均线。低于 0.8 少见，高于 2.4 多出现在牛市顶部附近。", src: "blockchain.com 每日均价" }));
     if (M.mvrv != null) T.push(tile({ lbl: "MVRV", val: num(M.mvrv, 2), z: zone(M.mvrv, [[1, "good", "低于持币成本"], [2.4, "mid", "正常"], [3.5, "warn", "偏热"], [Infinity, "bad", "过热"]]),
       sub: M.rp ? "已实现价格 " + usd(M.rp) + " · 数据日 " + M.mvrvDate.slice(5) : "数据日 " + M.mvrvDate,
+      extra: '<div class="t-sub">历史分位 <b>' + M.mvrvPct + '%</b>：比 ' + M.mvrvFrom + ' 年以来 ' + M.mvrvPct + '% 的日子都高</div>',
       desc: "市值 ÷ 已实现市值。低于 1 表示现价低于全网平均持币成本。", src: "Coin Metrics 社区版" }));
     if (M.z != null) T.push(tile({ lbl: "MVRV Z-Score", val: num(M.z, 2), z: zone(M.z, [[0, "good", "低估"], [3, "mid", "正常"], [7, "warn", "偏热"], [Infinity, "bad", "泡沫区"]]),
       desc: "（市值 − 已实现市值）÷ 历史市值标准差。低于 0 是历史底部区域，高于 7 多见于周期顶部。", src: "Coin Metrics 社区版，本页计算" }));
