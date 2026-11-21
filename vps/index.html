@@ -456,6 +456,96 @@ select.sortsel{background:var(--panel);color:var(--ink);border:1px solid var(--b
 .vtab.on{background:var(--green);border-color:var(--green);color:#06251a}
 
 </style>
+<style>
+/* ===== ported from szevents redesign: topbar, hero, agent box, filter bar (cards keep VPS styles) ===== */
+.srow input[type=search]{min-width:0}
+
+/* mobile filter collapse: groups hidden by default on small screens, toggle to open */
+@media (max-width:820px){
+#fgroups{display:none}
+#fgroups.open{display:block}
+}
+/* ===== mobile topbar dropdown + drop duplicated list chips 2026-11-11 ===== */
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+  .listchips{display:none}
+}
+
+/* ===== simplify pass 2026-11-11: one accent colour, one primary action per event, Agent subscription up top ===== */
+:root{--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3)}
+:root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
+.human-section>.wrap{max-width:880px}
+/* topbar */
+.topbar-nav a.nav-ag{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.nav-submit:hover{border-color:var(--green);color:var(--green)}
+/* hero: left-aligned, tagline above the title */
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{display:block;margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 4px}
+/* Agent box */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.agentbox .cmdline{max-width:none;margin:0;background:var(--cmd-bg);flex-wrap:nowrap;font-size:.85rem;padding:10px 12px}
+.agentbox .cmdline .u{color:var(--ink);font-size:.85rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.agentbox .cmdline button{flex:0 0 auto;white-space:nowrap}
+.ab-apis{font-size:.8rem;color:var(--ink-ter)}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+/* search + quick chips; full filter panel behind the filter button on every screen size */
+.bar{background:none;backdrop-filter:none;border-bottom:0;box-shadow:none;padding-top:18px;padding-bottom:4px}
+.srow{display:flex;gap:10px}
+.srow input[type=search]{flex:1;box-shadow:none;padding:10px 14px}
+#ftoggle{display:inline-flex;width:auto;margin:0;gap:6px;min-height:44px;padding:0 12px;color:var(--ink-sec);justify-content:center}
+#ftoggle #fcount{margin:0;color:var(--green)}
+#ftoggle #fcount:empty{display:none}
+#fgroups{display:none;margin-top:6px}
+#fgroups.open{display:block}
+.qchips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.qchips::-webkit-scrollbar{display:none}
+.chip{background:none;border-color:var(--border-hover);min-height:34px;padding:5px 13px;font-size:.84rem}
+.chip:hover{transform:none}
+.chip.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+[data-theme="light"] .mchip.on,.mchip.on{box-shadow:none}
+.favbtn.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+/* welcome: one-line inline bar */
+.welc{position:static;display:none;align-items:center;gap:12px;max-width:none;margin:14px 0 0;padding:9px 14px;border-radius:10px;border:1px solid var(--border);background:var(--tint);box-shadow:none;animation:none;font-size:.88rem;color:var(--ink-sec)}
+.welc #welc-body{flex:1;min-width:0}
+.welc #welc-body b{margin-right:6px}
+.welc-tour{background:none;border:0;color:var(--green);font:inherit;font-weight:600;cursor:pointer;padding:4px 0;white-space:nowrap}
+.welc-x{background:none;border:0;color:var(--ink-ter);font-size:1rem;cursor:pointer;padding:4px 6px;line-height:1}
+@media (max-width:820px){
+  .section-tagline{display:block}
+  .human-section>.wrap{padding:0 16px}
+  .agentbox{padding:14px;gap:10px;border-radius:12px}
+  .ab-head{display:contents}
+  .ab-text{order:1}
+  .agentbox .cmdline{order:2;font-size:.78rem;padding:8px 10px;gap:8px}
+  .agentbox .cmdline .u{font-size:.78rem}
+  .ab-go{order:3;text-align:center;padding:11px}
+  .ab-sub,.ab-apis,.ab-cmd{display:none}
+  .bar{margin:0;padding:14px 0 0}
+  #ftoggle-label{display:none}
+  #ftoggle{min-width:46px;padding:0 10px}
+  .chip{min-height:34px}
+}
+/* ===== topbar compact 2026-11-13 ===== */
+.topbar{padding-top:8px;padding-bottom:8px}
+@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
+@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
+</style>
 </head>
 <body>
 <a id="top"></a>
