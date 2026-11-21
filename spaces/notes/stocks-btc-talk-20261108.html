@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：11.8 美股 比特币一周行情总结，下周走势预测</h1>
 <p><strong>主题</strong>：美股与比特币一周行情总结，下周走势预测
 <strong>原链接</strong>：https://x.com/i/spaces/1MEXRXmnppjAyW
@@ -203,8 +210,390 @@
 <hr />
 <p><em>逐字稿：<code>hidden_files/transcript.txt</code>（1818 行，faster-whisper small 模型本地转写）；录音：<code>hidden_files/space.m4a</code>（64,314,140 字节，1 小时 30 分 07 秒）。转写前约 85 秒无语音内容。</em></p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：11.8 美股 比特幣一週行情總結，下週走勢預測</h1>
+<p><strong>主題</strong>：美股與比特幣一週行情總結，下週走勢預測
+<strong>原連結</strong>：https://x.com/i/spaces/1MEXRXmnppjAyW
+<strong>時間</strong>：2026-11-08 19:55 至 21:25（北京時間），錄音 1 小時 30 分 07 秒
+<strong>主持</strong>：茄哥 | Pod @qg7777
+<strong>發言人</strong>：樑枝 @liangyiwei11（約開場 8 分鐘上麥提問）、Yahoo @3DotWeb（約 53 分鐘上麥；逐字稿中無可明確歸屬其本人的發言段落）
+<strong>在聽人數</strong>：峰值 187 人
+<strong>說明</strong>：本紀要基於錄音本地轉寫（faster-whisper）整理。轉寫無說話人分離，發言人歸屬以主持人點名與對話上下文為準；全場絕大部分時間是茄哥單人講述，樑枝只在問答段落發聲。個別專名、數字轉寫存疑處已標註。文中金額、點位、機率、戰績均為發言人現場自述，未經外部核實，不構成投資建議。主持人對美國政治與選舉的說法均為其個人現場觀點，與事實查核無關。</p>
+<hr />
+<h2>一、結論先行</h2>
+<ol>
+<li><strong>下週看空為主，補跌一定要做</strong>：茄哥判斷美股與比特幣的回調都沒有走完，QQQ 可能跌破 600、標普 500 的 200 日均線 7332 一旦徹底跌破將有大變化；比特幣五連陰週線之後下週大機率還是陰線，底部一定會在 11 月出現，但修復到 12 萬美元可能要等到 2027 年 11 月。</li>
+<li><strong>本週的反彈是被動反彈，不值得追</strong>：他認為本週美股的急反彈是爆倉、到期、槓桿平倉頂起來的，主動加倉的人很少；"反彈得這麼急，最後的結果"不會好，週一（11 月 9 日）甚至可能出現進場大跌。</li>
+<li><strong>操作口徑是"觀望不下場"</strong>：他自述該跑的都跑完了，現貨沒有加倉、沒有抄底；最近不建議買期權，合約方向比較明確、流動性大，以看空為主；現貨不要猛加倉，沒到抄底的時候。</li>
+<li><strong>關鍵窗口是下週二 CPI</strong>：他多次強調 11 月 10 日（週二）的 10 月 CPI 是下週最重要的事件，可能進一步推高 12 月升息預期；PPI 影響不大。但他口中 CPI 的公布日期前後說法不一（10 號與 12 號兩種說法都出現過），以官方日曆為準。</li>
+<li><strong>升息預期是全場主線</strong>：他報稱 12 月升息 25 個基點機率 76.3%，且不排除一次性加 50 個基點的極端情況；美元走強、美債殖利率暴漲是他判斷黃金、美股承壓的核心邏輯。</li>
+<li><strong>政治敘事壓倒一切</strong>：他認為民主黨已掌控國會、AI 監管會比加密監管來得更快，2028 年大選共和黨勝算不大；標普約 3 兆美元市值可能被抹去（他引述的市場擔憂）；川普家族與加密貨幣的關係、裴洛西買股等說法均為其個人觀點，未經核實。</li>
+<li><strong>比特幣之外的配置</strong>：索拉納 80 美元加倉位一直沒到；以太坊可能是"最後的輝煌"；狗狗幣跌到 0.07 美元以下"看到就買"；黃金 1 月 20 日之前不會大暴漲，現價長期持有不明智；韓國股市是 AI 風向標，可能跌破 4000 點。</li>
+</ol>
+<h2>二、本週回顧：美股</h2>
+<ul>
+<li><strong>三大指數</strong>：納指反彈約 1%，標普 500 反彈約 0.72%，道瓊斯繼續跌 0.46%。茄哥反而覺得道瓊斯"挺好"——"跌不動的時候就是底了"；劇烈反彈的地方"空軍沒完全施展完"，是在誘多。</li>
+<li><strong>QQQ</strong>：日線級別上週五天"跌完反彈、然後再反彈"；從頂部回測已跌超 1.272（斐波那契位，轉寫如此），38.2% 回撤位（他報稱 656 附近）"肯定守不住"，他認定 QQQ 會跌破 600，下週可能見到 600 以下。否則"聖誕行情也沒有"。</li>
+<li><strong>輝達是 QQQ 最大的雷</strong>：他稱輝達此前的支撐位 109 已被跌破，反彈甚至沒有站上 109，"有可能會有一個極端式的下扎"；從 243（他報稱的高點，轉寫存疑）回調已超過 1.618 倍。他還稱黃仁勳被美國政府認定與新加坡方面之間有洩露核心機密的問題，美國國會可能要求其閉門聽證——此說法未經核實。</li>
+<li><strong>標普 500</strong>：非常關鍵的點位是 7332，即 200 日均線（他報稱）；已插到 7289。一旦徹底跌破 7332，"股市將會有個特別大的變化"，這輪回調的跌幅"絕對不是走到這裡就算完事"。日線趨勢線已完全走破，價格沒有回到原趨勢線底部。</li>
+<li><strong>AI 拋售</strong>：他稱市場擔心民主黨掌控國會後加強 AI 監管，AI 拋售潮下"標普公司約 3 兆美元的市值"將被抹去（引述口徑，未經核實）；AI 監管"一定是要比加密貨幣監管來得快"。</li>
+<li><strong>超跌反彈的個股</strong>：CRWV、高通、美光（MU）反彈比較好；但他認為反彈特別急、只是超跌反彈。SanDisk（轉寫為"Sandy"）"非常危險"。</li>
+<li><strong>SpaceX 與馬斯克</strong>：他自述 SpaceX 該跑的已跑完，"不要看 SpaceX 反彈"；馬斯克"在華爾街的世界裡邊就是要被清算的"，黃仁勳之後"接下來還清算誰"值得看。</li>
+</ul>
+<h2>三、本週回顧：比特幣與加密</h2>
+<ul>
+<li><strong>本週走勢</strong>：比特幣日線插到 74,888 美元（他報稱的低點）；0.618 回撤位在 72,500 美元附近；週線五連陰，"這五連陰收完了之後下一週大機率還是個陰線"。</li>
+<li><strong>修復需要多久</strong>：他以 2022 年類比——2022 年 3 月從 4 萬美元跌下來，到 2023 年 12 月才回歸該位置，用了一年九個月；因此他劃線認為本輪黑天鵝（他稱"10·11 黑天鵝"）修復到 12 萬美元"可能需要等到 2027 年 11 月 10 號"，即接近一年時間。但他同時認為"短期的底肯定是要見到了"，"後邊的底應該不會再有了"。</li>
+<li><strong>他的底位判斷</strong>：比特幣 200 日均線在 73,156 美元附近（他報稱），底"有可能在 73,300 這個位置"；如果跌破 73,300，"下來的底我們只能自求多福了再看"；插針一下問題不大，完全跌破"就不好玩了"。120 日均線 75,000 美元附近"根本站不住"。</li>
+<li><strong>下週一的兩種走法（11 月 9 日）</strong>：</li>
+<li>若 9 號一次性插針到 71,400 美元以下，"這個地方可以短期判斷應該是個基本上的底部了"，現貨可以在這個位置建頭倉；若出現極端情況跌到 72,500 美元以下（此處口徑與前述點位有出入，原文如此），可選擇加倉攤低成本，但"不要一下熬硬（全倉）"。</li>
+<li>若週一反彈到 78,000 美元附近，"都不算危險"，大機率在 76,500–78,000 附近震盪一段時間，"這個也是好事"。但他更希望"短平快一點，極端插一個底，然後直接反彈"。</li>
+<li>他不喜歡當前位置的反彈："這種反彈不好""我希望他跌就跌透"，"跌最後一下，把這個徹底的所謂幣安丟幣的黑天鵝、中期大選的行情全都給他消化掉就完事了"。</li>
+<li>4 小時級別目前"沒有像樣的反彈"，沒有走出上升趨勢；週一如果反彈得特別兇，"那壞了"。</li>
+<li><strong>以太坊與索拉納</strong>：SOL 80 美元加倉位"一直沒到"；如果本輪開啟牛市，SOL 與 ETH 的漲幅可能都比比特幣好，甚至比比特幣提前見到新高。以太坊"可能考慮會在這一輪加倉，我認為這是以太坊可能最後的輝煌"；但也可能淹沒在側鏈、L2 與 Swap 之中。</li>
+<li><strong>狗狗幣</strong>：很多人問能不能跌到 0.07 美元以下，他的回答是"看到 0.07 以下就買吧，看不到就算了"；0.06 美元"非常難"，"0.05 這個價格是不要想"。</li>
+<li><strong>山寨幣</strong>：會隨著比特幣暴跌"能再暴跌一下"；現在"在等的是一個新的低點"。</li>
+<li><strong>"新大航海時代"論</strong>：他提出一個推演課題——歐洲（尤其是法國）可能領導新一輪全球變革，歐元會迎來大貶值；加密貨幣能否成為"新大航海時代"的計價單位，繞開中東、繞開關稅（他稱關稅就是"買路財"、"此路是我開"）；北韓偷幣的事"你們想多了，那不是北韓自己能完成的"。以上均為其個人推演，未經核實。</li>
+</ul>
+<h2>四、宏觀與數據日曆：升息、美元、美債</h2>
+<ul>
+<li><strong>升息預期</strong>：他報稱 12 月升息 25 個基點是 76.3% 的市場態度；"升息不是一定只加 25"，"如果出現極端情況，可不可以直接一次性加 50，這個不好說"。12 月是 2026 年最後一次升息窗口，"美聯儲他也得掂量一下"。</li>
+<li><strong>數據日曆（他口述，日期前後說法不一，以官方日曆為準）</strong>：下週二 11 月 10 日公布 10 月 CPI，"可能會進一步去增加 12 月份升息的預期"；12 號 PPI、13 號亦有數據，"10 號、12 號、13 號這三天都很有踩雷的風險"；11 月非農在 12 月 4 日公布；10 月 25 日有 GDP 數據；12 月 FOMC（他稱 26 號是升息公布日，24 號平安夜、25 號聖誕節——該日期口徑與公開日曆不符，原文照錄）。</li>
+<li><strong>美元與美債</strong>：民主黨"希望美元走強"，升息解決通膨；美債殖利率暴漲，"不管美債的殖利率降下來，那麼這個市場會非常不健康"——錢一股腦去炒股票、估值堆高，"最後真正一爆炸出來爆的就是資金"。</li>
+<li><strong>非農數據</strong>：他認為非農數據特別好不代表經濟強勁，"非農數據有可能回頭還會修正"，且"不能代表 AI 權重的股票一定就會有希望"。</li>
+<li><strong>黃金</strong>：美元走強黃金就走弱；黃金想大規模上漲"美元必須得走弱，走弱的話必須得放水"，所以 QE 與降準"現在可能遙遙無期了"。黃金至少在 1 月 20 日之前不會有太大暴漲的跡象，"就在這個位置要磨"；高點大概在 4150 美元，4200 美元"一直沒看到能夠插破"；現價長期持有黃金"似乎不太明智"，"等到 1 月份再說"；短線做黃金合約流動性很好。美股週一若繼續下跌，黃金可能反彈一下。</li>
+<li><strong>油價與伊朗</strong>：川普"特別希望油價漲"，"甚至他有些發言都在暗示說油價沒有漲到他預想的位置"；油價"絕對不會單單的到 119 這個位置就下來"（他報稱的點位，單位與轉寫存疑）。他認為美國對伊朗的經濟制裁沒起到太大作用，凍結的都是流亡海外的前管理人的錢，"跟現任的這些人關係不大"。</li>
+</ul>
+<h2>五、政治敘事（主持人個人觀點，未經核實）</h2>
+<ul>
+<li><strong>國會與兩黨</strong>：他稱國會"現在就是民主黨天下"，"不需要討論誰主掌國會的問題"；兩黨"沒有進步全是互相治癒（掣肘）"，"你提個事我否定，我提個事你否定"；移民議題的議員將以多種族執掌國會，"一些法案會變得特別奇葩"。</li>
+<li><strong>民主黨與 AI</strong>：民主黨要贏 2028 年大選"必須得先能夠鎮壓住 AI 這些人"，"你得臣服於我，你得給我捐錢"；共和黨 2028 年選舉"不會有太大的勝算"。</li>
+<li><strong>加密貨幣與兩黨</strong>：他引述 Coinbase 方面說法稱"上任的民主黨會比以前更加支持加密貨幣"，但他認為 Coinbase CEO 與 MicroStrategy 老闆都是"早期民主黨的支持者"；"清洗法案"（CLARITY Act）沒通過的根本原因是"防止川普家族的腐敗問題"。他稱川普家族上任就是"撈錢"，"加密貨幣不就是為了撈錢"，與大號 KOL 發 Meme 幣"幹老鼠倉"沒區別；"川普現在是加密貨幣最大的敵人""他是利用加密貨幣貪腐最大的頭"。他同時稱民主黨操縱股市、川普也操縱股市，"裴洛西買幣和川普點名戴爾是一個道理"；結論是"不要有道德潔癖"，"他們擁護的東西我們能夠反應過來，我們就跟他去買一手"。</li>
+<li><strong>川普本人</strong>：他認為川普根本沒有連任打算，"所有的做法其實都是求自保"，"在自保的前提下能夠多為自己家族去獲取點財富"；白宮幕僚長換成米勒（Stephen Miller），強硬反非法移民政策的制定者，是想"給民主黨添亂"；國防部長赫格塞斯"會被扔出去當背鍋俠"，包括其提前買軍工股的事。</li>
+<li><strong>選舉雜談</strong>：聽眾問起喬治亞州一張丟失的記憶卡與 388 票、59 票的事，他回應翻紅對民主黨沒什麼影響，中期選舉"不會重新計票"，川普已表態願與共和黨人合作，"這件事就不要去談了"。</li>
+</ul>
+<h2>六、個股問答（樑枝提問，茄哥回答）</h2>
+<h3>Opendoor（OPEN）</h3>
+<ul>
+<li>樑枝問 OPEN 賣掉了沒有。茄哥：沒有賣，"跌很多也沒賣"，"我一直在一點點往它加倉"；"王老師賣了我都不賣"。</li>
+<li>他的邏輯：美國要進入"大拆遷"時代——AI 資料中心建不進居民區，解決辦法是把老舊住宅區整體拆遷安置，居民拿錢去買新房，既拉動房地產市場，又解決算力中心無法建設的矛盾；"中國當年的拆遷是為了修橋修路，美國的拆遷是為了新的科技發展"。Opendoor 就是"網上連結的房產仲介"，是這個邏輯的受益標的。</li>
+<li>操作：OPEN 再跌 30% 也不要來問他，"你願意買就買，你願意割肉就割肉"；他希望它跌回 0.5 美元附近，"如果漲到 5 塊就是十倍"。他估計樑枝買的"也不會超過三萬美金"，"你就先放那放著，你也別加倉了"。</li>
+<li>提醒：OPEN 是"辨識股"（小股票），總金額不要超過一萬美金；10 美元以下的小股票一天漲跌 20% 都正常，"不能上來就熬硬（全倉）的狀態去玩"。</li>
+</ul>
+<h3>Lennar（萊納）與巴菲特</h3>
+<ul>
+<li>他稱巴菲特投資 Lennar 的原因是美國要進入大拆遷時代；Lennar 從高點 112 回調到 70，"他現在都沒算回調走完"，"他可能還會跌"，但"這裡邊絕對是有不同的帳算"。</li>
+<li>"只要來一個大事件，所有的建築業的股票全都在那上（漲）"。</li>
+</ul>
+<h3>沃爾瑪</h3>
+<ul>
+<li>樑枝已賣掉沃爾瑪。茄哥：賣得也對，"連續走五週陽線，你拋的也對也不是不對"；但他自己"留了一點"，"準備跟他最後再搏一下"，認為沃爾瑪"應該能創新高"，"破 135 以上"能創新高，"雙底結構他也做得很實"。</li>
+</ul>
+<h3>諾基亞、SMR 與光通訊</h3>
+<ul>
+<li>諾基亞被套"不是說他沒有希望了"，其 AI 與光通訊部分的配合取決於 AI 是否放慢；股票"不是一天兩天賺錢的東西"。</li>
+<li>SMR（小型核能）與 Oklo 這類標的排在前面，"有可能會比那個什麼漲得快"；邏輯是資料中心要先拉光纜、配小型核電供電再建，"你就都在等"。</li>
+<li>聽眾私訊問某隻光運算股票（稱可把光運算功耗降低 90%），他回應"不要去看這些新東西，沒法看"，"保守型投資傳統一點"。</li>
+</ul>
+<h3>太陽能 Sunrun（RUN）</h3>
+<ul>
+<li>樑枝問 RUN（Sunrun，約 9.9 美元）。茄哥：現在漲是"誘多"，"回調沒完事"，"還會跌的"；日線在走三浪回調，"至少也下到 5 塊 5 附近再彈起來"，"沒見底"。</li>
+<li>他不看好太陽能替代現有電力："你認為太陽能可以取代現在的電力嗎？當然不行"；太陽能"拿去民用比較好，利好；如果拿去做 AI，利空"；除非是太空太陽能——馬斯克曾喊過太空太陽能與星艦儲能，後來不喊了；太空算力值得找找相關股票，因為"電力是最大的缺口，能源是最大的缺口"。</li>
+</ul>
+<h3>韓國股市</h3>
+<ul>
+<li>韓國股市"尤其是半導體這部分非常明顯"；KOSPI"跌破 5000 這是不用想的，有可能跌破 4000"，"4000 這個檔位實際上也沒有多遠"，"3900 可能都是（要到的）"。</li>
+<li>回調只到 0.618 附近"站不住"，"至少要 0.786 這個位置肯定是要往下走的"；"5000 點根本就不是韓國股市現有應該待的位置"；韓國股市"會作為整個 AI 風向標"。</li>
+</ul>
+<h2>七、下週操作建議彙總</h2>
+<ul>
+<li><strong>美股</strong>：下週看空為主，補跌一定要做；QQQ 週線已四連陰，下週再補一根陰線，可能補到 600 附近，然後走 12 月聖誕行情；12 月進入之前股市可能都會做"下跌"的盤子；具體操作"還得單日去看"。</li>
+<li><strong>比特幣</strong>：短期還要再跌一下，"不跌一下恐怕是沒有反彈機會"；9 號插針到 71,400 以下可建頭倉，72,500 附近可加倉攤低成本；反彈到 78,000 附近則看震盪；"現貨在這個位置去建頭倉"可以開始考慮，包括狗狗幣、SOL 與一些山寨幣。</li>
+<li><strong>期權與合約</strong>：最近不建議買期權；"很多合約我覺得在這個位置比較好做，方向比較明確，流動性比較大"，"有的時候可能這一張空單一個晚上就解決了"。</li>
+<li><strong>黃金</strong>：短線合約流動性好可以玩；長期持有等到 1 月再說。</li>
+<li><strong>通用提醒</strong>："在你不清楚狀況的時候不要輕易下手，不要拍腦門"；樑枝被他點名為"新手當中的拍腦門選手"，"有些東西不能拍腦門就買"；"你不用非得跟著我買股票，但是我重點提的東西你看一看"。</li>
+</ul>
+<h2>八、關鍵原話</h2>
+<ul>
+<li>"美股是沒什麼機會了……下週會走個反彈吧，但是可以說這個股市來到了一個非常緊張的狀態。"（00:01:44）</li>
+<li>"QQQ這塊呢會跌破 600 的，一定會跌破 600 的。"（00:05:43）</li>
+<li>"輝達有可能會有一個極端式的一個下扎的過程。"（00:07:42）</li>
+<li>"10 號能不能見到一個反轉，或者說徹底的一個行情的情況，那這個呢，我們再看 10 號這個 CPI 的公布。"（00:09:23）</li>
+<li>"我認為大機率民主黨的這個藍籌股票啊……不再去護這個盤，也不護指數盤。"（00:09:50）</li>
+<li>"川普現在是加密貨幣最大的敵人，他是最大敵人，他是利用加密貨幣貪腐的最大的頭。"（00:16:31）</li>
+<li>"我們不要有道德潔癖……他們擁護的東西我們能夠反應過來，我們就跟他去買一手，反應過來拉到。"（00:17:13）</li>
+<li>"修復一個黑天鵝用兩年時間來修復……你想回到 12 萬，可能還需要等接近一年。"（00:18:52）</li>
+<li>"我們現在認可就是什麼呢？觀望不下場。"（00:27:53）</li>
+<li>"如果 9 號一次性插針插到 714 以下……這個地方可以短期，我覺得判斷應該是個基本上的底部了，你可以現貨在這個位置去建頭倉。"（00:55:09）</li>
+<li>"我希望他跌就跌透。"（01:29:37）</li>
+<li>"今天的總結就到這裡，感謝大家收聽，祝大家週末愉快，拜拜。"（01:29:52）</li>
+</ul>
+<h2>九、時間線</h2>
+<table>
+<thead>
+<tr>
+<th>時間</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:01–00:05</td>
+<td>開場：美股沒什麼機會，下週會走個反彈；AI 資料中心遭遇居民抵制，類比核電站與比特幣礦場</td>
+</tr>
+<tr>
+<td>00:05–00:09</td>
+<td>QQQ 與輝達：QQQ 會跌破 600，輝達支撐 109 已破、可能極端下扎；下週數據日曆</td>
+</tr>
+<tr>
+<td>00:09–00:17</td>
+<td>道瓊斯連跌、藍籌股不再護盤；Coinbase 與 MicroStrategy 的政治站隊；川普家族與加密貨幣</td>
+</tr>
+<tr>
+<td>00:17–00:25</td>
+<td>比特幣修復時間線：回到 12 萬可能要等到 2027 年 11 月；美元走強、升息、美債</td>
+</tr>
+<tr>
+<td>00:25–00:30</td>
+<td>升息預期：12 月升息 25bp 機率 76.3%，不排除 50bp；黃金要等美元走弱</td>
+</tr>
+<tr>
+<td>00:30–00:42</td>
+<td>韓國股市：KOSPI 可能跌破 4000；AI 拋售與標普 3 兆市值；伊朗與油價</td>
+</tr>
+<tr>
+<td>00:42–00:53</td>
+<td>樑枝問答：OPEN 沒賣還在加倉、美國大拆遷邏輯；沃爾瑪、諾基亞、SMR</td>
+</tr>
+<tr>
+<td>00:53–01:01</td>
+<td>本週總結：利空沒有完全出盡；比特幣兩種走法與建倉點位；聖誕行情展望</td>
+</tr>
+<tr>
+<td>01:01–01:09</td>
+<td>標普 500 的 7332 關鍵位；比特幣 73,300 的底；狗狗幣 0.07</td>
+</tr>
+<tr>
+<td>01:09–01:21</td>
+<td>法國、歐元與"新大航海時代"；歐洲革命循環論；AI 電力需求與環保</td>
+</tr>
+<tr>
+<td>01:21–01:28</td>
+<td>樑枝問答：太陽能 RUN 誘多、可能跌到 5.5 美元；太空太陽能與太空算力</td>
+</tr>
+<tr>
+<td>01:28–01:30</td>
+<td>收尾：不喜歡當前位置的反彈，希望跌透；感謝收聽</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>逐字稿：<code>hidden_files/transcript.txt</code>（1818 行，faster-whisper small 模型本地轉寫）；錄音：<code>hidden_files/space.m4a</code>（64,314,140 位元組，1 小時 30 分 07 秒）。轉寫前約 85 秒無語音內容。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Nov 8 — US Stocks & Bitcoin Weekly Recap and Outlook for Next Week</h1>
+<p><strong>Topic</strong>: US stocks and Bitcoin — a recap of the week's market action and a forecast for next week
+<strong>Original link</strong>: https://x.com/i/spaces/1MEXRXmnppjAyW
+<strong>Time</strong>: 2026-11-08 19:55 to 21:25 (Beijing time); recording length 1 hour 30 minutes 07 seconds
+<strong>Host</strong>: Qie Ge | Pod @qg7777
+<strong>Speakers</strong>: Liangzhi @liangyiwei11 (came on mic to ask questions about 8 minutes in), Yahoo @3DotWeb (came on mic at about 53 minutes; the transcript contains no passages that can be clearly attributed to him personally)
+<strong>Listeners</strong>: peak 187
+<strong>Note</strong>: These notes were compiled from a local transcription of the recording (faster-whisper). The transcription has no speaker separation; speaker attribution follows the host's call-outs and conversational context. For most of the session Qie Ge spoke alone, with Liangzhi speaking only during the Q&A segments. A few proper names and figures that are doubtful in the transcription have been flagged. All amounts, price levels, probabilities and track records mentioned are the speakers' own on-the-spot statements, have not been externally verified, and do not constitute investment advice. The host's remarks on US politics and elections are his personal on-the-spot views and are unrelated to fact-checking.</p>
+<hr />
+<h2>I. Conclusions First</h2>
+<ol>
+<li><strong>Bearish next week overall; the catch-down must be traded</strong>: Qie Ge judged that neither the US stock correction nor Bitcoin's is finished. QQQ could break below 600, and if the S&P 500's 200-day moving average at 7332 is decisively broken, big changes will follow. After five consecutive red weekly candles, Bitcoin will most likely print another red candle next week; a bottom will definitely appear in November, but recovering to $120,000 may have to wait until November 2027.</li>
+<li><strong>This week's bounce was a passive bounce, not worth chasing</strong>: He argued that this week's sharp rebound in US stocks was propped up by liquidations, expiries and leveraged position unwinds, with very few people actively adding positions. "A bounce this sharp" will not end well, and on Monday (November 9) there could even be a big drop right at the open.</li>
+<li><strong>The operating stance is "watch from the sidelines, don't get in"</strong>: By his own account, he has exited everything he was going to exit; in spot he has neither added positions nor bottom-fished. He advised against buying options recently; contracts have a relatively clear direction and high liquidity, with a mainly bearish bias. Don't pile aggressively into spot — it is not bottom-fishing time yet.</li>
+<li><strong>The key window is Tuesday's CPI</strong>: He repeatedly stressed that the October CPI on November 10 (Tuesday) is next week's most important event and could further push up expectations of a December rate hike; PPI matters little. However, he was inconsistent about the CPI release date (both the 10th and the 12th came up), so go by the official calendar.</li>
+<li><strong>Rate-hike expectations are the main thread of the whole session</strong>: He cited a 76.3% probability of a 25-basis-point hike in December, and did not rule out the extreme case of a one-off 50-basis-point hike. A stronger dollar and surging US Treasury yields are the core logic behind his view that gold and US stocks are under pressure.</li>
+<li><strong>The political narrative overrides everything</strong>: He argued that the Democrats already control Congress, that AI regulation will come faster than crypto regulation, and that the Republicans' chances in the 2028 election are not great. Roughly $3 trillion of S&P market value could be wiped out (a market concern he cited). Claims about the Trump family's relationship with cryptocurrency, Pelosi's stock purchases and the like are all his personal views and have not been verified.</li>
+<li><strong>Allocations beyond Bitcoin</strong>: Solana's $80 add-on level never arrived; Ethereum may be enjoying its "last hurrah"; for Dogecoin, if it falls below $0.07, "buy it when you see it"; gold will not surge before January 20, and holding it long-term at current prices is unwise; the Korean stock market is an AI bellwether and could break below 4,000 points.</li>
+</ol>
+<h2>II. This Week in Review: US Stocks</h2>
+<ul>
+<li><strong>The three major indices</strong>: The Nasdaq rebounded about 1%, the S&P 500 about 0.72%, while the Dow Jones kept falling, down 0.46%. Qie Ge actually thought the Dow looked "pretty good" — "when it can't fall any further, that's the bottom"; where the bounce was violent, "the bears haven't fully had their say yet" — it was a bull trap.</li>
+<li><strong>QQQ</strong>: On the daily chart, last week's five days went "down, bounce, then bounce again"; from the top it has already retraced beyond 1.272 (a Fibonacci level, as transcribed). The 38.2% retracement level (around 656, by his account) "definitely won't hold"; he was certain QQQ will break below 600 and could be seen under 600 next week. Otherwise "there won't even be a Santa Claus rally".</li>
+<li><strong>Nvidia is QQQ's biggest landmine</strong>: He said Nvidia's previous support at 109 has already been broken, and the bounce didn't even reclaim 109, so "there could be an extreme flush down". From 243 (the high he cited; transcription doubtful) the pullback has already exceeded 1.618x. He also claimed that Jensen Huang has been deemed by the US government to have issues involving the leaking of core secrets with parties in Singapore, and that the US Congress may demand a closed-door hearing — this claim has not been verified.</li>
+<li><strong>S&P 500</strong>: The critical level is 7332, the 200-day moving average (by his account); it has already wicked down to 7289. Once 7332 is decisively broken, "the stock market will see a particularly big change", and this correction's decline "is absolutely not over just because it got here". The daily trendline is completely broken, and price has not returned to the bottom of the original trendline.</li>
+<li><strong>The AI selloff</strong>: He said the market fears that once the Democrats control Congress they will tighten AI regulation, and that in the AI selloff "roughly $3 trillion of S&P companies' market value" will be wiped out (a cited figure, not verified). AI regulation "will definitely come faster than cryptocurrency regulation".</li>
+<li><strong>Oversold bounces in individual names</strong>: CRWV, Qualcomm and Micron (MU) bounced relatively well, but he saw the bounces as especially sharp and merely oversold bounces. SanDisk (transcribed as "Sandy") is "very dangerous".</li>
+<li><strong>SpaceX and Musk</strong>: By his own account he has exited everything he was going to exit in SpaceX — "don't be fooled by a SpaceX bounce". Musk "is going to be settled with in Wall Street's world"; after Jensen Huang, "who gets settled with next" is worth watching.</li>
+</ul>
+<h2>III. This Week in Review: Bitcoin and Crypto</h2>
+<ul>
+<li><strong>The week's action</strong>: Bitcoin wicked down to $74,888 on the daily chart (the low he cited); the 0.618 retracement sits near $72,500. The weekly chart shows five consecutive red candles, and "after these five red candles close, next week will most likely be another red candle".</li>
+<li><strong>How long will recovery take?</strong> He drew a parallel with 2022: from the March 2022 drop from $40,000, it took until December 2023 — one year and nine months — to return to that level. So he drew the line that this round's black swan (which he called the "10·11 black swan") recovering to $120,000 "may have to wait until November 10, 2027", close to a year. But he also believed "the short-term bottom is definitely about to be seen" and "there shouldn't be further bottoms after that".</li>
+<li><strong>His bottom call</strong>: Bitcoin's 200-day moving average is near $73,156 (by his account), and the bottom "could be at the 73,300 level"; if it breaks below 73,300, "for the bottom below that, we'll just have to pray and see". A brief wick down is not a big problem, but a full break below "would not be fun". Around the 120-day moving average at $75,000 it "simply can't hold".</li>
+<li><strong>Two scenarios for next Monday (November 9)</strong>:</li>
+<li>If on the 9th it wicks down in one go below $71,400, "that spot can be judged in the short term as basically the bottom", and spot positions can start to be built there. In an extreme case where it falls below $72,500 (this figure conflicts with the levels mentioned earlier; the original says so), one could add to average down the cost, but "don't go all in at once".</li>
+<li>If on Monday it bounces to around $78,000, "none of that is dangerous"; it would most likely range around 76,500–78,000 for a while, "and that's a good thing too". But he would prefer it "fast and clean — spike an extreme bottom, then bounce straight away".</li>
+<li>He disliked a bounce from the current position: "This kind of bounce is no good", "I want it to fall through completely", "fall that last leg and fully digest this so-called Binance coin-loss black swan and the midterm-election market move, and be done with it".</li>
+<li>On the 4-hour timeframe there is currently "no decent bounce" and no uptrend has formed; if Monday's bounce is especially fierce, "that's bad".</li>
+<li><strong>Ethereum and Solana</strong>: SOL's $80 add-on level "never arrived". If a bull market starts this round, SOL and ETH could both outperform Bitcoin and even see new highs before Bitcoin does. For Ethereum, he "might consider adding in this round; I think this may be Ethereum's last hurrah" — though it could also be drowned out among sidechains, L2s and Swaps.</li>
+<li><strong>Dogecoin</strong>: Many people asked whether it could fall below $0.07; his answer was "if you see it below 0.07, just buy; if you don't see it, forget it". $0.06 is "very hard", and "don't even think about $0.05".</li>
+<li><strong>Altcoins</strong>: They will "dump again" along with a Bitcoin plunge; right now "what we're waiting for is a new low".</li>
+<li><strong>The "new Age of Discovery" thesis</strong>: He proposed a thought experiment — Europe (especially France) might lead a new round of global change, and the euro would see a big depreciation. Could cryptocurrency become the unit of account of a "new Age of Discovery", bypassing the Middle East and bypassing tariffs (he called tariffs "road tolls" — "I built this road")? As for North Korea stealing coins, "you're overthinking it; that's not something North Korea could pull off on its own". All of the above is his personal speculation and has not been verified.</li>
+</ul>
+<h2>IV. Macro and the Data Calendar: Rate Hikes, the Dollar, US Treasuries</h2>
+<ul>
+<li><strong>Rate-hike expectations</strong>: He cited a 76.3% market probability of a 25-basis-point hike in December. "A hike isn't necessarily only 25" — "in an extreme case, could they just do 50 at once? Hard to say". December is the last rate-hike window of 2026, and "the Fed will have to weigh it carefully too".</li>
+<li><strong>Data calendar (as he stated it; his dates were inconsistent, so go by the official calendar)</strong>: On Tuesday, November 10, the October CPI is released, which "could further increase expectations of a December hike"; PPI on the 12th and more data on the 13th — "the 10th, 12th and 13th all carry landmine risk". November nonfarm payrolls come out on December 4; GDP data on October 25; the December FOMC (he said the 26th is the hike announcement day, with Christmas Eve on the 24th and Christmas on the 25th — this date does not match the public calendar and is reproduced as stated).</li>
+<li><strong>The dollar and US Treasuries</strong>: The Democrats "want a stronger dollar", with rate hikes solving inflation. Treasury yields have surged; "if Treasury yields don't come down, this market will be very unhealthy" — money rushes headlong into stocks, valuations pile up, and "when it finally blows up, what blows up is the capital itself".</li>
+<li><strong>Nonfarm payrolls</strong>: He argued that especially good payroll data does not mean the economy is strong — "payroll data may later be revised" — and "it doesn't mean AI-heavy stocks will necessarily have hope".</li>
+<li><strong>Gold</strong>: A stronger dollar means weaker gold. For gold to rise on a large scale, "the dollar must weaken, and for it to weaken there must be money printing", so QE and reserve-requirement cuts "now look far off". Gold shows no sign of a major surge at least before January 20 — "it will grind at this level"; the high is roughly $4,150, and $4,200 "has never been seen to be pierced". Holding gold long-term at current prices "seems unwise" — "wait until January". Short-term gold contracts have good liquidity. If US stocks keep falling on Monday, gold might bounce a bit.</li>
+<li><strong>Oil prices and Iran</strong>: Trump "especially wants oil prices to rise", and "some of his remarks even hint that oil hasn't risen to where he expected". Oil "absolutely won't just come down after reaching 119" (a level he cited; unit and transcription doubtful). He argued that US economic sanctions on Iran haven't had much effect — the frozen money belongs to former managers exiled overseas and "has little to do with the current people".</li>
+</ul>
+<h2>V. The Political Narrative (the host's personal views, unverified)</h2>
+<ul>
+<li><strong>Congress and the two parties</strong>: He said Congress "is now the Democrats' world" and "there's no need to discuss who controls Congress". The two parties "make no progress, only checking each other" — "you propose something, I veto it; I propose something, you veto it". Lawmakers on immigration issues will run Congress as a multi-ethnic body, and "some bills will become particularly bizarre".</li>
+<li><strong>The Democrats and AI</strong>: To win the 2028 election, the Democrats "must first be able to suppress these AI people" — "you must submit to me, you must donate to me". The Republicans "won't have much of a chance" in the 2028 election.</li>
+<li><strong>Cryptocurrency and the two parties</strong>: He cited Coinbase's side as saying "the incoming Democrats will be more supportive of cryptocurrency than before", but argued that Coinbase's CEO and MicroStrategy's boss are both "early Democratic supporters". The root reason the "CLARITY Act" didn't pass was "to prevent corruption by the Trump family". He said the Trump family took office to "rake in money" — "isn't cryptocurrency for raking in money?" — no different from big KOLs issuing Meme coins and "front-running". "Trump is now cryptocurrency's biggest enemy" and "he is the biggest head of crypto corruption". He also said the Democrats manipulate the stock market and Trump manipulates the stock market too — "Pelosi buying coins and Trump name-dropping Dell are the same thing". His conclusion: "Don't have a moral obsession" — "if we can react in time to what they champion, we just buy a lot alongside them".</li>
+<li><strong>Trump himself</strong>: He argued Trump has no intention of seeking re-election at all and that "everything he does is really about self-preservation", "grabbing more wealth for his family on the premise of self-preservation". Replacing the White House chief of staff with Miller (Stephen Miller), the architect of the hardline anti-illegal-immigration policy, is meant to "make trouble for the Democrats". Defense Secretary Hegseth "will be thrown out as the scapegoat", including his advance purchases of defense stocks.</li>
+<li><strong>Election miscellany</strong>: A listener asked about a lost memory card in Georgia and the 388 votes and 59 votes; he responded that flipping red wouldn't affect the Democrats much, the midterms "won't be recounted", Trump has already said he is willing to work with Republicans, and "let's not talk about this anymore".</li>
+</ul>
+<h2>VI. Stock Q&A (Liangzhi asks, Qie Ge answers)</h2>
+<h3>Opendoor (OPEN)</h3>
+<ul>
+<li>Liangzhi asked whether he had sold OPEN. Qie Ge: He hadn't sold — "it fell a lot and I still didn't sell", "I've been adding to it bit by bit"; "even if Teacher Wang sold, I wouldn't sell".</li>
+<li>His logic: The US is about to enter an era of "mass demolition" — AI data centers can't be built in residential areas, so the solution is to demolish and relocate entire old residential districts, with residents taking the money to buy new homes, which both boosts the property market and resolves the contradiction of compute centers being unable to be built. "China's demolitions back then were for building bridges and roads; America's demolitions are for new technological development." Opendoor is an "online-linked real estate agency" and a beneficiary of this logic.</li>
+<li>Trading: Even if OPEN falls another 30%, don't come asking him — "buy if you want to buy, cut your losses if you want to cut". He hoped it would fall back to around $0.50 — "if it rises to $5, that's ten times". He estimated Liangzhi's purchase "wouldn't exceed $30,000" — "just leave it there, and don't add any more".</li>
+<li>A caution: OPEN is a "small-cap stock"; keep the total amount under $10,000. For small stocks under $10, a 20% daily swing either way is normal — "you can't play them by going all in from the start".</li>
+</ul>
+<h3>Lennar and Buffett</h3>
+<ul>
+<li>He said Buffett invested in Lennar because the US is about to enter the mass-demolition era. Lennar has pulled back from a high of 112 to 70; "he hasn't even finished correcting yet", "it may fall further", but "there is definitely different math at work here".</li>
+<li>"As soon as one big event comes along, all the construction stocks will be up there (rising)."</li>
+</ul>
+<h3>Walmart</h3>
+<ul>
+<li>Liangzhi had already sold Walmart. Qie Ge: Selling was fine — "five straight green weekly candles; your sell was right and also not wrong". But he himself "kept a little", "preparing to take one last shot with it", believing Walmart "should be able to make new highs" — above 135 it could make new highs, and "its double-bottom structure is very solidly built".</li>
+</ul>
+<h3>Nokia, SMR and Optical Communications</h3>
+<ul>
+<li>Being underwater on Nokia "doesn't mean it has no hope"; how its AI and optical-communications parts fit together depends on whether AI slows down. Stocks "are not things that make money in a day or two".</li>
+<li>Names like SMR (small modular nuclear) and Oklo rank ahead and "might rise faster than that other thing"; the logic is that data centers first need fiber laid and small nuclear power for supply before being built — "you're all just waiting".</li>
+<li>A listener privately messaged about an optical-computing stock (claimed to cut optical-computing power consumption by 90%); he responded, "Don't look at these new things, there's no way to evaluate them" — "be conservative and traditional with investments".</li>
+</ul>
+<h3>Solar — Sunrun (RUN)</h3>
+<ul>
+<li>Liangzhi asked about RUN (Sunrun, about $9.9). Qie Ge: The current rise is a "bull trap", "the pullback isn't finished", "it will fall further"; the daily chart is in a three-wave correction, "it will at least come down to around $5.5 before bouncing", "no bottom yet".</li>
+<li>He was not optimistic about solar replacing existing electricity: "Do you think solar can replace current electricity? Of course not." Solar "is better for civilian use — that's a positive; if used for AI, it's a negative". Unless it's space-based solar — Musk used to talk up space solar and Starship energy storage, then stopped talking about it. Space-based computing is worth looking for related stocks in, because "electricity is the biggest gap; energy is the biggest gap".</li>
+</ul>
+<h3>The Korean Stock Market</h3>
+<ul>
+<li>The Korean market, "especially the semiconductor part, is very obvious". KOSPI "breaking below 5,000 is a given; it could break below 4,000", "the 4,000 level isn't actually that far", "3,900 might be (reached) too".</li>
+<li>A pullback only to around 0.618 "won't hold"; "at least the 0.786 level is definitely going to be headed down to". "5,000 points is simply not where the Korean market should be right now"; the Korean market "will serve as a bellwether for the whole AI trade".</li>
+</ul>
+<h2>VII. Summary of Trading Advice for Next Week</h2>
+<ul>
+<li><strong>US stocks</strong>: Bearish overall next week; the catch-down must be traded. QQQ has had four straight red weekly candles and will likely add another next week, possibly catching down to around 600, then moving into the December Santa Claus rally. Before December begins, the market will likely trade a "falling" tape; specific trades "still have to be judged day by day".</li>
+<li><strong>Bitcoin</strong>: Short term it needs to fall a bit more — "without a fall there may be no bounce opportunity". A wick below 71,400 on the 9th is a spot to start building a position; adding around 72,500 can average down the cost; a bounce to around 78,000 means watching for range-bound trading. Starting to build spot positions "at this level" can be considered, including Dogecoin, SOL and some altcoins.</li>
+<li><strong>Options and contracts</strong>: Not advisable to buy options recently. "Many contracts, I think, are good to trade at this level — the direction is relatively clear and liquidity is high"; "sometimes one short position can be settled in a single night".</li>
+<li><strong>Gold</strong>: Short-term contracts have good liquidity and can be traded; for long-term holding, wait until January.</li>
+<li><strong>General reminders</strong>: "When you don't understand the situation, don't act rashly, don't decide on a whim." Liangzhi was singled out as "the whim-decider among beginners" — "some things can't just be bought on a whim". "You don't have to buy stocks just because I do, but take a look at the things I emphasize."</li>
+</ul>
+<h2>VIII. Key Quotes</h2>
+<ul>
+<li>"US stocks don't have much opportunity left… Next week there'll be a bounce, but you could say this market has reached a very tense state." (00:01:44)</li>
+<li>"QQQ will break below 600 — it definitely will break below 600." (00:05:43)</li>
+<li>"Nvidia could have an extreme flush-down process." (00:07:42)</li>
+<li>"Whether we see a reversal on the 10th, or a decisive market situation — we'll see when the CPI is released on the 10th." (00:09:23)</li>
+<li>"I think it's highly likely that the Democrats' blue-chip stocks… will no longer defend this market, nor defend the index." (00:09:50)</li>
+<li>"Trump is now cryptocurrency's biggest enemy — he is the biggest enemy, he is the biggest head of using cryptocurrency for corruption." (00:16:31)</li>
+<li>"Let's not have a moral obsession… If we can react in time to what they champion, we just buy a lot alongside them — react and ride it." (00:17:13)</li>
+<li>"Repairing a black swan takes two years… If you want to get back to 120k, you may still need to wait close to a year." (00:18:52)</li>
+<li>"What we endorse right now is: watch from the sidelines and don't get in." (00:27:53)</li>
+<li>"If on the 9th it wicks in one go below 714… that spot, in the short term, I think can be judged as basically the bottom — you can build a spot position there." (00:55:09)</li>
+<li>"I want it to fall, and fall through completely." (01:29:37)</li>
+<li>"That's today's summary. Thank you all for listening, have a great weekend, bye-bye." (01:29:52)</li>
+</ul>
+<h2>IX. Timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:01–00:05</td>
+<td>Opening: US stocks have little opportunity; next week there'll be a bounce; AI data centers face resident opposition, likened to nuclear power plants and Bitcoin mines</td>
+</tr>
+<tr>
+<td>00:05–00:09</td>
+<td>QQQ and Nvidia: QQQ will break below 600; Nvidia's support at 109 is broken and it may flush down sharply; next week's data calendar</td>
+</tr>
+<tr>
+<td>00:09–00:17</td>
+<td>The Dow's consecutive declines; blue chips no longer defending the market; Coinbase and MicroStrategy's political alignment; the Trump family and cryptocurrency</td>
+</tr>
+<tr>
+<td>00:17–00:25</td>
+<td>Bitcoin's recovery timeline: getting back to 120k may wait until November 2027; a stronger dollar, rate hikes, US Treasuries</td>
+</tr>
+<tr>
+<td>00:25–00:30</td>
+<td>Rate-hike expectations: a 76.3% probability of a 25bp December hike, 50bp not ruled out; gold needs a weaker dollar</td>
+</tr>
+<tr>
+<td>00:30–00:42</td>
+<td>The Korean market: KOSPI could break below 4,000; the AI selloff and $3 trillion of S&P market value; Iran and oil prices</td>
+</tr>
+<tr>
+<td>00:42–00:53</td>
+<td>Q&A with Liangzhi: OPEN not sold and still adding, the US mass-demolition logic; Walmart, Nokia, SMR</td>
+</tr>
+<tr>
+<td>00:53–01:01</td>
+<td>Week's summary: the bad news isn't fully out; Bitcoin's two scenarios and position-building levels; Santa Claus rally outlook</td>
+</tr>
+<tr>
+<td>01:01–01:09</td>
+<td>The S&P 500's key 7332 level; Bitcoin's bottom at 73,300; Dogecoin at 0.07</td>
+</tr>
+<tr>
+<td>01:09–01:21</td>
+<td>France, the euro and the "new Age of Discovery"; a cyclical theory of European revolutions; AI power demand and environmental protection</td>
+</tr>
+<tr>
+<td>01:21–01:28</td>
+<td>Q&A with Liangzhi: solar RUN is a bull trap, could fall to $5.5; space solar and space-based computing</td>
+</tr>
+<tr>
+<td>01:28–01:30</td>
+<td>Wrap-up: dislikes a bounce from the current position, wants it to fall through; thanks for listening</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Transcript: <code>hidden_files/transcript.txt</code> (1,818 lines, transcribed locally with the faster-whisper small model); recording: <code>hidden_files/space.m4a</code> (64,314,140 bytes, 1 hour 30 minutes 07 seconds). The first ~85 seconds of the recording contain no speech.</em></p>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+
+<footer data-lang="en" style="display:none">Source: Yat's List Space collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full text of the notes for this session; the content is the speakers' own on-the-spot accounts and has not been verified.</footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：11.8 美股 比特币一周行情总结，下周走势预测 · Yat's Talks",tw:"會議紀要：11.8 美股 比特幣一週行情總結，下週走勢預測 · Yat's Talks",en:"Meeting Notes: Nov 8 — US Stocks & Bitcoin Weekly Recap and Outlook for Next Week · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

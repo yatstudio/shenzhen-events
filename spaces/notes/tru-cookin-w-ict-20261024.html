@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要——TRU - Cookin w ICT（ICT 交易专场）</h1>
 <blockquote>
 <p>来源：X Space 回放录音本地转写（英文逐字稿，全程 5 小时 04 分 10 秒，4,967 行），纪要为中文整理。
@@ -251,8 +258,483 @@
 <li>日期口径：Space 归档日期为 2026-10-24（周六），场内多次提及"昨天周四""今天周五"，实际举行时间可能为周五美东时间下午；纪要按场内说法记录，未擅自改动。</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要——TRU - Cookin w ICT（ICT 交易專場）</h1>
+<blockquote>
+<p>來源：X Space 回放錄音本地轉寫（英文逐字稿，全程 5 小時 04 分 10 秒，4,967 行），紀要為中文整理。
+重要聲明：以下所有觀點、數字與市場判斷均為發言人現場自述，未經獨立核實，不構成任何投資建議。發言人歸屬按對話上下文推斷，無法確定處標註為「某位發言者/提問者」。</p>
+</blockquote>
+<h2>一、結論先行（核心要點）</h2>
+<ol>
+<li><strong>少做交易、做對少數幾次就夠了。</strong>Kitt 開場即點題：週四的 expansion 證明，不需要大量交易，只需要在正確的時間做對極少數交易。Pit Munch 本週只做了 4 筆原油交易（週一至週三），卻是她自 2023 年開始交易以來「最好的一週」。</li>
+<li><strong>Michael（ICT）本場的最大轉向訊號：從純日內轉向留「跑手」（runners）。</strong>他自述過去幾年一直迴避隔夜風險，但認為期中選舉前後波動將放大、出現可持續數日到兩週的大級別行情；計劃用日內模型進場、75% 倉位日內了結、留 25% 做 1–2 週的波段，並呼籲聽眾每天花 10–15 分鐘從 5 分鐘以下圖表 zoom out 到 4 小時/1 小時/週線看方向。</li>
+<li><strong>「獨角獸模型」不存在。</strong>Michael 親自澄清：「There is no unicorn model」——獨角獸只是他用來形容「一切條件完美對齊、週內最大一段行情」的形容詞，不是固定參數的模型；既不限於「Breaker 內嵌 FVG」，也不限於市場製造商模型的第二階段再分配/再累積。</li>
+<li><strong>流動性是第一課。</strong>對新手，Michael 的建議是：不要看即時行情，先用 2–4 週每天 20–30 分鐘看靜態圖表，研究當日高低點為何形成、價格為何去掃前一日高低、缺口與 FVG；先懂「價格為何去某個位置」，再談進場。不要用「五分鐘速成」、不要貪多，每天只練一件事。</li>
+<li><strong>「上膛的槍」（Loaded Gun）與「去讀盤，不去交易」。</strong>Pit Munch 的轉變是本場最完整的學員案例：2023 年每天交易約 20 次，從 NQ 的 10 點 scalp 做到 200–300 點，再轉原油 CL；現在每天上圖只為 tape reading（讀盤），沒有「滿倉訊號」（多個 confluence 全部對齊）就不出手，週四、週五看到「半把槍」的機會也果斷放棄。</li>
+<li><strong>固定百分比回報、拒絕加槓桿治過度交易。</strong>針對過度交易問題，Michael 給出「每月 6%、每週 1.5%、每筆風險 0.5%」的框架：達標即停手，逐步加目標；並明確反對「提高槓桿讓獲利變大」的想法，強調複利才是解法。</li>
+<li><strong>Michael 對後市偏空、偏防禦。</strong>據其自述：納指看向 28,815 一帶（12 月合約已跌破 9 月 16 日低點 29,005），黃金關注 3,900（跌破後或看 3,600s），原油則看多、認為會再創歷史新高；期中選舉後波動可能加劇，他本人目前「一週只做一到兩個 setup」，以防守為主。</li>
+<li><strong>交易 90% 是心理戰。</strong>全場反覆出現的主題：不要把家人、伴侶、社群媒體的期待帶進交易；不要用帳單錢交易；給自己「允許虧損」的許可；把交易當生意、寫交易日誌、把模型濃縮到「一張名片背面能寫完」。</li>
+</ol>
+<h2>二、場次資訊</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>標題</td>
+<td>TRU - Cookin w ICT（中文譯名：與 ICT 一起下廚 / ICT 交易專場）</td>
+</tr>
+<tr>
+<td>主持人</td>
+<td>Kitt @ICT_Concepts（Trader Roundup 系列主持）</td>
+</tr>
+<tr>
+<td>聯合主持</td>
+<td>Pit Munch</td>
+</tr>
+<tr>
+<td>核心嘉賓</td>
+<td>Michael（即 ICT 本人，Michael Huddleston）</td>
+</tr>
+<tr>
+<td>日期</td>
+<td>2026-10-24（週六；場內多次提及「昨天週四」「今天週五」，Space 實際於週五美東時間下午舉行）</td>
+</tr>
+<tr>
+<td>時長</td>
+<td>5 小時 04 分 10 秒（逐字稿 00:00:30–05:04:03）</td>
+</tr>
+<tr>
+<td>參與人數</td>
+<td>18,825 人（據 spacesdashboard 核實）；回放 4,020 次</td>
+</tr>
+<tr>
+<td>語言</td>
+<td>英文</td>
+</tr>
+<tr>
+<td>Space ID</td>
+<td>1wxWjlNMrQWJQ</td>
+</tr>
+<tr>
+<td>連結</td>
+<td>https://x.com/i/spaces/1wxWjlNMrQWJQ</td>
+</tr>
+</tbody>
+</table>
+<h2>三、分發言人歸納</h2>
+<h3>Kitt（主持人）</h3>
+<ul>
+<li>開場定調「Cookin w ICT」，介紹本週主線：週四出現大 expansion，Michael「在正確的時間做對了極少數交易」。</li>
+<li>全程擔任串聯者：複述 Pit Munch 的交易、向 Michael 提問、引導觀眾提問、控制節奏（Michael 原定 5 點結束，後延至 5:30、最終到 8 點）。</li>
+<li>給 Pit Munch 的「作業」是：拿更久、加倉位（size up）。他評價 NQ 像「a crazy bitch」（不可靠、反覆無常），原油 CL 則像「a consistent, reliable partner」（穩定可靠的伴侶）——這是 Pit Munch 轉做原油的背景。</li>
+<li>多次充當「翻譯」：把 Michael 的抽象表述轉成聽眾能跟上的步驟（如週度畫像 profiling、日開盤 18:00/午夜錨點、宏觀時段等），並主動替新聽眾追問。</li>
+<li>明確表示：Michael 發帖給出的價位只是「關注位」，不是進場訊號；並提醒提問者直接問問題、不要只刷「我有個問題」。</li>
+</ul>
+<h3>Pit Munch（聯合主持）</h3>
+<ul>
+<li>本場「學員案例」主角。自 2023 年 1 月開始學習（2022 mentorship 結束後跟 2023 mentorship），從每天約 20 次交易、NQ 10 點 scalp，發展到拿 200–300 點。</li>
+<li>兩週前從 NQ 轉原油：第一週先用 1 手 MCL（微型原油）試水，Kitt 要求她直接上 CL；第二週（本週）加倉，週一至週三共 4 筆交易，每筆至少賺 1 美元油價波幅（1 手 CL 每 1 美元 = 1,000 美元），其中一筆上週接近 4 美元；週三即完成全週目標，週四、週五空倉觀望。這是她交易生涯最好的一週。</li>
+<li>方法上主要用 2026 年內容：AMD Power 3（累積-操縱-派發）、RTH 缺口與 octants（八分位）構成的「階梯」、PD 陣列矩陣的驗證；另有一筆「最佳交易」用了 Michael 在 10 月 2 日非農講座開頭（約 16 秒處）講的「開盤區間缺口的影子（shadows of opening range gaps）」：3 分鐘影線 50% 處 + 反轉 FVG（inversion FVG）+ 30 秒訂單塊重疊，且 K 線實體不跌破訂單塊均值閾值與影線 50%，在影子處進場。Michael 當場評價「非常漂亮的執行」。</li>
+<li>她的模型叫「Loaded Gun（上膛的槍）」：必須多個 confluence 同時對齊才開槍；本週四、週五看到的只是「半把槍」，即使強烈懷疑會走出來也不做。</li>
+<li>心態轉變自述：以前「上圖就是為了找交易」，現在「上圖是為了讀盤（tape read），setup 自己出現時再交易」；並提到自己透過斷食、鍛鍊等個人生活調整來配合交易狀態。</li>
+</ul>
+<h3>Michael / ICT（核心嘉賓）</h3>
+<ul>
+<li>約 00:08 進場，開場即談「少即是多」，並表示希望把視野從 5 分鐘以下圖表拉長到波段級別。</li>
+<li>核心輸出分三塊：（1）方法論澄清：獨角獸、PD 陣列優先級、成交量失衡（volume imbalance）、訂單塊定義、Turtle Soup、結算價開關等；（2）市場分析：納指、原油、黃金、白銀的日線/週線解讀與點位；（3）交易心理與學習路徑：新手如何起步、為何不要急於求成、如何對待虧損與家人壓力。</li>
+<li>個人背景自述（未經核實）：54 歲，交易 33 年；年輕時換過 32 份工作，討厭為比自己「笨」的老闆打工；第一筆錢來自信用卡，入市一夜虧掉 50%，反而認為這是「發生在他身上最好的事」；給自己定了 20 年的學習期限；目標是不設金額、不設期限，只求「學會做到能獲利」；計劃到 2028 年結束公開教學。</li>
+<li>多次強調自己發言的影響力與克制：他說一句話可能讓學生放棄自己的判斷、產生依賴，所以對具體市場只在「足夠重要」時才開口；他發的價位是「關注位」，不是執行訊號；新手不應照著他的話直接交易，而應先觀察數週。</li>
+<li>明確表示不做加密貨幣（但稱有學生用他的方法在加密市場賺了「數百萬美元」），黃金是「事件驅動、高度操縱的市場」，自己很少做。</li>
+</ul>
+<h3>其他提問者 / 發言者</h3>
+<ul>
+<li><strong>Pippi Banks（Charter 會員、老學員）</strong>：兩問——（1）澄清「獨角獸模型」的真正定義（是否等於 Breaker 內嵌 FVG）；（2）嵌套 PD 陣列中，成交量失衡（volume imbalance）與 FVG 是否有不同處理。Michael 用約 25 分鐘系統回答，是全場最重要的方法論段落之一。</li>
+<li><strong>Ender / Andrette（名字轉寫不確定）</strong>：問 Michael 在市場與生活中遭遇困難時「是什麼讓你沒有放棄」。Michael 講了 20 年期限、信用卡起步、一夜虧 50%、32 份工作等經歷，並追問對方學習年限（對方自述學了 3–4 年）。</li>
+<li><strong>Victor（自稱 Prop Victor / Scalping King）</strong>：自述交易 3 年、為交易退學、被父親趕出家門、做 Silver Bullet、自營（prop）挑戰通過後因家庭壓力爆倉、現從零開始、感到「虛弱」。Michael 逐項追問其回測數據（自述 50 筆、60% 勝率、1:2 盈虧比、5 分鐘圖、紐約上午時段、目標倫敦/亞洲時段高低點），指出其問題不在模型而在「無法接受虧損、為向家人證明而交易」，建議先修復內心與關係、把交易與家人隔離開。</li>
+<li><strong>P.U.Q.（新學員，名字轉寫不確定）</strong>：自述學了 6 個月、已刷完 2016/2020/2026 等全部內容，問應優先「流動性」還是「分析」。Michael 建議放慢速度、每天最多 1–2 個影片、用靜態圖練流動性，並以「獵人追蹤鹿的足跡」作比喻講 Killzone 與 9:30 開盤區間缺口。</li>
+<li><strong>Trader in Training 60（61 歲、中風倖存者、自述有失語症）</strong>：交易 3 年半，策略跳來跳去，承認「不喜歡虧損、把虧損當失敗」，現用模擬盤、1 手微型合約、直播口頭解說價格（narrating price action）來放慢節奏，問能否只做 FVG、能否用在黃金上。Michael 回答：只做 FVG 完全夠用；黃金是事件驅動市場、容易被掃停損，小倉位可以嘗試；並強調「要給自己允許虧損的許可」。</li>
+<li><strong>Bobby Obodo（加拿大，40 多歲）</strong>：自述曾經營卡車公司、2025 年 2 月開始學交易、跟訊號群一天虧光、後自學 FVG 與訂單塊、日內波段能抓 300–700 點，但因「槓桿太小、獲利不夠看」而過度交易。Michael 給出固定百分比回報方案（見下文），並明確反對他「加槓桿」的提議；對方自述本金約 5 萬美元、期望年收入約 30 萬美元。</li>
+<li><strong>SHC</strong>：問日線圖上結算價（settlement）開關導致影線長短不同，該用哪一個。Michael 回答：他開關結算價只是為了找 volume imbalance（成交量失衡）；兩種都標出來，看價格尊重哪一個就用哪一個；並指出對「精度」的執念是新手常見誤區，Kitt 補充用「delta（差值）是否大到值得在意」來判斷。</li>
+<li><strong>Poison（南非）</strong>：問突破缺口（breakaway gap）的敏感度閾值、是否允許影線回踩。Michael 回答：理想狀態是完全不回踩、不「吻別」直接走遠；若回踩則需看到真正的沉重拋壓。</li>
+<li><strong>Neil</strong>：兩個高級問題——（1）能否用「developing 日線影線的 consequent encroachment（50% 回撤位）」作為盤中做多的觸發（假設當日低點已形成）；Michael 回答「理論上可以，但收益不值得這麼折騰」，並給出替代做法（用開盤區間缺口的 consequent encroachment + 賣方 inversion FVG）；（2）是否會深入講「鏈式保管（chain of custody）與訂單塊」，Michael 說會。Neil 自述其系統就是圍繞「custodial control（保管控制）+ 狀態轉換」建立的。</li>
+<li><strong>DJ Mann（奈及利亞）</strong>：問 Turtle Soup 與 CRT（Candle Range Theory，他人改名版本）的區別與用法。Michael 回答：「CRT 是 bullshit」，不要學別人改名重包裝的版本；Turtle Soup 本質就是掃掉一側流動性後反向擴張，關鍵看高時間框架的位置與「掃完後回踩到哪裡」。</li>
+<li><strong>Liquidity Llama（愛荷華州，壓軸提問）</strong>：問 2022 年「what do you see?」系列教學的初衷，以及當前市場環境是否與 2022 年相似。Michael 回答：那是用來把全場注意力收回到「一個細節」上的教學工具；對後市他預期期中選舉後可能出現大幅下行、波動加劇、甚至社會動盪與市場衝擊，目前以防守姿態、極度精選交易。</li>
+</ul>
+<h2>四、核心交易內容</h2>
+<h3>1. 本週復盤：週四的 expansion 與 Pit Munch 的原油週</h3>
+<ul>
+<li>Kitt 開場指出，週四出現大級別 expansion（擴張行情），Michael「幾乎沒看盤，卻在剛好的時間出現、抓到了幾天內最好的一段」。</li>
+<li>Pit Munch 本週：週一至週三 4 筆 CL 交易，每筆至少 1 美元波幅；週三收工，週四、週五空倉。她自述「一點不緊張、非常平靜」，與 2023 年每天 20 筆的自己形成對照。</li>
+<li>Michael 自述週四的操作（據其自述）：先做空納指，目標 29,053 一帶；價格先反抽掃掉他的停損，他二次進場；並稱當天「先做空高點、再買回低點」。</li>
+</ul>
+<h3>2. ICT 方法論要點（據發言人現場表述）</h3>
+<ul>
+<li><strong>流動性優先（Draw on Liquidity）</strong>：一切分析的起點是「價格要去哪裡」——前一日高低、時段高低、相對等高/等低（relative equal highs/lows）、缺口與 FVG 都是流動性池；價格先掃流動性、再反向走。</li>
+<li><strong>AMD / Power 3</strong>：累積（Accumulation）—操縱（Manipulation）—派發（Distribution），Pit Munch 的原油交易主框架。</li>
+<li><strong>PD 陣列（PD Arrays）</strong>：訂單塊（Order Block）、FVG（Fair Value Gap / 公允價值缺口）、成交量失衡（Volume Imbalance）、Breaker、反轉 FVG（Inversion FVG）、BISI/SIBI（買方/賣方失衡）。Michael 強調：沒有任何一個 PD 陣列天生優先於另一個，關鍵是「有沒有足夠的空間（range）到目標」；不要只盯一個拼圖碎片。</li>
+<li><strong>訂單塊的定義澄清</strong>：不是每個收陰 K 線都是訂單塊——只有當價格預期要向上走、且該 K 線的開盤價（改變狀態交付，CSD）位於現價下方、提供回踩空間時，才構成看漲訂單塊；反之亦然。</li>
+<li><strong>成交量失衡（Volume Imbalance）</strong>：所有 PD 陣列中最「靈活」的一個，可被反覆穿越；Michael 給的過濾規則是：一旦有 K 線實體在其上方收盤，就暫時不再參考它、改找其他 PD 陣列（不代表它永遠失效）。</li>
+<li><strong>折價/溢價敏感度（Discount / Premium Sensitivity）與均值閾值（Mean Threshold, 50%）</strong>：看漲時希望 K 線實體留在 PD 陣列上半部分（不跌破 50%）、影線可下探；看跌時相反。缺口最好保持「部分未填補」，填補後應立即恢復原方向，否則是轉弱訊號。另有「未能握手（failed to glad hand）」的概念：價格沒有回到應回的位置再走，是強勢/速度的體現。</li>
+<li><strong>Silver Bullet（銀彈）</strong>：上午 10:00（美東）出現的第一個 FVG 是重點；多個提問者用它做模型，Michael 建議新手就從「只做 10 點銀彈」或「只做開盤區間缺口到中點」起步。</li>
+<li><strong>開盤區間缺口（Opening Range Gap, ORG）</strong>：9:30 開盤價與前一日 16:14（美東）收盤價之差；最常見的情形是價格走到缺口一半（50%）處；Pit Munch 的「影子」交易即源於 10 月 2 日非農講座中「開盤區間缺口的影子」。</li>
+<li><strong>週度畫像（Weekly Profiles）與日/週 OHLC</strong>：Michael 自述多年前透過手繪每週 OHLC 折線圖發現：每週的漲跌形態只有有限幾種；結合經濟日曆，可預判哪一天最可能出現週內高點或低點、哪一天最可能出現大級別單邊行情。「畫像」不是 Market Profile，而是指一週內各日如何構成週線區間的通用形態。</li>
+<li><strong>市場製造商模型（Market Maker Models）</strong>：買方模型/賣方模型；Michael 最看重的是「第二階段再分配/再累積」（second stage redistribution / reaccumulation），稱之為「錢最多的地方」；獨角獸即指這一段。</li>
+<li><strong>獨角獸（Unicorn）澄清</strong>：不是模型，只是一個形容詞；用來強調「方向、位置、時間、時段全部對齊的罕見完美 setup」；Michael 說他每年都會免費給出一個「只練這一個就夠了」的模型。</li>
+<li><strong>Turtle Soup（龜湯）</strong>：掃掉一側流動性（買方或賣方）後反向擴張；不一定是大洗盤，也可能只是掃到日內小擺動低點後回落到區間一半再繼續原方向；關鍵在高時間框架的位置，不在掃本身。Michael 明確否定 CRT（他人改名版本）：「Stop learning versions of my stuff renamed.」</li>
+<li><strong>鏈式保管（Chain of Custody）與狀態轉換（Change in State of Delivery, CSD）</strong>：價格從一個 PD 陣列「移交」到下一個；Neil 的系統即圍繞「保管控制（custodial control）在特定時間、特定位置出現 + 狀態轉換確認」建立。</li>
+<li><strong>Killzone 與宏觀時段（Macros）</strong>：倫敦、紐約開盤及 10:00、15:15–15:45、15:50–16:10 等宏觀窗口被多次提及；Michael 建議新手把「時間」作為第一過濾器——知道什麼時候該坐在圖表前、什麼時候不必看盤。</li>
+<li><strong>「名片背面」模型</strong>：Michael 自述 2010 年在 BabyPips 寫過「Here's my card」：一個交易員的全部計劃應該能寫在名片背面；Pit Munch 2023 年 3 月 19 日還按此作業畫過自己的模型並貼出（50 分鐘流動性、賣方、市場結構轉變、獨角獸 Breaker+FVG），Michael 回覆「My model is a clock」。</li>
+<li><strong>結算價開關</strong>：只為尋找 volume imbalance 而切換；兩種設置都標出來，看價格尊重哪一個；不要為幾美分的影線長度糾結「精度」。</li>
+<li><strong>突破缺口（Breakaway Gap）</strong>：理想狀態是完全不回踩、直接遠離；一旦回踩，需看到真正的沉重（heaviness）與加速遠離。</li>
+</ul>
+<h3>3. 涉及的市場與具體點位（均為發言人自述，未經核實）</h3>
+<ul>
+<li><strong>納指 NQ</strong>：Michael 看空。連續合約（NQ1!）9 月 14 日低點、10 月 19 日（週一）看跌訂單塊（週五價格衝進該 K 線但實體未收在其開盤價之上）；12 月合約（NQZ26）已跌破 9 月 16 日低點 29,005，Michael 提到目標 28,815 一帶與 29,053；並提到週度 CB（約 1,500 點、5%+ 的失衡）與「7 月 30 日 Devil's Mark（無影線 K 線）」。另有提問者提到季度缺口（6–7 月缺口、9 月缺口）相繼被看跌收盤。</li>
+<li><strong>原油 CL</strong>：Michael 看多，認為日線上的反轉 FVG 已被有效利用、價格向上脫離，目標是再創歷史新高（2008 年 7 月高點）；並提到地緣因素（期中選舉、以色列/中東局勢）可能進一步推升波動與油價。Pit Munch 的實盤案例見上。</li>
+<li><strong>黃金 GC</strong>：Michael 此前曾提及向 3,900 發起「戰役」；現價接近此前低點約 3,955–3,960 一帶；若跌破 3,900 並放量，可能下看 3,600s；但他自述黃金是事件驅動市場、自己很少交易。</li>
+<li><strong>白銀</strong>：Michael 自述未細看，Kitt 補充稱白銀也有明顯下行；此前 Michael 曾提過 70 與 72 一帶的相關位置（表述較含糊，轉寫此處不完整）。</li>
+<li><strong>其他</strong>：未涉及加密貨幣的具體操作；Michael 明確表示自己不做加密。</li>
+</ul>
+<h3>4. 學習路徑（Michael 給新手的路線圖）</h3>
+<ol>
+<li>先學流動性：每天 20–30 分鐘看靜態圖，標註當日高低點如何形成、價格去了哪些前一日位置、缺口/FVG/訂單塊如何反應；持續 2–4 週。</li>
+<li>一次只練一件事：可以是「只找 FVG」、「只做 10 點銀彈」、「只做開盤區間缺口到中點」；每天最多看 1–2 個影片，不要 6 個月刷完全部內容。</li>
+<li>先讀盤、後交易：上圖不是為了「必須做一單」，而是 tape reading；setup 出現才做；錯過就等下一班車。</li>
+<li>寫日誌、做復盤：記錄每天找什麼、避開了什麼、哪裡做對做錯；Michael 自述自己的全部教學都來自自己的交易日誌時間線。</li>
+<li>固定百分比回報：月目標 6%（週 1.5%），每筆風險 0.5%，達標停手；用小資金（如 1,000 美元）先證明能穩定做到，再逐步放大目標（8.5%→10%→12.5–15%）。</li>
+<li>不要用帳單錢、不要讓家人成為交易的「董事會成員」：交易是你自己的公司，別人的意見沒有出資、卻想當 CEO/CFO。</li>
+</ol>
+<h2>五、心態與交易心理（單獨成節）</h2>
+<p>本場約一半篇幅是心理與成長話題，核心脈絡如下：</p>
+<ul>
+<li><strong>「必須在場」的成癮</strong>：新手覺得「必須一直在交易裡」，本質是對刺激（多巴胺）的成癮，像玩電子遊戲、像追高分；Pit Munch 自述 2023 年每天交易約 20 次、「必須交易、必須交易」，現在這種衝動「完全消失了」。</li>
+<li><strong>交易的公車比喻</strong>：Pit Munch 轉述 Michael 的話——「Trades are like buses, let the bus go, another bus will come.」（交易像公車，錯過一班還有下一班。）</li>
+<li><strong>「糖果店裡的孩子」</strong>：Michael 說，一旦看懂價格，到處都是機會，就像孩子進了糖果店；但什麼都吃會「肚子疼」。解決辦法是每次只專注一件事，並明確「現在我只對這個感興趣」。</li>
+<li><strong>不要把別人的聲音帶進交易</strong>：Michael 坦言自己也會被評論激怒、想「15 分鐘做 15 筆、賺 3 萬美元打對方的臉」，並稱這是自己的性格缺陷與「肩上的 chip」（心結：想證明給已故的長輩看）；他靠社群提醒自己專注。Victor 的案例則是反面教材：為向父母證明「退學是對的」而交易，結果越證明越虧。</li>
+<li><strong>虧損觀</strong>：Trader in Training 60 說「虧損=我失敗了」，Michael 回應：要「給自己允許虧損的許可」；虧損不是失敗，是「使用者失誤」（user error），像走路撞到腳趾——疼一下，繼續走；職業交易員與企業一樣，都預期會有虧損，但不預期會破產。</li>
+<li><strong>家人的壓力</strong>：Victor 被父親趕出家門、父母稱「即使成功也別回來」；Michael 的建議是：先修復關係與內心的平靜，把交易與所愛之人隔離開，「交易 90% 是你自己施加給自己的心理戰」；並建議 Victor 考慮回到學業（交易每天只需 30 分鐘–1 小時）。</li>
+<li><strong>「沒有捷徑」與「沒有一夜成功」</strong>：Michael 多次強調：任何人說「一年內能學會交易」都是在撒謊；速成課、訊號群、「五分鐘學會 ICT」都是在賣「參與感」而不是教賺錢；真正的學習是「慢、枯燥、長期」的。</li>
+<li><strong>自我鼓勵與日誌</strong>：Michael 自述早期每天自我鼓勵（「你今天專注得很好、避開了毒性想法」），並透過日誌衡量進步；他說普通人每天約有 300 個負面想法，交易者要主動管理自我對話，不要說「我不會」「我沒經驗」這類自我設限的話（他當場糾正 Pit Munch 說「我做不了高時間框架分析」）。</li>
+<li><strong>性別視角（發言人原話）</strong>：Michael 認為女性交易者往往更擅長「做完該做的就收手」，而男性更容易陷入「尺寸焦慮」——總覺得獲利不夠大、總想證明自己；這是他對 Bobby 過度交易的解釋框架之一（屬其個人觀點，未經核實）。</li>
+<li><strong>對「證明自己」的告誡</strong>：Michael 稱自己 54 歲仍在與「想證明自己比所有人強」的衝動作鬥爭；並提醒聽眾：不要在社群媒體上曬單求認同，「你不需要向任何人證明你能交易」。</li>
+</ul>
+<h2>六、關鍵原話（英文短引，附時間戳）</h2>
+<ol>
+<li>Kitt，開場定調少做交易（約 00:01:34）：<blockquote>
+<p>"You just don't need to take a lot of trades. You just need to be right very few times."</p>
+</blockquote>
+</li>
+<li>Michael，轉向波段思路（約 00:24:24）：<blockquote>
+<p>"I think we're getting ready to see this cork pop."</p>
+</blockquote>
+</li>
+<li>Pit Munch，讀盤而非找交易（約 00:54:16）：<blockquote>
+<p>"I do not go to the chart to take a trade. I go to the chart to tape read."</p>
+</blockquote>
+</li>
+<li>Pit Munch，轉述 Michael 的公車比喻（約 00:56:23）：<blockquote>
+<p>"Trades are like buses, let the bus go, another bus will come."</p>
+</blockquote>
+</li>
+<li>Michael，駁斥速成論（約 01:05:39）：<blockquote>
+<p>"Anybody that tells you you can learn how to trade in less than one year is a bullshitter. They're a liar."</p>
+</blockquote>
+</li>
+<li>Michael，澄清獨角獸（約 01:29:32、01:34:58）：<blockquote>
+<p>"There is no unicorn model. … It's just an adjective I used."</p>
+</blockquote>
+</li>
+<li>Michael，否定盈虧比執念（約 02:23:47）：<blockquote>
+<p>"I don't believe in risk to reward ratios."</p>
+</blockquote>
+</li>
+<li>Michael，交易即心理戰（約 02:26:38）：<blockquote>
+<p>"Trading is 90% psychological warfare that you place on yourself."</p>
+</blockquote>
+</li>
+<li>Michael，允許虧損（約 02:59:53）：<blockquote>
+<p>"We have to give ourselves permission to take losses."</p>
+</blockquote>
+</li>
+<li>Michael，名片背面模型（約 04:18:49）：
+    &gt; "As a trader, you should be able to summarize it on the back of a business card."</li>
+</ol>
+<h2>七、全程時間線（按小時分段）</h2>
+<ul>
+<li><strong>0–1 小時（00:00–01:00）</strong>：Kitt 開場，介紹「Cookin w ICT」特輯與週四 expansion；Pit Munch 上麥，講述轉做原油、加倉、本週 4 筆交易創生涯最佳週；Michael 約 00:08 進場，談「少即是多」、計劃從日內轉向留波段跑手、看好期中選舉後大波動；隨後講週度畫像（weekly profiles）、日/週 OHLC 手繪復盤法、原油日線反轉 FVG 看多至歷史新高；約 00:52 起談「不要急於求成」、新手應先看靜態圖；約 00:54 Pit Munch 講「上圖只為讀盤」的轉變。</li>
+<li><strong>1–2 小時（01:00–02:00）</strong>：Michael 長篇講新手心態（刺激成癮、訊號群收割、demo 帳戶的誤用、「一年學會交易是撒謊」）；約 01:08 起與 Kitt 對談週度 CB、納指 9 月 14 日低點、10 月 19 日看跌訂單塊、12 月合約跌破 29,005、目標 28,815；約 01:19 起談黃金 3,900 與白銀；約 01:23 Pippi Banks 提問獨角獸模型，Michael 用約 25 分鐘澄清「獨角獸不是模型」並講市場製造商模型第二階段；約 01:51 起新聽眾 Ender 提問「如何堅持下來」，Michael 講 20 年期限、信用卡起步、一夜虧 50%、32 份工作。</li>
+<li><strong>2–3 小時（02:00–03:00）</strong>：Michael 繼續回答 Ender 的追問（知識過載怎麼辦、如何保持冷靜），講「糖果店」比喻、「一次只關注一件事」、2028 年結束公開教學的計劃；約 02:15 Victor（自營交易員）上麥，講述退學、被趕出家門、挑戰爆倉的經歷，Michael 逐項追問其回測數據與 Silver Bullet 執行細節，指出問題在「為證明而交易」；約 02:32 起 P.U.Q.（6 個月新學員）提問流動性優先還是分析優先，Michael 以「獵人追蹤鹿」比喻講靜態圖練流動性、Killzone 與 9:30 開盤區間缺口。</li>
+<li><strong>3–4 小時（03:00–04:00）</strong>：約 02:56（逐字稿 3 小時段內）Trader in Training 60 提問能否只做 FVG、能否用於黃金，Michael 談「允許虧損」、黃金事件驅動特性、口頭解說讀盤法；約 03:11 Bobby Obodo 提問過度交易，Michael 給出「每月 6%/每週 1.5%/每筆風險 0.5%」的固定百分比回報框架與複利「一分錢翻倍」例子，明確反對加槓桿；約 03:38 SHC 提問日線結算價開關，Michael 與 Kitt 談「精度執念」與 delta 判斷法；約 03:52 起 Pit Munch 與 Michael 對練折價/溢價敏感度、均值閾值、缺口「未能握手」等概念。</li>
+<li><strong>4–5 小時（04:00–05:04）</strong>：約 04:04 Michael 總結「看跌時三個訊號」（上影 K 線不被突破、缺口保持部分未填補、陰線不斷被吃掉）；約 04:05 Poison 提問突破缺口敏感度；約 04:07 Neil 提問日線影線 consequent encroachment 與鏈式保管，Michael 稱前者「理論上可以但不值得折騰」；約 04:18 起談「名片背面模型」與 Pit Munch 2023 年的作業；約 04:35 DJ Mann 提問 Turtle Soup 與 CRT，Michael 否定 CRT 並解釋龜湯；約 04:44 Liquidity Llama 壓軸提問「what do you see?」教學初衷與 2022 vs 現在的市場環境，Michael 談期中選舉後的下行預期、防守姿態與「一週一兩個 setup」；約 05:02 Kitt 與 Pit Munch 致謝收尾，Space 結束。</li>
+</ul>
+<h2>八、注意事項與免責</h2>
+<ul>
+<li>本紀要全部內容來自機器轉寫的英文逐字稿，發言人無標籤、歸屬按對話上下文推斷；個別名字與術語轉寫可能有誤（如 Ender/Andrette、P.U.Q.、SHC、「CSID/CB」、「octants」、「BISI/SIBI」、「IOFED」等），請以原錄音為準。</li>
+<li>所有市場判斷（納指 28,815、黃金 3,900、原油歷史新高、期中選舉後大波動等）均為發言人現場自述，未經核實，不構成投資建議；部分地緣政治表述（如對選舉後局勢、社會動盪的預測）屬於發言人個人觀點。</li>
+<li>逐字稿中個別段落（如 Bobby Obodo 發言約 03:12–03:15、P.U.Q. 發言時背景有人聲）存在轉寫不清或斷句混亂，相關內容已按可辨認部分歸納，未作腦補。</li>
+<li>
+<p>Michael 在場內多次提到「我的學生」「我的付費會員」等表述，均為其自述；本紀要不作背書。</p>
+</li>
+<li>
+<p>定稿核對說明：關鍵原話已逐條對照逐字稿原文核對時間戳與措辭；發言人名字拼寫（Pippi Banks、SHC、P.U.Q.、Ender/Andrette）、納指與黃金的具體點位數字（29,053 / 28,815 / 29,005 / 29,227、黃金 3,955–3,960 等）及 "Devil's Mark"、"CSID/CB"、"octants"、"BISI/SIBI" 等術語仍以原錄音為準，轉寫存在誤差可能。</p>
+</li>
+<li>日期口徑：Space 歸檔日期為 2026-10-24（週六），場內多次提及「昨天週四」「今天週五」，實際舉行時間可能為週五美東時間下午；紀要按場內說法記錄，未擅自改動。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Session Notes — TRU - Cookin w ICT (ICT Trading Session)</h1>
+<blockquote>
+<p>Source: Local transcription of the X Space replay recording (English verbatim transcript, total length 5 hours 04 minutes 10 seconds, 4,967 lines); the notes are organized in Chinese. Important disclaimer: All views, figures, and market judgments below are the speakers' own on-the-spot statements, have not been independently verified, and do not constitute investment advice of any kind. Speaker attribution is inferred from the conversational context; where it cannot be determined, it is marked as "a speaker/questioner."</p>
+</blockquote>
+<h2>1. Conclusions First (Key Takeaways)</h2>
+<ol>
+<li><strong>Trade less — getting it right just a few times is enough.</strong> Kitt set the theme at the open: Thursday's expansion proved that you don't need a lot of trades; you only need to be right on a very small number of trades at the right time. Pit Munch took only 4 crude oil trades this week (Monday through Wednesday), yet it was her "best week" since she started trading in 2023.</li>
+<li><strong>Michael's (ICT's) biggest shift signal of the session: moving from pure intraday trading to keeping "runners."</strong> He said that for the past few years he had avoided overnight risk, but he believes volatility will expand around the midterm elections, producing large moves that can last from several days to two weeks. His plan is to enter with an intraday model, close 75% of the position intraday, and keep 25% as a 1–2 week swing. He urged listeners to spend 10–15 minutes a day zooming out from sub-5-minute charts to the 4-hour/1-hour/weekly charts to see direction.</li>
+<li><strong>There is no "unicorn model."</strong> Michael clarified this personally: "There is no unicorn model" — "unicorn" is merely an adjective he used to describe "everything perfectly aligned, the largest leg of the week"; it is not a model with fixed parameters. It is neither limited to "an FVG nested inside a Breaker" nor to the second-stage redistribution/reaccumulation of the market maker models.</li>
+<li><strong>Liquidity is lesson one.</strong> For beginners, Michael's advice is: don't watch live price action; first spend 2–4 weeks looking at static charts for 20–30 minutes a day, studying why the day's highs and lows formed, why price went to sweep the prior day's high/low, and gaps and FVGs. Understand "why price goes to a particular location" before talking about entries. Don't use "learn it in five minutes," don't be greedy for volume — practice just one thing each day.</li>
+<li><strong>The "Loaded Gun" and "go to read the tape, not to trade."</strong> Pit Munch's transformation is the most complete student case study of the session: in 2023 she traded about 20 times a day, scalping 10 points on NQ, then holding for 200–300 points, then switching to crude oil CL. Now she goes to the charts each day only for tape reading, and unless there is a "fully loaded signal" (multiple confluences all aligned) she does not pull the trigger; on Thursday and Friday she decisively passed on opportunities that were only a "half-loaded gun."</li>
+<li><strong>Fixed percentage returns; reject using leverage to cure overtrading.</strong> For the overtrading problem, Michael offered a framework of "6% per month, 1.5% per week, 0.5% risk per trade": once you hit the target, stop, and raise the target gradually. He explicitly opposed the idea of "increasing leverage to make the profits bigger," stressing that compounding is the solution.</li>
+<li><strong>Michael is bearish and defensive on the market outlook.</strong> Per his own statements: the Nasdaq is looking toward the 28,815 area (the December contract has already broken below the September 16 low of 29,005); gold — watch 3,900 (a break below could open the way to the 3,600s); crude oil he is bullish on, believing it will make new all-time highs. Volatility may intensify after the midterm elections; he himself is currently taking "only one or two setups a week," primarily on defense.</li>
+<li><strong>Trading is 90% psychological warfare.</strong> A theme that recurred throughout the session: don't bring the expectations of family, partners, or social media into your trading; don't trade with bill money; give yourself "permission to take losses"; treat trading as a business, keep a trading journal, and condense your model until it "fits on the back of a business card."</li>
+</ol>
+<h2>2. Session Information</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>TRU - Cookin w ICT (Chinese rendering: Cooking with ICT / ICT Trading Session)</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>Kitt @ICT_Concepts (host of the Trader Roundup series)</td>
+</tr>
+<tr>
+<td>Co-host</td>
+<td>Pit Munch</td>
+</tr>
+<tr>
+<td>Featured guest</td>
+<td>Michael (ICT himself, Michael Huddleston)</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-10-24 (Saturday; the session repeatedly mentioned "yesterday, Thursday" and "today, Friday" — the Space was actually held on Friday afternoon, US Eastern Time)</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>5 hours 04 minutes 10 seconds (transcript 00:00:30–05:04:03)</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>18,825 people (verified via spacesdashboard); 4,020 replays</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>English</td>
+</tr>
+<tr>
+<td>Space ID</td>
+<td>1wxWjlNMrQWJQ</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>https://x.com/i/spaces/1wxWjlNMrQWJQ</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Summary by Speaker</h2>
+<h3>Kitt (Host)</h3>
+<ul>
+<li>Opened by setting the tone for "Cookin w ICT" and introducing the week's main storyline: a large expansion on Thursday, with Michael "taking very few trades, but the right ones at the right time."</li>
+<li>Served as the connector throughout: recapping Pit Munch's trades, posing questions to Michael, guiding audience questions, and managing the pace (Michael was originally scheduled to finish at 5:00; this was extended to 5:30 and ultimately to 8:00).</li>
+<li>The "homework" he gave Pit Munch: hold longer and size up. He described NQ as "a crazy bitch" (unreliable, fickle), while crude oil CL is like "a consistent, reliable partner" — the backdrop to Pit Munch's switch to crude oil.</li>
+<li>Acted as "translator" many times: turning Michael's abstract expressions into steps listeners could follow (weekly profiling, daily open anchors at 18:00/midnight, macro time windows, etc.), and proactively asking follow-up questions on behalf of new listeners.</li>
+<li>Stated clearly: the price levels Michael gives in his posts are only "levels of interest," not entry signals; and reminded questioners to ask their questions directly rather than just spamming "I have a question."</li>
+</ul>
+<h3>Pit Munch (Co-host)</h3>
+<ul>
+<li>The "student case study" at the center of this session. She began learning in January 2023 (following the 2023 mentorship after the 2022 mentorship ended), going from about 20 trades a day and 10-point scalps on NQ to holding for 200–300 points.</li>
+<li>Two weeks ago she switched from NQ to crude oil: in the first week she tested the waters with 1 lot of MCL (micro crude); Kitt told her to go straight to CL. In the second week (this week) she sized up: 4 trades from Monday to Wednesday, each capturing at least $1 of oil price movement (for 1 lot of CL, every $1 = $1,000), with one trade the previous week coming close to $4. She hit her full weekly target by Wednesday and stayed flat, watching, on Thursday and Friday. It was the best week of her trading career.</li>
+<li>Method-wise she mainly uses the 2026 material: the AMD Power 3 (accumulation–manipulation–distribution), the "ladder" formed by RTH gaps and octants, and validation via the PD array matrix. One of her "best trades" used what Michael taught at the very start of the October 2 nonfarm lecture (around the 16-second mark) about the "shadows of opening range gaps": at the 50% of a 3-minute wick shadow + an inversion FVG + a 30-second order block overlapping, with the candle body not breaking below the order block's mean threshold and the 50% of the shadow, entering at the shadow. Michael praised it on the spot as "a very beautiful execution."</li>
+<li>Her model is called the "Loaded Gun": multiple confluences must align simultaneously before she fires. What she saw on Thursday and Friday this week was only a "half-loaded gun," and even though she strongly suspected the move would play out, she did not take it.</li>
+<li>On her mindset shift, in her own words: before, "going to the charts meant looking for a trade"; now "going to the charts is for tape reading — I trade when a setup presents itself." She also mentioned using personal lifestyle adjustments such as fasting and exercise to support her trading state.</li>
+</ul>
+<h3>Michael / ICT (Featured Guest)</h3>
+<ul>
+<li>Joined at around 00:08, opening with "less is more," and said he hoped to stretch the perspective from sub-5-minute charts out to swing timeframes.</li>
+<li>His core output fell into three blocks: (1) methodology clarifications — the unicorn, PD array priority, volume imbalance, the definition of an order block, Turtle Soup, the settlement price toggle, etc.; (2) market analysis — daily/weekly interpretations and levels for the Nasdaq, crude oil, gold, and silver; (3) trading psychology and the learning path — how beginners should start, why not to rush for quick success, and how to deal with losses and family pressure.</li>
+<li>His personal background, in his own words (unverified): 54 years old, 33 years of trading; as a young man he went through 32 jobs and hated working for bosses "dumber" than himself; his first money came from a credit card, and he lost 50% overnight after entering the market — which he instead considers "the best thing that ever happened to him"; he set himself a 20-year learning deadline; his goal has no dollar amount and no deadline, only to "learn to do it profitably"; he plans to end his public teaching by 2028.</li>
+<li>He repeatedly stressed both the influence of his words and his restraint: a single sentence from him can make students abandon their own judgment and become dependent, so he only speaks on specific markets when it is "important enough"; the levels he posts are "levels of interest," not execution signals; beginners should not trade directly on his words but observe for several weeks first.</li>
+<li>He stated clearly that he does not trade cryptocurrencies (though he said some students have made "millions of dollars" applying his methods in crypto markets), and that gold is an "event-driven, highly manipulated market" that he rarely trades himself.</li>
+</ul>
+<h3>Other Questioners / Speakers</h3>
+<ul>
+<li><strong>Pippi Banks (Charter member, long-time student)</strong>: Two questions — (1) clarifying the true definition of the "unicorn model" (whether it equals an FVG nested inside a Breaker); (2) within nested PD arrays, whether volume imbalance and FVGs are treated differently. Michael answered systematically over about 25 minutes — one of the most important methodology segments of the entire session.</li>
+<li><strong>Ender / Andrette (name transcription uncertain)</strong>: Asked Michael, when facing difficulties in the market and in life, "what kept you from giving up." Michael recounted the 20-year deadline, starting with a credit card, losing 50% overnight, the 32 jobs, and more, and asked in return how long the questioner had been learning (the questioner said 3–4 years).</li>
+<li><strong>Victor (calls himself Prop Victor / Scalping King)</strong>: Said he has traded for 3 years, dropped out of school for trading, was kicked out of the house by his father, trades the Silver Bullet, blew up a prop firm challenge under family pressure after passing it, is now starting over from zero, and feels "weak." Michael went through his backtest data item by item (per his own account: 50 trades, 60% win rate, 1:2 risk-to-reward, 5-minute chart, New York morning session, targeting London/Asia session highs and lows), pointed out that his problem is not the model but "being unable to accept losses and trading to prove himself to his family," and advised him to first repair his inner state and relationships and to keep trading separate from his family.</li>
+<li><strong>P.U.Q. (new student, name transcription uncertain)</strong>: Said he has studied for 6 months and has already gone through all the content (2016/2020/2026, etc.), and asked whether to prioritize "liquidity" or "analysis." Michael advised slowing down, watching at most 1–2 videos a day, practicing liquidity on static charts, and used the metaphor of "a hunter tracking a deer's footprints" to explain Killzones and the 9:30 opening range gap.</li>
+<li><strong>Trader in Training 60 (61 years old, stroke survivor, says he has aphasia)</strong>: Has traded for 3.5 years, jumping from strategy to strategy; admitted he "doesn't like losses and treats losses as failure"; now uses a demo account, 1 micro contract, and live verbal narration of price action to slow himself down; asked whether trading only FVGs is enough and whether they can be used on gold. Michael answered: trading only FVGs is entirely sufficient; gold is an event-driven market where stops are easily hunted, but small size is fine to try; and he stressed "you have to give yourself permission to take losses."</li>
+<li><strong>Bobby Obodo (Canada, in his 40s)</strong>: Said he used to run a trucking company, started learning to trade in February 2025, lost everything in a single day following a signal group, then taught himself FVGs and order blocks and can catch 300–700 points on intraday swings, but overtrades because "the leverage is too small and the profits don't look like much." Michael gave him the fixed-percentage return plan (see below) and explicitly opposed his proposal to "add leverage"; he said his capital is about $50,000 and his target annual income about $300,000.</li>
+<li><strong>SHC</strong>: Asked about the settlement price toggle on the daily chart causing wicks of different lengths, and which one to use. Michael answered: he toggles settlement only to find volume imbalance; mark both, and use whichever one price respects; he also pointed out that an obsession with "precision" is a common beginner misconception, and Kitt added the test of "whether the delta (difference) is large enough to matter."</li>
+<li><strong>Poison (South Africa)</strong>: Asked about the sensitivity threshold for breakaway gaps and whether a wick retest is allowed. Michael answered: ideally there is no retest at all — no "kiss goodbye," price just moves away; if it does retest, you need to see genuinely heavy selling pressure.</li>
+<li><strong>Neil</strong>: Two advanced questions — (1) whether the consequent encroachment (50% retracement level) of a developing daily wick can be used as an intraday long trigger (assuming the day's low has already formed); Michael answered "in theory yes, but the payoff isn't worth the hassle," and offered an alternative (using the consequent encroachment of the opening range gap + a sell-side inversion FVG); (2) whether he will go deeper on "chain of custody and order blocks" — Michael said he will. Neil said his own system is built around "custodial control + state changes."</li>
+<li><strong>DJ Mann (Nigeria)</strong>: Asked about the difference between Turtle Soup and CRT (Candle Range Theory, a renamed version by others) and how to use them. Michael answered: "CRT is bullshit" — don't learn other people's renamed, repackaged versions; Turtle Soup is essentially sweeping liquidity on one side and then expanding in the opposite direction, and the key is the higher-timeframe location and "where price retraces to after the sweep."</li>
+<li><strong>Liquidity Llama (Iowa, closing question)</strong>: Asked about the original intent of the 2022 "what do you see?" teaching series, and whether the current market environment resembles 2022. Michael answered: it was a teaching tool to bring everyone's attention back to "one detail"; on the outlook, he expects that after the midterm elections there could be a sharp decline, heightened volatility, and even social unrest and market shocks; he is currently in a defensive posture, extremely selective with trades.</li>
+</ul>
+<h2>4. Core Trading Content</h2>
+<h3>1. Review of the Week: Thursday's Expansion and Pit Munch's Crude Oil Week</h3>
+<ul>
+<li>Kitt opened by noting that Thursday saw a large-scale expansion move, and that Michael "barely watched the market, yet showed up at exactly the right time and caught the best leg of the past few days."</li>
+<li>Pit Munch this week: 4 CL trades from Monday to Wednesday, each capturing at least $1 of movement; done by Wednesday, flat and watching on Thursday and Friday. She described herself as "not nervous at all, very calm" — in contrast to her 2023 self, trading 20 times a day.</li>
+<li>Michael's own Thursday trading (per his account): he first shorted the Nasdaq with a target around 29,053; price first rallied back and swept his stop, and he re-entered a second time; he also said that day he "shorted the high first, then bought back the low."</li>
+</ul>
+<h3>2. ICT Methodology Points (as stated by the speakers live)</h3>
+<ul>
+<li><strong>Liquidity first (Draw on Liquidity)</strong>: The starting point of all analysis is "where is price going" — prior day highs/lows, session highs/lows, relative equal highs/lows, gaps, and FVGs are all liquidity pools; price sweeps liquidity first, then moves in the opposite direction.</li>
+<li><strong>AMD / Power 3</strong>: Accumulation — Manipulation — Distribution; the main framework for Pit Munch's crude oil trades.</li>
+<li><strong>PD Arrays</strong>: Order Blocks, FVGs (Fair Value Gaps), Volume Imbalances, Breakers, Inversion FVGs, BISI/SIBI (buy-side/sell-side imbalance). Michael stressed: no single PD array is inherently superior to another; the key is "whether there is enough range to the target"; don't fixate on one puzzle piece.</li>
+<li><strong>Clarifying the definition of an order block</strong>: Not every bearish candle is an order block — only when price is expected to move up, and that candle's opening price (change in state of delivery, CSD) sits below current price, providing room for a retracement, does it constitute a bullish order block; and vice versa.</li>
+<li><strong>Volume Imbalance</strong>: The most "flexible" of all PD arrays, and it can be traversed repeatedly. Michael's filter rule: once a candle body closes above it, temporarily stop referencing it and look for other PD arrays instead (that doesn't mean it is invalid forever).</li>
+<li><strong>Discount / Premium Sensitivity and the Mean Threshold (50%)</strong>: When bullish, you want candle bodies to stay in the upper half of the PD array (not breaking below 50%), while wicks may probe lower; the reverse when bearish. Gaps are best kept "partially unfilled"; after being filled, price should immediately resume the original direction, otherwise it is a sign of weakening. There is also the concept of "failed to glad hand": price failing to return to where it should before moving on is a sign of strength/speed.</li>
+<li><strong>Silver Bullet</strong>: The first FVG appearing at 10:00 a.m. (US Eastern) is the key one; several questioners use it as their model, and Michael advised beginners to start with "only trading the 10-point Silver Bullet" or "only trading the opening range gap to its midpoint."</li>
+<li><strong>Opening Range Gap (ORG)</strong>: The difference between the 9:30 opening price and the prior day's 16:14 (US Eastern) closing price; the most common scenario is price reaching the halfway point (50%) of the gap; Pit Munch's "shadow" trade came from the "shadows of opening range gaps" in the October 2 nonfarm lecture.</li>
+<li><strong>Weekly Profiles and daily/weekly OHLC</strong>: Michael said that years ago, by hand-drawing weekly OHLC line charts, he discovered that each week's up/down pattern comes in only a limited number of forms; combined with the economic calendar, one can anticipate which day is most likely to produce the weekly high or low and which day is most likely to see a large one-directional move. A "profile" here is not Market Profile, but the generic pattern of how the days within a week compose the weekly range.</li>
+<li><strong>Market Maker Models</strong>: Buy models / sell models; what Michael values most is the "second stage redistribution / reaccumulation," which he called "where the most money is"; the unicorn refers to this very segment.</li>
+<li><strong>Unicorn clarification</strong>: It is not a model, just an adjective, used to emphasize "a rare, perfect setup where direction, location, time, and session are all aligned"; Michael said that every year he gives away for free one model that is "enough to practice on its own."</li>
+<li><strong>Turtle Soup</strong>: After sweeping liquidity on one side (buy-side or sell-side), price expands in the opposite direction; it isn't necessarily a big stop hunt — it may simply sweep an intraday minor swing low, pull back to half the range, and then continue in the original direction; the key is the higher-timeframe location, not the sweep itself. Michael explicitly rejected CRT (the renamed version by others): "Stop learning versions of my stuff renamed."</li>
+<li><strong>Chain of Custody and Change in State of Delivery (CSD)</strong>: Price being "handed over" from one PD array to the next; Neil's system is built around "custodial control appearing at a specific time and location + confirmation of a state change."</li>
+<li><strong>Killzones and Macros</strong>: The London and New York opens and macro windows such as 10:00, 15:15–15:45, and 15:50–16:10 were mentioned repeatedly; Michael advised beginners to use "time" as the first filter — know when you should be sitting in front of the charts and when you don't need to watch at all.</li>
+<li><strong>The "back of a business card" model</strong>: Michael said that in 2010 he wrote "Here's my card" on BabyPips: a trader's entire plan should fit on the back of a business card. On March 19, 2023, Pit Munch drew her own model as this assignment and posted it (50-minute liquidity, sell-side, market structure shift, unicorn Breaker+FVG), and Michael replied, "My model is a clock."</li>
+<li><strong>Settlement price toggle</strong>: Switch it only to look for volume imbalance; mark both settings and see which one price respects; don't agonize over "precision" for a few cents of wick length.</li>
+<li><strong>Breakaway Gap</strong>: Ideally there is no retest at all and price moves straight away; if it does retest, you need to see genuine heaviness and acceleration away.</li>
+</ul>
+<h3>3. Markets and Specific Levels Mentioned (all per the speakers' own statements, unverified)</h3>
+<ul>
+<li><strong>Nasdaq NQ</strong>: Michael is bearish. The continuous contract (NQ1!): the September 14 low; the October 19 (Monday) bearish order block (on Friday price pushed into that candle but the body did not close above its opening price); the December contract (NQZ26) has already broken below the September 16 low of 29,005, and Michael mentioned a target area around 28,815 as well as 29,053; he also mentioned the weekly CB (an imbalance of roughly 1,500 points, 5%+) and the "July 30 Devil's Mark (a candle with no wick)." Another questioner mentioned quarterly gaps (the June–July gap and the September gap) being closed bearishly in succession.</li>
+<li><strong>Crude Oil CL</strong>: Michael is bullish, believing the inversion FVG on the daily chart has been effectively used and price is breaking away upward, with a target of new all-time highs (the July 2008 high); he also mentioned that geopolitical factors (the midterm elections, the Israel/Middle East situation) could further drive up volatility and oil prices. For Pit Munch's live trading case, see above.</li>
+<li><strong>Gold GC</strong>: Michael had previously spoken of a "campaign" toward 3,900; the current price is near the prior low area of about 3,955–3,960; if 3,900 breaks on volume, price could look toward the 3,600s; but he said gold is an event-driven market and he rarely trades it himself.</li>
+<li><strong>Silver</strong>: Michael said he hadn't looked at it closely; Kitt added that silver also showed a clear move down; Michael had previously mentioned relevant levels around 70 and 72 (the phrasing was vague and the transcription is incomplete at this point).</li>
+<li><strong>Other</strong>: No specific cryptocurrency operations were discussed; Michael stated clearly that he does not trade crypto.</li>
+</ul>
+<h3>4. Learning Path (Michael's Roadmap for Beginners)</h3>
+<ol>
+<li>Learn liquidity first: spend 20–30 minutes a day looking at static charts, marking how the day's highs and lows formed, which prior-day locations price visited, and how gaps/FVGs/order blocks reacted; keep this up for 2–4 weeks.</li>
+<li>Practice only one thing at a time: it could be "only look for FVGs," "only trade the 10-point Silver Bullet," or "only trade the opening range gap to its midpoint"; watch at most 1–2 videos a day — don't binge through all the content in 6 months.</li>
+<li>Read the tape first, trade second: going to the charts is not about "having to take a trade," it is tape reading; trade only when a setup appears; if you miss it, wait for the next bus.</li>
+<li>Keep a journal and review: record each day what you looked for, what you avoided, and what you did right or wrong; Michael said all of his own teaching comes from the timeline of his own trading journal.</li>
+<li>Fixed percentage returns: a monthly target of 6% (1.5% per week), 0.5% risk per trade, and stop when you hit the target; first prove you can do it consistently with small capital (e.g., $1,000), then gradually raise the target (8.5% → 10% → 12.5–15%).</li>
+<li>Don't use bill money, and don't let family become "board members" of your trading: trading is your own company — other people's opinions come with no capital invested, yet they want to act as CEO/CFO.</li>
+</ol>
+<h2>5. Mindset and Trading Psychology (Dedicated Section)</h2>
+<p>Roughly half of this session was devoted to psychology and personal growth; the core threads are as follows:</p>
+<ul>
+<li><strong>The addiction of "having to be in the market"</strong>: Beginners feel they "must always be in a trade," which is essentially an addiction to stimulation (dopamine) — like playing a video game, like chasing a high score. Pit Munch said that in 2023 she traded about 20 times a day, feeling she "had to trade, had to trade," and that this urge has now "completely disappeared."</li>
+<li><strong>The bus metaphor for trades</strong>: Pit Munch quoted Michael — "Trades are like buses, let the bus go, another bus will come." (Trades are like buses: miss one, and another will come along.)</li>
+<li><strong>"A kid in a candy store"</strong>: Michael said that once you understand price, opportunities are everywhere, like a child walking into a candy store; but eating everything will give you a "stomach ache." The solution is to focus on one thing at a time and be clear that "right now, this is the only thing I'm interested in."</li>
+<li><strong>Don't bring other people's voices into your trading</strong>: Michael admitted that he too gets provoked by comments and wants to "take 15 trades in 15 minutes and make $30,000 to shove it in their face," calling this a character flaw of his and a "chip on his shoulder" (a complex: wanting to prove himself to deceased elders); he relies on the community to remind him to stay focused. Victor's case is the cautionary tale: trading to prove to his parents that "dropping out was the right choice" — the more he tried to prove it, the more he lost.</li>
+<li><strong>The view on losses</strong>: Trader in Training 60 said "a loss = I failed"; Michael responded: you must "give yourself permission to take losses"; a loss is not failure, it is "user error" — like stubbing your toe while walking: it hurts for a moment, then you keep walking. Professional traders, like businesses, expect to have losses, but they do not expect to go bankrupt.</li>
+<li><strong>Family pressure</strong>: Victor was kicked out of the house by his father, and his parents said "don't come back even if you succeed"; Michael's advice: first repair the relationship and your inner peace, keep trading separate from the people you love — "trading is 90% psychological warfare that you place on yourself"; he also suggested Victor consider returning to his studies (trading only needs 30 minutes to 1 hour a day).</li>
+<li><strong>"No shortcuts" and "no overnight success"</strong>: Michael stressed repeatedly: anyone who says "you can learn to trade within a year" is lying; crash courses, signal groups, and "learn ICT in five minutes" sell a "sense of participation," not how to make money; real learning is "slow, boring, and long-term."</li>
+<li><strong>Self-encouragement and journaling</strong>: Michael said that in his early days he encouraged himself daily ("you focused well today, you avoided toxic thoughts") and measured his progress through his journal; he said the average person has about 300 negative thoughts a day, and traders must actively manage their self-talk, avoiding self-limiting statements like "I can't" or "I have no experience" (he corrected Pit Munch on the spot when she said "I can't do higher-timeframe analysis").</li>
+<li><strong>A gender perspective (the speaker's own words)</strong>: Michael believes female traders are often better at "doing what needs to be done and then stopping," while men more easily fall into "size anxiety" — always feeling the profits aren't big enough and always wanting to prove themselves; this is one of his explanatory frameworks for Bobby's overtrading (his personal view, unverified).</li>
+<li><strong>The warning about "proving yourself"</strong>: Michael said that at 54 he is still fighting the urge to "prove I'm stronger than everyone else"; and he reminded listeners: don't post your trades on social media seeking validation — "you don't need to prove to anyone that you can trade."</li>
+</ul>
+<h2>6. Key Verbatim Quotes (Short English Excerpts, with Timestamps)</h2>
+<ol>
+<li>Kitt, setting the "trade less" theme at the open (approx. 00:01:34): <blockquote>
+<p>"You just don't need to take a lot of trades. You just need to be right very few times."</p>
+</blockquote>
+</li>
+<li>Michael, shifting toward a swing mindset (approx. 00:24:24): <blockquote>
+<p>"I think we're getting ready to see this cork pop."</p>
+</blockquote>
+</li>
+<li>Pit Munch, reading the tape rather than hunting trades (approx. 00:54:16): <blockquote>
+<p>"I do not go to the chart to take a trade. I go to the chart to tape read."</p>
+</blockquote>
+</li>
+<li>Pit Munch, quoting Michael's bus metaphor (approx. 00:56:23): <blockquote>
+<p>"Trades are like buses, let the bus go, another bus will come."</p>
+</blockquote>
+</li>
+<li>Michael, rejecting the crash-course narrative (approx. 01:05:39): <blockquote>
+<p>"Anybody that tells you you can learn how to trade in less than one year is a bullshitter. They're a liar."</p>
+</blockquote>
+</li>
+<li>Michael, clarifying the unicorn (approx. 01:29:32, 01:34:58): <blockquote>
+<p>"There is no unicorn model. … It's just an adjective I used."</p>
+</blockquote>
+</li>
+<li>Michael, rejecting the risk-to-reward obsession (approx. 02:23:47): <blockquote>
+<p>"I don't believe in risk to reward ratios."</p>
+</blockquote>
+</li>
+<li>Michael, trading as psychological warfare (approx. 02:26:38): <blockquote>
+<p>"Trading is 90% psychological warfare that you place on yourself."</p>
+</blockquote>
+</li>
+<li>Michael, permission to take losses (approx. 02:59:53): <blockquote>
+<p>"We have to give ourselves permission to take losses."</p>
+</blockquote>
+</li>
+<li>Michael, the back-of-a-business-card model (approx. 04:18:49):
+    &gt; "As a trader, you should be able to summarize it on the back of a business card."</li>
+</ol>
+<h2>7. Full Timeline (Segmented by Hour)</h2>
+<ul>
+<li><strong>Hour 0–1 (00:00–01:00)</strong>: Kitt opens, introducing the "Cookin w ICT" special and Thursday's expansion; Pit Munch comes on mic, describing her switch to crude oil, sizing up, and her 4 trades this week making it the best week of her career; Michael joins at around 00:08, talking about "less is more," his plan to shift from intraday trading to keeping swing runners, and his expectation of big volatility after the midterm elections; he then covers weekly profiles, the hand-drawn daily/weekly OHLC review method, and the bullish case on crude oil via the daily inversion FVG toward all-time highs; from around 00:52, "don't rush for quick success" and why beginners should start with static charts; around 00:54, Pit Munch describes her shift to "going to the charts only to read the tape."</li>
+<li><strong>Hour 1–2 (01:00–02:00)</strong>: Michael speaks at length on beginner mindset (stimulation addiction, signal groups harvesting beginners, misuse of demo accounts, "learning to trade in a year is a lie"); from around 01:08, a discussion with Kitt on the weekly CB, the Nasdaq's September 14 low, the October 19 bearish order block, the December contract breaking below 29,005, and the 28,815 target; from around 01:19, gold at 3,900 and silver; around 01:23, Pippi Banks asks about the unicorn model, and Michael spends about 25 minutes clarifying that "the unicorn is not a model" and explaining the second stage of the market maker models; from around 01:51, new listener Ender asks "how do you keep going," and Michael recounts the 20-year deadline, starting with a credit card, losing 50% overnight, and the 32 jobs.</li>
+<li><strong>Hour 2–3 (02:00–03:00)</strong>: Michael continues answering Ender's follow-ups (what to do about knowledge overload, how to stay calm), covering the "candy store" metaphor, "focus on one thing at a time," and his plan to end public teaching in 2028; around 02:15, Victor (a prop trader) comes on mic, recounting dropping out, being kicked out of the house, and blowing up his challenge; Michael goes through his backtest data and Silver Bullet execution details item by item, pointing out the problem is "trading to prove himself"; from around 02:32, P.U.Q. (a 6-month new student) asks whether liquidity or analysis comes first, and Michael uses the "hunter tracking a deer" metaphor to explain practicing liquidity on static charts, Killzones, and the 9:30 opening range gap.</li>
+<li><strong>Hour 3–4 (03:00–04:00)</strong>: Around 02:56 (within the transcript's third hour), Trader in Training 60 asks whether he can trade only FVGs and whether they can be used on gold; Michael discusses "permission to take losses," gold's event-driven nature, and the verbal narration method of tape reading; around 03:11, Bobby Obodo asks about overtrading, and Michael gives the fixed-percentage return framework of "6% per month / 1.5% per week / 0.5% risk per trade" along with the compounding "doubling a penny" example, explicitly opposing added leverage; around 03:38, SHC asks about the daily settlement price toggle, and Michael and Kitt discuss the "precision obsession" and the delta method of judging; from around 03:52, Pit Munch and Michael drill on discount/premium sensitivity, the mean threshold, and gaps that "failed to glad hand," among other concepts.</li>
+<li><strong>Hour 4–5 (04:00–05:04)</strong>: Around 04:04, Michael summarizes "three signals when bearish" (an upper-wick candle not being taken out, a gap staying partially unfilled, bearish candles being continually absorbed); around 04:05, Poison asks about breakaway gap sensitivity; around 04:07, Neil asks about the consequent encroachment of daily wicks and chain of custody, and Michael calls the former "possible in theory but not worth the hassle"; from around 04:18, the "back of a business card" model and Pit Munch's 2023 assignment; around 04:35, DJ Mann asks about Turtle Soup and CRT, and Michael rejects CRT and explains the Turtle Soup; around 04:44, Liquidity Llama's closing question on the original intent of the "what do you see?" teaching and the 2022 vs. current market environment, with Michael discussing his expectation of a post-midterm-election decline, his defensive posture, and "one or two setups a week"; around 05:02, Kitt and Pit Munch give thanks and wrap up, and the Space ends.</li>
+</ul>
+<h2>8. Notes and Disclaimers</h2>
+<ul>
+<li>Everything in these notes comes from the machine-transcribed English verbatim transcript; the speakers are unlabeled and attribution is inferred from the conversational context. Individual names and terms may have been transcribed incorrectly (e.g., Ender/Andrette, P.U.Q., SHC, "CSID/CB," "octants," "BISI/SIBI," "IOFED," etc.) — please refer to the original recording as authoritative.</li>
+<li>All market judgments (Nasdaq 28,815, gold 3,900, crude oil all-time highs, large volatility after the midterm elections, etc.) are the speakers' own on-the-spot statements, unverified, and do not constitute investment advice; some geopolitical statements (such as predictions about the post-election situation and social unrest) are the speakers' personal views.</li>
+<li>A few passages of the transcript (e.g., Bobby Obodo's remarks around 03:12–03:15, and background voices during P.U.Q.'s remarks) are unclear or jumbled in transcription; the related content has been summarized based on the recognizable portions, with no embellishment.</li>
+<li>
+<p>Michael's repeated references during the session to "my students," "my paid members," and the like are his own statements; these notes do not endorse them.</p>
+</li>
+<li>
+<p>Final-draft verification note: the key verbatim quotes have been checked one by one against the original transcript for timestamps and wording; the spellings of speaker names (Pippi Banks, SHC, P.U.Q., Ender/Andrette), the specific Nasdaq and gold level figures (29,053 / 28,815 / 29,005 / 29,227; gold 3,955–3,960, etc.), and terms such as "Devil's Mark," "CSID/CB," "octants," and "BISI/SIBI" remain subject to the original recording, as transcription errors are possible.</p>
+</li>
+<li>Date convention: the Space is archived under 2026-10-24 (Saturday); the session repeatedly mentioned "yesterday, Thursday" and "today, Friday," so the actual time of the session may have been Friday afternoon, US Eastern Time; the notes follow the in-session statements and have not been altered.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes for this session; the content consists of the speakers' own on-the-spot statements and has not been independently verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要——TRU - Cookin w ICT（ICT 交易专场） · Yat's Talks",tw:"會議紀要——TRU - Cookin w ICT（ICT 交易專場） · Yat's Talks",en:"Session Notes — TRU - Cookin w ICT (ICT Trading Session) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

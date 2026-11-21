@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Breakpoint 2026: Day Two 会议纪要</h1>
 <ul>
 <li><strong>活动</strong>：Breakpoint 2026 第二天（Solana 年度大会，第六届，伦敦 Olympia）</li>
@@ -368,8 +375,720 @@
 <li>转写工具：faster-whisper small 模型，英文；46 个 600 秒分块，雅加达转写机完成。</li>
 </ul>
 </article>
-<footer>来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2mdqrEaWVkMPVz">https://x.com/i/broadcasts/2mdqrEaWVkMPVz</a> · Solana 官方直播 · 2026-11-17 18:26 – 2026-11-18 约 01:59（约 7 小时 36 分）· 观看 17,439 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Breakpoint 2026: Day Two 會議紀要</h1>
+<ul>
+<li><strong>活動</strong>：Breakpoint 2026 第二天（Solana 年度大會，第六屆，倫敦 Olympia）</li>
+<li><strong>時間</strong>：2026-11-17 18:26（北京時間）開播，約 2026-11-18 01:59 結束；逐字稿涵蓋 00:04:09–07:27:49，約 7 小時 27 分，直播總長約 7.56 小時</li>
+<li><strong>形式</strong>：X Broadcast 官方直播（英文場），現場兩天合計 6,000+ 人（閉幕時 Ellie 現場說法）；線上總觀看 17,439</li>
+<li><strong>主持</strong>：Vibhu Norby 開場；製片人 Amira Valiani；Ellie Platisse 閉幕</li>
+<li><strong>來源</strong>：逐字稿全文 5,506 行、61,206 詞（<code>transcript.txt</code>），本紀要為中文編譯整理</li>
+</ul>
+<blockquote>
+<p>說明：以下數字與判斷均為台上嘉賓現場說法，未經獨立核實；轉寫為機器轉寫，人名與術語按原文整理，疑似轉寫錯誤見文末「ASR 還原表」。無語音段：開場前約 4 分鐘、01:20–01:30、02:50–03:20（午休）、片尾 07:30–07:36；播放清單本身缺 4278–4280 三段，錄音缺約 6 秒。Day One 內容見另篇紀要，不在本次範圍。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Day Two 是「前沿日」：主題是 AI × 加密的機器經濟——算力變成可交易的金融資產、Agent 成為新的經濟主體、收藏品與體育 IP 上鏈；兩場辯論（SOL 是不是貨幣、DAT 是不是帶推特帳號的 ETF）與 Michael Lewis 的壓軸訪談，把兩天的調子收在「信任」上。</p>
+<h2>開場：Vibhu Norby 定調「前沿」</h2>
+<p>Vibhu Norby 開場定調 Day Two 的主題是「the frontier」（前沿）：AI 代幣 × 加密代幣的交匯、機器經濟、寶可夢卡牌、機器人。他預告了當天的重頭戲：WSOP 冠軍 Lucas Jumalon、足球名宿 Sol Campbell、NBA 球員 Tristan Thompson，以及壓軸的 Michael Lewis 爐邊談；還預告了兩場辯論——「Is SOL Money?」（Mert 對 Toly）與 DAT 之辯。</p>
+<p>製片人 Amira 在 Day One 的分工延續到今天：<strong>Day One 是「嬰兒潮資產」（機構日），Day Two 是「Z 世代資產」（前沿：算力等從未進入過大眾市場的新資產）</strong>。</p>
+<h2>Martin Gilbert：私募市場的流動性，Revolut 要用區塊鏈發基金</h2>
+<p>Revolut 董事長 Martin Gilbert（前 Aberdeen 首席執行官）與 Nick Dukoff 爐邊談，談的是私募市場的流動性問題。</p>
+<ul>
+<li>流動性「在的時候都在，不在的時候全不在」（liquidity is there until it isn't），美國私人信貸首當其衝</li>
+<li>Revolut 將推出 4 隻非流動性基金，用區塊鏈實現小額參與（fractional amounts）</li>
+<li>建議：「在不需要錢的時候去融資」（raise money when you don't need it）</li>
+<li>未來十年的金融中心：新加坡、海灣國家、美國；「永遠不要做空美國，也不要做空瑞士法郎」（現場說法）</li>
+</ul>
+<h2>Nameel Dalal：AI 融資要上網際網路資本市場</h2>
+<p>Nameel Dalal（YC 訪問合夥人，前 Coinbase USDC 負責人）談 AI 的融資方式：</p>
+<ul>
+<li>GPU 融資可以代幣化（長期），同時還有 45 天營運資金/商業票據這類短期工具</li>
+<li>Agent 將成為主要的金融行為體</li>
+<li>這套體系不需要激勵代幣</li>
+</ul>
+<h2>Greg Osuri：Akash Compute Forward——算力遠期</h2>
+<p>Greg Osuri（Akash 創始人）發布 <strong>Akash Compute Forward</strong>：鏈上遠期訂單簿，交易未來的 GPU 小時。</p>
+<ul>
+<li>1 份合約 = 1 個節點（8×B300）× 1 個日曆月，按 $/GPU-hour 計價；供應商經認證；<strong>沒有平台代幣</strong></li>
+<li>白皮書、模擬器與微站當天上線（forwards.akash.network）</li>
+<li>時間表：1 月在真實 B300 上演練、2 月審計與等級評定、3 月試點、4 月首個交割月</li>
+</ul>
+<h2>Shion Sengupta：算力市場真正的難題是期限錯配</h2>
+<p>Shion Sengupta（Multicoin 合夥人）談實物交割的算力市場：</p>
+<ul>
+<li>算力不可互換（non-fungible），不同晶片、不同地點不是同一種商品</li>
+<li>真正的問題不是供給短缺，而是現金流與期限錯配</li>
+<li>需要風險中介，角色類似主經紀商（prime broker）</li>
+<li>其組合公司 Epilogue 透過代幣化做期限套利</li>
+</ul>
+<h2>機器經濟圓桌：Jensen 辭任之後</h2>
+<p>Nico Asgari（《金融時報》）主持，嘉賓 Krista Lynch（Grayscale）與 Steve Vassallo（Foundation Capital）：</p>
+<ul>
+<li>黃仁勳辭任（2026-11-12 宣布，已核實）之後，資金向 Nvidia 的單向配置出現鬆動，更多實驗正在發生（AMD、TPU、Cerebras）</li>
+<li>CME 的標準化算力期貨被推遲，下一個檢查點是 2027 年 1 月 8 日</li>
+<li>Grayscale 把礦工 ETF 更名為 <strong>GCPU</strong>（算力基礎設施）</li>
+<li>GPU 小時「不用就作廢」（use-it-or-lose-it），與石油不同</li>
+<li>neocloud（新興雲廠商）預付 3–3.5 年、簽 5–10 年合約，多為股權融資</li>
+<li>起步先做長週期 agentic/批次處理工作負載；能源市場（含負電價）可作類比</li>
+</ul>
+<h2>Raoul Pal：加密的時間現在是無限的</h2>
+<p>Raoul Pal（Real Vision 創始人）的主旨演講，標題是「the time of crypto is now infinite」：</p>
+<ul>
+<li>Agent 是新的人口、新的經濟主體；進入「指數時代」（單位能源的智能）；Jevons 悖論——效率提升反而推高總用量</li>
+<li>OpenRouter 每週處理 44 萬億 tokens；Agent 占網際網路流量的 53%</li>
+<li>機器交易已有 2.38 億筆，但價值至今只有約 150 萬美元——量大、值小，還在極早期</li>
+<li>代幣化股票 14–15 個月從 1,000 萬美元做到 20 億美元</li>
+<li>預測：2035 年加密市場達到 100 萬億美元（其個人預測）</li>
+</ul>
+<h2>Rishi Sharma：Agent 支付的爆發數據</h2>
+<p>Rishi Sharma（Solana 基金會 AI 負責人）給了一組 Agent 經濟的數據：</p>
+<ul>
+<li>機器人占網際網路流量的 53%；agentic 占代幣支出的份額從 8% 漲到 76%，年底前奔向 100%</li>
+<li>x402 已處理 4 億美元以上的 Agent 支付（12 個月前還是 0）</li>
+<li><strong>solana.ai 上週上線</strong>，已有 120+ 團隊</li>
+<li>Block Run 是第一大 x402 伺服器，2 個月 6,000 萬筆交易，約 60% 交易量經 PayAI</li>
+<li>MoonPay PaidBlock 48 小時內新增 60 萬個錢包；私有 AI 推理已上線；支付通道（每秒 100 萬筆支付）；Pay.sh（100+ API）</li>
+<li>Google、阿里巴巴、字節跳動的模型將透過 agentic 支付變現</li>
+</ul>
+<h2>Jonathan Victor：BitRobot 與眾包機器人數據</h2>
+<p>Jonathan Victor（BitRobot 創始人）談眾包機器人數據：</p>
+<ul>
+<li>用第一視角影片與 RoboCap 採集帽眾包數據；10 萬貢獻者、100 個國家、50 萬+提交</li>
+<li>與 Hugging Face、Unitree 合作開源人形家庭數據集，下載 60 萬+</li>
+<li>新加坡國立大學的 RoboColosseum 競技場；RoboCap、RoboWrist 開售，每接受小時最高 6.60 美元</li>
+</ul>
+<h2>Jack Pearson：物理 AI 是 100 萬億美元的機會</h2>
+<p>Jack Pearson（RoboStrategy）介紹其納斯達克上市基金，投資私人機器人初創公司，同時也在 Solana 上代幣化（最忙的交易日是週日）：</p>
+<ul>
+<li>物理世界是 100 萬億美元的價值創造；Nvidia 與摩根士丹利看好 50–60 萬億美元的物理 AI 機會</li>
+<li>數字 AI 獨角獸合計約 4.2 萬億美元，物理 AI 只有其約 6%——17 倍差距</li>
+<li>組合：Standard Bots、Path Robotics（美國海軍造船焊接合約最高 6 億美元）、Figure（參與製造 3 萬輛寶馬）</li>
+</ul>
+<h2>Halsey Huth：MoonPay Paybox——給 Agent 的錢包</h2>
+<p>Halsey Huth（MoonPay 聯合創始人兼首席執行官）發布 <strong>Paybox</strong>：Agent 錢包 + 卡片保險庫。</p>
+<ul>
+<li>Agent 永遠看不到密碼、卡號、私鑰；使用者設定護欄</li>
+<li>3 個月內 50 萬+使用者、100 萬+筆交易，發生在 Claude、ChatGPT、Grok、Muse 內部</li>
+<li>過去一個月 600 個定製開發者整合；下一批外掛：Phoenix Trade、Maple Finance、Meteora、FOMO</li>
+</ul>
+<h2>Shinsuke Waka：三井物產選了 Solana</h2>
+<p>Shinsuke Waka（三井物產）介紹這家貿易商（1,300 億美元資產、50 億美元利潤、120 個辦公室、62 個國家）：</p>
+<ul>
+<li>自 2022 年起為日本零售發行黃金、白銀、鉑金背書的加密資產，以及房地產 fractional 代幣（銀座酒店）</li>
+<li>起於私有鏈 Miyabi，現為多鏈，最終選了 Solana</li>
+</ul>
+<h2>Vido Gentile：Solflare Private Mode</h2>
+<p>Vido Gentile（Solflare 首席執行官）發布 <strong>Private Mode</strong>（Helios 協議）：</p>
+<ul>
+<li>同一錢包、同一地址，公開餘額與私有餘額並排顯示；金額與資產隱藏，地址可見</li>
+<li>不需要新鏈、橋、代幣或安裝；方向是私有餘額可用於質押、交易與消費（含 Solflare 卡）</li>
+</ul>
+<h2>Chris Osborne：Leap——為紀律而非交易量設計的交易應用</h2>
+<p>Chris Osborne（Leap，Solana Labs 總經理）介紹行動交易應用 Leap：</p>
+<ul>
+<li>「為紀律而非交易量設計」，TestFlight 早期訪問</li>
+<li>盈虧引擎以盈虧平衡為錨；支援代幣化股票、ETF、大宗商品與加密</li>
+<li>目前零費用，未來部分費用計劃用於回購並銷毀 SOL</li>
+</ul>
+<h2>Bobby Ong：CoinGecko 的下一階段</h2>
+<p>Bobby Ong（CoinGecko 聯合創始人）與 Vibhu 爐邊談，宣布 <strong>CoinGecko 進入下一階段，獲得 Solana 基金會支援</strong>（當天早上宣布）：</p>
+<ul>
+<li>加倍投入 API 與數據基建（10 萬開發者），探索增加交易功能</li>
+<li>規模：2014 年起步時追蹤 20 個幣，如今追蹤 5,000 萬+代幣（39% 在 Solana）；但他同時又說「220 條鏈上 1,500 萬個代幣」——兩個數字不一致（見文末核實注）</li>
+<li>180 個國家的使用者，每月 5,000 萬頁面瀏覽；IMF、Mastercard、BitGo 使用其數據</li>
+<li>投入 MCP 伺服器、Claude Skills、CLI，以及與 Coinbase 合作的 x402 啟動夥伴</li>
+<li>創始人 100% 持股，從未拿過 VC；建議：第一天就全球化思考</li>
+</ul>
+<h2>辯論一：SOL 是貨幣嗎？</h2>
+<p>主持人 Austin Federa；正方 Mert（Helium 創始人），反方 Anatoly "Toly" Yakovenko（Solana 聯合創始人）。</p>
+<p><strong>Mert（正方）：</strong></p>
+<ul>
+<li>貨幣是社會現象；SOL 在這個社群裡已經 demonstrably 發揮了貨幣功能（買賣 NFT、持有餘額）</li>
+<li>土耳其里拉是爛貨幣，但仍然是貨幣；承認它是貨幣，才能改進它（例如減發投票）</li>
+</ul>
+<p><strong>Toly（反方）：</strong></p>
+<ul>
+<li>現代貨幣的關鍵產品特性是作為債務的記帳單位——銀行 fractionalization、央行鑄幣、稅收執行；加密在這一層無法競爭</li>
+<li>「它是貨幣，但是最爛的那種」（it is money but the shittiest version）；WoW 金幣類比</li>
+<li>SOL 更好的願景是全球自由市場電腦的抗垃圾引擎（引 Mises）</li>
+</ul>
+<p><strong>觀眾投票：動議通過——「SOL 是貨幣」。</strong></p>
+<h2>辯論二：DAT 只是帶推特帳號的 ETF 嗎？</h2>
+<p>主持人 Kristin Smith（Solana Policy Institute）；Kyle Samani（Forward Industries 董事長，約 880 萬 SOL）對 Matt Hougan（Bitwise 首席投資官，BSOL 約 1,010 萬 SOL）。</p>
+<p><strong>Kyle Samani：</strong></p>
+<ul>
+<li>其他 DAT 基本就是 ETF + 推特帳號；Forward 的目標是成為「Solana 的伯克希爾·哈撒韋」</li>
+<li>12 個月每股 SOL 複合約 33%，而質押率只有約 5.2–5.3%</li>
+<li>已投資 OnRe 與 Index Industries / USHP 房地產</li>
+</ul>
+<p><strong>Matt Hougan：</strong></p>
+<ul>
+<li>BSOL 100% 買入並質押，20bp 費，返還 94% 的質押收益</li>
+<li>DAT 是「甜點/衛星」（dessert/satellite）類多注車輛，不是核心配置</li>
+</ul>
+<p><strong>投票：Matt Hougan 勝（主持人稱「出乎意料的結果」）。</strong></p>
+<h2>Sir Nicholas Lyons：代幣化要強化倫敦</h2>
+<p>Sir Nicholas Lyons（前倫敦市長；Standard Life 董事長，4,800 億英鎊管理資產、1,600 萬保單持有人）主旨演講：</p>
+<ul>
+<li>英國數字金邊債券試點：財政部指定 6 家銀行，試點發行預計 2027 年第一季度</li>
+<li>SEC 9 月代幣化股票創新豁免；紐約梅隆銀行 7 月區塊鏈基金管理記錄；FCA 數字證券沙盒 + 代幣化基金框架</li>
+<li>Chris Woolard 報告：代幣化批發市場到 2035 年每年可為英國增加 330 億英鎊產出；全球代幣化 RWA 到 2035 年 88 萬億美元（引用的預測）</li>
+<li>英國家庭現金 8,500 億英鎊</li>
+<li>四個優先事項：金邊債券試點成功、代幣化抵押品/回購、互操作性、零售包容</li>
+</ul>
+<h2>英國「咆哮的 30 年代」爐邊談</h2>
+<p>主持人是 Forma 創始人（姓名轉寫不清，未採用）；嘉賓 Sir Sajid Javid（前財政大臣、內政大臣）、一位 Baroness "Sue"（貝爾法斯特女王大學參議院；姓氏轉寫不清，未採用）、Lord Ed Vaizey。</p>
+<ul>
+<li>權力下放與地鐵市長（Burnham 的曼徹斯特）；截至 2026 年 9 月英國誕生 18 家獨角獸</li>
+<li>Demis Hassabis 的 Isomorphic 首輪 50 億美元（主持人說法）</li>
+<li>High Potential Individual 簽證（前 50→前 150 大學，無需工作邀約）；英國全球人才簽證約 2,000 美元、40 頁、8 週，對比美國 O-1 約 2 萬美元、400 頁（主持人數字）</li>
+<li>英國養老基金持有英國股票的比例從 56%（1997 年）降到如今的 6%（Javid 現場說法）</li>
+<li>與美國的風險文化差距；Forma 全力押注英國（巴斯 Riverside 創新區住宅創始人校園）</li>
+</ul>
+<h2>冠軍圓桌：Sol Campbell × Tristan Thompson</h2>
+<p>主持人 Logan；嘉賓 Sol Campbell（阿森納名宿）與 Tristan Thompson（NBA 球員）。</p>
+<ul>
+<li>Campbell 談阿森納不敗賽季：團結、犧牲，紀錄至今未破</li>
+<li>Thompson 談騎士 2016 年 1–3 落後逆轉 73 勝勇士：「在你的角色裡當明星」（籃板、小事），連續 447 場出賽</li>
+<li>識別天賦 = 韌性、出勤；運動員正在成為資本配置者——股權重於代言</li>
+<li>Campbell 正在做 AI/AR 虛擬形象主導的足球教練應用（倫敦 + 里斯本）</li>
+<li>Solana Cup 首屆冠軍：Super Team UK</li>
+</ul>
+<h2>Maddie：Solana 是「去中心化矽谷」</h2>
+<p>Maddie（Coliseum）談 Solana 作為「去中心化矽谷」（研究 + 創始人 + 資本）：</p>
+<ul>
+<li>舊經濟理論在鏈上產品化：奧地利經濟學→比特幣；Robin Hanson 預測市場→Polymarket；Robert Shiller 永續合約→Hyperliquid</li>
+<li>值得關注的實驗：OR（非主權 2.0）、PROOF（Kenneth Arrow 狀態依存市場 / Multiverse Markets）、Futarchy + MetaDAO</li>
+<li>Coliseum Co-Pilot 把學術研究餵給 Agent</li>
+</ul>
+<h2>Charlie Dalton：網際網路會讓 VC 失業</h2>
+<p>Charlie Dalton（"Prophit"，MetaDAO）談鏈上融資：</p>
+<ul>
+<li>Ripcars 案例：從約 1,000 人募資 25 萬美元，產品上線一小時售罄；150 萬美元後續融資（Kyle Samani、DBA、Coliseum），ICO 後約 10 倍</li>
+<li>SEC "Reg Crypto Asset" 提案：500 萬美元以下的代幣銷售將合法化，創始人要求極少（其說法，「自加密誕生以來最大的 SEC 加密監管」）</li>
+<li>MetaDAO 團隊代幣要到 2029 年才有，在 50 億美元市值時賺取</li>
+</ul>
+<h2>閃電演講串</h2>
+<h3>Lucas Jumalon：WSOP 冠軍復盤</h3>
+<p>Jeff Platt（WSOP）介紹，20 歲的 <strong>Lucas Jumalon</strong>——2026 年 WSOP 主賽事冠軍（9,200+ 參賽者 × 1 萬美元，1,000 萬美元頭獎）逐手復盤：對 Zhao Lu、Malcolm Trainer 的關鍵手牌，單挑對 Lowry；心理戰與馬腳；GTO 與剝削的平衡；Kobe "I'm built for this" 的心態；奪冠後保守投資。</p>
+<h3>Jonathan Lewis：X 的 cashtag 交易</h3>
+<p>Jonathan Lewis（X，英國與歐洲董事總經理）：</p>
+<ul>
+<li>X 上有 2.5 億股票投資者；X 使用者投資加密的可能性是其他人的 3 倍</li>
+<li>新 cashtag 體驗：點一下，價格圖表與對話同處一屏；經紀商交易按鈕已在美國、加拿大上線</li>
+<li>2027 年重點：時間線交易按鈕 + 全球擴展</li>
+</ul>
+<h3>Michael Marcantonio：Temporal 發布 Supermassive</h3>
+<p>Michael Marcantonio（Temporal）宣布 <strong>"Supermassive"</strong>：prop-AMM 永續合約協議 + prop-AMM 期權協議 + 共享開放保證金層，明年發貨，首日組合保證金。</p>
+<ul>
+<li>Solana 現貨勝過幣安：交易量超過幣安 + OKX + Coinbase + Bybit 總和，成交更好；其 prop AMM 以約 600 萬美元資本做了 2,000 億美元+交易量</li>
+<li>但永續落後：Solana 各場所合計 4,500 億美元，對 Hyperliquid 2.93 萬億、幣安去年 27 萬億（其數字）</li>
+</ul>
+<h3>Eugene Chen：Phoenix Perps 的數據</h3>
+<p>Eugene Chen（Ellipsis Labs，Phoenix Perps）：</p>
+<ul>
+<li>2 月私測上線以來 2.5 萬+使用者，日交易量 6 個月漲 10 倍，累計名義 50 億美元+；100+ 市場、6 類資產（外匯上週上線）</li>
+<li>40 萬美元首個激勵計劃，與 Frontier Traders 共返還 100 萬美元+</li>
+<li>原生行動應用在建；Phoenix 將成為首家提供以 Backpack 代幣化股票作抵押的永續合約的場所</li>
+</ul>
+<h3>Lucas Bruder：市場是最好的測謊儀</h3>
+<p>Lucas Bruder（Jito Labs 首席執行官）：</p>
+<ul>
+<li>挑戰者號 1986：市場幾小時內鎖定 Morton Thiokol（O 型環製造商）</li>
+<li>Solana 是一台巨大的狀態機，每一價格同步設定；「誰先定價，誰先找到真相」</li>
+</ul>
+<h3>Seyong Park：數據最後才來</h3>
+<p>Seyong Park（FOMO 聯合創始人）談「社會觀察先於官方數據」：</p>
+<ul>
+<li>交易所始於咖啡館（1698 年倫敦、1793 年紐約）；cashtag 由 StockTwits 上的交易員於 2008 年發明</li>
+<li>印度 2 億經紀帳戶、日本 2,800 萬免稅儲蓄帳戶、韓國散戶持有約 2,000 億美元美股（其數字）</li>
+<li>案例：On Cloud 跑鞋俱樂部（2023 年）→ Nike CFO 驚訝（2024 年 6 月）；Taylor Swift 費城酒店（2023 年 5 月）→ 美聯儲褐皮書；Peloton 從客廳神器變成晾衣架</li>
+<li>FOMO 是 X cashtag 贊助商</li>
+</ul>
+<h3>Tuam Holmberg：收藏品是懷舊文物</h3>
+<p>Tuam Holmberg（Collector Crypt 首席執行官）：</p>
+<ul>
+<li>平台上線 5 年，卡包收入 15 億美元（其數字）</li>
+<li>收藏品 = 懷舊文物，20–30 年懷舊週期；PFP-NFT 高頻交易已死，但懷舊價值約 15 年後到來</li>
+<li>正在為 Solana 上的 NFT/收藏品轉移搭建金融軌道</li>
+</ul>
+<h3>Andrea Mieli：發現式購物，超越收藏品</h3>
+<p>Andrea Mieli（BEEZ 首席執行官）談「what if 時刻」的發現式購物：</p>
+<ul>
+<li>與 The Luxury Closet 合作，首個奢侈品 drop 42 分鐘售出 500 件認證商品（Birkin、LV、Bottega、Dior）</li>
+<li>與 Collector Crypt 宣布合作；新品牌 <strong>Mia</strong>——為女性做的發現式購物（itsmia.io）；Whatnot 美妝銷售額同比 +791%（其數字）</li>
+</ul>
+<h3>Tad Smith：Candy Digital 全面搬上 Solana</h3>
+<p>Tad Smith（Candy Digital 首席執行官）：</p>
+<ul>
+<li>約 600 萬件藏品、100 萬+客戶，現全部在 Solana 上經 Metaplex Core 鑄造，媒體存 Arweave；DC 漫畫 + MLB 授權，經 OpenSea、Magic Eden、Tensor 交易</li>
+<li>新站「明晚紐約時間」上線（candy.io），帶數字漫畫閱讀器；協議層自託管 + 稀缺性</li>
+</ul>
+<h2>Peter Moore：體育迷的終身價值</h2>
+<p>Peter Moore（前 Reebok、Sega、Xbox、EA、利物浦首席執行官；Wisła Kraków 部分所有者）：</p>
+<ul>
+<li>體育迷的終身價值才是真資產；AEM 漏斗（獲客/互動/變現）</li>
+<li>利物浦 3 億球迷、安菲爾德 61,000 座、兩年教會球迷掃碼進場</li>
+<li>Wisła 的 Lucky Fan Index 應用（9 座坎城獅子獎、坎城前 20 品牌——其說法）；球迷是關係，不是客戶</li>
+</ul>
+<h2>Justin Bons：Solana 是「比特幣 3.0」</h2>
+<p>Justin Bons（Cyber Capital）：Solana 同時是價值儲存、貨幣與應用平台，因此是「比特幣 3.0」；費用帶來安全、去中心化與稀缺；拒絕單一用途鏈——「不存在隱私幣這種東西，每條鏈都應有隱私與可擴展性」。</p>
+<h2>Brennan Watt：Anza 的 2026 回顧與 2027 預告</h2>
+<p>Brennan Watt（Anza 首席執行官）做 2026 年勝利總結：</p>
+<ul>
+<li>Alpenglow 從 Tower BFT 現場遷移，白皮書到主網 18 個月；最終確認 12.8 秒→約 150 毫秒；區塊時間 400 毫秒→200 毫秒；容量翻倍（約 2.5 億 CU/秒）；代幣轉帳效率 50 倍</li>
+<li>1,000+ 天正常運行時間、3,000 億筆交易；鏈上儲存成本 −27%，兩週內再降 7 倍；最大交易尺寸超過 3 倍</li>
+<li>2027 預告：協議簡化、儲存後端大修、Alpenglow.next + <strong>Constellation</strong>（Rotor 替代 Turbine、地理感知、協議內排序、第二提議者）、鏈上硬核計算（期權定價、保證金模型）</li>
+</ul>
+<h2>壓軸圓桌：Inside the bunker——加密的末日到了嗎？</h2>
+<p>主持人 Tee（Frontier One）；嘉賓 Brennan Watt（Anza）與 Ilya Polosukhin（NEAR 聯合創始人）。開場背景：美聯航宕機、空中交通管制、金融服務、歐洲冰箱接連出問題——我們生活在 30 年前大型機時代建成的系統裡。</p>
+<p><strong>Brennan：</strong> 一切已經開源，「以混淆求安全」本就是壞主意；這波會很痛，但會通向有史以來最安全的軟體；他一年前寫過一篇「安全末日」（security armageddon）部落格，正在應驗。</p>
+<p><strong>Ilya 的三件套：</strong></p>
+<ol>
+<li><strong>形式化驗證</strong>下探到 x86→WebAssembly→機器碼，AI 讓它變便宜了（以前只有 NASA 與少數智能合約做得起）</li>
+<li>用無審查模型對自家程式碼做<strong>紅隊</strong></li>
+<li><strong>主動監測</strong>：感知全部日誌、鏈與智能合約，找異常——例如一個從沒錢的地址突然從智能合約收到一大筆錢，「通常就是駭客」，先暫停、評估、轉入下一層分析</li>
+</ol>
+<p><strong>Brennan 的做法：</strong> 每天對新提交跑前沿模型，每 24 小時一輪；先堵新漏洞的流入，再清存量；10 年前的內核漏洞如今才被發現。Anza 安全團隊今年大幅擴招。</p>
+<p><strong>Ilya 的 NEAR 實踐：</strong> 對整個 NEAR 協議做數學表達並發現問題；每份 PR 都紅隊；供應鏈安全——某維護者的 GitHub 密鑰因用了某個隨機 Agent 而洩露，易受攻擊的程式碼被推了上去；跨 39 條鏈主動監測；萊特幣隱私池兩個漏洞連鎖盜幣，NEAR 最先發現並通報幣安等；<strong>Shield</strong> 情報網路 + 合作夥伴計劃（被盜資金被洗錢時可通報以暫停隔離）。</p>
+<p>Ilya 的結論：「AI 寫程式碼的時代，工程師的工作就是護欄——驗證與安全。」</p>
+<p><strong>「Bunker 模式」之爭：</strong> 源頭是 Justin Drake 的帖子——把錢轉進沒人見過公鑰的帳戶、別用區塊鏈。Ilya 認為這是被動做法：AI 攻擊密碼學 99.99% 的概率不是魔法，需要 10 吉瓦的超級電腦才可能破一把鑰匙；關鍵是<strong>密碼敏捷性</strong>——NEAR 自 2018 年主網起支援兩種密碼學，剛加了後量子密碼支援，使用者可以輪換密鑰。Brennan 附和：「bunker 敘事有點 loser energy」，更該主動出擊；Solana 在做後量子密鑰全套方案；量子電腦不會人手一台，但總有人會有。Ilya 補充：耐久性概念變了——比特幣曾因 Lindy 效應最耐久，但現在不重要了，10 年老程式碼也有漏洞，被動做法不夠。</p>
+<p><strong>硬體瓶頸提問：</strong> 軟體去中心化了，硬體卻集中在少數數據中心，怎麼辦？Brennan：Solana 真正無需許可，任何人、任何硬體都能加入；市場力量拉向更優體驗；今年早些時候某供應商中斷影響了大量質押；驗證者生態活躍；但不能進驗證者機器裡替他們打補丁——他們得自己上心。圓桌結尾：「現在去酒吧。」</p>
+<h2>壓軸訪談：Michael Lewis × Amira Valiani</h2>
+<p>作家 Michael Lewis（《說謊者的撲克牌》《點球成金》《大空頭》《弱點》《極速交易員》）接受 Amira Valiani 採訪，談新書（逐字稿作 "Blockers"，講第二屆特朗普政府與聯邦政府的碰撞；書名轉寫存疑，見文末核實注）。</p>
+<p><strong>職業與運氣：</strong> 第一份工作來自聖詹姆斯宮的一場晚宴——坐在所羅門兄弟倫敦兩位負責人的夫人中間，其中一位說「你必須來給我丈夫工作」——毫無資歷就入了行。寫專欄稱投行家薪酬過高，第二天老闆堵在桌前；之後以母親娘家姓 <strong>Diana Bleeker</strong> 匿名寫了約一年半；Chevy Chase 的父親（圖書編輯）識破身份，給了書約。26 歲放棄高薪、拿 4 萬美元書約離開；回望時他說，看看 35 歲的人——沒人會離開，都被困住了。風險偏好隨年齡變化。關鍵是「知道自己真正熱愛什麼」——他享受坐下來把詞寫在紙上的過程本身；很多人想「寫過一本書」，卻不享受寫的過程。《弱點》的起源：孟菲斯路過、拜訪老友 Sean Tuohy，對方第一句話是「誰替你寫書？」——以為他地下室養了一群代筆。</p>
+<p><strong>找人物的方法：</strong> 先有問題，再有框架，最後做 casting call。《大空頭》的問題是：華爾街大公司怎麼成了牌桌上的傻錢？答案在做空的人那裡——約 20 位對沖基金經理，逐一訪談；沒有一個人掌握全貌，幾個人拼起來才是全景。新書的框架：第二屆特朗普政府是「unbelievable power grab」——第一屆不在乎政府，第二屆比任何總統都更在乎政府；接管史密森尼、肯尼迪中心、和平研究所、錢袋權（16 個月前凍結 FAA 升級資金）；200 萬聯邦雇員向憲法宣誓、不向個人效忠；政府要變成服務於一個人的狹窄忠誠機器；問題是激勵改變後，每個職能的行為會怎樣變化；人物是那些因世界變了而被沖走的本職高手。</p>
+<p><strong>給加密講故事的建議：</strong></p>
+<ol>
+<li>先讓觀眾想知道——敘事扎根於人物；人物一旦立住，讀者會跟到任何地方；要解釋的東西必須對人物重要</li>
+<li>寫作者想顯得聰明，而非讓讀者覺得自己聰明——放下 ego、簡化、冒被專家說傻的風險</li>
+<li>別忘了基本問題——「它是什麼？它怎麼是貨幣？怎麼不是貨幣？」——無知與愚蠢的區別：無知可原諒</li>
+</ol>
+<p><strong>信任與美債：</strong> 長期美債是「愚蠢」的持有——向一個毫不關心處理財政問題的借款人長期放貸毫無意義；特朗普上任以來債務增加 4.5 萬億美元；兩黨都沒有處理它的政治市場；自然出路是通膨（印鈔稀釋），或者某天選擇性違約（「我們欠誰的錢？中國人有一萬億美元債券……我們就是不還了」）。他五年前買了黃金與歐元，因為不信任美國社會處理公共財政的能力。預警如 2005–2006 年：不是 AI 金融泡沫（雖有泡沫成分、投資難有回報、終有清算，「比網際網路泡沫更戲劇化」），更讓他警覺的是政府本身成為問題——2008 年能解決，是因為有成年人（政府）進場兜底；當美國政府本身就是問題時，沒有超國家組織大到能進場平息；下一個有趣的金融故事是美國政府信任的崩塌，時間未知、可能是十年後。</p>
+<p><strong>區塊鏈的共鳴：</strong> 加密貨幣是對法幣不信任的度量，「這種不信任是應得的」——「為這個理由持有它們並不傻。」</p>
+<p>結語：美國政府正在發生的事「令人嘆為觀止地有趣、令人嘆為觀止地 consequential」，可惜我們都得更了解它。</p>
+<h2>閉幕：2027 年舊金山見</h2>
+<p>Amira 與 Ellie Platisse（Breakpoint 背後的女人，連續五屆）閉幕：兩天現場 6,000+ 人；旅程從第 41 屆黑客屋、AI day 等系列活動開始，「神奇的兩週」。大門 19:00 關閉。</p>
+<p><strong>Breakpoint 2027：2027 年 9 月 8–10 日，舊金山</strong>；第一天領證 + 歡迎，兩天內容；補貼票價 75 美元。收尾原話："See you in San Francisco!"</p>
+<hr />
+<h2>ASR 還原表</h2>
+<table>
+<thead>
+<tr>
+<th>逐字稿寫法</th>
+<th>應為 / 說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blockers（Michael Lewis 新書名，出現兩次）</td>
+<td>按書中內容（第二屆特朗普政府與 200 萬聯邦雇員）對照，應為《Who Is Government?》，此處以逐字稿口徑為準、標題存疑</td>
+</tr>
+<tr>
+<td>Ilya Kudaiya, Senior Director of Financial Services, FIWARE</td>
+<td>Ilya Polosukhin（NEAR 聯合創始人）的轉寫錯誤</td>
+</tr>
+<tr>
+<td>VALSA Partner Program</td>
+<td>NEAR 合作夥伴計劃名稱，轉寫存疑</td>
+</tr>
+<tr>
+<td>taken our team to infinity</td>
+<td>Anza 安全團隊今年大幅擴招，具體倍數轉寫不清</td>
+</tr>
+<tr>
+<td>scalar die、200 MS</td>
+<td>Ellie 閉幕詞中的系列活動名，轉寫不清，未採用</td>
+</tr>
+<tr>
+<td>Baroness "Sue"、Forma 創始人（主持人）</td>
+<td>姓氏/姓名轉寫不清，未採用</td>
+</tr>
+<tr>
+<td>Ross topic（11.16 茄哥場）</td>
+<td>Anthropic；與本場無關</td>
+</tr>
+</tbody>
+</table>
+<h2>核實注</h2>
+<ul>
+<li>黃仁勳辭任 Nvidia 總裁/首席執行官/董事（2026-11-12 宣布）已於 2026-11-13 核實；本場多處「Jensen 辭任後」的說法與核實一致，「董事會罷免/出軌」等說法為節目內說法，未核實。</li>
+<li>Bobby Ong 在同一場訪談中給出兩個不一致的代幣追蹤規模（5,000 萬+ vs 220 條鏈上 1,500 萬個），以現場原話為準，未作調和。</li>
+<li>觀看數：meta.json 抓取時為 16,602；轉寫完成時 worker 報告最終為 17,439。</li>
+<li>錄音缺約 6 秒：播放清單本身缺 4278–4280 三段（約 6 秒音訊無法恢復），其餘 13,684 段完整。</li>
+<li>轉寫工具：faster-whisper small 模型，英文；46 個 600 秒分塊，雅加達轉寫機完成。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Breakpoint 2026: Day Two — Meeting Notes</h1>
+<ul>
+<li><strong>Event</strong>: Breakpoint 2026, Day Two (Solana's annual conference, sixth edition, Olympia, London)</li>
+<li><strong>Time</strong>: Stream began 2026-11-17 18:26 (Beijing time), ended around 2026-11-18 01:59; the transcript covers 00:04:09–07:27:49, about 7 hours 27 minutes, with a total livestream length of about 7.56 hours</li>
+<li><strong>Format</strong>: Official X Broadcast livestream (in English); 6,000+ people on site across the two days (per Ellie's remarks at the close); 17,439 total online views</li>
+<li><strong>Hosts</strong>: Vibhu Norby opened; producer Amira Valiani; Ellie Platisse closed</li>
+<li><strong>Source</strong>: Full transcript of 5,506 lines and 61,206 words (<code>transcript.txt</code>); these notes are a compiled Chinese-language summary of it</li>
+</ul>
+<blockquote>
+<p>Note: All figures and judgments below are as stated live on stage by the guests and have not been independently verified; the transcription is machine-generated, names and terms are organized as in the original, and suspected transcription errors are listed in the "ASR Restoration Table" at the end. Segments with no speech: about 4 minutes before the start, 01:20–01:30, 02:50–03:20 (lunch break), and the closing 07:30–07:36; the playlist itself is missing segments 4278–4280, so about 6 seconds of audio are missing. Day One is covered in a separate set of notes and is outside the scope of this piece.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Day Two was the "frontier day": its theme was the machine economy of AI × crypto — compute becoming a tradable financial asset, agents becoming new economic actors, and collectibles and sports IP going on-chain; two debates (Is SOL money? Are DATs just ETFs with Twitter accounts?) and Michael Lewis's closing interview brought the two days' tone to rest on "trust."</p>
+<h2>Opening: Vibhu Norby Sets the "Frontier" Tone</h2>
+<p>Vibhu Norby opened by framing Day Two's theme as "the frontier": the intersection of AI tokens × crypto tokens, the machine economy, Pokémon cards, and robots. He previewed the day's highlights: WSOP champion Lucas Jumalon, football legend Sol Campbell, NBA player Tristan Thompson, and the closing fireside chat with Michael Lewis; he also previewed two debates — "Is SOL Money?" (Mert vs. Toly) and the DAT debate.</p>
+<p>Producer Amira's framing from Day One carried over to today: <strong>Day One was "boomer assets" (the institutional day), while Day Two is "Gen Z assets" (the frontier: new assets such as compute that have never entered mass markets before)</strong>.</p>
+<h2>Martin Gilbert: Liquidity in Private Markets, and Revolut Will Issue Funds on Blockchain</h2>
+<p>Martin Gilbert, chairman of Revolut (former CEO of Aberdeen), spoke with Nick Dukoff in a fireside chat about the liquidity problem in private markets.</p>
+<ul>
+<li>Liquidity is "there until it isn't" (liquidity is there until it isn't), with US private credit first in the line of fire</li>
+<li>Revolut will launch 4 illiquid funds, using blockchain to enable fractional amounts</li>
+<li>His advice: "raise money when you don't need it" (raise money when you don't need it)</li>
+<li>The financial centers of the next decade: Singapore, the Gulf states, and the United States; "never short America, and never short the Swiss franc" (as stated on stage)</li>
+</ul>
+<h2>Nameel Dalal: AI Financing Should Go to Internet Capital Markets</h2>
+<p>Nameel Dalal (YC visiting partner, former head of USDC at Coinbase) discussed how AI should be financed:</p>
+<ul>
+<li>GPU financing can be tokenized (long term), alongside short-term instruments such as 45-day working capital / commercial paper</li>
+<li>Agents will become the main financial actors</li>
+<li>This system does not need incentive tokens</li>
+</ul>
+<h2>Greg Osuri: Akash Compute Forward — Compute Forwards</h2>
+<p>Greg Osuri (founder of Akash) launched <strong>Akash Compute Forward</strong>: an on-chain forward order book trading future GPU hours.</p>
+<ul>
+<li>1 contract = 1 node (8×B300) × 1 calendar month, priced in $/GPU-hour; suppliers are certified; <strong>there is no platform token</strong></li>
+<li>The white paper, simulator, and microsite went live that day (forwards.akash.network)</li>
+<li>Timeline: drills on real B300s in January, audits and grading in February, pilot in March, first delivery month in April</li>
+</ul>
+<h2>Shion Sengupta: The Real Problem in Compute Markets Is Maturity Mismatch</h2>
+<p>Shion Sengupta (partner at Multicoin) discussed physically settled compute markets:</p>
+<ul>
+<li>Compute is non-fungible (non-fungible): different chips in different locations are not the same commodity</li>
+<li>The real problem is not supply shortage, but cash-flow and maturity mismatch</li>
+<li>Risk intermediaries are needed, in a role similar to a prime broker (prime broker)</li>
+<li>His portfolio company Epilogue does maturity arbitrage through tokenization</li>
+</ul>
+<h2>Machine Economy Roundtable: After Jensen's Departure</h2>
+<p>Hosted by Nico Asgari (Financial Times), with guests Krista Lynch (Grayscale) and Steve Vassallo (Foundation Capital):</p>
+<ul>
+<li>After Jensen Huang's departure (announced 2026-11-12, verified), the one-way allocation of capital into Nvidia has loosened, and more experimentation is happening (AMD, TPU, Cerebras)</li>
+<li>CME's standardized compute futures have been postponed; the next checkpoint is January 8, 2027</li>
+<li>Grayscale renamed its miners ETF to <strong>GCPU</strong> (compute infrastructure)</li>
+<li>GPU hours are "use-it-or-lose-it" (use-it-or-lose-it), unlike oil</li>
+<li>Neoclouds (emerging cloud providers) prepay 3–3.5 years and sign 5–10-year contracts, mostly equity-financed</li>
+<li>Start with long-cycle agentic/batch-processing workloads; energy markets (including negative electricity prices) offer an analogy</li>
+</ul>
+<h2>Raoul Pal: Crypto's Time Is Now Infinite</h2>
+<p>Raoul Pal (founder of Real Vision) gave a keynote titled "the time of crypto is now infinite":</p>
+<ul>
+<li>Agents are a new population and new economic actors; we are entering the "exponential age" (intelligence per unit of energy); the Jevons paradox — efficiency gains instead push total usage higher</li>
+<li>OpenRouter processes 44 trillion tokens per week; agents account for 53% of internet traffic</li>
+<li>There have already been 238 million machine transactions, but their value so far is only about $1.5 million — large in volume, small in value, still extremely early</li>
+<li>Tokenized stocks grew from $10 million to $2 billion in 14–15 months</li>
+<li>Prediction: the crypto market will reach $100 trillion by 2035 (his personal prediction)</li>
+</ul>
+<h2>Rishi Sharma: Explosive Data on Agent Payments</h2>
+<p>Rishi Sharma (head of AI at the Solana Foundation) presented a set of figures on the agent economy:</p>
+<ul>
+<li>Bots account for 53% of internet traffic; agentic's share of token spending has risen from 8% to 76%, heading toward 100% before year-end</li>
+<li>x402 has processed more than $400 million in agent payments (it was 0 just 12 months ago)</li>
+<li><strong>solana.ai launched last week</strong> and already has 120+ teams</li>
+<li>Block Run is the largest x402 server, with 60 million transactions in 2 months, about 60% of volume going through PayAI</li>
+<li>MoonPay PaidBlock added 600,000 wallets within 48 hours; private AI inference is live; payment channels (1 million payments per second); Pay.sh (100+ APIs)</li>
+<li>Models from Google, Alibaba, and ByteDance will be monetized through agentic payments</li>
+</ul>
+<h2>Jonathan Victor: BitRobot and Crowdsourced Robot Data</h2>
+<p>Jonathan Victor (founder of BitRobot) discussed crowdsourced robot data:</p>
+<ul>
+<li>Crowdsourcing data with first-person video and the RoboCap capture hat; 100,000 contributors, 100 countries, 500,000+ submissions</li>
+<li>An open-source humanoid household dataset with Hugging Face and Unitree, downloaded 600,000+ times</li>
+<li>The RoboColosseum arena at the National University of Singapore; RoboCap and RoboWrist are on sale, paying up to $6.60 per accepted hour</li>
+</ul>
+<h2>Jack Pearson: Physical AI Is a $100 Trillion Opportunity</h2>
+<p>Jack Pearson (RoboStrategy) introduced his Nasdaq-listed fund, which invests in private robotics startups and is also tokenized on Solana (its busiest trading day is Sunday):</p>
+<ul>
+<li>The physical world represents $100 trillion of value creation; Nvidia and Morgan Stanley see a $50–60 trillion physical AI opportunity</li>
+<li>Digital AI unicorns total about $4.2 trillion, while physical AI is only about 6% of that — a 17× gap</li>
+<li>Portfolio: Standard Bots, Path Robotics (a US Navy shipbuilding welding contract worth up to $600 million), Figure (involved in manufacturing 30,000 BMWs)</li>
+</ul>
+<h2>Halsey Huth: MoonPay Paybox — A Wallet for Agents</h2>
+<p>Halsey Huth (co-founder and CEO of MoonPay) launched <strong>Paybox</strong>: an agent wallet + card vault.</p>
+<ul>
+<li>Agents never see passwords, card numbers, or private keys; users set the guardrails</li>
+<li>500,000+ users and 1 million+ transactions within 3 months, happening inside Claude, ChatGPT, Grok, and Muse</li>
+<li>600 custom developer integrations in the past month; next plugins: Phoenix Trade, Maple Finance, Meteora, FOMO</li>
+</ul>
+<h2>Shinsuke Waka: Mitsui &amp; Co. Chose Solana</h2>
+<p>Shinsuke Waka (Mitsui &amp; Co.) introduced the trading house ($130 billion in assets, $5 billion in profit, 120 offices, 62 countries):</p>
+<ul>
+<li>Since 2022 it has issued crypto assets backed by gold, silver, and platinum for Japanese retail, as well as real-estate fractional tokens (a Ginza hotel)</li>
+<li>It started on the private chain Miyabi, is now multichain, and ultimately chose Solana</li>
+</ul>
+<h2>Vido Gentile: Solflare Private Mode</h2>
+<p>Vido Gentile (CEO of Solflare) launched <strong>Private Mode</strong> (the Helios protocol):</p>
+<ul>
+<li>Same wallet, same address, with public and private balances shown side by side; amounts and assets are hidden, the address is visible</li>
+<li>No new chain, bridge, token, or installation needed; the direction is for private balances to be usable for staking, trading, and spending (including the Solflare card)</li>
+</ul>
+<h2>Chris Osborne: Leap — A Trading App Designed for Discipline, Not Volume</h2>
+<p>Chris Osborne (Leap, general manager at Solana Labs) introduced the mobile trading app Leap:</p>
+<ul>
+<li>"Designed for discipline, not trading volume," with early access on TestFlight</li>
+<li>Its P&amp;L engine is anchored to break-even; it supports tokenized stocks, ETFs, commodities, and crypto</li>
+<li>Zero fees for now; in future, part of the fees are planned to be used to buy back and burn SOL</li>
+</ul>
+<h2>Bobby Ong: CoinGecko's Next Phase</h2>
+<p>Bobby Ong (co-founder of CoinGecko) spoke with Vibhu in a fireside chat and announced that <strong>CoinGecko is entering its next phase, with support from the Solana Foundation</strong> (announced that morning):</p>
+<ul>
+<li>Doubling down on API and data infrastructure (100,000 developers) and exploring adding trading features</li>
+<li>Scale: it tracked 20 coins when it started in 2014 and now tracks 50 million+ tokens (39% on Solana); but he also said "15 million tokens across 220 chains" — the two figures are inconsistent (see the verification note at the end)</li>
+<li>Users in 180 countries, 50 million page views per month; the IMF, Mastercard, and BitGo use its data</li>
+<li>Investing in an MCP server, Claude Skills, a CLI, and an x402 launch partnership with Coinbase</li>
+<li>The founders own 100% and have never taken VC money; his advice: think globally from day one</li>
+</ul>
+<h2>Debate One: Is SOL Money?</h2>
+<p>Moderator Austin Federa; for the motion, Mert (founder of Helium); against, Anatoly "Toly" Yakovenko (co-founder of Solana).</p>
+<p><strong>Mert (for):</strong></p>
+<ul>
+<li>Money is a social phenomenon; SOL already demonstrably functions as money within this community (buying and selling NFTs, holding balances)</li>
+<li>The Turkish lira is terrible money, but it is still money; only by acknowledging it is money can we improve it (for example, by voting to reduce issuance)</li>
+</ul>
+<p><strong>Toly (against):</strong></p>
+<ul>
+<li>The key product feature of modern money is serving as a unit of account for debt — bank fractionalization, central-bank minting, tax enforcement; crypto cannot compete at that layer</li>
+<li>"It is money but the shittiest version" (it is money but the shittiest version); an analogy to WoW gold</li>
+<li>SOL's better vision is as the spam-resistance engine of a global free-market computer (citing Mises)</li>
+</ul>
+<p><strong>Audience vote: the motion carried — "SOL is money."</strong></p>
+<h2>Debate Two: Are DATs Just ETFs with Twitter Accounts?</h2>
+<p>Moderator Kristin Smith (Solana Policy Institute); Kyle Samani (chairman of Forward Industries, about 8.8 million SOL) vs. Matt Hougan (chief investment officer of Bitwise, BSOL about 10.1 million SOL).</p>
+<p><strong>Kyle Samani:</strong></p>
+<ul>
+<li>Other DATs basically are ETFs + Twitter accounts; Forward's goal is to become "the Berkshire Hathaway of Solana"</li>
+<li>SOL per share compounded at about 33% over 12 months, while the staking ratio is only about 5.2–5.3%</li>
+<li>It has invested in OnRe and in Index Industries / USHP real estate</li>
+</ul>
+<p><strong>Matt Hougan:</strong></p>
+<ul>
+<li>BSOL buys and stakes 100%, charges a 20bp fee, and returns 94% of staking rewards</li>
+<li>DATs are "dessert/satellite" multi-bet vehicles, not a core allocation</li>
+</ul>
+<p><strong>Vote: Matt Hougan won (the moderator called it "an unexpected result").</strong></p>
+<h2>Sir Nicholas Lyons: Tokenization Should Strengthen London</h2>
+<p>Sir Nicholas Lyons (former Lord Mayor of London; chairman of Standard Life, £480 billion in assets under management, 16 million policyholders) gave a keynote:</p>
+<ul>
+<li>UK digital gilt pilot: the Treasury has designated 6 banks, with pilot issuance expected in the first quarter of 2027</li>
+<li>The SEC's September tokenized-stock innovation exemption; Bank of New York Mellon's July blockchain fund-administration record; the FCA's digital securities sandbox + tokenized fund framework</li>
+<li>The Chris Woolard report: tokenized wholesale markets could add £33 billion a year in output for the UK by 2035; global tokenized RWA to reach $88 trillion by 2035 (a cited forecast)</li>
+<li>UK household cash: £850 billion</li>
+<li>Four priorities: a successful gilt pilot, tokenized collateral/repo, interoperability, and retail inclusion</li>
+</ul>
+<h2>UK "Roaring Thirties" Fireside Chat</h2>
+<p>The moderator was the founder of Forma (name unclear in the transcript, not used); guests were Sir Sajid Javid (former Chancellor of the Exchequer and Home Secretary), a Baroness "Sue" (Senate of Queen's University Belfast; surname unclear in the transcript, not used), and Lord Ed Vaizey.</p>
+<ul>
+<li>Devolution and metro mayors (Burnham's Manchester); 18 unicorns born in the UK as of September 2026</li>
+<li>Demis Hassabis's Isomorphic raised $5 billion in its first round (per the moderator)</li>
+<li>The High Potential Individual visa (top 50 → top 150 universities, no job offer required); the UK Global Talent visa costs about $2,000, runs 40 pages, and takes 8 weeks, versus the US O-1 at about $20,000 and 400 pages (the moderator's figures)</li>
+<li>The share of UK equities held by UK pension funds has fallen from 56% (1997) to 6% today (per Javid on stage)</li>
+<li>The risk-culture gap with the United States; Forma is going all-in on the UK (a residential founder campus in Bath's Riverside innovation district)</li>
+</ul>
+<h2>Champions Roundtable: Sol Campbell × Tristan Thompson</h2>
+<p>Moderator Logan; guests Sol Campbell (Arsenal legend) and Tristan Thompson (NBA player).</p>
+<ul>
+<li>Campbell on Arsenal's unbeaten season: unity and sacrifice; the record remains unbroken to this day</li>
+<li>Thompson on the Cavaliers' 2016 comeback from 1–3 down against the 73-win Warriors: "be a star in your role" (rebounding, the little things), and 447 consecutive games played</li>
+<li>Identifying talent = resilience and attendance; athletes are becoming capital allocators — equity matters more than endorsements</li>
+<li>Campbell is building a football coaching app led by AI/AR avatars (London + Lisbon)</li>
+<li>First Solana Cup champion: Super Team UK</li>
+</ul>
+<h2>Maddie: Solana Is a "Decentralized Silicon Valley"</h2>
+<p>Maddie (Coliseum) discussed Solana as a "decentralized Silicon Valley" (research + founders + capital):</p>
+<ul>
+<li>Old economic theories productized on-chain: Austrian economics → Bitcoin; Robin Hanson's prediction markets → Polymarket; Robert Shiller's perpetual contracts → Hyperliquid</li>
+<li>Experiments worth watching: OR (non-sovereign 2.0), PROOF (Kenneth Arrow state-contingent markets / Multiverse Markets), Futarchy + MetaDAO</li>
+<li>Coliseum Co-Pilot feeds academic research to agents</li>
+</ul>
+<h2>Charlie Dalton: The Internet Will Put VCs Out of Work</h2>
+<p>Charlie Dalton ("Prophit", MetaDAO) discussed on-chain fundraising:</p>
+<ul>
+<li>The Ripcars case: raised $250,000 from about 1,000 people, and the product sold out within an hour of launch; $1.5 million in follow-on financing (Kyle Samani, DBA, Coliseum), about 10× after the ICO</li>
+<li>The SEC's "Reg Crypto Asset" proposal: token sales under $5 million would be legalized, with very few requirements for founders (per his account, "the biggest SEC crypto regulation since crypto began")</li>
+<li>The MetaDAO team tokens do not arrive until 2029, earned at a $5 billion market cap</li>
+</ul>
+<h2>Lightning Talks</h2>
+<h3>Lucas Jumalon: The WSOP Champion's Review</h3>
+<p>Introduced by Jeff Platt (WSOP), 20-year-old <strong>Lucas Jumalon</strong> — champion of the 2026 WSOP Main Event (9,200+ entrants × $10,000, a $10 million first prize) — reviewed the event hand by hand: key hands against Zhao Lu and Malcolm Trainer, heads-up against Lowry; psychological warfare and tells; the balance between GTO and exploitation; Kobe's "I'm built for this" mindset; and conservative investing after the win.</p>
+<h3>Jonathan Lewis: Cashtag Trading on X</h3>
+<p>Jonathan Lewis (X, managing director for the UK and Europe):</p>
+<ul>
+<li>There are 250 million stock investors on X; X users are 3× more likely than others to invest in crypto</li>
+<li>The new cashtag experience: one tap, and price charts and conversation sit on the same screen; broker trading buttons are already live in the US and Canada</li>
+<li>Priorities for 2027: timeline trading buttons + global expansion</li>
+</ul>
+<h3>Michael Marcantonio: Temporal Launches Supermassive</h3>
+<p>Michael Marcantonio (Temporal) announced <strong>"Supermassive"</strong>: a prop-AMM perpetuals protocol + a prop-AMM options protocol + a shared open margin layer, shipping next year, with portfolio margin from day one.</p>
+<ul>
+<li>Solana spot beats Binance: volume exceeds Binance + OKX + Coinbase + Bybit combined, with better fills; its prop AMM did $200 billion+ in volume on about $6 million of capital</li>
+<li>But perpetuals lag: $450 billion across all Solana venues combined, versus Hyperliquid's $2.93 trillion and Binance's $27 trillion last year (his figures)</li>
+</ul>
+<h3>Eugene Chen: Phoenix Perps by the Numbers</h3>
+<p>Eugene Chen (Ellipsis Labs, Phoenix Perps):</p>
+<ul>
+<li>25,000+ users since the private beta launch in February, daily volume up 10× in 6 months, cumulative notional of $5 billion+; 100+ markets, 6 asset classes (FX launched last week)</li>
+<li>A first incentive program of $400,000, and more than $1 million returned together with Frontier Traders</li>
+<li>A native mobile app is in the works; Phoenix will become the first venue to offer perpetuals collateralized by Backpack tokenized stocks</li>
+</ul>
+<h3>Lucas Bruder: The Market Is the Best Lie Detector</h3>
+<p>Lucas Bruder (CEO of Jito Labs):</p>
+<ul>
+<li>Challenger, 1986: within hours the market had locked onto Morton Thiokol (the O-ring manufacturer)</li>
+<li>Solana is a giant state machine in which every price is set in sync; "whoever prices first finds the truth first"</li>
+</ul>
+<h3>Seyong Park: Data Comes Last</h3>
+<p>Seyong Park (co-founder of FOMO) discussed "social observation preceding official data":</p>
+<ul>
+<li>Exchanges began in coffee houses (London 1698, New York 1793); the cashtag was invented by traders on StockTwits in 2008</li>
+<li>200 million brokerage accounts in India, 28 million tax-free savings accounts in Japan, and Korean retail investors holding about $200 billion in US stocks (his figures)</li>
+<li>Cases: the On Cloud running-shoe club (2023) → the Nike CFO's surprise (June 2024); Taylor Swift's Philadelphia hotels (May 2023) → the Fed's Beige Book; Peloton's journey from living-room marvel to clothes rack</li>
+<li>FOMO is an X cashtag sponsor</li>
+</ul>
+<h3>Tuam Holmberg: Collectibles Are Nostalgia Artifacts</h3>
+<p>Tuam Holmberg (CEO of Collector Crypt):</p>
+<ul>
+<li>The platform has been live for 5 years, with $1.5 billion in card-pack revenue (his figure)</li>
+<li>Collectibles = nostalgia artifacts, on 20–30-year nostalgia cycles; high-frequency PFP-NFT trading is dead, but nostalgic value arrives about 15 years later</li>
+<li>It is building financial rails for NFT/collectible transfers on Solana</li>
+</ul>
+<h3>Andrea Mieli: Discovery Shopping, Beyond Collectibles</h3>
+<p>Andrea Mieli (CEO of BEEZ) discussed discovery shopping in "what if moments":</p>
+<ul>
+<li>In partnership with The Luxury Closet, its first luxury drop sold 500 authenticated items in 42 minutes (Birkin, LV, Bottega, Dior)</li>
+<li>It announced a partnership with Collector Crypt; a new brand, <strong>Mia</strong> — discovery shopping made for women (itsmia.io); Whatnot beauty sales are up 791% year on year (his figure)</li>
+</ul>
+<h3>Tad Smith: Candy Digital Moves Entirely onto Solana</h3>
+<p>Tad Smith (CEO of Candy Digital):</p>
+<ul>
+<li>About 6 million collectibles and 1 million+ customers, now all minted on Solana via Metaplex Core, with media stored on Arweave; DC Comics + MLB licenses, traded via OpenSea, Magic Eden, and Tensor</li>
+<li>A new site launches "tomorrow evening New York time" (candy.io), with a digital comic reader; self-custody at the protocol layer + scarcity</li>
+</ul>
+<h2>Peter Moore: The Lifetime Value of Sports Fans</h2>
+<p>Peter Moore (former CEO of Reebok, Sega, Xbox, EA, and Liverpool; part-owner of Wisła Kraków):</p>
+<ul>
+<li>The lifetime value of sports fans is the real asset; the AEM funnel (acquisition / engagement / monetization)</li>
+<li>Liverpool has 300 million fans and Anfield seats 61,000; it took two years to teach fans to scan their way in</li>
+<li>Wisła's Lucky Fan Index app (9 Cannes Lions awards, a top-20 brand at Cannes — per his account); fans are relationships, not customers</li>
+</ul>
+<h2>Justin Bons: Solana Is "Bitcoin 3.0"</h2>
+<p>Justin Bons (Cyber Capital): Solana is at once a store of value, money, and an application platform, and is therefore "Bitcoin 3.0"; fees bring security, decentralization, and scarcity; he rejects single-purpose chains — "there is no such thing as a privacy coin; every chain should have privacy and scalability."</p>
+<h2>Brennan Watt: Anza's 2026 Review and 2027 Preview</h2>
+<p>Brennan Watt (CEO of Anza) summed up 2026's wins:</p>
+<ul>
+<li>Alpenglow migrated live from Tower BFT, going from white paper to mainnet in 18 months; finality from 12.8 seconds → about 150 milliseconds; block times from 400 milliseconds → 200 milliseconds; capacity doubled (about 250 million CU/second); token-transfer efficiency up 50×</li>
+<li>1,000+ days of uptime and 300 billion transactions; on-chain storage costs down 27%, with a further 7× reduction within two weeks; maximum transaction size up more than 3×</li>
+<li>2027 preview: protocol simplification, a storage-backend overhaul, Alpenglow.next + <strong>Constellation</strong> (Rotor replacing Turbine, geo-awareness, in-protocol ordering, a second proposer), and hardcore on-chain computation (options pricing, margin models)</li>
+</ul>
+<h2>Closing Roundtable: Inside the Bunker — Is Crypto's Doomsday Here?</h2>
+<p>Moderator Tee (Frontier One); guests Brennan Watt (Anza) and Ilya Polosukhin (co-founder of NEAR). Opening backdrop: United Airlines outages, air traffic control, financial services, and European refrigerators failing one after another — we live on systems built in the mainframe era 30 years ago.</p>
+<p><strong>Brennan:</strong> Everything is already open source, and "security through obscurity" was always a bad idea; this wave will hurt, but it will lead to the most secure software ever; he wrote a "security armageddon" blog post a year ago, and it is coming true.</p>
+<p><strong>Ilya's three-part toolkit:</strong></p>
+<ol>
+<li><strong>Formal verification</strong> pushed down to x86 → WebAssembly → machine code; AI has made it cheap (previously only NASA and a few smart contracts could afford it)</li>
+<li><strong>Red-teaming</strong> your own code with uncensored models</li>
+<li><strong>Active monitoring</strong>: sense all logs, chains, and smart contracts and look for anomalies — for example, an address that has never had money suddenly receiving a large sum from a smart contract is "usually a hacker"; pause first, assess, and move to the next layer of analysis</li>
+</ol>
+<p><strong>Brennan's approach:</strong> Run frontier models against new commits every day, in a 24-hour cycle; first stop the inflow of new vulnerabilities, then clear the backlog; kernel vulnerabilities from 10 years ago are only being found now. Anza's security team has grown substantially this year.</p>
+<p><strong>Ilya's NEAR practice:</strong> Express the entire NEAR protocol mathematically and find problems; red-team every PR; supply-chain security — one maintainer's GitHub keys leaked because they used some random agent, and vulnerable code was pushed; active monitoring across 39 chains; two chained vulnerabilities in a Litecoin privacy pool drained funds, and NEAR was first to discover them and notify Binance and others; the <strong>Shield</strong> intelligence network + partner program (when stolen funds are being laundered, partners can be notified to pause and isolate them).</p>
+<p>Ilya's conclusion: "In the age of AI-written code, the engineer's job is the guardrails — verification and security."</p>
+<p><strong>The "bunker mode" dispute:</strong> It originated in a post by Justin Drake — move your money into accounts whose public keys no one has ever seen, and don't use blockchains. Ilya considers this a passive approach: there is a 99.99% probability that AI attacking cryptography is not magic — breaking a single key would take a 10-gigawatt supercomputer; what matters is <strong>crypto agility</strong> — NEAR has supported two cryptographic schemes since its 2018 mainnet launch and has just added post-quantum cryptography support, so users can rotate keys. Brennan agreed: "the bunker narrative has a bit of loser energy" — it is better to go on the offensive; Solana is building a full post-quantum key suite; quantum computers will not be in everyone's hands, but someone will have them. Ilya added: the concept of durability has changed — Bitcoin was once the most durable by the Lindy effect, but that no longer matters; 10-year-old code has vulnerabilities too, and a passive approach is not enough.</p>
+<p><strong>Question on the hardware bottleneck:</strong> Software has been decentralized, but hardware is concentrated in a few data centers — what then? Brennan: Solana is truly permissionless; anyone, on any hardware, can join; market forces pull toward a better experience; an outage at one provider earlier this year affected a large amount of stake; the validator ecosystem is active; but you cannot go inside validators' machines and patch for them — they have to take it seriously themselves. The roundtable ended with: "Now let's go to the bar."</p>
+<h2>Closing Interview: Michael Lewis × Amira Valiani</h2>
+<p>Author Michael Lewis (Liar's Poker, Moneyball, The Big Short, The Blind Side, Flash Boys) was interviewed by Amira Valiani about his new book (rendered in the transcript as "Blockers," about the second Trump administration's collision with the federal government; the transcription of the title is in doubt — see the verification note at the end).</p>
+<p><strong>Career and luck:</strong> His first job came from a dinner at St James's Palace — seated between the wives of the two heads of Salomon Brothers in London, one of whom said, "You must come work for my husband" — and he entered the industry with no qualifications at all. He wrote a column saying bankers were overpaid, and the next day his boss was waiting at his desk; he then wrote anonymously for about a year and a half under his mother's maiden name, <strong>Diana Bleeker</strong>; Chevy Chase's father (a book editor) figured out his identity and gave him a book deal. At 26 he walked away from a high salary for a $40,000 book deal; looking back, he said, look at 35-year-olds — no one leaves, they are all trapped. Risk appetite changes with age. The key is "knowing what you truly love" — he enjoys the very process of sitting down and putting words on paper; many people want to "have written a book" but do not enjoy the process of writing. The origin of The Blind Side: passing through Memphis, he visited his old friend Sean Tuohy, whose first words were "Who writes your books for you?" — assuming he kept a basement full of ghostwriters.</p>
+<p><strong>How he finds his characters:</strong> First the question, then the framework, and finally a casting call. The question of The Big Short was: how did the big Wall Street firms become the suckers at the poker table? The answer lay with the people who were short — about 20 hedge fund managers, interviewed one by one; no single person had the full picture, and only several of them together formed the panorama. The new book's framework: the second Trump administration is an "unbelievable power grab" — the first did not care about government, while the second cares about government more than any president; taking over the Smithsonian, the Kennedy Center, and the Institute of Peace, and the power of the purse (freezing FAA upgrade funds 16 months ago); 2 million federal employees swear an oath to the Constitution, not loyalty to an individual; the government is to become a narrow loyalty machine serving one person; the question is how each function's behavior changes once the incentives change; the characters are the consummate professionals swept away because the world changed.</p>
+<p><strong>His advice on storytelling for crypto:</strong></p>
+<ol>
+<li>First make the audience want to know — narrative is rooted in character; once a character stands up, readers will follow them anywhere; whatever needs explaining must matter to the character</li>
+<li>Writers want to seem smart rather than make the reader feel smart — drop the ego, simplify, and risk being called stupid by experts</li>
+<li>Do not forget the basic questions — "What is it? How is it money? How is it not money?" — the difference between ignorance and stupidity: ignorance is forgivable</li>
+</ol>
+<p><strong>Trust and US Treasuries:</strong> Long-term US Treasuries are a "stupid" holding — there is no point lending long-term to a borrower who does not care at all about dealing with the fiscal problem; debt has increased by $4.5 trillion since Trump took office; neither party has a political market for dealing with it; the natural way out is inflation (printing money to dilute it), or selective default one day ("Who do we owe money to? The Chinese hold a trillion dollars of bonds… we just won't pay"). Five years ago he bought gold and euros because he does not trust American society's ability to handle public finances. The warning signs resemble 2005–2006: not an AI financial bubble (though there are bubble elements, the investments will be hard to pay back, and there will eventually be a reckoning, "more dramatic than the internet bubble"), but what alerts him more is the government itself becoming the problem — 2008 could be resolved because adults (the government) stepped in to backstop it; when the US government itself is the problem, no supranational organization is big enough to step in and calm things down; the next interesting financial story is the collapse of trust in the US government, at an unknown time, possibly ten years from now.</p>
+<p><strong>Resonance with blockchain:</strong> Cryptocurrency is a measure of distrust in fiat currency, and "that distrust is earned" — "it is not stupid to hold them for that reason."</p>
+<p>Closing words: what is happening in the US government is "staggeringly interesting, staggeringly consequential," and unfortunately we all have to understand it better.</p>
+<h2>Close: See You in San Francisco in 2027</h2>
+<p>Amira and Ellie Platisse (the woman behind Breakpoint, five editions running) closed the event: 6,000+ people on site across the two days; the journey began with a series of events including the 41st hacker house and AI day — "a magical two weeks." Doors close at 19:00.</p>
+<p><strong>Breakpoint 2027: September 8–10, 2027, San Francisco</strong>; day one for credential pickup + welcome, two days of content; subsidized ticket price of $75. The closing words, verbatim: "See you in San Francisco!"</p>
+<hr />
+<h2>ASR Restoration Table</h2>
+<table>
+<thead>
+<tr>
+<th>As written in the transcript</th>
+<th>Should be / explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blockers (Michael Lewis's new book title, appears twice)</td>
+<td>Judging by the book's content (the second Trump administration and 2 million federal employees), it should be Who Is Government?; the transcript's version is followed here, and the title is in doubt</td>
+</tr>
+<tr>
+<td>Ilya Kudaiya, Senior Director of Financial Services, FIWARE</td>
+<td>A transcription error for Ilya Polosukhin (co-founder of NEAR)</td>
+</tr>
+<tr>
+<td>VALSA Partner Program</td>
+<td>The name of NEAR's partner program; transcription in doubt</td>
+</tr>
+<tr>
+<td>taken our team to infinity</td>
+<td>Anza's security team has grown substantially this year; the exact multiple is unclear in the transcript</td>
+</tr>
+<tr>
+<td>scalar die, 200 MS</td>
+<td>Names of a series of events in Ellie's closing remarks; transcription unclear, not used</td>
+</tr>
+<tr>
+<td>Baroness "Sue", Forma founder (moderator)</td>
+<td>Surname/name unclear in the transcript, not used</td>
+</tr>
+<tr>
+<td>Ross topic (the 11.16 session with Brother Qie)</td>
+<td>Anthropic; unrelated to this event</td>
+</tr>
+</tbody>
+</table>
+<h2>Verification Notes</h2>
+<ul>
+<li>Jensen Huang's resignation as Nvidia's president/CEO/director (announced 2026-11-12) was verified on 2026-11-13; the many references in this event to the period "after Jensen's departure" are consistent with that verification, while claims such as "removed by the board / an affair" were made within the program and have not been verified.</li>
+<li>Bobby Ong gave two inconsistent figures for the scale of token tracking in the same interview (50 million+ vs. 15 million across 220 chains); the live remarks are followed as spoken, with no reconciliation.</li>
+<li>View count: 16,602 when meta.json was fetched; the worker reported a final figure of 17,439 when transcription was completed.</li>
+<li>About 6 seconds of audio are missing: the playlist itself lacks segments 4278–4280 (about 6 seconds of audio that cannot be recovered); the remaining 13,684 segments are complete.</li>
+<li>Transcription tool: the faster-whisper small model, in English; 46 chunks of 600 seconds, completed on the transcription machine in Jakarta.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2mdqrEaWVkMPVz">https://x.com/i/broadcasts/2mdqrEaWVkMPVz</a> · Solana 官方直播 · 2026-11-17 18:26 – 2026-11-18 约 01:59（约 7 小时 36 分）· 观看 17,439 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2mdqrEaWVkMPVz">https://x.com/i/broadcasts/2mdqrEaWVkMPVz</a> · Solana 官方直播 · 2026-11-17 18:26 – 2026-11-18 約 01:59（約 7 小時 36 分）· 觀看 17,439 次<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Broadcast replay <a href="https://x.com/i/broadcasts/2mdqrEaWVkMPVz">https://x.com/i/broadcasts/2mdqrEaWVkMPVz</a> · Solana official livestream · 2026-11-17 18:26 – approx. 2026-11-18 01:59 (approx. 7 hours 36 minutes) · 17,439 views<br>This page is the full notes, compiled by hand from a machine transcript; all content consists of guests' improvised remarks and self-reported accounts during the livestream, has not been verified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Breakpoint 2026: Day Two 会议纪要 · Yat's Talks",tw:"Breakpoint 2026: Day Two 會議紀要 · Yat's Talks",en:"Breakpoint 2026: Day Two — Meeting Notes · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

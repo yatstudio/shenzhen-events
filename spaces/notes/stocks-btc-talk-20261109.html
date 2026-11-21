@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：11.9 黄仁勋出轨 股票继续崩还是反弹？时间之窗已经到来！</h1>
 <ul>
 <li><strong>系列</strong>：Stocks BTC Talk</li>
@@ -286,8 +293,554 @@
 <li>转写质量：base 模型中文同音词错误较多，人名、币名、股票代码按上下文归整（如“黄仁勋/黄仁薰/黄人薰”统一为黄仁勋，“比特币/比得比/比这比”统一为比特币）；数字以转写原文为准，存疑处在正文中注明“发言人口径”。</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：11.9 黃仁勳出軌 股票繼續崩還是反彈？時間之窗已經到來！</h1>
+<ul>
+<li><strong>系列</strong>：Stocks BTC Talk</li>
+<li><strong>時間</strong>：2026-11-09（週一）約 19:57–23:24（北京時間），時長 3 小時 26 分</li>
+<li><strong>主持人</strong>：茄哥 @qg7777</li>
+<li><strong>發言人</strong>：陳冬冬 @chenkaide73、樑枝102 @liangyiwei11、Ethan @Weex996、西西米修斯 @Sisymithus、Bono @CuiBono_pinap（以錄音實際為準）</li>
+<li><strong>Space</strong>：https://x.com/i/spaces/1LPXqLldgjBOmv</li>
+<li><strong>來源</strong>：錄音回放全程轉寫（faster-whisper 本地轉寫，中文；3,916 段，覆蓋 00:01–03:26）</li>
+<li><strong>說明</strong>：本紀要基於機器轉寫整理，逐字稿無說話人分離，發言歸屬按主持人點名與對話上下文判斷；轉寫中 00:10–00:17 有一段重複（斷點續傳所致），內容無影響。以下所有觀點、數字均為發言人現場自述、未經核實；行情點位、漲跌幅等均為發言人當時口徑，不構成投資建議。</li>
+</ul>
+<h2>結論先行</h2>
+<ol>
+<li><strong>今晚看反彈，不是反轉</strong>。茄哥全場主線：暴跌之後必有反彈，美股、比特幣今晚都看反彈；但這輪反彈走完、到 11 月底至聖誕節前結束之後，2027 年是「整個的大熊市」，持續到 2028 大選年才可能反轉。</li>
+<li><strong>黃仁勳「出軌」事件本身不是基本面利空</strong>，是情緒 + 消息面砸盤。茄哥與西西米修斯都認為：新聞在美東週末凌晨 5 點（北京時間凌晨）爆出、而非週一盤前，是「設計好了」的，目的是在底部製造「黃金坑」；英偉達流動性充足，砸出的坑會被接；但要區分損害性質——形象損害最不重要、能力損害可修補、誠信損害最難修復，目前尚看不清屬於哪一種，「讓子彈飛一會兒」。</li>
+<li><strong>本週最重要的數據是 11 月 10 日（週二）晚公布的 CPI</strong>。市場預期整體月增 0.3%（前值 0.6%）、核心月增與核心年增均下降；若 CPI 利好，反彈多漲一天；若爆冷門、反彈可能就此結束，12 月升息機率隨之上升。</li>
+<li><strong>比特幣</strong>：回撤到 73,333 附近被視為到位（200 日均線位置），今晚看反彈到 75,000–76,500；反彈高點可能在 11 月底前出現，之後回落，12 月初可能回調、明年 1 月底前或有小高點；長期節奏是 A 浪反彈—B 浪盤整—C 浪再拉，盤整或持續到明年 3 月再衝新高（發言人口徑：9 萬多）。</li>
+<li><strong>操作口徑（發言人自述）</strong>：空單在目前位置該平掉——茄哥稱自己 CRWV 空單準備平掉；無倉位者只做短線、快進快出；現貨緊盯比特幣高點拐點，比特幣到 78,000–80,000 附近分批出貨；狗狗幣 0.07 以下可買、反彈目標 0.09 附近；三倍做空 ETF 在 10 月份要謹慎，隨時可能被反彈拉爆。</li>
+</ol>
+<h2>一、開場：盤前定調——暴跌之後必反彈（約 00:01–00:26）</h2>
+<p>茄哥開場即定調：英偉達盤前跌 5.2%，納斯達克 100「恐怕不太好看」，標普 500 盤前也在跌；但恐慌指數（UVXY）盤前下降約 9 個百分點。他的判斷是：</p>
+<blockquote>
+<p>「市場肯定會迎來一波反彈，因為暴跌之後必反彈，暴漲之後必回吐。」</p>
+</blockquote>
+<ul>
+<li>本週最重要的數據是 CPI（11 月 10 日公布），今天（11 月 9 日）沒有重要數據。</li>
+<li>比特幣白天波動很大，半夜曾跌一下，「把多頭基本上殺得差不多」；每次到底部反轉時都要放出巨量。</li>
+<li>點位：比特幣 73,333 附近是 200 日均線位置，「現在不具備跌破 200 日均線的條件」，除非極端插針、極端拋售，或比特幣世界出大事、戰爭爆發。</li>
+<li>利好因素：貝森特搞 590 億美元美債回購，美債殖利率應下降；但 12 月升息預期升至 78.3%，升息對美股有影響，利空能否像上次一樣在公布前吃盡不好說，期中選舉後很多事不明朗。</li>
+<li>操作：空單在該位置該平掉，「比如我那個 CRWV，我準備要平掉了」；儲存、半導體（「散迪」、海力士等）空單也要考慮平，別被巨量反彈拉爆。</li>
+<li>明確表態：美股不會只因為黃仁勳「找了個什麼艾利斯·黃（Ilyse Huang）、背叛他老婆」就崩掉，「這都是開玩笑」。</li>
+<li>比特幣中長期：先走 ABC 反彈（A 浪拉起來、B 浪盤整、C 浪再回來），盤整可能持續到明年 3 月份，再拉一個高點（比如 9 萬多），夏天繼續上行；但推進節奏會比 2024–2025 年牛市慢得多。</li>
+<li>當日比特幣：高點 75,500、低點 73,000 附近，波動約 2,000 點；滾動 24 小時成交量約 279 億；三家交易所高點價格略有不同，Coinbase 盤口一般高 10 美元左右；現貨量幣安 6.92 億、Coinbase 約 3 億、OKX 約 3 億，「量沒縮」。</li>
+<li>風險提示：最怕的是本週反彈縮量；現貨交易量若暴降，可能進入短暫盤整期。ETF 在拋現貨：上週五（11 月 6 日）貝萊德賣出約 4 億美元，總計現貨淨流出約 4.11 億美元，「這兩天幾乎所有 ETF 都在淨流出，風向標上不是很好」。</li>
+<li>亞太盤面：日經漲 2.33%，韓國 KOSPI 跌 0.8%，外資賣出 6,000 多億韓元，散戶也在賣，「韓國股市我覺得 5,000 點應該是守不住的」；費城半導體上漲，石油在跌（布倫特跌破 100 美元關口，發言人口徑），30 年期美債跌 0.06、10 年期漲 0.1、2 年期高位 0.49。</li>
+<li>英偉達事件定性：黃仁勳要接受整個董事會調查；民主黨肯定要盯著這些人查；若坐實與間諜有關是另一回事，但「老黃不至於傻到明知道她是間諜還跟她直接來往」。美光、台積電、阿斯麥、應用材料盤前上漲；蘋果、特斯拉截至晚 8 點基本沒動；微軟漲約 1.82%。</li>
+<li>馬斯克的 SpaceX：週五反彈 8.62%，今天盤前漲約 2.7%，但茄哥不看好，認為「下行空間還有很大」，看到 120 附近，「在這個位置基本上應該是要收了，也要有一個反彈的」，但今晚不看好。</li>
+<li>地緣與政治：伊朗打的可能性不大；胡塞可能不穩定；期中選舉後民主黨與共和黨在股市、流動性問題上博弈；共和黨在換人、調整幕僚長，堅持不換赫格塞斯。</li>
+</ul>
+<h2>二、馬斯克中文 X 發「牛逼」與 Meme 幣插曲（約 00:26–00:30）</h2>
+<ul>
+<li>聽眾（樑枝102）問馬斯克在中文 X 發「牛逼」是什麼意思。茄哥的解釋：馬斯克刷推時看到很多人在講黃仁勳的事，發了這麼一句；另外大概率與支付網路打通有關。</li>
+<li>有聽眾買了相關 Meme 幣，價格 0.15。茄哥明確勸阻：「你可別玩這玩意……純屬騙人的，有的時候你買進去你都賣不出來，他把流動池給你撤了」，並建議「老老實實買你的股票吧」。</li>
+</ul>
+<h2>三、合約與比特幣短線：看反彈到 75,500（約 00:30–00:44）</h2>
+<ul>
+<li>茄哥認為這兩天合約交易好做：趨勢明顯，高點開空、低點開多；今晚看反彈，比特幣「怎麼也能夠回到 75,500」，甚至 76,000；但 75,500 這個位置試了兩次沒上去，主力很強。</li>
+<li>時間點預測：大概率凌晨 1 點左右到該位置，之後可能回調，明早 8 點換盤時回到 74,000–75,000 區間；也可能今晚不動，就在 74,000–75,000 震盪。</li>
+<li>極端情況：可能插針到 73,300、甚至 72,200；波動會非常大，多空雙殺最近太容易發生；保證金必須足夠，「你在 7 萬以上（開單）我覺得都不安全」。</li>
+<li>加密貨幣週五沒跟美股反彈，有恐慌踩踏意味；機構在底部有「派發誘多、拉你進場」的意思。</li>
+<li>個股點評：</li>
+<li>CRCL（Circle，發言中稱「思考」）：64.8–65 的位置短線應有反彈。</li>
+<li>英偉達不會跌那麼少；三選一仍選美光，美光「有可能還會再碰一下 776、756 的位置」，也可能突破。</li>
+<li>MRNA（Moderna）：可關注。</li>
+<li>CRWV：只能打非常短的短線，做多很難，「肯定是要爆雷」，黃仁勳事件之後還要爆一下，英偉達往下走時會「雙殺」。</li>
+<li>Oklo：茄哥自述被套，均價在 30 附近，已跌破 200 日均線，「最近很難能反彈起來」。</li>
+<li>山寨幣：以太坊這兩天波動非常大，比特幣漲一點它能漲 5%，現貨流動性很差、靠港版定價；索拉納（SOL）漲 3%–4%是暴漲暴跌過程中的常態；狗狗幣跌到 0.065 以下才考慮加倉，「我覺得是能看到的」；BNB 在 658 附近性價比不高；SOL 目標 28 附近（發言人口徑）；Hyperliquid（HYPE）現價 73 元，跌破 70 再加。</li>
+<li>SpaceX：122–130 之間震盪，「現在就別碰他了」，跌破 111 再看；特斯拉盤前微漲 0.86%，晶片、半導體普漲但特斯拉可能往下走；英特爾跌破 30 之前不做短線，跌破 30 後「你怎麼拿他都不可以」。</li>
+</ul>
+<h2>四、陳冬冬：四個山寨幣能不能拿（約 01:01–01:23）</h2>
+<p>陳冬冬上麥求助：買了 PEPE、ENA、ARB、UNI 四個幣，每個 5,000 美金以上，總投入約 3 萬美金，現剩約 2.6 萬多美金；還提到此前在特朗普幣（TRUMP，成本約 1.9–2 美元）上賠了很多錢，後把約 89,000 多美金（發言人口徑）倉位全部換成 ARB。</p>
+<p>茄哥逐個點評：</p>
+<ul>
+<li><strong>UNI</strong>：成本 6.8，沒跌破 200 日均線，先看 8 塊，到了再考慮賣不賣；日線剛開始有反彈跡象。</li>
+<li><strong>ARB</strong>：走得挺標準，一浪、二浪反彈、三浪下來、四浪反彈、五浪下去；若突破 0.2，上方能到 0.2 附近再下來、可能回 0.16；下方底部可能到 0.115；「ARB 就別期望太遠了，能找到 6 毛就不錯了，三毛他都上不去」。</li>
+<li><strong>ENA</strong>：會員群有人說年底看 0.57–0.78、明年看 2 塊；茄哥認為買了量不大的話就放著，0.18 附近買入後跌到 0.15 附近，「這個東西買了你把它忘了嘛」。</li>
+<li><strong>PEPE</strong>：不看好，「泥太王長」（轉寫原音，意為不看好），會漲但有限。</li>
+<li>核心建議：不要拿時間扛，要看價格。<strong>比特幣出現高點拐點就賣</strong>；比特幣到 78,000–80,000 附近就可以開始分批慢慢賣出；反彈高點有可能在 11 月底之前出現，12 月初可能是回調，要「吃 12 月升息的利空」。</li>
+<li>陳冬冬的計畫是拿到聖誕節/冬至前幾天拋掉。茄哥提醒：不一定非要等到那一天，反彈高點不見得等到聖誕節；11 月見底後反彈，不見得要等到聖誕節才到高點；「你到時候得找高點去出貨」。</li>
+<li>黃金：小時線走得非常好，但今晚若不能突破 4,135（另一處口徑 4,143），黃金可能下來走回調；日線看 ABC 回調的 C 浪已走完，開始往上走，但短時間可能再跌回 4,000 以下；反彈上去能到 4,409（1.382 位置，發言人口徑）；長線關注 4,340 能不能突破，突破則看 4,500；今晚預計在 4,050–4,130 區間，上不去則「黃金沒有那麼大的量去破」。</li>
+<li>以太坊系山寨：UNI、ARB 等可能跟著以太坊爆拉，「比特幣漲 100%、以太坊拉 3%，你那些可能就跟著漲 17%」（發言人口徑）。</li>
+</ul>
+<h2>五、聽眾提問：對沖、個股與數據中心（約 01:23–01:44）</h2>
+<ul>
+<li><strong>空頭對沖</strong>：聽眾問現在是不是最大策略是拿個做空的倉位、再買個正股對沖。茄哥：無倉位者只建議短線接，做了就跑；反彈中的股票大多在現價與 200 日均線之間波動，不會走反轉；舉例 BET（發言中稱「B1G」，疑為某能源/概念股）短線可接，高點約 210–220，上方 195 附近有缺口，今晚可能補；能源股相對好一些；藍籌股可買醫藥、房地產、Meta、亞馬遜、谷歌（谷歌在這個位置「有可能還會上 300」）。</li>
+<li><strong>三倍做空 ETF</strong>：10 月份要謹慎打，「隨時反彈隨時跳」，政策變化隨時可能爆拉；民主黨在數據中心專案上有動作（41 個專案 40 個被打回，發言人口徑），一旦通過一兩個、市場有利好就可能拉盤拉爆空頭。</li>
+<li><strong>數據中心與電力</strong>：美國現在最大的問題不是電力、是電力設施——沒有電網，數據中心離居住區太近、拉線困難；小型核能有希望（使用效率最高、安全與環保被認同），但網路布線仍是問題；馬斯克在孟菲斯的算力中心自建房車住人現場施工就是例證。</li>
+<li><strong>Oklo 與路透新聞</strong>：Oklo 均價 30 附近被套，跌破 200 日均線難反彈；路透新報導稱美國國會法案首次就數據中心選址表達不滿、要求加快新電廠審批與數量限度審批（發言人轉述）。</li>
+<li><strong>房地產</strong>：美國要搞大基建，補償拆遷、讓居民搬走再拉民用電；新建數據中心宜選老城區周邊、土地成本低的區域擴容，而非農場附近（農場沒有網路和電力配套）；巴菲特很早押注 Lennar 這類建築商；數據中心選址還會衝擊當地農場主利益，紅州與藍州的博弈在其中。</li>
+<li><strong>州與聯邦</strong>：州法律與聯邦法律的關係、州議會不通過就建不了；期中選舉選州長、州務卿、州法官，共同主持州議會。</li>
+<li><strong>反彈性質</strong>：這波反彈不是單純空頭回補，是「跌到位了，量這麼大就應該反彈」；原油還在跌（當天跌約 4%）、黃金沒漲多少、美債殖利率都在跌，「股票不爆拉反而不正常」；納斯達克 100 與標普 500 的單日跌幅已達今年來前列，上一回是 2025 年 4 月特朗普宣布關稅時；「極端的利空就是利好，利空出盡它就漲」。</li>
+<li><strong>CPI 與升息</strong>：若明天 CPI 爆冷門（持平或低於預期），反彈可能結束，12 月升息 50% 的機率提高；但原油價格暴跌對通膨的影響已釋放，單看原油不會帶崩股市；綜合看 SPY 盤前已漲 0.9%、QQQ 漲 0.8%，「已經非常內漲了」。</li>
+</ul>
+<h2>六、中段定調：反彈不是反轉，2027 年是大熊市（約 01:44–01:56）</h2>
+<p>茄哥中途離開幾分鐘後回來，給出全場最重要的中長期判斷：</p>
+<blockquote>
+<p>「其實呢，現在是反彈，不是反轉。明年是整個的大熊市，這個 27 年肯定是整個的大熊市，一直持續到 28 年大選年，有可能會出現極端反轉。」</p>
+</blockquote>
+<ul>
+<li>SPY 這一輪從 2026 年 3 月以來的回測：回測到 0.382 左右「還不夠，完全不夠」，至少要回測 50% 以上；中期時間會特別長；熊市的特點是沒有上漲、沒有流動性。</li>
+<li>英偉達：報倉（建倉）應在 171 下方重倉；現價 176，往下拉低點看到 165；週線級別 160 附近有支撐位，破了可能去看 122；現在做空英偉達不是時候，它會小反彈，反彈到 148–155 再看能不能下行（發言人前後口徑不一，原文如此）；ABC 回調的 C 浪走了 1.618，反彈可能很厲害，從目前位置反彈到 155 都有可能。</li>
+<li>CPI 預期太好反而可能相反：華爾街全部指望量化寬鬆；期中選舉丟掉眾議院後，國會與特朗普團隊之間會搶政權、互相掣肘，「你提的法案我不跟你通過」「把你身邊的人搞下去」；特朗普也有防備，彈劾要過三分之二，所以把共和黨裡的人全換成自己最信任的人；但黨內倒戈情緒明顯。</li>
+<li>人事點評（發言人自述）：副總統萬斯（JD Vance）「是個沒有理想的人」，不看好他當總統，「可能是個非常窩囊的美國總統」；貝森特水平不太夠；聯準會主席（發言中稱「凱文·霍什」，疑為 Kevin Warsh）有點傾向共和黨，但其領導的聯準會團隊「根本就沒有給出」明確訊號；10 月份其實應該升息一次、把通膨壓制一下，流動性緊縮一下再通過降息或 QE 搞量化寬鬆，但歷來期中大選前不升息。</li>
+<li>特朗普期中選舉失利原因（發言人自述）：年輕人反對意見特別大（戰爭、腐敗觀感、承諾不兌現）；共和黨背後的金主與以色列、中東地緣政治有關；美國年輕人對以色列很討厭；特朗普家族與以色列有淵源。</li>
+<li>「輪花園理論」（發言人自述的歷史循環論）：歐洲因大航海/走私發家，三角貿易帶來財富，英國搞工業革命強大；美國靠偷技術、建壁壘強大，二戰後吃到 10 倍紅利；東方衰落之後，中國才走了 20 年上坡路（2006–2026），到鼎盛還需 60 年，現在才走了三分之一；美國至少在 2050 年之前應該沒有問題，歐洲則一直在走下坡路。</li>
+<li>李自成典故：李自成打到北京卻沒能建立大順，吳三桂被扣「衝冠一怒為紅顏」的帽子是「扯淡」；類比中國人好「風花雪月」、愛八卦，黃仁勳這點事被全網拿出來講，祖克柏、比爾·蓋茨、拉里·佩奇找東方老婆之類的都被翻出來，「中國人特別吃這一套」。</li>
+</ul>
+<h2>七、黃仁勳其人：從顯示卡到 AI 之王（約 02:11–02:25）</h2>
+<ul>
+<li>黃仁勳 17 歲時認識他老婆，在美國念大學；英偉達當年非常難，2023 年初股價才多少錢，「原來就是個做顯示卡的，沒有能搞的事實（事蹟），幾千億的市值當時」。</li>
+<li>茄哥自述：2004–2005 年裝電腦就用英偉達顯示卡，2008 年挖礦也提到英偉達；台灣人「很勤勞」，是中華民族勤勞的優點；李安是其印象最深的台灣人代表之一。</li>
+<li>馬斯克 vs 祖克柏 vs 喬布斯（發言人自述）：馬斯克年輕時沒談戀愛、沒打牌，理工男，信條和信仰到位；祖克柏是天生的商人，但「我是不太喜歡的」，不過確實開創了社群媒體時代；喬布斯早期極端（去印度苦行、不洗澡、吃素），被趕出蘋果後結交大量上流社會人脈，迴歸後才成功，臨死前最英明的事是把蘋果交給庫克；蘋果的中國專賣店都是喬布斯死後才開的。</li>
+<li>加密貨幣的侷限性（發言人自述）：最重要的侷限是「它就是價值儲存的場地」，不具備其他功能，智能合約就足夠了；貝萊德 15 萬億美元，預計有數十億美元的加密貨幣流入。</li>
+<li>其他消息面：特朗普開始「裝糊塗」，稱對阿布達比相關投資一無所知；Strategy（MicroStrategy）加倉約 7,700 枚比特幣（發言人口徑）；貝萊德有加倉的意思；13 萬億美元的加密理財（發言人口徑）利好索拉納、AVAX，AVAX 漲約 10%。</li>
+<li>茄哥提到自己的帖子早上被人檢舉、封了 12 小時。</li>
+</ul>
+<h2>八、聽眾狗狗幣 200 倍槓桿求助（約 02:25–02:45）</h2>
+<p>一位聽眾連麥求助：狗狗幣多單開在 0.088、空單開在 0.077（另一處口徑 0.078），200 倍槓桿，帳戶約 1 萬多美元，多單浮虧 6,000 多美元；空單盈利約 700 多美元；兩張單合計預估強平價 0.062。</p>
+<ul>
+<li>茄哥的建議：把空單平了，強平價會提高；平掉空單後在底部稍微加一些倉，一反彈就解套了；「你這個空單應該是要平掉的」；多單 0.088 這個位置是個麻煩，但不能逐步平，要處理好對沖倉位。</li>
+<li>插曲：聽眾把強平價 0.062 說成 0.006，茄哥糾正「那是 0.006 不是 0.06……你要讓加密貨幣毀滅嗎」。</li>
+<li>狗狗幣點位：茄哥認為能上 0.073，保守看 0.072；就看比特幣一會拉盤；今晚比特幣能看到 76,500。</li>
+<li>盤面實況：納斯達克 100 漲幅到 2%，標普 500 漲約 1%，特斯拉漲 5%，VIX 降到 21.6、馬上要下 20；比特幣在 75,000 位置有壓力，試了幾次沒上去；CRWV 漲了，「CRWV 不行了、到頭了」，被套的該解套跑；能源股反彈。</li>
+<li>COTY（科蒂，美妝）：聽眾問走勢，茄哥認為連漲之後可能回調，Q3 財報一般，37 億市值的小股票，「幾百美金玩玩就行」，不能買太多。</li>
+</ul>
+<h2>九、西西米修斯：損害三分類與「黃金坑」（約 02:54–03:02）</h2>
+<p>西西米修斯（新加坡）上麥，英偉達倉位不小、成本 100 出頭，讓機器人跟蹤，認為「不能一下子馬上就做決定，讓子彈飛一會兒」。他提出損害三分類：</p>
+<ol>
+<li><strong>形象損害</strong>——最不重要；</li>
+<li><strong>能力損害</strong>——還可以修補（「我以前都很強，我這次做砸了，其實還能補回來」）；</li>
+<li><strong>誠信損害</strong>——最難修復。</li>
+</ol>
+<blockquote>
+<p>「我現在要看，他的這個趨勢到底是屬於這三個東西的哪一個。」</p>
+</blockquote>
+<p>茄哥回應：</p>
+<ul>
+<li>消息面砸盤的痕跡很明顯：新聞在凌晨 5 點（美東週末晚上）報出來，而不是週一盤前，「這是設計好了的」；目的是「砸個黃金坑」，讓人在底部加倉。</li>
+<li>別只八卦本身，從人性角度看：為什麼一個成功的人能看上她？「她身上某種東西讓老黃看到了，這個人就是當初的我，或者她身上有某種閃光的特質」；單靠美色很難，因為「確實不缺這種資源」。</li>
+<li>女方曾對外講「我能把黃仁勳喊出來」；茄哥認為若真有問題，這麼講「太張揚了，太容易暴露了」。</li>
+<li>老馬（馬斯克）的人生：搞政治、該玩玩，「商業做到一定程度大的時候就會有政治形象」。</li>
+</ul>
+<h2>十、收尾：今晚堅定看漲，但別興奮過頭（約 03:02–03:26）</h2>
+<ul>
+<li>比特幣：茄哥重申「今天晚上我堅定看漲」；回撤到 73,333 認為到位；日線波動不到 2,000 點不夠，「怎麼也得找到個 75,800、76,000」；日線收十字星，底部上升趨勢明顯；但 75,500 的壓力很大，反覆測試。</li>
+<li>美股：今天不要急著跑，「美股今天不要急著跑」，明天如果 CPI 再給個利好、明天會繼續漲一天；黃仁勳認錯、董事會要開會，認錯這個動作本身被視為利好（發言人口徑）；英偉達 vs 美光：看漲美光，海力士最不看好（韓國市場情況 + 離婚案影響）。</li>
+<li>2027 年節奏（發言人自述）：反彈到 20 號，回調到月底，再反彈到十幾號，聖誕節前結束；「整個的這一輪的反彈就結束了，然後就開始流動性縮減、往下走」；走完聖誕節行情就變成熊市。</li>
+<li>狗狗幣：年底回 0.1 以上很難；12 月比特幣應該反彈，1 月底前應有小高點；狗狗幣已超跌、日線走了 6 浪（發言人口徑），反彈可能走 4 週左右到 12 月中；底部 0.06x 反彈，目標 0.0865，12 月底前高點在 0.09 附近；下方支撐 0.066，2023 年 10 月的價格，「真跌不動了」。</li>
+<li>波浪方法論：茄哥向聽眾強調，日本蠟燭圖是最基礎的，沒有這個基礎別的東西看不懂；波浪理論 + 斐波那契 + MACD + 量價結合；「你要真正有學習的這個覺醒」，不要拿錢做實驗。</li>
+<li>結束語（約 03:25）：<blockquote>
+<p>「就到這吧……別太興奮，也別太興奮過頭。比特幣也好，以太坊也好呢，你要謹慎，留一根針在查（插針），因為它波動會特別大，現貨的量雖然起來點，但是不是很高，幣安的現貨量到現在沒過 10 億，上漲趨勢固然有，但隨時可能衝高回落，尤其破 75,500 以上，你一定要注意。」</p>
+</blockquote>
+</li>
+<li>茄哥說明天再聊，休息幾分鐘後去看另一場節目；本場結束。</li>
+</ul>
+<h2>關鍵原話摘錄</h2>
+<ul>
+<li>「市場肯定會迎來一波反彈，因為暴跌之後必反彈，暴漲之後必回吐。」——茄哥（開場）</li>
+<li>「美國股市不會說光是因為黃仁勳這個找了一個什麼艾利斯·黃，直接呢他就背叛他老婆，完了就把美國股市就幹崩了，這都是開玩笑。」——茄哥</li>
+<li>「其實呢，現在是反彈，不是反轉。明年是整個的大熊市，這個 27 年肯定是整個的大熊市，一直持續到 28 年大選年，有可能會出現極端反轉。」——茄哥</li>
+<li>「我覺得他（比特幣）應該有一個過程……A 浪拉起來，然後 B 浪盤整，然後 C 浪再回來……盤整我覺得應該可能會持續到明年的 3 月份，然後拉一個高點，比如說 9 萬多，重新振奮市場。」——茄哥</li>
+<li>「你得關注你的幣的價格，你不能拿時間來扛……比特幣出現高點的拐點了，你就賣。」——茄哥（對陳冬冬）</li>
+<li>「形象損害是最不重要的……能力損害了，這個事還可以修補……誠信損害就是最難修復的。我現在要看，他的這個趨勢到底是屬於這三個東西的哪一個。」——西西米修斯</li>
+<li>「明顯有大量推手在凌晨 5 點……而不是說週一在盤前……這是設計好了的。砸個黃金坑，我跟你說在底部呢，讓這些人加倉。」——茄哥</li>
+<li>「你可別玩這玩意……純屬騙人的，有的時候你買進去你都賣不出來，他把流動池給你撤了。」——茄哥（談 Meme 幣）</li>
+<li>「就到這吧……別太興奮，也別太興奮過頭。」——茄哥（結束語）</li>
+</ul>
+<h2>數字一覽（均為發言人當時口徑，未經核實）</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>發言人口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>英偉達盤前</td>
+<td>跌 5.2%</td>
+</tr>
+<tr>
+<td>恐慌指數 UVXY 盤前</td>
+<td>下降約 9 個百分點</td>
+</tr>
+<tr>
+<td>比特幣 200 日均線 / 回撤到位點</td>
+<td>約 73,333</td>
+</tr>
+<tr>
+<td>比特幣當日高 / 低點</td>
+<td>約 75,500 / 73,000</td>
+</tr>
+<tr>
+<td>比特幣今晚反彈目標</td>
+<td>75,000–76,500</td>
+</tr>
+<tr>
+<td>比特幣分批出貨參考</td>
+<td>78,000–80,000 附近</td>
+</tr>
+<tr>
+<td>比特幣長期目標</td>
+<td>明年 3 月前後衝 9 萬多</td>
+</tr>
+<tr>
+<td>12 月升息機率</td>
+<td>78.3%</td>
+</tr>
+<tr>
+<td>CPI 預期（11 月 10 日公布）</td>
+<td>整體月增 0.3%（前值 0.6%），核心月增與核心年增均下降</td>
+</tr>
+<tr>
+<td>貝森特美債回購</td>
+<td>590 億美元</td>
+</tr>
+<tr>
+<td>ETF 現貨淨流出（上週五）</td>
+<td>約 4.11 億美元（貝萊德約 4 億）</td>
+</tr>
+<tr>
+<td>比特幣滾動 24h 量</td>
+<td>約 279 億</td>
+</tr>
+<tr>
+<td>黃金關鍵位</td>
+<td>4,135（4,143）站不上則回調；反彈目標 4,409；長線看 4,340→4,500</td>
+</tr>
+<tr>
+<td>狗狗幣</td>
+<td>0.065 以下可考慮加倉；反彈目標 0.072–0.073；12 月底前高點約 0.09；支撐 0.066</td>
+</tr>
+<tr>
+<td>日經 / 韓國 KOSPI</td>
+<td>+2.33% / −0.8%（外資賣超 6,000 多億韓元）</td>
+</tr>
+<tr>
+<td>特斯拉當日</td>
+<td>漲 5%</td>
+</tr>
+<tr>
+<td>納指 100 / 標普 500 盤中</td>
+<td>約 +2% / +1%</td>
+</tr>
+<tr>
+<td>VIX</td>
+<td>降至 21.6，臨近 20</td>
+</tr>
+<tr>
+<td>SpaceX（馬斯克）</td>
+<td>週五 +8.62%，盤前 +2.7%；茄哥看震盪區間 122–130，跌破 111 再看</td>
+</tr>
+<tr>
+<td>CRWV 空單</td>
+<td>茄哥準備平掉</td>
+</tr>
+<tr>
+<td>美光</td>
+<td>可能再碰 776 / 756</td>
+</tr>
+<tr>
+<td>英偉達支撐</td>
+<td>171 下方建倉；165；週線 160；破位看 122</td>
+</tr>
+</tbody>
+</table>
+<h2>轉寫說明</h2>
+<ul>
+<li>錄音：space.m4a，147,577,076 位元組，時長 12,408.9 秒（3 小時 26 分 49 秒），與 spacesdashboard 記錄的開播 19:57、結束約 23:24、時長 3 小時 26 分一致。</li>
+<li>轉寫：faster-whisper 本地轉寫，中文，21 個 600 秒分片斷點續傳；chunk_00 用 small 模型，其餘分片用 base 模型（模型切換係轉寫進程多次靜默死亡後的降級處理）；逐字稿 3,916 段，存 hidden_files/transcript.txt。</li>
+<li>轉寫品質：base 模型中文同音詞錯誤較多，人名、幣名、股票代碼按上下文歸整（如「黃仁勳/黃仁薰/黃人薰」統一為黃仁勳，「比特幣/比得比/比這比」統一為比特幣）；數字以轉寫原文為準，存疑處在正文中註明「發言人口徑」。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Nov. 9 — Jensen Huang "Affair," Will Stocks Keep Crashing or Bounce? The Window of Time Has Arrived!</h1>
+<ul>
+<li><strong>Series</strong>: Stocks BTC Talk</li>
+<li><strong>Time</strong>: 2026-11-09 (Monday) approx. 19:57–23:24 (Beijing time), duration 3 hours 26 minutes</li>
+<li><strong>Host</strong>: Qie Ge @qg7777</li>
+<li><strong>Speakers</strong>: Chen Dongdong @chenkaide73, Liangzhi102 @liangyiwei11, Ethan @Weex996, Sisymithus @Sisymithus, Bono @CuiBono_pinap (based on the actual recording)</li>
+<li><strong>Space</strong>: https://x.com/i/spaces/1LPXqLldgjBOmv</li>
+<li><strong>Source</strong>: Full transcription of the recording replay (faster-whisper local transcription, Chinese; 3,916 segments, covering 00:01–03:26)</li>
+<li><strong>Note</strong>: These notes were compiled from a machine transcription. The verbatim transcript has no speaker separation; speaker attribution is based on the host's call-outs and conversational context. In the transcription, 00:10–00:17 contains a repeated segment (caused by resumable transfer at a breakpoint), with no impact on content. All views and figures below are the speakers' own on-site statements and have not been verified; market levels, gains and losses, etc. are as stated by the speakers at the time and do not constitute investment advice.</li>
+</ul>
+<h2>Conclusions First</h2>
+<ol>
+<li><strong>Tonight, expect a bounce, not a reversal</strong>. Qie Ge's main thread throughout: after a sharp fall there must be a bounce; U.S. stocks and Bitcoin are both expected to bounce tonight. But once this bounce runs its course and ends by late November to before Christmas, 2027 will be "a major bear market overall," lasting until the 2028 election year before a reversal may be possible.</li>
+<li><strong>The Jensen Huang "affair" incident itself is not a fundamental negative</strong>; it is sentiment plus news flow driving the selloff. Both Qie Ge and Sisymithus believe the news breaking at 5 a.m. Eastern on the weekend (early morning Beijing time), rather than before Monday's open, was "designed," with the aim of creating a "golden pit" at the bottom. Nvidia has ample liquidity, and the pit created by the selloff will be bought; but the nature of the damage must be distinguished — reputational damage matters least, capability damage can be repaired, and integrity damage is hardest to repair. It is not yet clear which type this is: "let the bullet fly a while."</li>
+<li><strong>The most important data this week is the CPI to be released on the evening of November 10 (Tuesday)</strong>. The market expects headline month-on-month at 0.3% (previous 0.6%), with both core month-on-month and core year-on-year declining. If CPI is favorable, the bounce gains another day; if it is a surprise disappointment, the bounce may end there, and the probability of a December rate hike will rise accordingly.</li>
+<li><strong>Bitcoin</strong>: The pullback to around 73,333 is seen as having reached its target (the 200-day moving average level); tonight a bounce to 75,000–76,500 is expected. The bounce high may appear before the end of November, followed by a decline, with a possible pullback in early December and possibly a small high before the end of January next year. The long-term rhythm is an A-wave bounce — B-wave consolidation — C-wave rally again, with consolidation possibly lasting until March next year before pushing to a new high (as stated by the speaker: above 90,000).</li>
+<li><strong>Trading stance (speakers' own statements)</strong>: Short positions should be closed at current levels — Qie Ge said he was preparing to close his own CRWV short. Those with no position should only trade short-term, in and out quickly. For spot, watch Bitcoin's high-point inflection closely; sell in batches as Bitcoin approaches 78,000–80,000. Dogecoin can be bought below 0.07, with a bounce target around 0.09. Be cautious with triple-leveraged short ETFs in October, as they can be blown up by a bounce at any time.</li>
+</ol>
+<h2>1. Opening: Setting the Tone Before the Open — After a Sharp Fall There Must Be a Bounce (approx. 00:01–00:26)</h2>
+<p>Qie Ge set the tone right at the start: Nvidia was down 5.2% pre-market, the Nasdaq 100 "probably won't look good," and the S&amp;P 500 was also down pre-market; but the fear index (UVXY) was down about 9 percentage points pre-market. His judgment was:</p>
+<blockquote>
+<p>"The market will definitely see a bounce, because after a sharp fall there must be a bounce, and after a sharp rise there must be a pullback."</p>
+</blockquote>
+<ul>
+<li>The most important data this week is CPI (released November 10); today (November 9) there is no important data.</li>
+<li>Bitcoin was very volatile during the day and dipped overnight, "basically killing off most of the longs"; every bottom reversal requires huge volume.</li>
+<li>Levels: Around 73,333 for Bitcoin is the 200-day moving average level; "conditions do not currently exist for breaking below the 200-day moving average," unless there is an extreme wick, extreme selling, or something major happens in the Bitcoin world or war breaks out.</li>
+<li>Positive factors: Bessent is arranging a US$59 billion Treasury buyback, so Treasury yields should fall; but expectations for a December rate hike have risen to 78.3%, and a hike would affect U.S. stocks. It is hard to say whether the negative will be fully priced in before the release as last time, and much is unclear after the midterm elections.</li>
+<li>Trading: Shorts should be closed at this level — "for example, my CRWV, I'm preparing to close it"; shorts in storage and semiconductors ("SanDisk," SK hynix, etc.) should also be considered for closing, to avoid being blown up by a huge-volume bounce.</li>
+<li>Explicit statement: U.S. stocks will not collapse just because Jensen Huang "found some Ilyse Huang and betrayed his wife" — "that's all a joke."</li>
+<li>Bitcoin medium to long term: First an ABC bounce (A wave up, B wave consolidation, C wave back up again), with consolidation possibly lasting until March next year, then another high (for example above 90,000), continuing upward in the summer; but the pace of advance will be much slower than in the 2024–2025 bull market.</li>
+<li>Bitcoin on the day: High 75,500, low around 73,000, a range of about 2,000 points; rolling 24-hour volume about 27.9 billion; highs differed slightly across the three exchanges, with Coinbase's book generally about US$10 higher; spot volume was 692 million on Binance, about 300 million on Coinbase, and about 300 million on OKX — "volume hasn't shrunk."</li>
+<li>Risk warning: The biggest fear is shrinking volume during this week's bounce; if spot trading volume plunges, a brief consolidation period may follow. ETFs were selling spot: last Friday (November 6) BlackRock sold about US$400 million, with total spot net outflows of about US$411 million; "almost all ETFs have had net outflows these past two days — not a good sign as a bellwether."</li>
+<li>Asia-Pacific markets: Nikkei up 2.33%, South Korea's KOSPI down 0.8%, foreign investors sold more than 600 billion won, and retail investors were also selling; "I think the Korean stock market won't be able to hold 5,000 points"; the Philadelphia Semiconductor Index rose, oil fell (Brent broke below the US$100 mark, as stated by the speaker), 30-year Treasuries fell 0.06, 10-year rose 0.1, and 2-year was at a high of 0.49.</li>
+<li>Characterization of the Nvidia incident: Jensen Huang will have to face an investigation by the entire board; the Democrats will certainly keep an eye on these people; if a link to espionage is confirmed that would be another matter, but "Old Huang wouldn't be so foolish as to deal directly with her knowing she was a spy." Micron, TSMC, ASML, and Applied Materials rose pre-market; Apple and Tesla were basically unchanged as of 8 p.m.; Microsoft rose about 1.82%.</li>
+<li>Musk's SpaceX: It bounced 8.62% on Friday and was up about 2.7% pre-market today, but Qie Ge is not bullish on it, believing "there is still a lot of downside," seeing around 120; "at this level it should basically be winding down, and there should be a bounce," but he is not bullish tonight.</li>
+<li>Geopolitics and politics: An attack involving Iran is unlikely; the Houthis may be unstable; after the midterms the Democrats and Republicans will contest over stocks and liquidity issues; the Republicans are changing personnel and adjusting the chief of staff, insisting on not replacing Hegseth.</li>
+</ul>
+<h2>2. Musk Posts "Niu Bi" on Chinese X and the Meme Coin Interlude (approx. 00:26–00:30)</h2>
+<ul>
+<li>A listener (Liangzhi102) asked what Musk meant by posting "niu bi" on Chinese X. Qie Ge's explanation: Musk saw many people talking about Jensen Huang while scrolling and posted that remark; it was also most likely related to payment networks being connected.</li>
+<li>A listener had bought a related Meme coin at a price of 0.15. Qie Ge explicitly discouraged it: "Don't play with that stuff... it's purely a scam; sometimes once you buy in you can't sell out at all — they pull the liquidity pool on you," and advised, "just honestly buy your stocks."</li>
+</ul>
+<h2>3. Futures and Bitcoin Short Term: Expecting a Bounce to 75,500 (approx. 00:30–00:44)</h2>
+<ul>
+<li>Qie Ge believes futures trading has been easy these two days: the trend is clear — short at highs, long at lows; tonight he expects a bounce, with Bitcoin "able to get back to 75,500 at least," even 76,000; but the 75,500 level has been tested twice without breaking through, and the main players are strong.</li>
+<li>Timing forecast: Most likely reaching that level around 1 a.m., then possibly pulling back, returning to the 74,000–75,000 range at the 8 a.m. session change tomorrow morning; or it may not move tonight and just oscillate between 74,000–75,000.</li>
+<li>Extreme case: It could wick down to 73,300, even 72,200; volatility will be very large, and long-short double kills have been too easy lately; margin must be sufficient — "opening a position above 70,000, I don't think any of it is safe."</li>
+<li>Crypto did not follow U.S. stocks' bounce on Friday, suggesting panic trampling; institutions at the bottom show signs of "distribution to lure longs in, pulling you into the market."</li>
+<li>Individual stock comments:</li>
+<li>CRCL (Circle, referred to in the remarks as "sikao"): At the 64.8–65 level there should be a short-term bounce.</li>
+<li>Nvidia will not fall that little; given a choice of three, still pick Micron — Micron "might touch 776, 756 again," and could also break out.</li>
+<li>MRNA (Moderna): Worth watching.</li>
+<li>CRWV: Only for very short-term trades; going long is very difficult; "it is bound to blow up," and after the Jensen Huang incident it will blow up once more; when Nvidia moves down it will be a "double kill."</li>
+<li>Oklo: Qie Ge said he was trapped, with an average price around 30, already below the 200-day moving average; "it will be hard for it to bounce back recently."</li>
+<li>Altcoins: Ethereum has been extremely volatile these two days — Bitcoin rises a little and it can rise 5%; spot liquidity is very poor and pricing relies on the Hong Kong version; Solana (SOL) rising 3%–4% is normal amid sharp rises and falls; only consider adding Dogecoin below 0.065 — "I think we'll see it"; BNB around 658 is not good value; SOL target around 28 (as stated by the speaker); Hyperliquid (HYPE) currently at 73 yuan, add if it breaks below 70.</li>
+<li>SpaceX: Oscillating between 122–130 — "don't touch it now," look again if it breaks below 111; Tesla was up slightly 0.86% pre-market; chips and semiconductors rose broadly but Tesla may move down; do not trade Intel short-term before it breaks below 30; after it breaks below 30, "you can't hold it in any way."</li>
+</ul>
+<h2>4. Chen Dongdong: Can Four Altcoins Be Held? (approx. 01:01–01:23)</h2>
+<p>Chen Dongdong came on mic for help: he had bought four coins — PEPE, ENA, ARB, and UNI — each for more than US$5,000, with total investment of about US$30,000, now left with a little over US$26,000; he also mentioned having previously lost a lot of money on the Trump coin (TRUMP, cost about US$1.9–2), and later converting a position of about US$89,000-plus (as stated by the speaker) entirely into ARB.</p>
+<p>Qie Ge commented on each one:</p>
+<ul>
+<li><strong>UNI</strong>: Cost 6.8, has not broken below the 200-day moving average; look to 8 first, then consider whether to sell when it gets there; the daily chart is just starting to show signs of a bounce.</li>
+<li><strong>ARB</strong>: Moving in a fairly standard pattern — wave one, wave two bounce, wave three down, wave four bounce, wave five down; if it breaks 0.2, it could reach around 0.2 above before coming down again, possibly back to 0.16; the bottom below could reach 0.115; "don't expect too much from ARB — getting to 0.6 would be good; it can't even get to 0.3."</li>
+<li><strong>ENA</strong>: Someone in the member group said they see 0.57–0.78 by year-end and 2 next year; Qie Ge believes if the amount bought is not large, just leave it — bought around 0.18 and now down to around 0.15; "once you've bought this thing, just forget about it."</li>
+<li><strong>PEPE</strong>: Not bullish — "ni tai wang chang" (original sound from the transcription, meaning not bullish); it will rise but only to a limited extent.</li>
+<li>Core advice: Do not endure with time; watch the price. <strong>Sell when Bitcoin shows a high-point inflection</strong>; as Bitcoin approaches 78,000–80,000 you can start selling gradually in batches. The bounce high may appear before the end of November, and early December may be a pullback, having to "digest the negative of a December rate hike."</li>
+<li>Chen Dongdong's plan was to hold until a few days before Christmas / the winter solstice and then sell. Qie Ge cautioned: there is no need to wait until that day; the bounce high may not wait until Christmas; after bottoming in November and bouncing, the high may not wait until Christmas to arrive; "when the time comes you have to find the high to sell into."</li>
+<li>Gold: The hourly chart is moving very well, but if it cannot break 4,135 tonight (4,143 in another statement), gold may come down into a pullback; on the daily chart the C wave of the ABC pullback has finished and it is starting to move up, but in the short term it could fall back below 4,000 again; on a bounce up it could reach 4,409 (the 1.382 level, as stated by the speaker); long term, watch whether 4,340 can be broken — if broken, look to 4,500; tonight it is expected in the 4,050–4,130 range, and if it cannot get up, "gold doesn't have that much volume to break through."</li>
+<li>Ethereum-ecosystem altcoins: UNI, ARB, etc. may surge along with Ethereum — "Bitcoin rises 100%, Ethereum pulls 3%, and yours may follow with a 17% rise" (as stated by the speaker).</li>
+</ul>
+<h2>5. Listener Questions: Hedging, Individual Stocks, and Data Centers (approx. 01:23–01:44)</h2>
+<ul>
+<li><strong>Short hedging</strong>: A listener asked whether the biggest strategy now is to hold a short position and buy the underlying stock to hedge. Qie Ge: Those with no position are advised only to take short-term trades and run once done; most stocks in a bounce fluctuate between the current price and the 200-day moving average and will not reverse; as an example, BET (referred to in the remarks as "B1G," suspected to be an energy/concept stock) can be taken short-term, with a high around 210–220 and a gap near 195 above that may be filled tonight; energy stocks are relatively better; for blue chips one can buy pharmaceuticals, real estate, Meta, Amazon, and Google (Google at this level "might still go to 300").</li>
+<li><strong>Triple-leveraged short ETFs</strong>: Be cautious playing them in October — "they can bounce and jump at any time," and policy changes could trigger a surge at any time; the Democrats have taken action on data center projects (40 of 41 projects rejected, as stated by the speaker); once one or two pass and the market gets positive news, it could rally and blow up the shorts.</li>
+<li><strong>Data centers and power</strong>: America's biggest problem now is not electricity but power infrastructure — there is no grid; data centers are too close to residential areas and wiring is difficult; small-scale nuclear power is promising (highest efficiency, with safety and environmental protection recognized), but network cabling remains a problem; Musk's compute center in Memphis, building RV housing on site for workers, is an example.</li>
+<li><strong>Oklo and Reuters news</strong>: Oklo is trapped at an average price around 30, and having broken below the 200-day moving average it is hard to bounce; a new Reuters report said a U.S. congressional bill for the first time expressed dissatisfaction with data center siting and called for faster approval of new power plants and quantity limits (as relayed by the speaker).</li>
+<li><strong>Real estate</strong>: The U.S. is going to undertake major infrastructure, compensating for demolition, moving residents out, and then bringing in residential power; new data centers should expand in areas around old urban districts with low land costs, rather than near farms (farms have no network or power infrastructure); Buffett bet very early on builders like Lennar; data center siting will also affect the interests of local farmers, with the contest between red states and blue states involved.</li>
+<li><strong>States and the federal government</strong>: The relationship between state law and federal law; if the state legislature does not pass it, it cannot be built; midterm elections choose governors, secretaries of state, and state judges, who jointly preside over state legislatures.</li>
+<li><strong>Nature of the bounce</strong>: This bounce is not simply short covering; it is "it has fallen to the right level, and with this much volume it should bounce"; crude oil is still falling (down about 4% that day), gold has not risen much, and Treasury yields are all falling — "it would be abnormal if stocks didn't surge"; the single-day declines of the Nasdaq 100 and S&amp;P 500 are already among the largest this year, the last time being in April 2025 when Trump announced tariffs; "extreme negatives are positives — once the negatives are exhausted, it rises."</li>
+<li><strong>CPI and rate hikes</strong>: If tomorrow's CPI is a surprise disappointment (flat or below expectations), the bounce may end, and the probability of a 50% December hike rises; but the impact of the crude oil price plunge on inflation has already been released, and oil alone will not crash the stock market; overall, SPY was already up 0.9% pre-market and QQQ up 0.8% — "already very much up internally."</li>
+</ul>
+<h2>6. Mid-Session Tone: A Bounce, Not a Reversal; 2027 Is a Major Bear Market (approx. 01:44–01:56)</h2>
+<p>After stepping away for a few minutes, Qie Ge returned and gave the most important medium- to long-term judgment of the session:</p>
+<blockquote>
+<p>"Actually, right now it's a bounce, not a reversal. Next year will be a major bear market overall — 2027 will definitely be a major bear market overall, lasting until the 2028 election year, when there may be an extreme reversal."</p>
+</blockquote>
+<ul>
+<li>SPY's retracement in this round since March 2026: Retracing to around 0.382 "is not enough, completely not enough"; it must retrace at least more than 50%; the medium-term period will be especially long; a bear market is characterized by no rises and no liquidity.</li>
+<li>Nvidia: Building a position should be done heavily below 171; current price 176, with the low on a pull down seen at 165; around 160 on the weekly level there is support; if broken it could go to 122; now is not the time to short Nvidia — it will have a small bounce, and after bouncing to 148–155 one can see whether it can move down (the speaker's statements were inconsistent before and after; the original text is as such); the C wave of the ABC pullback reached 1.618, so the bounce could be strong, possibly bouncing from the current level all the way to 155.</li>
+<li>CPI expectations being too good could actually have the opposite effect: Wall Street is all counting on quantitative easing; after losing the House in the midterms, Congress and Trump's team will fight for power and constrain each other — "the bill you propose, I won't pass it for you," "bring down the people around you"; Trump is also on guard — impeachment requires two-thirds, so he replaced everyone in the Republican Party with those he trusts most; but defections within the party are clearly emotional.</li>
+<li>Personnel comments (speaker's own statements): Vice President JD Vance "is a person with no ideals"; the speaker is not bullish on him as president — "he might be a very incompetent U.S. president"; Bessent's level is not quite enough; the Federal Reserve chair (referred to in the remarks as "Kevin Hosh," suspected to be Kevin Warsh) leans somewhat Republican, but the Fed team he leads "has simply not given" a clear signal; in October there actually should have been one rate hike to suppress inflation, tighten liquidity a bit, and then use rate cuts or QE for quantitative easing, but historically there are no hikes before midterm elections.</li>
+<li>Reasons for Trump's midterm election defeat (speaker's own statements): Young people strongly oppose (war, perceptions of corruption, unfulfilled promises); the donors behind the Republican Party are connected to Israel and Middle East geopolitics; American young people dislike Israel very much; the Trump family has ties to Israel.</li>
+<li>"Rotating garden theory" (the speaker's own historical cycle theory): Europe became rich through the Age of Discovery / smuggling, triangular trade brought wealth, and Britain became powerful through the Industrial Revolution; America became powerful by stealing technology and building barriers, and after World War II enjoyed a 10x dividend; after the East declined, China has only had 20 years of an uptrend (2006–2026), and it will take another 60 years to reach its peak — only one-third has passed so far; America should have no problem at least until 2050, while Europe has been on a continuous downtrend.</li>
+<li>The Li Zicheng allusion: Li Zicheng fought his way to Beijing but failed to establish Dashun; Wu Sangui being labeled as acting "in a fit of rage for a beauty" is "nonsense"; by analogy, Chinese people love "romance and gossip," and Jensen Huang's matter has been taken up across the entire internet, with Zuckerberg, Bill Gates, Larry Page finding Eastern wives and the like all being dug up — "Chinese people really buy into this."</li>
+</ul>
+<h2>7. Jensen Huang the Man: From Graphics Cards to King of AI (approx. 02:11–02:25)</h2>
+<ul>
+<li>Jensen Huang met his wife at 17 and attended university in the United States; Nvidia had a very hard time back then — how much was its share price at the start of 2023? "It was originally just a graphics card maker, with no real feats to speak of, and a market value of hundreds of billions at the time."</li>
+<li>Qie Ge's own account: He used Nvidia graphics cards when building computers in 2004–2005, and mentioned Nvidia for mining in 2008 as well; Taiwanese people are "very hardworking," a virtue of the Chinese nation; Ang Lee is one of the most impressive Taiwanese representatives in his mind.</li>
+<li>Musk vs. Zuckerberg vs. Jobs (speaker's own statements): Musk in his youth did not date or play cards — an engineering type, with creed and faith in place; Zuckerberg is a born businessman, but "I don't really like him," though he did indeed pioneer the social media era; Jobs was extreme in his early years (ascetic practice in India, not bathing, vegetarian), and after being driven out of Apple he befriended many high-society contacts and only succeeded after returning; the smartest thing he did before his death was hand Apple to Cook; Apple's specialty stores in China all opened only after Jobs' death.</li>
+<li>Limitations of cryptocurrency (speaker's own statements): The most important limitation is that "it is just a venue for storing value," with no other functions; smart contracts are enough; BlackRock has US$15 trillion, and tens of billions of dollars of cryptocurrency inflows are expected.</li>
+<li>Other news: Trump has begun "playing dumb," saying he knows nothing about Abu Dhabi-related investments; Strategy (MicroStrategy) added about 7,700 Bitcoins (as stated by the speaker); BlackRock shows signs of adding; US$13 trillion in crypto wealth management (as stated by the speaker) is positive for Solana and AVAX, with AVAX up about 10%.</li>
+<li>Qie Ge mentioned his own post was reported in the morning and banned for 12 hours.</li>
+</ul>
+<h2>8. Listener Seeks Help on Dogecoin with 200x Leverage (approx. 02:25–02:45)</h2>
+<p>A listener joined the mic for help: A Dogecoin long opened at 0.088 and a short opened at 0.077 (0.078 in another statement), with 200x leverage, an account of a little over US$10,000, the long showing an unrealized loss of more than US$6,000, the short showing a profit of more than US$700, and the two orders together having an estimated liquidation price of 0.062.</p>
+<ul>
+<li>Qie Ge's advice: Close the short, and the liquidation price will rise; after closing the short, add a little position at the bottom, and one bounce will get you out; "this short of yours should be closed"; the long at 0.088 is a trouble spot, but it cannot be closed gradually — handle the hedge position properly.</li>
+<li>Interlude: The listener said the liquidation price 0.062 as 0.006, and Qie Ge corrected: "That's 0.006, not 0.06... do you want to destroy cryptocurrency?"</li>
+<li>Dogecoin levels: Qie Ge believes it can reach 0.073, conservatively 0.072; it depends on Bitcoin rallying shortly; tonight Bitcoin could be seen at 76,500.</li>
+<li>Live market: The Nasdaq 100's gain reached 2%, the S&amp;P 500 rose about 1%, Tesla rose 5%, VIX fell to 21.6 and was about to go below 20; Bitcoin faced pressure at the 75,000 level and failed to break through after several tries; CRWV rose — "CRWV is done, it's topped out," those trapped should get out and run; energy stocks bounced.</li>
+<li>COTY (Coty, beauty): A listener asked about its trend; Qie Ge believes after consecutive rises it may pull back; Q3 earnings were average; it is a small stock with a market value of 3.7 billion — "just play with a few hundred dollars," don't buy too much.</li>
+</ul>
+<h2>9. Sisymithus: Three Types of Damage and the "Golden Pit" (approx. 02:54–03:02)</h2>
+<p>Sisymithus (Singapore) came on mic, holding a sizable Nvidia position with a cost just above 100, using a bot to track it, believing "one cannot decide immediately — let the bullet fly a while." He proposed three types of damage:</p>
+<ol>
+<li><strong>Reputational damage</strong> — the least important;</li>
+<li><strong>Capability damage</strong> — can still be repaired ("I was always strong before; I messed up this time, but it can actually be made up");</li>
+<li><strong>Integrity damage</strong> — the hardest to repair.</li>
+</ol>
+<blockquote>
+<p>"What I need to see now is which of these three things his trend belongs to."</p>
+</blockquote>
+<p>Qie Ge responded:</p>
+<ul>
+<li>The traces of news-driven selling are very obvious: The news was reported at 5 a.m. (Eastern weekend night) rather than before Monday's open — "this was designed"; the purpose was to "smash out a golden pit" and let people add positions at the bottom.</li>
+<li>Don't just gossip about the matter itself; look at it from human nature: Why would a successful person fall for her? "Something about her made Old Huang see — this person is who I once was — or she has some shining quality"; relying on beauty alone is hard, because "he really doesn't lack that kind of resource."</li>
+<li>The woman had publicly said "I can call Jensen Huang out"; Qie Ge believes if there really were a problem, saying that would be "too flamboyant, too easy to expose."</li>
+<li>Old Ma's (Musk's) life: Engaging in politics, playing when it's time to play — "once business reaches a certain scale, there will be a political image."</li>
+</ul>
+<h2>10. Closing: Firmly Bullish Tonight, But Don't Get Overexcited (approx. 03:02–03:26)</h2>
+<ul>
+<li>Bitcoin: Qie Ge reiterated "tonight I am firmly bullish"; the pullback to 73,333 is considered in place; daily volatility of less than 2,000 points is not enough — "it has to find 75,800, 76,000 somehow"; the daily chart closed with a doji, and the bottom uptrend is clear; but pressure at 75,500 is heavy, with repeated testing.</li>
+<li>U.S. stocks: Don't rush to run today — "don't rush to run from U.S. stocks today"; if CPI gives another positive tomorrow, it will rise for another day tomorrow; Jensen Huang admitting fault and the board holding a meeting — the act of admitting fault itself is seen as positive (as stated by the speaker); Nvidia vs. Micron: Bullish on Micron; least bullish on SK hynix (Korean market conditions + divorce case impact).</li>
+<li>2027 rhythm (speaker's own statement): Bounce until the 20th, pull back to month-end, bounce again to the mid-teens, ending before Christmas; "this entire round of bounce will be over, and then liquidity will shrink and it will move down"; after the Christmas market it becomes a bear market.</li>
+<li>Dogecoin: Getting back above 0.1 by year-end will be hard; Bitcoin should bounce in December, with a small high before the end of January; Dogecoin is already oversold and the daily chart has completed 6 waves (as stated by the speaker); the bounce may run about 4 weeks to mid-December; bouncing from a bottom of 0.06x, target 0.0865, with the high before the end of December around 0.09; support below at 0.066, the October 2023 price — "it really can't fall anymore."</li>
+<li>Wave methodology: Qie Ge emphasized to listeners that Japanese candlesticks are the most basic foundation, and without this foundation nothing else can be understood; wave theory + Fibonacci + MACD + volume-price combined; "you must truly have this awakening to learn" — do not experiment with money.</li>
+<li>Closing remarks (approx. 03:25): <blockquote>
+<p>"Let's leave it here... don't get too excited, and don't get overexcited either. Whether it's Bitcoin or Ethereum, you must be cautious and leave room for a wick, because its volatility will be especially large. Spot volume has picked up a bit but is not very high — Binance's spot volume still hasn't exceeded 1 billion so far. The uptrend is there, but it could surge and fall back at any time, especially above 75,500 — you must pay attention."</p>
+</blockquote>
+</li>
+<li>Qie Ge said they would talk again tomorrow, and after a few minutes' rest he would go watch another program; this session ended.</li>
+</ul>
+<h2>Key Verbatim Quotes</h2>
+<ul>
+<li>"The market will definitely see a bounce, because after a sharp fall there must be a bounce, and after a sharp rise there must be a pullback." — Qie Ge (opening)</li>
+<li>"The U.S. stock market won't collapse just because Jensen Huang found some Ilyse Huang and betrayed his wife — that's all a joke." — Qie Ge</li>
+<li>"Actually, right now it's a bounce, not a reversal. Next year will be a major bear market overall — 2027 will definitely be a major bear market overall, lasting until the 2028 election year, when there may be an extreme reversal." — Qie Ge</li>
+<li>"I think it (Bitcoin) should go through a process... A wave pulls up, then B wave consolidates, then C wave comes back... I think the consolidation may last until March next year, then pull a high, for example above 90,000, to re-energize the market." — Qie Ge</li>
+<li>"You have to watch the price of your coin; you can't endure with time... When Bitcoin shows a high-point inflection, you sell." — Qie Ge (to Chen Dongdong)</li>
+<li>"Reputational damage is the least important... capability damage can still be repaired... integrity damage is the hardest to repair. What I need to see now is which of these three things his trend belongs to." — Sisymithus</li>
+<li>"Clearly there were many pushers at 5 a.m.... rather than before Monday's open... this was designed. Smash out a golden pit, I tell you — at the bottom, let these people add positions." — Qie Ge</li>
+<li>"Don't play with that stuff... it's purely a scam; sometimes once you buy in you can't sell out at all — they pull the liquidity pool on you." — Qie Ge (on Meme coins)</li>
+<li>"Let's leave it here... don't get too excited, and don't get overexcited either." — Qie Ge (closing remarks)</li>
+</ul>
+<h2>Figures at a Glance (all as stated by the speakers at the time, unverified)</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>As stated by the speaker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nvidia pre-market</td>
+<td>Down 5.2%</td>
+</tr>
+<tr>
+<td>Fear index UVXY pre-market</td>
+<td>Down about 9 percentage points</td>
+</tr>
+<tr>
+<td>Bitcoin 200-day moving average / pullback target level</td>
+<td>Approx. 73,333</td>
+</tr>
+<tr>
+<td>Bitcoin high / low on the day</td>
+<td>Approx. 75,500 / 73,000</td>
+</tr>
+<tr>
+<td>Bitcoin bounce target tonight</td>
+<td>75,000–76,500</td>
+</tr>
+<tr>
+<td>Bitcoin batch selling reference</td>
+<td>Around 78,000–80,000</td>
+</tr>
+<tr>
+<td>Bitcoin long-term target</td>
+<td>Push above 90,000 around March next year</td>
+</tr>
+<tr>
+<td>Probability of a December rate hike</td>
+<td>78.3%</td>
+</tr>
+<tr>
+<td>CPI expectations (released November 10)</td>
+<td>Headline month-on-month 0.3% (previous 0.6%), core month-on-month and core year-on-year both declining</td>
+</tr>
+<tr>
+<td>Bessent Treasury buyback</td>
+<td>US$59 billion</td>
+</tr>
+<tr>
+<td>ETF spot net outflows (last Friday)</td>
+<td>Approx. US$411 million (BlackRock approx. US$400 million)</td>
+</tr>
+<tr>
+<td>Bitcoin rolling 24h volume</td>
+<td>Approx. 27.9 billion</td>
+</tr>
+<tr>
+<td>Gold key levels</td>
+<td>4,135 (4,143) — if it cannot stand above, pullback; bounce target 4,409; long term watch 4,340→4,500</td>
+</tr>
+<tr>
+<td>Dogecoin</td>
+<td>Consider adding below 0.065; bounce target 0.072–0.073; high before end of December approx. 0.09; support 0.066</td>
+</tr>
+<tr>
+<td>Nikkei / South Korea KOSPI</td>
+<td>+2.33% / −0.8% (foreign investors net sold more than 600 billion won)</td>
+</tr>
+<tr>
+<td>Tesla on the day</td>
+<td>Up 5%</td>
+</tr>
+<tr>
+<td>Nasdaq 100 / S&amp;P 500 intraday</td>
+<td>Approx. +2% / +1%</td>
+</tr>
+<tr>
+<td>VIX</td>
+<td>Fell to 21.6, approaching 20</td>
+</tr>
+<tr>
+<td>SpaceX (Musk)</td>
+<td>Friday +8.62%, pre-market +2.7%; Qie Ge sees an oscillation range of 122–130, look again if it breaks below 111</td>
+</tr>
+<tr>
+<td>CRWV short</td>
+<td>Qie Ge preparing to close it</td>
+</tr>
+<tr>
+<td>Micron</td>
+<td>May touch 776 / 756 again</td>
+</tr>
+<tr>
+<td>Nvidia support</td>
+<td>Build position below 171; 165; weekly 160; if broken, look to 122</td>
+</tr>
+</tbody>
+</table>
+<h2>Transcription Notes</h2>
+<ul>
+<li>Recording: space.m4a, 147,577,076 bytes, duration 12,408.9 seconds (3 hours 26 minutes 49 seconds), consistent with the spacesdashboard record of a 19:57 start, end approx. 23:24, and duration of 3 hours 26 minutes.</li>
+<li>Transcription: faster-whisper local transcription, Chinese, 21 chunks of 600 seconds with resumable transfer at breakpoints; chunk_00 used the small model, the remaining chunks used the base model (the model switch was a downgrade after the transcription process silently died multiple times); the verbatim transcript has 3,916 segments, stored in hidden_files/transcript.txt.</li>
+<li>Transcription quality: The base model makes many Chinese homophone errors; names of people, coins, and stock tickers were normalized by context (e.g., "黃仁勳/黃仁薰/黃人薰" in Chinese variants unified as Jensen Huang, "比特幣/比得比/比這比" unified as Bitcoin); figures follow the original transcription, with doubtful places noted in the text as "as stated by the speaker."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full text of the notes for this session; the content consists of the speakers' own on-site statements and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：11.9 黄仁勋出轨 股票继续崩还是反弹？时间之窗已经到来！ · Yat's Talks",tw:"會議紀要：11.9 黃仁勳出軌 股票繼續崩還是反彈？時間之窗已經到來！ · Yat's Talks",en:"Meeting Notes: Nov. 9 — Jensen Huang \"Affair,\" Will Stocks Keep Crashing or Bounce? The Window of Time Has Arrived! · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：黑天鹅碰撞中期大选——巨震行情下，散户如何守住钱包与捕捉波动？</h1>
 <p><strong>主题</strong>：币安安全事件（黑天鹅）+ 美国中期大选之后，散户如何守住钱包、捕捉波动
 <strong>原链接</strong>：https://x.com/i/spaces/1qVjpqmOElnWzg
@@ -165,8 +172,314 @@
 <hr />
 <p><strong>转写信息</strong>：录音 1 小时 34 分 50 秒（67.7 MB），本地 faster-whisper（small 模型）转写，共 2291 段；转写稿存于内部存档，未公开。</p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：黑天鵝碰撞中期大選——巨震行情下，散戶如何守住錢包與捕捉波動？</h1>
+<p><strong>主題</strong>：幣安安全事件（黑天鵝）+ 美國期中選舉之後，散戶如何守住錢包、捕捉波動
+<strong>原連結</strong>：https://x.com/i/spaces/1qVjpqmOElnWzg
+<strong>時間</strong>：2026-11-05 22:31 至 2026-11-06 00:06（北京時間），錄音 1 小時 34 分 50 秒
+<strong>主持</strong>：@WalletV_CN（WalletV中文，贊助方）· 聯合主持/串場：@Paris13Jeanne（K線教主）
+<strong>發言人</strong>：@qg7777（茄哥）、@bi_9527zx（DeFi狙擊手）、@BTV_Michael（Michael，礦機業務/趨勢分析）、@0xDonaldGao（唐長老，總體經濟與基本面）、@AdamCai15（Adam，WalletV）
+<strong>說明</strong>：本紀要基於錄音本地轉寫整理。轉寫無說話人分離，發言人歸屬以主持人點名與自我介紹為準；個別專名、數字轉寫存疑處已標註。文中金額、點位、戰績均為發言人現場自述，未經外部核實；點位競猜純屬節目遊戲，不構成投資建議。</p>
+<hr />
+<h2>一、結論先行</h2>
+<ol>
+<li><strong>全場對短期行情的共識是「回調未完、不是熊市」</strong>：教主認為當前只是 4 小時級別回調、未到日線級別，是可預見的結構性回調；茄哥認為是標準 ABC 回調，C 浪會更深、可能砸出「黃金坑」；但對坑有多深分歧極大——Michael 認為 7 萬就足以止跌、6 萬開頭很難再見，唐長老則看未來半年偏空、比特幣到 5 萬開頭可能性很高、到 4 萬也不意外。</li>
+<li><strong>錢包安全是全場最一致的實操共識</strong>：現貨放真正物理隔離的冷錢包，交易資本不要全押在中心化交易所；自託管錢包（以 WalletV 為代表的聚合錢包）被多位嘉賓視為交易資本的新去處，可分走 20%–40%。</li>
+<li><strong>期中選舉本身被老唐「祛魅」</strong>：他認為市場同時高估了期中選舉的影響、高估了共和黨對加密的支持、也高估了民主黨的打壓力度；真正值得盯的不是選舉，而是 AI 私募債這個可能比肩 2008 年次貸危機的雷。</li>
+<li><strong>AI 交易的場內判斷很克制</strong>：AI 不能創造策略，只能執行策略、做風控；真正有意義的是基於成熟交易體系訓練的個人 AI；DeFi 狙擊手自述 9 月在 AI 策略上跑了 5 萬多美元、目前約 3 萬美元在跑、整體盈利，但始終保留人工入口。</li>
+<li><strong>直播本身就是一面行情鏡子</strong>：開場時大餅還在 7.8 萬美元上方，節目進行中跌破 7.8 萬，收尾時教主稱已跌破她剛給出的 7.6 萬美元位置——嘉賓一邊聊一邊目睹支撐位告破。</li>
+</ol>
+<h2>二、開場與贊助：WalletV 積分規則（Adam 介紹）</h2>
+<ul>
+<li>當晚福利：上麥提問的 5 位聽眾各得 200 積分，留言區留言的 10 位各得 100 積分，中獎率自述很高。</li>
+<li>積分用途（Adam 原話）：可兌換 VIP 等級，提升交易返佣與獲得獎勵的概率；可參與 Launchpad 功能，免費獲得代幣空投；WalletV 代幣即將發行（TGE），持有積分的用戶屆時可獲得相應代幣。</li>
+<li>WalletV 定位：聚合 Polymarket、Hyperliquid、Aster、xStocks 的自託管錢包；當晚新上線聚合 paper trade 的 1000 倍合約（CFD 模式，見第六節）。</li>
+</ul>
+<h2>三、行情總覽：教主的判斷</h2>
+<ul>
+<li>背景：上週幣安安全事件後市場大波動，比特幣帶頭下跌；但 11 月 4 日市場走出一波不錯的上漲，前天（11 月 3 日前後）她開始做多，認為是日線級別的「二買」機會、非常難得。</li>
+<li>當前回調：只是 4 小時級別回調，還沒到日線級別；一是受美股下跌帶動，二是前期底部沒夯實，一般要經過「二次探底」才會形成止跌形態，所以回調是正常的、可以預見的。</li>
+<li>她的操作：昨天訊號提示多單可以止盈，她在原來盈利的位置設了止損直接離場，當天被粉絲罵「怎麼又拿不住」；她回應：該走還要走，避免回撤。</li>
+<li>底線判斷：這不是進熊市；除非再來一次更大的黑天鵝——她個人認為不太會有，交易所出事已經算是很大的事了（類比 2022 年 FTX 事件）。</li>
+</ul>
+<h2>四、幣安事件後，流動性往哪走（Adam 主講）</h2>
+<ul>
+<li>定性：對全行業是利空，不論交易所還是錢包；大部分用戶不懂技術細節，只會覺得「連幣安這麼專業的機構都會出事，還有誰不會出事」，信心恢復需要時間與教育。</li>
+<li>觀察到的遷移：用戶先在交易所內部跳來跳去（幣安→OK→其他交易所）；Coinbase 股價大跌後，也有人擔心它會不會是下一個。</li>
+<li>交易資本的新選擇：現貨可以放冷錢包，但交易資本放冷錢包不現實（平倉時隨身碟不在身邊就平不掉）；自託管錢包提供了一個新選項——在 Hyperliquid 最高 40 倍、Aster 100–200 倍、paper trade 1000 倍（CFD、無滑點），比特幣、以太坊等主流幣深度足夠。</li>
+<li>他的估計：隨著教育到位，自託管錢包承接交易資本的 20%–30% 甚至 30%–40% 是合理的，目的很簡單：分散駭客風險；而且不用 KYC、不會被卡幣、沒有風控，DEX 也無法凍結任何資金。</li>
+<li>手機錢包的安全性：iPhone 的安全級別不低於一些小的硬體錢包廠商（隨機數按蘋果硬體標準），但肯定比不過真正的硬體錢包。</li>
+</ul>
+<h2>五、錢包怎麼放才安全（Michael 主講，教主補充）</h2>
+<ul>
+<li>Michael 的唯一原則：<strong>冷錢包一定不能聯網</strong>。凡是宣稱「絕對安全、可以聯網升級」的都不是冷錢包；現在 AI 這麼厲害，聯網就一定有漏洞，只能相信物理隔離。</li>
+<li>不要買二手冷錢包，不要把冷錢包寄回廠商換新：他舉例某神冷錢包（小眾，只有中文客服），以太坊 POW 轉 POS 時全系列存不了 POS 的 ETH，廠商讓用戶把錢包寄回折價換新——他說寧可砸碎也不寄回去貪小便宜。</li>
+<li>真實案例（Michael 轉述社群經歷）：一位大哥早年誤把 600 個 ETH 買成 600 個 BTC（當時 ETH 才 90 多美元），後來買了 1000 多台 BTC 礦機；2023 年其 600 個 BTC 被盜——其財務把私鑰存在隨身碟、微信收藏裡也存了一份、還發郵件給了在美國的女兒。Michael 的結論是「活該被盜」：你足夠安全，資產就足夠安全。</li>
+<li>分層建議（Michael 原話）：資產沒到七八百個比特幣就別考慮冷錢包，直接放幣安、OK 等頭部交易所——「要臉、賠得起」，人家還有更多的錢沒賺；多簽、多錢包分散也是一種保護；冷錢包的要義是「只進不出」，前提是真正物理隔離。</li>
+<li>他剛在新加坡買了一台 iPhone 5，打算手搓一個「半冷錢包」；他認為不少人選擇這種方式，畢竟 100% 在自己手裡、完全不聯網。</li>
+<li>教主補充：她 2021 年玩 DeFi 時被盜過好幾次，對鏈上安全有點怕；但她是高頻交易，沒辦法不把錢放交易所，否則開單很麻煩。</li>
+</ul>
+<h2>六、捕捉波動：1000 倍槓桿與 AI 交易</h2>
+<h3>1000 倍槓桿是怎麼實現的（聽眾提問，Adam 回答）</h3>
+<ul>
+<li>不是 WalletV 自己提供 1000 倍，而是聚合了 paper trade 這個項目；本質是 CFD：沒有滑點、沒有手續費，賺錢時平台收約 2% 提成，虧錢時送 paper token、可在 WalletV 質押分幣。</li>
+<li>適用場景：只適合賭 2 個百分點以內的小波動、大倉位，成本遠低於中心化交易所；波動超過 2 個點就不划算。</li>
+<li>他的原話：波動在 2 個點以內的博弈最合適，「它沒有深度概念，波動直接定價」。</li>
+</ul>
+<h3>AI 交易，普通人怎麼用（聽眾老 A 提問）</h3>
+<ul>
+<li>DeFi 狙擊手：普通人完全可以用豆包、ChatGPT、Claude 這類通用模型，拿 6 小時、日 K、1 小時 K 線去問趨勢、問拿多還是拿空，「給出的判斷其實還蠻靠譜的」；他自己在 WalletV 裡跑 AI 交易（動量策略），也用 Claude Code、Codex 自己開發了一個 Meme 幣掃鏈雷達「MemeDog」，目前半自動（AI 推薦、人工點單），全自動還在測試——打狗風險太大，大多會歸零。</li>
+<li>唐長老：AI 做技術面分析一般；基本面分析能力理論上應強於技術面，但實際決策端遺漏還很多，普通人的決策力不會因此順利提高；真正有意義的是基於成熟交易體系、高勝率交易員訓練出來的個人 AI，「教主搞一個 AI 訓練得不錯的話，我是肯定付費的」。</li>
+<li>Michael：AI 不能創造策略，只能執行策略、幫他做風控——提高不爆倉的概率、嚴格執行止盈止損，「人是有貪欲的」，比如跌到 75000 想等 74000 再進，AI 到 79999999（指止盈價位）就已經下手了。</li>
+<li>教主：她從今年 4 月開始搞自己的策略，在推特發過訊號策略，但只是訊號、不能自己跑，正在做訊號自動執行；手動交易受情緒影響，AI 做量化套利很好，但捕捉單邊趨勢行情時可能錯過；未來發展會很快，「希望再能給我們人類交易員留點活路」。</li>
+<li>DeFi 狙擊手的實盤（自述）：9 月份在 AI 策略上跑了 5 萬多美元，現在約 3 萬美元在跑，整體盈利；預測市場也用 AI：收集新聞、跟蹤勝率高的錢包做參考，只投了 1000U；把教主的纏論策略做進 AI 的事做了一半沒做完，「一個 Agent 真正跑起來要兩三個月、有時將近半年」；始終保留人工入口，「半年不看它也不現實」。</li>
+</ul>
+<h3>WalletV 的量化模型（Adam 收尾介紹）</h3>
+<ul>
+<li>給不會寫 prompt 的小白準備的兩個版本：趨勢跟蹤、動量指標，可調幾個參數；回測夏普比率超過 1.5，過去一年行情回測收益約 340%（Adam 自述數字，「回測不能代表未來」）。</li>
+<li>本質不是 AI 交易，而是 AI 研究框架下的量化交易；他的說法是把量化基金 60%–70% 的能力交給散戶使用。</li>
+</ul>
+<h2>七、點位競猜：下週最低點在哪（節目遊戲，Adam 贊助 1000U）</h2>
+<p>規則（現場商定）：猜從當晚到下週四同一時間（11 月 12 日）內比特幣的最低點，最接近者拿走獎池；Adam 個人贊助 1000U，另有嘉賓各出 500U 進獎池（口述如此）。</p>
+<table>
+<thead>
+<tr>
+<th>嘉賓</th>
+<th>報的最低點</th>
+<th>依據（自述）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>茄哥</td>
+<td>73,700</td>
+<td>11 月 10 日是其講師團共同預測的時間窗口；按理論回調 0.382 位置，「是個黃金坑」</td>
+</tr>
+<tr>
+<td>教主</td>
+<td>73,300</td>
+<td>75,000 附近應有反彈；73,300 是其昨日提到的強支撐位置</td>
+</tr>
+<tr>
+<td>Michael</td>
+<td>75,000</td>
+<td>「75,000 跌不下去了」</td>
+</tr>
+<tr>
+<td>唐長老</td>
+<td>79,000</td>
+<td>他報的是下週四當天的價格而非最低點，被其他嘉賓糾正「短信不靈」；他本人不參與出資，「預測點位我是菜的」</td>
+</tr>
+<tr>
+<td>教主（另一口徑）</td>
+<td>76,200</td>
+<td>日線 200 均線的位置，跌到那兒可能就反彈</td>
+</tr>
+<tr>
+<td>Adam</td>
+<td>約 74,800</td>
+<td>口述數字含糊（74,833 / 74,003 兩說），轉寫未能完全確定，取約數</td>
+</tr>
+<tr>
+<td>DeFi 狙擊手</td>
+<td>約 74,500</td>
+<td>與 Adam 接近；其觀點是回調到上一輪回撤低點附近（9 月 16 日位置一帶）</td>
+</tr>
+</tbody>
+</table>
+<p>補充：教主自認是「純右側」交易者，纏論只看結構不看價格——底分型出來就是右側、沒出來就是左側；她最近一直在等日線二買，想做一波較大的趨勢多單；「跌得快反而見底快」。</p>
+<h2>八、期中選舉與美股：老唐的基本面長文（全場最悲觀的聲音）</h2>
+<ul>
+<li>期中選舉規律不明顯：很多人過分高估了期中選舉的影響——既高估了共和黨對加密的支持力度，也高估了民主黨的打壓力度；有很多東西是期中選舉決定不了的。</li>
+<li>Michael 補充的歷史統計（自述）：過去三次期中選舉後一個月，比特幣兩跌一漲，跌幅約 20%、19%，漲幅約 30% 多；但拉一年看三次都是漲的，最高漲了一倍。</li>
+<li>AI 股下跌的兩個原因（老唐）：一是民主黨拿下德州等建資料中心的州，後面對 AI 資料中心建設的環保與規範會趨嚴、建設放慢，上游硬體需求不如原來預期；二是 Anthropic 財報顯示 AI 收入增速二季度 116%、三季度已掉到 46%，如果四季度掉到 20% 就更糟；10 月中旬 AI 股票就在跌，主因是業績遠不如預期——OpenAI 原來 2–2.5 萬億美元的估值預期已被壓到約 1.5 萬億美元，且今年不發 IPO，「其中肯定是業績增速有問題」；Anthropic 自己都承認 AI 對做產品效率的提升遠不如預期。</li>
+<li>最大的黑天鵝（老唐原話重點）：如果民主黨政策跟上，AI 相關私募債市場可能出問題，進而引發美國私募債爆雷，「這個雷非常大，可以比肩 2008 年的次貸危機」；美股至少回調 30%，比特幣到 4–5 萬「毫不意外」。</li>
+<li>私募債規模（老唐自述數字）：疫情時美國私募債總規模才 500 億美元，現在已接近 2 萬億美元，其中至少 3000 億美元投入非上市 AI 基礎設施；基於這些私募債又做了保險、衍生品，規模「無法計算」；他 2025 年 10 月開 Space 時就提出過這個擔憂。</li>
+<li>他的時間判斷：未來 3–6 個月比較看空；美國 QE 如果來，傾向於明年二季度或三季度開始放水，所以上漲趨勢到來的概率比較大的是明年二季度、三季度往後。</li>
+<li>茄哥的美股觀察：週一（11 月 3 日前後）他和某老師做美股專欄時就講「星期一反彈趕緊跑、不反彈也要跑」；特斯拉當天跌超 10%，記憶體股（閃迪等「存儲三傻」）血流成河；消息面是主導，恐慌踩踏是機構在做；熱力圖上消費、民生板塊很堅挺——沃爾瑪他一個多月前就買了，「很堅挺」；短線做空水位高很理想；時間窗口上一直認為 10 月 10 日可能有反轉，但只是反彈。</li>
+</ul>
+<h2>九、支付與出入金（Adam 回答教主提問）</h2>
+<ul>
+<li>WalletV 可通過 Virgo Pay 刷 Visa 卡買 U，費率一般 3–5 個點（看地區）；教主問會員能否有折扣，Adam 說可以讓 Virgo Pay 的同事把優惠碼加進去。</li>
+<li>Adam 稱馬上會有新平台支持在國內用支付寶充值、把人民幣放到一張境外卡裡；教主回應「入金出金我跟你解決了」，但具體費率與合規細節現場沒有展開。</li>
+</ul>
+<h2>十、其他值得記的點</h2>
+<ul>
+<li>茄哥的類比：2025 年 4 月特朗普向伊朗扔三顆鑽地炸彈後，比特幣回調到 7 萬，之後拉升到 12.6 萬——他認為本輪從約 12.6 萬美元高點下來的回調也是標準 ABC，C 浪會更深。</li>
+<li>教主的提醒：不要拿別人某一個時間點的判斷去套現在——「你不是說要跌嗎，你看今天八萬嗎」；要看人家看的是 24 小時、週線還是年 K。</li>
+<li>Michael 的社群喊單（自述）：在 6.3 萬美元時已號召社群「全部至少七成倉」；他認為 7 萬 8「都趕緊買」，現貨可 DCA 分批接，但做多單他不敢上，「5 分鐘上天台」。</li>
+<li>節目進行中大餅跌破 7.8 萬美元；收尾時教主稱價格已跌破她剛說的 7.6 萬美元位置，「有可能擴大為週線級別的一筆」，「7 萬不一定打得住」。</li>
+<li>結尾：約 00:06 結束，教主說「12 點了，大家都困了，我去看盤」。</li>
+</ul>
+<hr />
+<p><strong>轉寫資訊</strong>：錄音 1 小時 34 分 50 秒（67.7 MB），本地 faster-whisper（small 模型）轉寫，共 2291 段；轉寫稿存於內部存檔，未公開。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: A Black Swan Meets the Midterms — In a Violently Swinging Market, How Do Retail Traders Protect Their Wallets and Catch the Volatility?</h1>
+<p><strong>Topic</strong>: After the Binance security incident (a black swan) and the US midterm elections, how retail traders can protect their wallets and capture volatility
+<strong>Original link</strong>: https://x.com/i/spaces/1qVjpqmOElnWzg
+<strong>Time</strong>: 2026-11-05 22:31 to 2026-11-06 00:06 (Beijing time); recording length 1 hour 34 minutes 50 seconds
+<strong>Host</strong>: @WalletV_CN (WalletV Chinese, sponsor) · Co-host / MC: @Paris13Jeanne ("Jiaozhu", the candlestick mentor)
+<strong>Speakers</strong>: @qg7777 (Qiege), @bi_9527zx (DeFi Sniper), @BTV_Michael (Michael, mining-machine business / trend analysis), @0xDonaldGao (Elder Tang, macro and fundamentals), @AdamCai15 (Adam, WalletV)
+<strong>Note</strong>: These notes were compiled from a local transcription of the recording. The transcription has no speaker diarization; speaker attribution follows the host's introductions and speakers' self-introductions. A few proper names and numbers of uncertain transcription are marked as such. All amounts, price levels and track records in the text are the speakers' own on-the-spot accounts and have not been externally verified; the price-level guessing game is purely a show segment and does not constitute investment advice.</p>
+<hr />
+<h2>I. Conclusions First</h2>
+<ol>
+<li><strong>The panel's consensus on the short-term market was "the pullback isn't over, but this is not a bear market"</strong>: Jiaozhu held that the current move is only a 4-hour-level pullback, not yet a daily-level one, and a foreseeable structural correction; Qiege saw it as a standard ABC correction, with the C wave going deeper and possibly carving out a "golden pit"; but views on how deep the pit could be diverged sharply — Michael believed 70k would be enough to stop the fall and that a print starting with 6 would be hard to see again, while Elder Tang was bearish on the next six months, seeing a high likelihood of Bitcoin reaching the low 50k range and saying even 40k would not surprise him.</li>
+<li><strong>Wallet security was the most unanimous practical consensus of the session</strong>: keep spot holdings in a truly physically isolated cold wallet, and don't park all trading capital on centralized exchanges; self-custody wallets (aggregator wallets such as WalletV) were seen by several guests as a new home for trading capital, able to take 20%–40% of it.</li>
+<li><strong>Elder Tang "demystified" the midterm elections themselves</strong>: he argued the market has simultaneously overestimated the impact of the midterms, overestimated Republican support for crypto, and overestimated Democratic suppression of it; what is really worth watching is not the election but AI private credit — a potential bomb comparable to the 2008 subprime crisis.</li>
+<li><strong>The in-session view on AI trading was restrained</strong>: AI cannot create strategies; it can only execute strategies and handle risk control. What is truly meaningful is a personal AI trained on a mature trading system. DeFi Sniper said he ran over $50,000 through AI strategies in September, currently has about $30,000 running, and is profitable overall, but always keeps a manual entry point.</li>
+<li><strong>The livestream itself was a mirror of the market</strong>: at the open, Bitcoin was still above $78,000; during the show it broke below 78k, and by the wrap-up Jiaozhu said it had already broken the $76,000 level she had just given — the guests watched support give way while they talked.</li>
+</ol>
+<h2>II. Opening and Sponsorship: WalletV Points Rules (introduced by Adam)</h2>
+<ul>
+<li>Perks for the night: the 5 listeners who came on mic to ask questions each received 200 points, and 10 commenters in the comment section each received 100 points; the stated win rate was high.</li>
+<li>Uses of points (in Adam's words): they can be redeemed for VIP tiers, improving trading rebates and the probability of receiving rewards; they can be used in the Launchpad feature to receive free token airdrops; the WalletV token is about to be issued (TGE), and users holding points will then receive corresponding tokens.</li>
+<li>WalletV's positioning: a self-custody wallet aggregating Polymarket, Hyperliquid, Aster and xStocks; that night it newly launched aggregated paper trade 1000x contracts (CFD mode, see Section VI).</li>
+</ul>
+<h2>III. Market Overview: Jiaozhu's Take</h2>
+<ul>
+<li>Background: after last week's Binance security incident the market swung hard, with Bitcoin leading the decline; but on November 4 the market put in a decent rally, and the day before yesterday (around November 3) she started going long, seeing it as a rare daily-level "second buy" opportunity.</li>
+<li>The current pullback: it is only a 4-hour-level pullback, not yet daily-level. First, it was dragged down by US stocks; second, the earlier bottom was not firmly built — a "double bottom" test is usually needed before a stop-fall pattern forms — so the pullback is normal and foreseeable.</li>
+<li>Her own trading: yesterday a signal suggested taking profit on longs; she set a stop at her original profit level and exited directly, and was scolded by fans that day for "failing to hold on again"; she responded: when it's time to leave, leave — avoid drawdowns.</li>
+<li>Bottom-line judgment: this is not the start of a bear market; unless an even bigger black swan arrives — which she personally thinks unlikely, since an exchange incident is already a very big deal (analogous to the 2022 FTX event).</li>
+</ul>
+<h2>IV. After the Binance Incident, Where Does Liquidity Go? (led by Adam)</h2>
+<ul>
+<li>Framing: it is bearish for the whole industry, exchanges and wallets alike; most users don't understand the technical details and will simply feel "if even an institution as professional as Binance can have an incident, who can't?" — restoring confidence takes time and education.</li>
+<li>Observed migration: users first hop around inside exchanges (Binance → OK → other exchanges); after Coinbase's stock price fell sharply, some also worried whether it might be next.</li>
+<li>A new option for trading capital: spot can sit in a cold wallet, but trading capital in a cold wallet is impractical (if the USB drive isn't with you when you need to close a position, you can't close it); self-custody wallets offer a new option — up to 40x on Hyperliquid, 100–200x on Aster, 1000x on paper trade (CFD, no slippage), with sufficient depth in majors such as Bitcoin and Ethereum.</li>
+<li>His estimate: as education catches up, it is reasonable for self-custody wallets to take on 20%–30%, or even 30%–40%, of trading capital; the purpose is simple — diversify hacker risk. And there is no KYC, no coin-withholding, no risk controls, and a DEX cannot freeze any funds.</li>
+<li>Mobile wallet security: an iPhone's security level is no lower than that of some small hardware-wallet vendors (random numbers follow Apple's hardware standards), though it certainly cannot match a real hardware wallet.</li>
+</ul>
+<h2>V. How Should Wallets Be Stored to Be Safe? (led by Michael, with Jiaozhu adding)</h2>
+<ul>
+<li>Michael's only principle: <strong>a cold wallet must never connect to the internet</strong>. Anything that claims to be "absolutely safe and upgradable online" is not a cold wallet; with AI as capable as it is now, going online means there will definitely be vulnerabilities — the only thing to trust is physical isolation.</li>
+<li>Don't buy second-hand cold wallets, and don't mail a cold wallet back to the vendor for a trade-in: he cited a certain obscure cold wallet (a niche product with only Chinese-language customer service) whose entire line could not store POS ETH after Ethereum's POW-to-POS transition; the vendor asked users to mail their wallets back for a discounted replacement — he said he would rather smash it than send it back for a small bargain.</li>
+<li>A real case (Michael relaying a community member's experience): a man early on mistakenly bought 600 BTC instead of 600 ETH (when ETH was only a bit over $90), later bought more than 1,000 BTC miners; in 2023 his 600 BTC were stolen — his finance staff had stored the private key on a USB drive, kept another copy in WeChat favorites, and had also emailed it to his daughter in the US. Michael's verdict was "he deserved to be robbed": if you are safe enough, your assets are safe enough.</li>
+<li>Tiered advice (in Michael's words): if your assets haven't reached seven or eight hundred Bitcoin, don't bother with a cold wallet — just keep funds on top exchanges like Binance and OK, which "care about their reputation and can afford to pay out", and still have more money yet to earn; multisig and spreading funds across multiple wallets is also a form of protection; the essence of a cold wallet is "in only, never out", premised on true physical isolation.</li>
+<li>He had just bought an iPhone 5 in Singapore, intending to hand-build a "semi-cold wallet"; he believes quite a few people choose this approach — after all, it is 100% in your own hands and never connects to the internet.</li>
+<li>Jiaozhu added: she was robbed several times playing DeFi in 2021 and is somewhat afraid of on-chain security; but she trades at high frequency and cannot avoid keeping money on exchanges, otherwise opening positions is too much trouble.</li>
+</ul>
+<h2>VI. Capturing Volatility: 1000x Leverage and AI Trading</h2>
+<h3>How is 1000x leverage achieved? (audience question, answered by Adam)</h3>
+<ul>
+<li>WalletV does not itself provide 1000x; it aggregates the paper trade project. In essence it is a CFD: no slippage, no fees; when you profit, the platform takes about a 2% cut, and when you lose it gives you paper tokens that can be staked on WalletV to earn distributions.</li>
+<li>Applicable scenarios: only suitable for betting on small moves within 2 percentage points with large position sizes, at a cost far below centralized exchanges; once volatility exceeds 2 points it is no longer cost-effective.</li>
+<li>In his words: betting on moves within 2 points is the best fit — "it has no concept of depth; volatility is priced directly".</li>
+</ul>
+<h3>AI trading — how can ordinary people use it? (question from audience member Lao A)</h3>
+<ul>
+<li>DeFi Sniper: ordinary people can perfectly well use general-purpose models such as Doubao, ChatGPT and Claude, feeding them 6-hour, daily and 1-hour candles to ask about trend and whether to hold long or short — "the judgments they give are actually quite reliable". He himself runs AI trading (a momentum strategy) inside WalletV, and also used Claude Code and Codex to develop his own meme-coin chain-scanning radar "MemeDog", currently semi-automatic (AI recommends, a human clicks the orders); fully automatic is still being tested — meme sniping is too risky, and most of them go to zero.</li>
+<li>Elder Tang: AI is mediocre at technical analysis; its fundamental-analysis ability should in theory be stronger than its technical analysis, but in practice much is still missed at the decision end, and ordinary people's decision-making will not improve smoothly because of it. What is truly meaningful is a personal AI trained by a mature trading system and high-win-rate traders — "if Jiaozhu builds a well-trained AI, I would definitely pay for it".</li>
+<li>Michael: AI cannot create strategies; it can only execute strategies and help him with risk control — raising the probability of not blowing up, and strictly executing take-profit and stop-loss, because "people are greedy": for example, when price falls to 75,000 you want to wait for 74,000 to enter, whereas the AI has already acted by 79999999 (referring to the take-profit level).</li>
+<li>Jiaozhu: she has been working on her own strategy since April this year and has posted signal strategies on Twitter, but they are only signals and cannot run by themselves; she is working on automatic signal execution. Manual trading is affected by emotion; AI is good at quantitative arbitrage, but may miss one-sided trending moves; development will be fast — "I hope it still leaves us human traders a way to make a living".</li>
+<li>DeFi Sniper's live trading (his own account): in September he ran over $50,000 through AI strategies, currently about $30,000 is running, profitable overall. He also uses AI for prediction markets: collecting news and tracking high-win-rate wallets as reference, with only 1000U invested. His project of building Jiaozhu's Chan-theory strategy into an AI was half done and unfinished — "getting one Agent truly running takes two to three months, sometimes nearly half a year"; he always keeps a manual entry point, since "not looking at it for half a year isn't realistic either".</li>
+</ul>
+<h3>WalletV's Quantitative Models (closing introduction by Adam)</h3>
+<ul>
+<li>Two versions prepared for beginners who can't write prompts: trend-following and momentum indicators, with a few adjustable parameters; backtested Sharpe ratio above 1.5, and a backtest over the past year's market returned about 340% (Adam's own figures; "backtests do not represent the future").</li>
+<li>In essence it is not AI trading but quantitative trading under an AI research framework; his way of putting it is that it hands retail traders 60%–70% of a quantitative fund's capability.</li>
+</ul>
+<h2>VII. Price-Level Guessing Game: Where Is Next Week's Low? (show segment, 1000U sponsored by Adam)</h2>
+<p>Rules (agreed on the spot): guess the lowest Bitcoin price between that evening and the same time next Thursday (November 12); whoever is closest takes the prize pool. Adam personally sponsored 1000U, and other guests each put 500U into the pool (as stated verbally).</p>
+<table>
+<thead>
+<tr>
+<th>Guest</th>
+<th>Called low</th>
+<th>Basis (their own account)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qiege</td>
+<td>73,700</td>
+<td>November 10 is the time window jointly predicted by his lecturer team; by theory it is the 0.382 retracement level — "a golden pit"</td>
+</tr>
+<tr>
+<td>Jiaozhu</td>
+<td>73,300</td>
+<td>There should be a rebound near 75,000; 73,300 is the strong support level she mentioned yesterday</td>
+</tr>
+<tr>
+<td>Michael</td>
+<td>75,000</td>
+<td>"It can't fall below 75,000"</td>
+</tr>
+<tr>
+<td>Elder Tang</td>
+<td>79,000</td>
+<td>What he called was the price on next Thursday itself rather than the low; other guests corrected him, saying "the text message doesn't work"; he himself did not contribute funds — "I'm bad at predicting price levels"</td>
+</tr>
+<tr>
+<td>Jiaozhu (another basis)</td>
+<td>76,200</td>
+<td>The position of the daily 200 moving average; if it falls there it may rebound</td>
+</tr>
+<tr>
+<td>Adam</td>
+<td>About 74,800</td>
+<td>The spoken number was unclear (two versions: 74,833 / 74,003); the transcription could not fully determine it, so an approximate figure is used</td>
+</tr>
+<tr>
+<td>DeFi Sniper</td>
+<td>About 74,500</td>
+<td>Close to Adam; his view was a pullback to near the previous drawdown low (around the September 16 level)</td>
+</tr>
+</tbody>
+</table>
+<p>Additional note: Jiaozhu considers herself a "pure right-side" trader; in Chan theory she looks only at structure, not price — when a bottom fractal appears it is the right side, and before it appears it is the left side. She has recently been waiting for a daily second buy, wanting to take a larger trending long position; "the faster it falls, the faster it bottoms".</p>
+<h2>VIII. The Midterms and US Stocks: Lao Tang's Long Fundamental Essay (the most bearish voice of the session)</h2>
+<ul>
+<li>No clear pattern from midterms: many people have greatly overestimated the impact of the midterm elections — both overestimating Republican support for crypto and overestimating Democratic suppression of it; many things simply cannot be decided by a midterm election.</li>
+<li>Historical statistics added by Michael (his own account): in the month after the past three midterm elections, Bitcoin fell twice and rose once, with declines of about 20% and 19% and a gain of over 30%; but over a one-year horizon all three were up, the most by about double.</li>
+<li>Two reasons for the AI stock decline (Lao Tang): first, Democrats taking states like Texas where data centers are being built means environmental and regulatory requirements for AI data-center construction will tighten and construction will slow, so upstream hardware demand will be lower than previously expected; second, Anthropic's results show AI revenue growth of 116% in Q2 already dropping to 46% in Q3, and if Q4 falls to 20% it will be worse still. AI stocks had already been falling since mid-October, mainly because earnings came in far below expectations — OpenAI's earlier valuation expectation of $2–2.5 trillion has been compressed to about $1.5 trillion, and it will not IPO this year, "so there must be a problem with earnings growth"; Anthropic itself admits that AI's improvement to product-building efficiency is far below expectations.</li>
+<li>The biggest black swan (a key point in Lao Tang's own words): if Democratic policies follow through, the AI-related private credit market could run into trouble, triggering a blowup in US private credit — "this bomb is very large, comparable to the 2008 subprime crisis"; US stocks would correct at least 30%, and Bitcoin reaching 40–50k would be "no surprise at all".</li>
+<li>Scale of private credit (Lao Tang's own figures): during the pandemic, total US private credit was only $50 billion; it is now approaching $2 trillion, of which at least $300 billion has gone into unlisted AI infrastructure; insurance and derivatives have been built on top of this private credit, on a scale that "cannot be calculated". He had already raised this concern in a Space he hosted in October 2025.</li>
+<li>His timing judgment: relatively bearish over the next 3–6 months; if US QE comes, he leans toward liquidity starting in Q2 or Q3 of next year, so the probability of an uptrend arriving is greater from Q2–Q3 of next year onward.</li>
+<li>Qiege's US stock observations: on Monday (around November 3), when he and another teacher were doing a US stock column, they said "if it rebounds on Monday, run quickly; if it doesn't rebound, run anyway"; Tesla fell more than 10% that day, and memory stocks (SanDisk and the other "memory trio") were a bloodbath; the news flow was in charge, and the panic stampede was the institutions' doing. On the heat map, consumer and livelihood sectors were very resilient — he had bought Walmart over a month earlier and it was "very resilient"; short-term shorting levels were high and ideal; on time windows he had always thought October 10 might see a reversal, but only a rebound.</li>
+</ul>
+<h2>IX. Payments and On/Off Ramps (Adam answering Jiaozhu's questions)</h2>
+<ul>
+<li>WalletV can buy U via Virgo Pay by swiping a Visa card, with fees generally 3–5 points (depending on region); Jiaozhu asked whether members could get a discount, and Adam said he could have colleagues at Virgo Pay add a discount code.</li>
+<li>Adam said a new platform would soon support topping up with Alipay domestically in China, putting RMB onto an overseas card; Jiaozhu responded "I'll solve deposits and withdrawals with you", but specific fees and compliance details were not elaborated on the spot.</li>
+</ul>
+<h2>X. Other Points Worth Noting</h2>
+<ul>
+<li>Qiege's analogy: in April 2025, after Trump dropped three bunker-buster bombs on Iran, Bitcoin pulled back to 70k and then rallied to 126k — he believes this pullback from the high of about $126,000 is likewise a standard ABC, with the C wave going deeper.</li>
+<li>Jiaozhu's reminder: don't take someone's judgment from one point in time and apply it to now — "didn't you say it would fall? Look, is it 80k today?"; you have to see whether they were looking at 24 hours, the weekly chart, or the yearly candles.</li>
+<li>Michael's community call (his own account): at $63,000 he had already urged his community to be "at least 70% positioned across the board"; he believes at 78k "everyone should buy quickly"; spot can be accumulated by DCA in batches, but he doesn't dare take long positions — "five minutes to the rooftop".</li>
+<li>During the show Bitcoin broke below $78,000; at the wrap-up Jiaozhu said the price had already broken the $76,000 level she had just mentioned, "possibly expanding into a weekly-level move", and "70k may not necessarily hold".</li>
+<li>Closing: the session ended at about 00:06, with Jiaozhu saying "It's midnight, everyone's sleepy — I'm off to watch the charts".</li>
+</ul>
+<hr />
+<p><strong>Transcription info</strong>: recording of 1 hour 34 minutes 50 seconds (67.7 MB), transcribed locally with faster-whisper (small model), 2,291 segments in total; the transcript is kept in an internal archive and is not public.</p>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+
+<footer data-lang="en" style="display:none">Source: Yat's List Space collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full notes of this session; the content is the speakers' own on-the-spot accounts and has not been verified.</footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：黑天鹅碰撞中期大选——巨震行情下，散户如何守住钱包与捕捉波动？ · Yat's Talks",tw:"會議紀要：黑天鵝碰撞中期大選——巨震行情下，散戶如何守住錢包與捕捉波動？ · Yat's Talks",en:"Meeting Notes: A Black Swan Meets the Midterms — In a Violently Swinging Market, How Do Retail Traders Protect Their Wallets and Catch the Volatility? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

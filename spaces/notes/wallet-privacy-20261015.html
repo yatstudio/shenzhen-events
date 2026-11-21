@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：你的钱包知道得太多——谁来修复链上隐私？</h1>
 <ul>
 <li><strong>原标题</strong>：Your Wallet Knows Too Much: Who Fixes Onchain Privacy?</li>
@@ -237,8 +244,458 @@
 <li>“If quantum wins, we have bigger problems.”——George（Mass Wallets）</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：你的錢包知道得太多——誰來修復鏈上隱私？</h1>
+<ul>
+<li><strong>原標題</strong>：Your Wallet Knows Too Much: Who Fixes Onchain Privacy?</li>
+<li><strong>主持人</strong>：Justin Roberty（@wenaltseason，Wenaltseason?）</li>
+<li><strong>時間</strong>：2026-10-15（週四例行場），時長約 1 小時 13 分</li>
+<li><strong>參與</strong>：約 20,780 人；嘉賓約 16 位</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1kJzDPeMlldKv</li>
+<li><strong>來源</strong>：Space 回放錄音本地轉寫（faster-whisper 英文，逐字稿 1,251 行，覆蓋 00:01:58–01:13:42）。以下所有觀點均為發言人現場自述，未經核實；數字、案例與項目說法以發言人原話為準。</li>
+</ul>
+<h2>結論先行</h2>
+<ol>
+<li><strong>隱私從邊緣議題變成了大規模採用的前提。</strong> 多位嘉賓的共識是：沒人會把畢生積蓄、薪水和公司金庫放進一個公開可查的銀行帳戶裡。穩定幣把真實的財務生活搬上鏈之後，隱私不再是密碼龐克的情懷，而是「上鏈十億人」的入場券。</li>
+<li><strong>安全是比意識形態更硬的驅動力。</strong> 「扳手攻擊」（線下脅迫交出資產）被反覆提及——Ronnie（Zano）稱法國去年已有約 90 起，幾乎每週兩起；Mass Wallets 的聯合創始人在墨西哥有過被綁架風險。公開的鏈上餘額正在變成人身安全隱患。</li>
+<li><strong>「隱私幣」這個品類可能正在死去，但隱私本身正在變成標配。</strong> Dash、Aztec 的 Joe 等人判斷：未來沒有單獨的「隱私鏈」，隱私會變成每條鏈、每個錢包的預設功能；短期會先流行「合規隱私」（執法可定向查看），長期則向「誰也攻不破的鐵桿隱私」擺動。</li>
+<li><strong>誰來決定「向誰披露什麼」沒有達成共識，分歧線很清晰。</strong> 一方主張用戶手握密鑰、按需向審計/稅務做「範圍披露」（Crypto Walker、Aztec）；另一方認為機構遲早會用「中間人式隱私」（銀行模式、私有鏈、隱私區）先把路鋪好，密碼學完美方案若再等八年就等於沒解決（Joe、Mr. J）。</li>
+<li><strong>技術上沒有「唯一贏家」。</strong> ZK、FHE、多方計算（MPC）各有位置，Tim Arno 等人認為關鍵在組合；Aztec 的 Joe 提出方法論——「先預設完全隱私，再一層層剝開公開披露」，而不是反過來。</li>
+<li><strong>可複用 KYC 與去中心化身分是全場最具體的產品方向。</strong> Aztec 的 ZK Passport 被作為範例：直接驗證護照/駕照晶片裡的政府簽名，只證明「證件有效」，不洩露姓名、生日和照片。Mass Wallets 則主張多家小型 KYC 機構 + 標準化介面，避免一家獨大。</li>
+</ol>
+<h2>嘉賓一覽</h2>
+<table>
+<thead>
+<tr>
+<th>嘉賓</th>
+<th>身分（現場自述）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Justin Roberty</td>
+<td>主持人（@wenaltseason）</td>
+</tr>
+<tr>
+<td>Joel / Dash</td>
+<td>Dash（@Dashpay）</td>
+</tr>
+<tr>
+<td>Theo</td>
+<td>Fiber 錢包（@_theopowers），主攻拉美市場</td>
+</tr>
+<tr>
+<td>Ruben</td>
+<td>Firo（@firoorg）</td>
+</tr>
+<tr>
+<td>Ditto</td>
+<td>Ditto Network（@Ditto_Network）</td>
+</tr>
+<tr>
+<td>Mr. J</td>
+<td>Sats Terminal / OnePump、OneSup（@juga_btc）</td>
+</tr>
+<tr>
+<td>Mitchell DiRaimondo</td>
+<td>@MitchDiRaimondo</td>
+</tr>
+<tr>
+<td>Ronnie</td>
+<td>Zano（@RonneTVR）</td>
+</tr>
+<tr>
+<td>George</td>
+<td>Mass Wallets（@masswallets）</td>
+</tr>
+<tr>
+<td>Joe</td>
+<td>Aztec Network（@jaosef），ZK Passport</td>
+</tr>
+<tr>
+<td>Crypto Walker</td>
+<td>@kryptowalk3r</td>
+</tr>
+<tr>
+<td>Jareen</td>
+<td>Privacy Cloak（@jerreenj），15 歲開始寫程式</td>
+</tr>
+<tr>
+<td>Tim Arno</td>
+<td>@TimArnoX</td>
+</tr>
+<tr>
+<td>NoNonsense4x</td>
+<td>交易員 / YouTuber（@This_Is_VP4X）</td>
+</tr>
+<tr>
+<td>defijangle</td>
+<td>中途掉線後重回，未作實質發言</td>
+</tr>
+<tr>
+<td>Django、Danielle</td>
+<td>臨近尾聲加入，未作實質發言</td>
+</tr>
+</tbody>
+</table>
+<h2>分發言人歸納</h2>
+<h3>Dash（Joel）——隱私是「不得不補的課」，合規隱私先行、鐵桿隱私隨後</h3>
+<ul>
+<li>驅動力很簡單：加密早期大家只是在試技術，鏈上沒什麼正經價值；現在進入早期大規模採用週期，舊敘事死掉、撐不起存在的鏈關門，隱私浮出水面。「沒人會把畢生積蓄放進公開帳本」（People are not going to put their life savings on chain where it's public knowledge）。</li>
+<li>五年展望：隱私會變得相對普遍，「隱私幣」作為單獨品類會消失——它只是一個必備功能。短期先流行「合規隱私」，例如 NEAR 的 confidential shards（執法可查看特定帳戶細節），因為公司既想要隱私、又不想被說成在幫洗錢者混幣；但隨後 Canton 式模型會見頂，越來越多公司和個人會要求「誰也攻不破的鐵桿隱私」。</li>
+<li>關鍵原話：「I think that the concept of something like a privacy coin might be dead in the future because it's just one feature that's now going to be a must-have.」</li>
+</ul>
+<h3>Theo（Fiber）——穩定幣把整個人生搬上鏈，錢包必須多鏈 + 隱私</h3>
+<ul>
+<li>隱私議題升溫的直接原因是穩定幣崛起：人們開始用鏈上收薪水、簽合約、和朋友轉帳。早期用戶可以接受低隱私，因為「整個人生還沒上鏈」；但要把全世界變成鏈上金融生活，就不能讓每個人都頂著一個公開銀行帳戶。「nobody wants that.」</li>
+<li>鏈上隱私不是「為隱私而隱私」：ZEC、門羅那套對新來的穩定幣用戶沒什麼用，他們需要的是一個多鏈錢包、上面疊加隱私——這正是 Fiber 在做的方向。不同地區會有不同的錢包，Fiber 主攻拉美。</li>
+<li>對中心化隱私的質疑：Coinbase 已經是一個半公開的鏈上混合銀行，每月也只有約 800 萬交易者，「顯然不是人們想要的」；中心化隱私的代價是交出大量 KYC 資訊，本身就製造一整套新問題。Fiber 只向用戶要一個信箱、甚至只用用戶名，「留下的足跡越小越好」。</li>
+</ul>
+<h3>Ruben（Firo）——技術終於成熟了，隱私復興是「雞生蛋」</h3>
+<ul>
+<li>Zcash 2016 年上線時需要一台強勁電腦、做一筆交易要約 30 秒；如今基礎設施成熟得多，人們更願意信任它。加密從「好玩的小愛好」變成有嚴肅價值在流動，隱私需求隨之而來；幣價上漲也有幫助。</li>
+<li>不是單方面「用戶在要」，是供需互相推動。</li>
+</ul>
+<h3>Ditto（Ditto Network）——傳統金融的參照系：可驗證，但不必全公開</h3>
+<ul>
+<li>區塊鏈的悖論：大家抱怨它「太透明」，但在傳統金融裡，銀行驗證交易並不需要公開你的全部帳戶歷史。鏈上的挑戰是「在保留公開可驗證性的同時，限制陌生人能從個人身上學到什麼」。</li>
+<li>機構既需要審計軌跡，也需要同時保密。解法是「最小暴露數據 + 把選擇性披露做進協議和錢包」，而且錢包要讓保護措施「像普通人用的東西一樣簡單」，而不是專家專屬流程。</li>
+</ul>
+<h3>Mr. J（Sats Terminal）——「隱私已經被 Canton 修好了」，機構路線已定</h3>
+<ul>
+<li>全場最明確的「已經有答案」立場：鏈上隱私的修復者是 Canton。DTCC 已選擇 Canton 做代幣化服務，原因就是隱私；美國國債正在 Canton 上代幣化，匯豐、摩根大通、日本方面在 Canton 上清算債券，韓國、香港也在做。機構層面已經完成，OnePump / OneSup 做的是把它帶給散戶。</li>
+<li>對傳統金融自建鏈的判斷：機構不會從頭自建，因為直接整合現有基礎設施更省事；它們需要的是「按需知情」的隱私——交易某部分讓哪些方知道、哪些方不知道。</li>
+<li>對去中心化的直言：「根本不存在真正的去中心化……Hyperliquid 上沒有去中心化，誰在乎去中心化？」他認為必須有一組可信的人來管理鏈上事務，出現問題時能回滾；「誰來控制這些決定，比去中心化程度本身更重要。」</li>
+</ul>
+<h3>Mitchell DiRaimondo——機構要的是「它們習慣的系統」，透明敘事已經變了</h3>
+<ul>
+<li>要讓機構入場，就得複刻它們習慣的系統；再去重講一遍「安全敘事」不會奏效。機構級產品越來越多，LP 更關心真實資產的現金流，而不是 100 倍。</li>
+<li>對主持人「透明是不是當初只是白皮書話術」的追問，他承認：2017–2018 年大家談的是白皮書技術本身，現在談的是產品，區塊鏈只是上面的附加層。心態已經變了。</li>
+</ul>
+<h3>Ronnie（Zano）——安全是第一推動力；機構會轉向「預設隱私鏈」</h3>
+<ul>
+<li>補充了前面沒人提的一點：推動鏈上隱私的首要原因是用戶安全。「扳手攻擊」去年和今年都在瘋漲，法國已有約 90 起，「幾乎每週兩起」；此外還有企業與政府靠用戶數據賺錢的監控。</li>
+<li>對 Soda Labs 剛融 300 萬美元「把隱私帶給公開鏈」的回應：他認為會發生相反的事——機構會轉向預設隱私的區塊鏈，因為公開鏈上總留有可追溯的痕跡；但隱私鏈必須有「可選透明」功能，Zano 正在朝這個方向做，計畫引入第三方審計來接機構。</li>
+</ul>
+<h3>George（Mass Wallets）——信任與隱私不正交；應用層隱私比鏈隱私更抗壓</h3>
+<ul>
+<li>「我不認為信任與隱私是對立的。」新區塊鏈用透明來建立信任，但現在已有技術可以在不犧牲隱私的前提下驗證資訊。</li>
+<li>墨西哥聯合創始人的例子：有人會被綁架、被要求清空帳戶，「如果隱私問題不解決，他們不會把資金搬上鏈」。匯款公司和企業金庫會是更大的採用驅動力——企業餘額絕不能放在公開鏈上，客戶會直接要求隱私。</li>
+<li>去中心化對隱私是必需的：各國政府遲早會對少數幾條鏈施壓；銀行保密制度在《銀行保密法》之後實際上已不存在，「連瑞士都屈服了」。因此應用層（智慧合約層）的隱私比鏈隱私更有意思：可以有許多帶隱私的合約，政府不可能一下子全部攻破。</li>
+<li>五年展望：KYC 走向標準化介面 + 許多小型 KYC 機構，把用戶身分代幣化、且身分可在全生態複用——既降低集中風險，又保留互操作性。「隱私一定會到來，沒有別的路。」</li>
+<li>關於量子與 AI 風險：量子若贏了，「我們有更大的問題」；AI 真正的風險一是人們自願把資訊倒給模型換性能，二是監控國家現在可以給每個人配一個監控代理——30、40 年前建監控國家幾乎不可能，現在可以規模化。</li>
+</ul>
+<h3>Joe（Aztec Network）——隱私是光譜，不是開關；可程式化隱私是未來</h3>
+<ul>
+<li>Starknet 影子帳戶（本週剛發布）：只隱藏錢包、不隱藏交易。「技術上沒什麼新東西」——本質就是用一個新帳戶注資、切斷與身分的關聯，以太坊上 Railgun、Aztec、Railgun 類資金池、Coinbase 都能做到；Starknet 的進步在用戶體驗，把流程整合進一個錢包。但仍容易被行為模式識別：「如果你是 Hyperliquid 大戶、每天固定時間交易，看到 15 個地址都在上午 10 點大額交易，大概率是同一個人。」Aztec 內部的原則是「先預設完全隱私，再一層層剝開公開披露」，影子帳戶是反方向的一小步。</li>
+<li>去中心化為什麼重要：不去中心化的隱私等於把隱私交給中間人，而中間人「轉身就把你的數據賣掉」。網際網路加密之所以成立，正是因為它是去中心化的強密碼學。</li>
+<li>技術路線的兩種世界：密碼學隱私（ZK、FHE、多方計算）vs 中間人式隱私（傳統金融的做法；Providium、Tempo 的「隱私區」本質是「給中間人的隱私」）。如果理論上完美的技術還要等八年，大家只會退回中間人方案，「那我們什麼都沒解決」。</li>
+<li>ZK Passport（可複用 KYC）：現代身分證件——美國新駕照、所有電子護照、多數歐洲身分證——晶片裡都有發證政府的簽名。ZK Passport 讀取簽名並用零知識證明「證件有效」，不洩露姓名、出生日期和照片；即使證明洩露，也只洩露「此人持有有效護照」這一事實。做對了，身分就回到用戶自己手裡，不再需要第三方驗證機構。</li>
+<li>五年展望：隱私不是二元的「私密或不私密」，而是一條光譜。關鍵轉向是「可程式化隱私」：開發者按自己的用例編碼隱私——受監管的證券交易所和跨境支付的隱私需求完全不同。未來不是隱私鏈，而是帶加密功能的智慧合約。</li>
+</ul>
+<h3>Crypto Walker——用戶握鑰匙，披露要「按需、按範圍」</h3>
+<ul>
+<li>誰來決定向誰披露什麼？「用戶應該握著鑰匙，接收方應該被限定範圍。審計員看到審計員需要的，稅務機關看到稅務機關需要的，僅此而已。沒有人因為有權有勢、禮貌敲門，就能拿到整棟房子。」</li>
+<li>真正要怕的是「主密鑰的負責人」：「歷史上每一把主密鑰最終都被偷、被攻破、被賣掉，或丟在計程車、機場的筆記型電腦裡。」密碼學的意義是為「受託方不再可信的那一天」做設計。</li>
+</ul>
+<h3>Jareen（Privacy Cloak）——市場要的是跨鏈隱私，不是又一條隱私鏈</h3>
+<ul>
+<li>門羅和 Zcash 挺過了多年監管壓力，市場錯判了什麼？答案是：新老用戶要的都是「跨鏈通用」——在 Solana 和以太坊之間換幣時，不希望一切都被公開。但至今沒有任何協議能做到跨鏈隱私 swaps，所以他正在做 Privacy Cloak：鏈無關、完全自託管。</li>
+<li>門羅、Zcash 作為獨立鏈，監管壓力「令人窒息」，且沒有以太坊、Solana 級別的流動性和用戶量。把隱私帶到現有主流鏈上、加上跨鏈功能、用企業級 API 交付，才是下一代用戶入場的路徑。</li>
+<li>對行業集中化的大判斷：傳統金融只會留下極少數鏈，「可能不到前十」；Hyperliquid 之後，新人進加密只認 Hyperliquid 一個交易所；99% 拿 500–1000 萬美元融資去建新 Layer 1 的項目「完全沒用」。AI 泡沫破裂後，活下來的鏈會更少。</li>
+<li>對反覆 KYC 的態度：反覆做 KYC 不會增加任何安全性，只給用戶加摩擦；統一身分（如 Worldcoin 那類）理論上能避免 90% 的駭客、詐騙和釣魚。但也要面對現實：連最頂尖安全團隊都會被 Lazarus 駭掉，「在這個行業裡沒有任何東西是安全的，永遠不會是」。</li>
+<li>量子 + AI：行業一路克服了所有困難，密碼學家們對方向有完整想法，「到時候我們會是抗量子的」；AI 能不能打敗加密，「沒人能猜」。</li>
+</ul>
+<h3>Tim Arno——沒有唯一最優技術，組合才是答案；匿名不只是協議問題</h3>
+<ul>
+<li>ZK、FHE、MPC 哪個能匹配大規模採用？「沒有最好或最差。」MPC 適合多方場景，FHE 理論上更好但還沒鋪開；對公司來說，押注單一技術不明智。有意思的系統會把它們組合起來，B2B 和 B2C 的解法完全不同。</li>
+<li>匿名不只是鏈上協議的事：你連咖啡館 Wi-Fi、到處是攝影機，「想從區塊鏈上消失」還取決於你怎麼用電腦和手機。</li>
+<li>五年展望：KYC、KYB 會保留；希望 ZK 還在，因為機構想控制一切；安全方面，代理式（agentic）工具會成為防止 AI 破解系統的防線。</li>
+</ul>
+<h3>NoNonsense4x（投資者視角）——DeFi 還有三到五年的窗口期</h3>
+<ul>
+<li>DeFi 永遠有位置，因為不是每個人都能接受傳統金融帶來的監管。傳統金融剛 capitulate（認輸）、承認未來是數位化的；但它們也明白，沒有隱私層什麼都做不了。</li>
+<li>這需要時間：各方要先就「用哪一層」達成一致，再經歷「東西不總能 100% 正常工作」的成長期。DeFi 群體大概還有三到五年窗口，之後隱私層真正落地，DeFi 依然重要。</li>
+<li>對大規模採用的用戶體驗要求：KYC 流程必須「和現在幾乎一模一樣」，一次做完、快速、熟悉；「如果突然要求所有人都變成加密原住民，這永遠行不通。」</li>
+</ul>
+<h3>主持人 Justin Roberty 的串場判斷</h3>
+<ul>
+<li>開場即定調：錢包和獨立 AI 知道得太多，隱私修復方案是本場主題；全場 16 位嘉賓，他前一天早上只有 6 位確認、開場前 15 分鐘才知道最終名單。</li>
+<li>AI 讓詐騙變得可怕：他最近收到一封仿冒 Google 的釣魚郵件，用隱藏字元偽造域名，「逼真到嚇人」。AI 正在加速鏈上分析——他自己報稅時發現，AI 能把不同地址、不同交易拼起來、講清楚；攻擊者同樣能用這套能力。</li>
+<li>傳統金融自建私有鏈的質疑貫穿全場：摩根大通曾嘗試 JPM Coin 私有鏈，「沒人想要」；銀行贊助的私有鏈「行不通」，因為它們只把區塊鏈當成銀行間的網路，而不是全球金融系統。</li>
+<li>收尾：每週四同一時間再見；並提醒聽眾有機會就暫時脫離連網設備，去公園走走。</li>
+</ul>
+<h2>討論脈絡（按時間）</h2>
+<ul>
+<li><strong>00:02–00:07｜為什麼是現在</strong>：穩定幣把財務生活搬上鏈；技術成熟了；鏈上有正經價值在流動了。Dash、Theo、Ruben 三人定調。</li>
+<li><strong>00:07–00:14｜透明的悖論</strong>：銀行驗證交易不必公開全部歷史；鏈上要同時保住可驗證性與隱私。Ditto、Mr. J 談機構視角。</li>
+<li><strong>00:14–00:20｜透明還是信任</strong>：Mitchell 談機構只接受「它們習慣的系統」；Ronnie 把安全（扳手攻擊）推到台前；George 提出「信任與隱私不正交」。</li>
+<li><strong>00:20–00:28｜傳統金融會不會自己建鏈</strong>：Theo、Joe 以 Coinbase、JPM Coin 為例否定；Joe 拆解 Starknet 影子帳戶。</li>
+<li><strong>00:28–00:36｜誰來決定披露</strong>：Crypto Walker 的「按需披露」原則；Jareen 談跨鏈隱私缺口與 Privacy Cloak；Jareen 預言只剩不到前十條鏈。</li>
+<li><strong>00:36–00:48｜技術路線與去中心化之爭</strong>：Joe 談 Zcash 被誤判為「罪犯鏈」；Tim 談 ZK/FHE/MPC 組合；NoNonsense4x 給 DeFi 三到五年窗口；Mr. J 與 Joe 就「去中心化還重要嗎」正面交鋒。</li>
+<li><strong>00:48–00:52｜AI 是放大器</strong>：主持人談 AI 釣魚；Jangle（defijangle）談 AI 加速鏈上分析與資產扣押焦慮；Ronnie 談機構與隱私鏈。</li>
+<li><strong>00:52–01:01｜可複用 KYC 與靈魂綁定代幣</strong>：Joe 講 ZK Passport 的晶片簽名驗證；George 講 KYC 資訊轉售與集中風險；Jareen 講統一身分與「什麼都不安全」。</li>
+<li><strong>01:01–01:13｜五年展望快問快答</strong>：Tim、George、Dash、NoNonsense4x、Joe、Jareen、George 依次作答；共識是隱私會成為預設功能，路徑是「可程式化隱私 + 標準化可複用身分」，分歧在於這條路要走合規隱私還是鐵桿隱私。</li>
+</ul>
+<h2>未決問題與分歧</h2>
+<ul>
+<li><strong>合規隱私 vs 鐵桿隱私</strong>：短期內機構需要可審計、可定向披露的隱私；長期看，Dash、Joe 等人認為需求會滑向無人能攻破的隱私。兩者之間的擺動幅度與時間點沒有共識。</li>
+<li><strong>去中心化是否還是前提</strong>：Joe、George 認為是（否則隱私只是換個中間人）；Mr. J 認為不是（Hyperliquid 式效率優先，誰控制決策更重要）。</li>
+<li><strong>傳統金融是合作方還是收編方</strong>：Mr. J 認為 Canton 已是定局；Jareen 認為傳統金融只會留下不到十條鏈，多數新鏈毫無意義。</li>
+<li><strong>隱私會不會被 AI 抵消</strong>：AI 既加速鏈上分析、又讓詐騙更逼真；Jangle 認為「你看不見的東西就扣押不了」，George 認為更大的風險在人們自願向模型交數據。</li>
+</ul>
+<h2>值得記住的原話</h2>
+<ul>
+<li>「People are not going to use a completely public open ledger for things to actually matter.」——Dash</li>
+<li>「If we want to convert the entire world to use on chain as their primary financial life, we can't have everybody be fine with a public bank account because nobody wants that.」——Theo（Fiber）</li>
+<li>「I don't think trust is orthogonal to privacy.」——George（Mass Wallets）</li>
+<li>「The user should hold the keys and the recipient should possibly be scoped. An auditor sees what an auditor needs… No more.」——Crypto Walker</li>
+<li>「You need to start being fully private and then kind of peel back layers of public disclosures versus the other way around.」——Joe（Aztec）</li>
+<li>「If you don't decentralize privacy, you end up with these centralized middlemen providing privacy or promising that you're going to have privacy. And what they actually do is they turn around and sell your data.」——Joe（Aztec）</li>
+<li>「There's no really decentralization… who cares about decentralization because on Hyperliquid, there's no decentralization.」——Mr. J（Sats Terminal）</li>
+<li>「You can't seize what you can't see.」——Jangle（defijangle）</li>
+<li>「Privacy is a spectrum.」——Joe（Aztec）</li>
+<li>「If quantum wins, we have bigger problems.」——George（Mass Wallets）</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Your Wallet Knows Too Much — Who Fixes Onchain Privacy?</h1>
+<ul>
+<li><strong>Original title</strong>: Your Wallet Knows Too Much: Who Fixes Onchain Privacy?</li>
+<li><strong>Host</strong>: Justin Roberty (@wenaltseason, Wenaltseason?)</li>
+<li><strong>Time</strong>: 2026-10-15 (regular Thursday session), duration about 1 hour 13 minutes</li>
+<li><strong>Participation</strong>: about 20,780 people; about 16 guests</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1kJzDPeMlldKv</li>
+<li><strong>Source</strong>: Local transcription of the Space replay recording (faster-whisper, English, 1,251-line verbatim transcript, covering 00:01:58–01:13:42). All views below are as stated live by the speakers and have not been verified; figures, cases, and claims about projects are as stated in the speakers' own words.</li>
+</ul>
+<h2>Conclusions First</h2>
+<ol>
+<li><strong>Privacy has moved from a fringe topic to a prerequisite for mass adoption.</strong> The consensus among several guests was: no one will put their life savings, salary, and company treasury into a publicly searchable bank account. Once stablecoins moved real financial life onchain, privacy was no longer a cypherpunk sentiment, but the entry ticket for "a billion people onchain."</li>
+<li><strong>Security is a harder driver than ideology.</strong> "Wrench attacks" (offline coercion to hand over assets) were mentioned repeatedly — Ronnie (Zano) said France had already seen about 90 cases last year, almost two per week; a co-founder of Mass Wallets had faced kidnapping risk in Mexico. Public onchain balances are becoming a personal safety hazard.</li>
+<li><strong>The "privacy coin" category may be dying, but privacy itself is becoming standard.</strong> Dash, Joe from Aztec, and others judged that in the future there will be no separate "privacy chains"; privacy will become a default feature of every chain and every wallet. In the short term, "compliant privacy" (targeted viewing by law enforcement) will prevail first, while in the long term the pendulum will swing toward "hardcore privacy that no one can break."</li>
+<li><strong>There was no consensus on who decides "what to disclose to whom," and the dividing line was clear.</strong> One side argued that users should hold the keys and make "scoped disclosures" to auditors/tax authorities as needed (Crypto Walker, Aztec); the other side argued that institutions will sooner or later pave the way first with "middleman-style privacy" (the banking model, private chains, privacy zones), and that if a cryptographically perfect solution takes another eight years, it is equivalent to not solving the problem at all (Joe, Mr. J).</li>
+<li><strong>Technically, there is no "single winner."</strong> ZK, FHE, and multi-party computation (MPC) each have their place, and Tim Arno and others argued the key is combining them; Joe from Aztec proposed a methodology — "start by defaulting to full privacy, then peel back layers of public disclosure one by one," rather than the other way around.</li>
+<li><strong>Reusable KYC and decentralized identity were the most concrete product direction of the session.</strong> Aztec's ZK Passport was cited as an example: it directly verifies the government signature in the chip of a passport/driver's license, proving only that "the document is valid," without revealing the name, birthday, or photo. Mass Wallets, meanwhile, advocated for many small KYC providers plus standardized interfaces, to avoid a single dominant player.</li>
+</ol>
+<h2>Guest List</h2>
+<table>
+<thead>
+<tr>
+<th>Guest</th>
+<th>Identity (as stated live)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Justin Roberty</td>
+<td>Host (@wenaltseason)</td>
+</tr>
+<tr>
+<td>Joel / Dash</td>
+<td>Dash (@Dashpay)</td>
+</tr>
+<tr>
+<td>Theo</td>
+<td>Fiber wallet (@_theopowers), focused on the Latin American market</td>
+</tr>
+<tr>
+<td>Ruben</td>
+<td>Firo (@firoorg)</td>
+</tr>
+<tr>
+<td>Ditto</td>
+<td>Ditto Network (@Ditto_Network)</td>
+</tr>
+<tr>
+<td>Mr. J</td>
+<td>Sats Terminal / OnePump, OneSup (@juga_btc)</td>
+</tr>
+<tr>
+<td>Mitchell DiRaimondo</td>
+<td>@MitchDiRaimondo</td>
+</tr>
+<tr>
+<td>Ronnie</td>
+<td>Zano (@RonneTVR)</td>
+</tr>
+<tr>
+<td>George</td>
+<td>Mass Wallets (@masswallets)</td>
+</tr>
+<tr>
+<td>Joe</td>
+<td>Aztec Network (@jaosef), ZK Passport</td>
+</tr>
+<tr>
+<td>Crypto Walker</td>
+<td>@kryptowalk3r</td>
+</tr>
+<tr>
+<td>Jareen</td>
+<td>Privacy Cloak (@jerreenj), started coding at age 15</td>
+</tr>
+<tr>
+<td>Tim Arno</td>
+<td>@TimArnoX</td>
+</tr>
+<tr>
+<td>NoNonsense4x</td>
+<td>Trader / YouTuber (@This_Is_VP4X)</td>
+</tr>
+<tr>
+<td>defijangle</td>
+<td>Dropped off midway and returned, made no substantive remarks</td>
+</tr>
+<tr>
+<td>Django, Danielle</td>
+<td>Joined near the end, made no substantive remarks</td>
+</tr>
+</tbody>
+</table>
+<h2>Summary by Speaker</h2>
+<h3>Dash (Joel) — Privacy is "a lesson that has to be made up"; compliant privacy first, hardcore privacy later</h3>
+<ul>
+<li>The driver is simple: in crypto's early days everyone was just experimenting with the technology, and there was not much serious value onchain; now we are entering an early mass-adoption cycle, old narratives are dying, chains that cannot sustain their existence are shutting down, and privacy is surfacing. "People are not going to put their life savings on chain where it's public knowledge."</li>
+<li>Five-year outlook: privacy will become relatively common, and "privacy coins" as a separate category will disappear — it is just a must-have feature. In the short term, "compliant privacy" will prevail first, for example NEAR's confidential shards (where law enforcement can view specific account details), because companies want privacy but do not want to be accused of helping money launderers mix coins; but afterwards the Canton-style model will hit its ceiling, and more and more companies and individuals will demand "hardcore privacy that no one can break."</li>
+<li>Key quote: "I think that the concept of something like a privacy coin might be dead in the future because it's just one feature that's now going to be a must-have."</li>
+</ul>
+<h3>Theo (Fiber) — Stablecoins are moving entire lives onchain; wallets must be multichain + private</h3>
+<ul>
+<li>The direct reason the privacy topic is heating up is the rise of stablecoins: people are starting to receive salaries, sign contracts, and transfer money to friends onchain. Early users could accept low privacy because "their entire life was not onchain yet"; but to turn the whole world into onchain financial life, you cannot have everyone walking around with a public bank account. "nobody wants that."</li>
+<li>Onchain privacy is not "privacy for privacy's sake": the ZEC and Monero approach is of little use to newly arrived stablecoin users; what they need is a multichain wallet with privacy layered on top — which is exactly the direction Fiber is working on. Different regions will have different wallets, and Fiber is focused on Latin America.</li>
+<li>Skepticism about centralized privacy: Coinbase is already a semi-public onchain hybrid bank, and even it has only about 8 million traders per month, "clearly not what people want"; the cost of centralized privacy is handing over a large amount of KYC information, which itself creates a whole new set of problems. Fiber asks users only for an email, or even just a username — "the smaller the footprint left behind, the better."</li>
+</ul>
+<h3>Ruben (Firo) — The technology has finally matured; the privacy revival is a "chicken-and-egg" dynamic</h3>
+<ul>
+<li>When Zcash launched in 2016 it required a powerful computer and a single transaction took about 30 seconds; today the infrastructure is far more mature, and people are more willing to trust it. Crypto has gone from a "fun little hobby" to something with serious value flowing through it, and the demand for privacy has followed; rising coin prices have also helped.</li>
+<li>It is not unilaterally "users demanding it"; supply and demand are driving each other.</li>
+</ul>
+<h3>Ditto (Ditto Network) — The traditional finance reference frame: verifiable, but not necessarily fully public</h3>
+<ul>
+<li>The paradox of blockchain: everyone complains it is "too transparent," but in traditional finance, a bank verifying a transaction does not need to make your entire account history public. The onchain challenge is "to preserve public verifiability while limiting what strangers can learn about an individual."</li>
+<li>Institutions need both an audit trail and confidentiality at the same time. The solution is "minimal data exposure + building selective disclosure into protocols and wallets," and wallets need to make protective measures "as simple as things ordinary people use," rather than expert-only processes.</li>
+</ul>
+<h3>Mr. J (Sats Terminal) — "Privacy has already been fixed by Canton"; the institutional path is set</h3>
+<ul>
+<li>The clearest "we already have the answer" position of the session: the fixer of onchain privacy is Canton. DTCC has already chosen Canton for tokenization services, precisely because of privacy; U.S. Treasuries are being tokenized on Canton, HSBC, JPMorgan, and Japanese parties are clearing bonds on Canton, and South Korea and Hong Kong are also working on it. The institutional layer is already done, and what OnePump / OneSup are doing is bringing it to retail users.</li>
+<li>On traditional finance building its own chains: institutions will not build from scratch, because directly integrating existing infrastructure is easier; what they need is "need-to-know" privacy — deciding which parties get to know which parts of a transaction, and which do not.</li>
+<li>Blunt words on decentralization: "There is fundamentally no real decentralization… There is no decentralization on Hyperliquid, who cares about decentralization?" He argued there must be a trusted group of people to manage onchain affairs, able to roll back when problems arise; "who controls these decisions matters more than the degree of decentralization itself."</li>
+</ul>
+<h3>Mitchell DiRaimondo — Institutions want "the systems they are used to"; the transparency narrative has changed</h3>
+<ul>
+<li>To get institutions in, you have to replicate the systems they are used to; retelling the "security narrative" will not work. There are more and more institutional-grade products, and LPs care more about cash flow from real assets than about 100x returns.</li>
+<li>Pressed by the host on whether "transparency was just whitepaper talk in the beginning," he acknowledged: in 2017–2018 everyone was talking about the whitepaper technology itself; now they talk about products, and blockchain is just an additional layer on top. The mindset has changed.</li>
+</ul>
+<h3>Ronnie (Zano) — Security is the number-one driver; institutions will shift to "privacy-by-default chains"</h3>
+<ul>
+<li>He added a point no one before him had raised: the primary reason driving onchain privacy is user safety. "Wrench attacks" surged last year and this year, with about 90 cases already in France, "almost two per week"; in addition, there is surveillance by companies and governments profiting from user data.</li>
+<li>Responding to Soda Labs having just raised $3 million to "bring privacy to public chains": he argued the opposite will happen — institutions will shift to blockchains that are private by default, because public chains always leave traceable traces; but privacy chains must have an "optional transparency" feature, and Zano is working in that direction, planning to bring in third-party audits to serve institutions.</li>
+</ul>
+<h3>George (Mass Wallets) — Trust and privacy are not orthogonal; application-layer privacy is more resilient than chain privacy</h3>
+<ul>
+<li>"I don't think trust and privacy are opposed to each other." New blockchains use transparency to build trust, but technology now exists to verify information without sacrificing privacy.</li>
+<li>The example of the Mexican co-founder: some people can be kidnapped and forced to empty their accounts; "if the privacy problem is not solved, they will not move funds onchain." Remittance companies and corporate treasuries will be even bigger adoption drivers — corporate balances must never sit on a public chain, and clients will directly demand privacy.</li>
+<li>Decentralization is necessary for privacy: governments will sooner or later pressure the few major chains; bank secrecy in practice ceased to exist after the Bank Secrecy Act, "even Switzerland gave in." Therefore privacy at the application layer (the smart contract layer) is more interesting than chain privacy: there can be many privacy-bearing contracts, and a government cannot break them all at once.</li>
+<li>Five-year outlook: KYC will move toward standardized interfaces + many small KYC providers, tokenizing user identity so that identity can be reused across the whole ecosystem — reducing concentration risk while preserving interoperability. "Privacy will definitely come; there is no other way."</li>
+<li>On quantum and AI risks: if quantum wins, "we have bigger problems"; the real risks from AI are, first, that people voluntarily dump their information into models in exchange for performance, and second, that surveillance states can now assign a monitoring agent to every person — building a surveillance state 30 or 40 years ago was almost impossible, now it can be done at scale.</li>
+</ul>
+<h3>Joe (Aztec Network) — Privacy is a spectrum, not a switch; programmable privacy is the future</h3>
+<ul>
+<li>Starknet shadow accounts (released just this week): they hide only the wallet, not the transactions. "There is nothing technically new" — in essence it is funding a new account and severing its link to your identity, which Railgun, Aztec, Railgun-like pools, and Coinbase can all do on Ethereum; Starknet's advance is in user experience, integrating the flow into a single wallet. But it is still easily identified by behavioral patterns: "If you are a Hyperliquid whale trading at a fixed time every day, and you see 15 addresses all making large trades at 10 a.m., they are most likely the same person." Aztec's internal principle is "start by defaulting to full privacy, then peel back layers of public disclosure one by one"; shadow accounts are a small step in the opposite direction.</li>
+<li>Why decentralization matters: privacy that is not decentralized amounts to handing privacy to a middleman, and middlemen "turn around and sell your data." Internet encryption works precisely because it is decentralized strong cryptography.</li>
+<li>Two worlds of technical approaches: cryptographic privacy (ZK, FHE, multi-party computation) vs. middleman-style privacy (the traditional finance approach; Providium's and Tempo's "privacy zones" are in essence "privacy for the middleman"). If theoretically perfect technology takes another eight years, everyone will simply fall back to middleman solutions, "and then we have solved nothing."</li>
+<li>ZK Passport (reusable KYC): modern identity documents — new U.S. driver's licenses, all electronic passports, most European ID cards — all carry the issuing government's signature in their chips. ZK Passport reads the signature and uses a zero-knowledge proof that "the document is valid," without revealing the name, date of birth, or photo; even if the proof leaks, it only reveals the fact that "this person holds a valid passport." Done right, identity returns to users' own hands, and third-party verification agencies are no longer needed.</li>
+<li>Five-year outlook: privacy is not a binary of "private or not private," but a spectrum. The key shift is "programmable privacy": developers encode privacy according to their own use case — the privacy needs of a regulated securities exchange and of cross-border payments are completely different. The future is not privacy chains, but smart contracts with encryption features.</li>
+</ul>
+<h3>Crypto Walker — Users hold the keys; disclosure should be "as needed, and scoped"</h3>
+<ul>
+<li>Who decides what to disclose to whom? "The user should hold the keys, and the recipient should be limited in scope. An auditor sees what an auditor needs, a tax authority sees what a tax authority needs, and nothing more. No one gets the whole house just because they are powerful and knock politely."</li>
+<li>What is truly to be feared is "the person in charge of the master key": "Every master key in history has eventually been stolen, hacked, sold, or left on a laptop in a taxi or an airport." The point of cryptography is to design for "the day the trustee is no longer trustworthy."</li>
+</ul>
+<h3>Jareen (Privacy Cloak) — The market wants cross-chain privacy, not yet another privacy chain</h3>
+<ul>
+<li>Monero and Zcash survived years of regulatory pressure — what did the market misjudge? The answer: both new and old users want "cross-chain universality" — when swapping coins between Solana and Ethereum, they do not want everything to be public. But no protocol has yet achieved cross-chain privacy swaps, which is why he is building Privacy Cloak: chain-agnostic and fully self-custodial.</li>
+<li>Monero and Zcash, as standalone chains, face "suffocating" regulatory pressure, and lack Ethereum- and Solana-level liquidity and user numbers. Bringing privacy to existing mainstream chains, adding cross-chain functionality, and delivering it through enterprise-grade APIs is the path for the next generation of users to enter.</li>
+<li>A big judgment on industry concentration: traditional finance will leave only a very small number of chains, "possibly fewer than the top ten"; after Hyperliquid, newcomers entering crypto recognize only Hyperliquid as an exchange; 99% of projects raising $5–10 million to build a new Layer 1 are "completely useless." After the AI bubble bursts, even fewer chains will survive.</li>
+<li>On repeated KYC: doing KYC repeatedly adds no security at all, only friction for users; a unified identity (such as the Worldcoin type) could in theory prevent 90% of hacks, scams, and phishing. But reality must also be faced: even the top security teams get hacked by Lazarus — "nothing in this industry is safe, and it never will be."</li>
+<li>Quantum + AI: the industry has overcome every difficulty along the way, and cryptographers have a complete idea of the direction — "when the time comes, we will be quantum-resistant"; whether AI can defeat encryption, "no one can guess."</li>
+</ul>
+<h3>Tim Arno — There is no single best technology; combination is the answer; anonymity is not just a protocol issue</h3>
+<ul>
+<li>Which of ZK, FHE, and MPC can match mass adoption? "There is no best or worst." MPC suits multi-party scenarios; FHE is theoretically better but has not yet rolled out; for a company, betting on a single technology is unwise. Interesting systems will combine them, and the solutions for B2B and B2C are completely different.</li>
+<li>Anonymity is not just a matter of onchain protocols: you connect to café Wi-Fi, there are cameras everywhere — "wanting to disappear from the blockchain" also depends on how you use your computer and phone.</li>
+<li>Five-year outlook: KYC and KYB will remain; hopefully ZK will still be around, because institutions want to control everything; on security, agentic tools will become the line of defense preventing AI from cracking systems.</li>
+</ul>
+<h3>NoNonsense4x (investor perspective) — DeFi still has a three-to-five-year window</h3>
+<ul>
+<li>DeFi will always have a place, because not everyone can accept the regulation that comes with traditional finance. Traditional finance has just capitulated, acknowledging that the future is digital; but they also understand that without a privacy layer they can do nothing.</li>
+<li>This will take time: parties first need to agree on "which layer to use," then go through a growth period where "things do not always work 100% properly." The DeFi community probably still has a three-to-five-year window; after that the privacy layer will truly land, and DeFi will remain important.</li>
+<li>User experience requirements for mass adoption: the KYC process must be "almost exactly the same as it is now" — done in one go, fast, and familiar; "if you suddenly require everyone to become a crypto native, this will never work."</li>
+</ul>
+<h3>Host Justin Roberty's Interludes and Judgments</h3>
+<ul>
+<li>He set the tone at the opening: wallets and independent AI know too much, and privacy fixes were the theme of the session; there were 16 guests in total, but only 6 had been confirmed by the previous morning, and he learned the final list only 15 minutes before the start.</li>
+<li>AI is making scams terrifying: he recently received a phishing email impersonating Google, using hidden characters to fake the domain, "convincingly scary." AI is accelerating onchain analysis — when filing his own taxes he found that AI can piece together different addresses and different transactions and explain them clearly; attackers can use the same capability.</li>
+<li>Skepticism about traditional finance building its own private chains ran through the whole session: JPMorgan once tried the JPM Coin private chain, and "nobody wanted it"; bank-sponsored private chains "do not work," because they treat blockchain only as an interbank network, not as a global financial system.</li>
+<li>Closing: see you again at the same time every Thursday; and he reminded listeners to disconnect from networked devices when they have the chance and take a walk in the park.</li>
+</ul>
+<h2>Discussion Flow (by time)</h2>
+<ul>
+<li><strong>00:02–00:07 | Why now</strong>: Stablecoins have moved financial life onchain; the technology has matured; serious value is now flowing onchain. Dash, Theo, and Ruben set the tone.</li>
+<li><strong>00:07–00:14 | The paradox of transparency</strong>: Banks verifying transactions do not need to make full histories public; onchain systems must preserve both verifiability and privacy. Ditto and Mr. J discussed the institutional perspective.</li>
+<li><strong>00:14–00:20 | Transparency or trust</strong>: Mitchell discussed how institutions accept only "the systems they are used to"; Ronnie brought safety (wrench attacks) to the fore; George proposed that "trust and privacy are not orthogonal."</li>
+<li><strong>00:20–00:28 | Will traditional finance build its own chains</strong>: Theo and Joe used Coinbase and JPM Coin as counterexamples; Joe dissected Starknet shadow accounts.</li>
+<li><strong>00:28–00:36 | Who decides disclosure</strong>: Crypto Walker's "disclosure as needed" principle; Jareen discussed the cross-chain privacy gap and Privacy Cloak; Jareen predicted fewer than the top ten chains would remain.</li>
+<li><strong>00:36–00:48 | Technical approaches and the decentralization debate</strong>: Joe discussed Zcash being misjudged as a "criminal chain"; Tim discussed combining ZK/FHE/MPC; NoNonsense4x gave DeFi a three-to-five-year window; Mr. J and Joe clashed head-on over "does decentralization still matter."</li>
+<li><strong>00:48–00:52 | AI as an amplifier</strong>: The host discussed AI phishing; Jangle (defijangle) discussed AI accelerating onchain analysis and anxiety over asset seizure; Ronnie discussed institutions and privacy chains.</li>
+<li><strong>00:52–01:01 | Reusable KYC and soulbound tokens</strong>: Joe explained ZK Passport's chip-signature verification; George discussed KYC information resale and concentration risk; Jareen discussed unified identity and "nothing is safe."</li>
+<li><strong>01:01–01:13 | Five-year outlook, rapid-fire Q&amp;A</strong>: Tim, George, Dash, NoNonsense4x, Joe, Jareen, and George answered in turn; the consensus was that privacy will become a default feature, via "programmable privacy + standardized reusable identity," with disagreement over whether the path runs through compliant privacy or hardcore privacy.</li>
+</ul>
+<h2>Unresolved Questions and Disagreements</h2>
+<ul>
+<li><strong>Compliant privacy vs. hardcore privacy</strong>: In the short term, institutions need privacy that is auditable and capable of targeted disclosure; in the long term, Dash, Joe, and others believe demand will slide toward privacy no one can break. There was no consensus on the magnitude or timing of the swing between the two.</li>
+<li><strong>Is decentralization still a prerequisite</strong>: Joe and George argued yes (otherwise privacy is just swapping in another middleman); Mr. J argued no (Hyperliquid-style efficiency comes first; who controls decisions matters more).</li>
+<li><strong>Is traditional finance a partner or an acquirer</strong>: Mr. J argued Canton is already a done deal; Jareen argued traditional finance will leave fewer than ten chains, and most new chains are meaningless.</li>
+<li><strong>Will privacy be offset by AI</strong>: AI both accelerates onchain analysis and makes scams more convincing; Jangle argued "you can't seize what you can't see," while George argued the bigger risk lies in people voluntarily handing data to models.</li>
+</ul>
+<h2>Memorable Quotes</h2>
+<ul>
+<li>"People are not going to use a completely public open ledger for things to actually matter." — Dash</li>
+<li>"If we want to convert the entire world to use on chain as their primary financial life, we can't have everybody be fine with a public bank account because nobody wants that." — Theo (Fiber)</li>
+<li>"I don't think trust is orthogonal to privacy." — George (Mass Wallets)</li>
+<li>"The user should hold the keys and the recipient should possibly be scoped. An auditor sees what an auditor needs… No more." — Crypto Walker</li>
+<li>"You need to start being fully private and then kind of peel back layers of public disclosures versus the other way around." — Joe (Aztec)</li>
+<li>"If you don't decentralize privacy, you end up with these centralized middlemen providing privacy or promising that you're going to have privacy. And what they actually do is they turn around and sell your data." — Joe (Aztec)</li>
+<li>"There's no really decentralization… who cares about decentralization because on Hyperliquid, there's no decentralization." — Mr. J (Sats Terminal)</li>
+<li>"You can't seize what you can't see." — Jangle (defijangle)</li>
+<li>"Privacy is a spectrum." — Joe (Aztec)</li>
+<li>"If quantum wins, we have bigger problems." — George (Mass Wallets)</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full text of the notes for this session; the content is as stated live by the speakers and has not been verified.</footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：你的钱包知道得太多——谁来修复链上隐私？ · Yat's Talks",tw:"會議紀要：你的錢包知道得太多——誰來修復鏈上隱私？ · Yat's Talks",en:"Meeting Notes: Your Wallet Knows Too Much — Who Fixes Onchain Privacy? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

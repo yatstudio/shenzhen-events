@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>门外汉谈英伟达 — X Space 纪要</h1>
 <ul>
 <li><strong>时间</strong>：2026-11-13 17:56–19:19 CST，约 1 小时 23 分</li>
@@ -132,8 +139,246 @@
 <li>转写噪音说明：录音中“黄仁勋”常被识别为“华人勋”，“CUDA”被识别为“枯大”，“护城河”被识别为“互称和”，“范式转移”被识别为“范畅转移”，“大猩猩”被识别为“大星星”，已按上下文还原；嘉宾姓名“董珍”“裴财”为录音发音还原，X 账号对应关系以元信息为准。</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1QnYdaERmzOWoO">https://x.com/i/spaces/1QnYdaERmzOWoO</a> · 主持 E2M Research @E2mResearch · 嘉宾 董珍、裴财、奥德赛 @OdysseysEth · 2026-11-13 17:56–19:19（约 1 小时 23 分）· 总收听 80 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>門外漢談英偉達 — X Space 紀要</h1>
+<ul>
+<li><strong>時間</strong>：2026-11-13 17:56–19:19 CST，約 1 小時 23 分</li>
+<li><strong>主持</strong>：E2M Research（@E2mResearch）</li>
+<li><strong>嘉賓</strong>：董珍、裴財、奧德賽（OdysseysEth）；X 元資訊另列 pcfli、zhendong2020 為發言人</li>
+<li><strong>收聽</strong>：總計 80 人</li>
+<li><strong>原連結</strong>：https://x.com/i/spaces/1QnYdaERmzOWoO</li>
+<li><strong>逐字稿</strong>：雅加達轉寫，1,300 行，約 48,000 字，覆蓋 00:01:47–01:22:41；轉寫噪音較多，人名與術語按上下文還原，個別詞句可能有出入</li>
+</ul>
+<blockquote>
+<p>背景（已核實）：2026 年 11 月 12 日，英偉達公告黃仁勳即日起辭去總裁、首席執行官及董事會成員職務，CFO 科萊特·克雷斯出任臨時 CEO，董事會啟動永久 CEO 遴選。本場就是在這一消息落地次日開的。場內其他數字與判斷均為嘉賓現場即興發言，未經核實；嘉賓在開場已聲明，本場內容不構成任何投資建議，股票與加密市場波動都很大，可能損失全部本金。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>黃仁勳辭職次日，三位嘉賓用一整場辯論王川 2023 年看空英偉達到底錯沒錯：結論是英偉達過去三年的暴漲可以被解釋為超級週期裡的關係權力變現，但這恰恰說明它不是王川標準裡那種能躺著賺錢的大猩猩。</p>
+<h2>核心結論</h2>
+<ol>
+<li><strong>董珍的開場判斷</strong>：英偉達過去三年的成長性是真實的，但未必證明它是「大猩猩」。他說，從王川 2023 年寫文章看空算起，英偉達股價到高點漲了約 6 倍、按當時價格也漲了約 4 倍，營收同期也漲了約 6 倍，毛利率沒有從約 70% 滑落、反而升到約 75%（以上數字均為董珍現場說法）。成長兌現了，問題是這種成長來自壟斷，還是來自超級週期。</li>
+<li><strong>CUDA 護城河正在被 AI 本身削弱，這是董珍現場最在意的觀察</strong>。他說，Anthropic 在錄影和最新 S-1 文件裡把英偉達 GPU 與谷歌、亞馬遜、AMD 的算力並列，借助 AI 只花了一天就完成 AMD GPU 的部署（均為董珍轉述）。他的推論是：AI 能力進步正在降低跨平台部署的成本，CUDA 這道牆沒有消失，但深度可能在變淺。</li>
+<li><strong>裴財的框架：關係權力 vs 結構權力</strong>。他說，關係權力是「你不吃我的藥就活不下去，我能按著你的頭收錢」，比如記憶體廠商逼客戶簽長期鎖貨協議；結構權力是「你進了我的遊戲規則就自然付費」，比如蘋果生態。他認為英偉達的 CUDA 屬於結構權力的一部分，但對 OpenAI、xAI 這類高度依賴英偉達的客戶，它同時在大量使用關係權力——晶片緊缺時先買幾年貨才能保證以後的配貨。</li>
+<li><strong>裴財的倉位結論</strong>：黃仁勳是整張權力網絡最關鍵的節點，他在，英偉達的權力還能延伸；他離開，之前編織的結構、財務決策與激勵機制都會變，所以他現在不會買英偉達。他的區分是：如果只是出壞消息、壟斷性沒變，股價跌可能是機會；但如果消息直接撞在壟斷性基礎上，那就是權力本身在變。</li>
+<li><strong>奧德賽的質疑：這套解釋是不是事後找補</strong>。他說，王川的「大猩猩」判斷本來就是定性的——像一眼看出姚明很高、看不出胖子有多胖一樣主觀；如果先說英偉達不是大猩猩、股價漲了 6 倍又改口說「它只有三年的關係權力」，那等於用一個輔助假設把原判斷救回來。他還追問：2021 年英偉達已經漲了很多、PE 已到約 40 倍（奧德賽現場說法），為什麼那時不是週期終點、現在才是？</li>
+<li><strong>全場沒有達成共識的三個問題</strong>：王川到底是「錯過」還是「主動不碰」；超級週期裡的交易機會算不算一種可複製的能力；以及霍華德·馬克斯備忘錄裡的「風險補償夠不夠」到底怎麼量化——裴財直言，馬克斯那套話「不可能錯」，但也很難證偽。</li>
+</ol>
+<h2>一、開場：為什麼是「門外漢」</h2>
+<ul>
+<li>標題來自霍華德·馬克斯最近一篇備忘錄《門外漢談人工智慧》（董珍現場說法）。董珍說，自己不是半導體從業者、此前很少研究半導體、現在也不持有任何半導體股票，所以用門外漢視角聊。</li>
+<li>他在開場 24 小時內集中看到三類文章：馬克斯的備忘錄、王川 2023 年看空英偉達的文章被重新翻出來，以及圍繞黃仁勳辭職的討論。董珍說，王川當時以思科為案例，討論一家公司在技術變革浪潮裡可能經歷「繁榮但股價沒有好回報」的週期；2023 年時王川認為約 40 倍 PE 的英偉達可能高估、收入增長不可持續（以上均為董珍轉述王川的觀點）。</li>
+<li>主持人在開場重申：本場從非技術角度聊英偉達，核心問題是「黃仁勳離開之後，英偉達還是不是一個值得下注的好標的」；上半年同一系列曾聊過「馬斯克個人對特斯拉的影響」，本場是同一母題的續篇。</li>
+</ul>
+<h2>二、王川錯了，還是沒錯？董珍的立場在場內發生了變化</h2>
+<ul>
+<li>董珍一開始傾向於：王川確實錯過了，英偉達符合「範式轉移裡最好的公司」這個簡單邏輯，AI 是明顯的範式轉移，裡面最好的就是英偉達。</li>
+<li>講到中段他改口：現在他更傾向於認為，英偉達的硬體屬性非常明顯，底子很硬；王川經歷過半導體以十年計的熊市，見過網際網路泡沫公司花 20 年才回到高點，所以對半導體硬體的漫長熊市有「刻骨銘心」的記憶，這讓他極度克制（董珍對王川動機的推測）。</li>
+<li>他的折中方案是把英偉達重新歸類為超級週期交易：他說，如果在範式轉移的行業裡識別出權力地位最強、最會使用關係權力的公司，伴隨這一輪轉移可以獲得巨大價值；事後看，一個高超的交易者如果在 2022–2023 年買入英偉達、拿到記憶體與儲存股拐頭時賣出，中間可以實現約 6 倍收益（董珍現場說法）。他認為這可能是一種可以抽象出來的交易策略，而不是長期持有大猩猩的策略。</li>
+</ul>
+<h2>三、裴財的權力框架：英偉達有什麼權力，又在消耗還是沉澱</h2>
+<ul>
+<li><strong>關係權力與結構權力</strong>：裴財說，兩者不是完全互斥的分類，但很好用。關係權力是供應受限、需求暴漲時，供方壓著買方簽約；結構權力是大家進了你的網絡就自然按規則付費，蘋果當年更接近後者。</li>
+<li><strong>消耗權力 vs 沉澱權力</strong>：他說，消耗權力是給老客戶漲價 50%，當下收入大增、兩年後客戶不再續約；沉澱權力是亞馬遜當年把幾年自由現金流花在物流中心和資料中心上，十年後瘋狂賺錢。用這組概念看英偉達，他認為 CUDA 是結構權力，但英偉達同時在用關係權力變現緊缺。</li>
+<li><strong>對 Anthropic 的觀察</strong>：裴財說，Anthropic 這類公司正在把英偉達「架空」——可以在 TPU、亞馬遜資料中心、GPU 上同時運行；但英偉達對 OpenAI 和 xAI 的權力更大，因為這兩家基本完全依賴英偉達。他的結論是英偉達的權力是結構加關係的混合體，而且占比會隨歷史與經營狀況動態變化。</li>
+<li><strong>特斯拉類比</strong>：裴財把特斯拉拆成兩家公司——成熟業務（Model 3 / Model Y / FSD）與初創業務（機器人、晶片工廠等衍生業務），拍腦袋估計兩者估值比約 1:1 到 1:3（初創部分占大頭）。他的判斷是：馬斯克出事對成熟業務影響不大、對初創業務影響非常大；如果馬斯克被辭職或出事，特斯拉整體股價可能跌約 50%（以上均為裴財現場拍腦袋估算，非模型結論）。</li>
+<li><strong>倉位紀律</strong>：裴財說，他現在持有特斯拉的倉位約 20%，以後最多放到約 30%；當初買入時倉位不到 3%，是因為漲太多才被動變大。他還說，事先知道可能虧 50% 並控制倉位，與不知道後果就下注，是兩回事；「世界上就是讓你在危險和危險之間選擇」。</li>
+</ul>
+<h2>四、奧德賽的追問：主觀判斷憑什麼比別人好</h2>
+<ul>
+<li><strong>大猩猩認定的主觀性</strong>：奧德賽說，王川自己講過，壟斷是定性描述，一眼能看出來才算；按這個標準，王川看了很多眼都覺得英偉達不像大猩猩。他的問題是：既然都是主觀，為什麼王川的主觀就比別人的主觀好？他自己的暫定答案是：經驗與直覺的總和——看過很多偽大猩猩的人，識別真大猩猩的眼光可能更好一點。</li>
+<li><strong>三個巴菲特問題</strong>：奧德賽連續發問——巴菲特有沒有錯過比特幣、亞馬遜、谷歌？他說，你可以說巴菲特沒錯過、這些不在他的現金流折現框架內；但也可以反過來問：如果一個模型解釋不了比特幣這樣的東西，是不是該調整模型本身？他認為，越往後越靠近巴菲特能力圈的問題，越難劃邊界。</li>
+<li><strong>「後退」的指控</strong>：奧德賽說，董珍與裴財的解釋有「退而求其次」的味道——先說結構權力更好、更持久，然後又說沒有結構權力、有關係權力也值得投；既然沒有絕對真理、只有更好的解釋，那兩個解釋差不多的時候，憑什麼說現在這個更好？董珍回應：結構權力與關係權力的占比本身就在動態變化，英偉達到底是純結構、還是結構加關係，並沒有那麼清楚。</li>
+<li><strong>單點風險的追問</strong>：奧德賽問裴財：如果馬斯克明天出事、特斯拉跌 50% 甚至 60%，你是平倉還是止損？那可是本金永久性損失 50%–60%，為什麼不乾脆不冒這個風險？裴財回應：他拆分後的測算是成熟業務約占 1 份、初創業務約占 3 份，馬斯克出事後初創部分可能只剩三分之一，整體股價跌約 50% 是他事先接受過的情景；至於跌到 49% 走不走、49.1% 走不走，是「禿頂問題」，沒有精確答案。</li>
+</ul>
+<h2>五、霍華德·馬克斯與不確定性：全場唯一被引用的外部框架</h2>
+<ul>
+<li>董珍轉述馬克斯備忘錄的結尾：巴菲特說過，如果等到事情明朗、沒有風險再出手，要付出很高很高的價格；反過來，風險與不確定性本身正是長期價值投資者的朋友。董珍說，馬克斯的結論是：永遠要在市場左右搖擺的過程中做決策，關鍵是按自己的能力圈判斷——好機會是否為其中風險提供了足夠的風險補償、最差情況會虧多少、最好情況機率與回報是多少、當前價格裡已經體現了多少樂觀或悲觀預期。</li>
+<li>裴財的保留意見：馬克斯講的是「四平八穩、聽起來很有道理、也很難說他錯」的話，但「風險補償夠不夠」怎麼定義？賺了就說當時補償夠了、虧了就說不夠，那這套話就變成了事後解釋。</li>
+<li>董珍的回應：這正是他最近的核心困惑——王川說「半導體硬體我不碰，寧可不賺這個錢，我已經挺有錢了、風險厭惡了，寧可錯過一次範式轉移也不想碰到一個泡沫」（董珍轉述王川的原話大意）。但對董珍自己這樣還想賺錢的人來說，問題是：有沒有一個理論能把這波 6 倍行情包進來、讓自己下次不再錯過？他承認這可能只是在為錯過的收益找解釋，奧德賽則提醒：從 1 萬漲到 1 億只需要 89 次漲停，一年有 250 多個交易日，難道要找一個理論把每一個漲停都包進來嗎？</li>
+</ul>
+<h2>六、尾聲：多因素同時指向「現在不是投硬體的好時候」</h2>
+<ul>
+<li>董珍在收尾時弱化了「老黃辭職是唯一原因」的說法。他說，黃仁勳辭職是一個因素，但不是唯一的直接因素；同時指向同一方向的還有週期解釋、硬體股特性、估值與利潤的關係。他的原話大意是：現在半導體硬體可能不能提供像馬克斯所說的、足以覆蓋風險的回報，成功機率不是那麼好，成功了回報也沒有那麼高，失敗了損失可能更大。</li>
+<li>他提到的具體信號（均為嘉賓現場說法）：英偉達估值已從約 40 倍殺到約 20 倍，接下來要看會不會「殺利潤」——股價反應很快，營收與利潤數據是滯後的；Anthropic 上市後披露的算力採購分布很平均，不再只依賴英偉達；曾明（音）等人的週期框架認為第一階段已經結束，第二階段要開始冒雛形，第一階段投賣鏟子的硬體公司比較好，第二階段可能不再是。</li>
+<li>董珍最後把問題翻轉為做業務 vs 做投資：他說，在超級週期出現時做業務可能比做投資更舒服，不用承擔投資風險，跟著行業就能賺錢；群裡跟王川交流的群友可能就是在這波裡做業務賺了不少錢（董珍現場說法）。</li>
+<li>結束時主持人確認無人補充，約 19:19 散場。原定發言的南南（音）未能上線。</li>
+</ul>
+<h2>分歧一覽</h2>
+<table>
+<thead>
+<tr>
+<th>議題</th>
+<th>董珍</th>
+<th>裴財</th>
+<th>奧德賽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>王川看空英偉達</td>
+<td>一開始認為錯過了，後改為「可以理解，硬體屬性太強」</td>
+<td>認為王川從未識別出英偉達是壟斷，不存在後悔</td>
+<td>認為「錯過還是主動不碰」要分清，模型本身可能需要調整</td>
+</tr>
+<tr>
+<td>英偉達是不是大猩猩</td>
+<td>成長性真實，但大猩猩結構沒有那麼強</td>
+<td>CUDA 有結構權力，但黃仁勳是關鍵節點，離開則權力網絡會變</td>
+<td>大猩猩認定本來就是主觀的，事後加「三年關係權力」是輔助假設</td>
+</tr>
+<tr>
+<td>現在能不能買</td>
+<td>未明確表態買或不買，傾向於按超級週期做交易</td>
+<td>明確現在不會買</td>
+<td>未表態，只追問對方的倉位與止損邏輯</td>
+</tr>
+<tr>
+<td>特斯拉與馬斯克</td>
+<td>未深入</td>
+<td>成熟業務可支撐估值漲 10 倍（裴財現場說法），初創業務看馬斯克</td>
+<td>創始人出事當天的跌幅與應對，是持有邏輯必須回答的問題</td>
+</tr>
+</tbody>
+</table>
+<h2>未核實與需提醒</h2>
+<ul>
+<li>場內關於黃仁勳辭職原因的各種說法（包括婚外情與董事會調查等傳聞）均為嘉賓轉述或場外報導，英偉達公告本身沒有說明離任原因，本紀要不轉述具體傳聞細節。</li>
+<li>「股價跌回 50 美元也不值得買」「特斯拉拆分後跌 50%」「英偉達 6 倍收益」等均為嘉賓現場即興估算或拍腦袋說法，不是預測，也不是投資建議。</li>
+<li>「Anthropic 一天部署 AMD GPU」「Anthropic S-1 算力採購分布」等均為董珍、裴財的轉述，未逐項核對原始文件。</li>
+<li>轉寫噪音說明：錄音中「黃仁勳」常被識別為「華人勳」，「CUDA」被識別為「枯大」，「護城河」被識別為「互稱和」，「範式轉移」被識別為「範暢轉移」，「大猩猩」被識別為「大星星」，已按上下文還原；嘉賓姓名「董珍」「裴財」為錄音發音還原，X 帳號對應關係以元資訊為準。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Outsiders on Nvidia — X Space Notes</h1>
+<ul>
+<li><strong>Time</strong>: 2026-11-13 17:56–19:19 CST, about 1 hour 23 minutes</li>
+<li><strong>Host</strong>: E2M Research (@E2mResearch)</li>
+<li><strong>Guests</strong>: Dong Zhen, Pei Cai, Odysseys (OdysseysEth); X metadata also lists pcfli and zhendong2020 as speakers</li>
+<li><strong>Listeners</strong>: 80 in total</li>
+<li><strong>Original link</strong>: https://x.com/i/spaces/1QnYdaERmzOWoO</li>
+<li><strong>Transcript</strong>: Transcribed in Jakarta, 1,300 lines, about 48,000 characters, covering 00:01:47–01:22:41; the transcription contains considerable noise, and names and terms have been restored from context, so individual words and phrases may differ</li>
+</ul>
+<blockquote>
+<p>Background (verified): On November 12, 2026, Nvidia announced that Jensen Huang had resigned, effective immediately, as president, chief executive officer and board member, that CFO Colette Kress would serve as interim CEO, and that the board had begun a search for a permanent CEO. This session was held the day after that news landed. All other figures and judgments in the session were impromptu remarks by the guests on the spot and have not been verified; the guests stated at the outset that nothing in this session constitutes investment advice, that both stock and crypto markets are highly volatile, and that it is possible to lose all of one's principal.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>The day after Jensen Huang's resignation, the three guests spent an entire session debating whether Wang Chuan was right or wrong to be bearish on Nvidia in 2023: the conclusion was that Nvidia's surge over the past three years can be explained as the monetization of relational power within a supercycle, but that this is precisely what shows it is not the kind of gorilla, in Wang Chuan's standard, that lets you make money lying down.</p>
+<h2>Core conclusions</h2>
+<ol>
+<li><strong>Dong Zhen's opening judgment</strong>: Nvidia's growth over the past three years is real, but it does not necessarily prove that it is a "gorilla." He said that from when Wang Chuan wrote his bearish article in 2023, Nvidia's share price rose about 6 times to its high and about 4 times at the price at the time, revenue rose about 6 times over the same period, and gross margin did not slip from about 70% but instead rose to about 75% (all figures above are as stated by Dong Zhen on the spot). The growth was delivered; the question is whether that growth came from monopoly or from a supercycle.</li>
+<li><strong>The CUDA moat is being weakened by AI itself, the observation Dong Zhen cared about most on the spot</strong>. He said Anthropic, in a video and in its latest S-1 filing, listed Nvidia GPUs alongside compute from Google, Amazon and AMD, and, with the help of AI, completed a deployment on AMD GPUs in just one day (all as relayed by Dong Zhen). His inference is that advances in AI capability are lowering the cost of cross-platform deployment; the CUDA wall has not disappeared, but its depth may be getting shallower.</li>
+<li><strong>Pei Cai's framework: relational power vs structural power</strong>. He said relational power is "you can't live without taking my medicine, and I can hold your head down and charge you," as when memory makers force customers to sign long-term supply-locking agreements; structural power is "once you enter my rules of the game, you pay naturally," as in Apple's ecosystem. He argued that Nvidia's CUDA is part of structural power, but that for customers highly dependent on Nvidia, such as OpenAI and xAI, it is also using relational power extensively — when chips are in short supply, you have to buy several years' worth first to secure future allocations.</li>
+<li><strong>Pei Cai's position conclusion</strong>: Jensen Huang is the most critical node in the entire power network; while he is there, Nvidia's power can still extend; if he leaves, the structures, financial decisions and incentive mechanisms woven before will all change, so he would not buy Nvidia now. His distinction is: if it is just bad news and the monopoly is unchanged, a falling share price might be an opportunity; but if the news strikes directly at the foundation of the monopoly, then the power itself is changing.</li>
+<li><strong>Odysseys' challenge: is this explanation just retrospective patching?</strong> He said Wang Chuan's "gorilla" judgment was qualitative to begin with — as subjective as seeing at a glance that Yao Ming is tall but not being able to tell how fat a fat person is; if you first say Nvidia is not a gorilla, and then, after the share price rises 6 times, revise it to "it only has three years of relational power," that is rescuing the original judgment with an auxiliary hypothesis. He also pressed: by 2021 Nvidia had already risen a lot and its PE had reached about 40 times (as stated by Odysseys on the spot), so why was that not the end of the cycle then, and why is it now?</li>
+<li><strong>Three questions on which the session reached no consensus</strong>: whether Wang Chuan "missed it" or "actively chose not to touch it"; whether trading opportunities in a supercycle count as a replicable skill; and how exactly to quantify whether "risk compensation is enough" in Howard Marks's memos — Pei Cai said bluntly that Marks's kind of talk "cannot be wrong," but is also hard to falsify.</li>
+</ol>
+<h2>1. Opening: why "outsiders"</h2>
+<ul>
+<li>The title comes from a recent Howard Marks memo, "Outsiders on Artificial Intelligence" (as stated by Dong Zhen on the spot). Dong Zhen said he is not a semiconductor practitioner, had rarely studied semiconductors before, and currently holds no semiconductor stocks, so he would discuss it from an outsider's perspective.</li>
+<li>In the 24 hours before the opening, he had concentrated on three kinds of articles: Marks's memo, Wang Chuan's 2023 bearish article on Nvidia being dug up again, and discussions around Jensen Huang's resignation. Dong Zhen said Wang Chuan had used Cisco as a case study at the time to discuss how a company in a wave of technological change might go through a cycle of "prospering but with no good return in its share price"; in 2023 Wang Chuan thought Nvidia, at about 40 times PE, might be overvalued and that its revenue growth was unsustainable (all above are Dong Zhen relaying Wang Chuan's views).</li>
+<li>The host reiterated at the opening: this session would discuss Nvidia from a non-technical angle, and the core question was "after Jensen Huang leaves, is Nvidia still a good target worth betting on"; in the first half of the year, the same series had discussed "Musk's personal influence on Tesla," and this session was a continuation of the same theme.</li>
+</ul>
+<h2>2. Was Wang Chuan wrong or not? Dong Zhen's stance shifted during the session</h2>
+<ul>
+<li>Dong Zhen initially leaned toward: Wang Chuan did miss it; Nvidia fits the simple logic of "the best company in a paradigm shift," AI is an obvious paradigm shift, and the best in it is Nvidia.</li>
+<li>Midway through, he changed his view: he now leaned more toward thinking Nvidia's hardware character is very pronounced and its foundation is very hard; Wang Chuan had lived through a semiconductor bear market measured in decades and had seen internet bubble companies take 20 years to return to their highs, so he has a "searing" memory of the long bear market in semiconductor hardware, which made him extremely restrained (Dong Zhen's speculation about Wang Chuan's motives).</li>
+<li>His compromise was to reclassify Nvidia as a supercycle trade: he said that if, in an industry undergoing a paradigm shift, you identify the company with the strongest power position and the greatest skill in using relational power, you can gain enormous value along with that shift; in hindsight, a skilled trader who bought Nvidia in 2022–2023 and sold when memory and storage stocks turned could have made about 6 times in between (as stated by Dong Zhen on the spot). He thought this might be a trading strategy that can be abstracted, rather than a strategy of holding a gorilla for the long term.</li>
+</ul>
+<h2>3. Pei Cai's power framework: what power Nvidia has, and whether it is consuming or accumulating it</h2>
+<ul>
+<li><strong>Relational power and structural power</strong>: Pei Cai said the two are not completely mutually exclusive categories, but they are very useful. Relational power is when supply is constrained and demand surges, and the supplier presses the buyer to sign; structural power is when everyone has entered your network and pays according to the rules naturally, as Apple was closer to in its day.</li>
+<li><strong>Consuming power vs accumulating power</strong>: He said consuming power is raising prices 50% for old customers, with a big jump in revenue now and customers not renewing in two years; accumulating power is Amazon spending several years of free cash flow on logistics centers and data centers back then, and making money wildly ten years later. Looking at Nvidia through this lens, he argued CUDA is structural power, but Nvidia is also monetizing scarcity with relational power at the same time.</li>
+<li><strong>Observations on Anthropic</strong>: Pei Cai said companies like Anthropic are "hollowing out" Nvidia — they can run simultaneously on TPUs, Amazon data centers and GPUs; but Nvidia's power over OpenAI and xAI is greater, because those two are basically completely dependent on Nvidia. His conclusion was that Nvidia's power is a mix of structural and relational, and the proportions change dynamically with history and operating conditions.</li>
+<li><strong>The Tesla analogy</strong>: Pei Cai split Tesla into two companies — the mature business (Model 3 / Model Y / FSD) and the startup business (robots, chip factories and other derivative businesses), estimating off the top of his head a valuation ratio of about 1:1 to 1:3 between them (with the startup part the larger share). His judgment was: if something happens to Musk, it would not much affect the mature business but would greatly affect the startup business; if Musk were dismissed or something happened to him, Tesla's overall share price might fall about 50% (all above are Pei Cai's on-the-spot, off-the-top-of-his-head estimates, not model conclusions).</li>
+<li><strong>Position discipline</strong>: Pei Cai said his current Tesla position is about 20%, and at most he would take it to about 30% in the future; when he first bought, the position was under 3%, and it only grew passively because the price rose so much. He also said knowing in advance that you might lose 50% and controlling your position is a different matter from betting without knowing the consequences; "in this world you are just made to choose between danger and danger."</li>
+</ul>
+<h2>4. Odysseys' pressing questions: why should a subjective judgment be better than anyone else's</h2>
+<ul>
+<li><strong>The subjectivity of identifying a gorilla</strong>: Odysseys said Wang Chuan himself had said monopoly is a qualitative description and only counts if you can see it at a glance; by that standard, Wang Chuan looked many times and did not think Nvidia looked like a gorilla. His question was: since it is all subjective, why should Wang Chuan's subjectivity be better than anyone else's? His own tentative answer was: the sum of experience and intuition — someone who has seen many fake gorillas may have a somewhat better eye for spotting a real one.</li>
+<li><strong>Three Buffett questions</strong>: Odysseys asked in succession — did Buffett miss Bitcoin, Amazon, Google? He said you could say Buffett did not miss them, that they were not within his discounted cash flow framework; but you could also ask the reverse: if a model cannot explain something like Bitcoin, should the model itself be adjusted? He thought the further you go toward questions near the edge of Buffett's circle of competence, the harder it is to draw the boundary.</li>
+<li><strong>The charge of "backing down"</strong>: Odysseys said Dong Zhen and Pei Cai's explanations had a flavor of "settling for second best" — first saying structural power is better and more durable, then saying that even without structural power, having relational power is also worth investing in; since there is no absolute truth, only better explanations, when two explanations are about equally good, why say the current one is better? Dong Zhen responded: the proportions of structural and relational power themselves change dynamically, and whether Nvidia is purely structural or structural plus relational is not that clear.</li>
+<li><strong>Pressing on single-point risk</strong>: Odysseys asked Pei Cai: if something happens to Musk tomorrow and Tesla falls 50% or even 60%, would you close the position or stop out? That would be a permanent loss of 50%–60% of principal — why not simply not take that risk? Pei Cai responded: in his split calculation, the mature business accounts for about 1 part and the startup business about 3 parts; if something happened to Musk, the startup part might be left with only a third, and an overall share price fall of about 50% was a scenario he had accepted in advance; as for whether to leave at 49% down or at 49.1%, that is a "baldness problem," with no precise answer.</li>
+</ul>
+<h2>5. Howard Marks and uncertainty: the only external framework cited in the whole session</h2>
+<ul>
+<li>Dong Zhen relayed the end of Marks's memo: Buffett has said that if you wait until things are clear and there is no risk before acting, you have to pay a very, very high price; conversely, risk and uncertainty themselves are precisely the friends of the long-term value investor. Dong Zhen said Marks's conclusion is: you always have to make decisions while the market swings back and forth, and the key is to judge within your own circle of competence — whether a good opportunity provides enough risk compensation for the risks in it, how much you would lose in the worst case, what the probability and return are in the best case, and how much optimism or pessimism is already reflected in the current price.</li>
+<li>Pei Cai's reservation: what Marks says is "steady, sounds very reasonable, and hard to say he is wrong," but how do you define whether "risk compensation is enough"? If you make money you say the compensation was enough at the time, and if you lose you say it was not, then that talk becomes a retrospective explanation.</li>
+<li>Dong Zhen's response: this is precisely his core confusion lately — Wang Chuan said "I don't touch semiconductor hardware; I'd rather not make this money; I'm already quite wealthy and risk-averse; I'd rather miss a paradigm shift than run into a bubble" (Dong Zhen relaying the gist of Wang Chuan's original words). But for someone like Dong Zhen himself, who still wants to make money, the question is: is there a theory that can encompass this 6-times move and keep me from missing it next time? He admitted this might just be looking for an explanation for missed gains, while Odysseys reminded him: going from 10,000 to 100 million takes only 89 limit-up moves, and there are more than 250 trading days in a year — are you going to find a theory that encompasses every single limit-up?</li>
+</ul>
+<h2>6. Closing: multiple factors point at once to "now is not a good time to invest in hardware"</h2>
+<ul>
+<li>At the close, Dong Zhen softened the claim that "Jensen Huang's resignation is the sole reason." He said Jensen Huang's resignation is one factor, but not the only direct factor; also pointing in the same direction are the cycle explanation, the character of hardware stocks, and the relationship between valuation and profits. The gist of his original words was: semiconductor hardware now may not be able to provide returns sufficient, as Marks put it, to cover the risk; the probability of success is not that good, the return if successful is not that high, and the loss if it fails may be greater.</li>
+<li>The specific signals he mentioned (all as stated by guests on the spot): Nvidia's valuation has been cut from about 40 times to about 20 times, and next we need to see whether it will "kill profits" — the share price reacts quickly, while revenue and profit data lag; after listing, Anthropic disclosed a very even distribution of compute purchases, no longer relying only on Nvidia; the cycle framework of people such as Zeng Ming (phonetic) holds that the first phase has ended and the second phase is beginning to take embryonic shape — in the first phase it was better to invest in the hardware companies selling shovels, in the second phase it may no longer be so.</li>
+<li>Dong Zhen finally flipped the question to doing business vs investing: he said that when a supercycle appears, doing business may be more comfortable than investing, since you do not bear investment risk and can make money by following the industry; group members who interact with Wang Chuan in the group may have made quite a lot of money doing business in this wave (as stated by Dong Zhen on the spot).</li>
+<li>At the end, the host confirmed no one had anything to add, and the session broke up at about 19:19. Nannan (phonetic), who was scheduled to speak, did not come online.</li>
+</ul>
+<h2>Overview of disagreements</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Dong Zhen</th>
+<th>Pei Cai</th>
+<th>Odysseys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wang Chuan being bearish on Nvidia</td>
+<td>Initially thought he missed it, later changed to "understandable, the hardware character is too strong"</td>
+<td>Argued Wang Chuan never identified Nvidia as a monopoly, so there is no regret</td>
+<td>Argued "missing it vs actively not touching it" must be distinguished, and the model itself may need adjustment</td>
+</tr>
+<tr>
+<td>Is Nvidia a gorilla</td>
+<td>The growth is real, but the gorilla structure is not that strong</td>
+<td>CUDA has structural power, but Jensen Huang is the key node, and if he leaves the power network will change</td>
+<td>Identifying a gorilla is subjective to begin with, and adding "three years of relational power" after the fact is an auxiliary hypothesis</td>
+</tr>
+<tr>
+<td>Can you buy it now</td>
+<td>Did not clearly state buy or not buy, leaned toward trading it as a supercycle</td>
+<td>Clearly would not buy now</td>
+<td>Did not state a view, only pressed the others on their position and stop-loss logic</td>
+</tr>
+<tr>
+<td>Tesla and Musk</td>
+<td>Did not go into depth</td>
+<td>The mature business can support a 10-times valuation rise (as stated by Pei Cai on the spot), the startup business depends on Musk</td>
+<td>The fall on the day something happens to the founder, and how to respond, is a question the holding logic must answer</td>
+</tr>
+</tbody>
+</table>
+<h2>Unverified and to note</h2>
+<ul>
+<li>The various claims in the session about the reasons for Jensen Huang's resignation (including rumors of an extramarital affair and a board investigation) are all guests relaying or off-session reports; Nvidia's announcement itself did not explain the reason for his departure, and these notes do not relay the specific details of the rumors.</li>
+<li>"Not worth buying even if the share price falls back to $50," "Tesla falling 50% after the split," "Nvidia's 6-times return" and the like are all guests' impromptu on-the-spot estimates or off-the-top-of-the-head remarks, not predictions and not investment advice.</li>
+<li>"Anthropic deploying AMD GPUs in one day," "the distribution of compute purchases in Anthropic's S-1" and the like are all as relayed by Dong Zhen and Pei Cai, and have not been checked item by item against the original documents.</li>
+<li>Note on transcription noise: in the recording, "Jensen Huang" was often recognized as "Huarenxun," "CUDA" as "kuda," "moat" as "huchenghe," "paradigm shift" as "fanchang transfer," and "gorilla" as "big star," and all have been restored from context; the guest names "Dong Zhen" and "Pei Cai" are restored from the pronunciation in the recording, and their correspondence to X accounts is subject to the metadata.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1QnYdaERmzOWoO">https://x.com/i/spaces/1QnYdaERmzOWoO</a> · 主持 E2M Research @E2mResearch · 嘉宾 董珍、裴财、奥德赛 @OdysseysEth · 2026-11-13 17:56–19:19（约 1 小时 23 分）· 总收听 80 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1QnYdaERmzOWoO">https://x.com/i/spaces/1QnYdaERmzOWoO</a> · 主持 E2M Research @E2mResearch · 嘉賓 董珍、裴財、奧德賽 @OdysseysEth · 2026-11-13 17:56–19:19（約 1 小時 23 分）· 總收聽 80 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1QnYdaERmzOWoO">https://x.com/i/spaces/1QnYdaERmzOWoO</a> · Host E2M Research @E2mResearch · Guests Dong Zhen, Pei Cai, Odysseys @OdysseysEth · 2026-11-13 17:56–19:19 (about 1 hour 23 minutes) · 80 listeners in total<br>This page is the full text of notes compiled by human editing after machine transcription; the content is all guests' impromptu remarks and self-accounts during the live broadcast, has not been verified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"门外汉谈英伟达 — X Space 纪要 · Yat's Talks",tw:"門外漢談英偉達 — X Space 紀要 · Yat's Talks",en:"Outsiders on Nvidia — X Space Notes · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

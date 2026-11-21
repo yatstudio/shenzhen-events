@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：加密货币行业安全对话</h1>
 <p><strong>主持</strong>：Phyrex @PhyrexNi ｜ <strong>嘉宾</strong>：谢家印 @xiejiayinBitget（Bitget）
 <strong>时间</strong>：2026-11-11 18:55–19:48 CST ｜ <strong>时长</strong>：53 分 08 秒 ｜ <strong>总收听</strong>：323 人
@@ -108,8 +115,198 @@
 <li>时间表述说明：文中「今年」「9 月底」「10 月初」「国庆」均指 2026 年；「过去一年多」指约 2025 年中至 2026 年 11 月。</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1BlLyALqJrgylv">https://x.com/i/spaces/1BlLyALqJrgylv</a> · 主持 Phyrex @PhyrexNi · 嘉宾 谢家印 @xiejiayinBitget（Bitget）· 2026-11-11 18:55–19:48（53 分 08 秒）· 总收听 323 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：加密貨幣行業安全對話</h1>
+<p><strong>主持</strong>：Phyrex @PhyrexNi ｜ <strong>嘉賓</strong>：謝家印 @xiejiayinBitget（Bitget）
+<strong>時間</strong>：2026-11-11 18:55–19:48 CST ｜ <strong>時長</strong>：53 分 08 秒 ｜ <strong>總收聽</strong>：323 人
+<strong>連結</strong>：https://x.com/i/spaces/1BlLyALqJrgylv</p>
+<h2>一句話</h2>
+<p>交易所連環被盜之後，使用者不再只問「哪家交易所最大」，而是問「我的資產放哪才安全」；Bitget 的答案是把託管和交易拆開——資產放銀行與專業託管機構，交易留在 Bitget，但這套叫 OCN 的系統還在開發測試階段，轉帳清算等關鍵細節還沒想透。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>賠付是底線，不是功勞</strong>。謝家印：被盜後賠付使用者是交易所的職業道德與底線，不能因為賠了就值得被誇。</li>
+<li><strong>痛點是資產集中帶來的單點風險</strong>。使用者把託管、安全、撮合全交給一家交易所，平台一旦失守，代價是整體性的；威脅還在動態升級，朝鮮國家級駭客團隊持續研究漏洞。</li>
+<li><strong>Bitget 的新打法：OCN 開放託管網路</strong>。口號是「資產在銀行，交易在 Bitget」：真實資產託管在銀行或專業託管機構，透過資產映射在 Bitget 交易，駭客即便得手也只能拿到無法兌現的映射憑證。</li>
+<li><strong>使用者行為已經在遷移</strong>。普通使用者開始把資金分散到三四家交易所，不再只看規模和深度；部分人把 BTC 換成 IBIT、ETH 換成 ETHA；「沒被盜只是倖存者偏差」成為共識。</li>
+<li><strong>「大所」不再等於安全</strong>。謝家印的新標準：規模、賠付能力都不再是安全標尺，Bybit、幣安、Bitget 都很大、也都出過事；要看的是平台能否改變資產單一集中的結構。</li>
+<li><strong>OCN 還很早期</strong>。2026 年 10 月初 Bitget 出事後才決定做，國慶後開始布局，內部測試約兩週，只對機構客戶開放；轉帳清算、授信與風控機制都還在摸索，謝家印現場坦承「摸著石頭過河」。</li>
+</ol>
+<h2>詳細內容</h2>
+<h3>1. 背景：過去一年多，交易所被盜成了常態</h3>
+<p>Phyrex 開場列出背景：過去一年多裡交易所被盜事件很多，中文圈熟知的有 Bybit、Bitget、幣安三起，此外還有 Polymarket 和幾家西方交易所（主持人說法，未逐一核實）。三起大額事件中，交易所基本都賠付了使用者，使用者資產沒有損失；但小交易所被盜後往往撐不下去、最終關門。他還提到一個歷史案例：Bitfinex 早期被盜後沒有足夠補償金，於是發了債與股權憑證應對提現——USDT 的誕生與這段歷史有關（主持人說法）。</p>
+<h3>2. 行業痛點：資產集中，單點風險</h3>
+<p>謝家印的總結：</p>
+<ul>
+<li><strong>賠付是底線</strong>：「你不能把自己的風險轉嫁給使用者」，賠付不是值得表揚的事，而是做交易所的職業道德。</li>
+<li><strong>結構性依賴</strong>：使用者把資產交給交易所，託管、安全、執行都由平台承擔，資產越集中、單點風險越大、平台責任越重。</li>
+<li><strong>威脅動態升級</strong>：駭客持續研究漏洞，朝鮮國家級駭客團隊也在不斷進步（嘉賓說法）；安全防禦是被動的，威脅是動態升級擴大的。</li>
+<li><strong>結論</strong>：問題已經不是「交易所夠不夠大」，而是「行業基礎設施夠不夠有韌性」。</li>
+</ul>
+<h3>3. Bitget 的方案：OCN 開放託管網路</h3>
+<p>謝家印介紹的核心產品是 <strong>OCN（開放託管網路）</strong>，口號是「資產在銀行，交易在 Bitget」：</p>
+<ul>
+<li><strong>機制——資產映射</strong>：使用者把資金託管到 Bitget 合作的金融級託管機構（銀行或專業託管商），透過資產映射打通託管與交易服務，在 Bitget 裡交易的只是映射憑證。Phyrex 的理解得到確認：即便被盜，駭客拿到手的只是 Bitget 自己認的映射憑證（比如 USDT-A/B/C 之分），拿不到真實的 USDT，因為真實資產鎖在託管方，贖回要走 KYC、沒有公開市場流動性——類似股票憑證的邏輯。</li>
+<li><strong>分工</strong>：專業的人做專業的事。銀行與託管機構負責保管，交易所只負責撮合、深度與使用者服務；交易所不必也不應該把所有環節都攥在自己手裡。</li>
+<li><strong>進展</strong>：仍在開發之中，目前更適合機構客戶。機構從前一兩年就開始走「託管在 Copper、Fireblocks 等機構、映射過來交易」的模式；Bitget 從 2025 年初做機構業務後受到啟發。OCN 正在對接金融級託管服務商與銀行系統，合作方包括 OSL、BitGo、Fireblocks 等（嘉賓說法）。</li>
+<li><strong>使用者側簡化</strong>：普通使用者若自行去多家平台開戶、做 KYC 與身分認證非常複雜，OCN 的設想是 Bitget 幫使用者完成這一步，使用者只需享受金融級安全與交易服務。</li>
+<li><strong>與現有產品的銜接</strong>：Bitget 已有 BGBTC、BGSOL 這類映射型產品（把資產映射後拿到鏈上做理財或生息，做資產快照），OCN 是同一思路的延伸。</li>
+</ul>
+<h3>4. 熔斷機制：Bitget 9 月底出事後的補救</h3>
+<p>謝家印提到，除 OCN 外，Bitget 在 2026 年 9 月底出事後，於 10 月初上線並營運了<strong>熔斷機制</strong>，目標是把下一次事故的損失控制在幾百萬到一兩千萬的量級，而不是上次的「幾個億」（金額為嘉賓原話，未經核實）。她同時承認：沒有一家平台敢再說自己「百分之百安全」，沒被盜可能只是倖存者偏差。</p>
+<h3>5. 信任崩塌：使用者正在用腳投票</h3>
+<p>Phyrex 與謝家印都觀察到使用者行為的轉變：</p>
+<ul>
+<li><strong>幣安被盜後的 24 小時出現大量提現潮</strong>，之後逐漸恢復；每家交易所被盜後剛恢復提現時都會出現這種情況（主持人說法）。</li>
+<li><strong>冷錢包也不再被視為安全港</strong>：Ledger（嘉賓稱「雷震」）事件中，一位客戶被盜 80 個比特幣（謝家印轉述其客戶案例，未證實），Ledger 稱是第三方問題、不予賠付。相比之下，大交易所至少還有賠付。</li>
+<li><strong>資產形態遷移</strong>：謝家印稱，身邊很多小夥伴已把 BTC 換成 IBIT、ETH 換成 ETHA（嘉賓說法）。</li>
+<li><strong>選擇標準變了</strong>：以前使用者選交易所看規模、深度、速度、產品力；現在先問「資產放哪才安全」，越來越多使用者不再把全部資金放在同一平台，開始分散配置；機構、大客戶、普通使用者依次傳導，「雞蛋不放在同一個籃子裡」正在成為共識。</li>
+<li><strong>安全與效率的兩難</strong>：資產分散後，交易調度變麻煩、效率變低，使用者被迫在安全與效率之間二選一；而使用者真正想要的是兩者都要。</li>
+</ul>
+<h3>6. 謝家印的私人答案：普通人該怎麼放錢</h3>
+<p>Phyrex 追問：如果拋開 Bitget 高管身分，作為普通從業者，錢會怎麼放？謝家印的回答：</p>
+<ul>
+<li>作為 Bitget 員工，資金全部放在 Bitget，「非常信任」。</li>
+<li>拋開身分，作為普通人，她會把資金分散在<strong>三四家交易所</strong>；不會放冷錢包、不會放鏈上錢包、不會放進 DeFi 協議——哪怕協議給出 7% 的生息收益也不敢放（主持人假設的收益數字）。理由：她沒有強大的安全團隊，錢包被盜就是真的被盜、沒人兜底；交易所被盜至少還會兜底。鏈上被盜事件太多，協議「很少見到有賠付的」（嘉賓說法），鏈上產品 TVL 也在下降，「黑森林把大家都嚇怕了」。</li>
+</ul>
+<h3>7. 怎麼判斷一家交易所安不安全：舊標準失效了</h3>
+<p>謝家印以普通人身分給出判斷框架的變化：</p>
+<ul>
+<li><strong>過去看三點</strong>：規模（夠大就安心）、紀錄（出沒出過事、出事後怎麼處理）、風控與技術底子（夠不夠嚴格、賠不賠得起）。</li>
+<li><strong>現在變了</strong>：規模越大不代表越安全——Bybit 很大、出了事，幣安很大、出了事，Bitget 很大、也出了事（嘉賓原話）；規模越大，一旦失守影響面也越大，大所之間已沒有絕對的安全碾壓。</li>
+<li><strong>攻擊面擴大了</strong>：駭客攻擊已從平台內部延伸到第三方環節——第三方安全公司、第三方數據平台靠不靠譜、會不會被攻破。</li>
+<li><strong>新的關注點</strong>：平台有沒有辦法改變「資產單一集中在平台」這個事實，安全要靠結構性基礎設施，而不是單一平台的光環。</li>
+</ul>
+<h3>8. 保護基金夠不夠？賠付解決不了結構性風險</h3>
+<p>Phyrex 問：各家都有保護基金或賠付資金，公開賠付資金多少是不是評判標準？謝家印：賠付資金只能回答「出了事能不能兜底」，真正要解決的是「能不能防住駭客攻擊」。「出了事扛得住、守得住、有擔當」是最基本的底線；賠付解決的是事後兜底，不能解決結構性風險的預防，兩者沒有替代關係。交易所要做的是從被動防禦轉向主動防禦，把出事的機率降到最低；映射化之後，風險敞口最大的資產反而是實際價值最低的——因為只有透過映射才能換回真實資產。</p>
+<h3>9. 最難的問題：託管分離後，轉帳怎麼辦</h3>
+<p>這是 Phyrex 問得最尖銳的一段，也是謝家印回答最坦率的一段：</p>
+<ul>
+<li><strong>問題</strong>：託管與交易分離後，交易用映射資金可以理解，但轉帳呢？是不是先扣映射資金、再從託管方把錢挪到指定地方？哪些資產能映射、授信怎麼算、風控清算怎麼協同？</li>
+<li><strong>回答</strong>：謝家印坦承還在「摸著石頭過河」，這些機制「需要一些時間去想透想清楚」，正在與大客戶一對一溝通以豐富方案。她強調 OCN 是<strong>分散風險、不是消除風險</strong>，沒有一家平台能拍著胸脯說自己百分百安全。</li>
+<li><strong>Phyrex 的補充觀察</strong>：類似「託管＋交易分離」的模式此前只對機構或大客戶成立，因為他們對即時提現的需求不強——銀行提款可能要提前三到六小時、轉帳要三到五個小時；而加密使用者已經被「T+0 瞬間到帳」慣壞了，提不出來等四小時就會擔心是不是出問題了。Phyrex 還舉了自己的例子：一次機構向銀行帳戶轉一筆兩萬元的款，平時半小時到，這次兩天沒到，「給我急壞了」。這正是託管分離模式遲遲沒能推向普通使用者的原因之一。</li>
+</ul>
+<h3>10. OCN 的測試現狀與機構回饋</h3>
+<ul>
+<li><strong>時間線</strong>：2026 年 10 月初 Bitget 出事後決定做，國慶假期後開始布局、對接各機構；內部測試約兩週（嘉賓說法），目前主要給機構客戶用，大客戶和普通使用者是後面的事。</li>
+<li><strong>機構客戶最常問的四個問題</strong>：交易體驗會不會打折、門檻高不高、是不是真的安全、託管方出了問題怎麼辦。</li>
+<li><strong>謝家印的回答</strong>：交易體驗與流動性深度「沒有任何影響」（嘉賓說法）；OCN 做的是分散風險而非消除風險；門檻目前只針對機構客戶，未來會一步步開放給更多使用者。</li>
+<li><strong>收尾</strong>：她再次強調 OCN 的方向是把選擇權還給使用者——使用者決定資產放哪、交給誰保管，而不是只有把資產放進某一家交易所才能獲得服務；希望打破「錢放我這、我越來越大」的舊秩序，建立新秩序。</li>
+</ul>
+<h2>說明</h2>
+<ul>
+<li>本紀要根據機器轉寫的逐字稿整理。轉寫存在同音錯聽，文中 Bybit、幣安、Bitget、Polymarket、Bitfinex、Ledger、Copper、Fireblocks、OSL、BitGo、IBIT、ETHA 等專名已按上下文校正；OCN（開放託管網路）、BGBTC、BGSOL 為嘉賓原話中的產品名。</li>
+<li>文中事件經過、金額與行業數據均為兩位嘉賓現場說法，未經核實：包括 Bybit／幣安／Bitget 被盜與賠付情況、Polymarket 被盜、Ledger 客戶被盜 80 個比特幣、Bitget 9 月底事故損失「幾個億」、鏈上 TVL 下降等。</li>
+<li>本場嘉賓為 Bitget 在職高管，OCN 是 Bitget 正在推廣的新產品，相關表述帶有產品宣傳性質，閱讀時請注意這一背景。</li>
+<li>時間表述說明：文中「今年」「9 月底」「10 月初」「國慶」均指 2026 年；「過去一年多」指約 2025 年中至 2026 年 11 月。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: A Conversation on Security in the Crypto Industry</h1>
+<p><strong>Host</strong>: Phyrex @PhyrexNi ｜ <strong>Guest</strong>: Xie Jiayin @xiejiayinBitget (Bitget)
+<strong>Time</strong>: 2026-11-11 18:55–19:48 CST ｜ <strong>Duration</strong>: 53 min 08 sec ｜ <strong>Total listeners</strong>: 323
+<strong>Link</strong>: https://x.com/i/spaces/1BlLyALqJrgylv</p>
+<h2>In One Sentence</h2>
+<p>After a string of exchange hacks, users no longer just ask "which exchange is the biggest?" — they ask "where is it safe to keep my assets?" Bitget's answer is to split custody from trading: assets stay with banks and professional custodians while trading stays on Bitget. But the system, called OCN, is still in development and testing, and key details such as transfers and settlement have not yet been worked out.</p>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>Compensation is a baseline, not an achievement</strong>. Xie Jiayin: compensating users after a hack is an exchange's professional ethics and baseline; an exchange does not deserve praise simply for paying out.</li>
+<li><strong>The pain point is the single-point risk created by concentrated assets</strong>. Users entrust custody, security, and matching to a single exchange; if the platform falls, the cost is total. Threats are also escalating dynamically, with North Korean state-level hacker teams continuously researching vulnerabilities.</li>
+<li><strong>Bitget's new approach: the OCN Open Custody Network</strong>. The slogan is "assets at the bank, trading on Bitget": real assets are custodied at banks or professional custody institutions and traded on Bitget through asset mapping, so even if hackers succeed they can only obtain mapping certificates that cannot be redeemed.</li>
+<li><strong>User behavior is already shifting</strong>. Ordinary users have begun spreading funds across three or four exchanges instead of looking only at scale and depth; some have swapped BTC for IBIT and ETH for ETHA; "not having been hacked is just survivorship bias" has become the consensus.</li>
+<li><strong>"Big exchange" no longer equals safe</strong>. Xie Jiayin's new standard: neither scale nor compensation capacity is a measure of safety anymore. Bybit, Binance, and Bitget are all large, and all have had incidents; what matters is whether a platform can change the structure of single-point asset concentration.</li>
+<li><strong>OCN is still very early</strong>. The decision to build it was made only after Bitget's incident in early October 2026; work began after the National Day holiday, internal testing has run for about two weeks, and it is open only to institutional clients. Transfer and settlement, credit, and risk-control mechanisms are all still being explored, and Xie Jiayin candidly admitted on the spot that they are "crossing the river by feeling the stones."</li>
+</ol>
+<h2>Detailed Notes</h2>
+<h3>1. Background: Over the past year or so, exchange hacks have become routine</h3>
+<p>Phyrex opened with the background: there have been many exchange hacks over the past year or so. The ones well known in the Chinese-speaking community are Bybit, Bitget, and Binance, plus Polymarket and several Western exchanges (as stated by the host, not verified one by one). In the three large incidents, the exchanges basically compensated users, and users' assets were not lost; but smaller exchanges often cannot survive a hack and end up closing. He also mentioned a historical case: after Bitfinex was hacked in its early days, it did not have enough compensation funds, so it issued debt and equity certificates to handle withdrawals — the birth of USDT is related to this history (as stated by the host).</p>
+<h3>2. Industry pain point: Concentrated assets, single-point risk</h3>
+<p>Xie Jiayin's summary:</p>
+<ul>
+<li><strong>Compensation is a baseline</strong>: "You cannot transfer your own risk to users." Compensation is not something to be praised; it is the professional ethics of running an exchange.</li>
+<li><strong>Structural dependence</strong>: Users hand their assets to the exchange, and the platform bears custody, security, and execution. The more concentrated the assets, the greater the single-point risk and the heavier the platform's responsibility.</li>
+<li><strong>Threats are escalating dynamically</strong>: Hackers keep researching vulnerabilities, and North Korean state-level hacker teams are also continuously improving (as stated by the guest); security defense is passive, while threats are dynamically escalating and expanding.</li>
+<li><strong>Conclusion</strong>: The question is no longer "is the exchange big enough?" but "is the industry's infrastructure resilient enough?"</li>
+</ul>
+<h3>3. Bitget's solution: The OCN Open Custody Network</h3>
+<p>The core product Xie Jiayin introduced is <strong>OCN (Open Custody Network)</strong>, with the slogan "assets at the bank, trading on Bitget":</p>
+<ul>
+<li><strong>Mechanism — asset mapping</strong>: Users custody their funds with financial-grade custody institutions partnered with Bitget (banks or professional custodians), and custody is connected to trading services through asset mapping; what is traded on Bitget is only the mapping certificate. Phyrex's understanding was confirmed: even if a hack occurs, what hackers get is only a mapping certificate recognized by Bitget itself (for example, distinctions such as USDT-A/B/C), not real USDT, because the real assets are locked with the custodian, redemption requires KYC, and there is no public-market liquidity — similar to the logic of stock certificates.</li>
+<li><strong>Division of labor</strong>: Let professionals do professional work. Banks and custody institutions are responsible for safekeeping, while the exchange is responsible only for matching, depth, and user service; an exchange does not need to, and should not, hold every link in its own hands.</li>
+<li><strong>Progress</strong>: Still in development, and currently better suited to institutional clients. Institutions began one or two years ago to follow the model of "custody with institutions such as Copper and Fireblocks, mapped over for trading"; Bitget was inspired by this after starting its institutional business in early 2025. OCN is integrating with financial-grade custody providers and banking systems, with partners including OSL, BitGo, Fireblocks, and others (as stated by the guest).</li>
+<li><strong>Simplification on the user side</strong>: For ordinary users, opening accounts, completing KYC, and verifying identity at multiple platforms on their own is very complicated. OCN's vision is for Bitget to complete this step for users, so users only need to enjoy financial-grade security and trading services.</li>
+<li><strong>Connection with existing products</strong>: Bitget already has mapping-type products such as BGBTC and BGSOL (which map assets and then take them on-chain for wealth management or yield, with asset snapshots), and OCN is an extension of the same thinking.</li>
+</ul>
+<h3>4. Circuit-breaker mechanism: Bitget's remedy after its late-September incident</h3>
+<p>Xie Jiayin mentioned that, in addition to OCN, after its incident in late September 2026 Bitget launched and has been operating a <strong>circuit-breaker mechanism</strong> in early October, with the goal of keeping losses from the next incident in the range of a few million to ten or twenty million, rather than the "several hundred million" of the last time (amounts as stated by the guest, unverified). She also acknowledged that no platform dares to claim it is "100% safe" anymore, and that not having been hacked may just be survivorship bias.</p>
+<h3>5. Collapse of trust: Users are voting with their feet</h3>
+<p>Both Phyrex and Xie Jiayin observed a shift in user behavior:</p>
+<ul>
+<li><strong>A large wave of withdrawals appeared in the 24 hours after Binance was hacked</strong>, and then gradually recovered; this happens at every exchange when withdrawals first resume after a hack (as stated by the host).</li>
+<li><strong>Cold wallets are no longer seen as a safe haven either</strong>: In the Ledger incident (which the guest called "Leizhen"), one client had 80 bitcoin stolen (a client case relayed by Xie Jiayin, unconfirmed), and Ledger said it was a third-party issue and refused compensation. By comparison, large exchanges at least offer compensation.</li>
+<li><strong>Migration of asset forms</strong>: Xie Jiayin said many people around her have already swapped BTC for IBIT and ETH for ETHA (as stated by the guest).</li>
+<li><strong>The criteria for choosing have changed</strong>: Users used to choose an exchange by scale, depth, speed, and product strength; now they first ask "where is it safe to keep assets?" More and more users no longer keep all their funds on the same platform and have begun to diversify; the transmission runs from institutions to large clients to ordinary users, and "don't put all your eggs in one basket" is becoming the consensus.</li>
+<li><strong>The dilemma between security and efficiency</strong>: After assets are dispersed, trading and scheduling become cumbersome and efficiency drops, forcing users to choose between security and efficiency; what users really want is both.</li>
+</ul>
+<h3>6. Xie Jiayin's personal answer: How should ordinary people keep their money?</h3>
+<p>Phyrex pressed further: setting aside your identity as a Bitget executive, as an ordinary practitioner, how would you keep your money? Xie Jiayin's answer:</p>
+<ul>
+<li>As a Bitget employee, she keeps all her funds on Bitget and "trusts it very much."</li>
+<li>Setting aside that identity, as an ordinary person she would spread her funds across <strong>three or four exchanges</strong>; she would not use cold wallets, on-chain wallets, or DeFi protocols — she would not dare to put funds in even if a protocol offered a 7% yield (a yield figure hypothesized by the host). Her reasoning: she does not have a strong security team, and if a wallet is hacked it is truly hacked, with no one to cover the loss; if an exchange is hacked, at least it will cover the loss. There have been too many on-chain hacks, protocols "are rarely seen to compensate" (as stated by the guest), on-chain product TVL is also falling, and "the dark forest has scared everyone."</li>
+</ul>
+<h3>7. How to judge whether an exchange is safe: The old standards no longer work</h3>
+<p>Speaking as an ordinary person, Xie Jiayin described how the judgment framework has changed:</p>
+<ul>
+<li><strong>In the past, three things mattered</strong>: scale (big enough to feel at ease), track record (whether incidents had occurred and how they were handled afterward), and risk-control and technical foundations (whether they were strict enough and whether the exchange could afford to compensate).</li>
+<li><strong>Now it has changed</strong>: Bigger does not mean safer — Bybit is very big and had an incident, Binance is very big and had an incident, Bitget is very big and also had an incident (the guest's own words); the bigger the scale, the wider the impact if it falls, and there is no longer any absolute safety dominance among large exchanges.</li>
+<li><strong>The attack surface has expanded</strong>: Hacker attacks have extended from inside platforms to third-party links — whether third-party security companies and third-party data platforms are reliable and whether they can be breached.</li>
+<li><strong>The new focus</strong>: Whether a platform has a way to change the fact that "assets are singly concentrated on the platform." Safety must rely on structural infrastructure, not on the halo of a single platform.</li>
+</ul>
+<h3>8. Are protection funds enough? Compensation cannot solve structural risk</h3>
+<p>Phyrex asked: every exchange has a protection fund or compensation funds; is the publicly disclosed amount of compensation funds a criterion for judgment? Xie Jiayin: compensation funds can only answer "can it cover losses if something happens?" What truly needs to be solved is "can it prevent hacker attacks?" "Being able to withstand an incident, hold the line, and take responsibility" is the most basic baseline; compensation addresses ex-post coverage and cannot address prevention of structural risk — the two are not substitutes. What exchanges need to do is shift from passive defense to active defense and minimize the probability of an incident; after mapping, the assets with the largest risk exposure actually have the lowest real value — because real assets can only be recovered through mapping.</p>
+<h3>9. The hardest question: After custody is separated, what happens with transfers?</h3>
+<p>This was the sharpest line of questioning from Phyrex, and the part where Xie Jiayin answered most frankly:</p>
+<ul>
+<li><strong>The question</strong>: After custody and trading are separated, using mapped funds for trading is understandable, but what about transfers? Is mapped funds deducted first, and then money moved from the custodian to a designated place? Which assets can be mapped, how is credit calculated, and how do risk control and settlement coordinate?</li>
+<li><strong>The answer</strong>: Xie Jiayin admitted they are still "crossing the river by feeling the stones," and that these mechanisms "need some time to be thought through clearly." They are communicating one-on-one with large clients to enrich the plan. She emphasized that OCN is about <strong>dispersing risk, not eliminating risk</strong>, and no platform can thump its chest and claim to be 100% safe.</li>
+<li><strong>Phyrex's additional observation</strong>: Models similar to "custody + trading separation" previously worked only for institutions or large clients, because their need for instant withdrawals is not strong — a bank withdrawal might need to be arranged three to six hours in advance, and a transfer takes three to five hours; but crypto users have been spoiled by "T+0 instant arrival," and if they cannot withdraw and have to wait four hours they will worry that something has gone wrong. Phyrex also gave his own example: once, an institution transferred 20,000 yuan to a bank account; it normally arrived in half an hour, but this time it had not arrived after two days, "which had me extremely anxious." This is one of the reasons the custody-separation model has been slow to reach ordinary users.</li>
+</ul>
+<h3>10. OCN's testing status and institutional feedback</h3>
+<ul>
+<li><strong>Timeline</strong>: The decision to build it was made after Bitget's incident in early October 2026; after the National Day holiday they began laying it out and connecting with various institutions; internal testing has run for about two weeks (as stated by the guest). It is currently mainly for institutional clients; large clients and ordinary users come later.</li>
+<li><strong>The four questions institutional clients ask most often</strong>: Will the trading experience be compromised, is the threshold high, is it really safe, and what happens if the custodian has a problem.</li>
+<li><strong>Xie Jiayin's answers</strong>: Trading experience and liquidity depth are "not affected at all" (as stated by the guest); OCN disperses risk rather than eliminating it; the threshold currently targets institutional clients only, and it will gradually open to more users in the future.</li>
+<li><strong>Closing</strong>: She emphasized again that OCN's direction is to return choice to users — users decide where to keep assets and whom to entrust them to, rather than only being able to obtain services by putting assets into a particular exchange; she hopes to break the old order of "put your money with me and I grow bigger and bigger" and establish a new order.</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>These notes were compiled from a machine-transcribed verbatim transcript. The transcription contains homophone errors; proper names in the text — Bybit, Binance, Bitget, Polymarket, Bitfinex, Ledger, Copper, Fireblocks, OSL, BitGo, IBIT, ETHA, and others — have been corrected based on context; OCN (Open Custody Network), BGBTC, and BGSOL are product names as used in the guest's own words.</li>
+<li>All events, amounts, and industry data in the text are as stated live by the two speakers and have not been verified: including the hacks of and compensation by Bybit / Binance / Bitget, the Polymarket hack, the Ledger client losing 80 bitcoin, Bitget's late-September incident loss of "several hundred million," the decline in on-chain TVL, and so on.</li>
+<li>The guest in this session is a serving Bitget executive, and OCN is a new product Bitget is promoting; the relevant statements have a product-promotion character, and readers should keep this background in mind.</li>
+<li>Note on time references: "this year," "late September," "early October," and "National Day" in the text all refer to 2026; "the past year or so" refers to roughly mid-2025 to November 2026.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1BlLyALqJrgylv">https://x.com/i/spaces/1BlLyALqJrgylv</a> · 主持 Phyrex @PhyrexNi · 嘉宾 谢家印 @xiejiayinBitget（Bitget）· 2026-11-11 18:55–19:48（53 分 08 秒）· 总收听 323 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1BlLyALqJrgylv">https://x.com/i/spaces/1BlLyALqJrgylv</a> · 主持 Phyrex @PhyrexNi · 嘉賓 謝家印 @xiejiayinBitget（Bitget）· 2026-11-11 18:55–19:48（53 分 08 秒）· 總收聽 323 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1BlLyALqJrgylv">https://x.com/i/spaces/1BlLyALqJrgylv</a> · Host Phyrex @PhyrexNi · Guest Xie Jiayin @xiejiayinBitget (Bitget) · 2026-11-11 18:55–19:48 (53 min 08 sec) · Total listeners 323<br>This page is the full text of notes compiled by human editing after machine transcription; all content is the guest's impromptu remarks and self-account during the livestream and has not been verified. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：加密货币行业安全对话 · Yat's Talks",tw:"會議紀要：加密貨幣行業安全對話 · Yat's Talks",en:"Meeting Notes: A Conversation on Security in the Crypto Industry · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

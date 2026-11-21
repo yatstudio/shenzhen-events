@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：CoinDesk Live at Solana Breakpoint 2026 Day 2</h1>
 <ul>
 <li><strong>来源</strong>：X Broadcast <code>2AMLLWRlnOQglO</code>，https://x.com/i/broadcasts/2AMLLWRlnOQglO</li>
@@ -188,8 +195,360 @@
 <li>“鲍里斯·约翰逊念错 Satoshi Nakamoto”为主持人转述的 Day 1 花絮，未在本场逐字稿正文中出现。</li>
 </ul>
 </article>
-<footer>来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2AMLLWRlnOQglO">https://x.com/i/broadcasts/2AMLLWRlnOQglO</a> · CoinDesk 演播室访谈 · 2026-11-17 21:06–22:23（约 1 小时 15 分）· 观看约 3,237 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：CoinDesk Live at Solana Breakpoint 2026 Day 2</h1>
+<ul>
+<li><strong>來源</strong>：X Broadcast <code>2AMLLWRlnOQglO</code>，https://x.com/i/broadcasts/2AMLLWRlnOQglO</li>
+<li><strong>時間</strong>：2026-11-17 21:06–約 22:23 CST，約 74.8 分鐘；觀看數約 3,237 次（轉寫完成時數據）</li>
+<li><strong>主持</strong>：CoinDesk 兩位主持人（結尾處稱其中一位為 Will；另一位自述住在菲律賓，2016–2017 年入圈）</li>
+<li><strong>形式</strong>：Breakpoint 2026（倫敦）場邊的演播室訪談節目，共 6 位嘉賓，非主舞台實錄。錄音開頭即為上一段訪談尾聲（中途切入），首句不完整。</li>
+<li><strong>逐字稿</strong>：<code>transcript.txt</code>（72,566 位元組，13,443 詞；本機 faster-whisper small 模型轉寫，無時間戳）</li>
+<li><strong>口徑說明</strong>：以下數字與說法均為嘉賓現場說法，未經核實；人名與專有名詞以轉寫為準，存疑處見文末 ASR 還原表。</li>
+</ul>
+<h2>一句話</h2>
+<p>這期 75 分鐘基本是 Breakpoint Day 2 的「落地篇」：球迷經濟、穩定幣支付、機構入場、代幣化利用率、匯款、機器人數據、美國合規永續——七個話題指向同一個判斷，鏈上金融正在從交易投機轉向真實使用，而 Solana 想當那個默認結算層。</p>
+<h2>核心內容</h2>
+<h3>1. Peter Moore：球迷是最被低估的鏈上用戶（前 Sega 總裁、Xbox、EA、利物浦 CEO）</h3>
+<ul>
+<li>履歷：Reebok 出身，1998 年 44 歲轉行進遊戲業；Sega 總裁任內推出 Dreamcast（首台聯網主機）；後為比爾·蓋茨操盤 Xbox 與 Xbox Live、Xbox 360 上市；EA Sports 總裁、EA 首席營運官；最後回英國任利物浦足球俱樂部 CEO，任內與主帥克洛普共事。現為波蘭歷史俱樂部維斯瓦·克拉科夫（Wisła Kraków）部分所有者，並為 Wrexham（瑞安·雷諾茲與羅伯·麥克爾亨尼所有）提供建議。本場主旨演講題為《球迷的價值》。</li>
+<li>利物浦自稱約有 3 億球迷，絕大多數一輩子到不了安菲爾德（球場僅容納 61,000 人），球迷互動只能靠內容與票務完成。</li>
+<li>數位化落地的真實成本：利物浦花了兩年時間教球迷用手機出示 QR Code／動態碼進場，包括為習慣紙票的老年球迷設線下培訓點。他的結論是「技術永遠跑在消費者理解能力前面」，必須按最不懂技術的球迷來設計。</li>
+<li>區塊鏈的用法：追蹤與獎勵球迷、治理票務詐欺。英國法律禁止門票高於面值轉售，倒票背後有組織犯罪。他在台上講的方案叫 Lucky Fan Index（幸運球迷指數）：看你去過哪些比賽、買過哪位球員的球衣、球隊贏還是輸——贏球指數上升、輸球下降，指數越高忠誠積分越多，整套行為記錄上鏈。</li>
+<li>細節：他 4 歲（1959 年）第一次去安菲爾德，父親往閘機塞了 2 先令 6 便士。EA 經典配音「It's in the game」出自 Andrew Anthony，此人住在他家附近的聖巴巴拉，每年仍收一筆不菲的費用，EA 多年不換這個聲音。</li>
+</ul>
+<h3>2. Ahmed Zifzaf：Ramp——穩定幣是「24 小時營業的支付軌道」</h3>
+<ul>
+<li>Ramp 是企業財務營運平台，穩定幣是其較新的業務線。過去幾個月已有約 2,500–3,000 家企業在用穩定幣支付；<strong>70% 的交易量發生在銀行下班之後</strong>——企業不睡覺，支付也不該睡覺。</li>
+<li>客戶從 AI 實驗室、建築公司到農場都有。穩定幣原生 CFO 看中的是法幣與穩定幣支付統一在一個平台，不用多處拼帳。</li>
+<li>Ramp 已支援 Solana 上的 USDG 與 OUSD（OpenUSD，背後是 Visa、Stripe、Coinbase、Mastercard）。選幣標準首先是客戶需求，其次是團隊可信度；一位新入職工程師兩週內就完成了 USDG on Solana 的接入。</li>
+<li>Ramp 內部工作流高度 AI 化（自研 AI 平台 Glass），入職培訓基本靠 AI 文件平台完成。</li>
+<li>區域穩定幣：目前約 95% 的穩定幣交易仍以美元穩定幣計價；Ramp 希望推動區域穩定幣，因為能優化企業財資後端與營運資金。</li>
+</ul>
+<h3>3. Nameel Dalal：Y Combinator——機構終於走到前面來了</h3>
+<ul>
+<li>Dalal 是 YC 訪問合夥人，主攻金融科技與加密；曾在 Coinbase 七年，主導 USDC；2012 年 YC 創業者，同批的布萊恩·阿姆斯特朗後來創辦 Coinbase。</li>
+<li>YC 至今資助 6,000 多家新創公司，其中加密項目 100 多家。他的判斷：Solana 是「網際網路資本市場」的中心，股票、債券等一切資產正在上鏈。</li>
+<li>穩定幣圓桌的核心結論有二：一是信任仍是第一要素；二是收益分成正在成為選型關鍵——USDC 早期餘額淨息差約 1%，如今是 4%–5%，對零售商這類大餘額持有者來說，這筆錢開始重要了。x402（Agent 支付協議）值得關注：穩定幣是「Agent 的錢」，因為有 API、全球可用、易於調用，Circle 已在重注 Agent 敘事。</li>
+<li>YC 上月發布的加密創業徵集（RFS）首次出現機構申請者多於消費者的情況。未來一兩年的重點：股票代幣化、穩定幣普及、Agent 可用的基礎設施，以及 AI 融資——他稱 AI 融資是「人類歷史上最大規模的融資事件」，堪比鐵路與電氣化，加密能為其解鎖全球流動性。</li>
+<li>機構接棒的原因有三：產品從測試版走向機構可信任；監管明朗（美國《GENIUS 法案》讓穩定幣成為生態的一等公民，各國立法也在跟進）；用例終於從投機交易擴展到支付與真實對沖。</li>
+<li>一個數字：YC 的單人創業者佔比兩年內從 3% 躍升至 20%，原因是 AI 工具讓一個人也能做出好產品；而且買家越來越多是 AI Agent——Alchemy 的 CTO 告訴他，該公司最大的用戶現在就是 Agent。開發工具的買家正在從開發者變成 Agent。</li>
+</ul>
+<h3>4. Kashi Danda：Jupiter——代幣化的 99% 利用率缺口</h3>
+<ul>
+<li>Danda 是 Jupiter 首席營運官，自稱頭銜其實是「Cat Herder」（管貓的人）。Jupiter 從 Solana 最大交易聚合器長成了鏈上金融超級應用，自我定位是「金融界的谷歌」：交易、借貸、預測市場、抵押、組合管理都在一個屋簷下。</li>
+<li>八天內連發七個產品：上週四個面向用戶（研究中心、鏈上 ETF「籃子」、聚合收益機會的金庫產品——與 Bitwise、RE7、K3、HiveMind 合作精選、聚合各協議的組合工具）；昨天主舞台三個，圍繞「代幣化之後」：<strong>代幣化資產名義規模 4,600 億美元，真正進入 DeFi 的只有約 35 億美元，99% 的利用率缺口</strong>才是問題。</li>
+<li>補缺口的第一步是 Jupiter Global Passport：用零知識技術做的 KYC 體系——默認匿名，需要時才提供資訊；按司法轄區模組化疊加問題（美國發行人問合格投資者資質，香港發行人問另一套）；穩定幣消費卡（帶返現）是誘導用戶完成 KYC 的「特洛伊木馬」。</li>
+<li>與機構交易所 Bullish 合作推出發行人擔保市場：真正的代幣化股票，持幣即持股、名字上股東名冊，需 KYC。</li>
+<li>數據：10 月是 Jupiter 代幣化股票交易最好的一月，較 9 月成長約 50%；今年迄今全產品交易量約 5,000 億美元，其中代幣化股票約 80–90 億美元，佔比仍小；用戶以零售與國際用戶為主（本地開券商帳戶不便的人），不少交易量是紐交所與鏈上之間的套利。Jupiter 現為 Solana 上最大的借貸市場。</li>
+</ul>
+<h3>5. Malcolm Clark：Western Union——匯款終於等到了鏈</h3>
+<ul>
+<li>Clark 是 Western Union 數位資產全球負責人。公司在 Solana 上發行了自有穩定幣 USDPT（PT 即 payment token，支付代幣），配套穩定卡已在 40 個國家上線，目標年底超過 60 個（他本人打了折扣：可能到不了 60）。</li>
+<li>卡的用法：收款人不用再去門市取現金，錢直接進卡，在 Visa 網路消費，或在西聯網點提現。重點行銷市場是墨西哥、哥倫比亞、阿根廷，以及玻利維亞或秘魯之一。</li>
+<li>最關鍵的變化是關係鏈的延長：過去收款人進店取現走人，關係就結束了；現在卡上有持續的消費數據，穩定幣可程式化——可以給持幣收益、可以做忠誠計畫（「在這家店花，1 美元值 1.05 美元」）。</li>
+<li>主持人的點評：匯款是 2016–2017 年加密圈最常講的用例，當時錢包與出入金通道都不成熟；現在真正的難點是現金進出（cash in / cash out），而這正是西聯的強項。菲律賓市場即將上線（一位主持人住在菲律賓）。</li>
+</ul>
+<h3>6. Jonathan Victor：BitRobot——機器人缺的不是模型，是數據</h3>
+<ul>
+<li>Victor 是 BitRobot 總裁。核心論點：大語言模型有網際網路文本可訓，機器人沒有「手臂如何移動、抓握用多大力」的數據集，這是機器人遠比 AI 落後的主因。</li>
+<li>產品 RoboCap 是一頂可穿戴採集帽：側面與正面多攝影機，能看到佩戴者看到的一切甚至更多（手在畫面外時側攝仍能捕捉），記錄疊衣服、做飯、組裝宜家家具等真實任務，用來訓練機器人策略。</li>
+<li>上週開源了 10,000 小時真實工作錄影，覆蓋 11 個國家、21 個行業；對比之下，一兩年前機器人領域所謂「大規模數據」不過 100 小時量級。</li>
+<li>為什麼不用 Meta 眼鏡這類現成設備：單攝影機無深度資訊、做不了手部追蹤；電池只能錄約一分鐘；帽子約 270 克、可換電池、能連續戴數小時。</li>
+<li>商業模式：平價出售帽子，配套 App 按數據被實驗室採納的情況向採集者支付加密貨幣；迄今約 100,000 名貢獻者、覆蓋 100 多個國家，全部結算走 Solana——理由是溯源（實驗室要知道數據來源）與全球支付成本（傳統數據支付仲介收 5% 手續費，即時提現再加 10%–15%，穩定幣幾乎零成本）。</li>
+<li>數據處理：上傳後做人臉模糊與去識別化，不合規內容會回饋拒絕。真實世界的「髒數據」恰恰是價值所在：有人疊衣服時一隻雞跑進來、幼兒打翻籃子——倉庫裡搭一萬個疊衣台也復現不了這種混亂。</li>
+</ul>
+<h3>7. Armani Ferrante：Backpack——美國第一家從零拿到 CFTC 清算所+交易所的加密原生平台</h3>
+<ul>
+<li>Ferrante 是 Backpack CEO。頭條消息（前一晚公布）：Backpack 成為第一家在美國從零獲得 CFTC 監管的清算所與交易所雙牌照的加密原生交易所，永續合約（無到期日的期貨）與加密抵押品、24 小時交易即將合規進入美國。</li>
+<li>歷時三四年，團隊包括前 CFTC 專員及代理主席 Mark Wetjen（歐巴馬時期任職）與前 CME 首席風險官 Sasha Rosenberg。系統已實盤運行數年，從設計之初就按合規來做——他強調沒有任何一天、任何一筆存款或訂單能讓紐約用戶靠 VPN 偷偷交易永續合約。</li>
+<li>競爭格局：永續合約每天在岸外交易數千億美元，是整個加密的價格發現所在；錢包與消費應用都在接去中心化交易所，但都在岸外。Backpack 的打法不是只做自己的消費產品，而是把合規基礎設施做成通用層，讓整個生態能觸達全球最大的資本市場。</li>
+<li>為什麼選 Solana 做代幣化股票：速度與可擴展性已解決、開發者生態強、還有一群彼此競爭的新創公司，他稱之為「金融界的矽谷」，且遍布全球而非一國；DTCC 本週宣布將其代幣化股票平台帶入 Solana 生態就是佐證。</li>
+</ul>
+<h3>8. 收尾：主持人各自的 Top 3</h3>
+<ul>
+<li>共同提名：鮑里斯·約翰遜（把 Satoshi Nakamoto 念錯，已成 meme 素材）；西聯匯款那場對話。</li>
+<li>一位主持人另提 Day 1 回憶：NEAR 的 Ilya（AI 與區塊鏈的一站式）、Austin Federa 講 DoubleZero（聚合多家 ISP、降延遲提頻寬）；另一位提名行銷人才正在進入加密：Ian Rogers（曾任 LVMH 數位負責人、創辦 Apple Music、參與 Beats Music、做過 Beastie Boys 第一個網站，現主導 Ledger 的使用者體驗）與 Solana 基金會的 Rachel Conlon（前幣安 CMO）。</li>
+<li>全場反覆出現的口號：token supercycle（代幣超級週期）、always-on capital markets（永不打烊的資本市場）——「市場不需要開盤，如果它從不收盤」。</li>
+</ul>
+<h2>值得注意的點</h2>
+<ul>
+<li><strong>與 Day One 的關係</strong>：這是 CoinDesk 在 Breakpoint 做的第二天演播室節目（約 75 分鐘），與 11 月 16 日那場 4.5 小時的官方主舞台直播是兩個不同的節目；嘉賓與議題基本不重疊，互補大於重複。</li>
+<li><strong>共識主線</strong>：六位嘉賓說的其實是同一件事的不同切面——球迷、匯款、機器人數據、機構資金都在找「真實使用」，而 Solana 的敘事已從「最快的鏈」轉向「默認的金融結算層」。</li>
+<li><strong>兩個最具體的數字</strong>：Jupiter 的 99% 利用率缺口（4,600 億 vs 35 億）與 Ramp 的 70% 盤後交易量，都是「鏈上金融正在變成日常基礎設施」的實證口徑。</li>
+<li><strong>合規是 Day 2 的暗線</strong>：Backpack 的 CFTC 雙牌照、Jupiter 的 ZK-KYC、西聯的持牌穩定幣，三件事同天出現，說明機構入場的瓶頸正在從技術轉向牌照與合規設計。</li>
+</ul>
+<h2>ASR 還原表（轉寫噪聲較大處）</h2>
+<table>
+<thead>
+<tr>
+<th>轉寫原文</th>
+<th>應為</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whistler / Viswa / Crack Out Football Club</td>
+<td>Wisła Kraków（維斯瓦·克拉科夫）</td>
+<td>波蘭俱樂部名，ASR 多次誤轉</td>
+</tr>
+<tr>
+<td>Brian Reynolds / Rob McElaney</td>
+<td>Ryan Reynolds / Rob McElhenney</td>
+<td>Wrexham 老闆</td>
+</tr>
+<tr>
+<td>Ahmed Zipsaf</td>
+<td>Ahmed Zifzaf</td>
+<td>Ramp 數位資產合作負責人</td>
+</tr>
+<tr>
+<td>Namil Dalal</td>
+<td>Nameel Dalal</td>
+<td>YC 訪問合夥人</td>
+</tr>
+<tr>
+<td>USCC / Cablecoin</td>
+<td>USDC / stablecoin</td>
+<td>通篇高頻誤轉</td>
+</tr>
+<tr>
+<td>Cash Dunder</td>
+<td>Kashi Danda</td>
+<td>Jupiter COO</td>
+</tr>
+<tr>
+<td>BitRoy</td>
+<td>BitRobot</td>
+<td>機器人數據公司</td>
+</tr>
+<tr>
+<td>Amani Farante</td>
+<td>Armani Ferrante</td>
+<td>Backpack CEO</td>
+</tr>
+<tr>
+<td>NICY</td>
+<td>NYSE（紐交所）</td>
+<td>套利語境</td>
+</tr>
+<tr>
+<td>DTC / Sony ecosystem</td>
+<td>DTCC / Solana ecosystem</td>
+<td>代幣化股票平台</td>
+</tr>
+<tr>
+<td>NIR</td>
+<td>NEAR</td>
+<td>Ilya 所在項目</td>
+</tr>
+<tr>
+<td>Mark Wiechen</td>
+<td>Mark Wetjen</td>
+<td>前 CFTC 專員</td>
+</tr>
+<tr>
+<td>「end of Windows 5」</td>
+<td>第五節/最後一節</td>
+<td>節目標段，原文不明</td>
+</tr>
+</tbody>
+</table>
+<h2>核實註</h2>
+<ul>
+<li>黃仁勳已於 2026-11-12 辭任輝達 CEO（本場未提及，沿用此前核實結論；節目內若出現相關說法以此為準）。</li>
+<li>「鮑里斯·約翰遜念錯 Satoshi Nakamoto」為主持人轉述的 Day 1 花絮，未在本場逐字稿正文中出現。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: CoinDesk Live at Solana Breakpoint 2026 Day 2</h1>
+<ul>
+<li><strong>Source</strong>: X Broadcast <code>2AMLLWRlnOQglO</code>, https://x.com/i/broadcasts/2AMLLWRlnOQglO</li>
+<li><strong>Time</strong>: 2026-11-17 21:06–approx. 22:23 CST, about 74.8 minutes; about 3,237 views (as of completion of the transcription)</li>
+<li><strong>Hosts</strong>: Two CoinDesk hosts (near the end, one of them is referred to as Will; the other says he lives in the Philippines and got into crypto in 2016–2017)</li>
+<li><strong>Format</strong>: A studio interview show recorded on the sidelines of Breakpoint 2026 (London), with 6 guests in total; not a recording of the main stage. The recording opens with the tail end of the previous interview (it cuts in mid-stream), so the first sentence is incomplete.</li>
+<li><strong>Transcript</strong>: <code>transcript.txt</code> (72,566 bytes, 13,443 words; transcribed locally with the faster-whisper small model, no timestamps)</li>
+<li><strong>Note on sourcing</strong>: All figures and claims below are as stated by the guests live and have not been verified; names and proper nouns follow the transcript, and doubtful points are listed in the ASR restoration table at the end.</li>
+</ul>
+<h2>In one sentence</h2>
+<p>These 75 minutes are essentially the "real-world deployment" installment of Breakpoint Day 2: fan economies, stablecoin payments, institutional entry, tokenization utilization, remittances, robotics data, and compliant perpetuals in the US — seven topics pointing to a single judgment, namely that on-chain finance is shifting from trading speculation to real usage, and Solana wants to be the default settlement layer for it.</p>
+<h2>Key content</h2>
+<h3>1. Peter Moore: Fans are the most underrated on-chain users (former Sega president, Xbox, EA, Liverpool CEO)</h3>
+<ul>
+<li>Background: Started at Reebok; switched into the games industry in 1998 at age 44. As president of Sega he launched the Dreamcast (the first internet-connected console); he later ran Xbox and Xbox Live for Bill Gates and launched the Xbox 360; he was president of EA Sports and COO of EA; finally he returned to the UK as CEO of Liverpool Football Club, working alongside manager Jürgen Klopp. He is now a part-owner of the historic Polish club Wisła Kraków and advises Wrexham (owned by Ryan Reynolds and Rob McElhenney). His keynote at the event was titled "The Value of a Fan."</li>
+<li>Liverpool claims roughly 300 million fans, the vast majority of whom will never in their lives get to Anfield (the stadium holds only 61,000 people), so fan engagement has to happen through content and ticketing.</li>
+<li>The real cost of going digital: Liverpool spent two years teaching fans to enter with QR codes / dynamic codes on their phones, including setting up in-person training points for older fans used to paper tickets. His conclusion: "technology always runs ahead of consumers' ability to understand it," and you have to design for the least tech-savvy fan.</li>
+<li>What blockchain is for: tracking and rewarding fans, and governing ticket fraud. UK law prohibits reselling tickets above face value, and organized crime sits behind ticket touting. The scheme he described on stage is called the Lucky Fan Index: it looks at which matches you have attended, which player's shirt you have bought, and whether the team won or lost — the index rises when the team wins and falls when it loses; the higher the index, the more loyalty points, with the whole record of behavior put on-chain.</li>
+<li>Details: He first went to Anfield at age 4 (in 1959), when his father slipped 2 shillings and 6 pence into the turnstile. EA's classic voice line "It's in the game" was recorded by Andrew Anthony, who lives near his home in Santa Barbara and still receives a substantial fee every year; EA has kept the same voice for years.</li>
+</ul>
+<h3>2. Ahmed Zifzaf: Ramp — stablecoins are "payment rails that are open 24 hours"</h3>
+<ul>
+<li>Ramp is a corporate finance operations platform, and stablecoins are a newer business line for it. Over the past few months, some 2,500–3,000 companies have already been paying with stablecoins; <strong>70% of the transaction volume happens after banks close</strong> — businesses don't sleep, and payments shouldn't either.</li>
+<li>Customers range from AI labs and construction companies to farms. What stablecoin-native CFOs value is having fiat and stablecoin payments unified on one platform, instead of stitching accounts together in multiple places.</li>
+<li>Ramp now supports USDG and OUSD (OpenUSD, backed by Visa, Stripe, Coinbase, and Mastercard) on Solana. Its coin selection criteria are, first, customer demand, and second, team credibility; a newly hired engineer completed the USDG-on-Solana integration within two weeks.</li>
+<li>Ramp's internal workflows are heavily AI-driven (its in-house AI platform is called Glass), and onboarding training is done largely through its AI documentation platform.</li>
+<li>Regional stablecoins: About 95% of stablecoin transactions are still denominated in dollar stablecoins; Ramp wants to promote regional stablecoins because they can optimize corporate treasury back ends and working capital.</li>
+</ul>
+<h3>3. Nameel Dalal: Y Combinator — institutions have finally moved to the front</h3>
+<ul>
+<li>Dalal is a YC visiting partner focused on fintech and crypto; he spent seven years at Coinbase, where he led USDC; he was a YC founder in 2012, in the same batch as Brian Armstrong, who later founded Coinbase.</li>
+<li>YC has funded more than 6,000 startups to date, over 100 of them crypto projects. His judgment: Solana is the center of the "internet capital markets," and every asset — stocks, bonds, and more — is moving on-chain.</li>
+<li>The stablecoin roundtable reached two core conclusions: first, trust remains the number-one factor; second, revenue sharing is becoming a key selection criterion — in USDC's early days the net interest margin on balances was about 1%, whereas today it is 4%–5%, and for large balance holders such as retailers, that money is starting to matter. x402 (the agent payments protocol) is worth watching: stablecoins are "the agent's money," because they have APIs, are globally available, and are easy to call, and Circle is already betting heavily on the agent narrative.</li>
+<li>In the crypto Request for Startups (RFS) YC released last month, institutional applicants outnumbered consumer applicants for the first time. The priorities for the next year or two: stock tokenization, stablecoin adoption, infrastructure usable by agents, and AI financing — which he called "the largest financing event in human history," comparable to the railroads and electrification, with crypto able to unlock global liquidity for it.</li>
+<li>There are three reasons institutions are taking over: products have moved from beta to something institutions can trust; regulation has become clearer (the US GENIUS Act makes stablecoins first-class citizens of the ecosystem, and legislation in other countries is following); and use cases have finally expanded beyond speculative trading to payments and real hedging.</li>
+<li>One figure: YC's share of solo founders has jumped from 3% to 20% within two years, because AI tools let one person build a good product; moreover, the buyers are increasingly AI agents — Alchemy's CTO told him that the company's biggest user is now an agent. The buyer of developer tools is shifting from developers to agents.</li>
+</ul>
+<h3>4. Kashi Danda: Jupiter — the 99% utilization gap in tokenization</h3>
+<ul>
+<li>Danda is Jupiter's COO, though he says his title is really "Cat Herder." Jupiter has grown from Solana's largest trading aggregator into an on-chain finance super app, positioning itself as "the Google of finance": trading, lending, prediction markets, collateral, and portfolio management all under one roof.</li>
+<li>Seven products launched in eight days: four user-facing ones last week (a research center, on-chain ETF "baskets," a vault product aggregating yield opportunities — curated in partnership with Bitwise, RE7, K3, and HiveMind — and a portfolio tool aggregating positions across protocols); and three on the main stage yesterday, centered on "after tokenization": <strong>tokenized assets total $460 billion in notional size, but only about $3.5 billion has actually entered DeFi — the 99% utilization gap</strong> is the real problem.</li>
+<li>The first step to closing the gap is Jupiter Global Passport: a KYC system built with zero-knowledge technology — anonymous by default, providing information only when needed; modular add-on questions by jurisdiction (US issuers ask about accredited-investor status, Hong Kong issuers ask a different set); and a stablecoin spending card (with cashback) serves as the "Trojan horse" to induce users to complete KYC.</li>
+<li>In partnership with the institutional exchange Bullish, it is launching an issuer-backed market: genuine tokenized stocks, where holding the token means holding the shares, with names on the shareholder register; KYC required.</li>
+<li>Data: October was Jupiter's best month ever for tokenized stock trading, up about 50% from September; year-to-date trading volume across all products is about $500 billion, of which tokenized stocks account for roughly $8–9 billion, still a small share; users are mainly retail and international users (people for whom opening a local brokerage account is inconvenient), and a good deal of the volume is arbitrage between the NYSE and on-chain venues. Jupiter is now the largest lending market on Solana.</li>
+</ul>
+<h3>5. Malcolm Clark: Western Union — remittances finally got their chain</h3>
+<ul>
+<li>Clark is Western Union's global head of digital assets. The company has issued its own stablecoin, USDPT (PT stands for payment token), on Solana, and its companion stablecoin card is already live in 40 countries, with a target of over 60 by year-end (he himself hedged: it may not reach 60).</li>
+<li>How the card works: recipients no longer have to go to a store to pick up cash; the money goes straight onto the card, to be spent on the Visa network or withdrawn in cash at Western Union locations. Key marketing markets are Mexico, Colombia, Argentina, and one of Bolivia or Peru.</li>
+<li>The most important change is the lengthening of the relationship chain: previously, a recipient would walk into a store, collect cash, and leave, and the relationship ended there; now the card generates ongoing spending data, and stablecoins are programmable — they can pay yield to holders and support loyalty programs ("spend at this store and $1 is worth $1.05").</li>
+<li>The hosts' commentary: remittances were the most talked-about use case in crypto in 2016–2017, when wallets and on/off-ramps were not yet mature; the real difficulty now is cash in / cash out, which happens to be Western Union's strength. The Philippines market is launching soon (one of the hosts lives in the Philippines).</li>
+</ul>
+<h3>6. Jonathan Victor: BitRobot — what robots lack is not models, it's data</h3>
+<ul>
+<li>Victor is the president of BitRobot. His core argument: large language models have the text of the internet to train on, but robots have no dataset for "how an arm should move, or how much force a grip should use" — the main reason robots lag so far behind AI.</li>
+<li>The product RoboCap is a wearable data-collection cap: multiple cameras on the side and front can see everything the wearer sees and more (the side cameras can still capture the hands when they are out of the front frame), recording real tasks such as folding clothes, cooking, and assembling IKEA furniture, to train robot policies.</li>
+<li>Last week it open-sourced 10,000 hours of real work footage, covering 11 countries and 21 industries; by contrast, what the robotics field called "large-scale data" a year or two ago was on the order of only 100 hours.</li>
+<li>Why not use an off-the-shelf device like Meta glasses: a single camera provides no depth information and cannot do hand tracking; the battery records only about a minute; the cap weighs about 270 grams, has swappable batteries, and can be worn continuously for hours.</li>
+<li>Business model: the caps are sold at an affordable price, and the companion app pays contributors cryptocurrency based on whether their data is adopted by labs; so far there are about 100,000 contributors across more than 100 countries, with all settlement on Solana — the reasons being provenance (labs need to know where the data came from) and the cost of global payments (traditional data-payment intermediaries charge a 5% fee, plus another 10%–15% for instant withdrawal, while stablecoins cost almost nothing).</li>
+<li>Data processing: after upload, faces are blurred and data is de-identified, and non-compliant content is rejected with feedback. The "dirty data" of the real world is precisely where the value lies: a chicken wanders in while someone is folding clothes, a toddler knocks over a basket — you could set up ten thousand folding stations in a warehouse and never reproduce that kind of chaos.</li>
+</ul>
+<h3>7. Armani Ferrante: Backpack — the first crypto-native platform to obtain a CFTC clearinghouse + exchange from scratch in the US</h3>
+<ul>
+<li>Ferrante is the CEO of Backpack. The headline news (announced the previous evening): Backpack has become the first crypto-native exchange to obtain, from scratch, dual CFTC-regulated clearinghouse and exchange licenses in the United States, and perpetual futures (futures with no expiry date) with crypto collateral and 24-hour trading are about to enter the US compliantly.</li>
+<li>The process took three to four years; the team includes former CFTC commissioner and acting chairman Mark Wetjen (who served under Obama) and former CME chief risk officer Sasha Rosenberg. The system has been running live for years and was built for compliance from the very design stage — he stressed that there was never a single day, deposit, or order that would let a New York user secretly trade perpetuals via a VPN.</li>
+<li>The competitive landscape: perpetuals trade hundreds of billions of dollars offshore every day and are where price discovery for all of crypto happens; wallets and consumer apps are all integrating decentralized exchanges, but all offshore. Backpack's play is not to build only its own consumer product, but to turn its compliant infrastructure into a general-purpose layer so the whole ecosystem can reach the world's largest capital market.</li>
+<li>Why Solana for tokenized stocks: speed and scalability are solved problems, the developer ecosystem is strong, and there is a cluster of startups competing with one another, which he called "the Silicon Valley of finance," spread across the globe rather than in one country; DTCC's announcement this week that it is bringing its tokenized stock platform into the Solana ecosystem is evidence of exactly that.</li>
+</ul>
+<h3>8. Wrap-up: each host's Top 3</h3>
+<ul>
+<li>Joint nominations: Boris Johnson (who mispronounced Satoshi Nakamoto, now meme material); and the Western Union remittances conversation.</li>
+<li>One host added Day 1 memories: NEAR's Ilya (a one-stop shop for AI and blockchain) and Austin Federa on DoubleZero (aggregating multiple ISPs to cut latency and increase bandwidth); the other host nominated marketing talent entering crypto: Ian Rogers (former LVMH digital chief, founder of Apple Music, involved in Beats Music, built the Beastie Boys' first website, now leading Ledger's user experience) and the Solana Foundation's Rachel Conlon (former Binance CMO).</li>
+<li>Slogans repeated throughout the show: token supercycle and always-on capital markets — "the market doesn't need to open if it never closes."</li>
+</ul>
+<h2>Points worth noting</h2>
+<ul>
+<li><strong>Relation to Day One</strong>: This is the second day of CoinDesk's studio program at Breakpoint (about 75 minutes), a different program from the 4.5-hour official main-stage livestream on November 16; guests and topics barely overlap, and the two complement rather than duplicate each other.</li>
+<li><strong>The consensus thread</strong>: The six guests were in fact describing different facets of the same thing — fans, remittances, robotics data, and institutional money are all looking for "real usage," and Solana's narrative has shifted from "the fastest chain" to "the default financial settlement layer."</li>
+<li><strong>The two most concrete figures</strong>: Jupiter's 99% utilization gap ($460 billion vs. $3.5 billion) and Ramp's 70% after-hours volume are both evidence, in hard numbers, that "on-chain finance is becoming everyday infrastructure."</li>
+<li><strong>Compliance is Day 2's undercurrent</strong>: Backpack's dual CFTC licenses, Jupiter's ZK-KYC, and Western Union's licensed stablecoin all appeared on the same day, showing that the bottleneck for institutional entry is shifting from technology to licenses and compliance design.</li>
+</ul>
+<h2>ASR restoration table (where transcription noise is heavy)</h2>
+<table>
+<thead>
+<tr>
+<th>As transcribed</th>
+<th>Should be</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whistler / Viswa / Crack Out Football Club</td>
+<td>Wisła Kraków</td>
+<td>Polish club name, repeatedly mistranscribed by ASR</td>
+</tr>
+<tr>
+<td>Brian Reynolds / Rob McElaney</td>
+<td>Ryan Reynolds / Rob McElhenney</td>
+<td>Owners of Wrexham</td>
+</tr>
+<tr>
+<td>Ahmed Zipsaf</td>
+<td>Ahmed Zifzaf</td>
+<td>Ramp's head of digital asset partnerships</td>
+</tr>
+<tr>
+<td>Namil Dalal</td>
+<td>Nameel Dalal</td>
+<td>YC visiting partner</td>
+</tr>
+<tr>
+<td>USCC / Cablecoin</td>
+<td>USDC / stablecoin</td>
+<td>Frequent mistranscription throughout</td>
+</tr>
+<tr>
+<td>Cash Dunder</td>
+<td>Kashi Danda</td>
+<td>Jupiter COO</td>
+</tr>
+<tr>
+<td>BitRoy</td>
+<td>BitRobot</td>
+<td>Robotics data company</td>
+</tr>
+<tr>
+<td>Amani Farante</td>
+<td>Armani Ferrante</td>
+<td>Backpack CEO</td>
+</tr>
+<tr>
+<td>NICY</td>
+<td>NYSE</td>
+<td>In an arbitrage context</td>
+</tr>
+<tr>
+<td>DTC / Sony ecosystem</td>
+<td>DTCC / Solana ecosystem</td>
+<td>Tokenized stock platform</td>
+</tr>
+<tr>
+<td>NIR</td>
+<td>NEAR</td>
+<td>The project Ilya is with</td>
+</tr>
+<tr>
+<td>Mark Wiechen</td>
+<td>Mark Wetjen</td>
+<td>Former CFTC commissioner</td>
+</tr>
+<tr>
+<td>"end of Windows 5"</td>
+<td>The fifth / final segment</td>
+<td>Program segment marker; original wording unclear</td>
+</tr>
+</tbody>
+</table>
+<h2>Verification notes</h2>
+<ul>
+<li>Jensen Huang stepped down as NVIDIA CEO on 2026-11-12 (not mentioned in this program; this follows the previously verified conclusion, and any related claims made in the program should be read against it).</li>
+<li>"Boris Johnson mispronounced Satoshi Nakamoto" is a Day 1 anecdote relayed by the hosts and does not appear in this program's transcript proper.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2AMLLWRlnOQglO">https://x.com/i/broadcasts/2AMLLWRlnOQglO</a> · CoinDesk 演播室访谈 · 2026-11-17 21:06–22:23（约 1 小时 15 分）· 观看约 3,237 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2AMLLWRlnOQglO">https://x.com/i/broadcasts/2AMLLWRlnOQglO</a> · CoinDesk 演播室訪談 · 2026-11-17 21:06–22:23（約 1 小時 15 分）· 觀看約 3,237 次<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Broadcast replay <a href="https://x.com/i/broadcasts/2AMLLWRlnOQglO">https://x.com/i/broadcasts/2AMLLWRlnOQglO</a> · CoinDesk studio interviews · 2026-11-17 21:06–22:23 (about 1 hour 15 minutes) · About 3,237 views<br>This page is the full text of notes compiled by hand from a machine transcript; the content consists of the guests' unscripted remarks and self-descriptions during the livestream, has not been verified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：CoinDesk Live at Solana Breakpoint 2026 Day 2 · Yat's Talks",tw:"會議紀要：CoinDesk Live at Solana Breakpoint 2026 Day 2 · Yat's Talks",en:"Meeting Notes: CoinDesk Live at Solana Breakpoint 2026 Day 2 · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

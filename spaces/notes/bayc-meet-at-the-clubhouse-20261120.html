@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：BAYC《Meet at the Clubhouse》</h1>
 <ul>
 <li>时间：2026-11-20 10:00–10:58 CST（58 分 52 秒）</li>
@@ -85,9 +92,153 @@
 <hr />
 <p><em>纪要来源：X Space 回放转写（small 模型英文转写，1234 行）。人名、数字为现场发言口径，未独立核实；转写可能存在同音误听。</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：BAYC《Meet at the Clubhouse》</h1>
+<ul>
+<li>時間：2026-11-20 10:00–10:58 CST（58 分 52 秒）</li>
+<li>主持：Bored Ape Yacht Club 🍌 @BoredApeYC（聯席主持 TheeHustleHouse、illaDaProducer）</li>
+<li>上麥：srinigoes、HodlrCollective、MakaveliDlaCruz、abpmoon、pm0721、LLCubKing、Asimoff_ 等</li>
+<li>總聽眾：428 人（場內峰值約 130 人）</li>
+<li>來源：X Space 回放 <code>1KoeLgzdEYAJXZ</code>，英文原聲，逐字稿 1234 行</li>
+</ul>
+<blockquote>
+<p>本紀要為中文整理。數字均出自現場發言口徑（未獨立核實），時間戳指向逐字稿位置；發言人名字以現場稱呼為準，括號內為 X 帳號。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>BAYC 每週例行閒聊場：主線是三件事——Mudwater 卡包與 Whatnot 直播、黑五發售與 12 月線下禮物交換、以及 Otherside 的 Outposts 與資源遊戲（ApeCoin 驅動，年底前上線），其中 Blight 競賽第一週冠軍有機會抽走一隻無聊猿。</p>
+<h2>核心要點</h2>
+<ol>
+<li><strong>黑五發售</strong>：11 月 20 日 15:00（BSC 時間）起至 12 月 2 日，猿猴會員可先領 30% 折扣碼（Mac 在 BAYC 官網看到的通知，[00:07:15]）。</li>
+<li><strong>「上地圖，領一包」</strong>：在 mudwater.bayc.com 連 Glyph 錢包 + Sol 錢包（Phantom 最順手）、在 IRL 標籤頁打卡，每隻猿都能免費領一包 Mudwater 實體卡包，不用參賽，限時領取（[00:12:13]）。</li>
+<li><strong>內容競賽</strong>：同期在推特分享拆包內容並提交連結與錢包，排名第一拿 4 包，前十也有包（[00:11:33]）。</li>
+<li><strong>12 月禮物交換</strong>：線下分會將辦 Bored Ape 主題禮物交換（白象式：到場簽到領號，輪流選禮物或偷別人的，三次被偷即鎖定），App 內可跟進；到場者再得一包 Mudwater（[00:13:01]）。</li>
+<li><strong>Otherside 資源遊戲</strong>：當天發的推文確認——Otherdeed 是 Otherside 經濟的骨架，地塊上的資源驅動整個經濟；以後地塊主人可以在上面建造；Outposts 人人可有，但地塊只有 10 萬個；資源交易將由 ApeCoin 驅動並配訂單簿；上線時間在「新年前」，具體日期 James Hall 未公布（[00:32:22]）。</li>
+<li><strong>Blight 競賽</strong>：ABP 與 369 做的 Otherside 內小遊戲，為期 8 週、每週一至週五積分、週五 17:00（太平洋時間）鎖榜；每週第一名轉輪盤抽無聊猿，中獎率第 1 週 5%、第 2 週 10%、第 3 週 15%、第 4 週 20%，未中則自選 7 隻變異猿之一；獎池另有 7 隻 Koda、22 塊地及神秘 NFT，頭獎池當時已累計 13,000 ApeCoin；免費參與，每週改規則（[00:23:03]）。</li>
+<li><strong>明日預告</strong>：11 月 21 日 James Hall 開 Otherside 專場 Space 回答提問；同日 15:00（太平洋時間）Whatnot 直播，11 月 27 日黑五 Whatnot 專場（[00:40:20]）。</li>
+</ol>
+<h2>一、Mudwater 與 Whatnot：Figgy 的直播帶貨</h2>
+<ul>
+<li>Whatnot 主播 Baron 回顧了昨天的直播：Figgy 在稀有手辦上現場作畫，送出 Black Flag 與 Black Flag  foil 原畫；每包都加了獨特內容；週五將抽 Black Flag 非 foil 版的買家贈禮，11 月 27 日黑五在 Figgy 工作室直播送出 Black Flag foil 原畫（[00:02:31]）。</li>
+<li>直播每場約 100 人，全程不斷抽獎，「來掛著就可能中獎」是賣點（[00:04:34]）。</li>
+<li>昨晚直播結束後，主持團隊把約 90 名觀眾「raid」到一位只有 3–4 名觀眾的 TCG 小主播那裡，她當場賣出不少卡包、開了 X 帳號並答應來了解 Mudwater；主持人把這當作零成本獲客的例子（[00:52:53]）。</li>
+<li>明天（11 月 21 日）Whatnot 直播 15:00（太平洋時間）將首次請嘉賓上場（[00:42:11]）。</li>
+</ul>
+<h2>二、黑五發售與官網通知</h2>
+<ul>
+<li>Mac 在 BAYC 官網看到：2026 年 11 月 19 日 21:45 發布新通知，「Black Friday 回歸俱樂部，11 月 20 日 15:00（BSC）起至 12 月 2 日」，猿猴先拿 30% 折扣碼；當晚 21:45 官網又向所有會員推送了同一通知的更詳細版本，更多細節待公布（[00:07:15]、[00:45:48]）。</li>
+<li>11 月 27 日黑五當天 Whatnot 專場約 12:00 開始（[00:44:12]）。</li>
+</ul>
+<h2>三、線下分會與「上地圖，領一包」</h2>
+<ul>
+<li>「Get on the map, get a pack」活動在 mudwater.bayc.com 上線約一週：到 IRL 標籤頁打卡即可領包；另有內容競賽，分享拆包內容、提交連結與錢包地址，排名第一得 4 包，其餘入選者 2–3 包，第 10 名 1 包（[00:10:54]）。</li>
+<li>分會已在 12 個以上城市排期，12 月多為禮物交換主題：自願帶禮物、到場簽到領號、輪流挑選或偷取（被偷三次即鎖定），主持人用 App 協助進行；到場者另得一包 Mudwater，實體包寄往歐洲、亞洲與美國兩岸，現場不夠時發數字包（[00:12:54]）。</li>
+<li>成員上麥反饋：平時很少發言的 Bullet 特意上麥致謝，稱過去在別的社群總覺得自己像個「跟班」，這套線下玩法讓他第一次覺得能參與、能貢獻；Srini（印度）稱自己離開俱樂部一段時間，Figgy 回歸後方向變了才回來，還自建了印度分會、盼年底前辦一場小型聚會；LLCubKing 在阿肯色州小石城建了分會，已有 4 人加入（[00:16:38]、[00:27:51]、[00:09:08]）。</li>
+<li>簽到激勵：分會改版上線後一週內，Srini 等 8 隻猿連續簽到 7 天以上，各自又得了一包（[00:30:39]）。</li>
+<li>LA 分會：Asimoff 每週二辦「Cars and Chronic」，預約到場即得一包（[00:36:04]）。</li>
+</ul>
+<h2>四、Otherside：Outposts、資源遊戲與 Blight</h2>
+<ul>
+<li>當天 Otherside 官方推文的核心（PM 現場讀推文第 3 條）：「Otherdeed 是 Otherside 經濟的骨架。地塊上的資源驅動整個經濟。最終地塊主人也能在上面建造。Outposts 面向所有人。」地塊總量 10 萬個，資源交易由 ApeCoin 驅動，將上線訂單簿，玩家可以採集、出售或按需購買，圍繞建造與裝飾展開（[00:32:22]）。</li>
+<li>上線窗口為「新年前」，James Hall 未給出具體日期；11 月 21 日他將開專場 Space，接受尖銳提問（[00:33:27]、[00:40:20]）。</li>
+<li>Blight（ABP 與 369 開發）：一週衝刺刷分，本週領先者 Dynapons（Dino Ponds）已連續玩了四天、為保第一幾乎沒睡；每週第一名轉輪盤，中無聊猿的概率逐週遞增（5%→10%→15%→20%），未中則自選 7 隻變異猿之一；另有 7 隻 Koda、22 塊 Otherdeed 與神秘 NFT 在獎池，頭獎池當時已到 13,000 ApeCoin；社群之間也比拚，前 5–10 名社群的 NFT 會被掃貨；免費玩，規則每週調整，感恩節與聖誕節各休一週（[00:19:53]、[00:23:03]、[00:39:13]）。</li>
+<li>現場氛圍：主持人稱這波消息「等了很久，像聖誕節提前到了」，並調侃與其去猜 GTA 代幣真假，不如等 ApeChain 上的真東西（[00:33:55]、[00:34:34]）。</li>
+</ul>
+<h2>五、其他</h2>
+<ul>
+<li><strong>ApeChain Rolodex</strong>：鏈上人才名錄已上線，ApeChain 帳號當天發了第一條招聘資訊，可發布或尋找機會，由官方品牌帳號轉發（[00:57:32]）。</li>
+<li><strong>Secret Santa</strong>：J Vegas 夫婦組織的秘密聖誕老人已有約 55–60 人參加，Google 表格當天發出，2 天內填寫；Mrs. J Vegas 當天 40 歲生日（[00:46:24]）。</li>
+<li><strong>Otherside 導覽</strong>：每週四 20:00（美東時間）新手沼澤導覽、每週六 14:00（美東時間）秘密地點與徽章活動（[00:47:01]）。</li>
+<li><strong>抽獎</strong>：評論置頂的 BAYC Space 貼文即可參與抽 Mudwater 卡包，本場中獎者為 T Claws；每週二、週四固定開獎（[00:02:01]、[00:55:07]）。</li>
+<li><strong>下期預告</strong>：下週二 09:00（太平洋時間）下一場「Meet at the Clubhouse」（[00:58:15]）。</li>
+</ul>
+<hr />
+<p><em>紀要來源：X Space 回放轉寫（small 模型英文轉寫，1234 行）。人名、數字為現場發言口徑，未獨立核實；轉寫可能存在同音誤聽。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: BAYC "Meet at the Clubhouse"</h1>
+<ul>
+<li>Time: 2026-11-20 10:00–10:58 CST (58 min 52 sec)</li>
+<li>Host: Bored Ape Yacht Club 🍌 @BoredApeYC (co-hosts TheeHustleHouse, illaDaProducer)</li>
+<li>Speakers: srinigoes, HodlrCollective, MakaveliDlaCruz, abpmoon, pm0721, LLCubKing, Asimoff_, and others</li>
+<li>Total listeners: 428 (peak of about 130 in the room)</li>
+<li>Source: X Space replay <code>1KoeLgzdEYAJXZ</code>, original English audio, 1,234-line transcript</li>
+</ul>
+<blockquote>
+<p>These notes are compiled in Chinese from the original session. All figures are as stated live (not independently verified); timestamps point to positions in the transcript; speaker names follow how they were addressed live, with X handles in parentheses.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>BAYC's weekly casual chat: three main threads — Mudwater card packs and Whatnot livestreams, the Black Friday sale and the December in-person gift exchange, and Otherside's Outposts and resource game (powered by ApeCoin, launching before year-end), with the Week 1 winner of the Blight competition getting a chance to spin for a Bored Ape.</p>
+<h2>Key Points</h2>
+<ol>
+<li><strong>Black Friday sale</strong>: From 15:00 (BSC time) on November 20 through December 2, Ape members can claim a 30% discount code first (notice seen by Mac on the BAYC website, [00:07:15]).</li>
+<li><strong>"Get on the map, get a pack"</strong>: At mudwater.bayc.com, connect a Glyph wallet + a Sol wallet (Phantom works smoothest) and check in on the IRL tab — every Ape can claim one free physical Mudwater pack, no competition entry needed, for a limited time ([00:12:13]).</li>
+<li><strong>Content competition</strong>: During the same period, share pack-opening content on Twitter and submit the link and wallet; first place gets 4 packs, and the top ten also receive packs ([00:11:33]).</li>
+<li><strong>December gift exchange</strong>: Local chapters will hold Bored Ape-themed gift exchanges (white-elephant style: check in on arrival to get a number, take turns picking a gift or stealing someone else's, locked after being stolen three times), trackable in the App; attendees get another Mudwater pack ([00:13:01]).</li>
+<li><strong>Otherside resource game</strong>: A tweet posted that day confirmed — Otherdeed is the backbone of the Otherside economy, and resources on the land drive the whole economy; landowners will eventually be able to build on their plots; anyone can have an Outpost, but there are only 100,000 land plots; resource trading will be powered by ApeCoin with an order book; launch is "before the New Year," with no specific date announced by James Hall ([00:32:22]).</li>
+<li><strong>Blight competition</strong>: A mini-game inside Otherside made by ABP and 369, running 8 weeks with points Monday to Friday each week and the leaderboard locking at 17:00 Pacific Time on Fridays; each week's first-place finisher spins a wheel for a Bored Ape, with win odds of 5% in Week 1, 10% in Week 2, 15% in Week 3, and 20% in Week 4 — if they miss, they pick one of 7 Mutant Apes; the prize pool also includes 7 Kodas, 22 land plots, and mystery NFTs, and the jackpot pool had already accumulated 13,000 ApeCoin at the time; free to enter, with rules changing weekly ([00:23:03]).</li>
+<li><strong>Tomorrow's preview</strong>: On November 21, James Hall will host a dedicated Otherside Space to answer questions; same day at 15:00 Pacific Time, a Whatnot livestream, and a Black Friday Whatnot special on November 27 ([00:40:20]).</li>
+</ol>
+<h2>I. Mudwater and Whatnot: Figgy's Livestream Sales</h2>
+<ul>
+<li>Whatnot streamer Baron recapped yesterday's stream: Figgy painted live on rare figures and gave away Black Flag and Black Flag foil original artwork; every pack included unique content; on Friday there will be a buyer giveaway drawing for the non-foil Black Flag, and on November 27, Black Friday, the Black Flag foil original will be given away in a stream from Figgy's studio ([00:02:31]).</li>
+<li>Each stream draws about 100 people, with giveaways running throughout — "just hang out and you might win" is the pitch ([00:04:34]).</li>
+<li>After last night's stream ended, the host team "raided" about 90 viewers over to a small TCG streamer who had only 3–4 viewers; she sold quite a few packs on the spot, opened an X account, and promised to learn about Mudwater; the hosts cited this as an example of zero-cost audience acquisition ([00:52:53]).</li>
+<li>Tomorrow (November 21), the Whatnot stream at 15:00 Pacific Time will feature a guest for the first time ([00:42:11]).</li>
+</ul>
+<h2>II. Black Friday Sale and Website Notices</h2>
+<ul>
+<li>Mac saw on the BAYC website: a new notice posted November 19, 2026 at 21:45 — "Black Friday returns to the Club, November 20 at 15:00 (BSC) through December 2" — with Apes getting a 30% discount code first; that evening at 21:45 the website pushed a more detailed version of the same notice to all members, with more details to come ([00:07:15], [00:45:48]).</li>
+<li>The Black Friday Whatnot special on November 27 starts at around 12:00 ([00:44:12]).</li>
+</ul>
+<h2>III. Local Chapters and "Get on the Map, Get a Pack"</h2>
+<ul>
+<li>The "Get on the map, get a pack" campaign had been live on mudwater.bayc.com for about a week: check in on the IRL tab to claim a pack; there is also a content competition — share pack-opening content and submit the link and wallet address, with first place getting 4 packs, other selected entries 2–3 packs, and 10th place 1 pack ([00:10:54]).</li>
+<li>Chapters have scheduled events in more than 12 cities, mostly gift-exchange themed in December: bring a gift voluntarily, check in on arrival to get a number, take turns picking or stealing (locked after being stolen three times), with hosts running it via the App; attendees get another Mudwater pack, with physical packs shipped to Europe, Asia, and both US coasts, and digital packs issued on site if physical stock runs short ([00:12:54]).</li>
+<li>Member feedback from the stage: Bullet, who rarely speaks, came up specifically to say thanks, saying that in other communities he had always felt like a "sidekick," and this in-person format made him feel for the first time that he could participate and contribute; Srini (India) said he had left the Club for a while and only returned after Figgy came back and the direction changed, and that he had set up an India chapter himself and hoped to hold a small meetup before year-end; LLCubKing set up a chapter in Little Rock, Arkansas, which already has 4 members ([00:16:38], [00:27:51], [00:09:08]).</li>
+<li>Check-in incentive: within a week of the chapter revamp going live, 8 Apes including Srini checked in for 7+ consecutive days and each received another pack ([00:30:39]).</li>
+<li>LA chapter: Asimoff runs "Cars and Chronic" every Tuesday, and booking attendance gets you a pack ([00:36:04]).</li>
+</ul>
+<h2>IV. Otherside: Outposts, the Resource Game, and Blight</h2>
+<ul>
+<li>The core of that day's official Otherside tweet (PM read tweet #3 aloud live): "Otherdeed is the backbone of the Otherside economy. Resources on the land drive the whole economy. Eventually landowners will also be able to build on it. Outposts are for everyone." There are 100,000 land plots in total; resource trading is powered by ApeCoin and will launch with an order book; players can gather, sell, or buy as needed, centered on building and decorating ([00:32:22]).</li>
+<li>The launch window is "before the New Year"; James Hall gave no specific date; on November 21 he will host a dedicated Space and take tough questions ([00:33:27], [00:40:20]).</li>
+<li>Blight (developed by ABP and 369): a one-week sprint for points; this week's leader Dynapons (Dino Ponds) had played for four straight days and barely slept to hold first place; each week's first-place finisher spins the wheel, with the odds of winning a Bored Ape rising week by week (5%→10%→15%→20%), and if they miss, they pick one of 7 Mutant Apes; the pool also holds 7 Kodas, 22 Otherdeeds, and mystery NFTs, and the jackpot pool had reached 13,000 ApeCoin at the time; communities also compete against each other, and NFTs of the top 5–10 communities get swept; free to play, rules adjusted weekly, with one week off each for Thanksgiving and Christmas ([00:19:53], [00:23:03], [00:39:13]).</li>
+<li>Atmosphere in the room: the hosts said this wave of news had been "a long time coming, like Christmas arriving early," and joked that rather than guessing whether a GTA token is real, better to wait for the real thing on ApeChain ([00:33:55], [00:34:34]).</li>
+</ul>
+<h2>V. Other</h2>
+<ul>
+<li><strong>ApeChain Rolodex</strong>: The on-chain talent directory is live; the ApeChain account posted its first job listing that day; you can post or look for opportunities, amplified by the official brand account ([00:57:32]).</li>
+<li><strong>Secret Santa</strong>: The Secret Santa organized by Mr. and Mrs. J Vegas already has about 55–60 participants; the Google form went out that day, to be filled in within 2 days; it was Mrs. J Vegas's 40th birthday that day ([00:46:24]).</li>
+<li><strong>Otherside tours</strong>: Newcomer swamp tours every Thursday at 20:00 Eastern Time, and secret-location and badge events every Saturday at 14:00 Eastern Time ([00:47:01]).</li>
+<li><strong>Giveaway</strong>: Comment on the pinned BAYC Space post to enter the Mudwater pack draw; this session's winner was T Claws; draws run every Tuesday and Thursday ([00:02:01], [00:55:07]).</li>
+<li><strong>Next session preview</strong>: Next Tuesday at 09:00 Pacific Time, the next "Meet at the Clubhouse" ([00:58:15]).</li>
+</ul>
+<hr />
+<p><em>Source of these notes: transcription of the X Space replay (small-model English transcription, 1,234 lines). Names and figures are as stated live and have not been independently verified; the transcription may contain homophone errors.</em></p>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1KoeLgzdEYAJXZ">https://x.com/i/spaces/1KoeLgzdEYAJXZ</a>（Bored Ape Yacht Club）· 嘉宾：TheeHustleHouse, illaDaProducer, srinigoes, HodlrCollective, MakaveliDlaCruz, abpmoon, pm0721, LLCubKing, Asimoff_ · 发布日期：2026-11-20 · 时长：59 分钟<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1KoeLgzdEYAJXZ">https://x.com/i/spaces/1KoeLgzdEYAJXZ</a>（Bored Ape Yacht Club）· 嘉賓：TheeHustleHouse, illaDaProducer, srinigoes, HodlrCollective, MakaveliDlaCruz, abpmoon, pm0721, LLCubKing, Asimoff_ · 發布日期：2026-11-20 · 時長：59 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1KoeLgzdEYAJXZ">https://x.com/i/spaces/1KoeLgzdEYAJXZ</a> (Bored Ape Yacht Club) · Guests: TheeHustleHouse, illaDaProducer, srinigoes, HodlrCollective, MakaveliDlaCruz, abpmoon, pm0721, LLCubKing, Asimoff_ · Published: 2026-11-20 · Duration: 59 minutes<br>This page is the full notes, compiled by hand from a machine transcription; views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1KoeLgzdEYAJXZ">https://x.com/i/spaces/1KoeLgzdEYAJXZ</a>（Bored Ape Yacht Club）· 嘉宾：TheeHustleHouse, illaDaProducer, srinigoes, HodlrCollective, MakaveliDlaCruz, abpmoon, pm0721, LLCubKing, Asimoff_ · 发布日期：2026-11-20 · 时长：59 分钟<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：BAYC《Meet at the Clubhouse》 · Yat's Talks",tw:"會議紀要：BAYC《Meet at the Clubhouse》 · Yat's Talks",en:"Meeting Notes: BAYC \"Meet at the Clubhouse\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

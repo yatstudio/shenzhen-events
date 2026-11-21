@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：赶紧买房！（不要用蓝牙耳机）</h1>
 <blockquote>
 <p>本纪要基于 X Space 录音的本地 ASR 逐字稿整理。<strong>以下全部内容均为发言人现场自述，未经核实；涉及房价、政策、投资、职业选择的内容均为嘉宾个人观点，不构成投资建议或决策依据。</strong></p>
@@ -466,8 +473,914 @@
 <li><strong>纪要依据：</strong>本地录音转写稿 hidden_files/transcript.txt（5,075 行，26 个 10 分钟块）</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：趕緊買房！（不要用藍牙耳機）</h1>
+<blockquote>
+<p>本紀要基於 X Space 錄音的本地 ASR 逐字稿整理。<strong>以下全部內容均為發言人現場自述，未經核實；涉及房價、政策、投資、職業選擇的內容均為嘉賓個人觀點，不構成投資建議或決策依據。</strong></p>
+</blockquote>
+<h2>一、核心結論（先行）</h2>
+<ol>
+<li><strong>標題是「釣魚標題」，本場基本沒講買房。</strong>主持人立黨兩次親口承認：「趕緊買房」是騙聽眾進來的標題（00:19、01:27），平時直播間只有 100 來人，本場靠標題拉到 300 多人同時在線；全場 4 小時 12 分，真正談房子的只有約 10 分鐘（北京個案 + 深圳房價一句話）。</li>
+<li><strong>關於買房的唯一實質判斷（立黨自述）：</strong>北京房價長期看還會跌，回歸「本身價值」約 2 萬元/平米，可能需要一二十年慢慢跌到；深圳房價「一定會跌」，但天通苑式老破小（轉寫存疑）「應該會往上」——前後表述不一，見下文原話。</li>
+<li><strong>本場真正的主題是「職業與專業選擇」大型答疑。</strong>半導體、醫學、電腦、藝術四大行業的從業者輪流上麥，立黨的反覆主線是：<strong>過去「專業與工作無關、畢業即被搶」的時代已經永遠過去了，現在選專業、讀研、找工作必須專業對口、立刻能產生價值。</strong></li>
+<li><strong>具身智能路線之爭（開場）：</strong>立黨認為傳統 VLA（視覺-語言-動作）路線「確實不太行」，Agent + VLM（視覺語言模型）才是可行方向；他用 GPT-6（轉寫存疑）+ Codex 做了肝臟血管縫合手術規劃的 demo，自稱「把北大、H.I.Bot 一腳踢翻」。這是他當晚最興奮的論點之一，但未經核實。</li>
+<li><strong>關於 P vs NP / ETH 的驚人宣稱（立黨自述）：</strong>立黨稱 OpenAI（轉寫為「Open App」）做出「人類世界最偉大的成果」，3SAT 問題「不再是指數級複雜度」，ETH（指數時間假設）被證偽，「人類完蛋了」「所有行業都要被顛覆」。<strong>該說法未經核實，與公開學術共識明顯衝突，請勿當作事實引用。</strong></li>
+<li><strong>投資建議（立黨自述，不構成投資建議）：</strong>標普、納斯達克指數「是這個星球上最優秀的資產」，長期持有、繼續定投；「最優秀的資產肯定是 OpenAI 和 Anthropic 的股票」，Anthropic 招股書已出、11 月中旬上市（均為發言人自述，未核實）。</li>
+<li><strong>找工作方法論（立黨反覆強調）：</strong>網上投履歷「完全不可能」，一個崗位有幾千上萬份履歷，HR 第一步按學歷篩掉 90%；必須線下跑展會、進社群、面對面認識人、拿內推；做開源專案比實習更值錢，「一個好的開源頂 100 個實習」。</li>
+<li><strong>醫學與藝術是本場最悲觀的兩條線：</strong>多位醫生上麥稱三明醫改後回扣消失、年輕醫生收入低、科室經營困難；立黨則稱「不要學藝術」，藝術生「班裡 60 個人、能從事本行的不到 5 人」，唯一出路是當網紅/直播帶貨。</li>
+</ol>
+<h2>二、時間線 / 流程</h2>
+<table>
+<thead>
+<tr>
+<th>時間（錄音內）</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00:00–00:07:42</td>
+<td><strong>無有效語音</strong>：靜默/音樂，VAD 判 0 段。轉寫從 00:07:42 開始。</td>
+</tr>
+<tr>
+<td>00:07:42–00:19:00</td>
+<td>開場：實習生 Marvin（轉寫存疑）問具身智能 VLA vs Agent+VLM、RoboDojo 榜單；立黨談自己的手術規劃 demo。</td>
+</tr>
+<tr>
+<td>00:19:00–00:20:05</td>
+<td>聽眾問「香港是否買房」，立黨答「哪裡都不要買」，並首次承認標題是騙人進來的。</td>
+</tr>
+<tr>
+<td>00:20:05–00:45:47</td>
+<td>半導體從業者（10 年經驗）長談：報專業、河北工大、半導體薪資週期、AI 與半導體工藝結合之難。</td>
+</tr>
+<tr>
+<td>00:45:47–00:47:12</td>
+<td>立黨插播：OpenAI「證偽 ETH」、P vs NP 下限被壓低，稱「震驚了一整夜」。</td>
+</tr>
+<tr>
+<td>00:47:12–00:51:02</td>
+<td>聽眾催更 YouTube reaction 影片；立黨長談中美豪宅差異（土地、採光、功能性），推薦重慶豪宅與「杜老師」（轉寫存疑）的 room tour。</td>
+</tr>
+<tr>
+<td>00:51:02–01:12:30</td>
+<td>立黨長篇獨白：「學什麼專業和從事什麼工作沒有任何關係」的時代過去了；以知乎 CTO 李深深、碧桂園/恆大 50 萬年薪、《小時代》為例講 2010 年代的就業紅利。</td>
+</tr>
+<tr>
+<td>01:12:30–01:27:11</td>
+<td>連麥問答：北京一本電腦學生、朋友欠 10 萬失蹤、國企「老登」、中廠 AI+醫療、多 Agent 吞吐高 28%。</td>
+</tr>
+<tr>
+<td>01:27:11–01:28:02</td>
+<td>聽眾再問「立黨老師真的要趕緊買房嗎」，立黨再答：「我這是騙你們進來的標題……平時直播間就 100 來人，今天已經 300 來人」。</td>
+</tr>
+<tr>
+<td>01:28:02–01:52:34</td>
+<td>連麥問答：東莞 IT 運維想轉 AI、中山大學 CS 軌跡優化學生（保研東南大學模擬 IC）、23 歲想學網安、Anthropic 上市與定投。</td>
+</tr>
+<tr>
+<td>01:52:34–02:04:28</td>
+<td>連麥問答：廣西二本軟體工程大四求職、臨床醫生（介入方向）想跳醫療器材公司。</td>
+</tr>
+<tr>
+<td>02:04:28–02:27:11</td>
+<td>醫療專題：醫生談介入技術、國產醫療器材、給醫生的轉行建議（Codex 做專案、關注深創投/前海母基金路演）。</td>
+</tr>
+<tr>
+<td>02:27:11–02:34:21</td>
+<td>另一位醫生「勸退學醫」：三明醫改後醫生收入與職業吸引力下降；立黨反駁稱醫學對多數分數段學生仍是較好選擇。</td>
+</tr>
+<tr>
+<td>02:34:21–02:43:53</td>
+<td>上海併購 5 年、辭職做 Crypto 虧損、回蘇州做服裝出海的 WY；藝術生談影視行業之難。</td>
+</tr>
+<tr>
+<td>02:43:53–03:04:38</td>
+<td>藝術生續談；香港學生 May（DSE、副學士、港五 CS）問 DevOps/IT Support 出路；聽眾再問 ETH 證偽。</td>
+</tr>
+<tr>
+<td>03:04:38–03:38:41</td>
+<td>21 歲 PLC 學徒；<strong>Rachel（03:09–03:38）長談</strong>：33 歲、美國被裁、找能 sponsor PERM 的工作，立黨建議讀 PhD 或去中資公司/回深圳上海。</td>
+</tr>
+<tr>
+<td>03:38:41–03:45:00</td>
+<td><strong>本場唯一的房產個案</strong>：聽眾問父母北京五環房子賣不賣、統建房拿不拿；立黨答北京房價長期跌、回歸 2 萬/平，統建房「肯定拿」。</td>
+</tr>
+<tr>
+<td>03:45:00–04:04:06</td>
+<td>北京一本 CS 學生規劃、鞍山二本土木大三、Hopper（華南理工、晶片驗證外包）、YYYW（墨爾本自動化大四、申香港碩士）。</td>
+</tr>
+<tr>
+<td>04:04:06–04:12:02</td>
+<td>收尾雜談：Print on Demand、醫保基金困境；立黨最後一句房價判斷：「深圳房價一定會跌的……天通苑老破小房價也會……應該會往上」；04:12:00 關房。</td>
+</tr>
+</tbody>
+</table>
+<h2>三、主持人立黨的主要觀點</h2>
+<h3>1. 關於本場標題與買房</h3>
+<ul>
+<li>標題是引流手段。原話（00:19:19–00:19:24）：「哪裡都不要買……啊？那趕緊買房是什麼意思？就騙你們進來。」原話（01:27:11–01:27:28）：「我這是騙你們進來的標題啊……我平時這個直播間就 100 來人，今天已經 300 來人讓你們進來聽啊。」</li>
+<li>北京房價判斷（03:40:01–03:41:14，回應聽眾個案）：「長下來看還會下跌，但是也許最近不太跌了……他只要折舊就會下降……回歸本身的價值在北京就是 2 萬一平米……慢慢的就會跌到這個位置……可能一二十年這樣子。」</li>
+<li>深圳房價判斷（04:09:13–04:09:24，收尾時被追問）：「深圳房價不分析了，深圳房價一定會跌的啊……天通苑老破小房價也會……我不好說，應該會往上。」——<strong>同一句話內先說「一定會跌」又說「應該會往上」，轉寫與口誤均有可能，引用時請注意。</strong></li>
+<li>對聽眾家統建房的建議（03:42:26–03:43:06）：「那就持有吧，這肯定穩定不賠……肯定拿，肯定拿呀……這個是一個福利，他到手就掙了一兩倍。」</li>
+</ul>
+<h3>2. 關於具身智能與 AI Agent</h3>
+<ul>
+<li>傳統 VLA 路線不行（00:16:13–00:16:20）：「VLA 這個方向確實不太行……只有自己做了之後才能感受到這個方向確實是一個很難的方向。」</li>
+<li>Agent + VLM 是可行路線（00:09:57–00:10:47）：他自稱直接接模型、讓模型自己寫 CV 工具、自己寫程式碼自己執行，「成功率是非常非常高的……不需要大模型，也不需要很多的資料，只需要接進去一個（模型）就好了」，並稱「黨哥一出手把所謂的北大、所謂的 H.I.Bot 都給一腳踢翻了」。（以上均為自述，未核實；「北大」此處所指不明，轉寫存疑。）</li>
+<li>機器人評測榜單應升級（00:14:12–00:15:38）：RoboDojo 的問題「太過於簡單了」，未來應換成醫學手術、魔方還原、雕刻、操作複雜儀表盤等「需要高強度邏輯」和精細操作的榜；多數人想像的機器人工作只是 pick and place。</li>
+<li>自己的專案 RSI-CHIP（03:23:04–03:23:14，03:35:32–03:37:00，自述）：「用 Agent 生成 EDA 工具、生成整個 EDA framework，從 SystemVerilog 到 RTL、綜合、LEC、門級網表……計劃複刻 1000 個以上模擬晶片、總計一萬個以上晶片」，並稱「EDA 現在沒有 Agent，只有 OpenAI 和我在做」。</li>
+<li>對 Anthropic 上市與指數投資（01:54:18–01:56:01，03:43:28–03:44:22）：「這輩子所有錢都放進去就可以吧……每個月生意的工資都得投進去」；「最優秀的資產肯定是 OpenAI 和 Anthropic 的股票」；指數「裡面頭部有一部分當然會上漲，但是漲了一定沒有 OpenAI 和（Anthropic）更快」。<strong>以上為嘉賓個人觀點，不構成投資建議。</strong></li>
+</ul>
+<h3>3. 關於 P vs NP / ETH（未經核實的驚人宣稱）</h3>
+<ul>
+<li>原話（00:45:53–00:47:10）：「我再說一句，OpenAI 做出了這個人類世界上最偉大的成果……3SAT 和這個 P versus NP 的問題，今天 OpenAI 把這問題徹底解決了……他把下限壓低了……這個是人類電腦整個計算領域最核心的問題，沒有之一……這個東西對人類社會影響太深刻了……我從昨天晚上到今天早上，現在早上九點鐘，我基本上就是在震驚中，這個情緒裡，我根本走不出來。」</li>
+<li>通俗解釋版（01:19:45–01:20:24，03:05:01–03:06:40）：「人類長期認為 3SAT 問題應該是指數級複雜度……今天告訴你它不是指數級了……很多像 3SAT、MaxFlow、MinCut 這種問題就有可能向多項式複雜度靠近……破解一個密碼現在都是線性的……所有行業都完蛋了。」</li>
+<li><strong>紀要注：該說法與公開學術共識明顯衝突，現場未提供論文出處，逐字稿中「OpenAI」一度被轉寫為「Open App」。請勿當作事實引用，僅記錄為「立黨當晚的現場宣稱」。</strong></li>
+</ul>
+<h3>4. 關於專業、就業與「時代變了」</h3>
+<p>這是立黨當晚篇幅最長、重複最多的主線（00:51–01:12 長篇獨白為核心）：</p>
+<ul>
+<li>「前 10 年的時間裡面很多的工作是不需要專業的……所有人都說你學了化學、學了化工、學了金融、學了什麼貿易，你進入工作之後跟你所有的專業可以完全不一樣，大部分人都是不一樣的……那個年代說實話就是學一個數學進（銀行）也沒有問題……當年都是這麼玩的……但是那個年代確實是已經永遠的過去了。」（00:52:02–00:53:25）</li>
+<li>當年紅利的具體例子（自述，未核實）：知乎 CTO 李深深「連語言帶框架什麼都不會，一邊看著書學語言、一邊看著書學框架、一邊把知乎最早的版本搭起來了」；2014 年以前去碧桂園/恆大「可以直接去當區域銷售經理，一年保底 50 萬起」；天津財經大學當年「收了一大批 650 分、660 分的孩子」，分數線高於天津的 985；「郭敬明那個電影《小時代》就是紀實的電影……當年上海就是像林蕭、顧里這樣的女生，隨便學一個什麼專業就可以進入那種公司……幹幾年就是總監」。</li>
+<li>現在的要求變了（00:57:14–00:59:06）：「現在你越往後念，人家越要看你研究所讀的什麼方向、博士研究的什麼專案……現在試用期一個月就得上手，三個月就要 qualify 這個人……現在這個學生也是挺不容易的。」</li>
+<li>找工作方法論（01:58:00–02:01:00）：「網上投履歷是沒有用的……每個 HR 的 recruiting system 裡面，任何一個崗位都有幾千上萬個履歷……第一步是必須要按照學歷篩淘汰 90% 的人……你必須線下去深圳、去上海，一個一個展會、一個一個活動去聊……讓他們去內推。」</li>
+<li>開源專案大於實習（02:04:30–02:04:52，回應 YYYW）：「一個好的開源頂 100 個實習……你要想做有價值的東西，現在就可以做，你不用等著實習再做。」</li>
+<li>不要學藝術（02:45:17–02:50:09）：「藝術是最難的事情……今天此時此刻學藝術的這些人就等於有了一個本科學歷，什麼都不會……班裡 60 個人，能從事該行業的不到五人……唯一的出路就是在 TikTok、YouTube 上當網紅，沒有別的出路，要不然就直播帶貨了……只有一種人能學藝術，就是你爸爸在天津京劇院、北京京劇院，你 13 歲能上台、18 歲拿國家級大獎。」</li>
+<li>對 AI 影視/短劇的判斷（02:46:50–02:47:50）：「AI 影視早就涼了，早就死了……大家看的是 IP 不是內容……哪怕是一個抖音上的小姑娘每天直播三小時陪你聊天，都比 AI 短劇對個人的情緒價值更高，這個是替代不了的。」</li>
+<li>對醫學的判斷（02:32:46–02:33:25，回應勸退者）：「醫學好與不好呢，在很多分數段的這些同學裡面，醫學依然是可能他們人生中比較好的一個選擇……醫學是一個相對來說吃經驗、愛學習、有動手能力、不需要特別強的數理能力的情況下，你可能能找到社會地位比較高、長期來看會逐漸有回報的工作，我覺得不是一個錯誤的選項。」</li>
+</ul>
+<h3>5. 關於豪宅（回應聽眾催更）</h3>
+<ul>
+<li>中美豪宅最大區別是土地、採光與功能性（00:48:20–00:49:08）：「美國的豪宅基本上都是前面大草坪、後面大草坪……中國的豪宅最大問題還是土地不夠……第二點就是中國的豪宅基本上沒有什麼功能性……今天此時此刻中國人最需要的功能性需求就是辦公室、娛樂房、工作室（studio）、分隔得比較開的臥室，但是這種豪宅在中國是不做的。」</li>
+<li>重慶豪宅最好（00:49:54–00:50:40，自述）：「中國的好的豪宅基本上都在重慶周圍……黃奇帆的原因，他們當年（土地政策）很寬鬆……重慶的豪宅市場特別大、特別繁榮……你們要看豪宅的話，看一個叫杜老師（轉寫存疑）就好了，他專門做重慶豪宅的 room tour，非常非常漂亮。」</li>
+<li>豪宅設計師的核心問題（00:51:07–00:51:13）：「豪宅的設計師、建築師們沒有住過豪宅，這是最大的問題。」</li>
+</ul>
+<h3>6. 關於半導體與中國產業機會</h3>
+<ul>
+<li>長期判斷（00:39:50–00:40:55）：「長期來看，中國還是半導體的機會是最多的……最後市場最大的、利潤最高的、標品就是汽車、半導體和消費電子……金融特別火、醫療特別火，最後全都沒飯吃，最後只有半導體、汽車、消費電子能有飯吃。」</li>
+<li>半導體有國安與國運加持（00:41:44–00:42:29，半導體從業者補充、立黨附和）：「中國半導體和其他國家都不一樣，中國半導體有一個國籌（國安）的問題……再加上孟晚舟向最高領袖做了保證（轉寫存疑）……所以好多地方的基金都要投錢、都要做。」</li>
+</ul>
+<h2>四、各發言人觀點</h2>
+<blockquote>
+<p>逐字稿無說話人分離，以下歸屬依據自報身分、互相稱呼與話題承接推斷；凡不確定處已標註「疑似」或歸入「現場討論」。</p>
+</blockquote>
+<h3>1. Marvin / Mario（疑似，00:07:42–00:19:00）—— 具身智能方向的實習生</h3>
+<ul>
+<li>自述在一家初創公司實習，做 VLA 或世界模型（World Model，轉寫存疑）；公司老闆們也對 Agent + VLM 感興趣，感覺「幾乎整個巨身（具身）行業都在往這個方向轉」。</li>
+<li>問立黨：做 Harness（轉寫存疑）可以嗎？個人開發者能做什麼小專案？</li>
+<li>提到 RoboDojo 榜單很火，榜上基本都是自己搭 Agent 再接模型進去的做法。</li>
+<li>認為 VLA 路線做下去「可能就很危險」，投資人不一定一直有耐心支撐這些公司；但也承認「泡沫大是歸大，但是賺的還是蠻多的」，實習待遇相對不錯。</li>
+<li>建議評測升級：給 Agent 接攝影機做 SLAM 建圖、用 CV 工具、多加感測器，讓 Agent 更好地了解環境參數。</li>
+</ul>
+<h3>2. 半導體從業者（00:20:05–00:45:47）—— 10 年半導體製造經驗，Section Manager</h3>
+<p>自述背景：重考生，報自動化未錄取、調劑到化學工程與工藝，河北工業大學（轉寫為「河北公大/河北理工」，應為河北工業大學）畢業，10 年前研究所畢業進半導體製造，去過海力士、三星，現任 section manager、副 department 級別。</p>
+<ul>
+<li><strong>報專業經驗：</strong>當年對工科反感、想報金融/工商管理「坐在辦公大樓裡當老闆」，是家裡前輩點醒他報「純粹一點的院校」（河北工大、石家莊鐵道、太原理工），避免被調劑到最差的文科專業；「學校的目的並不是為了讓你就業，他只是為了招生、收錢」。</li>
+<li><strong>行業變遷：</strong>10 年前雙非/一本研究生就能進半導體做工藝工程師（process engineer），不用頻繁進無塵室；現在招人「嚴格卡第一學歷」，「雙九（985）而且嚴格卡第一學歷，一定要是什麼什麼學校的、什麼什麼專業」。</li>
+<li><strong>薪資時間線（自述）：</strong>2016 年入行，研究生應屆 8,000 元/月；2017–2018 年長江存儲、長鑫、華虹（轉寫存疑）起來後，半導體薪資有質的飛躍，碩士能從 7、8 千談到 1 萬 2、3（轉寫存疑）；2023 年美光低谷（自述在海力士未受太多影響）；華為進場後又迎來一波薪資飛躍；現在硬體碩士「也能談到兩萬以上」，博士更高。</li>
+<li><strong>AI 與半導體工藝結合之難：</strong>各家公司 AI 都是封閉的，知識庫只用自己公司的材料；工藝 recipe 調參變數多、機理模型差，不像 ASML 光刻有深厚的計算光學模型與 OPC know-how；現在半導體公司的 AI 建設「僅限於替代一些搜尋」，想靠 AI 調 recipe「路可能會走得很長」。</li>
+<li><strong>對張雪峰的評價：</strong>立黨那期就業指導影片「比張雪峰說的要現實、現實很多」，「他（張雪峰）是老師，沒工作過，沒有真正在職場上感受過」。</li>
+</ul>
+<h3>3. 催更的聽眾（00:47:12–00:51:02）</h3>
+<ul>
+<li>自稱是立黨 YouTube 粉絲，愛看他 reaction 其他影片的節目（江平、《令人心動的 offer》、金融實習、豪宅），催更豪宅 reaction 與江平類影片。</li>
+<li>立黨回應見「三、5」。</li>
+</ul>
+<h3>4. 北京一本電腦學生（01:16:04–01:16:34）</h3>
+<ul>
+<li>自述大一大二沒學習，現在很後悔、不知道怎麼辦；稱一直關注立黨推特並收藏了很多帖子。</li>
+<li>立黨發現其推特沒有關注自己，請其下麥，未展開回答。</li>
+</ul>
+<h3>5. 朋友欠錢失蹤的聽眾（01:16:39–01:17:31）</h3>
+<ul>
+<li>問：生活中一個朋友欠了 10 萬（「十個」，應為 10 萬元），現在人找不到了，怎麼辦？</li>
+<li>立黨答：找相關朋友問；「這個可能就沒有辦法」，未給出進一步建議。</li>
+</ul>
+<h3>6. Ruann（疑似，01:17:33–01:19:27）—— 國企 CS 從業者</h3>
+<ul>
+<li>問怎麼「避雷老登國企」（轉寫存疑，應為吐槽國企論資排輩）。</li>
+<li>立黨答：壞處是「大量的規範流程，你只能跟著他們的邏輯思維去走」「沒有增量」；「年輕人如果你想有機會的話，你不要去，但是你沒有選擇的話，你還是可以去的」；領導年齡大不等於不行，「我自己最好的領導很多比我大 30 歲，非常非常聰明」；學 CS 的人在國企「感覺沒有辦法了」。</li>
+</ul>
+<h3>7. 中廠 AI+醫療從業者（01:19:28–01:27:11）</h3>
+<ul>
+<li>自述在中廠實習，做 AI + 醫療、醫保審核方向；與校友關係好；另在做一個 Multi-Agent 系統，硬體吞吐比 Single Agent 高 28%，但在程式設計領域 Multi-Agent 反而更差，方向上比較迷惘。</li>
+<li>問立黨：是否建議參與一個 AI 晶片設計社群（做 AI for Chip / Chip for AI 開源資源地圖）；立黨答「不建議」，「你們不是幹這個的……光一個 LEC、一個 SystemVerilog 前端編譯器、整個 UVM，我花了好幾週的時間……這個東西是有一個很長的學習週期的，需要你讀一個碩士學位出來，再加上你在行業裡面幹幾年的時間」。</li>
+<li>立黨另建議：重寫商業軟體要先重寫「你會的軟體」，「你用過你怎麼重寫啊」；並稱自己正在做最簡單的 RISC-V CPU，目標是跑通到 foundry signoff 的全流程。</li>
+</ul>
+<h3>8. 東莞 IT 運維、中層管理者（01:28:13–01:35:00）</h3>
+<ul>
+<li>自述在頭部 IT 運維公司做運營管理、快 30 歲、在東莞，想跳回北京，想學點 AI 方向的知識不被時代拋下；此前做自媒體，單條播放量 30 多萬到 100 多萬，但覺得行業不行了。</li>
+<li>立黨答：想轉技術「基本上不會有人給你機會」；真想學就「托福考一個 100 分，Georgia Tech Online CS Master，讀一個電腦碩士，花一年時間修完十門課，演算法、電腦基礎、作業系統、電腦體系結構、深度學習、LLM 都學會」；做 AI 內容可從自己能看懂的低門檻賽道切入，如 AI 影視的一致性（人物表情、場景、衣服、聲音前後 30 秒保持一致），或先跑展會看同行在做什麼產品。</li>
+</ul>
+<h3>9. 「釋懷」（疑似，01:35:02–01:52:34）—— 中山大學 CS 本科，機器人軌跡優化方向</h3>
+<p>自述：中山大學（「中九」）電腦本科，GPA 3.7/4.0，做 robotics 軌跡優化（motion planning，傳統方法如 mincost / A*，現做強化學習優化），發過 TRO 二作與 IROS 一作（轉寫存疑）；導師是大疆出來的；已保研到東南大學（轉寫為「華武」，疑似東南大學）做模擬 IC 的專項碩士，合作企業是做光刻機相關晶片的公司（轉寫為「語良生/雨量升」，疑似某光刻機產業鏈公司，未核實）。</p>
+<ul>
+<li>問：要不要去美國讀 robotics PhD？立黨答：不要。這個方向「沒有太好的機會」，畢業後一定要回深圳工作；在美國「只有做 LLM 的頭兩三個公司可能能給 H1B」，且「大疆已經不招（軌跡優化）相關了，他們在找（影像方向）」。</li>
+<li>立黨對其保研去向的判斷：「這兩個方向都比你在美國任何 lab 裡做 robotics 要好一萬倍……電源（模擬 IC）大家做的人少、人也少、一定是剛需……畢業之後能進入上海、深圳、北京做 DPU 的公司……如果你本科畢業之後能直接去（那家公司），你連碩士都不要讀了。」</li>
+<li>關於美國讀模擬 IC PhD：立黨稱美國 analog 黃金期是 2010 年以前，之後大量轉行寫程式碼，「在美國做 analog 的人流片了一片甚至兩片之後轉碼去了寫 Java、寫前端」；且「美國移民越來越不友好」、學習壓力大，「沒必要吃那個苦」。</li>
+<li>另：立黨稱 MEMS 是「死路一條」，「毫無疑問」。</li>
+</ul>
+<h3>10. 23 歲想學網路安全的聽眾（01:52:34–01:54:03）</h3>
+<ul>
+<li>問：23 歲學網路安全防護來得及嗎？覺得資料洩露、資訊洩露問題嚴重。</li>
+<li>立黨答：不用看那些東西（指 X 上「駭客攻擊骨幹網」的傳言，「都是大傻逼，不要信」）；「你學吧，電腦有很多課很多書，CS DIY 裡面有課，你先從那課開始學吧」；「我初二就能學這個」。</li>
+</ul>
+<h3>11. Anthropic 上市提問者（01:54:04–01:56:08）</h3>
+<ul>
+<li>自述按立黨建議長期定投標普和納指；問 Anthropic 招股說明書出來了、11 月中旬要上市，有什麼看法；是梭哈還是定投？</li>
+<li>立黨答：見「三、2」末段；對其定投方式反問「你有的錢你現在有的資產你怎麼定投啊，你不直接（投進去），你還分成三五十份一個月投一份是嗎」。</li>
+</ul>
+<h3>12. Leap（疑似，01:56:16–02:04:28）—— 廣西二本軟體工程大四</h3>
+<ul>
+<li>自述國內二本軟體工程大四，有國三、省三獎項（電腦相關競賽，集體獎）；按立黨影片做了一個主動修 bug 的 Agent 專案，也做過 RAG 專案（立黨批「RAG 這種東西垃圾，誰碰 RAG 誰沒有出息」）與大模型相關專案；每天投履歷，秋招無 offer，11 月能去實習；想找產品經理或 AI 應用方向。</li>
+<li>立黨答：城市（廣西柳州，轉寫存疑）有問題；「網上投是沒有用的」；要把推特主頁換成真人真名、把國三省三寫進簽名、做 GitHub Page；「你要做一些瘋狂的事情……你得做新的，你得去思考」；方向上「RSI chip、大型軟體重寫、Agent 進化是不是好方向？」並讓其先把自己的 AI 講座系列 57 個影片看完（「你看到第三期了……最重要的第五期你沒看」）。</li>
+</ul>
+<h3>13. 臨床醫生（02:04:28–02:27:11）—— 西北省會三甲醫院，介入方向，工作約 10 年</h3>
+<p>自述：臨床醫生，本科畢業後從外科轉到介入方向（肝臟、甲狀腺、乳腺等小器官介入，超音波引導微創消融），工作 10 年；所在地是西北某省會城市的三甲醫院；感覺技術天花板與收入上限都看得到，想跳出體制。</p>
+<ul>
+<li><strong>行業觀察：</strong>外科與腫瘤治療在不斷微創化，窗口越變越小；國產高端超音波等設備「價格打得下來，東西能做到八成九成像，但穩定性沒有老牌進口品牌高」；國產化要求越來越高，集採與利潤留在中國；一線城市與西北在醫療技術落地速度上「非常不平衡」。</li>
+<li><strong>轉行困惑：</strong>想去深圳的醫療器材公司（如邁瑞、開立）或私立醫院（如卓正），但不知需要準備什麼；與 AI 對話很多，仍想與真人聊。</li>
+<li><strong>立黨的建議：</strong>先別跳，等機械臂手術方向的公司落地（「真正人類落地可能還需要三五年」）；深圳很缺好醫生和技術，可直接找邁瑞的人內推；讀個 MBA/EMBA 補學歷短板（「學位很容易解決，深圳本地讀一個 MBA 就可以了」）；先裝 Codex、衝 OpenAI 會員，大概看信號與系統、自動控制原理、模數電、感測器幾門課；把手術影片、CT 資料導出來，用 Codex 做專案（教學、輔助、剪片、導航、醫學視覺化）放履歷上，「我覺得沒有醫療公司會拒絕你的」；關注深創投、前海母基金投了哪些生物醫療公司並去路演現場直接找 CEO/CTO 聊，「40 個人的公司融了 1000 萬，你一定去第二個公司比第一個公司更好」。</li>
+</ul>
+<h3>14. 「江澤蘭」（疑似，02:27:27–02:34:21）—— 醫生，勸退學醫</h3>
+<ul>
+<li>觀點：將來回國進醫療要謹慎，中國醫療「真的已經很爛了」；三明醫改前醫生可拿藥品與器材回扣，「最底層的住院醫生一個月拿一兩萬都沒有問題，基本工資可能只有兩千多、四千多，回扣可能有兩萬多」；醫改後回扣沒了，領導也躺平擺爛，年輕醫生收入低、提升可能性不大；醫學生很多，但真正進臨床當醫生的人很少。</li>
+<li>立黨反駁（02:32:46 起）：醫院沒有義務給所有醫學院畢業生兜底，市場化運作使然；醫學對多數分數段學生仍是較好選擇（見「三、4」末段）。</li>
+<li>雙方共識：現在醫院經營困難、醫保基金承壓；一二線城市自費買商業醫保的人越來越多。</li>
+</ul>
+<h3>15. WY（02:34:21–02:43:53）—— 上海併購 5 年，蘇州服裝生意</h3>
+<p>自述：在上海做併購 5 年多；去年 Crypto 火的時候辭職做 Crypto 相關，虧得比較多；家裡在蘇州做服裝 30 多年（外貿 2B 為主），自己帶小團隊做國內 2C 直播與海外獨立站（澳洲、美國市場），中高端女裝、單件約 200 美元，月流水 20 多萬但利潤微薄；用 AI 生成內容替代拍攝，做 content factory 模式。</p>
+<ul>
+<li>問：以自己的背景，AI Agent、具身智能等方向還值不值得做？是否要換賽道？</li>
+<li>立黨答：趕緊回去繼續做服裝；服裝出海很好，可找小紅書主理人合作訂製、找北美網紅帶貨；訂製化與規模化無法兼得；「每個人都用 AI 給自己生活或者生意提高一點效率，我覺得就很好的」，不需要跟 AI 有很強的關係，「跟 AI 有很強關係的產品和生意都必須要很強的技術背景，你不一定有這個東西」；AI + 電商本質還是注意力經濟。</li>
+<li>WY 的觀察：AI 電商的核心是 context（上下文），沒有上下文資訊沒法流轉；自己做的只是「AI 加」，不是「AI 原生」。</li>
+</ul>
+<h3>16. 藝術生（02:43:53–02:50:11）—— 動畫出身，現 IT 運維頭部公司</h3>
+<ul>
+<li>自述純藝術生出身，動畫/影視專業，現網際網路公司 IT 運維方向；稱藝術生就業比醫生更難；班裡 60 人、能從事本行的不到 5 人；曾申請韓國影視研究所，讀完回國也沒用；疫情期間紐約百老匯的人全失業。</li>
+<li>立黨回應：見「三、4」藝術部分；並稱 AI 短劇已涼（見「三、4」）。</li>
+</ul>
+<h3>17. May（疑似，02:50:19–03:04:38）—— 香港學生，港五 CS 在讀</h3>
+<p>自述：香港人，DSE 考得不好，讀了副學士（轉寫為「復學師/復學系」），現於香港城市大學（「港五」）讀電腦科學；副學士階段只想升 CS，沒學 coding 等技術；進大學後功課難、GPA 把握不住、經常拖延、很怕上學；LeetCode 第一題都不會做；想找銀行 IT 基建、雲、網路安全類工作。</p>
+<ul>
+<li>立黨建議：CS 讀不下去可考慮轉 EE（強電）；香港沒有電子行業，弱電崗位少，強電（電網、MTR、機場、醫院供電）工作穩定、收入不低且門檻低；若堅持 CS，可走 DevOps / SRE / IT Support 路線，先把 AWS 上最常用的 EC2、RDS、S3 等產品都用一遍、考 AWS 證書與 Cisco 證書，「香港的一些基金、銀行裡面的 DevOps 工作是沒有問題的」；也可考慮消費電子公司的 Sales Engineer；內地工作可透過小米等公司安排。</li>
+<li>May 的顧慮：從小在香港長大，不懂內地文化、租房、外賣，在內地沒有人脈；擔心做 IT Support 後跳不出來。立黨答：DevOps/SRE 仍是剛需，網路安全「門檻低了反而更難」，「如果你願意做 DevOps 或者 SRE 其實很好」。</li>
+</ul>
+<h3>18. NNBNN（疑似，03:04:50–03:08:17）—— 問 ETH 證偽的門外漢</h3>
+<ul>
+<li>問：立黨推特說的「ETH 被證偽」是什麼意思？門外漢一句聽不懂，能否用通俗語言講一遍？</li>
+<li>立黨答：見「三、3」通俗解釋版。</li>
+</ul>
+<h3>19. 21 歲 PLC 學徒（03:08:18–03:09:34）</h3>
+<ul>
+<li>自述 21 歲，學機電一體化技術，跟著師傅當 PLC 學徒；想一邊幹 PLC 一邊自學 AI Agent 開發。</li>
+<li>立黨答：可以學，慢慢學；主線是「好好學 PLC，好好找一個公司，和公司的業務一起發展，這是最好的選擇」。</li>
+</ul>
+<h3>20. Rachel（03:09:34–03:38:41）—— 33 歲，美國被裁，找 PERM 工作</h3>
+<blockquote>
+<p>立黨在 03:09:53 點名「Rachel，你還說嗎？」隨後由其本人發言；應為發言人名單中的 rachel_185 @chao43427774。</p>
+</blockquote>
+<p>自述背景：本科山東大學；本碩（轉寫存疑）均在美國；曾在德州儀器類公司做 cellular 相關射頻物理層測試工程師，後去 Sonos（轉寫為「sodos」）做消費電子測試工程師（寫自動化程式碼的 QA），再去 Amazon Robotics 做測試工程師；之後在 startup 做全端（Java Spring Boot + React），但一直用 AI 寫程式；33 歲，已婚，家庭在美國（奧斯汀附近，轉寫存疑），被裁後找不到能 sponsor PERM（綠卡）的工作。</p>
+<ul>
+<li><strong>求職困境：</strong>投 SDE 2 覺得自己水準不如現在的 CS 應屆生；硬體公司卡身分，連面試都拿不到（如 Teradyne，大放水期間能拿 offer，現在卡身分）；考慮轉晶片驗證工程師（verification engineer），但 Verilog 很久沒碰；也考慮靠 ROS 2 與機器人經驗回機器人公司。</li>
+<li><strong>立黨的建議：</strong></li>
+<li>不要在 test 裡打轉，「做 test 太浪費時間，如果做 test 至少要做 media test」；可考慮去中資公司在美國的辦公室，「中國人招中國人是最多的」；或回深圳/上海，「你的背景在上海、北京應該 60 萬年薪起步沒有任何問題」。</li>
+<li>讀 PhD 也是選項：有 industry 經驗的申請者很多導師願意要；但 Rachel 稱自己性格不適合讀博（不喜歡自己憑空創造問題再解決）。</li>
+<li>關注有增量的方向：具身智能、RSI（Recursive Self-Improvement）Agent 公司；「Agent 和 AI Engineer 其實不是後端轉過去的，大部分的 Agent Engineer 是從興趣出發、拍腦袋做出來的」。</li>
+<li>不要被 PERM 綁住：「如果 PERM 給你帶來很大的困擾，我覺得可以先不考慮它，先跟著機會走，因為你以後的機會一定會越來越多的。」</li>
+<li><strong>其他資訊點：</strong>立黨稱美國機器人公司不多，灣區一批做 VLA 的已不用 ROS，「只會 ROS 2 肯定是不好進」；MicroDoc（轉寫存疑，399 美元的具身智能小玩具，Hugging Face 相關）「這種小玩意很難活很久的，就像 Rabbit R1 一樣」。</li>
+</ul>
+<h3>21. 北京房產提問者（03:38:41–03:45:00）—— 本場唯一的房產個案</h3>
+<p>自述：父母 2013 年在北京五環西北邊、三山五園附近（香山、頤和園一帶，轉寫為「鄉山一鶴園」）買了一套 80 平米房子，花了 270 萬元，算上銀行利息總成本約 300 萬元；這些年收房租約 90 多萬元；現在掛牌出售可能 300 多萬。</p>
+<ul>
+<li>問：這套房子還有沒有比較大的繼續下跌空間？按租售比回歸本身價值，最後房價大概是多少？多少年會跌到？</li>
+<li>立黨答：見「三、1」。另問及父親是退休軍人、北京在分統建房，家裡排名在大興區（轉寫存疑），約 120–140 萬元可拿下一套 140 平米房子，與國家共有產權、不允許賣；立黨答「肯定拿」。</li>
+<li>提問者還問：去年 11 月看到立黨推薦買標普納斯達克但錯過了一波上漲，2026 年標普和納指是否還是「這個星球上最優秀的資產」？立黨答：指數仍會漲，但最優秀的是 OpenAI 與 Anthropic 股票；建議繼續定投、長期持有。</li>
+</ul>
+<h3>22. 北京一本 CS 學生（03:45:00–03:58:53）</h3>
+<ul>
+<li>自述大一大二沒怎麼學習，天天玩遊戲，現處於「零基礎階段」；想盡快賺錢，問過中介「學木工加雅思去發達國家當藍領」的路子；想拿綠卡。</li>
+<li>立黨建議：先考阿里雲和 AWS 證書；有錢去香港讀個碩士補課；北京有本土優勢，「北京的孩子一定要往外地去考」，如哈工大、華科、天津河北工大讀碩士，回北京就業；「你在北京幹什麼都餓不死，去小學幫他們備份資料庫也餓不死」；對出國當藍領（木工、幼教、護理）潑冷水：「你在北京也可以幹木工，你先幹一天試試……護士的工作年輕時候可以幹，有的人 30 歲腿就不行了……你不要賭這個事情」；並稱英澳「水碩」在 HR 那裡是「第一學歷的寄存處」（轉寫存疑），不如香港碩士能提高下限。</li>
+</ul>
+<h3>23. 鞍山二本土木大三學生（03:59:11–04:01:33）</h3>
+<ul>
+<li>自述鞍山某二本土木工程學院智能建造專業大三，大一、大二不學習、降過一級、差點退學，現學分補上；跟老師做過給鞍鋼的 1.3 億元專案（車輛監測系統、資料視覺化），有一篇 SCI 二作（材料學方向）；用 AI 工具投了 200 多份履歷，只有一家台灣企業（「天眼互動」，轉寫存疑）要他做自動化獲客，實習工資只有 1,000 元人民幣。</li>
+<li>立黨答：先去實習；「不行就讀一個碩士，電腦的碩士」。</li>
+</ul>
+<h3>24. Hopper（04:01:33–04:04:06）—— 疑似發言人 harper @liquefei267881</h3>
+<ul>
+<li>自述華南理工大學電腦專業，現於某公司做晶片（NPU）驗證，以外包身分，非正式員工；想諮詢職業發展。</li>
+<li>立黨答：「不用發展，就跟著公司業務走就可以了，這個工作可以給你養老」；若想轉正，可嘗試跳到競爭對手或友商；並建議按其 YouTube 影片自己做 Agent 專案再投履歷。</li>
+</ul>
+<h3>25. YYYW（04:04:06–04:07:24）—— 疑似發言人 yyyw_ @jingyu60985095</h3>
+<ul>
+<li>自述墨爾本（「墨久」，轉寫存疑）自動化大四學生，想申請香港碩士，傾向港中深（2 年制，方便實習）；本科偏硬體（嵌入式、PCB、FPGA），AI 接觸一點、軟體很少。</li>
+<li>立黨答：選 1 年制更省時間；「一個好的開源頂 100 個實習」；做自己最熟悉的方向（嵌入式）即可，「你不需要去趕 AI 的熱潮，你要能趕上，你前兩年應該趕上了」；並稱自己 2023 年 4 月 6 日就提出做 SW Agent，「比 Cloud Code、Codex 還要早」。</li>
+</ul>
+<h3>26. 現場討論（歸屬不明，04:07:24–04:12:02）</h3>
+<ul>
+<li>有聽眾補充：Print on Demand 在美國很卷，但全無人化的 Print on Demand 還是有機會。</li>
+<li>立黨收尾談醫療困境：人口變化帶來醫保基金缺口，「醫保基金一定是缺的，一定會在醫療上去壓」，會鼓勵大家花錢買商業醫保；「如果你不在體制內，盡量買上一份（商業醫保）」。</li>
+<li>最後被追問深圳房價與 design verification 行業前景，立黨稱 design verification 是「過去的 test」，早就飽和，增量不在加州而在東亞；隨後 04:12:00 關房。</li>
+</ul>
+<h2>五、關鍵原話摘錄（帶時間戳）</h2>
+<ol>
+<li>「哪裡都不要買……就騙你們進來。」——立黨，00:19:11–00:19:24</li>
+<li>「我這是騙你們進來的標題啊……我平時這個直播間就 100 來人，今天已經 300 來人讓你們進來聽啊。」——立黨，01:27:11–01:27:28</li>
+<li>「VLA 這個方向確實不太行……只有自己做了之後才能感受到這個方向確實是一個很難的方向。」——立黨，00:16:13–00:16:20</li>
+<li>「學什麼專業和你從事什麼工作，沒有任何關係……那個年代確實是已經永遠的過去了。」——立黨，00:52:17–00:53:25</li>
+<li>「網上投履歷是沒有用的……任何一個崗位都有幾千上萬個履歷……第一步是必須要按照學歷篩淘汰 90% 的人。」——立黨，01:58:00–01:58:45</li>
+<li>「回歸本身的價值在北京就是 2 萬一平米……慢慢的就會跌到這個位置……可能一二十年這樣子。」——立黨，03:40:41–03:41:14</li>
+<li>「深圳房價一定會跌的啊。」——立黨，04:09:13–04:09:15</li>
+<li>「OpenAI 做出了這個人類世界上最偉大的成果……這個是人類電腦整個計算領域最核心的問題，沒有之一。」——立黨，00:45:53–00:46:39（<strong>未經核實</strong>）</li>
+<li>「最優秀的資產肯定是 OpenAI 和 Anthropic 的股票啊，直接買了。」——立黨，03:43:56–03:44:02（<strong>個人觀點，不構成投資建議</strong>）</li>
+<li>「不要學藝術……藝術是最難的事情。」——立黨，02:45:17–02:45:24</li>
+<li>「一個好的開源頂 100 個實習。」——立黨，04:04:30–04:04:33（另見 02:04:30 前後相近表述）</li>
+<li>「中國還是半導體的機會是最多的……最後只有半導體、汽車、消費電子能有飯吃。」——立黨，00:39:50–00:40:55</li>
+</ol>
+<h2>六、案例與資料（均為發言人現場自述，未經核實）</h2>
+<table>
+<thead>
+<tr>
+<th>案例 / 資料</th>
+<th>來源</th>
+<th>時間戳</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>北京五環 80 平房子：2013 年 270 萬買入，總成本約 300 萬，收租約 90 多萬，現掛牌約 300 多萬</td>
+<td>北京房產提問者</td>
+<td>03:38:52–03:39:22</td>
+</tr>
+<tr>
+<td>統建房：約 120–140 萬拿 140 平，與國家共有產權、不可售</td>
+<td>同上</td>
+<td>03:42:17–03:42:34</td>
+</tr>
+<tr>
+<td>北京房價回歸價值約 2 萬/平米，90 平約 180 萬</td>
+<td>立黨</td>
+<td>03:40:41–03:41:00</td>
+</tr>
+<tr>
+<td>半導體碩士應屆：2016 年 8,000 元/月；2017–2018 年後談到 1.2–1.3 萬；現在硬體碩士 2 萬以上</td>
+<td>半導體從業者</td>
+<td>00:37:41–00:38:55</td>
+</tr>
+<tr>
+<td>2014 年前碧桂園/恆大區域銷售經理年薪保底 50 萬</td>
+<td>立黨</td>
+<td>00:35:27–00:35:44</td>
+</tr>
+<tr>
+<td>天津財經大學當年收 650、660 分學生，分數線高於天津 985</td>
+<td>立黨</td>
+<td>00:31:27–00:31:40</td>
+</tr>
+<tr>
+<td>蘇州服裝：月流水 20 多萬，利潤微薄；海外中高端女裝單件約 200 美元</td>
+<td>WY</td>
+<td>02:35:07–02:38:08</td>
+</tr>
+<tr>
+<td>Rachel：33 歲，美國被裁；本科山東大學；德州儀器、Sonos、Amazon Robotics 測試崗；startup 全端</td>
+<td>Rachel</td>
+<td>03:09:34–03:15:30</td>
+</tr>
+<tr>
+<td>Multi-Agent 硬體吞吐比 Single Agent 高 28%，程式設計領域反而更差</td>
+<td>中廠 AI+醫療從業者</td>
+<td>01:25:38–01:26:05</td>
+</tr>
+<tr>
+<td>藝術生：班裡 60 人，能從事本行的不到 5 人</td>
+<td>藝術生</td>
+<td>02:45:51–02:46:04</td>
+</tr>
+<tr>
+<td>醫生回扣年代：住院醫生基本工資 2–4 千，回扣可達 2 萬多/月</td>
+<td>「江澤蘭」（疑似）</td>
+<td>02:28:36–02:29:01</td>
+</tr>
+<tr>
+<td>鞍山學生：投 200 多份履歷，唯一 offer 實習工資 1,000 元/月；參與 1.3 億元鞍鋼專案</td>
+<td>鞍山二本學生</td>
+<td>03:59:46–04:00:30</td>
+</tr>
+<tr>
+<td>崗位履歷量：一個崗位幾千上萬份履歷，HR 先按學歷篩掉 90%</td>
+<td>立黨</td>
+<td>01:58:34–01:58:45</td>
+</tr>
+<tr>
+<td>MicroDoc：399 美元具身智能小玩具；Rabbit R1 全球銷量由立黨一位朋友操盤（自述）</td>
+<td>Rachel 提問、立黨答</td>
+<td>03:28:41–03:29:37</td>
+</tr>
+<tr>
+<td>Anthropic 招股書已出，11 月中旬上市（自述）</td>
+<td>提問者、立黨</td>
+<td>01:54:23–01:54:33</td>
+</tr>
+</tbody>
+</table>
+<h2>七、未核實聲明</h2>
+<ul>
+<li>本紀要全部內容均來自單場 Space 錄音的 ASR 逐字稿，<strong>所有觀點、資料、案例均為發言人現場自述，未經獨立核實</strong>，請勿直接當作事實引用。</li>
+<li>涉及房價走勢、標普/納斯達克指數、OpenAI 與 Anthropic 股票、Anthropic 上市時間、職業與專業選擇的內容，<strong>均為嘉賓個人觀點，不構成投資建議、購房建議或職業決策依據</strong>。</li>
+<li>立黨關於「3SAT / ETH 被證偽、P vs NP 下限被壓低」的宣稱，與公開學術共識明顯衝突，現場未提供論文出處，<strong>請勿當作事實引用</strong>，僅記錄為其當晚的現場說法。</li>
+<li>人名、公司名、地名、數字多處存在轉寫存疑，已在正文中標註；「Marvin/Mario」「釋懷」「江澤蘭」「杜老師」「語良生/雨量升」「天眼互動」「三山五園/香山一鶴園」等均以錄音諧音轉寫為準，未與本人核對。</li>
+<li>立黨關於北京房價「一定會跌」與「應該會往上」在收尾處（04:09:13–04:09:24）前後矛盾，可能是口誤或轉寫問題，原文照錄，請讀者自行判斷。</li>
+</ul>
+<h2>八、轉寫局限說明</h2>
+<ul>
+<li>開場約前 7 分 42 秒無有效語音（靜默/音樂，VAD 判 0 段）；逐字稿時間戳自 00:07:42 起，至 04:12:02 結束。</li>
+<li>逐字稿共 5,075 行、279,715 位元組，由 26 個 10 分鐘音訊塊經 faster-whisper 本地轉寫合併而成；無說話人分離，發言人歸屬均係根據上下文推斷。</li>
+<li>ASR 可能存在同音錯字，人名、地名、公司名、數字存疑處已標註「（轉寫存疑）」；英文術語（如 VLA、RoboDojo、LEC、UVM、PERM、RSI-CHIP 等）以轉寫為準。</li>
+<li>本場多位連麥者使用藍牙耳機，音質差，立黨多次表示「聽不清楚」「聲音特別小」；部分段落因音質問題轉寫不完整或存在大段重複詞（如 01:21:59 附近），相關內容未納入紀要。</li>
+<li>標題中的「（不要用藍牙耳機）」與場內反覆出現的音質問題相呼應：多位上麥者因藍牙耳機音質差被要求調整或請下麥。</li>
+</ul>
+<h2>九、基本資訊</h2>
+<ul>
+<li><strong>標題：</strong>《趕緊買房！（不要用藍牙耳機）》</li>
+<li><strong>Space ID：</strong>1qKDzWNvdvOJV</li>
+<li><strong>連結：</strong>https://x.com/i/spaces/1qKDzWNvdvOJV</li>
+<li><strong>spacesdashboard：</strong>https://spacesdashboard.com/space/1qKDzWNvdvOJV/</li>
+<li><strong>主持人：</strong>立黨 @lidangzzz</li>
+<li><strong>發言人（spacesdashboard 記錄，以錄音實際為準）：</strong>rachel_185 @chao43427774、yyyw_ @jingyu60985095、harper @liquefei267881；錄音中可確認發聲的另有多位連麥聽眾（見第四節），Rachel、YYYW、Hopper（疑似 harper）在錄音中均有對應發言段落</li>
+<li><strong>日期：</strong>2026-10-27 約 13:18–17:30（CST）</li>
+<li><strong>時長：</strong>約 4 小時 12 分（XspaceGPT 記 04:12:11；錄音轉寫覆蓋 00:07:42–04:12:02）</li>
+<li><strong>收聽人數：</strong>累計 4,093 人</li>
+<li><strong>紀要依據：</strong>本地錄音轉寫稿 hidden_files/transcript.txt（5,075 行，26 個 10 分鐘塊）</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Buy a Home Now! (Don't Use Bluetooth Earbuds)</h1>
+<blockquote>
+<p>These notes were compiled from a local ASR transcript of the X Space recording. <strong>Everything below is the speakers' own live account and has not been verified; content concerning housing prices, policy, investing, and career choices represents the guests' personal views only and does not constitute investment advice or a basis for decisions.</strong></p>
+</blockquote>
+<h2>1. Key Conclusions (Up Front)</h2>
+<ol>
+<li><strong>The title is clickbait; this session barely talked about buying homes.</strong> The host, Lidang, admitted twice on the record that "Buy a Home Now" was a title designed to lure listeners in (00:19, 01:27). His stream normally draws only about 100 people; this time the title pulled in over 300 concurrent listeners. Across the full 4 hours 12 minutes, actual discussion of housing took only about 10 minutes (one Beijing case plus a single sentence on Shenzhen prices).</li>
+<li><strong>The only substantive judgment on buying a home (Lidang's own account):</strong> Beijing housing prices will keep falling over the long term, returning to their "intrinsic value" of about RMB 20,000 per square meter, possibly taking ten to twenty years to drift down there. Shenzhen prices "will definitely fall," but old, small, rundown units of the Tiantongyuan type (transcription uncertain) "should go up" — his statements were inconsistent; see the original quotes below.</li>
+<li><strong>The real theme of this session was a large Q&amp;A on careers and choice of major.</strong> Practitioners from four industries — semiconductors, medicine, computing, and art — took the mic in turn. Lidang's recurring line was: <strong>the era when "your major had nothing to do with your job and graduates were fought over" is gone forever; today, choosing a major, doing a master's, and job hunting all require an exact match with the job, able to produce value immediately.</strong></li>
+<li><strong>The embodied-intelligence route debate (opening):</strong> Lidang argued the traditional VLA (vision-language-action) route "really doesn't work," and that Agent + VLM (vision-language model) is the viable direction. He built a demo of liver blood-vessel suturing surgical planning using GPT-6 (transcription uncertain) + Codex, claiming he "kicked Peking University and H.I.Bot aside in one blow." This was one of the points he was most excited about that evening, but it is unverified.</li>
+<li><strong>A startling claim about P vs NP / ETH (Lidang's own account):</strong> Lidang claimed OpenAI (transcribed as "Open App") had produced "the greatest achievement in the human world," that the 3SAT problem "is no longer of exponential complexity," that ETH (the Exponential Time Hypothesis) had been disproved, that "humanity is finished" and "every industry will be overturned." <strong>This claim is unverified and clearly conflicts with the published academic consensus; do not cite it as fact.</strong></li>
+<li><strong>Investment advice (Lidang's own account; not investment advice):</strong> The S&amp;P and Nasdaq indices are "the finest assets on this planet," to be held long-term with continued regular investing; "the finest assets are definitely the stocks of OpenAI and Anthropic"; Anthropic's prospectus is out and it will list in mid-November (all per the speaker's own account, unverified).</li>
+<li><strong>Job-hunting methodology (repeatedly stressed by Lidang):</strong> Submitting résumés online "is completely impossible" — a single position receives thousands upon thousands of résumés, and HR's first step filters out 90% by education. You must go offline: run the trade shows, join communities, meet people face to face, and get internal referrals. Open-source projects are worth more than internships: "one good open-source project is worth 100 internships."</li>
+<li><strong>Medicine and art were the two most pessimistic threads of the session:</strong> Several doctors came on mic saying that after the Sanming healthcare reform, kickbacks disappeared, young doctors earn little, and departments struggle to operate. Lidang said "don't study art": in an art class of 60 students, "fewer than 5 end up working in the field," and the only way out is becoming an influencer or doing livestream e-commerce.</li>
+</ol>
+<h2>2. Timeline / Flow</h2>
+<table>
+<thead>
+<tr>
+<th>Time (in recording)</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00:00–00:07:42</td>
+<td><strong>No usable speech</strong>: silence/music, VAD detected 0 segments. The transcript begins at 00:07:42.</td>
+</tr>
+<tr>
+<td>00:07:42–00:19:00</td>
+<td>Opening: intern Marvin (transcription uncertain) asks about embodied intelligence, VLA vs Agent+VLM, and the RoboDojo leaderboard; Lidang talks about his own surgical-planning demo.</td>
+</tr>
+<tr>
+<td>00:19:00–00:20:05</td>
+<td>A listener asks whether to buy a home in Hong Kong; Lidang answers "don't buy anywhere," and admits for the first time that the title was bait.</td>
+</tr>
+<tr>
+<td>00:20:05–00:45:47</td>
+<td>A semiconductor practitioner (10 years' experience) speaks at length: choosing a major, Hebei University of Technology, semiconductor salary cycles, and the difficulty of combining AI with semiconductor processes.</td>
+</tr>
+<tr>
+<td>00:45:47–00:47:12</td>
+<td>Lidang interjects: OpenAI "disproved ETH," the P vs NP lower bound was pushed down; he says he was "shocked all night."</td>
+</tr>
+<tr>
+<td>00:47:12–00:51:02</td>
+<td>A listener presses for more YouTube reaction videos; Lidang talks at length about differences between Chinese and American luxury homes (land, natural light, functionality) and recommends Chongqing luxury homes and the room tours of "Teacher Du" (transcription uncertain).</td>
+</tr>
+<tr>
+<td>00:51:02–01:12:30</td>
+<td>Lidang's long monologue: the era when "what you study has nothing to do with the job you do" is over; he uses Zhihu CTO Li Shenshen, the RMB 500k salaries at Country Garden/Evergrande, and the film <em>Tiny Times</em> as examples of the 2010s employment dividend.</td>
+</tr>
+<tr>
+<td>01:12:30–01:27:11</td>
+<td>Open-mic Q&amp;A: a computer science student at a Project 211 university in Beijing; a friend who owes RMB 100,000 and has vanished; "old-guard" state-owned enterprises; AI + healthcare at a mid-sized company; multi-agent throughput 28% higher.</td>
+</tr>
+<tr>
+<td>01:27:11–01:28:02</td>
+<td>A listener asks again, "Teacher Lidang, should we really buy a home now?" Lidang answers again: "That title is bait to get you in here… my stream normally has about 100 people; today there are already over 300."</td>
+</tr>
+<tr>
+<td>01:28:02–01:52:34</td>
+<td>Open-mic Q&amp;A: a Dongguan IT operations worker wanting to switch to AI; a Sun Yat-sen University CS student in trajectory optimization (admitted to a Southeast University master's in analog IC); a 23-year-old wanting to study cybersecurity; Anthropic's listing and regular investing.</td>
+</tr>
+<tr>
+<td>01:52:34–02:04:28</td>
+<td>Open-mic Q&amp;A: a Guangxi second-tier university software engineering senior job hunting; a clinician (interventional direction) wanting to jump to a medical-device company.</td>
+</tr>
+<tr>
+<td>02:04:28–02:27:11</td>
+<td>Medical special: a doctor discusses interventional techniques, domestic medical devices, and career-change advice for doctors (build projects with Codex, watch roadshows from Shenzhen Capital Group / Qianhai Fund of Funds).</td>
+</tr>
+<tr>
+<td>02:27:11–02:34:21</td>
+<td>Another doctor "discourages studying medicine": after the Sanming reform, doctors' incomes and the profession's appeal have fallen; Lidang pushes back, saying medicine is still a good choice for students in most score bands.</td>
+</tr>
+<tr>
+<td>02:34:21–02:43:53</td>
+<td>WY, who did M&amp;A in Shanghai for 5 years, quit to do Crypto and lost money, and returned to Suzhou to run a clothing export business; an art student talks about how hard the film and TV industry is.</td>
+</tr>
+<tr>
+<td>02:43:53–03:04:38</td>
+<td>The art student continues; Hong Kong student May (DSE, associate degree, CS at a top-five Hong Kong university) asks about DevOps/IT Support prospects; a listener asks again about the ETH disproof.</td>
+</tr>
+<tr>
+<td>03:04:38–03:38:41</td>
+<td>A 21-year-old PLC apprentice; <strong>Rachel's long segment (03:09–03:38)</strong>: 33 years old, laid off in the US, looking for a job that can sponsor PERM; Lidang advises a PhD or joining a Chinese company / returning to Shenzhen or Shanghai.</td>
+</tr>
+<tr>
+<td>03:38:41–03:45:00</td>
+<td><strong>The session's only property case</strong>: a listener asks whether his parents should sell their home inside Beijing's Fifth Ring Road and whether to take a government-built (tongjian) flat; Lidang says Beijing prices will fall over the long term back to RMB 20,000/sq m, and of the tongjian flat, "definitely take it."</td>
+</tr>
+<tr>
+<td>03:45:00–04:04:06</td>
+<td>A Beijing Project 211 CS student's plans; a third-year civil engineering student at a second-tier university in Anshan; Hopper (South China University of Technology, outsourced chip verification); YYYW (Melbourne automation senior applying for a Hong Kong master's).</td>
+</tr>
+<tr>
+<td>04:04:06–04:12:02</td>
+<td>Closing chat: Print on Demand, the medical insurance fund's difficulties; Lidang's final housing remark: "Shenzhen prices will definitely fall… Tiantongyuan old rundown small units will too… should go up"; the room closed at 04:12:00.</td>
+</tr>
+</tbody>
+</table>
+<h2>3. The Host Lidang's Main Views</h2>
+<h3>1. On the session's title and buying a home</h3>
+<ul>
+<li>The title is a traffic device. Original words (00:19:19–00:19:24): "Don't buy anywhere… Huh? What does 'buy a home now' mean then? It's just to trick you into coming in." Original words (01:27:11–01:27:28): "This title is bait to get you in here… my stream normally has about 100 people; today over 300 of you have come in to listen."</li>
+<li>His Beijing price judgment (03:40:01–03:41:14, responding to a listener's case): "Over the long run it will still fall, though maybe it hasn't fallen much lately… as long as it depreciates it declines… its intrinsic value in Beijing is RMB 20,000 per square meter… it will slowly fall to that level… maybe over ten or twenty years."</li>
+<li>His Shenzhen price judgment (04:09:13–04:09:24, pressed during the wrap-up): "I won't analyze Shenzhen prices. Shenzhen prices will definitely fall… Tiantongyuan old rundown small units will too… hard for me to say — they should go up." — <strong>Within a single sentence he first said "will definitely fall" and then "should go up"; either the transcription or a slip of the tongue is possible, so please note this when quoting.</strong></li>
+<li>His advice on the listener family's tongjian flat (03:42:26–03:43:06): "Then just hold it, it's definitely stable and won't lose money… definitely take it, definitely take it… it's a benefit; the moment it's in hand it's worth one to two times more."</li>
+</ul>
+<h3>2. On embodied intelligence and AI agents</h3>
+<ul>
+<li>The traditional VLA route doesn't work (00:16:13–00:16:20): "The VLA direction really doesn't work… you can only feel how hard this direction is after you've done it yourself."</li>
+<li>Agent + VLM is the viable route (00:09:57–00:10:47): he said he connects a model directly, lets the model write its own CV tools, write its own code and execute it, and "the success rate is extremely high… you don't need a big model or lots of data; you just plug in one (model)," adding that "once Brother Dang makes a move, the so-called Peking University and the so-called H.I.Bot are all kicked aside." (All of the above is his own account, unverified; what "Peking University" refers to here is unclear, transcription uncertain.)</li>
+<li>Robot evaluation leaderboards need upgrading (00:14:12–00:15:38): RoboDojo's tasks are "far too simple"; future benchmarks should switch to tasks requiring "intense logic" and fine manipulation, such as medical surgery, Rubik's cube solving, carving, and operating complex dashboards. Most people imagine robot work as mere pick and place.</li>
+<li>His own project RSI-CHIP (03:23:04–03:23:14, 03:35:32–03:37:00, his own account): "Use agents to generate EDA tools, generate the whole EDA framework, from SystemVerilog to RTL, synthesis, LEC, gate-level netlists… plan to replicate over 1,000 analog chips, over 10,000 chips in total," and "in EDA there are no agents right now — only OpenAI and I are doing it."</li>
+<li>On Anthropic's listing and index investing (01:54:18–01:56:01, 03:43:28–03:44:22): "Put all the money of your life into it and that's fine… every month's business income has to go in"; "the finest assets are definitely the stocks of OpenAI and Anthropic"; within indices "a portion of the top names will of course rise, but they definitely won't rise faster than OpenAI and (Anthropic)." <strong>The above are the guest's personal views and do not constitute investment advice.</strong></li>
+</ul>
+<h3>3. On P vs NP / ETH (an unverified, startling claim)</h3>
+<ul>
+<li>Original words (00:45:53–00:47:10): "Let me say one more thing: OpenAI has produced the greatest achievement in this human world… the 3SAT and P versus NP problem — today OpenAI has completely solved this problem… it pushed the lower bound down… this is the most core problem in the entire field of human computing, bar none… this thing has too profound an impact on human society… from last night to this morning — it's nine in the morning now — I've basically been in a state of shock, in this emotion; I simply can't get out of it."</li>
+<li>The plain-language version (01:19:45–01:20:24, 03:05:01–03:06:40): "For a long time humans believed the 3SAT problem should be of exponential complexity… today I'm telling you it's not exponential anymore… many problems like 3SAT, MaxFlow, MinCut could move closer to polynomial complexity… cracking a password is now linear… every industry is finished."</li>
+<li><strong>Note in these minutes: this claim clearly conflicts with the published academic consensus; no paper source was provided live, and in the transcript "OpenAI" was at one point transcribed as "Open App." Do not cite it as fact; it is recorded only as "Lidang's live claim that evening."</strong></li>
+</ul>
+<h3>4. On majors, employment, and "the times have changed"</h3>
+<p>This was Lidang's longest and most repeated thread of the evening (the long monologue at 00:51–01:12 is its core):</p>
+<ul>
+<li>"In the past 10 years, many jobs didn't require a matching major… everyone said that whether you studied chemistry, chemical engineering, finance, or trade, once you started working your job could be completely different from your major — and for most people it was… back then, honestly, studying mathematics and going into (a bank) was no problem… that's how it was played back then… but that era really is gone forever." (00:52:02–00:53:25)</li>
+<li>Concrete examples of the old dividend (his own account, unverified): Zhihu CTO Li Shenshen "knew neither the language nor the framework, and built the earliest version of Zhihu while learning the language from a book and the framework from a book"; before 2014, going to Country Garden/Evergrande "you could directly become a regional sales manager, with a guaranteed RMB 500,000 a year minimum"; Tianjin University of Finance and Economics "took in a big batch of kids scoring 650, 660," with an admission line higher than Tianjin's 985 universities; "Guo Jingming's film <em>Tiny Times</em> is a documentary film… back then in Shanghai, girls like Lin Xiao and Gu Li could study any random major and get into that kind of company… work a few years and you're a director."</li>
+<li>The requirements have changed now (00:57:14–00:59:06): "The further you study now, the more they look at what direction your master's was in, what project your PhD researched… now you have to be productive within a one-month probation, and qualify the person within three months… students today really don't have it easy."</li>
+<li>Job-hunting methodology (01:58:00–02:01:00): "Submitting résumés online is useless… in every HR recruiting system, any single position has thousands upon thousands of résumés… the first step must filter out 90% of people by education… you have to go offline to Shenzhen, to Shanghai, talk at one trade show after another, one event after another… and get them to refer you internally."</li>
+<li>Open source outweighs internships (02:04:30–02:04:52, responding to YYYW): "One good open-source project is worth 100 internships… if you want to make something valuable, you can do it right now; you don't need to wait for an internship."</li>
+<li>Don't study art (02:45:17–02:50:09): "Art is the hardest thing… the people studying art right now, at this very moment, end up with just a bachelor's degree and know how to do nothing… in a class of 60, fewer than five can work in the field… the only way out is becoming an influencer on TikTok or YouTube; there is no other way out, or else livestream e-commerce… only one kind of person can study art: if your father is at the Tianjin Peking Opera Theatre or the Beijing Peking Opera Theatre, you can go on stage at 13 and win a national-level award at 18."</li>
+<li>His judgment on AI film/TV and short dramas (02:46:50–02:47:50): "AI film and TV went cold long ago, died long ago… what people watch is IP, not content… even a young woman on Douyin livestreaming three hours a day chatting with you delivers more emotional value to an individual than an AI short drama; that can't be replaced."</li>
+<li>His judgment on medicine (02:32:46–02:33:25, responding to the discourager): "Whether medicine is good or not — for students in many score bands, medicine is still possibly a relatively good choice in their lives… medicine is a job where, relatively speaking, if you feed on experience, love learning, have hands-on ability, and don't need especially strong math and science ability, you can find work with relatively high social status that gradually pays off over the long term. I don't think it's a wrong option."</li>
+</ul>
+<h3>5. On luxury homes (responding to a listener pressing for more content)</h3>
+<ul>
+<li>The biggest differences between Chinese and American luxury homes are land, natural light, and functionality (00:48:20–00:49:08): "American luxury homes basically all have a big lawn in front and a big lawn in back… the biggest problem with Chinese luxury homes is still not enough land… second, Chinese luxury homes basically have no functionality… what Chinese people need most right now, functionally, is an office, an entertainment room, a studio, and bedrooms spaced well apart — but that kind of luxury home isn't built in China."</li>
+<li>Chongqing has the best luxury homes (00:49:54–00:50:40, his own account): "China's good luxury homes are basically all around Chongqing… because of Huang Qifan; their (land policy) back then was very loose… Chongqing's luxury-home market is especially big and prosperous… if you want to look at luxury homes, just watch someone called Teacher Du (transcription uncertain); he specializes in room tours of Chongqing luxury homes, very, very beautiful."</li>
+<li>The core problem with luxury-home designers (00:51:07–00:51:13): "Luxury-home designers and architects have never lived in a luxury home. That is the biggest problem."</li>
+</ul>
+<h3>6. On semiconductors and China's industrial opportunities</h3>
+<ul>
+<li>Long-term judgment (00:39:50–00:40:55): "Over the long term, China still has the most opportunities in semiconductors… in the end the biggest markets, the highest profits, the standard products are cars, semiconductors, and consumer electronics… finance was especially hot, healthcare was especially hot, and in the end none of them had food to eat; in the end only semiconductors, cars, and consumer electronics have food to eat."</li>
+<li>Semiconductors carry national-security and national-fortune backing (00:41:44–00:42:29, supplemented by the semiconductor practitioner, with Lidang agreeing): "Chinese semiconductors are different from every other country; Chinese semiconductors have a national-fund (national security) issue… plus Meng Wanzhou gave a guarantee to the top leader (transcription uncertain)… so funds in many places have to put money in, have to do it."</li>
+</ul>
+<h2>4. Views of Each Speaker</h2>
+<blockquote>
+<p>The transcript has no speaker separation; the attributions below are inferred from self-reported identities, how speakers address each other, and topic continuity. Uncertain cases are marked "tentative" or placed under "floor discussion."</p>
+</blockquote>
+<h3>1. Marvin / Mario (tentative, 00:07:42–00:19:00) — an intern in embodied intelligence</h3>
+<ul>
+<li>Said he interns at a startup working on VLA or world models (World Model, transcription uncertain); the company's bosses are also interested in Agent + VLM, and he feels "almost the entire embodied-intelligence industry is turning in this direction."</li>
+<li>Asked Lidang: is working on Harness (transcription uncertain) OK? What small projects can an individual developer do?</li>
+<li>Mentioned that the RoboDojo leaderboard is very popular, and that the entries on it are basically people building their own agents and plugging models into them.</li>
+<li>Believed continuing down the VLA route "could be quite dangerous," since investors may not keep patiently backing such companies; but he also admitted "the bubble is big, but the money earned is still quite a lot," and internship pay is relatively decent.</li>
+<li>Suggested upgrading evaluation: give agents cameras to do SLAM mapping, use CV tools, add more sensors, so agents can better understand environmental parameters.</li>
+</ul>
+<h3>2. Semiconductor practitioner (00:20:05–00:45:47) — 10 years in semiconductor manufacturing, Section Manager</h3>
+<p>Self-reported background: a repeat student (gaokao retaker) who applied for automation, was not admitted, and was reassigned to chemical engineering and technology; graduated from Hebei University of Technology (transcribed as "Hebei Gongda / Hebei Ligong," should be Hebei University of Technology); entered semiconductor manufacturing after his master's 10 years ago; worked at SK hynix and Samsung; now a section manager, at deputy department level.</p>
+<ul>
+<li><strong>Experience choosing a major:</strong> Back then he disliked engineering and wanted to apply for finance/business administration to "sit in an office building and be a boss"; an elder in the family woke him up and told him to apply to "purer" institutions (Hebei University of Technology, Shijiazhuang Tiedao University, Taiyuan University of Technology) to avoid being reassigned to the worst liberal-arts majors; "a school's purpose is not to get you employed; it's just to enroll students and collect money."</li>
+<li><strong>Industry change:</strong> Ten years ago, a master's graduate from a non-211/985 or Project 211 university could enter semiconductors as a process engineer without frequently entering the cleanroom; now hiring "strictly screens by first degree," "double-nine (985) and strictly screens by first degree — it must be such-and-such a school, such-and-such a major."</li>
+<li><strong>Salary timeline (his own account):</strong> Entered the industry in 2016 as a fresh master's graduate at RMB 8,000/month; after Yangtze Memory, ChangXin, and HHGrace (transcription uncertain) rose in 2017–2018, semiconductor salaries leapt qualitatively, and a master's holder could negotiate from 7–8 thousand up to 12–13 thousand (transcription uncertain); the Micron downturn in 2023 (he said he was at SK hynix and not much affected); after Huawei entered, another salary leap came; now a hardware master's "can also negotiate over twenty thousand," and PhDs get more.</li>
+<li><strong>The difficulty of combining AI with semiconductor processes:</strong> Each company's AI is closed, and knowledge bases use only the company's own materials; process recipes have many tuning variables and poor mechanistic models, unlike ASML lithography, which has deep computational-optics models and OPC know-how; semiconductor companies' AI efforts are currently "limited to replacing some searching," and relying on AI to tune recipes "could be a very long road."</li>
+<li><strong>His assessment of Zhang Xuefeng:</strong> Lidang's career-guidance video "was more realistic than Zhang Xuefeng's, much more realistic"; "he (Zhang Xuefeng) is a teacher; he has never worked a job, never truly experienced the workplace."</li>
+</ul>
+<h3>3. The listener pressing for more content (00:47:12–00:51:02)</h3>
+<ul>
+<li>Said he is a fan of Lidang's YouTube channel and loves his reaction videos to other content (Jiang Ping, <em>The Offer</em>, finance internships, luxury homes), pressing for more luxury-home reactions and Jiang Ping-type videos.</li>
+<li>For Lidang's response, see "3.5."</li>
+</ul>
+<h3>4. Beijing Project 211 computer science student (01:16:04–01:16:34)</h3>
+<ul>
+<li>Said he didn't study in his first two years of university, now regrets it and doesn't know what to do; said he has long followed Lidang on Twitter and saved many of his posts.</li>
+<li>Lidang discovered the student's Twitter did not actually follow him, asked him to leave the mic, and did not answer at length.</li>
+</ul>
+<h3>5. The listener whose friend owes money and has vanished (01:16:39–01:17:31)</h3>
+<ul>
+<li>Asked: a friend in his life owes RMB 100,000 ("ten," should be RMB 100,000) and now can't be found; what should he do?</li>
+<li>Lidang answered: ask mutual friends; "there may be nothing that can be done," and gave no further advice.</li>
+</ul>
+<h3>6. Ruann (tentative, 01:17:33–01:19:27) — a CS practitioner at a state-owned enterprise</h3>
+<ul>
+<li>Asked how to "avoid the landmines of old-guard SOEs" (transcription uncertain; presumably complaining about seniority-based hierarchy in state-owned enterprises).</li>
+<li>Lidang answered: the downside is "a mass of rules and processes; you can only follow their way of thinking," "no increment"; "if you're young and want opportunities, don't go; but if you have no choice, you can still go"; an older leader doesn't mean incompetent — "many of my own best leaders are 30 years older than me and extremely smart"; for CS people in SOEs, "it feels like there's no way out."</li>
+</ul>
+<h3>7. AI + healthcare practitioner at a mid-sized company (01:19:28–01:27:11)</h3>
+<ul>
+<li>Said he interns at a mid-sized company doing AI + healthcare, in medical-insurance review; has good relations with alumni; is also building a Multi-Agent system whose hardware throughput is 28% higher than a Single Agent, but in programming Multi-Agent performs worse, and he feels lost about direction.</li>
+<li>Asked Lidang whether he should join an AI chip-design community (building an open-source resource map for AI for Chip / Chip for AI); Lidang said "not recommended": "you're not the people who do this… just one LEC, one SystemVerilog front-end compiler, the whole UVM — I spent several weeks on it… this thing has a very long learning cycle; you need to come out with a master's degree and then work in the industry for several more years."</li>
+<li>Lidang also advised: to rewrite commercial software, first rewrite "software you know how to use" — "you've used it, so how would you rewrite it?"; and said he himself is building the simplest RISC-V CPU, aiming to run the full flow through to foundry signoff.</li>
+</ul>
+<h3>8. Dongguan IT operations worker, middle manager (01:28:13–01:35:00)</h3>
+<ul>
+<li>Said he does operations management at a top IT operations company, is nearly 30, is based in Dongguan, wants to jump back to Beijing, and wants to learn some AI so as not to be left behind by the times; he previously did self-media, with single videos getting 300,000 to over 1,000,000 views, but feels that industry no longer works.</li>
+<li>Lidang answered: if you want to switch to a technical role, "basically nobody will give you the chance"; if you truly want to learn, "score 100 on the TOEFL, do the Georgia Tech Online CS Master, get a computer science master's, finish ten courses in a year — algorithms, computer fundamentals, operating systems, computer architecture, deep learning, LLMs, learn them all"; for AI content, enter through a low-barrier track he can understand, such as consistency in AI film/TV (a character's expressions, scenes, clothes, and voice staying consistent across 30 seconds), or first run the trade shows to see what products peers are making.</li>
+</ul>
+<h3>9. "Shihuai" (tentative, 01:35:02–01:52:34) — Sun Yat-sen University CS undergraduate, robot trajectory optimization</h3>
+<p>Self-reported: computer science undergraduate at Sun Yat-sen University ("Zhongjiu," one of the C9-equivalent "Zhongjiu" group), GPA 3.7/4.0, working on robotics trajectory optimization (motion planning; traditional methods such as mincost / A*, now reinforcement-learning optimization); published as second author in TRO and first author at IROS (transcription uncertain); his advisor came out of DJI; he has been admitted to a specialized master's in analog IC at Southeast University (transcribed as "Huawu," presumably Southeast University), with the partner company making lithography-related chips (transcribed as "Yuliangsheng / Yuliangsheng," presumably a lithography-industry-chain company, unverified).</p>
+<ul>
+<li>Asked: should he go to the US for a robotics PhD? Lidang said no. That direction "has no great opportunities," and after graduating he would definitely have to return to Shenzhen to work; in the US "only the top two or three LLM companies might give an H1B," and "DJI is no longer hiring (trajectory optimization) people; they're looking for (image-direction) people."</li>
+<li>Lidang's judgment on his admission destination: "Both of these directions are ten thousand times better than doing robotics in any US lab… power (analog IC) — few people do it, few people in it, it's definitely a rigid demand… after graduating you can enter DPU companies in Shanghai, Shenzhen, Beijing… if after your bachelor's you could go directly to (that company), you wouldn't even need to read a master's."</li>
+<li>On doing an analog IC PhD in the US: Lidang said the golden age of analog in the US was before 2010, after which many people switched to writing code — "people doing analog in the US, after taping out one or even two chips, switched to writing Java, writing front-end"; and "US immigration is getting less and less friendly," the study pressure is high, "no need to eat that hardship."</li>
+<li>Also: Lidang called MEMS "a dead end, without question."</li>
+</ul>
+<h3>10. The 23-year-old wanting to study cybersecurity (01:52:34–01:54:03)</h3>
+<ul>
+<li>Asked: is 23 too late to study cybersecurity and protection? He felt data leaks and information leaks are serious problems.</li>
+<li>Lidang answered: don't look at that stuff (referring to rumors on X about "hackers attacking the backbone network" — "all idiots, don't believe it"); "just study it — computer science has many courses and many books; CS DIY has courses; start with those"; "I could learn this in the second year of middle school."</li>
+</ul>
+<h3>11. The Anthropic listing questioner (01:54:04–01:56:08)</h3>
+<ul>
+<li>Said he has been regularly investing in the S&amp;P and Nasdaq long-term per Lidang's advice; asked: Anthropic's prospectus is out and it lists in mid-November — any views? Go all in or invest regularly?</li>
+<li>Lidang answered: see the end of "3.2"; and pushed back on his regular-investing method: "The money you have, the assets you have now — how are you investing them regularly? You don't put it in directly; you split it into thirty or fifty parts and invest one part a month, is that it?"</li>
+</ul>
+<h3>12. Leap (tentative, 01:56:16–02:04:28) — a Guangxi second-tier university software engineering senior</h3>
+<ul>
+<li>Self-reported: a senior in software engineering at a domestic second-tier university, with national third-prize and provincial third-prize awards (computer-related competitions, team awards); following Lidang's videos, he built an agent project that proactively fixes bugs, and also did a RAG project (Lidang slammed it: "RAG is garbage; whoever touches RAG has no future") and large-model projects; he submits résumés daily, got no offer in the autumn recruitment season, and can start an internship in November; he wants to find a product-manager or AI-application direction.</li>
+<li>Lidang answered: the city (Guangxi Liuzhou, transcription uncertain) is a problem; "submitting online is useless"; change his Twitter profile to his real face and real name, put the national and provincial third prizes in his bio, make a GitHub Page; "you have to do some crazy things… you have to do new things, you have to think"; on direction, "are RSI chip, large software rewrites, agent evolution good directions?" and told him to first finish watching his own AI lecture series of 57 videos ("you've watched up to episode three… the most important one, episode five, you haven't watched").</li>
+</ul>
+<h3>13. The clinician (02:04:28–02:27:11) — a tertiary hospital in a northwest provincial capital, interventional direction, about 10 years of work</h3>
+<p>Self-reported: a clinician who, after his bachelor's, switched from surgery to the interventional direction (interventions on small organs such as the liver, thyroid, and breast; ultrasound-guided minimally invasive ablation), with 10 years of work; based at a tertiary (Grade 3A) hospital in a northwest provincial capital; he feels he can see both the technical ceiling and the income cap, and wants to jump out of the system.</p>
+<ul>
+<li><strong>Industry observations:</strong> Surgery and tumor treatment keep becoming less invasive, and the window keeps shrinking; domestic high-end ultrasound and similar equipment "can be priced down and can achieve 80–90% of the imaging, but stability is not as high as the established imported brands"; localization requirements keep rising, with centralized procurement and profits staying in China; first-tier cities and the northwest are "very unbalanced" in how fast medical technology lands.</li>
+<li><strong>Career-change confusion:</strong> He wants to go to a Shenzhen medical-device company (such as Mindray or SonoScape) or a private hospital (such as Distinct Healthcare), but doesn't know what to prepare; he talks with AI a lot but still wants to talk with a real person.</li>
+<li><strong>Lidang's advice:</strong> Don't jump yet; wait for robotic-arm surgery companies to land ("real human landing may still take three to five years"); Shenzhen is very short of good doctors and technique, and he can directly find people at Mindray for an internal referral; read an MBA/EMBA to patch the education gap ("a degree is easy to solve — just read an MBA locally in Shenzhen"); first install Codex, subscribe to OpenAI membership, and roughly study signals and systems, automatic control theory, analog and digital circuits, and sensors; export surgical videos and CT data and use Codex to build projects (teaching, assistance, clip editing, navigation, medical visualization) to put on his résumé — "I don't think any medical company would refuse you"; watch which biomedical companies Shenzhen Capital Group and Qianhai Fund of Funds have invested in, go to their roadshows, and talk directly with the CEO/CTO — "a 40-person company raised 10 million; you definitely go — the second company will be better than the first."</li>
+</ul>
+<h3>14. "Jiang Zelan" (tentative, 02:27:27–02:34:21) — a doctor discouraging people from studying medicine</h3>
+<ul>
+<li>His view: be careful about returning to China to enter healthcare in the future; Chinese healthcare "really is already terrible"; before the Sanming reform, doctors could take kickbacks on drugs and devices — "the lowest-level resident doctor had no problem taking ten to twenty thousand a month; base salary might be only two thousand-odd or four thousand-odd, and kickbacks could be over twenty thousand"; after the reform the kickbacks are gone, leaders are lying flat too, young doctors earn little with little prospect of improvement; there are many medical students, but few actually enter clinical practice as doctors.</li>
+<li>Lidang's rebuttal (from 02:32:46): hospitals have no obligation to underwrite every medical-school graduate; that's how market operation works; medicine is still a good choice for students in most score bands (see the end of "3.4").</li>
+<li>Common ground between the two: hospitals now struggle to operate and the medical insurance fund is under pressure; more and more people in first- and second-tier cities are buying commercial medical insurance out of pocket.</li>
+</ul>
+<h3>15. WY (02:34:21–02:43:53) — five years of M&amp;A in Shanghai, clothing business in Suzhou</h3>
+<p>Self-reported: worked in M&amp;A in Shanghai for over five years; last year, when Crypto was hot, he quit to do Crypto-related work and lost quite a lot; his family has done clothing in Suzhou for over 30 years (mainly foreign-trade B2B); he leads a small team doing domestic B2C livestreaming and overseas independent sites (Australian and US markets), mid-to-high-end women's clothing at about USD 200 per piece, with monthly turnover of over RMB 200,000 but thin profits; he uses AI-generated content to replace photo shoots, in a content factory model.</p>
+<ul>
+<li>Asked: with his background, are directions such as AI agents and embodied intelligence still worth doing? Should he switch tracks?</li>
+<li>Lidang answered: go back quickly and keep doing clothing; clothing exports are good — he can cooperate with Xiaohongshu hosts on custom products and find North American influencers to sell goods; customization and scale cannot both be had; "if everyone uses AI to make their life or business a little more efficient, I think that's very good" — you don't need a strong relationship with AI; "products and businesses with a strong relationship to AI all require a very strong technical background, and you may not have that"; AI + e-commerce is at its core still an attention economy.</li>
+<li>WY's observation: the core of AI e-commerce is context; without contextual information nothing can flow; what he has built is only "AI plus," not "AI native."</li>
+</ul>
+<h3>16. The art student (02:43:53–02:50:11) — animation background, now at a top IT operations company</h3>
+<ul>
+<li>Self-reported: a pure art student by training, in animation/film, now in IT operations at an internet company; said art students have an even harder time finding jobs than doctors; in his class of 60, fewer than 5 can work in the field; he applied to a Korean film graduate program, but even finishing it and returning to China was useless; during the pandemic, everyone on New York's Broadway lost their jobs.</li>
+<li>Lidang's response: see the art part of "3.4"; he also said AI short dramas have already gone cold (see "3.4").</li>
+</ul>
+<h3>17. May (tentative, 02:50:19–03:04:38) — a Hong Kong student, CS at a top-five Hong Kong university</h3>
+<p>Self-reported: a Hong Konger who did poorly on the DSE and read an associate degree (transcribed as "fuxueshi / fuxuexi"), now studying computer science at City University of Hong Kong ("one of the top five"); during the associate degree he only wanted to advance into CS and didn't learn coding or other techniques; after entering university the coursework is hard, he can't keep hold of his GPA, he procrastinates often and is very afraid of school; he can't solve even the first LeetCode problem; he wants to find bank IT infrastructure, cloud, or cybersecurity work.</p>
+<ul>
+<li>Lidang's advice: if CS is unsustainable, consider switching to EE (power engineering); Hong Kong has no electronics industry and few low-voltage (weak-current) jobs, while power (strong-current) jobs — the power grid, MTR, airport, hospital power supply — are stable, pay decently, and have low barriers; if he sticks with CS, he can take the DevOps / SRE / IT Support route: first use the most common AWS products such as EC2, RDS, and S3, and get AWS and Cisco certifications — "DevOps jobs at some Hong Kong funds and banks would be no problem"; he could also consider being a Sales Engineer at a consumer-electronics company; mainland jobs could be arranged through companies like Xiaomi.</li>
+<li>May's concerns: he grew up in Hong Kong and doesn't understand mainland culture, renting, or food delivery, and has no network on the mainland; he worries that after doing IT Support he won't be able to jump out. Lidang answered: DevOps/SRE is still a rigid demand; cybersecurity "with lower barriers is actually harder"; "if you're willing to do DevOps or SRE, that's actually very good."</li>
+</ul>
+<h3>18. NNBNN (tentative, 03:04:50–03:08:17) — a layman asking about the ETH disproof</h3>
+<ul>
+<li>Asked: what does "ETH has been disproved," as Lidang said on Twitter, mean? As a layman he couldn't understand a word; could it be explained in plain language?</li>
+<li>Lidang answered: see the plain-language version in "3.3."</li>
+</ul>
+<h3>19. The 21-year-old PLC apprentice (03:08:18–03:09:34)</h3>
+<ul>
+<li>Self-reported: 21 years old, studying mechatronics technology, working as a PLC apprentice under a master; wants to work on PLC while self-studying AI agent development.</li>
+<li>Lidang answered: you can learn it, slowly; the main line is "study PLC well, find a good company, and grow together with the company's business — that's the best choice."</li>
+</ul>
+<h3>20. Rachel (03:09:34–03:38:41) — 33 years old, laid off in the US, looking for PERM-sponsoring work</h3>
+<blockquote>
+<p>At 03:09:53 Lidang called out, "Rachel, are you still speaking?" after which she spoke herself; she should be rachel_185 @chao43427774 from the speaker list.</p>
+</blockquote>
+<p>Self-reported background: bachelor's at Shandong University; bachelor's and master's (transcription uncertain) both in the US; worked at a Texas Instruments-type company as an RF physical-layer test engineer for cellular work, then at Sonos (transcribed as "sodos") as a consumer-electronics test engineer (QA writing automation code), then at Amazon Robotics as a test engineer; later did full-stack work at a startup (Java Spring Boot + React), but always wrote programs using AI; 33 years old, married, family in the US (near Austin, transcription uncertain); after being laid off she cannot find work that can sponsor PERM (a green card).</p>
+<ul>
+<li><strong>Job-hunting difficulties:</strong> Applying for SDE 2, she feels her level is below that of current CS graduates; hardware companies screen by immigration status, and she can't even get interviews (e.g., Teradyne — during the big hiring wave she could get an offer; now they screen by status); she is considering switching to chip verification engineer, but hasn't touched Verilog in a long time; she is also considering returning to robotics companies on the strength of ROS 2 and robotics experience.</li>
+<li><strong>Lidang's advice:</strong></li>
+<li>Don't spin in place in testing: "doing test is too much of a waste of time; if you do test, at least do media test"; consider going to a Chinese company's US office — "Chinese people hire Chinese people the most"; or return to Shenzhen/Shanghai — "with your background, in Shanghai or Beijing, starting at RMB 600,000 a year should be no problem at all."</li>
+<li>A PhD is also an option: applicants with industry experience are wanted by many advisors; but Rachel said her personality is not suited to a PhD (she dislikes creating problems out of thin air and then solving them).</li>
+<li>Watch directions with increment: embodied intelligence and RSI (Recursive Self-Improvement) agent companies; "Agent and AI Engineers don't actually come over from back-end work; most Agent Engineers start from interest and build things on a whim."</li>
+<li>Don't be bound by PERM: "If PERM causes you a lot of trouble, I think you can set it aside for now and follow the opportunities, because your opportunities in the future will only increase."</li>
+<li><strong>Other information points:</strong> Lidang said there are not many robotics companies in the US; a batch of Bay Area VLA companies no longer use ROS, and "knowing only ROS 2 definitely makes it hard to get in"; MicroDoc (transcription uncertain, a USD 399 embodied-intelligence toy related to Hugging Face) — "little gadgets like this have a hard time living long, just like the Rabbit R1."</li>
+</ul>
+<h3>21. The Beijing property questioner (03:38:41–03:45:00) — the session's only property case</h3>
+<p>Self-reported: in 2013 his parents bought an 80 sq m home northwest of Beijing's Fifth Ring Road, near the Three Hills and Five Gardens (the Xiangshan and Summer Palace area, transcribed as "Xiangshan Yiheyuan") for RMB 2.7 million; including bank interest, the total cost was about RMB 3 million; over the years they collected about RMB 900,000+ in rent; listed for sale now it might fetch over RMB 3 million.</p>
+<ul>
+<li>Asked: does this home still have much room to keep falling? By rent-to-price ratio returning to intrinsic value, what would the final price roughly be? How many years until it falls there?</li>
+<li>Lidang answered: see "3.1." He also asked about his father being a retired soldier, Beijing distributing tongjian flats, the family being ranked in Daxing District (transcription uncertain), where about RMB 1.2–1.4 million could secure a 140 sq m home, co-owned with the state and not allowed to be sold; Lidang said "definitely take it."</li>
+<li>The questioner also asked: last November he saw Lidang recommend buying the S&amp;P and Nasdaq but missed a wave of gains; in 2026 are the S&amp;P and Nasdaq still "the finest assets on this planet"? Lidang answered: the indices will still rise, but the finest are the stocks of OpenAI and Anthropic; he advised continuing regular investing and holding long-term.</li>
+</ul>
+<h3>22. The Beijing Project 211 CS student (03:45:00–03:58:53)</h3>
+<ul>
+<li>Self-reported: he barely studied in his first two years and played games every day, and is now at a "zero foundation stage"; he wants to make money quickly and asked an agency about the route of "learning carpentry plus IELTS to work as a blue-collar worker in a developed country"; he wants a green card.</li>
+<li>Lidang's advice: first get Alibaba Cloud and AWS certifications; if he has money, read a master's in Hong Kong to catch up; Beijing has home-ground advantage, and "Beijing kids must go take exams outside Beijing," e.g., a master's at Harbin Institute of Technology, Huazhong University of Science and Technology, or Tianjin/Hebei University of Technology, then return to Beijing for work; "in Beijing you won't starve doing anything — you won't starve helping a primary school back up its database"; he poured cold water on going abroad as a blue-collar worker (carpentry, early-childhood education, nursing): "you can do carpentry in Beijing too; try it for one day first… nursing work can be done when you're young; some people's legs give out at 30… don't gamble on this"; and he said British and Australian "watery master's" degrees are, in HR's eyes, "a storage place for your first degree" (transcription uncertain), inferior to a Hong Kong master's at raising your floor.</li>
+</ul>
+<h3>23. The third-year civil engineering student at a second-tier university in Anshan (03:59:11–04:01:33)</h3>
+<ul>
+<li>Self-reported: a junior in the intelligent construction major at a civil-engineering college in Anshan; he didn't study in his first two years, repeated a year, and nearly dropped out, and has now made up the credits; he worked with a teacher on an RMB 130 million project for Ansteel (a vehicle monitoring system and data visualization) and has an SCI second-author paper (in materials science); using AI tools he submitted over 200 résumés, and only one Taiwanese company ("Tianyan Interactive," transcription uncertain) wanted him for automated customer acquisition, at an internship wage of only RMB 1,000/month.</li>
+<li>Lidang answered: go do the internship first; "if that doesn't work, read a master's — a computer science master's."</li>
+</ul>
+<h3>24. Hopper (04:01:33–04:04:06) — tentatively the speaker harper @liquefei267881</h3>
+<ul>
+<li>Self-reported: a computer science major at South China University of Technology, now doing chip (NPU) verification at a company as an outsourced worker, not a formal employee; he wanted career-development advice.</li>
+<li>Lidang answered: "No need to develop; just follow the company's business — this job can carry you to retirement"; if he wants to become a formal employee, he can try jumping to a competitor or partner company; and he advised building agent projects himself following his YouTube videos, then submitting résumés.</li>
+</ul>
+<h3>25. YYYW (04:04:06–04:07:24) — tentatively the speaker yyyw_ @jingyu60985095</h3>
+<ul>
+<li>Self-reported: a senior in automation in Melbourne ("Mojiu," transcription uncertain), wanting to apply for a Hong Kong master's, leaning toward CUHK Shenzhen (2-year program, convenient for internships); his bachelor's leans hardware (embedded systems, PCB, FPGA), with a little exposure to AI and very little software.</li>
+<li>Lidang answered: choose the 1-year program to save time; "one good open-source project is worth 100 internships"; just do the direction he knows best (embedded) — "you don't need to chase the AI craze; if you were going to catch it, you should have caught it in the previous two years"; and he said he himself proposed building SW Agents on April 6, 2023, "earlier than Cloud Code and Codex."</li>
+</ul>
+<h3>26. Floor discussion (attribution unclear, 04:07:24–04:12:02)</h3>
+<ul>
+<li>A listener added: Print on Demand is very competitive in the US, but fully unmanned Print on Demand still has opportunities.</li>
+<li>Lidang closed by discussing the healthcare dilemma: population change creates a medical insurance fund gap — "the medical insurance fund is definitely short, and it will definitely squeeze healthcare" — and will encourage everyone to spend money on commercial medical insurance; "if you're not inside the system, buy a policy (of commercial medical insurance) if you can."</li>
+<li>Finally pressed on Shenzhen housing prices and the design verification industry's prospects, Lidang said design verification is "the test of the past," long saturated, and that the increment is not in California but in East Asia; the room then closed at 04:12:00.</li>
+</ul>
+<h2>5. Key Original Quotes (with Timestamps)</h2>
+<ol>
+<li>"Don't buy anywhere… it's just to trick you into coming in." — Lidang, 00:19:11–00:19:24</li>
+<li>"This title is bait to get you in here… my stream normally has about 100 people; today over 300 of you have come in to listen." — Lidang, 01:27:11–01:27:28</li>
+<li>"The VLA direction really doesn't work… you can only feel how hard this direction is after you've done it yourself." — Lidang, 00:16:13–00:16:20</li>
+<li>"What major you study has nothing whatsoever to do with the job you do… but that era really is gone forever." — Lidang, 00:52:17–00:53:25</li>
+<li>"Submitting résumés online is useless… any single position has thousands upon thousands of résumés… the first step must filter out 90% of people by education." — Lidang, 01:58:00–01:58:45</li>
+<li>"Its intrinsic value in Beijing is RMB 20,000 per square meter… it will slowly fall to that level… maybe over ten or twenty years." — Lidang, 03:40:41–03:41:14</li>
+<li>"Shenzhen prices will definitely fall." — Lidang, 04:09:13–04:09:15</li>
+<li>"OpenAI has produced the greatest achievement in this human world… this is the most core problem in the entire field of human computing, bar none." — Lidang, 00:45:53–00:46:39 (<strong>unverified</strong>)</li>
+<li>"The finest assets are definitely the stocks of OpenAI and Anthropic — just buy them directly." — Lidang, 03:43:56–03:44:02 (<strong>personal view; not investment advice</strong>)</li>
+<li>"Don't study art… art is the hardest thing." — Lidang, 02:45:17–02:45:24</li>
+<li>"One good open-source project is worth 100 internships." — Lidang, 04:04:30–04:04:33 (see also a similar statement around 02:04:30)</li>
+<li>"China still has the most opportunities in semiconductors… in the end only semiconductors, cars, and consumer electronics have food to eat." — Lidang, 00:39:50–00:40:55</li>
+</ol>
+<h2>6. Cases and Data (all the speakers' own live accounts, unverified)</h2>
+<table>
+<thead>
+<tr>
+<th>Case / Data</th>
+<th>Source</th>
+<th>Timestamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beijing Fifth Ring Road 80 sq m home: bought in 2013 for RMB 2.7 million, total cost about RMB 3 million, about RMB 900,000+ collected in rent, now listed at over RMB 3 million</td>
+<td>The Beijing property questioner</td>
+<td>03:38:52–03:39:22</td>
+</tr>
+<tr>
+<td>Tongjian flat: about RMB 1.2–1.4 million for 140 sq m, co-owned with the state, cannot be sold</td>
+<td>Same as above</td>
+<td>03:42:17–03:42:34</td>
+</tr>
+<tr>
+<td>Beijing prices return to a value of about RMB 20,000/sq m; 90 sq m about RMB 1.8 million</td>
+<td>Lidang</td>
+<td>03:40:41–03:41:00</td>
+</tr>
+<tr>
+<td>Semiconductor fresh master's graduates: RMB 8,000/month in 2016; after 2017–2018 negotiated up to 12–13 thousand; now hardware master's over 20 thousand</td>
+<td>The semiconductor practitioner</td>
+<td>00:37:41–00:38:55</td>
+</tr>
+<tr>
+<td>Before 2014, Country Garden/Evergrande regional sales managers had a guaranteed annual salary of RMB 500,000</td>
+<td>Lidang</td>
+<td>00:35:27–00:35:44</td>
+</tr>
+<tr>
+<td>Tianjin University of Finance and Economics once admitted students scoring 650 and 660, with an admission line above Tianjin's 985 universities</td>
+<td>Lidang</td>
+<td>00:31:27–00:31:40</td>
+</tr>
+<tr>
+<td>Suzhou clothing: monthly turnover over RMB 200,000, thin profits; overseas mid-to-high-end women's clothing about USD 200 per piece</td>
+<td>WY</td>
+<td>02:35:07–02:38:08</td>
+</tr>
+<tr>
+<td>Rachel: 33 years old, laid off in the US; bachelor's at Shandong University; test roles at Texas Instruments, Sonos, Amazon Robotics; full-stack at a startup</td>
+<td>Rachel</td>
+<td>03:09:34–03:15:30</td>
+</tr>
+<tr>
+<td>Multi-Agent hardware throughput 28% higher than Single Agent, but worse in the programming domain</td>
+<td>The AI + healthcare practitioner at a mid-sized company</td>
+<td>01:25:38–01:26:05</td>
+</tr>
+<tr>
+<td>The art student: in a class of 60, fewer than 5 can work in the field</td>
+<td>The art student</td>
+<td>02:45:51–02:46:04</td>
+</tr>
+<tr>
+<td>The doctor-kickback era: resident doctors' base salary RMB 2–4 thousand, kickbacks could reach over RMB 20,000/month</td>
+<td>"Jiang Zelan" (tentative)</td>
+<td>02:28:36–02:29:01</td>
+</tr>
+<tr>
+<td>The Anshan student: submitted over 200 résumés, the only offer an internship wage of RMB 1,000/month; participated in an RMB 130 million Ansteel project</td>
+<td>The second-tier university student in Anshan</td>
+<td>03:59:46–04:00:30</td>
+</tr>
+<tr>
+<td>Position résumé volume: one position receives thousands upon thousands of résumés; HR first filters out 90% by education</td>
+<td>Lidang</td>
+<td>01:58:34–01:58:45</td>
+</tr>
+<tr>
+<td>MicroDoc: a USD 399 embodied-intelligence toy; the Rabbit R1's global sales were run by a friend of Lidang's (his own account)</td>
+<td>Rachel's question, Lidang's answer</td>
+<td>03:28:41–03:29:37</td>
+</tr>
+<tr>
+<td>Anthropic's prospectus is out; listing in mid-November (own account)</td>
+<td>The questioner, Lidang</td>
+<td>01:54:23–01:54:33</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Unverified-Claims Statement</h2>
+<ul>
+<li>Everything in these notes comes from the ASR transcript of a single Space recording. <strong>All views, data, and cases are the speakers' own live accounts and have not been independently verified</strong>; do not cite them directly as fact.</li>
+<li>Content concerning housing price trends, the S&amp;P/Nasdaq indices, the stocks of OpenAI and Anthropic, Anthropic's listing date, and career and major choices <strong>represents the guests' personal views only and does not constitute investment advice, home-buying advice, or a basis for career decisions</strong>.</li>
+<li>Lidang's claim that "3SAT / ETH has been disproved and the P vs NP lower bound pushed down" clearly conflicts with the published academic consensus, and no paper source was provided live. <strong>Do not cite it as fact</strong>; it is recorded only as his live statement that evening.</li>
+<li>Names of people, companies, and places, and numbers, are transcription-uncertain in many places and are marked as such in the text; "Marvin/Mario," "Shihuai," "Jiang Zelan," "Teacher Du," "Yuliangsheng," "Tianyan Interactive," "Three Hills and Five Gardens / Xiangshan Yiheyuan," and the like are all transcribed by sound from the recording and have not been checked with the persons concerned.</li>
+<li>Lidang's statements on Beijing prices — "will definitely fall" versus "should go up" — contradict each other at the wrap-up (04:09:13–04:09:24), possibly a slip of the tongue or a transcription issue; the original words are reproduced as spoken, and readers should judge for themselves.</li>
+</ul>
+<h2>8. Transcription Limitations</h2>
+<ul>
+<li>About the first 7 minutes 42 seconds of the opening contain no usable speech (silence/music, VAD detected 0 segments); transcript timestamps run from 00:07:42 to 04:12:02.</li>
+<li>The transcript totals 5,075 lines and 279,715 bytes, merged from 26 ten-minute audio chunks transcribed locally with faster-whisper; there is no speaker separation, and all speaker attributions are inferred from context.</li>
+<li>ASR may contain homophone errors; uncertain names of people, places, and companies and numbers are marked "(transcription uncertain)"; English terms (such as VLA, RoboDojo, LEC, UVM, PERM, RSI-CHIP) follow the transcript.</li>
+<li>Many of this session's mic guests used Bluetooth earbuds with poor audio quality, and Lidang repeatedly said "I can't hear clearly" and "your voice is very quiet"; some passages are incompletely transcribed or contain long runs of repeated words (e.g., around 01:21:59) due to audio quality, and the related content was not included in these notes.</li>
+<li>The "(Don't Use Bluetooth Earbuds)" in the title echoes the audio-quality problems that recurred throughout the session: several speakers were asked to adjust or were removed from the mic because of poor Bluetooth earbud audio.</li>
+</ul>
+<h2>9. Basic Information</h2>
+<ul>
+<li><strong>Title:</strong> "Buy a Home Now! (Don't Use Bluetooth Earbuds)"</li>
+<li><strong>Space ID:</strong> 1qKDzWNvdvOJV</li>
+<li><strong>Link:</strong> https://x.com/i/spaces/1qKDzWNvdvOJV</li>
+<li><strong>spacesdashboard:</strong> https://spacesdashboard.com/space/1qKDzWNvdvOJV/</li>
+<li><strong>Host:</strong> Lidang @lidangzzz</li>
+<li><strong>Speakers (per spacesdashboard records; the recording governs):</strong> rachel_185 @chao43427774, yyyw_ @jingyu60985095, harper @liquefei267881; several other mic guests can be confirmed speaking in the recording (see Section 4), and Rachel, YYYW, and Hopper (tentatively harper) all have corresponding speaking segments in the recording</li>
+<li><strong>Date:</strong> 2026-10-27, about 13:18–17:30 (CST)</li>
+<li><strong>Duration:</strong> about 4 hours 12 minutes (XspaceGPT records 04:12:11; the recording transcript covers 00:07:42–04:12:02)</li>
+<li><strong>Listeners:</strong> 4,093 cumulative</li>
+<li><strong>Basis of these notes:</strong> the local recording transcript hidden_files/transcript.txt (5,075 lines, 26 ten-minute chunks)</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full text of this session's notes; the content is the speakers' own live account and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：赶紧买房！（不要用蓝牙耳机） · Yat's Talks",tw:"會議紀要：趕緊買房！（不要用藍牙耳機） · Yat's Talks",en:"Meeting Notes: Buy a Home Now! (Don't Use Bluetooth Earbuds) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

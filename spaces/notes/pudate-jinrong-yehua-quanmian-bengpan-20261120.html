@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>普达特金融夜话：全面崩盘无处可逃！</h1>
 <ul>
 <li>主持：普达特（@Predator_fund），嘉宾发言人：老黑（@laohei789，约 02:27 上麦）</li>
@@ -104,9 +111,191 @@
 <hr />
 <p>逐字稿附后。合集条目与 Cara 专场一起，待天亮后推送。</p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>普達特金融夜話：全面崩盤無處可逃！</h1>
+<ul>
+<li>主持：普達特（@Predator_fund），嘉賓發言人：老黑（@laohei789，約 02:27 上麥）</li>
+<li>時間：2026-11-20 21:40 – 2026-11-21 01:12 CST，累計聽眾 2,867 人</li>
+<li>以下數字與說法均為嘉賓現場自述，未經獨立核實；其中關於黃仁勳「被董事會趕走」「間諜」等說法為普達特現場轉述的傳聞口徑，未見公開信源佐證，聽時請自行甄別。</li>
+</ul>
+<h2>一句話</h2>
+<p>普達特的判斷是全面崩盤：比特幣跌破 57,800 美元就開啟 C 浪、可能看到 25,000 美元；輝達是 AI 泡沫的命門，黃仁勳一走、整個 AI 債務鏈條就斷；幣圈唯一的出路是回到「私有財產神聖不可侵犯」的初心。</p>
+<h2>核心判斷（普達特自述）</h2>
+<ol>
+<li><strong>比特幣</strong>：從 126,000 美元連跌 7 週。現在是 B 浪反彈中的 B 浪 b 下跌，關鍵位 <strong>57,800 美元</strong>（TradingView 價格）。跌破則大 B 浪反彈結束，開始 C 浪五浪下跌，「跌到 25,000 都有可能」；若 A 浪根本沒走完，跌幅更難想像。直播進行到約 02:31 時，比特幣即時跌破 60,000 美元，全場「見證歷史」。</li>
+<li><strong>以太坊</strong>：從 4,000 多美元跌到 1,500–1,600 美元。跌破 <strong>1,400 美元</strong>，湯姆·李（Tom Lee，BitMine）基金的「刀斧手」（風控強制賣出部門）就會出來，屆時以太坊「跟 BNB 就看齊了」。他自稱 2025 年 9 月就說過比特幣、以太坊見頂。</li>
+<li><strong>狗狗幣</strong>：挖礦成本約 0.04 美元，他在 0.04 幾加倉了一點點。下一台階按週線測算約 0.04 美元（8 月 17 日低點 0.06947、9 月 21 日高點 0.10589，等距下移）。比特幣挖礦平均成本約 4 萬多美元，跌破後礦工關機、成本會動態下移。</li>
+<li><strong>黃金</strong>：技術上跌到 3,500–3,600 美元是「最起碼的」，之後有 B 浪反彈到約 4,230 美元，再走 C 浪下跌到明年。買實物只去水貝或香港（他要給老婆買「泥鰍背」手鐲），不買交易所黃金券。白銀「沒救了」。</li>
+<li><strong>美股</strong>：輝達他稱已跌到 140 美元，直播中報 134.6 美元、單日跌 6.71%；特斯拉 360–366 美元；標普 500 跌向 7,000 一線，「7,000 都挺不住，美國就崩盤了」。美債他稱一年利息上兆美元，「除非打一場核戰級別的戰爭清零，否則解不開」。</li>
+<li><strong>他的倉位</strong>：比特幣加狗狗幣占身家三分之一、USDT 三分之一、現金三分之一，「不會補倉，明知道沒有任何反轉跡象，我補什麼倉呢」。此前做過空，又在約 66,500 美元做過多單，倉位很小。他的量化機器人激進版從 10,000 美元虧到 6,000 美元又打回 12,000 美元，現已全線加硬止損（保守 23.6%、穩健 38.2%、激進約 40%）。他持有的是微策略（MSTR）而非比特幣現貨，自述浮虧「一輛路虎沒了」，並稱微策略「有點危險」。</li>
+<li><strong>短線建議</strong>：不建議歐印現貨，「歐印個 10% 的現貨賭這個位置」可以；比特幣「任何上漲都是反彈」，他「從來沒有說比特幣的牛市開始了」。</li>
+</ol>
+<h2>APEC 與三巨頭（開場約 30 分鐘）</h2>
+<ul>
+<li>深圳 APEC 會議：他稱真正的大事不可能在大會上落實，「大會啥事都定不了，主要就是行為藝術」。</li>
+<li>他講的現場細節（均為其自述）：老大親自去機場接川普，央視直播切掉了兩人擁抱的鏡頭；普丁來時只派蔡奇去接；川普住東海豪庭頂樓套房、馬斯克住二樓、普丁住朗廷；深圳機場當天下午停飛、民航全走，一名美團小哥騎電動車闖進車隊被警察抬走。</li>
+<li>三巨頭圓桌：他稱老大安排了中美俄三人圓桌會，「這畫面重要，談成什麼不重要」，歐洲「心裡拔涼拔涼的」；並即興編了一段三人密談：H200 晶片換稀土、俄烏停火「給個面子」、星鏈限 1,160 公里等，均為其想像演繹，非事實陳述。</li>
+<li>高市早苗：他吐槽深圳機場給日本代表團的舷梯放得太低，「讓高市穿緊身工裝裙下四十四公分台階，差點爬下來」，稱這種小動作「讓全世界覺得你流氓」。</li>
+<li>另：他稱川普在會上睡著了，解釋是各國領導人事先都拿到英文講稿、照稿讀「實在扛不住」。</li>
+</ul>
+<h2>黃仁勳與輝達（全場主線，約一小時）</h2>
+<p>以下均為普達特現場講述的傳聞與推演，未經核實：</p>
+<ul>
+<li>他稱輝達董事會以「間諜」指控逼黃仁勳辭職，黃仁勳承認「對不起老婆、對不起家人」，傳聞對象是公司一位健康助理；並稱民主黨一派（魯比奧、商務部長等「保皇派」）要查黃仁勳，而馬斯克、貝佐斯、甲骨文老闆等「挺皇派」因持有輝達股票而力保。</li>
+<li>他的核心論點：輝達的供應鏈沒有合約，全靠黃仁勳與台積電、三星等大佬「路邊撸串就定了」，幾百億美元的生意「口頭答應」；換一個空降 CEO，「你以為是麥當勞店長，說換就換了」。董事會秒拒黃仁勳回任後，他判斷黃仁勳「回不去了」，並編排了「成立輝達 2.0、聯合馬斯克另起爐灶」的情節，旋即自認「成不了」。</li>
+<li>他稱輝達兩天蒸發 2 兆美元市值（其中一天跌 7,000 億），「輝達現在跌到 140 了，還得再腰斬」；並稱黃仁勳個人只持股約 3.7%，但矽谷大佬與貝萊德等機構全線被套，「整個矽谷、科技圈全都罵董事會」。</li>
+<li>更深一層：他稱黃仁勳是「借坡下驢」——明知 AI 泡沫將破（「春節之前就得破」），正好在形象最好的時候「急流勇退」，「再崩就是別人的事了」。</li>
+<li>輝達是「AI 的銀行」：他稱輝達手握大量現金，貸款給算力中心買自家晶片，「你拿這貸款買我這晶片」，AI 行業現有債務 5,000 億美元，「擱啥還呢」。AI 至今沒找到盈利模式，「最後還得靠廣告，還得靠莆田模式、帶貨」——問個病就推莆田醫院，問個錶就推手錶，「不然靠訂閱費、token 費，你在開玩笑嗎」。</li>
+</ul>
+<h2>幣圈：合規就是自殺，隱私是唯一敘事</h2>
+<ul>
+<li>他稱幣圈所有敘事都結束了：DeFi、GameFi、RWA 等「全是鬧著玩」，未來唯一敘事是「對抗監管、對抗合規」，「幣圈的價值就是不合規、不被監管」。</li>
+<li>幣安封號：他稱幣安現在「草木皆兵、嚇破膽」，並稱自己被何一拉黑。他認為交易所凍結用戶資金毫無道理：銀行覺得錢有問題會原路退回，交易所卻「一塊錢有問題就封你一百萬」，且「沒有證據鏈」，他質問「柬埔寨出來的錢就全是詐騙的？你給判的？」</li>
+<li>他的洗錢成本口徑：洗乾淨要損失 25%–30%，還得跨鏈到以太坊洗。</li>
+<li>隱私賽道預測：以太坊上會出現「龍捲風 2.0」（升級版 Tornado Cash），前端部署在暗網，EIP-7702 讓「任何人都能出手續費」、追蹤更難；混幣「用的人越多越難追」，一萬個人同時混就沒法追。門羅幣、大零幣（Zcash）的問題是增發不透明，「基金會偷偷改一下程式碼多發點，你也不知道」。</li>
+<li>鏈的判斷：只有以太坊是真正去中心化的，BNB、Solana「都是機房鏈」，孫宇晨的鏈「他一人說了算，回滾都行」。但以太坊「只是工具，越用越便宜，不能把它當錢」；狗狗幣是「溫和通膨，分母一直在變大」。</li>
+<li>收尾口號：「幣圈必須回歸初心——保護你的資產，不能鎖定、不能沒收」，「交易所會挪到暗網去」。</li>
+</ul>
+<h2>美股、美債與伊朗</h2>
+<ul>
+<li>12 月聯準會：他稱「加不加息，美債都得崩」，「把雷根叫來也解不開」。</li>
+<li>美國只剩三樣能跟中國比：美元霸權、軍事、高科技；中國晶片追趕，老黑測算「最快 15 年」，普達特稱「三五年」，理由是摩爾定律到 1–2 奈米已到量子隧穿極限、美國「停下來了」，中國有時間追產業鏈。</li>
+<li>伊朗：他稱美國打不贏伊朗，「必須派地面部隊」，伊朗飛彈已炸完美軍在中東的基地與雷達；美國要重獲世界尊重，「必須把伊朗幹掉、扶持一個傀儡政府」，否則「基本面丟大了」。</li>
+<li>民主黨：他稱民主黨上台「更完蛋」，「物價就這樣了，美國國債就沒了」，川普「還能鬧著一起去」，民主黨上來就是「咬牙切齒開幹」。</li>
+</ul>
+<h2>人類起源、飲食與文玩（後半段閒聊）</h2>
+<ul>
+<li>人類起源：他稱進化論在人類身上不對，人類是外星人用大猩猩基因編輯出來的（為採黃金），證據是胃酸濃度像食腐動物、眼睛長在前面像食肉動物、肩膀結構適合投擲、黑曜石比刀鋒利。</li>
+<li>飲食：人類天生吃肉，碳水和大米吃太多才導致糖尿病高發，「肉蛋白的比例要超過碳水」；東北人一年不吃青菜沒事，南方人不行。</li>
+<li>文玩：天珠「就是瑪瑙，沒什麼功效」；菩提子 1.5 尺寸最合適，他 2016 年買的已盤了十多年；核桃、水晶都有講究，水晶「不能讓別人碰，會把髒東西帶進去」；「生命之門」河磨玉雕已絕版。風水、八字、靈魂、鬼「都是準的」，「你連意識都看不見，怎麼能看見藏在意識裡的鬼呢」。</li>
+<li>歷史政治：拿破崙 vs 毛澤東——他稱拿破崙的民法典三條（人生而平等、私有財產神聖不可侵犯、政教分離）是今天所有法治的源頭；蔣介石「成事不足、敗事有餘還喜歡微操」，淮海戰役「打折不走、走折不打」；劉亞子與毛澤東的詩「牢騷太盛防腸斷，風物長宜放眼量」；康生的書法「近代唯一能跟古人比的」；腐敗是「中國體制高效運轉的潤滑劑和催化劑」；李光耀「開明專制」、精英治國。</li>
+<li>美劇：他推薦史泰龍的《塔爾薩之王》，稱其為右派劇；《黃石》是「美國紅脖子劇」；左派劇（《石油天王》《財郎》等）「看得想吐」。</li>
+<li>其餘：深圳是「歷史的奇蹟」，「再過一千年歷史上會提到深圳奇蹟」；黎曼猜想「被 Claude 往前推了一步，不可能全證明了」；某 AI 團隊稱「偷偷證明了 700 多個數學難題沒公布」（他轉述）。</li>
+</ul>
+<h2>老黑的總結（約 02:27 上麥）</h2>
+<ul>
+<li>中美對比三點：美元政策、軍事實力、高科技壟斷，中國暫時都打不過，但「隨著時間推移都能追上」；歐洲「除了荷蘭光刻機，剩下沒有用」，「你聽說過歐洲有 AI 嗎」。</li>
+<li>中國是「國富民窮」，美國是「只剩一個空殼」、「瘦死駱駝」；美國人拿美國護照來中國「有福利，女孩子隨便處，工作隨便找」。</li>
+<li>制度觀：現在的歐美也不是純資本主義，「基本上就是社會主義了」；中國是「披著共產主義的皮，骨子裡是資本主義，內核還是儒釋道」；中國人「絕對不能民主」，適合精英治國。</li>
+</ul>
+<h2>值得記的原話</h2>
+<ul>
+<li>"全面崩盤，無處可逃。"</li>
+<li>"比特幣任何上漲都是反彈，我可從來沒有說比特幣的牛市開始了。"</li>
+<li>"AI 最後的盈利出路還得是廣告，還得是莆田模式，還得帶貨。"</li>
+<li>"幣圈的價值就是不合規，交易所這麼搞，這行業就廢了。"</li>
+<li>"心急吃不了熱豆腐，猴急凹不到好比。"</li>
+<li>"牢騷太盛防腸斷，風物長宜放眼量。"</li>
+<li>"天塌大家死，誰也沒好，就是虧多虧少的事。"</li>
+<li>"祝大家沉住氣吧，這個煎熬時刻，拜拜。"</li>
+</ul>
+<hr />
+<p>逐字稿附後。合集條目與 Cara 專場一起，待天亮後推送。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Pudate Finance Night Talk: Total Collapse, Nowhere to Hide!</h1>
+<ul>
+<li>Host: Pudate (@Predator_fund), guest speaker: Laohei (@laohei789, joined the stage at around 02:27)</li>
+<li>Time: 2026-11-20 21:40 – 2026-11-21 01:12 CST, cumulative audience 2,867</li>
+<li>All figures and claims below are the guests' live remarks and have not been independently verified; in particular, claims about Jensen Huang being "forced out by the board" and being a "spy" are rumors relayed live by Pudate, with no public sources to corroborate them — please exercise your own judgment when listening.</li>
+</ul>
+<h2>In One Sentence</h2>
+<p>Pudate's judgment is a total collapse: if Bitcoin breaks below $57,800, a Wave C begins and it could fall to $25,000; Nvidia is the linchpin of the AI bubble — once Jensen Huang is gone, the entire AI debt chain breaks; the only way out for crypto is to return to its founding principle that "private property is sacred and inviolable."</p>
+<h2>Core Judgments (as stated by Pudate)</h2>
+<ol>
+<li><strong>Bitcoin</strong>: Down for 7 straight weeks from $126,000. It is currently in a wave b decline within a Wave B rebound, with the key level at <strong>$57,800</strong> (TradingView price). A break below would end the large Wave B rebound and start a five-wave Wave C decline — "it could fall to 25,000." If Wave A never actually finished, the decline is even harder to imagine. At around 02:31 during the livestream, Bitcoin fell below $60,000 in real time, with the whole room "witnessing history."</li>
+<li><strong>Ethereum</strong>: Down from over $4,000 to $1,500–$1,600. If it breaks below <strong>$1,400</strong>, the "executioners" (the risk-control forced-selling desk) at Tom Lee's (Tom Lee, BitMine) fund will step in, and at that point Ethereum "will be on par with BNB." He said he had already called the top for Bitcoin and Ethereum back in September 2025.</li>
+<li><strong>Dogecoin</strong>: Mining cost is around $0.04, and he added a tiny position around $0.04x. The next step down, measured on the weekly chart, is around $0.04 (August 17 low 0.06947, September 21 high 0.10589, shifted down by an equal distance). The average Bitcoin mining cost is over $40,000; once price breaks below that, miners shut down and the cost will shift down dynamically.</li>
+<li><strong>Gold</strong>: Technically, a fall to $3,500–$3,600 is "the bare minimum," followed by a Wave B rebound to around $4,230, then a Wave C decline into next year. For physical gold, he only goes to Shuibei or Hong Kong (he wants to buy his wife a "loach-back" bracelet) and does not buy exchange gold certificates. Silver is "hopeless."</li>
+<li><strong>U.S. stocks</strong>: He said Nvidia has already fallen to $140, quoted at $134.6 during the livestream, down 6.71% on the day; Tesla at $360–$366; the S&amp;P 500 falling toward the 7,000 level — "if 7,000 can't hold, the U.S. collapses." He said U.S. Treasury interest alone exceeds a trillion dollars a year, and "unless there's a nuclear-war-level war to zero it out, there's no way to untangle it."</li>
+<li><strong>His positions</strong>: Bitcoin plus Dogecoin account for one-third of his net worth, USDT one-third, and cash one-third. "I won't add to positions — knowing full well there are no signs of a reversal, why would I add?" He had previously shorted, and also went long around $66,500 with a very small position. His quantitative bot's aggressive version fell from $10,000 to $6,000 and then fought back to $12,000, and now has hard stop-losses across the board (conservative 23.6%, steady 38.2%, aggressive around 40%). What he holds is MicroStrategy (MSTR) rather than spot Bitcoin, with an unrealized loss he described as "a Land Rover gone," and he called MicroStrategy "a bit dangerous."</li>
+<li><strong>Short-term advice</strong>: He does not recommend going all-in on spot; "going all-in with 10% in spot to bet on this level" is acceptable; for Bitcoin, "any rally is just a rebound," and he has "never said Bitcoin's bull market has begun."</li>
+</ol>
+<h2>APEC and the Big Three (Opening, Around 30 Minutes)</h2>
+<ul>
+<li>Shenzhen APEC meeting: He said truly major matters cannot be settled at a large conference — "a big conference can't decide anything; it's mainly performance art."</li>
+<li>On-the-ground details he described (all his own account): The boss personally went to the airport to receive Trump, and CCTV's live broadcast cut away the shot of the two embracing; when Putin arrived, only Cai Qi was sent to receive him; Trump stayed in the top-floor suite at Donghai Mansion, Musk on the second floor, and Putin at The Langham; Shenzhen airport halted flights that afternoon with all civil aviation cleared, and a Meituan delivery rider who rode his e-bike into the motorcade was carried away by police.</li>
+<li>The Big Three roundtable: He said the boss arranged a China–U.S.–Russia three-person roundtable — "the image is what matters, not what gets agreed" — leaving Europe "feeling a chill in their hearts"; he then improvised a secret three-way conversation: H200 chips in exchange for rare earths, a Russia–Ukraine ceasefire "as a favor," Starlink limited to 1,160 kilometers, and so on — all his own imagined dramatization, not factual statements.</li>
+<li>Sanae Takaichi: He mocked that the mobile stairs provided by Shenzhen airport for the Japanese delegation were set too low, "making Takaichi come down 44-centimeter steps in a tight work skirt, nearly having to climb down," saying such petty moves "make the whole world think you're a thug."</li>
+<li>Also: He said Trump fell asleep at the meeting, explaining that leaders of all countries had received the English speeches in advance and reading from the script was "really unbearable."</li>
+</ul>
+<h2>Jensen Huang and Nvidia (Main Thread of the Session, Around One Hour)</h2>
+<p>The following are all rumors and extrapolations recounted live by Pudate and have not been verified:</p>
+<ul>
+<li>He said Nvidia's board forced Jensen Huang to resign on "spy" allegations, that Huang admitted he had "let down his wife and his family," and that the rumored person involved was a health assistant at the company; he also said one Democratic faction (Rubio, the Secretary of Commerce, and other "royalists") wants to investigate Huang, while the "pro-Huang faction" — Musk, Bezos, Oracle's boss, and others — is protecting him because they hold Nvidia stock.</li>
+<li>His core argument: Nvidia's supply chain has no contracts and relies entirely on Huang's personal relationships with TSMC, Samsung, and other bosses — "settled over skewers by the roadside" — with hundreds of billions of dollars in business agreed "verbally"; swapping in a parachuted CEO is not possible — "you think he's a McDonald's store manager who can be replaced just like that?" After the board instantly rejected Huang's return, he judged that Huang "can't go back," and fabricated a plot about "founding Nvidia 2.0 and teaming up with Musk to start over," before immediately admitting it "won't work."</li>
+<li>He said Nvidia lost $2 trillion in market value in two days (including $700 billion in a single day), that "Nvidia is now down to 140 and still needs to halve again"; he also said Huang personally holds only about 3.7%, but Silicon Valley bosses and institutions such as BlackRock are all trapped, and "the whole of Silicon Valley and the tech world are cursing the board."</li>
+<li>On a deeper level: He said Huang is "taking the off-ramp" — knowing full well the AI bubble is about to burst ("it has to burst before the Spring Festival"), he is making a "graceful exit" while his image is at its best, so that "when it collapses further, it's someone else's problem."</li>
+<li>Nvidia is "the bank of AI": He said Nvidia holds large amounts of cash and lends to compute centers to buy its own chips — "you take this loan to buy my chips" — and that the AI industry now has $500 billion in debt: "How is that supposed to be repaid?" AI still has not found a profit model, and "in the end it will have to rely on advertising, on the Putian model, on livestream selling" — ask about an illness and it pushes a Putian hospital, ask about a watch and it pushes watches — "otherwise, relying on subscription fees and token fees? Are you joking?"</li>
+</ul>
+<h2>Crypto: Compliance Is Suicide, Privacy Is the Only Narrative</h2>
+<ul>
+<li>He said all crypto narratives are over: DeFi, GameFi, RWA, and the rest are "all just playing around." The only narrative for the future is "resisting regulation, resisting compliance" — "crypto's value is precisely that it is non-compliant and unregulated."</li>
+<li>Binance account bans: He said Binance is now "jumpy and terrified," and that he himself has been blocked by He Yi. He argued that exchanges freezing user funds makes no sense at all: if a bank thinks money is problematic, it returns it via the original route, whereas an exchange will "freeze your million because one dollar is problematic," with "no chain of evidence." He asked, "Is all money coming out of Cambodia fraud? Did you adjudicate that?"</li>
+<li>His figures for money-laundering costs: Cleaning funds costs a 25%–30% loss, and you still have to cross-chain to Ethereum to wash them.</li>
+<li>Privacy sector forecast: A "Tornado 2.0" (an upgraded Tornado Cash) will appear on Ethereum, with its front end deployed on the dark web. EIP-7702 will let "anyone pay the gas fees," making tracking harder; coin mixing is "harder to trace the more people use it" — if ten thousand people mix at the same time, it cannot be traced. The problem with Monero and Zcash is opaque issuance — "the foundation can secretly tweak the code and issue a bit more, and you'd never know."</li>
+<li>His view on chains: Only Ethereum is truly decentralized; BNB and Solana "are both server-room chains," and Justin Sun's chain is "whatever he says goes — he can even roll it back." But Ethereum "is just a tool — the more you use it, the cheaper it gets; you can't treat it as money"; Dogecoin has "mild inflation, with the denominator constantly growing."</li>
+<li>Closing slogan: "Crypto must return to its roots — protect your assets so they cannot be locked or confiscated," and "exchanges will move to the dark web."</li>
+</ul>
+<h2>U.S. Stocks, U.S. Treasuries, and Iran</h2>
+<ul>
+<li>The Fed in December: He said "whether rates are hiked or not, U.S. Treasuries will collapse," and "even if you brought Reagan back, he couldn't untangle it."</li>
+<li>The U.S. has only three things left that can compare with China: dollar hegemony, military power, and high technology. On China's chip catch-up, Laohei estimated "15 years at the fastest," while Pudate said "three to five years," on the grounds that Moore's Law has reached the quantum tunneling limit at 1–2 nanometers and the U.S. has "stopped," giving China time to catch up across the supply chain.</li>
+<li>Iran: He said the U.S. cannot beat Iran and "must deploy ground troops." Iranian missiles have already destroyed U.S. bases and radars in the Middle East; for the U.S. to regain the world's respect, it "must take out Iran and install a puppet government," otherwise "the fundamentals are badly damaged."</li>
+<li>Democrats: He said things would be "even worse" with Democrats in power — "prices are already like this, U.S. Treasury debt would be gone" — Trump "can at least make a scene and go along with it," whereas Democrats would come in "gnashing their teeth and going all out."</li>
+</ul>
+<h2>Human Origins, Diet, and Collectibles (Second-Half Chat)</h2>
+<ul>
+<li>Human origins: He said evolution does not hold for humans, and that humans were gene-edited by aliens from gorillas (to mine gold). His evidence: stomach acid concentration resembling that of scavengers, forward-facing eyes like carnivores, shoulder structure suited to throwing, and obsidian being sharper than a blade.</li>
+<li>Diet: Humans are born meat-eaters, and eating too many carbs and rice is what drives high diabetes rates — "the proportion of meat protein should exceed that of carbs"; people from Northeast China can go a year without eating greens and be fine, but Southerners cannot.</li>
+<li>Collectibles: Dzi beads are "just agate, with no special effects"; a 1.5 size for bodhi seeds is the most suitable, and the one he bought in 2016 has been polished in his hands for over a decade; walnuts and crystals each have their lore, and crystals "must not be touched by others, or they'll bring in dirty things"; the "Gate of Life" river-polished jade carving is out of production. Feng shui, Ba Zi, souls, and ghosts are "all accurate" — "you can't even see consciousness itself, so how could you see a ghost hidden inside consciousness?"</li>
+<li>History and politics: Napoleon vs. Mao Zedong — he said the three principles of Napoleon's Civil Code (all men are born equal, private property is sacred and inviolable, separation of church and state) are the source of all modern rule of law; Chiang Kai-shek was "more likely to ruin things than to accomplish them, and fond of micromanaging," and in the Huaihai Campaign "wouldn't move when discounted, wouldn't fight when moving"; Liu Yazi and Mao Zedong's poem line "牢骚太盛防肠断，风物长宜放眼量"; Kang Sheng's calligraphy is "the only modern work that can compare with the ancients"; corruption is "the lubricant and catalyst for the efficient operation of China's system"; Lee Kuan Yew practiced "enlightened authoritarianism" and rule by elites.</li>
+<li>American TV dramas: He recommended Sylvester Stallone's Tulsa King, calling it a right-wing drama; Yellowstone is an "American redneck drama"; left-wing dramas (Landman, 财郎, etc.) "make me want to throw up."</li>
+<li>Miscellaneous: Shenzhen is a "miracle of history," and "in another thousand years, history will mention the Shenzhen miracle"; the Riemann Hypothesis has been "pushed forward a step by Claude — there's no way it has been fully proved"; a certain AI team claimed to have "secretly proved over 700 mathematical problems without publishing them" (as relayed by him).</li>
+</ul>
+<h2>Laohei's Summary (Joined the Stage at Around 02:27)</h2>
+<ul>
+<li>Three points comparing China and the U.S.: dollar policy, military strength, and high-tech monopoly — China cannot beat the U.S. on any of them for now, but "can catch up on all of them over time"; Europe "apart from Dutch lithography machines, has nothing useful left" — "have you ever heard of Europe having AI?"</li>
+<li>China is "a rich country with poor people," while the U.S. is "just an empty shell" and a "dead camel"; Americans coming to China with a U.S. passport "get benefits, can date girls freely, and can find work freely."</li>
+<li>View on systems: Today's Europe and the U.S. are not pure capitalism either — "they're basically socialist now"; China is "wearing the skin of communism, capitalist to the bone, with Confucianism, Buddhism, and Taoism at its core"; Chinese people "absolutely cannot have democracy" and are suited to rule by elites.</li>
+</ul>
+<h2>Notable Quotes Worth Remembering</h2>
+<ul>
+<li>"全面崩盘，无处可逃。"</li>
+<li>"比特币任何上涨都是反弹，我可从来没有说比特币的牛市开始了。"</li>
+<li>"AI 最后的盈利出路还得是广告，还得是莆田模式，还得带货。"</li>
+<li>"币圈的价值就是不合规，交易所这么搞，这行业就废了。"</li>
+<li>"心急吃不了热豆腐，猴急凹不到好比。"</li>
+<li>"牢骚太盛防肠断，风物长宜放眼量。"</li>
+<li>"天塌大家死，谁也没好，就是亏多亏少的事。"</li>
+<li>"祝大家沉住气吧，这个煎熬时刻，拜拜。"</li>
+</ul>
+<hr />
+<p>The verbatim transcript follows. The collection entry, together with the Cara session, will be pushed after daybreak.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1qVOQOpMEoAOdE">https://x.com/i/spaces/1qVOQOpMEoAOdE</a>（普达特）· 嘉宾：老黑 · 发布日期：2026-11-20 · 时长：3 小时 33 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1qVOQOpMEoAOdE">https://x.com/i/spaces/1qVOQOpMEoAOdE</a>（普達特）· 嘉賓：老黑 · 發布日期：2026-11-20 · 時長：3 小時 33 分<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1qVOQOpMEoAOdE">https://x.com/i/spaces/1qVOQOpMEoAOdE</a> (Pudate) · Guest: Laohei · Published: 2026-11-20 · Duration: 3 hours 33 minutes<br>This page contains the full notes, manually edited from a machine transcript; views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1qVOQOpMEoAOdE">https://x.com/i/spaces/1qVOQOpMEoAOdE</a>（普达特）· 嘉宾：老黑 · 发布日期：2026-11-20 · 时长：3 小时 33 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"普达特金融夜话：全面崩盘无处可逃！ · Yat's Talks",tw:"普達特金融夜話：全面崩盤無處可逃！ · Yat's Talks",en:"Pudate Finance Night Talk: Total Collapse, Nowhere to Hide! · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

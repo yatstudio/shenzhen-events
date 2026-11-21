@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>立党《解答世间万物（不要用蓝牙耳机）》Space 纪要</h1>
 <ul>
 <li>主持：立党 @lidangzzz</li>
@@ -182,8 +189,346 @@
 <li>深大在京约 610–620 分，与北工大相当；上海大学在京 602 分、中外合办 620 分；华东理工 612 分左右；北理工去年 650 分以上；北邮去年 650 分以上；北邮玛丽女王学院智能科学与技术一年约 10 万元；宁波东方理工全国只招 70 人计算机大类；北京高考考生 8 万多人，清北约前 500 名；国科大北京约 702 分。</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1LPYmanrzREYnK">https://x.com/i/spaces/1LPYmanrzREYnK</a> · 立党 @lidangzzz 主持 · 2026-11-19 16:38 – 21:11（4 小时 32 分）· 累计在线听众 1630 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。转写稿自 00:06:31 起，开场约 6 分半无有效语音。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>立黨《解答世間萬物（不要用藍牙耳機）》Space 紀要</h1>
+<ul>
+<li>主持：立黨 @lidangzzz</li>
+<li>時間：2026-11-19 16:38–21:11（北京時間），約 4 小時 32 分</li>
+<li>規模：累計在線聽眾 1630 人；上麥者 9 位（masalachopra123、Bowen91782404、aaaassdxx、KrikFanc、Zoeyahqp、aliudn0371、zhangzhiya71020、wgzydan688、Hypnos8153）</li>
+<li>來源：X Space 回放轉寫，全文 5779 行、約 6.2 萬字；轉寫稿自 00:06:31 起，開場約 6 分半無有效語音</li>
+<li>原 Space：https://x.com/i/spaces/1LPYmanrzREYnK</li>
+</ul>
+<blockquote>
+<p>說明：本紀要數字與學校、分數資訊均為直播現場嘉賓與聽眾的自述說法，未經核實；轉寫由語音識別生成，存在同音錯字，校名已按上下文訂正。直播中途約 03:16 一度卡頓失聲。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>一場 4 個半小時的超長答疑：前兩個半小時是兩位北京高三家長的升學大會診（選校、選專業、城市選擇一次講透），後兩個小時是兩位 22 歲左右年輕人的職業與人生諮詢（一個是退學的直播博主，一個是歐洲在讀博士），收尾聊了 CoreWeave 上市與英偉達。</p>
+<h2>核心結論</h2>
+<ul>
+<li><strong>北京高三女生（約 620–650 分段）：不要學醫，首選電子，昆山杜克值得去，深圳大學是潛力股。</strong></li>
+<li><strong>北京孩子留京讀大學是浪費分數</strong>：出京去上海、深圳，同樣的分數能換來更高的溢價；但孩子普遍不想離京，家長要帶孩子去外地展會、實地走走，打破成見。</li>
+<li><strong>22 歲不要再回去讀本科</strong>：把技術撿起來、做開源、攢 GitHub 簡歷，直接進北京的早期創業團隊或頭部 AI Lab；方向要選 Agent+晶片、Agent+大型軟體重構、Agent+機械臂這類"成建制替代舊廠商"的賽道。</li>
+<li><strong>Simulink 不是好方向，EDA 才是</strong>：想做 Agent+工程軟體，從 PCB、EDA、晶片設計驗證入手。</li>
+<li><strong>非專業交易者不要猜個股</strong>：買標普、納指 ETF 就行；黃仁勳能不能回來、俄烏什麼時候停戰，都是猜不著的事。</li>
+</ul>
+<h2>一、北京高三女生家長：兩個半小時的升學大會診（00:25–02:57）</h2>
+<p>提問家長：北京人，夫妻都是三甲醫院主任；女兒高三，重點中學中層，裸考能上北京工業大學，分數約在 620–650 分段。手上有三個選項在糾結：北工大、昆山杜克、Virginia Tech（另有學校的多國升學機會）。</p>
+<h3>選校：Virginia Tech 本科不推薦，昆山杜克支持</h3>
+<ul>
+<li><strong>Virginia Tech</strong>：好學校，但好在碩博（研究生生源好），本科生源不行。立黨認為本科最重要的是同學——找足夠好的本科同學比什麼都重要，所以本科去 Virginia Tech 不划算。</li>
+<li><strong>昆山杜克</strong>：支持。畢業後可申請港中深醫學院的臨床博士（本科後教育，本科任何專業都能申），名額極少；昆杜另有與新加坡國立的合作通道。</li>
+<li><strong>哈工程</strong>：可以。學風硬、能吃苦、牌子夠用、回北京方便。</li>
+<li><strong>西工大</strong>：差約 20 分，夠不著。</li>
+<li><strong>港中深、港科廣</strong>：可以看看。</li>
+<li><strong>廣東以色列理工</strong>：它的"計算機"實際是 2/3 數學加 1/3 理論計算機，不理想。</li>
+<li><strong>國科大</strong>：北京約 702 分，夠不著。</li>
+</ul>
+<h3>不要學醫</h3>
+<p>立黨明確反對女兒學醫，理由是：</p>
+<ul>
+<li>學制太長：本博加規培加博士後，一路讀到 32 歲，12 年起步。</li>
+<li>知識結構單一、退出通道差：電子、計算機 4 年本科出來還有退路，醫學讀到一半想出來很難。</li>
+<li>公立體制內導師說了算：科研、文章、基金的壓力都壓在學生身上；家境差的孩子更容易被導師欺負。</li>
+<li>收入回報來得太晚：30 歲以前收入很少，等能掙錢時已經沒什麼消費慾望了；很多年輕人忍不了這個就轉行了。</li>
+<li>天津醫大八年制在北京只招一兩個人，分數不透明，不值得盯。</li>
+<li>深圳醫療反而是窪地：人口持續流入，醫療資源遠落後於經濟地位，醫學博士去深圳有機會；但那是十年後的事，週期太長，家長等不及。</li>
+</ul>
+<h3>專業：電子優先於計算機</h3>
+<ul>
+<li>女兒數學、物理中等。立黨建議<strong>電子優先</strong>：電子容錯大、知識更新慢、下限高；計算機要吃"手熟寫程式碼"的苦，還要做開源、找實習，對持續精進的要求更高。</li>
+<li>電子行業更新慢，學的東西不容易過時，適合中等偏上、願意執行的人；但立黨也提醒女生要想清楚：技術上一直保持精進，就勢必顧不上家庭，多數情況下是女方犧牲。</li>
+<li><strong>資料類課程不要修</strong>：需要的時候現學就行。</li>
+<li><strong>AI 藥物設計</strong>的正確路徑是純計算機演算法背景加略懂藥；生物資訊出身反而不行。</li>
+<li><strong>生物專業不要碰</strong>：對口產業太小，利潤低、成果不確定性大、仿製為主；華南理工也一樣，要學計算機不要學生物技術。</li>
+<li>女生學技術的另一條出路是 <strong>sales engineer / solution architect / forward deployment engineer</strong>（阿里雲、華為、AWS、微軟都有這類崗），但要語言能力。直播間有人建議"香港讀碩加外企 sales"，立黨當場否掉：北京孩子粵語、英語都撐不住，別不了解對方就瞎出主意。</li>
+</ul>
+<h3>電子、電氣、自動化到底怎麼分</h3>
+<p>家長問不清三者的區別，立黨展開講了一段專業史：</p>
+<ul>
+<li><strong>電子是弱電</strong>：與非門以上、電路以下的都算電子。</li>
+<li><strong>電氣是強電</strong>：電網、電力電子、IGBT、儲能、新能源車電池轉交流電、煞車能量回收，都屬於電氣。</li>
+<li><strong>自動化約等於 2/3 電子加 1/3 強電</strong>，再加控制和訊號。</li>
+<li>這套劃分是蘇聯體制的遺留：1950 年代為國家工業化定向培養人才，招一批人學一個專業，畢業進指定工廠。美國就是 EE 一個系，分幾個 track，學生修夠課就行，中國分得過細了。</li>
+<li><strong>機器人、智慧製造這類新專業，多是拼盤換牌招生</strong>：自動化學院把幾門課拼一拼就是自動化專業，再加兩門就是智慧機器人專業，機械專業換個名字就是智慧製造，本質沒區別，純粹為了好招生。</li>
+<li>選專業順序：<strong>電子（電子工程、積體電路）優先，其次自動化，電氣排最後</strong>（電氣弱電學得太少）。機器人感興趣可以考慮。</li>
+</ul>
+<h3>買書試讀、逛展會：兩招判斷孩子適不適合</h3>
+<ul>
+<li><strong>買書試讀法</strong>：計算機和電子的書各買回來，讓孩子翻一翻，看能不能看進去。高三判斷不了適合計算機還是自動化，就這麼試。</li>
+<li><strong>逛展會法</strong>：帶孩子去北京、上海、深圳的行業展會（服貿會、消費電子展、中國積體電路設計年會、機器人大會等），讓孩子親眼看看產業。北京孩子普遍不想離京，根子上是沒見過外面的樣子；走的地方多了，自我認知會自己調整。</li>
+</ul>
+<h3>城市選擇：深圳是潛力股，北京留京是浪費</h3>
+<ul>
+<li><strong>深圳大學是潛力股</strong>：華為、騰訊、比亞迪、大疆在深圳招不到人，只能用深大，本地溢價很高；深大在京錄取約 610–620 分，與北工大相當。有的學校像股票，區域爆發學校一定爆發。</li>
+<li><strong>深圳機會最多</strong>：製造業是中國唯一真正的經濟支柱，一個小東西（比如藍牙耳機）、一台無人機都能賣到全世界；北方除了北京體制內、天津考體制內，沒什麼增量產業；蘇州、杭州、寧波還可以。</li>
+<li><strong>北京網際網路一裁員就往底端滑</strong>：非技術崗裁了找不到工作，技術崗再找也要降薪；以前拿過高薪，再找同等薪資很難。</li>
+<li>戶口不用擔心：戶口在北京不怕，現在沒人看戶口。</li>
+<li>孩子嫌深圳又潮又熱，立黨直接回：怎麼那麼多廢話，該走了。</li>
+<li>北京高考 8 萬多考生，能進清北的是前 500 名的遊戲；12000 名開外就到不了頭部人才的框了。高中同學資源比大學同學還重要——都在北京，資訊互通很快。</li>
+<li>提分是相對位置遊戲：高三大家都在提分，相對位置不會有太大變化；一分一分提就是了。</li>
+</ul>
+<h3>新型大學的資訊差</h3>
+<ul>
+<li><strong>寧波東方理工</strong>：韋爾股份創始人加中科院院士創辦，專攻半導體，小號上科大；全國只招 70 人計算機大類，基本只招浙江，北京不招。</li>
+<li><strong>港大上海</strong>：首年招生，多數人不知道；立黨說這是他直播間常推薦的三所之一（深圳理工、寧波東方理工、港大上海）。</li>
+<li><strong>大灣區大學</strong>：基本只招廣東人。</li>
+<li>新型大學人少而精、師生比高，但學費貴（昆杜約 20 多萬一年）。250 人的大課掉隊 50 人老師不在乎；5 個學生小班，老師會逐個問你聽沒聽懂。</li>
+<li>新型大學首年招生基本都是區域招生，因為教授少、排不了太多課。</li>
+</ul>
+<h3>其他學校點評（直播現場陸續補充）</h3>
+<ul>
+<li><strong>上海大學</strong>：電機、強電傳統強校（錢偉長當過校長），工業界口碑特別好，電子也不錯；在京 602 分，中外合辦 620 分。三個中外合辦：悉尼工商學院（全商科）、中歐工程學院（法國技術大學集團，工科為主，大四可去法國讀一年拿雙學位）、葡萄牙里斯本大學（有電氣，但葡萄牙語難學、沒語言環境）。</li>
+<li><strong>成電、西電</strong>：分數都偏高，夠得勉強；<strong>南京郵電、南京理工</strong>肯定夠；<strong>南航、大連理工</strong>可以考慮（大連理工掉得快）。</li>
+<li><strong>華東理工</strong> 612 分左右；<strong>上海理工</strong>可以看。</li>
+<li><strong>河北工大</strong>（天津北辰校區，離北京近）：電子、控制、人工智慧都很好，生源好，當年碩士去華為是保底的說法。</li>
+<li><strong>華北電力大學</strong>：在京分數不高，但立黨認為行業吸引力有限。</li>
+<li><strong>重慶大學</strong>：985，轉移支付多，半導體、汽車專案落地多，當地機會不少，生活舒適，學生不願出來；可以考慮。</li>
+<li><strong>上財計算機</strong>：值得看，理論計算機強，本科教學規矩，吃上海位置。</li>
+<li><strong>電網出路</strong>：願意進電網是省心選擇，工資不高、有加班，但一輩子穩妥；女生學電氣的少，要接受出差、戶外、變電站考察。</li>
+<li>體制內之外的出路：好的國企、核電、運營商研究院可以考慮，但要認命、服輸；網管類工作無聊、沒成長，有點心氣的孩子幹半年就不想幹了。</li>
+<li>行業創業九死一生：北京創業的標配是清華本科學位，或在字節幹幾年，或 UC Berkeley、UCLA 的 PhD；軟體創業除非有資源、有渠道，否則中小企業根本不願買軟體。</li>
+</ul>
+<h2>二、北京高三男生家長：640 分，計算機還是自動化（02:57–03:34）</h2>
+<p>第二位家長也是北京的，北漂家庭，體制內；兒子高三，北京排名約 3000 名，複分後約 634–640 分，對計算機和自動化都沒什麼傾向。</p>
+<ul>
+<li>高三這個時間點<strong>判斷不了</strong>孩子適合計算機還是自動化：真正適合的判斷應該在小學、國中、高中就開始接觸程式設計；現在只能用買書試讀法。</li>
+<li>640 分這個段位：<strong>計算機放前面，電子放後備</strong>。</li>
+<li>北京孩子留京讀書，分數現實上就是浪費了。立黨一萬個反對北京人在北京讀大學——所有北京人都不想出京，才把北京的分數抬成全國最高。</li>
+<li>出京選項：北郵計算機夠不著（去年 650 分以上）；北航中外合辦勉強夠；北理工去年 650 以上，夠不著；北工大計算機差不多夠；深大計算機相關特色班可能夠，而且深大絕對比北郵強；<strong>上海大學</strong>計算機可以認真考慮；<strong>東北大學</strong>自動化很大、很全；<strong>南開、天大</strong>的計算機都在走下坡路，立黨明確說這兩家都不如深大計算機，南開略好於天大（南開計算機有位大牛一個人拉起來的）；<strong>武漢大學</strong>計算機也可考慮，牌子與體量優於北郵；<strong>中山大學</strong>也可以；<strong>同濟</strong>去不了。</li>
+<li>中外合辦：上財？不，上交？家長問的是<strong>北郵瑪麗女王學院</strong>的智慧科學與技術。立黨看了課程表（自然語言處理、資料結構、形式語言與自動機、機器學習、生成式 AI 應用），認為這幾門課沒問題，一年十萬能接受就可以讀；但中外合辦一定水，就業市場怎麼評估不知道；北郵的孩子本科就該工作，讀碩是浪費時間，最多讀個香港一年碩"洗學歷"。北郵四年都在沙河校區，很吃虧。</li>
+<li>讀研去向：如果回國工作，<strong>不要去新加坡讀碩</strong>。立黨說法：新加坡薪資比北京多約 40%，但租房、吃飯貴幾倍，到手剩下的錢差不多；身分便利對技術崗意義不大，一輩子出不了幾趟國。在國內讀本校研，讀不了再考慮；美國工作先不考慮。</li>
+<li>孩子比較懶、不想離京：立黨建議帶孩子去上海、深圳逛展會（機器人大會等），或者去看看微軟、英特爾、高通在上海的公司；孩子不是不接受，是根本沒概念。</li>
+<li>北京高考人數 8 萬多，天津高考人數比北京多，還有高考移民；再過三五年，天津高考可能比北京還難；十幾年後生育下降，人數會下來。</li>
+</ul>
+<h3>計算機大類下的專業避坑清單</h3>
+<p>家長逐個問計算機類裡的細分專業，立黨逐個點評：</p>
+<ul>
+<li><strong>區塊鏈工程</strong>：不要碰。中國大陸沒有這個產業。</li>
+<li><strong>密碼學</strong>：數學裡的一個分支，沒數學天賦的孩子不要碰，吃苦。</li>
+<li><strong>軟體工程</strong>：可以，很成熟，所有大學的軟體工程都沒問題。</li>
+<li><strong>網路工程</strong>：不能碰。就是純網管，連專業都不算，是給老師找飯吃的專業——20 年前網管是個大就業崗位才設了這個專業，今天砍不掉是因為不能把老師一個個掐死。</li>
+<li><strong>物聯網工程</strong>：千萬不能碰。2000 年代有一波物聯網浪潮，願景是上萬億設備聯網，結果產業根本沒起來，專業卻留下來了。</li>
+<li><strong>數位媒體</strong>：不要碰。</li>
+<li><strong>智慧科學、人工智慧專業</strong>：要看課表。99% 的概率不教今天的大模型，教的是傳統規劃、傳統 CV、專家系統這些四五十年的老東西——"今天到火箭時代了還在學馬車"。要看培養計畫，看到傳統機器學習、神經網路、古典人工智慧就別碰；哈工大這類少數學校可以看。</li>
+</ul>
+<h2>三、22 歲女生：退學、直播、UCLA 休學之後怎麼辦（03:34–04:11）</h2>
+<p>第三位上麥者是位 22 歲女生，經歷很曲折：天津南開中學理科實驗班出身，高一進資訊學競賽校隊（學到陣列、迴圈、資料結構、貪心演算法），拿過資訊學省一；自主招生取消改強基後，資訊學不受重視，她退出了校隊。數學很好，極限、導數能拿滿分。但父親重男輕女，酒後會打她，學習壓力大、心態差，成績下滑，覺得考上天津大學就是"這輩子廢了"（學校氛圍是"考不上清北就是垃圾"）。後來她想考港大計算機"曲線救國"，家裡極力反對；她開始倒賣學習資料賺錢，做顏值直播帳號，最多做到 10 萬粉（後來掉到一兩萬），簽了頭部 MCN，逃到上海，白天在一家外資公司實習，接觸創投圈、紅杉資本；靠直播收入加中介幫助，申請到 UCLA 數學，去了美國發現生活費遠超預期，兼顧不了學業加直播，覺得讀數學沒意義，休學回國繼續直播。現在看到高中同學保研到清北讀計算機，有的拿西交大計算機第一，覺得自己幾年在外面晃、沒學到實在東西，想回去讀書或做量化。</p>
+<p>立黨先讓她從情緒裡出來：南開中學那個"考不上清北就是垃圾"的氛圍是有毒的；溫家寶是南開中學少有的考進中國地質大學的，但那幾屆人裡他是最優秀的——學校不能定義人。</p>
+<p>然後給的結論很乾脆：<strong>不要讀書了</strong>。</p>
+<ul>
+<li>UCLA 讀不下去就別回去：轉計算機難，國際生費用完全不值，這錢可以省下來。</li>
+<li>MBZUAI（阿聯酋阿布扎比的人工智慧大學）可以考慮，有省一基本能申上，華人教授多；但本科課程也很無聊。22 歲這個年紀，該會的已經都會了，再聽一遍課、寫一遍作業沒有用。</li>
+<li>路徑：把立黨 AI 講座系列和推特 highlights 裡關於 Agent 的內容看明白，把技術撿起來，做開源，攢 GitHub 簡歷，去北京找最一線的工業界機會——早期創業團隊或頭部 AI Lab。沒有人會因為你沒讀完本科而不用你，有技術、有開源簡歷就行。</li>
+<li>方向清單：AI 加數學、AI 加攻防/安全、AI 加大型軟體重構、AI 加晶片設計、Proactive Agent（主動 Agent，幾十個 Agent 長期主動幫你做任務，立黨說他比行業提前一年講這個）、Agent 加機械臂/具身智慧、Agent 做逆向再做強化學習。中國現在這些方向幾乎沒人做。</li>
+<li><strong>量化別碰</strong>：不是所有人都能賺到錢；頭部量化賺錢，二線量化虧的錢就是被頭部賺走的；北大數學系每年能進量化的也就三分之一到四分之一。</li>
+<li><strong>融資看品位和故事</strong>：紅杉喜歡投清華退學的小孩，但不會無限制給機會；pre-seed 輪可以給你錢打磨，下一輪就要問錢怎麼花、招什麼人、客戶增長多少。YC 投的公司一大半都不行，淘汰率很高。</li>
+<li>不要跟做 SaaS 收購、講故事融資的那幫人玩：SaaS 公司自己會裁員，收個"屍體"過來沒有意義；要跟這幫人玩一輩子沒出息。</li>
+<li>她問能不能發抖音帳號給立黨看，立黨讓她私訊就行。</li>
+</ul>
+<h2>四、歐洲在讀博士：想回國做 Agent，Simulink 還是晶片（04:11–04:28）</h2>
+<p>第四位上麥者是男生，北航自動化本科，在國企工作過，疫情後轉碼，現在歐洲讀博士（自動控制、不確定性建模方向，偏理論），面過 Manus 的 Agent 崗；想回國做 Agent，在糾結幾個方向：Simulink/Matlab 替代、物理系統 Agent 控制、智慧家居語音控制（他強調" No Chatbot"，盡量少輸文字、靠語音控制）。</p>
+<p>立黨的判斷：</p>
+<ul>
+<li><strong>Simulink 不是好方向</strong>。MathWorks 大部分用戶是 application engineer（寫 toolbox 的人），用戶已經深度綁定，替代極難；而且 Simulink 在製造業公司裡的地位佔比很小，只是驗證、調一下參數的環節。EDA 軟體不同，很多公司從頭到尾趴在上面活著。</li>
+<li><strong>真正的好機會是 Agent 加一個工具，把以前整個廠商成建制替代掉</strong>。從 PCB、EDA 入手，datasheet 方向值得做；Agent 設計整個晶片是最重要的方向。</li>
+<li><strong>數學形式化是必走之路</strong>：把過去幾十年所有數學論文全部形式化驗證一遍，Agent 才能看懂結果；但要做出影響力，必須展現出 100 倍甚至 1000 倍的產出。</li>
+<li><strong>不要發論文</strong>：論文沒人看，開源才有人用、有人跑；驗證想法靠專案不靠論文。</li>
+<li><strong>讀博問題</strong>：反對為讀而讀。讀博要看導師水準，跟差得遠的導師讀沒意義；這個年紀該高強度做有價值的事；工業界變化太快，讀完五年出來都不知道什麼樣。哈工大創業天花板之類的問題，核心是導師和方向，不是學校牌子。</li>
+<li>歐洲機會比國內小太多：Mistral 雖然在擴張，但幅度比國內小得多；德國大廠機會也少。</li>
+</ul>
+<h2>五、收尾：CoreWeave 與英偉達（04:28–04:32）</h2>
+<p>直播間提問收尾：</p>
+<ul>
+<li><strong>CoreWeave 上市</strong>：按立黨此前的說法，可以買一點。</li>
+<li><strong>英偉達、黃仁勳回不來</strong>：立黨說增長沒那麼快了，但"依舊可以繼續持有"他說不知道、變數太大；黃仁勳能不能回來，是美國十幾二十個人能決定的事，不是普通人能猜的。非專業交易者就買標普、納斯達克 ETF 就行。</li>
+<li><strong>俄烏什麼時候停戰</strong>：猜不著。隨後下播。</li>
+</ul>
+<h2>附：本場提到的學校與分數（均為直播現場說法，未經核實）</h2>
+<ul>
+<li>深大在京約 610–620 分，與北工大相當；上海大學在京 602 分、中外合辦 620 分；華東理工 612 分左右；北理工去年 650 分以上；北郵去年 650 分以上；北郵瑪麗女王學院智慧科學與技術一年約 10 萬元；寧波東方理工全國只招 70 人計算機大類；北京高考考生 8 萬多人，清北約前 500 名；國科大北京約 702 分。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Lidang's "Answering Everything in the World (Don't Use Bluetooth Headphones)" Space — Notes</h1>
+<ul>
+<li>Host: Lidang @lidangzzz</li>
+<li>Time: 2026-11-19 16:38–21:11 (Beijing time), about 4 hours 32 minutes</li>
+<li>Scale: 1,630 cumulative live listeners; 9 speakers (masalachopra123, Bowen91782404, aaaassdxx, KrikFanc, Zoeyahqp, aliudn0371, zhangzhiya71020, wgzydan688, Hypnos8153)</li>
+<li>Source: Transcript of the X Space replay; full text 5,779 lines, about 62,000 characters; the transcript begins at 00:06:31, with no intelligible speech in the first roughly six and a half minutes</li>
+<li>Original Space: https://x.com/i/spaces/1LPYmanrzREYnK</li>
+</ul>
+<blockquote>
+<p>Note: The figures, schools and scores in these notes are all as stated by the guests and listeners during the livestream and have not been verified; the transcript was generated by speech recognition and contains homophone errors, and school names have been corrected according to context. At around 03:16 the livestream briefly stuttered and lost audio.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>A marathon four-and-a-half-hour Q&amp;A: the first two and a half hours were a full college-admissions consultation for two Beijing parents of final-year high school students (school choice, major choice and city choice all covered in one go), and the last two hours were career and life consultations for two young people around 22 (one a livestreamer who had dropped out, the other a PhD student in Europe), closing with CoreWeave's IPO and Nvidia.</p>
+<h2>Key conclusions</h2>
+<ul>
+<li><strong>Beijing final-year high school girl (roughly the 620–650 score band): don't study medicine; electronics is the top choice; Duke Kunshan is worth going to; Shenzhen University is an undervalued stock.</strong></li>
+<li><strong>For Beijing children, staying in Beijing for university wastes their score</strong>: going to Shanghai or Shenzhen gets a higher premium for the same score; but children generally don't want to leave Beijing, so parents should take them to exhibitions in other cities and walk around in person to break their preconceptions.</li>
+<li><strong>At 22, don't go back for a bachelor's degree</strong>: pick your technical skills back up, do open source, build a GitHub portfolio, and go straight into an early-stage startup team or a top AI Lab in Beijing; choose directions such as Agent + chips, Agent + large-scale software refactoring, and Agent + robotic arms — tracks that "replace incumbent vendors wholesale."</li>
+<li><strong>Simulink is not a good direction; EDA is</strong>: if you want to do Agent + engineering software, start from PCB, EDA and chip design verification.</li>
+<li><strong>Non-professional traders should not try to pick individual stocks</strong>: just buy S&amp;P and Nasdaq ETFs; whether Jensen Huang can come back, and when the Russia-Ukraine war will end, are things no one can guess.</li>
+</ul>
+<h2>I. Parents of a Beijing final-year high school girl: a two-and-a-half-hour admissions consultation (00:25–02:57)</h2>
+<p>The asking parent: a Beijing native; both parents are department heads at a top-tier (Grade 3A) hospital; their daughter is in her final year of high school, in the middle tier of a key high school, able on a bare exam score to get into Beijing University of Technology, with a score roughly in the 620–650 band. Three options were causing indecision: Beijing University of Technology, Duke Kunshan, and Virginia Tech (plus a multi-country study opportunity from another school).</p>
+<h3>School choice: Virginia Tech not recommended for undergrad; Duke Kunshan supported</h3>
+<ul>
+<li><strong>Virginia Tech</strong>: A good school, but good at the master's and PhD level (its graduate student body is strong); its undergraduate student body is not. Lidang believes the most important thing in an undergraduate degree is your classmates — finding good enough undergraduate classmates matters more than anything — so going to Virginia Tech for undergrad is not cost-effective.</li>
+<li><strong>Duke Kunshan</strong>: Supported. After graduating, one can apply for the clinical doctorate at the medical school of The Chinese University of Hong Kong, Shenzhen (a post-bachelor's program open to any undergraduate major), though places are extremely few; Duke Kunshan also has a partnership channel with the National University of Singapore.</li>
+<li><strong>Harbin Engineering University</strong>: Acceptable. A rigorous academic culture, able to endure hardship, a good enough name, and convenient for returning to Beijing.</li>
+<li><strong>Northwestern Polytechnical University</strong>: About 20 points short; out of reach.</li>
+<li><strong>CUHK Shenzhen, HKUST Guangzhou</strong>: Worth a look.</li>
+<li><strong>Guangdong Technion</strong>: Its "computer science" is actually 2/3 mathematics plus 1/3 theoretical computer science — not ideal.</li>
+<li><strong>University of Chinese Academy of Sciences</strong>: About 702 points in Beijing; out of reach.</li>
+</ul>
+<h3>Don't study medicine</h3>
+<p>Lidang explicitly opposed the daughter studying medicine, for these reasons:</p>
+<ul>
+<li>The training is too long: bachelor's-to-doctorate plus residency plus a postdoc, studying straight through to age 32 — 12 years at a minimum.</li>
+<li>A narrow knowledge structure and poor exit options: after a 4-year bachelor's in electronics or computer science there are still ways out, but halfway through medicine it is very hard to leave.</li>
+<li>Within the public system, the advisor calls the shots: the pressure of research, papers and grants all falls on the student; children from poorer families are more easily bullied by advisors.</li>
+<li>The income payoff comes too late: very little income before age 30, and by the time you can earn money there is little appetite left for spending; many young people can't endure this and switch careers.</li>
+<li>Tianjin Medical University's eight-year program admits only one or two people in Beijing, with opaque scores — not worth fixating on.</li>
+<li>Shenzhen medicine is actually a value trough: population keeps flowing in, medical resources lag far behind its economic standing, and medical PhDs have opportunities in Shenzhen; but that is ten years out, the cycle is too long, and the parents can't wait.</li>
+</ul>
+<h3>Major: electronics over computer science</h3>
+<ul>
+<li>The daughter is middling at mathematics and physics. Lidang advised <strong>electronics first</strong>: electronics is more forgiving, its knowledge updates slowly, and its floor is high; computer science requires enduring the grind of "writing code until it's second nature," plus doing open source and finding internships, with higher demands for continuous improvement.</li>
+<li>The electronics industry updates slowly, so what you learn doesn't easily go obsolete; it suits people who are above average and willing to execute; but Lidang also reminded her to think it through: staying continuously sharp technically inevitably means neglecting family, and in most cases it is the woman who sacrifices.</li>
+<li><strong>Don't take data-related courses</strong>: just learn them on the spot when needed.</li>
+<li>The correct path into <strong>AI drug design</strong> is a pure computer-science algorithms background plus a rough understanding of pharmaceuticals; a bioinformatics background, by contrast, doesn't work.</li>
+<li><strong>Don't touch biology majors</strong>: the matching industry is too small, with low profits, highly uncertain results, and a focus on imitation; the same applies at South China University of Technology — study computer science, not biotechnology.</li>
+<li>Another way out for women in tech is <strong>sales engineer / solution architect / forward deployment engineer</strong> (Alibaba Cloud, Huawei, AWS and Microsoft all have such roles), but it requires language ability. Someone in the livestream suggested "a master's in Hong Kong plus sales at a foreign company"; Lidang rejected it on the spot: a Beijing kid can't sustain either Cantonese or English — don't offer blind advice without understanding the other person.</li>
+</ul>
+<h3>How electronics, electrical engineering and automation actually differ</h3>
+<p>The parent couldn't get clear on the differences among the three, and Lidang gave a short history of the disciplines:</p>
+<ul>
+<li><strong>Electronics is low-voltage ("weak current")</strong>: everything from NAND gates up and circuits down counts as electronics.</li>
+<li><strong>Electrical engineering is high-voltage ("strong current")</strong>: power grids, power electronics, IGBTs, energy storage, converting EV battery DC to AC, and braking energy recovery all belong to electrical engineering.</li>
+<li><strong>Automation is roughly 2/3 electronics plus 1/3 strong current</strong>, plus control and signals.</li>
+<li>This division is a legacy of the Soviet system: in the 1950s, talent was trained directionally for national industrialization — a cohort was recruited to study one major and then sent to a designated factory after graduation. In the US there is just one EE department with several tracks, and students simply complete enough courses; China divides things too finely.</li>
+<li><strong>New majors such as robotics and intelligent manufacturing are mostly repackaged bundles for recruitment</strong>: an automation school bundles a few courses together and calls it an automation major, adds two more and it's an intelligent robotics major, and a mechanical engineering major under a new name becomes intelligent manufacturing — essentially no difference, purely to make recruitment easier.</li>
+<li>Order for choosing a major: <strong>electronics (electronic engineering, integrated circuits) first, automation second, electrical engineering last</strong> (electrical engineering teaches too little low-voltage content). Robotics can be considered if interested.</li>
+</ul>
+<h3>Buy books to test-read, visit exhibitions: two ways to judge whether a child fits</h3>
+<ul>
+<li><strong>The buy-books-and-test-read method</strong>: buy books on both computer science and electronics, let the child flip through them and see whether they can get into them. If in the final year of high school you can't judge whether computer science or automation fits, test this way.</li>
+<li><strong>The exhibition method</strong>: take the child to industry exhibitions in Beijing, Shanghai and Shenzhen (the services trade fair, consumer electronics shows, the China Integrated Circuit Design Annual Conference, robotics conferences, etc.) and let them see the industry with their own eyes. Beijing children generally don't want to leave Beijing, fundamentally because they have never seen what the outside looks like; the more places they go, the more their self-perception adjusts on its own.</li>
+</ul>
+<h3>City choice: Shenzhen is an undervalued stock; staying in Beijing is a waste</h3>
+<ul>
+<li><strong>Shenzhen University is an undervalued stock</strong>: Huawei, Tencent, BYD and DJI can't recruit enough people in Shenzhen and can only use Shenzhen University graduates, so the local premium is very high; Shenzhen University admits at about 610–620 points in Beijing, comparable to Beijing University of Technology. Some schools are like stocks: when a region takes off, its schools are bound to take off.</li>
+<li><strong>Shenzhen has the most opportunities</strong>: manufacturing is China's only real economic pillar; a small thing (such as Bluetooth headphones) or a drone can be sold to the whole world; in the north, apart from Beijing's public sector and taking public-sector exams in Tianjin, there is little growth industry; Suzhou, Hangzhou and Ningbo are still all right.</li>
+<li><strong>Once Beijing's internet sector lays people off, they slide to the bottom</strong>: non-technical roles that are cut can't find work, and technical roles have to take pay cuts to find another job; having once earned a high salary, finding the same pay again is very hard.</li>
+<li>No need to worry about hukou: with a Beijing hukou there's nothing to fear; nowadays nobody looks at hukou.</li>
+<li>The child complained Shenzhen is humid and hot; Lidang replied directly: what's with all the nonsense — it's time to go.</li>
+<li>Beijing has over 80,000 gaokao candidates; getting into Tsinghua or Peking University is a game for the top 500; beyond rank 12,000 you're outside the frame of top talent. High school classmates are an even more important resource than university classmates — all in Beijing, information flows very fast.</li>
+<li>Raising scores is a relative-position game: in the final year everyone is raising their scores, so relative position won't change much; just raise it point by point.</li>
+</ul>
+<h3>The information gap around new-type universities</h3>
+<ul>
+<li><strong>Eastern Institute of Technology, Ningbo</strong>: Founded by the founder of Will Semiconductor together with an academician of the Chinese Academy of Sciences, focused on semiconductors — a mini University of Science and Technology of China; nationwide it admits only 70 students in the computer science category, basically only from Zhejiang, and does not recruit in Beijing.</li>
+<li><strong>HKU Shanghai</strong>: First year of admissions, and most people don't know about it; Lidang said it is one of the three he often recommends in his livestream (Shenzhen University of Technology, Eastern Institute of Technology Ningbo, and HKU Shanghai).</li>
+<li><strong>Great Bay University</strong>: Basically only recruits from Guangdong.</li>
+<li>New-type universities are small and elite with high student-faculty ratios, but tuition is expensive (Duke Kunshan is about 200,000-plus yuan a year). In a 250-person lecture, the teacher doesn't care if 50 fall behind; in a 5-student small class, the teacher will ask each of you whether you understood.</li>
+<li>In their first year of admissions, new-type universities basically recruit regionally, because they have few professors and can't schedule too many courses.</li>
+</ul>
+<h3>Comments on other schools (added progressively during the livestream)</h3>
+<ul>
+<li><strong>Shanghai University</strong>: A traditionally strong school in motors and strong current (Qian Weichang was its president), with an especially good reputation in industry, and good electronics too; 602 points in Beijing, 620 for Sino-foreign cooperative programs. Its three Sino-foreign programs: SILC Business School (all business), the Sino-European School of Technology (the French UT group, mainly engineering; in the fourth year students can spend a year in France and earn a dual degree), and the University of Lisbon, Portugal (it has electrical engineering, but Portuguese is hard to learn and there's no language environment).</li>
+<li><strong>UESTC, Xidian</strong>: Both have rather high scores, a stretch to reach; <strong>Nanjing University of Posts and Telecommunications, Nanjing University of Science and Technology</strong> are definitely reachable; <strong>Nanjing University of Aeronautics and Astronautics, Dalian University of Technology</strong> can be considered (Dalian University of Technology is falling fast).</li>
+<li><strong>East China University of Science and Technology</strong> is around 612 points; <strong>University of Shanghai for Science and Technology</strong> is worth a look.</li>
+<li><strong>Hebei University of Technology</strong> (Beichen campus in Tianjin, close to Beijing): electronics, control and artificial intelligence are all very good, with a strong student body; back in the day, the saying was that its master's graduates were guaranteed a place at Huawei.</li>
+<li><strong>North China Electric Power University</strong>: Its scores in Beijing are not high, but Lidang considers the industry's appeal limited.</li>
+<li><strong>Chongqing University</strong>: A 985 university with substantial transfer payments and many semiconductor and automobile projects landing there, plenty of local opportunities, comfortable living, and students unwilling to leave; worth considering.</li>
+<li><strong>SUFE computer science</strong>: Worth a look — strong theoretical computer science, disciplined undergraduate teaching, and it benefits from its Shanghai location.</li>
+<li><strong>The power-grid path</strong>: Being willing to join the power grid is a worry-free choice — pay is not high and there is overtime, but it's secure for life; few women study electrical engineering, and one must accept business travel, outdoor work and substation inspections.</li>
+<li>Paths outside the public system: good state-owned enterprises, nuclear power, and telecom operator research institutes can be considered, but you have to accept your lot and admit defeat; network-administrator-type jobs are boring with no growth, and a child with any ambition won't want to do them after half a year.</li>
+<li>Starting a business in an industry is a near-death proposition: the standard profile for a Beijing founder is a Tsinghua bachelor's degree, or a few years at ByteDance, or a PhD from UC Berkeley or UCLA; in software startups, unless you have resources and channels, small and medium enterprises simply won't buy software.</li>
+</ul>
+<h2>II. Parents of a Beijing final-year high school boy: 640 points, computer science or automation (02:57–03:34)</h2>
+<p>The second parent was also from Beijing — a family of migrants to Beijing, working in the public system; their son is in his final year of high school, ranked about 3,000th in Beijing, with a score after re-checking of about 634–640 points, and no particular inclination toward either computer science or automation.</p>
+<ul>
+<li>At this point in the final year of high school, you <strong>cannot judge</strong> whether a child fits computer science or automation: a real judgment of fit should start with exposure to programming in primary, middle and high school; now the only option is the buy-books-and-test-read method.</li>
+<li>At the 640-point level: <strong>put computer science first, electronics as backup</strong>.</li>
+<li>For Beijing children, studying in Beijing realistically just wastes the score. Lidang is utterly opposed to Beijingers studying in Beijing — it's because no Beijingers want to leave that Beijing's scores have been pushed to the highest in the country.</li>
+<li>Options outside Beijing: Beijing University of Posts and Telecommunications computer science is out of reach (over 650 points last year); Beihang's Sino-foreign program is barely reachable; Beijing Institute of Technology was over 650 last year, out of reach; Beijing University of Technology computer science is about reachable; Shenzhen University's computer-science-related special classes might be reachable, and Shenzhen University is definitely stronger than BUPT; <strong>Shanghai University</strong> computer science deserves serious consideration; <strong>Northeastern University</strong> automation is very large and comprehensive; <strong>Nankai and Tianjin University</strong> computer science are both on a downward slope — Lidang said explicitly that neither is as good as Shenzhen University's computer science, with Nankai slightly better than Tianjin University (Nankai's computer science was pulled up by one leading figure single-handedly); <strong>Wuhan University</strong> computer science can also be considered, with a name and scale superior to BUPT's; <strong>Sun Yat-sen University</strong> is also possible; <strong>Tongji</strong> is out of reach.</li>
+<li>Sino-foreign programs: SUFE? No — SJTU? The parent was asking about Intelligent Science and Technology at <strong>BUPT's Queen Mary School</strong>. Lidang looked at the course list (natural language processing, data structures, formal languages and automata, machine learning, generative AI applications) and thought those courses were fine; if 100,000 yuan a year is acceptable, one can attend; but Sino-foreign programs are inevitably watered down, and how the job market evaluates them is unknown; BUPT children should work after their bachelor's — a master's is a waste of time, at most a one-year Hong Kong master's to "polish the credential." BUPT spends all four years at the Shahe campus, which is a real disadvantage.</li>
+<li>Where to do a master's: if you will work back in China, <strong>don't do a master's in Singapore</strong>. In Lidang's words: Singapore pay is about 40% more than Beijing's, but rent and food cost several times more, so what's left in hand is about the same; the convenience of status means little for technical roles, and you'll only leave the country a few times in a lifetime. Do a master's at your own university in China if you can, and consider other options only if you can't; working in the US is not to be considered for now.</li>
+<li>The child is rather lazy and doesn't want to leave Beijing: Lidang suggested taking the child to exhibitions in Shanghai and Shenzhen (robotics conferences and the like), or to see the Shanghai offices of Microsoft, Intel and Qualcomm; the child isn't refusing — they simply have no concept of it.</li>
+<li>Beijing has over 80,000 gaokao candidates; Tianjin has more gaokao candidates than Beijing, plus gaokao migration; in another three to five years, Tianjin's gaokao may be harder than Beijing's; in a decade or so, with births declining, the numbers will come down.</li>
+</ul>
+<h3>A pitfall list for sub-majors within the computer science category</h3>
+<p>The parent asked about each sub-major in the computer science category one by one, and Lidang commented on each:</p>
+<ul>
+<li><strong>Blockchain engineering</strong>: Don't touch it. Mainland China has no such industry.</li>
+<li><strong>Cryptography</strong>: A branch of mathematics; children without mathematical talent shouldn't touch it — it's suffering.</li>
+<li><strong>Software engineering</strong>: Fine, very mature; software engineering at every university is unproblematic.</li>
+<li><strong>Network engineering</strong>: Must not touch. It's pure network administration, not even a real major — a major created to give teachers a living: 20 years ago network administration was a major employment role, which is why the major was created; today it can't be cut because you can't just strangle the teachers one by one.</li>
+<li><strong>Internet of Things engineering</strong>: Absolutely must not touch. In the 2000s there was a wave of IoT hype, with a vision of trillions of devices connected, but the industry never took off while the major remained.</li>
+<li><strong>Digital media</strong>: Don't touch it.</li>
+<li><strong>Intelligent science and artificial intelligence majors</strong>: Look at the course list. With 99% probability they don't teach today's large models; they teach traditional planning, traditional CV, expert systems — old things from forty or fifty years ago: "we're in the rocket age today and they're still teaching horse-drawn carriages." Look at the training plan; if you see traditional machine learning, neural networks and classical artificial intelligence, don't touch it; a few schools such as Harbin Institute of Technology are worth a look.</li>
+</ul>
+<h2>III. A 22-year-old woman: after dropping out, livestreaming, and suspending her studies at UCLA, what next (03:34–04:11)</h2>
+<p>The third speaker was a 22-year-old woman with a very winding history: from the science experimental class at Tianjin Nankai High School, she joined the school informatics competition team in her first year of high school (learning arrays, loops, data structures and greedy algorithms) and won a provincial first prize in informatics; after independent admissions were abolished in favor of the Strong Foundation plan, informatics lost its importance and she left the team. She was very good at mathematics, able to get full marks on limits and derivatives. But her father favored sons over daughters and would hit her after drinking; under heavy study pressure and in a poor mental state, her grades slid, and she felt that getting into Tianjin University would mean "my life is ruined" (the school's atmosphere was "if you can't get into Tsinghua or Peking University you're garbage"). Later she wanted to take computer science at the University of Hong Kong as a "detour to save herself," which her family strongly opposed; she began reselling study materials to make money and ran a looks-based livestreaming account, reaching at most 100,000 followers (later falling to ten or twenty thousand), signed with a top MCN, fled to Shanghai, interned by day at a foreign company, and came into contact with venture capital circles and Sequoia Capital; with livestreaming income plus an agent's help, she was admitted to UCLA for mathematics, went to the US and found living costs far beyond expectations, couldn't balance studies and livestreaming, felt studying mathematics was meaningless, and suspended her studies to return to China and continue livestreaming. Now she sees high school classmates admitted to Tsinghua and Peking University for computer science postgraduate study, one of them ranked first in computer science at Xi'an Jiaotong University, and feels she has spent years drifting outside without learning anything solid, and wants to go back to study or do quantitative trading.</p>
+<p>Lidang first pulled her out of her emotions: that "if you can't get into Tsinghua or Peking University you're garbage" atmosphere at Nankai High School is toxic; Wen Jiabao was one of the few from Nankai High School to enter China University of Geosciences, yet among those cohorts he was the most outstanding — a school cannot define a person.</p>
+<p>Then the conclusion was blunt: <strong>stop studying</strong>.</p>
+<ul>
+<li>If you can't persist at UCLA, don't go back: switching to computer science is hard, the international-student fees are completely not worth it, and that money can be saved.</li>
+<li>MBZUAI (Mohamed bin Zayed University of Artificial Intelligence in Abu Dhabi, UAE) can be considered — with a provincial first prize you can basically get in, and there are many Chinese professors; but its undergraduate courses are also very boring. At 22, what you should know you already know; sitting through the courses and doing the assignments once more is useless.</li>
+<li>The path: understand clearly Lidang's AI lecture series and the Agent-related content in his Twitter highlights, pick your technical skills back up, do open source, build a GitHub portfolio, and go to Beijing for the most front-line industry opportunities — early-stage startup teams or top AI Labs. Nobody will refuse to hire you because you didn't finish your bachelor's; having skills and an open-source portfolio is enough.</li>
+<li>Direction list: AI plus mathematics, AI plus offense-defense/security, AI plus large-scale software refactoring, AI plus chip design, Proactive Agent (proactive agents — dozens of agents proactively doing tasks for you over the long term; Lidang said he talked about this a year ahead of the industry), Agent plus robotic arms / embodied intelligence, Agent doing reverse engineering and then reinforcement learning. In China almost nobody is working in these directions right now.</li>
+<li><strong>Don't touch quant</strong>: not everyone can make money; top quant firms make money, and the money second-tier quant firms lose is exactly what the top firms take; of Peking University's mathematics department, only a third to a quarter each year can get into quant.</li>
+<li><strong>Fundraising depends on taste and story</strong>: Sequoia likes to invest in Tsinghua dropouts, but won't give unlimited chances; a pre-seed round can give you money to polish, but the next round will ask how the money was spent, who was hired, and how much the customer base grew. More than half of the companies YC invests in don't work out; the elimination rate is very high.</li>
+<li>Don't hang around with the crowd doing SaaS acquisitions and storytelling-based fundraising: SaaS companies lay people off themselves; acquiring a "corpse" is meaningless; hanging around with that crowd for life gets you nowhere.</li>
+<li>She asked whether she could send Lidang her Douyin account to look at; Lidang told her to just send a private message.</li>
+</ul>
+<h2>IV. A PhD student in Europe: wants to return to China to work on Agents — Simulink or chips (04:11–04:28)</h2>
+<p>The fourth speaker was a man: an automation bachelor's from Beihang, who had worked at a state-owned enterprise, switched to coding after the pandemic, and is now doing a PhD in Europe (automatic control and uncertainty modeling, on the theoretical side); he had interviewed for an Agent role at Manus; he wants to return to China to work on Agents and was torn among several directions: replacing Simulink/Matlab, Agent control of physical systems, and smart-home voice control (he stressed "No Chatbot" — minimizing typed text and relying on voice control).</p>
+<p>Lidang's judgment:</p>
+<ul>
+<li><strong>Simulink is not a good direction</strong>. Most of MathWorks' users are application engineers (the people who write toolboxes); users are already deeply locked in, making replacement extremely hard; moreover, Simulink occupies only a small place in manufacturing companies — just the verification and parameter-tuning stage. EDA software is different: many companies live on it from start to finish.</li>
+<li><strong>The real opportunity is Agent plus a tool, replacing an entire incumbent vendor wholesale</strong>. Start from PCB and EDA; the datasheet direction is worth doing; having an Agent design an entire chip is the most important direction.</li>
+<li><strong>Mathematical formalization is a road that must be taken</strong>: formally verify all mathematical papers of the past several decades, and only then can Agents understand the results; but to have impact, you must demonstrate 100x or even 1000x output.</li>
+<li><strong>Don't publish papers</strong>: nobody reads papers; open source is what people use and run; ideas are validated by projects, not papers.</li>
+<li><strong>On doing a PhD</strong>: opposed to studying for its own sake. A PhD depends on the advisor's level; studying under an advisor far below you is meaningless; at this age one should work at high intensity on valuable things; industry changes too fast, and after five years of study you don't know what things will look like. Questions such as Harbin Institute of Technology's startup ceiling come down, at their core, to the advisor and the direction, not the school's name.</li>
+<li>Opportunities in Europe are far smaller than in China: Mistral is expanding, but by much less than in China; large German companies also offer few opportunities.</li>
+</ul>
+<h2>V. Closing: CoreWeave and Nvidia (04:28–04:32)</h2>
+<p>Closing questions from the livestream room:</p>
+<ul>
+<li><strong>CoreWeave's IPO</strong>: In line with what Lidang had said before, one can buy a little.</li>
+<li><strong>Nvidia, and Jensen Huang can't come back</strong>: Lidang said growth is no longer that fast, but as for "you can still keep holding it," he said he didn't know — too many variables; whether Jensen Huang can come back is something a dozen or twenty people in the US get to decide, not something ordinary people can guess. Non-professional traders should just buy S&amp;P and Nasdaq ETFs.</li>
+<li><strong>When will the Russia-Ukraine war end</strong>: Impossible to guess. The stream then ended.</li>
+</ul>
+<h2>Appendix: Schools and scores mentioned in this session (all as stated live, unverified)</h2>
+<ul>
+<li>Shenzhen University in Beijing is about 610–620 points, comparable to Beijing University of Technology; Shanghai University is 602 points in Beijing, 620 for Sino-foreign cooperative programs; East China University of Science and Technology is around 612 points; Beijing Institute of Technology was over 650 points last year; BUPT was over 650 points last year; Intelligent Science and Technology at BUPT's Queen Mary School costs about 100,000 yuan a year; Eastern Institute of Technology, Ningbo admits only 70 students nationwide in the computer science category; Beijing has over 80,000 gaokao candidates, with Tsinghua and Peking University at roughly the top 500; the University of Chinese Academy of Sciences in Beijing is about 702 points.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1LPYmanrzREYnK">https://x.com/i/spaces/1LPYmanrzREYnK</a> · 立党 @lidangzzz 主持 · 2026-11-19 16:38 – 21:11（4 小时 32 分）· 累计在线听众 1630 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。转写稿自 00:06:31 起，开场约 6 分半无有效语音。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1LPYmanrzREYnK">https://x.com/i/spaces/1LPYmanrzREYnK</a> · 立黨 @lidangzzz 主持 · 2026-11-19 16:38 – 21:11（4 小時 32 分）· 累計在線聽眾 1630 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。轉寫稿自 00:06:31 起，開場約 6 分半無有效語音。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1LPYmanrzREYnK">https://x.com/i/spaces/1LPYmanrzREYnK</a> · Hosted by Lidang @lidangzzz · 2026-11-19 16:38 – 21:11 (4 hours 32 minutes) · 1,630 cumulative live listeners<br>This page is the full notes, manually organized from a machine transcript; all content consists of guests' improvised remarks and self-descriptions during the livestream, has not been verified, and does not constitute investment advice. The transcript begins at 00:06:31; the first roughly six and a half minutes contain no intelligible speech. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"立党《解答世间万物（不要用蓝牙耳机）》Space 纪要 · Yat's Talks",tw:"立黨《解答世間萬物（不要用藍牙耳機）》Space 紀要 · Yat's Talks",en:"Lidang's \"Answering Everything in the World (Don't Use Bluetooth Headphones)\" Space — Notes · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

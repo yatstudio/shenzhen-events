@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>《噪音之后｜西堂：AI副业到AI创业，我是如何通过AI月入10w+》会议纪要</h1>
 <ul>
 <li><strong>时间</strong>：2026-11-13（周五）20:56–23:06（CST），2 小时 10 分</li>
@@ -116,8 +123,214 @@
 <li>“所有平台最后都一定会走向付费流。”</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1QnYobqOmWeeOL">https://x.com/i/spaces/1QnYobqOmWeeOL</a> · 主持 蜗牛King @isnail · 嘉宾 西堂 @xitang_ai · 2026-11-13 20:56–23:06（约 2 小时 10 分）· 累计收听 468 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>《噪音之後｜西堂：AI副業到AI創業，我是如何透過AI月入10w+》會議紀要</h1>
+<ul>
+<li><strong>時間</strong>：2026-11-13（週五）20:56–23:06（CST），2 小時 10 分</li>
+<li><strong>主持</strong>：蝸牛King 👑 @isnail（主做公眾號流量主）</li>
+<li><strong>嘉賓</strong>：西堂 @xitang_ai（深圳，西堂團隊負責人；來 X 才一個多月）</li>
+<li><strong>形式</strong>：前約 1 小時 10 分為西堂主講創業經歷，後約 1 小時為聽眾上麥問答</li>
+<li><strong>收聽</strong>：累計 468 人次（Space 元數據 total_live_listeners）</li>
+<li><strong>來源</strong>：X Space 回放錄音轉寫，逐字稿 3066 行、約 9.3 萬字，時間戳 00:00:03–02:10:07 全覆蓋</li>
+<li><strong>原 Space</strong>：https://x.com/i/spaces/1QnYobqOmWeeOL</li>
+</ul>
+<blockquote>
+<p>說明：本紀要所有數字、收入與判斷均為嘉賓西堂在直播中的現場自述，未經第三方核實，僅作記錄。轉寫為 ASR 自動生成，存在同音誤聽（如「商單」誤作「刪單/三單/山丹」、「漫劇」誤作「慢劇」、「西堂」誤作「西棠/西藏」），紀要已按語義還原；個別提問者姓名以轉寫音譯為準。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>程式設計師西堂用兩年半從 AI 影片副業走到全職創業，試過 AI 影片商單、培訓、AI 漫劇、跨境、電商換裝等多條線，最後的結論是：<strong>技術不值錢，組織和人才是核心；能穩定月入過萬的只有兩條路——接商單，或做 MCN；現在他的主盤是公眾號商單號 + 以培訓篩人建 MCN</strong>。</p>
+<h2>核心結論</h2>
+<ol>
+<li><strong>「技術一點都不重要」，核心是組織和人。</strong> 西堂原話：AI 時代一個牛人能抵 10 個甚至 50 個人；他現在全職五六個人幹的活，傳統做法要 30 個人。</li>
+<li><strong>副業穩定月入過萬很難，短期很難、長期有可能。</strong> 他認為零基礎打工人只有兩條路能做到穩定月入過萬：一是接商單，二是做 MCN（或做 IP 流量）。其他路要麼不穩定，要麼天花板低。</li>
+<li><strong>公眾號商單是他現在的現金牛。</strong> 大號「西堂 AI 影片」均閱從約 1 萬做到 1.5 萬，單篇商單報價從 3000–4000 元漲到 8000–1 萬，個別品牌方 2 萬多也成交；商單中 AIGC 類約佔 60%–70%。他稱這類虛擬業務利潤率約 40%–50%。</li>
+<li><strong>AI 漫劇（短劇）已經過了賺錢的窗口。</strong> 2025 年 10 月底切入時 1 分鐘能賣 1500 元，後來 800、600 元都接不到，保底也沒了；2026 年 4 月市場開始下行，原因是字節從劇本、算力到投流全鏈條說了算、內容過飽和、平台收緊。他的判斷：做漫劇承製是辛苦錢，培訓才是能留下的部分。</li>
+<li><strong>短劇帶貨、互動影遊、AI SaaS 出海，新手都別碰。</strong> 短劇帶貨「沒人掙錢」，核心在選品和帶貨能力，不在短劇技術；互動影遊靠資源和資本；AI SaaS 出海至少做好半年甚至一年不賺錢的準備，技術不是關鍵，80% 是流量和運營，產品還容易被抄。</li>
+<li><strong>培訓的本質是「招募合夥人」，不是賣課。</strong> 他的核心員工全部來自高客單價課程學員；不承諾變現，提前說清楚教什麼、能做出什麼作品，優秀學員有商單會優先給。</li>
+</ol>
+<h2>西堂其人：從騰訊程式設計師到全職創業</h2>
+<ul>
+<li>程式設計師出身，先在騰訊待了近兩年半（小組裡最後一個進去、職級最低），2023 年 8 月 1 日主管毫無徵兆地給了他 D 評（此前已明確說本組沒有 D），他當即開始面試，一個月後跳槽到商湯，漲薪約 30%。</li>
+<li>在商湯的一年多是副業黃金期：領導在上海、他在深圳管不到他，主業每天一兩個小時就能做完，大量時間做副業；2025 年 3 月 14 日正式離職創業。</li>
+<li>副業探索始於 2023 年：2 月 ChatGPT 火了開始關注，5–6 月接觸 Midjourney 覺得好玩，真正開始接觸 AI。在此之前做過非 AI 副業——求職陪跑、閒魚倒買倒賣加培訓，折騰一年掙不到 1 萬元。</li>
+</ul>
+<h2>時間線：從 AI 影片副業到公眾號商單</h2>
+<p><strong>2024 年 2–6 月：AI 影片起步</strong>
+- 2024 年 2 月 Sora 發布（春節刷屏），他判斷「文字一年了、圖片大半年了，接下來就是影片」，2 月拉兩個小夥伴，3 月磨合，團隊對外稱 2024 年 4 月 8 日成立。
+- 4–6 月只做一件事：讓別人知道團隊是做 AI 影片的。公眾號日更 30 天（全是 AI 影片相關），文章發各社群、影片發自媒體號、參加比賽，每天幹到凌晨 2–3 點。
+- 2024 年 6 月接到第一個 AI 影片商單：政府法制宣傳片，原片改 AI（圖生圖），約 10 天完成，收入 1 萬多元。他自述「70%–80% 靠運氣」，沒有這單可能堅持不下去——做副業兩三個月甚至半年沒正回饋，人會自我懷疑。</p>
+<p><strong>2024 年 7–8 月：培訓是為「找人」，不是為賺錢</strong>
+- 三個人一個月只能做三四單，解決辦法是「用培訓找人」：2024 年 7 月 31 日發售第一個培訓產品，定價最早 290 元，後漲到 390、490 元；發售一週報了 40 多人。
+- 他的邏輯很直白：如果 5 個人報名，能培養出兩三個人跟他幹，人力就翻倍。學員交了三四千塊，他想著至少讓人掙回來，不然覺得虧欠人家。
+- 2024 年 8 月起找 AI 影片落地方案，試了很多：電商換裝/模特（品牌一眼看出破綻，最後全靠 PS 修，又累又不賺錢）；跨境（交了 1 萬元給跨境大佬、派合夥人去學一個月打工，鏈路跑通只掙幾百塊，對方還想挖人，遂散伙）。結論是這些都不賺錢。</p>
+<p><strong>2024 年：副業年入 100 多萬；2025 年 2–10 月：線下八個月「至暗時刻」</strong>
+- 2024 年三個人做副業年入 100 多萬元（他的說法）。2025 年 2 月搬到線下辦公、租場地，兩個合夥人已辭職、他還在職，想把副業做成事業。
+- 2025 年 2–10 月八個月基本無休，培訓、IP、AI 程式設計、出海、智慧體五六件事同時幹，啥都有點結果；3–5 月甚至虧錢（虧的是 2024 年掙的錢），一個月最多幾萬塊三個人分。他在 2025 年國慶停下來反思：不是努力問題，是戰略問題——「什麼都想要」是這八個月最大的坑；沒穩定現金流就盲目轉線下、招員工，場地加人工全是成本。</p>
+<p><strong>2025 年 10 月 31 日：轉折點——AI 漫劇</strong>
+- 參加三天兩夜的培訓，聽人講 AI 漫劇，單聊 7 小時，認為能做且是自己的優勢：團隊有上萬學員、培訓體系成熟，廣告片按秒計價最高約 2.2 萬元/分鐘（約 500 元/秒）。
+- 之後一個半月，線上加線下不到 10 個人做了 4 部半 120 分鐘動態漫劇（1 部因 IP 問題終止），同時漫劇培訓一期能收 200 多人。
+- 但漫劇分兩條商業模式：承製（靠人力堆積加投流，是辛苦錢）與培訓。做完決定不做承製，只做培訓。2025 年 11 月到 2026 年 6 月開了 6–7 期、接近 1000 人做漫劇培訓。</p>
+<p><strong>2026 年 7 月 15 日：切入公眾號商單</strong>
+- 4 月也聽過一次 AI 公眾號商單的分享，但只 get 到「把內容做好」；7 月 15 日再去聽，私聊 1 個多小時把整套挖透、連結上相關人，當天開始做。
+- 單篇商單從 3000–4000 元，7 月底提到 8000 元，8 月穩定到 8000–1 萬元；8–10 月多帳號跑，公眾號商單培訓已辦到第三期。
+- 模式就是建構 MCN：單子太多需要寫手，市面上招不到人，所以培訓出寫手、扶持更多帳號，寫手寫帳號、團隊做商業化接商單。</p>
+<h2>現在的生意盤（他的說法）</h2>
+<ol>
+<li><strong>公眾號商單 + MCN（大頭）</strong>：大號「西堂 AI 影片」均閱約 1 萬時報價約 1 萬元，實際成交 8000–1 萬元；做到均閱 1.5 萬後報價 1–1.5 萬元，當天成交一單 1.5 萬元。品牌方選號邏輯：看近 10 天閱讀量中位數，閱讀量與報價約 1:1（如 3000 閱讀報 3000 元），再看文章內容是否匹配品類。帳號分兩類：AI 程式設計加 AI 辦公，或 AIGC 加 AI 辦公；他自己的號是後者。</li>
+<li><strong>培訓</strong>：公眾號培訓、企業培訓、漫劇培訓（後者不重點推但有人來）。企業培訓一天約 2 萬元（5.5 小時線下）；線上諮詢 1 小時 5000–6000 元，證券公司等會來找他們諮詢。公眾號培訓是線下兩天一夜加線上同步直播，平均一期 20 多人。</li>
+<li><strong>TVC 廣告片</strong>：現在 1 分鐘約 1 萬元，AI 廣告片大幾千，上個月接了 3 單。他自述這塊已流程化，客戶最看重人物一致性、創意、AI 感，團隊做得多了，這些問題都不大。</li>
+<li><strong>出書</strong>：《AI 漫劇創作一本通》2026 年 3–4 月出版，半年多賣了約 9 萬冊（他自述），定價 50 多元，到手 20 多萬元。做書的目的：一是培訓需要背書，二是把已有的系統性教程順手轉成書（兩週做完），又能賺錢又能做品牌。</li>
+<li>其他順帶收入：稿費、諮詢、企業培訓等。他強調現在不輕易開 0 到 1 的新業務，評估 ROI 後順手做的才做；公眾號的活都忙不過來，還要招人。</li>
+</ol>
+<h2>公眾號商單打法：最乾貨的部分</h2>
+<ul>
+<li><strong>公眾號讀者是「強信任」</strong>：長期內容輸出帶來的粉絲轉化非常高，IP 的天然優勢是溝通成本急劇降低；很多人（包括政府和資源很強的人）說看過他們的帳號，信任感極強。這是商單能賣上價的根基。</li>
+<li><strong>選題方法論就是對標</strong>：多關注同行怎麼寫、看對標帳號最近一個月寫什麼，再看抖音、小紅書最近一週會火什麼；先選定定位（AI 程式設計加 AI 辦公，或 AIGC 加 AI 辦公），再去找對標寫。做 AI 影片要會 LibTV、Runway Hub 等工具，做影片的能力是基本功。</li>
+<li><strong>商單交付不簡單</strong>：兩天內交付一個講工具怎麼用的影片並讓品牌方滿意、接受修改意見，很難；AI 影片本身就有難度，程式設計師寫辦公類內容容易，做 AI 影片不一定。</li>
+<li><strong>談單沒什麼技巧</strong>：最好招專門的商務去談；帳號報價按閱讀量中位數 1:1 報，成交價有浮動空間。推特（X）商單報價則低得多：萬粉帳號寫一篇長文到手一兩千，閱讀量可能幾萬，不到公眾號的三分之一，報價混亂、由 BD 驅動、無統一市場。</li>
+<li><strong>公眾號最終一定會走向付費流</strong>：所有平台最後都走向付費流，公眾號開了投流口子後商業化加速；流量主的紅利會收窄。蝸牛 King 聽完當場說自己主做流量主「虧了」。</li>
+<li><strong>AI 寫作流程</strong>：他是先口述、AI 整理、再改；也有人先 AI 寫、再口述一遍去 AI 味。用的模型他說是 GPT。沒有好壞，順手就行。</li>
+</ul>
+<h2>問答精選</h2>
+<ul>
+<li><strong>短劇帶貨（紅眼提問）</strong>：不好做、沒人掙錢。6 月就有人在做，11 月才火起來傳到市面上時往往已經捲起來或不賺錢了。核心在選品和帶貨能力，不在短劇技術；帶貨能力比會做短劇更難。做短劇切片出海、做品牌訂製劇是被提到的變體，但他沒做過、不背書。</li>
+<li><strong>互動影遊（紅眼提問）</strong>：不是半路出家能做的，靠資源和資本，最後賺錢的是這撥人；自己做只能學點技術。</li>
+<li><strong>系統是怎麼建起來的（馬哥提問）</strong>：不是一開始就設計好的。2024 年 2 月到 2025 年 2 月線上階段三個人悶頭幹、能掙錢就有信任，沒什麼系統；2025 年 2 月轉線下後合夥人沒收入、場地人工成本上來、AI 影片單價下降，才被迫開始想組織。合夥人是 AI 社群認識的，員工全是高客單價課程裡篩出來的。</li>
+<li><strong>AI SaaS 出海（聽眾提問）</strong>：至少做好半年甚至一年不賺錢的準備；技術不是關鍵，80% 是流量和運營；產品容易被抄、門檻太低；市面上掙錢的產品其實是做中轉掙錢。除非能力跟葉天（音）差不多，否則不建議做。做梗圖、梗影片打新品能比較快拿到回饋，但一直打新沒有沉澱。</li>
+<li><strong>AI 程式設計一對一（聽眾提問）</strong>：不建議做。一對一收幾千塊、服務一兩個月不掙錢；要麼收很高，要麼一對多。更好的路是把內容和流量做大，做垂直領域帳號、做小產品服務 IP。</li>
+<li><strong>剛辭職、教培背景、想找有收入的事（聽眾提問）</strong>：先看自己的資源和能力，不能從零摸索一個新行業；最快有收益的三條路是公眾號、推特、短影片加直播。推特變現能力不強（創作者分成、帶產品分佣、引流私域賣課、轉推收費），天花板高但需要已有資源；國內平台（小紅書、抖音、公眾號）商業化成熟，先賺小錢更容易。</li>
+<li><strong>大四剛畢業想做 AI 漫劇（聽眾提問）</strong>：西堂直接給結論：做不了、賺不了錢；想學技術可以學，想賺錢不行。建議做自己擅長的 AI 程式設計、AI 辦公類 IP 帳號，做流量、把用戶沉澱到私域。</li>
+<li><strong>公眾號選題（聽眾提問）</strong>：核心是對標；定位先行，AI 程式設計加 AI 辦公或 AIGC 加 AI 辦公選一條；每天可寫的內容非常多，選不出來就是定位問題。</li>
+<li><strong>商單號全是商單，粉絲會不會流失（聽眾提問）</strong>：不會，因為商單文章本身也是有使用價值的內容（新模型、新功能測評），一篇快則一天、慢則兩三天；長期是把口碑內容做好，短期才是接商單。</li>
+<li><strong>代理模式（聽眾提問）</strong>：有代理合作在談（豆包等 AI 辦公工具的代理、分佣），但不是主線；公眾號現在打擊引流很嚴，很多連結不能放，會被限流。企業培訓一天 2 萬元、三個月 5 萬元的單子也有，但接不過來，寧可一天 2 萬元打完收工。</li>
+<li><strong>西堂現在的需求</strong>：很多事已不用親自做，只抓核心點、看增長；現在想要的是跟不同的人交流、有好 idea 可以共創。蝸牛 King 預告：11 月 14 日下一場是線下企業 AI 落地（FDE）分享。</li>
+</ul>
+<h2>值得劃線的原話（轉述，非逐字）</h2>
+<ul>
+<li>「技術一點都不重要……所有的東西最後要人去做，AI 時代人就更顯得珍貴。」</li>
+<li>「很多問題你解決不了，只是因為你沒看過。」</li>
+<li>「創業 2.0 就是合作共贏。」</li>
+<li>「如果 5 個人報名，我只要能培養出兩三個人，人力就是翻倍的。」</li>
+<li>「我們不是在做培訓，更多是在做服務……更像在招募合夥人。」</li>
+<li>「做產品短期想掙錢太難了……你別想它天花板很高，但是它很難在短期之內掙到錢。」</li>
+<li>「所有平台最後都一定會走向付費流。」</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes on "After the Noise | Xitang: From AI Side Hustle to AI Startup — How I Made 100k+ a Month with AI"</h1>
+<ul>
+<li><strong>Time</strong>: 2026-11-13 (Friday) 20:56–23:06 (CST), 2 hours 10 minutes</li>
+<li><strong>Host</strong>: Woniu King 👑 @isnail (mainly runs WeChat Official Account traffic monetization)</li>
+<li><strong>Guest</strong>: Xitang @xitang_ai (Shenzhen, head of the Xitang team; on X for just over a month)</li>
+<li><strong>Format</strong>: The first ~1 hour 10 minutes was Xitang presenting his startup journey; the last ~1 hour was audience Q&amp;A on mic</li>
+<li><strong>Listeners</strong>: 468 total (Space metadata total_live_listeners)</li>
+<li><strong>Source</strong>: Transcript of the X Space replay recording, 3,066 lines, approx. 93,000 characters, timestamps 00:00:03–02:10:07 fully covered</li>
+<li><strong>Original Space</strong>: https://x.com/i/spaces/1QnYobqOmWeeOL</li>
+</ul>
+<blockquote>
+<p>Note: All figures, income and judgments in these notes are Xitang's own live statements during the broadcast, unverified by any third party, and recorded as stated. The transcript was generated automatically by ASR and contains homophone errors (e.g., "商单" [sponsored post] misheard as "删单/三单/山丹", "漫剧" [comic drama] as "慢剧", "西堂" as "西棠/西藏"); the notes restore meaning by context. A few questioners' names follow the transcript's phonetic rendering.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Programmer Xitang spent two and a half years going from an AI video side hustle to full-time entrepreneurship, trying AI video sponsored posts, training, AI comic dramas, cross-border e-commerce, e-commerce outfit-changing and several other lines. His final conclusion: <strong>technology is worthless; organization and talent are the core. There are only two routes to a stable 10k+ a month — taking sponsored posts, or running an MCN. His main business now is WeChat Official Account sponsored posts + using training to filter people and build an MCN</strong>.</p>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>"Technology doesn't matter at all" — organization and people are the core.</strong> In Xitang's words: in the AI era one top performer can do the work of 10 or even 50 people; his current full-time team of five or six does work that would traditionally take 30 people.</li>
+<li><strong>A stable side income of 10k+ a month is hard — hard in the short term, possible in the long term.</strong> He believes a zero-base office worker has only two routes to a stable 10k+ a month: one is taking sponsored posts, the other is running an MCN (or building IP traffic). Other routes are either unstable or have a low ceiling.</li>
+<li><strong>WeChat Official Account sponsored posts are his current cash cow.</strong> His main account "Xitang AI Video" grew average reads from about 10,000 to 15,000, and the price per sponsored post rose from 3,000–4,000 yuan to 8,000–10,000 yuan, with some brands paying over 20,000 yuan. AIGC posts account for about 60%–70% of sponsored posts. He says the profit margin on this kind of virtual business is about 40%–50%.</li>
+<li><strong>The window to make money from AI comic dramas (short dramas) has passed.</strong> When he entered at the end of October 2025, one minute could sell for 1,500 yuan; later even 800 or 600 yuan brought no takers, and minimum guarantees disappeared. The market began declining in April 2026 because ByteDance controlled the whole chain from scripts and compute to paid distribution, content became oversaturated, and platforms tightened. His judgment: contract production of comic dramas is hard-earned money; training is the part that can remain.</li>
+<li><strong>Beginners should stay away from short-drama commerce, interactive film-games, and AI SaaS going overseas.</strong> For short-drama commerce "nobody makes money"; the core is product selection and selling ability, not short-drama technology. Interactive film-games rely on resources and capital. For AI SaaS overseas, be prepared to make no money for at least six months or even a year; technology is not the key, 80% is traffic and operations, and products are easily copied.</li>
+<li><strong>The essence of training is "recruiting partners," not selling courses.</strong> All of his core staff came from students of his high-ticket courses; he makes no promise of monetization, states upfront what will be taught and what work students will be able to produce, and gives sponsored-post work preferentially to outstanding students.</li>
+</ol>
+<h2>About Xitang: From Tencent Programmer to Full-Time Founder</h2>
+<ul>
+<li>A programmer by background, he spent nearly two and a half years at Tencent (the last to join his team and the lowest-ranked). On August 1, 2023, his manager gave him a D rating with no warning (after explicitly saying the team had no D ratings), so he immediately started interviewing and a month later moved to SenseTime with a raise of about 30%.</li>
+<li>His year-plus at SenseTime was the golden period for his side hustle: his manager was in Shanghai and he was in Shenzhen, out of direct oversight; his day job took only one or two hours a day, leaving plenty of time for side projects. He officially quit to start his business on March 14, 2025.</li>
+<li>His side-hustle exploration began in 2023: he started following AI in February when ChatGPT blew up, tried Midjourney in May–June and found it fun, and truly began engaging with AI. Before that he had tried non-AI side hustles — job-search coaching, reselling on Xianyu plus training — tinkering for a year and making less than 10,000 yuan.</li>
+</ul>
+<h2>Timeline: From AI Video Side Hustle to WeChat Sponsored Posts</h2>
+<p><strong>Feb–Jun 2024: Getting started with AI video</strong>
+- Sora was released in February 2024 (it flooded screens over Spring Festival). He judged that "text has had a year, images more than half a year — next is video." In February he pulled in two partners, spent March getting aligned, and the team publicly dates its founding to April 8, 2024.
+- From April to June they did only one thing: let people know the team does AI video. They posted daily on their WeChat Official Account for 30 days (all AI-video related), shared articles in communities, posted videos on self-media accounts, entered competitions, and worked until 2–3 a.m. every day.
+- In June 2024 they landed their first AI video sponsored job: a government legal-education promo, converting the original footage to AI (image-to-image), completed in about 10 days for over 10,000 yuan. He says it was "70%–80% luck," and without that job he might not have kept going — doing a side hustle for two or three months or even half a year with no positive feedback makes people doubt themselves.</p>
+<p><strong>Jul–Aug 2024: Training was for "finding people," not for making money</strong>
+- Three people could only handle three or four jobs a month; the solution was to "use training to find people": on July 31, 2024, they launched their first training product, initially priced at 290 yuan, later raised to 390 and 490 yuan; over 40 people enrolled in the first week.
+- His logic was blunt: if 5 people sign up and he can train two or three to work with him, his manpower doubles. Students had paid three or four thousand yuan, and he felt he should at least help them earn it back, otherwise he would feel he owed them.
+- From August 2024 he looked for ways to apply AI video commercially and tried many things: e-commerce outfit-changing / models (brands could spot the flaws at a glance, and in the end everything relied on Photoshop retouching — exhausting and unprofitable); cross-border (he paid 10,000 yuan to a cross-border veteran and sent a partner to learn by working there for a month; the chain worked but made only a few hundred yuan, and the other side tried to poach his partner, so they parted ways). His conclusion was that none of these made money.</p>
+<p><strong>2024: Over 1 million yuan from the side hustle; Feb–Oct 2025: Eight months offline — the "darkest period"</strong>
+- In 2024 the three of them made over 1 million yuan from the side hustle (by his account). In February 2025 they moved to an offline office and rented space; his two partners had already quit their jobs while he was still employed, hoping to turn the side hustle into a business.
+- From February to October 2025 they worked almost without rest for eight months, doing five or six things at once — training, IP, AI programming, going overseas, agents — with a bit of result in each; from March to May they even lost money (money earned in 2024), splitting at most tens of thousands of yuan among three people in a month. During the 2025 National Day holiday he stopped to reflect: it was not an effort problem but a strategy problem — "wanting everything" was the biggest trap of those eight months; moving offline and hiring staff without stable cash flow meant rent and labor were all costs.</p>
+<p><strong>October 31, 2025: The turning point — AI comic dramas</strong>
+- He attended a three-day, two-night training, heard someone talk about AI comic dramas, had a one-on-one chat for 7 hours, and concluded it was doable and played to his strengths: the team had tens of thousands of students and a mature training system, and ad films priced by the second could reach about 22,000 yuan per minute (about 500 yuan per second) at the top.
+- Over the following month and a half, fewer than 10 people online and offline produced four and a half 120-minute animated comic dramas (one was terminated due to IP issues), while a single cohort of comic-drama training could enroll over 200 people.
+- But comic dramas have two business models: contract production (relying on piling up manpower plus paid distribution — hard-earned money) and training. After finishing, he decided not to do contract production, only training. From November 2025 to June 2026 he ran 6–7 cohorts, with nearly 1,000 people in comic-drama training.</p>
+<p><strong>July 15, 2026: Pivoting to WeChat Official Account sponsored posts</strong>
+- He had also heard a talk on AI WeChat sponsored posts in April, but only took away "make good content"; on July 15 he went again, chatted privately for over an hour to dig out the whole playbook and connected with the relevant people, and started that same day.
+- The price per sponsored post went from 3,000–4,000 yuan, to 8,000 yuan by the end of July, and stabilized at 8,000–10,000 yuan in August; from August to October they ran multiple accounts, and WeChat sponsored-post training had reached its third cohort.
+- The model is essentially building an MCN: too many jobs require writers, and writers cannot be hired on the market, so they train writers and support more accounts — writers write for the accounts, and the team handles commercialization and sponsored posts.</p>
+<h2>The Current Business (By His Account)</h2>
+<ol>
+<li><strong>WeChat sponsored posts + MCN (the bulk)</strong>: When the main account "Xitang AI Video" averaged about 10,000 reads, the quoted price was about 10,000 yuan, with actual deals at 8,000–10,000 yuan; after reaching 15,000 average reads, the quote rose to 10,000–15,000 yuan, and a 15,000-yuan deal closed that same day. How brands choose accounts: they look at the median reads over the past 10 days, with reads to price at roughly 1:1 (e.g., 3,000 reads = 3,000 yuan), then check whether the article content matches the category. Accounts fall into two types: AI programming plus AI office, or AIGC plus AI office; his own account is the latter.</li>
+<li><strong>Training</strong>: WeChat training, corporate training, and comic-drama training (the latter not actively promoted but people still come). Corporate training is about 20,000 yuan per day (5.5 hours offline); online consulting is 5,000–6,000 yuan per hour, and securities firms and the like come to consult them. WeChat training is two days and one night offline plus a simultaneous online livestream, averaging over 20 people per cohort.</li>
+<li><strong>TVC ad films</strong>: Now about 10,000 yuan per minute, with AI ad films in the high thousands; they took 3 jobs last month. He says this part is now process-driven; clients care most about character consistency, creativity, and AI feel, and with the team's experience these are no longer big issues.</li>
+<li><strong>Publishing a book</strong>: <em>The Complete Guide to AI Comic Drama Creation</em> was published in March–April 2026 and sold about 90,000 copies in just over half a year (by his account), priced at over 50 yuan, bringing in over 200,000 yuan. The purposes of the book: first, training needs endorsement; second, to turn the existing systematic tutorials into a book on the side (done in two weeks) — making money while building the brand.</li>
+<li>Other incidental income: manuscript fees, consulting, corporate training, etc. He stresses that he no longer casually starts new 0-to-1 businesses; he only does things that can be done on the side after evaluating ROI. The WeChat work alone is more than they can handle, and they still need to hire.</li>
+</ol>
+<h2>WeChat Sponsored-Post Playbook: The Most Practical Part</h2>
+<ul>
+<li><strong>WeChat readers are "strong trust"</strong>: Long-term content output brings very high fan conversion, and an IP's natural advantage is that communication costs drop sharply; many people (including government contacts and people with strong resources) say they have seen their account, and the sense of trust is extremely strong. This is the foundation that lets sponsored posts command a high price.</li>
+<li><strong>The topic-selection methodology is benchmarking</strong>: Pay attention to how peers write, what benchmark accounts have written in the past month, and what will blow up on Douyin and Xiaohongshu in the past week; first fix your positioning (AI programming plus AI office, or AIGC plus AI office), then find benchmarks to write against. Doing AI video requires tools like LibTV and Runway Hub; video-making ability is a basic skill.</li>
+<li><strong>Delivering sponsored posts is not simple</strong>: Delivering within two days a video explaining how to use a tool, satisfying the brand and accepting revision requests, is hard; AI video is inherently difficult, and programmers who write office content easily may not be able to do AI video.</li>
+<li><strong>There is no real trick to closing deals</strong>: It is best to hire dedicated business staff to negotiate; accounts quote at 1:1 to the median reads, with room to move on the final price. Twitter (X) sponsored posts pay far less: a 10k-follower account gets one or two thousand yuan for a long post, with reads possibly in the tens of thousands — less than a third of WeChat — with chaotic pricing, BD-driven, and no unified market.</li>
+<li><strong>WeChat will inevitably move to paid traffic</strong>: All platforms eventually move to paid traffic; after WeChat opened paid distribution, commercialization accelerated, and the traffic-monetization dividend will narrow. After hearing this, Woniu King said on the spot that focusing on traffic monetization meant he had "lost out."</li>
+<li><strong>AI writing workflow</strong>: He dictates first, has AI organize it, then revises; others write with AI first, then dictate it once more to remove the AI flavor. The model he uses, he says, is GPT. Neither is better; whatever is handy works.</li>
+</ul>
+<h2>Selected Q&amp;A</h2>
+<ul>
+<li><strong>Short-drama commerce (question from Hongyan)</strong>: Hard to do, nobody makes money. People were already doing it in June; by the time it heated up and reached the market in November it was often already cutthroat or unprofitable. The core is product selection and selling ability, not short-drama technology; selling ability is harder than making short dramas. Variants mentioned included taking short-drama clips overseas and making brand-customized dramas, but he has not done them and does not endorse them.</li>
+<li><strong>Interactive film-games (question from Hongyan)</strong>: Not something a career-changer can do; it relies on resources and capital, and in the end that crowd is who makes the money; doing it yourself you can only learn some technology.</li>
+<li><strong>How was the system built (question from Ma Ge)</strong>: It was not designed from the start. From February 2024 to February 2025, in the online phase, the three of them just kept their heads down and worked; as long as they made money there was trust, and there was no real system. After moving offline in February 2025, partners had no income, venue and labor costs rose, and AI video prices fell, forcing them to start thinking about organization. The partners were people he met in AI communities, and the staff were all filtered from high-ticket courses.</li>
+<li><strong>AI SaaS going overseas (audience question)</strong>: Be prepared to make no money for at least six months or even a year; technology is not the key, 80% is traffic and operations; products are easily copied and the barrier is too low; the products making money on the market are actually making money from relay/resale. Unless your ability is comparable to Ye Tian (phonetic), it is not recommended. Using meme images and meme videos to launch new products can get feedback relatively quickly, but constantly launching new things leaves no accumulation.</li>
+<li><strong>One-on-one AI programming tutoring (audience question)</strong>: Not recommended. Charging a few thousand yuan for one-on-one and serving for a month or two makes no money; either charge a lot, or do one-to-many. A better route is to grow content and traffic, run vertical-domain accounts, and build small products to serve the IP.</li>
+<li><strong>Just quit, education/training background, looking for something with income (audience question)</strong>: First look at your own resources and abilities; do not explore a new industry from zero. The three fastest routes to income are WeChat Official Accounts, Twitter, and short video plus livestreaming. Twitter's monetization is weak (creator revenue sharing, product commissions, funneling to private domain to sell courses, charging for retweets), with a high ceiling but requiring existing resources; domestic platforms (Xiaohongshu, Douyin, WeChat) have mature commercialization, making it easier to earn small money first.</li>
+<li><strong>A senior about to graduate who wants to do AI comic dramas (audience question)</strong>: Xitang gave a direct conclusion: you can't do it, you can't make money; learning the technology is fine, making money is not. He suggested doing AI programming / AI office IP accounts in areas they are good at, building traffic, and settling users into private domain.</li>
+<li><strong>WeChat topic selection (audience question)</strong>: The core is benchmarking; positioning comes first — pick one of AI programming plus AI office, or AIGC plus AI office; there is a huge amount that can be written every day, and being unable to choose is a positioning problem.</li>
+<li><strong>If a sponsored-post account is all sponsored posts, won't fans churn (audience question)</strong>: No, because sponsored articles themselves are useful content (reviews of new models and new features), taking one day at the fastest and two or three days at the slowest; in the long term it is about making reputation content well, and only in the short term about taking sponsored posts.</li>
+<li><strong>Agency model (audience question)</strong>: Agency cooperation is under discussion (agency and commission for AI office tools such as Doubao), but it is not the main line; WeChat now cracks down hard on funneling traffic, many links cannot be placed and will be throttled. There are also corporate training deals at 20,000 yuan per day and 50,000 yuan for three months, but they cannot take them all, preferring to finish in one day for 20,000 yuan.</li>
+<li><strong>What Xitang needs now</strong>: Many things no longer need his personal involvement; he only grasps the core points and watches growth; what he wants now is to talk with different people, and if there is a good idea, to co-create. Woniu King previewed: the next session on November 14 is an offline talk on enterprise AI implementation (FDE).</li>
+</ul>
+<h2>Quotable Lines Worth Underlining (Paraphrased, Not Verbatim)</h2>
+<ul>
+<li>"Technology doesn't matter at all… in the end everything has to be done by people, and in the AI era people are even more precious."</li>
+<li>"Many problems you can't solve are simply because you haven't seen them before."</li>
+<li>"Entrepreneurship 2.0 is win-win cooperation."</li>
+<li>"If 5 people sign up, as long as I can train two or three of them, my manpower doubles."</li>
+<li>"We're not really doing training; we're more doing service… it's more like recruiting partners."</li>
+<li>"Making products and wanting to make money in the short term is too hard… don't think about how high its ceiling is, but it is very hard to make money from it in the short term."</li>
+<li>"All platforms will eventually move to paid traffic."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1QnYobqOmWeeOL">https://x.com/i/spaces/1QnYobqOmWeeOL</a> · 主持 蜗牛King @isnail · 嘉宾 西堂 @xitang_ai · 2026-11-13 20:56–23:06（约 2 小时 10 分）· 累计收听 468 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1QnYobqOmWeeOL">https://x.com/i/spaces/1QnYobqOmWeeOL</a> · 主持 蝸牛King @isnail · 嘉賓 西堂 @xitang_ai · 2026-11-13 20:56–23:06（約 2 小時 10 分）· 累計收聽 468 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1QnYobqOmWeeOL">https://x.com/i/spaces/1QnYobqOmWeeOL</a> · Host: Woniu King @isnail · Guest: Xitang @xitang_ai · 2026-11-13 20:56–23:06 (approx. 2 hours 10 minutes) · Total listeners: 468<br>This page is the full notes, edited by hand from a machine transcript; all content is the guest's impromptu remarks and self-reported accounts during the livestream, unverified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"《噪音之后｜西堂：AI副业到AI创业，我是如何通过AI月入10w+》会议纪要 · Yat's Talks",tw:"《噪音之後｜西堂：AI副業到AI創業，我是如何透過AI月入10w+》會議紀要 · Yat's Talks",en:"Notes on \"After the Noise | Xitang: From AI Side Hustle to AI Startup — How I Made 100k+ a Month with AI\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

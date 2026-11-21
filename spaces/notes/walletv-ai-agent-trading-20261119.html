@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>WalletV《AI替你交易，你的私钥还在你手里吗？》Space 纪要</h1>
 <ul>
 <li>主持：WalletV中文 @WalletV_CN、茄哥 @qg7777</li>
@@ -115,8 +122,212 @@
 <li>注册钱包 25 万；月活 5000–10000；累计交易量 13–15 亿美元；月均交易量约 2 亿美元；Hyperliquid builder 总排名 10–20 名、Aster 约第 5 名；集团融资约 2500 万美元；计划营销投入 500 万美元 / 1.5 年；合约费万分之二、Swap 千分之三；AI 最低 100 美元起；预测市场量化回测年化 50% 以上；TGE 第三阶段奖池 880 万美元；NT 合约奖励 500 USDC / 20 人 / 每人 25 USDC；提问奖励每人 200 积分（约 30–40 美元）。</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1VNPAeoLeBWdJa">https://x.com/i/spaces/1VNPAeoLeBWdJa</a> · WalletV中文 @WalletV_CN 主持 · 2026-11-19 20:35 – 22:05（1 小时 27 分）· 累计在线听众 1058 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。转写稿自 00:00:41 起。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>WalletV《AI替你交易，你的私鑰還在你手裡嗎？》Space 紀要</h1>
+<ul>
+<li>主持：WalletV中文 @WalletV_CN、茄哥 @qg7777</li>
+<li>嘉賓：Adam（WalletV / Virgo Group 創辦人兼 CEO）、林可 @cryptoquantboo（00 後交易員）、Anny（WalletV 市場負責人，因網路問題全程發不出聲）</li>
+<li>時間：2026-11-19 20:35–22:05（北京時間），約 1 小時 27 分</li>
+<li>規模：累計線上聽眾 1058 人</li>
+<li>來源：X Space 回放轉寫，全文 2093 行、約 2.1 萬漢字；轉寫稿自 00:00:41 起</li>
+<li>原 Space：https://x.com/i/spaces/1VNPAeoLeBWdJa</li>
+</ul>
+<blockquote>
+<p>說明：本場是 WalletV 專場 AMA（贊助場）。以下數字與說法均為直播現場嘉賓自述，未經核實；轉寫由語音識別生成，存在同音錯字，人名、產品名已按上下文訂正。開場約 10 分鐘 X 網路不穩定，聽眾反覆被踢出，主持人稱是美國網際網路這兩天遭駭客攻擊所致（主持人說法）。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>WalletV 創辦人 Adam 用一個多小時講清了這款錢包的定位：非託管錢包 + DeFi 聚合 + 內建 AI 交易，私鑰在使用者手裡、AI 只拿下單權；並公布了一批積分與交易獎勵。</p>
+<h2>核心結論</h2>
+<ul>
+<li><strong>WalletV 是什麼</strong>：非託管錢包（自管私鑰、無需 KYC）+ DeFi Super App（原生接入 Hyperliquid、Aster、Polymarket 等）+ AI 交易門戶；另有 Virgo Pay 法幣出入金（覆蓋 26 國）。Adam 稱 DeFi 聚合完成度約六七成，AI 部分完成度只有約 20%。</li>
+<li><strong>AI 怎麼交易</strong>：分提示詞策略與量化模型兩類，最低 100 美元起，60 秒可完成設定，每 15 分鐘出一次帶理由的決策，隨時可一鍵停止並選擇手動或自動平倉。</li>
+<li><strong>私鑰安全</strong>：AI 不碰私鑰，交易走 Hyperliquid / Aster 子帳號 API；不備份私鑰就看不到充值地址；核心環節經 CertiK、SlowMist 等審計（Adam 現場說法）。</li>
+<li><strong>平台規模（Adam 現場說法）</strong>：註冊錢包 25 萬，月活 5000–10000，累計交易量 13–15 億美元，月均約 2 億美元；Hyperliquid builder 收入增速近期排第一。</li>
+<li><strong>錢從哪來</strong>：合約 Builder 費萬分之二、Swap 千分之三、預測市場費用 1.95（現場未說明單位），不吃客損；WalletV 本身未融資，集團累計融資約 2500 萬美元。</li>
+<li><strong>Adam 的判斷</strong>：沒有 AI 模型能讓人一直賺錢，聲稱能一直賺錢的平台就是忽悠；未來的競爭不在誰更賺錢，而在誰能提供夠多的模型、讓使用者在不同市況下選到合適的；安全是底線，做不到差異化。</li>
+</ul>
+<h2>一、Adam 的背景與 WalletV 的來歷（00:10–00:23）</h2>
+<ul>
+<li>Adam 自述：傳統資本市場出身（銀行、對沖基金約 8 年），2017 年 ICO 浪潮後被吸引，花兩年說服自己，2019 年開始在幣圈創業，至今 7 年。</li>
+<li>集團分兩個階段：前五年在加拿大做法幣出入金交易所（單一市場）；2024 年底川普當選、全球監管放鬆後，認為不能再做法幣交易所，轉向更有創新價值的方向。</li>
+<li>轉向的兩個理由：一是法幣交易所場景太單一（只能買賣幣，不能槓桿、理財、預測市場、自動化交易）；二是散戶交易反人性，大部分人賺一波又虧回去，缺時間盯盤、缺交易管理體系。</li>
+<li>選擇的產品路線：不把中端打包成 MCP 讓使用者自己訓 Agent（Adam 稱那條路普及率與可控性都遠遠不足、且 API 被盜風險大），而是把 AI 打包在 App 原生環境裡，使用者點點設定就能用。</li>
+</ul>
+<h2>二、WalletV 的定位：錢包 + DeFi 聚合 + AI 門戶（00:23–00:28）</h2>
+<ul>
+<li>兩個核心定位：DeFi Super App，以及與 AI Agent 互動的門戶端口。</li>
+<li>錢包屬性：可建立私鑰、儲存數位資產；不做任何託管，使用者隨時能把錢拿走，Adam 稱即使公司倒閉、App 沒了，憑備份好的私鑰匯入任何錢包都能取回。</li>
+<li>聚合邏輯：團隊持續找最好的 DeFi 應用做原生接入，使用者不用擔心點錯釣魚網站、在 App 裡點點就能用。</li>
+<li>願景表述：Adam 借用 Hyperliquid Jeff 的理念，稱目標是 "Everything About Finance"——把所有與金融相關的資產都放到鏈上，讓全球使用者接觸到最優質的資產（金融包容性）；並稱這是未來五到十年數位資產創新的道路。</li>
+</ul>
+<h2>三、AI 如何幫你交易：操作流程（00:35–00:41）</h2>
+<ul>
+<li>AI 出現在兩個地方：行情頁（Market 介面）的 AI 訊號（多空提示）；合約板塊的"AI 策略"（手動、跟單、AI 策略三個入口）。</li>
+<li>建立流程：點"建立"→選交易所（Hyperliquid、Aster，均為鏈上、無中心化交易所）→選策略類型→設投入金額→確認。Adam 稱快的話 60 秒完成，最低 100 美元起。</li>
+<li>三種策略類型：</li>
+<li>提示詞策略（固定提示詞 / 動態提示詞）：自己寫提示詞告訴 AI 怎麼做，模型包括 Trader GPT（免費）、DeepSeek、ChatGPT、Claude 5.5、Claude Opus、Gemini 3 Flash、Grok 4.7 等，進階模型需用積分購買點數。</li>
+<li>量化模型：兩個指標，一是均值回歸指標，二是趨勢追蹤的動量指標，每個模型帶評分與回測說明；參數預設由 AI 回測出的最適值，使用者可微調。</li>
+<li>運行中：每 15 分鐘出一次決策（開沒開倉、為什麼開、倉位多少、5 分鐘後調沒調倉、為什麼不調），全部以日誌形式展示；隨時可加倉或停掉。</li>
+<li>效果表述：Adam 稱目前在跑的 AI 大多是小資金嘗試（100–200 美元），幾天內完成 20%–30% 收益的情況不少，收益鏈上可查（Adam 現場說法）。</li>
+</ul>
+<h2>四、私鑰與安全：AI 能不能動你的錢（00:42–00:49）</h2>
+<ul>
+<li>私鑰在使用者手裡：建立錢包時必須備份私鑰，否則看不到充值地址（Adam 糾正茄哥的說法：不是不能轉出，而是看不到接收地址）；備份方式支援 Google 備份或紙上記錄，茄哥建議最好用不連網的數位相機拍照備份。</li>
+<li>安全審計：Adam 稱從一開始就與 CertiK、SlowMist 等安全公司合作，每個核心環節都經過審計，審計報告在官網可查；投資人中有專業安全團隊，對新功能（含 AI 功能）做即時的安全模組設計與護航。</li>
+<li>AI 的權限邊界：AI 不碰使用者私鑰，交易透過 Hyperliquid / Aster 子帳號 API 進行；使用者關掉 API，AI 立刻跑不了；團隊每天追蹤 AI 的表現、提示詞與幻覺情況，發現問題及時調整模型。</li>
+<li>林可的提問（風控）：單筆最大倉位、每日最大開倉次數能否設定？Adam 回答：量化模型可設最大同時開倉數（如設 10 個倉則每倉最多 10%）；提示詞模型可在自然語言裡規定單倉上限與虧損金額上限、到點自動停止；隨時一鍵暫停，可選手動平倉或立刻自動平倉。每日最大開倉次數未在直播中明確回答。</li>
+</ul>
+<h2>五、規模、排名與賺錢模式（00:28–00:34、00:54–00:57）</h2>
+<ul>
+<li>規模（Adam 現場說法）：註冊錢包 25 萬；月活 5000–10000（取決於用哪個產品）；累計交易量 13–15 億美元；月均交易量約 2 億美元。</li>
+<li>排名（Adam 現場說法）：Hyperliquid builder 總排名 10–20 名，近期一期收入增速排名第一，"遠超 MetaMask"；Aster 約第 5 名；Polymarket 曾排到約前 5 名（世界盃等大事件期間量大）。</li>
+<li>融資背景（Adam 現場說法）：WalletV 本身沒有融過資，由集團全資孵化；集團累計募資約 2500 萬美元，投資人包括 OKX Ventures、Jump Crypto、Solana Ventures、Waterdrip、Water Foundation 等近 20 家 VC（部分名稱轉寫不清，以現場說法為準）。</li>
+<li>集團動態（Adam 現場說法）：集團正與全球排名第一、第二的頭部交易所洽談"鏈上 IPO"概念（在 NDA 中，最早可能明年 1 月）；Adam 稱大概率是全球第一家做這件事，並稱完成後集團全球知名度將大幅提升。</li>
+<li>行銷投入（Adam 現場說法）：目前每月行銷費用只有小幾萬；待明年 1 月的集團動作完成後，計劃一年半內投入 500 萬美元行銷費用，目標一個季度內月活從 5000–10000 做到 5–10 萬。</li>
+<li>賺錢模式：合約 Builder 費萬分之二（Adam 稱在 Hyperliquid builder 中收得最低，大部分收萬分之四到千分之一）；Swap 收千分之三（稱比 MetaMask 的千分之八便宜）；預測市場費用 1.95（現場未說明單位）；理財不向使用者額外收費，與專案方經營分成。Adam 強調使用者爆倉平台收不到一分錢，"不吃客損"，並建議使用者多用止損單。</li>
+<li>Gas 補貼：EVM 轉帳每天補貼一定數量；充值到 Hyperliquid、Aster、Polymarket 的 Gas 一直免費；Swap 金額超過 5 美元免 Gas；由平台透過智慧合約設計代付。</li>
+</ul>
+<h2>六、預測市場量化與 PC 端（00:17–00:19、01:00–01:01）</h2>
+<ul>
+<li>預測市場量化：Adam 稱未來一兩週內推出預測市場量化交易，幾個模型回測年化收益 50% 以上、回撤不大；覆蓋合約、預測市場、財經事件與體育事件，使用者一鍵跟單、自動交易，回測邏輯對使用者可見。</li>
+<li>PC 端：目前沒有。Adam 稱 PC 端本質是 web terminal（可連接任意錢包，包括硬體錢包），在版圖規劃中，預計明年上半年、最早明年一季度推出，待現有功能疊加完成之後。</li>
+</ul>
+<h2>七、福利與活動（現場說法，00:49–01:26）</h2>
+<ul>
+<li>提問獎勵：留言區提問選 5 個，每人 200 積分（價值約 30–40 美元，按未來 TGE 定價）；官方另給 10 個幸運名額。</li>
+<li>NT 合約交易獎勵：Adam 給茄哥 500 USDC 額度，交易 NT 合約（NT 的 USDC 與 USDT 合約，分別為 10 倍與 40 倍槓桿），先到先得 20 人，每人 25 USDC，憑交易截圖聯繫 WalletV 中文官方客服領取；直播後段已登記 13 人，還剩 7 個名額。</li>
+<li>平台活動三項：①永續合約活動（10 月 5 日–12 月 5 日），獎池 100 萬積分（每 100 積分約 15 美元，總額約 15 萬美元），按平倉盈虧絕對值占比分配；②每週交易抽獎與盈虧競賽，8 個獎池同時開；③TGE 第三階段，獎池 880 萬美元，邀請頂級交易員加入，最高一人獨得 14000 USDC 積分獎勵。</li>
+<li>積分用途：透過交易、充值、分享、學習任務賺取；TGE 後可換空投與平台幣；平台幣可用於平台消費、AI token 充值、支付等（Adam 與茄哥現場說法）。茄哥現場補充：積分目前不是已上鏈的代幣，不能轉讓提現，沒有現金價值，也不代表未來一定兌換什麼。</li>
+<li>新使用者福利：新建立錢包免費體驗 1 個月 VIP（免費使用 AI 模型）；茄哥專場邀請碼 QG7777，24 小時內提交綁定可享專場待遇與更高獎勵；邀請好友可賺佣金與積分，返佣最低領取 10 美元；未來可能推出二級分銷。</li>
+<li>Space 結束後的專屬政策：官方將在 Space 結束後公布一個 48 小時週期的專場政策（茄哥稱大概率與 NT 上線有關），具體看官方貼文，茄哥會轉發。</li>
+<li>提醒：有使用者反映邀請碼綁定不了，茄哥稱可能是 IP 或網路延遲問題，已交官方客服處理；並提醒交易不要用美國和香港地區 IP，可用新加坡等地區。</li>
+</ul>
+<h2>八、開場背景與其他</h2>
+<ul>
+<li>茄哥開場稱：從幣安被盜開始他幾乎沒睡，每天只睡兩三個小時；隨後是期中選舉、黃仁勳辭職（主持人說法）、輝達財報、Anthropic 上市等一連串事件。</li>
+<li>Anthropic 上市（主持人說法）：稱是"歷史以來全球最大的 IPO"，估值已超 1.5 兆美元，發售 9.8 億股，估計開盤能衝到 1.8 兆美元；轉寫中該名稱多次被識別為 SROPIC / RossPopic，統一按 Anthropic 訂正。</li>
+<li>每週四固定活動：茄哥稱每週四都有 WalletV 活動與獎勵。</li>
+<li>Adam 因 9:30 有會，在約 01:04 提前離場，後半段由茄哥單獨主持福利環節；原定上麥環節因時間原因取消，問題改為留言區留言、會後逐一解答。</li>
+</ul>
+<h2>附：本場關鍵數字（均為直播現場說法，未經核實）</h2>
+<ul>
+<li>註冊錢包 25 萬；月活 5000–10000；累計交易量 13–15 億美元；月均交易量約 2 億美元；Hyperliquid builder 總排名 10–20 名、Aster 約第 5 名；集團融資約 2500 萬美元；計劃行銷投入 500 萬美元 / 1.5 年；合約費萬分之二、Swap 千分之三；AI 最低 100 美元起；預測市場量化回測年化 50% 以上；TGE 第三階段獎池 880 萬美元；NT 合約獎勵 500 USDC / 20 人 / 每人 25 USDC；提問獎勵每人 200 積分（約 30–40 美元）。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>WalletV Space Notes: "AI Trades for You — Is Your Private Key Still in Your Hands?"</h1>
+<ul>
+<li>Hosts: WalletV Chinese @WalletV_CN, Qie Ge @qg7777</li>
+<li>Guests: Adam (Founder and CEO of WalletV / Virgo Group), Lin Ke @cryptoquantboo (post-2000s trader), Anny (WalletV marketing lead, unable to speak throughout due to network issues)</li>
+<li>Time: 2026-11-19 20:35–22:05 (Beijing time), about 1 hour 27 minutes</li>
+<li>Scale: 1,058 cumulative live listeners</li>
+<li>Source: Transcript of the X Space replay, 2,093 lines in full, about 21,000 Chinese characters; transcript starts at 00:00:41</li>
+<li>Original Space: https://x.com/i/spaces/1VNPAeoLeBWdJa</li>
+</ul>
+<blockquote>
+<p>Note: This was a WalletV special AMA (sponsored session). All figures and statements below are as stated live by the guests and have not been verified; the transcript was generated by speech recognition and contains homophone errors, with names and product names corrected based on context. For about the first 10 minutes the X connection was unstable and listeners were repeatedly kicked out; the host said this was because the US internet had been under hacker attack over the past two days (per the host).</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>WalletV founder Adam spent over an hour explaining the wallet's positioning: a non-custodial wallet + DeFi aggregator + built-in AI trading, with private keys in users' hands and the AI holding only order-placement authority; he also announced a batch of points and trading rewards.</p>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>What WalletV is</strong>: A non-custodial wallet (self-managed private keys, no KYC) + DeFi Super App (native integration with Hyperliquid, Aster, Polymarket, etc.) + AI trading portal; plus Virgo Pay for fiat on- and off-ramps (covering 26 countries). Adam said the DeFi aggregation is about 60–70% complete, while the AI part is only about 20% complete.</li>
+<li><strong>How the AI trades</strong>: Two types — prompt-based strategies and quantitative models — starting from as little as $100, set up in 60 seconds, producing a reasoned decision every 15 minutes, and stoppable at any time with one click, with a choice of manual or automatic position closing.</li>
+<li><strong>Private key security</strong>: The AI never touches private keys; trading goes through Hyperliquid / Aster sub-account APIs; without backing up your private key you cannot see your deposit address; core processes have been audited by CertiK, SlowMist and others (per Adam live).</li>
+<li><strong>Platform scale (per Adam live)</strong>: 250,000 registered wallets, 5,000–10,000 monthly active users, $1.3–1.5 billion in cumulative trading volume, about $200 million per month on average; recently ranked No. 1 in Hyperliquid builder revenue growth.</li>
+<li><strong>Where the money comes from</strong>: A 0.02% contract Builder fee, 0.3% on Swaps, and a 1.95 prediction-market fee (unit not specified live), with no profit from client losses; WalletV itself has not raised funding, while the group has raised about $25 million in total.</li>
+<li><strong>Adam's view</strong>: No AI model can make people money forever, and any platform claiming it can is misleading people; future competition will not be about who makes more money, but about who can offer enough models for users to pick the right one under different market conditions; security is the baseline and cannot be a differentiator.</li>
+</ul>
+<h2>I. Adam's Background and the Origins of WalletV (00:10–00:23)</h2>
+<ul>
+<li>Adam's background, in his own words: from traditional capital markets (about 8 years in banking and hedge funds), drawn in after the 2017 ICO wave, he spent two years convincing himself and started building in crypto in 2019 — seven years ago.</li>
+<li>The group went through two phases: the first five years running a fiat on/off-ramp exchange in Canada (a single market); after Trump was elected at the end of 2024 and global regulation eased, he concluded they could no longer run a fiat exchange and pivoted to a direction with more innovative value.</li>
+<li>Two reasons for the pivot: first, a fiat exchange has too narrow a use case (only buying and selling crypto, with no leverage, wealth management, prediction markets or automated trading); second, retail trading goes against human nature — most people make money in one wave and lose it back, lacking time to watch the market and lacking a trading management system.</li>
+<li>The chosen product path: rather than packaging the middle layer as an MCP and letting users train their own Agents (Adam said that path has far too low adoption and controllability, and carries a high risk of API theft), they packaged the AI natively inside the App, so users can use it with a few taps in the settings.</li>
+</ul>
+<h2>II. WalletV's Positioning: Wallet + DeFi Aggregator + AI Portal (00:23–00:28)</h2>
+<ul>
+<li>Two core positionings: a DeFi Super App, and a portal for interacting with AI Agents.</li>
+<li>Wallet properties: it can create private keys and store digital assets; it provides no custody at all, and users can take their money away at any time. Adam said that even if the company went bankrupt and the App disappeared, users could recover funds by importing their backed-up private key into any wallet.</li>
+<li>Aggregation logic: the team continuously finds the best DeFi applications for native integration, so users do not need to worry about clicking the wrong phishing site and can use them with a few taps inside the App.</li>
+<li>Vision: Borrowing Hyperliquid Jeff's idea, Adam said the goal is "Everything About Finance" — putting all finance-related assets on-chain so global users can access the highest-quality assets (financial inclusion); he said this is the path for digital-asset innovation over the next five to ten years.</li>
+</ul>
+<h2>III. How the AI Helps You Trade: The Workflow (00:35–00:41)</h2>
+<ul>
+<li>The AI appears in two places: AI signals (long/short prompts) on the Market page; and "AI Strategies" in the contracts section (three entry points: manual, copy trading, and AI strategies).</li>
+<li>Creation flow: tap "Create" → select an exchange (Hyperliquid, Aster, both on-chain with no centralized exchange) → select a strategy type → set the investment amount → confirm. Adam said it can be completed in as little as 60 seconds, starting from $100.</li>
+<li>Three strategy types:</li>
+<li>Prompt strategies (fixed prompts / dynamic prompts): write your own prompts telling the AI what to do; models include Trader GPT (free), DeepSeek, ChatGPT, Claude 5.5, Claude Opus, Gemini 3 Flash, Grok 4.7, etc., with advanced models requiring points to purchase credits.</li>
+<li>Quantitative models: two indicators — a mean-reversion indicator and a trend-following momentum indicator — each model comes with a score and backtest notes; parameters default to the optimal values backtested by the AI and can be fine-tuned by the user.</li>
+<li>While running: a decision is produced every 15 minutes (whether a position was opened, why, the position size, whether it was adjusted 5 minutes later and why or why not), all shown in log form; you can add to a position or stop it at any time.</li>
+<li>On performance: Adam said most AI strategies currently running are small-capital trials ($100–$200), and cases of 20%–30% returns within a few days are not uncommon, with returns verifiable on-chain (per Adam live).</li>
+</ul>
+<h2>IV. Private Keys and Security: Can the AI Touch Your Money? (00:42–00:49)</h2>
+<ul>
+<li>Private keys stay with the user: when creating a wallet you must back up your private key, otherwise you cannot see your deposit address (Adam corrected Qie Ge: it is not that you cannot transfer out, but that you cannot see the receiving address); backup options include Google backup or writing it on paper, and Qie Ge recommended photographing it with a digital camera that is not connected to the internet.</li>
+<li>Security audits: Adam said they have worked with security firms such as CertiK and SlowMist from the very beginning, every core process has been audited, and audit reports are available on the official website; among the investors is a professional security team that provides real-time security module design and support for new features (including AI features).</li>
+<li>The AI's permission boundary: the AI never touches users' private keys; trading is done through Hyperliquid / Aster sub-account APIs; if the user turns off the API, the AI immediately cannot run; the team tracks the AI's performance, prompts and hallucinations daily and adjusts models promptly when issues are found.</li>
+<li>Lin Ke's question (risk controls): Can a maximum position per trade and a maximum number of trades per day be set? Adam replied: quantitative models can set a maximum number of simultaneous positions (e.g., with 10 positions, each position is at most 10%); prompt models can specify in natural language a per-position cap and a loss cap, with automatic stopping at the limit; it can be paused at any time with one click, with a choice of manual closing or immediate automatic closing. The maximum number of trades per day was not clearly answered during the livestream.</li>
+</ul>
+<h2>V. Scale, Rankings and Revenue Model (00:28–00:34, 00:54–00:57)</h2>
+<ul>
+<li>Scale (per Adam live): 250,000 registered wallets; 5,000–10,000 monthly active users (depending on which product); $1.3–1.5 billion in cumulative trading volume; about $200 million in average monthly trading volume.</li>
+<li>Rankings (per Adam live): Hyperliquid builder overall ranking 10th–20th, ranked No. 1 in revenue growth in a recent period, "far ahead of MetaMask"; about 5th on Aster; Polymarket once ranked around the top 5 (high volume during major events such as the World Cup).</li>
+<li>Funding background (per Adam live): WalletV itself has never raised funding and was fully incubated by the group; the group has raised about $25 million in total, from nearly 20 VCs including OKX Ventures, Jump Crypto, Solana Ventures, Waterdrip, Water Foundation, etc. (some names were unclear in transcription; as stated live).</li>
+<li>Group developments (per Adam live): The group is in talks with the world's No. 1 and No. 2 exchanges on an "on-chain IPO" concept (under NDA, possibly as early as next January); Adam said it will most likely be the first in the world to do this, and that once completed the group's global profile will rise significantly.</li>
+<li>Marketing spend (per Adam live): Currently only a few tens of thousands per month on marketing; after the group's move next January is completed, they plan to invest $5 million in marketing over a year and a half, targeting monthly active users growing from 5,000–10,000 to 50,000–100,000 within one quarter.</li>
+<li>Revenue model: A 0.02% contract Builder fee (Adam said this is the lowest among Hyperliquid builders, most of which charge 0.04% to 0.1%); 0.3% on Swaps (said to be cheaper than MetaMask's 0.8%); a 1.95 prediction-market fee (unit not specified live); wealth management charges users no extra fee, with revenue shared with project partners. Adam emphasized that when users get liquidated the platform does not earn a cent — "we don't profit from client losses" — and advised users to use stop-loss orders more.</li>
+<li>Gas subsidies: A certain amount of EVM transfers are subsidized daily; Gas for deposits to Hyperliquid, Aster and Polymarket has always been free; Swaps over $5 are Gas-free; the platform pays on users' behalf through smart contract design.</li>
+</ul>
+<h2>VI. Prediction-Market Quant and PC Version (00:17–00:19, 01:00–01:01)</h2>
+<ul>
+<li>Prediction-market quant: Adam said prediction-market quantitative trading will launch within the next one to two weeks, with several models backtesting at over 50% annualized returns and small drawdowns; covering contracts, prediction markets, financial events and sports events, with one-click copy trading and automated execution, and backtest logic visible to users.</li>
+<li>PC version: Not available yet. Adam said the PC version is essentially a web terminal (able to connect any wallet, including hardware wallets), is in the roadmap, and is expected in the first half of next year, Q1 at the earliest, after the existing features are fully layered in.</li>
+</ul>
+<h2>VII. Benefits and Campaigns (as stated live, 00:49–01:26)</h2>
+<ul>
+<li>Question rewards: 5 questions will be selected from the comments, each receiving 200 points (worth about $30–$40, priced at the future TGE); the official team will also give out 10 additional lucky slots.</li>
+<li>NT contract trading rewards: Adam gave Qie Ge a 500 USDC quota for trading NT contracts (NT's USDC and USDT contracts, at 10x and 40x leverage respectively), first come first served for 20 people, 25 USDC each, claimable by contacting WalletV Chinese official customer service with a trading screenshot; by the later part of the livestream 13 people had registered, leaving 7 slots.</li>
+<li>Three platform campaigns: ① Perpetual contract campaign (Oct 5 – Dec 5), prize pool of 1 million points (every 100 points ≈ $15, total ≈ $150,000), distributed pro rata by absolute closed P&amp;L; ② Weekly trading lotteries and P&amp;L competitions, with 8 prize pools running simultaneously; ③ TGE Phase 3, prize pool of $8.8 million, inviting top traders to join, with the highest single winner receiving 14,000 USDC in points rewards.</li>
+<li>Uses of points: Earned through trading, deposits, sharing and learning tasks; after TGE they can be exchanged for airdrops and the platform token; the platform token can be used for platform spending, AI token top-ups, payments, etc. (per Adam and Qie Ge live). Qie Ge added live: points are not currently an on-chain token, cannot be transferred or withdrawn, have no cash value, and do not guarantee any future redemption.</li>
+<li>New-user benefits: Newly created wallets get 1 month of free VIP (free use of AI models); Qie Ge's special session invite code QG7777 — bind within 24 hours to enjoy session benefits and higher rewards; inviting friends earns commissions and points, with a minimum rebate claim of $10; a second-tier distribution system may be launched in the future.</li>
+<li>Exclusive policy after the Space: The official team will announce a 48-hour special session policy after the Space ends (Qie Ge said it is most likely related to the NT listing); see the official post for details, which Qie Ge will repost.</li>
+<li>Reminder: Some users reported being unable to bind the invite code; Qie Ge said it may be an IP or network latency issue and has been handed to official customer service; he also reminded users not to trade using US or Hong Kong IPs, and to use regions such as Singapore instead.</li>
+</ul>
+<h2>VIII. Opening Background and Other Items</h2>
+<ul>
+<li>Qie Ge opened by saying: since the Binance theft incident he has barely slept, only two or three hours a day; this was followed by a string of events — the midterm elections, Jensen Huang's resignation (per the host), Nvidia's earnings, Anthropic's listing, etc.</li>
+<li>Anthropic listing (per the host): described as "the largest IPO in global history", with a valuation already over $1.5 trillion, 980 million shares issued, and an estimated opening surge to $1.8 trillion; in the transcript the name was repeatedly recognized as SROPIC / RossPopic and has been uniformly corrected to Anthropic.</li>
+<li>Regular Thursday events: Qie Ge said there are WalletV events and rewards every Thursday.</li>
+<li>Adam left early at about 01:04 because he had a meeting at 9:30, and Qie Ge hosted the benefits segment alone for the second half; the planned open-mic segment was cancelled due to time, with questions moved to the comments and to be answered one by one after the session.</li>
+</ul>
+<h2>Appendix: Key Figures from This Session (all as stated live, unverified)</h2>
+<ul>
+<li>250,000 registered wallets; 5,000–10,000 monthly active users; $1.3–1.5 billion cumulative trading volume; about $200 million average monthly trading volume; Hyperliquid builder overall ranking 10th–20th, Aster about 5th; group funding about $25 million; planned marketing spend $5 million / 1.5 years; contract fee 0.02%, Swap 0.3%; AI starting from $100; prediction-market quant backtested at over 50% annualized; TGE Phase 3 prize pool $8.8 million; NT contract rewards 500 USDC / 20 people / 25 USDC each; question rewards 200 points per person (about $30–$40).</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1VNPAeoLeBWdJa">https://x.com/i/spaces/1VNPAeoLeBWdJa</a> · WalletV中文 @WalletV_CN 主持 · 2026-11-19 20:35 – 22:05（1 小时 27 分）· 累计在线听众 1058 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。转写稿自 00:00:41 起。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1VNPAeoLeBWdJa">https://x.com/i/spaces/1VNPAeoLeBWdJa</a> · WalletV中文 @WalletV_CN 主持 · 2026-11-19 20:35 – 22:05（1 小時 27 分）· 累計線上聽眾 1058 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。轉寫稿自 00:00:41 起。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1VNPAeoLeBWdJa">https://x.com/i/spaces/1VNPAeoLeBWdJa</a> · Hosted by WalletV Chinese @WalletV_CN · 2026-11-19 20:35 – 22:05 (1 hour 27 minutes) · 1,058 cumulative live listeners<br>This page is the full notes, manually edited from a machine transcript; all content is the guests' impromptu live remarks and self-descriptions, unverified, and does not constitute investment advice. Transcript starts at 00:00:41. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"WalletV《AI替你交易，你的私钥还在你手里吗？》Space 纪要 · Yat's Talks",tw:"WalletV《AI替你交易，你的私鑰還在你手裡嗎？》Space 紀要 · Yat's Talks",en:"WalletV Space Notes: \"AI Trades for You — Is Your Private Key Still in Your Hands?\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

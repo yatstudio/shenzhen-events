@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：代币化股票合法化——谁赢得 SEC 的五年窗口？</h1>
 <blockquote>
 <p>来源：X Space 回放录音本地转写（faster-whisper，英文逐字稿 1,132 行）
@@ -153,8 +160,288 @@
 <li>逐字稿原文（英文）存于流水线工作区 hidden_files/transcript.txt，可供复核。</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：代幣化股票合法化——誰贏得 SEC 的五年窗口？</h1>
+<blockquote>
+<p>來源：X Space 回放錄音本地轉寫（faster-whisper，英文逐字稿 1,132 行）
+整理：中文紀要，結論先行；以下所有說法均為發言人現場自述，未經核實，不構成投資建議。</p>
+</blockquote>
+<h2>場次資訊</h2>
+<ul>
+<li><strong>原標題</strong>：Tokenized Stocks Go Legal: Who Wins The SEC's 5-Year Window?</li>
+<li><strong>主持人</strong>：Justin Roberty（@wenaltseason）</li>
+<li><strong>時間</strong>：2026-10-29（Space 已結束；場內提到 10 月 28 日 DTCC 上線、臨近萬聖節）</li>
+<li><strong>時長</strong>：1 小時 05 分 59 秒</li>
+<li><strong>參與</strong>：18,237 人</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1yxBePXvXaLJN</li>
+<li><strong>嘉賓</strong>：Kevin（Palladium，代幣化房地產）、Ari（XY Labs 首席營運官）、Matt（3Bet Media）、Crypto Walker（Anid，Solana 鏈上銀行）、CoinTulip（聽眾提問）</li>
+</ul>
+<h2>一句話結論</h2>
+<p>SEC 給了五年試驗期，但全場嘉賓的共識是：<strong>贏家大概率還是華爾街，其次是交易所，普通投資者排最後</strong>——技術層變快變便宜了，但監管結構沒變；真正的懸念是五年後鏈上交易量能否超過鏈下，以及發行人有沒有權否決自家股票被代幣化。</p>
+<h2>核心結論</h2>
+<ol>
+<li><strong>SEC 五年窗口是臨時豁免，不是永久修法</strong>：9 月 17 日「創新豁免」允許合規平台用區塊鏈自動做市商（AMM）交易代幣化美股，無需註冊為傳統交易所；試驗期至 2031 年 9 月，SEC 在此期間考慮長期規則。</li>
+<li><strong>DTCC 已下場，規模碾壓加密原生市場</strong>：10 月 28 日 DTCC 代幣化服務上線，首批 34 隻合資格證券、約 30 萬億美元市值；摩根大通、花旗、美銀、摩根士丹利、瑞銀等 20 家機構已簽約，跑在 Canton Network 和私有 Vesu 鏈上。主持人提醒：30 萬億是「可代幣化市值」，不是已代幣化金額。</li>
+<li><strong>發行人正在大規模說不</strong>：微軟、Alphabet、英特爾、甲骨文、IBM 等反對自家股票以 OKX / ISE 代幣化形式交易；截至 10 月 28 日已有 33 家發行人提出異議，包括摩根大通、可口可樂、戴爾——原定 62 家名單中近半已退出。嘉賓為此吵了一架：發行人到底有沒有權管你怎麼處置自己買的股票。</li>
+<li><strong>散戶得到的是「更好用的傳統金融」，不是主權</strong>：Ari 的判斷——交易更快、可能 24 小時、費用可能更低，但你大概率還是不能像轉 ETH 那樣把一股代幣化特斯拉直接轉給朋友（KYC 擋著）；監管結構不變，只是更高配的 TradFi。</li>
+<li><strong>三家路數不同</strong>：Robinhood（用戶基數大、年輕用戶、加密+股票交叉交易）、Ondo（發行+基建，兩頭下注，還與 DTCC 合作）、OKX（AMM 交易場所+穩定幣結算，並與紐交所傳有合資）。Kevin 押 OKX，Ari 押 Robinhood。</li>
+<li><strong>你買到的不是股票本身，是包裝</strong>：Crypto Walker 直言——底層資產由第三方持有，你拿到的是「在對方許可下使用的敞口」；發行人或託管方破產怎麼辦、投票權和分紅歸誰，細則全在小字條款裡，現場沒人能給出確定答案。</li>
+</ol>
+<h2>開場新聞梳理（主持人 Justin Roberty，00:01–00:07）</h2>
+<ul>
+<li>SEC 9 月 17 日創新豁免：合規平台五年內可交易代幣化美股，無需註冊為交易所；豁免是臨時的，2031 年 9 月到期。</li>
+<li>DTCC 10 月 28 日上線代幣化服務：首批 34 隻證券、約 30 萬億美元市值；20 家機構簽約（摩根大通、花旗、美銀、摩根士丹利、瑞銀等），運行於 Canton Network 與私有 Vesu 區塊鏈。</li>
+<li>Ondo Finance 兩頭下注：一邊與 DTCC 合作，一邊擴自己的代幣化股票產品。</li>
+<li>Robinhood Chain 10 月 27 日消息：接入 Ripple 穩定幣 RLUSD，新增 15 隻代幣化股票與 ETF，打通交易資產與鏈上支付。</li>
+<li>發行人反對：微軟、Alphabet、英特爾、甲骨文、IBM 等反對 OKX / ISE 代幣化形式；截至 10 月 28 日 33 家發行人已披露異議（含摩根大通、可口可樂、戴爾），62 家原定名單中約 30 家退出、近半。</li>
+<li>大賣點是 24/7 交易：穩定幣結算+鏈上流動性池，突破華爾街交易時段；但連續交易對定價、流動性和投資者保護提出新問題。</li>
+<li>主持人定調：這五年是各方證明哪種模式行得通的窗口期；豁免「看起來很實在，同時又留了退路」。</li>
+</ul>
+<h2>分發言人觀點</h2>
+<h3>Justin Roberty（主持人）</h3>
+<ul>
+<li>反覆追問的其實是同一個問題：贏家由誰定——是最好的技術，還是最會跟傳統金融打交道的人。他的判斷是後者：關係正在定義贏家和輸家。</li>
+<li>用自己當年幫 AccuWeather 與迪士尼合作的經歷打比方：跟巨頭「合作」從來不是平等合作，大多數時候是在哄巨頭開心；這在某種程度上「顛覆」了加密空間的去中心化理想。</li>
+<li>對本屆政府「挑選贏家」直言不舒服：錢進來了、行業被認可了，這是好事；但行政力量如此明確地選邊，會成為創新的障礙。他自述「心情複雜」。</li>
+<li>舉了 Robinhood 上出現 SpaceX IPO 相關代幣的例子：未經公司同意就有人把它的股票代幣化，「想想就覺得離譜」。</li>
+<li>提醒聽眾：他本人是編劇碩士出身，「不是投資建議」。</li>
+</ul>
+<h3>Kevin（Palladium，代幣化房地產）</h3>
+<ul>
+<li>對豁免整體樂觀：一定會帶來更多關注、打破壁壘；自己的項目目標是讓普通人更容易進出房地產投資，這波只會幫到這個事業。</li>
+<li>買家畫像：不在幣圈內部，而在圈外——會把以前遠離加密的人帶進來。</li>
+<li>對散戶的實際變化：不用再開券商帳戶（點名嘉信理財式帳戶），在交易所裡就能買進頭部股票；設有限額是好事，說明在「試水過渡」。</li>
+<li>預言分化：零售經紀市場會逐步瓦解，只剩機構資金（401K 等）繼續用傳統技術。</li>
+<li>押注 OKX 而非 Robinhood：理由是 OKX 已與紐交所成立合資企業；並提到 HYPE 當天因相關消息大漲。</li>
+<li>穩定幣是必需品：普通人用穩定幣計價遠比用比特幣或以太坊計價直觀；是整個代幣化股票市場的「底漆」和計價基準單位；穩定幣贏家「已經基本定下來了」。</li>
+<li>全球化：門已經裂開一條縫；雖然仍有代幣化比例上限、部分交易所在美國仍被地理屏蔽，但方向是向全世界開放；更多參與者進來也會帶來更多波動，以及被極高淨值人士公開操縱的風險。</li>
+</ul>
+<h3>Ari（XY Labs 首席營運官）</h3>
+<ul>
+<li><strong>技術層變了，主權沒變</strong>：豁免讓技術更高效，是對過去十年加密技術的一次「展示」；但如果你想像轉 ETH 一樣把一股代幣化特斯拉直接轉給朋友，KYC 就過不去——「主權收益」大概率落空。汽車代幣同理：除非車管部門認這個 token，否則轉不出去。</li>
+<li><strong>最大贏家是交易所和想進 RWA 的新創公司；終端用戶最可能被晾在一邊</strong>：體驗會變好（比如 24 小時交易），但監管結構不變，本質是「更高配的傳統金融」，不是真正的鏈上股票 DeFi。</li>
+<li><strong>DTCC 的 30 萬億關鍵在於是不是「新錢」</strong>：如果只是把已有帳戶裡的錢換個技術搬過來，對普通人好處有限；只有真正帶來新資金、同時讓交易更快更便宜，才算全贏。傳統券商過去沒有動力自我革新，現在是被逼著變快，否則別人會替他們變。</li>
+<li><strong>Robinhood 位置最好</strong>：用戶基數大、用戶年輕、已試過在 Robinhood 內交易加密；最能吃到「既想拿幣又想拿股票」的交叉交易人群——比如用市值前 100 的幣直接換特斯拉，反之亦然。</li>
+<li><strong>發行人否決權問題上站在所有權一邊</strong>：買車之後車企不能規定你賣給誰；買手機之後「維修權」之爭也是這個邏輯。持有 10 股微軟就是主權擁有，發行人憑什麼規定你能不能把它包成 token？稱這種自上而下的管制「在我看來是反美國的」。但同時承認：投票權、分紅歸誰，必須在包裝條款裡寫清楚——比如 Meta 股票本身就有不同投票權等級，透明是前提。</li>
+<li><strong>2031 年展望</strong>：不會是去中心化版本獲勝；更可能出現三分天下——機構大額轉帳維持傳統方式；出現一批「類區塊鏈但中心化」的高性能系統，成為新的中心化骨幹；去中心化版本只占一小部分。按交易筆數算，鏈上可能贏；按資金量算，未必。</li>
+<li><strong>AI 是未被討論的變量</strong>：鏈上轉帳讓 AI 交易變得極其容易、快速且便宜，未來一波 AI 交易員（機構、商業、個人）會顯著推高交易量；監管會不會限制 AI 交易、限制到什麼程度，將左右交易量最終流向哪裡。</li>
+</ul>
+<h3>Matt（3Bet Media）</h3>
+<ul>
+<li>五年「窗口長得很」：以加密的速度，五年足夠發生翻天覆地的變化，尤其疊加 AI 時代；下一個方法論將與代幣化資產和 AI 有關。</li>
+<li>預計會出現「代理式交易」（agentic transactions）與投資、交易結合的有趣產品和市場組合。</li>
+<li>對「五年後會不會被收回」：沒人知道；但真正的加密建設者總會找到辦法繼續建。</li>
+</ul>
+<h3>Crypto Walker（Anid，Solana 鏈上銀行，做了三年）</h3>
+<ul>
+<li><strong>兩個世界在碰撞</strong>：一邊是 Web3 原生創業者，很多人根本沒去過華爾街、也不在乎華爾街，自己做自己的事；另一邊是華爾街大玩家，看到列車已開走、不得不跟上。兩者都會繼續存在；他押注獨立思考者帶來的創新。</li>
+<li><strong>政治繞不開</strong>：加密與政治、全球大事過去幾年已深度綁定，當前這波推動與美國政治局勢（包括中期選舉）有關。</li>
+<li><strong>最賺錢的環節</strong>：發行（issuance）會起來——明年很多玩家要發穩定幣、搭平台、推新工具；交易平台也會因新用戶湧入而受益；但坦言「很難準確押注」。</li>
+<li><strong>你真正擁有什麼</strong>：代幣化股票是「包裝」——第三方持有底層資產，給你一個使用和標記的憑證；你不是最終所有者，只是經許可使用。託管方可能倒閉、可能關門，補償比例要看條款細則；類比銀行存款保險（如歐元區 10 萬歐元上限），不是全額兜底；「讀小字條款」。</li>
+<li><strong>MiCA 教訓</strong>：歐洲 MiCA 實行兩年，紙面上很好，執行起來卻讓很多項目乾脆不去歐洲或逃離歐洲——現金儲備等要求對新創公司過高，「地下室創業者基本不可能」在歐盟合規營運。結論：沒有監管不行，過度監管也不行，要找平衡點；希望美國走出更好的版本。</li>
+<li><strong>全球化視角</strong>：歐洲用戶大多仍用美元穩定幣（Circle 等產品占主導），美國市場開放後歐洲用戶很可能直接用美國平台；這會是全球性的事，但美國受益最大。</li>
+<li><strong>2031 年展望</strong>：希望技術趕上、實現談了十年的大規模採用；但不會出現「全部上鏈、無銀行」的世界——兩類體系將共存，鏈上交易會成為主要的去處之一。</li>
+</ul>
+<h3>CoinTulip（聽眾提問，00:45–00:48）</h3>
+<ul>
+<li>提出全場唯一沒人答得上來的問題：<strong>如果代幣化股票放在鏈上、自己託管，被盜了怎麼辦？</strong> 是像丟幣一樣「幣就沒了」，還是證券法和底層股權結構能提供真正的追回途徑？</li>
+<li>主持人承認不知道現階段監管會怎麼處理；提到 Saffron 與 Nexus Mutual 的保險合作（稱對方是該領域領先者、此前多次賠付，包括本月早些時候一次漏洞事件），但沒有人能就代幣化股票被盜的規則給出答案。</li>
+<li>CoinTulip 進一步追問：如果股票、大宗商品、房地產全都要上鏈（提到杜拜已有代幣化房地產試點），未來十年「萬物代幣化」之後，盜竊問題到底怎麼處理？現場無人接招，話題被帶過。</li>
+</ul>
+<h2>全場四次關鍵交鋒</h2>
+<h3>1. 發行人有沒有權否決代幣化？（00:32–00:41）</h3>
+<ul>
+<li>主持人與 Kevin 先表態：發行人應該有控制權，未經公司同意就代幣化其股票「很奇怪」，以後會有法律問題。</li>
+<li>Ari 殺回馬槍：買了股票就是你的財產，車企管不了你把車賣給誰；發行人管你能不能把股票包成 token，是自上而下的中心化管制，「在我看來是反美國的」；發行股票本身就是「交出對公司的一部分控制」。</li>
+<li>折中點：不管誰有權否決，投票權、分紅、法律保護必須在條款裡寫清楚；否則代幣持有者就是「二等持有人」。</li>
+</ul>
+<h3>2. 你買到的到底是什麼？（00:34–00:37）</h3>
+<ul>
+<li>Crypto Walker：第三方持有底層資產，你得到的是敞口+使用許可；託管方破產、跑路都有可能，補償看細則。</li>
+<li>主持人追問：那投票權、分紅、法律保護一樣嗎？如果不一樣，就是兩種等級的持有人。</li>
+<li>Ari 補充：不同股票本就權利不同（如 Meta 的多級投票權），關鍵是透明。</li>
+</ul>
+<h3>3. 誰是最大贏家？（速答環節，00:56–00:58）</h3>
+<ul>
+<li>Kevin：華爾街——因為他們有權力制定規則、讓自己成為贏家。</li>
+<li>Ari：華爾街第一、加密交易所第二、用戶第三——「有黃金的人定規則，規則讓他們得到更多黃金。」</li>
+<li>Crypto Walker：華爾街在主導遊戲，小魚只能吃剩下的碎屑。</li>
+</ul>
+<h3>4. 到 2031 年，鏈上交易會超過鏈下嗎？（00:58–01:03）</h3>
+<ul>
+<li>Kevin：零售交易上鏈會更多，但機構交易量是否上鏈「很難說」。</li>
+<li>Ari：三分天下；按筆數鏈上可能贏，按金額未必；AI 交易員的加入會是重要變量。</li>
+<li>Crypto Walker：兩類體系共存，但鏈上會成為主要的去處之一並持續增長。</li>
+</ul>
+<h2>值得注意的原話（英文短引）</h2>
+<ul>
+<li>Ari 談主權落空：<em>"I want to be able to give it to somebody else by just opening up my wallet and sending it to them. But I don't think that this new system is going to allow for that."</em></li>
+<li>Ari 談贏家排序：<em>"The people with the gold make the rules, and so they make the rules such that they get more gold."</em></li>
+<li>Kevin 談五年窗口：<em>"Five years [is] a hell of a window, man."</em></li>
+<li>Crypto Walker 談創新來源：<em>"I'll bet on innovation. Innovation comes from independent thinkers."</em></li>
+<li>Crypto Walker 談監管平衡：<em>"We cannot exist without regulation. We cannot exist with excessive regulation."</em></li>
+<li>主持人談豁免的性質：<em>"It is a great way to seem like you're doing something… and at the same time, leaving yourself the wiggle room in case people don't like how it works out."</em></li>
+</ul>
+<h2>說明與局限</h2>
+<ul>
+<li>本紀要基於回放錄音的機器轉寫逐字稿整理；轉寫可能存在人名、項目名誤聽（如嘉賓項目 "Anid"、"Palladium"、"Vesu 區塊鏈" 等按發音轉寫，未經外部核對）。</li>
+<li>文中數字（30 萬億美元、34 隻證券、33 家異議、62 家名單、20 家機構）均為發言人口述或主持人新聞梳理引用，未經獨立核實。</li>
+<li>CoinTulip 提出的「代幣化股票被盜如何追回」在場內未得到解答，是本場留下的最大開放問題。</li>
+<li>逐字稿原文（英文）存於流水線工作區 hidden_files/transcript.txt，可供覆核。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Tokenized Stocks Go Legal — Who Wins the SEC's Five-Year Window?</h1>
+<blockquote>
+<p>Source: Local transcription of the X Space replay recording (faster-whisper, 1,132-line English verbatim transcript)
+Compiled as Chinese notes, conclusions first; everything below is as stated live by the speakers, has not been verified, and does not constitute investment advice.</p>
+</blockquote>
+<h2>Session Information</h2>
+<ul>
+<li><strong>Original title</strong>: Tokenized Stocks Go Legal: Who Wins The SEC's 5-Year Window?</li>
+<li><strong>Host</strong>: Justin Roberty (@wenaltseason)</li>
+<li><strong>Time</strong>: 2026-10-29 (Space ended; the session mentioned the DTCC launch on October 28 and the approach of Halloween)</li>
+<li><strong>Duration</strong>: 1 hour 05 minutes 59 seconds</li>
+<li><strong>Participants</strong>: 18,237 people</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1yxBePXvXaLJN</li>
+<li><strong>Guests</strong>: Kevin (Palladium, tokenized real estate), Ari (Chief Operating Officer, XY Labs), Matt (3Bet Media), Crypto Walker (Anid, an on-chain bank on Solana), CoinTulip (audience question)</li>
+</ul>
+<h2>One-Sentence Conclusion</h2>
+<p>The SEC has given a five-year trial period, but the consensus among all the guests was: <strong>the winner will most likely still be Wall Street, followed by exchanges, with ordinary investors last</strong> — the technology layer has become faster and cheaper, but the regulatory structure has not changed; the real suspense is whether on-chain trading volume can exceed off-chain volume in five years, and whether issuers have the right to veto tokenization of their own shares.</p>
+<h2>Core Conclusions</h2>
+<ol>
+<li><strong>The SEC's five-year window is a temporary exemption, not a permanent change in the law</strong>: The September 17 "innovation exemption" allows compliant platforms to trade tokenized U.S. stocks using blockchain automated market makers (AMMs) without registering as a traditional exchange; the trial period runs until September 2031, during which the SEC will consider long-term rules.</li>
+<li><strong>DTCC has entered the field, at a scale that dwarfs the crypto-native market</strong>: On October 28, DTCC's tokenization service went live, with an initial 34 eligible securities and roughly $30 trillion in market capitalization; 20 institutions including JPMorgan, Citigroup, Bank of America, Morgan Stanley and UBS have signed up, running on Canton Network and the private Vesu chain. The host cautioned: the $30 trillion is "tokenizable market capitalization," not the amount already tokenized.</li>
+<li><strong>Issuers are saying no on a large scale</strong>: Microsoft, Alphabet, Intel, Oracle, IBM and others oppose their shares being traded in tokenized form via OKX / ISE; as of October 28, 33 issuers had raised objections, including JPMorgan, Coca-Cola and Dell — nearly half of the original list of 62 had withdrawn. The guests argued over this: do issuers have any right to control how you dispose of shares you bought yourself?</li>
+<li><strong>What retail investors get is "better traditional finance," not sovereignty</strong>: Ari's judgment — trading will be faster, possibly 24 hours, and fees may be lower, but you most likely still cannot transfer a share of tokenized Tesla directly to a friend the way you transfer ETH (KYC blocks it); the regulatory structure is unchanged, it is just TradFi with higher specifications.</li>
+<li><strong>Three different approaches</strong>: Robinhood (large user base, young users, cross-trading between crypto and stocks), Ondo (issuance + infrastructure, betting on both sides, and also partnering with DTCC), OKX (AMM trading venue + stablecoin settlement, and reportedly in a joint venture with the NYSE). Kevin backed OKX, Ari backed Robinhood.</li>
+<li><strong>What you buy is not the stock itself, it is a wrapper</strong>: Crypto Walker said bluntly — the underlying asset is held by a third party, and what you get is "exposure that you use with their permission"; what happens if the issuer or custodian goes bankrupt, and who gets the voting rights and dividends, are all in the fine print, and no one at the session could give a definite answer.</li>
+</ol>
+<h2>Opening News Roundup (Host Justin Roberty, 00:01–00:07)</h2>
+<ul>
+<li>SEC innovation exemption on September 17: compliant platforms can trade tokenized U.S. stocks for five years without registering as an exchange; the exemption is temporary and expires in September 2031.</li>
+<li>DTCC tokenization service launched October 28: an initial 34 securities, about $30 trillion in market capitalization; 20 institutions signed up (JPMorgan, Citigroup, Bank of America, Morgan Stanley, UBS, etc.), running on Canton Network and the private Vesu blockchain.</li>
+<li>Ondo Finance is betting on both sides: partnering with DTCC on one side, and expanding its own tokenized stock products on the other.</li>
+<li>Robinhood Chain news on October 27: integrating Ripple's stablecoin RLUSD, adding 15 tokenized stocks and ETFs, and connecting trading assets with on-chain payments.</li>
+<li>Issuer opposition: Microsoft, Alphabet, Intel, Oracle, IBM and others oppose the OKX / ISE tokenized form; as of October 28, 33 issuers had disclosed objections (including JPMorgan, Coca-Cola, Dell), and about 30 of the original list of 62 had withdrawn — nearly half.</li>
+<li>The big selling point is 24/7 trading: stablecoin settlement + on-chain liquidity pools, breaking out of Wall Street trading hours; but continuous trading raises new questions for pricing, liquidity and investor protection.</li>
+<li>The host's framing: these five years are a window for all sides to prove which model works; the exemption "looks very real, while also leaving a way out."</li>
+</ul>
+<h2>Views by Speaker</h2>
+<h3>Justin Roberty (Host)</h3>
+<ul>
+<li>What he kept asking was really the same question: who decides the winners — the best technology, or the people best at dealing with traditional finance? His judgment was the latter: relationships are defining winners and losers.</li>
+<li>He drew an analogy from his own experience helping AccuWeather partner with Disney: "partnering" with a giant is never an equal partnership; most of the time you are keeping the giant happy; to some extent this "subverts" the decentralization ideal of the crypto space.</li>
+<li>He said plainly that he was uncomfortable with this administration "picking winners": money has come in and the industry has been recognized, which is good; but such explicit side-taking by administrative power will become an obstacle to innovation. He described himself as having "mixed feelings."</li>
+<li>He cited the example of SpaceX IPO-related tokens appearing on Robinhood: someone tokenized its stock without the company's consent — "just thinking about it feels absurd."</li>
+<li>He reminded listeners: he himself has a master's degree in screenwriting, and this is "not investment advice."</li>
+</ul>
+<h3>Kevin (Palladium, tokenized real estate)</h3>
+<ul>
+<li>Overall optimistic about the exemption: it will definitely bring more attention and break down barriers; his own project's goal is to make it easier for ordinary people to get in and out of real estate investment, and this wave will only help that cause.</li>
+<li>Buyer profile: not inside the crypto circle, but outside it — it will bring in people who previously stayed away from crypto.</li>
+<li>The practical change for retail investors: no need to open a brokerage account anymore (he named Schwab-style accounts); you can buy leading stocks right inside an exchange; having limits is a good thing, it shows this is a "testing-the-waters transition."</li>
+<li>Prediction of divergence: the retail brokerage market will gradually disintegrate, leaving only institutional money (401Ks, etc.) continuing to use traditional technology.</li>
+<li>Backing OKX rather than Robinhood: because OKX has already formed a joint venture with the NYSE; he also mentioned that HYPE rose sharply that day on related news.</li>
+<li>Stablecoins are a necessity: for ordinary people, pricing in stablecoins is far more intuitive than pricing in Bitcoin or Ethereum; they are the "primer" and unit of account for the entire tokenized stock market; the stablecoin winners "are basically already decided."</li>
+<li>Globalization: the door has cracked open; although there are still caps on tokenization ratios and some exchanges are still geo-blocked in the U.S., the direction is toward opening to the whole world; more participants coming in will also bring more volatility, and the risk of public manipulation by ultra-high-net-worth individuals.</li>
+</ul>
+<h3>Ari (Chief Operating Officer, XY Labs)</h3>
+<ul>
+<li><strong>The technology layer has changed, sovereignty has not</strong>: The exemption makes the technology more efficient, a "showcase" of the past decade of crypto technology; but if you want to transfer a share of tokenized Tesla directly to a friend the way you transfer ETH, KYC will stop you — the "sovereignty gains" will most likely come to nothing. Car tokens are the same: unless the DMV recognizes the token, you cannot transfer it out.</li>
+<li><strong>The biggest winners are exchanges and startups wanting to enter RWA; end users are most likely to be left out</strong>: The experience will improve (for example, 24-hour trading), but the regulatory structure is unchanged; in essence it is "TradFi with higher specifications," not real on-chain stock DeFi.</li>
+<li><strong>The key question about DTCC's $30 trillion is whether it is "new money"</strong>: If it is just moving money already in existing accounts over with a different technology, the benefit to ordinary people is limited; only if it truly brings in new funds while making trading faster and cheaper is it a complete win. Traditional brokers had no incentive to reinvent themselves in the past; now they are being forced to move faster, or others will do it for them.</li>
+<li><strong>Robinhood is best positioned</strong>: large user base, young users, and it has already tried trading crypto inside Robinhood; it is best placed to capture the cross-trading crowd that "wants both coins and stocks" — for example, swapping a top-100 coin directly for Tesla, and vice versa.</li>
+<li><strong>On the issuer veto question, he sides with ownership</strong>: After you buy a car, the carmaker cannot dictate who you sell it to; the "right to repair" fight after buying a phone follows the same logic. Holding 10 shares of Microsoft is sovereign ownership — on what grounds can the issuer dictate whether you can wrap it into a token? He called this kind of top-down control "un-American in my view." But he also acknowledged: who gets voting rights and dividends must be written clearly in the wrapper terms — for example, Meta shares themselves have different classes of voting rights; transparency is the prerequisite.</li>
+<li><strong>Outlook for 2031</strong>: It will not be the decentralized version that wins; more likely there will be a three-way split — large institutional transfers remain traditional; a batch of "blockchain-like but centralized" high-performance systems emerge as a new centralized backbone; and the decentralized version accounts for only a small share. By number of transactions, on-chain may win; by amount of money, not necessarily.</li>
+<li><strong>AI is the undiscussed variable</strong>: On-chain transfers make AI trading extremely easy, fast and cheap, and a coming wave of AI traders (institutional, commercial, personal) will significantly push up trading volume; whether regulators restrict AI trading, and to what extent, will determine where trading volume ultimately flows.</li>
+</ul>
+<h3>Matt (3Bet Media)</h3>
+<ul>
+<li>Five years is "a hell of a long window": at crypto speed, five years is enough for earth-shaking change, especially layered with the AI era; the next methodology will be related to tokenized assets and AI.</li>
+<li>He expects interesting products and market combinations that combine "agentic transactions" with investing and trading.</li>
+<li>On "will it be taken back after five years": no one knows; but real crypto builders will always find a way to keep building.</li>
+</ul>
+<h3>Crypto Walker (Anid, an on-chain bank on Solana, three years in)</h3>
+<ul>
+<li><strong>Two worlds are colliding</strong>: On one side are Web3-native founders, many of whom have never been to Wall Street and do not care about Wall Street, doing their own thing; on the other side are the big Wall Street players, who see the train has left and have to catch up. Both will continue to exist; he bets on the innovation brought by independent thinkers.</li>
+<li><strong>Politics cannot be avoided</strong>: Crypto has become deeply bound up with politics and global events over the past few years, and the current push is related to the U.S. political situation (including the midterm elections).</li>
+<li><strong>The most profitable link</strong>: Issuance will take off — next year many players will issue stablecoins, build platforms and push new tools; trading platforms will also benefit from the influx of new users; but he admitted it is "hard to bet accurately."</li>
+<li><strong>What do you actually own</strong>: A tokenized stock is a "wrapper" — a third party holds the underlying asset and gives you a credential to use and mark it; you are not the ultimate owner, only using it with permission. The custodian may go bankrupt or shut down, and the compensation ratio depends on the fine print; he analogized it to bank deposit insurance (such as the €100,000 cap in the eurozone), which is not full coverage; "read the fine print."</li>
+<li><strong>The MiCA lesson</strong>: Europe's MiCA has been in force for two years; on paper it is very good, but in practice it has led many projects to simply not go to Europe or to flee Europe — requirements such as cash reserves are too high for startups, and "basement founders basically cannot" operate compliantly in the EU. Conclusion: no regulation does not work, and excessive regulation does not work either; a balance must be found; he hopes the U.S. produces a better version.</li>
+<li><strong>Global perspective</strong>: Most European users still use dollar stablecoins (products like Circle's dominate), and after the U.S. market opens, European users will very likely use U.S. platforms directly; this will be a global phenomenon, but the U.S. will benefit most.</li>
+<li><strong>Outlook for 2031</strong>: He hopes technology catches up and achieves the mass adoption talked about for ten years; but there will not be a world of "everything on-chain, no banks" — the two systems will coexist, and on-chain trading will become one of the main destinations.</li>
+</ul>
+<h3>CoinTulip (Audience question, 00:45–00:48)</h3>
+<ul>
+<li>He raised the one question in the whole session that no one could answer: <strong>If a tokenized stock is on-chain and self-custodied, what happens if it is stolen?</strong> Is it like losing coins — "the coins are just gone" — or can securities law and the underlying equity structure provide a real route to recovery?</li>
+<li>The host admitted he did not know how regulation would handle this at the current stage; he mentioned Saffron's insurance partnership with Nexus Mutual (calling them a leader in the field, with multiple payouts in the past, including an exploit incident earlier this month), but no one could give an answer on the rules for stolen tokenized stocks.</li>
+<li>CoinTulip pressed further: if stocks, commodities and real estate all have to go on-chain (he mentioned Dubai already has tokenized real estate pilots), after "tokenization of everything" in the next ten years, how will theft actually be handled? No one at the session took up the question, and the topic was moved past.</li>
+</ul>
+<h2>Four Key Exchanges in the Session</h2>
+<h3>1. Do issuers have the right to veto tokenization? (00:32–00:41)</h3>
+<ul>
+<li>The host and Kevin spoke first: issuers should have control, and tokenizing their stock without the company's consent is "very strange" and will lead to legal problems later.</li>
+<li>Ari pushed back: once you buy a stock it is your property; a carmaker cannot control who you sell your car to; an issuer controlling whether you can wrap a stock into a token is top-down centralized control, "un-American in my view"; issuing stock itself is "giving up part of the control over the company."</li>
+<li>The middle ground: regardless of who has veto power, voting rights, dividends and legal protections must be written clearly in the terms; otherwise token holders are "second-class holders."</li>
+</ul>
+<h3>2. What exactly are you buying? (00:34–00:37)</h3>
+<ul>
+<li>Crypto Walker: a third party holds the underlying asset, and what you get is exposure + a license to use it; custodian bankruptcy or absconding are both possible, and compensation depends on the fine print.</li>
+<li>The host pressed: then are voting rights, dividends and legal protections the same? If not, there are two classes of holders.</li>
+<li>Ari added: different stocks inherently have different rights (such as Meta's multi-class voting rights); the key is transparency.</li>
+</ul>
+<h3>3. Who is the biggest winner? (Rapid-fire round, 00:56–00:58)</h3>
+<ul>
+<li>Kevin: Wall Street — because they have the power to make the rules and make themselves the winners.</li>
+<li>Ari: Wall Street first, crypto exchanges second, users third — "The people with the gold make the rules, and the rules let them get more gold."</li>
+<li>Crypto Walker: Wall Street is running the game, and the small fish can only eat the crumbs left over.</li>
+</ul>
+<h3>4. By 2031, will on-chain trading exceed off-chain? (00:58–01:03)</h3>
+<ul>
+<li>Kevin: More retail trading will go on-chain, but whether institutional trading volume goes on-chain is "hard to say."</li>
+<li>Ari: A three-way split; by number of transactions on-chain may win, by amount not necessarily; the entry of AI traders will be an important variable.</li>
+<li>Crypto Walker: The two systems will coexist, but on-chain will become one of the main destinations and keep growing.</li>
+</ul>
+<h2>Notable Quotes (short English excerpts)</h2>
+<ul>
+<li>Ari on sovereignty falling short: <em>"I want to be able to give it to somebody else by just opening up my wallet and sending it to them. But I don't think that this new system is going to allow for that."</em></li>
+<li>Ari on the ranking of winners: <em>"The people with the gold make the rules, and so they make the rules such that they get more gold."</em></li>
+<li>Kevin on the five-year window: <em>"Five years [is] a hell of a window, man."</em></li>
+<li>Crypto Walker on the source of innovation: <em>"I'll bet on innovation. Innovation comes from independent thinkers."</em></li>
+<li>Crypto Walker on the balance of regulation: <em>"We cannot exist without regulation. We cannot exist with excessive regulation."</em></li>
+<li>The host on the nature of the exemption: <em>"It is a great way to seem like you're doing something… and at the same time, leaving yourself the wiggle room in case people don't like how it works out."</em></li>
+</ul>
+<h2>Notes and Limitations</h2>
+<ul>
+<li>These notes were compiled from a machine transcript of the replay recording; the transcription may contain mishearings of names of people and projects (for example, guest projects "Anid," "Palladium," "Vesu blockchain," etc. were transcribed by pronunciation and have not been externally checked).</li>
+<li>All figures in the text ($30 trillion, 34 securities, 33 objections, list of 62, 20 institutions) are as stated by the speakers or cited in the host's news roundup, and have not been independently verified.</li>
+<li>CoinTulip's question, "how to recover a stolen tokenized stock," was not answered in the session and is the biggest open question left by this session.</li>
+<li>The original verbatim transcript (in English) is stored in the pipeline workspace at hidden_files/transcript.txt, available for review.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes for this session. The content reflects what the speakers said live and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：代币化股票合法化——谁赢得 SEC 的五年窗口？ · Yat's Talks",tw:"會議紀要：代幣化股票合法化——誰贏得 SEC 的五年窗口？ · Yat's Talks",en:"Meeting Notes: Tokenized Stocks Go Legal — Who Wins the SEC's Five-Year Window? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

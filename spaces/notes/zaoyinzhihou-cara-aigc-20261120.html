@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>噪音之后 Cara 专场：从好莱坞到 AIGC，我的转型之路</h1>
 <ul>
 <li>Space：噪音之后 Cara 专场：从好莱坞到 AIGC，我的转型之路</li>
@@ -118,9 +125,219 @@
 <li>"画面不是那么重要了，谁都可以做得很炫酷的画面；故事是稀缺的。"</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>噪音之後 Cara 專場：從好萊塢到 AIGC，我的轉型之路</h1>
+<ul>
+<li>Space：噪音之後 Cara 專場：從好萊塢到 AIGC，我的轉型之路</li>
+<li>主持：Adrian Punk（@AdrianPunk115）</li>
+<li>嘉賓：Cara（Cara_Mosquito）</li>
+<li>時間：2026-11-20 20:58–23:21（約 2 小時 23 分）</li>
+<li>聽眾：402 人</li>
+<li>轉寫：逐字稿 2863 行，ASR 小模型轉寫，專有名詞按上下文歸一；以下數字與說法均為嘉賓現場自述，未經獨立核實。</li>
+</ul>
+<h2>一句話</h2>
+<p>好萊塢視效合成師 Cara 回國轉型 AIGC 創作者：她說 AIGC 只能幫你做到 60 分，剩下的靠傳統影視的思路——把預算和算力集中砸在最關鍵的鏡頭上，故事和審美才是磨平技術之後的競爭力。</p>
+<h2>前情：Cara 是誰</h2>
+<ul>
+<li>留學後進入好萊塢做影視視效合成（compositing），客戶以迪士尼、華納為主，還有 HBO、Netflix。參與過的科幻美劇包括《西部世界》《怪奇物語》《神盾局特工》《哥譚市》《天賦異稟》等。</li>
+<li>做《怪奇物語》時全組都沒想到它會爆；《哥譚市》團隊拿過 2017 年的視效獎（她自述）。</li>
+<li>合成是像素級工作：成片要上幾公尺高的大銀幕，每個像素都可能影響效果；工作間無窗（防洩密）、不開燈（燈光影響螢幕色彩判斷），長期在暗環境看高亮螢幕，眼睛熬出散光——這是她後來轉方向的直接原因之一。</li>
+<li>回國後被迫補管理課：國外分工極細、專精一崗，國內崇尚「多面手」，回國後開始接觸預算、排期、商務、客戶；之後做過大學宣傳工作，又創業做影片公司。</li>
+<li>創業忠告（她自述的教訓）：創業比打工辛苦得多，老闆沒有下班時間，每分每秒都是成本；想從 0 到 1 試一個東西，千萬別用創業來試，先去打工、花別人的錢試。創業初期來什麼活接什麼、缺什麼崗位臨時找人，風險失控，最後可能「前面一個專案賺錢、後面七八個全虧」，關掉公司還要倒貼幾十萬。</li>
+</ul>
+<h2>核心方法論：傳統視效的邏輯，套進 AIGC</h2>
+<h3>1. Money shot：預算只砸關鍵鏡頭</h3>
+<ul>
+<li>傳統影視裡，按一下按鈕、大樓爆炸這種鏡頭叫 money shot：前期設計到成片要打磨幾個月，成本極重；人物對話、快速過場的鏡頭只花很少成本。成本絕不能平均分配到每個鏡頭。</li>
+<li>套到 AIGC：一個片子 10 個鏡頭，不能每個鏡頭平均給兩次抽卡機會。把最關鍵的第五、六鏡（比如爆炸）分配六七次抽卡，過場鏡頭只給一次。這就是在控制 token 成本。</li>
+<li>延伸：剪輯也能省成本——有瑕疵、不重要的段落用「曲線加速」快放過去，觀眾看不出瑕疵；關鍵部分保持原速。比回爐重生成便宜得多。</li>
+</ul>
+<h3>2. 當甲方，別當操作工</h3>
+<ul>
+<li>有了 AI 工具，你的角色是老闆/導演，下面是一群各領域的優秀員工。別一步步告訴他「這裡降 20%、那裡左轉 15 度」，那樣會限制他的發揮；告訴他要達到什麼目的、什麼情緒、參考哪部電影的哪段剪輯，讓他自己發揮，效果往往比你手把手指揮更好。</li>
+<li>但前提是驗收標準必須清楚：受眾是誰、要達到什麼效果、參考什麼。標準不清楚，模型就只能瞎猜。不知道細節怎麼做時，就把驗收標準告訴 AI，讓它反過來不停提問、幫你拓展思路。</li>
+<li>術語能省 token：會術語的人兩個字就說清了，不會的人描述幾百字還不準。比如「過肩構圖」四個字，就包含了人物對話關係、前景虛化、焦點位置。學基礎術語和底層邏輯，比追新模型重要——模型下個月就更新，思路不會變。</li>
+</ul>
+<h3>3. 去 AI 味：把「缺陷」加回去</h3>
+<ul>
+<li>AI 生成的人物太完美了，這就是油光感/AI 味的來源。實拍本來有缺陷：膠片顆粒（噪點）、鏡頭髒斑、空氣中的顆粒、光斑。CG 渲染出來太乾淨，合成進實拍素材時要按原攝影機的噪點一模一樣加回去，否則一眼假。</li>
+<li>提示詞裡要寫具體：用什麼機器、什麼光、光從哪裡來、加什麼顆粒。只說「要有電影感」沒用，模型不知道電影感是什麼。</li>
+<li>Seedance 2.5 在這方面做得很好，油光感基本沒有；如果還有油光，往往是源頭圖片本身帶油光。先打磨好角色設定圖、場景設定圖這些美術資產再餵給影片模型，偷懶一定會反噬到錢包裡：源頭錯了，影片怎麼生都不對，改源頭又要重生。</li>
+</ul>
+<h3>4. 角色一致性的最新解法</h3>
+<ul>
+<li>目前圈內較新的做法：特寫放一張正面、一張側面、面部清晰的圖；全身圖則把頭去掉或把臉抹掉。這樣模型只能參考那張特寫來生成人臉，遠近鏡頭的人臉一致性才保得住。</li>
+<li>流程還沒定型，幾個月就可能出更好的方案，多關注最新解法。</li>
+</ul>
+<h3>5. 先打磨提示詞，再燒影片 token</h3>
+<ul>
+<li>第一步：一個靈感、一句話梗概，丟給語言模型（GPT、豆包、DeepSeek、Claude 都行），最好語音對話，讓它給三個方向、比稿，再往選定的方向拓展：時長 30 秒還是 1 分鐘、16:9、受眾是誰、想達到什麼目的。</li>
+<li>劇本出來後按模型單次生成上限拆段：Seedance 2.5 一次最多 30 秒，2.0 是 15 秒。拆的時候別把一段完整戲切成兩半。</li>
+<li>先用生圖模型生成分鏡圖驗證提示詞：便宜，能看出邏輯、運鏡、穿幫（比如她做咖啡流程影片時，模型把粉碗和杯子弄混了，分鏡階段就能發現並補提示詞）。分鏡圖只是驗證工具，別直接餵給影片模型——圖上的錯誤會被放大。</li>
+<li>AI 出的提示詞只有 60 分，一定要手搓：把畫面感寫出來，人物在什麼環境、什麼情緒、表情從什麼轉到什麼、配角在幹嘛（配角不能像面癱一樣站著不動）。寫提示詞就是在模擬導演現場講戲。手搓到 80–90 分，最後 10 分靠剪輯、音效、配樂、調色補足。</li>
+<li>新手別一上來就寫「第 0–2 秒幹嘛、第 5–10 秒幹嘛」，節奏把控不住反而帶偏方向。先寫有幾個鏡頭就行。</li>
+</ul>
+<h3>6. 別急著組團隊，先一個人摸索</h3>
+<ul>
+<li>AIGC 工作流還沒成熟，每個人方法都不同，組團隊容易出矛盾、風格不統一，觀眾能感覺出來。先一個人把導演、提示詞、成片、剪輯全走通，熟練了再組隊才有說服力。她自己踩過這個坑。</li>
+</ul>
+<h2>模型與平台點評（嘉賓現場說法）</h2>
+<ul>
+<li>開場對比：主持人用多個模型各做了一版《權力的遊戲》影片，認為 Gemini 新模型的性價比目前最高；Seedance 運鏡執行準確度最高；不同工具結合用才是正解——比如以 Claude 為主腦、調 Codex 生成圖片，再做影片；家裡 24 小時開機的 mini PC 跑 Claude/Codex，手機遠端調度。</li>
+<li>解析度：先生成 720p 再超分到 1080p，比直接生成 1080p 划算；不要跨太多級升（480p 升 1080p 會過度銳化、遺失細節，假 4K）；自媒體 1080p 已足夠，直接上 4K 性價比很低。行業內幕：很多所謂 4K 成片源頭只渲染了 2K，CG 部分 2K 渲染、合成時升到 4K 交付，檔案屬性看著是 4K——一切跟成本有關。</li>
+<li>新手建議用 Seedance：理解力強，能補足你的短板；出問題時你能確定是自己的提示詞問題，不用排查模型。MiniMax H3 很考驗使用者本身的專業能力；2.5 出來後想做影視級效果基本不做選擇，但很貴。</li>
+<li>平台：即夢、Lib TV、TypeNow、Higgsfield、小雲雀等。圈內不少人最後選 Lib TV，性價比還行、可選模型比即夢自家多；Higgsfield 是海外頭部平台，貴但常推出引領潮流的功能；TypeNow 對她來說有點貴。</li>
+<li>進階玩法：按鏡頭分模型生成——money shot 用 Seedance，講話類不重要的鏡頭用便宜模型；傳統視效也一樣，Nuke 和 AE 各有所長、經常混著用。</li>
+<li>入門預算建議：給自己定 1000–3000 元預算，充積分拚命玩，玩完看能得到什麼；又怕花錢又不敢試，永遠不知道自己適不適合。</li>
+</ul>
+<h2>學習路徑（嘉賓推薦）</h2>
+<ul>
+<li>零基礎先看影視颶風 Tim 的 49 元課程：講得很基礎、邏輯清晰，幾個小時能建立入門框架；她自己的運鏡、配樂、節奏基礎教程比課程寫得更全，但課程的好處是講清了畫布工具怎麼用。</li>
+<li>主持人 Adrian 自己的系列文章（運鏡、配樂、節奏）也被多位嘉賓推薦；另有習堂老師、Miner 等人的工作流教程。</li>
+<li>核心競爭力問答：技術磨平之後，競爭力就是內容和創意；未來 AIGC 的流程會和傳統影視一模一樣，只是全部換成 AI 工具。非專業人士也有優勢：不受傳統模式框住，容易碰撞出驚喜——她舉例一位房地產從業者做的 AI 短片曾爆火，靠的就是想法和審美，而不是專業出身。寫小說的人轉做 AIGC 也可能很強，因為故事掌控力在，但畫面表達邏輯和文字邏輯差距不小，還得補課。</li>
+</ul>
+<h2>場景統一：360 度與走位</h2>
+<ul>
+<li>評論區提問：鏡頭要環繞 360 度或兩個視角來回切，但圖片參考往往只有 180 度視角，怎麼辦？</li>
+<li>解法一：生成一張俯視布局圖（只參考站位、不作為鏡頭），並在提示詞裡寫清每張圖是幹嘛的，Seedance 2.5 能理解。</li>
+<li>解法二：Blender 白模控制人物站位和走位（從 A 點走到 B 點很難用文字描述清楚），或畫箭頭示意。</li>
+<li>解法三：先生成一段 360 度環繞影片作為場景參考，再從中截關鍵幀——效果好但成本太高，她本人因控制成本沒用這個方法。</li>
+</ul>
+<h2>好萊塢行業八卦與內幕（嘉賓自述，僅作談資）</h2>
+<ul>
+<li>范迪塞爾的性取向傳聞：一位做演員的朋友告訴她的，她本人表示自己是後期組、不了解，無法證實。</li>
+<li>視效指導要從劇本階段就進組：導演的一個想法可能讓成本上下浮動很大，視效指導現場報價、給省錢的改法；請視效指導的錢是為了後面省錢。很多劇組沒這個預算，拍完才找特效公司，常出現報價接受不了、效果不是想要的。</li>
+<li>大製作分工：漫威大片由好萊塢幾大視效公司分角色承包（比如一家專做滅霸），各帶團隊進組；一般電影只有一家視效公司，進組指導、回來再分包——好萊塢很常見，因為一家吃不下。</li>
+<li>「特效」與「視效」的區別：特效原指沒有電腦時代的特效化妝（血漿、假皮膚）；電腦加入後才叫視效，國內一直沒改口。</li>
+<li>諾蘭新片《奧德賽》用 IMAX 膠片機拍攝，機器巨大還包了靜音設備，擋住對手戲演員的視線，劇組在攝影機旁放鏡子反射、讓演員能眼神交流。阿凡達的表演捕捉更難：全身動捕服、臉上畫滿點點、面前架著面部捕捉攝影機，全程無實物表演一個外星生物。</li>
+</ul>
+<h2>值得記的原話</h2>
+<ul>
+<li>「技術一直在變，你今天學了這個提示詞、這個模型，下個月他就更新了；但是你的思路一定要學好。」</li>
+<li>「AI 能幫你走到 60 分，剩下的這一公里靠自己的審美和核心內容。」</li>
+<li>「想從 0 到 1 試一個東西，千萬不要用創業來試，先去打工，耗別人的錢比耗自己的錢性價比高多了。」</li>
+<li>「你不一定完全知道告訴他這裡降 20%、那裡左轉 15 度……用自然語言告訴他我想要什麼，就像客戶一樣，直接許願。」</li>
+<li>「畫面不是那麼重要了，誰都可以做得很炫酷的畫面；故事是稀缺的。」</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>After the Noise — Cara Special: From Hollywood to AIGC, My Path of Reinvention</h1>
+<ul>
+<li>Space: After the Noise — Cara Special: From Hollywood to AIGC, My Path of Reinvention</li>
+<li>Host: Adrian Punk (@AdrianPunk115)</li>
+<li>Guest: Cara (Cara_Mosquito)</li>
+<li>Time: November 20, 2026, 20:58–23:21 (about 2 hours 23 minutes)</li>
+<li>Audience: 402</li>
+<li>Transcription: 2,863-line transcript, transcribed with a small ASR model, proper nouns normalized by context; all figures and statements below are as stated live by the guest and have not been independently verified.</li>
+</ul>
+<h2>In One Sentence</h2>
+<p>Hollywood VFX compositor Cara returned to China to become an AIGC creator: she says AIGC can only get you to 60 points — the rest depends on traditional filmmaking thinking: concentrate your budget and compute on the most critical shots, because story and aesthetics are what remain competitive once the technology gap is leveled.</p>
+<h2>Background: Who Is Cara</h2>
+<ul>
+<li>After studying abroad, she entered Hollywood to work in film and TV visual effects compositing, with clients mainly Disney and Warner Bros., as well as HBO and Netflix. Sci-fi American series she worked on include <em>Westworld</em>, <em>Stranger Things</em>, <em>Agents of S.H.I.E.L.D.</em>, <em>Gotham</em>, and <em>The Gifted</em>, among others.</li>
+<li>When working on <em>Stranger Things</em>, no one on the team expected it to blow up; the <em>Gotham</em> team won a visual effects award in 2017 (according to her own account).</li>
+<li>Compositing is pixel-level work: the finished film plays on a big screen several meters high, and every pixel can affect the result; the workroom has no windows (to prevent leaks) and no lights on (lighting affects color judgment on screen), and working for long hours in a dark environment looking at bright screens gave her astigmatism — one of the direct reasons she later changed direction.</li>
+<li>After returning to China she was forced to catch up on management: overseas work is extremely specialized, focused on a single role, while China values "all-rounders"; after returning she began dealing with budgets, schedules, business development, and clients; later she worked in university publicity, and then started her own video company.</li>
+<li>Startup advice (lessons from her own account): starting a business is much harder than working for someone else — a boss has no off-hours, and every minute is a cost; if you want to try something from 0 to 1, never use starting a business to try it — go work for someone else first and spend other people's money to test it. In the early days of a startup you take whatever work comes in and hire whoever you can find for whatever role is missing, risk spirals out of control, and in the end you may find "the first project made money, the next seven or eight all lost money," and closing the company still costs you several hundred thousand out of pocket.</li>
+</ul>
+<h2>Core Methodology: Applying Traditional VFX Logic to AIGC</h2>
+<h3>1. Money shot: Spend the budget only on key shots</h3>
+<ul>
+<li>In traditional film and TV, a shot like pressing a button and a building exploding is called a money shot: from early design to final delivery it takes months of polishing and costs a huge amount; dialogue shots and quick transitional shots cost very little. Costs must never be distributed evenly across every shot.</li>
+<li>Applied to AIGC: if a piece has 10 shots, you cannot give every shot an average of two generation attempts. Give the most critical fifth and sixth shots (such as an explosion) six or seven attempts, and give transitional shots only one. That is how you control token costs.</li>
+<li>Extension: editing can also save costs — use "curve speed-up" to fast-forward through flawed, unimportant segments so the audience cannot see the flaws; keep key parts at original speed. This is much cheaper than regenerating.</li>
+</ul>
+<h3>2. Be the client, not the operator</h3>
+<ul>
+<li>With AI tools, your role is the boss/director, and below you is a group of excellent employees from various fields. Don't tell it step by step "lower this by 20%, turn left 15 degrees there" — that limits its performance; tell it what goal to achieve, what emotion, and which segment of which film to reference, and let it perform on its own — the result is often better than directing it by hand.</li>
+<li>But the prerequisite is that the acceptance criteria must be clear: who the audience is, what effect to achieve, and what to reference. If the criteria are unclear, the model can only guess blindly. When you don't know how to handle the details, tell the AI the acceptance criteria and let it ask you questions in return, helping you expand your thinking.</li>
+<li>Terminology saves tokens: someone who knows the terminology can say it in two words, while someone who doesn't may describe it in hundreds of words and still be inaccurate. For example, the four characters "over-the-shoulder composition" already contain the dialogue relationship between characters, foreground blur, and focal position. Learning basic terminology and underlying logic matters more than chasing new models — models update next month, but thinking does not change.</li>
+</ul>
+<h3>3. Removing the AI look: Add the "flaws" back in</h3>
+<ul>
+<li>AI-generated characters are too perfect — that is the source of the glossy/AI look. Real footage inherently has flaws: film grain (noise), dirt spots on the lens, particles in the air, lens flares. CG renders come out too clean, and when composited into live-action footage you have to add back exactly the same noise as the original camera, otherwise it looks fake at a glance.</li>
+<li>Prompts need to be specific: what camera, what light, where the light comes from, what grain to add. Just saying "make it cinematic" is useless — the model doesn't know what cinematic means.</li>
+<li>Seedance 2.5 does this very well, with basically no glossy look; if there is still glossiness, it is often because the source image itself is glossy. Polish your art assets — character design sheets, scene design sheets — first before feeding them to the video model; cutting corners will inevitably come back to bite your wallet: if the source is wrong, the video will never come out right no matter how you generate it, and fixing the source means regenerating.</li>
+</ul>
+<h3>4. The latest solution for character consistency</h3>
+<ul>
+<li>A newer practice in the field at the moment: for close-ups, provide one front view and one side view with a clear face; for full-body shots, remove the head or erase the face. That way the model can only reference that close-up to generate the face, and facial consistency across near and far shots can be maintained.</li>
+<li>The workflow is not yet settled, and a better solution may appear in a few months — keep an eye on the latest approaches.</li>
+</ul>
+<h3>5. Polish the prompt first, then burn video tokens</h3>
+<ul>
+<li>Step one: take an inspiration, a one-sentence synopsis, and throw it to a language model (GPT, Doubao, DeepSeek, Claude all work), preferably by voice conversation, and have it give you three directions to compare, then expand in the chosen direction: is the duration 30 seconds or 1 minute, 16:9, who is the audience, what goal do you want to achieve.</li>
+<li>Once the script is out, split it into segments according to the model's single-generation limit: Seedance 2.5 can do at most 30 seconds at a time, 2.0 is 15 seconds. When splitting, don't cut a complete scene in half.</li>
+<li>First use an image-generation model to create storyboard frames to validate the prompt: it's cheap, and you can see the logic, camera movement, and continuity errors (for example, when she made a coffee-process video, the model confused the portafilter basket with the cup — this could be caught at the storyboard stage and the prompt fixed). Storyboard frames are only a validation tool — don't feed them directly to the video model, because errors in the image will be amplified.</li>
+<li>AI-generated prompts are only worth 60 points — you must hand-craft them: write out the visual sense, what environment the character is in, what emotion, how the expression transitions from what to what, what the supporting characters are doing (supporting characters can't just stand there expressionless). Writing a prompt is like a director blocking a scene on set. Hand-craft it to 80–90 points, and make up the final 10 points with editing, sound effects, music, and color grading.</li>
+<li>Beginners should not start by writing "do this at seconds 0–2, do that at seconds 5–10" — if you can't control the pacing it will actually lead you astray. Just write how many shots there are to start with.</li>
+</ul>
+<h3>6. Don't rush to build a team — explore solo first</h3>
+<ul>
+<li>The AIGC workflow is not yet mature, everyone has a different method, and building a team easily leads to conflicts and inconsistent style that the audience can feel. First walk through directing, prompting, final delivery, and editing all by yourself; once you are proficient, building a team will be convincing. She fell into this trap herself.</li>
+</ul>
+<h2>Model and Platform Reviews (as stated live by the guest)</h2>
+<ul>
+<li>Opening comparison: the host used multiple models to each make a version of a <em>Game of Thrones</em> video, and felt that Gemini's new model currently offers the best value for money; Seedance has the highest accuracy in executing camera movements; combining different tools is the right answer — for example, using Claude as the main brain, calling Codex to generate images, then making video; a mini PC at home running 24 hours a day runs Claude/Codex, remotely dispatched by phone.</li>
+<li>Resolution: generate at 720p first and then upscale to 1080p — more cost-effective than generating 1080p directly; don't upscale across too many levels (upscaling 480p to 1080p over-sharpens and loses detail, fake 4K); 1080p is enough for self-media, and going straight to 4K has very low cost-effectiveness. Industry insider note: many so-called 4K finished pieces were only rendered at 2K at the source — the CG parts are rendered in 2K and upscaled to 4K at compositing for delivery, so the file properties look like 4K — it all comes down to cost.</li>
+<li>Beginners are advised to use Seedance: it has strong comprehension and can make up for your shortcomings; when something goes wrong you can be sure it's your prompt, without having to troubleshoot the model. MiniMax H3 really tests the user's own professional ability; after 2.5 came out, if you want film-grade results there's basically no other choice, but it's very expensive.</li>
+<li>Platforms: Jimeng, Lib TV, TypeNow, Higgsfield, Xiaoyunque, and others. Many people in the field ultimately choose Lib TV — decent value for money, and more model choices than Jimeng itself; Higgsfield is a leading overseas platform, expensive but often launches trend-setting features; TypeNow is a bit expensive for her.</li>
+<li>Advanced play: generate by shot with different models — use Seedance for money shots, and use a cheaper model for unimportant dialogue shots; traditional VFX is the same, Nuke and AE each have their strengths and are often used together.</li>
+<li>Beginner budget advice: set yourself a budget of 1,000–3,000 yuan, top up credits and play hard, and see what you get when you're done; if you're both afraid to spend money and afraid to try, you'll never know if you're suited for it.</li>
+</ul>
+<h2>Learning Path (recommended by the guest)</h2>
+<ul>
+<li>Complete beginners should first watch Film Hurricane Tim's 49-yuan course: it covers the basics with clear logic, and in a few hours you can build an introductory framework; her own basic tutorials on camera movement, music, and pacing are more comprehensive than the course, but the course's advantage is that it clearly explains how to use the canvas tools.</li>
+<li>Host Adrian's own series of articles (camera movement, music, pacing) was also recommended by multiple guests; there are also workflow tutorials from Teacher Xitang, Miner, and others.</li>
+<li>Core competitiveness Q&amp;A: once technology is leveled, competitiveness is content and creativity; in the future the AIGC process will be exactly the same as traditional film and TV, just with all the tools replaced by AI. Non-professionals also have advantages: not boxed in by traditional models, more likely to collide into surprises — she cited an example of a real estate practitioner whose AI short film went viral, relying on ideas and aesthetics rather than professional background. Novelists switching to AIGC may also be very strong, because they have control over story, but the logic of visual expression differs considerably from written logic, so they still need to catch up.</li>
+</ul>
+<h2>Scene Consistency: 360 Degrees and Blocking</h2>
+<ul>
+<li>Question from the comments: the camera needs to orbit 360 degrees or cut back and forth between two angles, but image references often only have a 180-degree view — what to do?</li>
+<li>Solution one: generate a top-down layout diagram (only for referencing positions, not as a shot), and clearly state in the prompt what each image is for — Seedance 2.5 can understand it.</li>
+<li>Solution two: use Blender white models to control character positions and blocking (walking from point A to point B is very hard to describe clearly in text), or draw arrows to indicate.</li>
+<li>Solution three: first generate a 360-degree orbiting video as a scene reference, then extract keyframes from it — good results but too costly; she herself did not use this method in order to control costs.</li>
+</ul>
+<h2>Hollywood Industry Gossip and Insider Stories (as recounted by the guest, for entertainment only)</h2>
+<ul>
+<li>Rumors about Vin Diesel's sexual orientation: told to her by a friend who is an actor; she herself said she was on the post-production team, doesn't know, and cannot confirm it.</li>
+<li>The VFX supervisor needs to join from the script stage: a single idea from the director can swing costs enormously, and the VFX supervisor quotes on set and offers money-saving alternatives; the money spent hiring a VFX supervisor is to save money later. Many productions don't have this budget and only look for a VFX company after filming is done, often ending up unable to accept the quote or not getting the effect they wanted.</li>
+<li>Division of labor on big productions: Marvel blockbusters are contracted out by character to the major Hollywood VFX companies (for example, one company specializes in Thanos), each bringing its own team onto the production; a typical film has only one VFX company, which provides on-set guidance and then subcontracts after returning — very common in Hollywood, because one company cannot handle it all.</li>
+<li>The difference between "special effects" and "visual effects": special effects originally referred to special makeup effects from the pre-computer era (blood, fake skin); only after computers were introduced did it become visual effects, though in China the old term has never been changed.</li>
+<li>Nolan's new film <em>The Odyssey</em> was shot with IMAX film cameras — the machines are huge and also wrapped in soundproofing equipment, blocking the eyeline of the actor in the opposite role, so the crew placed mirrors next to the camera to reflect, allowing the actors to make eye contact. Performance capture for <em>Avatar</em> was even harder: full-body motion-capture suits, faces covered in dots, a facial-capture camera rigged in front of them, performing an alien creature with no physical props the entire time.</li>
+</ul>
+<h2>Memorable Quotes</h2>
+<ul>
+<li>"Technology keeps changing — you learn this prompt, this model today, and next month it updates; but you must learn the thinking well."</li>
+<li>"AI can get you to 60 points; the last mile depends on your own aesthetics and core content."</li>
+<li>"If you want to try something from 0 to 1, never use starting a business to try it — go work for someone else first; spending other people's money is far more cost-effective than spending your own."</li>
+<li>"You don't necessarily know to tell it to lower this by 20% here, turn left 15 degrees there… Use natural language to tell it what I want, just like a client — just make a wish directly."</li>
+<li>"Visuals aren't that important anymore — anyone can make very cool visuals; story is what's scarce."</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1onqYRqvZMnKKp">https://x.com/i/spaces/1onqYRqvZMnKKp</a>（Adrian Punk）· 嘉宾：Cara · 发布日期：2026-11-20 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1onqYRqvZMnKKp">https://x.com/i/spaces/1onqYRqvZMnKKp</a>（Adrian Punk）· 嘉賓：Cara · 發布日期：2026-11-20 · 時長：2 小時 23 分<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1onqYRqvZMnKKp">https://x.com/i/spaces/1onqYRqvZMnKKp</a> (Adrian Punk) · Guest: Cara · Published: November 20, 2026 · Duration: 2 hours 23 minutes<br>This page is the full notes, manually edited from a machine transcript; all views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1onqYRqvZMnKKp">https://x.com/i/spaces/1onqYRqvZMnKKp</a>（Adrian Punk）· 嘉宾：Cara · 发布日期：2026-11-20 · 时长：2 小时 23 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"噪音之后 Cara 专场：从好莱坞到 AIGC，我的转型之路 · Yat's Talks",tw:"噪音之後 Cara 專場：從好萊塢到 AIGC，我的轉型之路 · Yat's Talks",en:"After the Noise — Cara Special: From Hollywood to AIGC, My Path of Reinvention · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

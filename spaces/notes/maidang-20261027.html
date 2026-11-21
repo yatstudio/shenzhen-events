@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：噪音之后 · 麦当专场</h1>
 <p><strong>主题</strong>：AI 自媒体创业，10 个月变现 20 万，知识产品变现经验分享
 <strong>原链接</strong>：https://x.com/i/spaces/1pKdRDqVlWpJW
@@ -132,8 +139,246 @@
 <hr />
 <p><em>转写稿（带时间戳）与录音同目录存档；本纪要中的数字（120+ 节课、300–400 名付费用户、近 20 万变现、80% 续费预期、&lt;10% 完课率等）均为发言人自述或转述，未做外部核实。</em></p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：噪音之後 · 麥當專場</h1>
+<p><strong>主題</strong>：AI 自媒體創業，10 個月變現 20 萬，知識產品變現經驗分享
+<strong>原連結</strong>：https://x.com/i/spaces/1pKdRDqVlWpJW
+<strong>時間</strong>：2026-10-27（錄音總時長 2 小時 08 分，前約 2 分鐘為開場等待/無聲）
+<strong>主持</strong>：Adrian Punk（@AdrianPunk115）
+<strong>主講</strong>：麥當（@mdldm）
+<strong>主要參與提問/討論</strong>：李白天、黃小木（木哥）等
+<strong>說明</strong>：本紀要基於錄音本地轉寫整理。個別專名轉寫存疑處（如早期課程所涉產品名）按上下文處理；金額、人數均為發言人自述，未經外部核實。</p>
+<hr />
+<h2>一、結論先行</h2>
+<ol>
+<li>麥當跑通的不是「賣一門課」，而是「訂閱我這個人」：單一包年產品（499/500 元/年，口述兩種說法），10 個月、120 多節錄播課、約 300–400 名付費用戶、變現近 20 萬元（其自述「不到 20 萬」，標題取整為 20 萬）。</li>
+<li>核心基建是<strong>自建知識站</strong>：全平台只做引流入口，結算、權益、數據、評論全部收歸一站；該站的框架他已開源。</li>
+<li>內容形態在轉型：從長篇系統課，轉向<strong>每週一次付費直播 + 錄播沉澱為付費資產</strong>，以此對沖「工具教學隨模型更新迅速過時」的問題，並降低持續錄課的焦慮和答疑消耗。</li>
+<li>他明確拒絕 9.9 元引流、層層銷轉的打法，賭的是低轉化、高黏性、高續費（其預期續費率約 80%，屬個人估算，尚未到驗證期）。</li>
+</ol>
+<h2>二、主講人背景與起點</h2>
+<ul>
+<li>軟體工程科班出身，先後在國企、大廠、AI 創業團隊、AI 產品團隊工作。</li>
+<li>內容定位：面向零技術小白的 AI 教學；各平台同名運營，小紅書、B站起步較早，X 是近幾個月才開始做。</li>
+<li>知識站上線約 10 個月，已發布 120 多節錄播課；站上還搭了自己的 API 中轉等附加功能。錄課、建站、行銷、銷售全程一人完成，自稱典型的 OPC（一人公司）。</li>
+</ul>
+<h2>三、關鍵轉折：課程被盜版</h2>
+<ul>
+<li>2023 年初（GPT-3.5/4 時代）錄了第一門 AI 工具課程，是國內較早一批；當時無粉絲，全年只賣出十幾份。</li>
+<li>2024 年把課免費放到 B站，同樣無水花，隨後擱置。</li>
+<li>後來被人告知課程被盜版：多個搬運博主在低價管道搬運售賣，單個影片播放十幾萬、最高上百萬。</li>
+<li>他的復盤：<strong>內容本身有價值、有人買帳，錯的是宣發和售賣路徑</strong>。這成為他自建知識站的直接動因。</li>
+</ul>
+<h2>四、商業模式：從賣課到「訂閱人」</h2>
+<ul>
+<li>純工具/科普課的死穴：強依賴模型與產品迭代——今天教的工具調用方法、loop engineering 之類概念，模型一更新或熱潮一過（兩三個月）就作廢，沉澱不下來。</li>
+<li>解法：讓用戶信任並訂閱 <strong>IP 本人</strong>，而不是某一門課。用戶因為「你講的我能聽懂」而付費，創作者產出壓力隨之下降——沒有系統課時，分享一個變現思路、一個小方法，用戶同樣買帳。</li>
+<li>訂閱制的複利：第一年累積的付費用戶，第二年哪怕只續一半，也是穩定的基本盤；有了忠實用戶後，再在站內推其他產品（如中轉服務）也更容易。</li>
+<li>定價：從第一天起就是約 500 元包年、<strong>只有一個產品</strong>，不做低價款和套餐升單。他自認 10 個月近 20 萬在知識付費圈不算高成績，但這是他主動選擇的「不割韭菜」模式。</li>
+</ul>
+<h2>五、自建知識站的理由（他反覆強調）</h2>
+<ol>
+<li><strong>防盜版</strong>：有過被搬運的 PTSD，不信任把內容託管在各平台。</li>
+<li><strong>統一結算與權益</strong>：多平台上架會導致價格不一、優惠券不一、權益不一、退款規則不一，用戶還會跨平台比價來吵——精力的消耗比平台抽成更可怕。</li>
+<li><strong>數據可復盤</strong>：自有站能看落地頁瀏覽量（≈當天全平台引流總量）、轉化、以及每節課的播放進度與跳出點（如第 13 分鐘明顯流失）；小鵝通等第三方平台給不了這些。評論區用來收集真實回饋，而不是挑好評做宣傳。</li>
+<li><strong>統一落地頁</strong>：所有平台引流到同一個落地頁，頁面寫清 CTA、會員權益、往期試看。</li>
+</ol>
+<h2>六、內容與引流打法</h2>
+<ul>
+<li><strong>免費/付費切分</strong>：基礎、體系化的內容放公域（小紅書、B站、X、抖音、YouTube）；付費側主打每週直播。</li>
+<li><strong>每週付費直播</strong>：選題來自兩個來源——新技術/新模型/工具更新（如新模型、Codex 更新），以及會員群當週集中出現的問題。直播後段留約 10 分鐘答疑；錄屏剪輯後上架知識站，成為新的付費資產。群裡的問題他白天不逐條回，晚上集中統計、沉澱，直接決定下一期直播選題。</li>
+<li><strong>小紅書/抖音的特性</strong>：完播率不高，但收藏量高於點讚——用戶刷到前 10 秒覺得有用就先收藏。因此他把系列課的開頭幾節免費發在這些平台，開頭明確埋鉤子：完整的 skill、提示詞、流程文件在站裡。</li>
+<li><strong>引流鏈路</strong>：小紅書直接放站外連結會被限流/干預，所以先引到飛書文件（免費文件），文件裡再埋知識站落地頁和私域群入口；每個平台帳號埋不同的連結以便分析各管道轉化。</li>
+<li><strong>平台人群差異</strong>：X 和 B站用戶對深度內容接受度更高，轉化乾脆、直接付費；小紅書/抖音來的用戶售前問題多（「我能不能學會」「能不能穩定變現」）。他的原則是同份內容盡量多分發。</li>
+<li><strong>社群結構</strong>：免費群做公開內容與轉化；付費群做答疑，並拉其他博主進來互相分享。</li>
+</ul>
+<h2>七、做課方法（李白天提問環節）</h2>
+<ul>
+<li>錄課流程：系統課先定週期，自己先列框架/知識導圖（每個知識點拆一二三子項），大綱的「肉」讓 AI 填充成課程體系；錄製時<strong>不用完整口播稿</strong>，按點口述發揮——他自認話密，這種方式最適合他。</li>
+<li>剪輯：早期靠人工剪輯團隊，是當時 AI 替代不了的環節；現在 AI 剪輯已成熟，自媒體內容的剪輯仍外包。原則：凡不摻雜個人觀點輸出、AI 或外包能做的環節，全部交出去；他只對「每個觀點是我想講的」負責。</li>
+<li>課程品質公式：<strong>一條功能線 + 一條案例線</strong>。不能只講功能怎麼用，必須用一個真實場景串起來——例如教 Codex 的 computer use，課程落點是「用 Codex 做電商自動化上架」。</li>
+<li>不刻意控制時長，看的是連貫性和後台跳出數據。</li>
+</ul>
+<h2>八、為什麼開源知識站（黃小木提問環節）</h2>
+<ul>
+<li>契機：與同行（轉寫作「塔特」）深聊。對方原本不推薦做知識付費——太消耗創作者：你想教的是 SOP 和協作方法，小白問的全是「這個工具怎麼下載、怎麼支付」這類基礎問題，足以耗盡創作精力。</li>
+<li>對方的建議：持續做<strong>利他</strong>的事。麥當由此決定把整套知識付費框架開源到 GitHub：會員制、課程上下架、影片播放、支付接入，以及 CDN、儲存等踩坑點都封裝好；別人定價和運營自己決定。</li>
+<li>開源的回報已出現：用他的框架搭起自己知識站的用戶，會進他的群、自發幫他回答新用戶的基礎問題——<strong>開源反哺了主營業務的交付</strong>，形成正向飛輪。</li>
+<li>他的判斷：這種框架藏著沒用，真想做的人用 Cursor/Claude Code 也能湊出一個；不如開源換生態。</li>
+</ul>
+<h2>九、爭議環節：木哥的「標品邏輯」（與會者觀點，非主講結論）</h2>
+<p>木哥（自述看得多、聊得多）在後半程給出了一套明顯更激進的打法，與麥當的模式形成對照：</p>
+<ul>
+<li><strong>買課的人大多不看課</strong>：他引用同行（轉寫作「冬哥」）上萬學員的數據稱，能把課看完的不到 10%，哪怕只有 5 節課、90% 的人也沒看完；買課本質是買心理安慰。所以不必把課做得過重，應把 10% 時間做課、90% 時間搞流量。</li>
+<li><strong>只賣標品、不做銷售</strong>：網站擺在那裡，愛買不買；有人加微信來問就扔課程連結、不做諮詢答疑——聊得越多對方越不付費，諮詢就是時間換錢。麥當補充了自己的觀察：忙時沒回覆、只順手扔了連結的人，反而自己付費了。</li>
+<li><strong>開分銷</strong>：內容邊際成本為零，應開 50% 分銷讓其他博主帶貨；課程拆短（100 分鐘拆成 10 個 10 分鐘）；再把演示用的官方 API 封裝一層加價售賣、給分銷者 token 激勵，形成「課 + 工具」的連環鏈路；信任沉澱夠了之後，再做高客單（線下課等）。</li>
+<li><strong>麥當的保留意見</strong>：① 分銷進來的人不是衝著 IP 來的，續費黏性可能掉；② 他做過統計——用戶越覺得課有用，越不願意推給同事（怕同事學會了比自己強），除非推課本身能讓他賺錢，分銷激勵必須按這個心理設計。</li>
+<li><strong>出海建議（木哥）</strong>：把課做多語言版本賣給外國人，成本幾乎為零；去 IG、Threads、TikTok 搞泛流量，國內抖音跑通的內容可以直接搬。</li>
+</ul>
+<h2>十、續費、收入結構與行業判斷</h2>
+<ul>
+<li>續費難題是全行業痛點：與會者提到生財有術這類頭部社群續費率也只有約 50%–60%（發言人憑記憶引用）。麥當認為自有站模式有更多運營手段提續費——用戶最終都回到同一個站看內容，而不是買完就消失在某個平台。</li>
+<li>AI 博主變現三條路：商單、企業服務（FDE/企業培訓）、知識產品。共識是商單會慢慢減少，沒有自有產品走不長久；知識付費的價值首先是提供穩定現金流（與會者引用易輝的說法）。</li>
+<li>麥當做站的原始動機很直白：<strong>不想上班</strong>，想要一個像網際網路產品一樣「睡著覺也有收入」的東西；信奉「1000 個鐵粉」理論。</li>
+<li>合規：他註冊的是有限公司而非個體戶，主要為解決合規與資質問題（如知識站做微信小程式收款需要公司資質）；原話是「在中國賺錢，最好先把合規整明白」「合法賺錢」。</li>
+<li>未來擴展（都在知識站這個「1」上長）：優化站功能、已在站上做自有中轉、考慮分銷、考慮海外版、考慮線下活動/培訓抬客單；但<strong>拒絕做重交付的線上高客單產品</strong>——高價必然要求高承諾，他自認懶，要的是低精力運營。線下則因為面對面的資訊密度無可替代，值得做。</li>
+<li>從 0 到 1 遠難於從 1 到 10（引用易輝當日發言大意），他認為自己最難的一步已經走完。</li>
+</ul>
+<h2>十一、給新手的建議（大學生/新人提問環節）</h2>
+<ul>
+<li><strong>不需要行業資歷背書，先起號</strong>。方法是 Learning in Public：把自己學一個工具、一個知識點的過程錄下來，讓 AI 幫剪，發出去。同頻的人會被你的講述方式吸引，這批內容本身就是背書。</li>
+<li>實例：他鼓勵前同事（轉寫作「西門」）做自媒體，對方只把自己開發小程式的全過程錄成長影片發抖音，單條約 7.7 萬播放，如今全網約 20 萬粉絲（均為麥當口述）。</li>
+<li>60 分的人完全可以教 30 分的人；不要等「準備好了、有背書了」才開始。</li>
+<li>定價建議（答若宇，針對陪跑類產品）：先做競品調研，定在同類中位略高一點，<strong>高到「哪怕累一點也覺得值得」</strong>。定價偏高能篩掉過度索取交付的人——一個人若在付款時斤斤計較，付費後一定會索要遠超價格的價值，並不會因為價格低而少要。陪跑真正的難點不是定價，而是交付邊界：開工前先講清哪些需求不接，邊界不清，後面必然被需求蔓延拖垮。</li>
+</ul>
+<h2>十二、其他觀點</h2>
+<ul>
+<li><strong>為什麼來 X 做內容</strong>：多一個曝光管道；且 X 與 B站對內容深度的要求高於小紅書/抖音，轉化更輕鬆。幾位與會者共同感受：2026 年下半年以來中文 X 的交流氛圍明顯變好。</li>
+<li><strong>現在還該不該入場做 AI 自媒體</strong>：麥當的回答是「現在就起號，不管發什麼」。更重要的理由不是變現，而是<strong>在網際網路上留痕</strong>——讓大模型的 web search 能搜到「你是誰、你幹什麼」，否則在 Agent 眼裡「你這個人就沒活過」。他判斷這件事未來一定有收益，具體形式還不知道。</li>
+<li><strong>強化自己的最快方式</strong>（引述他聽來的一位大佬的觀點）：讓最強的模型和你看到同一個世界。把每天的對話、錄音、照片盡量收集、同步給模型，讓它替你處理和判斷。他因此傾向於隨身攜帶長時錄音/資訊採集類 AI 硬體（無屏手環、長時錄音設備），用途是收集身體訊號與對話餵給 Agent，而不是開會紀要——錄音卡式的會議總結場景他認為已經過時。</li>
+<li><strong>怎麼看大 V 和競爭（Simon 提問）</strong>：他不內耗，自述評論裡說內容不行的不到 1%。優質內容現在根本不缺、免費可得，用戶買的是「用你的講述方式，我能吸收多少」——吸收率從 10% 提到 20%，可能比課程內容本身更值錢。他轉化不高但續費高，就是這種個人風格打法。買了一堆課看不完的補救辦法：讓 Agent 把買過的課全部扒下來蒸餾成大綱，多少能回點本。</li>
+<li><strong>應用派 vs 理論派之爭</strong>：他是實踐派，但採用折中——開頭用比喻和生動案例鋪墊淺層理論，後段用實操串聯，在講實操的過程中順手把 RAG 等概念講掉。真實場景帶來的理解效率最高。</li>
+<li><strong>國內模型格局</strong>：他的看法是只分兩類——最強的和最便宜的。最強的用來做工程和演示效果；最便宜的用來教大家如何低成本整合進產品。他對模型廠商的下一波熱點沒有特別預期。</li>
+</ul>
+<h2>十三、散場</h2>
+<ul>
+<li>主持人 Adrian 中途掉線未歸，由與會者收尾；麥當表示會把本次 Space 的錄音下載連結貼到評論區（他自述其 Space 錄音一直有固定的下載方式）。</li>
+<li>現場約了下一場：邀請做 FDE 的阿瑪在某個週六/週日（其帶娃，晚 10 點後才有空）來分享企業實戰案例——與會者共識是市面上真正的 FDE 實戰案例很少。</li>
+</ul>
+<hr />
+<p><em>轉寫稿（帶時間戳）與錄音同目錄存檔；本紀要中的數字（120+ 節課、300–400 名付費用戶、近 20 萬變現、80% 續費預期、&lt;10% 完課率等）均為發言人自述或轉述，未做外部核實。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: After the Noise · Maidang Session</h1>
+<p><strong>Topic</strong>: AI creator entrepreneurship — RMB 200,000 monetized in 10 months, and lessons from monetizing knowledge products
+<strong>Original link</strong>: https://x.com/i/spaces/1pKdRDqVlWpJW
+<strong>Time</strong>: 2026-10-27 (total recording length 2 hours 08 minutes; the first ~2 minutes are opening wait/silence)
+<strong>Host</strong>: Adrian Punk (@AdrianPunk115)
+<strong>Speaker</strong>: Maidang (@mdldm)
+<strong>Main participants asking questions / joining discussion</strong>: Li Baitian, Huang Xiaomu (Brother Mu), and others
+<strong>Note</strong>: These notes are compiled from a local transcription of the recording. Where the transcription of individual proper names is uncertain (such as product names mentioned in connection with early courses), they have been handled according to context; all figures for money and headcounts are as stated by the speakers and have not been externally verified.</p>
+<hr />
+<h2>I. Conclusions First</h2>
+<ol>
+<li>What Maidang got working is not "selling a course" but "subscribe to me as a person": a single annual product (RMB 499/500 per year — two figures given orally), 10 months, 120+ recorded lessons, roughly 300–400 paying users, and nearly RMB 200,000 monetized (by his own account "under 200,000"; the title rounds it to 200,000).</li>
+<li>The core infrastructure is a <strong>self-built knowledge site</strong>: every platform serves only as a traffic entry point, while checkout, entitlements, data, and comments all converge on one site; he has open-sourced the framework of that site.</li>
+<li>The content format is shifting: from long, systematic courses toward <strong>one paid livestream per week + recordings accumulated as paid assets</strong>, to hedge against the problem that "tool tutorials go obsolete quickly as models update," and to reduce the anxiety of constantly recording courses and the drain of answering questions.</li>
+<li>He explicitly rejects the RMB 9.9 lead-in and layered upsell playbook, betting instead on low conversion, high stickiness, and high renewal (his expected renewal rate is about 80% — a personal estimate that has not yet reached its validation period).</li>
+</ol>
+<h2>II. Speaker Background and Starting Point</h2>
+<ul>
+<li>Trained in software engineering; has worked at a state-owned enterprise, a big tech company, an AI startup team, and an AI product team.</li>
+<li>Content positioning: AI teaching aimed at complete beginners with no technical background; operates under the same name across platforms — Xiaohongshu and Bilibili started earlier, X only in the past few months.</li>
+<li>The knowledge site has been live for about 10 months, with 120+ recorded lessons published; the site also carries add-ons such as his own API relay. Recording, site building, marketing, and sales are all done by himself alone — a typical OPC (one-person company), as he puts it.</li>
+</ul>
+<h2>III. The Key Turning Point: The Course Was Pirated</h2>
+<ul>
+<li>In early 2023 (the GPT-3.5/4 era) he recorded his first AI tools course, among the earliest in China; with no followers at the time, he sold only a dozen or so copies in the whole year.</li>
+<li>In 2024 he put the course on Bilibili for free; it made no splash either, and he shelved it.</li>
+<li>Later someone told him the course had been pirated: multiple repost accounts were re-uploading and selling it through low-price channels, with individual videos getting hundreds of thousands of views, up to a million at most.</li>
+<li>His post-mortem: <strong>the content itself had value and people were willing to pay for it — what was wrong was the promotion and the sales path</strong>. This became the direct motivation for building his own knowledge site.</li>
+</ul>
+<h2>IV. Business Model: From Selling Courses to "Subscribing to a Person"</h2>
+<ul>
+<li>The fatal flaw of pure tool/science-communication courses: they depend heavily on model and product iteration — the tool-calling methods, loop engineering, and similar concepts taught today become obsolete the moment a model updates or a hype cycle passes (two or three months), and nothing accumulates.</li>
+<li>The solution: get users to trust and subscribe to the <strong>IP person himself</strong>, not to any single course. Users pay because "I can understand the way you explain things," and the creator's output pressure drops accordingly — even without a systematic course, sharing a monetization idea or a small method is something users will equally pay for.</li>
+<li>The compounding of subscriptions: the paying users accumulated in year one, even if only half renew in year two, form a stable base; once there are loyal users, promoting other products on the site (such as relay services) also becomes easier.</li>
+<li>Pricing: from day one it has been about RMB 500 per year, with <strong>only one product</strong> — no low-price tiers and no bundle upsells. He concedes that nearly RMB 200,000 in 10 months is not a high score in the paid-knowledge circle, but this is the "no fleecing the audience" model he deliberately chose.</li>
+</ul>
+<h2>V. Why Build His Own Knowledge Site (Stressed Repeatedly)</h2>
+<ol>
+<li><strong>Anti-piracy</strong>: he has PTSD from being reposted, and does not trust hosting content on the various platforms.</li>
+<li><strong>Unified checkout and entitlements</strong>: listing on multiple platforms leads to inconsistent prices, inconsistent coupons, inconsistent entitlements, and inconsistent refund rules, and users will cross-compare prices across platforms and come argue — the drain on energy is scarier than platform commissions.</li>
+<li><strong>Data for review</strong>: his own site shows landing-page views (≈ the total traffic driven from all platforms that day), conversion, and each lesson's playback progress and drop-off points (e.g., a clear drop at minute 13); third-party platforms like Xiaoe-tong cannot provide this. The comment section is for collecting genuine feedback, not for cherry-picking praise for promotion.</li>
+<li><strong>One unified landing page</strong>: all platforms funnel traffic to the same landing page, which spells out the CTA, member benefits, and previews of past content.</li>
+</ol>
+<h2>VI. Content and Traffic Tactics</h2>
+<ul>
+<li><strong>Free/paid split</strong>: foundational, systematic content goes to the public domain (Xiaohongshu, Bilibili, X, Douyin, YouTube); the paid side centers on the weekly livestream.</li>
+<li><strong>Weekly paid livestream</strong>: topics come from two sources — new technology / new models / tool updates (such as new models, Codex updates), and questions concentrated in the member group that week. About 10 minutes at the end of the livestream are reserved for Q&amp;A; after the recording is edited it goes up on the knowledge site as a new paid asset. He does not answer group questions one by one during the day; in the evening he tallies and distills them, which directly decides the next livestream's topic.</li>
+<li><strong>How Xiaohongshu/Douyin behave</strong>: completion rates are not high, but saves exceed likes — users save a video within the first 10 seconds if it looks useful. So he posts the opening lessons of a course series for free on these platforms, with an explicit hook at the start: the complete skills, prompts, and process documents are on the site.</li>
+<li><strong>Traffic chain</strong>: putting an external link directly on Xiaohongshu gets throttled/interfered with, so he first routes people to a Feishu document (a free document), and inside the document embeds the knowledge-site landing page and the private-domain group entry; each platform account embeds a different link so channel conversion can be analyzed.</li>
+<li><strong>Platform audience differences</strong>: users on X and Bilibili accept in-depth content more readily and convert cleanly, paying directly; users from Xiaohongshu/Douyin ask many pre-sale questions ("Can I actually learn this?" "Can I monetize stably?"). His principle is to distribute the same content as widely as possible.</li>
+<li><strong>Community structure</strong>: the free group handles public content and conversion; the paid group handles Q&amp;A, and other creators are brought in to share with each other.</li>
+</ul>
+<h2>VII. How He Makes Courses (Li Baitian's Q&amp;A Segment)</h2>
+<ul>
+<li>Recording process: for a systematic course he first sets the cycle, then drafts the framework/knowledge map himself (each knowledge point broken into sub-points one, two, three), and lets AI fill in the "meat" of the outline into a course system; when recording he <strong>does not use a full spoken script</strong>, but speaks freely point by point — he admits he talks densely, and this method suits him best.</li>
+<li>Editing: early on he relied on a human editing team, the one step AI could not replace at the time; now AI editing has matured, though editing of creator content is still outsourced. The principle: any step that involves no personal viewpoint output and that AI or outsourcing can do is handed off entirely; he is responsible only for "every viewpoint being one I want to express."</li>
+<li>Course quality formula: <strong>one feature line + one case line</strong>. You cannot just explain how a feature is used; you must string it together with a real scenario — for example, when teaching Codex's computer use, the course lands on "using Codex to automate e-commerce product listing."</li>
+<li>He does not deliberately control length; what he watches is coherence and back-end drop-off data.</li>
+</ul>
+<h2>VIII. Why Open-Source the Knowledge Site (Huang Xiaomu's Q&amp;A Segment)</h2>
+<ul>
+<li>The trigger: a deep conversation with a peer (transcribed as "Tate"). The peer originally did not recommend doing paid knowledge — it drains creators too much: what you want to teach is SOPs and collaboration methods, while beginners ask only basic questions like "how do I download this tool, how do I pay," which is enough to exhaust creative energy.</li>
+<li>The peer's advice: keep doing <strong>altruistic</strong> things. Maidang accordingly decided to open-source the entire paid-knowledge framework on GitHub: membership system, course listing/delisting, video playback, payment integration, plus pitfalls around CDN and storage, all packaged; others decide their own pricing and operations.</li>
+<li>The returns from open-sourcing have already appeared: users who built their own knowledge sites with his framework join his group and spontaneously help answer basic questions from new users — <strong>open source fed back into delivery for the main business</strong>, forming a positive flywheel.</li>
+<li>His judgment: a framework like this is useless kept hidden; anyone who really wants to do this could piece one together with Cursor/Claude Code anyway — better to open-source it in exchange for an ecosystem.</li>
+</ul>
+<h2>IX. The Controversial Segment: Brother Mu's "Standard-Product Logic" (A Participant's View, Not the Speaker's Conclusion)</h2>
+<p>Brother Mu (who describes himself as having seen and discussed a lot) laid out in the second half a markedly more aggressive playbook, in contrast to Maidang's model:</p>
+<ul>
+<li><strong>Most people who buy courses never watch them</strong>: citing data from a peer (transcribed as "Brother Dong") with tens of thousands of students, he said fewer than 10% finish a course — even with only 5 lessons, 90% never finish; buying a course is essentially buying psychological comfort. So courses should not be made too heavy: spend 10% of the time on the course and 90% on traffic.</li>
+<li><strong>Sell only standard products, do no selling</strong>: the website sits there — buy it or don't; if someone adds him on WeChat to ask, he throws them the course link and does no consulting or Q&amp;A — the more you chat, the less they pay; consulting is trading time for money. Maidang added his own observation: people he was too busy to reply to, to whom he just casually threw a link, ended up paying on their own.</li>
+<li><strong>Open distribution</strong>: content has zero marginal cost, so open 50% distribution and let other creators sell it; split courses short (100 minutes into ten 10-minute pieces); then wrap the official API used in demos with a markup layer and sell it, giving distributors token incentives, forming a linked "course + tool" chain; once enough trust has accumulated, move to high-ticket offers (offline courses, etc.).</li>
+<li><strong>Maidang's reservations</strong>: ① people who come through distribution are not there for the IP, so renewal stickiness may drop; ② he has done the statistics — the more useful users find a course, the less willing they are to recommend it to colleagues (afraid a colleague who learns it will outdo them), unless recommending the course itself makes them money; distribution incentives must be designed around this psychology.</li>
+<li><strong>Going-overseas advice (Brother Mu)</strong>: make multilingual versions of the course and sell to foreigners at almost zero cost; chase broad traffic on IG, Threads, and TikTok — content that worked on Douyin in China can be ported directly.</li>
+</ul>
+<h2>X. Renewal, Revenue Structure, and Industry Judgments</h2>
+<ul>
+<li>The renewal problem is an industry-wide pain point: participants noted that even top communities like Shengcai You Shu have renewal rates of only about 50%–60% (quoted from memory by the speaker). Maidang believes the self-owned-site model offers more operational levers to lift renewal — users ultimately come back to the same site for content instead of vanishing onto some platform after buying.</li>
+<li>Three monetization paths for AI creators: brand deals, enterprise services (FDE / corporate training), and knowledge products. The consensus is that brand deals will gradually shrink, and without a product of one's own there is no longevity; the value of paid knowledge is first of all in providing stable cash flow (participants citing Yi Hui's remark).</li>
+<li>Maidang's original motivation for building the site is blunt: <strong>he doesn't want a job</strong> — he wants something like an internet product that "earns money while you sleep"; he believes in the "1,000 true fans" theory.</li>
+<li>Compliance: he registered a limited company rather than a sole proprietorship, mainly to solve compliance and qualification issues (e.g., a knowledge site needs company qualifications to collect payments via a WeChat mini-program); in his words, "if you're making money in China, best get compliance sorted first" and "make money legally."</li>
+<li>Future expansion (all growing on the "1" of the knowledge site): improving site features, already running his own relay on the site, considering distribution, considering an overseas version, considering offline events/training to raise ticket size; but he <strong>refuses to make heavy-delivery high-ticket online products</strong> — a high price necessarily demands high promises, and he admits he is lazy and wants low-effort operations. Offline is worth doing because the information density of face-to-face interaction is irreplaceable.</li>
+<li>Going from 0 to 1 is far harder than from 1 to 10 (paraphrasing Yi Hui's remarks that day); he believes his hardest step is already behind him.</li>
+</ul>
+<h2>XI. Advice for Beginners (College Students / Newcomers Q&amp;A Segment)</h2>
+<ul>
+<li><strong>No industry credentials needed as endorsement — start an account first</strong>. The method is Learning in Public: record the process of learning a tool or a knowledge point yourself, let AI help edit, and post it. People on the same wavelength will be drawn to your way of explaining, and that content itself is the endorsement.</li>
+<li>Example: he encouraged a former colleague (transcribed as "Ximen") to do creator work; the colleague simply recorded his whole process of developing a mini-program as long videos on Douyin, with a single video getting about 77,000 views, and now has about 200,000 followers across platforms (all as recounted by Maidang).</li>
+<li>Someone at 60 points can absolutely teach someone at 30 points; don't wait until you are "ready and endorsed" to start.</li>
+<li>Pricing advice (answering Ruoyu, about coaching-style products): do competitor research first and price slightly above the median of comparable products, <strong>high enough that "even if it's a bit tiring, it still feels worth it"</strong>. A higher price filters out people who over-demand delivery — someone who haggles hard at payment time will certainly demand value far beyond the price after paying, and will not demand less just because the price is low. The real difficulty of coaching is not pricing but delivery boundaries: state clearly before starting which requests you won't take; with unclear boundaries, scope creep will inevitably drag you down later.</li>
+</ul>
+<h2>XII. Other Views</h2>
+<ul>
+<li><strong>Why do content on X</strong>: one more exposure channel; and X and Bilibili demand more content depth than Xiaohongshu/Douyin, making conversion easier. Several participants shared the feeling that the atmosphere of Chinese-language X has noticeably improved since the second half of 2026.</li>
+<li><strong>Is it still worth entering AI creator work now</strong>: Maidang's answer is "start an account now, whatever you post." The more important reason is not monetization but <strong>leaving a trace on the internet</strong> — so that large models' web search can find "who you are and what you do"; otherwise, in an Agent's eyes, "you never lived." He judges this will certainly pay off in the future, though in what form he doesn't yet know.</li>
+<li><strong>The fastest way to strengthen yourself</strong> (quoting a big name he heard): let the strongest model see the same world you see. Collect your daily conversations, recordings, and photos as much as possible and sync them to the model, letting it process and judge for you. He therefore leans toward carrying long-duration recording / information-capture AI hardware (screenless bands, long-duration recording devices), whose purpose is to gather body signals and conversations to feed the Agent, not meeting minutes — he considers the recording-card-style meeting-summary scenario already obsolete.</li>
+<li><strong>How he views big accounts and competition (Simon's question)</strong>: he doesn't spiral; by his account, fewer than 1% of comments say his content is no good. Quality content is not scarce at all now and is available free; what users buy is "with your way of explaining, how much can I absorb" — raising the absorption rate from 10% to 20% may be worth more than the course content itself. His low conversion but high renewal is exactly this personal-style playbook. A remedy for buying a pile of courses you never finish: have an Agent scrape all the courses you've bought and distill them into outlines, recovering at least some of the cost.</li>
+<li><strong>Practitioners vs. theorists</strong>: he is a practitioner, but takes a middle path — opening with metaphors and vivid cases to lay down shallow theory, then stringing things together with hands-on practice in the later part, slipping in concepts like RAG along the way. Real scenarios yield the highest comprehension efficiency.</li>
+<li><strong>The domestic model landscape</strong>: in his view there are only two categories — the strongest and the cheapest. The strongest are for engineering and demo effects; the cheapest are for teaching everyone how to integrate into products at low cost. He has no particular expectations for the model vendors' next wave of hotspots.</li>
+</ul>
+<h2>XIII. Wrap-Up</h2>
+<ul>
+<li>Host Adrian dropped off midway and did not return, so participants closed the session; Maidang said he would post the download link for this Space's recording in the comments (by his account, his Space recordings always have a fixed download method).</li>
+<li>The next session was arranged on the spot: inviting Ama, who does FDE work, to share enterprise case studies on a Saturday/Sunday (he has a kid to look after and is only free after 10 p.m.) — participants agreed that genuine FDE case studies are rare on the market.</li>
+</ul>
+<hr />
+<p><em>The transcript (with timestamps) and the recording are archived in the same directory; the figures in these notes (120+ lessons, 300–400 paying users, nearly RMB 200,000 monetized, 80% expected renewal, &lt;10% course-completion rate, etc.) are all as stated or relayed by the speakers and have not been externally verified.</em></p>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full notes of that session; the content is the speakers' own on-site accounts and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：噪音之后 · 麦当专场 · Yat's Talks",tw:"會議紀要：噪音之後 · 麥當專場 · Yat's Talks",en:"Meeting Notes: After the Noise · Maidang Session · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

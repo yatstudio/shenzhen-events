@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：Midterm 2026 —— 川普主义的升起和降落</h1>
 <h2>基本信息</h2>
 <ul>
@@ -222,8 +229,428 @@
 <hr />
 <p><em>纪要整理说明：本纪要基于本地转写逐字稿（9,649 行）与 Space 元数据整理；所有事实性内容均为发言人现场自述、未经核实；发言人归属依据自我介绍、主持人点名与上下文推断，不确定处已标注。</em></p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：Midterm 2026 —— 川普主義的升起和降落</h1>
+<h2>基本資訊</h2>
+<ul>
+<li><strong>Space 標題</strong>：Midterm 2026: Rise &amp; Fall of Trumpism | 川普主義的升起和降落（「美國新音」系列）</li>
+<li><strong>主持人</strong>：@geo_ethno_wars（Geopolitics = Ethnopolitics，地緣政治 = 種族政治；場內常被稱為「大紀/大紀哥」）</li>
+<li><strong>Space 連結</strong>：https://x.com/i/spaces/1onAOOVOMNPdkB</li>
+<li><strong>開播時間</strong>：2026 年 11 月 3 日 21:56（北京時間，下同）；<strong>結束時間</strong>：2026 年 11 月 4 日 06:01；<strong>總時長</strong>：8 小時 04 分</li>
+<li><strong>參與規模</strong>：元數據顯示總直播聽眾 729 人，回放觀看 21 人次</li>
+<li><strong>錄音與轉寫</strong>：本地錄音約 8 小時；轉寫逐字稿 9,649 行，時間範圍 00:37:40–08:03:41。前約 37 分鐘為音樂/等待，無有效發言；有效討論約 7.5 小時。</li>
+<li><strong>紀要依據</strong>：本地轉寫逐字稿（transcript.txt）與 Space 元數據（space_metadata.json）</li>
+</ul>
+<h2>文首聲明（必讀）</h2>
+<ol>
+<li><strong>全部內容均為發言人現場自述，未經核實。</strong> 本紀要中的所有事實性斷言——包括即時選情數字、歷史數據、法律與政策說法、人物言行引述——均轉述自發言人在直播中的口頭表達，不代表紀要整理者或任何機構的核實結論。凡文中出現「發言人稱/據稱/場內報稱」等表述，均表示該說法僅為現場口頭說法。</li>
+<li><strong>轉寫無說話人分離，歸屬存在不確定性。</strong> 原始轉寫未區分說話人，發言人歸屬依據三類線索綜合判斷：發言人自我介紹、主持人現場點名、上下文推斷。歸屬有把握的按人名歸納；歸屬不確定的段落明確標註「歸屬待確認」或「發言人未明確」，絕不編造發言人名字。</li>
+<li><strong>ASR 轉寫誤差。</strong> 自動語音識別對人名、地名存在大量誤聽與同音異寫，例如文豐/文封、朱朱/珠珠/諸諸、緬因州/免疫州、堪薩斯/康薩斯、南卡/藍卡等均指同一人或同一地點；「大紀」「泰哥」「老梁」等為場內提及的中推人物，多未在元數據發言人名單中，未必在場發言，本紀要不把「被提及者」寫成「發言者」。</li>
+<li><strong>不編造、不補全。</strong> 轉寫不清、疑似幻覺或前後矛盾的段落，本紀要或略去，或註明存疑；未寫入紀要的內容不代表未曾討論。</li>
+<li><strong>言論處理。</strong> 場內出現針對穆斯林、黑人、華人、同性戀群體等的攻擊性、辱罵性言論。本紀要概括其立場與論點，盡量不逐字複述侮辱性原話；引用以能說明觀點所必需為限。</li>
+</ol>
+<h2>核心結論</h2>
+<p>整場 8 小時討論以 2026 年美國中期選舉夜即時看票為線索，邊看結果邊辯論，核心判斷可概括為以下五點（均為場內發言人的共同或多數判斷，不代表核實結論）：</p>
+<ol>
+<li><strong>民主黨在本次中期選舉中大獲全勝，是場內多數發言人的共識性判斷。</strong> 從開場「兩院都有可能丟掉」的預判，到深夜眾議院、參議院及多個州長席位陸續被報稱翻藍，發言人普遍認為共和黨遭遇重挫。主持人據此提出全場中心論點：<strong>「今天的結果很可能是正式的川普主義開始要降落。」</strong></li>
+<li><strong>主持人提出「川普主義」與「MAGA」可以分開。</strong> 主持人認為，MAGA 作為民粹精神會長期存在；但川普主義——即以「交易的藝術」為核心、把是否遵守契約的選擇權留給自己的執政風格——在 2015–2016 年有吸引力，時間長了會失效。本次選舉失利的根源，按主持人的說法，是競選時承諾「和平總統、壓低物價」，執政後卻發動戰爭、物價上漲，構成「交易不守約」。</li>
+<li><strong>伊朗戰爭與經濟/物價是場內公認的兩大決定性因素。</strong> 多位發言人認為，獨立選民普遍反戰，73% 的美國人稱不應打伊朗（發言人引用的數字，未經核實）；同時物價上漲直接衝擊中間選民。Ryanchan 的概括最具代表性：只看經濟，物價漲就輸，把油價打下來就贏。主持人另列三個預判因素：獨立選民反戰、德州西裔對 ICE 執法反彈、以色列國內對內塔尼亞胡的支持下降。</li>
+<li><strong>場內存在明顯分歧，並非一邊倒。</strong> 傑瑞、文豐等人認為川普個人沒輸、鐵票未流失，只是中間派轉向；翠兒、咖啡姐等持川粉視角的發言人則給出相反判斷，認為選舉結果另有屬靈或制度層面的原因；老姚則強調美國的偉大在於憲法與獨立宣言兩大基石，選舉勝負不改變制度本身。</li>
+<li><strong>即時選情數字高度不可靠。</strong> 場內報出的州級領先幅度與翻藍消息前後矛盾、多次自我糾正（如佛羅里達一度被報成民主黨大幅領先，後又被糾正為共和黨守住；緬因州 81% 得票率被多人質疑為假新聞）。本紀要把所有選情數字一律寫成「發言人當時報稱」，並在文末單列矛盾清單，<strong>不得把其中任何一個數字當作最終選舉結果引用</strong>。</li>
+</ol>
+<hr />
+<h2>一、討論時間線</h2>
+<h3>00:37–00:49 開場：等結果，定調「川普主義開始降落」</h3>
+<p>Space 前 37 分鐘為音樂與等待。有效發言自 00:37 左右開始，發言人稱在等美國東部時間 6 點出結果，並預判兩院都有可能丟掉。</p>
+<p>開場即確立全場主線。主持人提出核心論點：川普主義和美國主義/MAGA 可以分開；川普最大的問題是「交易的藝術」卻不守交易契約——競選時承諾做和平總統、壓低物價，實際上卻搞了戰爭、物價上去。主持人據此判斷：「今天的結果很可能是正式的川普主義開始要降落。」</p>
+<p>開場穿插兩個案例。其一，一位發言人自述常看的一位俄裔 YouTuber——1990 年自蘇聯移民美國、在波音工作——這次中期選舉沒投票，理由是投誰都一樣。其二，密西根州一位埃及裔穆斯林候選人堅決反伊朗戰爭卻支持援烏，被場內發言人指為「雙標」（均為發言人說法）。</p>
+<h3>00:49–01:25 加拿大醫療與民生插曲</h3>
+<p>話題由選舉轉向加拿大民生。文豐自述個人經歷：上週一摔倒，週二看腿，週六突發天旋地轉、不停嘔吐，打 911 後救護車 30 多分鐘才到，在醫院樓道擔架上打吊瓶約 3 小時，午夜醫生才出現；他稱醫生未查腦部，只問消化道問題。眾人由此討論加拿大無家庭醫生的問題（發言人稱 300 萬人沒有家庭醫生）、walk-in clinic 的運作、Polysporin 藥膏與護士經驗的價值。</p>
+<p>話題進一步轉入加拿大流浪漢問題：發言人稱 Halifax 有 1,100 名無家可歸者、溫哥華常年 3,000–5,000 人、每天死 10 人（均為發言人說法，未經核實）；並討論毒品合法化、免費納洛酮急救包的發放與教會捐贈厚襪子等細節。此段與選舉主線關聯較弱，但反映了場內發言人對「民生即政治」的共同感受。</p>
+<h3>01:25–01:47 奴隸制賠償辯論</h3>
+<p>文豐提起英國國王訪問加勒比國家時被追討奴隸制賠償。圍繞 1833 年英國《廢奴法案》，發言人稱當時賠給奴隸主 2,000 萬英鎊（發言人先說 4,000 萬，後改口為 2,000 萬），相當於當時英國財政收入的 40%，政府為此借債、到 2010 年才還完（均為發言人說法，未經核實）。發言人還稱卡梅倫母系家族是當年賠償的受益者之一。</p>
+<p>辯論焦點在於賠償對象與形式：加勒比國家要求現金賠償而非援助基金；Jack Steel 與革命家反駁稱，按當時的財產邏輯，賠奴隸主是合理的，因為奴隸在當時不被算作人。主持人穿插引述 Sky News 的 Michael Clarke 的觀點，稱此次中期選舉與 1966 年越戰時期的中期選舉相似，是第一次美國選民因地緣政治錯誤而決定出來投票；主持人重申其招牌論點：「地緣政治實際上是種族政治。」</p>
+<h3>01:47–02:20 核武器與「雙標」辯論</h3>
+<p>朱朱提問：如果以色列對伊朗使用核武器，中國或朝鮮是否可以對日本使用、俄羅斯是否可以對烏克蘭使用？主持人回應稱美國不太會用，並稱川普當面回答記者說不會用（發言人說法）。討論隨後擴展到日本擁核的速度、朝鮮打擊日本須經過韓國的美軍防空、朝鮮已放棄統一國策（發言人說法）等問題。</p>
+<p>同一時段還討論了委內瑞拉問題（美國抓走其總統是否算入侵）以及「雙標」指控：烏克蘭戰爭無人反對，伊朗戰爭卻人人反對。發言人之間的分歧在於，雙標的根源是種族、地緣還是美國國內政治。</p>
+<h3>02:20–02:54 民調教訓與「糾錯機制」辯論</h3>
+<p>主持人稱要吸取 2024 年的教訓：當年民調稱哈里斯在愛荷華領先 6%，實際卻大敗。由此引出「糾錯機制」是否存在的大辯論。主持人自述住在特拉華州（拜登的州，很小），自己不投票，稱在特拉華投票沒意思，曾想 2020 年搬去賓州投票支持川普。</p>
+<p>此段還涉及幾則未經核實的傳聞與說法：傑瑞等人爭論最高法院是否判 2025 年 4 月 1 日加稅違憲、正在退錢；馬斯克競選時每州抽 100 萬美元的傳聞，有人稱其中獎者全是川粉、其律師已認罪，其他人稱沒聽過；「獨行者/讀心者」（ASR 寫法不一，疑似同一人）曾預言中期選舉不會發生、共和黨大獲全勝。主持人還回顧 1994 年共和黨奪回兩院與紐特·金里奇的《與美國的契約》。</p>
+<h3>02:54–03:36 同性戀/性少數長辯論</h3>
+<p>這是全場最長的單一話題辯論，約 40 分鐘。起因是朱朱提及一則杭州酒店群交傳聞，隨後辯論轉向同性戀是基因還是後天、婚姻合法化與收養子女等議題。</p>
+<p>Peter Duh 結合個人經歷發言：他 1999 年到美國後，加州公投未通過同性婚姻合法化，2015 年最高法院裁定合法，前後約 15 年。他認為美國社會逐漸接受同性狀態，並批評反對者「講不出個道理」——摩門教、天主教、基督教等各派教會講了十幾年，卻講不清楚同性婚姻到底有什麼問題，只能說「我們不贊同」。Seaskyblue 稱自己寫過性少數文章，引用 2015 年的一篇文章與 CDC 數據，稱美國高中生 15% 為 LGBTQIA+、8.7% 不確定，並稱目前沒有明確的同性戀基因（均為發言人引用的數據，未經核實）。</p>
+<p>文豐的立場在辯論中被反覆追問：他表示自己支持美國的同性戀合法化與收養，但不同意在中國搞同性戀合法化；這一區分遭到其他發言人的反駁。一位發言人（歸屬待確認）用「控制變量法」批評文豐，稱其關於同性戀家庭子女心理健康的說法沒有對照孤兒、單親家庭等其他情形，缺乏科學論證方法。主持人居中維持秩序，稱「在我的空間別人反駁你很正常，包括我本人」。</p>
+<p>同期穿插選情播報：George Report 稱民主黨奪眾議院概率 86%（後又稱 99%）、參議院 69%–72%；北卡翻藍、堪薩斯民主黨領先 29%（均為發言人報稱，未經核實）。</p>
+<h3>03:36–04:06 選情播報與腐敗、馬斯克</h3>
+<p>此段以即時報票為主。Fox 直播被報稱為眾議院 11 比 3、參議院 35 比 31（發言人報數，未經核實）。Vivian 稱川普與拜登兩年都沒變化、物價照樣貴、遣返人數不如拜登（發言人說法）。一個普通人稱投票是公民責任，今年投票站年輕人多。</p>
+<p>Seaskyblue 引用一位自稱廣州女婿的美國人王德忠的觀點，稱選舉的最好結果只是阻止對方取得成就；並引用數據稱 54% 的美國公民閱讀能力低下，2017 年有 4,300 萬功能性文盲，2023 年達 5,800 萬（發言人引用的數據，未經核實）。主持人稱馬斯克若被調查最有意思，指出 SpaceX 並非唯一選擇（還有藍色起源），並稱馬斯克在德州花了很多錢助選。</p>
+<h3>04:06–05:06 南卡、德州、宗教與馬克思</h3>
+<p>南卡被報稱 71% 選票已數、民主黨領先 8.2%（發言人說法）；林賽·格雷厄姆（發言人稱「林妹妹/林希格恩」，ASR 寫法不一）被指為戰爭販子。佛羅里達一度被報成民主黨大幅領先，後被糾正為共和黨守住，共和黨州長與參議員 Ashley Moody 勝選（發言人說法）。</p>
+<p>此段還討論民主社會主義黨（DSA）的走紅：發言人稱密西根穆斯林候選人與紐約市長馬姆達尼同屬該黨。主持人換頭像為剃掉鬍子的馬克思像馬斯克，稱科技與唯物主義相通；隨後討論猶太教與美聯儲、羅斯柴爾德名言、宗教作為保險/庇護的功能及其與黨組織的類比（均為發言人觀點，未經核實）。堪薩斯被報稱 61% 選票已數、民主黨領先 16.7%，愛荷華 29% 選票已數、民主黨領先 16.6%（均為發言人報稱）。</p>
+<h3>05:06–06:06 經濟決定論與戰爭形態</h3>
+<p>Ryanchan 提出經濟決定論：只看經濟，物價漲三倍就輸，把伊朗戰爭打下來、油價打下來就贏。主持人重引 1966 年越戰中期選舉的類比與塔克·卡爾森的說法，稱伊朗戰爭比越戰更不受歡迎、73% 的美國人稱不應打伊朗（發言人引用的數字，未經核實）。</p>
+<p>此段還討論戰爭形態的變化：無人機時代、重型坦克與航母是否過時、內燃機時代是否結束。Bab 預測三年內會發生第三次世界大戰（發言人個人預測）。關於伊朗核問題，發言人稱以色列絕對不允許伊朗擁有核武器，而伊朗一旦緩過氣來必定全力發展核武器，北韓就是例子；另有發言人稱「兩黨都是被以色列控制的」（均為發言人說法，未經核實）。</p>
+<p>主持人總結三個預判因素：獨立選民普遍反戰、德州西裔對 ICE 執法反彈、以色列國內對內塔尼亞胡的支持下降。</p>
+<h3>06:06–07:00 結果趨明，主持人一度掉線</h3>
+<p>主持人一度掉線，討論由其他發言人接續。發言人稱川普表示接受中期選舉結果、準備與民主黨合作，且未提選舉舞弊；維維克（Vivek，俄亥俄州長候選人）承認敗選（均為發言人說法）。</p>
+<p>選情方面，德州被報稱 68% 選票已數、民主黨領先 21%；喬治亞選出黑人女州長、新墨西哥選出原住民州長（均為發言人報稱，未經核實）。主持人回歸後重申川普主義的定義：做交易卻認為守不守契約由自己選擇，2015–2016 年有吸引力，時間長了失效；MAGA 會長存（民粹精神），川普主義會降落。</p>
+<p>06:29–06:35 左右，一位發言人（歸屬待確認）發表長篇批評，認為部分在美華人支持川普/共和黨的動機並非追求民主自由，而是追求「高人一等」的地位；並稱自己聽主持人的空間一年半，認同「你永遠是少數民族」這一判斷。同期發言人報稱民主黨已得 5 個參議員席位，俄亥俄、堪薩斯、德州、北卡、南卡、愛荷華均被報稱歸民主黨，愛荷華 92% 選票已數、民主黨仍領先；並稱德州現任共和黨州長阿博特已打電話承認敗選，但 CNN 並未作出阿博特會輸的預測（均為發言人報稱，未經核實，彼此矛盾）。</p>
+<h3>07:00–08:03 收尾：川粉強硬反應與制度之辯</h3>
+<p>翠兒（JadeWan97600889）上麥發表川粉立場的強硬反應，被主持人稱讚為「川粉裡面最強硬的反應」。老姚（Chris28521420）稱美國偉大之處在於憲法與獨立宣言兩大基石。咖啡姐稱選舉結果是信仰自由、不設國教帶來的屬靈敗落，稱伊朗戰爭是屬靈爭戰（均為發言人觀點）。</p>
+<p>收尾階段的選情播報稱：密西根穆斯林候選人 61% 選票已數、領先 4%，緬因州宣布民主黨贏 5%（均為發言人報稱）。主持人稱川普打電話給 Fox 談選舉結果、未提舞弊，稱民主黨大獲全勝；約 08:03:41 結束，並說明天還會開群聊中期選舉。</p>
+<hr />
+<h2>二、分發言人觀點</h2>
+<blockquote>
+<p>本節按主要發言人分述。同一發言人的觀點散見全場，此處按主題歸納；引文均註明時間戳。歸屬不確定的內容另見第四節。</p>
+</blockquote>
+<h3>主持人 @geo_ethno_wars（大紀）</h3>
+<p>全場論點最系統、發言量最大的發言人，核心論點有三：</p>
+<ol>
+<li><strong>「川普主義」與「MAGA」可分。</strong> 川普主義的核心是「交易的藝術」加「守不守契約由自己選擇」；MAGA 是民粹精神，會長期存在。前者在 2015–2016 年有吸引力，時間長了失效；後者不會隨一次選舉消失。</li>
+<li><strong>敗因是「交易不守約」。</strong> 競選時承諾和平總統、壓低物價，執政後卻發動戰爭、物價上漲。主持人認為這是中間選民轉向的直接原因，並據此在開場即判斷「今天的結果很可能是正式的川普主義開始要降落」。</li>
+<li><strong>「地緣政治實際上是種族政治。」</strong> 這是主持人的招牌論點，全場多次重申。他以 1966 年越戰時期的中期選舉作類比，引用 Sky News 的 Michael Clarke 的說法，稱這是第一次美國選民因地緣政治錯誤而決定出來投票；並以塔克·卡爾森的說法佐證伊朗戰爭的不得人心（73% 的美國人稱不應打，發言人引用的數字，未經核實）。</li>
+</ol>
+<p>主持人還總結了三個預判因素：獨立選民普遍反戰、德州西裔對 ICE 執法反彈、以色列國內對內塔尼亞胡的支持下降。他在空間管理上持開放態度，允許甚至鼓勵發言人互相反駁，稱「在我的空間別人反駁你很正常，包括我本人」。</p>
+<h3>文豐（Wenfeng，加拿大；元數據：Shannon94011261）</h3>
+<p>50 多歲，在加拿大在學藥劑方向。發言量大，話題橫跨民生、歷史與性少數議題：</p>
+<ul>
+<li><strong>加拿大醫療親歷。</strong> 自述摔傷後就醫遭遇：救護車 30 多分鐘、醫院樓道擔架上打吊瓶約 3 小時、午夜醫生才出現，且醫生未查腦部、只問消化道問題。由此引出對加拿大無家庭醫生、walk-in clinic 體系的批評。</li>
+<li><strong>奴隸制賠償。</strong> 提起英國國王訪問加勒比國家時被追討賠償，並給出 1833 年《廢奴法案》賠奴隸主 2,000 萬英鎊、相當於當時英國財政收入 40%、借債還到 2010 年的說法（先說 4,000 萬，後改口 2,000 萬；未經核實）。</li>
+<li><strong>同性戀議題的區分立場。</strong> 支持美國的同性戀婚姻合法化與收養，但不同意在中國搞同性戀合法化；並稱同性戀家庭子女的成長心理可能受影響。這一立場遭到多位發言人反駁，Peter Duh 與一位發言人（歸屬待確認）分別從「反對者講不出道理」與「控制變量法」的角度批評其論證。</li>
+<li><strong>選舉判斷。</strong> 認為川普個人沒輸、鐵票未流失，只是中間派轉向；與傑瑞的判斷相近。</li>
+</ul>
+<h3>Vivian / Vivi（加拿大，學藥；母親為產科醫生）</h3>
+<p>發言集中在民生與選情感受層面：稱川普與拜登兩年都沒變化、物價照樣貴、遣返人數不如拜登（發言人說法）；參與討論加拿大醫療與同性戀議題，舉病人群體推動醫療改革、《我不是藥神》為例，認為中國語境下群體抗爭也能推動改革。整體立場偏向認為選舉結果反映的是民生與物價問題，而非意識形態勝負。</p>
+<h3>傑瑞（Jerry；元數據：gerryzhang66）</h3>
+<p>主要參與民調、糾錯機制與選情討論。認為川普個人沒輸、鐵票未流失，輸的是中間派；參與爭論最高法院是否判 2025 年 4 月 1 日加稅違憲、正在退錢的說法（未經核實）。在同性戀辯論中發言較少，主要起承接與補充作用。</p>
+<h3>朱朱（ASR 寫法有珠珠/諸諸/祝祝等，疑似同一人）</h3>
+<p>提問型發言人，多次以提問推動話題轉向：</p>
+<ul>
+<li>01:47 左右提問核武器「雙標」問題：如果以色列對伊朗用核武器，中國/朝鮮是否可對日本用、俄羅斯是否可對烏克蘭用；</li>
+<li>02:54 左右提及杭州酒店群交傳聞，意外引出全場最長的同性戀辯論；</li>
+<li>其提問方式使討論從選情不斷外溢到戰爭倫理與社會議題。</li>
+</ul>
+<h3>Peter Duh（1999 年到美國，現居德州；元數據：peterduh_ea）</h3>
+<p>同性戀辯論中的主要發言人之一，立場鮮明：</p>
+<ul>
+<li>以親歷說明美國同性婚姻合法化歷程：1999 年到美國後加州公投未通過，2015 年最高法院裁定合法，前後約 15 年；其間同居不算婚姻、需登記結婚才能享受夫妻待遇，許多同性伴侶即使合法化後也不結婚、不出櫃。</li>
+<li>核心論點是反對者「講不出個道理」：基督教各派講了十幾年，卻講不清楚同性婚姻到底有什麼問題，只能說「我們不贊同」；他認為反對只是為了在宗教立場上反對，沒有有效的論述。</li>
+<li>另對中國語境持悲觀判斷，認為中國不存在需要民眾爭取的事，與 Vivian 的《我不是藥神》論據形成對立。</li>
+</ul>
+<h3>革命家（元數據：geminjia）</h3>
+<p>在奴隸制賠償辯論中與 Jack Steel 立場相近，認為按當時的財產邏輯賠奴隸主是合理的，因為奴隸在當時不被算作人。另在 06:30 左右被一位發言人（歸屬待確認）評價為「把現象說得很清楚」。其餘發言多為短促附和與補充。</p>
+<h3>Jack Steel（元數據：JackSteelAU）</h3>
+<p>在奴隸制賠償辯論中反駁賠償奴隸後代的主張，認為按當時的財產邏輯賠奴隸主合理。其餘時間發言較少，多為附和與簡短表態。</p>
+<h3>Ryanchan（紐約人；元數據：Ryancha07071091）</h3>
+<p>提出全場最簡潔的選舉分析框架——<strong>經濟決定論</strong>：只看經濟，物價漲三倍就輸；打伊朗把油價打下來就贏。這一框架被主持人多次引用。另參與戰爭形態（無人機、坦克與航母是否過時）的討論。</p>
+<h3>Bab（元數據：xbzsc599，場內稱 Bab/巴布）</h3>
+<p>作出全場最大膽的預測：<strong>三年內會發生第三次世界大戰</strong>（發言人個人預測，未經核實）。另參與伊朗核問題討論，認為伊朗一旦緩過氣來必定全力發展核武器，北韓就是例子。</p>
+<h3>Seaskyblue_T（元數據：Seaskyblue_T02）</h3>
+<p>資料型發言人，多次引用外部文章與數據：</p>
+<ul>
+<li>同性戀辯論中稱自己寫過性少數文章，引用 2015 年的一篇文章與 CDC 數據，稱美國高中生 15% 為 LGBTQIA+、8.7% 不確定，並稱目前沒有明確的同性戀基因；</li>
+<li>引用自稱廣州女婿的美國人王德忠的觀點，稱選舉的最好結果只是阻止對方取得成就；</li>
+<li>引用數據稱 54% 的美國公民閱讀能力低下，2017 年有 4,300 萬功能性文盲，2023 年達 5,800 萬（以上均為發言人引用的數據，未經核實）。</li>
+</ul>
+<h3>翠兒（元數據：JadeWan97600889）</h3>
+<p>收尾階段（約 07:00 後）上麥，發表川粉立場的強硬反應，被主持人稱讚為「川粉裡面最強硬的反應」。其發言代表場內少數堅持為川普辯護的聲音，與主流「川普主義降落」的判斷形成對照。具體論點因轉寫中該段多人插話、ASR 品質較差，本紀要不作過度歸納，詳見「未決問題」一節。</p>
+<h3>咖啡姐（Coffee.G777；元數據：Question222333）</h3>
+<p>以宗教視角解讀選舉：稱選舉結果是信仰自由、不設國教帶來的屬靈敗落，伊朗戰爭是屬靈爭戰。其觀點與場內主流的經濟、地緣解釋完全不同，代表場內宗教保守派的視角。</p>
+<h3>一個普通人（元數據：randnobody666，在美國）</h3>
+<p>強調投票是公民責任；稱今年投票站年輕人多、投票積極性高，尤其是不少亞裔華人面孔。另參與討論馬斯克抽獎傳聞等話題，發言多為現場見聞與常識性判斷。</p>
+<h3>Steve（元數據：gwdkaku）</h3>
+<p>發言量中等，參與民調、選情與同性戀辯論的附和與補充，未形成獨立的長篇論點。</p>
+<h3>老姚（Chris28521420，場內稱「老姚」）</h3>
+<p>收尾階段發言，提出制度層面的判斷：美國偉大之處在於憲法與獨立宣言兩大基石。這一表態將討論從「誰輸誰贏」拉回制度層面，與主持人的「主義興衰」框架形成互補。</p>
+<h3>其他發言人</h3>
+<p>元數據發言人名單共 25 人，除上述外，Alex（alexallwin1）、vv（heron_hero_）、Valor（ValorRed1）、小澤 Ozawa Seiji（baibianjinshen）、精石所指（ixnjuluhngl3）、吉良秀林（dalinzdl）、風清揚（cookman18）、成虹/陳紅（HongChe58003631，ASR 寫法不穩定）、Ocean（jamesadamsz）、統一合平三戰（whatwang4o）、Education（NWmx0119）、YI FU（Yansamsonc30693）等人在轉寫中或僅有簡短插話，或未被明確點名，無法可靠歸納其觀點，故不單獨成節。其發言如涉及重要論點，已併入時間線敘述；無法歸屬的，一律標註「歸屬待確認」。</p>
+<hr />
+<h2>三、關鍵原話（帶時間戳）</h2>
+<p>以下引文均轉錄自逐字稿，文字按轉寫原文略作標點整理；凡涉及事實斷言，仍為發言人現場自述、未經核實。時間戳為錄音內時間（Space 開播後計時）。</p>
+<ol>
+<li><strong>主持人，約 00:40–00:49</strong>：「今天的結果很可能是正式的川普主義開始要降落。」——全場中心判斷，定調之語。</li>
+<li><strong>主持人，多次重申</strong>：「地緣政治實際上是種族政治。」——主持人的招牌論點，亦為其播客名稱的含義。</li>
+<li><strong>主持人，約 06:00 前後</strong>：川普主義的定義是做交易卻認為守不守契約由自己選擇，2015–2016 年有吸引力，時間長了失效；MAGA 會長存（民粹精神），川普主義會降落。（轉述，非逐字）</li>
+<li><strong>Peter Duh，約 03:11–03:13</strong>：「沒有一個反對者可以講得清清楚楚，為什麼同性戀的婚姻是不可以的……講了十幾年，都講不出來。」——同性戀辯論中的核心論點。</li>
+<li><strong>文豐，約 03:16–03:17</strong>：他表示支持美國的同性戀合法化與收養，但「不同意在中國搞同性戀合法化」。（轉述）</li>
+<li><strong>主持人，約 03:16–03:17</strong>：「你要習慣就是在我的空間別人反駁你好不好，包括我本人。」——主持人維持辯論秩序時的表態。</li>
+<li><strong>Ryanchan，約 05:06–05:20</strong>：只看經濟，物價漲就輸，打伊朗把油價打下來就贏。（轉述）</li>
+<li><strong>Bab，約 05:30–06:00</strong>：預測三年內會發生第三次世界大戰。（轉述，發言人個人預測）</li>
+<li><strong>發言人未明確（歸屬待確認），約 06:30–06:33</strong>：「你永遠是少數民族。」——該發言人稱聽主持人的空間一年半，認同這一判斷；並認為部分在美華人支持川普/共和黨的動機是追求「高人一等」的地位，而非追求民主自由。（後半句為概括，前半句為原話）</li>
+<li><strong>主持人，約 07:00 後</strong>：稱翠兒的發言是「川粉裡面最強硬的反應」。（轉述）</li>
+<li><strong>老姚，約 07:00–08:00</strong>：美國偉大之處在於憲法與獨立宣言兩大基石。（轉述）</li>
+<li><strong>咖啡姐，約 07:00–08:00</strong>：選舉結果是信仰自由、不設國教帶來的屬靈敗落，伊朗戰爭是屬靈爭戰。（轉述）</li>
+<li><strong>主持人，約 08:03</strong>：稱民主黨大獲全勝，並說明天還會開群聊中期選舉。（轉述）</li>
+</ol>
+<hr />
+<h2>四、未決問題與待核實點</h2>
+<h3>1. 即時選情數字：前後矛盾，不得作為結果引用</h3>
+<p>場內報出的所有州級數字均為發言人邊看直播邊報的說法，<strong>前後矛盾、多次自我糾正</strong>，以下為主要矛盾點清單：</p>
+<ul>
+<li><strong>佛羅里達</strong>：一度被報成民主黨大幅領先，後被糾正為共和黨守住（共和黨州長與參議員 Ashley Moody 勝選，發言人說法）。</li>
+<li><strong>緬因州</strong>：81% 的得票率說法被多人質疑為假新聞；收尾時又被報稱民主黨贏 5%。</li>
+<li><strong>德州</strong>：先後被報稱民主黨領先 21%（68% 選票已數）、現任共和黨州長阿博特已打電話承認敗選；但同一時段發言人也承認 CNN 並未預測阿博特會輸。</li>
+<li><strong>堪薩斯</strong>：先後被報稱民主黨領先 29%、領先 16.7%（61% 選票已數）。</li>
+<li><strong>南卡</strong>：被報稱 71% 選票已數、民主黨領先 8.2%。</li>
+<li><strong>愛荷華</strong>：被報稱 29% 選票已數、民主黨領先 16.6%，後又被報稱 92% 選票已數、民主黨仍領先。</li>
+<li><strong>北卡</strong>：被報稱翻藍；未給出一致的票數口徑。</li>
+<li><strong>眾議院/參議院總盤</strong>：Fox 直播一度被報稱為眾議院 11 比 3、參議院 35 比 31；George Report 稱民主黨奪眾議院概率 86%（後稱 99%）、參議院 69%–72%；收尾時又被報稱民主黨已得 5 個參議員席位。以上數字彼此無法拼成一致的總盤。</li>
+<li><strong>州長層面</strong>：喬治亞選出黑人女州長、新墨西哥選出原住民州長、俄亥俄州長候選人維維克承認敗選（均為發言人說法）。</li>
+<li><strong>密西根</strong>：穆斯林候選人一度被報稱領先 4%（61% 選票已數）。</li>
+</ul>
+<p><strong>結論</strong>：上述數字只能證明「發言人當晚認為民主黨大勝」，不能證明任何一個州的實際結果。引用時必須註明來源與時間，並標註未經核實。</p>
+<h3>2. 其他未經核實的關鍵說法</h3>
+<ul>
+<li>1833 年英國《廢奴法案》賠奴隸主 2,000 萬英鎊（發言人先說 4,000 萬，後改口）、相當於當時英國財政收入 40%、借債還到 2010 年；卡梅倫母系家族為受益者。</li>
+<li>最高法院判 2025 年 4 月 1 日加稅違憲、正在退錢。</li>
+<li>馬斯克競選時每州抽 100 萬美元、中獎者全是川粉、其律師已認罪；馬斯克在德州花了很多錢助選，另有發言人稱其「砸了 5 億美元」（兩個數字出自不同發言人，均未經核實）。</li>
+<li>73% 的美國人稱不應打伊朗；54% 的美國公民閱讀能力低下；2017 年 4,300 萬功能性文盲、2023 年 5,800 萬；美國高中生 15% 為 LGBTQIA+、8.7% 不確定。</li>
+<li>加拿大 300 萬人沒有家庭醫生；Halifax 有 1,100 名無家可歸者、溫哥華常年 3,000–5,000 人、每天死 10 人。</li>
+<li>朝鮮已放棄統一國策；日本擁核速度；川普當面回答記者說不會對伊朗用核武器；川普表示接受中期選舉結果、準備與民主黨合作、未提選舉舞弊；川普打電話給 Fox 談選舉結果。</li>
+<li>「獨行者/讀心者」曾預言中期選舉不會發生、共和黨大獲全勝（該人是否在場發言無法確認）。</li>
+</ul>
+<h3>3. 發言人歸屬不確定之處</h3>
+<ul>
+<li>轉寫無說話人分離，以下人員的觀點歸屬主要依據主持人點名與自我介紹，仍有誤差可能：朱朱/珠珠/諸諸（疑似同一人，ASR 寫法多變）、文豐（文封/文鳳均為同一人）、成虹/陳紅（ASR 寫法不穩定）。</li>
+<li>03:13–03:15 左右以「控制變量法」批評文豐的長篇發言、06:29–06:35 左右關於在美華人動機的長篇發言，<strong>發言人未明確</strong>，本紀要未將其歸於任何具體人名。</li>
+<li>05:35–05:38 左右關於伊朗核問題的連續發言、03:36–04:06 關於王德忠引述之外的部分報票發言，存在多人插話，個別句子歸屬存疑。</li>
+<li>翠兒收尾階段的發言因多人插話、ASR 品質較差，未作詳細歸納。</li>
+<li>「大紀」「泰哥」「老梁」「金石」等為場內提及的中推人物，未必在場發言；本紀要不把被提及者寫成發言者。</li>
+<li>元數據發言人名單共 25 人，但轉寫中可明確辨認並歸納觀點的約 15 人；其餘人員或僅有簡短插話，或未被點名，無法可靠歸納。</li>
+</ul>
+<h3>4. 轉寫品質與存疑段落</h3>
+<ul>
+<li>全場 ASR 存在大量同音誤聽與幻覺式人名、地名（如「熱燒餅黨代表」等綽號化轉寫），疑似段落已略去或註明存疑，未寫入紀要正文。</li>
+<li>06:06 前後主持人一度掉線，該時段的發言銜接不完整。</li>
+<li>約 07:00 後收尾階段多人同時插話，部分句子無法斷句，已按可辨認的意思概括，未逐字引用。</li>
+<li>本紀要覆蓋的有效討論時間為 00:37:40–08:03:41；00:00–00:37 為音樂/等待，無有效發言。</li>
+</ul>
+<hr />
+<p><em>紀要整理說明：本紀要基於本地轉寫逐字稿（9,649 行）與 Space 元數據整理；所有事實性內容均為發言人現場自述、未經核實；發言人歸屬依據自我介紹、主持人點名與上下文推斷，不確定處已標註。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Midterm 2026 — The Rise and Fall of Trumpism</h1>
+<h2>Basic Information</h2>
+<ul>
+<li><strong>Space title</strong>: Midterm 2026: Rise &amp; Fall of Trumpism | The Rise and Fall of Trumpism (part of the "American New Voice" series)</li>
+<li><strong>Host</strong>: @geo_ethno_wars (Geopolitics = Ethnopolitics; often called "Daji / Brother Daji" in the Space)</li>
+<li><strong>Space link</strong>: https://x.com/i/spaces/1onAOOVOMNPdkB</li>
+<li><strong>Start time</strong>: November 3, 2026, 21:56 (Beijing time, same below); <strong>End time</strong>: November 4, 2026, 06:01; <strong>Total duration</strong>: 8 hours 04 minutes</li>
+<li><strong>Participation</strong>: Metadata shows 729 total live listeners and 21 replay views</li>
+<li><strong>Recording and transcription</strong>: Local recording of about 8 hours; transcript of 9,649 lines, covering 00:37:40–08:03:41. The first roughly 37 minutes were music/waiting with no substantive remarks; substantive discussion lasted about 7.5 hours.</li>
+<li><strong>Basis of these notes</strong>: The local transcript (transcript.txt) and the Space metadata (space_metadata.json)</li>
+</ul>
+<h2>Opening Statement (Must Read)</h2>
+<ol>
+<li><strong>Everything here is the speakers' own live account and has not been verified.</strong> All factual assertions in these notes — including live election figures, historical data, statements about law and policy, and quotations of what people said or did — are relayed from what speakers said live. They do not represent verified conclusions by the note-taker or any institution. Where the text says "a speaker said / it was said / it was reported in the Space," that means the claim was only a live oral statement.</li>
+<li><strong>The transcript has no speaker separation, so attribution is uncertain.</strong> The original transcript does not distinguish speakers. Attribution was judged from three kinds of clues together: speakers introducing themselves, the host naming people live, and inference from context. Where attribution is reasonably confident, remarks are grouped by name; where it is uncertain, passages are explicitly marked "attribution to be confirmed" or "speaker not identified," and no speaker name has been invented.</li>
+<li><strong>ASR transcription errors.</strong> Automatic speech recognition produced many mishearings and homophone variants for names and places — for example Wenfeng/Wenfeng variants, Zhuzhu/Zhuzhu/Zhuzhu, Maine rendered as "immune state," Kansas variants, and South Carolina variants all refer to the same person or place. "Daji," "Brother Tai," "Old Liang," and similar names are Chinese-language X figures mentioned in the Space; most do not appear in the metadata speaker list and may not have spoken. These notes do not turn a "person mentioned" into a "speaker."</li>
+<li><strong>Nothing invented, nothing filled in.</strong> Passages that are unclear in the transcript, suspected hallucinations, or internally contradictory have either been omitted or marked as doubtful. Content not included in these notes does not mean it was never discussed.</li>
+<li><strong>Handling of remarks.</strong> The Space contained attacking and abusive remarks directed at Muslims, Black people, Chinese people, gay people, and other groups. These notes summarize their positions and arguments and, as far as possible, do not reproduce insulting original wording verbatim; quotations are limited to what is necessary to explain a viewpoint.</li>
+</ol>
+<h2>Core Conclusions</h2>
+<p>The full 8-hour discussion followed live results on the night of the 2026 U.S. midterm elections, debating as results came in. Its core judgments can be summarized in the following five points (all are the shared or majority judgments of speakers in the Space, not verified conclusions):</p>
+<ol>
+<li><strong>The Democrats won a sweeping victory in this midterm election — this was the consensus judgment of most speakers.</strong> From the opening prediction that both chambers might be lost, to late-night reports that the House, the Senate, and several governorships had flipped Democratic, speakers generally believed the Republicans had suffered a heavy setback. On that basis the host put forward the central thesis of the whole session: <strong>"Today's result is very likely the formal beginning of the descent of Trumpism."</strong></li>
+<li><strong>The host argued that "Trumpism" and "MAGA" can be separated.</strong> In the host's view, MAGA as a populist spirit will exist for a long time; but Trumpism — a governing style centered on "the art of the deal," in which Trump reserves for himself the choice of whether to honor an agreement — was attractive in 2015–2016 but loses effectiveness over time. The root cause of this election defeat, according to the host, was that Trump campaigned on promises of being a "peace president" and lowering prices, but after taking office started a war and prices rose — a case of "not honoring the deal."</li>
+<li><strong>The Iran war and the economy/prices were the two decisive factors generally recognized in the Space.</strong> Several speakers argued that independent voters are broadly anti-war, and that 73% of Americans said the U.S. should not attack Iran (a figure cited by a speaker, unverified); at the same time, rising prices directly hit swing voters. Ryanchan's summary was the most representative: look only at the economy — if prices rise, you lose; bring oil prices down and you win. The host also listed three predictive factors: anti-war sentiment among independent voters, a backlash among Texas Hispanic voters against ICE enforcement, and declining support for Netanyahu inside Israel.</li>
+<li><strong>There was clear disagreement in the Space; it was not one-sided.</strong> Jerry, Wenfeng, and others argued that Trump personally had not lost and his core vote had not eroded — only centrists had shifted. Speakers with a pro-Trump perspective, such as Cui'er and Sister Coffee, offered the opposite judgment, arguing the election result had spiritual or institutional causes. Old Yao stressed that America's greatness lies in its two foundations, the Constitution and the Declaration of Independence, and that electoral wins and losses do not change the system itself.</li>
+<li><strong>Live election figures were highly unreliable.</strong> State-level leads and flip reports given in the Space contradicted each other and were self-corrected many times (for example, Florida was at one point reported as a large Democratic lead, then corrected to Republicans holding it; Maine's reported 81% vote share was questioned by many as fake news). These notes write all election figures as "reported by speakers at the time," list the contradictions separately at the end, and <strong>none of those figures should be cited as a final election result</strong>.</li>
+</ol>
+<hr />
+<h2>I. Discussion Timeline</h2>
+<h3>00:37–00:49 Opening: Waiting for Results, Setting the Tone of "Trumpism Beginning to Descend"</h3>
+<p>The first 37 minutes of the Space were music and waiting. Substantive remarks began around 00:37, with speakers saying they were waiting for results at 6 p.m. U.S. Eastern Time and predicting that both chambers might be lost.</p>
+<p>The opening established the main thread of the session. The host put forward the core thesis: Trumpism and Americanism/MAGA can be separated; Trump's biggest problem is "the art of the deal" combined with not honoring deal agreements — he campaigned on being a peace president and lowering prices, but in practice pursued war and prices went up. On that basis the host judged: "Today's result is very likely the formal beginning of the descent of Trumpism."</p>
+<p>Two cases were interspersed in the opening. First, a speaker described a Russian-born YouTuber he often watched — who immigrated from the Soviet Union to the U.S. in 1990 and worked at Boeing — who did not vote in this midterm election on the grounds that it made no difference who he voted for. Second, an Egyptian-American Muslim candidate in Michigan who firmly opposed the Iran war but supported aid to Ukraine was called out by speakers in the Space for a "double standard" (both are speakers' accounts).</p>
+<h3>00:49–01:25 Digression: Canadian Healthcare and Livelihood</h3>
+<p>The topic shifted from the election to everyday life in Canada. Wenfeng recounted his personal experience: he fell on Monday of the previous week, saw a doctor about his leg on Tuesday, and on Saturday suddenly became dizzy and vomited repeatedly; after calling 911, the ambulance took more than 30 minutes to arrive, he lay on a stretcher in a hospital corridor on an IV drip for about 3 hours, and a doctor only appeared at midnight; he said the doctor did not examine his brain and only asked about gastrointestinal issues. This led to discussion of Canada's lack of family doctors (a speaker said 3 million people have no family doctor), how walk-in clinics operate, Polysporin ointment, and the value of nurses' experience.</p>
+<p>The topic moved further to homelessness in Canada: a speaker said Halifax has 1,100 homeless people, Vancouver has 3,000–5,000 year-round, and 10 people die every day (all speakers' claims, unverified); they also discussed drug legalization, distribution of free naloxone rescue kits, and churches donating thick socks, among other details. This segment was weakly connected to the election thread, but reflected speakers' shared sense that "livelihood is politics."</p>
+<h3>01:25–01:47 Debate on Reparations for Slavery</h3>
+<p>Wenfeng raised the issue of Caribbean countries demanding reparations for slavery during a visit by the British king. Around the British Slavery Abolition Act of 1833, a speaker said slave owners were compensated £20 million at the time (the speaker first said £40 million, then corrected it to £20 million), equivalent to 40% of British government revenue at the time, and that the government borrowed to pay it and did not finish repaying until 2010 (all speakers' claims, unverified). A speaker also said Cameron's maternal family was one of the beneficiaries of that compensation.</p>
+<p>The debate focused on the recipient and form of reparations: Caribbean countries demanded cash compensation rather than an aid fund; Jack Steel and the Revolutionary argued in rebuttal that, under the property logic of the time, compensating slave owners was reasonable because slaves were not counted as people at the time. The host interspersed a quotation of Michael Clarke of Sky News, saying this midterm election resembled the 1966 midterm election during the Vietnam War — the first time American voters decided to turn out because of a geopolitical mistake; the host restated his signature thesis: "Geopolitics is actually racial politics."</p>
+<h3>01:47–02:20 Debate on Nuclear Weapons and "Double Standards"</h3>
+<p>Zhuzhu asked: If Israel used nuclear weapons against Iran, could China or North Korea use them against Japan, and could Russia use them against Ukraine? The host replied that the U.S. was unlikely to use them, and said Trump had answered a reporter face-to-face that he would not use them (a speaker's account). Discussion then expanded to how quickly Japan could acquire nuclear weapons, the fact that a North Korean strike on Japan would have to pass through U.S. air defenses in South Korea, and the claim that North Korea has abandoned its unification policy (a speaker's account).</p>
+<p>The same period also covered Venezuela (whether the U.S. seizing its president counted as an invasion) and accusations of "double standards": no one opposed the Ukraine war, yet everyone opposed the Iran war. Speakers disagreed on whether the root of the double standard was race, geopolitics, or U.S. domestic politics.</p>
+<h3>02:20–02:54 Lessons from Polling and the Debate on a "Correction Mechanism"</h3>
+<p>The host said a lesson should be learned from 2024: polls that year said Harris led by 6% in Iowa, but she lost badly in reality. This led to a major debate over whether a "correction mechanism" exists. The host said he lives in Delaware (Biden's state, very small), does not vote himself, said voting in Delaware was pointless, and had considered moving to Pennsylvania in 2020 to vote for Trump.</p>
+<p>This segment also involved several unverified rumors and claims: Jerry and others debated whether the Supreme Court had ruled the April 1, 2025 tax increase unconstitutional and was refunding money; the rumor that Musk drew $1 million per state during the campaign — some said all the winners were Trump supporters and his lawyer had pleaded guilty, others said they had never heard of it; and "the Lone Walker / Mind Reader" (ASR renderings vary, apparently the same person) had predicted the midterm election would not happen and the Republicans would win big. The host also recalled the Republicans retaking both chambers in 1994 and Newt Gingrich's "Contract with America."</p>
+<h3>02:54–03:36 Long Debate on Homosexuality / Sexual Minorities</h3>
+<p>This was the longest single-topic debate of the session, about 40 minutes. It began when Zhuzhu mentioned a rumor about group sex at a Hangzhou hotel, after which the debate turned to whether homosexuality is genetic or acquired, marriage legalization, adoption, and related issues.</p>
+<p>Peter Duh spoke from personal experience: after he arrived in the U.S. in 1999, a California referendum failed to pass same-sex marriage legalization, and the Supreme Court ruled it legal in 2015 — about 15 years in between. He argued American society has gradually accepted homosexuality, and criticized opponents for "being unable to give a reason" — Mormon, Catholic, Christian, and other churches talked for more than a decade but could not explain clearly what exactly was wrong with same-sex marriage, and could only say "we disapprove." Seaskyblue said he had written articles on sexual minorities, citing a 2015 article and CDC data, saying 15% of U.S. high school students are LGBTQIA+ and 8.7% are unsure, and that there is currently no clearly identified gay gene (all data cited by speakers, unverified).</p>
+<p>Wenfeng's position was repeatedly pressed during the debate: he said he supports legalization of homosexuality and adoption in the U.S., but does not agree with legalizing homosexuality in China; that distinction drew rebuttals from other speakers. A speaker (attribution to be confirmed) criticized Wenfeng using the "control variables method," saying his claims about the mental health of children in gay families had no comparison with orphans, single-parent families, or other situations, and lacked scientific method. The host kept order in the middle, saying "In my Space, it's normal for others to rebut you, including me."</p>
+<p>Election updates were interspersed at the same time: George Report said the probability of Democrats taking the House was 86% (later 99%) and the Senate 69%–72%; North Carolina flipped Democratic, and Democrats led by 29% in Kansas (all reported by speakers, unverified).</p>
+<h3>03:36–04:06 Election Updates, Corruption, and Musk</h3>
+<p>This segment was mainly live vote reporting. A Fox broadcast was reported as House 11 to 3 and Senate 35 to 31 (figures reported by a speaker, unverified). Vivian said Trump and Biden had changed nothing in two years, prices were still high, and deportations were fewer than under Biden (a speaker's account). An ordinary person said voting is a civic duty and that there were many young people at polling stations this year.</p>
+<p>Seaskyblue cited the view of Wang Dezhong, an American who called himself a Guangzhou son-in-law, saying the best outcome of an election is merely to prevent the other side from achieving anything; he also cited data saying 54% of U.S. citizens have low literacy, that there were 43 million functionally illiterate people in 2017, rising to 58 million in 2023 (data cited by a speaker, unverified). The host said it would be most interesting if Musk were investigated, pointed out that SpaceX is not the only option (there is also Blue Origin), and said Musk had spent a lot of money campaigning in Texas.</p>
+<h3>04:06–05:06 South Carolina, Texas, Religion, and Marx</h3>
+<p>South Carolina was reported as 71% of votes counted, with Democrats leading by 8.2% (a speaker's account); Lindsey Graham (called "Sister Lin / Lindsey Graham" by speakers, with varying ASR renderings) was described as a warmonger. Florida was at one point reported as a large Democratic lead, then corrected to Republicans holding it, with the Republican governor and Senator Ashley Moody winning (a speaker's account).</p>
+<p>This segment also discussed the rise of the Democratic Socialists of America (DSA): a speaker said the Michigan Muslim candidate and New York Mayor Mamdani both belong to the party. The host changed his avatar to a beardless Marx who looked like Musk, saying technology and materialism are connected; the discussion then turned to Judaism and the Federal Reserve, a Rothschild saying, the function of religion as insurance/shelter, and its analogy with party organization (all speakers' views, unverified). Kansas was reported as 61% of votes counted, with Democrats leading by 16.7%, and Iowa as 29% counted, with Democrats leading by 16.6% (all reported by speakers).</p>
+<h3>05:06–06:06 Economic Determinism and the Form of Warfare</h3>
+<p>Ryanchan put forward economic determinism: look only at the economy — if prices triple, you lose; win the Iran war and bring oil prices down, and you win. The host again cited the analogy of the 1966 Vietnam War midterm election and Tucker Carlson's remarks, saying the Iran war is even less popular than the Vietnam War and that 73% of Americans said the U.S. should not attack Iran (a figure cited by a speaker, unverified).</p>
+<p>This segment also discussed changes in the form of warfare: the drone era, whether heavy tanks and aircraft carriers are obsolete, and whether the internal-combustion era is ending. Bab predicted a third world war would occur within three years (a speaker's personal prediction). On Iran's nuclear issue, a speaker said Israel would absolutely not allow Iran to possess nuclear weapons, while Iran, once it recovers, would certainly develop nuclear weapons with all its strength, with North Korea as the example; another speaker said "both parties are controlled by Israel" (all speakers' claims, unverified).</p>
+<p>The host summarized three predictive factors: independent voters are broadly anti-war, a backlash among Texas Hispanic voters against ICE enforcement, and declining support for Netanyahu inside Israel.</p>
+<h3>06:06–07:00 Results Becoming Clear; the Host Briefly Drops Off</h3>
+<p>The host briefly dropped off, and other speakers continued the discussion. A speaker said Trump had expressed acceptance of the midterm results, was preparing to cooperate with the Democrats, and had not mentioned election fraud; Vivek (Vivek, an Ohio gubernatorial candidate) conceded defeat (all speakers' accounts).</p>
+<p>On the election situation, Texas was reported as 68% of votes counted, with Democrats leading by 21%; Georgia elected a Black woman governor and New Mexico elected a Native American governor (all reported by speakers, unverified). After returning, the host restated the definition of Trumpism: making deals while believing whether to honor the contract is one's own choice — attractive in 2015–2016, but losing effectiveness over time; MAGA will endure (the populist spirit), Trumpism will descend.</p>
+<p>Around 06:29–06:35, a speaker (attribution to be confirmed) delivered a long criticism, arguing that the motive of some Chinese Americans who support Trump/the Republicans is not the pursuit of democracy and freedom, but the pursuit of a status of being "superior to others"; he also said he had listened to the host's Spaces for a year and a half and agreed with the judgment "you will always be an ethnic minority." At the same time, speakers reported that Democrats had won 5 Senate seats, and that Ohio, Kansas, Texas, North Carolina, South Carolina, and Iowa were all reported as Democratic, with Iowa at 92% counted and Democrats still leading; they also said Texas's incumbent Republican governor Abbott had called to concede defeat, although CNN had not predicted Abbott would lose (all reported by speakers, unverified, and mutually contradictory).</p>
+<h3>07:00–08:03 Closing: Hardline Pro-Trump Reaction and the Debate on Institutions</h3>
+<p>Cui'er (JadeWan97600889) came on mic to deliver a hardline pro-Trump reaction, praised by the host as "the hardest reaction among Trump supporters." Old Yao (Chris28521420) said America's greatness lies in its two foundations, the Constitution and the Declaration of Independence. Sister Coffee said the election result was a spiritual decline brought about by freedom of religion and the absence of an established church, and that the Iran war is a spiritual war (all speakers' views).</p>
+<p>Election reporting in the closing stage said: the Michigan Muslim candidate, with 61% of votes counted, led by 4%, and Maine announced a Democratic win by 5% (all reported by speakers). The host said Trump called Fox to discuss the election results and did not mention fraud, and said the Democrats had won a sweeping victory; the session ended around 08:03:41, with the host saying he would open a group chat on the midterms again tomorrow.</p>
+<hr />
+<h2>II. Views by Speaker</h2>
+<blockquote>
+<p>This section is organized by main speaker. A single speaker's views appear throughout the session and are grouped here by theme; quotations are marked with timestamps. Content with uncertain attribution is in Section IV.</p>
+</blockquote>
+<h3>Host @geo_ethno_wars (Daji)</h3>
+<p>The speaker with the most systematic arguments and the largest volume of remarks in the session. His core theses are three:</p>
+<ol>
+<li><strong>"Trumpism" and "MAGA" can be separated.</strong> The core of Trumpism is "the art of the deal" plus "whether to honor the contract is my own choice"; MAGA is a populist spirit that will exist for a long time. The former was attractive in 2015–2016 but loses effectiveness over time; the latter will not disappear with a single election.</li>
+<li><strong>The cause of defeat is "not honoring the deal."</strong> He campaigned on being a peace president and lowering prices, but after taking office started a war and prices rose. The host argued this is the direct reason centrist voters shifted, and on that basis judged right at the opening that "today's result is very likely the formal beginning of the descent of Trumpism."</li>
+<li><strong>"Geopolitics is actually racial politics."</strong> This is the host's signature thesis, restated many times throughout the session. He used the 1966 midterm election during the Vietnam War as an analogy, citing Michael Clarke of Sky News, saying this was the first time American voters decided to turn out because of a geopolitical mistake; and he used Tucker Carlson's remarks to corroborate how unpopular the Iran war is (73% of Americans said the U.S. should not attack — a figure cited by a speaker, unverified).</li>
+</ol>
+<p>The host also summarized three predictive factors: independent voters are broadly anti-war, a backlash among Texas Hispanic voters against ICE enforcement, and declining support for Netanyahu inside Israel. In managing the Space he took an open attitude, allowing and even encouraging speakers to rebut each other, saying "In my Space, it's normal for others to rebut you, including me."</p>
+<h3>Wenfeng (Canada; metadata: Shannon94011261)</h3>
+<p>In his fifties, studying pharmacy in Canada. He spoke a lot, with topics spanning livelihood, history, and sexual-minority issues:</p>
+<ul>
+<li><strong>Firsthand experience of Canadian healthcare.</strong> He recounted his experience seeking care after a fall: the ambulance took more than 30 minutes, he lay on a stretcher in a hospital corridor on an IV drip for about 3 hours, a doctor only appeared at midnight, and the doctor did not examine his brain and only asked about gastrointestinal issues. This led to his criticism of Canada's lack of family doctors and its walk-in clinic system.</li>
+<li><strong>Reparations for slavery.</strong> He raised the Caribbean countries' demand for reparations during the British king's visit, and gave the account that the 1833 Slavery Abolition Act compensated slave owners £20 million, equivalent to 40% of British government revenue at the time, with borrowing repaid until 2010 (he first said £40 million, then corrected it to £20 million; unverified).</li>
+<li><strong>A differentiated position on homosexuality.</strong> He supports legalization of same-sex marriage and adoption in the U.S., but does not agree with legalizing homosexuality in China; and he said the psychological development of children in gay families may be affected. This position drew rebuttals from several speakers; Peter Duh and a speaker (attribution to be confirmed) criticized his argument from the angles of "opponents cannot give a reason" and the "control variables method," respectively.</li>
+<li><strong>Election judgment.</strong> He argued Trump personally had not lost and his core vote had not eroded — only centrists had shifted; similar to Jerry's judgment.</li>
+</ul>
+<h3>Vivian / Vivi (Canada, studying pharmacy; her mother is an obstetrician)</h3>
+<p>Her remarks focused on livelihood and impressions of the election: she said Trump and Biden had changed nothing in two years, prices were still high, and deportations were fewer than under Biden (a speaker's account); she took part in discussions of Canadian healthcare and homosexuality, citing patient groups driving medical reform and the film <em>Dying to Survive</em> as examples, arguing that collective resistance in a Chinese context can also drive reform. Her overall position leaned toward seeing the election result as reflecting livelihood and price issues rather than an ideological win or loss.</p>
+<h3>Jerry (metadata: gerryzhang66)</h3>
+<p>He mainly took part in discussions of polling, the correction mechanism, and the election. He argued Trump personally had not lost and his core vote had not eroded — what was lost was the centrists; he took part in debating the claim that the Supreme Court had ruled the April 1, 2025 tax increase unconstitutional and was refunding money (unverified). He spoke little in the homosexuality debate, mainly playing a linking and supplementary role.</p>
+<h3>Zhuzhu (ASR renderings include Zhuzhu/Zhuzhu/Zhuzhu and others, apparently the same person)</h3>
+<p>A question-driven speaker who repeatedly pushed topics in new directions with questions:</p>
+<ul>
+<li>Around 01:47, asked the nuclear-weapons "double standard" question: if Israel used nuclear weapons against Iran, could China/North Korea use them against Japan, and could Russia use them against Ukraine;</li>
+<li>Around 02:54, mentioned the rumor about group sex at a Hangzhou hotel, unexpectedly triggering the longest homosexuality debate of the session;</li>
+<li>Her way of asking questions caused discussion to spill over continually from the election to war ethics and social issues.</li>
+</ul>
+<h3>Peter Duh (arrived in the U.S. in 1999, now lives in Texas; metadata: peterduh_ea)</h3>
+<p>One of the main speakers in the homosexuality debate, with a clear position:</p>
+<ul>
+<li>He used firsthand experience to explain the course of same-sex marriage legalization in the U.S.: after he arrived in 1999, a California referendum failed to pass it, and the Supreme Court ruled it legal in 2015 — about 15 years in between; during that period cohabitation did not count as marriage, and couples had to register a marriage to enjoy spousal treatment, and many same-sex couples did not marry or come out even after legalization.</li>
+<li>His core argument is that opponents "cannot give a clear reason": Christian denominations talked for more than a decade but could not explain clearly what exactly was wrong with same-sex marriage, and could only say "we disapprove"; he argued opposition is merely opposition for the sake of a religious position, with no effective argument.</li>
+<li>He also took a pessimistic view of the Chinese context, arguing there is nothing in China that the public needs to fight for, in contrast with Vivian's <em>Dying to Survive</em> argument.</li>
+</ul>
+<h3>The Revolutionary (metadata: geminjia)</h3>
+<p>In the reparations debate he took a position similar to Jack Steel's, arguing that under the property logic of the time, compensating slave owners was reasonable because slaves were not counted as people at the time. Around 06:30 he was also described by a speaker (attribution to be confirmed) as "explaining phenomena very clearly." His other remarks were mostly brief agreement and additions.</p>
+<h3>Jack Steel (metadata: JackSteelAU)</h3>
+<p>In the reparations debate he rebutted the claim for compensating descendants of slaves, arguing that under the property logic of the time, compensating slave owners was reasonable. He spoke little at other times, mostly agreeing and making brief statements.</p>
+<h3>Ryanchan (New Yorker; metadata: Ryancha07071091)</h3>
+<p>He put forward the most concise election-analysis framework of the session — <strong>economic determinism</strong>: look only at the economy — if prices triple, you lose; win against Iran and bring oil prices down, and you win. This framework was cited by the host many times. He also took part in discussion of the form of warfare (drones, and whether tanks and aircraft carriers are obsolete).</p>
+<h3>Bab (metadata: xbzsc599, called Bab/Babu in the Space)</h3>
+<p>He made the boldest prediction of the session: <strong>a third world war will occur within three years</strong> (a speaker's personal prediction, unverified). He also took part in discussion of Iran's nuclear issue, arguing that once Iran recovers it will certainly develop nuclear weapons with all its strength, with North Korea as the example.</p>
+<h3>Seaskyblue_T (metadata: Seaskyblue_T02)</h3>
+<p>A data-oriented speaker who repeatedly cited outside articles and data:</p>
+<ul>
+<li>In the homosexuality debate he said he had written articles on sexual minorities, citing a 2015 article and CDC data, saying 15% of U.S. high school students are LGBTQIA+, 8.7% are unsure, and that there is currently no clearly identified gay gene;</li>
+<li>He cited the view of Wang Dezhong, an American who called himself a Guangzhou son-in-law, saying the best outcome of an election is merely to prevent the other side from achieving anything;</li>
+<li>He cited data saying 54% of U.S. citizens have low literacy, that there were 43 million functionally illiterate people in 2017, reaching 58 million in 2023 (all data cited by a speaker, unverified).</li>
+</ul>
+<h3>Cui'er (metadata: JadeWan97600889)</h3>
+<p>She came on mic in the closing stage (after about 07:00) and delivered a hardline pro-Trump reaction, praised by the host as "the hardest reaction among Trump supporters." Her remarks represented the minority in the Space who persisted in defending Trump, in contrast with the mainstream judgment of "the descent of Trumpism." Her specific arguments are not summarized in detail here because that part of the transcript contains many interruptions and poor ASR quality; see the "Unresolved Questions" section.</p>
+<h3>Sister Coffee (Coffee.G777; metadata: Question222333)</h3>
+<p>She interpreted the election from a religious perspective: she said the election result was a spiritual decline brought about by freedom of religion and the absence of an established church, and that the Iran war is a spiritual war. Her view differed completely from the mainstream economic and geopolitical explanations in the Space, representing the perspective of religious conservatives there.</p>
+<h3>An Ordinary Person (metadata: randnobody666, in the U.S.)</h3>
+<p>He stressed that voting is a civic duty; he said there were many young people at polling stations this year and high enthusiasm for voting, especially quite a few Asian and Chinese faces. He also took part in discussion of topics such as the Musk lottery rumor; his remarks were mostly firsthand observations and common-sense judgments.</p>
+<h3>Steve (metadata: gwdkaku)</h3>
+<p>He spoke a moderate amount, joining in agreement and additions in the polling, election, and homosexuality discussions, without forming an independent long argument.</p>
+<h3>Old Yao (Chris28521420, called "Old Yao" in the Space)</h3>
+<p>He spoke in the closing stage and offered an institutional judgment: America's greatness lies in its two foundations, the Constitution and the Declaration of Independence. This statement pulled the discussion back from "who won and who lost" to the institutional level, complementing the host's "rise and fall of an -ism" framework.</p>
+<h3>Other Speakers</h3>
+<p>The metadata speaker list has 25 people in total. Apart from those above, Alex (alexallwin1), vv (heron_hero_), Valor (ValorRed1), Ozawa Seiji (baibianjinshen), Jingshi Suozhi (ixnjuluhngl3), Kira Hidetoshi (dalinzdl), Feng Qingyang (cookman18), Cheng Hong/Chen Hong (HongChe58003631, unstable ASR rendering), Ocean (jamesadamsz), Tongyi Heping Sanzhan (whatwang4o), Education (NWmx0119), YI FU (Yansamsonc30693), and others had only brief interjections in the transcript or were not clearly named, so their views cannot be reliably summarized and they are not given separate sections. Where their remarks involve important arguments, they have been incorporated into the timeline narrative; where attribution is impossible, they are marked "attribution to be confirmed."</p>
+<hr />
+<h2>III. Key Original Remarks (with Timestamps)</h2>
+<p>The quotations below are all transcribed from the transcript, with punctuation lightly edited from the transcript text; where they involve factual assertions, they remain speakers' live accounts and have not been verified. Timestamps are times within the recording (timed from the start of the Space).</p>
+<ol>
+<li><strong>Host, about 00:40–00:49</strong>: "Today's result is very likely the formal beginning of the descent of Trumpism." — The central judgment of the session, the statement that set its tone.</li>
+<li><strong>Host, restated many times</strong>: "Geopolitics is actually racial politics." — The host's signature thesis, and also the meaning of his podcast's name.</li>
+<li><strong>Host, around 06:00</strong>: Trumpism is defined as making deals while believing whether to honor the contract is one's own choice — attractive in 2015–2016, but losing effectiveness over time; MAGA will endure (the populist spirit), Trumpism will descend. (Paraphrase, not verbatim)</li>
+<li><strong>Peter Duh, about 03:11–03:13</strong>: "Not a single opponent can explain clearly why gay marriage should not be allowed… They've talked for more than a decade and still can't say it." — The core argument in the homosexuality debate.</li>
+<li><strong>Wenfeng, about 03:16–03:17</strong>: He said he supports legalization of homosexuality and adoption in the U.S., but "does not agree with legalizing homosexuality in China." (Paraphrase)</li>
+<li><strong>Host, about 03:16–03:17</strong>: "You have to get used to it — in my Space, it's normal for others to rebut you, including me." — The host's statement while keeping order in the debate.</li>
+<li><strong>Ryanchan, about 05:06–05:20</strong>: Look only at the economy — if prices rise, you lose; attack Iran and bring oil prices down, and you win. (Paraphrase)</li>
+<li><strong>Bab, about 05:30–06:00</strong>: Predicted a third world war will occur within three years. (Paraphrase, a speaker's personal prediction)</li>
+<li><strong>Speaker not identified (attribution to be confirmed), about 06:30–06:33</strong>: "You will always be an ethnic minority." — The speaker said he had listened to the host's Spaces for a year and a half and agreed with this judgment; he also argued that the motive of some Chinese Americans who support Trump/the Republicans is the pursuit of a status of being "superior to others," not the pursuit of democracy and freedom. (The second half is a summary; the first half is the original wording)</li>
+<li><strong>Host, after about 07:00</strong>: Said Cui'er's remarks were "the hardest reaction among Trump supporters." (Paraphrase)</li>
+<li><strong>Old Yao, about 07:00–08:00</strong>: America's greatness lies in its two foundations, the Constitution and the Declaration of Independence. (Paraphrase)</li>
+<li><strong>Sister Coffee, about 07:00–08:00</strong>: The election result is a spiritual decline brought about by freedom of religion and the absence of an established church, and the Iran war is a spiritual war. (Paraphrase)</li>
+<li><strong>Host, about 08:03</strong>: Said the Democrats had won a sweeping victory, and that he would open a group chat on the midterms again tomorrow. (Paraphrase)</li>
+</ol>
+<hr />
+<h2>IV. Unresolved Questions and Points to Verify</h2>
+<h3>1. Live Election Figures: Internally Contradictory, Must Not Be Cited as Results</h3>
+<p>All state-level figures reported in the Space were speakers' claims as they watched live broadcasts, <strong>internally contradictory and self-corrected many times</strong>. The main contradictions are listed below:</p>
+<ul>
+<li><strong>Florida</strong>: At one point reported as a large Democratic lead, later corrected to Republicans holding it (the Republican governor and Senator Ashley Moody won, a speaker's account).</li>
+<li><strong>Maine</strong>: The claim of an 81% vote share was questioned by many as fake news; in the closing stage it was again reported that Democrats won by 5%.</li>
+<li><strong>Texas</strong>: Successively reported as Democrats leading by 21% (68% of votes counted) and incumbent Republican Governor Abbott having called to concede defeat; but in the same period a speaker also acknowledged CNN had not predicted Abbott would lose.</li>
+<li><strong>Kansas</strong>: Successively reported as Democrats leading by 29%, and leading by 16.7% (61% of votes counted).</li>
+<li><strong>South Carolina</strong>: Reported as 71% of votes counted, with Democrats leading by 8.2%.</li>
+<li><strong>Iowa</strong>: Reported as 29% of votes counted, with Democrats leading by 16.6%, and later as 92% counted, with Democrats still leading.</li>
+<li><strong>North Carolina</strong>: Reported as flipped Democratic; no consistent vote figures were given.</li>
+<li><strong>Overall House/Senate picture</strong>: A Fox broadcast was at one point reported as House 11 to 3 and Senate 35 to 31; George Report said the probability of Democrats taking the House was 86% (later 99%) and the Senate 69%–72%; in the closing stage it was again reported that Democrats had won 5 Senate seats. These figures cannot be combined into a consistent overall picture.</li>
+<li><strong>Governors</strong>: Georgia elected a Black woman governor, New Mexico elected a Native American governor, and Ohio gubernatorial candidate Vivek conceded defeat (all speakers' accounts).</li>
+<li><strong>Michigan</strong>: The Muslim candidate was at one point reported as leading by 4% (61% of votes counted).</li>
+</ul>
+<p><strong>Conclusion</strong>: The figures above can only prove that "speakers that night believed the Democrats had won big"; they cannot prove the actual result in any state. Any citation must note the source and time and be marked as unverified.</p>
+<h3>2. Other Unverified Key Claims</h3>
+<ul>
+<li>The 1833 British Slavery Abolition Act compensated slave owners £20 million (a speaker first said £40 million, then corrected it), equivalent to 40% of British government revenue at the time, with borrowing repaid until 2010; Cameron's maternal family was a beneficiary.</li>
+<li>The Supreme Court ruled the April 1, 2025 tax increase unconstitutional and is refunding money.</li>
+<li>During Musk's campaign he drew $1 million per state, all winners were Trump supporters, and his lawyer has pleaded guilty; Musk spent a lot of money campaigning in Texas, and another speaker said he "spent $500 million" (the two figures come from different speakers, both unverified).</li>
+<li>73% of Americans said the U.S. should not attack Iran; 54% of U.S. citizens have low literacy; 43 million functionally illiterate people in 2017 and 58 million in 2023; 15% of U.S. high school students are LGBTQIA+ and 8.7% are unsure.</li>
+<li>3 million people in Canada have no family doctor; Halifax has 1,100 homeless people, Vancouver has 3,000–5,000 year-round, and 10 people die every day.</li>
+<li>North Korea has abandoned its unification policy; the speed of Japan acquiring nuclear weapons; Trump answered a reporter face-to-face that he would not use nuclear weapons against Iran; Trump expressed acceptance of the midterm results, readiness to cooperate with the Democrats, and did not mention election fraud; Trump called Fox to discuss the election results.</li>
+<li>"The Lone Walker / Mind Reader" predicted the midterm election would not happen and the Republicans would win big (whether that person spoke in the Space cannot be confirmed).</li>
+</ul>
+<h3>3. Points of Uncertain Speaker Attribution</h3>
+<ul>
+<li>The transcript has no speaker separation. Attribution for the following people's views rests mainly on the host naming them and their self-introductions, and errors remain possible: Zhuzhu/Zhuzhu/Zhuzhu (apparently the same person, with varying ASR renderings), Wenfeng (Wenfeng/Wenfeng variants are the same person), Cheng Hong/Chen Hong (unstable ASR rendering).</li>
+<li>The long remarks around 03:13–03:15 criticizing Wenfeng with the "control variables method," and the long remarks around 06:29–06:35 on the motives of Chinese Americans, have <strong>no identified speaker</strong>, and these notes do not attribute them to any specific person.</li>
+<li>The consecutive remarks around 05:35–05:38 on Iran's nuclear issue, and part of the vote-reporting remarks around 03:36–04:06 apart from the Wang Dezhong quotation, involve multiple people interjecting, and attribution of individual sentences is doubtful.</li>
+<li>Cui'er's remarks in the closing stage involved many interjections and poor ASR quality, and are not summarized in detail.</li>
+<li>"Daji," "Brother Tai," "Old Liang," "Jinshi," and similar names are Chinese-language X figures mentioned in the Space who may not have spoken there; these notes do not write a person mentioned as a speaker.</li>
+<li>The metadata speaker list has 25 people in total, but only about 15 can be clearly identified and have their views summarized in the transcript; the rest either had only brief interjections or were not named, and cannot be reliably summarized.</li>
+</ul>
+<h3>4. Transcription Quality and Doubtful Passages</h3>
+<ul>
+<li>The ASR throughout contains many homophone mishearings and hallucinated names and places (such as nickname-like renderings like "Representative Hot Pancake Party"), and suspected passages have been omitted or marked as doubtful and not included in the main text of these notes.</li>
+<li>The host briefly dropped off around 06:06, and the flow of remarks in that period is incomplete.</li>
+<li>In the closing stage after about 07:00, many people interjected at the same time and some sentences cannot be segmented; they have been summarized by their recognizable meaning and not quoted verbatim.</li>
+<li>The substantive discussion covered by these notes runs from 00:37:40 to 08:03:41; 00:00–00:37 was music/waiting with no substantive remarks.</li>
+</ul>
+<hr />
+<p><em>Note on how these notes were compiled: These notes are based on the local transcript (9,649 lines) and the Space metadata; all factual content is speakers' live accounts and has not been verified; speaker attribution is based on self-introductions, the host naming people, and inference from context, with uncertain points marked.</em></p>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full text of the notes for this session; the content is the speakers' own live accounts and has not been verified.</footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：Midterm 2026 —— 川普主义的升起和降落 · Yat's Talks",tw:"會議紀要：Midterm 2026 —— 川普主義的升起和降落 · Yat's Talks",en:"Meeting Notes: Midterm 2026 — The Rise and Fall of Trumpism · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：币安炉边谈话 Binance Fireside Chat</h1>
 <ul>
 <li><strong>Space</strong>：Binance Fireside Chat 🎙️</li>
@@ -90,8 +97,162 @@
 <li>转写说明：逐字稿由 faster-whisper base 模型本地转写，个别口音较重处（如 Yi He 部分段落）存在误听可能，关键数字与人名已与币安公开稿交叉核对。</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：幣安爐邊談話 Binance Fireside Chat</h1>
+<ul>
+<li><strong>Space</strong>：Binance Fireside Chat 🎙️</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1ybALpPKvqmzaR（Space ID：1ybALpPKvqmzaR）</li>
+<li><strong>時間</strong>：2026-11-09 19:46–20:35（北京時間），時長 49 分 31 秒；現場聽眾 5,245 人</li>
+<li><strong>主持</strong>：Jessica Walker（@jessicasmw，幣安團隊）</li>
+<li><strong>嘉賓</strong>：Richard Teng（@_RichardTeng，幣安聯席 CEO）、Yi He 何一（@heyibinance，幣安聯合創始人、聯席 CEO）、Jimmy Su（@JimmySu27，幣安首席安全官）</li>
+<li><strong>語言</strong>：英文</li>
+<li><strong>來源</strong>：本地錄音 faster-whisper（base 模型）英文轉寫逐字稿，共 590 段，覆蓋全程 00:00–00:49:19；幣安 10 月 30 日公開稿作數字交叉參考。<strong>以下所有說法均為發言人現場自述，未經獨立核實</strong>；轉寫個別處有雜音/斷句不清，已在文中標註。</li>
+</ul>
+<h2>結論先行</h2>
+<ol>
+<li><strong>事件定性</strong>：2026 年 10 月 29 日，攻擊者利用對幣安內部錢包簽名服務的未授權存取，在正常提現流程之外發起交易，約 <strong>63.4 億美元</strong>數位資產受影響。受損的是幣安<strong>自有熱錢包</strong>，用戶資金未受影響，損失由幣安全額承擔。</li>
+<li><strong>用戶資金安全</strong>：幣安稱用戶資金由既定託管架構保管，絕大多數在冷錢包中，僅在用戶提現時才動用；未發現私鑰洩露或用戶資料洩露的證據；已撥備超過損失 100% 的資金，約 <strong>98%</strong> 受影響代幣資產已補足，剩餘 2% 為流動性較低的資產、採購需更久，但損失已有全額覆蓋。</li>
+<li><strong>凍結/攔截</strong>：Richard 現場稱約 50 億美元已被凍結或攔截（該句轉寫有雜音，數字存疑；幣安 10 月 30 日公開稿稱約 30 億美元已凍結——時點與統計口徑可能不同，此處以現場說法為準並標註存疑）。</li>
+<li><strong>攻擊鏈</strong>：9 月起的假招聘面試——工程師在正規求職平台被冒充專案總監者接觸，首輪影片面試冒充 HR、次輪在社交通訊應用上面試冒充某金融科技公司 CEO，最後被要求把「作業」程式碼倉庫下載到工作電腦，零日惡意軟體在安裝過程中執行並替換合法開發工具元件。2026 年內幣安安全團隊已攔截 <strong>57 起</strong>疑似北韓相關網路威脅案件。</li>
+<li><strong>為何暫停提現後資金仍流出</strong>：攻擊者濫用的鏈上交易授權獨立於幣安提現基礎設施，暫停提現只能阻止新請求；熱錢包採用 MPC（多方計算），沒有單一私鑰可立即撤銷惡意授權，團隊須在極端時間壓力下開發專門的撤銷程式，遏制花了數小時而非數分鐘。</li>
+<li><strong>不是 FTX</strong>：FTX 暫停是因為客戶資金已經不在了；幣安暫停是為保護本來就在的客戶資金，且數日內恢復服務，僅在確認系統安全後才恢復；用戶可用儲備證明自行核驗餘額。</li>
+<li><strong>已做與將做</strong>：截至 11 月 3 日已在新環境重建受影響錢包系統與內部 AI 工具、更換受影響員工設備、輪換憑證與令牌、全員設備全面掃描、強化 AI 行為異常偵測與錢包風控；下一步是更強的環境隔離、獨立網路安全審查、加大 AI 安全投入、設立行業安全研究基金。</li>
+</ol>
+<h2>分發言人歸納</h2>
+<h3>Richard Teng（聯席 CEO）：事件經過與資金安全</h3>
+<ul>
+<li>開場即表態：“This should not have happened. We take full responsibility and are actively working to make things right.”（這本不該發生，我們承擔全部責任，正在積極糾正。）</li>
+<li>10 月 29 日攻擊利用內部錢包簽名服務的未授權存取，在正常提現流程之外發起交易；系統對大額轉帳發出內部警報後立即開始調查，隨即採取遏制措施，包括暫停提現、聯合夥伴凍結受影響資產。</li>
+<li>影響約 63.4 億美元；約 50 億美元已被凍結或攔截（數字見上文標註）；感謝發行方、鏈上情報公司與執法機構「在幾分鐘內、而非幾小時內」行動；鏈上透明使即時追蹤資金流向、多方協同凍結成為可能，這是傳統金融不具備的能力。</li>
+<li>用戶資金安全：受影響的是幣安自有倉位與自有錢包，用戶資金未短缺過一分；已撥備超過損失 100% 的資金，約 98% 受影響代幣資產已補足，剩餘 2% 流動性較低、採購需更久，但無論如何都有覆蓋；“You don't have to take our word for it. You can verify your own balance against our published proof of reserve right now.”（不必只信我們的話，現在就可以用已發布的儲備證明核對自己的餘額。）</li>
+<li>與 FTX 的區別：FTX 暫停是因為客戶資金不在了；幣安暫停是預防性措施、為保護本來就在的客戶資金；服務在數日內恢復，且僅在確認系統安全後才恢復；區別在於可驗證性，而非承諾。</li>
+<li>AI 的雙面性：AI 改變了攻擊的經濟學——速度、規模、複雜程度都在上升，過去需要專業團隊的攻擊如今可自動化、更快、更大批量地發起，社工也變得遠比以前可信；但同樣技術也是最強的防禦之一，可發現異常、追蹤資金、以幾年前不可能的方式回應；防禦必須 AI 優先，幣安正加大對 AI 與 AI 防護、行為監測、終端防護的投入，並與頭部 AI 與安全公司合作而非單打獨鬥。“Security is never 100% for us or for anybody else. What is 100% in our case is our accountability to you, our users.”（安全對我們或任何人而言都不是 100%；100% 的是我們對用戶的責任。）</li>
+<li>結尾致用戶：資金安全、餘額從未短缺、賠付不依賴追回結果，請自行用儲備證明核驗；幣安將繼續更新、恢復更多網路與資產、發布並更新儲備證明、透過官方管道公布獨立審查結果；同時提醒保持警惕——絕不與任何人分享密碼、一次性驗證碼或助記詞，幣安絕不會索要這些；遇到冒充幣安或幣安人員的情況請盡快透過官方管道舉報；社工是所有用戶共同面對的一線風險。</li>
+</ul>
+<h3>Yi He 何一（聯合創始人、聯席 CEO）：當晚的人與為什麼公開細節</h3>
+<ul>
+<li>事發當晚她在阿布達比，正準備休息時刷 X 看到熱議，隨即進入工作群，看到團隊已在處理；作為非技術背景，她當時能做的是傾聽與對外溝通。團隊 24 小時輪班，公關與社群媒體團隊隨時待命。</li>
+<li>第一時間判斷：用戶最擔心的是自己的錢是否安全；她與主要股東快速碰頭後直接發帖，明確用戶資金安全、資產負債表可以覆蓋；發帖時攻擊仍在進行，損失總額尚不清楚。</li>
+<li>感謝 Tether、Circle、USD1 等發行方以及 Aave、Polygon 等行業夥伴在數小時內協助凍結；她表示那一刻真切感受到加密行業是互相支持的社群，而非外界以為的彼此難以合作。</li>
+<li>為什麼公布大量技術細節：高級法務與資深高管曾建議不要在公開信或報告中寫得這麼細，她明確拒絕了這一建議並堅持公開——幣安九年多來一直如此，信任來自不隱瞞錯誤、公開透明、承認並改進；分享更多細節也能讓行業其他參與者理解發生了什麼、如何發生、如何改進自身。她把這看作機會而非僅是挑戰。</li>
+<li>分享了 HR 團隊遇到的真實案例：面試者到辦公室時帶來電腦、與行政溝通的人與面試時不是同一個人；還有的面試者面孔與證件不符、IP 異常，背景調查後便消失——這類對抗每天都在發生。</li>
+<li>對行業展望（個人觀點）：她個人仍堅定看好加密行業，個人資產全部在加密資產中；行業正從炒作轉向真實價值，幣安在做股票永續合約（她稱其交易量占比已超 50%）、RWA（自稱在各公開平台中最活躍）等與傳統金融結合的業務，方向是把真實資產帶上鏈、以更高效率與更低成本做事。</li>
+<li>結尾：她上週曾與中文社群線上交流約 20 分鐘，之後會轉發一封信，說明幣安的觀點與應對；未來可能會開更多開放 AMA，因為用戶仍有問題想透過 AMA 得到答案。</li>
+</ul>
+<h3>Jimmy Su（首席安全官）：攻擊手法與整改路線圖</h3>
+<ul>
+<li>回應「幣安這麼大的安全團隊怎麼還會被攻破」：“Saying the attacker was sophisticated explains what happened, but it does not excuse it.”（說攻擊者很複雜可以解釋發生了什麼，但不能成為藉口。）“If a campaign like this can get through our defenses, it can get through most.”（如果這樣的攻擊能突破我們的防線，它也能突破大多數平台的防線。）這不是一家公司的問題，而是全行業的問題——攻擊者研究整個行業，每次有人吃虧他們就進步一次。</li>
+<li>假招聘面試攻擊鏈（9 月）：一名軟體工程師在正規求職平台被冒充專案總監者接觸，對方資料提及幣安經歷，屬針對性接觸而非隨機；首輪為影片面試，對方冒充 HR，並分享帶有個人照片與影片的社群媒體帳號以建立信任；次輪在常用社交通訊應用上進行，對方自稱某金融科技公司 CEO；面試尾聲被要求把「作業」程式碼倉庫下載到工作電腦，惡意程式碼在安裝過程中執行；惡意軟體採用複雜的反偵測與規避手段，替換合法開發工具元件以執行命令並與攻擊者控制的外部伺服器通訊；屬零日惡意軟體，第三方終端防護當時未能檢出；攻擊者還採取措施隱藏活動、清除痕跡，使偵測與調查更困難。</li>
+<li>威脅態勢：2026 年內，幣安安全團隊已發現並阻止 57 起疑似北韓相關網路威脅案件，手法包括虛假求職面試、偽裝成流行開發工具的惡意軟體、被入侵的軟體包與瀏覽器擴充功能、被竄改的影片會議應用、旨在竊取憑證與部署遠端存取惡意軟體的社工活動；這是持續、有資源的國家級背景攻擊，而非機會主義犯罪；57 起被阻止了，但不是全部都被阻止，這就是各大平台如今共同面對的現實，協作不是可選項。</li>
+<li>為何暫停提現後資金仍流出：攻擊者濫用的交易授權機制是標準提現暫停關不掉的——暫停提現只是讓幣安的提現基礎設施不再處理新請求，但攻擊者建立的惡意授權存在於鏈上、獨立於幣安的提現基礎設施之外，無需幣安系統運行即可繼續運作；還需額外的鏈上交易來撤銷這些授權。進一步的複雜性在於熱錢包採用 MPC，沒有單一私鑰可立即撤銷惡意授權，團隊須在極端時間壓力下開發並執行專門的撤銷程式——這就是遏制花了數小時而非數分鐘的原因。公開這一點，是因為任何使用類似架構的平台都需要在自己面對之前理解這種失效模式。</li>
+<li>截至 11 月 3 日已完成的措施：在新環境重建受影響錢包系統；重建受影響內部 AI 工具並強化其存取控制；更換受影響員工設備；輪換相關憑證與存取令牌；對全部員工設備做全面強化安全掃描；強化基於 AI 的行為異常偵測；強化錢包服務周邊風控；與執法機構、鏈上情報公司、行業夥伴密切合作追蹤與凍結受影響資產。</li>
+<li>架構級根本改進：更強的環境隔離，包括內外網流量嚴格分離、工作內容與敏感資料更好隔離、企業設備上檔案儲存與網路存取更強分離；背後的原則很簡單——即使單個員工設備被攻破，也不應該能升級為系統級安全事件，這是正在努力達到的標準。</li>
+<li>未來三大重點：
+  1. <strong>獨立網路安全審查</strong>：聘請外部安全專家全面審查事件、驗證結論、建議進一步改進；不希望只是自己審查自己然後宣布一切安全，希望獨立專家挑戰其假設、檢查控制措施、發現可能遺漏之處；審查結果也將指導持續整改。
+  2. <strong>加大 AI 安全與預防投入</strong>：增加對 AI 驅動的威脅偵測、終端防護、開發環境安全、行為異常監測的投入；本次事件的重要教訓是內部 AI 工具與開發環境必須被視為關鍵基礎設施，需要與其他敏感生產系統同樣嚴格的安全控制與監督。
+  3. <strong>更廣泛的行業協作</strong>：正在籌建安全研究基金，並與頭部 AI 公司、安全公司及其他行業參與者開展針對性合作，目標是推進安全研究（特別是 AI 相關威脅在區塊鏈環境中的問題）並與整個生態分享所學；威脅日益複雜，沒有一家公司能獨自應對，跨行業協作必不可少。</li>
+<li>同時也在認真審視自身的應急回應能力，審查簽名策略、熱錢包控制以及更快發現、遏制與回應威脅的機會；目標不只是從事件中恢復，而是吸取教訓、強化防禦、幫助整個行業變得更好、為未來類似攻擊做準備；信任要靠行動贏得，而非言語。</li>
+</ul>
+<h2>現場花絮</h2>
+<ul>
+<li>開場前約 14 分鐘為等候音訊（主持人提示 30 分鐘後開始、7 分鐘後開始）；正式開場後 Richard 一度出現麥克風問題，Jessica 先轉向何一發言，Richard 隨後恢復。</li>
+<li>本場為預設問題訪談、無自由提問環節，問題取自社群事先提交；結束時何一補充說明未來可能開更多開放 AMA。</li>
+</ul>
+<h2>附註</h2>
+<ul>
+<li>數字互校：63.4 億美元影響總額、98% 已補足、57 起已攔截案件等數字與幣安 10 月 30 日公開稿及公開報導口徑一致；「約 50 億美元已凍結或攔截」一句轉寫有雜音，幣安 10 月 30 日公開稿稱約 30 億美元已凍結，兩者時點與統計口徑可能不同，現場數字以存疑標註。</li>
+<li>轉寫說明：逐字稿由 faster-whisper base 模型本地轉寫，個別口音較重處（如 Yi He 部分段落）存在誤聽可能，關鍵數字與人名已與幣安公開稿交叉核對。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Binance Fireside Chat</h1>
+<ul>
+<li><strong>Space</strong>: Binance Fireside Chat 🎙️</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1ybALpPKvqmzaR (Space ID: 1ybALpPKvqmzaR)</li>
+<li><strong>Time</strong>: 2026-11-09 19:46–20:35 (Beijing time), duration 49 minutes 31 seconds; 5,245 live listeners</li>
+<li><strong>Host</strong>: Jessica Walker (@jessicasmw, Binance team)</li>
+<li><strong>Guests</strong>: Richard Teng (@_RichardTeng, Binance Co-CEO), Yi He (@heyibinance, Binance Co-founder and Co-CEO), Jimmy Su (@JimmySu27, Binance Chief Security Officer)</li>
+<li><strong>Language</strong>: English</li>
+<li><strong>Source</strong>: Verbatim English transcript from a local recording transcribed with faster-whisper (base model), 590 segments in total, covering the full session 00:00–00:49:19; Binance's public statement of October 30 was used as a cross-reference for figures. <strong>All statements below are the speakers' own accounts given live and have not been independently verified</strong>; a few passages in the transcript contain noise or unclear breaks and are marked as such in the text.</li>
+</ul>
+<h2>Key Takeaways First</h2>
+<ol>
+<li><strong>Nature of the incident</strong>: On October 29, 2026, attackers used unauthorized access to Binance's internal wallet signing service to initiate transactions outside the normal withdrawal process, affecting approximately <strong>US$6.34 billion</strong> in digital assets. What was hit was Binance's <strong>own hot wallets</strong>; user funds were not affected, and Binance bears the loss in full.</li>
+<li><strong>User funds are safe</strong>: Binance says user funds are held under its established custody architecture, with the vast majority in cold wallets and only drawn on when users withdraw; no evidence of private key leakage or user data leakage was found; funds exceeding 100% of the loss have been set aside, about <strong>98%</strong> of the affected token assets have been replenished, and the remaining 2% are lower-liquidity assets that will take longer to procure, but the loss is fully covered.</li>
+<li><strong>Frozen / intercepted</strong>: Richard said live that about US$5 billion had been frozen or intercepted (that sentence contains noise in the transcript and the figure is in doubt; Binance's public statement of October 30 said about US$3 billion had been frozen — the timing and statistical basis may differ; the live statement is used here with the doubt noted).</li>
+<li><strong>Attack chain</strong>: A fake recruitment interview campaign starting in September — an engineer was approached on a legitimate job platform by someone impersonating a project director; the first-round video interview impersonated HR, the second round, on a social messaging app, impersonated the CEO of a fintech company, and in the end the engineer was asked to download a "homework" code repository onto a work computer, where zero-day malware executed during installation and replaced components of a legitimate development tool. In 2026, Binance's security team has already intercepted <strong>57</strong> suspected North Korea-related cyber threat cases.</li>
+<li><strong>Why funds kept flowing out after withdrawals were paused</strong>: The on-chain transaction authorizations abused by the attackers are independent of Binance's withdrawal infrastructure, so pausing withdrawals could only stop new requests; the hot wallets use MPC (multi-party computation), so there is no single private key with which to immediately revoke the malicious authorizations, and the team had to develop a dedicated revocation program under extreme time pressure — containment took hours rather than minutes.</li>
+<li><strong>Not FTX</strong>: FTX paused because customer funds were already gone; Binance paused to protect customer funds that were in fact there, resumed service within days, and only resumed after confirming the systems were secure; users can verify their balances themselves against the proof of reserves.</li>
+<li><strong>Done and to come</strong>: As of November 3, the affected wallet systems and internal AI tools have been rebuilt in a new environment, affected employees' devices replaced, credentials and tokens rotated, all employee devices fully scanned, and AI-based behavioral anomaly detection and wallet risk controls strengthened; next steps are stronger environment isolation, an independent cybersecurity review, greater investment in AI security, and an industry security research fund.</li>
+</ol>
+<h2>Summary by Speaker</h2>
+<h3>Richard Teng (Co-CEO): What Happened and the Safety of Funds</h3>
+<ul>
+<li>He opened by stating: "This should not have happened. We take full responsibility and are actively working to make things right."</li>
+<li>The October 29 attack used unauthorized access to the internal wallet signing service to initiate transactions outside the normal withdrawal process; after the system issued internal alerts for large transfers, an investigation began immediately, followed by containment measures including pausing withdrawals and working with partners to freeze the affected assets.</li>
+<li>About US$6.34 billion was affected; about US$5 billion has been frozen or intercepted (see the note above on the figure); he thanked issuers, on-chain intelligence firms and law enforcement agencies for acting "in minutes, not hours"; on-chain transparency made it possible to track fund flows in real time and coordinate freezes across multiple parties, a capability traditional finance does not have.</li>
+<li>User funds are safe: what was affected was Binance's own positions and its own wallets; user funds were never short by a cent; funds exceeding 100% of the loss have been set aside, about 98% of the affected token assets have been replenished, and the remaining 2% are lower-liquidity assets that will take longer to procure, but are covered in any case; "You don't have to take our word for it. You can verify your own balance against our published proof of reserve right now."</li>
+<li>The difference from FTX: FTX paused because customer funds were gone; Binance's pause was a precautionary measure to protect customer funds that were in fact there; service resumed within days, and only after the systems were confirmed secure; the difference lies in verifiability, not promises.</li>
+<li>The two sides of AI: AI has changed the economics of attacks — speed, scale and complexity are all rising; attacks that once required a specialist team can now be automated and launched faster and in larger volumes, and social engineering has become far more convincing than before; but the same technology is also one of the strongest defenses, able to detect anomalies, track funds and respond in ways that were impossible a few years ago; defense must be AI-first, and Binance is increasing investment in AI and AI protection, behavioral monitoring and endpoint protection, and working with leading AI and security companies rather than fighting alone. "Security is never 100% for us or for anybody else. What is 100% in our case is our accountability to you, our users."</li>
+<li>Closing message to users: funds are safe, balances were never short, and compensation does not depend on recovery outcomes — please verify for yourselves using the proof of reserves; Binance will continue to provide updates, restore more networks and assets, publish and update its proof of reserves, and release the results of the independent review through official channels; he also reminded users to stay vigilant — never share your password, one-time verification code or seed phrase with anyone, as Binance will never ask for them; if you encounter anyone impersonating Binance or Binance staff, please report it through official channels as soon as possible; social engineering is a front-line risk faced by all users together.</li>
+</ul>
+<h3>Yi He (Co-founder, Co-CEO): The People That Night and Why the Details Were Disclosed</h3>
+<ul>
+<li>On the night of the incident she was in Abu Dhabi and was about to rest when she saw the heated discussion on X; she immediately joined the work group chat and saw the team was already handling it; with a non-technical background, what she could do at that moment was listen and handle external communications. The team worked in 24-hour shifts, and the PR and social media teams were on standby at all times.</li>
+<li>Her first judgment: what users worried about most was whether their own money was safe; after a quick meeting with the major shareholders, she posted directly, making clear that user funds were safe and that the balance sheet could cover the loss; at the time of the post the attack was still ongoing and the total loss was not yet known.</li>
+<li>She thanked issuers such as Tether, Circle and USD1, as well as industry partners such as Aave and Polygon, for helping with freezes within hours; she said that at that moment she truly felt the crypto industry is a community that supports one another, rather than one where cooperation is difficult, as outsiders assume.</li>
+<li>Why so many technical details were disclosed: senior legal counsel and senior executives had advised against writing in such detail in the public letter or report; she explicitly rejected that advice and insisted on disclosure — Binance has done this for more than nine years; trust comes from not concealing mistakes, being open and transparent, and admitting and improving; sharing more detail also lets other industry participants understand what happened, how it happened, and how to improve themselves. She sees this as an opportunity, not merely a challenge.</li>
+<li>She shared real cases encountered by the HR team: an interviewee who arrived at the office brought a computer, and the person communicating with the administrative staff was not the same person as in the interview; other interviewees whose faces did not match their ID documents and whose IPs were abnormal disappeared after background checks — confrontations of this kind happen every day.</li>
+<li>Her outlook on the industry (personal view): she personally remains firmly bullish on the crypto industry, and all of her personal assets are in crypto assets; the industry is shifting from hype to real value, and Binance is building businesses that combine with traditional finance, such as stock perpetual contracts (which she said already account for over 50% of trading volume) and RWA (which she said is the most active among public platforms), with the direction of bringing real assets on-chain and doing things with higher efficiency and lower cost.</li>
+<li>Closing: last week she had an online exchange of about 20 minutes with the Chinese-speaking community, and will later forward a letter explaining Binance's views and response; more open AMAs may be held in the future, because users still have questions they want answered through AMAs.</li>
+</ul>
+<h3>Jimmy Su (Chief Security Officer): Attack Method and Remediation Roadmap</h3>
+<ul>
+<li>In response to "how could Binance, with such a large security team, still be breached": "Saying the attacker was sophisticated explains what happened, but it does not excuse it." "If a campaign like this can get through our defenses, it can get through most." This is not one company's problem but an industry-wide problem — attackers study the entire industry, and every time someone suffers a loss, they improve.</li>
+<li>The fake recruitment interview attack chain (September): a software engineer was approached on a legitimate job platform by someone impersonating a project director; the person's profile mentioned Binance experience, making it a targeted approach rather than a random one; the first round was a video interview in which the other party impersonated HR and shared social media accounts with personal photos and videos to build trust; the second round took place on a commonly used social messaging app, with the other party claiming to be the CEO of a fintech company; at the end of the interview, the engineer was asked to download a "homework" code repository onto a work computer, and the malicious code executed during installation; the malware used sophisticated anti-detection and evasion techniques, replacing components of a legitimate development tool in order to execute commands and communicate with an external server controlled by the attackers; it was zero-day malware that third-party endpoint protection failed to detect at the time; the attackers also took measures to hide their activity and erase traces, making detection and investigation more difficult.</li>
+<li>Threat landscape: in 2026, Binance's security team has discovered and stopped 57 suspected North Korea-related cyber threat cases, with methods including fake job interviews, malware disguised as popular development tools, compromised software packages and browser extensions, tampered video conferencing apps, and social engineering activities aimed at stealing credentials and deploying remote-access malware; this is a sustained, well-resourced, state-backed campaign rather than opportunistic crime; 57 cases were stopped, but not all of them were, and that is the reality major platforms now face together — collaboration is not optional.</li>
+<li>Why funds kept flowing out after withdrawals were paused: the transaction authorization mechanism abused by the attackers cannot be switched off by a standard withdrawal pause — pausing withdrawals only stops Binance's withdrawal infrastructure from processing new requests, whereas the malicious authorizations established by the attackers exist on-chain, independent of Binance's withdrawal infrastructure, and can continue to operate without Binance's systems running; additional on-chain transactions are also required to revoke those authorizations. A further complication is that the hot wallets use MPC, so there is no single private key with which to immediately revoke the malicious authorizations, and the team had to develop and execute a dedicated revocation program under extreme time pressure — that is why containment took hours rather than minutes. This is being disclosed because any platform using a similar architecture needs to understand this failure mode before facing it itself.</li>
+<li>Measures completed as of November 3: rebuilding the affected wallet systems in a new environment; rebuilding the affected internal AI tools and strengthening their access controls; replacing affected employees' devices; rotating the relevant credentials and access tokens; conducting a full, enhanced security scan of all employee devices; strengthening AI-based behavioral anomaly detection; strengthening risk controls around the wallet services; and working closely with law enforcement agencies, on-chain intelligence firms and industry partners to track and freeze the affected assets.</li>
+<li>Fundamental architectural improvements: stronger environment isolation, including strict separation of internal and external network traffic, better isolation of work content and sensitive data, and stronger separation of file storage and network access on corporate devices; the principle behind this is simple — even if a single employee device is compromised, it should not be able to escalate into a system-level security incident, and that is the standard being worked toward.</li>
+<li>Three future priorities:
+  1. <strong>Independent cybersecurity review</strong>: engaging external security experts to comprehensively review the incident, verify the conclusions and recommend further improvements; the aim is not simply to review itself and then declare everything safe, but to have independent experts challenge its assumptions, examine its controls and find anything that may have been missed; the review results will also guide ongoing remediation.
+  2. <strong>Greater investment in AI security and prevention</strong>: increasing investment in AI-driven threat detection, endpoint protection, development environment security and behavioral anomaly monitoring; an important lesson of this incident is that internal AI tools and development environments must be treated as critical infrastructure, requiring security controls and oversight as strict as those for other sensitive production systems.
+  3. <strong>Broader industry collaboration</strong>: a security research fund is being established, and targeted collaboration is under way with leading AI companies, security companies and other industry participants, with the goal of advancing security research (in particular AI-related threats in blockchain environments) and sharing what is learned with the entire ecosystem; threats are growing more complex, no single company can deal with them alone, and cross-industry collaboration is essential.</li>
+<li>Binance is also seriously examining its own emergency response capabilities, reviewing signing policies, hot wallet controls and opportunities to detect, contain and respond to threats faster; the goal is not only to recover from the incident, but to learn from it, strengthen defenses, help the entire industry become better and prepare for similar attacks in the future; trust must be earned through actions, not words.</li>
+</ul>
+<h2>On-the-Spot Notes</h2>
+<ul>
+<li>About 14 minutes before the start was waiting audio (the host indicated it would start in 30 minutes, then in 7 minutes); after the formal start, Richard briefly had a microphone problem, Jessica turned first to Yi He to speak, and Richard later recovered.</li>
+<li>This session was a preset-question interview with no open Q&amp;A segment; the questions were drawn from submissions made by the community in advance; at the end, Yi He added that more open AMAs may be held in the future.</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Cross-check of figures: figures such as the US$6.34 billion total impact, 98% replenished and 57 intercepted cases are consistent with Binance's public statement of October 30 and public reporting; the sentence "about US$5 billion has been frozen or intercepted" contains noise in the transcript, while Binance's public statement of October 30 said about US$3 billion had been frozen — the timing and statistical basis of the two may differ, and the live figure is marked as in doubt.</li>
+<li>Transcription note: the verbatim transcript was produced locally with the faster-whisper base model; mishearings are possible in passages with heavier accents (such as some of Yi He's segments), and key figures and names have been cross-checked against Binance's public statement.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes for this session; the content consists of the speakers' own live accounts and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：币安炉边谈话 Binance Fireside Chat · Yat's Talks",tw:"會議紀要：幣安爐邊談話 Binance Fireside Chat · Yat's Talks",en:"Meeting Notes: Binance Fireside Chat · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

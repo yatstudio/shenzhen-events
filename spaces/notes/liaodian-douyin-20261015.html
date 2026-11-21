@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：《聊点抖音不能聊的》</h1>
 <h2>基本信息</h2>
 <ul>
@@ -180,8 +187,344 @@
 </tbody>
 </table>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：《聊點抖音不能聊的》</h1>
+<h2>基本資訊</h2>
+<ul>
+<li><strong>標題</strong>：《聊點抖音不能聊的》</li>
+<li><strong>時間</strong>：2026-10-15 14:08–16:19（spacesdashboard 頁面時間，疑為 UTC，引用時請注意時區不確定性）</li>
+<li><strong>時長</strong>：2 小時 11 分（錄音實測 7,874.7 秒）</li>
+<li><strong>主持人</strong>：自己造船的路飛 @CaptainLufei999（自稱"飛仔"）</li>
+<li><strong>聯合主持</strong>：DD 滴滴 @rtk17025</li>
+<li><strong>發言人</strong>（spacesdashboard 記錄）：Koda @wadezone、與神對話張 @zhang_bj_、香港王富貴 @fugui8、陳平安 @0X_CPA、IAMAI @iamai_omni、鹿姜南Sam @SamEvarth、小灰灰香辣雞翅 @chji42514575、鳳凰派 @RealPengFeii、李白天 @LeoLibt、Nora X @NoraX2026、佩德羅 @A8_Pedro、楊望川 @Ywc0901、師傅別念了 @QqCdch9573 等</li>
+<li><strong>參與</strong>：累計 6,081 人次，80 次回放播放（spacesdashboard 資料）</li>
+<li><strong>回放</strong>：https://x.com/i/spaces/1vJpPNmQLrgJE</li>
+<li><strong>紀要來源</strong>：X 回放錄音本地轉寫（faster-whisper，逐字稿 2,879 行，全長 2 小時 11 分）</li>
+</ul>
+<blockquote>
+<p><strong>說明（必讀）</strong>：本紀要所有金額、人數、戰績、經歷均為發言人現場自述或轉述，<strong>未經外部核實</strong>，引用時請以各方官方後續公告為準。轉寫無說話人分離，發言歸屬依據為對話內容、主持人現場點名及 spacesdashboard 發言人名單推斷；未能確切辨認的發言者記為"聽眾（自述）"。轉寫存在同音誤聽可能，關鍵引文已按錄音原意整理，個別詞句存疑處已標註。</p>
+</blockquote>
+<h2>結論先行</h2>
+<p>這是一場以路飛為主講的開放連麥：聽眾輪流上麥提問，路飛逐一作答，全場幾乎沒有嘉賓對談。核心就四句話：</p>
+<ol>
+<li><strong>出名比不出名安全</strong>：路飛認為有錢人最怕的是"出事沒人知道"，影響力本身就是保護——"如果我今天死了，明天全國都知道了，這就是安全"。他自述"徹底乾淨、沒有辮子"，並以孫宇晨、趙長鵬、王星緬北案為例。</li>
+<li><strong>上了牌桌不下來，一定輸</strong>：幣圈小資金高槓桿、頻繁交易是"機率性一定錯誤"——交易所手續費約千分之一，成交一千次本金就沒了；這不是零和遊戲，是"有人抽水的遊戲"。</li>
+<li><strong>他的解法是"備兌雙賣"</strong>：持有 QQQ 現貨的同時賣出買權、賣出賣權收權利金，股票部位不到 20%、大部分是現金，目標只是保本、跑贏美債殖利率；自述今年期權收益 6.48%，並拿一部分收益定期買"世界末日期權"賭黑天鵝。</li>
+<li><strong>散戶唯一的優勢是不急</strong>：資金、資訊、速度、手續費全方位落後，判斷漲跌本身沒有意義（漲跌是共識效應，不是真相）；能贏的辦法是船小好掉頭、不急著交代，以及嚴格執行自己定好的策略。</li>
+</ol>
+<p>此外：路飛不聊政治（有人一提即被下麥）；不給年輕人"過來人建議"（時代環境不同，給建議本身就是錯的）；自媒體要的是影響力這個"無形資產"，變現是順帶的。</p>
+<h2>分發言人紀要</h2>
+<h3>路飛（主持人，全場主講）</h3>
+<p><strong>財富與安全。</strong> 回答聽眾老張"有錢不出名安全還是有錢出名安全"時，路飛的答案是反直覺的：出名更安全。邏輯是出事之後會不會有人知道——王星被緬北抓走後輿論施壓，緬北"更慘"；他自稱如果自己被抓，影響力更大、更多人知道，所以沒人敢動。孫宇晨"現在很安全"是因為有名，趙長鵬"被美國啃了一口"是另一回事。他強調自己和孫宇晨不一樣："我沒有辮子，我是徹底乾淨的"；又說"我的痛苦你感受不到……這個世界最公平的就是每一個人無論多掙扎多努力或多慵懶地活著，你的痛苦和快樂都是一樣多的"。另勸老張：不要到處說自己認識孫宇晨、趙長鵬——地位不匹配時，對方就從"幫你掙錢的武器"變成了"幫你裝逼、維護尊嚴的武器"，"沒有人可以靠別人維護自己尊嚴"。</p>
+<p><strong>自我實現預言 / 吸引力法則。</strong> 老張問"每天說自己不行就會不行"是不是真的。路飛反駁《秘密》式理解：天天講一百遍長生不老並不能長生不老；但信念會改變行為選擇（相信能更長壽的人會選擇長壽的生活方式），長壽的第一基礎仍是基因。</p>
+<p><strong>"人選"與他的書。</strong> 聽眾問他與艾倫（Alan）聊過的"人選/天選"理論。路飛說：市面上所有理論都是"給你一個可以實踐的模板，照著做就能成功"；而他的書（自述 18 萬字，偏哲學方向）"沒有一個字是教你怎麼做的"，只講一件事發生時"正面是什麼、反面是什麼"。分析別人怎麼活對你沒有意義，"你得走你自己的路，才能活下去"。做任何金融的事，"本質就是只為選福"（轉寫如此）。</p>
+<p><strong>"歷史的垃圾時間"與道德敘事。</strong> 26 歲聽眾說這一代處在"歷史的垃圾時間"，路飛直接否定："任何一代都是這樣"。他提出自己的三分法：自然法（物競天擇、適者生存）、道德法（人與人互相講道德）、司法（犯法坐牢）；道德法是用來保護弱者的——"當你開始為自己的失敗找理由，你就變成一個弱者了，因為你需要被這個世界保護"。年輕人要擺脫"道德敘事"和受害者思想，"成為一個硬核、強勢文化的存在"。</p>
+<p><strong>交易觀：牌桌與手續費。</strong> 對"幣圈小資金以小博大、100 倍槓桿"的提問，路飛說："你上了這個牌桌你下不來，你就是一定輸的"。核心算式：交易所手續費約千分之一，勝率 50% 時"成交一千次本金就沒了"；交易不是零和遊戲、也不是正和遊戲，是"有人抽水"的遊戲。交易所、做市商、大券商之所以開出離譜佣金請他拉人，正因為"有鉅額利潤可以賺"。他也承認：真正靠交易發財的人百分之百有，但"那個人不會是你"；A 股"十大股神"裡"8、9 個已經沒了，就是因為沒下牌桌"；川普能成功是"被迫下牌桌"（制度決定他不能不下）。段永平、巴菲特的持股都是公開的，但沒人會照抄——"每個人都覺得自己比別人聰明"。</p>
+<p><strong>他的期權策略（備兌雙賣）。</strong> 路飛自述：交易對象主要是 SPY、QQQ、VOO 等指數，另有少量 UFO（航太）和醫療創新藥；股票配置不到 20%，大部分是現金。做法是持有 QQQ 現貨（自述約 1,000 萬）同時賣出買權、賣出賣權收權利金：漲到履約價就按約定價賣出，跌到履約價就按約定價接貨，"兩邊的權利金我是收走了"。他強調這是"背對"（有現貨避險）而非裸賣，裸賣會被強制平倉。保證金比例定得極高：QQQ 從 500 跌到 250、虧損約 30% 也可以接受，"一直往下接"，川普搞關稅那波他一路接到 400。QQQ 期權多做 1–3 天的末日期權，SPY 約一個月，個股期權約半年。自述今年期權收益 6.48%（截至當時），"今年就很差……因為它一直平"。心態目標極低："我能夠保本我就很開心了，如果能比美國國債收益率高，我就特別開心"，"有錢人沒有這個耐心把錢放在這麼低效率的地方"。</p>
+<p><strong>"世界末日期權"。</strong> 他拿一部分期權收益，每三個月固定買一次"世界末日期權"：直接做空最大的指數、賭黑天鵝，不做 VIX（與自己的持倉相關性不大）。2020 年 4 月負油價他經歷過，"跌就是給我機會……我是盼望它跌的，不是盼望它漲的"。心態管理靠壓制慾望："虧損的時候一定會難過，賺錢的時候一定會開心……最重要就是壓制慾望，不要想著賺太多"。</p>
+<p><strong>ETF 與理財產品。</strong> 只買被動型 ETF，不看發行商、只看成交量和費率，偏好先鋒（Vanguard）；港股 ETF 不敢買（美團權重太大、不均勻）；SPY 是 State Street 發行（現場說法）。給小白講期權很難：講到 delta、vega 等 Greeks 時"他們沒有耐心"。理財產品背後基本都是期權結構：雪球、固收+ 等產品裡，機構先收走期權金、再付你利息；低收益理財產品最虧——"你承擔的是 9.5% 甚至 10% 的風險，但你只有 8% 的收益"，等於幫銀行承擔了兩個點的風險；不如直接買美債、大銀行或蘋果的信用債。千禧年基金（Millennium，自述規模一千多億美金、約 400 個經理）是"風險預期管理/頭寸管理"，額度先內部消化，再經私行套殼分銷並收手續費。</p>
+<p><strong>量化與散戶劣勢。</strong> 股票漲跌是"共識效應"、是混沌系統，"判斷漲跌沒有意義"，就算你知道一家公司財務造假、只有你知道也沒用，要所有人都知道才有用；做空機構發文做空的例子同理。量化本質是"獵人與獵手不斷轉化"；長期資本管理公司（LTCM）的例子：華爾街最聰明的人聚在一起，"兩次跟頭就全部破產了"。散戶資金、資訊、網速、手續費全面落後，"唯一的優勢就是你不急"——機構要給主人、給市場、給自己一個交代，"所以他急"；散戶船小好掉頭，但路飛認為多數人"還到不了這個層面"。</p>
+<p><strong>年輕人要不要碰美股。</strong> 對 24 歲澳洲碩士的提問：國內年輕人盡量不要碰（海外利得稅、開戶難、殖利率低風險高）；在海外留學則"避不開"。關鍵在心態：不要奔著"學會投資就不用上班、做數位遊牧"，那是"貪美的夢"、"一定會把自己喊死"；建議拿薪水的 10% 定投，定一個 5–10 年策略嚴格執行，"輸了錢你都會特別牛逼"。小資金做他的雙賣策略沒有意義：一天權利金收益約千分之一到千分之二，"一萬塊錢就十塊錢"。靠投資實現財務自由的人極少，段永平也不是靠投資起家。財富自由的定義因人而異，他的定義是"不用再為上班（發愁）、可以花錢"；但"投資收益是不能拿來花的，因為它是不確定性的"；"每個人都會低估自己的物慾，沒有人會高估自己的物慾"。公開記錄投資心得會額外獲得"榮譽感、權威感"，"你會為這個東西付出巨大代價"。</p>
+<p><strong>自媒體與個人經歷。</strong> 路飛自述：15 歲拍電影，大學沒畢業出來做生意，大學時期做過遊戲商人、賣過珠寶；29 歲把公司賣了、移民香港，開始自己設計、自己造一條遊艇（自述幾千萬）。抖音從 30 多萬粉絲開始露臉，去年 12 月開始，到現在不到一年；早期自媒體年收入 6、70 萬自述都捐了，現在付費會員收入一年約 100 萬左右，"不捐了，自己花了"。X 玩了第三天，約 5 萬粉絲，靠"朗仔和艾倫"兩位 X 圈大哥宣傳。做自媒體的底子是那條船——"別人看到覺得這個人還挺有實力"，船是"一把刀"；後來靠講自己的哲學、人性觀察漲粉。他認為"有流量的時候不去變現是不對的"，但他要的更不一樣："我希望要的是一個影響力，這個影響力本身我認為是一個無形資產"。生活方式：廣東待約 2 個月、日本約 3 個月（櫻花季、秋天、滑雪）、其餘在香港，每年在海上飄 2–3 個月；最討厭約後天以後的事，機票都是當天買，"明天到這個點幹嘛就幹嘛"。在台灣寫書時經歷地震（上下震、非左右晃），丟了行李箱、筆電、耳機；台灣美食推台南早餐、現燙牛肉湯、虱目魚；海鮮"越往北越好吃：日本的好吃過台灣的，台灣的好吃過香港的"。</p>
+<p><strong>場務與邊界。</strong> 開場即掉線兩次，聽眾教他用電腦+工作號開房間、自己作發言人、另拉共同主持協調，可防掉線。路飛多次強調：抖音能問的問題去抖音排隊問，X 上要聊"抖音不能聊的"、認識新朋友，"我真的不想讓 X 變抖音的樣子"；有人一提政治立刻被下麥："不要聊政治……你只要提政治我都不跟你聊了"；不回答心理狀態類問題；拒絕給 22 歲年輕人"給過去的自己提建議"——"給過去的自己一個建議本身就是錯誤的"，時代、環境全不一樣，"如果我們總在歷史中找答案，人類就不會往前走了"。</p>
+<h3>佩德羅 @A8_Pedro（台灣，做幣圈發射台）</h3>
+<p>自述幣圈約 4 年、美股長期投資者，目前做"發射台"（讓大家發行自己的虛擬貨幣，CA 即合約地址）。與路飛長談約 35 分鐘（00:59–01:35），話題從散戶除交易外的出路（流動性提供等）、ETF 發行商選擇、期權科普方法、理財產品結構，聊到路飛的戒律與心態、2020 年負油價、"世界末日期權"，最後聊到徒步環島與台灣生活。結束時路飛請他推薦內地好吃的餐廳，佩德羅說"台灣也是中國不可分割的一部分"，兩人以"淚滴兄弟"（轉寫如此）互稱道別。</p>
+<h3>Nora X @NoraX2026</h3>
+<p>問國內外自媒體環境的區別與做自媒體的核心。自述從美國矽谷跑回深圳搞 AI、持續創業，抖音 5 月開始做口播、資料不錯，但"沒有找到一個很好的商業邏輯"，剛畢業、經濟尚未自由。路飛回應：他沒有傳授經驗的能力；做自媒體要先有"底子"，他自己的底子是那條船；"一個人能夠在抖音做到一萬粉絲，都是牛逼人"；"一千鐵桿粉絲理論"沒有量化標準，就像血糖 6.9 與 7.1 沒有本質區別。</p>
+<h3>陳平安 @0X_CPA</h3>
+<p>短暫上麥，問 2026 年剛接觸"外不散"（轉寫如此，疑為外匯類話題）如何起步。路飛答：自己"對外不散完全不懂""沒有持過幣"，沒有資格評價。</p>
+<h3>師傅別念了 @QqCdch9573</h3>
+<p>講了自己從小學六年級接觸色情內容、高二時"一個下午十幾次"的經歷，自述 30 多歲、程式設計師，長期焦慮，擔心身體受損、想戒又戒不掉。路飛回應：中西觀念不同，"過度"沒有統一真理；自述懂醫療與激素（催乳素、睪酮、性激素六項），稱長期過度可能讓催乳素偏高、睪酮偏低；但他認為對方的核心問題是心理上的——把手淫當成所有困難的"背鍋"，"你總覺得自己很多時候遇到很多困難的時候，是因為你自己這個原因導致的"。他還當場承認：前面順著對方說的幾句是"故意加進去的胡說"，對方也點頭，"因為它符合你自己想要的結論"——以此說明對方"根本就沒有經過思考的過程"。最後兩人以"楊偉"互嘲收場，路飛請其下麥。</p>
+<h3>DD 滴滴 @rtk17025（聯合主持）</h3>
+<p>主要負責場務：幫路飛看排麥名單、按粉絲數挑人連麥（"粉絲多的先連"），並在路飛掉線、看不到排麥時接管主持。</p>
+<h3>其他聽眾（上麥提問，未列入發言人名單或未能確切辨認）</h3>
+<ul>
+<li><strong>老張</strong>（00:02–00:13）：三個問題——書什麼時候出；有錢不出名安全還是有錢出名安全；自我實現預言是不是真的。路飛逐一作答，並勸其不要炫耀認識孫宇晨、趙長鵬。</li>
+<li><strong>26 歲聽眾</strong>（00:27–00:29）：問"歷史的垃圾時間"與道德敘事；另問靠婚姻移民美國，路飛強烈反對：認識的人靠婚姻去香港，"每個人到大概第三年就已經徹底受不了"，但必須熬到第七年拿永居，"人生已經大部分的時間都被消耗在裡面了"。</li>
+<li><strong>"禮拜天"</strong>（00:16–00:19）：問影片裡的人是不是路飛本人、創作流程是不是手寫；路飛答兩人團隊（自己+攝影師），抖音有很多罵他、也有說他好的，"綜合判斷一下"。</li>
+<li><strong>"龍克星"</strong>（00:19–00:25，轉寫存疑）：追問"大數理論/天選"——"為什麼我選了服務之後一定獲回來"；路飛答"我們倆沒有探討的基礎……能看得懂的人是不多的"，請其先了解自己再來溝通。</li>
+<li><strong>"私生粉"</strong>（00:30–00:31）：自稱從 2023 年看路飛彈鋼琴影片，想問其心理狀態；路飛拒絕："這個問題在抖音上也不能回答，這裡依然不能回答"。</li>
+<li><strong>匿名聽眾</strong>（00:31–00:32）：問"練脖肌能不能治好陽痿"；路飛答治不好，"生的陽痿是肯定治不好的"。</li>
+<li><strong>R.E.O</strong>（00:42–00:58，轉寫存疑）：幣圈玩家，問"每次都一小博大"對不對；路飛用牌桌、手續費、雜湊函數不可逆、因果與混沌系統長篇回應，並詳解自己的期權雙賣。</li>
+<li><strong>卡亞</strong>（01:54–01:56）：認為頂級量化額度都給了權貴；路飛拒絕討論"權貴論"："討論這個問題對所有人有什麼意義？沒有意義"，將其下麥。</li>
+<li><strong>24 歲澳洲碩士</strong>（01:40–01:52）：問年輕人接觸美股與投資的看法（見路飛"年輕人要不要碰美股"一節）。</li>
+</ul>
+<h2>關鍵原話（轉寫整理，未經核實）</h2>
+<ul>
+<li>"如果我今天死了，明天全國都知道了，這就是安全。"（約 00:08）</li>
+<li>"我跟孫宇晨不一樣，我沒有辮子，我是徹底乾淨的。"（約 00:05）</li>
+<li>"沒有人可以靠別人維護自己尊嚴的，我們都得靠自己維護自己的尊嚴。"（約 00:12）</li>
+<li>"你上了這個牌桌你下不來，你就是一定輸的。"（約 00:43）</li>
+<li>"成交一千次，這個本金就沒了。"（約 00:44）</li>
+<li>"我們不怕走得慢，我們只是怕走不遠，本金都沒有了你還拿什麼去做呢。"（約 01:28）</li>
+<li>"這個世界最公平的就是每一個人無論多掙扎多努力或多慵懶地活著，你的痛苦和快樂都是一樣多的。"（約 02:07）</li>
+<li>"每個人都會低估自己的物慾，沒有人會高估自己的物慾。"（約 01:45）</li>
+<li>"我沒有資格教任何人……我只能告訴傻子怎麼做。"（約 01:25）</li>
+<li>"判斷漲跌沒有意義……股票本身的漲跌是一個共識效應。"（約 01:46）</li>
+<li>"唯一的優勢就是你不急。"（約 01:50，路飛論散戶相對機構的優勢）</li>
+<li>"我希望要的是一個影響力，這個影響力本身我認為是一個無形資產。"（約 02:04）</li>
+</ul>
+<h2>時間線（相對錄音起點）</h2>
+<table>
+<thead>
+<tr>
+<th>時間</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00–00:02</td>
+<td>開場；路飛掉線重連，聽眾教電腦開房防掉線</td>
+</tr>
+<tr>
+<td>00:02–00:13</td>
+<td>老張三問：出書、安全論、自我實現預言</td>
+</tr>
+<tr>
+<td>00:14–00:16</td>
+<td>婚姻移民美國，路飛強烈反對</td>
+</tr>
+<tr>
+<td>00:16–00:19</td>
+<td>"禮拜天"：影片本人、創作流程</td>
+</tr>
+<tr>
+<td>00:19–00:25</td>
+<td>"龍克星"：大數理論/天選</td>
+</tr>
+<tr>
+<td>00:27–00:29</td>
+<td>26 歲聽眾：歷史垃圾時間、道德敘事</td>
+</tr>
+<tr>
+<td>00:30–00:31</td>
+<td>"私生粉"問心理狀態，被拒</td>
+</tr>
+<tr>
+<td>00:31–00:32</td>
+<td>練脖肌治陽痿（玩笑問答）</td>
+</tr>
+<tr>
+<td>00:32–00:42</td>
+<td>師傅別念了：性成癮困擾與心理"背鍋"論</td>
+</tr>
+<tr>
+<td>00:42–00:58</td>
+<td>R.E.O：幣圈以小博大、期權雙賣詳解</td>
+</tr>
+<tr>
+<td>00:59–01:35</td>
+<td>佩德羅長談：散戶出路、ETF、理財產品、戒律心態、負油價、世界末日期權</td>
+</tr>
+<tr>
+<td>01:35–01:39</td>
+<td>挑人連麥插曲；有人提政治被下麥</td>
+</tr>
+<tr>
+<td>01:40–01:52</td>
+<td>24 歲澳洲碩士：年輕人碰美股、定投與物慾</td>
+</tr>
+<tr>
+<td>01:54–01:56</td>
+<td>卡亞：量化額度權貴論，被下麥</td>
+</tr>
+<tr>
+<td>01:57–01:58</td>
+<td>陳平安："外不散"提問，路飛稱不懂</td>
+</tr>
+<tr>
+<td>01:58–02:09</td>
+<td>Nora X：自媒體環境、變現與影響力</td>
+</tr>
+<tr>
+<td>02:09–02:11</td>
+<td>收尾：路飛稱聯麥好玩、"脫光了躺著聊天"，互道晚安</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: "Talking About What Can't Be Talked About on Douyin"</h1>
+<h2>Basic Information</h2>
+<ul>
+<li><strong>Title</strong>: "Talking About What Can't Be Talked About on Douyin"</li>
+<li><strong>Time</strong>: 2026-10-15 14:08–16:19 (time shown on the spacesdashboard page, suspected to be UTC; please note the timezone uncertainty when citing)</li>
+<li><strong>Duration</strong>: 2 hours 11 minutes (recording measured at 7,874.7 seconds)</li>
+<li><strong>Host</strong>: 自己造船的路飞 @CaptainLufei999 (calls himself "飞仔")</li>
+<li><strong>Co-host</strong>: DD 滴滴 @rtk17025</li>
+<li><strong>Speakers</strong> (as recorded by spacesdashboard): Koda @wadezone, 与神对话张 @zhang_bj_, 香港王富贵 @fugui8, 陈平安 @0X_CPA, IAMAI @iamai_omni, 鹿姜南Sam @SamEvarth, 小灰灰香辣鸡翅 @chji42514575, 凤凰派 @RealPengFeii, 李白天 @LeoLibt, Nora X @NoraX2026, 佩德罗 @A8_Pedro, 杨望川 @Ywc0901, 师傅别念了 @QqCdch9573, and others</li>
+<li><strong>Participation</strong>: 6,081 cumulative attendances, 80 replay plays (spacesdashboard data)</li>
+<li><strong>Replay</strong>: https://x.com/i/spaces/1vJpPNmQLrgJE</li>
+<li><strong>Source of notes</strong>: Local transcription of the X replay recording (faster-whisper; verbatim transcript of 2,879 lines, total length 2 hours 11 minutes)</li>
+</ul>
+<blockquote>
+<p><strong>Note (must read)</strong>: All amounts, headcounts, track records and experiences in these notes are the speakers' own on-the-spot accounts or retellings, <strong>not externally verified</strong>; when citing, please rely on the parties' official subsequent announcements. The transcription has no speaker separation; speaker attribution is inferred from the conversation content, the host's on-the-spot roll calls and the spacesdashboard speaker list; speakers who could not be identified with certainty are recorded as "listener (self-described)". The transcription may contain homophone mishearings; key quotations have been arranged according to the original meaning in the recording, and individual doubtful words and phrases have been marked.</p>
+</blockquote>
+<h2>Conclusions First</h2>
+<p>This was an open mic session led by Lufei: listeners took turns coming on mic to ask questions, and Lufei answered them one by one, with almost no guest-to-guest conversation throughout. The core comes down to four points:</p>
+<ol>
+<li><strong>Being famous is safer than not being famous</strong>: Lufei believes what wealthy people fear most is "something happening and nobody knowing" — influence itself is protection: "If I died today, the whole country would know tomorrow; that is safety." He described himself as "completely clean, with no handles to grab", and cited Justin Sun, Changpeng Zhao and the Wang Xing northern Myanmar case as examples.</li>
+<li><strong>Once you sit down at the table and don't get up, you are certain to lose</strong>: Small capital with high leverage and frequent trading in crypto is "probabilistically certain to be wrong" — exchange fees are about one-thousandth, and after a thousand trades the principal is gone; this is not a zero-sum game, it is "a game where someone takes a cut".</li>
+<li><strong>His solution is "covered dual selling"</strong>: While holding QQQ spot, he sells call options and sells put options to collect premiums; equities are under 20% of the position and most is cash, and the goal is only to preserve capital and beat the US Treasury yield; he said his options return this year was 6.48%, and he regularly uses part of the proceeds to buy "doomsday options" betting on black swans.</li>
+<li><strong>The retail investor's only advantage is not being in a hurry</strong>: Capital, information, speed and fees are behind across the board, and judging rises and falls is itself meaningless (rises and falls are a consensus effect, not the truth); the way to win is to be small and nimble, not be in a hurry to account to anyone, and strictly execute the strategy you set for yourself.</li>
+</ol>
+<p>In addition: Lufei does not talk politics (anyone who brings it up is immediately removed from the mic); he does not give young people "advice from someone who's been there" (the era and environment are different, and giving advice is itself wrong); what social media is after is influence, an "intangible asset", and monetisation is incidental.</p>
+<h2>Notes by Speaker</h2>
+<h3>Lufei (host, main speaker throughout)</h3>
+<p><strong>Wealth and safety.</strong> Answering listener Lao Zhang's question "is it safer to be rich and unknown or rich and famous?", Lufei's answer was counterintuitive: being famous is safer. The logic is whether anyone would know after something happens — after Wang Xing was taken away in northern Myanmar, public pressure made things "even worse" for northern Myanmar; he claimed that if he himself were taken, his influence is greater and more people would know, so no one would dare touch him. Justin Sun is "very safe now" because he is famous, while Changpeng Zhao being "bitten by the United States" is another matter. He stressed that he is different from Justin Sun: "I have no handles; I am completely clean"; he also said "you cannot feel my pain… the fairest thing in this world is that no matter how much a person struggles, works hard or lives lazily, everyone has exactly the same amount of pain and happiness". He also advised Lao Zhang not to go around saying he knows Justin Sun and Changpeng Zhao — when your status does not match, the other person turns from "a weapon that helps you make money" into "a weapon that helps you show off and preserve your dignity", and "no one can preserve their dignity through someone else".</p>
+<p><strong>Self-fulfilling prophecy / the law of attraction.</strong> Lao Zhang asked whether "if you say every day that you're no good, you'll become no good" is true. Lufei rebutted the <em>The Secret</em>-style understanding: saying a hundred times a day that you will live forever does not make you live forever; but belief changes behavioural choices (people who believe they can live longer choose a lifestyle conducive to longevity), and the first foundation of longevity is still genes.</p>
+<p><strong>"The chosen" and his book.</strong> A listener asked about the "chosen / heaven-chosen" theory he had discussed with Alan. Lufei said: every theory on the market "gives you a template you can practise, and if you follow it you will succeed"; but his book (he said 180,000 characters, leaning philosophical) "does not have a single character teaching you how to do it" — it only talks about, when something happens, "what the positive side is and what the negative side is". Analysing how others live is meaningless for you; "you have to walk your own path to survive". Doing anything in finance, "the essence is only to choose fortune" (as transcribed).</p>
+<p><strong>"Garbage time in history" and moral narratives.</strong> A 26-year-old listener said this generation is in "garbage time in history", and Lufei directly rejected it: "Every generation is like this." He offered his own threefold division: natural law (survival of the fittest), moral law (people preaching morality to each other), and judiciary (break the law and go to prison); moral law exists to protect the weak — "when you start finding excuses for your own failure, you have become a weak person, because you need this world to protect you". Young people should shed "moral narratives" and victim thinking and "become a hardcore existence of a strong culture".</p>
+<p><strong>Trading view: the table and fees.</strong> On the question of "small capital in crypto betting small to win big, with 100x leverage", Lufei said: "Once you're at this table and you can't get up from it, you are certain to lose." The core arithmetic: exchange fees are about one-thousandth, and with a 50% win rate, "after a thousand trades the principal is gone"; trading is not a zero-sum game, nor a positive-sum game, but a game "where someone takes a cut". The reason exchanges, market makers and large brokerages offer outrageous commissions to get him to bring in people is precisely that "there are huge profits to be made". He also acknowledged that people who truly get rich from trading absolutely exist, but "that person will not be you"; of A-shares' "top ten stock gods", "eight or nine are already gone, precisely because they never left the table"; Trump could succeed because he was "forced to leave the table" (the system dictates that he cannot stay). Duan Yongping's and Buffett's holdings are all public, but no one copies them — "everyone thinks they are smarter than everyone else".</p>
+<p><strong>His options strategy (covered dual selling).</strong> Lufei said his trading instruments are mainly indices such as SPY, QQQ and VOO, plus a small amount of UFO (aerospace) and innovative medical drugs; equities are under 20% of the allocation and most is cash. The method is to hold QQQ spot (he said about 10 million) while selling call options and selling put options to collect premiums: if it rises to the strike price he sells at the agreed price, if it falls to the strike price he takes delivery at the agreed price, and "I have collected the premiums on both sides". He stressed this is "backed" (hedged with spot) rather than naked selling, which would be forcibly liquidated. The margin ratio is set extremely high: if QQQ fell from 500 to 250, a loss of about 30% would still be acceptable, "keep catching it all the way down", and during the wave when Trump imposed tariffs he kept catching it all the way down to 400. For QQQ options he mostly trades end-of-day options of 1–3 days, for SPY about one month, and for single-stock options about half a year. He said his options return this year was 6.48% (as of that time), "this year has just been bad… because it kept staying flat". His mindset target is extremely low: "If I can preserve my capital I'll be very happy; if I can beat the US Treasury yield I'll be especially happy", and "wealthy people don't have the patience to put money in such a low-efficiency place".</p>
+<p><strong>"Doomsday options".</strong> He takes part of the options proceeds and buys "doomsday options" on a fixed schedule every three months: directly shorting the largest indices, betting on black swans, and not trading VIX (which has little correlation with his own holdings). He lived through the negative oil prices of April 2020; "a fall is an opportunity for me… I hope it falls, I don't hope it rises". Mindset management relies on suppressing desire: "When you lose money you will definitely feel bad, and when you make money you will definitely feel happy… the most important thing is to suppress desire and not think about making too much".</p>
+<p><strong>ETFs and wealth management products.</strong> He only buys passive ETFs, ignoring the issuer and looking only at trading volume and fees, with a preference for Vanguard; he does not dare buy Hong Kong stock ETFs (Meituan's weight is too large and uneven); SPY is issued by State Street (as stated on the spot). Teaching options to beginners is hard: when it gets to the Greeks such as delta and vega, "they have no patience". Behind wealth management products there are basically options structures: in products such as snowball and fixed-income-plus, institutions first collect the options premium and then pay you interest; low-yield wealth management products are the worst deal — "you bear 9.5% or even 10% risk, but you only get 8% return", which is equivalent to bearing two points of risk for the bank; it is better to directly buy US Treasuries, or credit bonds of large banks or Apple. Millennium Fund (Millennium; he said its scale is over a hundred billion US dollars, with about 400 managers) is about "risk expectation management / position management"; quotas are first digested internally, then distributed through private banks in a wrapped form with fees charged.</p>
+<p><strong>Quantitative trading and retail disadvantages.</strong> Stock rises and falls are a "consensus effect" and a chaotic system; "judging rises and falls is meaningless" — even if you know a company is committing financial fraud, it is useless if only you know it; it only works if everyone knows, and the example of short-selling institutions publishing reports to short is the same. Quantitative trading is in essence "hunters and prey constantly switching roles"; the example of Long-Term Capital Management (LTCM): the smartest people on Wall Street gathered together, and "two stumbles and they were all bankrupt". Retail investors lag across the board in capital, information, internet speed and fees; "the only advantage is that you are not in a hurry" — institutions have to account to their masters, to the market and to themselves, "so they are in a hurry"; retail investors are small boats that turn easily, but Lufei believes most people "haven't reached that level yet".</p>
+<p><strong>Should young people touch US stocks?</strong> On the question from a 24-year-old Australian master's student: young people in China should try not to touch them (overseas capital gains tax, difficulty opening accounts, low returns and high risks); if studying abroad, it is "unavoidable". The key is mindset: do not aim at "learning to invest so you don't have to work and can be a digital nomad" — that is a "greedy, beautiful dream" and "will definitely shout yourself to death"; he suggested investing 10% of salary on a regular schedule, setting a 5–10 year strategy and executing it strictly, and "even if you lose money you'll be pretty impressive". Doing his dual-selling strategy with small capital is meaningless: the daily premium income is about one-thousandth to two-thousandths, "ten yuan on ten thousand yuan". Very few people achieve financial freedom through investing, and Duan Yongping did not get his start through investing either. The definition of financial freedom varies by person; his definition is "no longer having to worry about working, and being able to spend money"; but "investment returns cannot be spent, because they are uncertain"; "everyone underestimates their own material desires; no one overestimates their own material desires". Publicly recording investment insights additionally brings "a sense of honour and authority", and "you will pay a huge price for that thing".</p>
+<p><strong>Social media and personal experience.</strong> Lufei said: he made films at 15, dropped out of university to do business, worked as a game merchant and sold jewellery during university; at 29 he sold his company, emigrated to Hong Kong, and began designing and building a yacht himself (he said tens of millions). On Douyin he started showing his face from over 300,000 followers, starting last December, less than a year ago as of now; he said he donated all of his early social media annual income of 600,000–700,000, and now his paid membership income is about 1 million a year, "not donating anymore, spending it myself". He had been on X for three days, with about 50,000 followers, promoted by two big figures in the X circle, "Langzai and Alan". The foundation for doing social media is that boat — "others see it and think this person is quite capable", and the boat is "a knife"; later he gained followers by talking about his own philosophy and observations of human nature. He believes "when you have traffic, not monetising it is wrong", but what he wants is more different: "What I hope for is influence, and I believe that influence itself is an intangible asset." Lifestyle: about 2 months in Guangdong, about 3 months in Japan (cherry blossom season, autumn, skiing), the rest in Hong Kong, and 2–3 months a year drifting at sea; he hates most of all making plans for the day after tomorrow or later, buys plane tickets on the same day, and "whatever tomorrow brings at this time, that's what I'll do". While writing his book in Taiwan he experienced an earthquake (shaking up and down, not side to side), and lost his suitcase, laptop and earphones; for Taiwan food he recommended Tainan breakfast, freshly blanched beef soup and milkfish; for seafood, "the further north the better: Japan's is better than Taiwan's, and Taiwan's is better than Hong Kong's".</p>
+<p><strong>Session operations and boundaries.</strong> He dropped off twice right at the start; listeners taught him to open the room with a computer and a work account, act as a speaker himself, and bring in a co-host to coordinate, which can prevent drops. Lufei stressed many times: questions that can be asked on Douyin should be queued and asked on Douyin; on X he wants to talk about "what can't be talked about on Douyin" and meet new friends — "I really don't want X to become like Douyin"; anyone who mentioned politics was immediately removed from the mic: "Don't talk politics… as soon as you mention politics I won't talk with you"; he does not answer questions about psychological states; and he refused to give a 22-year-old "advice to your past self" — "giving your past self advice is itself wrong", the era and environment are completely different, and "if we always look for answers in history, humanity will not move forward".</p>
+<h3>佩德罗 @A8_Pedro (Taiwan, runs a crypto launchpad)</h3>
+<p>He said he has been in crypto for about 4 years and is a long-term US stock investor, and currently runs a "launchpad" (letting everyone issue their own virtual currency; CA means contract address). He had a long conversation with Lufei of about 35 minutes (00:59–01:35), with topics ranging from ways out for retail investors besides trading (liquidity provision and so on), choosing ETF issuers, methods for explaining options to the public, and the structure of wealth management products, to Lufei's precepts and mindset, the 2020 negative oil prices, "doomsday options", and finally hiking around the island and life in Taiwan. At the end, Lufei asked him to recommend good restaurants on the mainland; Pedro said "Taiwan is also an inseparable part of China", and the two bid each other farewell calling each other "tear-drop brothers" (as transcribed).</p>
+<h3>Nora X @NoraX2026</h3>
+<p>She asked about the differences between the social media environments at home and abroad and the core of doing social media. She said she ran back to Shenzhen from Silicon Valley in the United States to work on AI and keep starting businesses; she started doing talking-head videos on Douyin in May with good data, but "hasn't found a very good business logic", had just graduated and was not yet financially free. Lufei responded that he has no ability to pass on experience; to do social media you first need a "foundation", and his own foundation is that boat; "anyone who can reach ten thousand followers on Douyin is an impressive person"; the "1,000 true fans theory" has no quantitative standard, just as there is no essential difference between blood sugar of 6.9 and 7.1.</p>
+<h3>陈平安 @0X_CPA</h3>
+<p>He came on mic briefly and asked how to get started having just encountered "外不散" in 2026 (as transcribed, suspected to be a foreign-exchange-related topic). Lufei replied that he himself "knows nothing at all about 外不散" and "has never held coins", and is not qualified to comment.</p>
+<h3>师傅别念了 @QqCdch9573</h3>
+<p>He talked about his experience of encountering pornographic content in sixth grade of primary school and, in his second year of high school, "more than a dozen times in one afternoon"; he said he is in his thirties, a programmer, with long-term anxiety, worried about physical damage and wanting to quit but unable to. Lufei responded that Chinese and Western views differ and there is no unified truth about "excess"; he said he understands medicine and hormones (prolactin, testosterone, the six sex hormone tests), and that long-term excess may lead to high prolactin and low testosterone; but he believed the other person's core problem is psychological — treating masturbation as the "scapegoat" for all difficulties: "you always feel that when you encounter many difficulties, it is because of this reason of yours". He also admitted on the spot that the few remarks he had made earlier going along with the other person were "deliberately added nonsense", and the other person nodded, "because it fits the conclusion you yourself want" — using this to show that the other person "had not gone through a thinking process at all". In the end the two closed by teasing each other with "Yang Wei", and Lufei asked him to leave the mic.</p>
+<h3>DD 滴滴 @rtk17025 (co-host)</h3>
+<p>Mainly responsible for session operations: helping Lufei check the mic queue list, picking people to connect by follower count ("connect those with more followers first"), and taking over hosting when Lufei dropped off or could not see the mic queue.</p>
+<h3>Other listeners (came on mic to ask questions, not on the speaker list or not identified with certainty)</h3>
+<ul>
+<li><strong>Lao Zhang</strong> (00:02–00:13): Three questions — when will the book come out; is it safer to be rich and unknown or rich and famous; and is the self-fulfilling prophecy real. Lufei answered each in turn, and advised him not to show off knowing Justin Sun and Changpeng Zhao.</li>
+<li><strong>26-year-old listener</strong> (00:27–00:29): Asked about "garbage time in history" and moral narratives; also asked about emigrating to the United States through marriage, which Lufei strongly opposed: people he knows went to Hong Kong through marriage, and "by about the third year everyone is already completely unable to stand it", but must endure until the seventh year to get permanent residency, and "most of their life has already been consumed in it".</li>
+<li><strong>"Libaitian"</strong> (00:16–00:19): Asked whether the person in the videos is Lufei himself and whether the creative process is handwritten; Lufei replied it is a two-person team (himself + a photographer), that on Douyin many people curse him and some praise him, and to "make a comprehensive judgement".</li>
+<li><strong>"Longkexing"</strong> (00:19–00:25, transcription doubtful): Pressed on "the law of large numbers / the chosen" — "why is it that after I choose a service I will definitely get it back"; Lufei replied "the two of us have no basis for discussion… not many people can understand it", and asked him to understand himself first before coming to communicate.</li>
+<li><strong>"Sasaeng fan"</strong> (00:30–00:31): Said she has watched Lufei's piano videos since 2023 and wanted to ask about his psychological state; Lufei refused: "This question cannot be answered on Douyin either, and it still cannot be answered here."</li>
+<li><strong>Anonymous listener</strong> (00:31–00:32): Asked "can training neck muscles cure impotence"; Lufei replied it cannot, and "congenital impotence definitely cannot be cured".</li>
+<li><strong>R.E.O</strong> (00:42–00:58, transcription doubtful): A crypto player, asked whether "betting small to win big every time" is right; Lufei responded at length with the table, fees, the irreversibility of hash functions, causality and chaotic systems, and explained his own options dual selling in detail.</li>
+<li><strong>Kaya</strong> (01:54–01:56): Believed top quantitative quotas all go to the powerful and privileged; Lufei refused to discuss the "privilege theory": "What is the point of discussing this question for anyone? There is no point", and removed him from the mic.</li>
+<li><strong>24-year-old Australian master's student</strong> (01:40–01:52): Asked for views on young people engaging with US stocks and investing (see Lufei's section "Should young people touch US stocks?").</li>
+</ul>
+<h2>Key Quotations (arranged from the transcript, unverified)</h2>
+<ul>
+<li>"If I died today, the whole country would know tomorrow; that is safety." (approx. 00:08)</li>
+<li>"I'm different from Justin Sun. I have no handles; I am completely clean." (approx. 00:05)</li>
+<li>"No one can preserve their dignity through someone else; we all have to preserve our own dignity ourselves." (approx. 00:12)</li>
+<li>"Once you're at this table and you can't get up from it, you are certain to lose." (approx. 00:43)</li>
+<li>"After a thousand trades, the principal is gone." (approx. 00:44)</li>
+<li>"We're not afraid of walking slowly; we're only afraid of not walking far. If the principal is gone, what will you use to do anything?" (approx. 01:28)</li>
+<li>"The fairest thing in this world is that no matter how much a person struggles, works hard or lives lazily, everyone has exactly the same amount of pain and happiness." (approx. 02:07)</li>
+<li>"Everyone underestimates their own material desires; no one overestimates their own material desires." (approx. 01:45)</li>
+<li>"I'm not qualified to teach anyone… I can only tell fools what to do." (approx. 01:25)</li>
+<li>"Judging rises and falls is meaningless… the rise and fall of a stock itself is a consensus effect." (approx. 01:46)</li>
+<li>"The only advantage is that you are not in a hurry." (approx. 01:50, Lufei on the retail investor's advantage over institutions)</li>
+<li>"What I hope for is influence, and I believe that influence itself is an intangible asset." (approx. 02:04)</li>
+</ul>
+<h2>Timeline (relative to the start of the recording)</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00–00:02</td>
+<td>Opening; Lufei drops and reconnects, listeners teach him to open the room on a computer to prevent drops</td>
+</tr>
+<tr>
+<td>00:02–00:13</td>
+<td>Lao Zhang's three questions: the book, the safety argument, the self-fulfilling prophecy</td>
+</tr>
+<tr>
+<td>00:14–00:16</td>
+<td>Emigrating to the United States through marriage, strongly opposed by Lufei</td>
+</tr>
+<tr>
+<td>00:16–00:19</td>
+<td>"Libaitian": whether the videos are really him, the creative process</td>
+</tr>
+<tr>
+<td>00:19–00:25</td>
+<td>"Longkexing": the law of large numbers / the chosen</td>
+</tr>
+<tr>
+<td>00:27–00:29</td>
+<td>26-year-old listener: garbage time in history, moral narratives</td>
+</tr>
+<tr>
+<td>00:30–00:31</td>
+<td>"Sasaeng fan" asks about psychological state, refused</td>
+</tr>
+<tr>
+<td>00:31–00:32</td>
+<td>Training neck muscles to cure impotence (joke Q&amp;A)</td>
+</tr>
+<tr>
+<td>00:32–00:42</td>
+<td>师傅别念了: sex addiction troubles and the psychological "scapegoat" theory</td>
+</tr>
+<tr>
+<td>00:42–00:58</td>
+<td>R.E.O: betting small to win big in crypto, detailed explanation of options dual selling</td>
+</tr>
+<tr>
+<td>00:59–01:35</td>
+<td>Long conversation with Pedro: ways out for retail investors, ETFs, wealth management products, precepts and mindset, negative oil prices, doomsday options</td>
+</tr>
+<tr>
+<td>01:35–01:39</td>
+<td>Interlude picking people to connect; someone mentions politics and is removed from the mic</td>
+</tr>
+<tr>
+<td>01:40–01:52</td>
+<td>24-year-old Australian master's student: young people touching US stocks, regular investing and material desires</td>
+</tr>
+<tr>
+<td>01:54–01:56</td>
+<td>Kaya: the privilege theory of quantitative quotas, removed from the mic</td>
+</tr>
+<tr>
+<td>01:57–01:58</td>
+<td>陈平安: "外不散" question, Lufei says he does not understand it</td>
+</tr>
+<tr>
+<td>01:58–02:09</td>
+<td>Nora X: social media environment, monetisation and influence</td>
+</tr>
+<tr>
+<td>02:09–02:11</td>
+<td>Closing: Lufei says the mic session was fun, "lying down stripped bare chatting", and they say goodnight to each other</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+
+<footer data-lang="en" style="display:none">Source: Yat's List Space collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page is the full notes for this session; the content is the speakers' own on-the-spot accounts and has not been verified.</footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：《聊点抖音不能聊的》 · Yat's Talks",tw:"會議紀要：《聊點抖音不能聊的》 · Yat's Talks",en:"Meeting Notes: \"Talking About What Can't Be Talked About on Douyin\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

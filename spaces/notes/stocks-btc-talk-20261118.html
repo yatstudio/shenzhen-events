@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：茄哥《11.18 美中俄深圳会 英伟达财报翻倍 Anthropic定价 行情今晚怎么走？》</h1>
 <ul>
 <li><strong>时间</strong>：2026-11-18 19:56 – 23:32:21 CST（3 小时 35 分 19 秒）</li>
@@ -218,8 +225,418 @@
 <li>美中俄深圳会、晚宴座位等政治内容均为嘉宾现场说法，未核实。</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1zkZJdBQWZbeMj">https://x.com/i/spaces/1zkZJdBQWZbeMj</a> · 茄哥 @qg7777 主持 · 2026-11-18 19:56 – 23:32（3 小时 35 分）· 直播听众 1,348 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：茄哥《11.18 美中俄深圳會 英偉達財報翻倍 Anthropic定價 行情今晚怎麼走？》</h1>
+<ul>
+<li><strong>時間</strong>：2026-11-18 19:56 – 23:32:21 CST（3 小時 35 分 19 秒）</li>
+<li><strong>主持</strong>：茄哥 | Pod @qg7777</li>
+<li><strong>發言人</strong>：0xDonaldGao（老唐）、kaykay_reads、AdamCai15（Adam Cai，Virgo CEO）、hassaandh、Hualizi_、liangyiwei11、yzxiey、JayJiah25</li>
+<li><strong>在線</strong>：total_live_listeners 1,348</li>
+<li><strong>來源</strong>：X Space 回放逐字稿（3,984 行，約 125,149 字，[00:01:22]–[03:35:13]）</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1zkZJdBQWZbeMj</li>
+</ul>
+<blockquote>
+<p>免責：以下數字與判斷均為節目嘉賓現場說法，未經核實，不構成投資建議。財報、IPO 定價等數字以官方披露為準。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Anthropic IPO 定價前夜 + 英偉達財報夜：全場主線是「IPO 吸血抽乾流動性」，茄哥與老唐一致看空到底——BTC 震盪偏空、必破 6 萬、中線仍看 5.5 萬；黃金看回測 3,450–3,600；美股反彈只剩 19–21 號三天窗口，月底前該跑就跑；標題裡的美中俄深圳會被場內一致判定為「解決不了問題，不用關注」。</p>
+<h2>前情概要</h2>
+<p>承接茄哥 11 月 16 日、17 日兩場：16 日場定調「57,000 必破、55,000 以下才開始建倉」，17 日場把中線目標釘在「必破 60,000、中線 55,000」。本場是 Anthropic IPO 定價日（19 日凌晨 6 點定價、19 日晚上市）與英偉達財報夜的疊加場，茄哥開場即言明：今晚的變量就是這兩件事，流動性被 IPO 鎖死是理解一切的前提。</p>
+<h2>核心結論</h2>
+<ol>
+<li><strong>Anthropic IPO 是全場第一變量</strong>：定價到節目結束仍未出，等 19 日凌晨 6 點（北京時間）；市場預估估值約 1.4–1.5 萬億美元，彭博/華爾街日報稱 $80 以上、CNBC 稱高於 $78；超額認購 6 倍，最多 20% 股份給散戶；開盤市值可能頂到 1.8 萬億再回落。茄哥與老唐一致認為：IPO 把幾千億美元流動性鎖住，「吸血」效應是本輪美股、黃金、BTC 齊跌的主因，上市後資金回流才會緩解。</li>
+<li><strong>英偉達財報超預期，但股價沒過去</strong>：營收 1,158 億、同比增 103%，資料中心 1,076 億，Q4 指引 1,500 億（以上均為節目內說法，轉寫口徑見核實註）；盤後一度漲超 4%，盤前又跌回，160 美元線沒過去，盤前在 155–159 徘徊。茄哥：若無黃仁勳醜聞，財報後應在 200 美元；期中選舉後已回撤 32%，「跌掉了一個比特幣的市值」。</li>
+<li><strong>BTC：震盪偏空，今晚不做多也不做空</strong>：全天在 63,000–65,500 之間磨，幣安現貨成交量極低（不到 4 億美元）；1 小時線走破底部趨勢線，ABC 回調 C 浪沒走完，0.786 回調位在 63,500 左右。茄哥口徑：今晚先向下破一下 63,500 再拉起來；急拉上 65,000 是做空點；6 萬很容易到，月底前可能見到 61,700；中線目標仍是 55,000；現貨套保絕不能丟。節目進行中 BTC 跌破 63,500，茄哥當場認錯：「633500 真沒站住……我必須得認錯，挨打就得立正。」</li>
+<li><strong>黃金：分歧在回測深度</strong>：茄哥看三浪跌到 3,452，3,450–3,470 缺口必補，頭肩頂右肩要比左肩低；老唐看 3,600 附近（各國央行會在 3,600 重新大規模入市對沖），認為 12 月加息預期已部分計入價格。共識：12 月加息前後落底，加息完再考慮買；現貨 3,600 附近可觀望，合約隨時可空；短期有反彈，中線繼續下行。</li>
+<li><strong>美股：反彈只剩三天窗口</strong>：標普 500 已跌破 200 日均線，QQQ 自 10 月以來回調 15%。茄哥：今晚小反彈、可能收十字星；19 日肯定拉盤，真正大漲在 20 日；反彈到 21 號左右結束，感恩節–聖誕行情沒了；月底前反彈到好點位「該出貨就出貨，該跑就跑，不要太樂觀」。</li>
+<li><strong>聯準會：加息預期升溫</strong>：19 日凌晨 3 點公布 10 月 27–28 日會議紀要（茄哥認為不重要）；沃勒講話稱若不釋放 1 月加息訊號、12 月應加 50 個基點；市場認為 12 月加 50bp 機率很小（FedWatch 約 10%，Polymarket 已從 10% 降到 4%）；老唐預期 12 月、1 月、4 月加息兩到三次，12 月講話會非常鷹派；老唐同時預期明年 1 月開始考慮 QE 預期、年中開始 QE——與茄哥「加息後不會馬上 QE」的判斷相左。</li>
+</ol>
+<h2>Anthropic IPO：定價未出，吸血已成事實</h2>
+<ul>
+<li>定價時間：到節目結束仍未出，茄哥稱等到 19 日，明天（19 日）北京時間凌晨 6 點左右開始定價；上市敲鐘時間未定，「不會一開盤就敲鐘」，可能是收盤前敲一下、收個漂亮的收盤價。</li>
+<li>估值與價格：市場預估仍在 1.4 萬億美元（場內另一說法為 1.5 萬億左右）；彭博稱 $80 以上、華爾街日報稱 $80 以上、CNBC 堅持高於 $78；最多 20% 的股份給到散戶；關聯企業（博通、谷歌、美光、微軟、台積電等）額外認購 261（轉寫口徑，單位未明）。</li>
+<li>認購熱度：超額認購 6 倍；認購資金 3,800 億美元（轉寫口徑）；開盤預計市值可能頂到 1.8 萬億然後回落。茄哥：「這個子彈真是無限的。」</li>
+<li>吸血邏輯（茄哥、老唐共識）：IPO 鎖定幾千億美元流動性，納指、標普、黃金、BTC 全被抽血；機構已完成全年目標開始收手；散戶賣股套現等著打新，「不在這點上被套就在那裡被套」。老唐補充：超額認購 6 倍的情況下，上市時還有 3 億多股（約 240 億美元）直接解鎖可賣，吸血效應還會持續。</li>
+<li>打新態度：茄哥明確表示自己一點沒參與打新，「打幾百美金沒什麼意思，要打至少 1 萬美金起步，還搶不上」；上次 SWIS-X 搶上了最後退款了。另有場內說法稱現貨 ETF 昨天流出 2.4 億美元（貝萊德賣了 2 億），資金同樣流向 IPO。</li>
+</ul>
+<h2>英偉達財報與黃仁勳：財報很好，人回不來</h2>
+<ul>
+<li>財報（節目內說法）：營收 1,158 億、同比增 103%，其中資料中心營收 1,076 億，Q4 指引 1,500 億，全部超預期；盤後一度漲超 4%，盤前又跌回，160 美元線沒過去。</li>
+<li>茄哥：沒有黃仁勳醜聞，英偉達這個位置的價值應在 200 美元；從期中選舉後回撤 32%，「5 萬億市值回調 32%，跌掉 1 萬億還多」，「短短幾天跌掉了一個比特幣的市值」。英偉達這次崛起與幣圈 GPU 挖礦（以太坊）有絕大關係，2021 年的回調拐點與以太坊改演算法有關。</li>
+<li>黃仁勳回歸（場內說法，未核實）：老唐認為董事會若讓他回來等於否定董事會，「至少一年以內很難回到英偉達」，回歸是政治鬥爭；茄哥認為回歸遙遙無期，18 日的閉門聽證會「大概率走過場」，對股價影響不大；但黃仁勳有 60 個直接下屬，不回歸企業內部要洗牌，很多算力中心合作是口頭協議，後續服務可能出問題。場內還提到：黃仁勳夫婦聯合持有英偉達 3.2% 股份、價值 1,500 億美元（轉寫口徑）；其夫人一直沒有公開表態；美國聯邦證券委員會（SEC）發通告要調查英偉達違反相關禁令；新任 CFO 不被老黃粉絲看好；Adam 認為黃仁勳發道歉信前與部分董事聊過、獲得部分支持，未來某個時刻有可能回來。</li>
+<li>Adam Cai（Virgo CEO）觀點：堅定做多英偉達——過去季度業績大幅超預期、未來指引還在上升；老黃走了之後大客戶的 CapEx 投資意願未見退縮；英偉達是美國最優秀的企業之一，兩黨都不敢真把它「殺死」；AI 敘事不會結束；「千萬別做空，就算不做多也不要做空」。</li>
+<li>茄哥對 AI 的總判斷：AI 發展到現在「停一停其實也挺好」；AI 對普通人「只有壞處沒有好處」，搶崗位、騙人，「AI 現在就是人類社會的攪屎棍，偷有錢人的錢、搶窮人的飯碗」；大模型發展到一定程度可能要叫停，真正能賺錢的是 Agent。</li>
+</ul>
+<h2>比特幣：縮量陰跌，63,500 當場失守</h2>
+<ul>
+<li>盤面：12 小時波幅僅 700 多點；幣安現貨成交量不到 4 億美元（晚 11 點前全天僅約 6 億），「縮得非常厲害」；日線縮量下跌，昨天收十字星；1 小時線走破底部趨勢線，但茄哥認為「不會暴跌，也不會暴漲，大概率震盪偏空」。</li>
+<li>點位（茄哥現場說法）：63,000–63,500 有極強支撐，0.786 回調位在 63,500 左右；劇本是先向下破一下 63,500 再拉起來，然後走小反彈再向下；今晚區間 63,000–65,500；急拉上 65,000 仍是做空點；6 萬很容易到，「6 萬 3 這個位置如果守不住，底下很容易就去到 6 萬」；月底前可能見到 61,700（「19 號明天晚上砸到 61,700 多，直接跟爹砸下來，很正常」）；中線目標堅持 55,000；礦機關機幣價約 39,674，他不認為會到。</li>
+<li>實盤插曲：美股 22:30 開盤後 BTC 跌破 63,500，一度跌到 63,085/63,038 附近。茄哥當場認錯：「633500 真沒站住……我必須得認錯……挨打就得立正，要不然損失的就是你自己的錢包」；隨後在 63,000 附近帶量反彈站住，拉回 64,000 附近。茄哥事後復盤：放量急跌後必有反彈，反彈可以做空；「今天不會收陽線」；「拉回 64,000 以上的可能性不大」。</li>
+<li>結構判斷：BTC 沒跌透、「沒讓人絕望」，牛市發動條件未到；2028 年 4 月減半（場內說法）；2027 年走勢應像 2024 年不像 2023 年（節奏快）；加密與美股的相關性越來越差；加密總市值約 2.2 萬億美元（從 9 月的 3.1 萬億掉下來），BTC 市值約 1.3–1.5 萬億（場內說法不一）；「加密貨幣還是一個非常小眾的圈子」。</li>
+<li>操作口徑（茄哥）：這個位置不建議做多也不建議做空；現貨套保不能輕易拋棄，「防止暴跌」；「不要聽個點位就往上上，很容易就給你埋進去」；合約 5–10 倍合理，100 倍沒必要。</li>
+<li>其他幣種：ETH 跌破 2,008 位置，大週期可能回測 1,500 多；茄哥稱 ETH 是「假共識」，「要跌到 800」「跌破 500 也有可能」（場內說法）；SOL 差點被套在 83–84，低點跌到 60 多，沒加倉，空倉等；DOGE 跌不動，0.055 位置有大量 2023 年拿著沒賣的人，共識強但不漲；ARB 今年表現好（SEC 利好）；Starknet 是「天量解鎖、天量拋售、帶頭跑」的例子。</li>
+</ul>
+<h2>黃金與加息：3,450 還是 3,600？</h2>
+<ul>
+<li>茄哥：黃金「到了徹底回調的狀態」，三浪目標 3,452；走頭肩頂，右肩要比左肩低；3,450–3,470 的缺口「必補」；12 月加息前後落底；「加息加完再買」；現貨 3,600 附近可觀望，合約隨時可空；黃金與美元指數負相關是「所有指標裡邊最有效的」；美元指數 103.85，美元/日元 159.35。</li>
+<li>老唐：回測深度沒茄哥看得深——各國央行會在 3,600 左右重新大規模入市增持（中國 10 月購買力度仍比較強，11 月數據 12 月出）；頭肩頂橫跨時間太長、有效性要打問號；12 月加息預期已部分計入價格；若無央行對沖，同意茄哥「直接幹到 3,400」的判斷；有對沖則撐在 3,600 左右。老唐策略：跌多了合約上超跌小多、掙 100 多點就跑；明年 1 月開始考慮往多頭思路轉（仍是左側），5–6 月後對黃金、股票、BTC 的預期偏暖。</li>
+<li>聽眾 kaykay_reads 提問（去年買的黃金，本為攢嫁妝）：茄哥答長期拿著沒問題，定投可忽略短期波動；若看未來六個月肯定空倉不幹，「甚至沒事還要空一把」。老唐補了一堂課：黃金是特殊貨幣，主功能是儲藏與避險，不能當一般貨幣用。</li>
+</ul>
+<h2>美股與個股：反彈窗口與點位清單</h2>
+<ul>
+<li>大盤：盤前納指期貨 +0.9%、標普 +0.12%、道指 +0.1%；開盤高開低走，茄哥稱「大概率高開低走」；標普 500 跌破 200 日均線「是非常重要的一個點位」，破了之後「大概率要在下邊盤整好長時間」；SMH +2.15%、TLT +0.29%（後漲至 +0.68%），美債殖利率下降；原油 -0.8%；VIX 24 點位很高。</li>
+<li>節奏（茄哥）：今晚小反彈、可能收十字星；19 日肯定拉盤，真正大漲在 20 日；反彈到 21 號左右結束；感恩節到聖誕的行情沒了，「這個月的股市也就差不多了」；月底前反彈到好點位該出貨就出貨。</li>
+<li>個股點位（均為茄哥現場說法）：</li>
+<li>ARM：比較看好，反彈空間大，上方缺口 226，突破後可能到 220 幾再下來。</li>
+<li>沃爾瑪：這一輪完事了，茄哥已清倉；回調到 116 再進，年底有望到 140。</li>
+<li>耐克：昨天暴跌 6.3%，茄哥在 40 以上出了一部分；希望再跌、跌破 34 加倉，年底應有行情。</li>
+<li>諾基亞：現價 7.6，目標 8.2–8.5，7 月 28 日–11 月 3 日的回調後反彈應接近 10 塊；先拿著，反彈再加倉。</li>
+<li>英特爾：現價 54，上方缺口 85，極限反彈 70–80；下方 26–28 有缺口「肯定要補」；敢冒風險現在進場。</li>
+<li>美光：財報後回調走得較好，上方缺口 900–913，補一下就下來。</li>
+<li>AMD、博通：走得挺漂亮，博通在努力向上破 200 日均線；特斯拉、Meta、蘋果、亞馬遜盤中上漲。</li>
+<li>海力士、三星：反彈沒力度；SanDisk（閃迪）是儲存裡最弱的；STX 反彈無力，茄哥等高點做空；CRWV 做空「挺理想」；Oracle（轉寫 Ochleon/Ocklund）被套，Netflix 被套；BNC 跌回 3.5 以下，最近不能加倉，下方 2.98 缺口；派拉蒙自 10 月 10 日後一直下跌。</li>
+<li>茄哥自述：股票品種越收越少，不再買新品種，只在老品種上解套；投資標準是跑贏 8.6%（年化）；「買股票的耐性要比加密貨幣多得多」；這兩天空單賺了不少錢，「很累、很疲憊」；股票反彈結束就去滑雪休假。</li>
+</ul>
+<h2>人民幣與美元：取代不了，只能雙體系</h2>
+<p>聽眾 kaykay_reads 提問：人民幣有沒有可能取代美元、美元大概率何時降息。茄哥與老唐的回答基本一致：</p>
+<ul>
+<li>茄哥：人民幣不可能取代美元，只能走兩個不同的結算體系（美元體系與人民幣體系，俄羅斯、伊朗、朝鮮、非洲已有此跡象）；人民幣現在是單獨對美元升值，不是被動升值——原因是出口順差增長太快；高盛預測升到 5.7，他覺得誇張，升到 6.3/6.2 完全可能；被動升值會傷害出口貿易。</li>
+<li>老唐：一個貨幣要全球化取代美元，路還很遠——美國為維持美元全球化付出了極其高昂的成本（全球駐軍），中國沒有那麼大動力維持全球軍事存在；中國金融還比較弱，「在外部加密貨幣在中國合法化之前，就不要聊人民幣全球化」；蒙代爾三角之下，中國選的是財政獨立 + 有管理的匯率浮動 + 嚴格管制資本自由流動；中國現在敢放開資本管制，資金「嘩就流出來了」；20 年內不太考慮這個問題，10 年後外部加密貨幣能在中國相對合法化「就已經很不錯了」。</li>
+<li>美元：走強與加息預期有關；美元指數 103.85；美元走強 + IPO 吸血是黃金、BTC 下跌的兩大原因。</li>
+</ul>
+<h2>美中俄深圳會：標題話題，場內判了「不用關注」</h2>
+<ul>
+<li>茄哥定調：「中美俄三方的深圳會談不需要關注」「就是普通韭菜才會關注這種熱鬧事」；澤倫斯基不想下台、害怕被清算，不會輕易放權；歐洲現在很亂；川普拿這件事裝飾自己；金正恩參不參加無所謂；「解決不了實際問題」，「全是利空」（場內說法）。</li>
+<li>晚宴座位（場內說法）：普京坐在主席正位置上；高市早苗站在李家超邊上，李在明站在川普邊上，「日本都沒混上第一排，太慘了」。茄哥還拿雅爾塔會議三巨頭（史達林、邱吉爾、羅斯福）的合影與這次三人站位對比。</li>
+<li>延伸判斷（茄哥現場說法）：川普下台換人也不會扭轉經濟週期；共和黨內部問題最大（貝森特、盧比奧、范斯與川普之間）；美國最近幾年是「死亡螺旋」，像 2001–2005 年那段；民主黨說話還算比較算數，共和黨「說話從來不算」。</li>
+</ul>
+<h2>AI 變現、WalletWay 預告與其他</h2>
+<ul>
+<li>AI 變現（茄哥）：大模型盈利能力與估值差得遠；不考慮變現、不考慮盈利能力「早早晚晚是會爆雷的」，網景就是前車之鑑；真正能賺錢的是 Agent：個人訂閱付費（他自己每月花 $100 買 Grok 的 token；X 藍標現在已免費）與專項服務（影片剪輯、照片修圖——「最牛逼的產品是美顏相機」，AI 美顏相機很快會出來）；女人願為美付費，男人願為知識和遊戲付費；GTA6 上市可能帶來一波新內容；AI 與人直接互動的娛樂現在開發得很少。</li>
+<li>Adam Cai：英偉達財報後電話會中規中矩，代理 CEO 沒必要冒風險，但 CFO 背景出身能給出激進指引，說明基本面還在；私募（SoC finance 一類貸款）會不會破裂，「我覺得都還好」；BTC 連跌六週後市場極度恐慌，「接飛刀」難度大但 6.2–6.4 萬買入差別不大（前提是 BTC 不會消亡、不用高槓桿）。</li>
+<li>WalletWay 預告（茄哥）：19 日晚 8 點半有 WalletWay（聚合交易平台，Wallet V）AMA，社區有專屬積分，註冊連結可領空投；平台幣下個月 TGE；聚合了 Hyperliquid 等多個平台，黃金、美股、BTC、合約、槓桿都能做；老闆是好朋友、「說話算數」（此前 733 獎金兌現了）。</li>
+<li>交易所風險：茄哥認為「會有交易所爆雷的問題，黑客攻擊這麼猛」——銀行被攻擊、機場被攻擊、「國家安全局的內部網路都被攻擊」（場內說法）；幣安錢包 Alpha 剛恢復（被盜事件後）。</li>
+<li>圈子雜談：中文圈風氣越來越差，「抖音難民」跑來 X，沒有正經內容，互相黑流量（有人黑 ABE 圖片是偷來的）；茄哥懟回去：「大家都是搬運的，誰能說誰」；油管上的帶單比 X 更多，「油管韭菜比 X 多多了」；茄哥的 Bot（轉寫為 BianG）天天研究加密貨幣、畫線「畫得真準」。</li>
+<li>時間調整：有人建議 9 點開始，茄哥定為以後 8 點半到 9 點開播，「儘量早一點，給大家留一點時間思考準備」。</li>
+</ul>
+<h2>ASR 還原表</h2>
+<table>
+<thead>
+<tr>
+<th>轉寫</th>
+<th>還原</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ross Topic / Rustopic / Raus-Taubeck / Ross Hopper / Rostopic / Sdropic / Sdopic</td>
+<td>Anthropic（本場核心話題，IPO 定價與上市）</td>
+</tr>
+<tr>
+<td>老黃 / 黃仁勳 / 黃云勳 / 黃泳軍 / 黃來勳 / 黃泉</td>
+<td>黃仁勳（英偉達 CEO）</td>
+</tr>
+<tr>
+<td>金偉達 / 英偉達</td>
+<td>英偉達</td>
+</tr>
+<tr>
+<td>比德幣</td>
+<td>比特幣</td>
+</tr>
+<tr>
+<td>古事</td>
+<td>黃金</td>
+</tr>
+<tr>
+<td>投奸頂</td>
+<td>頭肩頂</td>
+</tr>
+<tr>
+<td>散迪</td>
+<td>SanDisk（閃迪）</td>
+</tr>
+<tr>
+<td>海地市 / 海列師</td>
+<td>SK 海力士</td>
+</tr>
+<tr>
+<td>Ochleon / Ocklund / Ocle</td>
+<td>Oracle（甲骨文，轉寫存疑）</td>
+</tr>
+<tr>
+<td>派拉門</td>
+<td>Paramount（派拉蒙）</td>
+</tr>
+<tr>
+<td>三胖 / 金三炮</td>
+<td>金正恩（場內戲稱）</td>
+</tr>
+<tr>
+<td>川胖</td>
+<td>川普（場內戲稱）</td>
+</tr>
+<tr>
+<td>德格萊蘭會議</td>
+<td>雅爾塔會議（轉寫存疑）</td>
+</tr>
+<tr>
+<td>BianG</td>
+<td>茄哥的 Bot（名字轉寫存疑）</td>
+</tr>
+<tr>
+<td>WalletWay / Wallet V / VoletVey</td>
+<td>WalletWay（聚合交易平台）</td>
+</tr>
+<tr>
+<td>渾水</td>
+<td>Muddy Waters（渾水做空機構）</td>
+</tr>
+<tr>
+<td>QQ</td>
+<td>QQQ（納斯達克 100 ETF）</td>
+</tr>
+<tr>
+<td>NQ</td>
+<td>納斯達克期貨</td>
+</tr>
+<tr>
+<td>加息</td>
+<td>加息（本場語境為聯準會加息，與常規降息週期表述相反，照錄）</td>
+</tr>
+<tr>
+<td>開場 12 小時高低點轉寫為 610,809 / 610,106</td>
+<td>與全場 63,000–65,000 的價格水平對不上，疑為轉寫錯誤，不採用</td>
+</tr>
+</tbody>
+</table>
+<h2>核實註</h2>
+<ul>
+<li>黃仁勳已辭任是核實過的事實：2026 年 11 月 12 日英偉達宣布其辭去總裁、CEO 與董事職務，即刻生效，CFO Colette Kress 任臨時 CEO（2026-11-13 已核實）。節目內關於「出軌」「董事會罷免」「聽證會」「回歸」的說法均為場內傳聞與推測，未核實。</li>
+<li>Anthropic IPO 的定價、估值（1.4–1.5 萬億）、發行價（$78–80 以上）、開盤市值（1.8 萬億）均為節目進行時的場內說法；節目結束時定價尚未公布，以官方披露為準。</li>
+<li>英偉達財報數字在逐字稿中為營收 1,158 億、資料中心 1,076 億、Q4 指引 1,500 億（轉寫口徑），與常規美元計價口徑對不上，疑為 ASR 誤轉；紀要按原話照錄，未做換算。</li>
+<li>所有行情點位、ETF 流量、個股目標價均為嘉賓現場說法，未經核實；其中 BTC 市值、加密總市值在場內出現兩個不一致的口徑（1.3 萬億/1.5 萬億），已在正文標註。</li>
+<li>「2028 年 4 月減半」「12 月、1 月、4 月加息兩到三次」「明年年中 QE」等均為場內說法，未核實。</li>
+<li>美中俄深圳會、晚宴座位等政治內容均為嘉賓現場說法，未核實。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Qiege — "11.18 US-China-Russia Shenzhen Meeting, Nvidia Earnings Double, Anthropic Pricing: How Will the Market Move Tonight?"</h1>
+<ul>
+<li><strong>Time</strong>: 2026-11-18 19:56 – 23:32:21 CST (3 hours 35 minutes 19 seconds)</li>
+<li><strong>Host</strong>: Qiege | Pod @qg7777</li>
+<li><strong>Speakers</strong>: 0xDonaldGao (Lao Tang), kaykay_reads, AdamCai15 (Adam Cai, Virgo CEO), hassaandh, Hualizi_, liangyiwei11, yzxiey, JayJiah25</li>
+<li><strong>Online</strong>: total_live_listeners 1,348</li>
+<li><strong>Source</strong>: X Space replay transcript (3,984 lines, approx. 125,149 characters, [00:01:22]–[03:35:13])</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1zkZJdBQWZbeMj</li>
+</ul>
+<blockquote>
+<p>Disclaimer: All figures and judgments below are statements made live by the program's guests, are unverified, and do not constitute investment advice. Figures such as earnings results and IPO pricing are subject to official disclosures.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>The night before Anthropic's IPO pricing + Nvidia earnings night: the main thread throughout was "the IPO draining liquidity like a vampire." Qiege and Lao Tang were consistently bearish to the end — BTC range-bound with a bearish bias, certain to break 60,000, with a medium-term target still at 55,000; gold seen retesting 3,450–3,600; US stocks have only a three-day rebound window on the 19th–21st, and anyone who should run before month-end should run; the US-China-Russia Shenzhen meeting in the title was unanimously judged in the session as "it can't solve any problems — no need to pay attention to it."</p>
+<h2>Background</h2>
+<p>This followed Qiege's sessions on November 16 and 17: the 16th set the tone of "57,000 will definitely break, start building positions only below 55,000," and the 17th pinned the medium-term target at "will definitely break 60,000, medium-term 55,000." This session combined Anthropic's IPO pricing day (priced at 6 a.m. on the 19th, listed on the evening of the 19th) with Nvidia earnings night. Qiege stated at the opening: tonight's variables are these two events, and liquidity being locked up by the IPO is the premise for understanding everything.</p>
+<h2>Core Conclusions</h2>
+<ol>
+<li><strong>The Anthropic IPO is the session's number-one variable</strong>: pricing had still not come out by the end of the program; it was expected at 6 a.m. on the 19th (Beijing time). The market estimated a valuation of about $1.4–1.5 trillion; Bloomberg / the Wall Street Journal said above $80, and CNBC said above $78; it was 6x oversubscribed, with at most 20% of shares going to retail investors; the market cap at the open could top $1.8 trillion before falling back. Qiege and Lao Tang agreed: the IPO locks up hundreds of billions of dollars of liquidity, and this "vampire" effect is the main cause of this round of simultaneous declines in US stocks, gold, and BTC; relief will come only after funds flow back following the listing.</li>
+<li><strong>Nvidia's earnings beat expectations, but the share price did not get through</strong>: revenue of 115.8 billion, up 103% year on year, data center revenue of 107.6 billion, and Q4 guidance of 150 billion (all as stated in the program; see the verification note on the transcript's figures); it rose more than 4% after hours at one point, then fell back pre-market, failing to get past the $160 line and hovering at 155–159 pre-market. Qiege: without the Jensen Huang scandal, it should be at $200 after the earnings; it has pulled back 32% since the midterm elections, "losing a Bitcoin's worth of market cap."</li>
+<li><strong>BTC: range-bound with a bearish bias; go neither long nor short tonight</strong>: it ground between 63,000–65,500 all day, with Binance spot volume extremely low (under $400 million); the 1-hour chart broke below the bottom trendline, the C wave of the ABC correction has not finished, and the 0.786 retracement level is around 63,500. Qiege's view: tonight it first breaks down through 63,500, then pulls back up; a sharp rally to 65,000 is a shorting point; 60,000 will be reached easily, and 61,700 may be seen before month-end; the medium-term target remains 55,000; spot hedges must absolutely not be dropped. During the program BTC broke below 63,500, and Qiege admitted his mistake on the spot: "633500 really didn't hold… I have to admit I was wrong — when you're beaten, you stand straight."</li>
+<li><strong>Gold: the disagreement is over the depth of the retest</strong>: Qiege sees a third wave down to 3,452, with the 3,450–3,470 gap certain to be filled, and the right shoulder of the head-and-shoulders top needing to be lower than the left; Lao Tang sees around 3,600 (central banks will re-enter the market on a large scale at 3,600 to hedge), and believes expectations of a December rate hike have already been partly priced in. Consensus: it bottoms around the December hike, and buying can be considered once the hike is done; spot around 3,600 can be watched, futures can be shorted at any time; there is a short-term rebound, but the medium-term trend continues downward.</li>
+<li><strong>US stocks: only a three-day rebound window remains</strong>: the S&amp;P 500 has fallen below its 200-day moving average, and QQQ has corrected 15% since October. Qiege: a small rebound tonight, possibly closing with a doji; the 19th will definitely see a rally, with the real big rise on the 20th; the rebound ends around the 21st, and the Thanksgiving–Christmas rally is gone; before month-end, on a rebound to a good level, "ship out what should be shipped, run if you should run, don't be too optimistic."</li>
+<li><strong>The Fed: rate-hike expectations are heating up</strong>: the minutes of the October 27–28 meeting will be released at 3 a.m. on the 19th (Qiege considers them unimportant); Waller said in a speech that if no signal of a January hike is released, December should see a 50-basis-point hike; the market sees a small probability of a 50bp hike in December (FedWatch about 10%, Polymarket has fallen from 10% to 4%); Lao Tang expects two to three hikes across December, January, and April, with very hawkish December remarks; Lao Tang also expects QE expectations to start being considered from January next year, with QE starting mid-year — contrary to Qiege's judgment that "QE won't come immediately after the hikes."</li>
+</ol>
+<h2>Anthropic IPO: Pricing Not Yet Out, but the Liquidity Drain Is Already a Fact</h2>
+<ul>
+<li>Pricing time: still not out by the end of the program; Qiege said to wait until the 19th, with pricing starting around 6 a.m. Beijing time tomorrow (the 19th); the time of the listing bell-ringing is undecided — "it won't ring the bell right at the open" — it may ring shortly before the close to secure a pretty closing price.</li>
+<li>Valuation and price: the market estimate remains $1.4 trillion (another figure given in the session was around $1.5 trillion); Bloomberg said above $80, the Wall Street Journal said above $80, and CNBC insisted on above $78; at most 20% of shares go to retail investors; related companies (Broadcom, Google, Micron, Microsoft, TSMC, etc.) subscribed for an additional 261 (as transcribed; unit unclear).</li>
+<li>Subscription heat: 6x oversubscribed; subscription funds of $380 billion (as transcribed); the market cap at the open is expected to possibly top $1.8 trillion before falling back. Qiege: "This bullet is truly unlimited."</li>
+<li>The liquidity-drain logic (consensus between Qiege and Lao Tang): the IPO locks up hundreds of billions of dollars of liquidity, draining the Nasdaq, the S&amp;P, gold, and BTC alike; institutions have already met their full-year targets and are pulling back; retail investors are selling shares to raise cash to wait for the new issue — "if you're not trapped on this side, you're trapped on that side." Lao Tang added: with 6x oversubscription, at listing there are also more than 300 million shares (about $24 billion) directly unlocked and sellable, so the draining effect will continue.</li>
+<li>Attitude toward the new issue: Qiege stated clearly that he did not participate in the IPO subscription at all — "subscribing for a few hundred US dollars is meaningless; if you're going to do it, start at at least $10,000, and you still can't get an allocation"; last time he got an allocation for SWIS-X but it was refunded in the end. Another statement in the session said spot ETFs saw an outflow of $240 million yesterday (BlackRock sold $200 million), with funds likewise flowing toward the IPO.</li>
+</ul>
+<h2>Nvidia Earnings and Jensen Huang: The Earnings Are Great, but the Man Can't Come Back</h2>
+<ul>
+<li>Earnings (as stated in the program): revenue of 115.8 billion, up 103% year on year, of which data center revenue was 107.6 billion, with Q4 guidance of 150 billion — all beating expectations; it rose more than 4% after hours at one point, then fell back pre-market, failing to get past the $160 line.</li>
+<li>Qiege: without the Jensen Huang scandal, Nvidia's value at this position should be $200; it has pulled back 32% since the midterm elections — "a 32% correction on a $5 trillion market cap wipes out more than $1 trillion" — "in just a few days it lost a Bitcoin's worth of market cap." Nvidia's rise this time is hugely related to crypto GPU mining (Ethereum), and the 2021 correction turning point was related to Ethereum changing its algorithm.</li>
+<li>Jensen Huang's return (statements in the session, unverified): Lao Tang believes that if the board lets him return it would amount to negating the board — "it will be very hard for him to return to Nvidia for at least a year" — and that a return is a political struggle; Qiege believes a return is a distant prospect, that the closed-door hearing on the 18th "will most likely be a formality," and that it will have little impact on the share price; but Jensen Huang has 60 direct reports, and if he does not return the company will have to reshuffle internally; many computing-center collaborations are verbal agreements, and follow-up services may run into problems. It was also mentioned in the session that Jensen Huang and his wife jointly hold 3.2% of Nvidia's shares, worth $150 billion (as transcribed); his wife has never made a public statement; the US Securities and Exchange Commission (SEC) issued a notice saying it would investigate Nvidia for violating related prohibitions; the new CFO is not favored by Jensen Huang's fans; Adam believes Jensen Huang spoke with some directors and gained partial support before issuing his apology letter, and that he may return at some point in the future.</li>
+<li>Adam Cai's (Virgo CEO) view: firmly long Nvidia — past quarterly results greatly beat expectations and future guidance is still rising; after Jensen Huang left, major clients' CapEx investment appetite showed no sign of retreating; Nvidia is one of America's finest companies, and neither party dares truly "kill" it; the AI narrative will not end; "never short it — even if you don't go long, don't short it."</li>
+<li>Qiege's overall judgment on AI: AI's development to this point — "a pause is actually quite good"; AI is "only harmful and of no benefit" to ordinary people, taking jobs and deceiving people — "AI is now a troublemaker in human society, stealing money from the rich and taking the livelihoods of the poor"; large models may have to be halted once they develop to a certain extent, and what can truly make money is Agents.</li>
+</ul>
+<h2>Bitcoin: Shrinking-Volume Drift Down, 63,500 Lost on the Spot</h2>
+<ul>
+<li>The market: the 12-hour range was only a little over 700 points; Binance spot volume was under $400 million (only about $600 million for the whole day before 11 p.m.), "shrinking drastically"; the daily chart fell on shrinking volume and closed with a doji yesterday; the 1-hour chart broke below the bottom trendline, but Qiege believes "it won't crash, and it won't surge either — most likely range-bound with a bearish bias."</li>
+<li>Levels (Qiege's live statements): 63,000–63,500 has extremely strong support, with the 0.786 retracement level around 63,500; the script is to first break down through 63,500, then pull back up, then stage a small rebound before heading down again; tonight's range is 63,000–65,500; a sharp rally to 65,000 is still a shorting point; 60,000 will be reached easily — "if this 63,000 position can't hold, it's very easy to go down to 60,000 below"; 61,700 may be seen before month-end ("tomorrow night, the 19th, smashing down to a bit over 61,700, straight down like with dad — perfectly normal"); the medium-term target sticks to 55,000; the miners' shutdown price is about 39,674, which he does not think will be reached.</li>
+<li>Live-trading episode: after US stocks opened at 22:30, BTC broke below 63,500, at one point falling to around 63,085/63,038. Qiege admitted his mistake on the spot: "633500 really didn't hold… I have to admit I was wrong… when you're beaten, you stand straight, otherwise what you lose is your own wallet"; it then rebounded with volume around 63,000 and held, pulling back to around 64,000. Qiege's later review: after a high-volume sharp drop there must be a rebound, and the rebound can be shorted; "it won't close with a green candle today"; "the likelihood of pulling back above 64,000 is not high."</li>
+<li>Structural judgment: BTC has not fallen through — "it hasn't made people despair" — and the conditions for a bull market launch are not yet in place; the April 2028 halving (as stated in the session); 2027's trend should resemble 2024 rather than 2023 (faster pace); the correlation between crypto and US stocks is getting worse and worse; total crypto market cap is about $2.2 trillion (down from $3.1 trillion in September), and BTC's market cap is about $1.3–1.5 trillion (figures in the session differed); "cryptocurrency is still a very niche circle."</li>
+<li>Trading stance (Qiege): at this position he recommends neither going long nor going short; spot hedges must not be abandoned lightly — "to guard against a crash"; "don't jump in just because you hear a level — you'll easily get buried"; 5–10x leverage on futures is reasonable, 100x is unnecessary.</li>
+<li>Other coins: ETH broke below the 2,008 level and may retest a bit over 1,500 on a large timeframe; Qiege called ETH a "fake consensus" that "will fall to 800" and "might even break below 500" (as stated in the session); SOL was almost trapped at 83–84, its low fell to the 60s, he did not add, and is waiting with an empty position; DOGE can't fall, with many people at the 0.055 level who bought in 2023 and haven't sold — strong consensus but no rise; ARB has performed well this year (SEC tailwind); Starknet is an example of "massive unlocks, massive sell-offs, leading the run."</li>
+</ul>
+<h2>Gold and Rate Hikes: 3,450 or 3,600?</h2>
+<ul>
+<li>Qiege: gold "has reached a state of full correction," with a third-wave target of 3,452; it is forming a head-and-shoulders top, with the right shoulder needing to be lower than the left; the 3,450–3,470 gap "will definitely be filled"; it bottoms around the December hike; "buy after the hike is done"; spot around 3,600 can be watched, futures can be shorted at any time; the negative correlation between gold and the US dollar index is "the most effective of all indicators"; the dollar index is at 103.85, and USD/JPY at 159.35.</li>
+<li>Lao Tang: he does not see the retest as deep as Qiege does — central banks will re-enter the market on a large scale to increase holdings around 3,600 (China's buying in October was still relatively strong; November data comes out in December); the head-and-shoulders top spans too long a period, so its validity is questionable; expectations of a December hike have already been partly priced in; without central-bank hedging, he agrees with Qiege's judgment of "going straight down to 3,400"; with hedging, it holds around 3,600. Lao Tang's strategy: when it has fallen a lot, take small oversold longs on futures and run after gaining a hundred-odd points; from January next year, start considering shifting toward a long mindset (still left-side), and after May–June his expectations for gold, stocks, and BTC turn warmer.</li>
+<li>Listener kaykay_reads asked (about gold bought last year, originally to save for a dowry): Qiege replied that holding it long-term is fine, and with regular fixed investments short-term fluctuations can be ignored; looking at the next six months, he would definitely stay empty and do nothing — "and even short it a bit when there's nothing else to do." Lao Tang added a lesson: gold is a special currency whose main function is storage and hedging; it cannot be used like ordinary currency.</li>
+</ul>
+<h2>US Stocks and Individual Names: Rebound Window and Level Checklist</h2>
+<ul>
+<li>The broader market: pre-market Nasdaq futures +0.9%, S&amp;P +0.12%, Dow +0.1%; the open was higher, then moved lower, with Qiege calling it "most likely a higher open followed by a lower move"; the S&amp;P 500 falling below its 200-day moving average "is a very important level," and after breaking it, "it will most likely consolidate below for a long time"; SMH +2.15%, TLT +0.29% (later rising to +0.68%), with US Treasury yields falling; crude oil -0.8%; the VIX at 24 is very high.</li>
+<li>Pace (Qiege): a small rebound tonight, possibly closing with a doji; the 19th will definitely see a rally, with the real big rise on the 20th; the rebound ends around the 21st; the Thanksgiving-to-Christmas rally is gone — "that's about it for this month's stock market"; before month-end, on a rebound to a good level, ship out what should be shipped.</li>
+<li>Individual stock levels (all Qiege's live statements):</li>
+<li>ARM: relatively bullish, with large rebound room; a gap above at 226, and after breaking through it may reach the 220s before coming back down.</li>
+<li>Walmart: this round is over; Qiege has cleared his position; buy again on a pullback to 116, with a possible move to 140 by year-end.</li>
+<li>Nike: it plunged 6.3% yesterday; Qiege sold part of his position above 40; he hopes it falls further and will add below 34; there should be a move by year-end.</li>
+<li>Nokia: current price 7.6, target 8.2–8.5; the rebound after the July 28 – November 3 correction should approach 10; hold for now and add on the rebound.</li>
+<li>Intel: current price 54, a gap above at 85, an extreme rebound to 70–80; a gap below at 26–28 that "will definitely be filled"; those willing to take the risk can enter now.</li>
+<li>Micron: its post-earnings pullback has gone relatively well; a gap above at 900–913 — fill it a bit and it comes back down.</li>
+<li>AMD, Broadcom: moving quite nicely, with Broadcom striving to break above its 200-day moving average; Tesla, Meta, Apple, and Amazon rose intraday.</li>
+<li>SK Hynix, Samsung: the rebound has no strength; SanDisk is the weakest in storage; STX's rebound is weak, and Qiege is waiting for a high to short it; shorting CRWV is "quite ideal"; Oracle (transcribed as Ochleon/Ocklund) is trapped, Netflix is trapped; BNC has fallen back below 3.5 and cannot be added to recently, with a gap below at 2.98; Paramount has been falling since October 10.</li>
+<li>Qiege's self-description: he holds fewer and fewer stock varieties, no longer buys new ones, and only unwinds trapped positions in old varieties; his investment standard is to beat 8.6% (annualized); "you need far more patience buying stocks than with cryptocurrency"; his short positions made quite a bit of money over the past two days — "very tired, very exhausted"; once the stock rebound ends he will go skiing on vacation.</li>
+</ul>
+<h2>RMB and the US Dollar: It Can't Replace It — Only a Dual System</h2>
+<p>Listener kaykay_reads asked: could the RMB replace the US dollar, and when is the dollar most likely to see rate cuts? Qiege's and Lao Tang's answers were broadly consistent:</p>
+<ul>
+<li>Qiege: the RMB cannot replace the US dollar; there can only be two different settlement systems (the dollar system and the RMB system, of which Russia, Iran, North Korea, and Africa already show signs); the RMB is now appreciating against the dollar on its own, not passively — because the export surplus is growing too fast; Goldman Sachs forecasts it rising to 5.7, which he finds exaggerated, while a rise to 6.3/6.2 is entirely possible; passive appreciation would hurt export trade.</li>
+<li>Lao Tang: for a currency to globalize and replace the dollar, there is still a long way to go — the United States paid an extremely high cost to maintain the dollar's globalization (global military deployments), and China does not have that much motivation to maintain a global military presence; China's finance is still relatively weak — "before external cryptocurrencies are legalized in China, don't talk about RMB globalization"; under the Mundell trilemma, China has chosen fiscal independence + a managed floating exchange rate + strict controls on free capital flows; if China dared to open capital controls now, funds would "whoosh right out"; this is not a question to consider much within 20 years, and if external cryptocurrencies can be relatively legalized in China in 10 years, "that would already be quite good."</li>
+<li>The US dollar: its strength is related to rate-hike expectations; the dollar index is at 103.85; a stronger dollar + the IPO liquidity drain are the two main reasons for gold's and BTC's declines.</li>
+</ul>
+<h2>The US-China-Russia Shenzhen Meeting: The Title Topic, Judged In-Session as "No Need to Pay Attention"</h2>
+<ul>
+<li>Qiege set the tone: "the Shenzhen talks among China, the US, and Russia need no attention" — "only ordinary retail investors would pay attention to this kind of spectacle"; Zelensky does not want to step down and fears being purged, so he will not give up power easily; Europe is in chaos now; Trump is using this to decorate himself; whether Kim Jong Un attends makes no difference; "it can't solve any real problems" and "it's all bearish" (as stated in the session).</li>
+<li>Dinner seating (as stated in the session): Putin sat in the chairman's central seat; Sanae Takaichi stood next to John Lee, and Lee Jae-myung stood next to Trump — "Japan didn't even make it into the first row, how miserable." Qiege also compared a group photo of the Yalta Conference's big three (Stalin, Churchill, Roosevelt) with the three people's positions this time.</li>
+<li>Extended judgments (Qiege's live statements): replacing Trump with someone else after he steps down will not reverse the economic cycle either; the Republican Party's internal problems are the biggest (among Bessent, Rubio, Vance, and Trump); the United States in recent years has been in a "death spiral," like the 2001–2005 period; the Democratic Party's word still counts for something, while the Republican Party's "word never counts."</li>
+</ul>
+<h2>AI Monetization, the WalletWay Preview, and Other Items</h2>
+<ul>
+<li>AI monetization (Qiege): large models' profitability is far from their valuations; not considering monetization or profitability "will blow up sooner or later" — Netscape is the cautionary tale; what can truly make money is Agents: personal subscription payments (he himself spends $100 a month buying Grok tokens; X's blue check is now free) and specialized services (video editing, photo retouching — "the most awesome product is a beauty camera," and AI beauty cameras will come out soon); women are willing to pay for beauty, men for knowledge and games; the launch of GTA6 may bring a wave of new content; entertainment in which AI interacts directly with people is still little developed.</li>
+<li>Adam Cai: Nvidia's post-earnings conference call was by the book; the acting CEO had no need to take risks, but the fact that someone from a CFO background could give aggressive guidance shows the fundamentals are still there; whether private credit (loans of the SoC finance type) will break — "I think it's all fine"; after BTC fell for six straight weeks the market is extremely fearful, and "catching a falling knife" is hard, but buying at 62,000–64,000 makes little difference (provided BTC will not disappear and no high leverage is used).</li>
+<li>WalletWay preview (Qiege): at 8:30 p.m. on the 19th there will be a WalletWay (aggregated trading platform, Wallet V) AMA, with exclusive community points and an airdrop available via the registration link; the platform token has its TGE next month; it aggregates Hyperliquid and several other platforms, and gold, US stocks, BTC, futures, and leverage can all be traded; the boss is a good friend who "keeps his word" (the earlier 733 bonus was honored).</li>
+<li>Exchange risk: Qiege believes "there will be a problem of exchanges blowing up, with hacking attacks this fierce" — banks being attacked, airports being attacked, "even the National Security Agency's internal network has been attacked" (as stated in the session); the Binance wallet Alpha has just been restored (after the theft incident).</li>
+<li>Circle chatter: the atmosphere in the Chinese-language circle keeps getting worse, with "Douyin refugees" coming to X, no proper content, and everyone smearing each other for traffic (someone smeared ABE, saying its images were stolen); Qiege fired back: "everyone is reposting — who can accuse whom"; there is even more paid trade-calling on YouTube than on X — "there are far more retail investors on YouTube than on X"; Qiege's Bot (transcribed as BianG) studies cryptocurrency every day and draws lines "really accurately."</li>
+<li>Schedule adjustment: someone suggested starting at 9; Qiege set future broadcasts to start between 8:30 and 9 — "as early as possible, to leave everyone a little time to think and prepare."</li>
+</ul>
+<h2>ASR Restoration Table</h2>
+<table>
+<thead>
+<tr>
+<th>Transcription</th>
+<th>Restoration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ross Topic / Rustopic / Raus-Taubeck / Ross Hopper / Rostopic / Sdropic / Sdopic</td>
+<td>Anthropic (this session's core topic: IPO pricing and listing)</td>
+</tr>
+<tr>
+<td>老黄 / 黄仁勋 / 黄云勋 / 黄泳军 / 黄来勋 / 黄泉</td>
+<td>Jensen Huang (Nvidia CEO)</td>
+</tr>
+<tr>
+<td>金伟达 / 英伟达</td>
+<td>Nvidia</td>
+</tr>
+<tr>
+<td>比德币</td>
+<td>Bitcoin</td>
+</tr>
+<tr>
+<td>古事</td>
+<td>Gold</td>
+</tr>
+<tr>
+<td>投奸顶</td>
+<td>Head-and-shoulders top</td>
+</tr>
+<tr>
+<td>散迪</td>
+<td>SanDisk</td>
+</tr>
+<tr>
+<td>海地市 / 海列师</td>
+<td>SK Hynix</td>
+</tr>
+<tr>
+<td>Ochleon / Ocklund / Ocle</td>
+<td>Oracle (transcription uncertain)</td>
+</tr>
+<tr>
+<td>派拉门</td>
+<td>Paramount</td>
+</tr>
+<tr>
+<td>三胖 / 金三炮</td>
+<td>Kim Jong Un (nickname used in the session)</td>
+</tr>
+<tr>
+<td>川胖</td>
+<td>Trump (nickname used in the session)</td>
+</tr>
+<tr>
+<td>德格莱兰会议</td>
+<td>Yalta Conference (transcription uncertain)</td>
+</tr>
+<tr>
+<td>BianG</td>
+<td>Qiege's Bot (name transcription uncertain)</td>
+</tr>
+<tr>
+<td>WalletWay / Wallet V / VoletVey</td>
+<td>WalletWay (aggregated trading platform)</td>
+</tr>
+<tr>
+<td>浑水</td>
+<td>Muddy Waters (short-selling firm)</td>
+</tr>
+<tr>
+<td>QQ</td>
+<td>QQQ (Nasdaq 100 ETF)</td>
+</tr>
+<tr>
+<td>NQ</td>
+<td>Nasdaq futures</td>
+</tr>
+<tr>
+<td>加息</td>
+<td>Rate hike (in this session's context, a Federal Reserve rate hike — the opposite of the usual rate-cut cycle phrasing; recorded as spoken)</td>
+</tr>
+<tr>
+<td>Opening 12-hour highs/lows transcribed as 610,809 / 610,106</td>
+<td>Inconsistent with the session-wide price level of 63,000–65,000; suspected transcription error, not adopted</td>
+</tr>
+</tbody>
+</table>
+<h2>Verification Notes</h2>
+<ul>
+<li>Jensen Huang's resignation is a verified fact: on November 12, 2026, Nvidia announced that he had resigned as president, CEO, and director, effective immediately, with CFO Colette Kress serving as interim CEO (verified 2026-11-13). Statements in the program about an "affair," "removal by the board," a "hearing," and a "return" are all in-session rumors and speculation, unverified.</li>
+<li>Anthropic's IPO pricing, valuation (1.4–1.5 trillion), issue price (above $78–80), and opening market cap (1.8 trillion) are all in-session statements made while the program was in progress; pricing had not yet been announced when the program ended, and official disclosures prevail.</li>
+<li>Nvidia's earnings figures in the transcript are revenue of 115.8 billion, data center revenue of 107.6 billion, and Q4 guidance of 150 billion (as transcribed), which do not match conventional US-dollar denominations and are suspected ASR mistranscriptions; the notes record them as originally spoken, without conversion.</li>
+<li>All market levels, ETF flows, and individual stock target prices are guests' live statements, unverified; BTC's market cap and total crypto market cap appeared in two inconsistent versions in the session (1.3 trillion / 1.5 trillion), as noted in the main text.</li>
+<li>"The April 2028 halving," "two to three hikes in December, January, and April," "QE in the middle of next year," and similar statements are all in-session statements, unverified.</li>
+<li>Political content such as the US-China-Russia Shenzhen meeting and the dinner seating consists of guests' live statements, unverified.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1zkZJdBQWZbeMj">https://x.com/i/spaces/1zkZJdBQWZbeMj</a> · 茄哥 @qg7777 主持 · 2026-11-18 19:56 – 23:32（3 小时 35 分）· 直播听众 1,348 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1zkZJdBQWZbeMj">https://x.com/i/spaces/1zkZJdBQWZbeMj</a> · 茄哥 @qg7777 主持 · 2026-11-18 19:56 – 23:32（3 小時 35 分）· 直播聽眾 1,348 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1zkZJdBQWZbeMj">https://x.com/i/spaces/1zkZJdBQWZbeMj</a> · Hosted by Qiege @qg7777 · 2026-11-18 19:56 – 23:32 (3 hours 35 minutes) · 1,348 live listeners<br>This page is the full text of notes compiled through human editing of a machine transcript; all content consists of the guests' impromptu remarks and self-descriptions during the livestream, is unverified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：茄哥《11.18 美中俄深圳会 英伟达财报翻倍 Anthropic定价 行情今晚怎么走？》 · Yat's Talks",tw:"會議紀要：茄哥《11.18 美中俄深圳會 英偉達財報翻倍 Anthropic定價 行情今晚怎麼走？》 · Yat's Talks",en:"Meeting Notes: Qiege — \"11.18 US-China-Russia Shenzhen Meeting, Nvidia Earnings Double, Anthropic Pricing: How Will the Market Move Tonight?\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

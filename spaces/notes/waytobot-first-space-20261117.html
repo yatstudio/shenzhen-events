@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>《WayToBot 社区首场 Space：为什么成立 WayToBot 社区》会议纪要</h1>
 <ul>
 <li><strong>活动</strong>：X Space《WayToBot 社区首场 Space：为什么成立 WayToBot 社区》</li>
@@ -167,8 +174,318 @@
 <h2>ASR 还原表</h2>
 <p>Way to Boat/微图博/V2Bot=WayToBot；Grokbot/Gorboat/Globo/GrowlBot/Galco Bot/国报= Grokbot（xAI）；Muse=Muse（Meta）；Dots/Dote/Doot=OpenAI Dots；Q=Manus（转写 "Manus Q"）；Cloud/Cloud Duet=Claude；小龙虾=底层编码 agent（转写，疑似 Claude Code，存疑）；Hermes/黑马斯=Hermes（开源 agent 框架）；Hawk/Hank/Hike=Hawk（视频生成 agent）；OPOS 5.5=某视频模型（转写，存疑）；特代/Tobay=国内 PA 软件（转写存疑）；吴云串星/Jabilot/Zepler=AI NAS 硬件（转写存疑）；本为无界/VLU/Value=桌面盒子（转写存疑）；Midgeny/MIDI增添=Midjourney；Lotion=Notion；get hub=GitHub；非书=飞书；U-Mind=U-Mind（转写）；SBS/SPS=Space；联迈/商卖=连麦/上麦；群谣日报=群聊日报；ORCA/T3code=Muralsim 类 ADE 产品（转写）；DBC/DXIC=某公司（转写，存疑）；Tide Coding Agent=某编码 agent（转写，存疑）；Xdudu=某硬件新品（转写，存疑）；UdnL=某唤醒机制（转写，存疑）</p>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1pedlnlnyjZevP">https://x.com/i/spaces/1pedlnlnyjZevP</a> · 主持 蓝哥AI @0xlangeai · 2026-11-17 19:59–22:14（约 2 小时 14 分）· 累计收听 771 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>《WayToBot 社群首場 Space：為什麼成立 WayToBot 社群》會議紀要</h1>
+<ul>
+<li><strong>活動</strong>：X Space《WayToBot 社群首場 Space：為什麼成立 WayToBot 社群》</li>
+<li><strong>主持</strong>：藍哥AI @0xlangeai</li>
+<li><strong>時間</strong>：2026-11-17 19:59–22:14 CST，約 2 小時 14 分（錄音時長 8,049 秒）</li>
+<li><strong>累計收聽</strong>：771 人</li>
+<li><strong>發言嘉賓</strong>：Kim、鐵柱、李九二、JKL、文哥、木都傳、張坤、賽博弗蘭克、Wayne Wang、顧德昊等（完整發言人句柄見文末）</li>
+<li><strong>逐字稿</strong>：2,583 行，約 88,125 字，時間戳 [00:01:40]–[02:14:04]</li>
+</ul>
+<blockquote>
+<p>說明：以下內容均為嘉賓在直播中的即興發言與自述，未經獨立核實；轉寫為機器轉寫，產品名、人名與數字多處為音近轉寫，疑似錯誤見文末 ASR 還原表；本紀要以簡體中文整理。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>WayToBot 是三個 Grokbot/Muse 重度使用者為新手建的免費入門社群；本場最有料的是兩塊硬貨——鐵柱總結的 Grokbot 省額度六條軍規，和 Kim 梳理的用 Personal Agent 變現的四條路（跨境電商、自媒體、2B 企業服務、AI 短劇與獨立開發）。</p>
+<h2>WayToBot 社群：誰發起、定位是什麼</h2>
+<ul>
+<li><strong>核心發起人</strong>：藍哥、Kim、鐵柱三人；嘉賓團約 10 位早期成員（李九二、陽文、小文、麥當、LK 等）</li>
+<li><strong>起因</strong>：三人是最早把 Grokbot、Muse 用得最深的一批創作者，在推特輸出了大量教學、累計幾百萬閱讀量；小群裡聊著聊著，覺得應該把聊天範圍擴大，幫更多不了解 Grokbot/Muse 的人入門</li>
+<li><strong>時間線（發言人說法）</strong>：xAI 8 月 11 日推出 Grokbot，Meta 9 月推出 Muse，隨後 OpenAI 的 Dots、Manus 等跟上，「這一輪 Personal Agent 感覺產品是緊噴的」</li>
+<li><strong>定位</strong>：幫大家做新手入門 Personal Agent 的社群，做高品質資訊的篩選；每週或每兩週開一次 Space，邀請厲害的嘉賓分享交流</li>
+<li><strong>提供三樣東西</strong>：① Grokbot、Muse、OpenAI Dots、Manus 等所有 Personal Agent 的最新新聞與功能資訊；② 定期線上嘉賓分享（含 QA 環節）；③ 免費群裡持續分享優質資訊與教學</li>
+<li><strong>不提供</strong>：付費群才有的客製服務與更深入的服務，「畢竟是免費的嘛」</li>
+<li><strong>官網已上線</strong>，後續會增加新手入門教學與實戰案例；歡迎共建——有好案例可申請當分享者，社群幫你安排分享、給曝光與增長機會</li>
+<li><strong>規模</strong>：已開十幾個微信群；下期主題已定：<strong>Grokbot + 電商</strong>（下週一請跨境電商行業嘉賓展開分享）；另預告 <strong>12 月 12 日 Grokbot 在深圳辦 Grokbot + 硬體 Meetup</strong></li>
+</ul>
+<h2>三大 Personal Agent 怎麼分</h2>
+<table>
+<thead>
+<tr>
+<th>產品</th>
+<th>嘉賓共識的定位</th>
+<th>短板（發言人說法）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grokbot</strong>（xAI）</td>
+<td>像一個虛擬員工團隊，偏商務/企業助手；分出多個電子員工協作，小型業務基本能包圓</td>
+<td>額度燒得快；主控模型不能自選，模型路由後水準忽高忽低、比較黑箱</td>
+</tr>
+<tr>
+<td><strong>Muse</strong>（Meta）</td>
+<td>像輕量化的生活/社交管家，個人秘書型；跟 Meta 生態綁定深</td>
+<td>不適合做商務；影片模型不算特別好，但便宜、「用不完」</td>
+</tr>
+<tr>
+<td><strong>Dots</strong>（OpenAI）</td>
+<td>通知最準（iPhone 原生通知彈出）；適合語音對話、分析程式碼</td>
+<td>只在 100 美元的 Pro 檔提供；handoff 到 Codex 時不能指定模型；外掛生態難調；群友體感「智商非常低」</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>共識</strong>：每個 Personal Agent 都跟自家生態深度綁定——Grokbot 跟 X，Muse 跟 Meta/Instagram，Dots 跟 Codex 生態；可以搭配著用：工作與內容產出交給 Grokbot，生活中用 Muse</li>
+<li><strong>李九二</strong>：三個都在用。Dots 通知準但貴；Muse 做影片有時間線，行業新聞基本在 Muse 上看完，還能直接營運 Instagram（發好影片直接發 Ins）；Grokbot 處在 Personal Agent 和 Coding Agent 之間，他有兩個帳號每天都在用，常拿它當雲端電腦做測試</li>
+<li><strong>JKL</strong>（本職英語老師，重度用 Grokbot，也辦線下活動）：Grokbot 是小企業型態的最佳選擇，組織活動、營運、宣發、剪輯、教學基本全包；Dots 只註冊了、實際用得少（已被 OpenClaw/Hermes 滿足）；Muse 是個人秘書型，不適合商務；國外朋友用 Muse 處理航班延誤寫郵件 argue，能要到折扣或退款</li>
+<li><strong>文哥</strong>（xAI 大使）：主要用 Grokbot 和 Muse；Muse 早期用自家模型時中文 AI 味很濃，Muse「說人話」，不用給過多提示、文字就很像人寫的；做影片不用特別提示或模板，效果也挺好</li>
+</ul>
+<h2>鐵柱的 Grokbot 省額度六條（本場最實用的段落）</h2>
+<p>背景：最近大家普遍反映額度燒得很快，官方暗中也有調整；鐵柱研究最多，總結了六點：</p>
+<ol>
+<li><strong>能用腳本就不用瀏覽器</strong>：能透過 CLI/命令列完成的任務不要開瀏覽器——瀏覽器每一步都要截圖識別、判斷狀態，極耗額度</li>
+<li><strong>重任務分出去</strong>：把 Codex 或其他 agent + 其他模型裝到 Grokbot 的虛擬機器上，Grokbot 只負責分析需求、指派任務、回收結果；中間最重的執行步驟額度就平攤到別的訂閱上。重任務包括瀏覽器任務、大量圖片識別、影片拉片分析、做影片（含程式碼編輯+渲染+抽幀查看）</li>
+<li><strong>定時任務降頻</strong>：5 分鐘檢查一次沒必要——很多任務一天只變化一次，前面全是空轉；每次喚醒都要讀記憶、讀定時任務上下文、讀聊天記錄，非常耗額度；刪掉沒必要的、調低頻率</li>
+<li><strong>盡量少用群聊</strong>：很多任務沒必要用群聊，Bot 之間可以直接溝通；沒必要長期保持的群聊，針對單個任務設臨時群聊，聊完回收結果就解散</li>
+<li><strong>一個 Bot 做完一件事，別按能力顆粒化拆</strong>：一個任務需要多項能力時，多個 Bot 來回溝通的通訊本身就很耗額度（新版用量面板能看到）；現在他的做法是盡量讓一個 Bot 把一件事做完</li>
+<li><strong>第三方工具註冊為公共服務</strong>：別給 Codex 單獨配一個 Bot 維護；接進來後註冊成公共服務，讓所有 Bot 都知道、執行時直接呼叫，省掉中間溝通的額度</li>
+</ol>
+<ul>
+<li><strong>JKL 的補充打法——「小馬拉大車」</strong>：Grokbot 只當指揮官，實際工作交給 Codex/Claude/Grok 等下面的 Agent；他從沒把群聊拉起來過（好奇時會點進去看 Bot 之間傳話）；除了成熟的剪影片讓 Grokbot 自己做，其餘基本交給別的 Agent；他的額度一直很夠用、從沒用完過</li>
+<li><strong>藍哥的自述</strong>：鐵柱說的坑他都踩過——群聊用得多、定時任務也多；改了用法後用量變化很明顯</li>
+</ul>
+<h2>用 Personal Agent 變現：Kim 的四條路</h2>
+<p>Kim 稱社群接龍裡問得最多就是「怎麼用它變現/搞錢」，他梳理了四個方向：</p>
+<ol>
+<li><strong>跨境電商</strong>：與 Grokbot 天然結合最好。選品、營運、投放、數據復盤、競品調研都極耗人工時間；現在賣家可以搭建很多 Grokbot 軍團，效率極大提升——「以前兩天能上 100 個連結，現在能上 1,000 個」；時間就是金錢，效率提升賺錢機會就更大</li>
+<li><strong>自媒體</strong>：不要覺得自媒體賺的錢少；用 Grokbot 做得好能又快又好地量產內容，接廣告、拿推特商單、做付費社群或培訓；三人就是受益者——兩三個月內快速漲到一萬多粉絲，藍哥一篇 Muse 教學約 200 萬閱讀、鐵柱一篇 Grokbot 微信教學百萬閱讀；他們在推特公開過收益，「基本每兩週就可以拿到接近破千刀」</li>
+<li><strong>2B 企業服務</strong>：客單價更高、利潤更好。企業的 AI 培訓、FDE、幫老闆搭工作台、給員工做講師等；社群後面想幫大家接商單分發給有能力的老師</li>
+<li><strong>AI 短劇與獨立開發</strong>：推特上最火的方向之一是用 Claude 接 Grokbot 做各種 AI 影片；獨立開發者用 Grokbot 找新詞、快速開發上架網站，「賺大錢不敢說，賺小錢問題不大」；出海方向：早期找需求詞、發外鏈（繁瑣人工活，Grokbot 定時任務很好用）</li>
+</ol>
+<ul>
+<li><strong>JKL 的補充</strong>：從本職出發拓展——他把影片發給 Grokbot，剪輯加上傳全包；後來讓 Grokbot 從百度網盤自動下載活動照片影片、篩選、剪出活動宣傳片；佛山一些有見識的小老闆已開始用 Grokbot 做小企業/工廠管理的數位團隊</li>
+<li><strong>木都傳的三個具體工作流</strong>：① 微信管家：群太多看不過來，用 EO 老師分享的 skill 把微信群記錄導到本地，調 Antigravity 整理成 HTML 沉澱到知識庫，用 Page 功能分享、發群聊日報；② 設計工作台：刷手機看到好的設計素材連結就發給 Bot，自動沉澱到工作台素材庫；③ 公眾號營運專家 Bot：Antigravity 寫提綱+文案、Codex 配圖、套 HTML 格式進公眾號草稿箱，推特長文則用 U-Mind 轉格式進推特草稿箱；開發修 bug 仍有問題，直接調 Codex 修</li>
+</ul>
+<h2>國內的 Personal Agent 產品：三款</h2>
+<p>Kim 分享了他看到的三款國內產品（均為發言人說法，未經核實）：</p>
+<ol>
+<li><strong>特代（Tobay，轉寫存疑）</strong>：國內較早的 Personal Agent 軟體，創業公司，核心團隊有 Manus 出來的人；融資約 10 億人民幣（發言人稱「應該是 10 億人民幣」）；他看好創業公司在這個賽道殺出來，「AI 的世界裡如果只有大廠在玩、沒有任何創業公司，這個世界會非常無聊」</li>
+<li><strong>吳雲串星的 Jabilot（轉寫存疑）</strong>：AI NAS 硬體，把大模型裝進本地儲存，在本地設備完成語義搜尋、轉寫、文件識別，不靠雲、不靠訂閱；2025 年在海外眾籌平台 Kickstarter 眾籌超 140 萬美元，總值約 1 億元</li>
+<li><strong>本為無界的 VLU（轉寫存疑）</strong>：插電腦上的桌面盒子，HDMI 讀屏、有鍵鼠、不用裝驅動，支援 Windows/Mac/Linux；2026 年 9 月 Kickstarter 眾籌約 2,000 萬人民幣，訂單 8,000 多台
+- 另：國內網際網路大廠肯定也在密集開發相關產品，「可以拭目以待」；藍哥補充 Muse 9 月就推出了硬體組件，可接入 Muse 生態</li>
+</ol>
+<h2>開源 Personal Agent 還在用嗎</h2>
+<ul>
+<li><strong>GKL 提問</strong>：現在各大廠的 Personal Agent 如此盛行，你們還有在用開源 Personal Agent 嗎？</li>
+<li><strong>藍哥</strong>：還在用 Hermes（轉寫「黑馬斯」）；原因：Grokbot 的模型沒法選，主控模型一定是它自己搭配的（很可能就是 Grok 4.7，評測整體比其他幾家偏弱）；Hermes 什麼模型都可以配</li>
+<li><strong>Hermes 的取捨</strong>：確實重，但可以做職責分工、有沉澱記憶；只用 Codex 會以 session 分工，session 可能很膨脹；Hermes 每次更新會覆蓋他個人化客製的外掛，這是他一度棄用的原因</li>
+<li><strong>顧德昊</strong>：在用開源的 RAKAGO（轉寫 "r a k a jio"，類似 Grokbot，有行動端+PC 端），做了深度開發；用途是企業級服務補充——Grokbot credit 太少，且稅務自動申報這類場景不適合用 Grokbot；企業客戶不能都推 Grokbot</li>
+</ul>
+<h2>X 自動化發帖：API 可以，computer use 會封號</h2>
+<ul>
+<li><strong>Steven 的問題</strong>：Grokbot 自動化發帖前天/昨天突然出問題了，有沒有人遇到過？</li>
+<li><strong>鐵柱的經驗</strong>：他只讓 Grokbot 做資訊收集（每天 9 點和 12 點收兩次 X 的資訊、看帖子訪問量、做選題），不讓它發帖；自動發帖流量掉得很狠，還有封號風險；他用小號測試過，跑了兩三週一直沒問題，但不建議這麼做</li>
+<li><strong>藍哥</strong>：推特本質是社交、像朋友圈，不互動就失去了來推特的意義；全自動很難得到連結與樂趣</li>
+<li><strong>鐵柱補充</strong>：推特官方支援自動發布，有官方 API；不推薦的是用 Grokbot/Codex 的 computer use 操作瀏覽器去發，「鐵定違反推特條例」，會遇到封號或影子封禁；用 AI 在別人帖子下面回留言「一點收益都沒有」，除了招人反感還虧 token</li>
+<li><strong>JKL 親身經歷</strong>：不知道有 API，就讓 Grokbot 用 computer use 在瀏覽器發帖，「喜提封號」，申訴後放出來了；後來才知道用 Grokbot 會得到 100 美元的 X 平台 API 額度，用 API 發帖就沒問題</li>
+<li><strong>共識</strong>：工具不重要，方式才重要——透過官方 API 發沒問題，透過瀏覽器 RPA 操作就是違規；Muse 也一樣</li>
+</ul>
+<h2>多場景、多設備的上下文管理</h2>
+<ul>
+<li><strong>願明水晶神（李竹）的問題</strong>：產品開發+自媒體+出海 SaaS 站，事情很雜，工具也多（OpenClaw、Hermes、Codex、Gemini、Grokbot、Claude），上下文散落在很多地方，skills 也不統一；有沒有好的工具降低遷移成本、統一入口？</li>
+<li><strong>鐵柱</strong>：用 Grokbot 建 Bot 做分配；或以人為中心、用 ADE（Agent Development Environment）聚合——ORCA、T3code 都是新的 ADE 產品</li>
+<li><strong>聽說老師的方案</strong>：三台電腦+三台伺服器，Obsidian + GitHub 私倉做唯一真源，Syncthing 外掛同步到每個地方；設定只有一個老大可以寫入；每次對話歸納總結、提取重要資訊寫入知識庫；自今年初用下來，「基本上就沒有再出現失憶或者打架的事情」</li>
+<li><strong>另一位嘉賓</strong>：早期也用 Obsidian，後來遷到 Notion（Grokbot 的喚醒機制寫本地檔案系統不便）；現在用 Muralsim（本地 ADE，把大任務拆分、支援客製 Bot、聚合本機所有 ADE 產品），用得比 Grokbot 還多；Grokbot 不能自選模型是硬傷</li>
+<li><strong>Wayston 的方案</strong>：一切以 GitHub 為本源，每天定時把所有數據同步到 GitHub；飛書做協作與輸出呈現；本地一切用 AGENTS.md 做主要支柱，其他與生態相關的檔案都讓模型去讀 AGENTS.md，「脫離某一家大語言模型的生態綁架」；用 SDD 形式推進產品研發</li>
+</ul>
+<h2>專案管理痛點：張坤的微信群機器人問題</h2>
+<ul>
+<li><strong>張坤的現狀</strong>：做專案管理，工作上一直用 Grokbot；總控 Bot + 寫文件/瀏覽器/編程 Bot；用 Webhook 把 Bot 接入客戶微信群自動回答問題；有五六個專案、很多群</li>
+<li><strong>痛點</strong>：客戶提問不能及時回覆，有些問題要改文件、改工具；Grokbot 佇列一次只能執行一件事，不能並行；想實現「super agent」理念——問題自動記錄、自動執行、人工復核</li>
+<li><strong>討論結果</strong>：① 鐵柱建議自己搭服務+多個 webhook 隔離不同群（他在 WayToBot 每個群都拉了一個「小鐵柱」，但只限自己 @，因為 webhook 一小時只能發起 200 次）；② 顧德昊建議接自己的 helpdesk/Ticket 系統，AI 自動營運，甚至把權限交給 Bot、讓它自動開發和改系統；③ 本地 Hermes 方案沒人實測過，留待後續活動再聊</li>
+</ul>
+<h2>工具分流實測與踩坑</h2>
+<ul>
+<li><strong>賽博弗蘭克</strong>：一個任務讓所有 Bot 都做、看誰做得好；寫公眾號用騰訊的 Lightweiler 最好，自動進公眾號草稿箱，但缺人味、曝光忽高忽低，測了一個月；影片交給 Hawk；YouTube 國學（八字風水）帳號更新一個多月，訂閱幾十、閱讀幾百上千，還沒變現；自己在做 Agent 硬體（類似 VLU），Hermes 裝龍箱老斷，最近 Hermes 推了新品 Xdudu，打通硬體與手機電腦</li>
+<li><strong>李叔</strong>：Grokbot 額度焦慮後也在用 Muse 和 Hawk；Bot 從很多個精簡到五六個，「一人多專」；Hawk 做影片要求越具體越複雜、品質越高，已達到 OPOS 5.5 級別；會全網找公版版權音樂並署名；教訓：讓它一次生成 500 張 Midjourney 照片、開了 4 個瀏覽器視窗跑完、品質很高，但 Midjourney 號被臨時封了（申訴中）——「使用這些 Agent 的時候還是要控制一下邊界」</li>
+<li><strong>Hawk 的免費額度</strong>：每天重置一次，額度較少；李叔的辦法是三四個瀏覽器各註冊一個 Hawk 帳號、按類型分開用</li>
+<li><strong>Wayne Wang</strong>：Muse 做影片對比過 MiniMax、Cdance、中轉平台，Muse 出來的影片最符合要求、AI 味不重、很真實、質感好；用 Muse + Codex 操控手機自動發 TikTok/Facebook/IG/Twitter；最近 Muse 遇到地區限制生成不了影片、封了兩三號；鐵柱解答：路由切到支援的區域，他的 Muse 所有路由（含 Facebook/Meta 路由）全走美國節點</li>
+<li><strong>AirLinz</strong>：Muse 自動發推/Facebook 的辦法是裝一個谷歌外掛，綁定 Meta 帳號即可自動發</li>
+</ul>
+<h2>值得留意的幾條線</h2>
+<ol>
+<li><strong>省額度是本場共識第一痛點</strong>：鐵柱六條 + JKL「小馬拉大車」，核心就一句——Grokbot 當指揮官，別讓它幹重活</li>
+<li><strong>變現路徑已經有人跑通</strong>：三人兩三個月漲粉一萬+、每兩週近千刀收益；跨境電商是 Kim 最看好的方向，Grokbot 軍團把上連結效率從兩天 100 個提到 1,000 個</li>
+<li><strong>國內 PA 正在補位</strong>：軟體（特代）+ 硬體（AI NAS、桌面盒子）三條線，12 月 12 日深圳還有 Grokbot + 硬體 Meetup</li>
+<li><strong>X 自動化發帖的紅線很清楚</strong>：官方 API 可以，瀏覽器 computer use 會封號——JKL 是親身封號案例</li>
+<li><strong>多 Agent 時代的真正瓶頸是上下文</strong>：Obsidian + GitHub 唯一真源、AGENTS.md 防生態綁架、ADE 聚合，三種解法同場出現，說明這已是重度使用者的共同痛點</li>
+</ol>
+<h2>發言人句柄（check_meta 最終名單）</h2>
+<p>li9292、KinGao476942、cgnot996、czzzzzJ_、stevencheng、MaiYangAI、JohnnyWang8802、tanglele0318、frank160997328、zhu1894341、jklthinking、kundocs、winston13111、FROST_JIANG、jeffli2002、89mdimd、8208wangdada、goodhawk2（另有鐵柱等，句柄未在最終名單中完整列出）</p>
+<h2>ASR 還原表</h2>
+<p>Way to Boat/微圖博/V2Bot=WayToBot；Grokbot/Gorboat/Globo/GrowlBot/Galco Bot/國報= Grokbot（xAI）；Muse=Muse（Meta）；Dots/Dote/Doot=OpenAI Dots；Q=Manus（轉寫 "Manus Q"）；Cloud/Cloud Duet=Claude；小龍蝦=底層編碼 agent（轉寫，疑似 Claude Code，存疑）；Hermes/黑馬斯=Hermes（開源 agent 框架）；Hawk/Hank/Hike=Hawk（影片生成 agent）；OPOS 5.5=某影片模型（轉寫，存疑）；特代/Tobay=國內 PA 軟體（轉寫存疑）；吳雲串星/Jabilot/Zepler=AI NAS 硬體（轉寫存疑）；本為無界/VLU/Value=桌面盒子（轉寫存疑）；Midgeny/MIDI增添=Midjourney；Lotion=Notion；get hub=GitHub；非書=飛書；U-Mind=U-Mind（轉寫）；SBS/SPS=Space；聯邁/商賣=連麥/上麥；群謠日報=群聊日報；ORCA/T3code=Muralsim 類 ADE 產品（轉寫）；DBC/DXIC=某公司（轉寫，存疑）；Tide Coding Agent=某編碼 agent（轉寫，存疑）；Xdudu=某硬體新品（轉寫，存疑）；UdnL=某喚醒機制（轉寫，存疑）</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: "WayToBot Community's First Space: Why We Founded the WayToBot Community"</h1>
+<ul>
+<li><strong>Event</strong>: X Space "WayToBot Community's First Space: Why We Founded the WayToBot Community"</li>
+<li><strong>Host</strong>: Lange AI @0xlangeai</li>
+<li><strong>Time</strong>: 2026-11-17 19:59–22:14 CST, about 2 hours 14 minutes (recording length 8,049 seconds)</li>
+<li><strong>Total listeners</strong>: 771</li>
+<li><strong>Speakers</strong>: Kim, Tiezhu, Li Jiuer, JKL, Wenge, Muduchuan, Zhang Kun, Cyber Frank, Wayne Wang, Gu Dehao, and others (see the end for the full list of speaker handles)</li>
+<li><strong>Transcript</strong>: 2,583 lines, about 88,125 characters, timestamps [00:01:40]–[02:14:04]</li>
+</ul>
+<blockquote>
+<p>Note: Everything below is the guests' impromptu remarks and personal accounts during the live broadcast, not independently verified; the transcript is machine-generated, and many product names, personal names and figures are phonetic transcriptions — see the ASR restoration table at the end for suspected errors; these notes were compiled in Simplified Chinese.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>WayToBot is a free beginner community built for newcomers by three heavy users of Grokbot/Muse; the most substantive parts of this session were two practical segments — Tiezhu's six rules for saving Grokbot quota, and Kim's four paths to monetizing Personal Agents (cross-border e-commerce, self-media, B2B enterprise services, and AI short dramas and indie development).</p>
+<h2>The WayToBot community: who founded it and what is it for?</h2>
+<ul>
+<li><strong>Core founders</strong>: Lange, Kim and Tiezhu; a guest group of about 10 early members (Li Jiuer, Yangwen, Xiaowen, Maidang, LK, etc.)</li>
+<li><strong>Origin</strong>: The three were among the earliest creators to use Grokbot and Muse most deeply, publishing a large number of tutorials on Twitter with millions of cumulative views; chatting in a small group, they felt they should widen the conversation and help more people unfamiliar with Grokbot/Muse get started</li>
+<li><strong>Timeline (according to speakers)</strong>: xAI launched Grokbot on August 11, Meta launched Muse in September, followed by OpenAI's Dots, Manus and others — "in this round, Personal Agent products feel like they're coming in a burst"</li>
+<li><strong>Positioning</strong>: A community to help everyone get started with Personal Agents as beginners, curating high-quality information; holding a Space once a week or every two weeks, inviting strong guests to share and exchange ideas</li>
+<li><strong>Three things it provides</strong>: ① The latest news and feature updates on all Personal Agents including Grokbot, Muse, OpenAI Dots and Manus; ② Regular online guest sharing sessions (including Q&amp;A); ③ Ongoing sharing of quality information and tutorials in the free groups</li>
+<li><strong>What it does not provide</strong>: The customized and more in-depth services available only in paid groups — "after all, it's free"</li>
+<li><strong>Official website is live</strong>, with beginner tutorials and practical case studies to be added later; co-building is welcome — if you have a good case, you can apply to be a speaker, and the community will arrange a sharing session for you and give you exposure and growth opportunities</li>
+<li><strong>Scale</strong>: More than a dozen WeChat groups have been opened; the next session's theme is set: <strong>Grokbot + e-commerce</strong> (next Monday, with guests from the cross-border e-commerce industry); also announced: <strong>on December 12, Grokbot will hold a Grokbot + Hardware Meetup in Shenzhen</strong></li>
+</ul>
+<h2>How the three major Personal Agents differ</h2>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Positioning by guest consensus</th>
+<th>Weaknesses (according to speakers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grokbot</strong> (xAI)</td>
+<td>Like a virtual employee team, geared toward business/enterprise assistance; it can spin up multiple digital employees to collaborate, and can basically cover a small business end to end</td>
+<td>Burns through quota quickly; the main control model cannot be chosen by the user, and after model routing performance fluctuates and is fairly opaque</td>
+</tr>
+<tr>
+<td><strong>Muse</strong> (Meta)</td>
+<td>Like a lightweight life/social manager, a personal-secretary type; deeply bound to the Meta ecosystem</td>
+<td>Not suited to business use; its video model is not particularly good, but it is cheap and "you can't use it up"</td>
+</tr>
+<tr>
+<td><strong>Dots</strong> (OpenAI)</td>
+<td>The most accurate notifications (native iPhone notifications pop up); suited to voice conversation and code analysis</td>
+<td>Only available on the $100 Pro tier; when handing off to Codex you cannot specify the model; the plugin ecosystem is hard to tune; group members feel its "intelligence is very low"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Consensus</strong>: Every Personal Agent is deeply bound to its own ecosystem — Grokbot with X, Muse with Meta/Instagram, Dots with the Codex ecosystem; they can be used in combination: leave work and content production to Grokbot, and use Muse in daily life</li>
+<li><strong>Li Jiuer</strong>: Uses all three. Dots has accurate notifications but is expensive; Muse makes videos with a timeline, he basically finishes reading industry news on Muse, and it can directly operate Instagram (post a finished video straight to Ins); Grokbot sits between a Personal Agent and a Coding Agent — he has two accounts he uses every day, and often uses it as a cloud computer for testing</li>
+<li><strong>JKL</strong> (an English teacher by profession, a heavy Grokbot user who also runs offline events): Grokbot is the best choice for a small-business setup, basically covering event organization, operations, promotion, editing and teaching end to end; he only registered for Dots and rarely uses it in practice (already satisfied by OpenClaw/Hermes); Muse is a personal-secretary type, not suited to business; friends abroad use Muse to handle flight-delay emails and argue, and can get discounts or refunds</li>
+<li><strong>Wenge</strong> (xAI ambassador): Mainly uses Grokbot and Muse; when Muse used its own model early on, its Chinese had a strong AI flavor, whereas Muse "speaks like a human" — without much prompting, its text reads very much like human writing; for videos, no special prompts or templates are needed and the results are quite good</li>
+</ul>
+<h2>Tiezhu's six rules for saving Grokbot quota (the most practical segment of the session)</h2>
+<p>Background: Recently everyone has generally felt quota burning very fast, and the platform has also quietly made adjustments; Tiezhu has researched this the most and summarized six points:</p>
+<ol>
+<li><strong>Use scripts instead of the browser whenever possible</strong>: Don't open a browser for tasks that can be done via CLI/command line — every browser step requires screenshot recognition and state judgment, which consumes a huge amount of quota</li>
+<li><strong>Delegate heavy tasks</strong>: Install Codex or other agents plus other models on Grokbot's virtual machine, and let Grokbot only analyze requirements, assign tasks and collect results; the heaviest execution steps in the middle then spread their quota cost across other subscriptions. Heavy tasks include browser tasks, large-scale image recognition, video breakdown analysis, and video production (including code editing + rendering + frame extraction and review)</li>
+<li><strong>Reduce the frequency of scheduled tasks</strong>: Checking every 5 minutes is unnecessary — many tasks change only once a day, and everything before that is idle spinning; every wake-up has to read memory, read the scheduled-task context and read chat history, which is very quota-intensive; delete unnecessary tasks and lower their frequency</li>
+<li><strong>Use group chats as little as possible</strong>: Many tasks don't need a group chat at all, and Bots can communicate directly; for group chats that don't need to persist, set up a temporary group chat for a single task, collect the results when done, and dissolve it</li>
+<li><strong>Let one Bot finish one job — don't split by capability granularity</strong>: When a task requires multiple capabilities, the communication itself between multiple Bots going back and forth consumes a lot of quota (visible in the new usage dashboard); his current approach is to let one Bot finish a job end to end whenever possible</li>
+<li><strong>Register third-party tools as public services</strong>: Don't assign a separate Bot just to maintain Codex; once integrated, register it as a public service so all Bots know about it and can call it directly at execution time, saving the quota spent on intermediate communication</li>
+</ol>
+<ul>
+<li><strong>JKL's additional tactic — "a small horse pulling a big cart"</strong>: Grokbot acts only as commander, with the actual work handed to Agents below it such as Codex/Claude/Grok; he has never spun up a group chat (when curious he will click in to watch Bots passing messages); except for mature video editing, which he lets Grokbot do itself, he hands basically everything else to other Agents; his quota has always been more than enough and he has never used it up</li>
+<li><strong>Lange's own account</strong>: He fell into every pit Tiezhu described — heavy use of group chats and many scheduled tasks; after changing his usage, the change in consumption was very obvious</li>
+</ul>
+<h2>Monetizing Personal Agents: Kim's four paths</h2>
+<p>Kim said the question asked most in the community relay was "how do you monetize it / make money with it," and he laid out four directions:</p>
+<ol>
+<li><strong>Cross-border e-commerce</strong>: The most natural fit with Grokbot. Product selection, operations, ad placement, data review and competitor research all consume enormous amounts of human time; sellers can now build large Grokbot legions for a massive efficiency gain — "before, we could list 100 links in two days; now we can list 1,000"; time is money, and higher efficiency means greater earning opportunities</li>
+<li><strong>Self-media</strong>: Don't assume self-media makes little money; used well, Grokbot can mass-produce content quickly and to a high standard, taking ads, Twitter commercial deals, and paid communities or training; the three of them are beneficiaries themselves — growing rapidly to over ten thousand followers in two or three months, with one Muse tutorial by Lange reaching about 2 million views and one Grokbot WeChat tutorial by Tiezhu reaching a million views; they have publicly shared their earnings on Twitter, "basically close to a thousand dollars every two weeks"</li>
+<li><strong>B2B enterprise services</strong>: Higher order values and better margins. Corporate AI training, FDE, building workbenches for bosses, serving as lecturers for employees, and so on; the community later wants to help everyone take commercial orders and distribute them to capable teachers</li>
+<li><strong>AI short dramas and indie development</strong>: One of the hottest directions on Twitter is using Claude connected to Grokbot to make all kinds of AI videos; indie developers use Grokbot to find new keywords and quickly develop and launch websites — "making big money is not guaranteed, but making small money is not a big problem"; for going overseas: finding demand keywords early and building backlinks (tedious manual work where Grokbot's scheduled tasks are very useful)</li>
+</ol>
+<ul>
+<li><strong>JKL's addition</strong>: Expand from your main job — he sends videos to Grokbot and it handles editing and uploading end to end; later he had Grokbot automatically download event photos and videos from Baidu Netdisk, filter them and cut event promo films; some perceptive small business owners in Foshan have already started using Grokbot as a digital team for small-business/factory management</li>
+<li><strong>Muduchuan's three concrete workflows</strong>: ① WeChat manager: with too many groups to keep up with, he uses a skill shared by Teacher EO to export WeChat group records locally, calls Antigravity to organize them into HTML and deposit them in a knowledge base, and uses the Page feature to share them and issue group-chat dailies; ② Design workbench: when he sees a good design-material link while scrolling on his phone, he sends it to the Bot, which automatically deposits it in the workbench material library; ③ Official-account operations expert Bot: Antigravity writes the outline + copy, Codex supplies images, and the result is formatted in HTML into the official account's draft box, while Twitter long-form posts are converted with U-Mind into the Twitter draft box; development bug-fixing still has issues, so he calls Codex directly to fix them</li>
+</ul>
+<h2>Domestic Personal Agent products: three of them</h2>
+<p>Kim shared three domestic products he has seen (all according to the speaker, unverified):</p>
+<ol>
+<li><strong>Tedai (Tobay, transcription uncertain)</strong>: An early domestic Personal Agent software from a startup whose core team includes people from Manus; it has raised about RMB 1 billion (the speaker said "it should be RMB 1 billion"); he is optimistic about a startup breaking out in this track — "if the AI world had only big companies playing and no startups at all, the world would be very boring"</li>
+<li><strong>Wuyunchuanxing's Jabilot (transcription uncertain)</strong>: AI NAS hardware that puts a large model into local storage and performs semantic search, transcription and document recognition on the local device, without relying on the cloud or subscriptions; in 2025 it raised over $1.4 million on the overseas crowdfunding platform Kickstarter, with a total value of about RMB 100 million</li>
+<li><strong>Benwei Wujie's VLU (transcription uncertain)</strong>: A desktop box that plugs into a computer, reads the screen via HDMI, has keyboard and mouse, needs no drivers, and supports Windows/Mac/Linux; in September 2026 it raised about RMB 20 million on Kickstarter, with over 8,000 orders
+- Also: domestic internet giants are certainly also intensively developing related products, "we can wait and see"; Lange added that Muse launched hardware components back in September that can connect to the Muse ecosystem</li>
+</ol>
+<h2>Are open-source Personal Agents still in use?</h2>
+<ul>
+<li><strong>GKL's question</strong>: With the major companies' Personal Agents now so prevalent, are you still using open-source Personal Agents?</li>
+<li><strong>Lange</strong>: Still using Hermes (transcribed as "Heimasi"); the reason: Grokbot's model cannot be chosen — the main control model is always its own pairing (very likely Grok 4.7, whose evaluations overall lag the others somewhat); Hermes can be paired with any model</li>
+<li><strong>The trade-offs of Hermes</strong>: It is indeed heavy, but it allows division of responsibilities and has accumulated memory; using only Codex divides work by session, and sessions can bloat badly; every Hermes update overwrites his personalized custom plugins, which is why he once stopped using it</li>
+<li><strong>Gu Dehao</strong>: Uses the open-source RAKAGO (transcribed as "r a k a jio," similar to Grokbot, with mobile + PC clients) and has done deep development on it; he uses it as a supplement for enterprise-grade services — Grokbot credits are too few, and scenarios such as automatic tax filing are not suited to Grokbot; enterprise clients cannot all be pushed to Grokbot</li>
+</ul>
+<h2>Automated posting on X: API is fine, computer use gets you banned</h2>
+<ul>
+<li><strong>Steven's question</strong>: Grokbot's automated posting suddenly ran into problems the day before yesterday/yesterday — has anyone else encountered this?</li>
+<li><strong>Tiezhu's experience</strong>: He only lets Grokbot collect information (collecting X information twice a day at 9 a.m. and 12 p.m., checking post views and planning topics), and does not let it post; automated posting causes traffic to drop sharply and carries a ban risk; he tested it with a small account, ran it for two or three weeks without problems, but does not recommend doing it</li>
+<li><strong>Lange</strong>: Twitter is essentially social, like Moments — without interaction you lose the point of coming to Twitter; fully automated operation makes it hard to gain connections and enjoyment</li>
+<li><strong>Tiezhu added</strong>: Twitter officially supports automated publishing and has an official API; what is not recommended is using Grokbot/Codex's computer use to operate a browser to post, which "definitely violates Twitter's rules" and will lead to bans or shadow bans; using AI to reply in comments under other people's posts "brings no benefit at all" — besides annoying people, it wastes tokens</li>
+<li><strong>JKL's firsthand experience</strong>: Not knowing there was an API, he had Grokbot use computer use to post in the browser and "got banned as a reward," then got released after an appeal; he later learned that using Grokbot gives you $100 in X platform API credits, and posting via the API is fine</li>
+<li><strong>Consensus</strong>: The tool doesn't matter, the method does — posting via the official API is fine, operating via browser RPA is a violation; the same applies to Muse</li>
+</ul>
+<h2>Managing context across multiple scenarios and devices</h2>
+<ul>
+<li><strong>Yuanming Shuijingshen (Li Zhu)'s question</strong>: Product development + self-media + an overseas SaaS site — things are messy and there are many tools (OpenClaw, Hermes, Codex, Gemini, Grokbot, Claude), with context scattered in many places and skills not unified; is there a good tool to lower migration costs and unify the entry point?</li>
+<li><strong>Tiezhu</strong>: Build Bots in Grokbot for assignment; or take a human-centered approach and aggregate with an ADE (Agent Development Environment) — ORCA and T3code are both new ADE products</li>
+<li><strong>Teacher Tingshuo's approach</strong>: Three computers + three servers, with Obsidian + a private GitHub repo as the single source of truth, synced everywhere with the Syncthing plugin; only one "boss" is set as allowed to write; every conversation is summarized, with important information extracted and written into the knowledge base; using this since early this year, "basically there has been no more amnesia or conflicts"</li>
+<li><strong>Another guest</strong>: Also used Obsidian early on, later migrated to Notion (Grokbot's wake-up mechanism made writing to the local file system inconvenient); now uses Muralsim (a local ADE that splits large tasks, supports custom Bots, and aggregates all local ADE products), which he uses even more than Grokbot; Grokbot's inability to let you choose the model is a fatal flaw</li>
+<li><strong>Wayston's approach</strong>: Everything is based on GitHub, with all data synced to GitHub on a daily schedule; Feishu is used for collaboration and presenting output; locally everything uses AGENTS.md as the main pillar, and all other ecosystem-related files instruct the model to read AGENTS.md, "breaking free of ecosystem lock-in by any single large language model provider"; product R&amp;D is advanced in SDD form</li>
+</ul>
+<h2>Project management pain point: Zhang Kun's WeChat group bot problem</h2>
+<ul>
+<li><strong>Zhang Kun's current situation</strong>: He does project management and has always used Grokbot at work; a master-control Bot + document-writing/browser/programming Bots; he uses Webhooks to connect Bots into client WeChat groups to answer questions automatically; he has five or six projects and many groups</li>
+<li><strong>Pain point</strong>: Client questions cannot be answered promptly, and some questions require changing documents and tools; Grokbot's queue can execute only one thing at a time and cannot run in parallel; he wants to realize the "super agent" concept — questions automatically recorded, automatically executed, and manually reviewed</li>
+<li><strong>Discussion outcome</strong>: ① Tiezhu suggested building his own service + multiple webhooks to isolate different groups (he has pulled a "Little Tiezhu" into every WayToBot group, but it only responds to his own @ mentions, because a webhook can only initiate 200 times per hour); ② Gu Dehao suggested connecting his own helpdesk/ticket system, letting AI operate it automatically, even handing permissions to the Bot and letting it develop and modify the system automatically; ③ No one had actually tested the local Hermes approach, so it was left for a later event</li>
+</ul>
+<h2>Tool routing: hands-on tests and pitfalls</h2>
+<ul>
+<li><strong>Cyber Frank</strong>: Gives one task to all Bots and sees who does it best; for writing official-account posts, Tencent's Lightweiler is best — it automatically enters the official account's draft box, but lacks human flavor and exposure fluctuates, and he tested it for a month; videos are handed to Hawk; a YouTube guoxue (eight-characters and feng shui) account has been updated for over a month, with dozens of subscribers and hundreds to thousands of views, not yet monetized; he is building Agent hardware himself (similar to VLU) — Hermes installed on a Long box kept disconnecting, and recently Hermes launched a new product, Xdudu, connecting hardware with phones and computers</li>
+<li><strong>Uncle Li</strong>: After Grokbot quota anxiety, he also uses Muse and Hawk; he streamlined his Bots from many down to five or six, "one person, multiple specialties"; the more specific and complex the requirements for Hawk's videos, the higher the quality, already reaching OPOS 5.5 level; it will search the whole web for public-domain music and credit it; lesson: he had it generate 500 Midjourney photos at once, running through 4 browser windows to completion at high quality, but his Midjourney account was temporarily banned (appeal in progress) — "when using these Agents you still need to control the boundaries"</li>
+<li><strong>Hawk's free quota</strong>: Resets once a day and is relatively small; Uncle Li's method is to register one Hawk account in each of three or four browsers and use them separately by type</li>
+<li><strong>Wayne Wang</strong>: For Muse videos he compared MiniMax, Cdance and relay platforms, and Muse's videos best met his requirements — low AI flavor, very realistic, good texture; he uses Muse + Codex to control his phone to automatically post to TikTok/Facebook/IG/Twitter; recently Muse ran into regional restrictions and could not generate videos, and two or three accounts were banned; Tiezhu explained: switch routing to a supported region — all of his Muse routes (including Facebook/Meta routes) go through US nodes</li>
+<li><strong>AirLinz</strong>: Muse's method for automatically posting to Twitter/Facebook is to install a Google plugin and bind a Meta account to post automatically</li>
+</ul>
+<h2>A few threads worth noting</h2>
+<ol>
+<li><strong>Saving quota is the session's number-one consensus pain point</strong>: Tiezhu's six rules + JKL's "small horse pulling a big cart" — the core in one line: let Grokbot be the commander, don't make it do the heavy work</li>
+<li><strong>Monetization paths have already been proven by some</strong>: The three grew by over ten thousand followers in two or three months, earning close to a thousand dollars every two weeks; cross-border e-commerce is the direction Kim is most bullish on, with Grokbot legions raising link-listing efficiency from 100 in two days to 1,000</li>
+<li><strong>Domestic PAs are filling the gap</strong>: Three lines — software (Tedai) + hardware (AI NAS, desktop boxes) — and on December 12 there will be another Grokbot + Hardware Meetup in Shenzhen</li>
+<li><strong>The red line for automated posting on X is clear</strong>: The official API is fine, browser computer use gets you banned — JKL is a firsthand ban case</li>
+<li><strong>The real bottleneck of the multi-Agent era is context</strong>: Obsidian + GitHub as the single source of truth, AGENTS.md to prevent ecosystem lock-in, and ADE aggregation — three solutions appeared in the same session, showing this is already a shared pain point among heavy users</li>
+</ol>
+<h2>Speaker handles (final check_meta list)</h2>
+<p>li9292, KinGao476942, cgnot996, czzzzzJ_, stevencheng, MaiYangAI, JohnnyWang8802, tanglele0318, frank160997328, zhu1894341, jklthinking, kundocs, winston13111, FROST_JIANG, jeffli2002, 89mdimd, 8208wangdada, goodhawk2 (plus Tiezhu and others, whose handles were not fully listed in the final list)</p>
+<h2>ASR restoration table</h2>
+<p>Way to Boat/Weitubo/V2Bot = WayToBot; Grokbot/Gorboat/Globo/GrowlBot/Galco Bot/Guobao = Grokbot (xAI); Muse = Muse (Meta); Dots/Dote/Doot = OpenAI Dots; Q = Manus (transcribed as "Manus Q"); Cloud/Cloud Duet = Claude; Xiaolongxia = underlying coding agent (transcription, suspected to be Claude Code, uncertain); Hermes/Heimasi = Hermes (open-source agent framework); Hawk/Hank/Hike = Hawk (video-generation agent); OPOS 5.5 = a video model (transcription, uncertain); Tedai/Tobay = domestic PA software (transcription uncertain); Wuyunchuanxing/Jabilot/Zepler = AI NAS hardware (transcription uncertain); Benwei Wujie/VLU/Value = desktop box (transcription uncertain); Midgeny/MIDI Zeng Tian = Midjourney; Lotion = Notion; get hub = GitHub; Feishu (transcribed as "Feishu" in pinyin-like form) = Feishu; U-Mind = U-Mind (transcription); SBS/SPS = Space; Lianmai/Shangmai = joining the mic / going on mic; Qunyao Ribao = group-chat daily; ORCA/T3code = Muralsim-type ADE products (transcription); DBC/DXIC = a company (transcription, uncertain); Tide Coding Agent = a coding agent (transcription, uncertain); Xdudu = a new hardware product (transcription, uncertain); UdnL = a wake-up mechanism (transcription, uncertain)</p>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1pedlnlnyjZevP">https://x.com/i/spaces/1pedlnlnyjZevP</a> · 主持 蓝哥AI @0xlangeai · 2026-11-17 19:59–22:14（约 2 小时 14 分）· 累计收听 771 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1pedlnlnyjZevP">https://x.com/i/spaces/1pedlnlnyjZevP</a> · 主持 藍哥AI @0xlangeai · 2026-11-17 19:59–22:14（約 2 小時 14 分）· 累計收聽 771 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1pedlnlnyjZevP">https://x.com/i/spaces/1pedlnlnyjZevP</a> · Host: Lange AI @0xlangeai · 2026-11-17 19:59–22:14 (about 2 hours 14 minutes) · Total listeners: 771<br>This page is the full text of notes compiled manually from a machine transcript; all content is the guests' impromptu remarks and personal accounts during the live broadcast, unverified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
+
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"《WayToBot 社区首场 Space：为什么成立 WayToBot 社区》会议纪要 · Yat's Talks",tw:"《WayToBot 社群首場 Space：為什麼成立 WayToBot 社群》會議紀要 · Yat's Talks",en:"Notes: \"WayToBot Community's First Space: Why We Founded the WayToBot Community\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

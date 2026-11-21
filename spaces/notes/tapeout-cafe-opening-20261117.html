@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：tapeout咖啡馆开业啦</h1>
 <ul>
 <li><strong>来源</strong>：X Space <code>1jPqOjydbMYlBj</code>，https://x.com/i/broadcasts/1jPqOjydbMYlBj（标题页显示为 Space；主持方称之为“咖啡馆”）</li>
@@ -224,8 +231,428 @@
 <li>“最近一起约 60 亿元的被盗事件”为现场提及，未展开说明，纪要不做认定。</li>
 </ul>
 </article>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1jPqOjydbMYlBj">https://x.com/i/spaces/1jPqOjydbMYlBj</a> · 主持 周红衣 @Kakabong08 · 2026-11-17 19:47 – 2026-11-18 00:06（约 4 小时 19 分）· 累计收听 219 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：tapeout咖啡館開業啦</h1>
+<ul>
+<li><strong>來源</strong>：X Space <code>1jPqOjydbMYlBj</code>，https://x.com/i/broadcasts/1jPqOjydbMYlBj（標題頁顯示為 Space；主持方稱之為「咖啡館」）</li>
+<li><strong>時間</strong>：2026-11-17 19:47:46–2026-11-18 00:06:49 CST，4 小時 19 分 03 秒；total_live_listeners 219</li>
+<li><strong>主持</strong>：周紅衣 @Kakabong08（現場稱「周總」）；新帥（帥總）為咖啡館發起人；考拉小姐姐後半段客串主持並帶來兩位嘉賓</li>
+<li><strong>嘉賓/發言者</strong>：風哥、星星、晴天、胖爸、瓜哥、大離、帥總（新帥）、考拉、福利哥（KOL）、百里老師（Web3 KOL）；被提及者：火星人、崩子/崩哥、綁 3、成王敗寇（礦霸）、小孩哥（創始人，現場稱「天才小孩哥/B 神」）、清華（開發者）</li>
+<li><strong>逐字稿</strong>：<code>transcript.txt</code>（189,427 位元組，約 65,663 字；本機 faster-whisper small 模型轉寫，無時間戳；<strong>末尾句中斷尾，錄音本身截斷</strong>）</li>
+<li><strong>口徑說明</strong>：這是一場社區閒聊 Space，無固定議程、多人輪流發言、無說話人標註，歸屬以現場互稱與上下文判斷，存疑處已標註。以下數字與說法均為現場說法，未經核實；<strong>本場大部分內容是 tapeout 生態參與者對其自有代幣與產品的討論，存在明顯的站台性質</strong>，閱讀時請注意這一立場。</li>
+</ul>
+<h2>一句話</h2>
+<p>tapeout 社區自發 Space「咖啡館」的開業場：4 個多小時的閒聊裡，真正成體系的內容是周紅衣/新帥反覆講的「長線看好就該拿礦機不拿幣」的倉位論，外加考拉帶來的 TipAI 預存機制問答、福利哥與百里的生態討論，以及一場關於「該不該拿建設者口音開玩笑」的社區價值觀爭執。</p>
+<h2>背景：tapeout 是什麼（按現場說法整理）</h2>
+<ul>
+<li>tapeout（現場亦稱 T-POP）是一個社區自下而上做的加密項目，鏈上協議層，涉及 BSC 鏈與 X Layer；自稱「弱創始人」項目。</li>
+<li>資產線（現場說法）：<strong>BM 是基礎資產</strong>（負責機架與結算，現場稱「大廈的地基」）；<strong>UP 是平台幣</strong>（tapout 原生平台幣/發射平台）；<strong>TipAI（TAI）</strong>是生態裡的 AI Agent 項目幣；另有 FAB、餘燼世界 Passcard 等生態內資產與遊戲。</li>
+<li><strong>礦機</strong>：生態內的挖礦機器，每天產 BM，現場稱「沒有成本、白嫖、可隨時賣掉」，是本場爭論的核心資產。</li>
+<li>「地鐵站」：現場對平台收入模式的比喻——每發射一個項目，平台就多一份收入。</li>
+<li>「咖啡館」：社區自發組織的 Space 系列，每天不定期開，有時從早上/下午一直開到深夜、長達 9 小時；最早由新帥發起，9 月中旬前後成形；誰有時間誰開、誰有時間誰主持，不屬於任何一個人。</li>
+</ul>
+<h2>核心內容</h2>
+<h3>1. 開場閒聊：感冒、Claw 封號、打土狗與「擼石油」</h3>
+<ul>
+<li>開場是熟人寒暄：風哥感冒吃藥剛睡醒；有人在調 T-POP 頁面與網路（三個機子逐一排查）；有人在聊 VPN（微屏/深哥推薦的企業級 VPN，現場互相要連結）。</li>
+<li>有人提到當天打土狗、玩餘燼遊戲「一個帳號一天收入 50U」；「擼石油」一天約 20U，按現場算法「100 多塊錢一天的生活費，一個月四五千」。</li>
+<li>多人提到 <strong>Claw 帳號當天被封</strong>：有人換了 80 個 IP 也被封；有人花 180 多美元找人開號也被封死；現場歸因於 IP（自建唯一 IP 被封就無路可走，與機場共享 IP 不同）。Claw 在此指現場眾人日常用的 AI 工具（具體產品未展開）。</li>
+<li>LVT：有人在衝測試網任務，目標拿滿 4 個 LVT 後「躺平」。</li>
+</ul>
+<h3>2. 周紅衣/新帥的核心論點：長線看好，就拿礦機不拿幣</h3>
+<p>這是本場篇幅最大、重複最多的一段論述（周紅衣主講，新帥補充，多人附和），邏輯可歸納為三層：</p>
+<p><strong>（1）下限一樣，體驗不同。</strong> 最壞情況是項目歸零：持幣歸零、礦機也歸零，「大家一起死」，不存在礦機死、幣能活；所以只比中間狀態。</p>
+<p><strong>（2）混得普通，礦機穩賺。</strong> 按三年一個週期計：礦機每天產幣、可隨時賣、沒有損耗與成本（與比特幣礦機有電費、有折舊不同），「回本」概念本身就是比特幣礦機的誤導——tapout 礦機沒有回本問題，挖 3 天賣掉、3 天就是白嫖。幣漲礦機也漲（幣漲 10 倍、礦機漲 5 倍就持平），且礦機有估值錨（現場偏向「至少千天回本」的估值區間，認為當前仍被低估）。結論是「混得普通也能賺幾倍到幾十倍」。</p>
+<p><strong>（3）混得很好，礦機爽死。</strong> 若項目活成以太坊級別，礦機一直產、一直賺；一年後回本後心態無敵。反之只持幣的人「主觀上覺得自己長線看好，客觀上拿不住」——比特幣信仰者尚且拿不住三年，普通人更拿不住；礦機的作用是把「主觀長期看好」變成客觀上能拿住（幣本位心態：每天看產量而不是每天看價格）。</p>
+<ul>
+<li>現場反覆出現的詞是 <strong>「持倉感」</strong>（轉寫作「慈善感/磁臟感」）：持幣跌了就睡不著、粉轉黑；有礦機在手，每天產幣，「持倉感」好才不會下車。周紅衣自述：自己也曾因只持幣而難受，研究後才轉礦機；目標不是影響 1000 個人，而是影響 3–5 個真正長線看好的信仰者。</li>
+<li>也有人補充了門檻：礦機貴（現場稱「67BM 一個日產能的價格，隨便搞一下礦機都要幾十萬」——口徑含糊，見核實注），小白入場難；但「貴肯定有貴的道理」，且礦機 K 線一直是上升趨勢、沒怎麼回調。</li>
+<li>相關價格說法（現場說法）：BM 從 60 多美元跌到約 9–10 美元；流通約 55.7 萬枚、市值約 500 萬美元；有人預測「BM 早晚會去 100 多美元」；UP 在 0.53–0.65 美元區間，有大戶一手掃掉幾十上百張（現場說法）。</li>
+</ul>
+<h3>3. 崩子與綁 3：砸盤者也是話題</h3>
+<ul>
+<li>崩子（崩哥）：現場稱其剛砸了 3 萬多個 BM，砸出一個坑；有人說他「哪有熱度蹭哪」「發幣再發一輪」；也有人提醒不要與他過多接觸（他第一天還來過咖啡館）。</li>
+<li>綁 3：被多人稱為「大科學家」，每分鐘都在用腳本賣出；有人說他是抄了別人的東西起家，前期速度極快；現場無人願公開其身分。</li>
+<li>火星人：被稱超級大哥，最早把礦機價格拉上去；其特點是「每天 30 條推文」，被現場當作「有智慧」的範例（玩過比特幣、挖過礦，一看就知道要有礦機）。</li>
+</ul>
+<h3>4. 考拉、福利哥、百里：生態討論</h3>
+<ul>
+<li><strong>考拉</strong>：介紹咖啡館的由來（社區自發、每天開）；談市場變化：meme 幣平均持幣時間據一則報導只有 108–109 秒，很多人已轉去美股或 token 產業鏈生意；tapout 是下半年還能看到的在建設的項目；共識來自社區文化與弱創始人結構。</li>
+<li><strong>福利哥</strong>：核心觀點是「投入的成本不重要，錯過的成本才高；格局高低無所謂，但不能不在牌桌上」。策略：確定性收益（如 USDT 空投）轉場外變現；不確定性收益（代幣）全部不賣、拿一年，看哪個能漲 100 倍、1000 倍；自己永遠留 20% 底倉（「最後留的底倉比之前賣掉的所有利潤總和還高」）。並介紹 BM 的定位：tapout 的基礎資產/地基，UP 是平台幣，TipAI 是開枝散葉的新項目，「航母上停著很多戰鬥機」。</li>
+<li><strong>百里</strong>：肯定社區與共識的價值；自己參與過早期質押；關注兩點：做出來的電路會不會被其他開發者複用、TipAI 跑完任務的用戶會不會分享給朋友；認為 POV/POB 機制（預存+線性釋放）給團隊與社區更多時間，優於 PVP 式開盤一波流；留存是關鍵，建議大使計畫與圖文/影片教程、測試反饋等持續建設。</li>
+</ul>
+<h3>5. TipAI 預存機制問答（考拉提問，生態方回答）</h3>
+<ul>
+<li><strong>如何發射</strong>：TAI 是全流通代幣、線性解鎖，不存在「按多少市值發射」；開盤價格由底池買盤決定，買得早可能是 10 萬、20 萬、50 萬、100 萬美元市值不等，與 pump 平台打新類似。</li>
+<li><strong>預存情況</strong>：已預存兩萬多個 BM；預存部分可獲 3% 的 TI 空投（現場稱約數萬枚 TI，口徑見核實注）。</li>
+<li><strong>釋放節奏</strong>：14 天線性釋放；預存部分可透過 Invite Code 主動加速解鎖到 20%（第一天約 10%）；不開盤直接買，第一天也有 10% 解鎖；第一個 24 小時後再買入，釋放比例更高（現場稱可達 50%）。Invite Code 綁定後不能再綁另一個，但可被多人加速。</li>
+<li><strong>外盤發射</strong>：尚未定節點，將由全體「檢察官」投票決定；外盤是雙刃劍（接入 BNB/USDT/USDC 等更廣流動性，但需要社區基礎與 PMF 驗證），傾向先建設一段時間、拿出好產品再說。</li>
+<li><strong>發幣的代價</strong>：現場多次說發幣是雙刃劍——代幣是連接社區的紐帶，但「生了孩子就要負責」，代幣價格是情緒與共識的放大器；不是所有產品都要發幣；TipAI 平台的定位是讓開發者專注做產品、不用承擔發幣的壓力。</li>
+</ul>
+<h3>6. 生態進展：X Layer 跨鏈、卡牌與鏈上計算研究</h3>
+<ul>
+<li><strong>跨鏈 X Layer</strong>：X Layer 辦了黑客松，項目表現還行，X Layer 方面聯繫要求出跨鏈方案；正在設計中（NFT 與代幣都要跨）。現場認為 BSC 鏈流量大但官方支持力度小，X Layer 是主攻方向；並稱「BM 上幣安板上釘釘、只是時間問題」（現場說法，未經核實）。</li>
+<li><strong>TipCard 卡牌項目</strong>：在測試、未上線；透過「電路」做線下卡牌對戰、收藏與交易；狼仔（七八十萬粉絲）看好卡牌賽道將爆發；楊總以前做過卡牌項目後放棄，現場勸其撿起來。</li>
+<li><strong>鏈上計算研究</strong>：J.O.（現場稱「高材生」）在研究複雜電路的鏈上複算成本，結論是 gas 費不一定隨複雜度上升、在固定區間內可能比傳統智慧合約還低，已在兩條鏈上做模擬實驗，並想往科學期刊投稿；布魯格（Bruce）在做提案、制定標準。現場多人稱這是 tapout 最有想像力的部分（「萬鏈歸一」、協議層統一規則）。</li>
+<li><strong>餘燼世界</strong>：生態內遊戲，Passcard 才能玩；mint 價 0.088、現價 0.88（漲 10 倍，現場說法），3000 張、mint 了近 3 天才 mint 完；10 張只能玩一半遊戲，20 張才能玩全部；現場稱 20 張卡一天能打三四十 U、約 25 天回本（現場算法，口徑含糊）；遊戲幣 FAB 可在遊戲內流通（現場稱約 2100 萬個、約 1U 一個）。多人表示自己不玩遊戲、但看好其營運（「悶聲悶氣，沒怎麼宣傳卻做起來了」）。</li>
+<li><strong>其他聯動</strong>：楊總的 TipChow 紅包功能（給 X 上有社群的 KOL 準備 TI 帶幣紅包、建裂變社群）；賽綿哥的 Agent 產品接口聯動；TipFly（果營的產品）；一個奈及利亞開發者在做的 AI 錢包（基於 402 協議+電路規則）。</li>
+</ul>
+<h3>7. 社區價值觀爭執：能不能拿建設者口音開玩笑</h3>
+<ul>
+<li>福利哥開場糾正「成王敗寇」（礦霸，社區大礦工）的福建口音玩笑（把「電費」聽成「電匯」），引發多位發言者不滿：認為客人一來就拿信仰者的口音開玩笑不合適；社區應團結、尊重衝在第一線建設的人。</li>
+<li>發言者反覆強調的社區觀：只看誰在做事（發帖、群裡交流、參加咖啡館、開咖啡館都是建設），不看資產多少；「現在是見證信徒的時候」，真信徒才進一個圈子；要留住人才——現場舉例一位在美國幫人帶貨、有財力的參與者，因 60 美元買幣後無人講清玩法而流失，「很可惜」。</li>
+<li>周紅衣自述：家裡孩子要睡覺，自己還得把咖啡館掛著，「大家不上火，我不能走」。</li>
+</ul>
+<h3>8. 結尾</h3>
+<ul>
+<li>有人約餘燼世界的開發者「本省」來咖啡館做半小時分享（解釋遊戲經濟系統），正在私信約時間。</li>
+<li>最後的話題是清華（開發者，黑客松第二名、獎金 4000U）：其新項目涉及「AI 居民的封閉小世界」與「打動一個 Agent 他才投票」的斷權機制，現場多人表示看不懂，希望他來講講；並確認其應是中國人。</li>
+<li>錄音在討論中斷權機制時戛然而止（句中斷尾），隨後是「晚安，周總辛苦了」。</li>
+</ul>
+<h2>值得注意的點</h2>
+<ul>
+<li><strong>這不是一場發布會，而是一場社區內部的深夜閒聊</strong>：4 小時 19 分裡成體系的內容不到一半，大量時間是熟人寒暄、幣價討論與互相捧場；紀要已按主題重組，順序不等於實際發言順序。</li>
+<li><strong>站台性質明顯</strong>：發言者多為 BM/UP/礦機持有者，核心論點（礦機優於持幣、BM 上幣安、項目活成以太坊級別）均為持有者說法，未經核實；「BM 從 60 多跌到 9 塊」與「礦機 K 線一直上升」這兩個說法同時成立，恰恰說明礦機與幣價走勢已經分化，紀要保留了這一張力。</li>
+<li><strong>最有資訊量的部分</strong>：TipAI 預存與釋放機制的具體數字、X Layer 跨鏈方案正在設計、以及 J.O. 的鏈上計算研究——三者都是可驗證的後續進展。</li>
+<li><strong>社區治理的側面</strong>：一場口音玩笑能引發半小時的價值觀辯論，說明這個社區正處在「信徒篩選期」——發言者自己也這麼說。</li>
+</ul>
+<h2>ASR 還原表（轉寫噪聲極大處）</h2>
+<table>
+<thead>
+<tr>
+<th>轉寫原文</th>
+<th>應為</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tapout / T-POP / 貼炮 / 貼報 / 太巴爾 / tipi</td>
+<td>tapeout</td>
+<td>項目名，現場多種讀法</td>
+</tr>
+<tr>
+<td>bm / 臂 / B</td>
+<td>BM</td>
+<td>基礎代幣</td>
+</tr>
+<tr>
+<td>up / 阿普 / 有屁</td>
+<td>UP</td>
+<td>平台幣</td>
+</tr>
+<tr>
+<td>礦機 / 礦劑 / 況且 / 逛機</td>
+<td>礦機</td>
+<td>生態內挖礦機器</td>
+</tr>
+<tr>
+<td>慈善感 / 磁臟感 / 持餐感</td>
+<td>持倉感</td>
+<td>持有資產的心理舒適度，本場關鍵詞</td>
+</tr>
+<tr>
+<td>晶體館 / 經體館</td>
+<td>疑為協議/平台名</td>
+<td>轉寫不一，未展開</td>
+</tr>
+<tr>
+<td>地鐵站</td>
+<td>平台收入模式的比喻</td>
+<td>每發射一個項目多一份收入</td>
+</tr>
+<tr>
+<td>檢察官</td>
+<td>存疑</td>
+<td>現場多次出現，疑為某角色/機制名，未展開</td>
+</tr>
+<tr>
+<td>小孩哥 / B 神</td>
+<td>創始人</td>
+<td>現場稱「天才小孩哥」</td>
+</tr>
+<tr>
+<td>成王敗寇</td>
+<td>礦霸</td>
+<td>社區大礦工，福建口音</td>
+</tr>
+<tr>
+<td>綁 3</td>
+<td>某大戶/科學家</td>
+<td>每分鐘腳本賣出，身分未公開</td>
+</tr>
+<tr>
+<td>崩子 / 崩哥</td>
+<td>某參與者</td>
+<td>剛砸盤 3 萬多個 BM（現場說法）</td>
+</tr>
+<tr>
+<td>餘境 / 漁徑 / 於晉</td>
+<td>餘燼世界</td>
+<td>生態內遊戲</td>
+</tr>
+<tr>
+<td>FIB / FVD / NFD</td>
+<td>FAB 相關</td>
+<td>遊戲內貨幣/資產，轉寫不一</td>
+</tr>
+<tr>
+<td>POV / POB / PAP</td>
+<td>POB（預存+線性釋放機制）</td>
+<td>轉寫不一，以機制描述為準</td>
+</tr>
+<tr>
+<td>斷權</td>
+<td>存疑</td>
+<td>涉及 Agent 投票的機制，現場無人講清</td>
+</tr>
+<tr>
+<td>Claw</td>
+<td>Claw（AI 工具）</td>
+<td>當天多人帳號被封</td>
+</tr>
+<tr>
+<td>擼石油</td>
+<td>某玩法/代幣</td>
+<td>日入約 20U（現場說法）</td>
+</tr>
+<tr>
+<td>LVT</td>
+<td>LVT</td>
+<td>測試網任務代幣</td>
+</tr>
+</tbody>
+</table>
+<h2>核實注</h2>
+<ul>
+<li>BM「從 60 多跌到 9 塊」與礦機價格「穩住沒回調」均為現場說法；「流通 55.7 萬枚、市值 500 萬美元」「BM 早晚去 100 美元」「BM 上幣安板上釘釘」均為發言者預測或斷言，未經核實。</li>
+<li>TipAI 空投數量現場口徑不清（「3% 也有 6 3 萬枚 TI」），紀要只保留 3% 這一比例，不寫絕對數。</li>
+<li>礦機價格現場口徑含糊（「67BM 一個日產能的價格，隨便搞一下礦機都要幾十萬」），紀要未採用具體數值；餘燼「20 張卡一天三四十 U、25 天回本」為現場口頭算法，未逐項核對。</li>
+<li>逐字稿無說話人標註；周紅衣為礦機長論的主講者，是依據現場「周總說的」這一互稱判斷的；其餘發言歸屬以現場互稱為準，無法確認的已寫為「現場」或「有人」。</li>
+<li>「最近一起約 60 億元的被盜事件」為現場提及，未展開說明，紀要不做認定。</li>
+</ul>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: The tapeout Café Opens</h1>
+<ul>
+<li><strong>Source</strong>: X Space <code>1jPqOjydbMYlBj</code>, https://x.com/i/broadcasts/1jPqOjydbMYlBj (the title page shows it as a Space; the hosts call it a "café")</li>
+<li><strong>Time</strong>: 2026-11-17 19:47:46–2026-11-18 00:06:49 CST, 4 hours 19 minutes 03 seconds; total_live_listeners 219</li>
+<li><strong>Hosts</strong>: Zhou Hongyi @Kakabong08 (referred to on site as "President Zhou"); Xinshuai (President Shuai) was the founder of the café; Miss Koala guest-hosted the second half and brought two guests</li>
+<li><strong>Guests/speakers</strong>: Fengge, Xingxing, Qingtian, Pangba, Guage, Dali, President Shuai (Xinshuai), Koala, Fulige (KOL), Teacher Baili (Web3 KOL); mentioned: Huoxingren, Bengzi/Bengge, Bang 3, Chengwangbaikou (the mining overlord), Xiaohaige (the founder, referred to on site as "the genius kid brother / God B"), Qinghua (developer)</li>
+<li><strong>Transcript</strong>: <code>transcript.txt</code> (189,427 bytes, about 65,663 characters; transcribed locally with the faster-whisper small model, no timestamps; <strong>the final sentence is cut off mid-sentence, and the recording itself is truncated</strong>)</li>
+<li><strong>Note on attribution</strong>: This was a community casual-chat Space, with no fixed agenda, many people taking turns to speak, and no speaker labels; attribution is based on how people addressed each other on site and on context, and doubtful points have been marked. All figures and claims below are as stated on site and have not been verified; <strong>most of this session was tapeout ecosystem participants discussing their own tokens and products, with an obvious promotional character</strong> — please keep that position in mind when reading.</li>
+</ul>
+<h2>In One Sentence</h2>
+<p>The opening session of the "café," a Space series spontaneously organized by the tapeout community: in more than 4 hours of casual chat, the truly systematic content was the position thesis that Zhou Hongyi/Xinshuai repeated again and again — "if you are bullish long-term, you should hold mining machines, not coins" — plus a Q&amp;A on TipAI's pre-deposit mechanism brought by Koala, ecosystem discussion by Fulige and Baili, and a dispute over community values about "whether it is OK to joke about a builder's accent."</p>
+<h2>Background: What Is tapeout (compiled from what was said on site)</h2>
+<ul>
+<li>tapeout (also called T-POP on site) is a crypto project built bottom-up by the community, at the on-chain protocol layer, involving the BSC chain and X Layer; it calls itself a "weak founder" project.</li>
+<li>Asset lines (as stated on site): <strong>BM is the base asset</strong> (responsible for racks and settlement, called on site "the foundation of the building"); <strong>UP is the platform token</strong> (tapout's native platform token/launch platform); <strong>TipAI (TAI)</strong> is the AI Agent project token in the ecosystem; there are also in-ecosystem assets and games such as FAB and the Ember World Passcard.</li>
+<li><strong>Mining machines</strong>: Mining machines within the ecosystem, producing BM every day, described on site as "no cost, free to obtain, can be sold at any time" — the core asset disputed in this session.</li>
+<li>"Subway station": A metaphor used on site for the platform's revenue model — every project launched means another stream of income for the platform.</li>
+<li>"Café": A Space series spontaneously organized by the community, held irregularly every day, sometimes running from morning/afternoon late into the night, for as long as 9 hours; first started by Xinshuai, taking shape around mid-September; whoever has time opens it, whoever has time hosts it, and it belongs to no one person.</li>
+</ul>
+<h2>Core Content</h2>
+<h3>1. Opening Chat: Colds, Claw Bans, Meme-Coin Sniping and "Farming Petroleum"</h3>
+<ul>
+<li>The opening was small talk among acquaintances: Fengge had a cold, had taken medicine and just woken up; someone was adjusting the T-POP page and network (checking three machines one by one); someone was talking about VPNs (an enterprise-grade VPN recommended by Weiping/Shengge, with people asking each other for the link on site).</li>
+<li>Someone mentioned sniping meme coins that day, and playing the Ember game for "50U of income per account per day"; "farming petroleum" was about 20U a day, which by the on-site calculation was "a little over 100 yuan a day for living expenses, four to five thousand a month."</li>
+<li>Several people mentioned that <strong>their Claw accounts were banned that day</strong>: one person changed 80 IPs and was still banned; another spent over US$180 paying someone to open an account and it was banned outright; on site this was attributed to IP (a self-built unique IP, once banned, leaves no way out, unlike a shared airport IP). Claw here refers to the AI tool the people on site used in daily life (the specific product was not elaborated).</li>
+<li>LVT: Someone was grinding testnet tasks, aiming to collect all 4 LVT and then "lie flat."</li>
+</ul>
+<h3>2. Zhou Hongyi/Xinshuai's Core Thesis: If You Are Bullish Long-Term, Hold Mining Machines, Not Coins</h3>
+<p>This was the longest and most repeated exposition in the session (led by Zhou Hongyi, supplemented by Xinshuai, with many chiming in), and its logic can be summarized in three layers:</p>
+<p><strong>(1) The floor is the same, the experience is different.</strong> In the worst case the project goes to zero: coin holders go to zero, mining machines also go to zero, "everyone dies together" — there is no scenario where the machines die but the coins survive; so only the intermediate states are worth comparing.</p>
+<p><strong>(2) If it does ordinarily, mining machines make steady money.</strong> Counting on a three-year cycle: a mining machine produces coins every day, can be sold at any time, and has no wear or cost (unlike Bitcoin mining machines, which have electricity costs and depreciation), and the very concept of "payback" is a misleading import from Bitcoin mining machines — tapout mining machines have no payback problem: mine for 3 days and sell, and those 3 days are pure free gain. When the coin rises, the machine rises too (if the coin rises 10x and the machine rises 5x, it evens out), and the machine has a valuation anchor (on site they leaned toward a valuation range of "at least a thousand days to pay back," believing it is still undervalued at present). The conclusion is that "even doing ordinarily, you can make several times to tens of times your money."</p>
+<p><strong>(3) If it does very well, mining machines feel amazing.</strong> If the project lives to the level of Ethereum, the machine keeps producing and keeps earning; after payback in a year, your mindset is invincible. Conversely, people who only hold coins "subjectively think they are bullish long-term, but objectively cannot hold on" — even Bitcoin believers cannot hold for three years, let alone ordinary people; the role of a mining machine is to turn "subjective long-term bullishness" into something you can objectively hold onto (a coin-denominated mindset: watch daily output rather than daily price).</p>
+<ul>
+<li>The word that recurred on site was <strong>"holding comfort"</strong> (transcribed as "charity feeling / magnetic-dirt feeling"): if you hold coins and they fall, you cannot sleep and turn from fan to critic; with a mining machine in hand producing coins every day, only with good "holding comfort" will you not get off the bus. Zhou Hongyi recounted: he himself had suffered from only holding coins, and only switched to mining machines after research; his goal was not to influence 1000 people, but to influence 3–5 believers who were truly bullish long-term.</li>
+<li>Others added the threshold: mining machines are expensive (on site it was said that "at the price of 67BM for one unit of daily production capacity, doing anything with mining machines casually costs several hundred thousand" — the basis is vague, see the verification note), making entry hard for newcomers; but "if it is expensive, there must be a reason," and the mining machine K-line has been in an uptrend all along, with hardly any pullback.</li>
+<li>Related price claims (as stated on site): BM fell from over US$60 to about US$9–10; circulation is about 557,000 coins, with a market cap of about US$5 million; someone predicted "BM will go to over US$100 sooner or later"; UP was in the US$0.53–0.65 range, with a large holder sweeping dozens to over a hundred orders in one go (as stated on site).</li>
+</ul>
+<h3>3. Bengzi and Bang 3: The Dumpers Are Also a Topic</h3>
+<ul>
+<li>Bengzi (Bengge): On site it was said he had just dumped over 30,000 BM, smashing out a pit; some said he "chases wherever there is heat" and "issues a coin and then issues another round"; others warned against too much contact with him (he had even come to the café on the first day).</li>
+<li>Bang 3: Called a "great scientist" by many, selling with scripts every minute; some said he got started by copying others' work, with extremely fast speed in the early stage; no one on site was willing to disclose his identity publicly.</li>
+<li>Huoxingren: Called a super big brother, the first to push mining machine prices up; his characteristic is "30 tweets a day," held up on site as an example of "wisdom" (he has played Bitcoin and mined before, and knew at a glance that you need mining machines).</li>
+</ul>
+<h3>4. Koala, Fulige, Baili: Ecosystem Discussion</h3>
+<ul>
+<li><strong>Koala</strong>: Introduced the origin of the café (spontaneous community, open every day); talked about market changes: the average holding time for meme coins is only 108–109 seconds according to one report, and many people have moved to US stocks or token industry-chain businesses; tapout is a project still building that can be seen in the second half of the year; consensus comes from community culture and the weak-founder structure.</li>
+<li><strong>Fulige</strong>: His core view is "the cost of what you put in does not matter; the cost of what you miss is high; the size of your vision does not matter, but you cannot not be at the table." Strategy: convert certain returns (such as USDT airdrops) to off-exchange cash; hold all uncertain returns (tokens) unsold for a year, to see which can rise 100x or 1000x; always keep a 20% base position for himself ("the base position left at the end is higher than the sum of all profits sold before"). And he introduced BM's positioning: tapout's base asset/foundation, UP is the platform token, TipAI is a new project branching out, "an aircraft carrier with many fighter jets parked on it."</li>
+<li><strong>Baili</strong>: Affirmed the value of community and consensus; he himself participated in early staking; he focused on two points: whether the circuits built will be reused by other developers, and whether users who finish TipAI tasks will share them with friends; he believed the POV/POB mechanism (pre-deposit + linear release) gives the team and community more time, and is better than the PVP-style one-wave launch; retention is key, and he suggested sustained building such as an ambassador program and graphic/video tutorials and test feedback.</li>
+</ul>
+<h3>5. TipAI Pre-Deposit Mechanism Q&amp;A (Koala asks, the ecosystem side answers)</h3>
+<ul>
+<li><strong>How it launches</strong>: TAI is a fully circulating token with linear unlocking; there is no such thing as "launching at a certain market cap"; the opening price is determined by buying in the base pool, and buying early could mean a market cap of US$100,000, US$200,000, US$500,000 or US$1 million, similar to new offerings on pump platforms.</li>
+<li><strong>Pre-deposit status</strong>: Over 20,000 BM have been pre-deposited; the pre-deposited portion can receive a 3% TI airdrop (on site it was said to be roughly tens of thousands of TI; for the basis see the verification note).</li>
+<li><strong>Release pace</strong>: Linear release over 14 days; the pre-deposited portion can be actively accelerated via an Invite Code to unlock up to 20% (about 10% on the first day); even buying directly without waiting for launch gives 10% unlocking on the first day; buying again after the first 24 hours gives a higher release ratio (on site it was said to reach 50%). Once an Invite Code is bound it cannot be bound to another, but it can be accelerated by many people.</li>
+<li><strong>External-market launch</strong>: The node has not yet been set and will be decided by a vote of all the "prosecutors"; an external market is a double-edged sword (access to broader liquidity such as BNB/USDT/USDC, but requiring community foundations and PMF validation), and the inclination is to build for a while first and produce a good product before talking about it.</li>
+<li><strong>The cost of issuing a coin</strong>: It was said many times on site that issuing a coin is a double-edged sword — a token is a bond connecting the community, but "once you have a child you must take responsibility," and token price is an amplifier of emotion and consensus; not all products need to issue a coin; TipAI's platform positioning is to let developers focus on building products without bearing the pressure of issuing a coin.</li>
+</ul>
+<h3>6. Ecosystem Progress: X Layer Cross-Chain, Cards, and On-Chain Computation Research</h3>
+<ul>
+<li><strong>Cross-chain X Layer</strong>: X Layer held a hackathon, the project performed decently, and the X Layer side contacted them asking for a cross-chain solution; it is being designed (both NFTs and tokens need to cross). On site it was believed that the BSC chain has large traffic but little official support, and X Layer is the main direction of attack; and it was claimed that "BM listing on Binance is a done deal, only a matter of time" (as stated on site, not verified).</li>
+<li><strong>TipCard card project</strong>: In testing, not yet launched; it uses "circuits" for offline card battles, collecting and trading; Langzai (with 700,000–800,000 followers) is bullish that the card track will explode; President Yang had done a card project before and then gave it up, and people on site urged him to pick it up again.</li>
+<li><strong>On-chain computation research</strong>: J.O. (called a "top student" on site) is researching the on-chain recomputation cost of complex circuits, concluding that gas fees do not necessarily rise with complexity and, within a fixed range, may be lower than traditional smart contracts; he has run simulation experiments on two chains and wants to submit to a scientific journal; Bruce is working on proposals and setting standards. Many people on site called this the most imaginative part of tapout ("ten thousand chains returning to one," unified rules at the protocol layer).</li>
+<li><strong>Ember World</strong>: An in-ecosystem game that requires a Passcard to play; mint price 0.088, current price 0.88 (up 10x, as stated on site), 3,000 cards, taking nearly 3 days to mint out; 10 cards let you play only half the game, 20 cards let you play all of it; on site it was said that 20 cards can earn thirty to forty U a day, with payback in about 25 days (on-site calculation, vague basis); the game currency FAB can circulate in the game (on site it was said to be about 21 million coins, about 1U each). Many people said they do not play games themselves but are bullish on its operation ("quiet and unassuming, it got built without much promotion").</li>
+<li><strong>Other linkages</strong>: President Yang's TipChow red-packet feature (preparing TI coin-bearing red packets for KOLs with communities on X, building fission communities); Saige's Agent product interface linkage; TipFly (Guoying's product); an AI wallet being built by a Nigerian developer (based on the 402 protocol + circuit rules).</li>
+</ul>
+<h3>7. Community Values Dispute: Can You Joke About a Builder's Accent?</h3>
+<ul>
+<li>Fulige opened by correcting a joke about the Fujian accent of "Chengwangbaikou" (the mining overlord, a large community miner) (mistaking "electricity fee" for "wire transfer"), which triggered dissatisfaction from several speakers: they believed it was inappropriate for a guest to joke about a believer's accent as soon as he arrived; the community should unite and respect the people building on the front line.</li>
+<li>The community view repeatedly emphasized by speakers: look only at who is doing work (posting, communicating in groups, attending the café, opening the café are all building), not at how many assets they have; "now is the time to witness believers," and only true believers enter a circle; talent must be retained — on site they gave the example of a participant in the United States who helps people with purchasing and has financial means, who was lost because, after buying US$60 of coins, no one explained clearly how to play, "a great pity."</li>
+<li>Zhou Hongyi recounted: his child at home needed to sleep, and he still had to keep the café running: "everyone, don't get worked up; I cannot leave."</li>
+</ul>
+<h3>8. Closing</h3>
+<ul>
+<li>Someone invited the Ember World developer "Bensheng" to come to the café for a half-hour sharing session (explaining the game's economic system), and was privately messaging to arrange a time.</li>
+<li>The final topic was Qinghua (developer, second place in the hackathon, prize 4000U): his new project involves "a closed small world of AI residents" and a rights-severing mechanism in which "an Agent only votes if you move it," which many people on site said they did not understand and hoped he would come explain; and they confirmed he should be Chinese.</li>
+<li>The recording stopped abruptly while discussing the rights-severing mechanism (cut off mid-sentence), followed by "good night, President Zhou, thank you for your hard work."</li>
+</ul>
+<h2>Points Worth Noting</h2>
+<ul>
+<li><strong>This was not a launch event, but a late-night casual chat inside the community</strong>: less than half of the 4 hours 19 minutes was systematic content; much of the time was small talk among acquaintances, coin-price discussion and mutual flattery; these notes have been reorganized by theme, and the order does not equal the actual speaking order.</li>
+<li><strong>An obvious promotional character</strong>: Most speakers are holders of BM/UP/mining machines, and the core theses (mining machines are better than holding coins, BM will list on Binance, the project will live to the level of Ethereum) are all holders' claims and have not been verified; the fact that "BM fell from over 60 to 9" and "the mining machine K-line has been rising all along" are both true at the same time precisely shows that mining machines and coin price trends have diverged, and these notes preserve that tension.</li>
+<li><strong>The most information-dense parts</strong>: The specific figures for TipAI's pre-deposit and release mechanism, the X Layer cross-chain solution being designed, and J.O.'s on-chain computation research — all three are follow-up developments that can be verified.</li>
+<li><strong>A side view of community governance</strong>: That an accent joke could trigger half an hour of values debate shows this community is in a "believer screening period" — as the speakers themselves put it.</li>
+</ul>
+<h2>ASR Restoration Table (where transcription noise is extreme)</h2>
+<table>
+<thead>
+<tr>
+<th>Transcribed original</th>
+<th>Should be</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tapout / T-POP / 贴炮 / 贴报 / 太巴尔 / tipi</td>
+<td>tapeout</td>
+<td>Project name, read in many ways on site</td>
+</tr>
+<tr>
+<td>bm / 臂 / B</td>
+<td>BM</td>
+<td>Base token</td>
+</tr>
+<tr>
+<td>up / 阿普 / 有屁</td>
+<td>UP</td>
+<td>Platform token</td>
+</tr>
+<tr>
+<td>矿机 / 矿剂 / 况且 / 逛机</td>
+<td>Mining machine</td>
+<td>In-ecosystem mining machine</td>
+</tr>
+<tr>
+<td>慈善感 / 磁脏感 / 持餐感</td>
+<td>Holding comfort</td>
+<td>The psychological comfort of holding assets, a keyword of this session</td>
+</tr>
+<tr>
+<td>晶体馆 / 经体馆</td>
+<td>Suspected to be a protocol/platform name</td>
+<td>Transcribed inconsistently, not elaborated</td>
+</tr>
+<tr>
+<td>地铁站</td>
+<td>Metaphor for the platform revenue model</td>
+<td>Every project launched means another stream of income</td>
+</tr>
+<tr>
+<td>检察官</td>
+<td>Doubtful</td>
+<td>Appeared many times on site, suspected to be a role/mechanism name, not elaborated</td>
+</tr>
+<tr>
+<td>小孩哥 / B 神</td>
+<td>Founder</td>
+<td>Called "the genius kid brother" on site</td>
+</tr>
+<tr>
+<td>成王败寇</td>
+<td>Mining overlord</td>
+<td>Large community miner, Fujian accent</td>
+</tr>
+<tr>
+<td>绑 3</td>
+<td>A large holder/scientist</td>
+<td>Sells with scripts every minute, identity not disclosed</td>
+</tr>
+<tr>
+<td>崩子 / 崩哥</td>
+<td>A participant</td>
+<td>Had just dumped over 30,000 BM (as stated on site)</td>
+</tr>
+<tr>
+<td>余境 / 渔径 / 于晋</td>
+<td>Ember World</td>
+<td>In-ecosystem game</td>
+</tr>
+<tr>
+<td>FIB / FVD / NFD</td>
+<td>Related to FAB</td>
+<td>In-game currency/assets, transcribed inconsistently</td>
+</tr>
+<tr>
+<td>POV / POB / PAP</td>
+<td>POB (pre-deposit + linear release mechanism)</td>
+<td>Transcribed inconsistently; the mechanism description prevails</td>
+</tr>
+<tr>
+<td>断权</td>
+<td>Doubtful</td>
+<td>A mechanism involving Agent voting, which no one on site explained clearly</td>
+</tr>
+<tr>
+<td>Claw</td>
+<td>Claw (AI tool)</td>
+<td>Many people's accounts were banned that day</td>
+</tr>
+<tr>
+<td>撸石油</td>
+<td>A certain gameplay/token</td>
+<td>Daily income about 20U (as stated on site)</td>
+</tr>
+<tr>
+<td>LVT</td>
+<td>LVT</td>
+<td>Testnet task token</td>
+</tr>
+</tbody>
+</table>
+<h2>Verification Notes</h2>
+<ul>
+<li>BM "falling from over 60 to 9" and mining machine prices "holding steady with no pullback" are both as stated on site; "circulation of 557,000 coins, market cap of US$5 million," "BM will go to US$100 sooner or later," and "BM listing on Binance is a done deal" are all speakers' predictions or assertions and have not been verified.</li>
+<li>The basis for the TipAI airdrop quantity was unclear on site ("3% is also 6 30,000 TI"), so these notes keep only the 3% ratio and do not give an absolute number.</li>
+<li>The basis for mining machine prices was vague on site ("at the price of 67BM for one unit of daily production capacity, doing anything with mining machines casually costs several hundred thousand"), so these notes do not use a specific figure; Ember's "20 cards earning thirty to forty U a day, payback in 25 days" is an on-site oral calculation and has not been checked item by item.</li>
+<li>The transcript has no speaker labels; Zhou Hongyi being the main speaker of the long mining-machine exposition is judged from the on-site form of address "as President Zhou said"; other speaking attributions follow the on-site forms of address, and those that could not be confirmed have been written as "on site" or "someone."</li>
+<li>"A recent theft incident of about 6 billion yuan" was mentioned on site without elaboration, and these notes make no determination about it.</li>
+</ul>
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1jPqOjydbMYlBj">https://x.com/i/spaces/1jPqOjydbMYlBj</a> · 主持 周红衣 @Kakabong08 · 2026-11-17 19:47 – 2026-11-18 00:06（约 4 小时 19 分）· 累计收听 219 人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1jPqOjydbMYlBj">https://x.com/i/spaces/1jPqOjydbMYlBj</a> · 主持 周紅衣 @Kakabong08 · 2026-11-17 19:47 – 2026-11-18 00:06（約 4 小時 19 分）· 累計收聽 219 人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1jPqOjydbMYlBj">https://x.com/i/spaces/1jPqOjydbMYlBj</a> · Host Zhou Hongyi @Kakabong08 · 2026-11-17 19:47 – 2026-11-18 00:06 (about 4 hours 19 minutes) · 219 total listeners<br>This page is the full text of notes compiled by hand from a machine transcription; the content consists entirely of the guests' impromptu remarks and self-accounts during the live broadcast, has not been verified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes List</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：tapeout咖啡馆开业啦 · Yat's Talks",tw:"會議紀要：tapeout咖啡館開業啦 · Yat's Talks",en:"Meeting Notes: The tapeout Café Opens · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

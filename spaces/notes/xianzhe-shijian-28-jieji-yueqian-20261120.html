@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>贤者时间第28期：普通家庭出身的年轻人，如何实现第一次阶级跃迁？</h1>
 <ul>
 <li>Space：https://x.com/i/spaces/1ZBQNjAeVANYzE</li>
@@ -160,9 +167,305 @@
 <li>逐字稿为 whisper-small 自动识别：人名（切哥 / 杰哥 / 七哥为同一人）、"环境"（应为黄金）、"LNT" / "Rostovic"（应为 Anthropic 上市）、"坑波周期"（应为康波周期）、"iPad 课"（应为 APEC）等均按上下文归并，原文措辞以 transcript.txt 为准。</li>
 </ul>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>賢者時間第28期：普通家庭出身的年輕人，如何實現第一次階級躍遷？</h1>
+<ul>
+<li>Space：https://x.com/i/spaces/1ZBQNjAeVANYzE</li>
+<li>時間：2026-11-20 21:36 – 2026-11-21 04:12（北京時間），總時長 6 小時 35 分</li>
+<li>主持：Lacey（@Lacey8ea）</li>
+<li>常駐發言：切哥（逐字稿中亦作傑哥、七哥，同一人）、西西老師、紅膜老師、傑森哥、AZ 等</li>
+<li>累計聽眾：882 人（據 Space 元數據）</li>
+<li>逐字稿：transcript.txt（7608 行，末尾時間戳 [06:35:05]，與音訊總時長吻合）</li>
+</ul>
+<blockquote>
+<p>說明：本紀要按逐字稿整理，均為發言者當晚的即興口述，未經獨立核實；數字、公司名與人名以發言者原話為準，逐字稿識別有誤之處在文中以括號註明。節目全長 6.5 小時，真正扣題的段落集中在前 3.5 小時；後半夜大量時間在聊即時崩盤行情與一位聽眾的感情問題。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>一群在交易和自媒體裡賺過錢、也虧過錢的中年人，用一整夜告訴一個 23 歲年輕人：普通家庭的第一次躍遷沒有捷徑，靠的是選對方向、敢折騰、別碰重資產、別急著買房，以及——先把時間自由掙到手。</p>
+<h2>前情：這期節目怎麼來的</h2>
+<p>話題由一位深圳的大二聽眾提出。Lacey 開場說，「階級躍遷」這個詞是她改的，原來說的是「階層」——她認為要先有躍遷的錢，才談得上躍升階層。開場先聊了半小時行情：BTC 七連跌、Anthropic 上市次日即破發（發言者口徑）、英偉達受黃仁勳相關傳聞衝擊，幾位老交易員的共識是「現在是分批建倉的時候，但絕不梭哈、絕不猜底」。</p>
+<h2>一、教育與專業選擇：真正的壁壘是資訊差</h2>
+<ul>
+<li><strong>學歷在貶值，但還沒貶到沒用。</strong> 發言者的說法是：現在的中專約等於過去的 211 碩士，985 約等於過去的大專。但一位 HR 從業者的配偶補充：雙 985、專業對口的畢業生，起薪仍有 16 萬左右，普遍 18 萬起，另有 8–10 萬補助，且不需要關係。</li>
+<li><strong>選專業的本質是資訊差。</strong> 張雪峰真正的價值不在講志願，而在講資訊差。不要扎堆熱門專業——90 年代的通信、自動化、電信就是當時的坑；如今中文系也被點名「已死」。反例：一位專科生因專業 niche，被蘇州、成都、昆明的科研院所爭搶，而不少三本畢業生反而不如他。</li>
+<li><strong>選錯標的的代價。</strong> 一位省排名前 12 的考生，人大畢業後去德國、讀新聞專業，最後回國當了鄉村公務員再轉文職——發言者評價「像選錯了股票」。</li>
+<li><strong>交易的類比。</strong> 厲害的不是預測，而是應對與對沖；只會止損的思維同樣會虧；先接受現實，再談操作。</li>
+</ul>
+<h2>二、自媒體：普通人最現實的躍遷通道</h2>
+<p>這是當晚最成體系的一段（約 1:04–1:45），核心觀點來自切哥與幾位常駐：</p>
+<ul>
+<li><strong>搬運 + 改編是普通人的路。</strong> 把國外已有的內容搬回來、改編後發，是成本最低的起步。一位發言者靠手抄書名句的抖音號賣出一本 398 元的書，賺了一萬多；另一條《男人一定要戒色》的影片，被人配上雷軍配音轉發後爆了——但此前他熬了半年多一分錢沒賺。</li>
+<li><strong>平台對比。</strong> 小紅書女性用戶多、反饋直接（有年輕用戶私信感謝）；影片號偏年長；抖音已飽和；X 相對沒有諧音詞審查。一位 120 萬粉的帳號每天發 75 條抖音，再靠直播間收流量。</li>
+<li><strong>學歷越高做自媒體越吃虧。</strong> 群裡清華北大博士賺得最少；一位低學歷女主播「像收割機」，一晚賺十幾萬——因為她敢說敢吹、沒有羞恥心。結論被反覆強調：<strong>破不了羞恥心就賺不到錢</strong>。切哥自己剃光頭、穿奇裝異服做直播，「邁出這一步後就無所謂了」；賣 9999 的課，首先得敢把價格說出口。</li>
+<li><strong>賣比教賺錢。</strong> 新東方給銷售的錢比給名師多——錢在賣，不在教。</li>
+<li><strong>AI 時代的打法是打時間差。</strong> 用 AI 學 AI，把國外已有的東西搬回來；AI 應用場景滲透還不到 5%，仍然很早。</li>
+</ul>
+<h2>三、實體小生意：別碰重資產</h2>
+<ul>
+<li>切哥的冒菜店曾是整條街最火的一家（兩層樓、排隊），直到隔壁學校搬走才垮掉。他學費交給了陳安之的課程——「被割了韭菜，但學到了東西」。</li>
+<li>教訓三條：成本壓到最低；先小後大（先擺烤串攤，再開餐館）；<strong>絕不先上重資產</strong>——有同事開酒吧虧掉家裡幾百萬。</li>
+<li>真正的玩法在店背後：會員制鎖客、爆品、公眾號 / 抖音 / 小紅書 / 大眾點評引流。「味道好」很多時候是引流製造出來的。線上線下只有兩條路：流量 → 變現，先有流量再說。</li>
+</ul>
+<h2>四、跨國婚介：被當場叫停</h2>
+<p>一位年輕聽眾提出做跨國婚介（越南、寮國新娘，介紹費 4–8 萬；傳聞蛇頭拿 2 萬多、女方家拿 5–6 萬，還有一年「保期」），被幾位長輩當場否決：這接近人口販賣，新娘大多會跑，中間還有鏈條，別碰違法的捷徑，慢一點賺乾淨錢。</p>
+<h2>五、直播中的 BTC 破位：6 萬美元失守</h2>
+<p>約 2:05–2:17，BTC 在節目進行中跌破 6 萬美元，隨後跌破 5.95 萬，幾位交易員反應平靜：</p>
+<ul>
+<li>切哥 2022 年入場、另一位 2021 年、老交易員 2017–18 年，經歷過三輪牛熊。2022 年的戰例：一位發言者在聖誕節前後把剩餘全部資產換成 BTC（當時約 1.6 萬美元附近），一直持有至今；另一位賣掉的房子後來又跌了 100 萬。</li>
+<li><strong>A 股的判斷：別碰。</strong> 三浪回調沒走完，要跌破 2800，回到 2024 年 9 月的水平，甚至 2500–2600；美股能創新高，A 股會套人。</li>
+<li>一句 market 哲學：一個資產的「價值」，等於有多少人被套在裡面。</li>
+</ul>
+<h2>六、不要買房，與找對象</h2>
+<ul>
+<li><strong>給年輕男性的首要建議：不要買房。</strong> 堅持「買房才結婚」的對象，發言者認為認知有問題，要找同頻的人。</li>
+<li>擇偶的核心：講理、男人負責任；長相只是包裝。夫妻每天溝通不到一小時就是不合格（發言者自述來自自己的推文）。</li>
+<li>一位獨生子女聽眾問，為什麼自己只想找獨生子女對象——回答是：自利與家庭結構的概率考量，但真談上之後標準會融化。</li>
+</ul>
+<h2>七、當晚最扣題的一段：23 歲青年與 7 萬塊錢</h2>
+<p>約 2:55–3:15，一位 23 歲的前 IT 從業者上麥：AI 浪潮中被裁，此前在北京亦莊一帶工作，現住家裡，手頭約 7 萬元（父母給的，原本打算買車），問這筆錢該怎麼辦。</p>
+<ul>
+<li>一位女常駐（姐）的建議：把這筆錢當作「脫離金 / 小金庫」，<strong>不要拿去投資</strong>。她引用松哥的規則：現金不到 50 萬就別投資，把時間花在自己身上。可以考慮放進保險 / 儲蓄險當作類銀行的鎖定；網上學習資源都是免費的。他真正的問題不是缺投資標的，而是「想動這筆錢又怕有負罪感」；最好的辦法可能是暫時忘掉這筆錢。</li>
+<li>他回應：父母有醫保、會托底；平時和同學玩《三角洲行動》，有人氪金但不重；打算過完年、金三銀四再找工作。她建議期間可以試試數據標註類的零工。</li>
+<li>他承認自己「沒東西可輸出」，做不了自媒體。這段沒有結論，他下麥時問題仍懸著，她最後也承認「每個人看法不同」。</li>
+</ul>
+<h2>八、心態：躺平三件套與遠離拉低認知的人</h2>
+<p>約 3:17–3:36，西西老師主導的一段：</p>
+<ul>
+<li><strong>躺平三件套 = 拼好飯 + 拼多多 + 紅果短劇</strong>，被定性為設計好的陷阱。西西老師部分不同意：衣服不必全在拼多多買，保留一點品質（優衣庫、無印良品被舉為日本失去三十年的物美價廉答案）；拼好飯不如自己做飯，又便宜又是一門生活技能。</li>
+<li>紅果短劇的重生爽文與嫉惡如仇是洗腦——現實裡惡有惡報很少（發言者舉例：許家印在獄中過得比大多數人好）。</li>
+<li>普通家庭沒有舒適區可退：家庭認知的天花板（攀比、催婚）注定讓人不舒服，對父母點到為止，能用錢和體力解決就解決，別試圖改變他們；與親戚保持距離。</li>
+<li><strong>西西老師的三要素總結</strong>（約 3:27–3:36）：一、沒有退路——普通家庭的退路都是坑，退一步踩一個坑；考公被舉為例證，考上就是一次躍遷，考大學反而是人生中最簡單的一件事。二、不受干擾——保送生拉黑同班同學保研的例子：沒有對等能力，沒人會幫你。三、找對方向 + 勤奮——勤奮不是漫無目的的勤奮；判斷方向對不對的標準是：這件事很累，但不痛苦，而且能不斷拿到結果。馬斯克也被舉例：PayPal、特斯拉、SpaceX，一件事很少做一輩子，能堅持三年以上還盈利的已屬極難；一件事做幾個月就換很正常，但至少堅持 21 天以上，幹出一樣結果再說。</li>
+</ul>
+<h2>九、Space 運營方法論：每天開，還是定期開</h2>
+<p>約 3:37–3:46，一位聽眾提問後，切哥系統回答：</p>
+<ul>
+<li>有號召力的不用天天開（幣安、馬斯克的 Space 隨時開都有幾萬人）；沒號召力又想做，就得像早期主播一樣天天熬——直播間一個人都沒有也要撐著。</li>
+<li>賢者時間本身就是後者：沒有紅膜老師、西西老師、AZ、Lacey 的堅持，「現在可能一天就十個八個人」。社群從 2023 年熬起，其間 4 個帳號被平台封掉；X 上個人 Space 能穩定超過 100 人聽，已經「非常牛逼」。</li>
+<li>另一句被反覆說的話：「做事情不是做了就能成功，但不做永遠成功不了。」</li>
+</ul>
+<h2>十、後半夜的崩盤實況與「掠奪者」理論</h2>
+<p>約 3:46–4:18，市場與宏大敘事交織：</p>
+<ul>
+<li>美股全面下跌；英偉達跌到 136 美元（發言者口徑），切哥的判斷是「他老婆不出來發言，我肯定不會碰」——暗指黃仁勳相關傳聞未有定論（該傳聞在節目中未提供任何公開來源，<strong>請勿當作事實</strong>）。</li>
+<li>Anthropic 上市被當作風向標：發言者稱其「馬上就破發」，證明股市水分太大（逐字稿作 "LNT" / "Rostovic"，應為 Anthropic 的識別錯誤）。</li>
+<li>AI 領軍人物的排序：硬體第一、安全第二、模型第三；先從硬體開刀，輪不到模型公司。</li>
+<li><strong>「只有掠奪者才能發財」。</strong> 切哥的理論：老錢不光要拍倒新貴，還要掠奪其創造的東西——例證是網景（Netscape）與微軟 IE 的官司、HTC 在美國被訴訟拖垮。普通人看不懂也無妨，只能應對：等股價被砸到 100 以下、開始放利好、機構增持上調估值時，才是老錢進場的信號；120 與 150 對普通人沒有區別。</li>
+<li>錢的流向：黃金、美股、比特幣都在跌，錢流進了美債；USDT 匯率當晚從 6.66 跳到 6.76，發言者稱因有人要拿去補倉；BTC「至少還有四五千點」要跌，抄底要等 5 萬–5.5 萬以下，且「至少盤整一個月才能見到真正的底部」；另一位發言者的劇本更激進：看到 4 萬美元左右。</li>
+<li>交易紀律穿插其中：看不懂就空倉；做空也很難；虧了先冷靜復盤，虧在哪、是聽信了別人還是主觀判斷錯了；復盤不能太急，要等週期走完。</li>
+</ul>
+<h2>十一、原則、自我與本我</h2>
+<p>約 4:19–4:32，一段相當直白的哲學對談：</p>
+<ul>
+<li><strong>「人的原則是掠奪。」</strong> 出生就是掠奪資源（陽光、空氣、水、食物）；原則被觸犯時看兩點：利益受損多大、自己的能力夠不夠。包容可以，但必須立規矩——立不住規矩，對方會不斷試探邊界。止損線是「可替代性」：覺得某人某點不可替代可以保留，但要同時開發新的人選。世界上沒有擺脫不了的關係，「連血緣都可以擺脫」，逃離原生家庭被舉例。</li>
+<li><strong>自我與本我。</strong> 切哥說，他從哪一刻起不再追求人生與關係的圓滿、開始相信自我和錢最真實？是「半小時能賺到 10 萬美金」的那一刻——像發現了世界的 bug；人生的意義於是變成曬太陽、喝咖啡、和西西老師吹牛、在賢者時間扯淡。但一天賺一萬塊錢很難，單天賺到靠運氣，每天賺到是另一回事。</li>
+</ul>
+<h2>十二、傑森哥：時間自由 → 收入自由 → 消費自由</h2>
+<p>約 4:47–4:54，傑森哥（Jason）提出當晚最結構化的躍遷框架，並得到多人認同：</p>
+<ul>
+<li>階級躍遷不是一下子拿到一個大結果，而是三步：<strong>先時間自由</strong>（不用每天打卡上班八小時也能拿到相應回報），<strong>再收入自由</strong>（本職之外收入不斷增長），<strong>最後才是消費自由</strong>。</li>
+<li>沒攢到第一桶金之前，賺錢靠絕對值（月薪 3 萬一年 36 萬、5 萬一年 60 萬）；有了 50 萬、100 萬、200 萬並懂得投資之後，才靠百分比滾大。</li>
+<li>他自述第一桶金是「割韭菜」賺來的（自認雖有實物交付，本質仍是割韭菜）；停手的原因是執法變了——這件事以前歸工商管理局管，後來歸警察管。他的判斷：今天的中國，暴利生意依然存在，中國階層有一百層、資訊差巨大，「對掠奪獲利而言是個很好的地方」，但法律收緊讓代價變大；連做返佣都有法律風險。所以更現實的路徑就是西西老師說的三步自由，「不要好高騖遠」。</li>
+</ul>
+<h2>十三、AZ 的感情長談：從抽煙吵到 0.618</h2>
+<p>約 4:56–6:06，佔了後半夜近一半篇幅。一位自稱渣男的聽眾 AZ（在印尼、新加坡一帶做 Cloud 帳號生意，師父是切哥）上麥傾訴，邊喝酒邊聊：</p>
+<ul>
+<li>他遇到一個「很簡單很單純」的女生（洛陽人，在鄭州國企做財務，月薪五六千，碩士畢業，27–28 歲），兩人相戀 438 天。他自認是「用魔法打敗魔法」——她單純到讓他這個不婚主義者有了結婚的衝動。</li>
+<li>他開玩笑立過一個 flag：給她買一公斤黃金就結婚。黃金跌到 3500（發言者口徑，應為金價點位）後他當天又轉了 50 克的錢，累計已轉約 150 萬元（發言者口徑，均為他自述），父母雙方都已見過，原定過完年可能訂婚。</li>
+<li>當晚吵架的導火索是抽煙：他答應過她，結婚那天戒煙，平時一天只抽三四根；她認為為他好、應該盡量少抽。他認為這是原則問題——答應的做到了，剩下的就是他的自由；她要的是安穩人生（每天下班回家有個人在），他要的是自由人生（今天在中國、明天在印尼、後天在新加坡）。他發現「人無法真正改變一個人」，妥協下去會進入負向循環。</li>
+<li>切哥與傑森哥的勸法：別走極端，按 0.618 來——三分愛她、兩分愛自己，或三分真誠、兩分手段；談事情要抱著「談不成」的心態去談，否則會不斷退讓；不要輕易許諾（"Don't promise come too easy"，做到了再說）；先把主動權拿回來，「永遠向前走，永遠不要停下腳步，你才有吸引力」；也別把她保護得太好，讓她自己去受傷害，你在關鍵時刻兜底就行。</li>
+<li>也有人點破另一面：她要的其實不是黃金，是「腦袋頂上有片瓦」——中國人幾千年對房子的執念；他給黃金、給錢，卻沒給她真正想要的安全感。兩人認知不在一個層面，「你認為的婚姻是一場愛情，她認為的婚姻是一場生意」。</li>
+<li>AZ 最後的自省：以前每段感情都可操控、可控制，所以自認渣男；這次以為「變簡單就 ok」，結果發現自己走進了另一個極端——活在自己的想像裡。「人永遠不能靠想像而活。」他喝了 12 瓶喜力，節目建議他直接找酒店開房睡覺，明天再說。</li>
+</ul>
+<h2>十四、敦刻爾克大撤退與收尾</h2>
+<p>約 6:20–6:35，切哥回應聽眾提問，解釋自己前一天的推文：</p>
+<ul>
+<li>他把當下稱為「敦刻爾克大撤退」時刻：Anthropic 上市開盤後的走勢注定資金撤退，沒有預想的反彈，「資金逃離市場，全球技術股大跳水」。撤退不是認輸，是保命、保存實力、以退為進；下一步怎麼走不知道，先撤再說。</li>
+<li>俄烏問題若解決、原油鬆口氣、通脹鬆口氣，可能迎來利好甚至量化寬鬆；但中美俄三方會談在他看來「走了個樣子」，APEC 本身也是例行會議（他講了 1993 年克林頓發皮夾克的舊事），「不要把開國際大會看得太重要」。</li>
+<li>康波週期（逐字稿作「坑波週期」）的判斷：2026 年是個小高潮，之後下行，直到 2032 年見底、2032–2035 年反彈，「接下來還有五六年光景很難」。</li>
+<li>收尾的盤面：QQQ 跌破 620（發言者口徑的點位），熊市回撤 50%「很正常」；唯一能逃過的是民生股——沃爾瑪、Costco、寶潔、可口可樂、百事都在漲；他一個月前就預判，民主黨若贏下參眾兩院，錢會流向民生項目。現金為王的心態貫穿結尾：從 10 月底就空倉的人「越跌越興奮」，等著抄底；也有人從 8.6 萬一路空下來賺了 40 倍（發言者口徑）。</li>
+<li>凌晨 4 點 12 分，Lacey 與切哥互道晚安，節目結束：「明天再聊。」</li>
+</ul>
+<h2>值得單獨記下的幾句話（發言者原話，大意轉述）</h2>
+<ul>
+<li>「考大學是人世間最簡單的一件事，甚至比找一個合適的人結婚還簡單。」</li>
+<li>「做事情不是做了就能成功，但不做永遠成功不了。」</li>
+<li>「破不了羞恥心就賺不到錢。」</li>
+<li>「普通家庭沒有舒適區可退。」</li>
+<li>「人永遠不要期盼百分百的 all in，要相信 0.618。」</li>
+<li>「不要輕易許諾，做到了再說。」</li>
+<li>「人永遠不能靠想像而活。」</li>
+<li>「錢永遠不會夠；一兩百萬不夠打動人。」（AZ 的原話，語境是感情）</li>
+</ul>
+<h2>本期紀要的邊界</h2>
+<ul>
+<li>節目是深夜閒聊，不是訪談：話題跳躍、同一觀點多人重複、後半夜與主題漸行漸遠；紀要按主題重組，未按時間平鋪。</li>
+<li>所有市場判斷（BTC 點位、金價、美股、英偉達）均為發言者當晚的即興觀點，且多在情緒高點說出；Anthropic IPO、黃仁勳相關傳聞、AI 泡沫論等均未在節目中提供可核查來源。</li>
+<li>AZ 的感情經歷、轉帳金額、黃金數量均為其本人自述，無法核實；節目中關於「Cloud 帳號生意」與印尼移民局的說法同樣未經核實，紀要只作轉述。</li>
+<li>逐字稿為 whisper-small 自動識別：人名（切哥 / 傑哥 / 七哥為同一人）、"環境"（應為黃金）、"LNT" / "Rostovic"（應為 Anthropic 上市）、"坑波週期"（應為康波週期）、"iPad 課"（應為 APEC）等均按上下文歸併，原文措辭以 transcript.txt 為準。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Sage Time, Episode 28: How Can a Young Person from an Ordinary Family Make Their First Leap Up the Class Ladder?</h1>
+<ul>
+<li>Space: https://x.com/i/spaces/1ZBQNjAeVANYzE</li>
+<li>Time: 2026-11-20 21:36 – 2026-11-21 04:12 (Beijing time), total duration 6 hours 35 minutes</li>
+<li>Host: Lacey (@Lacey8ea)</li>
+<li>Regular speakers: Qiege (also rendered as Jiege and Qige in the transcript, the same person), Teacher Xixi, Teacher Hongmo, Jason, AZ, and others</li>
+<li>Total listeners: 882 (per the Space metadata)</li>
+<li>Transcript: transcript.txt (7,608 lines, ending timestamp [06:35:05], matching the total audio length)</li>
+</ul>
+<blockquote>
+<p>Note: These notes are compiled from the transcript and consist entirely of the speakers' improvised remarks that evening; nothing has been independently verified. Figures, company names, and personal names are as the speakers stated them, and places where the transcript's speech recognition is likely wrong are noted in parentheses. The show ran a full 6.5 hours; the segments genuinely on topic are concentrated in the first 3.5 hours, while much of the late-night portion was spent on the live market crash and one listener's relationship problems.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>A group of middle-aged people who have made money — and lost money — in trading and self-media spent an entire night telling a 23-year-old: there is no shortcut to a first class leap for an ordinary family. It comes from picking the right direction, being willing to hustle, avoiding heavy assets, not rushing to buy a home — and first earning your freedom of time.</p>
+<h2>Background: how this episode came about</h2>
+<p>The topic was raised by a sophomore listener in Shenzhen. Lacey opened by saying that she had changed the wording to "class leap" (阶级跃迁); the original phrase was "social stratum" (阶层) — in her view, you first need the money for a leap before you can talk about rising to a higher stratum. The first half hour was spent on the market: BTC down seven days in a row, Anthropic falling below its IPO price the day after listing (per the speakers), and Nvidia hit by rumors involving Jensen Huang. The consensus among the veteran traders was: "Now is the time to build positions in batches — but never go all in, and never try to guess the bottom."</p>
+<h2>1. Education and choice of major: the real barrier is the information gap</h2>
+<ul>
+<li><strong>Degrees are depreciating, but not yet worthless.</strong> As one speaker put it: a technical-secondary-school diploma today is roughly what a master's from a 211 university used to be, and a 985 degree is roughly what a junior-college diploma used to be. But the spouse of an HR professional added: graduates with two 985 credentials in a matching major still start at around 160,000 yuan, commonly 180,000 and up, plus another 80,000–100,000 in subsidies — no connections needed.</li>
+<li><strong>Choosing a major is, at its core, an information gap.</strong> Zhang Xuefeng's real value is not in advising on college applications but in explaining information gaps. Don't crowd into fashionable majors — communications, automation, and telecommunications in the 1990s were the trap of their day; Chinese language and literature was also named as "already dead." A counterexample: a junior-college graduate whose major was niche was fought over by research institutes in Suzhou, Chengdu, and Kunming, while many graduates of third-tier universities fared worse than he did.</li>
+<li><strong>The cost of picking the wrong target.</strong> A student ranked in the top 12 of his province graduated from Renmin University, went to Germany, studied journalism, and ended up back in China as a rural civil servant before moving to a clerical post — the speakers commented that it was "like picking the wrong stock."</li>
+<li><strong>The trading analogy.</strong> What makes someone good is not prediction but response and hedging; a mindset that only knows how to cut losses loses money too. Accept reality first, then talk about moves.</li>
+</ul>
+<h2>2. Self-media: the most realistic channel of upward mobility for ordinary people</h2>
+<p>This was the most systematic segment of the night (roughly 1:04–1:45), with the core views coming from Qiege and several regulars:</p>
+<ul>
+<li><strong>Reposting + adaptation is the ordinary person's path.</strong> Taking content that already exists abroad, bringing it back, adapting it, and posting it is the lowest-cost way to start. One speaker sold a 398-yuan book through a Douyin account that hand-copied famous quotes from books, making over ten thousand yuan; another video, "Men Must Quit Lust," went viral after someone reposted it dubbed with Lei Jun's voice — but before that, he had ground away for over half a year without earning a cent.</li>
+<li><strong>Platform comparison.</strong> Xiaohongshu has many female users and direct feedback (young users sent private messages of thanks); WeChat Channels skews older; Douyin is saturated; X has relatively no homophone-based censorship. One account with 1.2 million followers posts 75 Douyin videos a day and then harvests traffic through its livestream room.</li>
+<li><strong>The higher your education, the worse you do at self-media.</strong> In their circle, the Tsinghua and Peking University PhDs earn the least; a female streamer with little education is "like a harvesting machine," making over a hundred thousand yuan in a single night — because she dares to talk big and has no sense of shame. The conclusion was repeated again and again: <strong>if you can't break through your sense of shame, you can't make money</strong>. Qiege himself shaved his head and wore outlandish outfits for livestreams: "Once you take that step, you stop caring." To sell a course for 9,999, you first have to dare to say the price out loud.</li>
+<li><strong>Selling makes more money than teaching.</strong> New Oriental pays its salespeople more than its star teachers — the money is in selling, not teaching.</li>
+<li><strong>The AI-era play is the time lag.</strong> Use AI to learn AI; bring back what already exists abroad. AI application scenarios have penetrated less than 5% — it is still very early.</li>
+</ul>
+<h2>3. Small brick-and-mortar businesses: don't touch heavy assets</h2>
+<ul>
+<li>Qiege's maocai restaurant was once the most popular on the whole street (two floors, queues out the door), until the school next door moved away and it collapsed. His tuition went to Chen Anzhi's courses — "I got fleeced, but I learned something."</li>
+<li>Three lessons: keep costs as low as possible; start small, then grow (run a grilled-skewer stall first, then open a restaurant); and <strong>never start with heavy assets</strong> — a colleague opened a bar and lost his family several million yuan.</li>
+<li>The real game is behind the shop: membership systems to lock in customers, hero products, and traffic from WeChat official accounts / Douyin / Xiaohongshu / Dianping. "Tastes good" is often something manufactured by traffic generation. Online or offline, there are only two steps: traffic → monetization. Get the traffic first.</li>
+</ul>
+<h2>4. Cross-border matchmaking: shut down on the spot</h2>
+<p>A young listener proposed going into cross-border matchmaking (brides from Vietnam and Laos, introduction fees of 40,000–80,000 yuan; rumor had it that the smugglers took over 20,000, the bride's family 50,000–60,000, and there was even a one-year "warranty period"). Several elders vetoed it on the spot: this borders on human trafficking, most of the brides run away, and there is a whole chain in between. Don't touch illegal shortcuts; earn clean money a bit more slowly.</p>
+<h2>5. BTC breaks down live on air: the $60,000 level falls</h2>
+<p>Around 2:05–2:17, while the show was running, BTC fell below $60,000 and then below $59,500. The traders reacted calmly:</p>
+<ul>
+<li>Qiege entered in 2022, another speaker in 2021, and a veteran trader in 2017–18; they have lived through three bull-bear cycles. A 2022 war story: around Christmas, one speaker converted all his remaining assets into BTC (then near $16,000) and has held it ever since; another speaker's sold house later fell by another 1 million yuan.</li>
+<li><strong>The verdict on A-shares: don't touch them.</strong> The third-wave correction isn't finished; the index will break 2,800, return to the September 2024 level, maybe even 2,500–2,600. US stocks can make new highs; A-shares trap people.</li>
+<li>A piece of market philosophy: an asset's "value" equals how many people are trapped in it.</li>
+</ul>
+<h2>6. Don't buy a home, and finding a partner</h2>
+<ul>
+<li><strong>The top advice for young men: don't buy a home.</strong> A partner who insists on "no marriage without buying a home" has a problem with their thinking, in the speakers' view; find someone on the same wavelength.</li>
+<li>The core of choosing a spouse: being reasonable, and the man taking responsibility; looks are just packaging. A couple that communicates less than an hour a day is failing (a speaker said this came from his own post).</li>
+<li>An only-child listener asked why he only wanted an only-child partner — the answer: a probabilistic consideration of self-interest and family structure, though once you're actually in a relationship, the standards melt away.</li>
+</ul>
+<h2>7. The most on-topic segment of the night: a 23-year-old and 70,000 yuan</h2>
+<p>Around 2:55–3:15, a 23-year-old former IT worker came on mic: he had been laid off in the AI wave, previously worked around Yizhuang in Beijing, now lives at home, and has about 70,000 yuan on hand (given by his parents, originally meant for buying a car). He asked what he should do with the money.</p>
+<ul>
+<li>A female regular's advice: treat the money as an "exit fund / little treasury" and <strong>do not invest it</strong>. She cited Songge's rule: if your cash is under 500,000 yuan, don't invest; spend your time on yourself. He could consider putting it into insurance / a savings-type policy as a bank-like lock-up; learning resources online are all free anyway. His real problem is not a lack of investment targets but "wanting to use the money while feeling guilty about it"; the best approach might be to temporarily forget the money exists.</li>
+<li>He responded: his parents have medical insurance and will back him up; he plays Delta Force with classmates, some of whom spend on in-game purchases but not heavily; he plans to look for work after the New Year, in the peak spring hiring season. She suggested he could try gig work such as data annotation in the meantime.</li>
+<li>He admitted he has "nothing to output" and can't do self-media. The segment reached no conclusion; when he left the mic, his question was still hanging, and she finally conceded that "everyone sees it differently."</li>
+</ul>
+<h2>8. Mindset: the "lying flat" trio, and staying away from people who drag down your thinking</h2>
+<p>Around 3:17–3:36, a segment led by Teacher Xixi:</p>
+<ul>
+<li><strong>The lying-flat trio = Pinhaofan (group-buy meals) + Pinduoduo + Hongguo short dramas</strong>, characterized as a designed trap. Teacher Xixi partly disagreed: you don't have to buy all your clothes on Pinduoduo; keep a bit of quality (Uniqlo and Muji were cited as Japan's answer of good value through its lost thirty years); Pinhaofan is worse than cooking for yourself, which is cheaper and is a life skill besides.</li>
+<li>The rebirth power-fantasy stories and black-and-white morality of Hongguo short dramas are brainwashing — in real life, evil rarely gets its comeuppance (a speaker gave the example that Xu Jiayin lives better in prison than most people do).</li>
+<li>Ordinary families have no comfort zone to retreat to: the ceiling of family thinking (comparisons, pressure to marry) is bound to make you uncomfortable. With parents, make your point and stop; solve what can be solved with money and effort, and don't try to change them. Keep your distance from relatives.</li>
+<li><strong>Teacher Xixi's three-element summary</strong> (around 3:27–3:36): First, no way back — an ordinary family's retreats are all pits; step back and you step into one. The civil-service exam was given as evidence: passing it is itself a class leap, and getting into university is actually the simplest thing in life. Second, no interference — the example of a student with a guaranteed postgraduate recommendation blocking a classmate who got one too: without comparable ability, no one will help you. Third, the right direction + diligence — diligence is not aimless diligence; the test of whether a direction is right is: it's tiring but not painful, and it keeps producing results. Musk was also cited: PayPal, Tesla, SpaceX — very few people do one thing for a whole life; sticking with something for over three years and still profiting is already extremely hard. Switching after a few months is normal, but stick with it for at least 21 days and produce one result before you talk.</li>
+</ul>
+<h2>9. Space operations methodology: run it daily, or on a schedule?</h2>
+<p>Around 3:37–3:46, after a listener's question, Qiege answered systematically:</p>
+<ul>
+<li>Those with drawing power don't need to run one every day (Binance's and Musk's Spaces draw tens of thousands whenever they open); if you have no drawing power but want to do it, you have to grind daily like early streamers — keep going even when there is not a single person in the room.</li>
+<li>Sage Time itself is the latter: without the persistence of Teacher Hongmo, Teacher Xixi, AZ, and Lacey, "there might be eight or ten people a day by now." The community has ground on since 2023, with four accounts banned by the platform along the way; on X, an individual Space that can stably hold over 100 listeners is already "seriously impressive."</li>
+<li>Another line repeated throughout: "Doing something doesn't guarantee success, but not doing it guarantees you'll never succeed."</li>
+</ul>
+<h2>10. The late-night crash, live, and the "predator" theory</h2>
+<p>Around 3:46–4:18, markets intertwined with grand narratives:</p>
+<ul>
+<li>US stocks fell across the board; Nvidia dropped to $136 (per the speakers). Qiege's judgment was, "If his wife doesn't come out and say something, I definitely won't touch it" — hinting that the rumors involving Jensen Huang remained unsettled (the show provided no public source for the rumor; <strong>do not treat it as fact</strong>).</li>
+<li>Anthropic's listing was treated as a bellwether: a speaker claimed it was "about to fall below its IPO price," proving the stock market is full of froth (the transcript renders it as "LNT" / "Rostovic," which should be speech-recognition errors for Anthropic).</li>
+<li>The ranking of AI leaders: hardware first, safety second, models third; the knife falls on hardware first, and model companies aren't at the front of the line.</li>
+<li><strong>"Only predators get rich."</strong> Qiege's theory: old money doesn't just knock down the newly rich, it plunders what they created — the examples given were the Netscape vs. Microsoft IE lawsuit and HTC being dragged down by litigation in the US. It's fine if ordinary people can't see it; all they can do is respond: the signal for old money entering is when a stock has been smashed below 100, good news starts coming out, and institutions raise their holdings and valuations. For ordinary people, 120 versus 150 makes no difference.</li>
+<li>Where the money flowed: gold, US stocks, and Bitcoin all fell, and money flowed into US Treasuries; the USDT exchange rate jumped from 6.66 to 6.76 that night, which a speaker attributed to people needing it to add margin; BTC "has at least another four or five thousand points" to fall, and bottom-fishing should wait until below 50,000–55,000, with "at least a month of consolidation before a real bottom appears"; another speaker's script was more aggressive: down to around $40,000.</li>
+<li>Trading discipline was interspersed throughout: if you can't read it, stay in cash; shorting is hard too; if you lose, calmly review first — where did you lose, did you trust someone else or was it your own wrong judgment; and don't rush the review — wait until the cycle has played out.</li>
+</ul>
+<h2>11. Principles, the ego, and the id</h2>
+<p>Around 4:19–4:32, a remarkably blunt philosophical exchange:</p>
+<ul>
+<li><strong>"The human principle is plunder."</strong> Being born is plundering resources (sunlight, air, water, food). When a principle is violated, look at two things: how much your interests are harmed, and whether your own ability is enough. Tolerance is fine, but you must set rules — if you can't hold the rules, the other side will keep testing your boundaries. The stop-loss line is "replaceability": if you feel some point about a person is irreplaceable, you can keep them, but develop new candidates at the same time. There is no relationship in the world you can't break free of — "even blood ties can be broken" — with escaping one's family of origin given as an example.</li>
+<li><strong>Ego and id.</strong> Qiege said: from what moment did he stop pursuing completeness in life and relationships and start believing that the self and money are what's most real? It was the moment he could "make $100,000 in half an hour" — like discovering a bug in the world. The meaning of life then became sunbathing, drinking coffee, shooting the breeze with Teacher Xixi, and talking nonsense on Sage Time. But making ten thousand yuan in a day is hard; making it on a single day is luck, making it every day is something else entirely.</li>
+</ul>
+<h2>12. Jason: freedom of time → freedom of income → freedom of consumption</h2>
+<p>Around 4:47–4:54, Jason laid out the most structured mobility framework of the night, which many endorsed:</p>
+<ul>
+<li>A class leap is not landing one big result all at once; it is three steps: <strong>first, freedom of time</strong> (earning the corresponding return without clocking in eight hours a day), <strong>then freedom of income</strong> (income outside your main job keeps growing), <strong>and only finally freedom of consumption</strong>.</li>
+<li>Before you've saved your first pot of gold, money is made in absolute terms (a monthly salary of 30,000 yuan is 360,000 a year; 50,000 a month is 600,000 a year); once you have 500,000, 1 million, 2 million and know how to invest, you grow it by percentages.</li>
+<li>He said his own first pot of gold came from "fleecing the leeks" (by his own admission, although something tangible was delivered, in essence it was still fleecing); he stopped because enforcement changed — the business used to be under the Administration for Industry and Commerce, and later came under the police. His judgment: in today's China, highly profitable businesses still exist; China has a hundred class layers and an enormous information gap, making it "a very good place for profiting by plunder," but tighter laws have raised the cost; even rebate schemes carry legal risk. So the more realistic path is Teacher Xixi's three freedoms — "don't aim too high and reach beyond yourself."</li>
+</ul>
+<h2>13. AZ's long talk about love: from a fight over smoking to 0.618</h2>
+<p>Around 4:56–6:06, taking up nearly half of the late-night portion. A listener who calls himself a playboy, AZ (in the Cloud account business around Indonesia and Singapore; his mentor is Qiege), came on mic to pour his heart out while drinking:</p>
+<ul>
+<li>He met a girl who is "very simple and pure" (from Luoyang, working in finance at a state-owned enterprise in Zhengzhou, earning five to six thousand yuan a month, a master's graduate, 27–28 years old); they have been together for 438 days. He describes it as "using magic to defeat magic" — she was so pure that she gave him, a committed non-marriage type, the urge to get married.</li>
+<li>He had jokingly set a flag: he would marry her once he had bought her a kilogram of gold. After gold fell to 3,500 (per the speaker; apparently a gold price level), he transferred money for another 50 grams that same day; in total he has transferred about 1.5 million yuan (per the speaker; all by his own account). Both sets of parents have met, and the original plan was possibly to get engaged after the New Year.</li>
+<li>The trigger for that night's fight was smoking: he had promised her he would quit on their wedding day, and normally smokes only three or four cigarettes a day; she felt that, for his own good, he should smoke as little as possible. He sees it as a matter of principle — what he promised, he has done; the rest is his freedom. What she wants is a stable life (someone at home when she gets off work every day); what he wants is a free life (in China today, Indonesia tomorrow, Singapore the day after). He has discovered that "you can't truly change a person," and compromising further leads into a negative loop.</li>
+<li>Qiege's and Jason's advice: don't go to extremes; go by 0.618 — three parts loving her, two parts loving yourself; or three parts sincerity, two parts technique. Negotiate with the mindset that "the talk may fail," or you'll keep giving ground. Don't make promises lightly ("Don't promise come too easy" — speak only after you've done it). Take back the initiative first: "Always move forward, never stop, and that's what makes you attractive." And don't protect her too well — let her get hurt herself; you just be there to catch her at the critical moment.</li>
+<li>Someone also pointed out the other side: what she actually wants isn't gold, it's "a tile over her head" — the Chinese fixation on housing over thousands of years. He gives gold and money but hasn't given her the security she truly wants. The two are not on the same level of understanding: "You think marriage is a romance; she thinks marriage is a business."</li>
+<li>AZ's final self-reflection: in every past relationship he could manipulate and control, hence calling himself a playboy; this time he thought "just be simple and it'll be OK," and found he had walked into the opposite extreme — living inside his own imagination. "A person can never live on imagination." He had drunk 12 bottles of Heineken; the show suggested he go straight to a hotel, get a room, and sleep, and talk tomorrow.</li>
+</ul>
+<h2>14. The Dunkirk evacuation and the wrap-up</h2>
+<p>Around 6:20–6:35, Qiege answered a listener's question and explained his post from the previous day:</p>
+<ul>
+<li>He calls the present moment a "Dunkirk evacuation": Anthropic's post-IPO trajectory made a capital retreat inevitable, there was no expected rebound — "capital is fleeing the market, global tech stocks are plunging." A retreat is not surrender; it is saving your life, preserving strength, advancing by withdrawing. He doesn't know the next step; retreat first, then talk.</li>
+<li>If the Russia-Ukraine issue is resolved, crude oil breathes, and inflation breathes, there could be positive catalysts, even quantitative easing; but in his view the China-US-Russia three-way talks were "just going through the motions," and APEC itself is a routine meeting (he told the old story of Clinton handing out leather jackets in 1993) — "don't take international conferences too seriously."</li>
+<li>The Kondratieff cycle judgment (the transcript renders it as "坑波周期," a misrecognition): 2026 is a small peak, then a downtrend, bottoming in 2032, with a rebound in 2032–2035 — "the next five or six years will be hard."</li>
+<li>The closing market picture: QQQ broke below 620 (a level per the speakers); a 50% bear-market drawdown is "perfectly normal"; the only things that escape are consumer-staples stocks — Walmart, Costco, Procter & Gamble, Coca-Cola, and Pepsi are all rising. He had predicted a month earlier that if the Democrats win both houses of Congress, money will flow into livelihood projects. A cash-is-king mindset ran through the ending: people who have been in cash since late October get "more excited the more it falls," waiting to buy the bottom; someone else shorted all the way down from 86,000 and made 40x (per the speaker).</li>
+<li>At 4:12 a.m., Lacey and Qiege said goodnight to each other and the show ended: "Talk again tomorrow."</li>
+</ul>
+<h2>Lines worth recording on their own (speakers' words, paraphrased in gist)</h2>
+<ul>
+<li>"Getting into university is the simplest thing in the world — even simpler than finding the right person to marry."</li>
+<li>"Doing something doesn't guarantee success, but not doing it guarantees you'll never succeed."</li>
+<li>"If you can't break through your sense of shame, you can't make money."</li>
+<li>"Ordinary families have no comfort zone to retreat to."</li>
+<li>"Never expect a 100% all-in; believe in 0.618."</li>
+<li>"Don't make promises lightly; speak only after you've done it."</li>
+<li>"A person can never live on imagination."</li>
+<li>"Money is never enough; one or two million isn't enough to move anyone." (AZ's words, in the context of the relationship)</li>
+</ul>
+<h2>The limits of these notes</h2>
+<ul>
+<li>The show is a late-night chat, not an interview: topics jump around, the same views are repeated by multiple people, and the late-night portion drifts further and further from the theme. These notes are reorganized by topic rather than laid out chronologically.</li>
+<li>All market judgments (BTC levels, the gold price, US stocks, Nvidia) are the speakers' improvised views that night, many of them voiced at emotional peaks; the Anthropic IPO, the rumors involving Jensen Huang, the AI-bubble thesis, and so on were given no verifiable sources in the show.</li>
+<li>AZ's relationship history, transfer amounts, and gold quantities are all his own account and cannot be verified; the show's claims about the "Cloud account business" and the Indonesian immigration authorities are likewise unverified, and these notes merely relay them.</li>
+<li>The transcript was automatically recognized by whisper-small: personal names (Qiege / Jiege / Qige are the same person), "环境" (should be 黄金, gold), "LNT" / "Rostovic" (should be Anthropic's listing), "坑波周期" (should be the Kondratieff cycle), "iPad 课" (should be APEC), and similar items have been merged according to context; for the original wording, transcript.txt is authoritative.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1ZBQNjAeVANYzE">https://x.com/i/spaces/1ZBQNjAeVANYzE</a>（Lacey）· 嘉宾：切哥, 西西老师, 杰森哥, AZ · 发布日期：2026-11-20 · 时长：6 小时 35 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1ZBQNjAeVANYzE">https://x.com/i/spaces/1ZBQNjAeVANYzE</a>（Lacey）· 嘉賓：切哥, 西西老師, 傑森哥, AZ · 發布日期：2026-11-20 · 時長：6 小時 35 分<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1ZBQNjAeVANYzE">https://x.com/i/spaces/1ZBQNjAeVANYzE</a> (Lacey) · Guests: Qiege, Teacher Xixi, Jason, AZ · Published: 2026-11-20 · Duration: 6 hours 35 minutes<br>This page is the full text of notes compiled and edited by hand from a machine transcript; the views and figures expressed in the session are the speakers' own and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1ZBQNjAeVANYzE">https://x.com/i/spaces/1ZBQNjAeVANYzE</a>（Lacey）· 嘉宾：切哥, 西西老师, 杰森哥, AZ · 发布日期：2026-11-20 · 时长：6 小时 35 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"贤者时间第28期：普通家庭出身的年轻人，如何实现第一次阶级跃迁？ · Yat's Talks",tw:"賢者時間第28期：普通家庭出身的年輕人，如何實現第一次階級躍遷？ · Yat's Talks",en:"Sage Time, Episode 28: How Can a Young Person from an Ordinary Family Make Their First Leap Up the Class Ladder? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

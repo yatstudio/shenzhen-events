@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>「币安被黑事件讨论」Space 纪要（完整版）</h1>
 <p><strong>基本信息：</strong>Space 标题「币安被黑事件讨论」，主持 @ChandlerGuo（宝二爷），共同主持 @qg7777，2026-10-29 晚直播，2026-10-30 已结束并下载到录音。转写稿共 7876 行，带 [HH:MM:SS-HH:MM:SS] 时间戳，录音全长约 6 小时 21 分钟，实际有声内容约到 06:03，06:03 后无有效语音段。本纪要依据 faster-whisper small 模型转写稿整理，转写无说话人区分，存在同音错字，下文凡不能明确对应发言人的，一律写“发言人（转写未区分说话人）”。</p>
 <p><strong>结论先行：</strong>这场 Space 与其说是一次事件复盘，不如说是一次“币圈安全公开课 + 行情心理按摩”。开场先由主持方汇总网上帖子，把事发头几个小时的冻结、暂停、抛售信息拼在一起；随后以被称为“张哥/张老师”的发言人为核心，用约 40 分钟讲个人与机构安全；中间穿插大漂亮、K 线教主、Adam、林可等人的行情与赔付判断；后半段大量听众提问，话题逐渐发散到助记词保存、去中心化、BNB、美股与 AI。场内最一致的三个结论是：第一，币安体量够大、赔得起，不必恐慌性挤兑，更不要因此断言“第二个 FTX”；第二，没有任何一种保管方式是 100% 安全的，所有交易所都会丢币，区别只在于丢多少、利润盖不盖得住、冻结追回能拿回多少；第三，对普通人最现实的方案不是学黑客技术，而是分开放、用对姿势、少操作、别信假客服。</p>
@@ -160,8 +167,301 @@
 <hr />
 <p><em>来源：Space 链接 https://x.com/i/spaces/1mdjgoregOjLvy?s=20（主持 @ChandlerGuo、共同主持 @qg7777，标题「币安被黑事件讨论」）；录音与转写稿存 goal 工作区 hidden_files（录音 6:21:09、转写 7876 行）。</em></p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>「幣安被黑事件討論」Space 紀要（完整版）</h1>
+<p><strong>基本資訊：</strong>Space 標題「幣安被黑事件討論」，主持 @ChandlerGuo（寶二爺），共同主持 @qg7777，2026-10-29 晚直播，2026-10-30 已結束並下載到錄音。轉寫稿共 7876 行，帶 [HH:MM:SS-HH:MM:SS] 時間戳，錄音全長約 6 小時 21 分鐘，實際有聲內容約到 06:03，06:03 後無有效語音段。本紀要依據 faster-whisper small 模型轉寫稿整理，轉寫無說話人區分，存在同音錯字，下文凡不能明確對應發言人的，一律寫“發言人（轉寫未區分說話人）”。</p>
+<p><strong>結論先行：</strong>這場 Space 與其說是一次事件復盤，不如說是一次“幣圈安全公開課 + 行情心理按摩”。開場先由主持方彙總網上帖子，把事發頭幾個小時的凍結、暫停、拋售資訊拼在一起；隨後以被稱為“張哥/張老師”的發言人為核心，用約 40 分鐘講個人與機構安全；中間穿插大漂亮、K 線教主、Adam、林可等人的行情與賠付判斷；後半段大量聽眾提問，話題逐漸發散到助記詞儲存、去中心化、BNB、美股與 AI。場內最一致的三個結論是：第一，幣安體量夠大、賠得起，不必恐慌性擠兌，更不要因此斷言“第二個 FTX”；第二，沒有任何一種保管方式是 100% 安全的，所有交易所都會丟幣，區別只在於丟多少、利潤蓋不蓋得住、凍結追回能拿回多少；第三，對普通人最現實的方案不是學駭客技術，而是分開放、用對姿勢、少操作、別信假客服。</p>
+<h2>一、事件時間線與事實（按轉寫稿時段整理，均為發言人轉述/自述）</h2>
+<p><strong>開場彙總（00:00–00:14，主持方彙總網上帖子，自述“具體情況也不是很清楚”，只是把看到的帖子彙總給大家）：</strong></p>
+<ul>
+<li>事發約 3 小時前，幣安被攻擊約 25 億美元；緊接著另一地址轉出約 7.8 億 USDC，累計約 33 億美元。開場第一句就是“接近 60 億美元”，隨後又自我追問“50 億、30 億還是 60 億”，說明開場時數字本身就在滾動變化中。</li>
+<li>CZ 發帖稱約 17.94 億美元被凍結，其中 Tether 約 9.7 億、Circle 約 8 億多；波場鏈上約 3.13 億 USDT 被凍結；Tether CEO 隨後發推稱凍結了約 15.67 億美元，發言人解讀為“這些錢都等於是沒被偷”。</li>
+<li>幣安宣告使用者資金安全、正在調查，同時禁止提幣；隨後一度稱部分正常使用者可以恢復提幣，但“馬上要恢復然後又沒恢復”。</li>
+<li>駭客把偷來的 USDT 抵押進 Aave（轉寫為“RV/阿維”），借走約 1.98 萬枚 ETH。發言人強調這是最麻煩的一步：ETH 一旦提走，即使凍結其在合約上的地址也很難辦；Aave 隨後公告凍結 V3、V4 池子的全部借貸交易，發言人稱這與他此前的預測一致，否則駭客還會繼續在上面“搞錢搞 ETH”。</li>
+<li>幣安 Alpha 交易暫停，稱安全問題解決後恢復；發言人解讀為補上了最後一個漏洞，防止駭客通過 Alpha 再轉賬跑路。幣安錢包業務的充提據稱應該是正常的，不正常的是 Alpha 上的交易。</li>
+<li>幣安公告稱總計凍結約 25.4 億美元，發言人評價“最大交易所還是能力很強、第一時間”。</li>
+<li>DeFiLlama 創始人發帖稱幣安託管資產約 1440 億美元，此次損失約 10 億美元，僅佔託管資產約 0.69%，“風險可控”。</li>
+<li>World Liberty 團隊凍結約 2700 萬 USD1 和約 4800 萬 WLFI；Ripple 團隊迅速凍結約 2 億美元相關資產。發言人藉此感慨“POS 鏈還是有好處的，關鍵時候能動手”，並稱自己一直不太喜歡 POS、更推崇 POW，但這次凍結確實有用；以太坊基金會則不會像這樣凍結地址，否則當年就不會分叉出 ETC，以太坊相對更去中心化。</li>
+<li>關聯地址拋售約 470 萬枚 UNI 換成 ETH；駭客隨後開始拋售 PEPE 等幣，另有約 3951 萬的某幣種相關數字（轉寫不清，此處不強行還原幣種與口徑）。</li>
+<li>其他平臺表態：Crypto.com 的 Chris 稱其平臺沒有受影響，這次只針對幣安；Wintermute 稱在幣安的風險敞口不到淨資產的 20%，運營不會受到干擾；陸續有交易所稱自己在幣安只有約 5% 的敞口。發言人提醒：很多小交易所的流動性其實是在幣安上做對沖的，所以“全行業的交易所都受影響了”，只是只要不停止交易、只停止提幣，很多客戶當時還沒感覺，恐慌是隨後才來的。</li>
+<li>開場發言人還提到一個判斷：幣安美國是安全的，因為完全在監管範圍內，“駭客不敢搶美國公司的錢”，不是因為幣安美國的安全團隊更強，而是“駭客不想得罪美國”。這是發言人的個人解讀，不是事實陳述。</li>
+</ul>
+<p><strong>張哥的核心安全長談（00:15–01:00 段，多次掉線、從 KTV 接入，自述前幾天與北京車庫咖啡、清華北大背景的人聊過 AI 與零日漏洞）：</strong></p>
+<ul>
+<li>他推上來的報告顯示約 57.79 億美元，並強調該值是浮動值，推上來 5 秒鐘後顯示出來的數就可能變了。</li>
+<li>他判斷駭客“不是一個非常懂 DeFi 的專業選手”：如果足夠專業，應該直接通過合約、Swap、Aave 等快速把幣敲到以太坊、波場、Solana 等鏈上、換成難凍結的資產，而不是留在容易被凍結的 USDT/USDC 裡。但“具體怎麼盜的，現在大家還在分析”。</li>
+<li>他給出個人分析：內部人員內外勾結的可能性佔 80%。同時他展開講了零日漏洞的背景：AI 發現了大量零日漏洞，包括 1980 年代程式碼的漏洞、某系統 1990 年某成員寫的漏洞；零日漏洞在暗網可賣到約 500 萬美元一個，國內公安曾買過約 35 萬美元一個，前段時間還談過一個約 200 萬美元的零日；過去是駭客挖到零日去暗網賣，現在是直接自己用開源工具“破甲”。這些都是他轉述的見聞與個人分析，不是本紀要核實的事實。</li>
+<li>他還講了更早的安全史：某三家交易所要倒閉時與駭客合作、植入程式碼並強制使用者更新交易所 App；官網本身被駭客黑下來，導致從官網下載到的 App 都是假錢包；以及“中國人每次攻擊和瀑布都是在凌晨 4 點到 6 點”這類經驗之談（據其自述）。</li>
+</ul>
+<p><strong>行情與賠付判斷段（01:18–01:50）：</strong></p>
+<ul>
+<li>01:18 段，主持人邀請其好朋友 @giantcutie666 大漂亮“做個復盤”，稱兩人全程盯著鏈上。大漂亮稱自己凌晨 1 點多就吃到了瓜，涉案數量從發到現在“越來越多了”；估計這波大概能追回 30 多億美元，剩下可能還有 30 多億美元損失；並稱幣安此前還被美國政府罰過一大筆錢，再加上這次規模，損失確實不小。她還提出一個市場框架：昨天大漲後面“憋著一個利空”，市場處於流動性緊縮、大家都 confused、不知道錢的方向，而這次事件像一個“觸發器/發令槍”，把事情推向目標比較明確的路徑，容易引發連續下跌；但基本面“沒那麼好、也沒那麼差”，AI 推動仍在，因此個人觀點是可以準備買入、團隊也在打電話討論加倉動作，但“不能打保票”，要走一步看市場。</li>
+<li>01:22 段，被稱為 K 線教主的發言人稱，發言時比特幣約 8.1 萬美元、以太坊約 2350 美元（按轉寫還原），該價位已經橫了很長時間；自己此前一直是空頭，沒少被多頭罵；凌晨 2 點看到帶量跌破，先衝進去做跌破單，後來才看到是幣安被盜的訊息；一開始覺得還好，因為幣安多年前被盜過一次且有賠付，自己 2020 年開戶就是因為知道賠付才覺得靠譜，但後來發現金額很大、駭客還在不停轉錢，才意識到不對勁。他聯想到 2022 年 11 月初 FTX 事件也是在 10 月底 11 月初、四季度出現，提醒大家不要著急抄底，尤其不要急著用槓桿做多；如果有人現在做定投（DCA），可以在下跌中金字塔式開始買一些，優先買主流幣，小幣不要急；並稱要觀察接下來 48–72 小時，一般“事件發生後的第一根針不是最低點”，應該還會有二次探底，比特幣結構上“沒有跌到位”、指標還沒有完全修復好。</li>
+<li>01:30 段一位自稱做交易的朋友表示，比較同意 K 線教主的觀點，現在不要急著抄底，讓事件再發酵一會兒；並稱整個加密市場存在時間已經挺長、安全性不用擔心，幣安安全方面做得也很好，大家不用當成“幣圈末日”。</li>
+<li>01:38 段林可被點名，提問這次黑天鵝放在比特幣以往下跌史裡算什麼等級。01:39–01:43 段張哥回答：對比特幣影響不大；牛熊有三浪五階段，最低點約 57000 多已經過了；如果幣安丟 500 億美元就是“黑天鵝事件”，丟 5 億美元可能還是毛毛雨，利潤覆蓋得住；這次因為 USDT、USDC 幫它凍結了大量穩定幣，後期跨鏈橋、混幣器等環節還可能繼續凍結，未來除已凍結外還可能追回約 30% 左右，所以“賠得起，大家也不用太擔心”；比特幣漲跌本身更多是因為美國加息，12 月還有一次加息，加 25、50 還是 75 個基點是關鍵，此外還有聖誕節、春節、世界盃/歐洲盃等季節性波動規律。他還自述兩週內連發 4 帖明確寫出比特幣會跌破 8 萬、跌破 78600，24 小時後比特幣跌破了 78600，回帖罵他的人不知在說什麼。</li>
+<li>01:49 段被稱為 AHR996 的發言人提問：像自己這樣的小散，最懶的策略是不是直接買 IBIT（比特幣現貨 ETF），因為“天塌下來有個高的頂著”；張哥回應“對對對”，並講了“天塌下來有個高的頂著”的邏輯：有人持有 1 萬、10 萬枚比特幣，出現量子危機、減半危機時，那幫人會想辦法，小散反而相對安全。</li>
+</ul>
+<p><strong>事件定性與後續處置段（02:09–02:35、03:12–03:14、03:53–03:57）：</strong></p>
+<ul>
+<li>02:11 段一位十年老使用者堅決反對用手機做冷錢包：手機沒有安全晶片，不能保證強隨機數；他 10 年前就一直用 Trezor（轉寫為“Trizler”）第一代冷錢包存到現在沒動過；唯一安全的儲存方式是冷錢包離線轉幣，再加上分片（Shamir 式）儲存；新版本錢包可把私鑰分成三份，分別放在國內三個地址或三個國家。並稱千萬不要用自制的冷錢包。</li>
+<li>02:14 段被稱為 Adam 的發言人做了全場最系統的一次“穩住”發言：首先大家先穩住，這件事一定不會導致進入深熊；每輪牛市末端好像都要出現一次大的系統性風險，上次是 FTX，這次是幣安；目前看到的最大敞口約 50 億美元，其中 20 多億已凍結，比特幣部分還不能確定到底是不是被盜；淨估計值約在 10–20 億美元，對幣安來說“毫無風險、一定能夠賠付”；因為此前也做過交易所，一般流程是先把所有提幣與授權機制全部關掉，在找到根本原因前不會開啟，之後再逐步用雙重授權等方式恢復；因此只要私鑰本身沒出問題、且是中心化交易所繫統授權問題，就一定能控住；他相信 CZ 及幣安有能力賠付客戶，不會出現 FTX 式倒臺與連鎖踩踏；這波大跌可能是牛市解釋中的“最後一波”事件；提醒大家保持冷靜，不要把好不容易拿住的幣拋掉，不要相信任何主動找你的“客服”聲稱能幫你開通提幣許可權；冷錢包一定是儲存大量數字貨幣的最好方式，前提是官方購買、韌體最新；有交易需求的人可以逐步考慮把一部分交易型資產放到自託管錢包與 DeFi 裡，用 DEX 滿足交易需求；最後稱“冷靜者能夠吃到最後一波風險帶來的不對稱收益機會”，但同時也承認接下來一段時間會有恐慌拋盤與惡意做空存在。</li>
+<li>02:19、02:31、02:48 段陸續出現“已確認是 Lazarus”的說法：02:19 段主持方稱“這個結果出來了還是拉撒路頭的”“不出所料，又是金三胖團隊的所作所為”；02:31 段發言人稱“現在那個 ZachXBT 已經爆出來了是拉撒路這一部分”；02:48 段被問“已經確認是朝鮮駭客了嗎”，回答是“這個資訊已確認了，已確認是 Lazarus，而且確認的是一臺工程師的筆記型電腦被攻破了，官方已經發訊息了”。但本紀要必須強調：這些都是場內發言人的轉述，轉寫稿本身無法驗證官方公告原文，不能直接當作官方定論。</li>
+<li>02:20 段發言人回顧幣安歷史：2019 年熱錢包被盜 7000 枚比特幣；2022 年 BNB 鏈跨鏈橋被駭客增發大量 BNB（轉寫數字不清，不引具體數）；2018 年駭客盜取使用者 API、把使用者幣全部賣掉買 VIA 幣。結論是：幣安雖然號稱全球第一大所，但之前出現的安全問題其實也不少，經歷過一輪牛熊就沒什麼好怕的，反而希望出現黑天鵝好把之前賣掉的幣買回來（個人心態表述）。</li>
+<li>02:31 段發言人回答“提幣最晚多久恢復”時稱：官方跟他說，現在主要是檢查安全問題，不是卡提幣；“這點錢在幣安說實話真就是灑灑水”；他個人判斷“今天應該就能解決”；並稱已凍結的資金都是有統計的，不算問題。02:47–02:48 段關於 EIP-7702 的問答明確澄清：不是因為 7702 被盜，7702 只是批次轉幣的一個協議，是駭客轉移的快捷手段。</li>
+<li>03:12–03:14 段發言人稱：官方發言是一臺電腦被攻破，是不是內鬼不知道，但肯定是被攻破了；這臺電腦可能變成“歷史上最值錢的一臺電腦”，並提到“63 個億的問題”（轉寫如此，口徑不明，不作換算）；使用者資產沒問題，現在封鎖不讓提幣是因為安全檢查，“開放提幣也沒有基本上沒人提”（據發言人說法）。</li>
+<li>03:53 段發言人總結幣安措施：第一，先確認沒有更擴大的安全問題，即個人持有的幣安錢包有沒有被攻破的情況；現在已確認是因為某工程師電腦被攻破；在安全檢查完成前暫時暫停存款和提幣；撤銷受影響地址授權；聯絡執法機構；聯動鏈上情報合作伙伴。發言人轉述稱，鏈上情報方確認的是 Lazarus，“金三胖是不會把錢吐出來的”，損失就損失在幣安身上，“幣安講了，全部責任由幣安來負責”，且凍結效率“在冬季的效率上已經最高了”（轉寫如此，按語義理解為處置效率很高）。</li>
+<li>03:56 段主持方明確劃界：究竟攻破的是什麼，只能按官方公告講，不做猜測；有聽眾猜測是區域網被攻破、那臺電腦有許可權被委託，主持方回應“沒有辦法下結論”“如果讓我做猜測就沒有意義了”，並稱最終幣安會給出完整報告；同時提到 CZ、何一與寶二爺、老張都是關係很好的朋友，因此不做猜測。</li>
+</ul>
+<h2>二、數字對照表（並列，不調和）</h2>
+<table>
+<thead>
+<tr>
+<th>時段</th>
+<th>說法來源（按轉寫對應）</th>
+<th>數字與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00–00:14</td>
+<td>開場彙總網上帖子</td>
+<td>接近 60 億美元；先被攻擊約 25 億 + 另一地址約 7.8 億 USDC = 累計約 33 億；CZ 帖約 17.94 億被凍結（Tether 約 9.7 億 + Circle 約 8 億多）；波場鏈約 3.13 億 USDT 被凍結；Tether CEO 稱凍結約 15.67 億；幣安公告總計凍結約 25.4 億；DeFiLlama 創始人稱託管約 1440 億、損失約 10 億、佔比約 0.69%；World Liberty 凍結約 2700 萬 USD1 + 約 4800 萬 WLFI；Ripple 凍結約 2 億相關資產；Aave 借出約 1.98 萬枚 ETH</td>
+</tr>
+<tr>
+<td>00:15</td>
+<td>張哥推上來的報告</td>
+<td>約 57.79 億美元，浮動值</td>
+</tr>
+<tr>
+<td>01:19</td>
+<td>大漂亮</td>
+<td>可追回約 30 多億，剩餘損失約 30 多億</td>
+</tr>
+<tr>
+<td>02:14</td>
+<td>Adam 段發言人</td>
+<td>最大敞口約 50 億，其中 20 多億已凍結，淨估計約 10–20 億</td>
+</tr>
+<tr>
+<td>01:43</td>
+<td>張哥</td>
+<td>除已凍結外，未來還可能追回約 30% 左右</td>
+</tr>
+<tr>
+<td>03:09</td>
+<td>發言人（轉寫未區分）</td>
+<td>真正丟了的可能約 30 億美元，幣安實力能夠承受</td>
+</tr>
+<tr>
+<td>03:53</td>
+<td>發言人轉述幣安立場</td>
+<td>全部責任由幣安承擔（據發言人轉述）</td>
+</tr>
+</tbody>
+</table>
+<p>對照說明：開場“60 億”與張哥“57.79 億”更接近“涉案/波及總額”口徑；“25.4 億”“24 億左右”“20 多億已凍結”更接近“已凍結額”口徑；“10–20 億”“30 億左右淨丟”更接近“淨損失估計”口徑；三者不能直接相減或平均。所有數字都發生在直播當天上午的資訊滾動中，後續以幣安官方公告與鏈上統計為準。</p>
+<h2>三、各發言人的主要判斷（嚴格按可對應程度分級）</h2>
+<p><strong>能明確對應到被點名者的：</strong></p>
+<ul>
+<li><strong>張哥/張老師：</strong>全場安全主講，約 40 分鐘科普。核心判斷有四條：其一，沒有任何東西是絕對安全的，所有交易所都會丟幣，判斷交易所能不能活的簡單演算法是“丟幣量能不能被一年或兩年內的利潤蓋住”，公開儲備與利潤的交易所相對可判斷，不公開的不好說；其二，對比特幣價格影響不大，真正影響比特幣的是美國加息與季節性因素，12 月加息幅度（25、50 還是 75 個基點）是關鍵；其三，提幣暫停時間決定反彈怎麼走，暫停越久、韭菜恐慌拋售越多，低點可能出現在當天 9–11 點，第二個低點取決於暫停 24、48 還是 72 小時，之後還有美聯儲降息前、聖誕節、春節幾個時間點，春節前後或春節後可能進入慢牛（均為其個人預測）；其四，暴跌不怕、怕陰跌，暴跌搶反彈可以，但熊市開始的第一波第二波不要做，且自己從沒玩過合約槓桿。</li>
+<li><strong>@giantcutie666 大漂亮：</strong>見上文 01:19 段。補充一點：她稱自己與團隊凌晨 1 點多就開始吃瓜，說明她的資訊源是全程盯盤，不是事後複述；她對“市場主流說昨天大漲後面憋著利空”表示認同，並專門做了影片講流動性緊縮的必然性。</li>
+<li><strong>K 線教主（01:22 段）：</strong>見上文。補充：他自述此前一直看空、被多頭罵，但堅持認為需要一次大級別回撥才能更確定地做多；他做的是跌破單，不是抄底單。</li>
+<li><strong>Adam（02:14 段）：</strong>見上文。補充：他自述之前也做過交易所，因此對“先關提幣與授權、找到根本原因、再逐步用雙重授權恢復”的流程判斷，是基於從業經驗，不是純猜測。</li>
+<li><strong>林可：</strong>01:38 段提問黑天鵝等級；03:22 段自述玩價值幣時間比較久、平時很少看新聞、主要以 K 線做交易，認為大餅回撥給到了 120 日均線支撐，已打第一倉做多狗狗幣，還要看二次恐慌拋壓，總體不用恐慌。05:28、05:35 段林可再次出現，話題已轉向美股學習與狗狗幣倉位管理，不再屬於被盜事件本身。</li>
+<li><strong>AHR996（01:49 段被點名）：</strong>提問小散最懶的策略是不是直接買 IBIT；張哥肯定了這個思路。</li>
+<li><strong>BNB 持有者口吻的發言人（03:49 段）：</strong>自述“我們也都是 BNB 大戶，隨隨便便都是幾百個”，認為 BNB 財庫化後上漲空間還很大、至少能翻倍；同時抱怨“出這種事你說我們高興嗎”。這是持倉者的個人判斷與情緒，不是中立分析。</li>
+</ul>
+<p><strong>只能寫“發言人（轉寫未區分說話人）”的代表性觀點：</strong></p>
+<ul>
+<li>02:46–02:47 段：第一個低點在 9–11 點，第二個低點看提幣暫停時長，之後還有美聯儲、聖誕、春節三個時間點；並稱自己已在低點買了 2000 手（轉寫如此，標的不清）。</li>
+<li>03:06 段：牛市結束約 300–400 天、400 天是牛市開始（歷史相似、不是相同），近期低點在當天 9–11 點，若幣安拖 48 小時會出現第二個低點；慢牛可能在春節後啟動，但新敘事才是賺錢機會，陽光普照式上漲仍以比特幣、以太坊等主流為主。</li>
+<li>03:20 段：機構永遠在等籌碼，個人拿不住就會在這個事件中產生損失；機構對比特幣安全非常重視，因為大機構拿了海量大餅，希望從中得到更多信仰；堅定的信仰者會認為這次事件是“非常好的事件”。</li>
+<li>03:41 段：主流藍籌幣（比特幣、以太坊、Solana、BNB）全部暴跌一波，唯獨 Hyperliquid 逆勢上漲約 17%，提問是否僅僅因為它是幣安競爭對手；主持方打斷稱“你不看新聞嗎”，指出馬斯克前晚轉推才是原因（據主持方說法），並批評提問者不關注新聞。</li>
+<li>03:52 段：初步調查是因為某工程師電腦是一個漏洞，才發生現在的事情；往往不是合約本身不安全，而是個人行為導致的安全事件。</li>
+</ul>
+<h2>四、給普通聽眾的實操建議（按稿中原意歸納，並註明分歧）</h2>
+<p><strong>1. 分層存放，按資金量選方案。</strong>場內共識句是“冷錢包放一些、軟錢包放一些、交易所放一些”，不要存在一個錢包裡。02:57 段說得最直白：資產足夠大，肯定用冷錢包，且要有正確的購買資質與正確的儲存資質；資產只有 5000 美元、2 萬美元，就不要去買 500–1000 美元的冷錢包，不成立；1 萬美元以下的大眾資產，也建議用冷錢包，但可以用更便宜的款式。01:35 段補充：小散還是分散放在大型中心化交易所相對好一點，因為個人專業知識遠遠不夠，而“想偷你幣的人太多太多了”——錢包公司開發員工、交易所員工、交易所管安全的員工、外面的駭客、非專業駭客的社會工程（假交易所、假 WhatsApp、假錢包、過度授權、釣魚網頁）都在偷。</p>
+<p><strong>2. 買冷錢包：官方渠道、最新款、防拆包裝。</strong>02:17、02:57–02:59 段：官方購買，不要破包裝；買最新版彩色屏或最新晶片款，避免老晶片生成的弱隨機數或漏洞；發言人稱 OneKey 約 50 多美元不帶電池的那款可以考慮，插上去用；並稱中國人做的冷錢包在包裝與硬體防拆上比老外好，OneKey 沒有出現 Ledger 那種情況（據發言人說法）。02:11 段十年老使用者則強調必須用全開源的冷錢包、離線轉幣。03:29 段還有發言人提到可用 AI 自己做 Safe 合約錢包冷簽名器，或用 Gnosis Safe 這類多籤合約錢包，高階玩家可考慮，但這屬於進階方案，不適合小白直接照搬。</p>
+<p><strong>3. 助記詞/私鑰：不要改、不要靠腦子記，要分片加密分開存。</strong>這是全場重複最多的一條。01:00–01:03 段張哥明確反對聽眾提出的“把第 5 個助記詞換掉、記在另外一個地方”的做法：12 個詞中前 11 個是資料、第 12 個是校驗位，少 1 個 1 分鐘就能被算出來，少 4 個當年要跑兩三天、現在算力快 100 倍；而且人類有錯誤記憶，連國內排名第一、第二的安全公司老闆自己改詞都搞錯過，最後靠同事做算力模型才把錢跑出來。02:22–02:27 段大漂亮與主持方也一致反對：改詞第一會忘，第二有科學方法可以算出來；正確做法是分成兩片或三片儲存，每片再加一層或兩層加密；02:27 段一位老使用者補充最安全的做法：用 Trezor 分片形式，分成 5 份，其中任意 2–3 個私鑰/分片即可管理錢包，他自己做的是 3 份、2 個錢包即可管理，3 份放三個地方，丟 1 份別人也打不開，帶出國也可分批帶。02:24 段還有聽眾問“助記詞和私鑰哪個更不好破解”，得到的回答是“肯定是私鑰不容易破、助記詞容易破”（場內說法，僅作記錄）。</p>
+<p><strong>4. 手機當冷錢包：場內未達成一致。</strong>02:11 段反對派理由：手機沒有安全晶片，不能保證強隨機數，之前還有某弱隨機事件。03:00 段支援派理由：拿一個不用的手機當冷錢包，只要不聯網就行，斷網建立錢包、保持離線就是冷錢包；不信任的話可以自己擲骰子 256 次生成強隨機數。兩者都沒被場內裁決，本紀要如實並列，不替聽眾選邊。</p>
+<p><strong>5. 轉賬與通訊：核對地址、影片確認、警惕假應用。</strong>01:37 段：轉賬與建錢包都有標準流程；對方地址要貼上、圖片核對、生物識別、語音讀後幾位；金額超過發言人提到的 5 萬或 10 萬美元，轉賬前雙方必須視訊通話確認是本人，掛電話後再發三要素確認再轉。因為現在駭客會用假錢包、假 Telegram、假 WhatsApp 直接模擬對方、替換地址與圖片，你在微信、WhatsApp、Telegram 上收到的收幣地址可能已經被換成駭客的。00:29–00:30 段還提到：官網本身都可能被黑，導致從官網下載到的 App 都是假錢包；因此“從官網下載”不是一勞永逸的，還要核對渠道與版本。03:34 段補充：手機系統要升級到最新，蘋果最近堵了很多安全漏洞；不要截圖備份助記詞（03:34 段提及老張此前講過截圖備份的風險）。</p>
+<p><strong>6. 交易所選擇：看排名、看儲備、看利潤蓋不蓋得住。</strong>03:24 段發言人建議：選 CEX 先看排名與名氣，再定期檢視儲備金，避免黑天鵝爆發時平臺沒有足夠資金賠付；並提醒踩踏事件的本質是大家以為自己的錢丟了、著急提幣導致的，FTX 就是踩踏的例子。01:35–01:36 段張哥的演算法是：中心化交易所年利潤約等於其託管總資金量的 10% 左右，丟幣量如果能被一年或兩年內利潤蓋住，就百分之百能活下來；沒有公開資料的就不好說。</p>
+<p><strong>7. 只信官方公告，不信主動找你的“客服”。</strong>02:14 段 Adam 明確提醒：提幣暫停期間，千萬不要相信任何找到你的客服聲稱能幫你開啟提幣許可權。03:24 段主持方也打斷科普式發言，強調“這次是幣安被盜，安全知識張哥分享得非常詳細”，不要把公共時間用來講與事件無關的基礎科普。</p>
+<p><strong>8. 交易心態：不恐慌、不急著加槓桿、分批看。</strong>多位發言人一致：不要因為恐慌把拿住的幣拋掉；不要急著抄底，尤其不要急著用槓桿做多；觀察 48–72 小時發酵情況；如果做定投，可在下跌中金字塔式分批買主流幣；暴跌搶反彈可以，但熊市開始的第一波第二波不要做；01:49 段張哥自述自己從沒玩過合約。03:08 段有聽眾問“把 Solana 解押後存進 Aave 借穩定幣、加 10% 槓桿是否合適”，主持方明確表示不想在公共時間回答個人倉位問題，只聊點位、抄底與未來走勢、過往經驗即可，本紀要也只記錄該邊界，不復述其倉位建議。</p>
+<h2>五、場內分歧與未定論（不要讀成定論）</h2>
+<ul>
+<li><strong>內外勾結 vs 外部攻破 vs 單臺電腦被攻破：</strong>張哥個人判斷內外勾結可能性 80%；官方口徑（據發言人轉述）是一臺工程師電腦被攻破；另有發言人猜測是區域網被攻破、該電腦有許可權被委託；主持方明確表示只能按官方公告講、最終以幣安完整報告為準。三者並未在場內統一。</li>
+<li><strong>Lazarus 歸因：</strong>場內多次稱“已確認是 Lazarus”，並點名 ZachXBT 已爆料，但轉寫稿本身無法驗證該爆料原文與官方公告原文，本紀要只記錄“場內發言人如此轉述”，不把它升級為已核實事實。</li>
+<li><strong>損失總額：</strong>60 億、57.79 億、50 億敞口、30 億淨丟、10–20 億淨估計並存，口徑與時點不同，場內沒有統一口徑。</li>
+<li><strong>去中心化：</strong>01:52 段學生提問“穩定幣發行商能凍結資產，加密貨幣一直強調的去中心化與資產自主權怎麼理解”，得到的回答是“相信去中心化的都是傻叉，去中心化是個偽命題、不存在的”（發言人原話，語氣激烈）；03:02–03:03 段另一輪討論則把結論收斂為：去中心化不存在是因為比特幣原始碼也有人掌管、伺服器要有人租，但區塊鏈的價值在於用數學演算法保證私有財產神聖不可侵犯、保證兩個人交易不需要第三方。兩者角度不同，但都指向“不要把去中心化理解成沒有任何人能管”。</li>
+<li><strong>手機冷錢包：</strong>見上文第四條，場內未裁決。</li>
+<li><strong>BNB 後市：</strong>03:49 段持有者判斷至少翻倍；03:06、03:20 段則更關注提幣暫停時長與機構籌碼，不直接給 BNB 點位。兩者都是個人判斷。</li>
+</ul>
+<h2>六、後半段話題漂移說明（避免誤讀為事件結論）</h2>
+<p>04:00 後，Space 話題已明顯發散：04:00–04:25 段聊到 AI 資金是否流向比特幣、被動式 ETF 是否更安全、以太坊機器與 BNB 量；04:45–04:56 段聊到抄底 BNB、平衡波動；05:26–06:03 段基本已是閒聊，包括某 AI 醫療資料公司股價（發言人稱從 30 多漲到 77，個人看好年底衝破 100–120）、儲存股（海力士、三星、美光）從 2024 年 500 左右起飛到 1000 多、儲存一定會跌的“九勝必衰”邏輯、特斯拉拆分為車 + 自動駕駛 + 電池 + 訂閱制機器人、SpaceX 股價從 70–80 回落到 140 多等。這些內容與幣安被盜事件無直接關係，本紀要不把它們當作事件結論，只在此說明：後半段不是事件復盤的延續，而是 Space 進入閒聊階段。05:30 段發言人自己也說“大家不要恐慌就是”，並稱 10 點鐘已佈局第一倉小市值幣、仍在觀望是否跌破 75000 一帶；05:35 段林可稱 10 點鐘做了狗狗幣、倉位管理是“跌一點抄一點、不敢滿倉抄”。06:03 後錄音無有效語音段，僅剩字幕製作人一行，Space 在此收尾。</p>
+<h2>七、轉寫侷限（必須說明）</h2>
+<p>本紀要依據 faster-whisper small 模型轉寫稿，轉寫無說話人區分，除主持人點名邀請的幾位（大漂亮、林可、K 線教主、Adam、AHR996、張哥/張老師）外，多數發言無法可靠對應到具體賬號，因此凡不能明確對應的一律寫“發言人（轉寫未區分說話人）”，沒有憑猜測把話安到某個人頭上。轉寫存在大量同音錯字，已按語義還原，如“必安/避安/彼岸/畢業”=幣安、“UIDT/UIDC”=USDT/USDC、“RV/阿維”=Aave、“波長”=波場、“拉撒路”=Lazarus、“Trizler”=Trezor、“陳續元的電腦”疑為某工程師電腦的音誤、“金三胖團隊”=發言人對 Lazarus 的口語化指稱等；個別數字（如 2022 年 BNB 鏈橋增發數、約 3951 萬的 PEPE 相關數、03:13 段“63 個億的問題”）轉寫不清，已略去或註明不清，未強行還原。錄音全長約 6 小時 21 分鐘，但實際有聲內容約到 06:03，06:03 後僅剩“字幕製作人 Zither Harp”一行，無有效語音段；04:00 後話題已明顯發散，本紀要已將閒聊段與事件段分開。所有金額、凍結數、損失估計均為場內發言人轉述/自述，不代表本紀要核實的官方資料，後續應以幣安官方公告與鏈上統計為準。</p>
+<hr />
+<p><em>來源：Space 連結 https://x.com/i/spaces/1mdjgoregOjLvy?s=20（主持 @ChandlerGuo、共同主持 @qg7777，標題「幣安被黑事件討論」）；錄音與轉寫稿存 goal 工作區 hidden_files（錄音 6:21:09、轉寫 7876 行）。</em></p>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes on the "Binance Hack Discussion" Space (Full Version)</h1>
+<p><strong>Basic information:</strong> Space titled "Binance Hack Discussion", hosted by @ChandlerGuo (Bao Erye), co-hosted by @qg7777, livestreamed on the evening of 2026-10-29, ended on 2026-10-30, with the recording downloaded. The transcript runs to 7,876 lines, with [HH:MM:SS-HH:MM:SS] timestamps; the recording is about 6 hours 21 minutes long in total, with actual audible content up to about 06:03 and no valid speech segments after 06:03. These notes were compiled from a transcript produced by the faster-whisper small model. The transcript does not distinguish speakers and contains homophone errors; wherever a statement below cannot be clearly attributed to a specific speaker, it is written as "speaker (the transcript does not distinguish speakers)".</p>
+<p><strong>Conclusions first:</strong> Rather than a review of the incident, this Space was more of a "crypto security open class + market psychology massage". It opened with the hosts summarising online posts, piecing together the freezes, suspensions and sell-offs from the first few hours after the incident; it then centred on a speaker referred to as "Brother Zhang / Teacher Zhang", who spent about 40 minutes on personal and institutional security; interspersed were market and compensation judgements from Da Piaoliang, the K-Line Guru, Adam, Lin Ke and others; and in the second half, a large number of audience questions gradually took the topics off in other directions, to mnemonic phrase storage, decentralisation, BNB, US stocks and AI. The three most consistent conclusions in the room were: first, Binance is large enough and can afford to pay, so there is no need for a panic run on it, and still less reason to declare it "a second FTX"; second, no custody method is 100% safe — every exchange loses coins, and the only differences are how much is lost, whether profits can cover it, and how much can be recovered through freezes; third, the most realistic approach for ordinary people is not to learn hacking techniques, but to spread funds across places, use the right practices, operate as little as possible, and not trust fake customer service.</p>
+<h2>I. Incident Timeline and Facts (organised by transcript segment; all relayed or stated by the speakers themselves)</h2>
+<p><strong>Opening summary (00:00–00:14; the hosts summarised online posts, saying themselves that they were "not very clear on the specifics either" and were simply pulling together the posts they had seen for everyone):</strong></p>
+<ul>
+<li>About 3 hours earlier, Binance had been attacked for about US$2.5 billion; immediately afterwards, another address transferred out about 780 million USDC, for a cumulative total of about US$3.3 billion. The very first line of the opening was "close to US$6 billion", followed by the speaker questioning himself — "5 billion, 3 billion or 6 billion?" — showing that the figures themselves were still rolling and changing at the start.</li>
+<li>CZ posted that about US$1.794 billion had been frozen, of which Tether accounted for about 970 million and Circle for more than 800 million; about 313 million USDT on the Tron chain had been frozen; the Tether CEO then tweeted that about US$1.567 billion had been frozen, which the speaker interpreted as "this money is effectively not stolen".</li>
+<li>Binance stated that user funds were safe and that it was investigating, while prohibiting withdrawals; it then said for a time that some normal users could resume withdrawals, but "it was about to resume and then did not resume".</li>
+<li>The hacker pledged the stolen USDT into Aave (transcribed as "RV/Awei"), borrowing about 19,800 ETH. The speaker stressed that this was the most troublesome step: once the ETH is withdrawn, it is very hard to do anything even if the hacker's contract address is frozen; Aave subsequently announced a freeze on all lending transactions in its V3 and V4 pools, which the speaker said matched his earlier prediction — otherwise the hacker would have kept "making money and getting ETH" there.</li>
+<li>Trading on Binance Alpha was suspended, to resume once the security issue was resolved; the speaker interpreted this as plugging the last loophole and preventing the hacker from transferring funds away via Alpha. Deposits and withdrawals for the Binance Wallet business were said to be normal; what was abnormal was trading on Alpha.</li>
+<li>Binance announced that a total of about US$2.54 billion had been frozen, and the speaker commented that "the biggest exchange really is very capable, and was first on the scene".</li>
+<li>The founder of DeFiLlama posted that Binance's custodied assets were about US$144 billion, that this loss was about US$1 billion, only about 0.69% of custodied assets, and that "the risk is manageable".</li>
+<li>The World Liberty team froze about 27 million USD1 and about 48 million WLFI; the Ripple team quickly froze about US$200 million in related assets. The speaker remarked on this that "POS chains do have their advantages — they can act at critical moments", and said he had never much liked POS and had always favoured POW, but that this freeze really was useful; the Ethereum Foundation, by contrast, would not freeze addresses in this way — otherwise there would have been no fork into ETC back then — and Ethereum is relatively more decentralised.</li>
+<li>A related address sold about 4.7 million UNI for ETH; the hacker then began selling coins such as PEPE, and there was also a figure of about 39.51 million relating to some coin (the transcript is unclear, so the coin and the basis of the figure are not forcibly reconstructed here).</li>
+<li>Statements from other platforms: Chris of Crypto.com said his platform was unaffected and that this targeted Binance only; Wintermute said its exposure to Binance was less than 20% of its net assets and its operations would not be disrupted; a succession of exchanges said they had only about 5% exposure on Binance. The speaker cautioned that many small exchanges actually hedge their liquidity on Binance, so "exchanges across the whole industry are affected" — it is just that as long as trading is not stopped and only withdrawals are stopped, many customers had not yet felt it at the time, and the panic came afterwards.</li>
+<li>The opening speaker also offered a judgement: Binance US is safe because it is entirely within the regulatory perimeter — "hackers don't dare rob a US company's money" — not because the Binance US security team is stronger, but because "hackers don't want to offend the United States". This is the speaker's personal interpretation, not a statement of fact.</li>
+</ul>
+<p><strong>Brother Zhang's core long talk on security (the 00:15–01:00 segment; he dropped out several times and joined from a KTV, and said that a few days earlier he had talked about AI and zero-day vulnerabilities with people from Beijing Garage Coffee and with Tsinghua and Peking University backgrounds):</strong></p>
+<ul>
+<li>The report he pulled up showed about US$5.779 billion, and he stressed that this was a floating figure — the number shown five seconds after pulling it up could already have changed.</li>
+<li>He judged that the hacker "is not a very DeFi-savvy professional": if professional enough, they should have quickly knocked the coins through contracts, swaps, Aave and the like onto chains such as Ethereum, Tron and Solana and exchanged them into hard-to-freeze assets, rather than leaving them in easily frozen USDT/USDC. But "exactly how it was stolen is still being analysed by everyone".</li>
+<li>He gave his personal analysis: the probability of internal staff colluding with outsiders was 80%. He also expanded on the background of zero-day vulnerabilities: AI has discovered a large number of zero-days, including vulnerabilities in code from the 1980s and a vulnerability written by a member of some system in 1990; a zero-day can sell on the dark web for about US$5 million each, China's public security authorities once bought one for about US$350,000, and a zero-day of about US$2 million had been discussed recently; in the past, hackers who dug up a zero-day would sell it on the dark web, whereas now they simply use open-source tools themselves to "break the armour". All of this is his relayed hearsay and personal analysis, not facts verified by these notes.</li>
+<li>He also recounted earlier security history: when three exchanges were about to collapse, they cooperated with hackers, planted code and forced users to update the exchange app; an official website itself was hacked, so that the apps downloaded from the official site were all fake wallets; and rules of thumb such as "every Chinese attack and waterfall happens between 4 and 6 a.m." (according to his own account).</li>
+</ul>
+<p><strong>Market and compensation judgements segment (01:18–01:50):</strong></p>
+<ul>
+<li>In the 01:18 segment, the host invited his good friend @giantcutie666, Da Piaoliang, to "do a review", saying the two of them had been watching the chain the whole time. Da Piaoliang said she had caught the story at a little after 1 a.m., and that the amounts involved had "grown more and more" from then until now; she estimated that roughly more than US$3 billion of this wave could probably be recovered, with perhaps more than US$3 billion in losses remaining; and she said Binance had previously been fined a large sum by the US government as well, so combined with the scale this time, the loss really was not small. She also offered a market framework: behind yesterday's big rise, "a piece of bad news was being held back"; the market was in a liquidity squeeze, everyone was confused and did not know which way the money would go, and this incident was like a "trigger / starting gun", pushing things onto a path with a clearer target and easily triggering consecutive falls; but the fundamentals were "not that good, and not that bad either", and the AI push was still there, so her personal view was that one could prepare to buy, and her team was also on calls discussing adding to positions — but she "could not guarantee it", and they would take it one step at a time with the market.</li>
+<li>In the 01:22 segment, the speaker referred to as the K-Line Guru said that at the time of speaking, Bitcoin was about US$81,000 and Ethereum about US$2,350 (restored from the transcript), a level at which prices had been moving sideways for a long time; he himself had been bearish all along and had been cursed by the bulls plenty; at 2 a.m. he saw a volume-backed break downwards and rushed in with a breakdown trade, and only afterwards saw the news that Binance had been robbed; at first he thought it was fine, because Binance had been robbed once many years ago and had paid compensation, and he himself had opened an account in 2020 precisely because knowing about that compensation made it feel reliable — but he later found the amount was very large and the hacker was still transferring money non-stop, and realised something was wrong. He was reminded that the FTX incident in early November 2022 also occurred in late October / early November, in the fourth quarter, and he cautioned everyone not to rush to buy the dip, and especially not to rush into leveraged longs; if anyone was now doing dollar-cost averaging (DCA), they could start buying a little in a pyramid fashion into the fall, prioritising major coins and not rushing into small coins; and he said to watch the next 48–72 hours — generally "the first needle after an incident is not the lowest point", there should be a second test of the bottom, and Bitcoin structurally "has not fallen into place" and its indicators have not fully repaired yet.</li>
+<li>In the 01:30 segment, a friend who said he was a trader said he broadly agreed with the K-Line Guru: do not rush to buy the dip now, let the incident ferment a little longer; and he said the crypto market as a whole has existed for quite a long time and there is no need to worry about its security, Binance also does security very well, and no one should treat this as "the end of crypto".</li>
+<li>In the 01:38 segment, Lin Ke was called on and asked what grade this black swan ranks as in Bitcoin's history of falls. In the 01:39–01:43 segment, Brother Zhang answered: it will not affect Bitcoin much; bull and bear markets have three waves and five phases, and the lowest point of about 57,000-plus has already passed; if Binance lost US$50 billion that would be a "black swan event", whereas losing US$500 million might still be a drizzle that profits can cover; this time, because USDT and USDC helped it freeze a large amount of stablecoins, and further freezes may still occur later at stages such as cross-chain bridges and mixers, in future about another 30% or so may be recovered on top of what has already been frozen, so "it can afford to pay, and no one needs to worry too much"; Bitcoin's rises and falls themselves are more because of US interest rate hikes — there is another hike in December, and whether it is 25, 50 or 75 basis points is the key — plus seasonal fluctuation patterns such as Christmas, the Spring Festival, and the World Cup / European Championship. He also said that within two weeks he had posted four times in a row clearly writing that Bitcoin would break below 80,000 and below 78,600, that 24 hours later Bitcoin did break below 78,600, and that he did not know what the people who replied cursing him were talking about.</li>
+<li>In the 01:49 segment, the speaker referred to as AHR996 asked: for a small retail investor like himself, is the laziest strategy simply to buy IBIT (the spot Bitcoin ETF), because "if the sky falls, there are taller people to hold it up"; Brother Zhang responded "yes, yes, yes", and explained the logic of "if the sky falls, there are taller people to hold it up": some people hold 10,000 or 100,000 Bitcoins, and if a quantum crisis or a halving crisis appears, those people will find a way, so small retail investors are relatively safe by comparison.</li>
+</ul>
+<p><strong>Incident characterisation and follow-up handling segment (02:09–02:35, 03:12–03:14, 03:53–03:57):</strong></p>
+<ul>
+<li>In the 02:11 segment, a ten-year veteran user firmly opposed using a mobile phone as a cold wallet: phones have no secure chip and cannot guarantee strong randomness; he himself had used a first-generation Trezor (transcribed as "Trizler") cold wallet for 10 years and had not touched the funds since; the only safe storage method is offline transfers with a cold wallet, plus sharded (Shamir-style) storage; newer wallets can split a private key into three parts, placed at three addresses in China or in three countries. And he said never to use a home-made cold wallet.</li>
+<li>In the 02:14 segment, the speaker referred to as Adam gave the most systematic "steadying" speech of the whole session: first, everyone should steady themselves — this incident definitely will not lead into a deep bear market; at the end of every bull market there seems to be one big systemic risk — last time it was FTX, this time it is Binance; the largest exposure seen so far is about US$5 billion, of which more than US$2 billion has already been frozen, and it is still uncertain whether the Bitcoin portion was actually stolen; the net estimate is about US$1–2 billion, which for Binance is "no risk at all — it will definitely be able to pay"; because he had also run an exchange before, the general process is to first shut down all withdrawal and authorisation mechanisms, and not to reopen them until the root cause is found, and then gradually restore them using methods such as dual authorisation; so as long as the private keys themselves have no problem and it is an authorisation problem in the centralised exchange system, it can definitely be brought under control; he believed CZ and Binance are capable of compensating customers and that there will be no FTX-style collapse and chain-reaction stampede; this big fall may be the "last wave" event in the explanation of the bull market; he reminded everyone to stay calm, not to throw away coins they had managed to hold onto, and not to believe any "customer service" who proactively contacts you claiming they can open withdrawal permissions for you; a cold wallet is definitely the best way to store large amounts of digital currency, provided it is bought officially and the firmware is up to date; people with trading needs can gradually consider moving part of their trading assets into self-custody wallets and DeFi, using DEXs to meet their trading needs; and finally he said "those who stay calm can capture the asymmetric return opportunities brought by the last wave of risk", while also acknowledging that there will be panic selling and malicious shorting for a period ahead.</li>
+<li>In the 02:19, 02:31 and 02:48 segments, claims that "it has been confirmed to be Lazarus" appeared in succession: in the 02:19 segment, the hosts said "the result is out and it is still the Lazarus outfit" and "as expected, it was the Kim Jong-un team's doing again"; in the 02:31 segment, a speaker said "ZachXBT has now revealed that this part is Lazarus"; in the 02:48 segment, asked "has it been confirmed to be North Korean hackers?", the answer was "this information has been confirmed — it has been confirmed to be Lazarus, and it is confirmed that an engineer's laptop was breached, and the official side has already issued a message". But these notes must stress: all of these are relays by speakers in the room; the transcript itself cannot verify the text of any official announcement, and they cannot be taken directly as an official conclusion.</li>
+<li>In the 02:20 segment, a speaker reviewed Binance's history: in 2019, its hot wallet was robbed of 7,000 Bitcoins; in 2022, a hacker minted a large amount of BNB via the BNB Chain cross-chain bridge (the transcribed figure is unclear, so no specific number is quoted); in 2018, a hacker stole users' APIs and sold all the users' coins to buy VIA coin. The conclusion was: although Binance calls itself the world's largest exchange, it has actually had quite a few security problems before, and after living through a bull-bear cycle there is nothing to be afraid of — on the contrary, he hoped for a black swan so he could buy back the coins he had sold earlier (a statement of personal mindset).</li>
+<li>In the 02:31 segment, answering "when will withdrawals resume at the latest", a speaker said: the official side told him that at present it is mainly about checking the security issue, not about blocking withdrawals; "this amount of money really is just a sprinkling of water to Binance, to be honest"; his personal judgement was "it should be resolved today"; and he said the frozen funds are all tallied and are not a problem. The Q&amp;A about EIP-7702 in the 02:47–02:48 segment made clear: the theft was not because of 7702 — 7702 is only a protocol for batch-transferring coins, a shortcut the hacker used to move funds.</li>
+<li>In the 03:12–03:14 segment, a speaker said: the official statement is that one computer was breached; whether there was an inside accomplice is unknown, but it was definitely breached; this computer could become "the most valuable computer in history", and he mentioned "a problem of 6.3 billion" (as transcribed; the basis is unclear and no conversion is made); user assets are fine, and withdrawals are currently blocked because of the security check — "even if withdrawals were opened, basically no one would withdraw" (according to the speaker).</li>
+<li>In the 03:53 segment, a speaker summarised Binance's measures: first, confirm there is no wider security problem, i.e. whether the Binance wallets held by individuals have been breached; it has now been confirmed that the cause was a certain engineer's computer being breached; deposits and withdrawals are temporarily suspended until the security check is complete; authorisations for affected addresses are revoked; law enforcement agencies are contacted; and on-chain intelligence partners are coordinated. The speaker relayed that the on-chain intelligence side had confirmed Lazarus, that "Kim Jong-un will not spit the money back out", that the loss falls on Binance, that "Binance has said all responsibility will be borne by Binance", and that the freezing efficiency "is already the highest in winter efficiency" (as transcribed; understood semantically as the handling efficiency being very high).</li>
+<li>In the 03:56 segment, the hosts clearly drew a line: what exactly was breached can only be stated according to the official announcement, with no speculation; a listener guessed that a local area network had been breached and that the computer had delegated permissions, and the hosts responded "there is no way to draw a conclusion" and "if you let me guess, it would be meaningless", and said Binance will ultimately give a complete report; they also mentioned that CZ, He Yi, Bao Erye and Lao Zhang are all very good friends, so they would not speculate.</li>
+</ul>
+<h2>II. Comparison Table of Figures (placed side by side, not reconciled)</h2>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Source of the claim (as corresponding in the transcript)</th>
+<th>Figures and basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00–00:14</td>
+<td>Opening summary of online posts</td>
+<td>Close to US$6 billion; first attacked for about 2.5 billion + about 780 million USDC from another address = a cumulative total of about 3.3 billion; CZ's post: about 1.794 billion frozen (Tether about 970 million + Circle more than 800 million); Tron chain: about 313 million USDT frozen; Tether CEO said about 1.567 billion frozen; Binance announcement: a total of about 2.54 billion frozen; DeFiLlama founder said custody of about 144 billion, a loss of about 1 billion, a share of about 0.69%; World Liberty froze about 27 million USD1 + about 48 million WLFI; Ripple froze about 200 million in related assets; Aave lent out about 19,800 ETH</td>
+</tr>
+<tr>
+<td>00:15</td>
+<td>Report pulled up by Brother Zhang</td>
+<td>About US$5.779 billion, a floating figure</td>
+</tr>
+<tr>
+<td>01:19</td>
+<td>Da Piaoliang</td>
+<td>About more than 3 billion recoverable, with remaining losses of about more than 3 billion</td>
+</tr>
+<tr>
+<td>02:14</td>
+<td>Speaker in the Adam segment</td>
+<td>Largest exposure about 5 billion, of which more than 2 billion already frozen, net estimate about 1–2 billion</td>
+</tr>
+<tr>
+<td>01:43</td>
+<td>Brother Zhang</td>
+<td>On top of what has already been frozen, about another 30% or so may be recovered in future</td>
+</tr>
+<tr>
+<td>03:09</td>
+<td>Speaker (transcript does not distinguish)</td>
+<td>What was truly lost may be about US$3 billion; Binance has the strength to bear it</td>
+</tr>
+<tr>
+<td>03:53</td>
+<td>Speaker relaying Binance's position</td>
+<td>All responsibility to be borne by Binance (according to the speaker's relay)</td>
+</tr>
+</tbody>
+</table>
+<p>Note on the comparison: the opening "6 billion" and Brother Zhang's "5.779 billion" are closer to a "total amount involved / affected" basis; "2.54 billion", "about 2.4 billion" and "more than 2 billion frozen" are closer to an "amount already frozen" basis; "1–2 billion" and "about 3 billion net lost" are closer to a "net loss estimate" basis; the three cannot be directly subtracted from or averaged with each other. All figures occurred amid the rolling information on the morning of the live broadcast day; the Binance official announcement and on-chain statistics shall prevail going forward.</p>
+<h2>III. Main Judgements of Each Speaker (strictly graded by how reliably they can be attributed)</h2>
+<p><strong>Those that can be clearly attributed to a named person:</strong></p>
+<ul>
+<li><strong>Brother Zhang / Teacher Zhang:</strong> The session's main security lecturer, with about 40 minutes of popularisation. He had four core judgements: first, nothing is absolutely safe — every exchange loses coins, and the simple algorithm for judging whether an exchange can survive is "whether the amount of coins lost can be covered by one or two years of profits"; exchanges that publish reserves and profits can be judged relatively well, while those that do not publish are hard to assess; second, the impact on Bitcoin's price is not large — what truly affects Bitcoin is US rate hikes and seasonal factors, and the size of the December hike (25, 50 or 75 basis points) is the key; third, the length of the withdrawal suspension determines how the rebound goes — the longer the suspension, the more panic selling by retail investors, the low may appear between 9 and 11 o'clock that day, a second low depends on whether the suspension lasts 24, 48 or 72 hours, and after that there are further points in time: before a Federal Reserve rate cut, Christmas, and the Spring Festival, with a slow bull market possibly beginning around or after the Spring Festival (all his personal predictions); fourth, do not fear a sharp fall — fear a slow, grinding fall; grabbing a rebound from a sharp fall is fine, but do not trade the first or second wave at the start of a bear market, and he himself has never played with contract leverage.</li>
+<li><strong>@giantcutie666 Da Piaoliang:</strong> See the 01:19 segment above. One addition: she said she and her team started following the story at a little after 1 a.m., showing that her information source was watching the market throughout, not a post-hoc retelling; she expressed agreement with "the mainstream market view that a piece of bad news was being held back behind yesterday's big rise", and had specifically made a video on the inevitability of the liquidity squeeze.</li>
+<li><strong>K-Line Guru (01:22 segment):</strong> See above. Addition: he said he had been bearish all along and had been cursed by the bulls, but insisted that a large-scale correction was needed before going long with more certainty; what he traded was a breakdown order, not a dip-buying order.</li>
+<li><strong>Adam (02:14 segment):</strong> See above. Addition: he said he had also run an exchange before, so his judgement on the process of "first shutting down withdrawals and authorisations, finding the root cause, then gradually restoring with dual authorisation" is based on industry experience, not pure speculation.</li>
+<li><strong>Lin Ke:</strong> In the 01:38 segment he asked about the black swan's grade; in the 03:22 segment he said he had played value coins for a relatively long time, usually rarely watched the news and mainly traded on K-lines, believed the big coin's pullback had reached support at the 120-day moving average, had already placed a first long position in Dogecoin, and still needed to watch for a second wave of panic selling — overall there was no need to panic. Lin Ke appeared again in the 05:28 and 05:35 segments, by which time the topics had shifted to learning about US stocks and managing his Dogecoin position, no longer part of the theft incident itself.</li>
+<li><strong>AHR996 (named in the 01:49 segment):</strong> Asked whether the laziest strategy for a small retail investor is simply to buy IBIT; Brother Zhang affirmed this line of thinking.</li>
+<li><strong>A speaker in the tone of a BNB holder (03:49 segment):</strong> Said of himself "we are all big BNB holders too, casually holding several hundred each", believed that after BNB's treasury-isation the room to rise is still large — at least a doubling; and at the same time complained "with something like this happening, do you think we are happy?" This is a holder's personal judgement and emotion, not neutral analysis.</li>
+</ul>
+<p><strong>Representative views that can only be written as "speaker (the transcript does not distinguish speakers)":</strong></p>
+<ul>
+<li>02:46–02:47 segment: the first low is between 9 and 11 o'clock, the second low depends on the length of the withdrawal suspension, and after that there are three more points in time — the Federal Reserve, Christmas and the Spring Festival; and the speaker said he had already bought 2,000 lots at the low (as transcribed; the instrument is unclear).</li>
+<li>03:06 segment: a bull market ends in about 300–400 days, and 400 days is when a bull market begins (history is similar, not identical); the recent low is between 9 and 11 o'clock that day, and if Binance drags it out for 48 hours a second low will appear; a slow bull market may start after the Spring Festival, but the real money-making opportunity is a new narrative, and a broad-based rise would still centre on majors such as Bitcoin and Ethereum.</li>
+<li>03:20 segment: institutions are forever waiting for chips; individuals who cannot hold on will incur losses in this incident; institutions attach great importance to Bitcoin's security, because large institutions hold huge amounts of the big coin and hope to gain more conviction from it; firm believers will regard this incident as "a very good event".</li>
+<li>03:41 segment: all the major blue-chip coins (Bitcoin, Ethereum, Solana, BNB) fell sharply in one wave, and only Hyperliquid rose against the trend by about 17% — the question was whether that was merely because it is a Binance competitor; the hosts interrupted, saying "don't you watch the news?", and pointed out that Musk's retweet the night before was the reason (according to the hosts), criticising the questioner for not following the news.</li>
+<li>03:52 segment: the preliminary investigation is that the incident happened because a certain engineer's computer had a vulnerability; often it is not that the contract itself is insecure, but that personal behaviour causes the security incident.</li>
+</ul>
+<h2>IV. Practical Advice for Ordinary Listeners (summarised according to the original meaning in the transcript, with disagreements noted)</h2>
+<p><strong>1. Store in layers, choosing the scheme by the amount of funds.</strong> The consensus line in the room was "put some in a cold wallet, some in a soft wallet, some on an exchange" — do not keep it all in one wallet. The 02:57 segment put it most bluntly: if your assets are large enough, definitely use a cold wallet, and have the correct purchasing credentials and the correct storage credentials; if your assets are only US$5,000 or US$20,000, do not go and buy a US$500–1,000 cold wallet — it does not add up; for mass assets under US$10,000, a cold wallet is also recommended, but a cheaper model can be used. The 01:35 segment added: for small retail investors it is still relatively better to spread funds across large centralised exchanges, because personal professional knowledge is far from sufficient, and "there are far too many people who want to steal your coins" — wallet company development staff, exchange staff, exchange security staff, outside hackers, and the social engineering of non-professional hackers (fake exchanges, fake WhatsApp, fake wallets, excessive authorisations, phishing pages) are all stealing.</p>
+<p><strong>2. Buying a cold wallet: official channels, the latest model, tamper-proof packaging.</strong> The 02:17 and 02:57–02:59 segments: buy officially, do not break the packaging; buy the latest colour-screen version or the latest-chip model, to avoid weak randomness or vulnerabilities generated by old chips; a speaker said the OneKey model at a little over US$50 without a battery could be considered — plug it in and use it; and said cold wallets made by Chinese makers are better than foreign ones on packaging and hardware tamper-proofing, and that OneKey has not had the kind of situation Ledger had (according to the speaker). The ten-year veteran user in the 02:11 segment stressed that one must use a fully open-source cold wallet and transfer coins offline. In the 03:29 segment, a speaker also mentioned using AI to make oneself a Safe contract wallet cold-signing device, or using a multisig contract wallet such as Gnosis Safe — advanced players may consider it, but this is an advanced scheme and is not suitable for beginners to copy directly.</p>
+<p><strong>3. Mnemonic phrases / private keys: do not change them, do not rely on memory, shard and encrypt them and store them separately.</strong> This was the most repeated point of the whole session. In the 01:00–01:03 segment, Brother Zhang clearly opposed the approach proposed by a listener of "swapping out the 5th mnemonic word and memorising it in another place": of the 12 words, the first 11 are data and the 12th is a checksum — with 1 missing, it can be computed in 1 minute; with 4 missing, it took two or three days back then, and computing power is now 100 times faster; moreover, humans have false memories — even the bosses of China's No. 1 and No. 2 ranked security companies got it wrong when they changed words themselves, and in the end colleagues had to build a computing-power model to get the money out. In the 02:22–02:27 segment, Da Piaoliang and the hosts also agreed in opposition: changing words means, first, you will forget, and second, there are scientific methods to compute them back; the correct approach is to save them split into two or three pieces, with each piece given one or two further layers of encryption; in the 02:27 segment, a veteran user added the safest approach: use the Trezor sharding form, split into 5 shares, of which any 2–3 private keys / shards can manage the wallet — he himself made 3 shares, manageable with 2 wallets, with the 3 shares in three places, so losing 1 share still cannot be opened by anyone else, and they can also be carried abroad in batches. In the 02:24 segment, a listener also asked "which is harder to crack, a mnemonic phrase or a private key", and the answer given was "a private key is definitely not easy to crack, a mnemonic phrase is easy to crack" (a claim made in the room, recorded only).</p>
+<p><strong>4. A phone as a cold wallet: the room did not reach agreement.</strong> The opposing side's reasoning in the 02:11 segment: phones have no secure chip and cannot guarantee strong randomness, and there was also a certain weak-randomness incident before. The supporting side's reasoning in the 03:00 segment: take an unused phone as a cold wallet — as long as it does not go online it is fine; create the wallet disconnected and keep it offline and it is a cold wallet; if you do not trust it, you can roll dice 256 times yourself to generate strong randomness. Neither was adjudicated in the room, and these notes present them side by side as they are, without choosing a side for the listener.</p>
+<p><strong>5. Transfers and communications: verify addresses, confirm by video, beware fake apps.</strong> The 01:37 segment: transfers and wallet creation both have standard processes; the other party's address should be pasted, checked against an image, biometrically verified, and the last few digits read aloud by voice; if the amount exceeds the US$50,000 or US$100,000 mentioned by the speaker, both parties must confirm by video call that it is the person themselves before transferring, and after hanging up, send the three elements for confirmation before transferring again. Because hackers now use fake wallets, fake Telegram and fake WhatsApp to directly simulate the other party and replace addresses and images, the receiving address you get on WeChat, WhatsApp or Telegram may already have been swapped for the hacker's. The 00:29–00:30 segment also mentioned: the official website itself may be hacked, so that the apps downloaded from the official site are all fake wallets; therefore "downloading from the official site" is not a once-and-for-all solution — channels and versions still need to be checked. The 03:34 segment added: keep the phone system updated to the latest version — Apple has recently patched many security vulnerabilities; do not back up mnemonic phrases by screenshot (the 03:34 segment mentioned the risk of screenshot backups that Lao Zhang had discussed earlier).</p>
+<p><strong>6. Choosing an exchange: look at ranking, look at reserves, look at whether profits can cover it.</strong> A speaker in the 03:24 segment advised: to choose a CEX, first look at ranking and fame, then check the reserves regularly, to avoid the platform not having enough funds to compensate when a black swan erupts; and he reminded listeners that the essence of a stampede incident is that everyone thinks their money is lost and rushes to withdraw — FTX was an example of a stampede. Brother Zhang's algorithm in the 01:35–01:36 segment was: a centralised exchange's annual profit is roughly equal to about 10% of its total custodied funds, and if the amount of coins lost can be covered by one or two years of profits, it can definitely survive 100%; for those without published data, it is hard to say.</p>
+<p><strong>7. Trust only official announcements, not "customer service" who proactively contact you.</strong> Adam made this explicit in the 02:14 segment: during the withdrawal suspension, never believe any customer service who contacts you claiming they can open withdrawal permissions for you. In the 03:24 segment, the hosts also interrupted a popular-science-style speech, stressing "this time it is Binance that was robbed, and Brother Zhang has shared the security knowledge in great detail" — do not use public time for basic popularisation unrelated to the incident.</p>
+<p><strong>8. Trading mindset: do not panic, do not rush to add leverage, watch in batches.</strong> Several speakers agreed: do not throw away coins you have held onto out of panic; do not rush to buy the dip, and especially do not rush into leveraged longs; watch how things ferment over 48–72 hours; if doing dollar-cost averaging, buy majors in a pyramid fashion in batches into the fall; grabbing a rebound from a sharp fall is fine, but do not trade the first or second wave at the start of a bear market; Brother Zhang said in the 01:49 segment that he himself has never played with contracts. In the 03:08 segment, a listener asked "is it suitable to unstake Solana, deposit it into Aave, borrow stablecoins and add 10% leverage", and the hosts clearly stated they did not want to answer personal position questions in public time — they would only discuss levels, dip-buying, future trends and past experience — and these notes likewise only record that boundary and do not reproduce his position advice.</p>
+<h2>V. Disagreements and Unsettled Points in the Room (do not read these as conclusions)</h2>
+<ul>
+<li><strong>Internal-external collusion vs external breach vs a single computer breached:</strong> Brother Zhang's personal judgement was an 80% probability of internal-external collusion; the official line (as relayed by speakers) was that one engineer's computer was breached; another speaker guessed that a local area network had been breached and that the computer had delegated permissions; the hosts clearly stated that they could only go by the official announcement and that the Binance complete report shall ultimately prevail. The three were not unified in the room.</li>
+<li><strong>Lazarus attribution:</strong> The room repeatedly said "it has been confirmed to be Lazarus" and named ZachXBT as having revealed it, but the transcript itself cannot verify the original text of that revelation or of the official announcement; these notes only record "speakers in the room relayed it as such" and do not elevate it to a verified fact.</li>
+<li><strong>Total losses:</strong> 6 billion, 5.779 billion, 5 billion in exposure, 3 billion net lost, and a net estimate of 1–2 billion coexist, with different bases and points in time, and the room had no unified basis.</li>
+<li><strong>Decentralisation:</strong> In the 01:52 segment, a student asked "stablecoin issuers can freeze assets — how should the decentralisation and asset autonomy that crypto has always emphasised be understood", and the answer given was "anyone who believes in decentralisation is an idiot; decentralisation is a false proposition, it does not exist" (the speaker's original words, in heated tone); in another discussion in the 03:02–03:03 segment, the conclusion converged to: decentralisation does not exist because Bitcoin's original code is also managed by someone and servers have to be rented by someone, but the value of blockchain lies in using mathematical algorithms to guarantee that private property is sacred and inviolable and to guarantee that two people can transact without a third party. The two take different angles, but both point to "do not understand decentralisation as meaning no one at all can intervene".</li>
+<li><strong>Phone cold wallets:</strong> See point 4 above; not adjudicated in the room.</li>
+<li><strong>BNB's outlook:</strong> A holder in the 03:49 segment judged it would at least double; the 03:06 and 03:20 segments focused more on the length of the withdrawal suspension and institutional chips, and did not directly give a BNB level. Both are personal judgements.</li>
+</ul>
+<h2>VI. Note on the Topic Drift in the Second Half (to avoid misreading it as incident conclusions)</h2>
+<p>After 04:00, the Space's topics had clearly diverged: the 04:00–04:25 segment discussed whether AI funds would flow into Bitcoin, whether passive ETFs are safer, and Ethereum machine and BNB volumes; the 04:45–04:56 segment discussed buying the dip in BNB and balancing volatility; the 05:26–06:03 segment was basically casual chat, including the share price of a certain AI medical data company (a speaker said it had risen from 30-plus to 77, and he personally was optimistic it would break through 100–120 by year-end), storage stocks (SK Hynix, Samsung, Micron) taking off from around 500 in 2024 to more than 1,000, the "nine wins must decline" logic that storage will definitely fall, Tesla split into cars + autonomous driving + batteries + subscription robots, and the SpaceX share price falling back from 70–80 to 140-plus. None of this has a direct bearing on the Binance theft incident, and these notes do not treat it as incident conclusions — it is noted here only to say: the second half is not a continuation of the incident review, but the Space entering its casual-chat stage. A speaker in the 05:30 segment himself said "everyone just don't panic", and said he had laid out a first position in a small-cap coin at 10 o'clock and was still watching whether it would break below around 75,000; Lin Ke in the 05:35 segment said he had traded Dogecoin at 10 o'clock, with position management of "buy a little on each dip, not daring to buy a full position on the dip". After 06:03 there are no valid speech segments in the recording, only a line for the subtitle producer, and the Space wraps up there.</p>
+<h2>VII. Limitations of the Transcript (must be stated)</h2>
+<p>These notes are based on a transcript produced by the faster-whisper small model. The transcript does not distinguish speakers; apart from the few people the host invited by name (Da Piaoliang, Lin Ke, the K-Line Guru, Adam, AHR996, Brother Zhang / Teacher Zhang), most statements cannot be reliably attributed to a specific account, so wherever attribution is not clear they are written as "speaker (the transcript does not distinguish speakers)", and no words have been put into anyone's mouth on the basis of guesswork. The transcript contains many homophone errors, which have been restored according to meaning — for example "Bian / Bian / the other shore / graduation" = Binance, "UIDT/UIDC" = USDT/USDC, "RV/Awei" = Aave, "Bochang (wave-length)" = Tron, "Lasalu" = Lazarus, "Trizler" = Trezor, "Chen Xuyuan's computer" is suspected to be a phonetic error for a certain engineer's computer, and "the Kim Jong-un team" = the speaker's colloquial reference to Lazarus; a few figures (such as the number of BNB minted via the BNB Chain bridge in 2022, the PEPE-related figure of about 39.51 million, and "a problem of 6.3 billion" in the 03:13 segment) are unclear in the transcript and have been omitted or noted as unclear, not forcibly restored. The recording is about 6 hours 21 minutes long in total, but the actual audible content runs to about 06:03; after 06:03 there is only the line "Subtitle producer Zither Harp" and no valid speech segments; after 04:00 the topics had clearly diverged, and these notes have separated the casual-chat segments from the incident segments. All amounts, frozen figures and loss estimates are relays or statements by speakers in the room and do not represent official data verified by these notes; the Binance official announcement and on-chain statistics shall prevail going forward.</p>
+<hr />
+<p><em>Source: Space link https://x.com/i/spaces/1mdjgoregOjLvy?s=20 (host @ChandlerGuo, co-host @qg7777, titled "Binance Hack Discussion"); the recording and transcript are stored in the goal workspace hidden_files (recording 6:21:09, transcript 7,876 lines).</em></p>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes for this session; the content is the speakers' own live accounts and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"「币安被黑事件讨论」Space 纪要（完整版） · Yat's Talks",tw:"「幣安被黑事件討論」Space 紀要（完整版） · Yat's Talks",en:"Notes on the \"Binance Hack Discussion\" Space (Full Version) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Breakpoint 2026: Day One 会议纪要</h1>
 <ul>
 <li><strong>活动</strong>：Breakpoint 2026 第一天（Solana 年度大会，第六届，首次在伦敦举办）</li>
@@ -240,8 +247,462 @@
 </tbody>
 </table>
 </article>
-<footer>来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2NgQPdyyEPkEOk">https://x.com/i/broadcasts/2NgQPdyyEPkEOk</a> · Solana Breakpoint 2026（伦敦）· 2026-11-16 17:59–22:26（约 4 小时 27 分）· 总观看约 2.4 万人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Breakpoint 2026: Day One 會議紀要</h1>
+<ul>
+<li><strong>活動</strong>：Breakpoint 2026 第一天（Solana 年度大會，第六屆，首次在倫敦舉辦）</li>
+<li><strong>時間</strong>：2026-11-16，倫敦時間約 10:00–14:30（北京時間約 18:00–22:30）；逐字稿覆蓋 00:00:03–04:27:10，約 4 小時 27 分</li>
+<li><strong>形式</strong>：X Broadcast 官方直播（英文場），現場 6,000+ 人、100+ 國家、170+ 創辦人、250 家機構；線上峰值同時觀看 21,530 人，總觀看 23,687</li>
+<li><strong>主持</strong>：Lily Lu、Rachel Conlon（Solana 基金會）；製片人 Amira</li>
+<li><strong>來源</strong>：逐字稿全文 2,765 行（<code>transcript.txt</code>），本紀要為中文編譯整理</li>
+</ul>
+<blockquote>
+<p>說明：以下數字與判斷均為台上嘉賓現場說法，未經獨立核實；轉寫為機器轉寫，人名與術語按原文整理，疑似轉寫錯誤見文末「ASR 還原表」。午休時段（倫敦時間約 13:00–14:00）直播暫停，逐字稿在 03:16–04:00 間無內容；錄製在最後一位嘉賓演講中途（04:27:10）截斷，後續內容不在本次逐字稿內。第二天內容不在本次範圍。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>Day One 是"機構日"：Solana 宣布主網正式出 Beta（1.0），並用一整天證明同一件事——傳統金融的錢、資產與支付正在搬上 Solana，而這場搬家最大的瓶頸不再是技術，是"出口"（提現通道）與分發。</p>
+<h2>開場：Solana 主網 1.0</h2>
+<p>Lily Lu 開場宣布：六年"mainnet beta"結束，<strong>Solana 正式進入 mainnet 1.0</strong>。</p>
+<ul>
+<li>區塊時間 400 毫秒→200 毫秒；單區塊容量 3 倍以上；租金降 10 倍</li>
+<li>Alpenglow 上線後（10 月 21 日，台上稱為"換心手術"），最終確認時間從約 13 秒降至約 150 毫秒，約 85 倍提升</li>
+<li>2026 年數據（現場說法）：上季度代幣化股票交易超 70 億美元；RWA 創紀錄 50 億美元（自 6 月增加 30 億），持有者超 100 萬人；質押 ETF 40 億美元（接近 6 月的兩倍）；B-SOL 不到 10 個月突破 10 億美元；摩根士丹利 7 月推出 ETF</li>
+<li>應用收入：第一季度應用收入 3.7 億美元（三個月增長 48%），連續 10 個季度全鏈應用收入第一；60+ 應用年收入超 100 萬美元；日活錢包 220 萬</li>
+<li>峰值日 8 月 21 日處理 2.17 億筆真實交易；8 月 29% 的質押下線，區塊照常產出</li>
+<li>Backpack 把美股代幣化（每枚代幣對應一股真實股票），Sunrise 提供流動性，週交易 10 億美元；SpaceX 在納斯達克上市當天，其代幣化版本同步在 Solana 上線（現場說法）</li>
+</ul>
+<p><strong>大會主題：代幣超級週期（token supercycle）</strong>。這不是價格週期，而是結構性轉變——貨幣、資產、所有權全部上鏈。核心論點有三：</p>
+<ol>
+<li><strong>分發即估值</strong>：同一美元利潤，能買到的地方不同，估值就不同。同一家公司在倫敦上市比在紐約折價 25–30%；全球 22,000 家非美上市公司中只有 5% 能進入指數、被 2 萬億美元資金追蹤。代幣化讓每個資產都能被發現、被買到。</li>
+<li><strong>不是全民基本收入，而是全民基本所有權</strong>：AI 時代人人可以參與經濟創造，更關鍵的是參與所有權；金融變成一次 API 呼叫，每個應用都可以成為超級應用。</li>
+<li><strong>Solana 承載近四分之三的 x402 代理支付</strong>；穩定幣供應三年增長 10 倍以上，過去一年穩定幣交易量近 5 萬億美元（2 月單月 6,500 億美元，為史上任何鏈單月最高）；三星把 Solana USDC 原生整合進 8,200 萬個錢包（從美國起步）。</li>
+</ol>
+<p>製片人 Amira 定調兩天分工：<strong>今天是"嬰兒潮資產"（boomer assets，機構日），明天是"Z 世代資產"（zoomer assets，前沿：算力等從未進入過大眾市場的新資產）</strong>。</p>
+<h2>穩定幣專場：對齊問題與三枚新幣</h2>
+<p>上午的半天幾乎全是穩定幣，核心矛盾只有一個：<strong>穩定幣好用，但"出口"和收益分配不對齊</strong>。</p>
+<h3>OpenUSD：穩定幣的收益該歸誰</h3>
+<p>Zach Abrams（Open Standard 創辦人，前 Bridge 創辦人，Bridge 被 Stripe 收購）指出，現有穩定幣有個根本的對齊問題：</p>
+<ul>
+<li>法幣放著能生息，換成穩定幣，收益就成了發行方的收入——零和博弈，鏈上建設者在經濟上先天吃虧</li>
+<li>想退出還要交"退出稅"：Tether 約 10–100 個基點，USDC 約 2–5 個基點，動輒幾千美元，大額資金流轉根本沒法用</li>
+</ul>
+<p>為此推出 <strong>OpenUSD（OUSD）</strong>：底層收益返還給業務方（共享經濟）、鑄造與銷毀免費、建設者按創造的經濟價值賺取 Open Standard 的股權。已上線六週，是達到 5 億美元 AUM 最快的穩定幣，有望最快突破 10 億；合作方包括 Ramp。</p>
+<h3>MoneyGram × Solflare：USDC 直接取現金</h3>
+<p>Lamia Pardo（MoneyGram 首席行銷官）：MoneyGram 年服務 6,000 萬+活躍客戶、200 個國家和地區、50 億個數位端點、48 萬個零售網點（比星巴克加麥當勞全球門市總和還多）。約一半匯款仍以現金提取，尤其在菲律賓（42% 面對面交易用現金）、墨西哥（40%）、奈及利亞（39%）。</p>
+<ul>
+<li><strong>MoneyGram Ramps</strong>：一個 API 接入全球零售網路，170 個國家和地區可提現，櫃員無需懂區塊鏈，憑參考碼兌付</li>
+<li>與 <strong>Solflare</strong> 合作：即日起，符合條件的 Solflare 使用者可把 USDC 換成現金，在 170 個國家和地區的 MoneyGram 網點提取；Solflare 月活 400 萬+，自託管資產 150 億美元+；<strong>年底前 USDC→現金提現零手續費</strong></li>
+</ul>
+<h3>Zelle-USD：美國最大 P2P 網路發幣</h3>
+<p>Alexandra Lang（Zelle）：Zelle 是美國最常用的個人對個人支付網路，由七大銀行所有（美國銀行、Capital One、摩根大通、PNC、Truist、US Bank、富國銀行），2,400+ 銀行與信用社接入，去年處理超 1 萬億美元、20 億+筆交易。</p>
+<p>推出 <strong>Zelle-USD</strong>（與 Anchorage Digital 合作、建在 Solana 上的美元穩定幣），並現場演示<strong>機密轉帳與機密餘額</strong>：金額對公眾鏈隱藏，僅網路營運方與銀行可見，銀行之間可加密轉帳、再解密入帳。目標是把"知道對方手機號或信箱就能轉帳"的體驗帶到跨境。</p>
+<h3>Western Union USDPT：175 年老店的"出口"答案</h3>
+<p>Malcolm Clark（Western Union）：公司 175 年前靠電報發了第一條"沒有錢的匯款資訊"，今天問題沒變——錢在後台動，人還得去門市交錢取錢。全球約 4% 人口生活在出生地之外，匯款的 75% 在當地花掉（現金或刷卡，不是加密資產）。</p>
+<ul>
+<li><strong>USDPT 穩定幣已在 Solana 上線生產環境</strong>（其原話：這不是承諾，不是產品推介，已經在用），透過 Anchorage Digital Bank 免費鑄造與銷毀，約 160 個國家可直接鑄銷</li>
+<li>關鍵差異在出口：40 萬個網點、130 種貨幣可取現；<strong>Stablecard 應用</strong>已上架：40+ 市場持有 USDPT，可刷 Visa、去門市取現、轉入本地銀行</li>
+<li><strong>匯款重定向</strong>：收款人收到匯款通知後，可即時把錢轉到 stablecard，無需懂加密、無需懂穩定幣</li>
+<li><strong>數位資產生態網路"Dan"</strong>：錢包一次整合即可選 Western Union 為出口，130 種貨幣、180 個國家、40 萬+網點；現場向觀眾派發 20 美元 USDPT 紅包</li>
+</ul>
+<h3>圓桌：Ramp × Payoneer——"價格在跌，穩定幣在大牛市"</h3>
+<p>主持 Namil Dahul（YC），嘉賓 Ahmed Zifsa（Ramp 穩定幣與加密合作負責人）、Roland Berry（Payoneer）。兩家合計每年處理超 3,500 億美元。</p>
+<ul>
+<li><strong>Ramp</strong>：穩定幣帳戶把法幣與鏈上財務流程統一在一個平台；7 月上線墨西哥後，<strong>70% 的交易量發生在銀行營業時間之外</strong>（週末與假日）；支援 USDC、USDT、USDG 與 OpenUSD；選幣標準是覆蓋、合規、營運成本與客戶需求；目前 97% 的交易量仍是美元穩定幣；區分"支付用"與"持有用"穩定幣；看好墨西哥披索、巴西雷亞爾、阿根廷披索等本地貨幣穩定幣</li>
+<li><strong>Payoneer</strong>：200 萬中小企業使用者；自發穩定幣 payout USD，並已申請美國信託銀行牌照——動機不是淨息差，而是<strong>監管責任歸屬</strong>：客戶的錢由誰負責、出了問題找誰；最大痛點是出入金（off-ramp）與後台合規：資金來源證明、FinOps 與財資團隊的工具不統一、鏈上退款如何回到最終受益人</li>
+<li>一年後展望：不再談"穩定幣"，只談為客戶創造了什麼價值；穩定幣與法幣的界限模糊到按"最便宜、最快、最合適的通道"自動路由</li>
+</ul>
+<h3>Mastercard 與 Bitso：非美元穩定幣的缺口</h3>
+<ul>
+<li><strong>Christian Rao（Mastercard）</strong>：願景是"選擇，且不犧牲安全"；連接 38 億消費者、5 億受理點、32 種貨幣；不押注某個贏家，也不認為未來是"多穩定幣"各自為島——需要<strong>一個全球貨幣平台</strong>，讓法幣、不同幣種穩定幣、代幣化存款、代幣化基金互通</li>
+<li><strong>Ben Reed（Bitso）</strong>：美國閒置美元賺約 4%（國庫券利率），墨西哥約 6%（CETES）；美國小企業貸款 7–11%，墨西哥專業放貸機構要 30–40% 以上；鏈上借貸用數學壓縮利差（借款利率×利用率＝出借收益）；"<strong>披索問題需要披索方案</strong>"：墨西哥人持有的是股票、黃金與應收帳款，不是 BTC/ETH；<strong>MXNB（墨西哥披索穩定幣，Bitso 發行）即日起上線 Solana</strong></li>
+</ul>
+<h3>Paystack：非洲最後一公里</h3>
+<p>Shola Akinlade（Paystack 聯合創辦人兼 CEO，非洲的 Stripe，2020 年被 Stripe 收購）：7 個市場 11 張牌照、50+ 銀行與行動支付直連、每月 6,000 萬+筆交易風控決策、40 萬+企業、年收款 150 億美元+。非洲 15 億人、中位年齡 19 歲，但有 54 國、41 種貨幣。<strong>Global Stack API</strong>：一個 API 打通 20 個非洲市場的出入金，把非洲貨幣接進鏈上經濟。</p>
+<h3>SoFi 與 Squads：銀行變成外掛</h3>
+<ul>
+<li><strong>Simon Griffin（SoFi）</strong>：1,700 萬消費者客戶；加密業務一週年；推出 <strong>SOFA USD——第一家美國全國性銀行發行的穩定幣</strong>；首家銀行推出<strong>代幣化存款（付 4.4% 利息、FDIC 承保）</strong>；質押即將上線，借貸 2027 年上半年推出；Agent 已在幫使用者做理財規劃與機器人投顧，MCP 陸續上線</li>
+<li><strong>Stefan Simkin（Squads 聯合創辦人兼 CEO）</strong>："銀行變成外掛"——帳戶（錢存在哪）與服務（誰提供服務）解耦，可程式化帳戶居中，銀行與 PSP 變成可插拔的服務；其產品 <strong>Altitude</strong>（全球商業帳戶）上線 12 個月，已有 800 家企業、80 個國家，年化支付量 20 億美元，五分之一美元在週末流動，卡消費月增 50%；今年迄今穩定幣支付 4,820 億美元，穩定幣卡消費近 100 億美元；下一步機會是端到端擁有金融工作流、讓 AI Agent 替客戶完成工作（已上線應付、應收、費用管理、會計工作流與 L2MCP）</li>
+</ul>
+<h2>Agent 經濟：每次請求都是一次交易</h2>
+<p>Rohin（Cloudflare，Agent 網際網路團隊產品經理）：Cloudflare 支撐 20% 以上的網際網路；過去一年 HTTP 流量增長 60% 以上；<strong>HTML 內容請求中機器人已超 70%，活躍機器人比人類還多</strong>；舊商業模式（廣告）正被 AI 概覽與 Agent 流量衝擊。</p>
+<p>案例：他讓 Agent 找倫敦最好的餐廳，Agent 翻了 1,000+ 份菜單、按他的偏好推薦了幾家——只有 1 家受益，另外 999 家白白承擔了成本。新思路：<strong>每次請求都是一次價值交換的機會</strong>。</p>
+<ul>
+<li><strong>Monetization Gateway</strong>：任意 URL 的付費牆，資料集、API、MCP 工具、頁面均可定價，Agent 到訪即付費</li>
+<li><strong>Pay Per Crawl</strong>：可信買家競價購買內容，並可追蹤內容被如何使用、賺了多少錢</li>
+<li>底層是 <strong>x402 協議</strong>（X402 基金會治理，Solana、Cloudflare、Visa、Mastercard、Coinbase、Stripe 等為成員）；<strong>Solana 承載 70% 以上的 x402 交易</strong>；機器間 commerce 需要高吞吐、低延遲、能做微支付（0.1 美分甚至 0.01 美分）的支付軌道</li>
+</ul>
+<h2>私募市場與信貸上鏈：代幣化的第二步</h2>
+<p>Michael（Kamino CEO）與 David Vacheva（Fasenara 代幣化負責人）對談。核心觀點：<strong>代幣化只是第一步，真正的解鎖是拿代幣化資產做抵押借貸</strong>。</p>
+<ul>
+<li><strong>Kamino</strong>：代幣化股票市場規模 155 萬億美元（現場說法），信貸與另類資產另有 40–50 萬億美元；Kamino 已發放貸款超 200 億美元、交易超 6,000 億美元；發布全新 <strong>Kamino App</strong>（資產發現、聚合兌換）與 <strong>Kamino Omni</strong>（超越傳統金庫：持有資產、抵押借貸、組建投資組合）；策略是不爭零售使用者來 Kamino，而是把 API 交給已有客戶的平台（券商、退休、財富、投顧）</li>
+<li><strong>Fasenara</strong>：80 億美元資管，專注資產支持信貸（30/60/90 天發票應收等超短久期）；上鏈一年 TVL 從 0 做到 3 億美元+；代幣化版本可存入 Kamino 等 DeFi 借貸協議換穩定幣流動性，比傳統經紀商借貸更快更便宜；流動性分三種：贖回流動性、融資流動性（借）、二級市場流動性</li>
+<li>給資管同行的建議：按資產類別找用例（代幣化股票講可及性，私募市場講解鎖流動性）；監管是關鍵——代幣所有權的法律確定性、破產隔離、結算終局性、抵押品品質，都是監管機構要先搞明白的問題</li>
+</ul>
+<h2>杜拜房產上鏈：從份額到代幣</h2>
+<p>Ricardo（Stake 聯合創辦人兼 CPTO）：Stake 2020 年底創立、2021 年開展業務，200 萬使用者、206 個國籍、170 個國家；150 美元起即可擁有杜拜房產份額。痛點：所有權只在自家資料庫、退出窗口有限、透過 SWIFT 結算。宣布與 Solana 合作把資產代幣化：<strong>代幣即所有權憑證、全球統一規則（一次身分核驗）、自由交易</strong>；目標是"我媽不用懂錢包也能投代幣"。</p>
+<h2>Ledger 三項發布</h2>
+<p>Ian Rogers（Ledger）：</p>
+<ol>
+<li><strong>Clear Signing 在 Solana 上線</strong>：簽名時能在裝置上看到可讀文字——以 Jupiter 一筆兌換為例，此前要在 Ledger 上翻 13 屏難讀文字，現在 3 屏易讀；覆蓋 9 個 Solana DApp、日常 22 項核心操作中的 18 項；與 Solana 基金會、Anza 合作</li>
+<li><strong>Ledger Agent Intent</strong>（上月發布）：Agent 審批佇列化——Agent 永遠不持有私鑰，需要動錢時發起審批、使用者非同步批准（例：pay.sh），Agent 不必停下來等</li>
+<li><strong>Ledger Atom</strong>：新行動裝置（基於 AOSP），可變身 Ledger 裝置；交易時安全模式把螢幕交給 Ledger 安全元件，金鑰對 Android 也不可見；與 Solana Seeker 合作，Atom 是 Seeker 平台登陸的首款硬體裝置，Seeker 商店 1,500+ 應用將全部遷移過來</li>
+</ol>
+<h2>倫敦市政府專場與下午政治辯論</h2>
+<h3>副市長：倫敦要做加密之都</h3>
+<p>Howard Dawber（倫敦副市長，分管商業與增長；逐字稿作 Dobber）：倫敦自稱世界商業之都；60–70 家企業已註冊進入英國新加密監管框架；今年倫敦已誕生 19 家獨角獸；AI 方面倫敦是歐洲科技之都、全球三大 AI 集群之一；倫敦增長計畫覆蓋綠色科技（25% 外國直接投資流向綠色技術）、體驗經濟、健康與生命科學、科技；倫敦 GDP 年增約 2.5–3%；公司可在幾天內完成註冊、開戶與辦公；市長已設 AI 工作組（Martha Lane Fox 牽頭），關注 AI 對就業的影響與再培訓。</p>
+<h3>鮑里斯·約翰遜與 Ross Kempsell：加密貨幣與英國經濟增長</h3>
+<p>主持 Gareth Jenkinson（The Block 多媒體負責人），嘉賓為前首相鮑里斯·約翰遜與 Lord Ross Kempsell。本節政治色彩濃，多處數字為嘉賓現場說法，未經核實。</p>
+<ul>
+<li><strong>鮑里斯談經濟</strong>：英國 2027 年增長預期僅 1%；抨擊現任工黨政府稅太高、福利開支失控（其說法：六分之一成年人登記領取殘障福利 PIP）；任內倫敦億萬富翁數量全球最多，工黨上台後億萬富翁流失 10%、百萬富翁減少 7%（其說法；全球僅莫斯科同期也在減少）；呼籲盡快換保守黨政府</li>
+<li><strong>鮑里斯談比特幣</strong>：承認幾個月前寫專欄稱比特幣是龐氏騙局，起因是教區一位老人被騙的經歷——"尋找更大傻瓜"的遊戲到了牛津郡鄉下；但強調這只是針對投機性加密貨幣的懷疑，區塊鏈與資產代幣化技術他完全支持，倫敦應在前沿</li>
+<li><strong>Kempsell</strong>：8% 以上英國成年人持有某種加密資產（其說法）；關鍵是機構採用區塊鏈技術；英國監管框架正在建立（FCA 劃定監管邊界、英格蘭銀行穩定幣框架、數位證券沙盒）；倫敦有 3,000+ 活躍金融科技公司，去年歐洲金融科技投資第一目的地</li>
+<li><strong>能源與 AI</strong>：鮑里斯稱英國電價太貴是 AI 與資料中心發展的關鍵瓶頸，主張區域電價（蘇格蘭、威爾士等可再生能源富集地區電價應更低）；AI 是其一生最重要的認知能力革命</li>
+<li><strong>脫歐議題</strong>：Kempsell 稱英國不在歐盟 AI 法案與數位市場法案、數位服務法案管轄內是優勢，英國是全球第三大 AI 強國；反對重返歐盟；鮑里斯稱重返歐盟將使英國每週向歐盟繳納 7.5 億英鎊（其說法），且英國公眾不會投票放棄邊境控制</li>
+</ul>
+<h2>壓軸：All Funds——2 萬億美元遇上鏈上</h2>
+<p>Annabel Spring（All Funds CEO）：All Funds 是基金分銷的"數位管道"，連接 3,900+ 資產管理公司與 950+ 分銷商（財富管理、銀行、保險、私人銀行），65+ 國家，規模超 2 萬億美元；Solana 上 RWA 43 億美元，增長極快；兩者之間的差距就是"十年一遇的機會"。</p>
+<p>推出 <strong>Harmony 倡議</strong>：讓資產管理公司無需重建營運模式即可觸達鏈上生態，讓建設者獲得機構級產品流；All Funds 區塊鏈聯盟已運作五年，"不是試點、不是實驗室"。演講在舉例中途被錄製截斷，逐字稿在 04:27:10 處中斷。</p>
+<h2>值得留意的幾條線</h2>
+<ol>
+<li><strong>"出口"是全天的高頻詞</strong>：OpenUSD、USDPT、MoneyGram Ramps、Western Union Dan、Payoneer 的 off-ramp 痛點——穩定幣的競爭已從"誰發幣"轉向"誰能讓錢出來、變成現金"</li>
+<li><strong>非美元穩定幣接力</strong>：MXNB（墨西哥披索）上線 Solana；Ramp 點名巴西雷亞爾、阿根廷披索；Mastercard 要的是多幣種互通的全球貨幣平台</li>
+<li><strong>分發壓倒產品</strong>：All Funds（2 萬億美元）與 Kamino（把 API 交給已有客戶的平台）講的是同一件事——誰掌握分發，誰掌握估值</li>
+<li><strong>Agent 支付成為獨立賽道</strong>：x402 + Solana 占 70%+ 交易 + Cloudflare 的按次付費牆，機器間 commerce 的收費模式正在成型</li>
+<li><strong>監管仍是機構入場的最後一道門</strong>：ICE Clear Europe 的 Hester 明確表示，24/7 抵押品移動要等監管對代幣所有權、破產隔離與結算終局性點頭；紐約證券交易所正在建代幣化 ATS（已可接受 Solana 上鑄造的代幣），ICE 也在研究成為 Solana 驗證者</li>
+</ol>
+<h2>未覆蓋與存疑</h2>
+<ul>
+<li>錄製在 All Funds 演講中途截斷（04:27:10），當天下午後半段內容不在本次逐字稿內</li>
+<li>ICE Clear Europe 的 Hester（逐字稿未給姓氏）一段：ICE 正在推進零售市場（與機構市場隔離、不影響現有保證基金與風險瀑布）、紐約證券交易所代幣化 ATS、代幣化證券交易場所合資項目，以及接受黃金、日圓、澳元等作為初始保證金——因篇幅未單列，詳見逐字稿 03:00–03:16</li>
+<li>午休前後另有短片與暖場內容，未計入要點</li>
+</ul>
+<h2>ASR 還原表</h2>
+<table>
+<thead>
+<tr>
+<th>逐字稿寫法</th>
+<th>應為</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Salana / Salina</td>
+<td>Solana</td>
+<td>全文高頻</td>
+</tr>
+<tr>
+<td>Freakpoint</td>
+<td>Breakpoint</td>
+<td>主題詞</td>
+</tr>
+<tr>
+<td>Zell / ZEL</td>
+<td>Zelle</td>
+<td>美國 P2P 支付網路；其穩定幣為 Zelle-USD</td>
+</tr>
+<tr>
+<td>OpenUSC / OpenUSD</td>
+<td>OpenUSD（OUSD）</td>
+<td>Open Standard 的穩定幣</td>
+</tr>
+<tr>
+<td>Monogram</td>
+<td>MoneyGram</td>
+<td>匯款公司</td>
+</tr>
+<tr>
+<td>Solfler / Solfair / Sulfur</td>
+<td>Solflare</td>
+<td>Solana 錢包</td>
+</tr>
+<tr>
+<td>US DPT / USDPT</td>
+<td>USDPT</td>
+<td>Western Union 的穩定幣</td>
+</tr>
+<tr>
+<td>Kamina / Camino</td>
+<td>Kamino</td>
+<td>Solana 借貸協議</td>
+</tr>
+<tr>
+<td>Fasenara / Fastenara</td>
+<td>Fasenara</td>
+<td>80 億美元資管</td>
+</tr>
+<tr>
+<td>Pioneer</td>
+<td>Payoneer</td>
+<td>B2B 支付平台</td>
+</tr>
+<tr>
+<td>Howard Dobber</td>
+<td>Howard Dawber</td>
+<td>倫敦副市長（分管商業與增長）</td>
+</tr>
+<tr>
+<td>Kemstle / Kempsel / Lord Camp</td>
+<td>Lord Ross Kempsell</td>
+<td>逐字稿拼寫不一</td>
+</tr>
+<tr>
+<td>Lily Lu</td>
+<td>Lily Liu</td>
+<td>Solana 基金會總裁（疑為轉寫，存疑）</td>
+</tr>
+<tr>
+<td>Dan</td>
+<td>Digital Asset Network</td>
+<td>Western Union 的數位資產生態網路，簡稱 Dan</td>
+</tr>
+<tr>
+<td>chunk_023</td>
+<td>靜音段</td>
+<td>午休時段附近的一段靜音，不影響完整性</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Breakpoint 2026: Day One — Conference Notes</h1>
+<ul>
+<li><strong>Event</strong>: Day One of Breakpoint 2026 (Solana's annual conference, sixth edition, held in London for the first time)</li>
+<li><strong>Time</strong>: 2026-11-16, approx. 10:00–14:30 London time (approx. 18:00–22:30 Beijing time); transcript covers 00:00:03–04:27:10, about 4 hours 27 minutes</li>
+<li><strong>Format</strong>: Official X Broadcast livestream (English-language session), 6,000+ people on site, 100+ countries, 170+ founders, 250 institutions; peak concurrent online viewers 21,530, total views 23,687</li>
+<li><strong>Hosts</strong>: Lily Lu, Rachel Conlon (Solana Foundation); producer Amira</li>
+<li><strong>Source</strong>: Full transcript of 2,765 lines (<code>transcript.txt</code>); these notes are a compiled and edited summary</li>
+</ul>
+<blockquote>
+<p>Note: All figures and judgments below are as stated by speakers on stage and have not been independently verified; the transcript is machine-generated, names and terms are organized as in the original, and suspected transcription errors are listed in the "ASR Restoration Table" at the end. The livestream paused during the lunch break (approx. 13:00–14:00 London time), with no content in the transcript between 03:16–04:00; the recording cuts off mid-talk during the final speaker (04:27:10), and later content is not included in this transcript. Day Two content is out of scope for these notes.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Day One was "institution day": Solana announced that mainnet has officially exited Beta (1.0), and spent the whole day proving one thing — the money, assets and payments of traditional finance are moving onto Solana, and the biggest bottleneck in that move is no longer technology, but "exits" (off-ramp channels) and distribution.</p>
+<h2>Opening: Solana Mainnet 1.0</h2>
+<p>Lily Lu opened by announcing: six years of "mainnet beta" are over, and <strong>Solana has officially entered mainnet 1.0</strong>.</p>
+<ul>
+<li>Block time from 400 milliseconds to 200 milliseconds; capacity per block up more than 3x; rent down 10x</li>
+<li>After Alpenglow went live (October 21, described on stage as a "heart transplant"), finality time fell from about 13 seconds to about 150 milliseconds, an improvement of about 85x</li>
+<li>2026 figures (as stated on stage): tokenized stock trading exceeded $7 billion last quarter; RWAs hit a record $5 billion (up $3 billion since June), with more than 1 million holders; staked ETFs at $4 billion (nearly double June); B-SOL broke $1 billion in under 10 months; Morgan Stanley launched an ETF in July</li>
+<li>Application revenue: Q1 application revenue of $370 million (up 48% in three months), ranked first in app revenue across all chains for 10 consecutive quarters; 60+ apps with annual revenue over $1 million; 2.2 million daily active wallets</li>
+<li>On the peak day, August 21, it processed 217 million real transactions; on August 29% of stake went offline and blocks continued to be produced as normal</li>
+<li>Backpack tokenized U.S. stocks (each token corresponds to one real share), with Sunrise providing liquidity and $1 billion in weekly trading; on the day SpaceX listed on Nasdaq, its tokenized version launched simultaneously on Solana (as stated on stage)</li>
+</ul>
+<p><strong>Conference theme: the token supercycle</strong>. This is not a price cycle but a structural shift — money, assets and ownership all moving on-chain. There were three core arguments:</p>
+<ol>
+<li><strong>Distribution is valuation</strong>: The same dollar of profit is valued differently depending on where it can be bought. The same company listed in London trades at a 25–30% discount to New York; of the world's 22,000 non-U.S. listed companies, only 5% can enter indices and be tracked by $2 trillion in funds. Tokenization lets every asset be discovered and bought.</li>
+<li><strong>Not universal basic income, but universal basic ownership</strong>: In the AI era everyone can take part in economic creation, and more importantly in ownership; finance becomes an API call, and every app can become a super app.</li>
+<li><strong>Solana carries nearly three-quarters of x402 agent payments</strong>; stablecoin supply has grown more than 10x in three years, with nearly $5 trillion in stablecoin transaction volume over the past year ($650 billion in February alone, the highest single-month total for any chain in history); Samsung natively integrated Solana USDC into 82 million wallets (starting in the U.S.).</li>
+</ol>
+<p>Producer Amira set the division of labor for the two days: <strong>today is "boomer assets" (institution day), tomorrow is "zoomer assets" (the frontier: new assets such as compute that have never entered mass markets)</strong>.</p>
+<h2>Stablecoin Sessions: The Alignment Problem and Three New Coins</h2>
+<p>Almost the entire morning was about stablecoins, with a single core tension: <strong>stablecoins are useful, but "exits" and the distribution of yield are not aligned</strong>.</p>
+<h3>OpenUSD: Who Should the Yield on Stablecoins Belong To?</h3>
+<p>Zach Abrams (founder of Open Standard, previously founder of Bridge, which was acquired by Stripe) pointed out a fundamental alignment problem with existing stablecoins:</p>
+<ul>
+<li>Fiat left sitting earns interest; convert it into a stablecoin and the yield becomes the issuer's revenue — a zero-sum game in which on-chain builders are economically disadvantaged from the start</li>
+<li>Exiting also incurs an "exit tax": about 10–100 basis points for Tether, about 2–5 basis points for USDC, often thousands of dollars, making large-scale money movement impractical</li>
+</ul>
+<p>To address this, he launched <strong>OpenUSD (OUSD)</strong>: underlying yield is returned to businesses (a shared economy), minting and redemption are free, and builders earn equity in Open Standard in proportion to the economic value they create. Live for six weeks, it is the fastest stablecoin to reach $500 million in AUM and is on track to be the fastest to break $1 billion; partners include Ramp.</p>
+<h3>MoneyGram × Solflare: Cash Out USDC Directly</h3>
+<p>Lamia Pardo (Chief Marketing Officer, MoneyGram): MoneyGram serves 60 million+ active customers a year, across 200 countries and territories, 5 billion digital endpoints and 480,000 retail locations (more than Starbucks and McDonald's global stores combined). About half of remittances are still collected in cash, especially in the Philippines (42% of face-to-face transactions in cash), Mexico (40%) and Nigeria (39%).</p>
+<ul>
+<li><strong>MoneyGram Ramps</strong>: One API connects to the global retail network, with cash-out available in 170 countries and territories; tellers need no knowledge of blockchain and pay out against a reference code</li>
+<li>Partnership with <strong>Solflare</strong>: Starting today, eligible Solflare users can convert USDC into cash and collect it at MoneyGram locations in 170 countries and territories; Solflare has 4 million+ monthly active users and $15 billion+ in self-custodied assets; <strong>zero fees on USDC-to-cash withdrawals through the end of the year</strong></li>
+</ul>
+<h3>Zelle-USD: America's Largest P2P Network Issues a Coin</h3>
+<p>Alexandra Lang (Zelle): Zelle is the most commonly used person-to-person payment network in the United States, owned by seven major banks (Bank of America, Capital One, JPMorgan Chase, PNC, Truist, US Bank and Wells Fargo), connected to 2,400+ banks and credit unions, and processed more than $1 trillion and over 2 billion transactions last year.</p>
+<p>It launched <strong>Zelle-USD</strong> (a U.S. dollar stablecoin built on Solana, in partnership with Anchorage Digital), and demonstrated live <strong>confidential transfers and confidential balances</strong>: amounts are hidden from the public chain and visible only to the network operator and banks, allowing encrypted transfers between banks that are then decrypted on crediting. The goal is to bring the experience of "transferring money knowing only someone's phone number or email" to cross-border payments.</p>
+<h3>Western Union USDPT: A 175-Year-Old Company's Answer on "Exits"</h3>
+<p>Malcolm Clark (Western Union): 175 years ago the company used the telegraph to send the first "money message without money"; the problem today is unchanged — money moves in the back end, but people still have to go to a store to pay in and collect cash. About 4% of the world's population lives outside their country of birth, and 75% of remittances are spent locally (in cash or by card, not in crypto assets).</p>
+<ul>
+<li><strong>The USDPT stablecoin is already live in production on Solana</strong> (in his words: this is not a promise, not a product pitch — it is already in use), with free minting and redemption through Anchorage Digital Bank and direct mint/redeem available in about 160 countries</li>
+<li>The key difference is the exit: 400,000 locations and cash-out in 130 currencies; the <strong>Stablecard app</strong> is now available: hold USDPT in 40+ markets, spend by Visa, withdraw cash in stores, or transfer to a local bank</li>
+<li><strong>Remittance redirection</strong>: After receiving a remittance notification, recipients can instantly move the money to a stablecard, with no need to understand crypto or stablecoins</li>
+<li><strong>The digital asset ecosystem network "Dan"</strong>: Wallets can integrate once and choose Western Union as their exit, covering 130 currencies, 180 countries and 400,000+ locations; $20 in USDPT was distributed to the audience on site</li>
+</ul>
+<h3>Roundtable: Ramp × Payoneer — "Prices Are Falling, Stablecoins Are in a Major Bull Market"</h3>
+<p>Hosted by Namil Dahul (YC), with guests Ahmed Zifsa (Head of Stablecoin and Crypto Partnerships, Ramp) and Roland Berry (Payoneer). Together the two companies process more than $350 billion a year.</p>
+<ul>
+<li><strong>Ramp</strong>: Stablecoin accounts unify fiat and on-chain financial workflows on one platform; after launching in Mexico in July, <strong>70% of transaction volume occurred outside banking hours</strong> (weekends and holidays); it supports USDC, USDT, USDG and OpenUSD; coin selection criteria are coverage, compliance, operating cost and customer demand; 97% of volume is still in U.S. dollar stablecoins; it distinguishes "payment" stablecoins from "holding" stablecoins; it is bullish on local-currency stablecoins such as the Mexican peso, Brazilian real and Argentine peso</li>
+<li><strong>Payoneer</strong>: 2 million SME users; it issues its own stablecoin payout USD and has applied for a U.S. trust bank charter — the motivation is not net interest margin but <strong>where regulatory responsibility lies</strong>: who is responsible for customers' money and who to turn to if something goes wrong; its biggest pain points are on/off-ramps and back-end compliance: proof of source of funds, fragmented tools for FinOps and treasury teams, and how on-chain refunds get back to the ultimate beneficiary</li>
+<li>Outlook for a year from now: no longer talking about "stablecoins," only about what value was created for customers; the line between stablecoins and fiat blurring to the point of automatic routing by "cheapest, fastest, most suitable channel"</li>
+</ul>
+<h3>Mastercard and Bitso: The Gap in Non-Dollar Stablecoins</h3>
+<ul>
+<li><strong>Christian Rao (Mastercard)</strong>: The vision is "choice, without sacrificing security"; connecting 3.8 billion consumers, 500 million acceptance points and 32 currencies; not betting on a single winner, and not believing the future is "many stablecoins" as separate islands — what is needed is <strong>one global money platform</strong> that makes fiat, stablecoins in different currencies, tokenized deposits and tokenized funds interoperable</li>
+<li><strong>Ben Reed (Bitso)</strong>: Idle U.S. dollars earn about 4% (Treasury rates), Mexico about 6% (CETES); small-business loans are 7–11% in the U.S., while specialist lenders in Mexico charge 30–40% or more; on-chain lending uses mathematics to compress spreads (borrowing rate × utilization = lending yield); "<strong>a peso problem needs a peso solution</strong>": Mexicans hold stocks, gold and receivables, not BTC/ETH; <strong>MXNB (the Mexican peso stablecoin issued by Bitso) goes live on Solana today</strong></li>
+</ul>
+<h3>Paystack: Africa's Last Mile</h3>
+<p>Shola Akinlade (co-founder and CEO of Paystack, Africa's Stripe, acquired by Stripe in 2020): 11 licenses across 7 markets, direct connections to 50+ banks and mobile payment providers, 60 million+ transaction risk decisions per month, 400,000+ businesses, and more than $15 billion collected annually. Africa has 1.5 billion people with a median age of 19, but 54 countries and 41 currencies. <strong>Global Stack API</strong>: one API for on- and off-ramps across 20 African markets, connecting African currencies to the on-chain economy.</p>
+<h3>SoFi and Squads: Banks Become Plug-ins</h3>
+<ul>
+<li><strong>Simon Griffin (SoFi)</strong>: 17 million consumer customers; one year into its crypto business; launched <strong>SOFA USD — the first stablecoin issued by a U.S. national bank</strong>; the first bank to offer <strong>tokenized deposits (paying 4.4% interest, FDIC-insured)</strong>; staking coming soon, lending to launch in the first half of 2027; Agents are already helping users with financial planning and robo-advice, with MCP rolling out progressively</li>
+<li><strong>Stefan Simkin (co-founder and CEO, Squads)</strong>: "Banks become plug-ins" — accounts (where money sits) are decoupled from services (who provides them), with programmable accounts at the center and banks and PSPs becoming pluggable services; its product <strong>Altitude</strong> (global business accounts) has been live for 12 months, with 800 businesses across 80 countries, $2 billion in annualized payment volume, one-fifth of dollars moving on weekends, and card spending growing 50% month on month; stablecoin payments so far this year total $482 billion, with nearly $10 billion in stablecoin card spending; the next opportunity is owning financial workflows end to end and letting AI Agents do the work for customers (accounts payable, accounts receivable, expense management, accounting workflows and L2MCP already live)</li>
+</ul>
+<h2>The Agent Economy: Every Request Is a Transaction</h2>
+<p>Rohin (Cloudflare, Product Manager for the Agent Internet team): Cloudflare supports more than 20% of the internet; HTTP traffic grew by more than 60% over the past year; <strong>bots now account for over 70% of HTML content requests, with more active bots than humans</strong>; the old business model (advertising) is being hit by AI overviews and Agent traffic.</p>
+<p>Example: He asked an Agent to find the best restaurant in London; the Agent went through 1,000+ menus and recommended a few based on his preferences — only 1 benefited, while the other 999 bore the cost for nothing. The new idea: <strong>every request is an opportunity for a value exchange</strong>.</p>
+<ul>
+<li><strong>Monetization Gateway</strong>: A paywall for any URL — datasets, APIs, MCP tools and pages can all be priced, and Agents pay on arrival</li>
+<li><strong>Pay Per Crawl</strong>: Trusted buyers bid to purchase content, and can track how content is used and how much money it earns</li>
+<li>Underneath is the <strong>x402 protocol</strong> (governed by the X402 Foundation, with Solana, Cloudflare, Visa, Mastercard, Coinbase, Stripe and others as members); <strong>Solana carries more than 70% of x402 transactions</strong>; machine-to-machine commerce needs payment rails with high throughput, low latency and the ability to handle micropayments (0.1 cents, even 0.01 cents)</li>
+</ul>
+<h2>Private Markets and Credit On-Chain: Step Two of Tokenization</h2>
+<p>A conversation between Michael (CEO, Kamino) and David Vacheva (Head of Tokenization, Fasenara). Core view: <strong>tokenization is only step one; the real unlock is borrowing against tokenized assets as collateral</strong>.</p>
+<ul>
+<li><strong>Kamino</strong>: The tokenized stock market is $155 trillion in size (as stated on stage), with another $40–50 trillion in credit and alternative assets; Kamino has issued more than $20 billion in loans and over $600 billion in trading; it released the all-new <strong>Kamino App</strong> (asset discovery, aggregated swaps) and <strong>Kamino Omni</strong> (beyond traditional vaults: hold assets, borrow against collateral, build portfolios); its strategy is not to compete for retail users to come to Kamino, but to give its API to platforms that already have customers (brokers, retirement, wealth, advisory)</li>
+<li><strong>Fasenara</strong>: An $8 billion asset manager focused on asset-backed credit (ultra-short duration such as 30/60/90-day invoice receivables); in one year on-chain its TVL went from 0 to over $300 million; the tokenized version can be deposited into DeFi lending protocols such as Kamino in exchange for stablecoin liquidity, faster and cheaper than borrowing through traditional brokers; liquidity comes in three types: redemption liquidity, financing liquidity (borrowing), and secondary-market liquidity</li>
+<li>Advice to asset-management peers: Find the use case by asset class (tokenized stocks are about accessibility, private markets about unlocking liquidity); regulation is key — legal certainty of token ownership, bankruptcy remoteness, settlement finality and collateral quality are all questions regulators need to work through first</li>
+</ul>
+<h2>Dubai Real Estate On-Chain: From Shares to Tokens</h2>
+<p>Ricardo (co-founder and CPTO, Stake): Stake was founded at the end of 2020 and began operating in 2021, with 2 million users, 206 nationalities and 170 countries; from $150 you can own a share of Dubai real estate. Pain points: ownership exists only in its own database, exit windows are limited, and settlement goes through SWIFT. It announced a partnership with Solana to tokenize its assets: <strong>the token is the proof of ownership, with unified global rules (one identity verification) and free trading</strong>; the goal is "my mom can invest in tokens without understanding wallets."</p>
+<h2>Three Ledger Launches</h2>
+<p>Ian Rogers (Ledger):</p>
+<ol>
+<li><strong>Clear Signing live on Solana</strong>: When signing, you can see readable text on the device — taking a Jupiter swap as an example, where previously you had to flip through 13 screens of hard-to-read text on a Ledger, it is now 3 readable screens; covering 9 Solana DApps and 18 of the 22 core everyday operations; in collaboration with the Solana Foundation and Anza</li>
+<li><strong>Ledger Agent Intent</strong> (released last month): Agent approvals are queued — an Agent never holds private keys; when it needs to move money it initiates an approval and the user approves asynchronously (example: pay.sh), so the Agent does not have to stop and wait</li>
+<li><strong>Ledger Atom</strong>: A new mobile device (based on AOSP) that can transform into a Ledger device; in secure mode during transactions the screen is handed to the Ledger secure element, and keys are invisible even to Android; in partnership with Solana Seeker, Atom is the first hardware device to land on the Seeker platform, and all 1,500+ apps in the Seeker store will migrate over</li>
+</ol>
+<h2>City of London Session and the Afternoon Political Debate</h2>
+<h3>Deputy Mayor: London Aims to Be the Crypto Capital</h3>
+<p>Howard Dawber (Deputy Mayor of London for Business and Growth; rendered as Dobber in the transcript): London calls itself the world's business capital; 60–70 companies have registered into the UK's new crypto regulatory framework; London has produced 19 unicorns this year; on AI, London is Europe's tech capital and one of the world's top three AI clusters; the London Growth Plan covers green tech (25% of foreign direct investment goes to green technology), the experience economy, health and life sciences, and technology; London's GDP grows about 2.5–3% a year; companies can register, open accounts and set up offices within days; the Mayor has set up an AI taskforce (led by Martha Lane Fox) focused on AI's impact on jobs and retraining.</p>
+<h3>Boris Johnson and Ross Kempsell: Cryptocurrency and UK Economic Growth</h3>
+<p>Hosted by Gareth Jenkinson (Head of Multimedia, The Block), with guests former Prime Minister Boris Johnson and Lord Ross Kempsell. This session was heavily political, and many figures were as stated by the guests on stage and have not been verified.</p>
+<ul>
+<li><strong>Johnson on the economy</strong>: UK growth in 2027 is expected to be only 1%; he attacked the current Labour government for taxes that are too high and out-of-control welfare spending (by his account: one in six adults is registered for the disability benefit PIP); under him London had the most billionaires in the world, and since Labour came to power billionaires are down 10% and millionaires down 7% (by his account; globally only Moscow also declined over the same period); he called for a Conservative government as soon as possible</li>
+<li><strong>Johnson on Bitcoin</strong>: He acknowledged writing a column a few months ago calling Bitcoin a Ponzi scheme, prompted by an elderly parishioner being scammed — the "greater fool" game reaching rural Oxfordshire; but he stressed this was skepticism only toward speculative cryptocurrencies, that he fully supports blockchain and asset tokenization technology, and that London should be at the frontier</li>
+<li><strong>Kempsell</strong>: More than 8% of UK adults hold some crypto asset (by his account); the key is institutional adoption of blockchain technology; the UK regulatory framework is being built (the FCA drawing regulatory boundaries, the Bank of England's stablecoin framework, the digital securities sandbox); London has 3,000+ active fintech companies and was Europe's top destination for fintech investment last year</li>
+<li><strong>Energy and AI</strong>: Johnson said Britain's high electricity prices are a key bottleneck for AI and data centers, and argued for zonal pricing (regions rich in renewables such as Scotland and Wales should have lower prices); AI is the most important cognitive revolution of his lifetime</li>
+<li><strong>Brexit</strong>: Kempsell said it is an advantage that the UK is not subject to the EU's AI Act, Digital Markets Act or Digital Services Act, and that the UK is the world's third-largest AI power; he opposed rejoining the EU; Johnson said rejoining would cost Britain £750 million a week in payments to the EU (by his account), and that the British public would not vote to give up border control</li>
+</ul>
+<h2>Finale: All Funds — $2 Trillion Meets On-Chain</h2>
+<p>Annabel Spring (CEO, All Funds): All Funds is the "digital plumbing" of fund distribution, connecting 3,900+ asset management companies with 950+ distributors (wealth management, banks, insurance, private banks) across 65+ countries, at a scale of more than $2 trillion; RWAs on Solana are $4.3 billion and growing extremely fast; the gap between the two is a "once-in-a-decade opportunity."</p>
+<p>It launched the <strong>Harmony Initiative</strong>: allowing asset managers to reach the on-chain ecosystem without rebuilding their operating models, and giving builders access to institutional-grade product flow; the All Funds blockchain alliance has been operating for five years — "not a pilot, not a lab." The talk was cut off mid-example by the recording, with the transcript ending at 04:27:10.</p>
+<h2>Threads Worth Noting</h2>
+<ol>
+<li><strong>"Exit" was the word of the day</strong>: OpenUSD, USDPT, MoneyGram Ramps, Western Union's Dan, Payoneer's off-ramp pain points — competition in stablecoins has shifted from "who issues the coin" to "who can get the money out and turn it into cash"</li>
+<li><strong>Non-dollar stablecoins take the baton</strong>: MXNB (Mexican peso) live on Solana; Ramp named the Brazilian real and Argentine peso; what Mastercard wants is a global money platform with multi-currency interoperability</li>
+<li><strong>Distribution beats product</strong>: All Funds ($2 trillion) and Kamino (giving its API to platforms that already have customers) are making the same point — whoever controls distribution controls valuation</li>
+<li><strong>Agent payments become a track of their own</strong>: x402 + Solana accounting for 70%+ of transactions + Cloudflare's per-use paywalls — the charging model for machine-to-machine commerce is taking shape</li>
+<li><strong>Regulation remains the last door for institutions</strong>: Hester of ICE Clear Europe stated clearly that 24/7 collateral movement must wait for regulators to sign off on token ownership, bankruptcy remoteness and settlement finality; the New York Stock Exchange is building a tokenized ATS (already able to accept tokens minted on Solana), and ICE is also exploring becoming a Solana validator</li>
+</ol>
+<h2>Not Covered and Uncertain</h2>
+<ul>
+<li>The recording cuts off mid-talk during All Funds (04:27:10); the second half of that afternoon is not in this transcript</li>
+<li>A segment with Hester of ICE Clear Europe (surname not given in the transcript): ICE is advancing retail markets (segregated from institutional markets, with no impact on existing guarantee funds and risk waterfalls), the New York Stock Exchange tokenized ATS, a joint venture for a tokenized securities trading venue, and accepting gold, yen, Australian dollars and more as initial margin — not given its own section due to length; see the transcript at 03:00–03:16 for details</li>
+<li>There were also short videos and warm-up content around the lunch break, not included in the key points</li>
+</ul>
+<h2>ASR Restoration Table</h2>
+<table>
+<thead>
+<tr>
+<th>As written in the transcript</th>
+<th>Should be</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Salana / Salina</td>
+<td>Solana</td>
+<td>Frequent throughout</td>
+</tr>
+<tr>
+<td>Freakpoint</td>
+<td>Breakpoint</td>
+<td>Theme word</td>
+</tr>
+<tr>
+<td>Zell / ZEL</td>
+<td>Zelle</td>
+<td>U.S. P2P payment network; its stablecoin is Zelle-USD</td>
+</tr>
+<tr>
+<td>OpenUSC / OpenUSD</td>
+<td>OpenUSD (OUSD)</td>
+<td>Open Standard's stablecoin</td>
+</tr>
+<tr>
+<td>Monogram</td>
+<td>MoneyGram</td>
+<td>Remittance company</td>
+</tr>
+<tr>
+<td>Solfler / Solfair / Sulfur</td>
+<td>Solflare</td>
+<td>Solana wallet</td>
+</tr>
+<tr>
+<td>US DPT / USDPT</td>
+<td>USDPT</td>
+<td>Western Union's stablecoin</td>
+</tr>
+<tr>
+<td>Kamina / Camino</td>
+<td>Kamino</td>
+<td>Solana lending protocol</td>
+</tr>
+<tr>
+<td>Fasenara / Fastenara</td>
+<td>Fasenara</td>
+<td>$8 billion asset manager</td>
+</tr>
+<tr>
+<td>Pioneer</td>
+<td>Payoneer</td>
+<td>B2B payment platform</td>
+</tr>
+<tr>
+<td>Howard Dobber</td>
+<td>Howard Dawber</td>
+<td>Deputy Mayor of London (Business and Growth)</td>
+</tr>
+<tr>
+<td>Kemstle / Kempsel / Lord Camp</td>
+<td>Lord Ross Kempsell</td>
+<td>Inconsistent spelling in the transcript</td>
+</tr>
+<tr>
+<td>Lily Lu</td>
+<td>Lily Liu</td>
+<td>President of the Solana Foundation (suspected transcription, uncertain)</td>
+</tr>
+<tr>
+<td>Dan</td>
+<td>Digital Asset Network</td>
+<td>Western Union's digital asset ecosystem network, abbreviated Dan</td>
+</tr>
+<tr>
+<td>chunk_023</td>
+<td>Silent segment</td>
+<td>A silent segment near the lunch break; does not affect completeness</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+<footer data-lang="zh">来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2NgQPdyyEPkEOk">https://x.com/i/broadcasts/2NgQPdyyEPkEOk</a> · Solana Breakpoint 2026（伦敦）· 2026-11-16 17:59–22:26（约 4 小时 27 分）· 总观看约 2.4 万人<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2NgQPdyyEPkEOk">https://x.com/i/broadcasts/2NgQPdyyEPkEOk</a> · Solana Breakpoint 2026（倫敦）· 2026-11-16 17:59–22:26（約 4 小時 27 分）· 總觀看約 2.4 萬人<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Broadcast replay <a href="https://x.com/i/broadcasts/2NgQPdyyEPkEOk">https://x.com/i/broadcasts/2NgQPdyyEPkEOk</a> · Solana Breakpoint 2026 (London) · 2026-11-16 17:59–22:26 (approx. 4 hours 27 minutes) · Total views approx. 24,000<br>This page is the full text of notes compiled and edited by hand from a machine transcript; all content consists of guests' improvised remarks and self-descriptions during the livestream, has not been verified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Breakpoint 2026: Day One 会议纪要 · Yat's Talks",tw:"Breakpoint 2026: Day One 會議紀要 · Yat's Talks",en:"Breakpoint 2026: Day One — Conference Notes · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

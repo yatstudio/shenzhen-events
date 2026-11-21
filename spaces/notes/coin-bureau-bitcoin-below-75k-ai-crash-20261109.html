@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：比特币跌破 75K、AI 崩盘与民主党加密整顿？</h1>
 <blockquote>
 <p><strong>本场是 X 视频直播（Broadcast），不是 Space。</strong> 主播 Coin Bureau @coinbureau，主持 Guy 与 Nic，嘉宾 Lewis（技术分析）。
@@ -152,8 +159,286 @@
 <hr />
 <p><em>纪要依据 X 回放英文逐字稿整理；转写由 faster-whisper 本地完成，个别专有名词与数字可能存在听错。价格与事件数字均为直播当时发言人口径。</em></p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：比特幣跌破 75K、AI 崩盤與民主黨加密整頓？</h1>
+<blockquote>
+<p><strong>本場是 X 影片直播（Broadcast），不是 Space。</strong> 主播 Coin Bureau @coinbureau，主持 Guy 與 Nic，嘉賓 Lewis（技術分析）。
+直播時間：2026-11-09（週一）約 21:00–21:55 CST，時長 54 分 05 秒，回放約 2,931 次觀看。
+原標題：<em>Bitcoin Below $75K, AI CRASH &amp; Democrat Crypto Crackdown?</em>
+連結：https://x.com/i/broadcasts/2JQXvdeqYJarKk
+來源：X 回放下載後本地轉寫（faster-whisper，英文逐字稿 825 行，涵蓋 00:00–00:54:05）。</p>
+<p><strong>口徑說明：以下所有說法均為發言人現場自述，未經核實；價格點位、數字均為發言人當時口徑，不構成投資建議。轉寫有個別聽錯（如人名、地名），已在可疑處標註。</strong></p>
+</blockquote>
+<h2>結論先行</h2>
+<ol>
+<li><strong>民主黨期中選舉橫掃兩院是本週一切的源頭</strong>：主持人稱這是「藍色海嘯」，民主黨拿下眾議院和參議院、至少 5 個州長席位和 5 個州的完整州級控制權；市場先因「結果落地」反彈一天，隨後消化到監管含義後科技股出現自新冠以來最慘暴跌。</li>
+<li><strong>AI 與加密是受衝擊最大的兩個行業</strong>：資料中心在多地被禁/被限、成為選舉核心議題；加密行業約 2 億美元政治投入打了水漂，CLARITY 法案基本沒戲，2027 年 1 月起民主黨掌握傳票權，電視聽證會將至。</li>
+<li><strong>比特幣跌破 75K，但嘉賓 Lewis 仍總體看多</strong>：75–76K 的 38.2% 回撤位沒守住，下一關鍵位是 61.8% 黃金分割約 69–70K；跌破 69K 他才會轉空；以太坊黃金分割位約 2,000 美元。</li>
+<li><strong>主持人眼中的「銀邊」</strong>：整頓會把騙子、套利者清出行業，加密本來就是局外人行業，「進了帳篷、被川普家族掏了口袋、又被踢回寒冷中——而這正是我們該待的地方」。</li>
+<li><strong>Lewis 的持倉表態</strong>：重倉 HYPE 與 PERP（Hyperliquid 相關）、看好 PEPE 的相對強勢與 TAO 的技術位置；目前不用槓桿，只做現貨。</li>
+</ol>
+<hr />
+<h2>一、上週回顧：從蘋果財報到「血色星期四」</h2>
+<p><strong>Guy 與 Nic 按時間線復盤上週：</strong></p>
+<ul>
+<li><strong>週一：蘋果財報</strong>——營收 1,140 億美元創紀錄、超華爾街預期，是新 CEO（轉寫為 John Ternas，疑為聽錯）上任後首份財報，但因毛利率疲軟，盤後股價仍下跌。主持人點評：蘋果是除 Netflix 外唯一沒有 All in AI 的大科技公司，仍靠「造東西、賣東西」的老辦法。</li>
+<li><strong>週一：油價</strong>——美油因美伊和平協議傳聞大跌（轉寫數字不清）、布倫特跌約 5%。</li>
+<li><strong>週二：期中選舉，民主黨大勝</strong>——「不是藍色浪潮，是藍色海嘯」。幾乎所有被看作翻盤選區的席位都被民主黨拿下，還拿下南卡羅來納；阿拉斯加、密西西比仍在計票（密西西比用陳舊的宣誓計票制度，可能拖兩週）。主持人稱這是自 1974 年水門事件後現任執政黨被懲罰得最慘的一次。</li>
+<li><strong>週三：市場先反彈</strong>——選舉結果落地後美股開盤市值增加 1.1 兆美元；比特幣先跌破 76K，隨後收復 79K。同日壞消息：OKX 與 ICE 交易所合作的代幣化股票項目遭「七巨頭」全部反對，七家公司拒絕自家股票被代幣化——代幣化敘事近期受挫。</li>
+<li><strong>週四：科技股崩盤</strong>——市場消化選舉的監管含義後，AI、半導體、儲存、資料中心股大幅拋售，納斯達克 100 跌超 6%、標普跌近 4.5%，為新冠以來科技股最慘單日。川普前一天為上漲邀功、第二天把下跌歸咎於民主黨。比特幣同向跌破 76K，一小時內超 5 億美元加密槓桿倉位被清算。</li>
+<li><strong>週五：亞洲跟跌 + 非農爆表</strong>——韓國 KOSPI 較 6 月高點跌 45%、中國跌 30%、台灣跌 24%（主持人口徑），已進入熊市區間。非農新增 16.5 萬人（預期 6.5 萬）、失業率 4.1%、薪資月增 +0.4%（預期 +0.3%），主持人稱 12 月升息機率約 70%。另據主持人說法，上週多家選股型對沖基金爆倉、關門或向投資人返還資金。</li>
+<li><strong>週末兩件大事</strong>：</li>
+<li><strong>黃仁勳緋聞</strong>：輝達 CEO 被曝與一名據稱是中國間諜的女子有染。主持人認為目前證據下是「雷聲大雨點小」（nothing burger），董事會正在調查；但輝達股價開盤即跌。</li>
+<li><strong>巴拉圭銀行危機</strong>：該國最大零售銀行/最大數位貸款機構因償付能力比率跌破法定最低標準一半，被央行下令接管，App 被鎖、帳戶凍結，約 60% 成年人口無法使用銀行服務，街頭出現騷亂，總統被迫辭職、央行行長辭職、多名銀行高管被起訴。主持人稱當地有存款保險、錢最終能拿回但很慢，並以此論證「持有銀行體系之外的、自己掌控的資產」（比特幣）的意義；同時承認這類事「任何地方都可能發生」。</li>
+</ul>
+<hr />
+<h2>二、主議題：民主黨橫掃對 AI 與加密意味著什麼</h2>
+<p><strong>選舉結果（主持人口徑）：</strong></p>
+<ul>
+<li>民主黨贏下眾議院與參議院，另有 2 個參議院席位可能到手，屆時參議院將達 56 席——而今年的選區版圖本對共和黨有利。</li>
+<li>至少翻轉 5 個州長席位，並在威斯康辛、明尼蘇達、賓夕法尼亞、內華達、密西根取得州政府完整控制權——關鍵在於這賦予了各州出台州級資料中心限制的權力。</li>
+</ul>
+<p><strong>資料中心成為選舉議題：</strong></p>
+<ul>
+<li>俄亥俄州 14 個市鎮禁止或限制資料中心，包括叫停亞馬遜在 Sunbury 的 20 億美元項目；另有 8 個市鎮通過暫停/禁令，範圍從佛羅里達到伊利諾伊；俄亥俄與奧克拉荷馬有市長因支持資料中心項目被罷免。</li>
+<li>主持人稱，資料中心與油價、生活成本、伊朗戰爭並列為選舉核心議題，「人們不喜歡資料中心，尤其不想住在它旁邊」；而亞馬遜、Meta、谷歌等超大規模企業仍在推進項目，民眾感覺「被強塞」。</li>
+<li>晶片股指數（SOX）創 2020 年以來最差單日表現，市場定價的是「數個季度的減速」，而非短暫停頓。</li>
+</ul>
+<p><strong>未來三處壓力點（Nic 歸納）：</strong></p>
+<ol>
+<li><strong>監管風險</strong>：民主黨上台意味著更嚴的 AI 與加密規則，CLARITY 法案基本已死。</li>
+<li><strong>AI 交易本身的可持續性</strong>：此前已有質疑——債務融資規模、資料中心建設支出、中國記憶體競爭引發的恐慌。</li>
+<li><strong>政治反彈</strong>：民主黨認為選民給了他們打壓資料中心與 AI 行業的授權；馬斯克花了約 5 億美元支持共和黨候選人、基本全軍覆沒，作為 AI 繁榮的「代言面孔」也會招致反彈。</li>
+</ol>
+<p><strong>對加密行業的具體衝擊（Guy 與 Nic）：</strong></p>
+<ul>
+<li>加密行業「把牌打光了，而且輸得很慘」：投入約 2 億美元，支持的多名候選人落敗，政治資本大減；加上川普的 Meme 幣及其家族在加密領域的參與，行業最大的華盛頓優勢——友好的委員會領導層——一夜消失。</li>
+<li><strong>傳票權是遊戲規則改變者</strong>：2027 年 1 月起，民主黨可強制取證、強制文件、強制行業人物出庭作證。此前 Blumenthal、Warren 等人的信函被共和黨數月置之不理；此後將是電視直播聽證會，「在美國每台電視上播放」，對行業形象極差，「有幾顆人頭已被盯上」。</li>
+<li><strong>最大軟肋是川普家族的錢</strong>：主持人稱川普家族透過代幣銷售、版稅與加密業務賺了約 16 億美元，每一項政策優惠都可能構成利益衝突。</li>
+<li><strong>CLARITY 法案</strong>：原版已無望；民主黨可能按自己的版本重寫、加入此前要求的道德條款，但川普已表示將否決民主黨提交的大量法案，不會簽署帶民主黨道德條款的版本。</li>
+<li><strong>主持人眼中的積極面</strong>：整頓會清出騙子、詐欺者與套利者，帶來能讓行業誠實發展的紮實監管；加密不需要一個「親加密總統」，只需要自己。原話（英文）：<blockquote>
+<p>"We got inside the tent. We got our pockets picked by the Trump family. We now have been booted back out of the tent into the cold and it's exactly where we should be."</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h2>三、技術分析：Lewis 現場 TA（約 00:33–00:48）</h2>
+<p><strong>總體判斷：仍看多，但關鍵位在 69–70K。</strong></p>
+<ul>
+<li><strong>TOTAL2（除比特幣外的加密總市值）</strong>：自 2020 年以來的一條趨勢線六年多來始終有效（僅 2023 年短暫跌破），目前價格又回到這條線上——山寨幣可能迎來反彈；要避免連續六週下跌。</li>
+<li><strong>比特幣</strong>：75–76K（38.2% 回撤位）沒有守住、沒有出現反彈，因此更傾向於會下探 61.8% 黃金分割位，約 69–70K。若按 2022–2023 年的走勢重演：觸及黃金分割、留一根大下影線、然後繼續上漲，「仍處於巨大上升趨勢中」。他認識的交易員中約 60% 仍看多、認為是買入機會、應在好位置定投（週線已創新高，當前只是上升趨勢中的簡單回撤），40% 認為已入熊、會創新低；他屬於前者，<strong>跌破 69K 才會轉為空頭</strong>。</li>
+<li><strong>以太坊</strong>：接近黃金分割位約 2,000 美元，僅比現價低約 5%，「應該會在 2,000 美元附近出現大反彈」；連續五週收紅後，第六週繼續收紅在他看來「有點瘋狂」。</li>
+<li><strong>HYPE 與 PERP（Hyperliquid）——Lewis 的「全倉信仰」</strong>：在 Druckenmiller（Stanley Druckenmiller）被曝買入 PERP 後，他自稱已成「徹底的 maximalist」，「這是自當年比特幣、以太坊以來唯一讓我如此著迷的標的」，越跌越買。引述 Druckenmiller 的話：<blockquote>
+<p>"I don't like to diversify. I like to do my research really, really well, go into something and put all of my eggs into one basket and then watch that basket very carefully."
+  他認為若 Hyperliquid 能把全球機構資金與大交易員帶進期貨市場，將吃掉整個期貨市場份額。</p>
+</blockquote>
+</li>
+<li><strong>PEPE</strong>：全市場下跌時它在漲——相對強勢本身就是需求訊號；歷史經驗是，下跌期跑贏的幣，在反彈期往往跑得更好。</li>
+<li><strong>TAO（Bittensor，AI 敘事幣）</strong>：按純技術面，當前價位與 2024 年以來任何時點買入後數週/數月都有不錯回報的位置相當，正在進入「不錯的價格區間」。</li>
+<li><strong>其他</strong>：USELESS 等 Meme 幣相對市場也表現尚可，主持人調侃「Meme 幣比一半所謂大實用幣表現還好，這就是加密」。</li>
+<li><strong>槓桿</strong>：目前不用任何槓桿——不確定性太高，他只在有 60–90% 把握時才用槓桿；但現貨已重倉投入，「risk it for the biscuit」（不入虎穴，焉得虎子）。</li>
+</ul>
+<hr />
+<h2>四、本週推文與日程</h2>
+<p><strong>本週推文（約 00:48–00:51）：</strong></p>
+<ul>
+<li>馬斯克選後自嘲：「看來我的選舉干預太空雷射沒起作用」（"guess my election interference space lasers didn't work"）。</li>
+<li>一批選舉梗圖（主持人只口頭帶過，未逐條念）。</li>
+<li>Bubblemaps 曝光某知名 CT 人物/KOL 透過 pump.fun 拉盤代幣，時間線互相指控、「騙子出賣騙子」，主持人稱如今的 CT「就是個糞坑，而且比以往更甚」。</li>
+<li>黃仁勳事件的相關梗圖。</li>
+</ul>
+<p><strong>本週重要日程（Dates for the diary，約 00:51–00:52）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>週二</td>
+<td>10 月 CPI、10 年期美債拍賣</td>
+</tr>
+<tr>
+<td>週三</td>
+<td>思科（Cisco）財報——對 AI 板塊有指示意義</td>
+</tr>
+<tr>
+<td>週四</td>
+<td>三季度 GDP、初請失業金</td>
+</tr>
+<tr>
+<td>週五</td>
+<td>美國 PPI、密西根大學消費者信心指數</td>
+</tr>
+</tbody>
+</table>
+<p>主持人收尾稱「2026 年就是不肯放手」，波動仍在前方；下週同一時間再見。</p>
+<hr />
+<h2>附：關鍵原話（英文短引）</h2>
+<ul>
+<li>開場定調："Democrats sweep both chambers, tech has its worst crash since COVID, a Red Hot Jobs report revives rate hike fears and Bitcoin slides below 75k."</li>
+<li>論資料中心民意："Data centers were very much on the ballot."</li>
+<li>論傳票權："From January though, Democrats being in control, they can compel testimony, they can compel documents, they can compel industry figures to come before them."</li>
+<li>論 CLARITY 法案："Not gonna happen. NGMI bro, NGMI."</li>
+<li>Lewis 論比特幣關鍵位："If we fall underneath 69K, which is that golden ratio for Bitcoin… I would be more likely to fall under that camp [bearish]."</li>
+<li>Lewis 論槓桿："I'm not using any leverage right now because there is too much uncertainty… I only like to use leverage when things are 60, 70, 80, 90% certainty."</li>
+</ul>
+<hr />
+<p><em>紀要依據 X 回放英文逐字稿整理；轉寫由 faster-whisper 本地完成，個別專有名詞與數字可能存在聽錯。價格與事件數字均為直播當時發言人口徑。</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Bitcoin Below 75K, AI Crash &amp; Democrat Crypto Crackdown?</h1>
+<blockquote>
+<p><strong>This was an X video livestream (Broadcast), not a Space.</strong> Hosted by Coin Bureau @coinbureau, with hosts Guy and Nic and guest Lewis (technical analysis).
+Livestream time: 2026-11-09 (Monday) around 21:00–21:55 CST, duration 54 minutes 05 seconds, replay viewed around 2,931 times.
+Original title: <em>Bitcoin Below $75K, AI CRASH &amp; Democrat Crypto Crackdown?</em>
+Link: https://x.com/i/broadcasts/2JQXvdeqYJarKk
+Source: Downloaded from the X replay and transcribed locally (faster-whisper, English verbatim transcript of 825 lines, covering 00:00–00:54:05).</p>
+<p><strong>Note on sourcing: All statements below are the speakers' own live remarks and have not been verified; price levels and figures are as stated by the speakers at the time and do not constitute investment advice. The transcript contains occasional mishearings (such as names of people and places), which have been flagged where suspicious.</strong></p>
+</blockquote>
+<h2>Key Takeaways First</h2>
+<ol>
+<li><strong>The Democrats' midterm sweep of both chambers is the source of everything this week</strong>: The hosts called it a "blue tsunami," with Democrats taking the House and the Senate, at least 5 governorships, and full state-level control in 5 states; markets first rallied for a day on the "result is in" relief, then, after digesting the regulatory implications, tech stocks suffered their worst plunge since COVID.</li>
+<li><strong>AI and crypto are the two hardest-hit sectors</strong>: Data centers have been banned or restricted in many places and became a core election issue; the crypto industry's roughly $200 million in political spending went down the drain, the CLARITY Act is basically dead, Democrats will hold subpoena power from January 2027, and televised hearings are coming.</li>
+<li><strong>Bitcoin fell below 75K, but guest Lewis remains broadly bullish</strong>: The 38.2% retracement level at 75–76K did not hold, and the next key level is the 61.8% golden ratio at around 69–70K; only a break below 69K would turn him bearish; Ethereum's golden ratio level is around $2,000.</li>
+<li><strong>The "silver lining" in the hosts' view</strong>: The crackdown will clear scammers and arbitrageurs out of the industry. Crypto was always an outsider industry — "We got inside the tent, we got our pockets picked by the Trump family, and we have been booted back out into the cold — and that is exactly where we should be."</li>
+<li><strong>Lewis's positioning</strong>: Heavily long HYPE and PERP (Hyperliquid-related), bullish on PEPE's relative strength and TAO's technical setup; currently using no leverage, spot only.</li>
+</ol>
+<hr />
+<h2>I. Last Week in Review: From Apple Earnings to "Bloody Thursday"</h2>
+<p><strong>Guy and Nic recapped last week in chronological order:</strong></p>
+<ul>
+<li><strong>Monday: Apple earnings</strong> — Revenue hit a record $114 billion, beating Wall Street expectations. It was the first earnings report under the new CEO (transcribed as John Ternas, likely a mishearing), but the stock still fell after hours on weak gross margins. The hosts commented that Apple is the only big tech company besides Netflix that has not gone all-in on AI, still relying on the old approach of "making things and selling things."</li>
+<li><strong>Monday: Oil prices</strong> — U.S. crude fell sharply on rumors of a U.S.–Iran peace deal (the transcribed figure was unclear), while Brent fell about 5%.</li>
+<li><strong>Tuesday: Midterms, a big Democratic win</strong> — "Not a blue wave, a blue tsunami." Democrats took almost every seat considered a flip opportunity, and also won South Carolina; Alaska and Mississippi were still counting (Mississippi uses an outdated affidavit-based counting system that could drag on for two weeks). The hosts said this was the harshest punishment of a sitting governing party since Watergate in 1974.</li>
+<li><strong>Wednesday: Markets rallied first</strong> — After the election result landed, U.S. stocks added $1.1 trillion in market value at the open; Bitcoin first fell below 76K, then reclaimed 79K. Bad news the same day: the tokenized stock project from OKX in partnership with the ICE exchange was opposed by all of the "Magnificent Seven," with all seven companies refusing to have their own shares tokenized — the tokenization narrative has taken a recent hit.</li>
+<li><strong>Thursday: Tech stock crash</strong> — After markets digested the regulatory implications of the election, AI, semiconductor, memory, and data center stocks were heavily sold off. The Nasdaq 100 fell more than 6% and the S&amp;P fell nearly 4.5%, the worst single day for tech stocks since COVID. Trump had taken credit for the rise the day before, then blamed Democrats for the fall the next day. Bitcoin fell in tandem below 76K, with more than $500 million in crypto leveraged positions liquidated within an hour.</li>
+<li><strong>Friday: Asia followed down + a blowout jobs report</strong> — South Korea's KOSPI was down 45% from its June high, China down 30%, and Taiwan down 24% (per the hosts), all in bear market territory. Nonfarm payrolls added 165,000 (expected 65,000), unemployment was 4.1%, and wages rose +0.4% month-on-month (expected +0.3%). The hosts put the probability of a December rate hike at around 70%. The hosts also said several stock-picking hedge funds blew up, shut down, or returned capital to investors last week.</li>
+<li><strong>Two major weekend stories</strong>:</li>
+<li><strong>The Jensen Huang scandal</strong>: Nvidia's CEO was reported to be having an affair with a woman alleged to be a Chinese spy. The hosts considered it a "nothing burger" on current evidence, with the board investigating; Nvidia's stock still fell at the open.</li>
+<li><strong>The Paraguay banking crisis</strong>: The country's largest retail bank / largest digital lender was ordered into receivership by the central bank after its solvency ratio fell to less than half the statutory minimum. Its app was locked and accounts frozen, leaving about 60% of the adult population unable to use banking services. Riots broke out, the president was forced to resign, the central bank governor resigned, and several bank executives were prosecuted. The hosts said there is deposit insurance locally and the money will eventually be returned, albeit slowly, and used this to argue for the value of "holding assets outside the banking system that you control yourself" (Bitcoin), while acknowledging that such things "can happen anywhere."</li>
+</ul>
+<hr />
+<h2>II. Main Topic: What the Democratic Sweep Means for AI and Crypto</h2>
+<p><strong>Election results (per the hosts):</strong></p>
+<ul>
+<li>Democrats won the House and the Senate, with 2 more Senate seats possibly to come, which would bring the Senate to 56 seats — even though this year's electoral map was supposed to favor Republicans.</li>
+<li>They flipped at least 5 governorships and gained full control of state government in Wisconsin, Minnesota, Pennsylvania, Nevada, and Michigan — crucially, this gives states the power to enact state-level data center restrictions.</li>
+</ul>
+<p><strong>Data centers became an election issue:</strong></p>
+<ul>
+<li>14 municipalities in Ohio banned or restricted data centers, including halting Amazon's $2 billion project in Sunbury; another 8 municipalities passed moratoriums/bans, ranging from Florida to Illinois; mayors in Ohio and Oklahoma were recalled for supporting data center projects.</li>
+<li>The hosts said data centers ranked alongside oil prices, cost of living, and the Iran war as core election issues: "People don't like data centers, especially don't want to live next to one"; meanwhile hyperscalers such as Amazon, Meta, and Google are still pushing projects forward, and the public feels they are being "force-fed."</li>
+<li>The chip stock index (SOX) had its worst single day since 2020, with markets pricing in "several quarters of slowdown" rather than a brief pause.</li>
+</ul>
+<p><strong>Three pressure points ahead (summarized by Nic):</strong></p>
+<ol>
+<li><strong>Regulatory risk</strong>: Democrats in power means stricter AI and crypto rules, and the CLARITY Act is basically dead.</li>
+<li><strong>The sustainability of the AI trade itself</strong>: Questions had already been raised — the scale of debt financing, data center construction spending, and panic over Chinese memory competition.</li>
+<li><strong>Political backlash</strong>: Democrats believe voters gave them a mandate to crack down on data centers and the AI industry; Musk spent around $500 million supporting Republican candidates and was basically wiped out, and as the "poster face" of the AI boom he will also draw backlash.</li>
+</ol>
+<p><strong>Specific impact on the crypto industry (Guy and Nic):</strong></p>
+<ul>
+<li>The crypto industry "played all its cards, and lost badly": It spent around $200 million, several candidates it backed lost, and its political capital shrank sharply; combined with Trump's Meme coin and his family's involvement in crypto, the industry's biggest Washington advantage — friendly committee leadership — vanished overnight.</li>
+<li><strong>Subpoena power is a game changer</strong>: From January 2027, Democrats can compel evidence, compel documents, and compel industry figures to testify. Previously, letters from figures such as Blumenthal and Warren were ignored by Republicans for months; going forward there will be televised hearings, "played on every TV in America," which is terrible for the industry's image, with "a few heads already targeted."</li>
+<li><strong>The biggest vulnerability is the Trump family's money</strong>: The hosts said the Trump family made around $1.6 billion from token sales, royalties, and crypto businesses, and every policy favor could constitute a conflict of interest.</li>
+<li><strong>The CLARITY Act</strong>: The original version is hopeless; Democrats may rewrite it in their own version and add the ethics provisions they previously demanded, but Trump has said he will veto many bills submitted by Democrats and will not sign a version with Democratic ethics clauses.</li>
+<li><strong>The positive side in the hosts' view</strong>: The crackdown will clear out scammers, fraudsters, and arbitrageurs, bringing solid regulation that lets the industry develop honestly; crypto does not need a "pro-crypto president," it just needs itself. In their original words (English): <blockquote>
+<p>"We got inside the tent. We got our pockets picked by the Trump family. We now have been booted back out of the tent into the cold and it's exactly where we should be."</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h2>III. Technical Analysis: Lewis's Live TA (approx. 00:33–00:48)</h2>
+<p><strong>Overall view: Still bullish, but the key level is 69–70K.</strong></p>
+<ul>
+<li><strong>TOTAL2 (total crypto market cap excluding Bitcoin)</strong>: A trendline dating back to 2020 has held for more than six years (briefly broken only in 2023), and price has now returned to that line — altcoins may be due for a bounce; six straight weeks of declines should be avoided.</li>
+<li><strong>Bitcoin</strong>: 75–76K (the 38.2% retracement level) did not hold and produced no bounce, so a move down to the 61.8% golden ratio, around 69–70K, is more likely. If the 2022–2023 pattern repeats: touch the golden ratio, leave a long lower wick, then continue higher, "still in a huge uptrend." Among traders he knows, about 60% remain bullish, see this as a buying opportunity, and favor dollar-cost averaging at good levels (the weekly chart has made a new high, and this is just a simple pullback within an uptrend), while 40% believe a bear market has begun and new lows are coming; he is in the former camp and <strong>would only turn bearish on a break below 69K</strong>.</li>
+<li><strong>Ethereum</strong>: Approaching the golden ratio level around $2,000, only about 5% below the current price, "there should be a big bounce around $2,000"; after five straight weeks closing in the red, a sixth week in the red would, in his view, be "a bit crazy."</li>
+<li><strong>HYPE and PERP (Hyperliquid) — Lewis's "all-in conviction"</strong>: After Druckenmiller (Stanley Druckenmiller) was reported to have bought PERP, he said he has become a "complete maximalist," calling it "the only asset since Bitcoin and Ethereum back in the day that has fascinated me this much," buying more as it falls. Quoting Druckenmiller: <blockquote>
+<p>"I don't like to diversify. I like to do my research really, really well, go into something and put all of my eggs into one basket and then watch that basket very carefully."
+  He believes that if Hyperliquid can bring global institutional capital and large traders into the futures market, it will capture the entire futures market share.</p>
+</blockquote>
+</li>
+<li><strong>PEPE</strong>: It was rising while the whole market was falling — relative strength itself is a demand signal; historically, coins that outperform during declines tend to perform even better during rebounds.</li>
+<li><strong>TAO (Bittensor, an AI narrative coin)</strong>: On pure technicals, the current price is comparable to levels at any point since 2024 where buying was followed by decent returns over the following weeks/months, and it is entering a "decent price zone."</li>
+<li><strong>Other</strong>: Meme coins such as USELESS also performed reasonably relative to the market, with the hosts joking that "Meme coins are outperforming half the so-called major utility coins — that's crypto."</li>
+<li><strong>Leverage</strong>: Currently using no leverage at all — uncertainty is too high, and he only uses leverage when he has 60–90% conviction; but he is heavily invested in spot, "risk it for the biscuit."</li>
+</ul>
+<hr />
+<h2>IV. This Week's Tweets and Calendar</h2>
+<p><strong>This week's tweets (approx. 00:48–00:51):</strong></p>
+<ul>
+<li>Musk's post-election self-mockery: "guess my election interference space lasers didn't work."</li>
+<li>A batch of election memes (the hosts only mentioned them in passing, without reading them one by one).</li>
+<li>Bubblemaps exposed a well-known CT figure/KOL pumping a token via pump.fun, with timelines accusing each other — "scammers ratting out scammers" — and the hosts said today's CT "is just a cesspit, and worse than ever."</li>
+<li>Memes related to the Jensen Huang incident.</li>
+</ul>
+<p><strong>Key dates this week (Dates for the diary, approx. 00:51–00:52):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tuesday</td>
+<td>October CPI, 10-year Treasury auction</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>Cisco earnings — an indicator for the AI sector</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>Q3 GDP, initial jobless claims</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>U.S. PPI, University of Michigan consumer sentiment index</td>
+</tr>
+</tbody>
+</table>
+<p>The hosts closed by saying "2026 just won't let go," with volatility still ahead; see you next week at the same time.</p>
+<hr />
+<h2>Appendix: Key Quotes (Short English Excerpts)</h2>
+<ul>
+<li>Opening framing: "Democrats sweep both chambers, tech has its worst crash since COVID, a Red Hot Jobs report revives rate hike fears and Bitcoin slides below 75k."</li>
+<li>On public sentiment toward data centers: "Data centers were very much on the ballot."</li>
+<li>On subpoena power: "From January though, Democrats being in control, they can compel testimony, they can compel documents, they can compel industry figures to come before them."</li>
+<li>On the CLARITY Act: "Not gonna happen. NGMI bro, NGMI."</li>
+<li>Lewis on Bitcoin's key level: "If we fall underneath 69K, which is that golden ratio for Bitcoin… I would be more likely to fall under that camp [bearish]."</li>
+<li>Lewis on leverage: "I'm not using any leverage right now because there is too much uncertainty… I only like to use leverage when things are 60, 70, 80, 90% certainty."</li>
+</ul>
+<hr />
+<p><em>These notes were compiled from the English verbatim transcript of the X replay; transcription was done locally with faster-whisper, and individual proper nouns and figures may contain mishearings. Prices and event figures are as stated by the speakers during the livestream.</em></p>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes for this session; the content consists of the speakers' live remarks and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：比特币跌破 75K、AI 崩盘与民主党加密整顿？ · Yat's Talks",tw:"會議紀要：比特幣跌破 75K、AI 崩盤與民主黨加密整頓？ · Yat's Talks",en:"Meeting Notes: Bitcoin Below 75K, AI Crash & Democrat Crypto Crackdown? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

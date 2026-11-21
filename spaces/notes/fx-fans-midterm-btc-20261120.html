@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：美国中期选举落幕，市场下一步该怎么走？</h1>
 <ul>
 <li><strong>来源</strong>：X Space <code>1gqONAeXJPmgky</code></li>
@@ -136,9 +143,255 @@
 <hr />
 <p><em>逐字稿：<code>transcript.txt</code>（2142 行，01:40:25 止，音频总长 01:40:40）</em></p>
 </article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：美國中期選舉落幕，市場下一步該怎麼走？</h1>
+<ul>
+<li><strong>來源</strong>：X Space <code>1gqONAeXJPmgky</code></li>
+<li><strong>時間</strong>：2026-11-20 21:08–22:49（北京時間）</li>
+<li><strong>時長</strong>：1 小時 41 分鐘</li>
+<li><strong>主持</strong>：FX中文FANS</li>
+<li><strong>嘉賓</strong>：真誠小道士、Henry、林、Alice、十二老師</li>
+<li><strong>累計聽眾</strong>：234 人</li>
+</ul>
+<blockquote>
+<p>說明：本紀要根據逐字稿整理。文中數字、判斷均為嘉賓當場自述，未經獨立核實；ASR 識別有誤之處已按語境歸一（如「教育員」即交易員、「518」即 5.8 萬美元）。本場標題講中期選舉，但實際內容幾乎全部圍繞 BTC 行情與 FX 交易平台展開，中期選舉本身基本沒有展開討論。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>BTC 從 12.6 萬美元連跌 7 週回到 6.1 萬美元，5.8 萬美元是不是底？全場共識是<strong>沒人敢說它是底</strong>，分歧只在「還能跌多深」——看空的一派把 5 萬美元、甚至 4 萬美元的礦機關機價當作下一道防線；看多的一派也不敢梭哈，只敢在 5.8 萬美元附近分批投倉、等突破 8.6 萬美元再確認。以及，這場 Space 的另一半內容是 FX 平台的清算保護機制。</p>
+<h2>本輪下跌到哪了</h2>
+<ul>
+<li>BTC 本輪高點 <strong>12.6 萬美元</strong>（2025 年 10 月前後見頂），到本場開播時已<strong>連跌 7 週</strong>，價格約 <strong>6.1 萬美元</strong>。主持人開場點題：上一個低點 5.8 萬美元能不能撐住，是「站住反彈」還是「破位進深熊」，是全場最關心的問題。</li>
+<li>Henry 從週線看：自 12.6 萬美元跌下來，中間只有 <strong>2026 年 8 月 17 日那一波反彈突破了前一個反彈高點</strong>，其餘時間全是「反彈不過前高」的下跌延續。8 月那波反彈恰好踩在 <strong>2021 年牛市頂部 5.8 萬美元</strong>的位置上啟動——這是他認為 5.8 萬美元值得重視的兩個理由之一。</li>
+<li>十二老師補充：6.1 萬美元的日線底部到本場為止已經<strong>被測試了四次</strong>，每次摸一下就回升、但始終沒有放量，是典型的陰跌+誘多結構。他判斷下跌情緒「還沒有結束」。</li>
+</ul>
+<h2>5.8 萬美元是不是底？各人給出的點位</h2>
+<table>
+<thead>
+<tr>
+<th>嘉賓</th>
+<th>判斷</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真誠小道士</td>
+<td>不是底，還會往下；但 5 萬美元可能是重要關口，跌破 5 萬很難</td>
+<td>分批抄現貨，合約只拿幾百到一千美元、虧了就當丟了</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>不猜底；5.8 萬美元只佈局投倉，突破週線 8.6 萬美元才算確認底部、重倉加</td>
+<td>跌破 5.8 萬則在 5.3 萬、5 萬再接；短線只做空，中長線只做現貨</td>
+</tr>
+<tr>
+<td>林</td>
+<td>不糾結點位；沒放量、沒持續買盤、合約持倉沒降，結構沒改善</td>
+<td>極致陰跌行情不玩合約，休息、等行情好轉</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>可能再跌破一次上次低點 5 萬多美元</td>
+<td>5.8 萬、5 萬多分批抄底，每次只用約 10% 資金</td>
+</tr>
+<tr>
+<td>十二老師</td>
+<td>底部在 4 萬–4.5 萬美元區間（礦機關機價一帶）；6.1 萬只是誘多</td>
+<td>已在 FX 上掛了 38,500 美元的多單等極端插針</td>
+</tr>
+<tr>
+<td>主持人 FX</td>
+<td>已進入「底部區間」但底部要磨出來；拉長十年看，4 萬、5 萬、6 萬都是底</td>
+<td>現貨分批，不上槓桿抄底</td>
+</tr>
+</tbody>
+</table>
+<h2>下跌的原因：嘉賓們提到的幾條線</h2>
+<ul>
+<li><strong>宏觀與流動性</strong>：小道士認為 AI 泡沫正在被擠、整體經濟下行、大家口袋都緊了，「以前行情不好兜裡還有錢，現在是兜裡沒錢」，資金不敢進風險市場。主持人補充了原油高位震盪、日元加息、美債高企、AI 泡沫回歸，認為 2027 年可能是「黃金坑」。</li>
+<li><strong>利空事件</strong>：Alice 提到本月初的兩條消息——MSTR（MicroStrategy）被踢出 MSCI 指數，以及 Anthropic 的 IPO（嘉賓自述，未核實）——是她從 8 萬多美元開始做空的觸發點。</li>
+<li><strong>美聯儲預期</strong>：十二老師稱 12 月的市場預期是美聯儲加息 50 個基點（嘉賓自述），因此反彈應該做空、賠率更大。一個月前他在 8.3 萬美元開長線空單，邏輯就是「交易裡沒有預測，只有計劃；賣預期」。</li>
+<li><strong>礦工成本線</strong>：十二老師與多位礦工、機構交流後的說法——目前絕大部分礦機的關機價在 <strong>4.4–4.5 萬美元</strong>，S19 在 7 萬美元以下已經虧錢，S21 仍有利潤；最頂級的礦機關機價約 2.8 萬美元。他認為 BTC 的核心支撐/洗盤價格大概率落在關機價上下，也就是 4 萬美元上下。</li>
+</ul>
+<h2>十二老師的兩種劇本</h2>
+<p>他認為無非兩種走法：</p>
+<ol>
+<li><strong>擊穿後快速收回</strong>：6.1 萬美元被打破，急跌擊穿 <strong>57,750 美元</strong>的止損密集區，然後快速拉回，BTC 回到 7 萬多美元做第三次派發；</li>
+<li><strong>擊穿後收不回來</strong>：57,750 美元被打穿且收不回，疊加全球資產拋售，一路向下。</li>
+</ol>
+<p>他強調歷史上 BTC 的恐慌性下跌一定伴隨<strong>放量</strong>——像三箭崩盤、LUNA 崩盤、FTX 崩盤那樣，巨量砸盤後在某個點位有巨額資金接盤。而現在 6.1 萬美元附近既沒放量也沒插針，所以「底部還沒到」。</p>
+<h2>倉位管理：全場唯一沒有分歧的部分</h2>
+<ul>
+<li><strong>生活錢與投資錢分開</strong>：林的做法是生活費永遠留足，投資的錢虧光也不影響生活；她自認「很上頭」，所以只在自己最拿手的行情（比如看好的 AI 板塊）才敢梭哈，沒把握就不玩。</li>
+<li><strong>合約只拿虧得起的錢</strong>：小道士的資金從 1,000 美元做到 23,000 美元又爆倉歸零，之後的心態是「開合約的錢，開單那一刻就當已經丟了」；現在每單只拿幾百到一千美元。</li>
+<li><strong>每單必須帶止損</strong>：Henry 做了五年全職交易，他說「爆倉是低級錯誤」，每個單子都帶止損，方向對了但點位沒開好就止損重開，絕不用全部保證金去補倉扛單。</li>
+<li><strong>做不好就停手</strong>：Henry 的辦法是連續做錯就停真實資金、開模擬倉復盤，等操作順了再回來；實在手癢就拿 50–70 美元開一單過癮。林的版本是「活下去才有翻身機會」，沒子彈了行情就跟你沒關係了。</li>
+<li><strong>別想一筆賺回來</strong>：Alice 提醒，連續虧損後想靠一筆交易翻本的心態最危險；她自己早期也有過，現在只做分倉、低槓桿。</li>
+<li><strong>帶單的壓力</strong>：Henry 只帶自己社區的用戶、私下帶單，不公開帶，因為「公開帶單會放大心理壓力」——他舉例說交易能力很強的盧哥一開實盤也虧錢。林補充：做多做空都能賺錢，但「一會兒多一會兒空，節奏亂了心態就亂，心態亂了錢就沒了」。</li>
+</ul>
+<h2>FX 平台的清算保護機制（本場後半段主題）</h2>
+<p>本場由 FX 中文頻道主辦，後半段集中討論 FX 的防爆倉機制，按嘉賓描述：</p>
+<ul>
+<li><strong>機制</strong>：遇到插針行情時不直接強平，而是給 <strong>15 分鐘保護期</strong>、逐步減倉（再平衡），讓倉位有機會活下來。主持人稱之為「第二條命」。</li>
+<li><strong>林的經歷</strong>：在 FX 交易大賽中（幾百美元本金、ETH 長線多單賺了幾千美元奪冠），第一單遇到插針，FX 的逐步減倉保住了單子，之後滾雪球拿到第一。</li>
+<li><strong>小道士的經歷</strong>：方向看反時 FX 幫他再平衡了四五次，之後行情漲回來成功回本。</li>
+<li><strong>主持人的經歷</strong>：去年夏天在 ETH 3,800 美元開空，漲到 4,400 美元也沒被清算，倉位至今還在，「最起碼沒賺沒虧」，他認為最大的價值是心理層面的正回饋——開錯單不至於自責到不敢再開單。</li>
+<li><strong>Henry 的保留意見</strong>：他本人沒體驗過該機制，但認為「爆了在哪都是爆，在 FX 爆好歹賠一點、有繼續玩的資本」；同時堅持職業交易員不應該爆倉，止損才是正道。</li>
+</ul>
+<p>主持人還提到 FX 只支持 BTC 和 ETH 作為抵押借貸（連自己的平台幣都不支持），並以此論證團隊「只相信這兩個資產是長期核心資產」。Sky（原 MakerDAO）的借貸產品也被十二老師點名，稱其 LTV 已把 sUSDS 額度借滿。</p>
+<h2>主持人 FX 的收尾：一個老空軍的自述</h2>
+<ul>
+<li>他自稱「老空軍」，2021 年在 15,000 美元做空，28,000–18,000 美元區間做空賺到錢，之後被牛市帶走、28,000–54,000 美元那波一直虧損；特朗普就職前後又被整麻。</li>
+<li>去年 10 月起堅定做空，10.8 萬美元時喊「看 5 萬美元」，在 7.4 萬美元開空、均價 8 萬美元，前幾天在支撐位平倉，賺了一點，但「失去了很多群友關係」——做空是「跟全世界作對，贏了世界輸了你」，所以現在空單盡量少做，要「帶大家一起爽」。</li>
+<li>抄底的三條件：<strong>足夠的保證金、足夠的耐心、足夠的信仰</strong>，缺一不可。他舉例：朋友 5 月 8 日抄底，帳戶到 10 萬又下來、受不了賣掉，賣完就起飛，拍大腿後又做空掛山上、再做多又掛腰上。</li>
+<li>他的時間框架：2027–2029 年是「屬於我們這個時代的人的機遇」，現在 4 萬、5 萬、6 萬的區別，拉長到十年、等漲到 20 萬、30 萬回頭看，「這裡就是一個底」。</li>
+<li>結尾引用「今天很殘酷，明天也很殘酷，後天很美好」，提醒聽眾週末好好休息、不要糾結。</li>
+</ul>
+<h2>值得注意的背景</h2>
+<ul>
+<li><strong>標題與內容錯位</strong>：標題是「美國中期選舉落幕，市場下一步該怎麼走」，但整場 100 分鐘幾乎沒有討論中期選舉結果本身，全部話題都是 BTC 點位、倉位管理與 FX 產品。</li>
+<li><strong>情緒底色</strong>：與「5.8 萬美元是不是底」的技術討論並行，全場反覆出現的是爆倉創傷——小道士的 1,000→23,000→歸零、主持人「爆倉後覺得生活失去意義」、林「爆了就真的沒有了」。本場更像一場熊市裡的「倖存者互助會」，而不是行情研判會。</li>
+<li><strong>嘉賓自述、未核實</strong>：12 月美聯儲加息 50 個基點的預期、MSTR 被踢出 MSCI、礦機關機價 4.4–4.5 萬美元、Anthropic IPO 的時間點，均為嘉賓當場說法，未獨立核實。</li>
+</ul>
+<hr />
+<p><em>逐字稿：<code>transcript.txt</code>（2142 行，01:40:25 止，音訊總長 01:40:40）</em></p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: The U.S. Midterm Elections Are Over — Where Does the Market Go Next?</h1>
+<ul>
+<li><strong>Source</strong>: X Space <code>1gqONAeXJPmgky</code></li>
+<li><strong>Time</strong>: 2026-11-20 21:08–22:49 (Beijing time)</li>
+<li><strong>Duration</strong>: 1 hour 41 minutes</li>
+<li><strong>Host</strong>: FX中文FANS</li>
+<li><strong>Guests</strong>: 真诚小道士, Henry, 林, Alice, 十二老师</li>
+<li><strong>Total listeners</strong>: 234</li>
+</ul>
+<blockquote>
+<p>Note: These notes are compiled from the transcript. All figures and judgments in the text are the guests' own statements made on the spot and have not been independently verified; ASR recognition errors have been normalized according to context (for example, "教育员" means trader, and "518" means USD 58,000). Although the title of this session is about the midterm elections, the actual content revolved almost entirely around BTC price action and the FX trading platform; the midterm elections themselves were barely discussed.</p>
+</blockquote>
+<h2>In one sentence</h2>
+<p>BTC has fallen for 7 straight weeks from USD 126,000 back to USD 61,000 — is USD 58,000 the bottom? The consensus in the room was that <strong>no one dares to call it the bottom</strong>; the only disagreement was over "how much deeper it can fall" — the bearish camp treats USD 50,000, and even the USD 40,000 miner shutdown price, as the next line of defense; the bullish camp does not dare to go all in either, only daring to build positions in batches near USD 58,000 and wait for a break above USD 86,000 for confirmation. And the other half of this Space was about the FX platform's liquidation protection mechanism.</p>
+<h2>Where is this round of decline now?</h2>
+<ul>
+<li>BTC's high for this cycle was <strong>USD 126,000</strong> (topping out around October 2025); by the time this session went live it had <strong>fallen for 7 straight weeks</strong>, with the price at about <strong>USD 61,000</strong>. The host opened with the key question: whether the previous low of USD 58,000 can hold — whether it will "hold and bounce" or "break down into a deep bear market" — was the issue the whole room cared about most.</li>
+<li>Henry, looking at the weekly chart: since falling from USD 126,000, only <strong>the rebound on August 17, 2026 broke above the previous rebound high</strong>; the rest of the time it has all been a continuation of the decline, with "rebounds failing to exceed the prior high." That August rebound happened to launch right from the level of the <strong>2021 bull market top of USD 58,000</strong> — one of the two reasons he believes USD 58,000 deserves attention.</li>
+<li>十二老师 added: the daily-chart bottom at USD 61,000 had, as of this session, already <strong>been tested four times</strong>; each time it touched and bounced back, but never with volume — a typical slow-bleed plus bull-trap structure. He judged that the downward sentiment "is not over yet."</li>
+</ul>
+<h2>Is USD 58,000 the bottom? The levels each person gave</h2>
+<table>
+<thead>
+<tr>
+<th>Guest</th>
+<th>Judgment</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真诚小道士</td>
+<td>Not the bottom; it will go lower. But USD 50,000 may be an important threshold, and breaking below USD 50,000 would be difficult</td>
+<td>Buy spot in batches; for contracts, only risk a few hundred to a thousand dollars, treating it as lost if it goes</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>Doesn't guess the bottom; at USD 58,000 he only lays out probe positions — only a break above the weekly USD 86,000 level would confirm the bottom, at which point he would add heavily</td>
+<td>If it breaks below USD 58,000, buy again at USD 53,000 and USD 50,000; short-term trades only short, medium- to long-term only spot</td>
+</tr>
+<tr>
+<td>林</td>
+<td>Doesn't fixate on levels; no volume, no sustained buying, contract open interest hasn't come down — the structure hasn't improved</td>
+<td>In an extreme slow-bleed market, don't play contracts; rest and wait for conditions to improve</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>It may break below the last low of USD 50,000-something once more</td>
+<td>Buy the dip in batches at USD 58,000 and USD 50,000-something, using only about 10% of funds each time</td>
+</tr>
+<tr>
+<td>十二老师</td>
+<td>The bottom is in the USD 40,000–45,000 range (around the miner shutdown price); USD 61,000 is just a bull trap</td>
+<td>Has already placed a USD 38,500 long order on FX waiting for an extreme wick</td>
+</tr>
+<tr>
+<td>Host FX</td>
+<td>Already in the "bottom zone," but a bottom has to be ground out; over a ten-year horizon, USD 40,000, 50,000 and 60,000 are all bottoms</td>
+<td>Spot in batches, no leverage when buying the dip</td>
+</tr>
+</tbody>
+</table>
+<h2>Reasons for the decline: several threads the guests mentioned</h2>
+<ul>
+<li><strong>Macro and liquidity</strong>: 小道士 believes the AI bubble is being squeezed, the overall economy is heading down, and everyone's pockets are tight — "in the past, when the market was bad you still had money in your pocket; now there's no money in your pocket" — so capital doesn't dare enter risky markets. The host added crude oil oscillating at high levels, Japanese rate hikes, high U.S. debt, and the return of the AI bubble, arguing that 2027 could be a "golden pit."</li>
+<li><strong>Bearish events</strong>: Alice mentioned two news items from early this month — MSTR (MicroStrategy) being removed from the MSCI index, and Anthropic's IPO (guest's own statement, unverified) — as the triggers for her shorting from above USD 80,000.</li>
+<li><strong>Federal Reserve expectations</strong>: 十二老师 said the market expectation for December is a 50-basis-point Fed rate hike (guest's own statement), so rallies should be shorted for better odds. A month ago he opened a long-term short at USD 83,000, with the logic that "there is no prediction in trading, only plans; sell the expectation."</li>
+<li><strong>Miner cost lines</strong>: According to 十二老师, after talking with several miners and institutions — the shutdown price for the vast majority of mining rigs is currently <strong>USD 44,000–45,000</strong>; the S19 is already losing money below USD 70,000, while the S21 is still profitable; the shutdown price for the very top rigs is about USD 28,000. He believes BTC's core support / shakeout price will most likely land around the shutdown price, that is, around USD 40,000.</li>
+</ul>
+<h2>十二老师's two scenarios</h2>
+<p>He believes there are only two possible paths:</p>
+<ol>
+<li><strong>A break down followed by a quick recovery</strong>: USD 61,000 is broken, a sharp drop pierces the stop-loss-dense zone at <strong>USD 57,750</strong>, then it quickly pulls back, and BTC returns to above USD 70,000 for a third distribution;</li>
+<li><strong>A break down that doesn't recover</strong>: USD 57,750 is pierced and cannot be reclaimed, combined with a global asset sell-off, heading all the way down.</li>
+</ol>
+<p>He emphasized that historically, panic declines in BTC are always accompanied by <strong>volume</strong> — like the Three Arrows collapse, the LUNA collapse, and the FTX collapse, where after huge sell volume, enormous funds stepped in to buy at some level. Right now, around USD 61,000 there is neither volume nor a wick, so "the bottom hasn't arrived yet."</p>
+<h2>Position management: the only part of the session with no disagreement</h2>
+<ul>
+<li><strong>Separate living money from investment money</strong>: 林's approach is to always keep enough set aside for living expenses, so that even if the investment money is wiped out it doesn't affect her life; she admits she "gets carried away easily," so she only dares to go all in on the market conditions she is best at (such as an AI sector she is bullish on), and doesn't play when she has no conviction.</li>
+<li><strong>For contracts, only use money you can afford to lose</strong>: 小道士 grew his funds from USD 1,000 to USD 23,000 and then got liquidated back to zero; his mindset since then is "the money I open a contract with — the moment I open the trade, I treat it as already lost"; now each trade is only a few hundred to a thousand dollars.</li>
+<li><strong>Every trade must have a stop-loss</strong>: Henry has traded full-time for five years; he said "getting liquidated is a rookie mistake" — every order carries a stop-loss, and if the direction was right but the entry level was poor, he stops out and re-enters, never using all his margin to average down and hold a losing position.</li>
+<li><strong>If you're trading badly, stop</strong>: Henry's method is, after consecutive mistakes, to stop trading real money, open a paper account to review, and come back once his execution is smooth again; if he really itches to trade, he opens a USD 50–70 trade for fun. 林's version is "only by surviving do you get a chance to come back" — once you're out of bullets, the market has nothing to do with you.</li>
+<li><strong>Don't try to win it all back in one trade</strong>: Alice warned that the mindset of trying to recover consecutive losses with a single trade is the most dangerous; she had it herself early on, and now only trades with split positions and low leverage.</li>
+<li><strong>The pressure of leading trades for others</strong>: Henry only leads users from his own community, privately, and doesn't lead publicly, because "leading trades publicly amplifies psychological pressure" — he gave the example of 卢哥, whose trading ability is very strong, yet who also loses money once he trades live publicly. 林 added: you can make money going long or short, but "flipping between long and short, once your rhythm is messed up your mindset is messed up, and once your mindset is messed up the money is gone."</li>
+</ul>
+<h2>The FX platform's liquidation protection mechanism (the theme of the second half)</h2>
+<p>This session was hosted by the FX Chinese channel, and the second half focused on FX's anti-liquidation mechanism, as described by the guests:</p>
+<ul>
+<li><strong>The mechanism</strong>: When a wick (price spike) occurs, instead of liquidating directly, it gives a <strong>15-minute protection period</strong> and gradually reduces the position (rebalancing), giving the position a chance to survive. The host called it a "second life."</li>
+<li><strong>林's experience</strong>: In an FX trading competition (with a few hundred dollars of capital, she won the championship by earning several thousand dollars on a long-term ETH long), her first order hit a wick, and FX's gradual position reduction saved the order; after that it snowballed to first place.</li>
+<li><strong>小道士's experience</strong>: When he had the direction wrong, FX rebalanced for him four or five times, and afterwards the market rose back and he successfully broke even.</li>
+<li><strong>The host's experience</strong>: Last summer he shorted ETH at USD 3,800; even when it rose to USD 4,400 he wasn't liquidated, and the position is still open today, "at least neither profit nor loss." He believes its greatest value is the positive psychological feedback — opening a wrong trade doesn't leave you blaming yourself to the point of not daring to trade again.</li>
+<li><strong>Henry's reservations</strong>: He himself has not experienced the mechanism, but believes "a liquidation is a liquidation anywhere; at least liquidating on FX compensates a bit and leaves you capital to keep playing"; at the same time he insists a professional trader should not get liquidated, and stop-losses are the right path.</li>
+</ul>
+<p>The host also mentioned that FX only supports BTC and ETH as collateral for lending (not even supporting its own platform token), and used this to argue that the team "only believes these two assets are long-term core assets." Sky's (formerly MakerDAO) lending product was also named by 十二老师, who said its LTV has already fully drawn the sUSDS quota.</p>
+<h2>Host FX's closing: a veteran bear's account of himself</h2>
+<ul>
+<li>He calls himself a "veteran bear": in 2021 he shorted at USD 15,000, made money shorting in the USD 28,000–18,000 range, then was carried away by the bull market and kept losing through the USD 28,000–54,000 leg; around Trump's inauguration he got wrecked again.</li>
+<li>Since last October he has been firmly bearish: at USD 108,000 he called for "watch USD 50,000," shorted at USD 74,000 with an average price of USD 80,000, and closed at a support level a few days ago for a small profit, but "lost many group-friend relationships" — shorting is "going against the whole world; if you win, the world loses to you," so now he shorts as little as possible, wanting to "have fun together with everyone."</li>
+<li>The three conditions for buying the dip: <strong>enough margin, enough patience, enough conviction</strong> — none can be missing. His example: a friend bought the dip on May 8, the account went up to 100,000 and came back down, he couldn't take it and sold, and right after selling it took off; after kicking himself, he shorted and got stuck at the top, then went long and got stuck halfway down.</li>
+<li>His time frame: 2027–2029 is "the opportunity for people of our era"; the difference between USD 40,000, 50,000 and 60,000 now, stretched over ten years — when it rises to USD 200,000 or 300,000 and you look back — "this here is a bottom."</li>
+<li>He closed by quoting "today is cruel, tomorrow is also cruel, the day after tomorrow is beautiful," reminding listeners to rest well over the weekend and not to obsess.</li>
+</ul>
+<h2>Background worth noting</h2>
+<ul>
+<li><strong>Mismatch between title and content</strong>: The title is "The U.S. Midterm Elections Are Over — Where Does the Market Go Next?", but in the entire 100 minutes there was almost no discussion of the midterm election results themselves; all topics were BTC levels, position management, and FX products.</li>
+<li><strong>Emotional undertone</strong>: Running parallel to the technical discussion of "is USD 58,000 the bottom," what kept recurring throughout the session was liquidation trauma — 小道士's 1,000→23,000→zero, the host's "after liquidation I felt life had lost its meaning," 林's "once you're liquidated, it's really gone." This session was more like a "survivors' support group" in a bear market than a market analysis meeting.</li>
+<li><strong>Guests' own statements, unverified</strong>: The expectation of a 50-basis-point Fed rate hike in December, MSTR being removed from MSCI, the miner shutdown price of USD 44,000–45,000, and the timing of Anthropic's IPO are all statements made by guests on the spot and have not been independently verified.</li>
+</ul>
+<hr />
+<p><em>Transcript: <code>transcript.txt</code> (2142 lines, ending at 01:40:25, total audio length 01:40:40)</em></p>
+
+</article>
+<footer data-lang="zh">来源：X Space 回放 <a href="https://x.com/i/spaces/1gqONAeXJPmgky">https://x.com/i/spaces/1gqONAeXJPmgky</a>（FX中文FANS）· 嘉宾：真诚小道士, Henry, 林, Alice, 十二老师 · 发布日期：2026-11-20 · 时长：1 小时 41 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 回放 <a href="https://x.com/i/spaces/1gqONAeXJPmgky">https://x.com/i/spaces/1gqONAeXJPmgky</a>（FX中文FANS）· 嘉賓：真誠小道士, Henry, 林, Alice, 十二老師 · 發布日期：2026-11-20 · 時長：1 小時 41 分<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space replay <a href="https://x.com/i/spaces/1gqONAeXJPmgky">https://x.com/i/spaces/1gqONAeXJPmgky</a> (FX中文FANS) · Guests: 真诚小道士, Henry, 林, Alice, 十二老师 · Published: 2026-11-20 · Duration: 1 hour 41 minutes<br>This page is the full text of notes compiled by human editing after machine transcription; the views and figures in the session are the speakers' own statements and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space 回放 <a href="https://x.com/i/spaces/1gqONAeXJPmgky">https://x.com/i/spaces/1gqONAeXJPmgky</a>（FX中文FANS）· 嘉宾：真诚小道士, Henry, 林, Alice, 十二老师 · 发布日期：2026-11-20 · 时长：1 小时 41 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：美国中期选举落幕，市场下一步该怎么走？ · Yat's Talks",tw:"紀要：美國中期選舉落幕，市場下一步該怎麼走？ · Yat's Talks",en:"Notes: The U.S. Midterm Elections Are Over — Where Does the Market Go Next? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

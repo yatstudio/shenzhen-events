@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：【普达特加密夜话】：后川普时代，加密行业走势分析</h1>
 <p><strong>主题</strong>：美国中期选举后川普大败的原因、后川普时代的政治僵局，以及加密行业（BTC/ETH/DOGE）与美股的走势判断
 <strong>原链接</strong>：https://x.com/i/spaces/1evWmQAJKLLPjm
@@ -121,8 +128,222 @@
 <hr />
 <p><em>转写说明：录音 2 小时 33 分 20 秒，本地 faster-whisper（small 模型，中文）转写 3140 段；转写开头约 5 分钟为空白/试音，首段自 00:05:03 起。文中"自述"指发言人现场说法，未经外部核实。</em></p>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：：後川普時代，加密行業走勢分析</h1>
+<p><strong>主題</strong>：美國期中選舉後川普大敗的原因、後川普時代的政治僵局，以及加密行業（BTC/ETH/DOGE）與美股的走勢判斷
+<strong>原連結</strong>：https://x.com/i/spaces/1evWmQAJKLLPjm
+<strong>時間</strong>：2026-11-06 21:29 至 2026-11-07 00:03（北京時間），錄音 2 小時 33 分 20 秒
+<strong>主持</strong>：普達特 @Predator_fund（單人講述 + 讀聽眾留言作答；轉寫顯示無其他嘉賓上麥發言）
+<strong>說明</strong>：本紀要基於錄音本地轉寫整理。轉寫無說話人分離，內容歸屬以主持人口吻與點名為準；個別專名、數字轉寫存疑處已標註。文中金額、點位、戰績、選舉結果等均為發言人現場自述，未經外部核實；其中多處說法與公開事實存在出入，引用時請以官方後續公告與權威信源為準。本紀要不構成投資建議。</p>
+<hr />
+<h2>一、結論先行</h2>
+<ol>
+<li><strong>期中選舉定性：川普大敗，而且輸得比預想慘</strong>：普達特自述德州丟了、佛羅里達領先優勢只剩約 3 個點，肯塔基、北卡、南卡等傳統紅州也輸了。他總結敗因有三：萬國關稅被最高法院判違憲、打伊朗、背書了一批弱候選人；並稱這次失敗的影響長達 50 年——參議員任期六年、最高法院 6:3 的格局會被改寫，2028 年共和黨即便奪回總統，兩院仍可能在民主黨手裡。</li>
+<li><strong>後川普時代是僵局，誰也推不動議程</strong>：川普只剩否決權（參議院推翻否決需三分之二即 66 票，自述目前只有 54 票）；民主黨也立不了法，只能互相交換、談判。</li>
+<li><strong>加密牛市沒了，十年內不會有</strong>：他稱民主黨從根上反加密，現在最反對加密的女議員（黃頭髮那位）反過來負責加密事務；通過的將是民主黨的"清洗法案"。比特幣 12.6 萬美元前高十年內創不了，漲到 9–10 萬美元的反彈有可能；以太坊一晚跌 10%，在他口中已淪為"洗幣工具"，Thom Lee 再跌就要爆倉；華爾街幾大銀行要搞自己的聯盟鏈、把 USDT 收回去；VC 不再投幣圈項目，東南亞幾個大哥的項目已全部停掉。</li>
+<li><strong>他的倉位：只拿比特幣和狗狗幣，當黃金拿</strong>：狗狗幣 0.0588 美元買入、0.24 美元起套保，現成本不到 0.0588 美元，仍處賺錢狀態；買這兩者不是為了賺漲價，而是當作"無主資產"替代法幣。以太坊不碰，認為其價格應向 SOL、BNB 看齊；黃金等 3600 美元以下再買實物；合約最近沒掙錢。</li>
+<li><strong>幣安事件的判斷</strong>：幣安被盜 60 億美元（自述）；他堅持"幣安技術不如 OK"，稱徐明星是懂技術的技術男、CZ 與何一是行銷高手；幣安重行銷輕技術，運維被逼到出去找工作是出事的根源之一。開場約 20 分鐘講自己因這句話被一姐（何一）封鎖的事。</li>
+<li><strong>對美國的判斷很悲觀、對中國很樂觀</strong>：美國廢了，"法國的今天就是美國的明天"；中國是 Number 1（政府有錢、執行力強、科技與製造上來了）。他自述"開明獨裁好過民主"，並稱歷史上任何帝國都沒有超過 300 年，美國國運也差不多到頭了。</li>
+<li><strong>提醒</strong>：以上均為發言人現場自述，未經核實，不構成投資建議。轉寫中多處數字（如"德州丟了""佛州只領先 3 個點""最高法院判關稅違憲"）與公開報導口徑不同，引用前務必另行核對。</li>
+</ol>
+<h2>二、開場：被一姐封鎖，與幣安被盜 60 億（00:05–00:25）</h2>
+<ul>
+<li>開場先試音，隨後講自己被一姐（何一）封鎖：起因是他在影片裡說了一句"從技術角度上說，幣安不如 OK"。他稱自己從不發帖罵人、也不刪帖（除非對方打招呼），被封鎖反而是"代表你重要"；但仍堅持幣安技術不如 OK 的判斷。</li>
+<li>幣安被盜金額：他先以為只是熱錢包因 EIP-7702 亂授權丟了，後來聽說"什麼都丟了"，金額是 60 億美元（自述）。他稱自己在幣安的錢一分沒提，因為"知道沒事，60 億能扛住"，並稱去年 10 月 11 日一天的損失都不止 60 億。</li>
+<li>三家交易所的人設對比（他的原話）：</li>
+<li><strong>OK</strong>：徐明星是技術男、自己上手寫程式碼，安全、技術、API 各方面做得好；韓林也是技術宅，行銷不行，所以 OK 一直不死不活。</li>
+<li><strong>幣安</strong>：CZ 與何一是行銷高手，幣安廣場、KOL、外圍周邊、銀趴大會做得好；但腦子沒往技術上放，運維崗位不被重視。</li>
+<li><strong>火幣</strong>：李林時期個人魅力與領導力好；換成孫宇晨之後就完蛋了——孫哥既不是技術也不是行銷，特點是"搞玄學、搞大賽、蹭巴菲特、蹭川普、往幣安存錢薅羊毛"。</li>
+<li>出事機制（他的推測）：幣安有運維出去找工作，把求職資訊掛在工作電腦上；橫向感染拉上另外幾個人，互相傳小道消息，六七個人的小群最後導致 60 億丟失。他主張：財務、運維、管錢包的核心崗位必須集中辦公、電腦不能帶走、過安檢、兩人同時開保險櫃；交易所開發與運維薪資就該給高，"本來就是刀頭舔血的活"。</li>
+<li>他還稱幣安一個月光 KOL、隊長、幣安廣場就花 400 多萬（自述），"哪怕把這錢的千分之一拿出來給運維關鍵崗位漲薪，也不至於出這事"。</li>
+</ul>
+<h2>三、期中選舉復盤：川普為什麼大敗（00:25–01:03）</h2>
+<ul>
+<li>定性：這次大敗超出他預料——想到了敗，沒想到敗這麼慘；德州能丟是他沒想到的，佛羅里達也危險，"再來一次佛州都得丟"。</li>
+<li>德州變紫的原因（他的分析）：加州民主黨人受不了加州的高稅、強監管與"零元購"，大批搬到德州（馬斯克也是其中之一），但意識形態沒改；加上拉丁裔被 ICE 抓人得罪、以及"紅脖子"（指當地保守派選民）流淚等因素，德州從深紅變紫。佛州則因為很多加州人覺得"佛州有海"，也開始流入。</li>
+<li>他對川普本人的態度：不討厭也不喜歡，年輕時讀過《交易的藝術》所以挺崇拜；認為川普是"學好的富二代"，不抽菸不喝酒連咖啡都不喝，是個商人，美國現在就需要商人總統；但川普最大的問題就是"那張嘴"，老闆出身、不會好好說話，得罪人太多，"但凡學會點政客的虛偽，也不會得罪這麼多人"。</li>
+<li>對期中選舉制度的看法（他的原話）：眾議院兩年一選、參議院六年一選、最高法院終身制，是開國先父的設計；但"一人一票、贏者通吃"的民主不是好東西，容易形成暴民政治；選民只關心油價與物價高不高，不會想背後的原因，"美國人卡裡有 400 美元都算沒錢的人"。</li>
+</ul>
+<h2>四、敗因之一：萬國關稅與最高法院（00:33–00:40）</h2>
+<ul>
+<li>川普上台先加"萬國關稅"，不管哪個國家先來個 10%。普達特稱他理解川普的意圖：美國工業空心化，連航母鋼板、保險套、口香糖、背心都做不了，必須用關稅壁壘保護本國產業、讓國內企業發展起來；馬斯克也說過美國再想立於世界頂端只能看 AI。</li>
+<li>但他認為川普"次序錯了"（下象棋講"頓挫"）：美國超市 80% 的商品都是中國造的，在本國實業沒發展起來之前不能先加關稅，否則日用品、衛生棉全漲價。川普的盤算是用收來的關稅補貼超市與老百姓，等國內企業起來，但見效要十年。</li>
+<li>民主黨從地方法院一路告到最高法院，最高法院判萬國關稅違憲（自述），還要求把已收的關稅退回去。"川普本來想收幾千億給人民群眾補貼一下，這下補貼不了了"，計畫全被打亂。</li>
+<li>他還稱川普想發展本國工業的路子是對的，但"沒有十年根本見不到效"。</li>
+</ul>
+<h2>五、敗因之二：打伊朗（00:40–00:53）</h2>
+<ul>
+<li>他認為打伊朗是主要敗因之一：川普第一任是唯一沒發動戰爭的總統，本以為"滅伊朗就是個玩兒"，沒想到"沒打過"。</li>
+<li>沒打過的原因（他的分析）：一是現代戰爭已進入不對稱戰爭，無人機讓高價武器失效——東莞產的小型無人機出廠價 8000 多人民幣，伊朗兩萬美元買走，一次放一千架就把巴林、科威特的美軍基地與中東最先進的雷達炸瞎了，"修復要三年"，飛機只能從很遠的地方起飛；二是拜登時期的 DEI（多元平等包容）搞垮了美軍戰鬥力，航母上要配女兵、同性戀、胖子比例，還要研發孕婦飛行服；林肯號連續 270 天沒回母港，大兵受不了，甚至堵廁所、點洗衣房抗議。</li>
+<li>戰果（他的說法）：美軍對伊朗空襲兩萬多次，超過南聯盟時期，幾天就把美國彈藥打空了；伊朗除了幾個大城市本來就是"不毛之地"，炸電力也沒用，"除了德黑蘭有點電，人民群眾本來就沒電"。</li>
+<li>後續僵局：川普退縮了，要打必須登陸，伊朗比山東省加起來還大，地面部隊最少要 50 萬；歐洲又不出兵；導彈炸彈用完了想生產，美國軍工產能極低，恢復到戰前水準要到 2035 年（自述）；國會也不批給烏克蘭愛國者導彈，"只要你川普贊成的，我們國會一定不同意"。</li>
+<li>他給川普開的"正確次序"：先修邊境牆、已進來的人就別往回攆；把能源政策全解開（阿拉斯加原油修管道、加拿大阿省原油過來、德州原油大開發、煉油廠全批）；等石油產能上來、美國變成石油出口國之後再打伊朗，"在產能沒上來之前怎麼能去打伊朗呢"。</li>
+</ul>
+<h2>六、敗因之三：背書弱候選人與"影響 50 年"（00:57–01:18）</h2>
+<ul>
+<li>川普背書只看忠誠不看能力：德州本該讓老滑頭科寧（深耕多年的地頭蛇參議員）去選，結果挺了帕克斯頓（"一隻眼睛斜視那位"），口才不行，輸給了一個自述有六個性別的對手；格萊厄姆的妹妹"就是個傻子"，川普也挺；密蘇里、愛荷華、肯塔基、南卡的候選人都很弱，"誰的意見都聽不進去"，萬斯勸也沒用。</li>
+<li>影響 50 年的邏輯（他的推演）：參議員任期六年，這次共和黨丟得太多，2028 年大選即便共和黨奪回總統，參議院仍在民主黨手裡；最高法院現在 6:3，鐵桿支持川普的只有三個半，其中兩個年齡大了要退休，民主黨上台會直接塞三四個年輕的最高法院法官，"再幹四十年沒問題"。所以盧比奧、萬斯、克魯斯可能都不想競選 2028——"當上總統，兩院在別人手裡，這個總統還能幹啥"。</li>
+<li>民主黨內部紀律（他的說法）：民主黨黨內紀律極嚴，投票從來沒有反水的，不聽話就斷經費、連助理的錢都沒有，最後只能去地下室辦公；共和黨人多有錢、不在乎黨那點經費，獨立性強，所以即便拿到兩院很多東西也通過不了。</li>
+<li>民主黨上台後的承諾：高福利，錢從哪來？向馬斯克、貝索斯、小扎、甲骨文的埃里森等富人增稅、甚至直接沒收；他類比 1953 年公私合營與 1957 年反右（自述上海一天十個資本家跳樓、反右殺了 50 萬右派），稱"這招都擺在眼前，拿著就用"。</li>
+<li>馬斯克的處境：他判斷民主黨上台第一刀就是砍星鏈——"必須給你拆分"，就像當年拆分貝爾電話（AT&amp;T 被拆成七塊，貝爾實驗室沒了，美國通信基礎研究就沒了）；X 是私人公司沒上市，拆不了，但可以立法或成立"X 言論審核委員會"，"不用立法就弄死你"；馬斯克搞新黨派沒那麼容易，"美國政治比中國黑多了"；他調侃馬斯克只能去俄羅斯政治避難，"普京說，哎呀我看馬兄弟，分香一個頭，磕頭拜把子兄弟了"。</li>
+<li>還提到：民主黨上次連續彈劾兩次、整了 90 多個案子、加起來判 700 多年（自述），目的不是伸張正義，是阻止川普當選；佩洛西"端端正正幾十年賺了 20 多個億，靠炒股"（自述），但拜登離任前已把這些人都特赦完了，"連兒子未來犯的罪都特赦了"，川普也沒轍；川普家族發幣"一個幣都沒賣"，是幣圈的人把川普幣炒高的。</li>
+</ul>
+<h2>七、民主黨與加密：牛市沒了（01:19–01:44）</h2>
+<ul>
+<li>民主黨從根上反加密：民主黨什麼事都要管，覺得加密"控制不住了，必須得管"；共和黨是"法無禁止即可為"，民主黨是"法無通過即不能為"（他引用李克強總理"法無禁止即可為"的說法作對比）。</li>
+<li>最反對加密的女議員（黃頭髮那位，他未點名）現在準備負責美國加密事務了；川普家族一看，"得了，比特幣搞什麼國家戰略儲備，土匪你媽的幣直接賣了吧"，川普家族的倉位在頭天晚上給砸下來了（自述，未經證實）。</li>
+<li>他的核心判斷："加密的牛市是沒有了，十年之內都不會有加密的牛市"；比特幣 12.6 萬美元的新高"創不了了，十年都創不了"；但漲到 9 萬、10 萬美元"這事有可能"。</li>
+<li>以太坊：他兩月、四月前就說過以太坊已淪為"洗幣工具"，當時幣安還沒被偷；現在美國幾大交易所與華爾街公司都表態不承認 RWA 與美股代幣化，"要搞也是我們自己搞"，準備搞自己的聯盟鏈，讓 USDT 從以太坊與 TRX 上收回來；下一步要爆的是 Thom Lee，"以太坊再跌跌，Thom Lee 就要爆倉了，扛不住了"。</li>
+<li>行業停擺：從共和黨輸開始，他認識的東南亞幾個大哥全部停了項目，"幣發完了也停了，幣、鏈、盤全停了"；VC 誰還會投幣圈項目，"有病啊"；"接下來你還空頭擼毛，你擼你自己的雞巴毛吧，哪有這事了"。</li>
+<li>美股：AI 七姐妹買了那麼多顯示卡，算力中心已被叫停、"誰也不能用電也不能用"，還不許繼續研發；"美國這唯一的正常點都沒了"，美股接下來會怎麼樣，"不用我多說了吧"；他還稱波音好不容易把殘疾人、瞎子、聾子清出去換真正的工程師上來，這回又要回去繼續按成分論配人。</li>
+<li>比特幣走勢（他的技術判斷）：大 B 浪反彈結束了，開始 A 浪下跌，"熊途慢慢的，一個延伸浪接一個延伸浪"；昨天消息剛出他就說"完了，大餅破位了，要跌"，大跌之前先反抽一下讓多單進去，昨天晚上以太坊跌了 10%，"太狠了"。</li>
+<li>但他也表態：幣圈還會存在，他也不會離開幣圈；"比特幣會歸零嗎？不會，狗狗幣都不會"，"你跌到一分錢的時候我買呀"。</li>
+</ul>
+<h2>八、他的持倉與操作：比特幣、狗狗幣當黃金（01:37–01:54）</h2>
+<ul>
+<li>狗狗幣：0.0588 美元買了一大筆，0.24 美元開始套保，"鐵寶"過程中掙了很多幣，現在成本還不到 0.0588 美元，仍是賺錢狀態。他聲明從沒喊過別人買狗狗幣、沒說過"衝啊、All in 狗狗幣"，"我只是說我買了"。</li>
+<li>買法：狗狗幣不能做波段，買來就是收藏，"純粹就跟買實物黃金是一個道理"。他等黃金跌到 3600 美元以下去水貝買點實物；"5000 多買的人現在不也哭呢嗎"。他稱自己說黃金白銀見頂"就差兩天就見頂了"。</li>
+<li>邏輯：他對世界上任何一個政府都不放心，要把受控制的法幣變成自己控制的幣；全世界只有比特幣與狗狗幣是"無主的"，剩下都有主——以太坊憑什麼值這麼多錢，"價格就應該跟 SOL 一樣，都不應該超過 BNB"，功能還不如這兩者。</li>
+<li>黃金：國際金價 3600 美元以下考慮買，國內人民幣金價 600 多元/克時考慮買點；但法幣要從境外往回弄"還挺危險的"，沒機會就不買。</li>
+<li>合約：最近合約炒得不好，"上個月沒掙什麼錢"；現在就是拿著狗狗幣、拿著比特幣，短線炒炒合約。</li>
+<li>大 A：3600 點保衛戰（自述）；當年衝擊大 A 的人"高位都套下了"，喊"大 A 牛市來了、趕緊 All in"的，"All in 是一種智慧，傻也是一種智慧"。</li>
+<li>Space 股票：隊長抄底 Space，他看了一眼是 131 美元，"昨天跌太狠了"，週線也沒救了，"100 肯定破"。</li>
+<li>記憶體股：美光、三星等，西安與杭州幾個廠產能增加好幾條流水線；"記憶體就是用沙子做的，那又不是用稀土做的，能咋的"。</li>
+<li>量化策略：聽眾問策略，他回應"策略裡邊全是形容詞"沒法寫，"當波動劇烈的時候我怎麼怎麼的——波動率是多少，你用 C 語言怎麼寫、Python 怎麼寫"；量化就是不能用形容詞。</li>
+<li>其他問答：BSV 沒前途、太集中了；YFI 與 DeFi 收益"簡單回答：沒有"投資價值；比特幣週線 MACD 都快翻紅了，"下探、在底部兩三年很正常"；28 年民主黨當選了中國會崛起嗎——"中國崛起跟美國沒啥關係"。</li>
+</ul>
+<h2>九、問答雜談：中國、戰爭與制度（01:54–02:33）</h2>
+<ul>
+<li>中國 Number 1：他稱"龍國現在強大得不要不要的"，政府全世界最有錢、牛馬最聽話、科技與製造上來了，"2025 中國製造、2035 中國智慧製造，就這不是夢"；中國造軍艦的速度"跟下餃子一樣"，美國現在軍艦"不是說造，連修都修不了，韓國給修"；內蒙古算力中心"老大到內蒙古去了，打打就幹"，風電"死幾隻鳥上個毛兒，你幹"。</li>
+<li>美國廢了："法國的今天就是美國的明天"，但美國國歌最後一句是"這是一片自由的土地，勇敢者的天堂"，"最後就開槍"；"不用玩 GTA6，美國很快就 GTA6 了"。</li>
+<li>制度觀（他的原話）："我沒有說一黨好過兩黨，我說的是獨裁好過民主，但是獨裁前面要加一句叫開明獨裁"；蔣經國開明才有台灣今天的發達，朴正熙開明才有漢江奇蹟、韓國發達；"獨裁對國家好，民主對人民好"，但人民永遠希望不勞而獲、討好人民最後就把國家養廢了，"跟歐洲一樣"；民主制度最基本的前提是人得有道德、有宗教信仰，美國第二任總統說過美國的民主制度是很脆弱的制度，必須建立在基督教建國的基礎上。</li>
+<li>年輕人：現在年輕人就是"無望，看不到一點希望"；辦法是開放民營經濟、不封帳號、不追稅、社保隨便交、"你稅四檔你就別收了，你收大企業就行了"、放鬆民間監管，讓老闆們重新做生意才有年輕人的就業機會，"但普哥又說了不算"。</li>
+<li>歷史雜談：毛澤東與拿破崙誰高——"不是拿破崙能和毛澤東相比，是毛澤東可以跟拿破崙相比，拿破崙比毛澤東高多了"，拿破崙是帶領整個歐洲走入現代文明的人；大躍進是"上面放個屁，底下唱台戲"、層層加碼；中越戰爭與蘇聯解體有直接關係（引述美國學者庫蘭德的研究結論）；深圳三和大神都沒了、自助小店都撤走了，菜市場橘子賣到五毛錢一斤，他在樓下買五個水蜜桃花 60 元，"這幾個人吃不起啊"。</li>
+<li>康波週期：問他怎麼看康波週期，他答"你能活一個康波週期都不容易了"。</li>
+<li>戰爭：他老婆認為世界需要一場戰爭，"法國無解，德國無解，歐洲無解，美國無解，就得幹一場"；他認為本世紀內不會發生大戰，但"三天之內發生都有可能"，"人類發展到這種程度，誰也解不開了，只有戰爭咔一刀下去"。</li>
+<li>收尾：02:20 左右稱"又 12 點了"、比特幣"慢得破位了"、大 B 浪反彈完了，"嚇一口奔 7 萬吧"；從這個位置再反抽一下到 8 萬也有可能，但"波瀾壯闊的大牛市就別想了"；最後 334 人在聽，"本週咱就聊到這裡，祝大家萬事如意，拜拜"。</li>
+</ul>
+<hr />
+<p><em>轉寫說明：錄音 2 小時 33 分 20 秒，本地 faster-whisper（small 模型，中文）轉寫 3140 段；轉寫開頭約 5 分鐘為空白/試音，首段自 00:05:03 起。文中"自述"指發言人現場說法，未經外部核實。</em></p>
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: [Pudate Crypto Night Talk]: Crypto Industry Trends in the Post-Trump Era</h1>
+<p><strong>Topic</strong>: The reasons for Trump's heavy defeat after the US midterm elections, the political deadlock of the post-Trump era, and outlook judgments for the crypto industry (BTC/ETH/DOGE) and US stocks
+<strong>Original link</strong>: https://x.com/i/spaces/1evWmQAJKLLPjm
+<strong>Time</strong>: 2026-11-06 21:29 to 2026-11-07 00:03 (Beijing time), recording 2 hours 33 minutes 20 seconds
+<strong>Host</strong>: Pudate @Predator_fund (solo talk + reading and answering audience messages; the transcript shows no other guest speaking on mic)
+<strong>Note</strong>: These notes are compiled from a local transcription of the recording. The transcription has no speaker separation, and attribution follows the host's tone and naming; a few proper names and numbers where transcription is doubtful have been marked. Amounts, price levels, track records, election results and so on in the text are all the speaker's on-site account, not externally verified; several claims differ from public facts, so when citing them please rely on official follow-up announcements and authoritative sources. These notes do not constitute investment advice.</p>
+<hr />
+<h2>1. Conclusions First</h2>
+<ol>
+<li><strong>Characterization of the midterms: Trump suffered a heavy defeat, worse than expected</strong>: Pudate said Texas was lost, Florida's lead was down to only about 3 points, and traditional red states such as Kentucky, North Carolina and South Carolina were also lost. He summarized three causes of defeat: the universal tariffs were ruled unconstitutional by the Supreme Court, the strike on Iran, and endorsing a batch of weak candidates; and he said the impact of this defeat would last 50 years — senators serve six-year terms, the Supreme Court's 6:3 balance will be rewritten, and even if Republicans retake the presidency in 2028, both chambers may still be in Democratic hands.</li>
+<li><strong>The post-Trump era is a deadlock; no one can push an agenda through</strong>: Trump is left only with the veto (overriding a veto in the Senate requires two-thirds, i.e. 66 votes; he said there are currently only 54); the Democrats cannot legislate either, and can only exchange and negotiate with each other.</li>
+<li><strong>The crypto bull market is gone and will not return for ten years</strong>: He said the Democrats are anti-crypto at the root, and now the female lawmaker most opposed to crypto (the one with yellow hair) is in turn in charge of crypto affairs; what will pass will be the Democrats' "cleansing bill." Bitcoin's previous high of $126,000 cannot be reached again within ten years, though a rebound to $90,000–$100,000 is possible; Ethereum fell 10% in one night and in his words has been reduced to a "coin-washing tool," and Thom Lee will be liquidated if it falls further; several major Wall Street banks want to build their own consortium chain and take USDT back; VCs no longer invest in crypto projects, and the projects of several big figures in Southeast Asia have all been stopped.</li>
+<li><strong>His position: hold only Bitcoin and Dogecoin, treated as gold</strong>: Dogecoin bought at $0.0588, hedged from $0.24, now costing less than $0.0588 and still in profit; he bought these two not to profit from price rises but as "ownerless assets" to replace fiat currency. He does not touch Ethereum, believing its price should align with SOL and BNB; for gold he will wait until below $3,600 to buy physical; contracts have not made money recently.</li>
+<li><strong>Judgment on the Binance incident</strong>: Binance was robbed of $6 billion (by his account); he insisted "Binance's technology is inferior to OK's," saying Xu Mingxing is a technical man who understands technology, while CZ and He Yi are marketing masters; Binance emphasizes marketing over technology, and operations staff being driven to look for jobs outside was one root cause of the incident. He spent about the first 20 minutes talking about being blocked by Yijie (He Yi) because of this remark.</li>
+<li><strong>Very pessimistic about the US, very optimistic about China</strong>: The US is finished, "France today is America's tomorrow"; China is Number 1 (the government has money, strong execution, and technology and manufacturing have come up). He said "enlightened dictatorship is better than democracy," and said no empire in history has lasted more than 300 years, and America's national fortune is nearly at its end.</li>
+<li><strong>Reminder</strong>: All of the above is the speaker's on-site account, unverified, and does not constitute investment advice. Several figures in the transcript (such as "Texas was lost," "Florida leads by only 3 points," "the Supreme Court ruled tariffs unconstitutional") differ from public reporting, so be sure to check them separately before citing.</li>
+</ol>
+<h2>2. Opening: Blocked by Yijie, and Binance Robbed of $6 Billion (00:05–00:25)</h2>
+<ul>
+<li>He opened with a sound check, then talked about being blocked by Yijie (He Yi): it started because he said in a video, "From a technical point of view, Binance is inferior to OK." He said he never posts to curse people and never deletes posts (unless the other party asks), and being blocked actually means "you matter"; but he still stood by the judgment that Binance's technology is inferior to OK's.</li>
+<li>Amount stolen from Binance: he first thought only a hot wallet had been lost through reckless EIP-7702 authorizations, but later heard "everything was lost," in the amount of $6 billion (by his account). He said he did not withdraw a cent of his money on Binance because he "knew it would be fine, $6 billion can be borne," and said the loss on October 11 last year alone was more than $6 billion in a single day.</li>
+<li>Comparison of the personas of the three exchanges (in his words):</li>
+<li><strong>OK</strong>: Xu Mingxing is a technical man who writes code himself, and security, technology and API are all done well; Han Lin is also a tech geek, weak at marketing, so OK has always been neither dead nor alive.</li>
+<li><strong>Binance</strong>: CZ and He Yi are marketing masters; Binance Square, KOLs, peripheral merchandise and silver-party conferences are done well; but their minds are not on technology, and operations roles are not valued.</li>
+<li><strong>Huobi</strong>: In the Li Lin era, personal charisma and leadership were good; after Sun Yuchen took over it was finished — Sun is neither technology nor marketing, and his specialty is "metaphysics, competitions, riding on Buffett, riding on Trump, depositing money on Binance to farm rewards."</li>
+<li>Mechanism of the incident (his speculation): A Binance operations employee went job hunting and put job-seeking information on a work computer; lateral infection pulled in several others, they passed rumors to each other, and a small group of six or seven people ultimately led to the loss of $6 billion. He argued: core roles in finance, operations and wallet management must work together in one place, computers cannot be taken away, staff must pass security checks, and two people must open the safe together; development and operations at an exchange should be paid highly, "it is inherently a job of licking blood off a knife's edge."</li>
+<li>He also said Binance spends more than 4 million a month just on KOLs, captains and Binance Square (by his account), "even if one-thousandth of that money were taken out to raise pay for key operations roles, this would not have happened."</li>
+</ul>
+<h2>3. Midterm Review: Why Trump Lost So Badly (00:25–01:03)</h2>
+<ul>
+<li>Characterization: This heavy defeat exceeded his expectations — he had expected a defeat, but not one this severe; that Texas could be lost was unexpected, Florida is also in danger, "one more round and Florida would be lost too."</li>
+<li>Why Texas turned purple (his analysis): California Democrats could not stand California's high taxes, strong regulation and "zero-dollar shopping," and moved to Texas in large numbers (Musk among them), but their ideology did not change; combined with Latino voters offended by ICE arrests and "rednecks" (referring to local conservative voters) shedding tears and other factors, Texas went from deep red to purple. Florida, meanwhile, began to see inflows because many Californians feel "Florida has the sea."</li>
+<li>His attitude toward Trump himself: He neither dislikes nor likes him; he read <em>The Art of the Deal</em> when young so he rather admired him; he believes Trump is a "reformed rich second generation," does not smoke, drink or even drink coffee, is a businessman, and America now needs a businessman president; but Trump's biggest problem is "that mouth" — a boss by background who cannot speak properly and offends too many people, "if he had learned a little of politicians' hypocrisy, he would not have offended so many."</li>
+<li>His view of the midterm system (in his words): The House elected every two years, the Senate every six years, and the Supreme Court for life were designed by the Founding Fathers; but "one person, one vote, winner takes all" democracy is not a good thing and easily forms mob politics; voters only care whether oil and other prices are high, and do not think about the reasons behind them, "Americans with $400 in their card are considered people with no money."</li>
+</ul>
+<h2>4. Cause One: Universal Tariffs and the Supreme Court (00:33–00:40)</h2>
+<ul>
+<li>Trump first imposed "universal tariffs" on taking office, 10% on every country regardless. Pudate said he understands Trump's intent: American industry has hollowed out, it cannot even make aircraft-carrier steel plates, condoms, chewing gum or vests, so tariff barriers must protect domestic industry and let domestic firms grow; Musk also said that for America to stand at the top of the world again it can only look to AI.</li>
+<li>But he believed Trump got the "sequence wrong" (in chess this is called "dun cuo" / tempo): 80% of goods in American supermarkets are made in China, and tariffs cannot be imposed before domestic industry has developed, otherwise daily necessities and sanitary pads will all rise in price. Trump's plan was to use tariff revenue to subsidize supermarkets and ordinary people until domestic firms grew, but that would take ten years to take effect.</li>
+<li>The Democrats sued from local courts all the way to the Supreme Court, which ruled the universal tariffs unconstitutional (by his account) and demanded the collected tariffs be refunded. "Trump originally wanted to collect hundreds of billions to subsidize the people, now he cannot," and the plan was completely disrupted.</li>
+<li>He also said Trump's path of developing domestic industry was right, but "without ten years there will be no effect at all."</li>
+</ul>
+<h2>5. Cause Two: Striking Iran (00:40–00:53)</h2>
+<ul>
+<li>He believed striking Iran was one of the main causes of defeat: Trump in his first term was the only president who did not start a war, and he had thought "destroying Iran would be a game," but unexpectedly "could not win."</li>
+<li>Why he could not win (his analysis): First, modern warfare has entered asymmetric warfare, and drones have made expensive weapons ineffective — small drones made in Dongguan have an ex-factory price of just over RMB 8,000, Iran bought them for $20,000, and releasing a thousand at once blinded US bases in Bahrain and Kuwait and the most advanced radars in the Middle East, "repairs will take three years," and aircraft can only take off from far away; second, DEI (diversity, equity and inclusion) in the Biden era wrecked US military combat power — aircraft carriers must meet ratios for female soldiers, homosexuals and overweight personnel, and even develop flight suits for pregnant women; the Lincoln was away from its home port for 270 consecutive days, soldiers could not stand it and even blocked toilets and set laundry rooms on fire in protest.</li>
+<li>Results (his account): The US military carried out more than 20,000 airstrikes on Iran, more than in the Yugoslavia period, and emptied American ammunition in a few days; apart from a few large cities Iran was already a "barren land," bombing electricity was useless, "except for Tehran having some electricity, the people simply had no electricity to begin with."</li>
+<li>Subsequent deadlock: Trump backed down; to fight would require a landing, Iran is larger than Shandong Province combined, ground forces would need at least 500,000; Europe would not send troops; missiles and bombs were used up and America wanted to produce more, but US military-industrial capacity is extremely low and recovery to pre-war levels would take until 2035 (by his account); Congress also would not approve Patriot missiles for Ukraine, "as long as you, Trump, approve it, we in Congress will definitely not agree."</li>
+<li>The "correct sequence" he prescribed for Trump: first build the border wall and do not drive out those already in; fully unlock energy policy (Alaska crude pipelines, crude from Alberta, Canada, major Texas crude development, approve all refineries); wait until oil capacity rises and America becomes an oil exporter, then strike Iran — "how can you strike Iran before capacity has come up?"</li>
+</ul>
+<h2>6. Cause Three: Endorsing Weak Candidates and "Impact for 50 Years" (00:57–01:18)</h2>
+<ul>
+<li>Trump's endorsements looked only at loyalty, not ability: Texas should have let the old fox Cornyn (a local-boss senator rooted there for many years) run, but Trump backed Paxton ("the one with a squint in one eye"), who is a poor speaker and lost to an opponent who described themselves as having six genders; Graham's sister "is just a fool," and Trump backed her too; the candidates in Missouri, Iowa, Kentucky and South Carolina were all very weak, "he would not listen to anyone's opinion," and Vance's persuasion was useless.</li>
+<li>The logic of a 50-year impact (his deduction): Senators serve six years, Republicans lost too many this time, and even if Republicans retake the presidency in the 2028 election, the Senate will still be in Democratic hands; the Supreme Court is now 6:3, with only three and a half staunch Trump supporters, two of whom are old and about to retire, and Democrats in power will directly pack in three or four young Supreme Court justices, "who can serve another forty years without problem." So Rubio, Vance and Cruz may all not want to run in 2028 — "if you become president and both chambers are in others' hands, what can that president do?"</li>
+<li>Internal Democratic discipline (his account): Democratic Party discipline is extremely strict, votes never defect; if you disobey, funding is cut, even assistants get no money, and in the end you can only work from a basement office; Republicans mostly have money and do not care about the party's small funding, so they are highly independent, and even if they win both chambers many things cannot pass.</li>
+<li>Democratic promises after taking power: High welfare — where will the money come from? Raise taxes on the rich such as Musk, Bezos, Zuckerberg and Oracle's Ellison, or even confiscate directly; he analogized the 1953 public-private joint ownership and the 1957 Anti-Rightist campaign (by his account, ten capitalists jumped from buildings in Shanghai in one day, and the Anti-Rightist campaign killed 500,000 rightists), saying "this move is right in front of you, just pick it up and use it."</li>
+<li>Musk's situation: He judged that the Democrats' first cut in power would be Starlink — "it must be broken up for you," just as Bell Telephone was broken up (AT&amp;T was split into seven pieces, Bell Labs was gone, and American basic research in communications was gone); X is a private company and not listed, so it cannot be broken up, but they can legislate or set up an "X Speech Review Committee," "they can kill you without legislation"; it is not that easy for Musk to form a new party, "American politics is much darker than China's"; he joked Musk can only seek political asylum in Russia, "Putin says, oh I see Brother Ma, let's burn incense, kowtow and become sworn brothers."</li>
+<li>He also mentioned: The Democrats impeached twice in a row last time, put together more than 90 cases totaling more than 700 years of sentences (by his account), with the aim not of upholding justice but of preventing Trump from being elected; Pelosi "properly earned more than 2 billion over decades, by stock trading" (by his account), but Biden pardoned all these people before leaving office, "even pardoning crimes his son might commit in the future," and Trump could do nothing; the Trump family issued a coin and "did not sell a single coin," it was crypto people who pumped the Trump coin up.</li>
+</ul>
+<h2>7. Democrats and Crypto: The Bull Market Is Gone (01:19–01:44)</h2>
+<ul>
+<li>The Democrats are anti-crypto at the root: The Democrats want to control everything and feel crypto "is out of control and must be controlled"; Republicans are "what the law does not prohibit is permitted," Democrats are "what the law has not passed cannot be done" (he cited Premier Li Keqiang's phrase "what the law does not prohibit is permitted" for comparison).</li>
+<li>The female lawmaker most opposed to crypto (the one with yellow hair, whom he did not name) is now preparing to take charge of US crypto affairs; the Trump family saw this and said, "Forget it, what national strategic reserve for Bitcoin, just sell the bandit's coins directly," and the Trump family's position was smashed down the night before (by his account, unconfirmed).</li>
+<li>His core judgment: "There is no crypto bull market, and there will be no crypto bull market within ten years"; Bitcoin's new high of $126,000 "cannot be made, not for ten years"; but rising to $90,000 or $100,000 "is possible."</li>
+<li>Ethereum: He said two months and four months ago that Ethereum had been reduced to a "coin-washing tool," when Binance had not yet been robbed; now several major US exchanges and Wall Street firms have stated they do not recognize RWA and tokenized US stocks, "if it is to be done, we will do it ourselves," preparing to build their own consortium chain and take USDT back from Ethereum and TRX; the next to blow up will be Thom Lee, "if Ethereum falls a bit more, Thom Lee will be liquidated, he cannot hold on."</li>
+<li>Industry shutdown: Since the Republicans lost, several big figures in Southeast Asia he knows have all stopped their projects, "even after the coin was issued they stopped, coins, chains and schemes all stopped"; which VC would still invest in crypto projects, "are they sick?"; "next you still want to short and farm airdrops, farm your own — there is no such thing anymore."</li>
+<li>US stocks: The AI Magnificent Seven bought so many graphics cards, computing centers have been halted — "no one is allowed to use electricity" — and continued R&amp;D is not allowed; "America's only normal point is gone," what will happen to US stocks next "need I say more?"; he also said Boeing had finally cleared out disabled people, blind people and deaf people and brought in real engineers, and now it will go back to assigning people by class composition.</li>
+<li>Bitcoin trend (his technical judgment): The large Wave B rebound is over, Wave A decline has begun, "the bear path is slow, one extension wave after another"; yesterday as soon as the news came out he said "it's over, Bitcoin has broken down, it will fall," before a big fall it first pulls back to let longs in, and last night Ethereum fell 10%, "too ruthless."</li>
+<li>But he also stated: Crypto will still exist and he will not leave crypto; "Will Bitcoin go to zero? No, Dogecoin won't either," "when you fall to one cent I will buy."</li>
+</ul>
+<h2>8. His Holdings and Operations: Bitcoin and Dogecoin as Gold (01:37–01:54)</h2>
+<ul>
+<li>Dogecoin: He bought a large amount at $0.0588 and began hedging at $0.24, earning many coins in the "iron treasure" process, and now his cost is less than $0.0588 and he is still in profit. He declared he has never called on others to buy Dogecoin and never said "charge, all in Dogecoin," "I only said I bought it."</li>
+<li>How to buy: Dogecoin cannot be traded in swings; buying it is for collection, "purely the same logic as buying physical gold." He is waiting for gold to fall below $3,600 to buy some physical gold in Shuibei; "aren't people who bought at over 5,000 crying now too?" He said when he called the top for gold and silver, "it topped just two days later."</li>
+<li>Logic: He does not trust any government in the world and wants to turn controlled fiat currency into coins he controls himself; in the whole world only Bitcoin and Dogecoin are "ownerless," the rest all have owners — why should Ethereum be worth so much money, "its price should be the same as SOL, and should not exceed BNB," and its function is not even as good as those two.</li>
+<li>Gold: Consider buying when the international gold price is below $3,600, and consider buying some when the domestic RMB gold price is over RMB 600 per gram; but bringing fiat currency back from overseas "is quite dangerous," so if there is no opportunity he will not buy.</li>
+<li>Contracts: Recently his contract trading has been poor, "last month I did not make much money"; now he just holds Dogecoin and Bitcoin and trades contracts short-term.</li>
+<li>Big A (A-shares): The 3,600-point defense battle (by his account); people who charged into Big A back then "are all trapped at high levels," and those who shouted "the Big A bull market is here, hurry and go all in" — "all in is a kind of wisdom, foolishness is also a kind of wisdom."</li>
+<li>Space stock: The captain bottom-fished Space; he glanced and it was $131, "yesterday it fell too hard," the weekly chart cannot be saved either, "100 will definitely break."</li>
+<li>Memory stocks: Micron, Samsung and others; several plants in Xi'an and Hangzhou have added several production lines of capacity; "memory is made of sand, it is not made of rare earths, what can happen?"</li>
+<li>Quantitative strategy: An audience member asked about strategy, and he responded "the strategy is full of adjectives" and cannot be written, "when volatility is violent I do such and such — what is the volatility, how do you write it in C, how do you write it in Python"; quantitative means you cannot use adjectives.</li>
+<li>Other Q&amp;A: BSV has no future, it is too concentrated; YFI and DeFi yields — "simple answer: no" investment value; Bitcoin's weekly MACD is almost turning red, "probing down and spending two or three years at the bottom is normal"; if the Democrats are elected in 2028 will China rise — "China's rise has nothing to do with America."</li>
+</ul>
+<h2>9. Q&amp;A Chat: China, War and Institutions (01:54–02:33)</h2>
+<ul>
+<li>China Number 1: He said "the Dragon Country is now incredibly powerful," the government is the richest in the world, the workers are the most obedient, technology and manufacturing have come up, "Made in China 2025, Intelligent Manufacturing in China 2035, this is not a dream"; China builds warships at a speed "like dumplings going into the pot," and America now "cannot even repair warships, let alone build them, Korea repairs them"; for the Inner Mongolia computing center "the boss went to Inner Mongolia, just do it," and for wind power "a few birds die, so what, just do it."</li>
+<li>America is finished: "France today is America's tomorrow," but the last line of the American national anthem is "this is a land of the free, a paradise of the brave," "in the end they will shoot"; "no need to play GTA6, America will soon be GTA6."</li>
+<li>View on institutions (in his words): "I did not say one party is better than two parties, I said dictatorship is better than democracy, but dictatorship must be prefixed with enlightened dictatorship"; only because Chiang Ching-kuo was enlightened does Taiwan have today's prosperity, only because Park Chung-hee was enlightened was there the Miracle on the Han River and Korea's prosperity; "dictatorship is good for the country, democracy is good for the people," but people always hope to get something for nothing, and pandering to the people in the end raises the country into uselessness, "just like Europe"; the most basic premise of democracy is that people must have morality and religious faith, and the second US president said America's democratic system is a very fragile system that must be built on the foundation of a Christian founding.</li>
+<li>Young people: Young people now are "hopeless, seeing not a bit of hope"; the way is to open up the private economy, not block accounts, not chase taxes, let social insurance be paid freely, "do not collect your fourth tax bracket, just collect from large enterprises," relax private-sector regulation, and let bosses do business again so young people have job opportunities, "but Brother Pu's word does not count."</li>
+<li>Historical chat: Who is greater, Mao Zedong or Napoleon — "it is not that Napoleon can be compared with Mao Zedong, it is that Mao Zedong can be compared with Napoleon, Napoleon is far greater than Mao Zedong," Napoleon led all of Europe into modern civilization; the Great Leap Forward was "the top lets out a fart, the bottom puts on a show," with layer upon layer of escalation; the Sino-Vietnamese War was directly related to the collapse of the Soviet Union (citing the research conclusion of American scholar Kurland); Shenzhen's Sanhe gods are gone, self-service small shops have withdrawn, oranges in the market sell for fifty cents a jin, he bought five peaches downstairs for 60 yuan, "these few people cannot afford to eat."</li>
+<li>Kondratieff cycle: Asked how he sees the Kondratieff cycle, he answered "it is not easy for you to even live through one Kondratieff cycle."</li>
+<li>War: His wife believes the world needs a war, "France has no solution, Germany has no solution, Europe has no solution, America has no solution, there must be a fight"; he believes there will be no major war in this century, but "it could happen within three days," "humanity has developed to this point, no one can untie it, only war cutting down with one stroke."</li>
+<li>Closing: Around 02:20 he said "it is 12 o'clock again," Bitcoin "has slowly broken down," the large Wave B rebound is finished, "let it scare down toward 70,000"; from this position another pullback to 80,000 is also possible, but "do not think about a magnificent big bull market"; in the end 334 people were listening, "that is it for this week, wish everyone all the best, bye bye."</li>
+</ul>
+<hr />
+<p><em>Transcription note: Recording 2 hours 33 minutes 20 seconds, transcribed locally with faster-whisper (small model, Chinese) into 3,140 segments; the first about 5 minutes of the transcription are blank / sound check, and the first segment starts at 00:05:03. "By his account" in the text refers to the speaker's on-site statements, not externally verified.</em></p>
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes of this session; the content is the speaker's on-site account and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：【普达特加密夜话】：后川普时代，加密行业走势分析 · Yat's Talks",tw:"會議紀要：：後川普時代，加密行業走勢分析 · Yat's Talks",en:"Meeting Notes: [Pudate Crypto Night Talk]: Crypto Industry Trends in the Post-Trump Era · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

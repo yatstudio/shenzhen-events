@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：Misa社区 × 简易期权 专属奖励等你来拿</h1>
 <ul>
 <li><strong>来源</strong>：X Broadcast <code>2jPqOjykjbKOdg</code>，https://x.com/i/broadcasts/2jPqOjykjbKOdg</li>
@@ -222,8 +229,426 @@
 <li>区块链日记自称山东人；现场关于他是广西老表、日本人、马来西亚人的说法均为玩笑，以本人自述为准。</li>
 </ul>
 </article>
-<footer>来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2jPqOjykjbKOdg">https://x.com/i/broadcasts/2jPqOjykjbKOdg</a> · 主持 Misa（Misa 社区）· 2026-11-17 19:47–22:07（约 2 小时 19 分）· 观看约 3,065 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：Misa社群 × 簡易期權 專屬獎勵等你來拿</h1>
+<ul>
+<li><strong>來源</strong>：X Broadcast <code>2jPqOjykjbKOdg</code>，https://x.com/i/broadcasts/2jPqOjykjbKOdg</li>
+<li><strong>時間</strong>：2026-11-17 19:47:48–約 22:07:08 CST，2 小時 19 分 19 秒；觀看數約 3,065 次</li>
+<li><strong>主持</strong>：Misa（Misa 社群）；工作人員零 X 協助抽獎與控場</li>
+<li><strong>嘉賓</strong>：區塊鏈日記、Queen（麥雲，期權從業者）、邵映（OKX 產品方，講簡易期權）、溫蒂 Wendy（美股從業者，以小白代表身分提問）、OKX 產品經理（後半段答疑）；比特幣老肥原定參加（開車途中，未在逐字稿中出現）</li>
+<li><strong>逐字稿</strong>：<code>transcript.txt</code>（106,363 位元組，約 37,393 字；本機 faster-whisper small 模型轉寫，無時間戳）</li>
+<li><strong>口徑說明</strong>：以下數字與說法均為嘉賓現場說法，未經核實；期權術語在轉寫中雜訊極大，存疑處見文末 ASR 還原表。<strong>全場多次聲明：內容僅為產品教育與經驗交流，不構成任何投資建議。</strong></li>
+</ul>
+<h2>一句話</h2>
+<p>這是一場給純小白講期權的中文教學直播：Misa 社群請 OKX 產品方和一位期權從業者，用輝達財報前的三個具體場景把 Call/Put 講成人話，再用兩組回測講清「虧有限不等於好賺錢、收權利金不等於收房租」，最後落到 OKX 簡易期權的 25U 體驗金上。</p>
+<h2>核心內容</h2>
+<h3>1. 開場：500U 獎勵與三條底線</h3>
+<ul>
+<li>為讓大家「第一筆期權玩得爽一點、沒有負擔一點」，Misa 申請了 <strong>500U 獎勵：25U × 20 人</strong>，以體驗金形式發放，可開一個迷你倉試手；領取方式是後續在貼文裡公布做法，條件是曬真實持倉單（不能憑空想像）。</li>
+<li>全場多次抽周邊：開場稱有 10 份，Misa 個人又加 3 份，後續答題與問答環節又陸續抽出多份（獲獎者包括 Jungle King、阿良、孤獨的烤魚、Y-I-L-I-A、喬海龍、早睡、「給我一張紅卡」等，多為新面孔；老粉被主持人多次安撫「不要吃醋」）。</li>
+<li>開場即立規矩：買方可能虧光全部權利金；賣方收了權利金就要承擔相應義務與風險；操作前必須先了解產品、成本與最壞結果，再決定是否適合自己。</li>
+</ul>
+<h3>2. 邵映：期權大白話——兩個角色</h3>
+<ul>
+<li>記住兩個角色就行：<strong>付錢買權利的是買方，收錢擔義務的是賣方</strong>。買方付一筆權利金，獲得在約定時間按約定價格買入或賣出標的的權利；賣方先收錢，但收了就得履約，不能反悔——因為收錢時已有保證金押在平台，不是憑個人意願。</li>
+<li>巴菲特的經典案例：波克夏曾賣出一筆可口可樂看跌期權，憑空（打引號）收到約 <strong>750 萬美元權利金</strong>。代價是承諾：在約定日按約定價（節目中舉例約 100 美元/股）買入對方的股票，哪怕屆時股價跌到 1 美元也得接。巴菲特敢做，是因為長期看好可口可樂、且那個價位是他心裡願意長期持有的價位。</li>
+<li>現場有人指出「這很像雙幣贏的低買」，邵映確認：<strong>雙幣贏產品的底層就是期權</strong>，用戶拿到的年化收益本質上就是權利金。</li>
+</ul>
+<h3>3. 必須知道的詞：權利金、行權價、到期日、Call/Put</h3>
+<ul>
+<li><strong>權利金</strong>：期權的價格，買方付、賣方收（巴菲特那 750 萬美元就是權利金）。</li>
+<li><strong>行權價</strong>：雙方約定的買賣價格；<strong>到期日</strong>：權利到哪天截止，過期作廢。</li>
+<li><strong>Call 是看漲期權</strong>（買方按約定價買入的權利），<strong>Put 是看跌期權</strong>（買方按約定價賣出的權利）。最容易繞的是：Call 和 Put 都能買也能賣，共四種情況——買 Call、賣 Call、買 Put、賣 Put。</li>
+<li>現場反覆出現「馬冬梅」梗（買 Call 賣 Call 買 Put 賣 Put 念混了）。邵映準備了一張「說明書」（對照表），建議截圖保存：先找到自己的心理價位與需求（怕跌想保護？想在某價接貨？看好上漲想小資金參與？持有現貨到價願賣？），再對號入座看策略與最壞情況。</li>
+</ul>
+<h3>4. 區塊鏈日記：三個場景，都拿輝達舉例（現價約 160 美元/股，財報臨近）</h3>
+<p><strong>場景一：持有現貨，怕財報後下跌——買 Put 當保險。</strong>
+花 3 美元/股買一份行權價 150 的 Put。到期三種結果：
+- 跌到 130：現貨虧 30 美元/股，Put 值 20 美元，扣掉 3 美元權利金，實際只虧 13 美元（不買保護要虧 30）；
+- 漲到 180：現貨賺 20 美元，Put 作廢扣 3 美元，實際賺 17 美元；
+- 沒跌（160）：Put 作廢，最多虧 3 美元權利金——「為睡好覺付的成本」。
+他前一段還按整張合約算過同一筆保護：權利金約 400 美元/張（1 張=100 股），100 股口徑下對沖後淨虧約 1,400 美元，而裸持現貨要虧 3,000 美元。另需注意：<strong>買的 Put 必須在財報後才結算</strong>，買在財報前結算的等於白買。</p>
+<p><strong>場景二：想在 140 接貨，不想追高——賣 Put（現金擔保）。</strong>
+先收 3 美元/股權利金，再等 140。到期高於 140：不用接貨，白拿權利金；到期低於 140：必須按 140 接貨，哪怕跌到 120、130 也得接（浮虧自擔）。前提是準備好 140 美元/股的保證金。看的是<strong>到期結算價</strong>，不是盤中一度觸到 140 就能成交。</p>
+<p><strong>場景三：預算有限，看好上漲——買 Call。</strong>
+花 5 美元買行權價 160 的 Call。到期漲到 180：期權值 20 美元，扣成本淨賺 15 美元；到期只漲到 163：期權值 3 美元，扣成本還虧 2 美元。<strong>上漲不一定賺錢，得漲夠才賺</strong>。不要總抱著「以小博大」的心態：期權是組合工具，不是比合約更無腦的單邊操作。</p>
+<ul>
+<li>現場小測驗：三場景分別對應什麼策略？正確答案 <strong>B C A</strong>（持倉怕跌=買 Put；備足資金按約定價接貨=賣 Put；看好上漲願承擔權利金虧光=買 Call）。答對的前三名是 Jungle King、阿良、孤獨的烤魚。</li>
+</ul>
+<h3>5. OKX 簡易期權：簡易在哪</h3>
+<ul>
+<li>入口：OKX App 或網頁端，交易 → 期權。同一頁裡有「簡易期權」與「期權鏈」（專業頁）；專業頁像一張巨大的表，新手看一眼就暈，簡易頁則一目了然。</li>
+<li>標的目前以美股與 ETF 為主，BTC 等後續會上簡易期權。</li>
+<li>最受好評的一點：<strong>下單前就能預覽權利金、盈虧平衡價與可能的盈虧</strong>（可視化圖像，相當於模擬盤），不用花真金白銀先算帳。</li>
+<li>資金門檻：<strong>1 股起</strong>，而專業期權 1 張=100 股——輝達 160 美元/股，1 張就是 16,000 美元，差了 100 倍。也不用懂隱含波動率（IV）、Greeks 等專業詞。</li>
+<li>但邵映反覆強調：<strong>簡化的只是操作，風險的原理一樣</strong>。買方依然可能虧光權利金，賣方收錢依然必須履約。下單前想清楚兩個問題就行：我要解決什麼問題？我為此願意付出什麼？</li>
+</ul>
+<h3>6. Queen（麥雲）：三個誤區，都有回測數據</h3>
+<p>回測用雅虎歷史數據、BS 模型估算，<strong>並非真實成交價</strong>；BTC 與 SPY（美股 ETF）兩個標的。</p>
+<p><strong>誤區一：期權不是槓桿合約。</strong>「把法拉利當油門」——槓桿是線性的、漲跌同比例放大；期權買賣的是權利：買方虧有限、賺無上限，賣方正好反過來。用槓桿的腦子滿倉買期權，「像拿菜刀做心臟手術」。
+- 案例：2020 年 3 月疫情，3 月 6 日 BTC 9,123 美元，買平值看跌期權，權利金 498 美元；3 月 13 日 BTC 跌至 5,564 美元（約 -39%），看跌賠付 3,559 美元，持倉價值 8,624 美元。裸持現貨虧 39%，買了保護只虧 <strong>5.5%</strong>——498 美元的保險非常值。</p>
+<p><strong>誤區二：虧有限，不代表容易賺。</strong>有限的是單筆金額，不是次數。一天買十次、一個月買三百次，就是給交易所送錢。
+- 案例：2024 年 4 月 22 日 BTC 約 66,008 美元，買 6 個月後到期、行權價 73,000 美元（高約 10%）的看漲期權，權利金 8,300 美元；10 月 22 日到期 BTC 67,003 美元（半年漲幅約 0.8%，節目內說法），始終未達行權價，<strong>權利金虧光 100%</strong>——等於花 8,300 美元買了張彩券。買方要同時看對方向、幅度與波動，缺一個都白搭。</p>
+<p><strong>誤區三：收權利金不等於穩定收益。</strong>「金融界最貴的錯覺之一——真這麼穩，各大銀行早改行賣期權了。」賣方收益像公司債（有封頂），風險像信用卡帳單：大漲時賣 Call 理論上虧無限，賣 Put 大跌時要按約定價接貨；一次極端行情能把多次權利金連本帶利吞掉。
+- 案例：2020 年 2 月 19 日 SPY 338 美元（歷史高點），賣一個月後到期、行權價 320 的看跌期權，權利金 1.18 美元/股，當時 30 日歷史波動率僅 11.6%；3 月 20 日 SPY 跌至 228 美元，被指派按 320 接貨，<strong>每股虧 91 美元，是權利金的 77 倍</strong>。</p>
+<p><strong>新手風險檢查表（Queen 給的）：</strong>
+1. 先搞懂權利義務與損益結構再下單；OKX 簡易期權的盈虧平衡點展示值得用。
+2. 只用虧得起的錢，做好倉位管理；把權利金當保險費——虧掉的若是睡眠，代價更貴。
+3. 新手不要裸賣、不要重倉：一次極端行情能吞掉多次權利金，「裸賣像裸奔，過癮一時，後面全靠毅力撐著」。
+4. 下單前自問：最壞情況要付出多少？權利金虧損影響生活嗎？期權貴不貴（看 Theta 時間價值與 IV 隱含波動率；IV 大意味著市場已把波動預期計入價格，期權就貴）？
+5. 賣方專屬：有沒有足夠的保證金或現貨對沖？連錯五次後，第六次還能按紀律判斷嗎？
+6. 有任何一項不明白，就先別下單。</p>
+<ul>
+<li>溫蒂復盤（快問快答：下單最重要的三件事）：一、最壞預算能否接受（虧光權利金或這筆虧損能不能承受）；二、漲/跌幅度是多少、多久能到；三、兩項都答不上來就先別碰，先學習。「猶豫就不要幹。」</li>
+</ul>
+<h3>7. 快問快答：輝達財報前，你會開哪一單</h3>
+<ul>
+<li><strong>區塊鏈日記</strong>：上週已買了 12 月到期（約 12 月 11 日）的看漲期權。長期看好輝達，但 CEO 繼任人選未定，擔心即使財報好、短期市場也不買帳，所以買遠期、不做短期。</li>
+<li><strong>Queen</strong>：此前在約 200 美元高位減過一部分倉，當時做了 12 月到期的看跌保護；現在看 OKX 上輝達末日期權（0–3 天到期）隱含波動率 100% 多，太貴，不做。</li>
+<li><strong>溫蒂</strong>：也會買 Call，但不留到 12 月中（1 月升息週期未必走完），會買半年左右的 Call，用時間對沖風險；平時偏中長線。</li>
+<li>（核實註：節目內多次說「輝達 CEO 人選還沒確定」——黃仁勳已於 2026-11-12 辭任 CEO，繼任人選確實未定；節目內未出現「出軌/罷免」等說法。輝達股價在節目內說法為 157–160 美元區間，財報臨近。）</li>
+</ul>
+<h3>8. 產品 Q&amp;A（OKX 產品經理）</h3>
+<ul>
+<li><strong>新手怎麼選行權價？</strong> 按買方還是賣方分開想；從賣方講更容易。以賣 Put 為例：按心理接貨價選——NVDA 現價約 157 美元，若覺得 130 美元值得接，就選行權價 130 的看跌合約；若風險承受力更高也可選中 150。行權價越高，承擔的風險越高、能賺的權利金也越多。到期跌破行權價就要按約定價接貨（舉例：行權價 150、到期市價 148，虧 2 美元但權利金可能覆蓋，實際還賺）。賣方勝率高，是因為大多數情況下價格不跌破行權價就白拿權利金。賣 Call 同理：按願意離場的價選——如 BTC 現價 65,000 美元、想在 80,000 美元離場，就賣行權價 80,000 美元的 Call：漲破則收權利金、同時按目標價賣出現貨離場；沒漲破則白拿權利金、現貨還在手裡。直接賣期權多數情況下報價會比雙幣贏好一點（跨過了一道初階門檻）。</li>
+<li><strong>買入後行情提前達到目標，能提前獲利了結嗎？</strong> 可以。持倉過程中的收益曲線受時間價值與 IV 影響，簡易期權為降低理解成本只畫到期收益圖；但倉位裡能看到即時盈虧，覺得合適就提前平倉。</li>
+<li><strong>交易結束後能否拆解盈虧歸因（方向/時間/波動率各占多少）？</strong> 到期好拆（結算價差減權利金）；持倉中提前平倉難拆（受做市商流動性與報價影響，實際價格取決於當時市場供需）。產品方建議的土辦法：把交易資訊發給 AI 大致分析。</li>
+<li><strong>簡易期權報價有效期多久？</strong> 10 秒一刷新。</li>
+<li><strong>25U 體驗金</strong>：開迷你倉試手，需曬真實持倉單；做法會寫在貼文裡。</li>
+</ul>
+<h3>9. 結尾</h3>
+<ul>
+<li>再次感謝嘉賓（區塊鏈日記、Queen、溫蒂、兩位產品經理、工作人員零 X）與觀眾；重申內容僅為產品教育與經驗交流、不構成投資建議；回放、福利明細與未回答的問題會在 Misa 社群同步。</li>
+<li>直播結束時出現小插曲：主播們一時找不到關播按鈕（「怎麼關直播」「直接挑戰 24 小時直播」），最後才找到關閉入口。</li>
+</ul>
+<h2>值得注意的點</h2>
+<ul>
+<li><strong>這場是教學不是喊單</strong>：全場結構是「概念→場景→誤區→檢查表→實盤策略」，沒有推薦具體點位；三位嘉賓的 NVDA 策略也都是「自己的看法、不構成建議」。</li>
+<li><strong>最值得帶走的兩句話</strong>：Queen 的「虧有限的是金額、不是次數」與「收權利金不等於收房租」；邵映的「簡化的是操作、不是風險」。</li>
+<li><strong>與當日行情的呼應</strong>：節目多次提到「最近行情低迷」「輝達一直在跌」，三位嘉賓不約而同地迴避了末日期權與短期博弈（IV 太貴、CEO 未定），取向都是遠期與對沖。</li>
+<li><strong>產品意圖明顯</strong>：這是 OKX 簡易期權的推廣場（入口演示、1 股起、25U 體驗金），紀要中的產品描述均轉述自產品方現場說法。</li>
+</ul>
+<h2>ASR 還原表（轉寫雜訊極大處）</h2>
+<table>
+<thead>
+<tr>
+<th>轉寫原文</th>
+<th>應為</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>七拳 / 氣泉 / 西拳</td>
+<td>期權</td>
+<td>通篇高頻誤轉</td>
+</tr>
+<tr>
+<td>檢疫期權 / 剪一七拳</td>
+<td>簡易期權</td>
+<td>產品名</td>
+</tr>
+<tr>
+<td>OKS / oks</td>
+<td>OKX</td>
+<td>平台名</td>
+</tr>
+<tr>
+<td>因為達 / 英偉大</td>
+<td>輝達（NVDA）</td>
+<td>標的</td>
+</tr>
+<tr>
+<td>彩包 / 彩報</td>
+<td>財報</td>
+<td>輝達財報臨近</td>
+</tr>
+<tr>
+<td>鋪 / 套 / 摳</td>
+<td>Put / Call</td>
+<td>看跌 / 看漲期權</td>
+</tr>
+<tr>
+<td>雙幣營 / 雙臂營</td>
+<td>雙幣贏</td>
+<td>OKX 理財產品，底層是期權</td>
+</tr>
+<tr>
+<td>比特匹老肥</td>
+<td>比特幣老肥</td>
+<td>嘉賓，未出場</td>
+</tr>
+<tr>
+<td>少穎 / 雙銀 / 雙應</td>
+<td>邵映</td>
+<td>OKX 產品方</td>
+</tr>
+<tr>
+<td>米薩 / 米莎</td>
+<td>Misa</td>
+<td>主持人</td>
+</tr>
+<tr>
+<td>麥當</td>
+<td>Misa（主持人切 PPT 時的口誤轉寫）</td>
+<td>上下文為「你來截圖吧」</td>
+</tr>
+<tr>
+<td>馬冬梅</td>
+<td>買 Call 賣 Call 買 Put 賣 Put 念混的玩笑</td>
+<td>現場梗</td>
+</tr>
+<tr>
+<td>CEO 的冷血 / 人選</td>
+<td>CEO 繼任人選</td>
+<td>黃仁勳已辭任，繼任者未定</td>
+</tr>
+<tr>
+<td>5090</td>
+<td>輝達 RTX 5090 顯示卡</td>
+<td>主持人玩笑「去輝達當 CEO 就送 5090」</td>
+</tr>
+<tr>
+<td>Pocas</td>
+<td>OKX（轉寫誤）</td>
+<td>Queen 說「OKX 的期權剛上」</td>
+</tr>
+<tr>
+<td>CETA</td>
+<td>Theta</td>
+<td>期權時間價值</td>
+</tr>
+</tbody>
+</table>
+<h2>核實註</h2>
+<ul>
+<li>逐字稿中約 30 分鐘內容重複出現兩次（chunk 004–006 與 009–011 內容基本相同，應為回放音訊本身的重複段），紀要已按去重後的內容寫；兩處文本的關鍵數字一致，互相印證。</li>
+<li>區塊鏈日記前段按整張合約算的保護成本（權利金約 400 美元/張）與後段按每股算的 3 美元/股口徑不同（100 股口徑下約合 300 美元/張），屬兩次舉例假設不同，紀要兩處都保留了原說法。</li>
+<li>Queen 回測案例中「BTC 半年漲幅約 0.8%」為節目內說法；按他給出的價格（66,008 → 67,003 美元）算約 1.5%，以節目口徑為準。</li>
+<li>區塊鏈日記自稱山東人；現場關於他是廣西老表、日本人、馬來西亞人的說法均為玩笑，以本人自述為準。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Misa Community × Simple Options — Exclusive Rewards Up for Grabs</h1>
+<ul>
+<li><strong>Source</strong>: X Broadcast <code>2jPqOjykjbKOdg</code>, https://x.com/i/broadcasts/2jPqOjykjbKOdg</li>
+<li><strong>Time</strong>: 2026-11-17 19:47:48 – approx. 22:07:08 CST, 2 hours 19 minutes 19 seconds; about 3,065 views</li>
+<li><strong>Host</strong>: Misa (Misa Community); staff member Ling X assisted with giveaways and floor control</li>
+<li><strong>Guests</strong>: Blockchain Diary, Queen (Maiyun, an options practitioner), Shao Ying (OKX product team, presenting Simple Options), Wendy (US equities practitioner, asking questions as the newcomer representative), OKX product manager (Q&amp;A in the second half); Bitcoin Laofei was scheduled to join (was driving, did not appear in the transcript)</li>
+<li><strong>Transcript</strong>: <code>transcript.txt</code> (106,363 bytes, approx. 37,393 characters; transcribed locally with the faster-whisper small model, no timestamps)</li>
+<li><strong>Note on sourcing</strong>: All figures and claims below are as stated by the guests live and have not been verified; options terminology is extremely noisy in the transcription — see the ASR restoration table at the end for doubtful passages. <strong>It was stated repeatedly throughout the session: the content is for product education and experience sharing only and does not constitute investment advice.</strong></li>
+</ul>
+<h2>In One Sentence</h2>
+<p>This was a Chinese-language teaching livestream on options for complete beginners: the Misa Community invited the OKX product team and an options practitioner to explain Calls and Puts in plain language through three concrete scenarios ahead of Nvidia's earnings, then used two sets of backtests to make clear that "limited loss does not mean easy profit, and collecting premium does not mean collecting rent," landing finally on the 25U trial bonus for OKX Simple Options.</p>
+<h2>Core Content</h2>
+<h3>1. Opening: 500U in Rewards and Three Ground Rules</h3>
+<ul>
+<li>To let everyone "have a bit more fun with their first options trade, with less pressure," Misa secured <strong>500U in rewards: 25U × 20 people</strong>, issued as trial funds to open a mini position and try things out; how to claim would be announced in a follow-up post, with the condition of posting a real position statement (not something imagined).</li>
+<li>Merch was given away multiple times throughout: 10 items were mentioned at the open, Misa personally added 3 more, and more were drawn during the quiz and Q&amp;A segments (winners included Jungle King, Aliang, Lonely Grilled Fish, Y-I-L-I-A, Qiao Hailong, Zaoshui, and "Give Me a Red Card," mostly new faces; longtime fans were repeatedly consoled by the host with "don't be jealous").</li>
+<li>Ground rules were set right at the start: buyers can lose their entire premium; sellers who collect premium must bear the corresponding obligations and risks; before trading, you must first understand the product, the costs, and the worst-case outcome, then decide whether it suits you.</li>
+</ul>
+<h3>2. Shao Ying: Options in Plain Language — Two Roles</h3>
+<ul>
+<li>Just remember two roles: <strong>the buyer pays money for a right; the seller collects money and takes on an obligation</strong>. The buyer pays a premium to obtain the right to buy or sell the underlying at an agreed price at an agreed time; the seller collects money first, but having collected it must perform and cannot back out — because margin is already pledged on the platform when the money is collected, it is not a matter of personal willingness.</li>
+<li>Buffett's classic case: Berkshire once sold a Coca-Cola put option and collected, out of thin air (in quotation marks), about <strong>US$7.5 million in premium</strong>. The price was a commitment: on the agreed date, to buy the counterparty's shares at the agreed price (given in the show as about US$100/share), even if the share price had fallen to US$1 by then. Buffett dared to do it because he was bullish on Coca-Cola long term, and that price was one at which he was willing to hold the stock for the long term.</li>
+<li>Someone in the room noted "this looks a lot like the low-buy side of Dual Currency," and Shao Ying confirmed: <strong>options are the underlying of Dual Currency products</strong>, and the annualized return users receive is essentially premium.</li>
+</ul>
+<h3>3. Terms You Must Know: Premium, Strike Price, Expiry Date, Call/Put</h3>
+<ul>
+<li><strong>Premium</strong>: the price of the option, paid by the buyer and received by the seller (Buffett's US$7.5 million was premium).</li>
+<li><strong>Strike price</strong>: the buy/sell price agreed by both sides; <strong>expiry date</strong>: the day the right ends — after that it is void.</li>
+<li><strong>A Call is a bullish option</strong> (the buyer's right to buy at the agreed price); <strong>a Put is a bearish option</strong> (the buyer's right to sell at the agreed price). The part that trips people up most: both Calls and Puts can be bought or sold — four combinations in total: buy Call, sell Call, buy Put, sell Put.</li>
+<li>A "Ma Dongmei" joke recurred live (mixing up buy Call, sell Call, buy Put, sell Put when reciting them). Shao Ying had prepared a "manual" (a comparison table) and suggested screenshotting it for safekeeping: first find your own target price and need (afraid of a drop and want protection? want to take delivery at a certain price? bullish and want to participate with small capital? holding spot and willing to sell at a target price?), then match yourself to the strategy and worst case.</li>
+</ul>
+<h3>4. Blockchain Diary: Three Scenarios, All Using Nvidia as the Example (spot price about US$160/share, earnings approaching)</h3>
+<p><strong>Scenario 1: You hold spot and fear a post-earnings drop — buy a Put as insurance.</strong>
+Pay US$3/share for a Put with a strike of 150. Three outcomes at expiry:
+- Falls to 130: spot loses US$30/share, the Put is worth US$20, minus the US$3 premium, for an actual loss of only US$13 (without protection you would lose 30);
+- Rises to 180: spot gains US$20, the Put expires worthless minus US$3, for an actual gain of US$17;
+- No drop (160): the Put expires worthless, and you lose at most the US$3 premium — "the cost of sleeping well."
+Earlier he had also worked through the same protection on a whole-contract basis: premium of about US$400/contract (1 contract = 100 shares); on a 100-share basis the hedged net loss was about US$1,400, versus US$3,000 for holding spot unhedged. Note also: <strong>the Put you buy must settle after earnings</strong> — one that settles before earnings is money wasted.</p>
+<p><strong>Scenario 2: You want to take delivery at 140 and don't want to chase the price — sell a Put (cash-secured).</strong>
+Collect US$3/share in premium first, then wait for 140. At expiry above 140: no delivery needed, you keep the premium for nothing; at expiry below 140: you must take delivery at 140, even if it has fallen to 120 or 130 (the unrealized loss is yours to bear). The prerequisite is having margin of US$140/share ready. What matters is the <strong>expiry settlement price</strong>, not an intraday touch of 140.</p>
+<p><strong>Scenario 3: Limited budget, bullish — buy a Call.</strong>
+Pay US$5 for a Call with a strike of 160. At expiry up to 180: the option is worth US$20, a net gain of US$15 after costs; at expiry up only to 163: the option is worth US$3, still a US$2 loss after costs. <strong>A rise does not necessarily mean profit — it has to rise enough.</strong> Don't always come in with a "small stake, big win" mindset: options are a portfolio tool, not a more mindless one-way bet than futures.</p>
+<ul>
+<li>Live mini-quiz: which strategy does each of the three scenarios correspond to? Correct answer <strong>B C A</strong> (holding a position and fearing a drop = buy Put; having funds ready to take delivery at the agreed price = sell Put; bullish and willing to risk losing the whole premium = buy Call). The first three correct answers were Jungle King, Aliang, and Lonely Grilled Fish.</li>
+</ul>
+<h3>5. OKX Simple Options: What Is Simple About Them</h3>
+<ul>
+<li>Entry point: OKX App or web, Trade → Options. The same page has "Simple Options" and the "Options Chain" (the professional page); the professional page looks like one giant table that makes a beginner's head spin at a glance, while the simple page is clear at a glance.</li>
+<li>Underlyings are currently mainly US stocks and ETFs; BTC and others will come to Simple Options later.</li>
+<li>The most praised feature: <strong>before placing an order you can preview the premium, the breakeven price, and the possible profit/loss</strong> (a visualized chart, equivalent to a paper-trading view), without spending real money to do the math first.</li>
+<li>Capital threshold: <strong>starting from 1 share</strong>, versus 1 contract = 100 shares for professional options — Nvidia at US$160/share means one contract is US$16,000, a 100× difference. You also don't need to understand professional terms like implied volatility (IV) or the Greeks.</li>
+<li>But Shao Ying stressed repeatedly: <strong>what is simplified is the operation, not the principles of the risk</strong>. Buyers can still lose their entire premium, and sellers who collect money must still perform. Before ordering, just think through two questions: What problem am I trying to solve? And what am I willing to pay for it?</li>
+</ul>
+<h3>6. Queen (Maiyun): Three Misconceptions, Each With Backtest Data</h3>
+<p>The backtests used Yahoo historical data and BS-model estimates, <strong>not real traded prices</strong>; two underlyings, BTC and SPY (a US equity ETF).</p>
+<p><strong>Misconception 1: Options are not leveraged futures.</strong> "Treating a Ferrari as a gas pedal" — leverage is linear, amplifying gains and losses proportionally; what options trade is rights: buyers have limited loss and unlimited upside, sellers exactly the reverse. Going all-in on options with a leverage mindset is "like doing heart surgery with a kitchen knife."
+- Case: during the March 2020 pandemic crash, on March 6 BTC was US$9,123; buying an at-the-money put cost US$498 in premium; on March 13 BTC fell to US$5,564 (about -39%), the put paid out US$3,559, and the position was worth US$8,624. Holding spot unhedged lost 39%; with protection the loss was only <strong>5.5%</strong> — US$498 of insurance was very worthwhile.</p>
+<p><strong>Misconception 2: Limited loss does not mean easy profit.</strong> What is limited is the amount per trade, not the number of trades. Buying ten times a day, three hundred times a month, is just handing money to the exchange.
+- Case: on April 22, 2024, with BTC at about US$66,008, buying a call expiring in 6 months with a strike of US$73,000 (about 10% higher) cost US$8,300 in premium; at expiry on October 22, BTC was US$67,003 (a half-year gain of about 0.8%, as stated in the show), never reaching the strike, and <strong>the premium was lost 100%</strong> — the equivalent of spending US$8,300 on a lottery ticket. A buyer has to get direction, magnitude, and volatility right at the same time; miss any one and it is all for nothing.</p>
+<p><strong>Misconception 3: Collecting premium does not equal stable income.</strong> "One of the most expensive illusions in finance — if it were really that stable, the big banks would have switched to selling options long ago." Seller returns are like corporate bonds (capped), while the risk is like a credit-card bill: selling Calls into a big rally means theoretically unlimited loss, and selling Puts into a big drop means taking delivery at the agreed price; a single extreme move can swallow many rounds of premium, principal and interest together.
+- Case: on February 19, 2020, with SPY at US$338 (an all-time high), selling a put expiring in one month with a strike of 320 brought in US$1.18/share in premium, when 30-day historical volatility was only 11.6%; on March 20 SPY fell to US$228, the seller was assigned to take delivery at 320, <strong>losing US$91 per share — 77 times the premium</strong>.</p>
+<p><strong>Beginner's risk checklist (from Queen):</strong>
+1. Understand the rights, obligations, and profit/loss structure before ordering; OKX Simple Options' breakeven display is worth using.
+2. Only use money you can afford to lose, and manage position size; treat premium as an insurance premium — if what you lose is sleep, the cost is higher.
+3. Beginners should not sell naked and should not take oversized positions: one extreme move can swallow many rounds of premium — "selling naked is like streaking: fun for a moment, then it's all willpower after that."
+4. Ask yourself before ordering: How much will the worst case cost me? Will losing the premium affect my life? Is the option expensive (look at Theta time value and IV implied volatility; a large IV means the market has already priced in expected volatility, so the option is expensive)?
+5. For sellers only: Do you have enough margin or spot to hedge? After five wrong calls in a row, can you still judge the sixth with discipline?
+6. If there is anything you don't understand, don't place the order yet.</p>
+<ul>
+<li>Wendy's recap (rapid-fire: the three most important things when ordering): one, can you accept the worst-case budget (can you bear losing the whole premium, or this loss); two, what is the size of the rise/fall and how long will it take to get there; three, if you can't answer either, don't touch it yet — learn first. "If you're hesitating, don't do it."</li>
+</ul>
+<h3>7. Rapid-Fire: Ahead of Nvidia Earnings, Which Trade Would You Open?</h3>
+<ul>
+<li><strong>Blockchain Diary</strong>: Bought call options last week expiring in December (around December 11). Bullish on Nvidia long term, but the CEO successor is undecided, so he worries that even with good earnings the market may not buy it in the short term — hence buying longer-dated options and not trading short term.</li>
+<li><strong>Queen</strong>: Had trimmed part of her position earlier near the US$200 high and put on December-expiry put protection at the time; now, looking at OKX, Nvidia's shortest-dated options (0–3 days to expiry) have implied volatility over 100% — too expensive, not trading them.</li>
+<li><strong>Wendy</strong>: Would also buy Calls, but would not hold them into mid-December (the January rate-hike cycle may not be over), would buy roughly six-month Calls and use time to hedge risk; normally favors medium- to long-term trades.</li>
+<li>(Verification note: the show said several times that "Nvidia's CEO choice hasn't been decided" — Jensen Huang did step down as CEO on 2026-11-12, and a successor indeed has not been decided; no claims of an "affair/dismissal" or similar appeared in the show. Nvidia's share price as stated in the show was in the US$157–160 range, with earnings approaching.)</li>
+</ul>
+<h3>8. Product Q&amp;A (OKX Product Manager)</h3>
+<ul>
+<li><strong>How should a beginner choose a strike price?</strong> Think separately as a buyer or a seller; it is easier to explain from the seller's side. Take selling a Put: choose by your target delivery price — NVDA spot is about US$157; if you think US$130 is worth taking delivery at, pick the put contract with a strike of 130; if your risk tolerance is higher you could also pick 150. The higher the strike, the higher the risk you bear and the more premium you can earn. If price falls below the strike at expiry you must take delivery at the agreed price (example: strike 150, expiry market price 148 — you lose US$2, but the premium may cover it, so you actually still profit). Sellers have a high win rate because most of the time the price does not fall below the strike and they simply keep the premium. Selling Calls is analogous: choose by the price at which you are willing to exit — e.g., BTC spot at US$65,000 and you want to exit at US$80,000, so you sell a Call with a strike of US$80,000: if it breaks above, you collect premium and simultaneously sell your spot at the target price to exit; if it doesn't break above, you keep the premium for nothing and still hold your spot. Selling options directly will in most cases quote slightly better than Dual Currency (having crossed one beginner threshold).</li>
+<li><strong>After buying, if the market reaches your target early, can you take profit and close early?</strong> Yes. The profit curve during holding is affected by time value and IV; to reduce the comprehension burden, Simple Options only draws the expiry payoff chart; but your position shows live profit/loss, so close early whenever it looks right.</li>
+<li><strong>After a trade ends, can the profit/loss be broken down by attribution (how much from direction/time/volatility)?</strong> At expiry it is easy to break down (settlement price difference minus premium); closing early mid-holding is hard to break down (affected by market-maker liquidity and quotes, with the actual price depending on market supply and demand at the time). The product team's rough-and-ready suggestion: send the trade details to an AI for an approximate analysis.</li>
+<li><strong>How long is a Simple Options quote valid?</strong> It refreshes every 10 seconds.</li>
+<li><strong>The 25U trial bonus</strong>: for opening a mini position to try things out; you must post a real position statement; instructions will be written in the post.</li>
+</ul>
+<h3>9. Closing</h3>
+<ul>
+<li>Thanks again to the guests (Blockchain Diary, Queen, Wendy, the two product managers, staff member Ling X) and the audience; reiterated that the content is for product education and experience sharing only and does not constitute investment advice; the replay, benefit details, and unanswered questions will be posted in the Misa Community.</li>
+<li>A small mishap at the end of the stream: the hosts briefly could not find the end-stream button ("how do we end the stream," "just challenge a 24-hour stream directly"), before finally finding the close control.</li>
+</ul>
+<h2>Points Worth Noting</h2>
+<ul>
+<li><strong>This session was teaching, not calls</strong>: the whole structure was "concepts → scenarios → misconceptions → checklist → live strategies," with no specific price levels recommended; the three guests' NVDA strategies were all framed as "my own view, not advice."</li>
+<li><strong>The two lines most worth taking away</strong>: Queen's "what is limited is the amount, not the number of trades" and "collecting premium does not mean collecting rent"; Shao Ying's "what is simplified is the operation, not the risk."</li>
+<li><strong>Echoing that day's market</strong>: the show mentioned several times that "the market has been sluggish lately" and "Nvidia keeps falling," and all three guests independently avoided shortest-dated options and short-term speculation (IV too expensive, CEO undecided), leaning instead toward longer-dated trades and hedging.</li>
+<li><strong>Clear product intent</strong>: this was a promotional session for OKX Simple Options (entry-point demo, starting from 1 share, 25U trial bonus); product descriptions in these notes are all relayed from what the product team said live.</li>
+</ul>
+<h2>ASR Restoration Table (Where Transcription Noise Is Severe)</h2>
+<table>
+<thead>
+<tr>
+<th>As transcribed</th>
+<th>Should be</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>七拳 / 气泉 / 西拳</td>
+<td>期权 (options)</td>
+<td>Frequent mistranscription throughout</td>
+</tr>
+<tr>
+<td>检疫期权 / 剪一七拳</td>
+<td>简易期权 (Simple Options)</td>
+<td>Product name</td>
+</tr>
+<tr>
+<td>OKS / oks</td>
+<td>OKX</td>
+<td>Platform name</td>
+</tr>
+<tr>
+<td>因为达 / 英伟大</td>
+<td>英伟达 (NVDA / Nvidia)</td>
+<td>Underlying</td>
+</tr>
+<tr>
+<td>彩包 / 彩报</td>
+<td>财报 (earnings report)</td>
+<td>Nvidia earnings approaching</td>
+</tr>
+<tr>
+<td>铺 / 套 / 抠</td>
+<td>Put / Call</td>
+<td>Put / Call options</td>
+</tr>
+<tr>
+<td>双币营 / 双臂营</td>
+<td>双币赢 (Dual Currency)</td>
+<td>OKX wealth product, underlaid by options</td>
+</tr>
+<tr>
+<td>比特匹老肥</td>
+<td>比特币老肥 (Bitcoin Laofei)</td>
+<td>Guest, did not appear</td>
+</tr>
+<tr>
+<td>少颖 / 双银 / 双应</td>
+<td>邵映 (Shao Ying)</td>
+<td>OKX product team</td>
+</tr>
+<tr>
+<td>米萨 / 米莎</td>
+<td>Misa</td>
+<td>Host</td>
+</tr>
+<tr>
+<td>麦当</td>
+<td>Misa (transcription of a slip while the host switched slides)</td>
+<td>Context was "you take the screenshot"</td>
+</tr>
+<tr>
+<td>马冬梅</td>
+<td>Joke about mixing up buy Call, sell Call, buy Put, sell Put</td>
+<td>Live running joke</td>
+</tr>
+<tr>
+<td>CEO 的冷血 / 人选</td>
+<td>CEO successor choice</td>
+<td>Jensen Huang has stepped down; successor undecided</td>
+</tr>
+<tr>
+<td>5090</td>
+<td>Nvidia RTX 5090 graphics card</td>
+<td>Host joke: "go be Nvidia CEO and get a free 5090"</td>
+</tr>
+<tr>
+<td>Pocas</td>
+<td>OKX (mistranscribed)</td>
+<td>Queen said "OKX's options just launched"</td>
+</tr>
+<tr>
+<td>CETA</td>
+<td>Theta</td>
+<td>Option time value</td>
+</tr>
+</tbody>
+</table>
+<h2>Verification Notes</h2>
+<ul>
+<li>About 30 minutes of content appears twice in the transcript (chunks 004–006 and 009–011 are essentially identical, apparently a repeated segment in the replay audio itself); these notes follow the deduplicated content; the key figures in both copies agree and corroborate each other.</li>
+<li>The protection cost Blockchain Diary calculated on a whole-contract basis in the earlier part (premium about US$400/contract) uses a different basis from the US$3/share figure later (about US$300/contract on a 100-share basis); the two examples rest on different assumptions, and these notes preserve both original statements.</li>
+<li>In Queen's backtest case, "BTC's half-year gain of about 0.8%" is as stated in the show; calculated from the prices he gave (US$66,008 → US$67,003) it is about 1.5% — the show's figure governs.</li>
+<li>Blockchain Diary described himself as being from Shandong; live claims that he was a fellow Guangxi native, Japanese, or Malaysian were all jokes — his own account governs.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2jPqOjykjbKOdg">https://x.com/i/broadcasts/2jPqOjykjbKOdg</a> · 主持 Misa（Misa 社区）· 2026-11-17 19:47–22:07（约 2 小时 19 分）· 观看约 3,065 次<br>本页为机器转写后人工整理的纪要全文；内容均为嘉宾在直播中的即兴发言与自述，未经核实，不构成投资建议。 · <a href="https://yatslist.com/spaces/">Yat's List Space 纪要清单</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Broadcast 回放 <a href="https://x.com/i/broadcasts/2jPqOjykjbKOdg">https://x.com/i/broadcasts/2jPqOjykjbKOdg</a> · 主持 Misa（Misa 社群）· 2026-11-17 19:47–22:07（約 2 小時 19 分）· 觀看約 3,065 次<br>本頁為機器轉寫後人工整理的紀要全文；內容均為嘉賓在直播中的即興發言與自述，未經核實，不構成投資建議。 · <a href="https://yatslist.com/spaces/">Yat's List Space 紀要清單</a></footer>
+<footer data-lang="en" style="display:none">Source: X Broadcast replay <a href="https://x.com/i/broadcasts/2jPqOjykjbKOdg">https://x.com/i/broadcasts/2jPqOjykjbKOdg</a> · Host Misa (Misa Community) · 2026-11-17 19:47–22:07 (approx. 2 hours 19 minutes) · About 3,065 views<br>This page is the full notes, compiled by hand from a machine transcription; the content consists of the guests' impromptu remarks and personal accounts during the livestream, has not been verified, and does not constitute investment advice. · <a href="https://yatslist.com/spaces/">Yat's List Space Notes Index</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：Misa社区 × 简易期权 专属奖励等你来拿 · Yat's Talks",tw:"會議紀要：Misa社群 × 簡易期權 專屬獎勵等你來拿 · Yat's Talks",en:"Meeting Notes: Misa Community × Simple Options — Exclusive Rewards Up for Grabs · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

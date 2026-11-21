@@ -8,22 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script><style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
-<article>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：代币化股票上线，还需要 CEX 吗？</h1>
 <ul>
 <li><strong>原标题</strong>：Tokenized Stocks Go Live: Does Anyone Still Need A CEX?</li>
@@ -120,8 +127,222 @@
 <li>所有数字（奖池金额、票数、涨幅倍数、赔付金额）均为发言人现场说法，未经独立核实。</li>
 </ul>
 </article>
-<footer>来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：代幣化股票上線，還需要 CEX 嗎？</h1>
+<ul>
+<li><strong>原標題</strong>：Tokenized Stocks Go Live: Does Anyone Still Need A CEX?</li>
+<li><strong>時間</strong>：2026-10-22（週四），時長 1 小時 16 分</li>
+<li><strong>主持</strong>：Justin Roberty，Wen Alt Season（@wenaltseason，每週四固定節目）</li>
+<li><strong>參與</strong>：21,087 人</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1MJgNbmvngmGL</li>
+<li><strong>特邀嘉賓</strong>：Pop DEX（Zach Prater）；嘉賓：Daria、Katana 的 Matt/Matthew、Holder House 的 Nikita、No Nonsense Forex、Arch Lending 的 Drew、SpoutFi 的 Mark Ryan、ME Wallet 的 Dr. Jack、Piper 的 Roman</li>
+<li><strong>說明</strong>：以下均為發言人現場自述，未經核實；英文原話為轉寫稿摘錄，可能存在轉寫誤差。</li>
+</ul>
+<h2>結論先行</h2>
+<ol>
+<li><strong>CEX 不會馬上消失，但敘事重心已轉向鏈上</strong>：全場沒有人斷言 CEX 會死，討論的實際問題是——代幣化股票和永續合約 DEX 能不能從 CEX 手裡搶走交易量和用戶。共識是：現在仍以加密原生用戶為主，傳統金融用戶還沒真正進來，平台現在布局是為幾年後做準備。</li>
+<li><strong>代幣化股票真正的賣點不是「能交易」，而是「能組合」</strong>：Nikita 的核心論點是，股票上鏈後可以抵押借貸、質押生息、加槓桿，像對待 BTC 一樣對待股票；還能用來對沖鎖倉份額（vested allocation）和 PIPE 投資。這是全場最有分量的一個論點。</li>
+<li><strong>激勵計劃只能拉新，留不住人</strong>：Drew、Daria、Zach、Matt 四方一致——獎勵能換來短期流量，但留存靠產品、執行速度、流動性、客服和信任。積分/平台幣模式被多方點名批評，Zach 明確主張「不要發幣，100% 價值以 USDT/USDC 直接返還給用戶」。</li>
+<li><strong>藍籌股代幣化對 Web3 吸引力有限，小盤股和 Pre-IPO 才是主戰場</strong>：Nikita 和 Roman 都認為藍籌日波動只有幾個百分點，不符合加密用戶要波動的胃口；小盤股和未上市股權（如 SpaceX、Cursor 案例）才是代幣化的增量機會，但監管與標準缺失是最大短板。</li>
+<li><strong>2026 年是「贏家靠分發和信任」的一年</strong>：快問快答環節，Mark 說贏在分發（能否接入 Revolut、Interactive Brokers 這類 TradFi 入口），Daria 和 Nikita 說贏在信任與 track record，Zach 說不會只有一個贏家，贏在聽用戶反饋、摳細節。</li>
+</ol>
+<h2>一、開場：Pop DEX 公開 Beta 上線</h2>
+<ul>
+<li>Zach Prater 介紹：Pop DEX 結束約 5 個月封閉 Beta，本週正式開放公開 Beta，並同步推出獎勵活動 <strong>Megapop</strong>（交易賺抽獎券的彩票系統）。</li>
+<li>Pop DEX 定位：永續合約 + 代幣化股票 + 大宗商品，<strong>全鏈上訂單簿、高速度執行</strong>，目前約 66 個交易市場；與一家代幣化平台合作（轉寫為 "Reality"，原文如此），目標 2027 年做到 500–1,000 個甚至更多市場，並自稱要進入 Perp 平台前五。</li>
+<li>獎勵機制：獎勵以 <strong>USDT/USDC</strong> 發放，不發積分、不發平台幣；Megapop 獎池分 5 檔，現場稱已有約 2 萬張票在池中，一等獎 77,000（幣種未說明，疑為美元）、二等獎 14,000；未來 6 週早期交易者獎勵翻倍。</li>
+</ul>
+<h2>二、為什麼 Perp DEX 這麼火？用戶到底要什麼</h2>
+<p><strong>Daria（機構視角）</strong>：Hyperliquid 定了行業標準；現在用戶要的是<strong>更多品種敞口 + 更開放</strong>，以及跨過准入門檻去碰黃金、白銀之外的「更 exotic、更有意思」的資產。</p>
+<p><strong>Zach（Pop DEX）</strong>：用戶要三樣東西——① 交易執行成本合理；② 平台激勵；③ 能直接聯繫到團隊。Hyperliquid 太大了，已無法再圍繞用戶客製產品；Pop DEX 要圍繞用戶反饋做產品，搞「100% 價值返還」。</p>
+<blockquote>
+<p>"If your product sucks, it doesn't matter about your incentive strategy because you're just burning money." —— Zach Prater</p>
+</blockquote>
+<p><strong>Matt（Katana）</strong>：很多產品在爭一個相對停滯的用戶池，流動性被切碎；用戶遷移只發生在產品真正有優勢時（更好的機制、UX、資金效率），激勵只是強力的冷啟動手段。加密客服普遍比 Fintech/傳統金融公司差，這是行業共識的短板。</p>
+<h2>三、激勵計劃：拉新有效，留存另有答案</h2>
+<p><strong>Drew（Arch Lending）</strong>：激勵能讓人來試產品，但留住人的是執行、流動性、客服、UI/UX；否則「你只是花錢買了一次性的數字高峰，然後這些人就去刷下一個獎勵了」。</p>
+<p><strong>Daria</strong>：這和以前的 NFT、Layer 2 熱潮沒有本質區別——獎勵把人拉進來，產品得足夠好（UI、執行速度、品種、費用）才能留住；DEX 不會是解決這個問題的例外。</p>
+<p><strong>Nikita（Holder House）</strong>：投機沒什麼可羞恥的，大多數自稱交易員/投資者的人本質上就是在投機（「想用 100 美元博 100 倍」）。激勵和行銷驅動的量是市場成熟的必經之路——流動性就是這樣一點點攢起來的；但 Meme 幣式的純拉盤不可持續。代幣化股票的關鍵區別在於：<strong>股票背後有真實業務、營收和財報</strong>。</p>
+<p><strong>Matt（Katana）</strong>：經歷過 Hyperliquid 等多輪空投的用戶，和沒經歷過的用戶，行為模式差異很大；激勵本質上是「為你想要的行為付費」。Katana 的做法是每兩週一次交易競賽，約 10–12.5 萬 USDC 按交易量和盈虧返還給交易者；團隊要自問：優化的是活動的盈利性，還是增長？</p>
+<h2>四、代幣化股票的真正用途：對沖、借貸與組合</h2>
+<p><strong>Nikita（本場最系統的論述）</strong>：</p>
+<ul>
+<li>他做了 5 年二級市場經紀，撮合過數百筆交易。機構用 Perp 的主要原因之一是<strong>對沖</strong>：買入鎖倉份額（vested allocation）時，在 Perp 上對沖。</li>
+<li>同理，PIPE 投資（折價拿到的鎖倉股）也可以用代幣化股票 Perp 對沖。</li>
+<li>代幣化的真正效用不在交易本身，而在<strong>可組合性</strong>：股票代幣可以抵押借貸、質押生息、加槓桿——「就像你拿 BTC 抵押再借出再買更多 BTC 一樣，現在股票也可以這樣」。</li>
+<li>藍籌股不適合 Web3：日波動幾個百分點，加密用戶要的是波動；小盤股代幣化更有想像空間。</li>
+</ul>
+<p><strong>No Nonsense Forex（17 年交易經驗的內容創作者，非業內人士視角）</strong>：</p>
+<ul>
+<li>現在沒多少人真正對代幣化股票感興趣，平台做這些更多是「怕掉隊」——別人都有，三年後你沒有就輸了；先把東西搭好、把早期錯誤犯完，等用戶慢慢進來。</li>
+<li>人們隨著年齡增長會對 TradFi 越來越感興趣，歷史經驗表明幾年後需求會來。</li>
+</ul>
+<p><strong>Roman（Piper，Pre-IPO 平台）</strong>：</p>
+<ul>
+<li>目前市面上的代幣化股票大多是 SpaceX 這類藍籌/熱門標的，但散戶很難賺到錢；Piper 做的是<strong>小盤公司和 Pre-IPO 股權</strong>，舉例稱 Cursor 公司自 Pre-IPO 發售以來漲了 15,000 倍（發言人自述，未經核實）。</li>
+<li>Pre-IPO 市場規模被嚴重低估，分析、研究與合規基本是空白；監管澄清預計還要幾年。這是他眼中 2026 年最被低估的創新方向。</li>
+</ul>
+<h2>五、什麼激勵真正管用？來自一線分銷者的觀察</h2>
+<p><strong>No Nonsense Forex</strong>（為多家經紀商做推廣的中大型 affiliate，自述視角）：</p>
+<ul>
+<li><strong>不管用的</strong>：期權種類、速度（交易者預設所有平台都有）；<strong>平台幣贈送</strong>（大家預設平台幣不值錢，換成穩定幣還嫌麻煩）。</li>
+<li><strong>管用的兩樣</strong>：① 進入生態後的持續專屬感——以 Bybit 為例，生態內全天候不斷有促銷，介紹獎勵太好反而讓人起疑；他舉例稱有交易者隨手參加抽獎贏了 2 個 BTC（發言人自述）。② <strong>一對一客服</strong>：出問題時能立刻找到真人（他合作的 DEX 提供會四種語言的專屬客服代表），而不是不存在的客服、聽不懂的客服或 AI 客服。</li>
+</ul>
+<h2>六、透明度、信任與保險：DeFi 正在補 TradFi 的課</h2>
+<p><strong>Mark（SpoutFi）</strong>：SpoutFi 用客戶資產賣期權合約產生收益，必須公開賣了什麼合約、在哪賣——「不透明的話，我們完全可以在後台跑一個龐氏騙局而你毫無察覺」。人們現在要求透明度；隨著收益預期從 1000 倍降到 2 倍、10 倍甚至 8% 質押收益，可靠性變得更重要。</p>
+<p><strong>Justin 主持人提問</strong>：Nexus Mutual 這類 DeFi 保險本月剛賠了 500 萬美元，FTX 之後也賠過（主持人自述）——人們會不會開始要求 DeFi 提供和傳統金融一樣的保障？</p>
+<p><strong>Nikita</strong>：TradFi 來調研的人第一個問題永遠是託管人是誰、安全性如何、這些份額在清償順序（waterfall）裡排第幾、公司還有哪些債務。Web3 原住民有點妄想，以為 Web3 是獨立於現實世界的另一個世界——它只是技術，像網際網路、銀行系統一樣，更快、更透明、可程式化。下一個大機會是：<strong>把交易、借貸、質押這些經典金融動作都搬到鏈上，同時做到透明、有保險、足夠安全</strong>，再疊加藍籌股給不了的波動性。</p>
+<p><strong>Matt（Katana）</strong>：行業正在從「代幣化表演」（tokenization theater，只是把資產包個殼搬上鏈，市場沒跟過去）轉向「鏈上市場」（on-chain markets）。BlackRock 等機構的訊號讓大家認真對待這項技術；TradFi 越來越像加密軌道，加密也在補 TradFi 的保障。</p>
+<h2>七、2026 年的市場與快問快答：誰會贏？</h2>
+<p><strong>市場定性</strong>：多方認為 2026 年既非牛市也非全面熊市——波動大、走勢反覆、偏慢、偏熊（Dr. Jack 直言 mostly bearish）。Zach 認為是「好市場」：懂交易的人（Delta 中性、做市策略）照樣賺錢，買入持有則不太行。</p>
+<p><strong>Dr. Jack（ME Wallet）</strong>：SpaceX IPO 的整個打法讓他覺得「TradFi 在模仿加密的創新」，像一場加密發行；現在的客戶比以前精明得多，能分辨真假，炒作只能帶來知名度、推不動基本面；他營運一家 CEX（轉寫為 seed CEX，原文如此）和自託管錢包 ME Wallet（掃碼可直接消費）。</p>
+<p><strong>快問快答——2026 年 Perp DEX 的贏家公式</strong>：</p>
+<ul>
+<li><strong>Mark（SpoutFi）</strong>：<strong>分發</strong>。Perp 比期權好理解得多，贏家是誰能打進 TradFi 市場——能否與 Revolut、Interactive Brokers 這類公司達成合作。</li>
+<li><strong>Daria</strong>：<strong>信任與 track record</strong>。動盪年份最重要的是可靠：平台不出 bug、鏈不宕機、管理密鑰不被盜；信任是日復一日做出來的，不是靠一次發布。</li>
+<li><strong>Nikita</strong>：<strong>信任 + 託管 + 保險 + 可組合性</strong>（見第六節）。</li>
+<li><strong>Matt（Katana）</strong>：從「代幣化表演」到「鏈上市場」的轉變本身就是贏家公式。</li>
+<li><strong>Zach（Pop DEX）</strong>：<strong>不會只有一個贏家</strong>。贏在把錢返還給創造價值的用戶、摳客服與 UI/UX 的細節、聽用戶反饋改產品。他現場透露：聽眾中的重度用戶 Giveno 提的反饋已被納入路線圖；本場討論中 No Nonsense Forex 提的一對一客服建議，他當場就加進了路線圖。</li>
+</ul>
+<blockquote>
+<p>"We're building this space together, we're growing this space together." —— Zach Prater</p>
+</blockquote>
+<h2>八、關鍵原話摘錄</h2>
+<ul>
+<li>"Product is power." —— Zach Prater，談全鏈上訂單簿與高速執行</li>
+<li>"If you're trading on a platform and you're contributing value, 100 percent of that value should go back to that user." —— Zach Prater，談 100% 價值返還模式</li>
+<li>"I don't think that there should be a token involved in any of this." —— Zach Prater，談為什麼 Pop DEX 不發幣</li>
+<li>"It's throwing money back at your users that bring that value." —— Zach Prater，談真正的贏家策略</li>
+<li>"We need to build our product around what the users want, not what we think they want." —— Zach Prater，收尾</li>
+<li>（主持人收尾免責）"This is not financial information, of course. We're not telling you what to go out and do." —— Justin Roberty</li>
+</ul>
+<h2>附：事實核對</h2>
+<ul>
+<li>錄音時長 1h16m30s，與 spacesdashboard 標稱 1h16m14s 相符；逐字稿涵蓋 00:02:36–01:16:05。</li>
+<li>轉寫工具 faster-whisper（英文），逐字稿存於流水線工作區 hidden_files/transcript.txt。</li>
+<li>文中公司名、人名按轉寫稿音譯，個別名稱轉寫可能有誤（如合作代幣化平台 "Reality"、Dr. Jack 營運的 CEX 名稱），已在文中標註。</li>
+<li>所有數字（獎池金額、票數、漲幅倍數、賠付金額）均為發言人現場說法，未經獨立核實。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: Tokenized Stocks Go Live — Does Anyone Still Need a CEX?</h1>
+<ul>
+<li><strong>Original title</strong>: Tokenized Stocks Go Live: Does Anyone Still Need A CEX?</li>
+<li><strong>Date</strong>: October 22, 2026 (Thursday), duration 1 hour 16 minutes</li>
+<li><strong>Host</strong>: Justin Roberty, Wen Alt Season (@wenaltseason, a regular Thursday show)</li>
+<li><strong>Participants</strong>: 21,087</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1MJgNbmvngmGL</li>
+<li><strong>Featured guest</strong>: Pop DEX (Zach Prater); Guests: Daria, Matt/Matthew of Katana, Nikita of Holder House, No Nonsense Forex, Drew of Arch Lending, Mark Ryan of SpoutFi, Dr. Jack of ME Wallet, Roman of Piper</li>
+<li><strong>Note</strong>: Everything below is as stated live by the speakers and has not been verified; the English quotations are excerpts from the transcript and may contain transcription errors.</li>
+</ul>
+<h2>Key Takeaways First</h2>
+<ol>
+<li><strong>CEXs will not disappear overnight, but the narrative center of gravity has shifted on-chain</strong>: No one in the session claimed CEXs would die. The real question under discussion was whether tokenized stocks and perpetual DEXes can take trading volume and users away from CEXs. The consensus was that the user base is still mainly crypto-native, traditional finance users have not really arrived yet, and platforms are positioning now to prepare for a few years from now.</li>
+<li><strong>The real selling point of tokenized stocks is not "you can trade them," but "you can compose with them"</strong>: Nikita's core argument was that once stocks are on-chain, they can be used as collateral for borrowing, staked for yield, and leveraged — treated just like BTC; they can also be used to hedge vested allocations and PIPE investments. This was the most substantial argument of the session.</li>
+<li><strong>Incentive programs can acquire users but cannot retain them</strong>: Drew, Daria, Zach, and Matt all agreed — rewards bring short-term traffic, but retention depends on product, execution speed, liquidity, customer support, and trust. The points/platform-token model was called out by multiple speakers, and Zach explicitly argued: "Don't issue a token — return 100% of the value directly to users in USDT/USDC."</li>
+<li><strong>Tokenizing blue-chip stocks has limited appeal for Web3; small caps and Pre-IPO are the real battleground</strong>: Both Nikita and Roman argued that blue chips move only a few percent a day, which does not match crypto users' appetite for volatility; small-cap stocks and pre-IPO equity (such as the SpaceX and Cursor cases) are where tokenization creates incremental opportunity, but the lack of regulation and standards is the biggest gap.</li>
+<li><strong>2026 is a year when "winners win on distribution and trust"</strong>: In the rapid-fire round, Mark said the win is distribution (whether you can plug into TradFi entry points like Revolut and Interactive Brokers), Daria and Nikita said the win is trust and track record, and Zach said there will not be a single winner — winning means listening to user feedback and obsessing over details.</li>
+</ol>
+<h2>1. Opening: Pop DEX Public Beta Goes Live</h2>
+<ul>
+<li>Zach Prater introduced: Pop DEX has ended roughly 5 months of closed beta and this week officially opened its public beta, launching the rewards campaign <strong>Megapop</strong> at the same time (a lottery system where trading earns raffle tickets).</li>
+<li>Pop DEX positioning: perpetuals + tokenized stocks + commodities, <strong>a fully on-chain order book with high-speed execution</strong>, currently about 66 trading markets; it is partnering with a tokenization platform (transcribed as "Reality," as in the original), targeting 500–1,000 or even more markets by 2027, and says it aims to enter the top five Perp platforms.</li>
+<li>Rewards mechanism: rewards are paid in <strong>USDT/USDC</strong>, with no points and no platform token; the Megapop prize pool is split into 5 tiers, with about 20,000 tickets already in the pool according to the live session, a first prize of 77,000 (currency not specified, presumably USD) and a second prize of 14,000; early traders' rewards will be doubled over the next 6 weeks.</li>
+</ul>
+<h2>2. Why Are Perp DEXes So Hot? What Do Users Actually Want?</h2>
+<p><strong>Daria (institutional perspective)</strong>: Hyperliquid set the industry standard; what users want now is <strong>more asset exposure + greater openness</strong>, and the ability to cross access thresholds to reach "more exotic, more interesting" assets beyond gold and silver.</p>
+<p><strong>Zach (Pop DEX)</strong>: Users want three things — ① reasonable trading execution costs; ② platform incentives; ③ direct access to the team. Hyperliquid has become too big to tailor products around users anymore; Pop DEX wants to build around user feedback and do "100% value return."</p>
+<blockquote>
+<p>"If your product sucks, it doesn't matter about your incentive strategy because you're just burning money." —— Zach Prater</p>
+</blockquote>
+<p><strong>Matt (Katana)</strong>: Many products are competing for a relatively stagnant user pool, and liquidity is being fragmented; users only migrate when a product has a genuine edge (better mechanics, UX, capital efficiency), with incentives serving only as a powerful cold-start tool. Crypto customer support is generally worse than that of Fintech/traditional finance companies — a widely acknowledged shortcoming of the industry.</p>
+<h2>3. Incentive Programs: Effective for Acquisition, Retention Is Another Story</h2>
+<p><strong>Drew (Arch Lending)</strong>: Incentives can get people to try a product, but what keeps them is execution, liquidity, customer support, and UI/UX; otherwise "you're just buying a one-off spike in numbers, and then those people move on to farm the next reward."</p>
+<p><strong>Daria</strong>: This is no different in essence from the earlier NFT and Layer 2 hype cycles — rewards pull people in, and the product has to be good enough (UI, execution speed, asset selection, fees) to keep them; DEXes will not be the exception that solves this problem.</p>
+<p><strong>Nikita (Holder House)</strong>: There is nothing shameful about speculation — most people who call themselves traders/investors are essentially speculating ("trying to turn $100 into 100x"). Incentive- and marketing-driven volume is a necessary stage on the path to market maturity — that is how liquidity is built up bit by bit; but pure Meme-coin-style pumping is unsustainable. The key difference with tokenized stocks is that <strong>behind the stock there is a real business, revenue, and financial statements</strong>.</p>
+<p><strong>Matt (Katana)</strong>: Users who have lived through multiple airdrop cycles such as Hyperliquid's behave very differently from those who have not; incentives are essentially "paying for the behavior you want." Katana's approach is a trading competition every two weeks, returning about 100,000–125,000 USDC to traders based on trading volume and P&amp;L; the team has to ask itself: are we optimizing for the profitability of the campaign, or for growth?</p>
+<h2>4. The Real Use of Tokenized Stocks: Hedging, Borrowing, and Composability</h2>
+<p><strong>Nikita (the most systematic exposition of the session)</strong>:</p>
+<ul>
+<li>He worked for 5 years as a secondary-market broker and facilitated hundreds of trades. One of the main reasons institutions use Perps is <strong>hedging</strong>: when buying a vested allocation, they hedge on a Perp.</li>
+<li>By the same logic, PIPE investments (locked-up shares acquired at a discount) can also be hedged with tokenized-stock Perps.</li>
+<li>The real utility of tokenization lies not in trading itself, but in <strong>composability</strong>: stock tokens can be pledged as collateral for borrowing, staked for yield, and leveraged — "just like you pledge BTC, borrow against it, and buy more BTC, stocks can now do the same."</li>
+<li>Blue chips are not suited to Web3: they move only a few percent a day, while crypto users want volatility; tokenizing small caps offers far more room for imagination.</li>
+</ul>
+<p><strong>No Nonsense Forex (a content creator with 17 years of trading experience, speaking from a non-industry perspective)</strong>:</p>
+<ul>
+<li>Not many people are genuinely interested in tokenized stocks right now, and platforms are building them more out of "fear of falling behind" — everyone else has them, and if you don't in three years you lose; build the thing first, make the early mistakes, and wait for users to gradually arrive.</li>
+<li>As people get older they become more interested in TradFi, and history suggests the demand will come in a few years.</li>
+</ul>
+<p><strong>Roman (Piper, a Pre-IPO platform)</strong>:</p>
+<ul>
+<li>Most tokenized stocks on the market today are blue-chip/hot names like SpaceX, but it is hard for retail investors to make money on them; Piper focuses on <strong>small companies and Pre-IPO equity</strong>, citing as an example that Cursor has risen 15,000x since its Pre-IPO offering (as stated by the speaker, not verified).</li>
+<li>The Pre-IPO market is severely underestimated in size, and analysis, research, and compliance are basically a blank slate; regulatory clarity is still expected to take a few more years. In his view, this is the most underrated area of innovation for 2026.</li>
+</ul>
+<h2>5. What Incentives Actually Work? Observations from a Frontline Distributor</h2>
+<p><strong>No Nonsense Forex</strong> (a mid-to-large affiliate promoting multiple brokers, speaking from his own stated perspective):</p>
+<ul>
+<li><strong>What doesn't work</strong>: the range of options, speed (traders assume every platform has it); <strong>platform-token giveaways</strong> (everyone assumes platform tokens are worthless, and converting them to stablecoins is a hassle).</li>
+<li><strong>Two things that do work</strong>: ① a continuous sense of exclusivity after entering the ecosystem — taking Bybit as an example, there are promotions around the clock inside the ecosystem, and referral rewards that are too good actually make people suspicious; he cited an example of a trader casually entering a raffle and winning 2 BTC (as stated by the speaker). ② <strong>One-on-one customer support</strong>: when something goes wrong you can immediately reach a real person (the DEX he works with provides dedicated support representatives who speak four languages), rather than nonexistent support, support that doesn't understand you, or AI support.</li>
+</ul>
+<h2>6. Transparency, Trust, and Insurance: DeFi Is Catching Up on TradFi's Lessons</h2>
+<p><strong>Mark (SpoutFi)</strong>: SpoutFi uses client assets to sell options contracts to generate yield, and must disclose what contracts were sold and where — "if it weren't transparent, we could be running a Ponzi scheme in the background and you'd have no idea." People now demand transparency; as yield expectations fall from 1000x to 2x, 10x, or even 8% staking yields, reliability matters more.</p>
+<p><strong>Question from host Justin</strong>: DeFi insurance like Nexus Mutual just paid out $5 million this month, and also paid out after FTX (as stated by the host) — will people start demanding that DeFi provide the same protections as traditional finance?</p>
+<p><strong>Nikita</strong>: The first question TradFi people doing due diligence always ask is who the custodian is, how secure it is, where these shares rank in the repayment waterfall, and what other debts the company has. Web3 natives are a bit delusional, thinking Web3 is a separate world independent of the real world — it is just technology, like the internet and the banking system, only faster, more transparent, and programmable. The next big opportunity is: <strong>moving classic financial actions like trading, borrowing, and staking on-chain, while making them transparent, insured, and secure enough</strong>, and layering on the volatility that blue-chip stocks cannot offer.</p>
+<p><strong>Matt (Katana)</strong>: The industry is shifting from "tokenization theater" (just wrapping an asset in a shell and putting it on-chain, without the market following) to "on-chain markets." Signals from institutions like BlackRock have made everyone take this technology seriously; TradFi is looking more and more like crypto rails, and crypto is catching up on TradFi's protections.</p>
+<h2>7. The 2026 Market and Rapid-Fire: Who Will Win?</h2>
+<p><strong>Market characterization</strong>: Multiple speakers saw 2026 as neither a bull market nor a full bear market — high volatility, choppy moves, slow, and leaning bearish (Dr. Jack said outright: mostly bearish). Zach considered it a "good market": people who know how to trade (delta-neutral, market-making strategies) still make money, while buy-and-hold does not work as well.</p>
+<p><strong>Dr. Jack (ME Wallet)</strong>: The whole playbook around the SpaceX IPO made him feel that "TradFi is imitating crypto's innovation," like a crypto launch; clients today are much savvier than before and can tell real from fake — hype can only bring awareness, it cannot move fundamentals; he operates a CEX (transcribed as seed CEX, as in the original) and the self-custody wallet ME Wallet (scan a code to spend directly).</p>
+<p><strong>Rapid-fire — the winning formula for Perp DEXes in 2026</strong>:</p>
+<ul>
+<li><strong>Mark (SpoutFi)</strong>: <strong>Distribution</strong>. Perps are much easier to understand than options, and the winner will be whoever can break into the TradFi market — whether they can strike partnerships with companies like Revolut and Interactive Brokers.</li>
+<li><strong>Daria</strong>: <strong>Trust and track record</strong>. In a turbulent year, reliability matters most: the platform doesn't bug out, the chain doesn't go down, admin keys don't get stolen; trust is built day by day, not by a single launch.</li>
+<li><strong>Nikita</strong>: <strong>Trust + custody + insurance + composability</strong> (see Section 6).</li>
+<li><strong>Matt (Katana)</strong>: The shift itself from "tokenization theater" to "on-chain markets" is the winning formula.</li>
+<li><strong>Zach (Pop DEX)</strong>: <strong>There will not be just one winner</strong>. Winning means returning money to the users who create value, obsessing over the details of customer support and UI/UX, and listening to user feedback to improve the product. He revealed live: feedback from heavy user Giveno in the audience has already been added to the roadmap; and the one-on-one customer support suggestion raised by No Nonsense Forex during this session was added to the roadmap on the spot.</li>
+</ul>
+<blockquote>
+<p>"We're building this space together, we're growing this space together." —— Zach Prater</p>
+</blockquote>
+<h2>8. Key Quotes</h2>
+<ul>
+<li>"Product is power." —— Zach Prater, on the fully on-chain order book and high-speed execution</li>
+<li>"If you're trading on a platform and you're contributing value, 100 percent of that value should go back to that user." —— Zach Prater, on the 100% value-return model</li>
+<li>"I don't think that there should be a token involved in any of this." —— Zach Prater, on why Pop DEX does not issue a token</li>
+<li>"It's throwing money back at your users that bring that value." —— Zach Prater, on the real winning strategy</li>
+<li>"We need to build our product around what the users want, not what we think they want." —— Zach Prater, closing</li>
+<li>(Host's closing disclaimer) "This is not financial information, of course. We're not telling you what to go out and do." —— Justin Roberty</li>
+</ul>
+<h2>Appendix: Fact Check</h2>
+<ul>
+<li>The recording is 1h16m30s long, consistent with the 1h16m14s listed by spacesdashboard; the transcript covers 00:02:36–01:16:05.</li>
+<li>Transcription tool: faster-whisper (English); the transcript is stored in the pipeline workspace at hidden_files/transcript.txt.</li>
+<li>Company and personal names in the text are transliterated from the transcript, and some names may have been transcribed incorrectly (such as the partner tokenization platform "Reality" and the name of the CEX operated by Dr. Jack), as noted in the text.</li>
+<li>All figures (prize pool amounts, ticket counts, multiples of gains, payout amounts) are as stated live by the speakers and have not been independently verified.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本页为该场纪要全文，内容为发言人现场自述、未经核实。</footer>
+<footer data-lang="tw" style="display:none">來源：Yat's List Space 合集（<a href="/spaces/">yatslist.com/spaces/</a>）· 本頁為該場紀要全文，內容為發言人現場自述、未經核實。</footer>
+<footer data-lang="en" style="display:none">Source: Yat's List Space Collection (<a href="/spaces/">yatslist.com/spaces/</a>) · This page contains the full notes from this session; the content is as stated live by the speakers and has not been verified.</footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：代币化股票上线，还需要 CEX 吗？ · Yat's Talks",tw:"會議紀要：代幣化股票上線，還需要 CEX 嗎？ · Yat's Talks",en:"Meeting Notes: Tokenized Stocks Go Live — Does Anyone Still Need a CEX? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
