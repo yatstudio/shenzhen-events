@@ -674,6 +674,7 @@ input[type=search]{font-size:16px}
       <p class="section-tagline">SPACES · LIVE · INTERVIEWS · FULL-TEXT NOTES</p>
       <h2 class="section-title" id="hero-title">Yat's Talks · 谈话录</h2>
       <p class="section-subtitle" id="hero-sub">Space、直播、访谈——全文纪要，喂给你的 Agent 读。</p>
+      <div class="ylstat" data-list="talks"></div>
     </div>
 
     <!-- Agent subscription: the one primary action on the page -->
@@ -1416,6 +1417,7 @@ cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],
 new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
 })})();
 </script>
+<script src="/stats.js" defer></script>
 </body>
 </html>
 

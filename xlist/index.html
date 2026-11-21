@@ -516,6 +516,7 @@ input[type=search]{font-size:16px}
   <div class="xhero">
     <h1 id="x-title">AI X List</h1>
     <p class="sub" id="x-sub">华语 AI 圈的人，都在这张单子上：按分类和地域找到他们，一键打开主页或关注你。自己加进来，也能被别人找到。</p>
+    <div class="ylstat" data-list="xlist" style="justify-content:center"></div>
     <div class="xjoins">
       <a class="xjoin" id="x-join" href="https://submit.yatslist.com/xlist" onclick="openXJoin();return false;">＋ 把我加进去（网页提交，不用注册）</a>
       <a class="xjoin gh" id="x-join-gh" href="https://github.com/yatstudio/shenzhen-events/blob/main/x.json" target="_blank" rel="noopener">用 GitHub 提交（提 PR 加一行）</a>
@@ -719,5 +720,6 @@ cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],
 new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
 })})();
 </script>
+<script src="/stats.js" defer></script>
 </body>
 </html>

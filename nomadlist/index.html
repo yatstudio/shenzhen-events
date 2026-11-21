@@ -89,6 +89,7 @@ footer a{color:var(--ink-sec)}
 <div class="wrap">
 <div class="hero">
 <h1>数字游民城市清单 <em>NomadList</em></h1>
+<div class="ylstat" data-list="nomadlist"></div>
 <p>全球 + 中国国内双轨：月成本（美元）、一居租金、网速、中国大陆护照签证类型与可停留天数，并细到片区与具体住处。数据分三档可信度：已核实（双源交叉）/ 首批核实 / 待核实估算——估算会如实标注，不装精确。本清单无综合评分，按预算、网速、签证这些单项指标筛。</p>
 <div class="stats">
 <div class="stat"><b>80</b><span>城市</span></div>
@@ -170,4 +171,5 @@ document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>{
 ['q','budget','sort'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 render();
 </script>
+<script src="/stats.js" defer></script>
 </body></html>

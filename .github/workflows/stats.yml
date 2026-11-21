@@ -1,0 +1,44 @@
+# Rebuild stats.json (list totals + new-per-day counts) whenever a list's data changes,
+# and once just after midnight Shanghai time so "new today" resets.
+name: stats
+on:
+  push:
+    branches: [main]
+    paths:
+      - events.json
+      - hackathons.json
+      - talks.json
+      - vps.json
+      - x.json
+      - szexpat/events.json
+      - remote.json
+      - nomadlist.json
+      - tools/build_stats.mjs
+  schedule:
+    - cron: "5 16 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: stats
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/build_stats.mjs
+      - name: Commit stats.json if counts changed
+        run: |
+          git config user.name "yatslist-stats[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats.json
+          if git diff --cached --quiet -- stats.json; then echo "no change"; exit 0; fi
+          git commit -m "stats: rebuild list counts [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
