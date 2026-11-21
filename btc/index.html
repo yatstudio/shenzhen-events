@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<title>BTC 周期看板 · 实时价格、链上估值与矿机关机价 | Yat's List</title>
+<meta name="description" content="BTC 实时价格、恐惧贪婪指数、ahr999、200 周均线、MVRV、Puell、减半倒计时、VWAP 成本锚与矿机关机价。每项标注数据来源，浏览器实时计算。">
+<link rel="canonical" href="https://yatslist.com/btc/">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<meta name="theme-color" content="#0d1218">
+<style>
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--green:#2ee6a8;--green-hover:#3df4b5;
+--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3);
+--bar-bg:rgba(13,18,24,.92);
+--good:#2ee6a8;--warn:#FBBF24;--bad:#F87171;
+--grid:rgba(255,255,255,.07);
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+color-scheme:dark;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--green-hover:#0e9263;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0;
+--bar-bg:rgba(246,248,247,.92);
+--good:#0a7d55;--warn:#b45309;--bad:#c2410c;
+--grid:rgba(16,42,32,.08);
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;
+color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.6;letter-spacing:.01em}
+a{color:var(--green);text-decoration:none}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+/* topbar: same as the other lists */
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:8px 0}
+.topbar .wrap{max-width:1200px;display:flex;align-items:center;gap:16px}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav{margin-left:auto;display:flex;align-items:center;gap:18px;overflow-x:auto;scrollbar-width:none}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav>*{flex-shrink:0}
+.topbar-nav a{color:var(--ink-sec);font-size:.92rem;font-weight:600;white-space:nowrap}
+.topbar-nav a:hover{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.themecyc:hover{color:var(--ink);border-color:var(--border-hover)}
+/* hero */
+.section-header{padding:28px 0 8px}
+.section-tagline{margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 4px;line-height:1.25}
+.section-subtitle{font-size:.95rem;color:var(--ink-sec);margin:0}
+.pricecard{margin:18px 0 0;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 28px}
+.pc-main{flex:1 1 260px;min-width:0}
+.pc-lbl{font-size:.8rem;color:var(--ink-ter)}
+.pc-price{font-size:clamp(2.6rem,8vw,3.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.pc-chg{font-size:1rem;font-weight:700;margin-left:6px;vertical-align:.5em}
+.pc-chg.up{color:var(--good)}.pc-chg.down{color:var(--bad)}
+.pc-meta{font-size:.78rem;color:var(--ink-ter);margin-top:4px}
+.pc-side{display:grid;grid-template-columns:repeat(3,auto);gap:4px 22px}
+.pc-side div{font-size:.78rem;color:var(--ink-ter)}
+.pc-side b{display:block;font-size:1.05rem;color:var(--ink);font-weight:700}
+/* sections */
+.sec{margin:34px 0 0}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:0 0 10px}
+.sec-h h2{font-size:1.08rem;margin:0}
+.sec-h .k{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;color:var(--ink-ter)}
+.sec-h .r{margin-left:auto;font-size:.78rem;color:var(--ink-ter)}
+.sec-note{font-size:.8rem;color:var(--ink-ter);margin:8px 0 0;line-height:1.6}
+/* stat tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.tile{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.t-lbl{font-size:.82rem;color:var(--ink-sec);font-weight:600}
+.t-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.t-val{font-size:1.65rem;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.t-sub{font-size:.8rem;color:var(--ink-sec)}
+.zone{display:inline-flex;align-items:center;gap:5px;font-size:.74rem;font-weight:700;border-radius:999px;padding:1px 9px;border:1px solid currentColor;white-space:nowrap}
+.zone::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.zone.good{color:var(--good)}.zone.warn{color:var(--warn)}.zone.bad{color:var(--bad)}.zone.mid{color:var(--ink-sec)}
+.t-desc{font-size:.8rem;color:var(--ink-ter);line-height:1.5}
+.t-src{font-size:.7rem;color:var(--ink-ter);opacity:.8;margin-top:auto;padding-top:4px}
+.fng-bar{position:relative;height:8px;border-radius:999px;margin:8px 0 2px;background:linear-gradient(90deg,var(--bad),var(--warn) 50%,var(--good))}
+.fng-dot{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--ink);border:2px solid var(--panel);transform:translate(-50%,-50%)}
+/* chart */
+.chartcard{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 16px 10px}
+.c-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:6px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.8rem;color:var(--ink-sec)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:2px;border-radius:2px;display:inline-block}
+.ranges{margin-left:auto;display:flex;gap:6px}
+.chip{background:none;border:1px solid var(--border-hover);color:var(--ink-sec);border-radius:999px;padding:3px 12px;font:inherit;font-size:.8rem;cursor:pointer}
+.chip.on{background:var(--tint);color:var(--green);border-color:var(--green)}
+.chartbox{position:relative}
+.chartbox svg{display:block;width:100%;height:auto;overflow:visible}
+.tip{position:absolute;pointer-events:none;background:var(--panel-hover);border:1px solid var(--border-hover);border-radius:8px;padding:6px 10px;font-size:.78rem;line-height:1.55;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none;z-index:5}
+.tip b{font-weight:700}
+.tip .sw{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+details.tbl{margin-top:6px;font-size:.8rem;color:var(--ink-sec)}
+details.tbl summary{cursor:pointer;color:var(--ink-ter)}
+/* tables */
+.tbl-wrap{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+th,td{padding:9px 14px;text-align:left;border-top:1px solid var(--border);white-space:nowrap}
+thead th{border-top:0;font-size:.74rem;color:var(--ink-ter);font-weight:600}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr.dim td{color:var(--ink-ter)}
+/* miner lab */
+.lab-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.lab-top label{font-size:.85rem;color:var(--ink-sec);display:flex;align-items:center;gap:10px;flex:1 1 280px}
+.lab-top input[type=range]{flex:1;accent-color:var(--green)}
+.lab-top b{color:var(--ink);font-variant-numeric:tabular-nums}
+.lab-sum{font-size:.85rem;color:var(--ink-sec)}
+.lab-sum b{font-size:1.1rem}
+/* sources */
+.srcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px 18px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 16px;font-size:.82rem}
+.srcs div{display:flex;justify-content:space-between;gap:10px;min-width:0}
+.srcs span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-sec)}
+.st{font-weight:700;white-space:nowrap}
+.st.ok{color:var(--good)}.st.wait{color:var(--ink-ter)}.st.fail{color:var(--bad)}.st.back{color:var(--warn)}
+.agentnote{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 16px;font-size:.84rem;color:var(--ink-sec);line-height:1.75}
+.agentnote code{font-family:var(--font-mono);font-size:.8em;background:var(--cmd-bg);padding:1px 6px;border-radius:6px;color:var(--ink);word-break:break-all}
+.foot{font-size:.8rem;color:var(--ink-ter);padding:28px 0 48px;line-height:1.8}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .section-header{padding:18px 0 4px}
+  .pricecard{padding:14px}
+  .pc-side{grid-template-columns:repeat(3,1fr);gap:4px 12px;width:100%}
+  .tiles{grid-template-columns:1fr 1fr}
+  .tile{padding:12px}
+  .t-val{font-size:1.3rem}
+  .t-desc{display:none}
+  .ranges{margin-left:0}
+  th,td{padding:8px 10px}
+}
+@media (max-width:380px){.tiles{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+    <nav class="topbar-nav">
+      <a href="https://yatslist.com/szevents/">活动</a>
+      <a href="https://yatslist.com/hackathons/">黑客松</a>
+      <a href="https://yatslist.com/talks/">Talks</a>
+      <a href="https://yatslist.com/btc/" class="nav-on" aria-current="page">BTC</a>
+      <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="section-header">
+    <p class="section-tagline">BTC · ON-CHAIN · LIVE</p>
+    <h1 class="section-title">BTC 周期看板</h1>
+    <p class="section-subtitle">价格、周期估值、矿工压力放在一页。每个数字都标了来源，在你的浏览器里实时算。</p>
+  </div>
+
+  <div class="pricecard">
+    <div class="pc-main">
+      <div class="pc-lbl" id="pc-src">BTC / USD</div>
+      <div><span class="pc-price" id="price">—</span><span class="pc-chg" id="chg"></span></div>
+      <div class="pc-meta" id="pc-meta">正在获取价格…</div>
+    </div>
+    <div class="pc-side">
+      <div>全网算力<b id="hash">—</b></div>
+      <div>下次难度调整<b id="diffchg">—</b></div>
+      <div>减半倒计时<b id="halv">—</b></div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="sec-h"><h2>周期估值</h2><span class="k">CYCLE VALUATION</span></div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>价格与两条成本线</h2><span class="k">LOG SCALE</span></div>
+    <div class="chartcard">
+      <div class="c-top">
+        <div class="legend" id="legend"></div>
+        <div class="ranges" id="ranges"><button class="chip" data-r="1">1 年</button><button class="chip on" data-r="4">4 年</button><button class="chip" data-r="0">全部</button></div>
+      </div>
+      <div class="chartbox" id="chartbox"><div class="tip" id="tip"></div></div>
+      <details class="tbl"><summary>查看数据表（每月一行）</summary><div class="tbl-wrap" style="margin-top:6px;max-height:320px;overflow:auto"><table id="charttable"></table></div></details>
+    </div>
+    <p class="sec-note">对数坐标。200 周均线：最近 200 个周收盘价的平均。已实现价格：每枚币按它上一次链上转移时的价格计价，求平均，相当于全网持币的平均成本。</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>VWAP 成本锚</h2><span class="k">VOLUME-WEIGHTED</span></div>
+    <div class="tbl-wrap"><table id="vwap"></table></div>
+    <p class="sec-note">从锚点那天到今天，按每日美元成交量加权的平均价格：Σ 成交额 ÷ Σ 成交量（成交量 = 成交额 ÷ 当日均价）。现价高于 VWAP，说明这段时间进场的人整体在盈利。来源：blockchain.com 每日均价与交易所成交额。</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>矿机关机价</h2><span class="k">SHUTDOWN PRICE</span><span class="r" id="lab-diff"></span></div>
+    <div class="lab-top">
+      <label for="elec">电费<input type="range" id="elec" min="0.02" max="0.12" step="0.005" value="0.06"><b id="elec-v">$0.060/kWh</b></label>
+      <div class="lab-sum" id="lab-sum"></div>
+    </div>
+    <div class="tbl-wrap"><table id="miners"></table></div>
+    <p class="sec-note">关机价 = 每天电费 ÷ 每天挖到的 BTC。每天挖到的 BTC = 86400 × 算力 × 区块奖励 ÷（难度 × 2³²）。只算电费，不含矿池费、折旧和场地。难度与区块奖励来自 mempool.space，矿机规格为厂商公布值。</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>数据来源</h2><span class="k">SOURCES</span><span class="r" id="src-upd"></span></div>
+    <div class="srcs" id="srcs"></div>
+    <p class="sec-note">现价按 mempool.space → Binance → Coinbase → CoinGecko 的顺序取，前一个失败才用下一个；主源正常时其余显示「备用」。现价每 15 秒刷新，其余指标每 10 分钟刷新。</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>给 Agent</h2><span class="k">FOR AGENTS</span></div>
+    <div class="agentnote">本页没有后端，所有数字都直接来自公开接口，Agent 可以照同样方式自己读：现价 <code>https://mempool.space/api/v1/prices</code>；每日均价 <code>https://api.blockchain.info/charts/market-price?timespan=all&amp;sampled=false&amp;format=json</code>；MVRV 与市值 <code>https://community-api.coinmetrics.io/v4/timeseries/asset-metrics?assets=btc&amp;metrics=CapMVRVCur,CapMrktCurUSD&amp;frequency=1d</code>；算力与难度 <code>https://mempool.space/api/v1/mining/hashrate/3d</code>；恐惧贪婪 <code>https://api.alternative.me/fng/</code>。各指标公式见每张卡片和每节下方的说明。</div>
+  </section>
+
+  <div class="foot">数据仅供参考，不构成投资建议。指标的区间划分是社区常用经验值，不是预测。<br><a href="https://yatslist.com/szevents/">← 回到 Yat's List</a></div>
+</main>
+<script src="/btc/btc.js" defer></script>
+</body>
+</html>
