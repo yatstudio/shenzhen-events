@@ -47,10 +47,6 @@
     });
     var hk = S.lists.hackathons; if (hk && stale) hk = Object.assign({}, hk, { new_today: 0 });
     if (hk) {
-      document.querySelectorAll('.topbar-nav a[href*="/hackathons/"]').forEach(function (a) {
-        var b = a.querySelector(".navbadge"); if (!b) { b = document.createElement("span"); b.className = "navbadge"; a.appendChild(b); }
-        b.textContent = hk.total;
-      });
       document.querySelectorAll("a.hackhero").forEach(function (a) {
         a.innerHTML = '<span class="hn">' + hk.total + '</span><span class="ht"><b>' + T.hackTitle + "</b><span>" + T.hackSub(hk.total) +
           (hk.new_today ? ' · <span class="hup">' + T.today + " +" + hk.new_today + "</span>" : "") + '</span></span><span class="hgo">' + T.go + "</span>";
