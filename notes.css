@@ -1,0 +1,68 @@
+/* Yat's List · 谈话纪要全文页（spaces/notes、interviews/notes）共用样式 */
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--green:#2ee6a8;--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--tint:rgba(46,230,168,.08);--cmd-bg:rgba(0,0,0,.3);--bar-bg:rgba(13,18,24,.92);
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+color-scheme:dark}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--tint:rgba(10,125,85,.06);--cmd-bg:#edf2f0;--bar-bg:rgba(246,248,247,.92);
+color-scheme:light}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.8;letter-spacing:.01em}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:8px 0}
+.topbar .bwrap{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:16px}
+.topbar a:hover{text-decoration:none}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav{margin-left:auto;display:flex;align-items:center;gap:18px}
+.topbar-nav a{color:var(--ink-sec);font-size:.92rem;font-weight:600;white-space:nowrap}
+.topbar-nav a:hover{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer;flex-shrink:0}
+.themecyc:hover{color:var(--ink);border-color:var(--border-hover)}
+.note{max-width:760px;margin:0 auto;padding:22px 20px 56px}
+.back{display:inline-block;margin:0 0 10px;font-size:.86rem;color:var(--ink-sec)}
+.back:hover{color:var(--green);text-decoration:none}
+.note-tag{margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+article{font-size:1.02rem;overflow-wrap:anywhere}
+article h1{font-size:clamp(1.45rem,4vw,1.85rem);line-height:1.35;margin:0 0 16px;letter-spacing:-.005em}
+article h2{font-size:1.2rem;line-height:1.45;margin:2em 0 .6em;padding-top:1.1em;border-top:1px solid var(--border)}
+article h1+blockquote+h2,article h1+h2{border-top:0;padding-top:0}
+article h3{font-size:1.05rem;margin:1.6em 0 .5em}
+article p,article ul,article ol{margin:.7em 0}
+article ul,article ol{padding-left:1.4em}
+article li{margin:.35em 0}
+article li::marker{color:var(--ink-ter)}
+article strong{color:var(--ink);font-weight:700}
+article em{color:var(--ink-sec)}
+blockquote{margin:1.1em 0;padding:10px 16px;border:1px solid var(--border);border-left:3px solid var(--green);border-radius:10px;background:var(--panel);color:var(--ink-sec);font-size:.92rem;line-height:1.75}
+blockquote p{margin:.3em 0}
+article>blockquote:first-of-type{margin-top:0}
+.tblwrap{overflow-x:auto;margin:1em 0;background:var(--panel);border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.88rem;overflow-wrap:normal}
+.tblwrap table{margin:0}
+th,td{border-top:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top;min-width:4.5em}
+thead th{border-top:0;font-size:.8rem;color:var(--ink-ter);font-weight:600}
+tr>*+*{border-left:1px solid var(--border)}
+hr{border:none;border-top:1px solid var(--border);margin:2em 0}
+code{font-family:var(--font-mono);background:var(--cmd-bg);padding:1px 6px;border-radius:6px;font-size:.86em}
+pre{background:var(--cmd-bg);padding:12px 14px;overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+pre code{background:none;padding:0}
+footer{margin-top:3em;padding-top:1.2em;border-top:1px solid var(--border);font-size:.82rem;color:var(--ink-ter);line-height:1.8;overflow-wrap:anywhere}
+@media (max-width:640px){
+  .topbar .bwrap{padding:0 16px;gap:12px}
+  .topbar-nav{gap:14px}
+  .topbar-nav a{font-size:.88rem}
+  .note{padding:16px 16px 48px}
+  article{font-size:1rem}
+}
+@media (max-width:360px){.topbar-nav a.nav-hack{display:none}}
