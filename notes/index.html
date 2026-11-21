@@ -26,44 +26,50 @@
 .card p{margin:0;color:var(--ink-sec);font-size:.92rem}
 .card .author{margin-top:8px;font-size:.8rem;color:var(--ink-ter)}
 .thumb{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:12px;background:#fff}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);color:var(--ink-ter);font-size:.82rem}
 @media (max-width:640px){.wrap{padding:0 16px 48px}.section-header{padding:18px 0 4px}.card{padding:14px}}
 </style>
-<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
+</head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/">Talks</a>
     <a href="https://yatslist.com/notes/" class="nav-on" aria-current="page">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="wrap">
   <div class="section-header">
-    <p class="section-tagline">YAT'S NOTES · 读到的，想到的</p>
+    <p class="section-tagline" data-ui="tagline">YAT'S NOTES · 读到的，想到的</p>
     <h1 class="section-title">Yat's Notes</h1>
-    <p class="section-subtitle">Talks 记我听到的，Notes 记我读到的。每篇先有 AI 解读，最后必须有我自己的判断——没有我的见解，不进这个清单。</p>
+    <p class="section-subtitle" data-ui="subtitle">Talks 记我听到的，Notes 记我读到的。每篇先有 AI 解读，最后必须有我自己的判断——没有我的见解，不进这个清单。</p>
     <div class="ylstat" data-list="notes"></div>
   </div>
   <div class="cards">
-  <a class="card" href="kobeissi-bubble.html">
+  <a class="card" href="kobeissi-bubble.html" data-card="kobeissi-ai-bubble">
+    <img class="thumb" src="https://img.yatslist.com/notes/kobeissi-bubble.jpg" alt="标普 500、黄金与比特币近 45 天走势（原文配图）">
     <div class="ctop"><span class="tag">AI 解读 · 长文</span><span class="date">2026-11-21</span></div>
     <h2>45 天蒸发 6 万亿：AI 泡沫破了吗？</h2>
     <p>Kobeissi 的答案是：没有泡沫破裂。坏消息大半已经定价，这轮急跌的主角是情绪和流动性——但他也没说这就是底。</p>
     <div class="author">原文：The Kobeissi Letter《-$6 Trillion In 45 Days》 · 解读：大脚</div>
   </a>
 
-  <a class="card" href="dan-koe.html">
+  <a class="card" href="dan-koe.html" data-card="dan-koe-fix-your-life">
     <div class="ctop"><span class="tag">AI 解读 · 长文</span><span class="date">2026-11-21</span></div>
     <h2>如何用一天修好你整个人生</h2>
     <p>改变的顺序是反的：先定下「我是谁」，行为才会自己跟上。Dan Koe 这篇 2.5 亿浏览的长文，讲身份认同、隐藏目标，和一次一日重置。</p>
     <div class="author">原文：Dan Koe《How to fix your entire life in 1 day》 · 解读：大脚</div>
   </a>
 
-  <a class="card" href="nvidia-bank.html">
+  <a class="card" href="nvidia-bank.html" data-card="nvidia-bank">
     <img class="thumb" src="https://img.yatslist.com/notes/nvidia-bank.png" alt="The Bank Of Nvidia 关系图">
     <div class="ctop"><span class="tag">AI 解读 · 图表</span><span class="date">2026-11-21</span></div>
     <h2>英伟达是 AI 产业的中央银行</h2>
@@ -71,9 +77,39 @@
     <div class="author">原图：ZeroHedge《The Bank Of Nvidia》 · 解读：大脚</div>
   </a>
   </div>
-  <div class="foot">Yat's Notes 是 Yat's List 的一个清单 · 数据仅供参考 · 机器可读：<a href="/notes/notes.json">notes.json</a></div>
+  <div class="foot"><span data-ui="foot">Yat's Notes 是 Yat's List 的一个清单 · 数据仅供参考 · 机器可读：</span><a href="/notes/notes.json">notes.json</a></div>
 </main>
 <script src="/article.js" defer></script>
 <script src="/stats.js" defer></script>
+<script>
+var I18N={
+ui:{zh:{nav_events:"活动",nav_hack:"黑客松",tagline:"YAT'S NOTES · 读到的，想到的",subtitle:"Talks 记我听到的，Notes 记我读到的。每篇先有 AI 解读，最后必须有我自己的判断——没有我的见解，不进这个清单。",foot:"Yat's Notes 是 Yat's List 的一个清单 · 数据仅供参考 · 机器可读："},
+tw:{nav_events:"活動",nav_hack:"黑客松",tagline:"YAT'S NOTES · 讀到的，想到的",subtitle:"Talks 記我聽到的，Notes 記我讀到的。每篇先有 AI 解讀，最後必須有我自己的判斷——沒有我的見解，不進這個清單。",foot:"Yat's Notes 是 Yat's List 的一個清單 · 資料僅供參考 · 機器可讀："},
+en:{nav_events:"Events",nav_hack:"Hackathons",tagline:"YAT'S NOTES · READ · REFLECT",subtitle:"Talks are what I heard; Notes are what I read. Every note starts with an AI reading and must end with my own judgment — no take of mine, no entry.",foot:"Yat's Notes is a Yat's List collection · For reference only · Machine-readable: "}},
+cards:{
+"kobeissi-ai-bubble":{zh:{tag:"AI 解读 · 长文",title:"45 天蒸发 6 万亿：AI 泡沫破了吗？",summary:"Kobeissi 的答案是：没有泡沫破裂。坏消息大半已经定价，这轮急跌的主角是情绪和流动性——但他也没说这就是底。",author:"原文：The Kobeissi Letter《-$6 Trillion In 45 Days》 · 解读：大脚"},
+tw:{tag:"AI 解讀 · 長文",title:"45 天蒸發 6 兆美元：AI 泡沫破了嗎？",summary:"Kobeissi 的答案是：沒有泡沫破裂。壞消息大半已經定價，這輪急跌的主角是情緒和流動性——但他也沒說這就是底。",author:"原文：The Kobeissi Letter《-$6 Trillion In 45 Days》 · 解讀：大腳"},
+en:{tag:"AI Reading · Longform",title:"$6 Trillion Gone in 45 Days: Did the AI Bubble Pop?",summary:"Kobeissi's answer: no bubble has burst. Most of the bad news is already priced in; sentiment and liquidity drove this plunge — but he is not calling a bottom either.",author:"Original: The Kobeissi Letter, \"-$6 Trillion In 45 Days\" · Commentary by 大脚"}},
+"dan-koe-fix-your-life":{zh:{tag:"AI 解读 · 长文",title:"如何用一天修好你整个人生",summary:"改变的顺序是反的：先定下「我是谁」，行为才会自己跟上。Dan Koe 这篇 2.5 亿浏览的长文，讲身份认同、隐藏目标，和一次一日重置。",author:"原文：Dan Koe《How to fix your entire life in 1 day》 · 解读：大脚"},
+tw:{tag:"AI 解讀 · 長文",title:"如何用一天修好你整個人生",summary:"改變的順序是反的：先定下「我是誰」，行為才會自己跟上。Dan Koe 這篇 2.5 億瀏覽的長文，講身分認同、隱藏目標，和一次一日重置。",author:"原文：Dan Koe《How to fix your entire life in 1 day》 · 解讀：大腳"},
+en:{tag:"AI Reading · Longform",title:"How to Fix Your Entire Life in One Day",summary:"Change works in reverse: settle who you are first, and behavior follows on its own. Dan Koe's 250-million-view essay on identity, hidden goals, and a one-day reset.",author:"Original: Dan Koe, \"How to fix your entire life in 1 day\" · Commentary by 大脚"}},
+"nvidia-bank":{zh:{tag:"AI 解读 · 图表",title:"英伟达是 AI 产业的中央银行",summary:"出资、出担保、出兜底：钱在生态里绕一圈，最后大部分又变回 GPU 订单。一张图看懂 Nvidia 的循环融资，和它的风险在哪。",author:"原图：ZeroHedge《The Bank Of Nvidia》 · 解读：大脚"},
+tw:{tag:"AI 解讀 · 圖表",title:"英偉達是 AI 產業的中央銀行",summary:"出資、出擔保、出兜底：錢在生態裡繞一圈，最後大部分又變回 GPU 訂單。一張圖看懂 Nvidia 的循環融資，和它的風險在哪。",author:"原圖：ZeroHedge《The Bank Of Nvidia》 · 解讀：大腳"},
+en:{tag:"AI Reading · Chart",title:"Nvidia Is the AI Industry's Central Bank",summary:"Equity stakes, guarantees, buyback backstops: money circles the ecosystem and most of it returns as GPU orders. One chart maps Nvidia's circular financing — and where the risk sits.",author:"Chart: ZeroHedge, \"The Bank Of Nvidia\" · Commentary by 大脚"}}}};
+function applyNotesLang(l){
+ if(!I18N.ui[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ var ui=I18N.ui[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-card]").forEach(function(card){
+   var c=I18N.cards[card.getAttribute("data-card")];if(!c||!c[l])return;var t=c[l];
+   var tag=card.querySelector(".tag"),h=card.querySelector("h2"),p=card.querySelector("p"),a=card.querySelector(".author");
+   if(tag)tag.textContent=t.tag;if(h)h.textContent=t.title;if(p)p.textContent=t.summary;if(a)a.textContent=t.author;});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyNotesLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}if(l!=="zh")applyNotesLang(l);})();
+</script>
 </body>
 </html>
