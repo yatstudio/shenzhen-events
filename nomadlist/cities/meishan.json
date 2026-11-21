@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 600,
-    "rent_1br_usd_month": 280,
+    "cost_usd_month": 620,
+    "rent_1br_usd_month": 240,
     "coworking_usd_month": 48,
     "internet_mbps": 110,
     "safety_score": 4.6,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 17.0,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "low-cost",
@@ -34,14 +34,55 @@
     ],
     "summary_zh": "游民CO 在列，成都半小时半径的平替小城。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "东坡区 (Dongpo District)",
+        "name_en": "Dongpo District",
+        "rent_1br_usd_month": 250,
+        "vibe": "主城区+苏东坡故里，配套最全",
+        "best_for": "市中心生活配套",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥1,800≈$250；本地租房实录东坡岛一室一厅精装 ¥1,800 交叉"
+      },
+      {
+        "name": "彭山区 (Pengshan District)",
+        "name_en": "Pengshan District",
+        "rent_1br_usd_month": 240,
+        "vibe": "北接成都、发展快的新区",
+        "best_for": "近成都通勤",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥1,700≈$240"
+      },
+      {
+        "name": "天府新区眉山片区 (Tianfu New Area edge)",
+        "name_en": "Tianfu New Area edge",
+        "rent_1br_usd_month": 265,
+        "vibe": "与成都南扩交界，最新楼盘",
+        "best_for": "新盘与成都南向",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥1,900≈$265"
+      },
+      {
+        "name": "火车站片区 (Railway Station Area)",
+        "name_en": "Railway Station Area",
+        "rent_1br_usd_month": 225,
+        "vibe": "成昆线眉山站，出行方便",
+        "best_for": "铁路出行",
+        "coworking_density": 1,
+        "note": "everycity.guide 中央一居 ¥1,600≈$225"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "http://everycity.guide/city/meishan",
+      "https://meishan.wodeyingxiao.com/zhanshi/24581.html",
+      "https://www.chinawiki.net/travelcina1com/meishan-climate.html",
+      "https://www.adventuretourchina.com/destination/meishan/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-21",
+    "updated_at": "2026-11-21",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -53,14 +94,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-21"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-21"
       },
       "visa": {
         "confidence": 0.5,

@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 17.0,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "low-cost",
@@ -35,13 +35,52 @@
     ],
     "summary_zh": "游民CO 在列的四川小城，成本地板级，适合纯写作型长住。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "巴州区·江北 (Bazhou / Jiangbei)",
+        "name_en": "Bazhou / Jiangbei",
+        "rent_1br_usd_month": 190,
+        "vibe": "市中心+江北大道商圈，配套最全",
+        "best_for": "市中心生活配套",
+        "coworking_density": 2,
+        "note": "估算：按巴州区 ¥30/㎡、45㎡ 一居约 ¥1,350≈$190"
+      },
+      {
+        "name": "恩阳区 (Enyang)",
+        "name_en": "Enyang",
+        "rent_1br_usd_month": 170,
+        "vibe": "新城区+机场方向，新盘多",
+        "best_for": "新城低价",
+        "coworking_density": 1,
+        "note": "估算：按 ¥30/㎡、40㎡ 一居约 ¥1,200≈$170"
+      },
+      {
+        "name": "回风·南坝 (Huifeng / Nanba)",
+        "name_en": "Huifeng / Nanba",
+        "rent_1br_usd_month": 150,
+        "vibe": "老城南片，烟火气、租金低",
+        "best_for": "老城烟火气",
+        "coworking_density": 1,
+        "note": "估算：低于市中心价，取 ¥1,080≈$150"
+      },
+      {
+        "name": "平昌县 (Pingchang)",
+        "name_en": "Pingchang",
+        "rent_1br_usd_month": 120,
+        "vibe": "县城、银耳之乡，最安静低价",
+        "best_for": "极低成本长住",
+        "coworking_density": 1,
+        "note": "估算：县城价，取 ¥860≈$120"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://en.wikipedia.org/wiki/Bazhong",
+      "https://www.yyjk01.cn/realestate/1404826.html"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-21",
     "data_tier": "seed_v2",
     "best_months_nums": [
       3,

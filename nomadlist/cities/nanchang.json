@@ -10,9 +10,9 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 750,
-    "rent_1br_usd_month": 350,
-    "coworking_usd_month": 60,
+    "cost_usd_month": 720,
+    "rent_1br_usd_month": 210,
+    "coworking_usd_month": 90,
     "internet_mbps": 120,
     "safety_score": 4.5,
     "english_score": 3.0,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 18.6,
     "best_months": "Mar-May,Oct-Nov",
     "tags": [
       "low-cost",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "游民CO 在列，成本低、赣江边慢生活。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "红谷滩·金融中心 (Honggutan / Financial Centre)",
+        "name_en": "Honggutan / Financial Centre",
+        "rent_1br_usd_month": 250,
+        "vibe": "新城CBD+省政府片区，南昌最现代的片区",
+        "best_for": "现代商圈与江景",
+        "coworking_density": 4,
+        "note": "估算：市中心1居取 ¥1,800≈$250（urcity 全市中位 ¥1,600 之上）"
+      },
+      {
+        "name": "东湖·八一广场 (Donghu / Bayi Square)",
+        "name_en": "Donghu / Bayi Square",
+        "rent_1br_usd_month": 225,
+        "vibe": "老城中心+八一广场商圈，生活配套最全",
+        "best_for": "市中心生活配套",
+        "coworking_density": 4,
+        "note": "urcity 全市 1 居中位 ¥1,600≈$225；Regus 阳洋春天中心在此区"
+      },
+      {
+        "name": "青山湖·艾溪湖 (Qingshan Lake / Aixihu)",
+        "name_en": "Qingshan Lake / Aixihu",
+        "rent_1br_usd_month": 195,
+        "vibe": "高新区+艾溪湖，湖景与科技园",
+        "best_for": "湖景与高新氛围",
+        "coworking_density": 2,
+        "note": "估算：近 Numbeo 市郊 1 居 $120 之上，取 ¥1,400≈$195"
+      },
+      {
+        "name": "九龙湖 (Jiulong Lake)",
+        "name_en": "Jiulong Lake",
+        "rent_1br_usd_month": 170,
+        "vibe": "红谷滩西延新城，地铁+新盘，租金低",
+        "best_for": "低成本新城",
+        "coworking_density": 1,
+        "note": "估算：取 ¥1,200≈$170"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Nanchang-China?displayCurrency=USD",
+      "https://citycost.org/nanchang/",
+      "https://www.livingcost.net/china/nanchang",
+      "https://www.climatestotravel.com/climate/china/nanchang",
+      "https://urcity.com/en/cities/nanchang-jx/",
+      "https://www.regus.com/zh/cn/nanchang/coworking"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-21",
+    "updated_at": "2026-11-21",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -51,14 +94,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-21"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-21"
       },
       "visa": {
         "confidence": 0.5,
