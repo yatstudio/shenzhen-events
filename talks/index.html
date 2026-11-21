@@ -634,7 +634,7 @@ input[type=search]{font-size:16px}
 <style>
 /* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
 .prefs{display:inline-flex;align-items:center;gap:6px}
-.prefs .langsw,.prefs .themesw{display:none!important}
+.prefs .themesw{display:none!important}
 .langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
 .langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
 .langsel option{background:var(--panel);color:var(--ink)}
@@ -662,7 +662,7 @@ input[type=search]{font-size:16px}
       <a href="https://yatslist.com/szevents/" id="nav-events">活动</a>
       <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
       <a href="https://yatslist.com/talks/" id="nav-spaces" class="nav-on" aria-current="page">Talks</a>
-      <span class="prefs"><select class="langsel" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="https://yatslist.com/talks/" selected>简体</option><option value="https://yatslist.com/talks/tw/">繁體</option><option value="https://yatslist.com/talks/en/">EN</option></select><span class="langsw" role="group" aria-label="Language"><a href="https://yatslist.com/talks/" class="on" aria-current="page">简体</a><span class="lsep">|</span><a href="https://yatslist.com/talks/tw/">繁體</a><span class="lsep">|</span><a href="https://yatslist.com/talks/en/">EN</a></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
+      <span class="prefs"><span class="langsw" role="group" aria-label="Language"><a href="https://yatslist.com/talks/" class="on" aria-current="page">简体</a><span class="lsep">|</span><a href="https://yatslist.com/talks/tw/">繁體</a><span class="lsep">|</span><a href="https://yatslist.com/talks/en/">EN</a></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
       <button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">投稿</button>
     </nav></div>
   </div>
