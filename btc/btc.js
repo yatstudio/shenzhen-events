@@ -37,9 +37,9 @@
   var SRC = {
     mempoolPrice: "mempool.space 现价", binance: "Binance 现价（备用）", coinbase: "Coinbase 现价（备用）", coingecko: "CoinGecko 现价（备用）",
     hist24: "mempool.space 24 小时前价格", bcPrice: "blockchain.com 每日均价", bcVol: "blockchain.com 每日成交额", bcRev: "blockchain.com 矿工收入",
-    cm: "Coin Metrics MVRV / 市值", mining: "mempool.space 算力与难度", diffadj: "mempool.space 难度调整", tip: "mempool.space 区块高度", fng: "Alternative.me 恐惧贪婪"
+    cm: "Coin Metrics MVRV / 市值", bnHist: "Binance 日 K（价格历史备用）", mining: "mempool.space 算力与难度", diffadj: "mempool.space 难度调整", tip: "mempool.space 区块高度", fng: "Alternative.me 恐惧贪婪"
   };
-  var STATE = {};
+  var STATE = { bnHist: "back" };
   var STLBL = { ok: "正常", wait: "获取中", fail: "请求失败", back: "备用" };
   function setSt(k, s) { STATE[k] = s; renderSrc(); }
   function renderSrc() {
@@ -99,7 +99,25 @@
   function loadDaily() {
     return get("https://api.blockchain.info/charts/market-price?timespan=all&sampled=false&format=json&cors=true", "bcPrice", 25000).then(function (j) {
       var v = (j.values || []).filter(function (o) { return o.y > 0; });
-      D.days = v.map(function (o) { return o.x * 1000; }); D.px = v.map(function (o) { return o.y; });
+      if (v.length > 1400) { D.days = v.map(function (o) { return o.x * 1000; }); D.px = v.map(function (o) { return o.y; }); D.pxSrc = "bc"; }
+    });
+  }
+  function useCmHistory() { // backup when blockchain.com price history is unavailable
+    var v = D.cm.filter(function (o) { return o.px > 0; });
+    if (v.length < 1400) return;
+    D.days = v.map(function (o) { return Date.parse(o.d + "T00:00:00Z"); }); D.px = v.map(function (o) { return o.px; }); D.pxSrc = "cm";
+  }
+  function loadBinanceHistory() { // third source: Binance daily closes since 2017-08, 1000 per request
+    var out = [], start = Date.UTC(2017, 7, 17);
+    function page(t) {
+      return get("https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=1000&startTime=" + t, "bnHist", 20000).then(function (k) {
+        k.forEach(function (r) { out.push([r[0], +r[4]]); });
+        if (k.length === 1000) return page(k[k.length - 1][0] + DAY);
+      });
+    }
+    return page(start).then(function () {
+      if (D.px || out.length < 1400) return;
+      D.days = out.map(function (r) { return r[0]; }); D.px = out.map(function (r) { return r[1]; }); D.pxSrc = "bn";
     });
   }
   function loadVol() {
@@ -113,8 +131,9 @@
     });
   }
   function loadCM() {
-    return get("https://community-api.coinmetrics.io/v4/timeseries/asset-metrics?assets=btc&metrics=CapMVRVCur,CapMrktCurUSD&frequency=1d&page_size=10000&start_time=2010-07-18", "cm", 25000).then(function (j) {
-      D.cm = (j.data || []).map(function (o) { return { d: o.time.slice(0, 10), mvrv: +o.CapMVRVCur, mc: +o.CapMrktCurUSD }; }).filter(function (o) { return o.mvrv > 0 && o.mc > 0; });
+    return get("https://community-api.coinmetrics.io/v4/timeseries/asset-metrics?assets=btc&metrics=CapMVRVCur,CapMrktCurUSD,PriceUSD&frequency=1d&page_size=10000&start_time=2010-07-18", "cm", 25000).then(function (j) {
+      D.cm = (j.data || []).map(function (o) { return { d: o.time.slice(0, 10), mvrv: +o.CapMVRVCur, mc: +o.CapMrktCurUSD, px: +o.PriceUSD }; }).filter(function (o) { return o.mvrv > 0 && o.mc > 0; });
+      if (!D.px) useCmHistory();
     });
   }
   function loadMining() {
@@ -253,7 +272,7 @@
   /* ---------- chart: price vs 200WMA vs realized price (log) ---------- */
   var CH = null, RANGE = 4;
   function buildChart() {
-    if (!D.px) return;
+    if (!D.px) { if (HIST_TRIES >= 3) chartMsg("价格历史暂时取不到：blockchain.com、Coin Metrics 和 Binance 都没有响应。10 分钟后会自动重试。", true); else if (HIST_TRIES === 2) chartMsg("主数据源没有响应，正在改用 Binance…"); return; }
     var rpBy = {};
     if (D.cm) D.cm.forEach(function (o) { rpBy[o.d] = o; });
     var pts = [];
@@ -282,7 +301,7 @@
     for (var e = Math.floor(y0); e <= Math.ceil(y1); e++) [1, 2, 5].forEach(function (m) { var v = m * Math.pow(10, e); if (Math.log10(v) >= y0 && Math.log10(v) <= y1) ticks.push(v); });
     if (ticks.length > 6) ticks = ticks.filter(function (v) { return String(v)[0] === "1"; });
     var grid = css("--grid"), ink3 = css("--ink-ter"), surf = css("--panel");
-    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="BTC 价格、200 周均线与已实现价格，对数坐标">';
+    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" width="' + W + '" height="' + H + '" preserveAspectRatio="xMidYMid meet" role="img" aria-label="BTC 价格、200 周均线与已实现价格，对数坐标">';
     ticks.forEach(function (v) { var y = Y(v).toFixed(1); svg += '<line x1="' + L + '" x2="' + (W - Rm) + '" y1="' + y + '" y2="' + y + '" stroke="' + grid + '" stroke-width="1"/><text x="' + (L - 6) + '" y="' + y + '" dy="0.32em" text-anchor="end" font-size="11" fill="' + ink3 + '">' + compact(v) + "</text>"; });
     var yrs = [], y = new Date(t0).getUTCFullYear() + 1;
     for (; Date.UTC(y, 0, 1) <= t1; y++) yrs.push(y);
@@ -291,6 +310,7 @@
     SERIES.slice().reverse().forEach(function (s) {
       var dpath = "", pen = false;
       pts.forEach(function (o) { var v = o[s[0]]; if (v > 0) { dpath += (pen ? "L" : "M") + X(o.t).toFixed(1) + " " + Y(v).toFixed(1); pen = true; } else pen = false; });
+      if (!dpath) return;
       svg += '<path d="' + dpath + '" fill="none" stroke="' + css(s[2]) + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
       var lastPt = null; for (var i = pts.length - 1; i >= 0; i--) if (pts[i][s[0]] > 0) { lastPt = pts[i]; break; }
       if (lastPt) svg += '<circle cx="' + X(lastPt.t).toFixed(1) + '" cy="' + Y(lastPt[s[0]]).toFixed(1) + '" r="4" fill="' + css(s[2]) + '" stroke="' + surf + '" stroke-width="2"/>';
@@ -298,7 +318,7 @@
     svg += '<line id="xh" y1="' + Tp + '" y2="' + (H - B) + '" stroke="' + ink3 + '" stroke-width="1" opacity="0"/><g id="xd"></g>';
     svg += '<rect x="' + L + '" y="0" width="' + (W - L - Rm) + '" height="' + (H - B) + '" fill="transparent" id="hit"/></svg>';
     box.innerHTML = svg; box.appendChild(tip);
-    $("#legend").innerHTML = SERIES.map(function (s) { return '<span><i style="background:' + css(s[2]) + '"></i>' + s[1] + "</span>"; }).join("");
+    $("#legend").innerHTML = SERIES.filter(function (s) { return pts.some(function (o) { return o[s[0]] > 0; }); }).map(function (s) { return '<span><i style="background:' + css(s[2]) + '"></i>' + s[1] + "</span>"; }).join("");
     var svgEl = box.querySelector("svg"), xh = svgEl.querySelector("#xh"), xd = svgEl.querySelector("#xd");
     function move(ev) {
       var r = svgEl.getBoundingClientRect(), sx = (ev.clientX - r.left) * W / r.width;
@@ -332,9 +352,25 @@
 
   /* ---------- run ---------- */
   function renderAll() { renderPrice(); renderTiles(); renderMining(); renderMiners(); renderVwap(); $("#src-upd").textContent = "上次刷新 " + hm(Date.now()); }
+  var HIST_TRIES = 0;
+  function update() { renderAll(); buildChart(); }
   function slow() {
-    return Promise.all([loadDaily(), loadVol(), loadRev(), loadCM(), loadMining(), loadFng()].map(function (p) { return p.catch(function () {}); }))
-      .then(function () { renderAll(); buildChart(); });
+    HIST_TRIES = 0; chartMsg("正在加载价格历史…");
+    var hist = function (p) {
+      return p.then(update, function () {
+        HIST_TRIES++;
+        if (HIST_TRIES === 2 && !D.px) loadBinanceHistory().then(update, function () { HIST_TRIES++; update(); });
+        else update();
+      });
+    };
+    hist(loadDaily()); hist(loadCM());
+    [loadVol(), loadRev(), loadMining(), loadFng()].forEach(function (p) { p.then(update, update); });
+  }
+  function chartMsg(t, retry) {
+    if (CH) return;
+    var box = $("#chartbox"), tip = $("#tip");
+    box.innerHTML = '<div class="chartmsg">' + t + (retry ? ' <button type="button" class="chip" id="chartretry">重试</button>' : "") + "</div>"; box.appendChild(tip);
+    var b = $("#chartretry"); if (b) b.addEventListener("click", function () { slow(); });
   }
   renderSrc(); applyTheme(); renderTiles();
   livePrice(); load24h(); slow();
