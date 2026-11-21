@@ -621,6 +621,7 @@ input[type=search]{font-size:16px}
 .dlist .hls div:nth-child(n+3){display:none}
 .dlist .rail .t2{color:var(--ink-ter)}
 @media (max-width:820px){.dlist .hls{display:none}}
+@media (max-width:820px){.talk-block .actions .btn{white-space:normal;max-width:100%;text-align:center}}
 </style>
 </head>
 <body>
@@ -1258,7 +1259,7 @@ function tourStep(d){tourI+=d;if(tourI>=TOUR.length){endTour();return}if(tourI<0
 function endTour(){if(tourEl)tourEl.classList.remove("tour-hl");tourEl=null;document.getElementById("tourcard").classList.remove("open");try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 function dismissWelc(){document.getElementById("welc").style.display="none";try{localStorage.setItem("szTourSeen","1")}catch(e){}}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();endTour()}});
-try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="block"}catch(e){}
+try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style.display="flex"}catch(e){}
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
