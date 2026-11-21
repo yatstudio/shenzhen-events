@@ -526,6 +526,7 @@ input[type=search]{font-size:16px}
 .more{background:none;border:0;color:var(--ink-ter);font-size:1.05rem;letter-spacing:1px;line-height:1;width:32px;height:30px;border-radius:6px;cursor:pointer;font-family:inherit}
 .more:hover,.cact.open .more{background:var(--panel-hover);color:var(--ink)}
 .more-ph{display:inline-block;width:32px;height:30px}
+.more.shr{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 .cmenu{display:none;position:absolute;right:0;top:calc(100% + 6px);z-index:50;min-width:150px;background:var(--panel-hover);border:1px solid var(--border-hover);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden}
 .cact.open .cmenu{display:block}
 .cmenu>*{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--border);padding:9px 16px;font:inherit;font-size:.85rem;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
@@ -694,11 +695,9 @@ function cardOf(e){
   const venue=pick(e,"venue"),district=pick(e,"district"),org=pick(e,"organizer");
   const sum=pick(e,"summary");
   const where=e.format==="线上"||e.city==="线上"?tr("online"):([venue,district].filter(Boolean).join(" · ")||"");
-  const time=hm(e.start)+(e.end?" – "+hm(e.end):"");
   const fee=e.fee||tr("feeTbd");
-  const tags=(e.categories||[]).map(c=>`<span class="tag">${esc(c)}</span>`).join("");
-  const share=e.id?`<a class="btn" href="https://yatslist.com/e/${esc(e.id)}/">${tr("share")}</a>`:"";
-  return `<div class="ev"><div class="card"><h3><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(title)}</a></h3><div class="meta">🕐 ${esc(time)}${where?` · 📍 ${esc(where)}`:""}<br>💰 ${esc(fee)}${org?` · ${esc(org)}`:""}</div>${sum?`<p class="sum">${esc(sum)}</p>`:""}${tags?`<div class="tags">${tags}</div>`:""}<div class="actions"><a class="btn primary" href="${esc(e.url)}" target="_blank" rel="noopener">${tr("official")}</a>${share}</div></div></div>`;
+  const meta=[where,fee,org].filter(Boolean).map(esc).join('<i class="sep"> · </i>');
+  return `<div class="ev"><div class="rail"><div class="t1">${esc(hm(e.start))}</div>${e.end?`<div class="t2">${esc(hm(e.end))}</div>`:""}</div><div class="card"><div class="cmain"><h3><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(title)}</a></h3>${meta?`<div class="cmeta">${meta}</div>`:""}${sum?`<p class="sum">${esc(sum)}</p>`:""}</div><div class="cact"><a class="reg" href="${esc(e.url)}" target="_blank" rel="noopener">${tr("official")}</a>${e.id?`<a class="more shr" href="https://yatslist.com/e/${esc(e.id)}/" title="${esc(tr("share"))}" aria-label="${esc(tr("share"))}">↗</a>`:""}</div></div></div>`;
 }
 let EVENTS=[];
 function render(){
@@ -707,10 +706,11 @@ function render(){
   const past=EVENTS.filter(e=>{const end=e.end?Date.parse(e.end):Date.parse(e.start);return end<now});
   $("#hero-meta").textContent=tr("meta")(EVENTS.length,up.length);
   let html="",lastDay="";
-  for(const e of up){const k=dayKey(e.start);if(k!==lastDay){lastDay=k;const L=dayLabel(e.start);const n=up.filter(x=>dayKey(x.start)===k).length;html+=`<div class="dayhead"><span class="dnum">${esc(L.n)}</span><span class="dmeta">${esc(L.m)}</span><span class="dcnt">${esc(tr("dayCount")(n))}</span></div>`}html+=cardOf(e)}
+  for(const e of up){const k=dayKey(e.start);if(k!==lastDay){if(lastDay)html+="</div>";lastDay=k;const L=dayLabel(e.start);const n=up.filter(x=>dayKey(x.start)===k).length;html+=`<div class="dayhead"><span class="dnum">${esc(L.n)}</span><span class="dmeta">${esc(L.m)}</span><span class="dcnt">${esc(tr("dayCount")(n))}</span></div><div class="dlist">`}html+=cardOf(e)}
+  if(lastDay)html+="</div>";
   $("#list").innerHTML=html||`<div class="empty">${tr("loading")}</div>`;
   $("#sec-past").hidden=past.length===0;
-  $("#pastlist").innerHTML=past.slice().reverse().map(cardOf).join("");
+  $("#pastlist").innerHTML=past.length?'<div class="dlist">'+past.slice().reverse().map(cardOf).join("")+"</div>":"";
 }
 function applyLang(){
   document.documentElement.lang=LANG==="en"?"en":(LANG==="tw"?"zh-TW":"zh-CN");
