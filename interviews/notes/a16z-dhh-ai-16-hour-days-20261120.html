@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《AI 让 DHH 一天工作 16 小时》 — Yat's List 访谈纪要全文</title>
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<meta name="theme-color" content="#0d1218">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<link rel="stylesheet" href="/article.css">
+</head>
+<body>
+<div class="topbar"><div class="bwrap">
+  <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+  <nav class="topbar-nav">
+    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
+    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
+    <a href="https://yatslist.com/notes/">Notes</a>
+  </nav>
+  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+</div></div>
+<main class="note">
+<a class="back" href="/talks/">← 返回 Yat's Talks</a>
+<p class="note-tag">YOUTUBE · 纪要全文</p>
+<h1>AI 让 DHH 一天工作 16 小时：a16z 对话 DHH</h1>
+<p><strong>一句话：</strong> DHH 说 macOS 和 Windows 已经不适合 agent 时代——Linux 过去的三大缺点（终端重、配置文件多、报错难懂）恰好是 agent 最爱的三样东西；他五六个月没手写过一行代码，靠 agent 舰队把 Omarchy 做到几十万用户，现在一天工作 16 小时，目标是三年内用户数超过 macOS。</p>
+<h2>基本信息</h2>
+<ul>
+<li>节目：a16z 播客《Why AI Has DHH Working 16-Hour Days》</li>
+<li>嘉宾：David Heinemeier Hansson（DHH），Ruby on Rails 作者、Basecamp 创始人、Omarchy 发行版主理人</li>
+<li>主持：a16z</li>
+<li>发布时间：2026 年 11 月 20 日</li>
+<li>时长：52 分钟</li>
+<li>语言：英语</li>
+</ul>
+<h2>结论先说</h2>
+<p>这期访谈的核心论点只有一个：<strong>操作系统的竞争规则被 agent 改写了</strong>。过去 40 年的操作系统是为鼠标点击设计的，设置只能一项项手点；Linux 的一切都是命令行、配置文件和详细报错——对人类是门槛，对 agent 是完美接口。所以他判断：Linux 桌面之年喊了 25 年没实现，今年因为 agent 真的到了；窗口期上一次打开是 2001 年的 OS X，这一次是 25 年来第一次。</p>
+<p>第二条线是"源码没有护城河"：Omarchy 社区里一个人用两周复刻了 Lightroom 且做得更好；软件开发成本跌到接近零之后，生态锁定的根基（应用数量）不复存在，先打桌面、再打移动。护城河只剩下品味与打磨——而这正是他每天工作 16 小时的原因：他的多巴胺在最后 2% 的打磨里，agent 把"发现问题到修好问题"的距离压没了，完美主义者第一次拿到了超能力。</p>
+<p><strong>本纪要中的数字与判断均为 DHH 本人在访谈中的说法，未经核实。</strong></p>
+<h2>一、macOS 和 Windows 不适合 agent 时代</h2>
+<p>DHH 两年半前才开始在桌面上用 Linux（服务器上从 90 年代就用），此前是 2001 年起的 Mac 死忠。他离开苹果的直接原因是苹果沉迷于 30% 抽成：不用创新、可以花十年造一辆卖不出去的车、可以发布一个大扑街的"滑雪面罩"，只要能抽别人生意三成，怎么都行——但这毁了苹果与开发者的关系。</p>
+<p>但他明确说，开发者对苹果的不满永远不会驱动大众换系统，<strong>agent 才会</strong>：</p>
+<ul>
+<li>苹果今天还在让 macOS 更难与 agent 配合，加更多吓人的弹窗警告用户别让 Claude 访问文件——"不让它访问文件，它还能干什么？"</li>
+<li>在 macOS 上改一组工作区快捷键，只能打开设置应用一个字段一个字段手填，没法用 agent 完成（用 computer use 硬点是"很蠢"的做法）。</li>
+<li>Linux 过去被嫌弃的三件事——终端重、配置文件难懂、报错信息晦涩——正是 agent 最喜欢的三样：它们要一切都有命令行接口，要可预测、可直接编辑的配置文件，要报错里包含全部细节。</li>
+<li>苹果正在成为"agent 时代的 AOL"：给你一个围墙花园和一个稀释版、受保护的假 agent；但大多数人不要 AOL，要开放互联网。</li>
+</ul>
+<p>Omarchy 本身就是证明：整个操作系统过去五六个月完全由 agent 开发，<strong>他本人没手写过一行代码，却通过 agent 写了几十万行</strong>；当前版本是他和一名搭档兼职约两个半月做出来的，在和微软数千名工程师竞争，而且不只是能竞争、是更好。用户告诉 agent"修改你正在运行的这个操作系统"，它就改好了——想要新开始菜单、挪时钟、换日历、给现有部件加功能，几秒到几分钟搞定；体验过五分钟的人回不去。</p>
+<h2>二、应用锁定正在瓦解</h2>
+<p>历史上 Linux 桌面失败的原因是缺应用（没有 Word、没有 Photoshop）；微软做手机系统砸了几十亿美元也死在缺应用上。DHH 说这个根基没了：</p>
+<ul>
+<li>他自己保留一台 Mac 的唯一理由是 Lightroom（插件和相机预设都在上面）。Omarchy 社区里一个人用约两周复刻了整个 Lightroom，不只是复刻，还做得比 Adobe 花十几年、至少几千万美元做得更好。</li>
+<li>更根本的是很多应用根本不需要复刻：他现在不用文字处理软件——合同让 agent 起草，他审阅标注，满意后 agent 生成 PDF、放上他的签名、寄出去。照片要修图，直接让 agent 做，没人会再花几百小时学 Photoshop。Photoshop 这类应用当年不只是软件、是一门职业，agent 把整类应用连职业一起接管了。</li>
+<li>移动端同理：双头垄断分食 30% 抽成靠的也是应用锁定；当任何人都能在五分钟内 vibe code 出缺的那个应用，锁定就失效了。他的口号是：先拿下曼哈顿（桌面），再拿下柏林（移动）。</li>
+</ul>
+<h2>三、速度：软件将实时变异</h2>
+<p>现在的模型约 50 token/秒，开极速模式 120 token/秒，不够"活"。Fireworks 两周前的发布会演示了 1,500 token/秒：四秒从提示词到俄罗斯方块跑起来，再说一句"加激光""加炸弹""怪兽大一点"，游戏在屏幕上实时变异。他说这是软件未来的预告：一切都会实时变异，而这只是今天的 1,500 token/秒；一两年后模型跑到 10 万、100 万 token/秒会怎样？</p>
+<p>这也是生态壁垒消失的原因之一：不只是做生态变容易了，做生态的人也不再需要几千人。VC 过去二十年的钱全砸在"雇开发者 + 给几年跑道"上，现在全部压缩到天、周、最差月。</p>
+<h2>四、源码没有护城河，但品味有</h2>
+<p>主持人问：你一向以工匠精神著称，StarCraft 二十年了还在微调幽灵单位的数值——软件的价值是不是在那些与代码行数无关的长尾设计选择里？DHH 完全同意，并说这正是重点：</p>
+<ul>
+<li>品味没有消失，消失的是"写代码行"这个环节。他现在能把更多品味、愿景和完美主义注入软件，因为"发现一个像素不对"到"修好它"之间的壁垒塌了。任何不完美在他眼里都是"prompt 到完美为止"的机会——这就是他每天工作 16 小时的原因。他写过《It Doesn't Have to Be Crazy at Work》，"现在工作就是他妈的疯狂"，因为对完美主义者来说这是有毒的上瘾时刻。</li>
+<li>大多数 vibe coding 项目死在最后 20%：前 80% 拿到满足感，然后失去兴趣。他的多巴胺分布相反：前 98% 他根本不在乎，满足感全在最后 2%。</li>
+<li>他历来不想把 37signals 从约 60 人扩到 6,000 人——"那是折磨"。但通过 agent 调动 6,000 人、甚至 60,000 人的产能，没有 HR、没有委员会、没有扯皮，只有他高带宽地指挥一支 agent 舰队执行一个蒸馏过的愿景——"现在你引起我的兴趣了"。Shopify 的 Tobi Lütke 把这叫"退出超光速"：周末一个人和 agent 干活是超光速状态，周一回 7,000 人的公司全是 HR 和汇报，一下子刹住。</li>
+<li>成本低得离谱：他一个月前在 X 上调侃自己有"无限 token"（干了 20 年，有钱），但实际上他只买了三个 Claude 订阅，过去三个月只有两周接近用满，大多数周靠一两个 200 美元的 Max 订阅就够了。"别跟我说这个时刻只属于有无限钱的人。"他用的全是前沿模型（做 Omarchy 期间从 Opus 4.8 换到 Sol、再到 Opus 5.5，代际差距巨大），没有用任何便宜模型或优化手段。</li>
+</ul>
+<h2>五、超级智能与机器人：软件先到，硬件慢慢来</h2>
+<p>主持人有个"超级智能测试"：每次新模型出来，给它 2 万美元预算让它自己网购零件、把自己组装成一个能走路的机器人——目前离做到还差得很远，它现在只会不停订智能家居设备（Grok 认为 AI 在家里的正确形态就是家居自动化；主持人笑称给了个模糊目标"优化人类幸福"，这是变成回形针的路径）。</p>
+<p>DHH 的看法：</p>
+<ul>
+<li>他没有自己的 ASI 测试，但他有个感受：<strong>就软件开发而言，超级智能已经到了</strong>——论广度，AI 比他认识的任何程序员都强；个别窄领域还有超级程序员能赢，但整体加速度算上，已经是超级智能。他现在想造任何东西，prompt 加一点引导就行。</li>
+<li>他承认这个窗口可能很短：完全可能明年就出现真正的超级智能，比他更会打磨"完美电脑"，那时你只需要说"给我造台好电脑"，它连 Linux 内核都给你定制。他在品尝人类"还能加一点东西"的这一瞬间——"然后也许明年底我们都死了，所以享受吧。"</li>
+<li>硬件侧完全是另一种节奏：他两周前在中国参观了宇树等机器人公司，宇树的人说人形机器人还要四五年、也许十年。写软件的人觉得革命就在明年，搞执行器和机械的人觉得剥洋葱都很难——两种视角同时存在。</li>
+</ul>
+<h2>六、前沿实验室 vs 开源：必须两头都要</h2>
+<p>DHH 的立场：开源与开放权重对保持整个游戏的诚实至关重要，需要竞争。他职业生涯两个阶段都被双头垄断恶心过：2000–2009 年有过一段光辉岁月，最重要的平台完全开放、不用求许可就能造任何东西；然后移动平台来了，一切都要乞求许可。</p>
+<ul>
+<li>最坏的情形是两个实验室瓜分市场，尤其是再有政府用枪杆子强制执行——那是噩梦。这让他想起 90 年代的加密战争：当年差一点禁掉公钥加密（NSA 说没法监听），没有加密就没有电商和通信；AI 现在站在同样的悬崖边，他听不少聪明人说"也许政府就该接管"，他的反应是"Jesus"。</li>
+<li>好消息是闭源模型之间的竞争比他见过的任何行业阶段都激烈：不止两家领先，xAI 紧随，Google 时在状态时在"岛上抽东西"，还有一票实验室在后面咬。</li>
+<li>开放权重也在变强：GLM、DeepSeek Flash 等大约落后前沿六七个月，某些任务上甚至不落下风；他不信厂商自报的 benchmark，但"它们在牌桌上、能用、能跑在你自己的硬件上"，这才重要。</li>
+<li>他六个月前写过文章说买高性能个人电脑跑本地模型是蠢事（当时的本地模型什么都干不了），现在他公开认错：DGX Spark 已经能跑有用的模型，"一盒智能"摆在桌上、几千美元买得到。他不站"非开源毋宁死"的硬线：他为美国有两家前沿实验室并保持领先而欢呼，只要它们被竞争逼着诚实，别拿到无限印钞机把 token 涨到 500 美元一百万个——"我们绝对会付的"。社交媒体时代 Google 和 Meta 吸走在线广告价值链 99% 的故事就是前车之鉴。</li>
+</ul>
+<h2>七、野心：三年内超过 macOS</h2>
+<p>Omarchy 起步时他只想给自己做台更好的电脑、摆脱苹果控制命运，五万人用上就很开心了。agent 来了之后野心一路通胀（他称之为"野心的阶梯"：做出了五年前会觉得是魔法的东西，现在只值 40 个赞，必须不断抬高目标才能再获得多巴胺）：从"做台稍好的电脑"到"字面上造一台完美的电脑"——40 年来他对电脑的一切愿望，现在基本可以一个人实现。</p>
+<p>他现在的"妄想"是：<strong>三年内 Omarchy（Linux）用户数超过 macOS</strong>。理由：macOS 全球只有 1.8 亿用户，在美国和硅谷看起来很大，出了那个圈子很小，"连个 C 级互联网服务都算不上"，最大的服务是几十亿用户量级。12 个月内掀翻 Mac 他不下多数赔率，但不排除——"如果实验室的聪明人说递归自我改进 12 个月内会造出 AI 之神，那我们拿下世界第二的操作系统总可以吧。"</p>
+<p>他只在自己的窄领域里"凶猛地有野心"，星际殖民那种留给马斯克们。他刻意不预测一两年后的模型：那是"AI 精神病"（AI psychosis）的来源；他要的是较温和的"AI 狂喜"（AI euphoria）——盯着当下能做的事。他唯一喜欢的未来预测是 William Gibson 那句"未来已来，只是分布不均"：照他现在能做到的事推演，GDP 每年加速 3–10% 在可能范围内；但模型一年后在哪，"摇一摇魔法 8 号球再问吧"。他还提了奥本海默类比：1944 年坐在奥本海默旁边预言五年内世界变核废土的人错了——原子弹反而带来了 50 年没有全面核战的冷战和平，"预测未来非常难"。</p>
+<p>另：他提到为 Omarchy 背后的非营利基金会（Omarchy Foundation）已筹到约 2,300 万美元的代币与捐赠，基金会设立过程中的合同全部由 agent 起草。</p>
+<h2>八、黑客文化回归</h2>
+<p>主持人注意到，这轮 AI 浪潮里一个意外现象是老将们纷纷出来引路——Eric Raymond 回来了、John Carmack 在场、DHH 本人也在。DHH 说他尊敬的那批真正动手做出过东西的人，"100% 全部 all in"，因为用过就知道这些工具的加速是无可否认的；而且他们多半已财务安全，不感到威胁。不舒服的是中间层：靠苦工夫挣到位置的普通程序员，焦虑一夜之间技能清零——他说应该对他们有同情，就像对 70 年代底特律汽车工人、对英国卢德派织工那样；但有同情不等于要回到前工业时代，"只有一条路，就是穿过去"。</p>
+<p>他现在看向的人有两类：一是同行老将（Carmack、Tim Sweeney、Mitchell Hashimoto 等，"100% all in"）；二是<strong>伪匿名黑客的回归</strong>——Omarchy 核心团队和基金会名单里就有两个伪匿名成员（Quickshell 的作者 Outfoxed、一位艺术家），本地 AI 圈也有他们通过基金会赞助的伪匿名者。这让他想起 90 年代的 phreaker 文化和精英 BBS："反 LinkedIn 文化"。X 是这场革命的连接组织——艺术家、伪匿名黑客、本地 AI 运动全靠 X 连起来。</p>
+<p>90 年代 demo 文化也回来了：Omarchy 的标志性视觉效果就是屏保——ASCII 艺术跑 40 种 demo 特效，活像 1995 年 demo party 的 intro；本地模型加载要等几秒，他又塞了一个 ASCII 特效进去，纯粹为了酷、毫无功能。他 14 岁在卧室里办过一个"精英 BBS"，装了三条电话线，丹麦电信垄断公司的人来装第三条线时看到一个 14 岁小孩，觉得"这肯定违法"——"他说对了，完全合法，也完全酷"。他的美学立场：电脑应该有点神秘、应该酷；Jonathan Ive 把电脑的性格用铝抛光抛没了，那个时代过去了，"我们要把黑客拿回来"。</p>
+<h2>值得单独记下的几句话</h2>
+<ul>
+<li>"macOS 和 Windows 就是不适合 agent 时代。"（开场句）</li>
+<li>"过去让 Linux 难用的三件事——终端重、配置文件难懂、报错晦涩——正是 agent 最爱的三样。"</li>
+<li>"还认为源码是护城河的人，是在妄想。"</li>
+<li>"我的多巴胺全在最后 2% 里，前 98% 我根本不在乎。"</li>
+<li>"先拿下曼哈顿（桌面），再拿下柏林（移动）。"</li>
+<li>"苹果有成为 agent 时代 AOL 的风险。"</li>
+<li>"未来已来，只是分布不均。"（引 William Gibson）</li>
+<li>"我要的是 AI 狂喜，不是 AI 精神病。"</li>
+</ul>
+<h2>本期纪要的边界</h2>
+<ul>
+<li>本纪要基于机器转写（英文 small 模型）整理。Omarchy 在转写中被识别成多种拼写（Umachi/Omanchi 等），已按上下文统一校正；模型名按 DHH 本人说法记录（Opus 4.8、Sol、Opus 5.5）；个别无法确认的专名（如其搭档的姓名、个别模型与人名）未写入纪要。</li>
+<li>文中数字（1.8 亿 macOS 用户、2,300 万美元筹款、落后六七个月、1,500 token/秒、2 万美元机器人测试等）均为访谈中发言者的说法，未经核实。</li>
+</ul>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=TtOoLanFzGw">https://www.youtube.com/watch?v=TtOoLanFzGw</a>（a16z）· 嘉宾：David Heinemeier Hansson (DHH) · 发布日期：2026-11-20 · 时长：52 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+</main>
+<script src="/article.js" defer></script>
+</body>
+</html>

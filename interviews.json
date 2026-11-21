@@ -1,9 +1,35 @@
 {
-  "updated_at": "2026-11-21T02:57:27Z",
+  "updated_at": "2026-11-21T11:22:55Z",
   "title": "Yat's List 访谈清单",
   "note": "深度访谈与分享的全文纪要存档：每条含原视频链接、要点与全文纪要页（note_url）。内容为嘉宾在节目中的自述与观点，未经核实。人工整理、不定期更新。",
   "source_site": "https://yatslist.com/interviews/",
   "interviews": [
+    {
+      "id": "a16z-dhh-ai-16-hour-days-20261120",
+      "title": "《AI 让 DHH 一天工作 16 小时》",
+      "series": "a16z",
+      "date": "2026-11-20",
+      "host": "a16z",
+      "guest": "David Heinemeier Hansson (DHH)",
+      "duration": "52 分钟",
+      "duration_minutes": 52,
+      "url": "https://www.youtube.com/watch?v=TtOoLanFzGw",
+      "note_url": "/interviews/notes/a16z-dhh-ai-16-hour-days-20261120.html",
+      "topics": [
+        "DHH",
+        "Omarchy",
+        "Linux",
+        "Agent",
+        "开源",
+        "a16z"
+      ],
+      "highlights": [
+        "DHH 的核心判断：macOS 和 Windows 不适合 agent 时代——Linux 过去被嫌弃的终端重、配置文件多、报错晦涩，恰好是 agent 最爱的三样；Omarchy 过去五六个月完全由 agent 开发，他本人没手写一行代码。",
+        "应用锁定正在瓦解：Omarchy 社区一个人两周复刻了 Lightroom 且做得更好；他自己连合同都不用文字处理软件，agent 起草、签名、寄出一条龙。源码没有护城河，剩下的只有品味与打磨。",
+        "他每天工作 16 小时的原因：多巴胺全在最后 2% 的打磨里；他只买了三个 Claude 订阅就跑满前沿模型，反驳了「这只属于有钱人」的说法；目标是三年内 Omarchy 用户数超过 macOS 的 1.8 亿。",
+        "前沿与开源两头都要：开放权重落后约六七个月但已在牌桌上，DGX Spark 能跑有用的模型；最怕的是重演加密战争式的政府接管，或两个实验室瓜分市场、把 token 涨到天价。"
+      ]
+    },
     {
       "date": "2026-11-20",
       "duration": "14 分钟",
