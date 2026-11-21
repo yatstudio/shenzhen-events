@@ -37,12 +37,12 @@
 <body>
 <div class="wrap">
   <h1>Crypto 量化纸面盘 · 策略 v2 看板</h1>
-  <div class="sub">Binance 4h MACD 趋势策略的纸面（模拟）验证盘。虚拟本金 10,000 USDT，<b>不动真钱、不下单</b>，只验证策略期望是否为正。本页每 4 小时随策略迭代更新一次。最近更新：2026-11-21 13:00 CST（第 48 轮迭代，2026-11-21 09:49）。</div>
+  <div class="sub">Binance 4h MACD 趋势策略的纸面（模拟）验证盘。虚拟本金 10,000 USDT，<b>不动真钱、不下单</b>，只验证策略期望是否为正。策略状态每 4 小时随迭代更新（最近：2026-11-21 05:54 CST，第 49 轮，2026-11-21 13:49）；现价与浮盈由浏览器直连 Binance 公开行情<b>每 30 秒实时刷新</b>，持仓与成交以每 4 小时引擎结算为准。实时价更新于 <span id="liveclock">—</span>。</div>
 
   <div class="cards">
-    <div class="card"><div class="k">账户权益（含浮盈）</div><div class="v">10,408.9</div><div class="d">本金 9,959.8 + 浮盈 +449.1</div></div>
+    <div class="card"><div class="k">账户权益（含浮盈）</div><div class="v" id="eq">10,438.6</div><div class="d">本金 9,959.8 + 浮盈 <span id="eqd">+478.8</span></div></div>
     <div class="card"><div class="k">v2 已实现盈亏</div><div class="v pos">+739.1</div><div class="d">已平 7 笔 · 胜率 71.4%</div></div>
-    <div class="card"><div class="k">当前浮盈（3 笔持仓）</div><div class="v pos">+449.1</div><div class="d">未扣平仓手续费</div></div>
+    <div class="card"><div class="k">当前浮盈（3 笔持仓）</div><div class="v pos" id="ut">+478.8</div><div class="d">未扣平仓手续费</div></div>
     <div class="card"><div class="k">全程已实现（含 v1）</div><div class="v neg">-40.2</div><div class="d">v1 坏口径样本 -779.4 已隔离</div></div>
   </div>
 
@@ -61,7 +61,7 @@
   <h2>当前持仓</h2>
   <div class="tblwrap"><table>
     <tr><th>品种</th><th>方向</th><th>数量</th><th>入场</th><th>现价</th><th>浮盈</th><th>止损</th><th>距止损</th><th>开仓时间</th></tr>
-    <tr><td>BTC</td><td class='neg'>空</td><td>0.0443</td><td>62,156.32</td><td>56,357.33</td><td class='pos'>+256.9</td><td>64,404.10</td><td>14.3%</td><td class='dim'>2026-11-20 13:49 CST</td></tr><tr><td>SOL</td><td class='neg'>空</td><td>14.8749</td><td>71.80</td><td>66.16</td><td class='pos'>+83.9</td><td>75.10</td><td>13.5%</td><td class='dim'>2026-11-20 21:49 CST</td></tr><tr><td>ETH</td><td class='neg'>空</td><td>1.1579</td><td>1,655.57</td><td>1,562.05</td><td class='pos'>+108.3</td><td>1,741.60</td><td>11.5%</td><td class='dim'>2026-11-21 01:49 CST</td></tr>
+    <tr><td>BTC</td><td class='neg'>空</td><td>0.0443</td><td>62,156.32</td><td id='px-BTCUSDT'>55,858.41</td><td id='uu-BTCUSDT' class='pos'>+279.0</td><td>64,404.10</td><td id='dd-BTCUSDT'>15.3%</td><td class='dim'>2026-11-20 13:49 CST</td></tr><tr><td>SOL</td><td class='neg'>空</td><td>14.8749</td><td>71.80</td><td id='px-SOLUSDT'>65.57</td><td id='uu-SOLUSDT' class='pos'>+92.7</td><td>75.10</td><td id='dd-SOLUSDT'>14.5%</td><td class='dim'>2026-11-20 21:49 CST</td></tr><tr><td>ETH</td><td class='neg'>空</td><td>1.1579</td><td>1,655.57</td><td id='px-ETHUSDT'>1,563.07</td><td id='uu-ETHUSDT' class='pos'>+107.1</td><td>1,741.60</td><td id='dd-ETHUSDT'>11.4%</td><td class='dim'>2026-11-21 01:49 CST</td></tr>
   </table></div>
 
   <h2>v2 已平仓（7 笔）</h2>
@@ -77,12 +77,12 @@
     <span class="chip">样本外回测（279 笔）：期望 +12.54 · 回撤 10.9%</span>
   </div>
 
-  <h2>最新一轮盘面（第 48 轮）</h2>
+  <h2>最新一轮盘面（第 49 轮）</h2>
   <div class="note">
     <ul>
       <li>行情标签：<b>空头 / 强 / 高波动</b></li>
-      <li>Polymarket BTC 预测参考：年底前跌破 $55,000 2.1%；11 月内反弹回 $70,000 0.55%；12 月加息 25bp 定价 91.25%（只观察，不下单）</li>
-      <li>链上周期：SOPR 0.93（<1 亏损投降区） · 现价 $58,905.5 跌破 200WMA $68,535.6 · MVRV Z 0.2654 · Puell 0.8739（背景参考，不构成交易信号）</li>
+      <li>Polymarket BTC 预测参考：年底前跌破 $55,000 97.25%；11 月内反弹回 $70,000 54.95%；12 月加息 25bp 定价 91.35%（只观察，不下单）</li>
+      <li>链上周期：SOPR 0.93（<1 亏损投降区） · 现价 $55,780.4 跌破 200WMA $68,519.8 · MVRV Z 0.2518 · Puell 0.8739（背景参考，不构成交易信号）</li>
     </ul>
   </div>
 
@@ -109,5 +109,33 @@
 
   <div class="foot">纸面盘说明：以上为模拟记账结果，不代表真实交易收益，不构成投资建议。策略年化参考：回测样本内约 3.3%、样本外约 16%，收益高度依赖行情段，单年可为负。<br><a href="https://yatslist.com/">Yat's List</a> · <a href="https://yatslist.com/talks/">Yat's Talks</a></div>
 </div>
+<script>
+const POS = [{"symbol": "BTCUSDT", "side": "short", "qty": 0.0443, "entry": 62156.32, "stop": 64404.1}, {"symbol": "SOLUSDT", "side": "short", "qty": 14.8749, "entry": 71.8, "stop": 75.1}, {"symbol": "ETHUSDT", "side": "short", "qty": 1.1579, "entry": 1655.57, "stop": 1741.6}];
+const CAPITAL = 9959.794977221296;
+function fmt(x, nd) { return x.toLocaleString('en-US', {minimumFractionDigits: nd, maximumFractionDigits: nd}); }
+function sgn(x, nd) { return (x >= 0 ? '+' : '') + fmt(x, nd); }
+async function tick() {
+  let total = 0, ok = true;
+  for (const p of POS) {
+    try {
+      const r = await fetch('https://data-api.binance.vision/api/v3/ticker/price?symbol=' + p.symbol);
+      const j = await r.json(); const px = parseFloat(j.price);
+      const u = p.side === 'short' ? (p.entry - px) * p.qty : (px - p.entry) * p.qty;
+      total += u;
+      const d = p.side === 'short' ? (p.stop - px) / px * 100 : (px - p.stop) / px * 100;
+      const e1 = document.getElementById('px-' + p.symbol); if (e1) e1.textContent = fmt(px, 2);
+      const e2 = document.getElementById('uu-' + p.symbol); if (e2) { e2.textContent = sgn(u, 1); e2.className = u >= 0 ? 'pos' : 'neg'; }
+      const e3 = document.getElementById('dd-' + p.symbol); if (e3) e3.textContent = d.toFixed(1) + '%';
+    } catch (e) { ok = false; }
+  }
+  if (ok) {
+    const eq = document.getElementById('eq'); if (eq) eq.textContent = fmt(CAPITAL + total, 1);
+    const ut = document.getElementById('ut'); if (ut) { ut.textContent = sgn(total, 1); ut.className = 'v ' + (total >= 0 ? 'pos' : 'neg'); }
+    const ed = document.getElementById('eqd'); if (ed) ed.textContent = sgn(total, 1);
+    const lc = document.getElementById('liveclock'); if (lc) lc.textContent = new Date().toLocaleTimeString('zh-CN', {hour12: false});
+  }
+}
+tick(); setInterval(tick, 30000);
+</script>
 </body>
 </html>
