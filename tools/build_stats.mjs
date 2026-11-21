@@ -20,6 +20,7 @@ const LISTS = {
   expat: { file: "szexpat/events.json", arr: (d) => d.events, keys: ["id", "url"] },
   remote: { file: "remote.json", arr: (d) => d.jobs, keys: ["id", "url"] },
   nomadlist: { file: "nomadlist.json", arr: (d) => d.cities, keys: ["id"] },
+  notes: { file: "notes/notes.json", arr: (d) => d.notes, keys: ["id", "url"] },
 };
 
 function firstSeen(sources, keys) {

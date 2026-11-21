@@ -4,35 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>英伟达是 AI 产业的中央银行 · Yat's Notes</title>
-<style>
-  :root{--bg:#f7f8f7;--panel:#fff;--ink:#17251e;--ink-sec:#5c6b62;--line:#e2e8e3;--green:#0a7a55;--green-bg:#e9f5ef}
-  @media (prefers-color-scheme:dark){:root{--bg:#0d1218;--panel:#131a21;--ink:#e6edf3;--ink-sec:#9db0a4;--line:#223028;--green:#2ee6a8;--green-bg:#12271e}}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
-  .wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
-  a{color:var(--green);text-decoration:none}
-  .back{font-size:.9rem;color:var(--ink-sec)}
-  .kicker{display:inline-block;margin-top:18px;padding:2px 10px;border-radius:999px;background:var(--green-bg);color:var(--green);font-size:.8rem;font-weight:700}
-  h1{font-size:1.7rem;line-height:1.35;margin:12px 0 6px}
-  .meta{color:var(--ink-sec);font-size:.88rem;margin-bottom:20px}
-  .hero{width:100%;border:1px solid var(--line);border-radius:12px;background:#fff}
-  .lede{font-size:1.05rem;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px;padding:14px 18px;margin:20px 0}
-  h2{font-size:1.15rem;margin:28px 0 8px}
-  p{margin:10px 0}
-  ul{margin:8px 0;padding-left:22px}
-  li{margin:6px 0}
-  b{color:var(--ink)}
-  .nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
-  .num{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-  .num .v{font-size:1.35rem;font-weight:800;color:var(--green)}
-  .num .k{font-size:.85rem;color:var(--ink-sec)}
-  .src{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink-sec);font-size:.85rem}
-</style>
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<meta name="theme-color" content="#0d1218">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<link rel="stylesheet" href="/article.css">
 </head>
 <body>
-<div class="wrap">
-  <a class="back" href="index.html">← Yat's Notes</a>
-  <div><span class="kicker">AI 解读 · 图表</span></div>
+<div class="topbar"><div class="bwrap">
+  <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+  <nav class="topbar-nav">
+    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
+    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/talks/">Talks</a>
+    <a href="https://yatslist.com/notes/" class="nav-on">Notes</a>
+  </nav>
+  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+</div></div>
+<main class="note">
+<a class="back" href="/notes/">← 返回 Yat's Notes</a>
+<article>
+  <span class="kicker">AI 解读 · 图表</span>
   <h1>英伟达是 AI 产业的中央银行</h1>
   <div class="meta">2026-11-21 · 原图：ZeroHedge《The Bank Of Nvidia》（2026-11-12）· 解读：大脚</div>
 
@@ -69,6 +60,8 @@
   <p>你碰的算力、云、托管生意，上游的钱很多就是从这张图里流出来的——跟 neocloud 这类玩家打交道时，先看清它的钱是谁担保的，它的信用本质上是 Nvidia 的信用。</p>
 
   <div class="src">数据来源：ZeroHedge 整理 Nvidia 10-Q 与 CFO 口径（Q2 FY27，2026-07-26）、8-K 与 13F 文件、公司文件与新闻稿（Bloomberg、Reuters、CNBC、WSJ、The Information、Hunterbrook）。图中数字为已宣布的承诺或最大敞口，未标注的并非盯市价值。</div>
-</div>
+</article>
+</main>
+<script src="/article.js" defer></script>
 </body>
 </html>

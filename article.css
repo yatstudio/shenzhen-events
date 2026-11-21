@@ -1,4 +1,4 @@
-/* Yat's List · 谈话纪要全文页（spaces/notes、interviews/notes）共用样式 */
+/* Yat's List · 长文阅读页共用样式：谈话纪要全文（spaces/notes、interviews/notes）与 Yat's Notes（notes/*.html） */
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
 --green:#2ee6a8;--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
@@ -23,7 +23,9 @@ a:hover{text-decoration:underline}
 .topbar a:hover{text-decoration:none}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
-.topbar-nav{margin-left:auto;display:flex;align-items:center;gap:18px}
+.topbar-nav{margin-left:auto;min-width:0;display:flex;align-items:center;gap:18px;overflow-x:auto;scrollbar-width:none}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav>*{flex-shrink:0}
 .topbar-nav a{color:var(--ink-sec);font-size:.92rem;font-weight:600;white-space:nowrap}
 .topbar-nav a:hover{color:var(--green)}
 .topbar-nav a.nav-on{color:var(--ink)}
@@ -58,11 +60,29 @@ code{font-family:var(--font-mono);background:var(--cmd-bg);padding:1px 6px;borde
 pre{background:var(--cmd-bg);padding:12px 14px;overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
 pre code{background:none;padding:0}
 footer{margin-top:3em;padding-top:1.2em;border-top:1px solid var(--border);font-size:.82rem;color:var(--ink-ter);line-height:1.8;overflow-wrap:anywhere}
+/* Yat's Notes 文章组件 */
+.kicker{display:inline-block;margin:0 0 10px;padding:2px 10px;border-radius:999px;background:var(--tint);border:1px solid var(--border);color:var(--green);font-size:.78rem;font-weight:700}
+article .orig{color:var(--ink-sec);font-size:.95rem;margin:-8px 0 2px}
+article .meta{color:var(--ink-ter);font-size:.85rem;margin:0 0 18px}
+article h1+.meta{margin-top:-8px}
+.hero{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:12px;background:#fff;margin:4px 0 18px}
+.lede{font-size:1.04rem;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:10px;padding:14px 18px;margin:20px 0}
+.lede b{color:var(--ink)}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.num,.stat{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 14px;line-height:1.5}
+.stat{text-align:center;min-width:88px;padding:10px 14px}
+.num .v,.stat .v{font-size:1.3rem;font-weight:800;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stat .v{font-size:1.15rem}
+.num .k,.stat .k{font-size:.82rem;color:var(--ink-sec)}
+article .lede+h2,article .stats+h2,article .nums+h2{margin-top:1.8em}
+.src{margin-top:3em;padding-top:1.2em;border-top:1px solid var(--border);color:var(--ink-ter);font-size:.82rem;line-height:1.8;overflow-wrap:anywhere}
 @media (max-width:640px){
-  .topbar .bwrap{padding:0 16px;gap:12px}
-  .topbar-nav{gap:14px}
+  .topbar .bwrap{padding:0 16px;gap:10px}
+  .topbar-nav{gap:12px}
+  .brandmark{font-size:1rem}
+  .topbar-nav a.nav-ev,.topbar-nav .navbadge{display:none} /* 品牌标已链到活动页 */
   .topbar-nav a{font-size:.88rem}
   .note{padding:16px 16px 48px}
   article{font-size:1rem}
 }
-@media (max-width:360px){.topbar-nav a.nav-hack{display:none}}
