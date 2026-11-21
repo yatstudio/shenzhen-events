@@ -8,21 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     <a href="https://yatslist.com/notes/">Notes</a>
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>AI Jam | House of Jammers：14 小时马拉松纪要</h1>
 <p><strong>一句话：</strong> 这是一场 14 个半小时的开放麦马拉松——前半段是 AI 与崩盘市场的实质讨论（Scoble、Boardy、再生农业、黄仁勋传闻、黎曼猜想传闻），后半段逐渐滑向数小时的政治争吵与更衣室闲聊；想听干货，听到第 5 小时左右就可以停。</p>
 <h2>基本信息</h2>
@@ -134,9 +142,258 @@
 <li>文中所有市场数字、传闻与指控均为场内发言者当时的说法，未经核实；黄仁勋、黎曼猜想、Lutnick、SEC 调查等条目尤其如此，请勿直接引用为事实。</li>
 <li>发言者未做声纹区分，归属按上下文判断；"发言者"指代不确定的轮换发言者。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>AI Jam | House of Jammers：14 小時馬拉松紀要</h1>
+<p><strong>一句話：</strong> 這是一場 14 個半小時的開放麥馬拉松——前半段是 AI 與崩盤市場的實質討論（Scoble、Boardy、再生農業、黃仁勳傳聞、黎曼猜想傳聞），後半段逐漸滑向數小時的政治爭吵與更衣室閒聊；想聽乾貨，聽到第 5 小時左右就可以停。</p>
+<h2>基本資訊</h2>
+<ul>
+<li>節目：AI Jam | House of Jammers</li>
+<li>主持：Dominick Romano（@dromanocpm）</li>
+<li>時間：2026 年 11 月 21 日 01:31–16:07（北京時間），總時長 14 小時 35 分 56 秒</li>
+<li>累計聽眾：2,112 人</li>
+<li>語言：英語</li>
+<li>主要發言者：Robert Scoble（前約 4 小時 20 分在場）、Marco、Peter、Ed（再生農業）、Donnie、Webb、Polly 等輪換發言者</li>
+<li>備註：本場主持人未開回放，錄音為直播期間逐段抓取；約 35 個分片（約 105 秒）抓取失敗、散落在全場各處，個別句子可能缺失</li>
+</ul>
+<h2>結論先說</h2>
+<p>這場 Space 的主題是 AI，但真正的主線是「崩盤那一天」：BTC 從 12.6 萬美元連跌七週到 5.8 萬美元上下，NVDA 一天跌 8%、自 10 月 6 日高點跌去約 45%，VIX 當日一度漲 40%。房間裡的人一邊看盤一邊聊，話題在 AI、市場、政治和閒聊之間來回跳。</p>
+<p>有實質內容的段落集中在前 5 小時：Scoble 的知識圖譜與 Boardy、Ed 的再生農業、以及黃仁勳去留傳聞的現場朗讀與爭論。第 5 小時之後，黎曼猜想傳聞、關稅長辯、Polly 的遊戲、駭客經濟學各有一段可聽之處；第 9 小時之後基本是政治爭吵、GTA 6 與各類 locker-room 閒聊，資訊密度很低，本紀要只作一筆交代。</p>
+<p><strong>本紀要所有數字與說法均為場內發言者當時的自述或轉述，未經核實；</strong>其中黃仁勳、黎曼猜想、Lutnick 被炒、SEC 調查等說法，場內本身就有不同版本甚至互相撤回，紀要裡會逐處標明。</p>
+<h2>一、開場：Scoble 的四小時（約 00:00–04:20）</h2>
+<p>Robert Scoble 是開場的主角，聊了四個多小時才離場。</p>
+<p><strong>他的公司與產品。</strong> Scoble 是 Drain Pipe 的 CEO，稱公司在製藥業站穩腳跟、明年收入翻倍；下週要發一個新 SaaS：雲端知識圖譜（他類比為雲上的 Obsidian）加上「agent 即應用」——agent 自帶前端、看板與報告渲染面板。這是他多年夢想的第一個「可賣的假日季 SaaS」，後續還想做模擬、3D、無人機與機器人。</p>
+<p><strong>知識圖譜與 Palantir。</strong> 他談到 Palantir 的本體論在阿拉伯語等語言上效果差、Neo4j 2022 年推知識圖譜，以及 World AI Con Festival 展位軼事。他的判斷是：知識圖譜是 agent 時代的基礎設施，模型本身會越來越便宜。</p>
+<p><strong>伊朗空襲與 Anthropic。</strong> Max Tegmark 批評 Anthropic 捲入伊朗學校空襲，Scoble 為 Anthropic 辯護：衛星圖是三年前的舊圖、學校早已搬出軍事設施圍牆；Anthropic 曾抵制該用途、為此損失數十億美元並被列入供應鏈風險名單。這是他的說法，未核實。</p>
+<p><strong>廣告業黑話。</strong> 他回顧 DoubleClick 2007、AppNexus→AT&amp;T→微軟（Xandr）的歷史，稱 Google AdX 約 15–30% 是無法解釋的「暗庫存」——機器人網路、一次展示背後塞 15 條廣告；同一廣告反覆出現，是需求碎片化後的填充。理想的廣告是「恰當產品、恰當時機、看不出是廣告」。</p>
+<p><strong>Scoble 的 Grokbot。</strong> 他維護 68 個 X list，覆蓋約 7 萬個 AI 帳號，資料庫存了 400–500 萬條帖子；Grok 每天讀 4 萬帖、每 3 小時出一份全球 Top 20 新聞報告。他稱 X Pro 的 list 是無演算法過濾的即時流，還曾用帖庫給 NVIDIA 寫過一份 80 頁投資策略報告。X 流量方面：他平日約 20 萬瀏覽，馬斯克轉發可到 1,100 萬；老號被封前月曝光 2 億；今年演算法改 AI 驅動後，曝光正在拉平。</p>
+<p><strong>川普與中國做 AI 聯合護欄。</strong> Scoble 提到川普宣布與中國做 AI 聯合護欄——沒人想看到車庫造生物武器、AI 無人機互相殺戮；但無人機已在烏克蘭自主找煉油廠打，誤炸風險真實（呼應伊朗學校事件）。</p>
+<p><strong>意識辯論。</strong> Azeem Azhar（Exponential View）寫「十億 agent 比一個人聰明」；虛擬人 Trisha Code（AI 音樂明星）：有人複製 Scoble 的聲音形象做了採訪，Scoble 稱不告訴他是 AI 就認不出來，「這是最差的一次，以後只會更真」；他預測 5 年內人形機器人會聊天、握手、下棋、洗碗，大多數人會覺得它有意識。BCI 方面：奧斯汀一名四肢癱患者（衝浪事故）戴手環讀腦電訊號、憑意念控制機械手開合。</p>
+<p><strong>自動駕駛與機器人。</strong> 舊金山暴雨中 Waymo 遇 3–4 英尺積水停下，被媒體誇大；FSD 在機場接人推理仍弱（找停車位行、找 7 號門接人不行）；農場採摘機器人陷泥裡，靠給農民戴頭戴相機採集泥地數據訓練；數據多了，推理模型 3–6 個月到一年內會補上。</p>
+<p><strong>Boardy。</strong> 創辦人 Andrew（HF0 背景），產品每天與數千創辦人／投資人對話，讀郵件、日曆與簡訊、撮合人脈——Scoble 稱之為「新型約會 app」「未來的老闆」，估值 1–5 億美元（他還說了「值數萬億」級別的野心說法），認為 YC 該買下它保住未來幾十年的相關性；3,000 多名投資人在上面；還能當約會服務；競品 backdoor.ai 比較年輕。</p>
+<p><strong>Anthropic 員工約 90% 在 IPO 後成百萬富翁</strong>（Scoble 的說法）；AI 情境喜劇／劇集在談；虛擬形象做品牌代言無授權糾紛、可規模化；ElevenLabs 式公司已是十億級。</p>
+<p><strong>算力成本與中國。</strong> Scoble 認為算力成本長期只會降（60 年摩爾定律）；微軟有新專利可用閒置個人電腦 GPU；機器人要本地算力（Jetson Thor）、模型蒸餾變小、本機運行是趨勢。開源 vs 閉源：中國不放棄開源，晶片禁令逼中國練出「在破電腦上寫出好程式碼」的能力， bleeding-edge 晶片最多落後一兩年且在加速追趕；美國若與中國開戰打不贏供應鏈；人形機器人若中國造得便宜，人人會買，勞動與稅收隨之轉移。小米在歐洲／非洲遍地、美國一家店都沒有；中國車企因川普禁中國車入美砍預算，改邀 Scoble 參加 4 月上海車展（稱比 CES 還大）。</p>
+<p><strong>養老機器人與預防醫療。</strong> 90 歲讓機器人換尿布保尊嚴（勝過等護士）；發言者岳母腦瘤、在養老院住了 7 年，兩人一間只有布簾。預防醫療的帳：心臟病發救護車 1.1 萬美元加四搭橋 15 萬美元，提前一天預警只需 1 萬美元支架；生物標誌物預警是「身體的故障燈」；但診斷權仍歸醫生，責任問題未解。</p>
+<h2>二、市場崩盤實況（貫穿全場）</h2>
+<p>這是全場真正的背景音。按場內發言者的說法：</p>
+<ul>
+<li><strong>BTC</strong>：從 12.6 萬美元連跌七週，到 5.8–5.9 萬美元；有人稱 6 萬美元的「底」已被撤回（稱 2026 年 8 月 21 日公開撤回）；場內一度喊出「44K 正在路上」；礦工關機價約 4.4–4.5 萬美元。</li>
+<li><strong>NVDA</strong>：高點 243 美元→現價 127 美元，當日跌 8%、自 10 月 6 日跌約 45%；場內有人預測下週跌破 100 美元。</li>
+<li><strong>大盤</strong>：兩週蒸發 6 萬億美元（發言者說法）；VIX 當日一度漲 40%（後回落至 32% 附近），尾盤到 35；有人預測「週一市場會反彈」。</li>
+<li><strong>Anthropic</strong>：IPO 後跌回接近發行價，場內稱流通盤僅約 7%（980M 股），「不算正經 IPO」「滿是協調操縱的味道」；股價跌到 86 美元（發言者說法）。</li>
+<li><strong>個股</strong>：Enphase 240→20 美元；Snap XR 眼鏡 2,100 美元（Scoble 稱很驚豔但不推薦這個價）；Duolingo 91 美元；蘋果自動駕駛燒 40B 美元、Meta 元宇宙燒 58B 美元（發言者說法）。</li>
+<li><strong>交易員的抄底模型</strong>：約 8 個指標當天全亮、情緒「糟得像新冠時期」、中小盤科技跌 40–70%、信貸市場凍結、靠可轉債活著的公司面臨債務牆；BTC 是金絲雀但近 3–4 年已脫鉤；FinTwit 情緒指標（ZeroHedge 引摩根大通數據：FinTwit 約 50 個有影響力的人）；結構性問題是債務（巴菲特「裸泳者」）；增長選項被拿走。</li>
+<li><strong>普通人的反應</strong>：有人稱自己的妹妹本週第一次打電話來，慌張地問 AI 斷電、AI 攻擊電網與銀行的事；Reddit 上出現「刷爆信用卡再破產」的黑帖；有人把離開美國當作退休後備方案。</li>
+<li><strong>AI 行業的資訊傳遞批判</strong>：本該說「生產力工具、把時間還給你」，卻說「一切都完了」，結果是虛無主義、怨恨與對資料中心的反彈；第二／第三受眾理論——CEO 對投資人說話，公眾聽到的是末日；IPO 結構是內部人在鎖定期滿退出、散戶是退出流動性。</li>
+</ul>
+<p>以上全部是場內發言者的說法與判斷，不是本紀要的核實結論。</p>
+<h2>三、黃仁勳傳聞全程（約 02:41–13:02，全部未核實）</h2>
+<p>這是全場反覆出現、版本不斷變化的一條線，<strong>必須按時間順序讀，否則會誤判</strong>：</p>
+<ol>
+<li><strong>最初版本（約 02:41）</strong>：場內朗讀一篇 Wired 報導（Lauren Goode / Paresh Dave），稱董事會因「缺乏坦誠、撒謊」將黃仁勳趕走，涉及 Alice Wong（新加坡資料中心公司，ASR 音譯為 Megaspede）與 2025 年 10 月一篇 NYT 報導；董事會主席 Harvey Jones 在壓制回歸傳言；黃仁勳 12 月中旬要去國會；SEC 在查會計問題；CFO 暫代 CEO。場內爭論：本應停薪留職而非開除；黃仁勳已公開道歉。</li>
+<li><strong>撤回說法（約 06:40 之後）</strong>：一名發言者稱，國家安全／「間諜」角度已被 NYT／CNN 撤回（「everybody's retracting it」），剩下的是婚外情與常規 SEC 審計；他稱自己當初力挺原報導、現在感覺被「rug pull」。</li>
+<li><strong>尾盤版本（約 13:02）</strong>：又有人稱有 SEC 調查傳聞、股價當日跌 14%、前 CFO 現任 CEO「她就是廚子」；還稱英偉達用未來晶片採購資助新創公司，CFO「曾試圖阻止這一切」，另一人反問「那她是不是在幫黃仁勳把帳做得不像欺詐」。</li>
+</ol>
+<p><strong>紀要立場</strong>：以上三個版本互相衝突，且都來自場內轉述，沒有任何公開來源在場內得到確認。不要把其中任何一版當作事實引用。唯一可確認的是：這場 Space 當天，房間裡的人確實在熱烈討論黃仁勳的去留。</p>
+<p>另：場內還出現「Lutnick 被炒」的說法，發言者自己明確說「聽說」、「無人報導」——純傳言，不採信。</p>
+<h2>四、黎曼猜想傳聞（約 05:00、11:23–11:35，全部未核實）</h2>
+<p>場內稱：Anthropic 一名研究員用 Claude（ASR 作「Quad」）做出黎曼猜想證明，Lean 初步校驗通過，全文 25 萬頁，二階校驗待數日完成；同一人當天還宣布了另一個千禧難題（Navier-Stokes）；他「談 Claude 像在談另一個人」，被場內調侃為「數學家的 AI 精神病」。</p>
+<p>場內也有人質疑：若公司宣稱造假是否構成證券欺詐；還有人直接說這是「propaganda」。另有人感慨：「兩年前 LLM 還不會加法，現在解決了 P≠NP 之外最重要的數學問題」，「只會越來越怪」（引 Terrence McKenna）。</p>
+<p><strong>紀要立場</strong>：該說法在場內沒有任何可驗證的來源，25 萬頁、二階校驗等細節均為轉述。把它當作「Space 當天流傳的一個重磅傳言」記錄，不要當作事實。</p>
+<p>相關傳聞還有：Thinking Machines 的「Inkling 2 mini」模型，稱 26.4B 參數、跑贏 Qwen3 27B、激活參數少 5 倍、可在 16GB 筆電跑——同樣未證實。</p>
+<h2>五、再生農業：Ed 的長段（約 03:45–04:35）</h2>
+<p>Ed（fieldwork.ai）是全場最成體系的一段發言，主題是食物即藥：</p>
+<ul>
+<li>90% 以上的農產品營養密度只有應有水準的 10–20 百分位；手機測營養密度儀是可能的產品方向；AI 讀不到付費期刊與播客——前沿科學現在靠播客和 Zoom 傳播。</li>
+<li>遺傳學可專利賺錢，表觀遺傳學對普通人更有益但難行銷；GMO／CRISPR 種子「多半失敗」，地方 heirloom 種子本地馴化更成功。</li>
+<li>Laura Kavanaugh 博士（前 NASA 任務控制，後 Syngenta 做 GMO，現投身再生農業）；根噬循環（rhizophagy cycling，植物是細菌的「牧場主」，約 10 年前的新科學）；他稱 AI 搜不到該詞是「被壓制」。</li>
+<li>fieldwork.ai 自有 AI（餵自家數據）；有人建議用 Bright Data 抓取、WhisperFlow 轉寫 20 年播客（John Kemp 已這麼做）；願景是一個貫通健康、可穿戴、土地、金融與生物計算的整體再生農業 AI。</li>
+</ul>
+<p>以上是 Ed 個人的主張與說法，科學性未經本紀要核實。</p>
+<h2>六、Gary Marcus 下週要來</h2>
+<p>Dominick 在 nest 裡宣布：Gary Marcus 已確認下週來 AI Jam（時間未鎖定）。Dom 稱之為「hater acknowledgement tour」——Gary 曾預測到這輪崩盤；他上過 Breaking Points 的採訪。場內有人提醒：Gary 用的是 2025 年的舊數據。</p>
+<h2>七、關稅長辯（約 05:37–06:23）</h2>
+<p>Donnie 與 Falcon／Uncle Scrooge 吵了約 40 分鐘，核心是加拿大乳製品 300–400% 關稅配額：一方稱配額從未觸發所以是「無害關稅」，另一方稱配額本身就是上限（超配額即 350% 關稅、沒法做生意）；Nippon Steel 在美 30 億美元鋼廠被引為關稅奏效的證據；歐盟對日本鋼材近 30% 關稅；「解放日」全面關稅 vs 針對性關稅之爭；關稅收入 300 億美元／月填補富人減稅的說法。場內自嘲「這不再是 AI Jam，是 Donnie Jam」。另有約一小時的德州政治爭吵（Abbott、Paxton、H-1B、德州法案通過率不到 15% 等說法），無新資訊，不展開。</p>
+<h2>八、Polly 的遊戲《Strip Club Empire》（約 08:20–09:33）</h2>
+<p>Polly 介紹自己的新遊戲：模擬經營類（Sims／過山車大亨風）脫衣舞俱樂部管理遊戲，100% 用 AI（Claude）編碼，美術與動畫全是他自己的；25 年遊戲開發經驗，基於他在拉斯維加斯 Olympic Gardens 工作的歲月；Steam 審核中、即將搶先體驗。機制包括「censored act」（舞者在暗角行為不端會招來風化警察→突襲→關門，除非經理介入）與「handsy drunk」；場內笑話提議把鹹豬手機度表命名為「Skobul scale」。他早期的遊戲 Blackjack Bailey VR（Meta Quest 免費，做了約 2 年）。</p>
+<p>他還談了網站生意模式——永遠別賣網站，要租網站（客戶不想管任何事）；24／7 在線贏得競爭對手錯過的夜間搜尋；有效的外聯方法是 DM 只發「what's up?」——即時信任、約到電話。Alex Hormozzi 軼事：Polly 管理過拉斯維加斯一棟 30,000 平方英尺大樓（舊 USC 大樓改遊戲工作室），Hormozzi 2023 年以 1,000 萬美元買下作總部；見過他和 Layla，「和他呈現的一模一樣、真實」。</p>
+<h2>九、駭客經濟學與安全（約 11:45–12:00）</h2>
+<ul>
+<li>當天新聞（場內轉述）：伊利諾伊大壩系統被入侵；FBI 全國犯罪資料庫被黑（重大入侵，Dom 發在 nest 裡）；美國農業部也被提及。「當壞蛋的好時候，配個 AI 訂閱就行。」</li>
+<li>漏洞價格（場內說法）：廠商 bug bounty 5 千–5 萬美元、主承包商 10–20 萬美元、經紀商 50–100 萬美元（賣給民族國家）；白帽被裁員會推高網路犯罪；有人稱自己曾在 iMessage 找漏洞，提交給廠商要 40 小時做重現影片。</li>
+<li>Bezos 被黑／沙特；特拉維夫某公司員工自拍洩露後台（可進 Signal、WhatsApp）；「壞蛋的時代到了」。</li>
+</ul>
+<h2>十、Sam Altman 討論（約 10:56–11:08）</h2>
+<p>場內長聊 Altman，核心是兩點：</p>
+<ul>
+<li>他在國會作證時說「我不擁有這家公司任何股份」，Gary Marcus 就坐在旁邊；場內稱這是他最大的敗筆——作證後若拿股份就是「大醜聞」，所以他改拿合作公司的股份；身價估計 50–100 億美元（發言者說法）。</li>
+<li>「完美工具」理論：沒有所有權等於可控；若 OpenAI 失敗，微軟／SoftBank 會以減記價接盤；「產品還在，垮的只是錢那一面」。另有人稱 SoftBank 的 Masayoshi「被 Sam 坑了」，以及關於 Altman 家庭的指控討論——<strong>後者是未核實的指控，本紀要不轉述細節</strong>。</li>
+</ul>
+<p>另：場內提到谷歌持有 Anthropic 約 30%（發言者說法）。</p>
+<h2>十一、後半段：一筆帶過</h2>
+<p>第 9 小時之後，Space 基本進入閒聊模式，本紀要不展開，只記梗概以便讀者判斷是否值得去聽原錄音：</p>
+<ul>
+<li>政治爭吵佔了大頭：德州 vs 加州、民主黨 vs 共和黨、「自由意志」辯論（Skinny vs Donnie，約 1.5 小時循環爭吵）、阿爾巴尼亞／索馬里／牙買加榮譽文化、「mud sharks / coal burners」辱罵辯論；另有大屠殺否認 bait 與 Epstein／DiCaprio 等未核實指控——一律略過。</li>
+<li>GTA 6 長聊：買菜、衛生棉條、裝乾牆等家務任務，「Cuck Simulator」笑話；元宇宙派失望；PS5 Pro 僅 30fps、無 PC 版；「Terry Davis 說得對——遊戲不再創新」。</li>
+<li>「$101 名人選秀」遊戲：按價格檔選女明星（Gal Gadot 28 美元、Dakota Johnson 35 美元、Kendall Jenner 16 美元、Scarlett Johansson 20 美元、Sydney Sweeney 28 美元……），約 45 分鐘。</li>
+<li>其他：Clubhouse 懷舊（邀請制殺死了它）；Webb 的 Compton CNC 店停電、開除普通合夥人（「scared money don't make money」）；Kay Jewelers 故事——16 歲賣出一枚 1.4 萬美元的 Leo Diamond 戒指給名叫 Leo Ferrari 的男人，「人們買的是故事」；Birria taco 辯論（牛肉 vs 山羊肉才是正宗；所有連鎖品牌的食品都是冷庫裡的預製冷凍品）；紅酒加 Häagen-Dazs 香草冰淇淋像草莓奶昔；VIX 當日到 35，有人預測「週一市場會反彈」。</li>
+</ul>
+<h2>值得單獨記下的幾句話</h2>
+<ul>
+<li>「賣鏟子才是賺錢處。」（談 AI 投資，發言者原話大意）</li>
+<li>「基本面已退出對話；一切都是故事股。」（談 SPAC 與市場，發言者原話大意）</li>
+<li>「人們買的是故事。」（Kay Jewelers 賣戒指的故事，發言者原話大意）</li>
+<li>「賭場裡不許哭。」（談 BTC 暴跌，發言者原話大意）</li>
+<li>「我們在乞求問題存在。」（談 AI 解決一切之後，發言者原話大意）</li>
+<li>「這是最差的一次，以後只會更真。」（Scoble 談 AI 複製自己的採訪）</li>
+<li>「失落的十年」——加密讓一代年輕人整天看 K 線而不是發明東西。（發言者提出的概念）</li>
+</ul>
+<h2>本期紀要的邊界</h2>
+<ul>
+<li>本場主持人未開回放，錄音為直播期間逐段抓取；約 35 個分片（約 105 秒）抓取失敗，散落在全場各處，個別句子可能缺失；轉寫為英文 small 模型，專有名詞可能有誤（如 Scoble／Boardy／Grokbot 等已按上下文校正，個別不確定的名字未寫入紀要）。</li>
+<li>全場 14.5 小時，後半段大量內容為爭吵、重複與粗俗閒聊，本紀要只保留了有資訊量的部分；想聽原貌請直接聽錄音。</li>
+<li>文中所有市場數字、傳聞與指控均為場內發言者當時的說法，未經核實；黃仁勳、黎曼猜想、Lutnick、SEC 調查等條目尤其如此，請勿直接引用為事實。</li>
+<li>發言者未做聲紋區分，歸屬按上下文判斷；「發言者」指代不確定的輪換發言者。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>AI Jam | House of Jammers: Notes from a 14-Hour Marathon</h1>
+<p><strong>In one sentence:</strong> This was a fourteen-and-a-half-hour open-mic marathon — the first half offered substantive discussion of AI and a crashing market (Scoble, Boardy, regenerative agriculture, the Jensen Huang rumors, the Riemann hypothesis rumors), while the second half drifted into hours of political shouting and locker-room banter; if you want the substance, you can stop around hour five.</p>
+<h2>Basic information</h2>
+<ul>
+<li>Show: AI Jam | House of Jammers</li>
+<li>Host: Dominick Romano (@dromanocpm)</li>
+<li>Time: November 21, 2026, 01:31–16:07 (Beijing time), total length 14 hours 35 minutes 56 seconds</li>
+<li>Total listeners: 2,112</li>
+<li>Language: English</li>
+<li>Main speakers: Robert Scoble (present for roughly the first 4 hours 20 minutes), Marco, Peter, Ed (regenerative agriculture), Donnie, Webb, Polly, and other rotating speakers</li>
+<li>Note: the host did not enable replay; the recording was captured segment by segment during the live broadcast. About 35 segments (roughly 105 seconds) failed to download and are scattered across the full session, so individual sentences may be missing</li>
+</ul>
+<h2>The conclusion first</h2>
+<p>The Space was nominally about AI, but the real throughline was "the day of the crash": BTC fell for seven straight weeks from $126,000 to around $58,000, NVDA dropped 8% in a single day and about 45% from its October 6 high, and the VIX at one point rose 40% on the day. The people in the room watched the charts as they talked, jumping between AI, markets, politics, and idle chat.</p>
+<p>The substantive passages are concentrated in the first five hours: Scoble on knowledge graphs and Boardy, Ed on regenerative agriculture, and the live reading and debate of the rumors about Jensen Huang's departure. After hour five, the Riemann hypothesis rumors, the long tariff argument, Polly's game, and the hacker-economics segment each have something worth hearing; after hour nine the show is mostly political arguing, GTA 6, and locker-room talk of very low information density, which these notes cover in a single paragraph.</p>
+<p><strong>Every number and claim in these notes is a speaker's own statement or relay at the time, and none of it has been verified;</strong> this applies in particular to the claims about Jensen Huang, the Riemann hypothesis, Lutnick being fired, and an SEC investigation — the room itself offered conflicting versions of these, and in some cases retracted them. Each is flagged in place.</p>
+<h2>1. Opening: Four hours with Scoble (approx. 00:00–04:20)</h2>
+<p>Robert Scoble was the star of the opening, talking for more than four hours before leaving.</p>
+<p><strong>His company and products.</strong> Scoble is CEO of Drain Pipe, which he says has established a foothold in pharmaceuticals and will double revenue next year. Next week he plans to launch a new SaaS product: a cloud knowledge graph (he compares it to Obsidian in the cloud) plus "agent as application" — agents that come with their own front end, dashboard, and report-rendering panels. It is the first "sellable holiday-season SaaS" of a dream he has carried for years; later he wants to add simulation, 3D, drones, and robotics.</p>
+<p><strong>Knowledge graphs and Palantir.</strong> He discussed how Palantir's ontology performs poorly in languages such as Arabic, Neo4j's 2022 push into knowledge graphs, and an anecdote from a World AI Con Festival booth. His view: knowledge graphs are the infrastructure of the agent era, and models themselves will only get cheaper.</p>
+<p><strong>The Iran airstrike and Anthropic.</strong> Max Tegmark criticized Anthropic's involvement in the strike on a school in Iran; Scoble defended Anthropic, saying the satellite imagery was three years old and the school had long since moved outside the military compound's walls, and that Anthropic had resisted that use case at a cost of billions of dollars and a place on a supply-chain risk list. That is his account, unverified.</p>
+<p><strong>Ad industry shop talk.</strong> He retraced the history of DoubleClick in 2007 and AppNexus→AT&amp;T→Microsoft (Xandr), and said roughly 15–30% of Google AdX is "dark inventory" that cannot be accounted for — bot networks, fifteen ads stuffed behind a single impression. The same ad showing up again and again, he said, is what happens when fragmented demand gets backfilled. The ideal ad is "the right product, at the right moment, and you can't tell it's an ad."</p>
+<p><strong>Scoble's Grokbot.</strong> He maintains 68 X lists covering about 70,000 AI accounts, with a database of four to five million stored posts. Grok reads 40,000 posts a day and produces a global Top 20 news report every three hours. He described X Pro lists as a real-time stream with no algorithmic filtering, and said he once used the post archive to write an 80-page investment strategy report for NVIDIA. On X reach: he gets around 200,000 views on an ordinary day, while a reshare from Musk can reach 11 million; before his old account was banned it had 200 million monthly impressions. Since the algorithm switched to AI-driven ranking this year, he said, reach is flattening out.</p>
+<p><strong>Trump and China on joint AI guardrails.</strong> Scoble mentioned Trump's announcement of joint AI guardrails with China — nobody wants garage-built bioweapons or AI drones killing each other — but noted that drones in Ukraine are already autonomously hunting refineries, so the risk of a mistaken strike is real (echoing the Iran school incident).</p>
+<p><strong>The consciousness debate.</strong> Azeem Azhar (Exponential View) wrote that "a billion agents are smarter than one person." On Trisha Code, a virtual AI music star: someone cloned Scoble's voice and likeness for an interview, and Scoble said that if he hadn't been told it was AI, he wouldn't have known — "this is the worst it will ever be; it only gets more real from here." He predicted that within five years humanoid robots will chat, shake hands, play chess, and wash dishes, and most people will feel they are conscious. On brain-computer interfaces: a quadriplegic in Austin (a surfing accident) wears a wristband that reads brain signals and lets him open and close a robotic hand by thought.</p>
+<p><strong>Self-driving and robots.</strong> Waymo stopping in three to four feet of floodwater during a San Francisco downpour was exaggerated by the press, he said. FSD is still weak at airport pickups — it can find a parking spot but not gate 7 to pick someone up. Farm-picking robots get stuck in mud, and the fix is strapping head cameras on farmers to collect mud-terrain data for training; with more data, reasoning models should close the gap within three to six months to a year.</p>
+<p><strong>Boardy.</strong> Founded by Andrew (HF0 background), the product talks to thousands of founders and investors every day, reads email, calendars, and texts, and makes introductions — Scoble called it "a new kind of dating app" and "the boss of the future," putting its valuation at $100–500 million (he also floated a "worth trillions" level of ambition) and arguing YC should buy it to stay relevant for decades. More than 3,000 investors are on it; it can also work as a dating service. The competitor backdoor.ai is younger.</p>
+<p><strong>About 90% of Anthropic's employees became millionaires after the IPO</strong> (Scoble's claim). AI sitcoms and series are in discussion; virtual personas can endorse brands with no licensing disputes and at scale; ElevenLabs-style companies are already at the billion-dollar level.</p>
+<p><strong>Compute costs and China.</strong> Scoble believes compute costs will only fall over the long run (sixty years of Moore's law). Microsoft has a new patent for using idle personal-computer GPUs; robots need local compute (Jetson Thor), distilled models are getting smaller, and running on-device is the trend. On open source vs. closed: China will not give up open source, and the chip bans forced China to develop the ability to "write good code on a broken computer" — bleeding-edge chips are at most one or two years behind and catching up fast. If the US went to war with China, it could not win the supply chain; if China builds cheap humanoid robots, everyone will buy them, and labor and tax revenue will follow. Xiaomi is everywhere in Europe and Africa and has not a single store in the US; Chinese automakers cut budgets after Trump banned Chinese cars from the US and instead invited Scoble to the April Shanghai auto show, which they say is bigger than CES.</p>
+<p><strong>Elder-care robots and preventive medicine.</strong> At 90, having a robot change your diaper preserves your dignity (better than waiting for a nurse); one speaker's mother-in-law has a brain tumor and has spent seven years in a nursing home, two to a room with only a curtain between them. The math of preventive medicine: a heart attack costs $11,000 for the ambulance plus $150,000 for a quadruple bypass, while a day's warning would mean only a $10,000 stent. Biomarker alerts are "the check-engine light for the body" — but the authority to diagnose still rests with doctors, and the liability question is unresolved.</p>
+<h2>2. The market crash, live (throughout the show)</h2>
+<p>This was the real background music all day. As the speakers in the room described it:</p>
+<ul>
+<li><strong>BTC</strong>: down seven straight weeks from $126,000 to $58,000–59,000. One speaker said the "$60,000 floor" had been withdrawn (he said it was publicly withdrawn on August 21, 2026); at one point the room was shouting "44K is coming." The miner shutdown price is around $44,000–45,000.</li>
+<li><strong>NVDA</strong>: from a high of $243 to $127 now, down 8% on the day and about 45% since October 6. Someone in the room predicted it would fall below $100 next week.</li>
+<li><strong>The broader market</strong>: $6 trillion wiped out in two weeks (a speaker's claim). The VIX rose as much as 40% during the day (later easing back toward 32%), closing near 35. One speaker predicted "the market bounces on Monday."</li>
+<li><strong>Anthropic</strong>: after the IPO it fell back near its offering price; the room put its public float at only about 7% (980M shares) — "not a serious IPO," "oozing coordination and manipulation." The share price fell to $86 (a speaker's claim).</li>
+<li><strong>Individual names</strong>: Enphase $240 → $20; Snap's XR glasses at $2,100 (Scoble called them amazing but not recommendable at that price); Duolingo at $91; Apple burned $40B on self-driving and Meta $58B on the metaverse (speakers' claims).</li>
+<li><strong>A trader's dip-buying model</strong>: about eight indicators all flashed that day, sentiment "as bad as COVID," small- and mid-cap tech down 40–70%, credit markets freezing, companies living off convertible debt facing a wall. BTC is the canary but has decoupled over the last three to four years. FinTwit as a sentiment gauge (ZeroHedge citing a JPMorgan figure: FinTwit is about 50 influential people). The structural problem is debt (Buffett's naked swimmers); the growth option is being removed.</li>
+<li><strong>Ordinary people's reactions</strong>: one speaker said his sister called for the first time this week, frantic, asking about AI blackouts and AI attacks on the power grid and banks. Reddit was full of blackpill posts about maxing out credit cards and then declaring bankruptcy. Some talked about leaving the US as a retirement fallback.</li>
+<li><strong>A critique of how the AI industry communicates</strong>: instead of saying "a productivity tool that gives you your time back," the industry said "everything is over" — producing nihilism, resentment, and backlash against data centers. The second- and third-audience theory: CEOs speak to investors, and the public hears doom. IPO structure means insiders exit when the lockup expires and retail is the exit liquidity.</li>
+</ul>
+<p>All of the above is what the speakers in the room said and believed — not a verified conclusion of these notes.</p>
+<h2>3. The Jensen Huang saga, in full (approx. 02:41–13:02, all unverified)</h2>
+<p>This thread kept coming back all day with a changing story, <strong>so it has to be read in chronological order or it will mislead</strong>:</p>
+<ol>
+<li><strong>The first version (approx. 02:41)</strong>: the room read aloud a Wired report (Lauren Goode / Paresh Dave) saying the board had pushed Jensen Huang out over a "lack of candor and lying," involving Alice Wong (a Singapore data-center firm, rendered by ASR as "Megaspede") and a New York Times report from October 2025. Board chair Harvey Jones was said to be quelling talk of a return; Huang was due before Congress in mid-December; the SEC was said to be investigating accounting issues; the CFO was interim CEO. The room argued it should have been paid leave rather than a firing, and noted Huang had apologized publicly.</li>
+<li><strong>The retraction (after approx. 06:40)</strong>: one speaker said the national-security / "spy" angle had been retracted by the NYT and CNN ("everybody's retracting it"), leaving only extramarital affairs and a routine SEC audit. He said he had been vocal in support of the original story and now felt rug-pulled.</li>
+<li><strong>The late version (approx. 13:02)</strong>: someone else claimed there were SEC investigation rumors, the stock down 14% that day, and the former CFO now CEO — "she's the cook." It was also claimed NVIDIA funded startups with future chip purchases, that the CFO had "tried to stop all of that," and another speaker asked whether she was in fact helping Huang "make this not look like fraud."</li>
+</ol>
+<p><strong>These notes' position</strong>: the three versions contradict each other, and all of them come from relayed accounts in the room — no public source was confirmed on air. Do not cite any one version as fact. The only thing that can be confirmed is that the people in the room really were arguing heatedly about Huang's status that day.</p>
+<p>Separately, the room also aired a claim that Lutnick had been fired; the speaker himself said it was something he had "heard" and that "nobody has reported that" — pure hearsay, not adopted here.</p>
+<h2>4. The Riemann hypothesis rumors (approx. 05:00, 11:23–11:35, all unverified)</h2>
+<p>According to the room: an Anthropic researcher used Claude (rendered by ASR as "Quad") to produce a proof of the Riemann hypothesis, with an initial Lean check passed, a 250,000-page manuscript, and a second-order check still days away. The same person was said to have announced a second Millennium Prize problem (Navier-Stokes) the same day. He "talks about Claude like it's another person," the room joked — "AI psychosis among the math people."</p>
+<p>Others in the room were skeptical: if a company made a false claim like that, would it be securities fraud? One person called it outright "propaganda." Another marveled: "two years ago LLMs couldn't do addition; now they've solved the most important math problem outside P vs NP" — "it's just going to get weirder and weirder" (quoting Terrence McKenna).</p>
+<p><strong>These notes' position</strong>: the claim has no verifiable source in the room; the 250,000 pages, the second-order check, and the rest are all relayed details. Record it as "a heavyweight rumor circulating in the Space that day," not as fact.</p>
+<p>A related rumor: Thinking Machines' "Inkling 2 mini" model, said to have 26.4B parameters, to beat Qwen3 27B with five times fewer active parameters, and to run on a 16GB laptop — likewise unconfirmed.</p>
+<h2>5. Regenerative agriculture: Ed's long segment (approx. 03:45–04:35)</h2>
+<p>Ed (fieldwork.ai) gave the most systematic talk of the day, on food as medicine:</p>
+<ul>
+<li>More than 90% of farm output sits at only the 10th–20th percentile of nutrient density; a smartphone nutrient meter is a plausible product. AI cannot read paywalled journals or podcasts — frontier science now spreads through podcasts and Zoom calls.</li>
+<li>Genetics can be patented and monetized; epigenetics is more useful to ordinary people but harder to market. GMO/CRISPR seeds have "mostly failed," while locally adapted heirloom seeds do better.</li>
+<li>Dr. Laura Kavanaugh (ex-NASA Mission Control, then GMO work at Syngenta, now in regenerative agriculture); rhizophagy cycling — plants as "ranchers" of bacteria, science about ten years old. He claims AI search cannot find the term because it is "suppressed."</li>
+<li>fieldwork.ai has its own AI trained on its own data. Someone suggested using Bright Data for scraping and WhisperFlow to transcribe twenty years of podcasts (John Kemp has already done this). The vision is a holistic regenerative AI spanning health, wearables, land, finance, and biological computing.</li>
+</ul>
+<p>These are Ed's own claims and positions; their scientific basis has not been verified by these notes.</p>
+<h2>6. Gary Marcus is coming next week</h2>
+<p>Dominick announced in the nest that Gary Marcus has confirmed he will appear on AI Jam next week (time not locked). Dom called it the "hater acknowledgement tour" — Marcus predicted this crash, and he has appeared on Breaking Points. Someone in the room cautioned that Marcus is using stale 2025 numbers.</p>
+<h2>7. The long tariff argument (approx. 05:37–06:23)</h2>
+<p>Donnie and Falcon/Uncle Scrooge argued for about 40 minutes, centered on Canada's 300–400% dairy tariff quotas: one side said the quota has never been triggered, so it is a "harmless tariff"; the other said the quota itself is the cap (above it, a 350% tariff makes trade impossible). Nippon Steel's $3B US steel plant was cited as evidence tariffs work; the EU's near-30% tariffs on Japanese steel; "Liberation Day" blanket tariffs vs. targeted tariffs; and the claim that $30B a month in tariff revenue backfills tax cuts for the rich. The room joked, "this is no longer AI Jam, it's the Donnie Jam." There was also about an hour of Texas political arguing (Abbott, Paxton, H-1B, a claimed sub-15% bill-passage rate in the Texas legislature) — no new information, not expanded here.</p>
+<h2>8. Polly's game, Strip Club Empire (approx. 08:20–09:33)</h2>
+<p>Polly introduced his new game: a management sim in the style of The Sims / RollerCoaster Tycoon, running a strip club, coded 100% with AI (Claude), with all art and animation his own. He has 25 years of game development behind him, and the game draws on his years working at Olympic Gardens in Las Vegas. It is in Steam review, with early access coming soon. The mechanics include a "censored act" system (dancers misbehaving in dark corners attract vice cops — raids, then closure unless a manager intervenes) and a "handsy drunk" system; the room joked about naming the groping meter the "Skobul scale." His earlier game, Blackjack Bailey VR, is free on Meta Quest and took about two years to make.</p>
+<p>He also talked about his website business model — never sell websites, rent them (clients don't want to manage anything); being online 24/7 wins the nighttime searches competitors miss. One outreach method that works: DM just "what's up?" — instant trust, calls booked. And an Alex Hormozzi anecdote: Polly managed a 30,000 sq ft building in Las Vegas (an old USC building turned game studio) that Hormozzi bought for $10M in 2023 as his headquarters; he met him and Layla — "exactly how he appears, authentic."</p>
+<h2>9. Hacker economics and security (approx. 11:45–12:00)</h2>
+<ul>
+<li>The day's news (as relayed in the room): the dam system in Illinois was breached; the FBI's national crime database was hacked (a major breach, posted by Dom in the nest); the US Department of Agriculture was also mentioned. "It's a good time to be a bad guy with an AI subscription."</li>
+<li>Exploit prices (as stated in the room): vendor bug bounties $5,000–$50,000, prime contractors $100,000–$200,000, brokers $500,000–$1M (selling to nation states). Laid-off white-hat hackers will push cybercrime higher, the room argued; one speaker said he once found vulnerabilities in iMessage, and that submitting one to a vendor takes 40 hours of reproduction video.</li>
+<li>The Bezos hack / Saudi Arabia; a Tel Aviv company's employee selfie leaked a backend dashboard (access to Signal, WhatsApp). "It's the bad guys' time to shine."</li>
+</ul>
+<h2>10. The Sam Altman discussion (approx. 10:56–11:08)</h2>
+<p>The room spent a long stretch on Altman, around two points:</p>
+<ul>
+<li>In congressional testimony he said "I don't own any of this company," with Gary Marcus sitting right next to him. The room called this his biggest mistake — after saying that on the record, taking shares later would be "a big scandal," so instead he takes shares in partner companies. His net worth was estimated at $5–10B (a speaker's claim).</li>
+<li>The "perfect tool" theory: having no ownership makes him controllable. If OpenAI fails, Microsoft and SoftBank would scoop it up at a write-down. "The product still works; only the money side fails." Others said SoftBank's Masayoshi was "getting suckered by Sam," and there was discussion of allegations about Altman's family — <strong>the latter are unverified allegations, and these notes do not repeat the details</strong>.</li>
+</ul>
+<p>Separately, the room mentioned that Google owns about 30% of Anthropic (a speaker's claim).</p>
+<h2>11. The second half, in brief</h2>
+<p>After hour nine the Space settled into chat mode. These notes do not expand on it, and only record the outline so readers can judge whether the original audio is worth their time:</p>
+<ul>
+<li>Political arguing took up the largest share: Texas vs. California, Democrats vs. Republicans, a "free will" debate (Skinny vs. Donnie, about 1.5 hours of circular argument), Albanian / Somali / Jamaican honor culture, and a "mud sharks / coal burners" slur debate. Holocaust-denial bait and unverified Epstein / DiCaprio allegations also appeared — all omitted.</li>
+<li>Long GTA 6 talk: grocery shopping, tampons, and drywall-installation chores as missions; the "Cuck Simulator" joke; disappointment from the metaverse crowd; 30fps on the PS5 Pro, no PC release; "Terry Davis was right — there's no innovation in games anymore."</li>
+<li>The "$101 celebrity draft" game: picking female celebrities by price tier (Gal Gadot $28, Dakota Johnson $35, Kendall Jenner $16, Scarlett Johansson $20, Sydney Sweeney $28, and more), about 45 minutes.</li>
+<li>Other bits: Clubhouse nostalgia (the invite-only system killed it); Webb's Compton CNC shop losing power and his firing of a general partner ("scared money don't make money"); the Kay Jewelers story — selling a $14,000 Leo Diamond ring at 16 to a man named Leo Ferrari, "people buy a story"; the birria taco debate (beef vs. goat as the authentic meat, and how all chain restaurants' food is pre-made frozen product from cold storage); red wine plus Häagen-Dazs vanilla ice cream tasting like a strawberry milkshake; the VIX hitting 35, with one speaker predicting "the market bounces on Monday."</li>
+</ul>
+<h2>Lines worth remembering</h2>
+<ul>
+<li>"Sell shovels — that's where the money is." (On AI investing, paraphrasing a speaker.)</li>
+<li>"Fundamentals have exited the conversation; everything is a story stock." (On SPACs and the market, paraphrasing a speaker.)</li>
+<li>"People buy a story." (The Kay Jewelers ring story, paraphrasing a speaker.)</li>
+<li>"No crying in the casino." (On the BTC crash, paraphrasing a speaker.)</li>
+<li>"We're begging for problems to exist." (On what comes after AI solves everything, paraphrasing a speaker.)</li>
+<li>"This is the worst it will ever be; it only gets more real from here." (Scoble, on the AI clone interview of himself.)</li>
+<li>"The lost decade" — crypto made a generation of young men watch charts all day instead of inventing things. (A concept proposed by a speaker.)</li>
+</ul>
+<h2>The limits of these notes</h2>
+<ul>
+<li>The host did not enable replay; the recording was captured segment by segment during the live broadcast. About 35 segments (roughly 105 seconds) failed to download and are scattered across the session, so individual sentences may be missing. Transcription used a small English model, so proper nouns may be wrong (Scoble / Boardy / Grokbot and others have been corrected against context; uncertain names were left out of the notes).</li>
+<li>The show ran 14.5 hours, and much of the second half is arguing, repetition, and crude chat. These notes keep only the informative parts; listen to the original audio for the full picture.</li>
+<li>Every market figure, rumor, and allegation in this text is what speakers said at the time, unverified — above all the items about Jensen Huang, the Riemann hypothesis, Lutnick, and the SEC investigation. Do not cite them as fact.</li>
+<li>Speakers were not separated by voiceprint; attribution follows context, and "a speaker" means a rotating speaker whose identity is uncertain.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space 直播抓取（本场无回放） <a href="https://x.com/i/spaces/1evOEWAnZqpovz">https://x.com/i/spaces/1evOEWAnZqpovz</a>（Dominick Romano）· 嘉宾：Robert Scoble、Marco、Peter、Ed、Donnie、Webb、Polly · 发布日期：2026-11-21 · 时长：14 小时 36 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space 直播抓取（本場無回放） <a href="https://x.com/i/spaces/1evOEWAnZqpovz">https://x.com/i/spaces/1evOEWAnZqpovz</a>（Dominick Romano）· 嘉賓：Robert Scoble、Marco、Peter、Ed、Donnie、Webb、Polly · 發布日期：2026-11-21 · 時長：14 小時 36 分<br>本頁為機器轉寫後人工整理的紀要全文；場中觀點、數字均為發言人口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space, captured live (no replay available for this session) <a href="https://x.com/i/spaces/1evOEWAnZqpovz">https://x.com/i/spaces/1evOEWAnZqpovz</a> (Dominick Romano) · Guests: Robert Scoble, Marco, Peter, Ed, Donnie, Webb, Polly · Published: 2026-11-21 · Duration: 14 hours 36 minutes<br>This page contains the full notes, manually edited from a machine transcript; views and figures in the session are as stated by the speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space 直播抓取（本场无回放） <a href="https://x.com/i/spaces/1evOEWAnZqpovz">https://x.com/i/spaces/1evOEWAnZqpovz</a>（Dominick Romano）· 嘉宾：Robert Scoble、Marco、Peter、Ed、Donnie、Webb、Polly · 发布日期：2026-11-21 · 时长：14 小时 36 分<br>本页为机器转写后人工整理的纪要全文；场中观点、数字均为发言人口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat\’s Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"AI Jam | House of Jammers：14 小时马拉松纪要 · Yat's Talks",tw:"AI Jam | House of Jammers：14 小時馬拉松紀要 · Yat's Talks",en:"AI Jam | House of Jammers: Notes from a 14-Hour Marathon · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
