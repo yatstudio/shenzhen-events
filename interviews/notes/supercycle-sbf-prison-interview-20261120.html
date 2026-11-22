@@ -8,21 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">YOUTUBE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">YOUTUBE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>狱中的 SBF：Anthropic 值万亿、p(doom) 约 25%，以及那枚「毁灭世界的硬币」</h1>
 <blockquote>
 <p>来源：YouTube 播客 The Supercycle（2026-11-20 发布，82 分钟）
@@ -81,9 +89,150 @@
 <li>给 14 岁主持人的建议：先把 AI 学透，成为对话的一部分——无论是做理解 AI 的工具还是直接做 AI 安全，这是当下最重要的事。相比之下「学交易、赚钱去捐」这条老路的权重下降了：离 AI 起飞的时间在压缩，先去找一个 AI 能自动化某块基础设施的真实位置。</li>
 <li>最后一个问题：FTX 的崛起与崩塌，算上未来基金做的好事，「值不值」？他的回答是：「我想说值，但我没法诚实地说出口。我觉得它本应该是值的——如果我没有在最后搞砸的话。如果人们从中吸取了正确的教训，也许值，但我不觉得人们在吸取。」他认为该吸取的教训都关于危机时刻：坏建议来得极快，很多人很快就看不清什么才重要，而最终叙事会被胜利者的镜头扭曲，很难看清到底发生了什么。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>獄中的 SBF：Anthropic 值兆級、p(doom) 約 25%，以及那枚「毀滅世界的硬幣」</h1>
+<blockquote>
+<p>來源：YouTube 播客 The Supercycle（2026-11-20 發布，82 分鐘）
+嘉賓：Sam Bankman-Fried（SBF），在布魯克林 MDC 聯邦監獄服刑中，透過監獄電話受訪
+主持：Eli Goldfine（節目標題稱其 14 歲）；採訪由 SBF 的母親 Barbara Fried 協助協調，Doom Debates 團隊參與製作
+本紀要據英文字幕整理；SBF 正服刑且其陳述涉及自身案件與爭議事項，以下均為其自述口徑，未另行核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這是一場資訊量很大的獄中長談：SBF 依然用期望值框架思考一切——他給 AI 末日的機率約 25%，認為 Anthropic 值兆級量級、FTX 未來基金的錢花得比捐給 GiveWell 更有效；但被問到 FTX 的崛起與崩塌「值不值」時，他說：我想說是，但我沒法誠實地說出口。</p>
+<h2>獄中狀態與刑事司法</h2>
+<ul>
+<li>他在獄中大部分時間花在自己的案子上；最缺的是資訊流——看不到市場的日內變化、接觸不到第一線的人和公司，沒法做盡調，這讓「向前看」變得很難真正 productive。</li>
+<li>對刑事司法的批評很系統：白領犯罪坐牢沒有任何幫助，不改造任何人，只是取消掉一個人幾年的人生並消耗社會資源，民事程序（罰款、改合約）細膩得多。</li>
+<li>他提出一個「錘子原理」的變體：你為某類犯罪設立一個聯邦專案組，這個組就會去辦這類犯罪——當專案組比真實犯罪還大時，它就開始辦「假犯罪」。他舉前宏都拉斯總統 Juan Orlando Hernández 案為例，稱之為檢控徹底失控的樣本；聯邦監獄裡大量案件在他看來是「蠢案」（如成年人之間的 sexting 被當作性犯罪）。</li>
+<li>毒品案件的真正解法是給出能與販毒競爭的經濟機會：把人放回只有販毒是像樣工作的社區，坐完牢出來還是會選那條路。被問到最低垂的改革果實，他的答案是「把聯邦這一層基本推倒重來」。</li>
+<li>但他明確說：司法改革不該是有效利他主義的優先項——決定下一個十年 AI 走向的事情重要得多。</li>
+</ul>
+<h2>Anthropic 與那筆 5 億美元</h2>
+<ul>
+<li>主持人轉述 Anthropic 即將 IPO、估值將超兆，問他怎麼看。他說「值很多」：AI 在十年內會成為核心經濟部門，整個板塊最終值幾十兆量級；就算把三分之二留給還沒誕生的公司，剩下的也有至少 10 兆美元分給現有玩家，而夠格的核心公司只有個位數（OpenAI、Anthropic、Google/DeepMind、xAI），意味著頭部每家都是兆級量級。Anthropic 在他眼裡至少是前二：模型強度、消費產品口碑都是頂級，其 AI 軟體開發工具是世界最好的。</li>
+<li>為什麼當年只投了約 5 億美元？他的回答是：那輪 Anthropic 本來就只打算融約 5 億——那是它 bootstrap 模型所需的算力開支；FTX 投了「接近它那一輪的全部」。公司不該融超過自己需要的錢，融太多反而容易亂花（他舉了把錢砸在廣告上把自己砸停滯的公司通病）。他也承認：也許 Anthropic 當年應該多融、多買 GPU 加速——部分是它不想多稀釋股權。</li>
+<li>FTX Ventures 的運作：早期是一單一單地由他或同事臨時做（Anthropic、Solana 是他親自深度參與的），做大後才招了專職的人（如 Ramnik、Amy 等）。他的決策哲學是授權式的：你雇了一個人，他花 15 小時做完盡調，你若不信、要自己再花 15 小時重做一遍，那雇他就沒意義了——他只補上自己的人脈和增量資訊。</li>
+<li>問他現在的「alpha」是什麼，他拒絕給標的：「我不會採納我自己的建議」——沒有在外面實地盡調，他給不出有信心的答案。大方向上他認為 alpha 在於分辨誰是真 AI 公司、誰只是把 AI 塞進 pitch deck 的 T 恤公司；未來幾年會出現兩人小團隊做出 1 億到 10 億美元公司的機會。大盤股裡他點名輝達是真 AI 公司，而蘋果的成功靠的是消費產品設計、軟體易用性和品牌，「不那麼 AI 中心」。</li>
+<li>傳統軟體公司是不是完了？他說不是：很多行業 AI 衝擊來得慢（世界還需要鋼鐵，AI 不挖礦）；更重要的是品牌——Coinbase、Robinhood 值幾百億靠的不是技術而是美國散戶認得的品牌，產品變得容易複製，品牌價值依然在。</li>
+</ul>
+<h2>有效利他主義與 FTX 未來基金復盤</h2>
+<ul>
+<li>未來基金的模式是「再授予 + 微型資助」：招募一批人，給每人一筆可自主推薦小額資助的錢，用眾包的方式找到雷達之下的機會——AI 安全、生物風險、政治等領域很多人只差一筆啟動資金（讀完大學、或開一家公司）。他認為這比把錢給 GiveWell 的頂級慈善更有效：一家年預算 800 萬美元的機構，你突然給它 3000 萬，它可能根本不知道怎麼花。他點名生物風險方向資助出了一些做傳染病新療法的組織；但很多專案（尤其政治類）在 FTX 危機時被中止了。</li>
+<li>出獄後的預設路徑是回到「賺錢去捐贈」（earning to give），繼續支持他認為在做實事的事業；職業上他會認真考慮 crypto、AI 和更廣義的金融。但他也清楚自己的聲譽已經極度負面，公眾討論、政治、媒體這些位置未必還有他的角色。</li>
+<li>Anthropic 與 AI 安全：有一家真正在意安全的頭部公司是好事，但只要有一個完全不在乎安全的玩家，競次（race to the bottom）就存在——如果別人都不減速，單方面減速未必是對的；最優解是推動主要玩家達成跨方的共同約定。至於具體怎麼對齊，他的誠實答案是「魔鬼在細節裡」：沒有一句話的高層答案，只能靠一種心態加上海量測試、 tinkering 和謹慎，並預設模型會被 agentic 地使用。</li>
+<li>他對當前模型的印象（他在獄中能收到外界貼給他的模型輸出）：像一個「很好、很周到、很盡責的研究助理」，一天的活一分鐘幹完；但大多數事情仍是人類能做的，只是快得多。他以 Claude 的不同版本為例談「人格同一性」：說兩個版本是同一個人或不是，都不是好答案——上傳心智的同一性問題也會如此，他本人對上傳沒有原則性反對。</li>
+</ul>
+<h2>AI 時間線與 p(doom)</h2>
+<ul>
+<li>他認為 AGI 不會是一個二元的離散事件：未來 5–10 年，社會會被 AI 一塊一塊地「吞掉」——軟體開發已經如此，數學研究更早（棋類之後）。現在的模型大致相當於「一個聰明、有充足時間的人類，最終能做到的水準，只是瞬間可得、還能並行跑很多份」；從「80 IQ 到 180 IQ」是一條模糊的線，但可能會有某一年它明確地「啪」地越過人類。</li>
+<li>被追問 p(doom)（AI 導致人類滅絕級災難的機率），他給出：低於 50%、高於 10%，「大概在 25% 一帶」；若把灰色情形算進去（比如心智上傳後未上傳的人類被甩下，算不算災難），區間可以到 20%–60%。他的推理鏈：一旦 AI 在大多數任務上強於人類，離 AI 運行世界的大部分只剩一小步；一個更強大的存在在幾個世紀尺度上不用自己的權力，機率很低。結局分支包括：AI 厭倦人類並將其抹除、人類藉 AI 增強到超越現在的形態、人機協同的大擴張。</li>
+</ul>
+<h2>預測市場與 FTX 的產品舊事</h2>
+<ul>
+<li>FTX 從一開始就想做預測市場：在他看來預測市場本質就是結算到某個值的期貨合約。FTX 國際站在 2020 年大選時有過相當活躍的川普對拜登市場（他稱有幾億美元成交量），但成長被 CFTC 的監管 clarity 卡住——美國用戶不能參與。</li>
+<li>為什麼 Polymarket、Kalshi 起來了而 FTX 沒做大：一是時機早，二是監管——Polymarket 早期不做 KYC，美國用戶靠 VPN 就能進；FTX 作為中心化交易所必須對所有用戶做 KYC 和身分文件核驗。主持人提到 Kalshi 正在以約 650 億美元估值融資（主持人口徑）。</li>
+<li>代幣化股票他認為還有很大空間（基礎設施比真實股市好用）；pre-IPO 永續合約為什麼比定期期貨流行，他的答案很實在：用戶就是喜歡不用管到期日，資金費率大多數人根本不在意——流動性自我強化，哪個市場先有共識，人和做市商就都聚到哪兒。</li>
+</ul>
+<h2>那枚硬幣：與 Tyler Cowen 的舊問重談</h2>
+<ul>
+<li>2022 年 Tyler Cowen 問過他：51% 機率讓世界效用翻倍、49% 機率讓一切消失的賭局，接不接、要不要連著接？他這次把前提條件講全了：必須假設獨立宇宙、一次性機會、未來不能以更低成本複製，等等。在「兩個互不相干的世界，一個活一個死」與「50% 兩個都活、50% 兩個都死」之間，他說本質相同，有 51/49 的賠率就該選前者。</li>
+<li>但邊際效用要看翻倍的是什麼：若翻倍的是宇宙長期總效用，它對自身是線性的；若翻倍的是 GDP 這類代理指標，邊際遞減明確存在（GDP 翻倍不等於幸福翻倍，還可能 30 年後本來就會發生、或帶來環境代價）。真正能反覆翻倍而不遞減的指標，他舉的例子是殖民其他星球——創造更多獨立的世界。</li>
+<li><strong>現實版他明確不接</strong>：真有一枚硬幣，一面讓世界成長翻倍、一面毀滅世界，他說絕對不要——現實中成長大概率別人遲早也會做到、不是永久翻倍，而毀滅是永久的；不確定性讓毀滅那一側遠比模型裡更糟。</li>
+<li>AI 版的同構問題（減速把 p(doom) 從 10% 降到 2%，還是全速衝）：取決於效用曲線形狀——若是「指數永遠漲」，早一年啟動等於永久翻倍；若是「奇點後到達某個高原」，宇宙還剩幾十億年，晚 100 年連 1% 都不到，那為降低 1% 的 p(doom) 延遲 100 年都值得。真實答案在兩者之間。</li>
+<li>獄中版硬幣（51% 明天出獄、49% 刑期翻倍）：他毫不猶豫接——他的刑期實質等同終身，他要的不是 60 歲出獄去小木屋養老，而是出去對世界產生正向影響；代價只是損失尾部那些沒產出的年份，這筆帳划算。</li>
+<li>順帶拆了帕斯卡賭注：同樣的邏輯可以造出「電線杆宗教」和「反電線杆宗教」，得出完全相反的結論——你不能給無窮多個不可信的可能性都賦予顯著機率。</li>
+</ul>
+<h2>雜談與收尾</h2>
+<ul>
+<li>閱讀觀沒變：他在獄中讀了不少科幻小說，仍然認為大多數書「應該寫成六段話的部落格帖」；Netflix 比書好在資訊吞吐量（音訊+任意像素的畫面），電影則輸在太短（一個半小時裝不下人物與情節），最好的劇集兼得兩者之長。</li>
+<li>給 14 歲主持人的建議：先把 AI 學透，成為對話的一部分——無論是做理解 AI 的工具還是直接做 AI 安全，這是當下最重要的事。相比之下「學交易、賺錢去捐」這條老路的權重下降了：離 AI 起飛的時間在壓縮，先去找一個 AI 能自動化某塊基礎設施的真實位置。</li>
+<li>最後一個問題：FTX 的崛起與崩塌，算上未來基金做的好事，「值不值」？他的回答是：「我想說值，但我沒法誠實地說出口。我覺得它本應該是值的——如果我沒有在最後搞砸的話。如果人們從中吸取了正確的教訓，也許值，但我不覺得人們在吸取。」他認為該吸取的教訓都關於危機時刻：壞建議來得極快，很多人很快就看不清什麼才重要，而最終敘事會被勝利者的鏡頭扭曲，很難看清到底發生了什麼。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>SBF in Prison: Anthropic Is Worth Trillions, p(doom) Around 25%, and the Coin Flip That Could Destroy the World</h1>
+<blockquote>
+<p>Source: The Supercycle, a YouTube podcast (released 2026-11-20, 82 minutes)
+Guest: Sam Bankman-Fried (SBF), serving his sentence at the MDC Brooklyn federal prison, interviewed by prison phone
+Host: Eli Goldfine (the episode title says he is 14); the interview was coordinated with help from SBF's mother, Barbara Fried, and produced with the Doom Debates team
+These notes were compiled from the English subtitles. SBF is currently serving a prison sentence, and his statements concern his own case and disputed matters; everything below is his own account and has not been independently verified.</p>
+</blockquote>
+<h2>The One-Sentence Version</h2>
+<p>This is a remarkably substantive long conversation from prison: SBF still thinks about everything in expected-value terms — he puts the probability of AI doom at around 25%, believes Anthropic is worth on the order of trillions, and maintains that the FTX Future Fund spent its money more effectively than donating to GiveWell would have. But asked whether FTX's rise and collapse were "worth it," he said: I'd like to say it was, but I can't honestly say that.</p>
+<h2>Life in Prison and Criminal Justice</h2>
+<ul>
+<li>He spends most of his time in prison on his own case. What he lacks most is information flow — he can't see intraday market moves or reach frontline people and companies, and he can't do due diligence, which makes it hard for "looking forward" to be truly productive.</li>
+<li>His criticism of the criminal justice system is systematic: imprisoning white-collar offenders accomplishes nothing. It rehabilitates no one; it simply cancels several years of a person's life and consumes social resources. Civil processes (fines, contract changes) are far more nuanced.</li>
+<li>He offered a variant of the hammer principle: set up a federal task force for a category of crime and that task force will go out and prosecute that category of crime — and when the task force grows larger than the actual crime, it starts prosecuting "fake crime." He cited the case of former Honduran president Juan Orlando Hernández as an example of prosecution completely out of control; in his view, a large share of cases in federal prison are "stupid cases" (such as sexting between adults prosecuted as a sex crime).</li>
+<li>The real solution to drug cases is to provide economic opportunities that can compete with drug dealing: send someone back to a community where dealing is the only decent job, and after serving their time they will choose that path again. Asked for the lowest-hanging fruit of reform, his answer was "basically tear down and rebuild the federal layer."</li>
+<li>But he was explicit: criminal justice reform should not be an effective altruism priority — the things that will decide where AI goes over the next decade matter far more.</li>
+</ul>
+<h2>Anthropic and That $500 Million</h2>
+<ul>
+<li>The host relayed that Anthropic is about to IPO at a valuation above a trillion and asked what he thought. He said "it's worth a lot": within a decade AI will become a core sector of the economy, and the sector as a whole will ultimately be worth tens of trillions. Even if two-thirds of that is reserved for companies not yet founded, at least $10 trillion remains for existing players, and only a single-digit number of companies qualify as core players (OpenAI, Anthropic, Google/DeepMind, xAI) — meaning each of the leaders is worth on the order of trillions. In his view Anthropic is at least top two: its model strength and consumer product reputation are both top-tier, and its AI software development tools are the best in the world.</li>
+<li>Why did he only invest about $500 million back then? His answer: in that round Anthropic only intended to raise about $500 million in the first place — that was the compute spending it needed to bootstrap its models — and FTX invested "close to all of what they were raising." Companies shouldn't raise more than they need; raising too much makes it easy to waste money (he pointed to the common pathology of companies blowing money on advertising until they stall). He also conceded that perhaps Anthropic should have raised more back then and bought more GPUs to accelerate — partly it didn't want to dilute its equity further.</li>
+<li>How FTX Ventures operated: in the early days, deals were done one at a time, ad hoc, by him or colleagues (he was personally and deeply involved in Anthropic and Solana); only after it scaled did they hire dedicated staff (such as Ramnik and Amy). His decision philosophy was delegative: if you hire someone and they spend 15 hours doing the due diligence, and you don't trust it and spend another 15 hours redoing it yourself, there was no point hiring them — he only added his own network and incremental information.</li>
+<li>Asked what his "alpha" is now, he refused to name targets: "I wouldn't take my own advice" — without doing diligence in person out in the field, he can't give an answer he's confident in. Broadly, he believes the alpha lies in distinguishing real AI companies from T-shirt companies that just stuff AI into a pitch deck; the coming years will see two-person teams building companies worth $100 million to $1 billion. Among large caps, he named NVIDIA as a genuine AI company, while Apple's success rests on consumer product design, software ease of use, and brand — "not that AI-centric."</li>
+<li>Are traditional software companies finished? He said no: in many industries the AI shock arrives slowly (the world still needs steel; AI doesn't mine), and more importantly there is brand — Coinbase and Robinhood are worth tens of billions not because of technology but because of brands American retail investors recognize. Products become easier to copy; brand value remains.</li>
+</ul>
+<h2>Effective Altruism and a Postmortem on the FTX Future Fund</h2>
+<ul>
+<li>The Future Fund's model was "regranting + microgrants": recruit a group of people, give each of them a pot of money they can use at their own discretion to recommend small grants, and use crowdsourcing to find opportunities below the radar — in fields like AI safety, biorisk, and politics, many people are just one starter grant away (finishing university, or founding a company). He argued this is more effective than giving to GiveWell's top charities: an organization with an annual budget of $8 million, suddenly handed $30 million, may have no idea how to spend it. He noted that the biorisk portfolio funded some organizations working on novel therapies for infectious diseases; but many projects (especially political ones) were halted when the FTX crisis hit.</li>
+<li>His default path after release is to return to "earning to give," continuing to support causes he believes are doing real work; professionally, he would seriously consider crypto, AI, and finance more broadly. But he is also clear-eyed that his reputation is now extremely negative, and roles in public discussion, politics, and media may no longer be open to him.</li>
+<li>Anthropic and AI safety: having a leading company that genuinely cares about safety is a good thing, but as long as there is one player that doesn't care about safety at all, a race to the bottom exists — if no one else is slowing down, slowing down unilaterally may not be the right move; the optimal solution is to push the major players toward cross-party agreements. As for how to do alignment concretely, his honest answer was "the devil is in the details": there is no one-sentence high-level answer, only a mindset plus massive amounts of testing, tinkering, and caution, while assuming models will be used agentically.</li>
+<li>His impression of current models (in prison he can receive model outputs that people outside copy and paste to him): like "a very good, thoughtful, conscientious research assistant" who does a day's work in a minute; but most of what they do is still things humans could do, just much faster. He used different versions of Claude as an example in discussing "personal identity": saying two versions are the same person, or that they are not, are both unsatisfying answers — the identity question for mind uploading will be the same, and he himself has no objection in principle to uploading.</li>
+</ul>
+<h2>AI Timelines and p(doom)</h2>
+<ul>
+<li>He believes AGI will not be a binary, discrete event: over the next 5–10 years, society will be "eaten" by AI piece by piece — software development already has been, and mathematical research even earlier (after board games). Today's models are roughly equivalent to "what a smart human with plenty of time could eventually achieve, except instantly available and runnable in many parallel copies"; the line from "80 IQ to 180 IQ" is a blurry one, but there may be some year in which it clearly "snaps" past humans.</li>
+<li>Pressed on p(doom) (the probability that AI causes a human-extinction-level catastrophe), he gave: below 50%, above 10%, "somewhere in the region of 25%"; if gray-area scenarios are counted (for example, if minds are uploaded and the un-uploaded humans are left behind, does that count as a catastrophe?), the range could run from 20% to 60%. His chain of reasoning: once AI is stronger than humans at most tasks, it is only a small step to AI running most of the world; and the probability that a more powerful entity goes centuries without using its power is low. The outcome branches include: AI grows bored with humanity and wipes it out; humans use AI to enhance themselves beyond their current form; and a large human–machine collaborative expansion.</li>
+</ul>
+<h2>Prediction Markets and Old FTX Product Stories</h2>
+<ul>
+<li>FTX wanted to do prediction markets from the very beginning: in his view, a prediction market is essentially a futures contract that settles to some value. FTX International had a fairly active Trump-vs.-Biden market during the 2020 election (he said it did a few hundred million dollars in volume), but growth was blocked by the CFTC's regulatory clarity — U.S. users could not participate.</li>
+<li>Why did Polymarket and Kalshi take off while FTX never got big at it? First, timing — it was early; second, regulation — Polymarket did no KYC in its early days and U.S. users could get in with a VPN, while FTX, as a centralized exchange, had to perform KYC and identity-document verification on all users. The host mentioned that Kalshi is raising at a valuation of about $65 billion (per the host's account).</li>
+<li>He believes tokenized stocks still have a lot of room (the infrastructure is easier to use than the real stock market). As for why pre-IPO perpetuals are more popular than dated futures, his answer was down-to-earth: users simply like not having to worry about expiry dates, and most people don't care about funding rates at all — liquidity is self-reinforcing, and whichever market reaches consensus first is where the people and the market makers gather.</li>
+</ul>
+<h2>The Coin Flip: Revisiting Tyler Cowen's Old Question</h2>
+<ul>
+<li>In 2022, Tyler Cowen asked him: a bet with a 51% chance of doubling the world's utility and a 49% chance of making everything disappear — do you take it, and would you take it repeatedly? This time he laid out the preconditions in full: one must assume independent universes, a one-time opportunity, no cheaper way to replicate it in the future, and so on. Between "two unrelated worlds, one lives and one dies" and "50% both live, 50% both die," he said they are essentially the same, and with 51/49 odds one should choose the former.</li>
+<li>But marginal utility depends on what is being doubled: if what doubles is the universe's long-run total utility, it is linear in itself; if what doubles is a proxy metric like GDP, diminishing returns clearly apply (doubling GDP does not mean doubling happiness, and it might have happened anyway 30 years later, or come with environmental costs). The one metric that can double repeatedly without diminishing, he suggested, is colonizing other planets — creating more independent worlds.</li>
+<li><strong>He explicitly would not take the real-world version</strong>: if there really were a coin with one side doubling world growth and the other destroying the world, he said absolutely not — in reality, growth would probably be achieved by someone else sooner or later anyway and is not a permanent doubling, while destruction is permanent; uncertainty makes the destruction side far worse than in the model.</li>
+<li>The isomorphic AI version (slow down to cut p(doom) from 10% to 2%, or go full speed): it depends on the shape of the utility curve — if it is "exponential growth forever," starting a year earlier equals a permanent doubling; if it is "a plateau after the singularity," the universe has billions of years left and arriving 100 years late costs less than 1%, so delaying 100 years to reduce p(doom) by 1% would be worth it. The real answer lies somewhere in between.</li>
+<li>The prison version of the coin flip (51% released tomorrow, 49% sentence doubled): he took it without hesitation — his sentence is effectively a life sentence, and what he wants is not to get out at 60 and retire to a cabin in the woods, but to get out and have a positive impact on the world; the cost is only losing the unproductive tail years, so the trade is worth it.</li>
+<li>He also dismantled Pascal's wager along the way: the same logic can manufacture a "telephone-pole religion" and an "anti-telephone-pole religion" that reach exactly opposite conclusions — you cannot assign significant probability to infinitely many implausible possibilities.</li>
+</ul>
+<h2>Loose Ends and the Close</h2>
+<ul>
+<li>His view of reading hasn't changed: he has read a fair amount of science fiction in prison and still believes most books "should have been a six-paragraph blog post"; Netflix beats books on information throughput (audio plus imagery at arbitrary resolution), while movies lose for being too short (an hour and a half can't hold characters and plot), and the best TV series combine the strengths of both.</li>
+<li>His advice to the 14-year-old host: learn AI thoroughly and become part of the conversation — whether building tools for understanding AI or working directly on AI safety, this is the most important thing right now. By comparison, the old path of "learn trading, earn to give" has lost weight: the time before AI takeoff is compressing, so first find a real place where AI can automate some piece of infrastructure.</li>
+<li>The final question: counting the good the Future Fund did, were FTX's rise and collapse "worth it"? His answer: "I'd like to say it was worth it, but I can't honestly say that. I think it should have been worth it — if I hadn't screwed up at the end. If people learned the right lessons from it, maybe it was worth it, but I don't think people are learning them." In his view, the lessons to be learned are all about moments of crisis: bad advice arrives extremely fast, many people quickly lose sight of what matters, and the final narrative gets distorted by the victor's lens, making it hard to see what actually happened.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=w50iHEeNBos">https://www.youtube.com/watch?v=w50iHEeNBos</a>（The Supercycle）· 嘉宾：Sam Bankman-Fried · 主持：Eli Goldfine · 发布日期：2026-11-20 · 时长：82 分钟<br>本页为据英文字幕整理的纪要全文；SBF 正服刑中，观点、数字均为其自述口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=w50iHEeNBos">https://www.youtube.com/watch?v=w50iHEeNBos</a>（The Supercycle）· 嘉賓：Sam Bankman-Fried · 主持：Eli Goldfine · 發布日期：2026-11-20 · 時長：82 分鐘<br>本頁為據英文字幕整理的紀要全文；SBF 正服刑中，觀點、數字均為其自述口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=w50iHEeNBos">https://www.youtube.com/watch?v=w50iHEeNBos</a> (The Supercycle) · Guest: Sam Bankman-Fried · Host: Eli Goldfine · Release date: 2026-11-20 · Duration: 82 minutes<br>This page is the full text of notes compiled from the English subtitles; SBF is currently serving a prison sentence, and all views and figures are his own account, unverified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=w50iHEeNBos">https://www.youtube.com/watch?v=w50iHEeNBos</a>（The Supercycle）· 嘉宾：Sam Bankman-Fried · 主持：Eli Goldfine · 发布日期：2026-11-20 · 时长：82 分钟<br>本页为据英文字幕整理的纪要全文；SBF 正服刑中，观点、数字均为其自述口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"狱中的 SBF：Anthropic 值万亿、p(doom) 约 25%，以及那枚「毁灭世界的硬币」 · Yat's Talks",tw:"獄中的 SBF：Anthropic 值兆級、p(doom) 約 25%，以及那枚「毀滅世界的硬幣」 · Yat's Talks",en:"SBF in Prison: Anthropic Is Worth Trillions, p(doom) Around 25%, and the Coin Flip That Could Destroy the World · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
