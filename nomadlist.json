@@ -6993,10 +6993,10 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 650,
+   "cost_usd_month": 550,
    "rent_1br_usd_month": 300,
    "coworking_usd_month": 52,
-   "internet_mbps": 110,
+   "internet_mbps": 63,
    "safety_score": 4.7,
    "english_score": 3.0,
    "visa": {
@@ -7009,22 +7009,64 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 18.9,
    "best_months": "Mar-Jun,Sep-Nov",
    "tags": [
     "mountain",
     "ecology"
    ],
-   "summary_zh": "游民CO 在列，浙江绿谷、山水好、节奏慢。",
+   "summary_zh": "浙江绿谷山水城，市中心一居 $300、单人月均约 $550，英语极少、无外籍社群。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "莲都区中心 (Liandu Centre)",
+     "name_en": "Liandu Centre",
+     "rent_1br_usd_month": 300,
+     "vibe": "市中心+行政商业核心，配套最全",
+     "best_for": "市中心生活+高铁出行",
+     "coworking_density": 3,
+     "note": "rewireabroad/Numbeo 市中心一居 $300；bkwk.cn 市中心 40–60元/㎡（50㎡约¥2,000–3,000）交叉；Regus 万达广场与 Ucommune 在此区"
+    },
+    {
+     "name": "白云新区 (Baiyun New District)",
+     "name_en": "Baiyun New District",
+     "rent_1br_usd_month": 280,
+     "vibe": "新城居住区，配套完善",
+     "best_for": "新盘与安静居住",
+     "coworking_density": 1,
+     "note": "估算（bkwk.cn 热门区域；市中心价下浮）"
+    },
+    {
+     "name": "万象新城 (Wanxiang New Town)",
+     "name_en": "Wanxiang New Town",
+     "rent_1br_usd_month": 260,
+     "vibe": "环境好、生活便利的新城",
+     "best_for": "性价比新盘",
+     "coworking_density": 1,
+     "note": "估算（bkwk.cn 热门区域）"
+    },
+    {
+     "name": "青田县城 (Qingtian Town)",
+     "name_en": "Qingtian Town",
+     "rent_1br_usd_month": 220,
+     "vibe": "侨乡县城，石雕+欧式风情",
+     "best_for": "侨乡风情与低价",
+     "coworking_density": 1,
+     "note": "估算（市郊一居 $200 水平；rewireabroad 重点片区）"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://rewireabroad.com/country/china/city/lishui",
+    "https://www.numbeo.com/cost-of-living/in/Lishui-China",
+    "https://www.bkwk.cn/article/li-shui-zu-fang-gong-lve-zu-jin-ji-suan-yu-shi-yong-xin-xi-yi-wang-da-jin.html",
+    "https://en.wikipedia.org/wiki/Lishui,_Zhejiang",
+    "https://weatherandclimate.com/china/zhejiang/lishui"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-22",
+   "updated_at": "2026-11-22",
+   "data_tier": "checked",
    "best_months_nums": [
     3,
     4,
@@ -7036,14 +7078,14 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-22"
     },
     "internet_mbps": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-22"
     },
     "visa": {
      "confidence": 0.5,
@@ -7059,8 +7101,8 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 700,
-   "rent_1br_usd_month": 320,
+   "cost_usd_month": 880,
+   "rent_1br_usd_month": 335,
    "coworking_usd_month": 56,
    "internet_mbps": 120,
    "safety_score": 4.7,
@@ -7075,37 +7117,74 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
-   "best_months": "Mar-Jun,Sep-Nov",
+   "avg_temp_c": 16.3,
+   "best_months": "Apr-May,Oct-Nov",
    "tags": [
     "tea",
     "pottery",
     "quiet"
    ],
-   "summary_zh": "游民CO 在列，紫砂+茶+太湖西岸小城。",
+   "summary_zh": "紫砂+茶+太湖西岸小城，市中心一居 ¥2,400、单人月均约 $880，最佳 4–5 月与 10–11 月。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "宜城核心 (Yicheng Core)",
+     "name_en": "Yicheng Core",
+     "rent_1br_usd_month": 335,
+     "vibe": "主城区+市政中心，配套最全",
+     "best_for": "市中心生活配套",
+     "coworking_density": 2,
+     "note": "everycity.guide 中央一居 ¥2,400≈$335"
+    },
+    {
+     "name": "丁蜀陶都 (Dingshu Pottery Town)",
+     "name_en": "Dingshu Pottery Town",
+     "rent_1br_usd_month": 290,
+     "vibe": "紫砂作坊聚集，陶都风情",
+     "best_for": "紫砂与手艺氛围",
+     "coworking_density": 1,
+     "note": "everycity.guide 一居 ¥2,100≈$290"
+    },
+    {
+     "name": "太湖湖畔 (Taihu Lakeside)",
+     "name_en": "Taihu Lakeside",
+     "rent_1br_usd_month": 350,
+     "vibe": "太湖西岸景观房，视野最好",
+     "best_for": "湖景与度假感",
+     "coworking_density": 1,
+     "note": "everycity.guide 一居 ¥2,500≈$350"
+    },
+    {
+     "name": "湖父茶山 (Hufu Tea Hills)",
+     "name_en": "Hufu Tea Hills",
+     "rent_1br_usd_month": 265,
+     "vibe": "南部茶竹山乡，半乡村低价",
+     "best_for": "茶山田园与低价",
+     "coworking_density": 1,
+     "note": "everycity.guide 一居 ¥1,900≈$265"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "http://everycity.guide/city/yixing",
+    "https://en.wikipedia.org/wiki/Yixing",
+    "https://www.numbeo.com/cost-of-living/in/Yixing-China"
    ],
    "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-22",
    "data_tier": "seed_v2",
    "best_months_nums": [
-    3,
     4,
     5,
-    6,
-    9,
     10,
     11
    ],
    "fields_provenance": {
     "cost_usd_month": {
      "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "basis": "single source: everycity.guide May 2026, not yet cross-checked",
+     "as_of": "2026-11-22"
     },
     "internet_mbps": {
      "confidence": 0.4,
@@ -7126,8 +7205,8 @@
    "country": "China",
    "country_zh": "中国",
    "region": "China Domestic",
-   "cost_usd_month": 700,
-   "rent_1br_usd_month": 320,
+   "cost_usd_month": 580,
+   "rent_1br_usd_month": 200,
    "coworking_usd_month": 56,
    "internet_mbps": 130,
    "safety_score": 4.6,
@@ -7142,22 +7221,64 @@
    },
    "timezone": "Asia/Shanghai",
    "currency": "CNY",
-   "avg_temp_c": null,
+   "avg_temp_c": 12.4,
    "best_months": "Apr-Jun,Sep-Oct",
    "tags": [
     "new-city",
     "quiet"
    ],
-   "summary_zh": "游民CO 在列，新城样本、租金低，配套还在长。",
+   "summary_zh": "新城样本：容东/启动区配套在长，80㎡租金约¥1,600–1,700、远低于北京，白洋淀在侧。",
    "summary_en": "",
-   "neighborhoods": [],
+   "neighborhoods": [
+    {
+     "name": "容东片区 (Rongdong Area)",
+     "name_en": "Rongdong Area",
+     "rent_1br_usd_month": 250,
+     "vibe": "首批回迁+新建住宅区，配套最新",
+     "best_for": "新城生活与 15 分钟生活圈",
+     "coworking_density": 2,
+     "note": "估算（bccci.net 新区 80㎡ 租金 ¥1,600–1,700，一居折算约 ¥1,800）"
+    },
+    {
+     "name": "容西片区 (Rongxi Area)",
+     "name_en": "Rongxi Area",
+     "rent_1br_usd_month": 230,
+     "vibe": "新建安置片区，次于容东",
+     "best_for": "新盘与安静居住",
+     "coworking_density": 1,
+     "note": "估算（容东价下浮）"
+    },
+    {
+     "name": "雄县县城·雄安站周边 (Xiongxian Town / Xiong'an Station)",
+     "name_en": "Xiongxian Town / Xiong'an Station",
+     "rent_1br_usd_month": 180,
+     "vibe": "老县城+高铁站，青年公寓集中",
+     "best_for": "高铁通勤与过渡居住",
+     "coworking_density": 1,
+     "note": "估算（6697033.com 雄县独立一居一千元上下）"
+    },
+    {
+     "name": "安新·白洋淀 (Anxin / Baiyangdian)",
+     "name_en": "Anxin / Baiyangdian",
+     "rent_1br_usd_month": 150,
+     "vibe": "白洋淀水乡，生态与慢节奏",
+     "best_for": "淀区风光与低价",
+     "coworking_density": 1,
+     "note": "估算（雄县价下浮；淀区民宿多、长租少）"
+    }
+   ],
    "sources": [
     "参照站公开榜单 — 发现线索（见 discovery_sources）",
-    "Numbeo — 成本交叉"
+    "Numbeo — 成本交叉",
+    "https://bccci.net/blog/xiongan-lifestyle-draws-top-young-talent/?fsp_sid=627632",
+    "https://www.6697033.com/zufang-xinxi/79.html",
+    "https://global.chinadaily.com.cn/a/202604/01/WS69cc5d52a310d6866eb41040_4.html",
+    "https://www.mdpi.com/2073-4441/16/2/205",
+    "http://china-world.china.org.cn/info/2025-04/15/content_117824454.shtml"
    ],
-   "verified_at": "2026-11-18",
-   "updated_at": "2026-11-18",
-   "data_tier": "seed_v2",
+   "verified_at": "2026-11-22",
+   "updated_at": "2026-11-22",
+   "data_tier": "checked",
    "best_months_nums": [
     4,
     5,
@@ -7167,14 +7288,14 @@
    ],
    "fields_provenance": {
     "cost_usd_month": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-22"
     },
     "internet_mbps": {
-     "confidence": 0.4,
-     "basis": "estimate, pending verification",
-     "as_of": "2026-11-18"
+     "confidence": 0.8,
+     "basis": "cross_checked",
+     "as_of": "2026-11-22"
     },
     "visa": {
      "confidence": 0.5,

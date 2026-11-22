@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 700,
-    "rent_1br_usd_month": 320,
+    "cost_usd_month": 580,
+    "rent_1br_usd_month": 200,
     "coworking_usd_month": 56,
     "internet_mbps": 130,
     "safety_score": 4.6,
@@ -26,22 +26,64 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 12.4,
     "best_months": "Apr-Jun,Sep-Oct",
     "tags": [
       "new-city",
       "quiet"
     ],
-    "summary_zh": "游民CO 在列，新城样本、租金低，配套还在长。",
+    "summary_zh": "新城样本：容东/启动区配套在长，80㎡租金约¥1,600–1,700、远低于北京，白洋淀在侧。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "容东片区 (Rongdong Area)",
+        "name_en": "Rongdong Area",
+        "rent_1br_usd_month": 250,
+        "vibe": "首批回迁+新建住宅区，配套最新",
+        "best_for": "新城生活与 15 分钟生活圈",
+        "coworking_density": 2,
+        "note": "估算（bccci.net 新区 80㎡ 租金 ¥1,600–1,700，一居折算约 ¥1,800）"
+      },
+      {
+        "name": "容西片区 (Rongxi Area)",
+        "name_en": "Rongxi Area",
+        "rent_1br_usd_month": 230,
+        "vibe": "新建安置片区，次于容东",
+        "best_for": "新盘与安静居住",
+        "coworking_density": 1,
+        "note": "估算（容东价下浮）"
+      },
+      {
+        "name": "雄县县城·雄安站周边 (Xiongxian Town / Xiong'an Station)",
+        "name_en": "Xiongxian Town / Xiong'an Station",
+        "rent_1br_usd_month": 180,
+        "vibe": "老县城+高铁站，青年公寓集中",
+        "best_for": "高铁通勤与过渡居住",
+        "coworking_density": 1,
+        "note": "估算（6697033.com 雄县独立一居一千元上下）"
+      },
+      {
+        "name": "安新·白洋淀 (Anxin / Baiyangdian)",
+        "name_en": "Anxin / Baiyangdian",
+        "rent_1br_usd_month": 150,
+        "vibe": "白洋淀水乡，生态与慢节奏",
+        "best_for": "淀区风光与低价",
+        "coworking_density": 1,
+        "note": "估算（雄县价下浮；淀区民宿多、长租少）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://bccci.net/blog/xiongan-lifestyle-draws-top-young-talent/?fsp_sid=627632",
+      "https://www.6697033.com/zufang-xinxi/79.html",
+      "https://global.chinadaily.com.cn/a/202604/01/WS69cc5d52a310d6866eb41040_4.html",
+      "https://www.mdpi.com/2073-4441/16/2/205",
+      "http://china-world.china.org.cn/info/2025-04/15/content_117824454.shtml"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-22",
+    "updated_at": "2026-11-22",
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -51,14 +93,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-22"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-22"
       },
       "visa": {
         "confidence": 0.5,

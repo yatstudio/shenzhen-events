@@ -10,10 +10,10 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 650,
+    "cost_usd_month": 550,
     "rent_1br_usd_month": 300,
     "coworking_usd_month": 52,
-    "internet_mbps": 110,
+    "internet_mbps": 63,
     "safety_score": 4.7,
     "english_score": 3.0,
     "visa": {
@@ -26,22 +26,64 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 18.9,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "mountain",
       "ecology"
     ],
-    "summary_zh": "游民CO 在列，浙江绿谷、山水好、节奏慢。",
+    "summary_zh": "浙江绿谷山水城，市中心一居 $300、单人月均约 $550，英语极少、无外籍社群。",
     "summary_en": "",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "莲都区中心 (Liandu Centre)",
+        "name_en": "Liandu Centre",
+        "rent_1br_usd_month": 300,
+        "vibe": "市中心+行政商业核心，配套最全",
+        "best_for": "市中心生活+高铁出行",
+        "coworking_density": 3,
+        "note": "rewireabroad/Numbeo 市中心一居 $300；bkwk.cn 市中心 40–60元/㎡（50㎡约¥2,000–3,000）交叉；Regus 万达广场与 Ucommune 在此区"
+      },
+      {
+        "name": "白云新区 (Baiyun New District)",
+        "name_en": "Baiyun New District",
+        "rent_1br_usd_month": 280,
+        "vibe": "新城居住区，配套完善",
+        "best_for": "新盘与安静居住",
+        "coworking_density": 1,
+        "note": "估算（bkwk.cn 热门区域；市中心价下浮）"
+      },
+      {
+        "name": "万象新城 (Wanxiang New Town)",
+        "name_en": "Wanxiang New Town",
+        "rent_1br_usd_month": 260,
+        "vibe": "环境好、生活便利的新城",
+        "best_for": "性价比新盘",
+        "coworking_density": 1,
+        "note": "估算（bkwk.cn 热门区域）"
+      },
+      {
+        "name": "青田县城 (Qingtian Town)",
+        "name_en": "Qingtian Town",
+        "rent_1br_usd_month": 220,
+        "vibe": "侨乡县城，石雕+欧式风情",
+        "best_for": "侨乡风情与低价",
+        "coworking_density": 1,
+        "note": "估算（市郊一居 $200 水平；rewireabroad 重点片区）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://rewireabroad.com/country/china/city/lishui",
+      "https://www.numbeo.com/cost-of-living/in/Lishui-China",
+      "https://www.bkwk.cn/article/li-shui-zu-fang-gong-lve-zu-jin-ji-suan-yu-shi-yong-xin-xi-yi-wang-da-jin.html",
+      "https://en.wikipedia.org/wiki/Lishui,_Zhejiang",
+      "https://weatherandclimate.com/china/zhejiang/lishui"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-22",
+    "updated_at": "2026-11-22",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -53,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-22"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-22"
       },
       "visa": {
         "confidence": 0.5,
