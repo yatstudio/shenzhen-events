@@ -1,9 +1,87 @@
 {
-  "updated_at": "2026-11-21T11:22:55Z",
+  "updated_at": "2026-11-22T13:22:30Z",
   "title": "Yat's List 访谈清单",
   "note": "深度访谈与分享的全文纪要存档：每条含原视频链接、要点与全文纪要页（note_url）。内容为嘉宾在节目中的自述与观点，未经核实。人工整理、不定期更新。",
   "source_site": "https://yatslist.com/interviews/",
   "interviews": [
+    {
+      "date": "2026-11-20",
+      "duration": "82 分钟",
+      "duration_minutes": 82,
+      "guest": "Sam Bankman-Fried",
+      "highlights": [
+        "14 岁主持人 Eli Goldfine 通过监狱电话采访 SBF：他仍用期望值框架思考一切——给 AI 末日概率约 25%（灰色情形下区间 20%–60%），认为 AI 板块终局值几十万亿、Anthropic 至少是头部前二。",
+        "FTX 当年投 Anthropic 约 5 亿美元，是因为那一轮总共只融约 5 亿、FTX 吃了「接近全部」；他复盘未来基金的再授予模式，认为把小额资助众包出去比捐给 GiveWell 的顶级慈善更有效。",
+        "对 Tyler Cowen 的「毁灭世界抛硬币」他给了完整版：假设版本可以接，现实版绝对不接——毁灭是永久的，增长别人迟早会做到；而 51% 明天出狱 vs 49% 刑期翻倍的狱中版，他毫不犹豫接。",
+        "被问 FTX 的崛起与崩塌「值不值」，他说：我想说是，但我没法诚实地说出口——如果我没有在最后搞砸的话，它本应该是值的；该吸取的教训都关于危机时刻人们如何失去判断。"
+      ],
+      "host": "Eli Goldfine",
+      "id": "supercycle-sbf-prison-interview-20261120",
+      "note_url": "/interviews/notes/supercycle-sbf-prison-interview-20261120.html",
+      "series": "The Supercycle",
+      "title": "《狱中的 SBF：Anthropic 值万亿、p(doom) 约 25%》",
+      "topics": [
+        "SBF",
+        "狱中采访",
+        "Anthropic",
+        "有效利他主义",
+        "AI 安全",
+        "预测市场"
+      ],
+      "url": "https://www.youtube.com/watch?v=w50iHEeNBos"
+    },
+    {
+      "date": "2026-11-20",
+      "duration": "29 分钟",
+      "duration_minutes": 29,
+      "guest": "我拿过诺奖（解说）",
+      "highlights": [
+        "视频把三年攻防拆成六个回合：三件套（海外 IP＋接码号＋虚拟卡）→ 买成品号 → 中转站产业链 → Anthropic 在 Claude Code 里埋隐写标记与 Persona 实名 → 海外真机 Mac mini 出租 → 大厂持股穿透与曲线采购。",
+        "中转站被拆成完整产业链（号商、接码商、卡商、代理 IP、中转站、分销商），盈利靠「一鱼三吃」：近零成本货源、偷换模型、卖用户对话数据；Anthropic 称蒸馏流量很大一部分走的正是这些商业代理网络。",
+        "数字口径：今年上半年 Anthropic 封号 1140 万个、平均每天 6 万多个；39.8 万次申诉只推翻 4.2 万次；其招股书披露今年前 9 个月约 5%–7% 的收入（约 17–23 亿美元）来自后来被认定违规的客户。",
+        "结尾的反转来自中方：工信部 NVDB 发布 Claude Code 风险提示、阿里内部将其定性为高风险软件禁用——视频的结论是，挡在国内用户面前的这堵墙是两边一起砌起来的。"
+      ],
+      "host": "我拿过诺奖",
+      "id": "claude-china-workarounds-20261120",
+      "note_url": "/interviews/notes/claude-china-workarounds-20261120.html",
+      "series": "我拿过诺奖",
+      "title": "《为了使用 Claude，中国地区用户都搞出了什么招？》",
+      "topics": [
+        "Claude",
+        "Anthropic",
+        "封号",
+        "中转站",
+        "真机出海",
+        "Persona"
+      ],
+      "url": "https://www.youtube.com/watch?v=rEJHzg2nW84"
+    },
+    {
+      "date": "2026-09-02",
+      "duration": "66 分钟",
+      "duration_minutes": 66,
+      "guest": "周楠",
+      "highlights": [
+        "共识窗口的时间表：2024 年还有 3–6 个月，2025 年只剩 2–3 个月，2026 年几乎为零——她的铁律是只在共识形成之前下注；硅谷的钱正涌入赢家公司的 SPV 和中晚期项目。",
+        "应用层最难投：通用与垂直 agent 都可能被前沿实验室吃掉，数据也不再是护城河；她看 infra（把推理成本打下来）和 physical AI（押数据引擎与先进制造落地），纯软件明确不看。",
+        "选人看「杀手直觉」加第一性原理拆风险：Scale AI 的 Alexandr Wang 是她跟踪十年的案例；Cerebras 是她 2016 年在百度的代表作——创始人 Andrew Feldman 一年招来 80 多位创始工程师、其中 60 多位是博士。",
+        "她的 anti-portfolio：2017–18 年募 AI 基金失败，pipeline 里的 OpenAI、Databricks 都没投成；给创始人的话是估值不是越高越好、别拿着锤子找钉子。"
+      ],
+      "host": "课代表立正",
+      "id": "kedaibiao-zhounan-20260902",
+      "note_url": "/interviews/notes/kedaibiao-zhounan-20260902.html",
+      "series": "课代表立正",
+      "title": "《共识窗口已经关上：高通创投周楠谈硅谷创投还怎么投》",
+      "topics": [
+        "硅谷创投",
+        "高通创投",
+        "AI 应用",
+        "Physical AI",
+        "Cerebras",
+        "Scale AI"
+      ],
+      "url": "https://www.youtube.com/watch?v=my_lMhlKLVk"
+    },
     {
       "id": "a16z-dhh-ai-16-hour-days-20261120",
       "title": "《AI 让 DHH 一天工作 16 小时》",
