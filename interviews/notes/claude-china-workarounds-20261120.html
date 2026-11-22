@@ -8,21 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">YOUTUBE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">YOUTUBE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>为了用上 Claude，中国用户搞出了什么招：三年、六个回合的攻防战</h1>
 <blockquote>
 <p>来源：YouTube 频道「我拿过诺奖」解说视频（2026-11-20 发布，29 分钟）
@@ -82,9 +90,152 @@
 <li>最近一个多月的矛盾信号：10 月初 Claude 网页版和桌面端悄悄上线简体、繁体中文界面；10 月下旬有人实测发现升级订阅的付款页出现了中国大陆及港澳台地区选项、支持绑银联卡——但细看接入的是银联国际的跨境清算通道，并非国内日常的本土银联网络。紧接着 11 月 12 日，Anthropic 新版支持地区政策正式生效，规则焊得更死：人物理身处不支持地区就不能用，公司注册在不支持地区、或被这类主体控股过半的，哪怕员工坐在硅谷办公室也一律禁用，中国大陆依然在不支持名单上。社区因此吵成两派：一派认为是「精准钓鱼」——先虚掩着门，等你绑了银联卡、填了真实账单地址暴露身份，风控再收网一锅端；另一派认为这跟大陆关系不大，台湾、新加坡、马来西亚和全球海外华人本就是合法增量盘，上市前补齐本地化界面和国际卡支付只是做大营收的基本功。</li>
 <li>收尾的判断：挡在国内用户面前的这堵墙从来不是单方面建起来的——彼岸在升级封控算法、收紧地区禁令，此岸把虚拟卡平台一纸叫停、头部大厂把 Claude Code 列为高风险软件清退；几年前被当作全人类共享基础设施的 AI，正在以肉眼可见的速度裂变成各用各的生态。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>為了用上 Claude，中國使用者搞出了什麼招：三年、六個回合的攻防戰</h1>
+<blockquote>
+<p>來源：YouTube 頻道「我拿過諾獎」解說影片（2026-11-20 發布，29 分鐘）
+本紀要據雅加達轉寫稿整理（原影片無字幕）；文中數字與說法均為影片引用媒體報導與官方文件的口徑，未另行核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這期影片把 2023–2026 年國內使用者繞過 Anthropic 地區封鎖的辦法按時間線拆成六個回合：從個人自備「三件套」，到買號、中轉站產業鏈，再到真機出海和大廠曲線採購；而 Anthropic 的反制也一路升級到在 Claude Code 裡埋隱寫標記、強制實名和按股權穿透封殺。影片的結論是：這堵牆是兩邊一起砌起來的。</p>
+<h2>背景：為什麼非用不可，又為什麼死活不讓用</h2>
+<ul>
+<li>非用不可的理由很樸素：寫程式確實能打。影片引 Wired 的採訪稱，多家科技公司的學者和一線工程師承認，真到啃硬骨頭時優先選的還是 Claude 而不是國產模型。</li>
+<li>Anthropic 的封鎖動機，影片歸因於「模型蒸餾」焦慮：今年 2 月 Anthropic 點名 DeepSeek、月之暗面、MiniMax，指控其用約 2.4 萬個虛假帳號刷了 1600 多萬次對話，把回答倒出去訓練自家模型；6 月又指控與阿里相關的團隊用了 2.5 萬個假帳號、2800 多萬次對話。</li>
+<li>大盤子數字（引 Anthropic 透明度報告）：今年上半年共封號 1140 萬個，平均每天 6 萬多個，力度是去年下半年的 8 倍；官方口徑是全球各種違規的總和，未點名中國使用者占比。</li>
+</ul>
+<h2>第一回合（2023 年 7 月起）：入門三件套</h2>
+<ul>
+<li>Claude 網頁版 2023 年 7 月開放時只有美國、英國，中國大陸從未進過支持名單。最早的使用者要過三關：海外 IP（梯子）、海外手機號（接碼平台租一次性號碼）、海外支付（虛擬信用卡或禮品卡）。</li>
+<li>Anthropic 把 IP、手機號、銀行卡打包交叉比對：機房公共 IP + 被幾百人輪用過的接碼號 + 同號段虛擬卡，在風控眼裡等於腦門上貼了「批量註冊」。</li>
+<li>使用者對策：買固定海外住宅 IP 不再亂跳、註冊後先「養號」（每天隨便聊兩句攢活躍度）、被誤殺就寫申訴小作文。2024 年 8 月 Linux.do 論壇流傳的經典模板核心話術是「我是美國人，只是出差來中國」；也有人申訴郵件只寫了一句「I use it for coding」就被解封——這一回合拚的純是運氣，成本太高，於是市場轉向買現成的。</li>
+</ul>
+<h2>第二回合：買成品號，與野卡之死</h2>
+<ul>
+<li>淘寶、閒魚、Telegram 上滿屏成品號，Pro 甚至上百美元的 Max 帳號常和 ChatGPT Plus、Gemini 打包成「AI 全家桶」；也能幾人拼車合租。影片引媒體深挖稱，很多賣家根本不是駭客團夥，而是淘寶老牌遊戲代充商家——以前做海外點卡、跨區儲值，鏈路現成，順手把 Claude 擺上貨架。</li>
+<li>買號的本質是把風險外包而非消滅：號是別人用虛擬資訊註冊的，賣家跑路或號段被一鍋端，使用者連申訴資格都沒有。</li>
+<li>更大的變數來自國內一側：2025 年 7 月 12 日，國內最有名的虛擬卡平台野卡（WildCard）突然公告停止所有業務，理由只有「應相關部門要求」七個字，幾十萬使用者失去最順手的儲值管道，不少人餘額還取不出來。這一回合的門是國內這邊焊死的。</li>
+</ul>
+<h2>第三回合：中轉站——一門分工嚴密的產業鏈</h2>
+<ul>
+<li>顆粒度拆到最細：連號都不用買，按量付費、用多少付多少。原理被影片比作「AI 界的海淘代購」：中轉站在海外伺服器上批量養著成百上千個 Claude 帳號，使用者在國內發問，它轉發給 Claude 再把答案吐回來。代理、虛擬卡、註冊三件套全員下崗，微信支付寶人民幣直接用。</li>
+<li>價格：常見行情是 1 元人民幣買 1 美元官方額度，相當於一折多；影片引 ChinaTalk 報導稱國內中轉站普遍報價在官方定價的一到三折。GitHub 上有專人維護的中轉站導覽目錄，第三方網站把各家單價、延遲、可用率做成即時排行榜。The Information 挖到的細節：北京海淀一棟寫字樓約 30 家租戶裡有 6 家在做轉賣 Claude 額度的生意。</li>
+<li>上游鏈條：號商（批量註冊）—接碼商（海外號碼）—卡商（批量虛擬卡）—代理網路供應商（乾淨住宅 IP）—中轉站老闆（搭介面、寫自動切號腳本躲風控）—各級分銷商（打包貼牌回淘寶閒魚零售）。</li>
+<li>獲利模式被總結為「一魚三吃」：①把進貨成本壓到近乎為零——白嫖免費試用額度、把 200 美元包月的 Max 套餐按小時限流拆給幾十人拼車、用盜刷信用卡開號在拒付前把額度變現；②掛羊頭賣狗肉——前端選的是頂級模型，後台偷偷路由給便宜的輕量版甚至國產開源模型，普通人日常寫程式察覺不出；③賣數據——使用者發過去的每行程式碼、每個提示詞連同模型推理過程全量存下，打包賣給其他實驗室或拿去訓練模型。ChinaTalk 的判斷是：賣額度是辛苦錢，這些白撿的對話數據才是中轉站最暴利的核心資產——「在超低價的生意裡，你自己往往才是被打包出售的商品」。</li>
+<li>與蒸餾的扣合：Anthropic 今年 2 月的安全報告指出，DeepSeek 等的蒸餾流量很大一部分走的正是這種商業代理網路；其中一個網路手握 2 萬多個虛假帳號，還故意把高併發蒸餾請求和普通開發者的正常請求混在一個池子裡發，干擾風控識別。</li>
+</ul>
+<h2>第四回合：Anthropic 的反制——程式碼隱寫與實名制</h2>
+<ul>
+<li><strong>Claude Code 裡的隱形暗號</strong>：今年 3、4 月起，Claude Code 安裝包裡被塞進一段未公開的混淆程式碼，平時休眠，只有當使用者改了環境變數、把官方伺服器位址指向第三方代理時才啟動——會改這個位址的，十有八九是中轉站使用者。啟動後它在後台做兩件事：讀系統時區看是否落在中國；把所連的中轉站域名與內置的一份 140 多條重點名單比對（國內科技公司域名、主流大模型實驗室關鍵詞）。結果不彈窗不斷網，而是縫進發往雲端的系統提示詞裡：時區命中中國，日期裡的短橫線就被換成斜線；代理命中名單，「today's」裡的單引號被換成幾種肉眼幾乎無法區分的 Unicode 相似符號，分別編碼命中類型。專業上這叫提示詞隱寫。事情瞞了三個多月，6 月底被一位開發者拆包發現，海外開發者社群炸鍋；Claude Code 工程師回應稱這是 3 月上線的反濫用實驗、為打擊未授權轉賣和蒸餾，並在 7 月 1 日的新版本裡刪除了這段程式碼。至於網傳的「還掃描系統語言」，影片稱從公開的逆向程式碼看沒有實錘。</li>
+<li><strong>實名驗證</strong>：4 月中旬幫助中心悄悄上線新規，部分使用者需上傳政府證件（護照/駕照/身分證）加自拍，驗證外包給第三方公司 Persona；7 月 8 日起在部分能力存取和付費訂閱路徑上成為強制門檻。</li>
+<li>使用者的對抗跟著升級：全套環境偽裝（時區改美國、指紋瀏覽器隔離），即刻上甚至有人做了「環境擬真度檢測」網頁，自測配置像不像中國使用者，結果頁用 Dario 的表情包打分；黑產同步在 Telegram 上明碼標價出售「已過 Persona 實名」的成品號。社群還演化出玄學保號守則（比如「凌晨 5 點寫程式最容易觸發風控」）。但影片也指出這套風控有時像抽獎：有人時區上海、系統簡體中文、Claude 記憶裡明寫著居住在中國大陸，三個號安然無恙；也有正經成年帳號被以「未滿 18 歲」為由封禁。</li>
+</ul>
+<h2>第五回合：真機出海——個人玩家的終極形態</h2>
+<ul>
+<li>前四回合的核心動作都是「演」：把國內電腦演成在美國。第五回合不用演：在北美、日本、新加坡等支持區擺一台實體 Mac mini，插當地家庭寬頻，預裝 Claude 桌面端和 Claude Code、綁機主本人的信用卡、開好頂配套餐，整機按月租出，國內使用者遠端桌面連過去用。市面上已有專門團隊公開招攬客戶。</li>
+<li>逐項對帳它為什麼難被抓：IP 是真實海外家庭寬頻而非擠爆的機房節點；時區語言是機器出廠本地配置；扣款是機主實體銀行卡；真觸發 Persona，大概率機主拿自己證件就過；就算 Claude Code 隱寫還活著，在純正海外真機上也掃不出異常。更硬核的版本（圈內口耳相傳、無公開實證）是連遠端桌面軟體都不用：HDMI 擷取卡抓畫面加硬體鍵鼠模擬器，在 macOS 底層看來鍵鼠就是插在 USB 口上的實體外設，沒有任何遠端進程痕跡。</li>
+<li>產業鏈新角色「海外包租公」：據稱多為北美華人和留學生，把閒置寬頻和幾台 Mac mini 變成副業，一人一機包月獨享。價格感人：影片查到一家含 Max 20 倍用量檔的公開報價，月租一度近 4000 元人民幣，幾乎是官方訂閱價的 3 倍。</li>
+<li>兩個死穴：①作息對不上——機器在洛杉磯，人卻在北京，北京傍晚的黃金工作時間是洛杉磯凌晨三點，這台機器「天天在深更半夜最勤奮」；影片引金融時報報導稱 Anthropic 會結合本地時區與活躍時段判斷使用者真實位置。②雙向信任裸奔——機主拿真實姓名、信用卡和家庭 IP 給租客做擔保，租客違規封的是機主的真實身分；而租客的核心程式碼和私有 API 金鑰，全都實打實跑在陌生人的硬碟上。</li>
+</ul>
+<h2>第六回合：大廠層級，與劇情反轉</h2>
+<ul>
+<li>去年 9 月 Anthropic 改寫服務條款：只要一家企業被中國等不支持地區的實體直接或間接持股超過 50%，無論子公司註冊在新加坡、美國還是開曼，一律禁用——從法理上堵死海外殼公司路線。</li>
+<li>但大廠各有曲線方案（影片引金融時報 7 月 3 日報導）：螞蟻集團透過新加坡註冊的關聯實體給員工開通企業版帳號；字節跳動走去中心化路線，公司不統一採購，允許符合條件的工程師自訂個人版、掛代理幹活、拿帳單報銷；還有公司借道海外子公司，透過 AWS Bedrock、Azure 等第三方雲端平台間接調用。消息出來後 Anthropic 已在緊急排查封堵，螞蟻和字節對報導均不予回應。</li>
+<li>反轉來自中方：隱寫事件 6 月底曝光後迅速升級為網路安全事件——7 月 8 日工信部旗下 NVDB 發布風險提示，稱特定版本 Claude Code 存在暗中收集使用者環境資訊的後門風險；7 月 10 日阿里巴巴內部下達封殺令，把 Claude Code 定性為高風險軟體，嚴禁員工在工作設備上使用，全員遷移到阿里自研的程式設計工具 Qoder。「你封我的介面，我禁你的軟體」，博弈至此已超越工具之爭。</li>
+</ul>
+<h2>帳算給誰看：兩邊都在買單</h2>
+<ul>
+<li>使用者側：走中轉站的，搭進去的是數據安全、模型被偷換、平台關門清零的風險；走高配路線的，要麼把真實證件和高清人臉交給海外商業公司做風控建檔，要麼把整個研發環境的控制權交給租機器的陌生人。申訴基本指望不上：官方透明度報告數據，今年上半年收到 39.8 萬次解封申訴，只推翻了 4.2 萬次，成功率 10.6%（去年下半年是 5.2 萬次申訴、放行 1700 次，成功率 3.3%）——成功率翻了三倍，但同期封號總數漲了近 8 倍，近九成申訴仍被駁回。</li>
+<li>Anthropic 側：中資持股超 50% 的禁令按當時行業測算一刀砍掉每年數億美元潛在營收；更直觀的是它 11 月初遞交的上市招股書修訂版——今年前 9 個月約 5%–7% 的收入來自後來被認定違反使用政策或商業條款的客戶，按前 9 個月 332 億美元總營收算，這筆「灰產流水」高達 17 億到 23 億美元。影片的解讀是：它在敲鐘前主動向華爾街交底，等於明說這十幾二十億美元以後大概率掙不到了。</li>
+<li>最近一個多月的矛盾信號：10 月初 Claude 網頁版和桌面端悄悄上線簡體、繁體中文介面；10 月下旬有人實測發現升級訂閱的付款頁出現了中國大陸及港澳台地區選項、支持綁銀聯卡——但細看接入的是銀聯國際的跨境清算通道，並非國內日常的本土銀聯網路。緊接著 11 月 12 日，Anthropic 新版支持地區政策正式生效，規則焊得更死：人物理身處不支持地區就不能用，公司註冊在不支持地區、或被這類主體控股過半的，哪怕員工坐在矽谷辦公室也一律禁用，中國大陸依然在不支持名單上。社群因此吵成兩派：一派認為是「精準釣魚」——先虛掩著門，等你綁了銀聯卡、填了真實帳單地址暴露身分，風控再收網一鍋端；另一派認為這跟大陸關係不大，台灣、新加坡、馬來西亞和全球海外華人本就是合法增量盤，上市前補齊在地化介面和國際卡支付只是做大營收的基本功。</li>
+<li>收尾的判斷：擋在國內使用者面前的這堵牆從來不是單方面建起來的——彼岸在升級封控演算法、收緊地區禁令，此岸把虛擬卡平台一紙叫停、頭部大廠把 Claude Code 列為高風險軟體清退；幾年前被當作全人類共享基礎設施的 AI，正在以肉眼可見的速度裂變成各用各的生態。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>What Chinese Users Have Cooked Up to Use Claude: A Three-Year, Six-Round Cat-and-Mouse Game</h1>
+<blockquote>
+<p>Source: explainer video from the YouTube channel "我拿过诺奖" (published 2026-11-20, 29 minutes)
+These notes were compiled from a Jakarta transcription (the original video has no subtitles); all figures and claims are as cited by the video from media reports and official documents, and have not been independently verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>The video breaks down, in timeline order, the methods Chinese users used from 2023 to 2026 to get around Anthropic's regional blockade into six rounds: from individuals assembling their own "three-piece kit," to buying ready-made accounts and the relay-station supply chain, to renting physical machines overseas and big tech firms' indirect procurement workarounds; meanwhile Anthropic's countermeasures escalated all the way to burying steganographic markers in Claude Code, mandatory real-name verification, and bans that pierce through equity ownership. The video's conclusion: this wall was built by both sides together.</p>
+<h2>Background: Why They Insist on Using It, and Why Anthropic Insists on Blocking Them</h2>
+<ul>
+<li>The reason for insisting is simple: it really is that good at writing code. The video cites interviews by Wired in which scholars and frontline engineers at multiple tech companies admit that when it comes to genuinely hard problems, they still reach for Claude first rather than domestic models.</li>
+<li>Anthropic's motive for blocking, the video argues, is anxiety over "model distillation": this February Anthropic named DeepSeek, Moonshot AI, and MiniMax, accusing them of using roughly 24,000 fake accounts to run more than 16 million conversations and siphoning the answers off to train their own models; in June it accused a team linked to Alibaba of using 25,000 fake accounts and more than 28 million conversations.</li>
+<li>The headline numbers (from Anthropic's transparency report): 11.4 million accounts were banned in the first half of this year, an average of more than 60,000 a day, eight times the intensity of the second half of last year; by the official framing this is the total across all kinds of violations worldwide, and it does not break out the share attributable to Chinese users.</li>
+</ul>
+<h2>Round One (from July 2023): The Entry-Level Three-Piece Kit</h2>
+<ul>
+<li>When the Claude web version opened in July 2023 it was available only in the US and UK; mainland China has never been on the supported list. The earliest users had to clear three hurdles: an overseas IP (a VPN), an overseas phone number (a one-time number rented from an SMS-receiving platform), and overseas payment (a virtual credit card or gift card).</li>
+<li>Anthropic cross-checks IP, phone number, and bank card as a bundle: a shared data-center IP + an SMS number cycled through hundreds of people + a virtual card from the same number range reads, to risk control, like a "bulk registration" label stuck on your forehead.</li>
+<li>Users' countermeasures: buy a fixed overseas residential IP and stop hopping around; "warm up" a new account after registering (chat idly every day to build up activity); and if wrongly banned, write an appeal essay. The classic template circulating on the Linux.do forum in August 2024 boiled down to "I'm American, I'm just in China on a business trip"; one person's appeal email consisted of a single line — "I use it for coding" — and got the account unbanned. This round was pure luck, and the costs were too high, so the market shifted to buying ready-made accounts.</li>
+</ul>
+<h2>Round Two: Buying Ready-Made Accounts, and the Death of WildCard</h2>
+<ul>
+<li>Taobao, Xianyu, and Telegram are full of ready-made accounts; Pro and even hundred-dollar Max accounts are often bundled with ChatGPT Plus and Gemini into "AI family packs," and several people can also split one account. The video cites media digging showing that many sellers are not hacker gangs at all but veteran Taobao game top-up merchants — they used to sell overseas game cards and cross-region recharges, the plumbing was already in place, and they simply put Claude on the shelf too.</li>
+<li>Buying an account outsources the risk rather than eliminating it: the account was registered with someone else's fake information, so if the seller vanishes or the whole account range gets wiped out, the user has no standing even to appeal.</li>
+<li>The bigger shock came from the domestic side: on July 12, 2025, WildCard, the country's best-known virtual card platform, abruptly announced it was shutting down all services, giving only a seven-character reason — "as required by the relevant authorities." Hundreds of thousands of users lost their most convenient top-up channel, and many couldn't even withdraw their balances. The door in this round was welded shut from the Chinese side.</li>
+</ul>
+<h2>Round Three: Relay Stations — A Tightly Divided Supply Chain</h2>
+<ul>
+<li>At the finest granularity, you don't even need to buy an account: pay per use, pay only for what you consume. The video likens the principle to "a cross-border shopping proxy for AI": a relay station keeps hundreds or thousands of Claude accounts running on overseas servers; a user in China sends a question, the station forwards it to Claude and spits the answer back. Proxies, virtual cards, and the registration kit are all out of a job — WeChat Pay, Alipay, and renminbi work directly.</li>
+<li>Prices: a common quote is 1 yuan for 1 US dollar of official credit, roughly a tenth of the official price or a bit more; the video cites ChinaTalk reporting that domestic relay stations generally quote between one-tenth and three-tenths of the official price. On GitHub, volunteers maintain directory lists of relay stations, and third-party sites turn each provider's unit price, latency, and availability into real-time leaderboards. A detail dug up by The Information: in one office building in Beijing's Haidian district, 6 of roughly 30 tenants were in the business of reselling Claude credit.</li>
+<li>The upstream chain: account farmers (bulk registration) — SMS suppliers (overseas numbers) — card suppliers (bulk virtual cards) — proxy network providers (clean residential IPs) — relay station operators (building the interface, writing auto-switching scripts to dodge risk control) — distributors at every level (repackaging and white-labeling for retail on Taobao and Xianyu).</li>
+<li>The profit model is summed up as "one fish, three meals": ① drive procurement costs to nearly zero — leech free trial credit, split a $200-a-month Max plan among dozens of people with hourly rate limits, or open accounts with stolen credit cards and cash out the credit before the chargeback hits; ② bait and switch — the front end says you picked a top-tier model while the back end quietly routes to a cheap lightweight version or even a domestic open-source model, which ordinary people writing everyday code can't detect; ③ sell the data — every line of code and every prompt users send, together with the model's reasoning traces, is stored in full and packaged for sale to other labs or used to train models. ChinaTalk's judgment: selling credit is the hard-earned money; the conversation data picked up for free is the relay stations' most lucrative core asset — "in an ultra-cheap business, you yourself are often the product being packaged and sold."</li>
+<li>The distillation connection: Anthropic's security report this February noted that a large share of the distillation traffic from DeepSeek and others ran through exactly these commercial proxy networks; one network held more than 20,000 fake accounts and deliberately mixed high-concurrency distillation requests with normal developers' ordinary requests in the same pool to interfere with risk-control detection.</li>
+</ul>
+<h2>Round Four: Anthropic Strikes Back — Code Steganography and Real-Name Verification</h2>
+<ul>
+<li><strong>The invisible code inside Claude Code</strong>: starting in March–April of this year, a piece of undisclosed obfuscated code was slipped into the Claude Code installer. It lies dormant normally and activates only when a user changes an environment variable to point the official server address at a third-party proxy — and anyone who changes that address is, nine times out of ten, a relay-station user. Once activated it does two things in the background: it reads the system time zone to see whether it falls in China, and it checks the connected relay station's domain against a built-in watchlist of more than 140 entries (domains of Chinese tech companies and keywords for major model labs). The results trigger no pop-up and no disconnection; instead they are sewn into the system prompt sent to the cloud: if the time zone hits China, the hyphens in dates are replaced with slashes; if the proxy hits the list, the apostrophe in "today's" is swapped for one of several Unicode lookalike characters that are nearly indistinguishable to the eye, each encoding a different hit type. Professionally this is called prompt steganography. It stayed hidden for more than three months until a developer unpacked the code at the end of June and the overseas developer community erupted; a Claude Code engineer responded that it was an anti-abuse experiment launched in March to fight unauthorized resale and distillation, and the code was removed in the July 1 release. As for the rumored scanning of system language, the video says there is no hard evidence of it in the publicly reverse-engineered code.</li>
+<li><strong>Real-name verification</strong>: in mid-April the help center quietly rolled out new rules under which some users must upload a government ID (passport/driver's license/national ID card) plus a selfie, with verification outsourced to a third-party company, Persona; from July 8 it became a mandatory gate on some capability-access and paid-subscription paths.</li>
+<li>Users' countermeasures escalated in step: full environment camouflage (time zone set to the US, fingerprint-browser isolation); someone on Jike even built an "environment realism test" web page that scores how much your setup looks like a Chinese user, with Dario memes on the results page; and the black market simultaneously listed "Persona-verified" ready-made accounts on Telegram at marked prices. The community also evolved folk account-protection rules (for example, "coding at 5 a.m. is the most likely time to trigger risk control"). But the video also notes that this risk control sometimes works like a lottery: one person with a Shanghai time zone, a Simplified Chinese system, and Claude memory entries stating outright that they live in mainland China kept three accounts perfectly fine, while a bona fide adult account was banned for being "under 18."</li>
+</ul>
+<h2>Round Five: Physical Machines Overseas — The Endgame for Individual Players</h2>
+<ul>
+<li>The core move of the first four rounds was "acting": making a computer in China perform as if it were in America. Round five requires no acting: put a physical Mac mini in a supported region such as North America, Japan, or Singapore, plug it into local home broadband, preinstall the Claude desktop app and Claude Code, bind the owner's own credit card, open a top-tier plan, and rent out the whole machine by the month for users in China to connect to via remote desktop. Dedicated teams are already openly recruiting customers for this.</li>
+<li>Going through the checklist of why it's hard to catch: the IP is real overseas home broadband, not an overcrowded data-center node; the time zone and language are the machine's factory local settings; payments run through the owner's physical bank card; if Persona verification is actually triggered, the owner can most likely pass it with their own documents; and even if the Claude Code steganography were still alive, it would find nothing anomalous on a genuine overseas machine. The more hardcore version (passed around by word of mouth in the community, with no public proof) skips remote desktop software entirely: an HDMI capture card grabs the video and a hardware keyboard-and-mouse emulator makes the peripherals look, at the macOS level, like physical USB devices plugged into the machine, leaving no trace of any remote process.</li>
+<li>A new role in the supply chain, the "overseas landlord": said to be mostly North American Chinese expatriates and international students turning idle broadband and a few Mac minis into a side business, one machine per customer on a monthly rental. The prices are steep: the video found one public quote for a package including the Max 20x usage tier at nearly 4,000 yuan a month at one point, almost three times the official subscription price.</li>
+<li>Two fatal weaknesses: ① the activity-hours mismatch — the machine is in Los Angeles but the person is in Beijing, and Beijing's prime evening working hours are 3 a.m. in Los Angeles, so the machine is "hardest at work in the middle of every night"; the video cites Financial Times reporting that Anthropic combines local time zone and active hours to judge a user's real location. ② two-way naked trust — the owner stakes their real name, credit card, and home IP as guarantee for the tenant, and if the tenant breaks the rules it is the owner's real identity that gets banned; meanwhile the tenant's core code and private API keys run, in full, on a stranger's hard drive.</li>
+</ul>
+<h2>Round Six: The Big-Tech Level, and a Plot Twist</h2>
+<ul>
+<li>Last September Anthropic rewrote its terms of service: if a company is more than 50% owned, directly or indirectly, by entities from unsupported regions such as China, it is banned across the board no matter whether the subsidiary is registered in Singapore, the US, or the Cayman Islands — legally sealing off the overseas-shell-company route.</li>
+<li>But the big firms each have their own indirect schemes (the video cites Financial Times reporting from July 3): Ant Group opened enterprise accounts for employees through an affiliated entity registered in Singapore; ByteDance took a decentralized route — the company doesn't procure centrally, and eligible engineers subscribe individually, work through proxies, and expense the bills; other companies route through overseas subsidiaries and call the models indirectly via third-party cloud platforms such as AWS Bedrock and Azure. After the reports came out, Anthropic began urgently investigating and plugging the holes; Ant and ByteDance both declined to comment on the reporting.</li>
+<li>The twist came from the Chinese side: after the steganography incident broke at the end of June it rapidly escalated into a cybersecurity affair — on July 8 the NVDB, under the Ministry of Industry and Information Technology, issued a risk advisory saying specific versions of Claude Code posed a backdoor risk of secretly collecting users' environment information; on July 10 Alibaba issued an internal ban, designating Claude Code as high-risk software, forbidding employees from using it on work devices, and migrating everyone to Alibaba's in-house coding tool, Qoder. "You block my API, I ban your software" — by this point the contest had moved beyond a fight over tools.</li>
+</ul>
+<h2>Settling the Bill: Both Sides Are Paying</h2>
+<ul>
+<li>On the user side: those who go through relay stations are putting up data security, the risk of models being secretly swapped, and the risk of a platform shutting down and zeroing out balances; those who take the high-spec route either hand real identity documents and high-definition facial images to an overseas commercial company for risk-control profiling, or hand control of their entire development environment to a stranger they rent a machine from. Appeals are basically hopeless: according to the official transparency report, in the first half of this year 398,000 unban appeals were received and only 42,000 were overturned, a success rate of 10.6% (in the second half of last year it was 52,000 appeals with 1,700 granted, a 3.3% success rate) — the success rate tripled, but total bans rose nearly eightfold over the same period, and close to 90% of appeals are still rejected.</li>
+<li>On Anthropic's side: by industry estimates at the time, the ban on companies with more than 50% Chinese ownership cut away hundreds of millions of dollars in potential annual revenue in one stroke; more vividly, its amended IPO prospectus filed in early November showed that about 5%–7% of revenue in the first nine months of this year came from customers later found to have violated usage policies or commercial terms — on total revenue of $33.2 billion for the first nine months, that "gray-market flow" amounts to $1.7–2.3 billion. The video's reading: by volunteering this to Wall Street before the opening bell, Anthropic was effectively saying this one-to-two billion dollars would most likely not be earned again.</li>
+<li>The contradictory signals of the past month or so: in early October the Claude web and desktop apps quietly added Simplified and Traditional Chinese interfaces; in late October, testers found that the subscription upgrade payment page offered mainland China and Hong Kong/Macao/Taiwan region options and supported linking a UnionPay card — but on closer inspection the channel was UnionPay International's cross-border clearing network, not the domestic UnionPay network used in everyday life in China. Then, on November 12, Anthropic's new supported-regions policy formally took effect, welding the rules even tighter: a person physically located in an unsupported region cannot use it at all, and a company registered in an unsupported region, or majority-controlled by such an entity, is banned across the board even if the employee sits in a Silicon Valley office; mainland China remains on the unsupported list. The community split into two camps: one sees "precision fishing" — the door is left half-open until you've linked a UnionPay card and filled in a real billing address that exposes your identity, at which point risk control hauls in the net and takes everyone at once; the other argues it has little to do with the mainland — Taiwan, Singapore, Malaysia, and ethnic Chinese users worldwide are a legitimate growth market, and completing localized interfaces and international card payments before an IPO is just basic revenue-building.</li>
+<li>The closing judgment: the wall in front of Chinese users was never built by one side alone — on one shore, blocking algorithms keep being upgraded and regional bans tightened; on this shore, a virtual card platform was shut down by a single notice and a leading tech giant purged Claude Code as high-risk software. An AI that a few years ago was treated as shared infrastructure for all humanity is visibly splitting, at a speed you can watch, into separate ecosystems, each using its own.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=rEJHzg2nW84">https://www.youtube.com/watch?v=rEJHzg2nW84</a>（我拿过诺奖）· 发布日期：2026-11-20 · 时长：29 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为视频引用媒体与官方文件的口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=rEJHzg2nW84">https://www.youtube.com/watch?v=rEJHzg2nW84</a>（我拿過諾獎）· 發布日期：2026-11-20 · 時長：29 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為影片引用媒體與官方文件的口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=rEJHzg2nW84">https://www.youtube.com/watch?v=rEJHzg2nW84</a> (我拿过诺奖) · Published: 2026-11-20 · Length: 29 minutes<br>This page is the full text of notes compiled and edited by hand from a machine transcription; all viewpoints and figures are as cited by the video from media and official documents, and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=rEJHzg2nW84">https://www.youtube.com/watch?v=rEJHzg2nW84</a>（我拿过诺奖）· 发布日期：2026-11-20 · 时长：29 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为视频引用媒体与官方文件的口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"为了用上 Claude，中国用户搞出了什么招：三年、六个回合的攻防战 · Yat's Talks",tw:"為了用上 Claude，中國使用者搞出了什麼招：三年、六個回合的攻防戰 · Yat's Talks",en:"What Chinese Users Have Cooked Up to Use Claude: A Three-Year, Six-Round Cat-and-Mouse Game · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
