@@ -8,21 +8,29 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">YOUTUBE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">YOUTUBE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>共识窗口已经关上：高通创投周楠谈硅谷创投还怎么投</h1>
 <blockquote>
 <p>来源：YouTube 频道「课代表立正」对谈节目（2026-09-02 发布，66 分钟）
@@ -76,9 +84,140 @@
 <li>她管理注意力的办法是冥想（20 分钟）和印象派油画（有孩子后已封笔）：画印象派像做投资，先有一个假设（thesis），再在不停落笔中论证它。她的总结是借用那句名言——Attention Is All You Need，但前提是把 attention 花在正确的事情上。</li>
 <li>对「AI 时代什么人不会被淘汰」，她的答案是：会用 AI 工具、且有系统性思维的人——能迅速学习、善于发问、把问题拆解成系统框架，再让 AI 来赋能。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>共識窗口已經關上：高通創投周楠談矽谷創投還怎麼投</h1>
+<blockquote>
+<p>來源：YouTube 頻道「課代表立正」對談節目（2026-09-02 發布，66 分鐘）
+嘉賓：周楠（Nan），高通創投（Qualcomm Ventures）投資合夥人，此前在百度美國研究院一線做 AI 投資
+主持：課代表立正
+本紀要據影片自帶中文字幕整理；文中數字與判斷均為嘉賓自述口徑，未另行核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>周楠的整套打法只有一條鐵律：只在共識形成之前下注。而她給出的時間表是——這個窗口 2024 年還有 3–6 個月，2025 年只剩 2–3 個月，2026 年幾乎為零；矽谷的錢正因此逃離 AI 應用層，湧向少數贏家和中晚期公司。</p>
+<h2>一、共識窗口：從半年縮到零</h2>
+<ul>
+<li>她給自己定的紀律是：絕不追高，必須在形成共識之前、哪怕窗口只有兩三個月，也要基於自己的投資論（thesis）下注；等共識到了再下注，「就等著被割」。</li>
+<li>今年的實際景象：一級市場的錢一窩蜂湧入「贏家品類」——Anthropic、OpenAI、SpaceX、Databricks 這類公司的 SPV 一個接一個爆火，錢往中晚期走，成了今年 VC 的主流趨勢。她轉述並認同 Sarah Guo（Conviction 創辦人）的判斷：今年的 AI 投資非常難，找不到特別明顯的趨勢可投。</li>
+<li>為什麼應用層最難：通用 agent 可能被 OpenAI、Anthropic 這些前沿實驗室直接吃掉；垂直 agent 同樣危險——金融、服務類 agent，Anthropic 自己都在做。</li>
+<li>數據不再是護城河：一兩年前垂直行業數據還能算壁壘，現在大模型公司可以生成合成數據、可以買標註，數據這條路堵死了。還能投的垂直機會，是能把高價值鏈的複雜工作流整個打通的 agent（她舉醫療為例：從找醫生、病歷記錄到建議、拿藥全流程）——模型是大腦，但複雜流程的「動手」部分還沒被自動化。</li>
+<li>她對週期的判斷：2026 年是這一輪的第一階段頂峰——OpenAI、Anthropic 都要上市收割，可能有個小泡沫要破，但她不認為 AI 泡沫會破裂；下一個 cycle 正在形成，要等新的技術曲線突破和拐點。</li>
+</ul>
+<h2>二、她現在看什麼：Infra 與 Physical AI</h2>
+<ul>
+<li><strong>Infra 是她的主線</strong>：新型計算（針對推理場景的 ASIC 等）、能把推理成本打下來的基礎設施。邏輯很實際：agentic 創業者的毛利空間取決於推理成本，不降下來，就一直是在給前沿模型公司打工。</li>
+<li><strong>硬體的收費模式變了</strong>：從賣硬體變成賣系統、按用量（token 消耗/吞吐）收費。她以 Cerebras 為例：看它的招股書，它賣的已經不是一顆晶圓級晶片，而是一整套推理系統加自建資料中心，幫客戶跑推理負載。她判斷價值的大頭將被「硬體+系統」、模型公司和 infra cloud 吃掉，應用層創業者「湯都喝不上」——除非做出爆款。</li>
+<li><strong>Physical AI（機器人、世界模型）是當下共識最熱的賽道</strong>，她相對看好的是：①能真正落地的部署場景——機器人要在真實場景裡落地、收集數據、迭代大腦，行業現在太熱衷討論方法論，「deployment 反而被忽視了」；②數據的終局不是滿街採集，而是能生成數據的「數據引擎」——她判斷這個領域會出現像 Scale AI 之於語言模型那樣的公司，給世界模型和機器人供給高品質數據；只靠買硬體到處採數據的公司要小心。早期落地場景她押注先進製造（工業場景），理由是美國有把生產能力帶回本土的戰略目標。</li>
+<li><strong>純軟體她明確不看</strong>：不是下判斷說軟體沒前途，而是承認這不是她擅長的領域，不發表擾亂別人心智的意見。</li>
+<li>從 Demo 到量產之間死掉的公司，共性是錯判需求加不能落地：疫情期間的倉儲物流機器人有過暫時性的產品市場契合，現象一過市場就沒了，還要跟大量本地 IT 做配置調試，ROI 根本算不過來。</li>
+</ul>
+<h2>三、選人：殺手直覺先行，第一性原理驗風險</h2>
+<ul>
+<li>她非常認同徐新的一句話：挑創業者要看有沒有「殺手的直覺」（killer instinct）。她的方法是直覺先行、驗證跟上——先憑直覺把人放進漏斗長期追蹤，再像驗證假設一樣把風險點一個一個拆開，看創辦人是否把每個風險都深思熟慮過、想好了怎麼解。</li>
+<li>她列的創辦人素質：解決一個足夠難、足夠大的問題（是未來 3–5 年甚至 5–10 年的問題、目前沒有解決方案，而不是「做下一個微信」）；把解法拆到細顆粒度；講故事、招人、融資三種能力；scrappy、hustling、能落地。</li>
+<li><strong>案例一：Scale AI / Alexandr Wang</strong>。十年前她在百度時從 YC 的錄影回放裡注意到 Wang，當時就判斷數據對模型訓練（尤其自動駕駛）至關重要。真正讓她確信的是第二階段：2021–22 年自動駕駛退潮、Scale 的客戶變少，Wang 迅速轉向美國政府與公共部門的數據基礎設施生意，行動極快，還抓住了 Eric Schmidt 做導師站台，訂單量大漲。她用一個漏斗長期追蹤這類人，2022、2023 年相繼在內部提議投資，高通創投最終投進了 Scale。她轉述的細節：Wang 融 F 輪時錄了一段 28 分鐘的影片給投資人，在大多數投資人剛認同 Scaling Law 時，他已經大膽給出 AGI 的方向與時間表，並把公司怎麼一步步抓住機會講得清清楚楚。Meta 收購 Scale 的價格，她口徑是約 290 億美元（對話中先說錯成 2000 億，隨即自我糾正）。</li>
+<li><strong>案例二：Cerebras（她在百度時的 home run）</strong>。2016 年，百度美研的研究員（含 Deep Speech 論文作者）判斷未來模型會非常大、算力遠遠不夠；她的推論是：要麼英偉達壟斷，要麼必須投新的晶片架構——這是在共識形成很多年之前。她滿街找顛覆性架構，選中 Cerebras 的關鍵原因是創辦人 Andrew Feldman：公司成立才一年，就招來 80 多個創始工程師、其中 60 多個是 PhD，絕大多數是跟他從前一家公司 SeaMicro（被 AMD 收購）一路過來的老人；盡調時 Feldman 把所有系統級風險拆得極細、講得極清。她 2016 年預測 2025 年 AI 晶片市場約 250 億美元，當時身邊人說她太激進——回頭看還是低估了。</li>
+</ul>
+<h2>四、Anti-portfolio：越厲害的投資人，遺憾越多</h2>
+<ul>
+<li>2017–18 年她和前老闆出來募一支 AI 基金，deal pipeline 裡放著 OpenAI、Databricks、Cerebras（想繼續加注），但 LP 普遍覺得 AI 賽道不靠譜、又重資產，基金沒募起來。她說當時 OpenAI 方向並不清晰、在同時試五六個方向，是 Sam Altman 與陸奇關係好、百度又是 YC 的支持方，她覺得「這個人很厲害，應該投一下」，沒太算報酬率。</li>
+<li>Databricks 是她在 Andreessen 年會上從一兩百家公司裡自己挑出來聊的，很有 conviction，但帶回百度內部被以「太 low-tech、不符合投前沿 AI 的邏輯」否掉，沒上成會。</li>
+<li>她的結論：幾乎所有投資人都有 anti-portfolio，越厲害的越多——Sarah Guo 在 Greylock 攢了一堆遺憾，最後自己出來創辦了 Conviction。拐點感知上她有個親身標記：百度美研 2017 年前後預測「Wikipedia 級別聰明的模型」大約 2025 年出現，ChatGPT 在 2022 年底出來，比預測快了三年——拐點剛形成、非共識轉共識的短窗口，是贏面最大的下注點。</li>
+</ul>
+<h2>五、給創辦人的幾句實話</h2>
+<ul>
+<li><strong>估值不是越高越好</strong>：卯著高估值談，下一輪迭代跟不上就是斷崖式下跌。LeCun 的 AMI 一出來就幾十億美元估值，那是名聲溢價，普通研究者複製不了。</li>
+<li><strong>別拿著錘子找釘子</strong>：她見過很出色的大廠技術 leader，模型範式創新很厲害，但應用場景沒想清楚、市場講不大，募不到資。投資人問幾個問題，五分鐘就能判斷一個創辦人想得深不深。</li>
+<li><strong>別追熱點</strong>：agent、即時學習這些熱點，是給很久以前就在深耕的人準備的機會，追的時候已經來不及了。</li>
+<li><strong>什麼叫 coachable</strong>：主動來問問題、聽完會反思、去實踐、再回來問的，是可教的；嘴上 yes yes 點頭、關鍵時點又犯同樣錯誤的，不是。最牛的創辦人是「不需要 coach」型（如 Musk），最危險的是「需要 coach 又不 coachable」型。</li>
+<li><strong>不拿 VC 的錢也完全成立</strong>：她舉 Surge AI 的 Edwin Chen——沒怎麼拿 VC 錢，埋頭幾年手搓出數據引擎，一出來就是爆款，大客戶是 Anthropic 的強化學習數據生意。有這個底氣，不拿錢是最好的。</li>
+</ul>
+<h2>六、投後與自我管理：放下助人情結</h2>
+<ul>
+<li>高通創投的運作像 Benchmark：6 個合夥人，每個人投、融、管、退全包；她在大約 7–8 家被投公司任董事會觀察員（board observer）。她在 Qualcomm 六年練出的長板是 storytelling coaching：技術創辦人 pitch 完二三十分鐘，她能用 10 分鐘指出故事講得差在哪——因為她常年和 Doug Leone（紅杉）、Vinod Khosla 等人同在一個董事會，知道不同大佬愛聽什麼樣的故事。</li>
+<li>早年她做投後是「關心過度」型，總想把經驗和教訓灌輸給創辦人；後來想通了：人悟不到的東西，硬塞也不會內化執行。她現在發現被投公司出現壞苗頭就點到為止——「人教人教不會，事教事一教就會」，放下助人情結，自己每天還能多睡一小時。</li>
+<li>她管理注意力的辦法是冥想（20 分鐘）和印象派油畫（有孩子後已封筆）：畫印象派像做投資，先有一個假設（thesis），再在不停落筆中論證它。她的總結是借用那句名言——Attention Is All You Need，但前提是把 attention 花在正確的事情上。</li>
+<li>對「AI 時代什麼人不會被淘汰」，她的答案是：會用 AI 工具、且有系統性思維的人——能迅速學習、善於發問、把問題拆解成系統框架，再讓 AI 來賦能。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>The Consensus Window Has Closed: Qualcomm Ventures' Zhou Nan on How Silicon Valley VC Can Still Invest</h1>
+<blockquote>
+<p>Source: Interview program on the YouTube channel "课代表立正" (released 2026-09-02, 66 minutes)
+Guest: Zhou Nan (Nan), Investment Partner at Qualcomm Ventures; previously did frontline AI investing at Baidu's US research institute
+Host: 课代表立正
+These notes were compiled from the video's own Chinese subtitles; all figures and judgments are as stated by the guest and have not been independently verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Zhou Nan's entire playbook rests on a single iron rule: bet only before consensus forms. And the timeline she gives is stark — that window was still 3–6 months in 2024, shrank to just 2–3 months in 2025, and is nearly zero in 2026; Silicon Valley money is therefore fleeing the AI application layer and flooding into a handful of winners and later-stage companies.</p>
+<h2>1. The Consensus Window: From Half a Year to Zero</h2>
+<ul>
+<li>Her self-imposed discipline: never chase high prices. She must place her bets before consensus forms — even if the window is only two or three months — based on her own investment thesis; once consensus arrives, betting means "just waiting to get fleeced."</li>
+<li>The actual scene this year: primary-market money has stampeded into "winner categories" — SPVs for companies like Anthropic, OpenAI, SpaceX and Databricks have been red-hot one after another, money is moving to the mid-to-late stage, and that has become this year's mainstream VC trend. She echoes and agrees with Sarah Guo (founder of Conviction): AI investing this year is very hard, with no especially obvious trend to invest in.</li>
+<li>Why the application layer is the hardest: general-purpose agents may be eaten directly by frontier labs like OpenAI and Anthropic; vertical agents are equally at risk — Anthropic itself is building agents for finance, services and the like.</li>
+<li>Data is no longer a moat: a year or two ago, vertical-industry data could still count as a barrier; now the big model companies can generate synthetic data and buy annotation, so that path is closed. The vertical opportunities still worth funding are agents that can wire through an entire complex workflow across a high-value chain (her example is healthcare: from finding a doctor, to medical records, to recommendations, to picking up medication — the full flow). The model is the brain, but the "hands-on" parts of complex processes have not yet been automated.</li>
+<li>Her read on the cycle: 2026 is the peak of the first phase of this round — OpenAI and Anthropic are both going public to harvest, there may be a small bubble to pop, but she does not believe the AI bubble will burst; the next cycle is already forming and will have to wait for a new technology curve breakthrough and inflection point.</li>
+</ul>
+<h2>2. What She Looks At Now: Infra and Physical AI</h2>
+<ul>
+<li><strong>Infra is her main line</strong>: new forms of compute (such as ASICs designed for inference workloads) and infrastructure that can drive inference costs down. The logic is practical: agentic founders' gross-margin headroom depends on inference costs — if those don't come down, they are effectively working for the frontier model companies.</li>
+<li><strong>The hardware charging model has changed</strong>: from selling hardware to selling systems, billed by usage (token consumption/throughput). Her example is Cerebras: read its prospectus and you see it is no longer selling a wafer-scale chip, but a complete inference system plus self-built data centers that run customers' inference workloads. She expects the bulk of the value to be captured by "hardware + systems," the model companies and infra clouds, leaving application-layer founders "not even a sip of the soup" — unless they produce a breakout hit.</li>
+<li><strong>Physical AI (robots, world models) is the hottest consensus track right now.</strong> What she is relatively bullish on: ① deployment scenarios that can actually land — robots need to be deployed in real-world settings, collect data and iterate their brains; the industry is currently too obsessed with methodology, and "deployment has actually been neglected"; ② the endgame for data is not collecting it all over the streets, but "data engines" that can generate data — she expects this field to produce a company like Scale AI was to language models, supplying high-quality data to world models and robots; companies that merely buy hardware and collect data everywhere should be treated with caution. For early deployment scenarios she bets on advanced manufacturing (industrial settings), because the US has a strategic goal of bringing production capacity back home.</li>
+<li><strong>She explicitly does not look at pure software</strong>: not a judgment that software has no future, but an admission that it is not her area of expertise, and she won't voice opinions that disturb other people's thinking.</li>
+<li>The companies that died between demo and mass production shared a common trait: misjudging demand plus an inability to land. Warehouse and logistics robots during the pandemic had a temporary product-market fit; once the phenomenon passed, the market vanished, and they still had to do configuration and debugging with large amounts of local IT — the ROI simply never added up.</li>
+</ul>
+<h2>3. Picking People: Killer Instinct First, First Principles to Vet the Risk</h2>
+<ul>
+<li>She strongly endorses a line from Kathy Xu (徐新): when picking founders, look for "killer instinct." Her method is intuition first, verification second — use intuition to put people into a funnel and track them over the long term, then, as if testing a hypothesis, take the risk points apart one by one and see whether the founder has thought each risk through deeply and figured out how to solve it.</li>
+<li>The founder qualities she lists: tackling a problem that is hard enough and big enough (a problem of the next 3–5 years, even 5–10 years, with no solution yet — not "building the next WeChat"); breaking the solution down to a fine granularity; three abilities — storytelling, recruiting and fundraising; being scrappy, hustling, and able to execute.</li>
+<li><strong>Case one: Scale AI / Alexandr Wang.</strong> Ten years ago, while at Baidu, she noticed Wang in a YC video replay and judged even then that data would be critical for model training (especially autonomous driving). What truly convinced her was the second phase: in 2021–22, as autonomous driving receded and Scale's customers dwindled, Wang pivoted rapidly to data infrastructure for the US government and public sector, moved extremely fast, and got Eric Schmidt on board as a mentor lending his name — order volume surged. She tracks people like this in a funnel over the long term; in 2022 and 2023 she successively proposed the investment internally, and Qualcomm Ventures ultimately invested in Scale. A detail she recounts: when raising his Series F, Wang recorded a 28-minute video for investors; at a time when most investors had only just come to accept the Scaling Law, he had already boldly laid out the direction and timeline for AGI, and explained clearly, step by step, how the company would seize the opportunity. The price at which Meta acquired Scale, by her account, was about US$29 billion (in the conversation she first misspoke and said 200 billion, then immediately corrected herself).</li>
+<li><strong>Case two: Cerebras (her home run at Baidu).</strong> In 2016, researchers at Baidu's US institute (including authors of the Deep Speech paper) judged that future models would be enormous and compute nowhere near sufficient; her inference was: either Nvidia monopolizes it, or you have to bet on a new chip architecture — years before consensus formed. She scoured the field for disruptive architectures, and the key reason she picked Cerebras was founder Andrew Feldman: barely a year after founding, the company had brought in more than 80 founding engineers, over 60 of them PhDs, most of them veterans who had followed him from his previous company SeaMicro (acquired by AMD); in due diligence, Feldman broke down every system-level risk in extreme detail and explained it with extreme clarity. In 2016 she predicted the 2025 AI chip market would be about US$25 billion; people around her said she was too aggressive — in hindsight she had still underestimated it.</li>
+</ul>
+<h2>4. Anti-Portfolio: The Better the Investor, the More Regrets</h2>
+<ul>
+<li>In 2017–18, she and her former boss set out to raise an AI fund. The deal pipeline held OpenAI, Databricks and Cerebras (which she wanted to keep adding to), but LPs generally felt the AI track was unreliable and too asset-heavy, and the fund never got raised. She says OpenAI's direction was unclear at the time — it was trying five or six directions at once — but Sam Altman had a good relationship with Qi Lu, Baidu was a YC supporter, and she felt "this person is very impressive, we should invest," without calculating the rate of return too hard.</li>
+<li>Databricks she picked out herself from one or two hundred companies at an Andreessen event and had strong conviction, but when she brought it back to Baidu it was rejected internally as "too low-tech, not fitting the logic of investing in frontier AI," and never made it to the investment committee.</li>
+<li>Her conclusion: almost every investor has an anti-portfolio, and the better the investor, the bigger it is — Sarah Guo accumulated a pile of regrets at Greylock and eventually left to found Conviction herself. She has a personal marker for sensing inflection points: around 2017, Baidu's US institute predicted that "Wikipedia-level smart models" would appear around 2025; ChatGPT came out at the end of 2022, three years ahead of the prediction — the short window when an inflection point has just formed and non-consensus is turning into consensus is the highest-odds moment to bet.</li>
+</ul>
+<h2>5. A Few Honest Words for Founders</h2>
+<ul>
+<li><strong>A higher valuation is not always better</strong>: negotiate stubbornly for a high valuation, and if the next round can't keep up with the iteration, it's a cliff-edge drop. LeCun's AMI came out of the gate with a valuation of several billion dollars — that is a reputation premium an ordinary researcher cannot replicate.</li>
+<li><strong>Don't walk around with a hammer looking for nails</strong>: she has seen outstanding technical leaders from big companies whose model-paradigm innovation was superb, but who hadn't thought the application scenario through and couldn't tell a big market story — they couldn't raise money. An investor asks a few questions and can tell within five minutes how deeply a founder has thought.</li>
+<li><strong>Don't chase hot topics</strong>: hot topics like agents and real-time learning are opportunities prepared for people who have been digging deep in them since long ago; by the time you chase them, it's already too late.</li>
+<li><strong>What "coachable" means</strong>: someone who proactively asks questions, reflects after listening, puts it into practice and comes back with more questions is coachable; someone who nods "yes yes" but repeats the same mistakes at critical moments is not. The best founders are the "don't need a coach" type (like Musk); the most dangerous are the "need a coach but aren't coachable" type.</li>
+<li><strong>Not taking VC money is completely valid</strong>: her example is Surge AI's Edwin Chen — he barely took VC money, spent years heads-down hand-building a data engine, and came out with a breakout hit whose big client is Anthropic's reinforcement-learning data business. With that kind of confidence, not taking money is the best option.</li>
+</ul>
+<h2>6. Post-Investment and Self-Management: Letting Go of the Urge to Help</h2>
+<ul>
+<li>Qualcomm Ventures operates like Benchmark: 6 partners, each covering investing, fundraising, management and exits end-to-end; she serves as a board observer at roughly 7–8 portfolio companies. The strength she built over six years at Qualcomm is storytelling coaching: after a technical founder pitches for twenty or thirty minutes, she can pinpoint in 10 minutes where the story falls short — because she has sat on boards for years alongside people like Doug Leone (Sequoia) and Vinod Khosla, and knows what kinds of stories different heavyweights like to hear.</li>
+<li>Early on, her post-investment style was "overly caring" — always wanting to pour her experience and lessons into founders. Later she figured it out: what a person hasn't grasped on their own won't be internalized and executed just because you force-feed it. Now, when she spots bad signs at a portfolio company, she says just enough — "you can't teach people by telling them; life teaches them in one go" — and by letting go of the urge to help, she gets an extra hour of sleep every day.</li>
+<li>Her way of managing attention is meditation (20 minutes) and Impressionist oil painting (a brush she has put down since having a child): painting Impressionism is like investing — you start with a hypothesis (thesis), then argue it out stroke by stroke. Her summary borrows the famous line — Attention Is All You Need — with the caveat that the attention has to be spent on the right things.</li>
+<li>On "who won't be eliminated in the AI era," her answer is: people who can use AI tools and think systemically — who can learn quickly, ask good questions, break problems down into a systems framework, and then let AI empower them.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=my_lMhlKLVk">https://www.youtube.com/watch?v=my_lMhlKLVk</a>（课代表立正）· 嘉宾：周楠（高通创投投资合伙人）· 发布日期：2026-09-02 · 时长：66 分钟<br>本页为据视频自带字幕整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=my_lMhlKLVk">https://www.youtube.com/watch?v=my_lMhlKLVk</a>（課代表立正）· 嘉賓：周楠（高通創投投資合夥人）· 發布日期：2026-09-02 · 時長：66 分鐘<br>本頁為據影片自帶字幕整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=my_lMhlKLVk">https://www.youtube.com/watch?v=my_lMhlKLVk</a> (课代表立正) · Guest: Zhou Nan (Investment Partner, Qualcomm Ventures) · Release date: 2026-09-02 · Duration: 66 minutes<br>This page is the full text of notes compiled from the video's own subtitles; all views and figures are as stated by the original speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：YouTube <a href="https://www.youtube.com/watch?v=my_lMhlKLVk">https://www.youtube.com/watch?v=my_lMhlKLVk</a>（课代表立正）· 嘉宾：周楠（高通创投投资合伙人）· 发布日期：2026-09-02 · 时长：66 分钟<br>本页为据视频自带字幕整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"共识窗口已经关上：高通创投周楠谈硅谷创投还怎么投 · Yat's Talks",tw:"共識窗口已經關上：高通創投周楠談矽谷創投還怎麼投 · Yat's Talks",en:"The Consensus Window Has Closed: Qualcomm Ventures' Zhou Nan on How Silicon Valley VC Can Still Invest · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
