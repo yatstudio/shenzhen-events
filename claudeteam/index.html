@@ -5,162 +5,471 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude Team 英国网络版 — 官方席位 + 英国线路，一次开通 | Yat's List</title>
 <meta name="description" content="Anthropic 官方 Claude Team 席位，搭配英国本地网络出口。网页、桌面 App 与 Claude Code 照常使用，环境稳定，少封号。">
+<meta name="theme-color" content="#09090b">
+<script>document.documentElement.classList.add('js')</script>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
 <style>
-  :root{--ink:#1a1a2e;--sub:#5a5a72;--line:#e6e6ef;--accent:#c2410c;--accent-bg:#fff4ec;--card:#fff;--bg:#fafaf7}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
-  header{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-  .brand{font-weight:700;font-size:17px}
-  .brand span{color:var(--accent)}
-  header a{color:var(--sub);text-decoration:none;font-size:14px}
-  .hero{padding:56px 0 36px;text-align:center}
-  .hero .tag{display:inline-block;background:var(--accent-bg);color:var(--accent);font-size:13px;padding:4px 12px;border-radius:99px;margin-bottom:18px}
-  .hero h1{font-size:36px;line-height:1.3;margin-bottom:14px}
-  .hero p{color:var(--sub);font-size:17px;max-width:560px;margin:0 auto}
-  .cta{display:inline-block;margin-top:26px;background:var(--ink);color:#fff;padding:12px 30px;border-radius:10px;text-decoration:none;font-size:16px}
-  section{padding:30px 0}
-  h2{font-size:22px;margin-bottom:18px;text-align:center}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-  .card h3{font-size:16px;margin-bottom:8px}
-  .card p{color:var(--sub);font-size:14.5px}
-  .flow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;font-size:15px;color:var(--sub);text-align:center}
-  .flow b{color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-weight:600}
-  .flow i{font-style:normal;color:var(--accent)}
-  .plan{position:relative}
-  .plan .price{font-size:15px;color:var(--accent);margin:6px 0 10px;font-weight:600}
-  .plan ul{list-style:none;color:var(--sub);font-size:14.5px}
-  .plan li{padding:3px 0}
-  .plan li::before{content:"✓ ";color:var(--accent)}
-  .steps{counter-reset:s;max-width:560px;margin:0 auto}
-  .steps li{list-style:none;padding:10px 0 10px 44px;position:relative;color:var(--sub)}
-  .steps li b{color:var(--ink)}
-  .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:8px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;text-align:center;line-height:28px;font-size:14px}
-  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
-  summary{cursor:pointer;font-weight:600;font-size:15px}
-  details p{color:var(--sub);font-size:14.5px;margin-top:8px}
-  footer{padding:34px 0 44px;color:var(--sub);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:20px}
-  @media(max-width:600px){.hero h1{font-size:28px}}
+:root{
+  --bg:#09090b;--bg2:#0f0f13;--panel:rgba(255,255,255,.035);--panel2:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --ink:#f4f4f5;--sub:#a1a1aa;--mute:#71717a;
+  --accent:#e8875f;--accent2:#f5b38f;--glow:rgba(232,135,95,.35);--ok:#4ade80;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* background */
+.bg-grid{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);opacity:.55}
+.bg-glow{position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:1100px;height:700px;z-index:-1;background:radial-gradient(closest-side,rgba(232,135,95,.22),rgba(232,135,95,.06) 55%,transparent);filter:blur(10px);pointer-events:none}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);background:rgba(9,9,11,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:650;font-size:15px;letter-spacing:.2px}
+.brand .mark{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#b4532e);display:grid;place-items:center;box-shadow:0 0 18px var(--glow)}
+.brand .mark svg{width:14px;height:14px}
+.brand em{font-style:normal;color:var(--mute);font-weight:500}
+.links{display:flex;gap:28px;font-size:14px;color:var(--sub)}
+.links a:hover{color:var(--ink)}
+.nav-r{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav-r .back{color:var(--mute)}
+.nav-r .back:hover{color:var(--ink)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;border-radius:10px;font-size:15px;font-weight:600;transition:all .2s ease;border:1px solid transparent;white-space:nowrap}
+.btn-sm{height:34px;padding:0 14px;font-size:13.5px;border-radius:8px}
+.btn-p{background:var(--ink);color:#09090b}
+.btn-p:hover{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.08),0 8px 30px rgba(232,135,95,.25)}
+.btn-g{border-color:var(--line2);color:var(--ink);background:var(--panel)}
+.btn-g:hover{background:var(--panel2);border-color:rgba(255,255,255,.24)}
+.btn svg{width:16px;height:16px}
+
+/* hero */
+.hero{position:relative;padding:96px 0 40px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--sub);padding:6px 14px 6px 10px;border:1px solid var(--line2);border-radius:99px;background:var(--panel);margin-bottom:28px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.55)}70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.hero h1{font-size:clamp(36px,6.2vw,68px);line-height:1.12;font-weight:700;letter-spacing:-1.5px}
+.grad{background:linear-gradient(100deg,#fff 0%,var(--accent2) 45%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:var(--sub);font-size:clamp(16px,1.8vw,19px);max-width:620px;margin:22px auto 0}
+.hero .acts{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+
+/* device console */
+.console{margin:64px auto 0;max-width:920px;border:1px solid var(--line2);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));box-shadow:0 30px 80px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.02) inset,0 -1px 0 rgba(255,255,255,.08) inset;overflow:hidden;text-align:left}
+.c-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line)}
+.lights{display:flex;gap:7px}
+.lights i{width:11px;height:11px;border-radius:50%;background:#3f3f46}
+.tabs{display:flex;gap:4px;padding:3px;border:1px solid var(--line);border-radius:9px;background:rgba(0,0,0,.3)}
+.tab{white-space:nowrap;font:inherit;font-size:13px;color:var(--sub);background:none;border:0;padding:5px 14px;border-radius:6px;cursor:pointer;transition:all .2s}
+.tab[aria-selected=true]{background:var(--panel2);color:var(--ink);box-shadow:0 0 0 1px var(--line2)}
+.c-status{font-family:var(--mono);font-size:12px;color:var(--mute);display:flex;align-items:center;gap:7px}
+.c-body{display:grid;grid-template-columns:1.05fr 1fr;min-height:280px}
+.c-left{padding:26px;border-right:1px solid var(--line);font-family:var(--mono);font-size:13px;line-height:1.9;color:var(--sub)}
+.c-left .k{color:var(--mute)}
+.c-left .v{color:var(--ink)}
+.c-left .a{color:var(--accent2)}
+.c-left .g{color:var(--ok)}
+.c-left .cursor{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.c-right{padding:26px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.hop{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.25);position:relative}
+.hop .ic{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;background:var(--panel2);border:1px solid var(--line);flex:none}
+.hop .ic svg{width:16px;height:16px;stroke:var(--sub)}
+.hop b{display:block;font-size:14px;font-weight:600}
+.hop small{display:block;font-size:12px;color:var(--mute);font-family:var(--mono)}
+.hop .lat{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+.hop.on{border-color:rgba(232,135,95,.45);background:rgba(232,135,95,.06)}
+.hop.on .ic{border-color:rgba(232,135,95,.5)}
+.hop.on .ic svg{stroke:var(--accent2)}
+.link{height:14px;margin-left:29px;border-left:1px dashed var(--line2)}
+.c-note{font-size:12px;color:var(--mute);text-align:center;margin-top:14px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+.stat{padding:26px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:26px;font-weight:700;letter-spacing:-.5px}
+.stat span{font-size:13.5px;color:var(--sub)}
+
+/* sections */
+section{padding:110px 0 0}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.sh{max-width:640px;margin-bottom:48px}
+.sh.c{margin-left:auto;margin-right:auto;text-align:center}
+.sh h2{font-size:clamp(28px,3.6vw,42px);line-height:1.2;letter-spacing:-.8px;font-weight:700}
+.sh h2 .m{color:var(--mute)}
+.sh p{color:var(--sub);font-size:16.5px;margin-top:14px}
+
+/* features */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--panel);transition:border-color .25s,background .25s,transform .25s;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(232,135,95,.10),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:var(--line2);background:var(--panel2)}
+.card:hover::before{opacity:1}
+.card .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;border:1px solid var(--line2);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));margin-bottom:20px}
+.card .ic svg{width:19px;height:19px;stroke:var(--accent2)}
+.card h3{font-size:17px;font-weight:650;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--sub)}
+
+/* architecture */
+.arch{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));padding:56px 40px 36px;position:relative;overflow:hidden}
+.arch::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(ellipse at center,#000,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000,transparent 75%);pointer-events:none}
+.nodes{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center;position:relative;z-index:1}
+.node{text-align:center}
+.node .box{width:76px;height:76px;margin:0 auto 16px;border-radius:18px;display:grid;place-items:center;border:1px solid var(--line2);background:#111115;box-shadow:0 10px 30px -10px rgba(0,0,0,.8)}
+.node .box svg{width:28px;height:28px;stroke:var(--ink)}
+.node.hl .box{border-color:rgba(232,135,95,.55);box-shadow:0 0 0 6px rgba(232,135,95,.06),0 0 40px rgba(232,135,95,.25)}
+.node.hl .box svg{stroke:var(--accent2)}
+.node b{display:block;font-size:15px;font-weight:600}
+.node small{font-size:12px;color:var(--mute);font-family:var(--mono)}
+.wire{width:clamp(40px,8vw,110px);height:2px;position:relative;background:linear-gradient(90deg,var(--line2),var(--line2));margin-bottom:46px;overflow:hidden;border-radius:2px}
+.wire::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,var(--accent),transparent);animation:flow 2.4s linear infinite}
+.wire.d2::after{animation-delay:.8s}.wire.d3::after{animation-delay:1.6s}
+@keyframes flow{to{left:100%}}
+.legend{display:flex;justify-content:center;gap:26px;margin-top:40px;font-size:13px;color:var(--sub);flex-wrap:wrap;position:relative;z-index:1}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:8px;height:8px;border-radius:2px;background:var(--accent)}
+.legend i.o{background:var(--line2)}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.plan{display:flex;flex-direction:column;padding:30px 28px;border:1px solid var(--line);border-radius:16px;background:var(--panel);position:relative}
+.plan.pop{border-color:rgba(232,135,95,.5);background:linear-gradient(180deg,rgba(232,135,95,.09),rgba(255,255,255,.02) 60%);box-shadow:0 0 60px -20px rgba(232,135,95,.4)}
+.plan .badge{position:absolute;top:-11px;left:28px;font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--accent);color:#1a0d07}
+.plan .tier{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--mute);text-transform:uppercase}
+.plan h3{font-size:20px;font-weight:650;margin:8px 0 18px}
+.plan .price{display:flex;align-items:baseline;gap:8px;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.plan .price b{font-size:28px;font-weight:700;letter-spacing:-.5px}
+.plan .price span{font-size:13px;color:var(--mute)}
+.plan ul{list-style:none;font-size:14.5px;color:var(--sub);flex:1}
+.plan li{display:flex;gap:10px;padding:6px 0}
+.plan li svg{width:16px;height:16px;flex:none;margin-top:4px;stroke:var(--accent2)}
+.plan .btn{margin-top:26px;justify-content:center;width:100%}
+.p-note{text-align:center;color:var(--mute);font-size:13.5px;margin-top:22px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--panel);position:relative}
+.step .n{font-family:var(--mono);font-size:13px;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.step .n::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(232,135,95,.4),transparent)}
+.step h3{font-size:17px;font-weight:650;margin-bottom:8px}
+.step p{font-size:14.5px;color:var(--sub)}
+
+/* faq */
+.faq-wrap{display:grid;grid-template-columns:320px 1fr;gap:56px}
+.faq-wrap .sh{margin-bottom:0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 2px;font-size:16px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:22px;height:22px;flex:none;border:1px solid var(--line2);border-radius:6px;position:relative;transition:transform .25s}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:9px;height:1.5px;background:var(--sub);transform:translate(-50%,-50%)}
+.faq summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s}
+.faq details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq summary:hover{color:#fff}
+.faq details p{color:var(--sub);font-size:15px;padding:0 40px 22px 2px;margin-top:-6px}
+
+/* cta band */
+.band{margin-top:120px;padding:72px 40px;text-align:center;border:1px solid var(--line2);border-radius:20px;position:relative;overflow:hidden;background:radial-gradient(600px 260px at 50% 0%,rgba(232,135,95,.22),transparent 70%),var(--bg2)}
+.band h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.8px;line-height:1.2}
+.band p{color:var(--sub);margin:14px 0 30px;font-size:16px}
+.band .mail{display:block;margin-top:18px;font-family:var(--mono);font-size:13px;color:var(--mute)}
+
+footer{margin-top:90px;border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer p{max-width:560px}
+footer a:hover{color:var(--ink)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .links{display:none}
+  .c-body{grid-template-columns:1fr}
+  .c-left{border-right:0;border-bottom:1px solid var(--line)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .feat,.plans,.steps{grid-template-columns:1fr}
+  .faq-wrap{grid-template-columns:1fr;gap:28px}
+  .nodes{grid-template-columns:1fr;gap:0}
+  .wire{width:2px;height:36px;margin:6px auto 14px}
+  .wire::after{left:0;top:-40%;width:100%;height:40%;background:linear-gradient(180deg,transparent,var(--accent),transparent);animation-name:flowv}
+  @keyframes flowv{to{top:100%}}
+  .plan.pop{margin-top:8px}
+}
+@media(max-width:560px){
+  .hero{padding-top:64px}
+  .nav-r .back{display:none}
+  .c-bar .c-status{display:none}
+  .arch{padding:40px 20px 28px}
+  .band{padding:56px 22px}
+  .hero h1{font-size:min(34px,7.4vw);letter-spacing:-.5px}
+  .hero h1 .grad{display:inline-block;margin-top:4px}
+  .hero p.lead br{display:none}
+  .lights{display:none}
+  .c-bar{justify-content:center}
+  .tab{padding:5px 12px}
+  .hop .lat{display:none}
+  .c-left,.c-right{padding:20px}
+  .stat{padding:20px 16px}
+  .stat b{font-size:20px}
+  .stat span{font-size:12.5px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">Yat's <span>List</span> · Claude Team</div>
-    <a href="https://yatslist.com/">← 全部清单</a>
-  </header>
+<div class="bg-grid" aria-hidden="true"></div>
 
-  <div class="hero">
-    <div class="tag">官方 Team 席位 × 英国网络</div>
-    <h1>稳定用上 Claude Team<br>席位与英国线路，一次开通</h1>
-    <p>Anthropic 官方 Claude Team 席位，搭配英国本地网络出口。网页、桌面 App 与 Claude Code，照常使用。</p>
-    <a class="cta" href="mailto:biz@macbnb.net?subject=Claude%20Team%20英国网络版开通咨询">联系开通</a>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0d07" stroke-width="2.6" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span>
+      Claude Team <em>· Yat's List</em>
+    </a>
+    <div class="links">
+      <a href="#why">优势</a><a href="#arch">网络架构</a><a href="#plans">开通方案</a><a href="#faq">常见问题</a>
+    </div>
+    <div class="nav-r">
+      <a class="back" href="https://yatslist.com/">全部清单</a>
+      <a class="btn btn-p btn-sm" href="mailto:biz@macbnb.net?subject=Claude%20Team%20英国网络版开通咨询">联系开通</a>
+    </div>
   </div>
+</nav>
 
-  <section>
-    <h2>为什么是英国网络</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🇬🇧 英国本地出口</h3>
-        <p>流量从英国本地网络出去，IP、时区、语言环境一致——账号环境干净稳定，是少封号、少风控的关键一环。</p>
+<header class="hero" id="top">
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="pill rv"><span class="dot"></span>官方 Team 席位 × 英国本地网络</div>
+    <h1 class="rv">稳定用上 Claude Team<br><span class="grad">席位与线路，一次开通。</span></h1>
+    <p class="lead rv">Anthropic 官方 Claude Team 席位，搭配英国本地网络出口。<br>网页、桌面 App 与 Claude Code，照常使用。</p>
+    <div class="acts rv">
+      <a class="btn btn-p" href="mailto:biz@macbnb.net?subject=Claude%20Team%20英国网络版开通咨询">联系开通
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-g" href="#arch">查看连接架构</a>
+    </div>
+
+    <div class="console rv" role="region" aria-label="连接示意">
+      <div class="c-bar">
+        <div class="lights"><i></i><i></i><i></i></div>
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" aria-selected="true" data-t="web">网页</button>
+          <button class="tab" role="tab" aria-selected="false" data-t="app">桌面 App</button>
+          <button class="tab" role="tab" aria-selected="false" data-t="code">Claude Code</button>
+        </div>
+        <div class="c-status"><span class="dot"></span>connected · UK</div>
       </div>
-      <div class="card">
-        <h3>🎫 官方 Team 席位</h3>
-        <p>Anthropic 官方 Claude Team 订阅，一席一人，团队统一管理与账单；也可以自备账号，只开线路。</p>
+      <div class="c-body">
+        <div class="c-left" id="term"></div>
+        <div class="c-right">
+          <div class="hop on"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><div><b>你的电脑</b><small id="src">浏览器 · claude.ai</small></div><span class="lat">local</span></div>
+          <div class="link"></div>
+          <div class="hop"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><div><b>加密隧道</b><small>仅 Claude / Anthropic 域名</small></div><span class="lat">TLS</span></div>
+          <div class="link"></div>
+          <div class="hop"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><b>英国本地出口</b><small>IP · 时区 · 语言一致</small></div><span class="lat">GB</span></div>
+          <div class="link"></div>
+          <div class="hop on"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span><div><b>Claude</b><small>claude.ai · api.anthropic.com</small></div><span class="lat">200 OK</span></div>
+        </div>
       </div>
-      <div class="card">
-        <h3>🎯 只走 Claude 的流量</h3>
-        <p>客户端只接管 Claude 与 Anthropic 的域名，其他网站、内网和日常上网沿用你现有的网络，互不影响。</p>
+    </div>
+    <div class="c-note">架构示意，实际线路以开通服务为准</div>
+
+    <div class="stats rv">
+      <div class="stat"><b>3 种入口</b><span>网页 · 桌面 App · Code</span></div>
+      <div class="stat"><b>UK</b><span>英国本地网络出口</span></div>
+      <div class="stat"><b>按域名分流</b><span>只接管 Claude 流量</span></div>
+      <div class="stat"><b>0 留存</b><span>不解密、不保存对话</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="why">
+    <div class="sh rv">
+      <div class="eyebrow">Why UK Network</div>
+      <h2>环境做对，<span class="m">账号才稳。</span></h2>
+      <p>官方订阅、本地出口、环境一致。这是目前已知最有效的降低风控方式。</p>
+    </div>
+    <div class="feat">
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>英国本地出口</h3><p>流量从英国本地网络出去，IP、时区、语言环境一致，账号环境干净稳定。</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>官方 Team 席位</h3><p>Anthropic 官方 Claude Team 订阅，一席一人，团队统一管理与账单；也可自备账号只开线路。</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 17h6M14 7l6 5-6 5"/></svg></div><h3>只走 Claude 的流量</h3><p>客户端只接管 Claude 与 Anthropic 域名，其他网站、内网和日常上网沿用现有网络。</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7 8-4 4 4 4M17 8l4 4-4 4M14 4l-4 16"/></svg></div><h3>Claude Code 免配置</h3><p>连接后终端里的 Claude Code 直接经英国线路访问，无需额外设置代理变量。</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>不碰对话内容</h3><p>线路只转发加密连接，不做解密，也不保存任何对话内容。</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.5c2.6.2 4.4 2 5 5"/></svg></div><h3>团队统一开通</h3><p>按席位计，一席一人。人数和档位确认后统一开通、统一续费管理。</p></div>
+    </div>
+  </section>
+
+  <section id="arch">
+    <div class="sh c rv">
+      <div class="eyebrow">Architecture</div>
+      <h2>从你的电脑，<span class="m">到 Claude。</span></h2>
+      <p>Claude 相关流量经加密隧道到达英国本地出口，再连接 Claude。其余流量不经过线路。</p>
+    </div>
+    <div class="arch rv">
+      <div class="nodes">
+        <div class="node"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><b>你的电脑</b><small>Web · App · Code</small></div>
+        <div class="wire"></div>
+        <div class="node"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><b>加密隧道</b><small>domain split</small></div>
+        <div class="wire d2"></div>
+        <div class="node hl"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><b>英国本地出口</b><small>United Kingdom</small></div>
+        <div class="wire d3"></div>
+        <div class="node"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></div><b>Claude</b><small>claude.ai</small></div>
+      </div>
+      <div class="legend">
+        <span><i></i>Claude / Anthropic 流量</span>
+        <span><i class="o"></i>其他流量：直连，不经线路</span>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>连接方式</h2>
-    <div class="flow">
-      <b>你的电脑<br><small>网页 · 桌面 App · Claude Code</small></b><i>→</i>
-      <b>加密隧道</b><i>→</i>
-      <b>英国本地出口</b><i>→</i>
-      <b>Claude<br><small>claude.ai</small></b>
+  <section id="plans">
+    <div class="sh c rv">
+      <div class="eyebrow">Plans</div>
+      <h2>按席位开通。</h2>
+      <p>官方 Claude Team 席位，一席一人；也可以自备 Claude 账号，只开英国线路。</p>
     </div>
-  </section>
-
-  <section>
-    <h2>按席位开通</h2>
-    <div class="grid">
-      <div class="card plan">
+    <div class="plans">
+      <div class="plan rv">
+        <div class="tier">Standard</div>
         <h3>标准席位 + 英国线路</h3>
-        <div class="price">内测期价格，联系开通时确认</div>
+        <div class="price"><b>内测价</b><span>/ 席 / 月 · 开通时确认</span></div>
         <ul>
-          <li>Claude Team 标准席位一席</li>
-          <li>英国本地网络出口</li>
-          <li>网页 / 桌面 App / Claude Code 全支持</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Claude Team 标准席位一席</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>英国本地网络出口</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>网页 / 桌面 App / Claude Code</li>
         </ul>
+        <a class="btn btn-g" href="mailto:biz@macbnb.net?subject=Claude%20Team%20标准席位开通咨询">咨询开通</a>
       </div>
-      <div class="card plan">
+      <div class="plan pop rv">
+        <span class="badge">重度用户推荐</span>
+        <div class="tier">Premium</div>
         <h3>高级席位 + 英国线路</h3>
-        <div class="price">内测期价格，联系开通时确认</div>
+        <div class="price"><b>内测价</b><span>/ 席 / 月 · 开通时确认</span></div>
         <ul>
-          <li>Claude Team 高级席位一席（更高用量）</li>
-          <li>英国本地网络出口</li>
-          <li>适合重度 Claude Code 用户</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Claude Team 高级席位一席，更高用量</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>英国本地网络出口</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>适合重度 Claude Code 用户</li>
         </ul>
+        <a class="btn btn-p" href="mailto:biz@macbnb.net?subject=Claude%20Team%20高级席位开通咨询">咨询开通</a>
       </div>
-      <div class="card plan">
+      <div class="plan rv">
+        <div class="tier">Network only</div>
         <h3>只开线路（自备账号）</h3>
-        <div class="price">内测期价格，联系开通时确认</div>
+        <div class="price"><b>内测价</b><span>/ 月 · 开通时确认</span></div>
         <ul>
-          <li>已有自己的 Claude 账号</li>
-          <li>只提供英国网络出口</li>
-          <li>环境与账号注册地保持一致</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>已有自己的 Claude 账号</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>只提供英国网络出口</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>环境与账号注册地保持一致</li>
         </ul>
+        <a class="btn btn-g" href="mailto:biz@macbnb.net?subject=Claude%20英国线路开通咨询">咨询开通</a>
+      </div>
+    </div>
+    <p class="p-note">席位套餐已包含英国线路，无需重复购买。</p>
+  </section>
+
+  <section id="start">
+    <div class="sh rv">
+      <div class="eyebrow">Get Started</div>
+      <h2>三步开始使用。</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>选档并确认席位</h3><p>告诉我们需要几个席位、哪一档，确认后开通。</p></div>
+      <div class="step rv"><div class="n">02</div><h3>安装客户端</h3><p>按指引装好连接客户端，支持 Mac / Windows。</p></div>
+      <div class="step rv"><div class="n">03</div><h3>登录并连接</h3><p>用席位邮箱登录，连接后照常打开 Claude 工作。</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="faq-wrap">
+      <div class="sh rv">
+        <div class="eyebrow">FAQ</div>
+        <h2>常见问题</h2>
+        <p>还有其他问题？发邮件到 <a href="mailto:biz@macbnb.net" style="color:var(--accent2)">biz@macbnb.net</a>。</p>
+      </div>
+      <div class="faq rv">
+        <details><summary>能保证不封号吗？<span class="pm"></span></summary><p>不能向任何人保证不封号，封号与否由 Anthropic 决定。我们能做的是把环境做对：官方订阅、英国本地出口、环境一致。环境干净稳定，是目前已知最有效的降风险方式。</p></details>
+        <details><summary>装了客户端，其他网站还能正常上吗？<span class="pm"></span></summary><p>能。客户端只接管 Claude 相关域名，不改系统默认路由，其他网站、内网、日常软件都不受影响。</p></details>
+        <details><summary>Claude Code 能用吗？<span class="pm"></span></summary><p>能。连接后终端里的 Claude Code 直接经英国线路访问，无需额外配置代理变量。</p></details>
+        <details><summary>你们能看到我的对话内容吗？<span class="pm"></span></summary><p>不能。线路只转发加密连接，不解密、不保存对话内容。</p></details>
+        <details><summary>团队多人怎么开通？<span class="pm"></span></summary><p>按席位计，一席一人。把人数和档位发给我们，统一开通、统一续费管理。</p></details>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>三步开始使用</h2>
-    <ol class="steps">
-      <li><b>选档并确认席位</b> —— 告诉我们需要几个席位、哪一档，确认后开通。</li>
-      <li><b>安装客户端</b> —— 按指引装好连接客户端（Mac / Windows）。</li>
-      <li><b>登录并连接</b> —— 用席位邮箱登录，连接后照常打开 Claude 工作。</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>常见问题</h2>
-    <details>
-      <summary>能保证不封号吗？</summary>
-      <p>不能向任何人保证不封号——封号与否由 Anthropic 决定。我们能做的是把环境做对：官方订阅、英国本地出口、环境一致。环境干净稳定，是目前已知最有效的降风险方式。</p>
-    </details>
-    <details>
-      <summary>装了客户端，其他网站还能正常上吗？</summary>
-      <p>能。客户端只接管 Claude 相关域名，不改系统默认路由，其他网站、内网、日常软件都不受影响。</p>
-    </details>
-    <details>
-      <summary>Claude Code 能用吗？</summary>
-      <p>能。连接后终端里的 Claude Code 直接经英国线路访问，无需额外配置代理变量。</p>
-    </details>
-    <details>
-      <summary>你们能看到我的对话内容吗？</summary>
-      <p>不能。线路只转发加密连接，不解密、不保存对话内容。</p>
-    </details>
-    <details>
-      <summary>团队多人怎么开通？</summary>
-      <p>按席位计，一席一人。把人数和档位发给我们，统一开通、统一续费管理。</p>
-    </details>
-  </section>
-
-  <div style="text-align:center;padding:10px 0 6px">
-    <a class="cta" href="mailto:biz@macbnb.net?subject=Claude%20Team%20英国网络版开通咨询">联系开通</a>
+  <div class="band rv">
+    <h2>今天开通，<span class="grad">明天照常工作。</span></h2>
+    <p>告诉我们席位数量和档位，确认后即可开通。</p>
+    <a class="btn btn-p" href="mailto:biz@macbnb.net?subject=Claude%20Team%20英国网络版开通咨询">联系开通
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <span class="mail">biz@macbnb.net</span>
   </div>
+</main>
 
-  <footer>
-    Claude 与 Claude Team 为 Anthropic 的产品与商标，本页为独立服务方案介绍，与 Anthropic 无隶属关系。<br>
-    © Yat's List · <a href="https://yatslist.com/" style="color:inherit">yatslist.com</a>
-  </footer>
-</div>
+<footer>
+  <div class="wrap">
+    <p>Claude 与 Claude Team 为 Anthropic 的产品与商标。本页为独立服务方案介绍，与 Anthropic 无隶属关系。</p>
+    <div>© Yat's List · <a href="https://yatslist.com/">yatslist.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var T={
+    web:{src:'浏览器 · claude.ai',lines:[
+      [['k','# 打开浏览器']],
+      [['k','$ '],['v','open https://claude.ai/new']],
+      [['k','route   '],['a','tunnel → gb-exit']],
+      [['k','geo     '],['v','GB · Europe/London · en-GB']],
+      [['k','status  '],['g','200 OK · 已登录 Team 席位']]]},
+    app:{src:'Claude 桌面 App',lines:[
+      [['k','# 启动 Claude 桌面 App']],
+      [['k','$ '],['v','open -a Claude']],
+      [['k','route   '],['a','claude.ai → gb-exit']],
+      [['k','other   '],['v','其他应用 → 直连']],
+      [['k','status  '],['g','connected · Team workspace']]]},
+    code:{src:'终端 · Claude Code',lines:[
+      [['k','# 终端里直接启动']],
+      [['k','$ '],['v','claude']],
+      [['k','route   '],['a','api.anthropic.com → gb-exit']],
+      [['k','proxy   '],['v','无需设置 HTTP_PROXY']],
+      [['k','status  '],['g','✓ Ready · 照常写代码']]]}
+  };
+  var term=document.getElementById('term'),src=document.getElementById('src');
+  function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+  function render(k){
+    var d=T[k],h='';
+    d.lines.forEach(function(row){h+='<div>'+row.map(function(c){return '<span class="'+c[0]+'">'+esc(c[1])+'</span>'}).join('')+'</div>'});
+    term.innerHTML=h+'<div><span class="k">$ </span><span class="cursor"></span></div>';
+    src.textContent=d.src;
+  }
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')});
+    t.setAttribute('aria-selected','true');render(t.dataset.t);
+  })});
+  render('web');
+
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();
+      c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})
+  });
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
 </body>
 </html>
