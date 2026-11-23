@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 800,
-    "rent_1br_usd_month": 380,
+    "cost_usd_month": 640,
+    "rent_1br_usd_month": 195,
     "coworking_usd_month": 64,
     "internet_mbps": 120,
     "safety_score": 4.7,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 13.1,
     "best_months": "May-Oct",
     "tags": [
       "beach",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "海边干净小城、韩式生活圈，适合夏秋。",
     "summary_en": "A clean small seaside city with a Korean lifestyle circle; best in summer-autumn.",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "环翠区中心 (Huancui Centre)",
+        "name_en": "Huancui Centre",
+        "rent_1br_usd_month": 195,
+        "vibe": "市中心+海滨老城，配套最全",
+        "best_for": "市中心生活+海滨散步",
+        "coworking_density": 2,
+        "note": "Numbeo/CityCost 市中心一居 $195（¥1,300）；mylifeelsewhere $193.90 交叉"
+      },
+      {
+        "name": "高区·国际海水浴场 (High-tech Zone · Bathing Beach)",
+        "name_en": "High-tech Zone · Bathing Beach",
+        "rent_1br_usd_month": 230,
+        "vibe": "海水浴场+韩式商圈（韩乐坊/威高广场）",
+        "best_for": "海边度假式旅居",
+        "coworking_density": 2,
+        "note": "估算（zs56.net 2026 租金行情：韩乐坊/威高广场精装一居 ¥1,700–2,000，取区间低值折算）"
+      },
+      {
+        "name": "经区·威海站 (Economic Zone · Weihai Station)",
+        "name_en": "Economic Zone · Weihai Station",
+        "rent_1br_usd_month": 170,
+        "vibe": "经开区新城，生活便利",
+        "best_for": "性价比与高铁出行",
+        "coworking_density": 1,
+        "note": "估算（市中心价下浮；CityCost 市郊一居 $142 水平之上）"
+      },
+      {
+        "name": "荣成·那香海 (Rongcheng · Naxianghai)",
+        "name_en": "Rongcheng · Naxianghai",
+        "rent_1br_usd_month": 140,
+        "vibe": "远郊海景度假盘，钻石沙滩",
+        "best_for": "低价海边长住",
+        "coworking_density": 1,
+        "note": "估算（CityCost 市郊一居 $142 水平；距主城约 1 小时，流动性弱）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://citycost.org/weihai/",
+      "https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=China&city1=Yantai&country2=China&city2=Weihai",
+      "https://urcity.com/en/cities/weihai-sd/",
+      "https://en.wikipedia.org/wiki/Weihai",
+      "https://en.climate-data.org/asia/china/shandong/weihai-2584/",
+      "https://weihai.zs56.net/zixun/21237.html"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-23",
+    "updated_at": "2026-11-23",
+    "data_tier": "checked",
     "best_months_nums": [
       5,
       6,
@@ -52,9 +95,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-23"
       },
       "internet_mbps": {
         "confidence": 0.4,

@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 800,
-    "rent_1br_usd_month": 380,
+    "cost_usd_month": 655,
+    "rent_1br_usd_month": 225,
     "coworking_usd_month": 64,
     "internet_mbps": 120,
     "safety_score": 4.6,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 12.9,
     "best_months": "May-Oct",
     "tags": [
       "beach",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "胶东海滨+葡萄酒，成本比青岛低。",
     "summary_en": "A Jiaodong seaside city with wine country; cheaper than Qingdao.",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "芝罘区中心 (Zhifu Centre)",
+        "name_en": "Zhifu Centre",
+        "rent_1br_usd_month": 225,
+        "vibe": "市中心老城+滨海商圈，配套最全",
+        "best_for": "市中心生活+海滨散步",
+        "coworking_density": 2,
+        "note": "Numbeo 市中心一居 $224.83（¥1,500）；CityCost $222 交叉"
+      },
+      {
+        "name": "莱山区 (Laishan)",
+        "name_en": "Laishan",
+        "rent_1br_usd_month": 200,
+        "vibe": "新城居住区，高校与新盘集中",
+        "best_for": "新盘与安静居住",
+        "coworking_density": 1,
+        "note": "估算（市中心价下浮；58 同城 1 居挂牌 ¥1,100–1,700 区间内）"
+      },
+      {
+        "name": "福山区 (Fushan)",
+        "name_en": "Fushan",
+        "rent_1br_usd_month": 175,
+        "vibe": "老工业区转型居住区，性价比高",
+        "best_for": "低价长住",
+        "coworking_density": 1,
+        "note": "估算（市郊一居 $152 水平之上）"
+      },
+      {
+        "name": "开发区·蓬莱 (Development Zone · Penglai)",
+        "name_en": "Development Zone · Penglai",
+        "rent_1br_usd_month": 160,
+        "vibe": "开发区产业园+蓬莱古城海滨",
+        "best_for": "产业园通勤与低价",
+        "coworking_density": 1,
+        "note": "估算（乐活领寓龙口 25㎡ 精装一居 ¥699；58 同城 1 居挂牌 ¥648 起）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://citycost.org/yantai/",
+      "https://www.numbeo.com/cost-of-living/in/Yantai-China?displayCurrency=USD",
+      "https://urcity.com/en/cities/yantai-sd/",
+      "http://en.climate-data.org/asia/china/shandong/yantai-2639/",
+      "https://weatherspark.com/y/137567/Average-Weather-in-Yantai-China-Year-Round",
+      "https://gov.w10.cn/a_439539"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-23",
+    "updated_at": "2026-11-23",
+    "data_tier": "checked",
     "best_months_nums": [
       5,
       6,
@@ -52,9 +95,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-23"
       },
       "internet_mbps": {
         "confidence": 0.4,

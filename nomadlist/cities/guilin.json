@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 650,
-    "rent_1br_usd_month": 300,
+    "cost_usd_month": 600,
+    "rent_1br_usd_month": 210,
     "coworking_usd_month": 52,
     "internet_mbps": 100,
     "safety_score": 4.5,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 19.6,
     "best_months": "Mar-May,Oct-Nov",
     "tags": [
       "mountain",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "漓江山水、阳朔片区是实际旅居落点，雨季多。",
     "summary_en": "Li River scenery; the Yangshuo area is the actual nomad landing spot, with a long rainy season.",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "秀峰区 (Xiufeng)",
+        "name_en": "Xiufeng",
+        "rent_1br_usd_month": 240,
+        "vibe": "市中心湖区老城，两江四湖",
+        "best_for": "市中心生活+湖景散步",
+        "coworking_density": 3,
+        "note": "everycity.guide 中央一居 ¥1,600"
+      },
+      {
+        "name": "象山区 (Xiangshan)",
+        "name_en": "Xiangshan",
+        "rent_1br_usd_month": 225,
+        "vibe": "象鼻山+漓江边，旅游核心区",
+        "best_for": "漓江边旅居",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥1,500"
+      },
+      {
+        "name": "七星区 (Qixing)",
+        "name_en": "Qixing",
+        "rent_1br_usd_month": 210,
+        "vibe": "七星公园+高校区，文教氛围",
+        "best_for": "高校周边与公园生活",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥1,400"
+      },
+      {
+        "name": "阳朔县 (Yangshuo)",
+        "name_en": "Yangshuo",
+        "rent_1br_usd_month": 185,
+        "vibe": "漓江下游县城，攀岩骑行圣地",
+        "best_for": "户外与慢生活旅居",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥1,250"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "http://everycity.guide/city/guilin",
+      "https://www.numbeo.com/cost-of-living/in/Guilin-China?displayCurrency=USD",
+      "https://citycost.org/guilin/",
+      "https://www.climatestotravel.com/climate/china/guilin",
+      "https://freakingnomads.com/places/guilin",
+      "https://en.climate-data.org/asia/china/guangxi/guilin-2302/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-23",
+    "updated_at": "2026-11-23",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -51,9 +94,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-23"
       },
       "internet_mbps": {
         "confidence": 0.4,
