@@ -1,37 +1,139 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<meta name="theme-color" content="#0d1218">
 <title>《利他主义者》The Altruists · 分集清单 — Yat's List</title>
 <meta name="description" content="Netflix 限定剧《利他主义者》（The Altruists）分集指南：8 集标题与剧情摘要、剧中人物与真实人物对照，数据来自 Crypto Story Club 币圈知识库。">
+<link rel="canonical" href="https://yatslist.com/altruists/">
+<link rel="alternate" type="application/json" href="altruists.json" title="《利他主义者》分集清单数据（altruists.json）">
 <style>
-body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0d1218;color:#e6edf3;line-height:1.65}
-.wrap{max-width:860px;margin:0 auto;padding:24px 16px 64px}
-h1{font-size:1.7rem;margin:.2em 0} .sub{color:#8b98a5}
-a{color:#2ee6a8}
-.note{background:#10151b;border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:12px 16px;color:#8b98a5;font-size:.92rem}
-.card{background:#10151b;border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:20px;margin:18px 0}
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--green:#2ee6a8;--green-dim:#1a8a66;
+--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--coral:#FF5A5F;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--r-sm:8px;--r-md:12px;--r-lg:16px;--r-pill:999px;
+--shadow-sm:0 2px 8px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);
+--sp-xs:4px;--sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;--sp-3xl:48px;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+--warm:#FBBF24;--warm-dim:#78350F;
+--red:#F87171;--red-dim:#7F1D1D;
+--green-hover:#3df4b5;--bar-bg:rgba(13,18,24,.95);--bar-bg96:rgba(13,18,24,.96);
+color-scheme:dark;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--green-dim:#0a7d55;--green-hover:#0e9263;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--shadow-sm:0 2px 8px rgba(16,42,32,.08);--shadow-md:0 8px 24px rgba(16,42,32,.13);
+--bar-bg:rgba(246,248,247,.92);--bar-bg96:rgba(246,248,247,.94);
+color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+a{color:var(--green)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
+/* ===== Topbar (same as szevents) ===== */
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:10px 0}
+.topbar .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
+.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
+.topbar-nav a:hover{color:var(--green)}
+.topbar-nav .nav-ag{color:var(--green)}
+.prefs{display:inline-flex;align-items:center;gap:6px}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+@media (max-width:900px){
+#mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
+#mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+#mnav-panel.open{display:block}
+#mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+#mnav-panel .topbar-nav a{font-size:.95rem}
+}
+/* ===== Page content ===== */
+main .wrap{padding-top:clamp(var(--sp-2xl),6vw,56px);padding-bottom:64px}
+.section-header{text-align:center;margin-bottom:clamp(var(--sp-2xl),5vw,var(--sp-3xl))}
+.section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
+.section-title{font-size:clamp(1.8rem,4.5vw,2.2rem);font-weight:700;letter-spacing:-.01em;color:var(--ink);margin:0 0 var(--sp-sm);line-height:1.2}
+.section-subtitle{font-size:clamp(.9rem,2vw,.98rem);color:var(--ink-sec);margin:0;line-height:1.55}
+.agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
+.agentnote b{color:var(--ink)}
+.agentnote a{color:var(--green);text-decoration:none;font-weight:600}
+.agentnote a:hover{text-decoration:underline}
+.sub{color:var(--ink-sec)}
+h2.sec{font-size:1.3rem;margin:34px 0 4px;color:var(--ink)}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(20px,4vw,24px);box-shadow:var(--shadow-sm);margin:18px 0}
 .card h2{font-size:1.15rem;margin:0}
-.meta{color:#8b98a5;margin:.3em 0;font-size:.92rem}
-.ep{display:inline-block;background:rgba(46,230,168,.15);color:#2ee6a8;border-radius:8px;padding:0 8px;margin-right:10px;font-size:.9rem}
-.frow{display:flex;gap:14px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.frow:last-child{border-bottom:none} .fk{color:#8b98a5;min-width:64px;flex-shrink:0} .fv{color:#e6edf3}
-.crow{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.crow:last-child{border-bottom:none} .csum{color:#c9d4dd;font-size:.94rem;margin:.3em 0 0}
-.actor{text-align:right;color:#8b98a5;font-size:.9rem;white-space:nowrap} .actor b{color:#e6edf3;font-size:1rem}
-.bg{margin:.6em 0;color:#c9d4dd}
+.meta{color:var(--ink-sec);margin:.3em 0;font-size:.92rem}
+.ep{display:inline-block;background:color-mix(in srgb,var(--green) 15%,transparent);color:var(--green);border-radius:var(--r-sm);padding:0 8px;margin-right:10px;font-size:.9rem}
+.frow{display:flex;gap:14px;padding:7px 0;border-bottom:1px solid var(--border)}
+.frow:last-child{border-bottom:none}
+.fk{color:var(--ink-sec);min-width:64px;flex-shrink:0}
+.fv{color:var(--ink)}
+.crow{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)}
+.crow:last-child{border-bottom:none}
+.csum{color:var(--ink);font-size:.94rem;margin:.3em 0 0}
+.actor{text-align:right;color:var(--ink-sec);font-size:.9rem;white-space:nowrap}
+.actor b{color:var(--ink);font-size:1rem}
+@media (max-width:640px){.crow{flex-direction:column}.actor{text-align:left;white-space:normal}}
+.bg{margin:.6em 0;color:var(--ink)}
 .foot{display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;align-items:flex-start}
-.apply{background:#2ee6a8;color:#0d1218;font-weight:700;border-radius:10px;padding:9px 18px;text-decoration:none}
-.agent{font-family:ui-monospace,Consolas,monospace;background:#000;border-radius:12px;padding:14px 16px;color:#8b98a5;font-size:.88rem;overflow-x:auto;margin-top:24px}
-.agent b{color:#2ee6a8}
-footer{margin-top:36px;color:#6a737d;font-size:.85rem;line-height:1.8}
-h2.sec{font-size:1.3rem;margin:34px 0 4px}
+.apply{background:var(--green);color:var(--bg);font-weight:700;border-radius:10px;padding:9px 18px;text-decoration:none}
+.apply:hover{background:var(--green-hover)}
+.agent{font-family:var(--font-mono);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;color:var(--ink-sec);font-size:.88rem;line-height:1.75;overflow-x:auto;margin-top:24px}
+.agent b{color:var(--green)}
+.agent a{color:var(--green)}
+/* ===== Footer (same as szevents) ===== */
+.sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
+.sitefoot .wrap{text-align:center}
+.sf-brand{font-family:var(--font-mono);font-size:1.25rem;font-weight:700;color:var(--ink)}
+.sf-brand .sf-cur{color:var(--green)}
+.sf-small{margin:16px 0 0;color:var(--ink-ter);font-size:.83rem;line-height:1.7}
+.sf-copy{margin:6px 0 0;color:var(--ink-ter);font-size:.83rem;font-family:var(--font-mono)}
 </style>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-</head><body><div class="wrap">
-<p class="sub"><a href="/" style="color:#8b98a5;text-decoration:none">Yat's List</a> · 剧集清单</p>
-<h1>《利他主义者》The Altruists</h1>
-<p class="sub">Netflix 2026 年 11 月 19 日上线的 8 集限定剧，讲 FTX 与 SBF、Caroline Ellison 的崛起与崩盘，剧名取自两人的信仰：有效利他主义（EA）。</p>
-<div class="note">本页是分集指南：集名与剧情摘要来自 <a href="https://kb.cryptostory.club" target="_blank" rel="noopener">Crypto Story Club 币圈知识库</a>的公开条目整理；剧本台词全文属版权材料，不在本页发布。看剧前先读下面的「背景条目」，人名和梗就全通了。</div>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- Sticky Topbar -->
+<div class="topbar">
+  <div class="wrap">
+    <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="Yat's List 深圳活动清单" style="text-decoration:none">
+      <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
+    </a>
+    <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+    <div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agent-section" class="nav-ag">Agent</a>
+      <a href="https://yatslist.com/szevents/">活动</a>
+      <a href="https://yatslist.com/hackathons/">黑客松</a>
+      <a href="https://yatslist.com/talks/">Talks</a>
+      <span class="prefs"><button type="button" class="themecyc" aria-label="Theme">&#9680;</button></span>
+    </nav></div>
+  </div>
+</div>
+
+<main>
+<div class="wrap">
+<div class="section-header">
+  <p class="section-tagline">剧集清单</p>
+  <h1 class="section-title">《利他主义者》The Altruists</h1>
+  <p class="section-subtitle">Netflix 2026 年 11 月 19 日上线的 8 集限定剧，讲 FTX 与 SBF、Caroline Ellison 的崛起与崩盘，剧名取自两人的信仰：有效利他主义（EA）。</p>
+</div>
+<div class="agentnote">本页是分集指南：集名与剧情摘要来自 <a href="https://kb.cryptostory.club" target="_blank" rel="noopener">Crypto Story Club 币圈知识库</a>的公开条目整理；剧本台词全文属版权材料，不在本页发布。看剧前先读下面的「背景条目」，人名和梗就全通了。</div>
 
 <h2 class="sec">剧集档案</h2>
 <div class="card">
@@ -127,7 +229,34 @@ h2.sec{font-size:1.3rem;margin:34px 0 4px}
 <li><a href="https://kb.cryptostory.club/e/the-altruists.html" target="_blank" rel="noopener">Crypto Story Club：《利他主义者》主条目</a></li>
 </ul>
 
-<div class="agent">🤖 <b>给 Agent 的数据：</b> 本页数据文件 altruists.json（series / episodes / cast / background 四个部分），可直接抓取引用；更完整的背景叙事见 kb.cryptostory.club 的 kb.json。</div>
+<div class="agent" id="agent-section">🤖 <b>给 Agent 的数据：</b> 本页数据文件 <a href="https://yatslist.com/altruists/altruists.json">altruists.json</a>（series / episodes / cast / background 四个部分），字段定义见 <a href="https://yatslist.com/altruists/altruists.schema.json">altruists.schema.json</a>，可直接抓取引用；更完整的背景叙事见 kb.cryptostory.club 的 kb.json。</div>
+</div>
+</main>
 
-<footer>Yat's List · 数据来源：Crypto Story Club 币圈知识库（kb.cryptostory.club）· 整理于 2026-11-24</footer>
-</div></body></html>
+<footer class="sitefoot">
+  <div class="wrap">
+    <div class="sf-brand">&gt; yat's list<span class="sf-cur">_</span></div>
+    <p class="sf-small">Yat's List · 数据来源：Crypto Story Club 币圈知识库（kb.cryptostory.club）· 整理于 2026-11-24</p>
+    <p class="sf-copy">© 2026 Yat's List · yatslist.com</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+var order=["auto","light","dark"],ic={auto:"◐",light:"☀",dark:"☾"},names={auto:"自动",light:"白天",dark:"晚上"};
+var THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
+if(THEME!=="light"&&THEME!=="dark")THEME="auto";
+var mq=window.matchMedia("(prefers-color-scheme: dark)");
+function resolved(){return THEME==="dark"?"dark":THEME==="light"?"light":(mq.matches?"dark":"light")}
+function apply(){var r=resolved();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);var tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");var cyc=document.querySelector(".themecyc");if(cyc){cyc.textContent=ic[THEME];var t="Theme: "+names[THEME];cyc.title=t;cyc.setAttribute("aria-label",t)}}
+function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}apply()}
+var cyc=document.querySelector(".themecyc");
+if(cyc)cyc.addEventListener("click",function(){setTheme(order[(order.indexOf(THEME)+1)%3])});
+if(mq.addEventListener)mq.addEventListener("change",function(){if(THEME==="auto")apply()});
+apply();
+var btn=document.getElementById("mnav-btn"),panel=document.getElementById("mnav-panel");
+if(btn&&panel)btn.addEventListener("click",function(){var open=panel.classList.toggle("open");btn.setAttribute("aria-expanded",open?"true":"false")});
+})();
+</script>
+</body>
+</html>
