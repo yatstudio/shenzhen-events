@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《Grok Bot 跨境电商实战：1 个主管 + 12 个 Agent 岗位》 — Yat's List 访谈纪要全文</title>
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<meta name="theme-color" content="#0d1218">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="bwrap">
+  <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+  <nav class="topbar-nav">
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
+    <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
+    
+  </nav>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+</div></div>
+<main class="note">
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
+<h1>Grok Bot 跨境电商实战：1 个主管 + 12 个 Agent 岗位</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/waytobot-grokbot-kuajing-dianshang-20261123.mp3"></audio></p>
+<blockquote>
+<p>X Space（WayToBot 社区）· 主持：蓝哥AI（@0xlangeai）· 主讲：扎斯老师（前亚马逊团队负责人）· 2026-11-23 19:56 开播 · 时长约 107 分钟</p>
+<p>说明：本场录音的自动转写噪声较大——产品名 Grok Bot 在转写里有十几种写法，嘉宾名以主持人口播的「扎斯老师」为准（转写中另有 Zack、Jack 等写法，应为同一人）。文中数字均为发言者自述，未经外部核实；约 00:49–00:50 有约 38 秒转写缺失；录音在结尾的自由交流中途结束。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>一位把亚马逊团队两年做到 2 亿 GMV 的操盘手，分享他怎么把 Grok Bot 搭成「1 个主管 + 12 个岗位 Agent」的运营团队：先接付费数据接口、再沉淀自有 Skill、产出全部回写飞书；后半场的开放麦则聊透了利润打法、欧洲税务和 GEO 新流量。</p>
+<h2>主讲部分：扎斯老师的 Grok Bot 落地方法（约 00:05–00:42）</h2>
+<p>扎斯老师的背景（主持人介绍）：曾负责带公司的整个亚马逊团队，约两年从 0 到 1 做到两个亿 GMV；2025 年 7 月离职创业，现做企业咨询陪跑，同时自己选品。</p>
+<p>他对 Grok Bot 的定位：本质是「一个大号的龙虾」——平台帮你配好了模型和云电脑，形态上更适合做<strong>执行层</strong>；但它不能自选模型，所以真正的打法是多 Agent 搭配。他的六个要点：</p>
+<h3>1. 先给 Agent 接准数据：三类付费接口</h3>
+<p>不要让 Bot 去云电脑上抓亚马逊前台——他们 9 月试过还能进，10 月就被亚马逊前台机制挡住了，效果也不理想。应该接付费 API，分三类：</p>
+<ul>
+<li><strong>自有店铺数据</strong>：领星、赛狐等跨境 ERP 已经出了对应的 MCP 接口，接进来 Agent 才知道每条链接的真实销售情况；</li>
+<li><strong>市场调研数据</strong>：H10、卖家精灵、Sorftime 等第三方工具的数据（近半年基本都开放了 MCP 或 CLI），基于真实平台数据做调研，而不是基于报告猜；</li>
+<li><strong>关键词数据</strong>：SIF、西柚洞察一类关键词服务商，监控具体链接的关键词表现。</li>
+</ul>
+<p>三类数据接齐，店铺和大盘的分析能扎实约 90%；剩下的众筹等长尾数据同样找付费接口，不要硬抓。</p>
+<h3>2. 每家公司必须有自己的 Skill（工作流）</h3>
+<p>直接让 Bot 裸跑任务，结果往往跟想要的不一样；把成熟做法写成 Skill 给它执行，才可能真正替代掉某个岗位的工作。他们的做法是本地 + 云端分工：用本地的 Claude Code、Codex、Google Antigravity 写 Skill，统一放在 GitHub，Grok Bot 从同一仓库拉取执行，本地和云端共用同一套 Skill、在实战中迭代。再给 Grok Bot 一个单独的 GitHub 账号提交 PR，区分哪些改动是 Bot 自己提的、哪些是本地 Agent 提的，改崩了能回滚。</p>
+<p>同理，市场调研这类任务的 Skill 必须带上公司的目的：他上一家公司只看规模、不看利润率（为做 GMV 上市），调研就优先看市场体量；自己创业后反过来，优先看切入的利润率。目的不同，Skill 就不同——这是 Skill 不能照搬的根本原因。</p>
+<h3>3. 给 Grok Bot 装 Codex CLI，补它的短板</h3>
+<p>Grok Bot 不能选模型，处理大数据量任务（比如抓亚马逊榜单 Top 100 做挖掘）效果不好。解法：在 Grok Bot 里装好 Codex CLI，设一个专管数据分析的 Bot，遇到大数据处理就调用 Codex 来执行，效果明显好于让它靠自带模型硬做。</p>
+<h3>4. 产出全部回写飞书，资产留在公司内部</h3>
+<p>一定要打通飞书协作，把 Agent 的产出回写到公司内部服务器或飞书知识库，而不是留在云端电脑里。理由很现实：哪天 Grok Bot 降智了、或者有更好的产品出现，迁移成本取决于资料在不在自己手里。团队成员哪怕不用 Grok Bot，在飞书里也能读到全部产出、接着推进。</p>
+<h3>5. 岗位架构：1 + N，不要群聊</h3>
+<p>他搭了 12 个岗位 Bot + 1 个亚马逊主管 Bot，按「向外看 / 向内看 / 流量侧 / 支撑侧」分工：</p>
+<ul>
+<li><strong>向外看</strong>：跨境情报 Bot，盯亚马逊和美国市场的趋势变化，反哺自家 Listing；</li>
+<li><strong>向内看</strong>：VOC 反馈 Bot + 运营数据分析 Bot，看产品上架后的真实问题；</li>
+<li><strong>内容生产</strong>：文案 Bot、图片 Bot（接 Nano Banana 模型出图）各一；</li>
+<li><strong>流量侧</strong>：广告策略 Bot（横看 Google、Meta、亚马逊 DSP 等跨平台流量）+ 亚马逊广告投手 Bot（只处理站内广告报表）；</li>
+<li><strong>支撑侧</strong>：库存 Bot、物流时效 Bot、财务 Bot（盯每条链接的利润率，出周报月报）、合规 Bot（抓合规政策做上架前把关，如磁吸类产品限制、认证要求）；</li>
+<li><strong>闭环</strong>：还有一个 Bot 专管周报月报，把做对和做错的经验沉淀进内部知识库。</li>
+</ul>
+<p>两个细节值得记：</p>
+<ul>
+<li><strong>数据分析为什么拆成三个 Bot</strong>：最早所有报告都塞给一个「运营数据分析」Bot，后来把广告数据和财务数据单独拆出来各设一个 Bot 做上下文隔离——因为他们是精品出身，认定广告和财务是亚马逊生意里最重要的两块，值得精细化；运营分析 Bot 则回归看流量、链接详情页数据并做汇总。</li>
+<li><strong>VOC 的数据困境</strong>：亚马逊原本有 SP-API 接口能拿到自家店铺的 review 数据，约在 2025 年七八月把这个接口关了，领星等 ERP 现在也拿不到 review 数据。他们现在的办法是手动抓最新评论、存回内部，再让 Agent 分析——他建议真重视 VOC 的卖家在评论上多下功夫，AI 能把评论挖得比以前深得多。</li>
+</ul>
+<p>整套体系沉淀了六七十个 Skill，分配给各 Bot（每个 Bot 底下三五个），全链路从选品、文案、上架、广告策略与投放、库存到财务，都在飞书里流转推进。</p>
+<h3>6. 照搬框架的翻车现场</h3>
+<p>他把这套框架分享给社群朋友后，有人直接全盘照搬，把写文案、选品、财务几个 Bot 拉进一个群——结果几个 Bot 纷纷发言「这件事情不归我管，我要退群」。教训就是上面的架构原则：按任务分工、明确边界，不要用群聊把 Bot 混在一起；框架只能借鉴思路，每家公司的业务形态不同，不能原样搬。</p>
+<h3>关于「降智」与多 Agent 搭配</h3>
+<p>扎斯说 Grok Bot 最近一两个月有明显的降质：9 月时觉得特别好用、想把所有工作都迁进去，用下来发现更落地的场景还是多 Agent 搭配——本地 Agent 写 Skill、云端 Bot 执行，手机上也能把事办了；团队成员 Skill 不完善也没关系，直接在飞书里 @ 对应的 Bot 就能干活。</p>
+<h2>开放麦精选（约 00:42–01:47）</h2>
+<h3>评论爬取的土办法</h3>
+<p>一位听众分享：装一个走 CDP 的浏览器操控 Skill，让 Agent 像真人一样操控<strong>本地</strong>浏览器爬评论，本地 IP 基本不触发封控（亚马逊、沃尔玛、Reddit 都试过）；扎斯补充：云端浏览器登录亚马逊看评论可以，但批量抓会触发风控。双方约了私下细聊。</p>
+<h3>生意账：利润率、FBA 与认证</h3>
+<ul>
+<li><strong>利润率打法</strong>：早期纯贸易时 15 个点以上没什么问题；上一家工贸一体公司纯追求规模，故意把利润率压到 10% 以下、投放打得很激进，「就是不想让竞争对手进来」，第二年做到 2 亿多 GMV——按 10% 算也是两千多万利润（均为自述）；</li>
+<li><strong>仓配</strong>：大部分货直发 FBA，少量库存放海外仓应急，不太需要自建海外仓；</li>
+<li><strong>认证</strong>：大多数产品用供应商现成的认证、让供应链发证书即可；纯私模产品才需要自己找机构做；</li>
+<li><strong>他为什么出来创业</strong>：和公司谈股权没谈拢（自述）；也有老板挖他，但「过去还是打工」，职场收入上限和成就感都有限；</li>
+<li><strong>创业的现金流安排</strong>：亚马逊资金周转差、特别压钱，所以他一边给底子弱的跨境企业做咨询陪跑、接广告代投拿现金流，一边自己选品，选品偏供应链整合，不靠 1688 铺货。</li>
+</ul>
+<h3>欧洲税务：别全灰</h3>
+<p>德国卖家 Aurora（在德国的华人团队，做 TikTok、Temu、Otto 等本土平台，有服饰美妆 3C 货盘和海外仓，资质齐全）问合作与品类偏好，扎斯的回应里带出欧洲站的门槛：</p>
+<ul>
+<li>泛欧计划要把欧洲五国税号注册完，得十几万，小卖家拿不出；他们在欧洲只挑小品类做更高利润率，主力仍是美国，欧洲多是拿美国的产品过去卖；</li>
+<li>Aurora 补充实操：现在不一定要注册五国，一般一个公司主体配套两个税号（本国 + 欧盟），如德国主体就是德国税号 + 欧盟税号；并提醒<strong>不要全灰</strong>——看好、利润高的货必走正规清关，全灰在后续税务、记账报税上麻烦很多；德国税局前几年发起过针对中国卖家的调查、封了不少卖家，税局很清楚中国卖家在玩什么；</li>
+<li>扎斯早前被问到国内物流的双清包税时也说：行业里不少利润本质上是偷漏税的钱，合规申报后很多账算不过来（此段发言有约 38 秒转写缺失，观点以缺失前后语境为准）；</li>
+<li>品类上，移动空调今年在欧洲卖到断货、Aurora 团队已在备货明年夏天；扎斯说这类品类想碰，但现阶段资金量不够。合作意向双方都有，约了会后细聊。主持人蓝哥也在现场拉了跨境电商微信群。</li>
+</ul>
+<h3>多 Agent 协同：飞书做中枢，人做拍板</h3>
+<p>飞书渠道方的王先生（SaaS 出身）问：一个任务要多个 Agent 接力时怎么自动协调？扎斯的答案很克制：</p>
+<ul>
+<li><strong>不追求全链路自动化</strong>。他们还在打磨阶段，关键节点坚持 Human in the loop——「做跨境电商都是真金白银砸下去」，最后必须有人确认；确认的过程本身就是在打磨 Skill 和工作流，把返工率压低，但最终拍板留给人；</li>
+<li>体系与其说搭在 Grok Bot 上，不如说搭在飞书上：所有 Agent 的产出都回飞书，换任何 Agent（Grok Bot、Codex、Claude Code）都能接着往下推进；</li>
+<li>王先生分享了自己的版本：花一周做了个工作台，看每个任务的执行节点和自动化结果，在工作台上提交反馈、由一个 GPT 侧的 Agent 捕捉后分发调整给各个 Bot——他自评是个复杂工程，「不知道未来能有什么用，挺好玩的」。</li>
+</ul>
+<h3>工具打通：CLI + Skill + 飞书机器人换后端</h3>
+<ul>
+<li>听众阿健问 Grok Bot 与 Claude、Gemini 等怎么打通联动，扎斯答：用 CLI（在 Grok Bot 里装 Codex CLI）+ 用 Skill 统一行为，Skill 在 GitHub 统一管理，谁执行时发现 Skill 不好就迭代，Grok Bot 定期拉取更新；最终结果沉淀飞书，中间沟通的优先级低于结果本身；</li>
+<li>铁柱补充：飞书机器人可以接不同的 Agent 后端——GitHub 上有开源项目，能把 Claude Code、Antigravity、Codex 乃至国产 Agent 都接进飞书机器人，于是文案岗可以配 Gemini 或 Kimi、做图岗配 Codex，按岗位最大化利用各模型长处；他还提到 Gemini 最新模型很强，已经成了 Claude 的平替（均为发言者观点）。</li>
+</ul>
+<h3>知识库要能自进化</h3>
+<ul>
+<li>铁柱写过一套基于 LLM Wiki + Hermes 的知识库搭建教程（公众号文章），特点是知识库可以自我进化，会发到群里；</li>
+<li>王先生的做法：设一个「知识库管理员」Agent 做两道质检——外部信息入库前先审值不值得存、价值在哪；已入库内容里的废弃材料定期检索删除；</li>
+<li>传统外贸出身的塞特咖（自研系统给四个厂家做跨境，跑 GEO/SEO/EDM，客户走 WhatsApp 沟通）强调 RAG 的误区：不是投喂越多越好，文档进来必须去重、清洗、去噪，Agent 调用的答案才会越来越准；他的知识库按厂家和产品线分区（产品库、客服库等），客户咨询时由对应 Agent 调取后人工转述回复。他自 2025 年 9 月给第一个客户上独立站系统，自述流量基本全是 GEO 带的，并晒了 24 小时后台数据：必应 460 多、谷歌 200 多、苹果端 120 多（客户做实验室玻璃仪器、卖欧美）；</li>
+<li>他还提醒选品先看品类壁垒：实验室仪器这类产品国外认证成本极高、欧美渠道基本被三大分销商占住，品牌再好也很难挤进去；户外用品这类就好做得多。</li>
+</ul>
+<h3>GEO：被反复提到的新流量入口</h3>
+<p>品牌出海公司的 Tim 分享了两个项目：</p>
+<ul>
+<li><strong>GEO 项目</strong>：上一家公司独立站做 GEO 约三个月，AI 带来的流量翻了一倍、营收涨了约 50%（自述）。要点：GEO 的地基是 SEO——先把 SEO 做到同行第一第二，再做 GEO 是事半功倍；北美市场 AI 流量的主要入口是 ChatGPT，他们先挖出客户会在 AI 上问的一两百个细分问题（比如「新手最值得买的高级机是什么」「亚克力场景该买哪个料理机」），再针对性优化官网、Reddit、YouTube、维基百科等 ChatGPT 爱抓的渠道（他们当时连维基百科词条都没有，赶紧补上）；</li>
+<li><strong>VOC 舆情系统</strong>：把亚马逊、各社交平台、Reddit 等全渠道的用户评论（买过的和没买的）统一抓回，用大模型打标分类（售前问题、售后问题、对哪个产品有疑问），再分流到售后工单或售前咨询；沉淀下来的数据对后续选品和产品迭代价值很大；</li>
+<li>主持人补充：在刚结束的 GEO 大会上有嘉宾分享，豆包采集最多的视频时长是 5 分钟的视频（不是通常以为的长视频）；海外做 GEO 的会买词、做 PR，动辄几千个词。在流量越来越贵的环境里，GEO 仍能拉到相对低成本的流量。</li>
+</ul>
+<h2>一句话收尾</h2>
+<p>这场最值钱的不是某个工具技巧，而是两个判断：一，Agent 团队的上限取决于你喂的数据接口和沉淀的 Skill，而不是模型本身；二，越是真金白银的业务，越要把「人做最终确认」写进流程里。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Grok Bot 跨境電商實戰：1 個主管 + 12 個 Agent 崗位</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/waytobot-grokbot-kuajing-dianshang-20261123.mp3"></audio></p>
+<blockquote>
+<p>X Space（WayToBot 社區）· 主持：藍哥AI（@0xlangeai）· 主講：扎斯老師（前亞馬遜團隊負責人）· 2026-11-23 19:56 開播 · 時長約 107 分鐘</p>
+<p>說明：本場錄音的自動轉寫噪聲較大——產品名 Grok Bot 在轉寫裡有十幾種寫法，嘉賓名以主持人口播的「扎斯老師」為準（轉寫中另有 Zack、Jack 等寫法，應為同一人）。文中數字均為發言者自述，未經外部核實；約 00:49–00:50 有約 38 秒轉寫缺失；錄音在結尾的自由交流中途結束。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>一位把亞馬遜團隊兩年做到 2 億 GMV 的操盤手，分享他怎麼把 Grok Bot 搭成「1 個主管 + 12 個崗位 Agent」的運營團隊：先接付費數據接口、再沉澱自有 Skill、產出全部回寫飛書；後半場的開放麥則聊透了利潤打法、歐洲稅務和 GEO 新流量。</p>
+<h2>主講部分：扎斯老師的 Grok Bot 落地方法（約 00:05–00:42）</h2>
+<p>扎斯老師的背景（主持人介紹）：曾負責帶公司的整個亞馬遜團隊，約兩年從 0 到 1 做到兩個億 GMV；2025 年 7 月離職創業，現做企業諮詢陪跑，同時自己選品。</p>
+<p>他對 Grok Bot 的定位：本質是「一個大號的龍蝦」——平台幫你配好了模型和雲端電腦，形態上更適合做<strong>執行層</strong>；但它不能自選模型，所以真正的打法是多 Agent 搭配。他的六個要點：</p>
+<h3>1. 先給 Agent 接準數據：三類付費接口</h3>
+<p>不要讓 Bot 去雲端電腦上抓亞馬遜前台——他們 9 月試過還能進，10 月就被亞馬遜前台機制擋住了，效果也不理想。應該接付費 API，分三類：</p>
+<ul>
+<li><strong>自有店鋪數據</strong>：領星、賽狐等跨境 ERP 已經出了對應的 MCP 接口，接進來 Agent 才知道每條連結的真實銷售情況；</li>
+<li><strong>市場調研數據</strong>：H10、賣家精靈、Sorftime 等第三方工具的數據（近半年基本都開放了 MCP 或 CLI），基於真實平台數據做調研，而不是基於報告猜；</li>
+<li><strong>關鍵詞數據</strong>：SIF、西柚洞察一類關鍵詞服務商，監控具體連結的關鍵詞表現。</li>
+</ul>
+<p>三類數據接齊，店鋪和大盤的分析能紮實約 90%；剩下的眾籌等長尾數據同樣找付費接口，不要硬抓。</p>
+<h3>2. 每家公司必須有自己的 Skill（工作流）</h3>
+<p>直接讓 Bot 裸跑任務，結果往往跟想要的不一樣；把成熟做法寫成 Skill 給它執行，才可能真正替代掉某個崗位的工作。他們的做法是本地 + 雲端分工：用本地的 Claude Code、Codex、Google Antigravity 寫 Skill，統一放在 GitHub，Grok Bot 從同一倉庫拉取執行，本地和雲端共用同一套 Skill、在實戰中迭代。再給 Grok Bot 一個單獨的 GitHub 帳號提交 PR，區分哪些改動是 Bot 自己提的、哪些是本地 Agent 提的，改崩了能回滾。</p>
+<p>同理，市場調研這類任務的 Skill 必須帶上公司的目的：他上一家公司只看規模、不看利潤率（為做 GMV 上市），調研就優先看市場體量；自己創業後反過來，優先看切入的利潤率。目的不同，Skill 就不同——這是 Skill 不能照搬的根本原因。</p>
+<h3>3. 給 Grok Bot 裝 Codex CLI，補它的短板</h3>
+<p>Grok Bot 不能選模型，處理大數據量任務（比如抓亞馬遜榜單 Top 100 做挖掘）效果不好。解法：在 Grok Bot 裡裝好 Codex CLI，設一個專管數據分析的 Bot，遇到大數據處理就調用 Codex 來執行，效果明顯好於讓它靠自帶模型硬做。</p>
+<h3>4. 產出全部回寫飛書，資產留在公司內部</h3>
+<p>一定要打通飛書協作，把 Agent 的產出回寫到公司內部伺服器或飛書知識庫，而不是留在雲端電腦裡。理由很現實：哪天 Grok Bot 降智了、或者有更好的產品出現，遷移成本取決於資料在不在自己手裡。團隊成員哪怕不用 Grok Bot，在飛書裡也能讀到全部產出、接著推進。</p>
+<h3>5. 崗位架構：1 + N，不要群聊</h3>
+<p>他搭了 12 個崗位 Bot + 1 個亞馬遜主管 Bot，按「向外看 / 向內看 / 流量側 / 支撐側」分工：</p>
+<ul>
+<li><strong>向外看</strong>：跨境情報 Bot，盯亞馬遜和美國市場的趨勢變化，反哺自家 Listing；</li>
+<li><strong>向內看</strong>：VOC 反饋 Bot + 運營數據分析 Bot，看產品上架後的真實問題；</li>
+<li><strong>內容生產</strong>：文案 Bot、圖片 Bot（接 Nano Banana 模型出圖）各一；</li>
+<li><strong>流量側</strong>：廣告策略 Bot（橫看 Google、Meta、亞馬遜 DSP 等跨平台流量）+ 亞馬遜廣告投手 Bot（只處理站內廣告報表）；</li>
+<li><strong>支撐側</strong>：庫存 Bot、物流時效 Bot、財務 Bot（盯每條連結的利潤率，出週報月報）、合規 Bot（抓合規政策做上架前把關，如磁吸類產品限制、認證要求）；</li>
+<li><strong>閉環</strong>：還有一個 Bot 專管週報月報，把做對和做錯的經驗沉澱進內部知識庫。</li>
+</ul>
+<p>兩個細節值得記：</p>
+<ul>
+<li><strong>數據分析為什麼拆成三個 Bot</strong>：最早所有報告都塞給一個「運營數據分析」Bot，後來把廣告數據和財務數據單獨拆出來各設一個 Bot 做上下文隔離——因為他們是精品出身，認定廣告和財務是亞馬遜生意裡最重要的兩塊，值得精細化；運營分析 Bot 則回歸看流量、連結詳情頁數據並做彙總。</li>
+<li><strong>VOC 的數據困境</strong>：亞馬遜原本有 SP-API 接口能拿到自家店鋪的 review 數據，約在 2025 年七八月把這個接口關了，領星等 ERP 現在也拿不到 review 數據。他們現在的辦法是手動抓最新評論、存回內部，再讓 Agent 分析——他建議真重視 VOC 的賣家在評論上多下功夫，AI 能把評論挖得比以前深得多。</li>
+</ul>
+<p>整套體系沉澱了六七十個 Skill，分配給各 Bot（每個 Bot 底下三五個），全鏈路從選品、文案、上架、廣告策略與投放、庫存到財務，都在飛書裡流轉推進。</p>
+<h3>6. 照搬框架的翻車現場</h3>
+<p>他把這套框架分享給社群朋友後，有人直接全盤照搬，把寫文案、選品、財務幾個 Bot 拉進一個群——結果幾個 Bot 紛紛發言「這件事情不歸我管，我要退群」。教訓就是上面的架構原則：按任務分工、明確邊界，不要用群聊把 Bot 混在一起；框架只能借鑑思路，每家公司的業務形態不同，不能原樣搬。</p>
+<h3>關於「降智」與多 Agent 搭配</h3>
+<p>扎斯說 Grok Bot 最近一兩個月有明顯的降質：9 月時覺得特別好用、想把所有工作都遷進去，用下來發現更落地的場景還是多 Agent 搭配——本地 Agent 寫 Skill、雲端 Bot 執行，手機上也能把事辦了；團隊成員 Skill 不完善也沒關係，直接在飛書裡 @ 對應的 Bot 就能幹活。</p>
+<h2>開放麥精選（約 00:42–01:47）</h2>
+<h3>評論爬取的土辦法</h3>
+<p>一位聽眾分享：裝一個走 CDP 的瀏覽器操控 Skill，讓 Agent 像真人一樣操控<strong>本地</strong>瀏覽器爬評論，本地 IP 基本不觸發封控（亞馬遜、沃爾瑪、Reddit 都試過）；扎斯補充：雲端瀏覽器登入亞馬遜看評論可以，但批量抓會觸發風控。雙方約了私下細聊。</p>
+<h3>生意賬：利潤率、FBA 與認證</h3>
+<ul>
+<li><strong>利潤率打法</strong>：早期純貿易時 15 個點以上沒什麼問題；上一家工貿一體公司純追求規模，故意把利潤率壓到 10% 以下、投放打得很激進，「就是不想讓競爭對手進來」，第二年做到 2 億多 GMV——按 10% 算也是兩千多萬利潤（均為自述）；</li>
+<li><strong>倉配</strong>：大部分貨直發 FBA，少量庫存放海外倉應急，不太需要自建海外倉；</li>
+<li><strong>認證</strong>：大多數產品用供應商現成的認證、讓供應鏈發證書即可；純私模產品才需要自己找機構做；</li>
+<li><strong>他為什麼出來創業</strong>：和公司談股權沒談攏（自述）；也有老闆挖他，但「過去還是打工」，職場收入上限和成就感都有限；</li>
+<li><strong>創業的現金流安排</strong>：亞馬遜資金周轉差、特別壓錢，所以他一邊給底子弱的跨境企業做諮詢陪跑、接廣告代投拿現金流，一邊自己選品，選品偏供應鏈整合，不靠 1688 鋪貨。</li>
+</ul>
+<h3>歐洲稅務：別全灰</h3>
+<p>德國賣家 Aurora（在德國的華人團隊，做 TikTok、Temu、Otto 等本土平台，有服飾美妝 3C 貨盤和海外倉，資質齊全）問合作與品類偏好，扎斯的回應裡帶出歐洲站的門檻：</p>
+<ul>
+<li>泛歐計畫要把歐洲五國稅號註冊完，得十幾萬，小賣家拿不出；他們在歐洲只挑小品類做更高利潤率，主力仍是美國，歐洲多是拿美國的產品過去賣；</li>
+<li>Aurora 補充實操：現在不一定要註冊五國，一般一個公司主體配套兩個稅號（本國 + 歐盟），如德國主體就是德國稅號 + 歐盟稅號；並提醒<strong>不要全灰</strong>——看好、利潤高的貨必走正規清關，全灰在後續稅務、記帳報稅上麻煩很多；德國稅局前幾年發起過針對中國賣家的調查、封了不少賣家，稅局很清楚中國賣家在玩什麼；</li>
+<li>扎斯早前被問到國內物流的雙清包稅時也說：行業裡不少利潤本質上是偷漏稅的錢，合規申報後很多賬算不過來（此段發言有約 38 秒轉寫缺失，觀點以缺失前後語境為準）；</li>
+<li>品類上，移動空調今年在歐洲賣到斷貨、Aurora 團隊已在備貨明年夏天；扎斯說這類品類想碰，但現階段資金量不夠。合作意向雙方都有，約了會後細聊。主持人藍哥也在現場拉了跨境電商微信群。</li>
+</ul>
+<h3>多 Agent 協同：飛書做中樞，人做拍板</h3>
+<p>飛書渠道方的王先生（SaaS 出身）問：一個任務要多個 Agent 接力時怎麼自動協調？扎斯的答案很克制：</p>
+<ul>
+<li><strong>不追求全鏈路自動化</strong>。他們還在打磨階段，關鍵節點堅持 Human in the loop——「做跨境電商都是真金白銀砸下去」，最後必須有人確認；確認的過程本身就是在打磨 Skill 和工作流，把返工率壓低，但最終拍板留給人；</li>
+<li>體系與其說搭在 Grok Bot 上，不如說搭在飛書上：所有 Agent 的產出都回飛書，換任何 Agent（Grok Bot、Codex、Claude Code）都能接著往下推進；</li>
+<li>王先生分享了自己的版本：花一週做了個工作台，看每個任務的執行節點和自動化結果，在工作台上提交反饋、由一個 GPT 側的 Agent 捕捉後分發調整給各個 Bot——他自評是個複雜工程，「不知道未來能有什麼用，挺好玩的」。</li>
+</ul>
+<h3>工具打通：CLI + Skill + 飛書機器人換後端</h3>
+<ul>
+<li>聽眾阿健問 Grok Bot 與 Claude、Gemini 等怎麼打通聯動，扎斯答：用 CLI（在 Grok Bot 裡裝 Codex CLI）+ 用 Skill 統一行為，Skill 在 GitHub 統一管理，誰執行時發現 Skill 不好就迭代，Grok Bot 定期拉取更新；最終結果沉澱飛書，中間溝通的優先級低於結果本身；</li>
+<li>鐵柱補充：飛書機器人可以接不同的 Agent 後端——GitHub 上有開源項目，能把 Claude Code、Antigravity、Codex 乃至國產 Agent 都接進飛書機器人，於是文案崗可以配 Gemini 或 Kimi、做圖崗配 Codex，按崗位最大化利用各模型長處；他還提到 Gemini 最新模型很強，已經成了 Claude 的平替（均為發言者觀點）。</li>
+</ul>
+<h3>知識庫要能自進化</h3>
+<ul>
+<li>鐵柱寫過一套基於 LLM Wiki + Hermes 的知識庫搭建教學（公眾號文章），特點是知識庫可以自我進化，會發到群裡；</li>
+<li>王先生的做法：設一個「知識庫管理員」Agent 做兩道質檢——外部資訊入庫前先審值不值得存、價值在哪；已入庫內容裡的廢棄材料定期檢索刪除；</li>
+<li>傳統外貿出身的塞特咖（自研系統給四個廠家做跨境，跑 GEO/SEO/EDM，客戶走 WhatsApp 溝通）強調 RAG 的誤區：不是投餵越多越好，文件進來必須去重、清洗、去噪，Agent 調用的答案才會越來越準；他的知識庫按廠家和產品線分區（產品庫、客服庫等），客戶諮詢時由對應 Agent 調取後人工轉述回覆。他自 2025 年 9 月給第一個客戶上獨立站系統，自述流量基本全是 GEO 帶的，並曬了 24 小時後台數據：必應 460 多、谷歌 200 多、蘋果端 120 多（客戶做實驗室玻璃儀器、賣歐美）；</li>
+<li>他還提醒選品先看品類壁壘：實驗室儀器這類產品國外認證成本極高、歐美渠道基本被三大分銷商占住，品牌再好也很難擠進去；戶外用品這類就好做得多。</li>
+</ul>
+<h3>GEO：被反覆提到的新流量入口</h3>
+<p>品牌出海公司的 Tim 分享了兩個項目：</p>
+<ul>
+<li><strong>GEO 項目</strong>：上一家公司獨立站做 GEO 約三個月，AI 帶來的流量翻了一倍、營收漲了約 50%（自述）。要點：GEO 的地基是 SEO——先把 SEO 做到同行第一第二，再做 GEO 是事半功倍；北美市場 AI 流量的主要入口是 ChatGPT，他們先挖出客戶會在 AI 上問的一兩百個細分問題（比如「新手最值得買的高級機是什麼」「亞克力場景該買哪個料理機」），再針對性優化官網、Reddit、YouTube、維基百科等 ChatGPT 愛抓的渠道（他們當時連維基百科詞條都沒有，趕緊補上）；</li>
+<li><strong>VOC 輿情系統</strong>：把亞馬遜、各社交平台、Reddit 等全渠道的用戶評論（買過的和沒買的）統一抓回，用大模型打標分類（售前問題、售後問題、對哪個產品有疑問），再分流到售後工單或售前諮詢；沉澱下來的數據對後續選品和產品迭代價值很大；</li>
+<li>主持人補充：在剛結束的 GEO 大會上有嘉賓分享，豆包採集最多的影片時長是 5 分鐘的影片（不是通常以為的長影片）；海外做 GEO 的會買詞、做 PR，動輒幾千個詞。在流量越來越貴的環境裡，GEO 仍能拉到相對低成本的流量。</li>
+</ul>
+<h2>一句話收尾</h2>
+<p>這場最值錢的不是某個工具技巧，而是兩個判斷：一，Agent 團隊的上限取決於你餵的數據接口和沉澱的 Skill，而不是模型本身；二，越是真金白銀的業務，越要把「人做最終確認」寫進流程裡。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Grok Bot in Cross-Border E-Commerce, in Practice: 1 Manager + 12 Agent Roles</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/waytobot-grokbot-kuajing-dianshang-20261123.mp3"></audio></p>
+<blockquote>
+<p>X Space (WayToBot community) · Host: Lange AI (@0xlangeai) · Main speaker: Zasi (former Amazon team lead) · Started 2026-11-23 19:56 · About 107 minutes long</p>
+<p>Note: the automatic transcription of this recording is quite noisy — the product name Grok Bot appears in more than a dozen different spellings in the transcript, and the guest's name follows the host's spoken introduction, "Zasi" (the transcript also contains spellings such as Zack and Jack, which should refer to the same person). All figures in the text are the speakers' own statements and have not been independently verified; about 38 seconds of transcription are missing around 00:49–00:50; the recording ends in the middle of the open discussion at the end.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>An operator who grew an Amazon team to 200 million GMV in two years shares how he built Grok Bot into an operations team of "1 manager + 12 role-based Agents": first wire it up to paid data APIs, then accumulate your own Skills, and write all output back to Feishu; the open-mic second half thoroughly covered margin tactics, European taxes, and the new GEO traffic.</p>
+<h2>Main Talk: Zasi's Method for Putting Grok Bot to Work (approx. 00:05–00:42)</h2>
+<p>Zasi's background (per the host's introduction): he led his company's entire Amazon team, growing it from 0 to 1 to 200 million GMV in about two years; he left in July 2025 to start his own business, and now does corporate consulting and coaching while also selecting products himself.</p>
+<p>His take on what Grok Bot is: essentially "an oversized lobster" — the platform pre-configures the models and a cloud computer for you, and its form makes it better suited as an <strong>execution layer</strong>; but it cannot choose models itself, so the real play is combining multiple Agents. His six points:</p>
+<h3>1. First, Give the Agent the Right Data: Three Kinds of Paid APIs</h3>
+<p>Don't have the Bot scrape Amazon's storefront from a cloud computer — they tried in September and could still get in, but by October Amazon's storefront mechanisms blocked them, and the results weren't great anyway. Instead, connect paid APIs, in three categories:</p>
+<ul>
+<li><strong>Your own store data</strong>: cross-border ERPs such as Lingxing and Saihu already offer corresponding MCP interfaces; once connected, the Agent knows the real sales picture of every listing;</li>
+<li><strong>Market research data</strong>: data from third-party tools such as H10, SellerSprite, and Sorftime (most have opened up MCP or CLI access in the last six months), so research is based on real platform data rather than guesswork from reports;</li>
+<li><strong>Keyword data</strong>: keyword service providers such as SIF and Xiyou Insight, to monitor the keyword performance of specific listings.</li>
+</ul>
+<p>With all three kinds of data connected, analysis of your store and the overall market can be about 90% solid; for the remaining long-tail data such as crowdfunding, likewise find paid APIs instead of forcing a scrape.</p>
+<h3>2. Every Company Must Have Its Own Skills (Workflows)</h3>
+<p>If you let the Bot run tasks bare, the results often aren't what you wanted; writing proven practices into Skills for it to execute is what makes it possible to truly replace the work of a given role. Their approach splits local and cloud: they write Skills locally with Claude Code, Codex, and Google Antigravity, keep them all in GitHub, and Grok Bot pulls from the same repository to execute them, so local and cloud share one set of Skills and iterate on them in real work. They also gave Grok Bot its own GitHub account for submitting PRs, to distinguish which changes the Bot proposed itself and which came from local Agents, so a bad change can be rolled back.</p>
+<p>Likewise, a Skill for a task like market research must carry the company's purpose: his previous company cared only about scale, not margins (doing GMV in order to go public), so research prioritized market size; after starting his own business he reversed that, prioritizing the margin at which he can enter a market. Different purpose, different Skill — that is the fundamental reason Skills cannot simply be copied.</p>
+<h3>3. Install the Codex CLI in Grok Bot to Cover Its Weakness</h3>
+<p>Grok Bot cannot choose models, and it performs poorly on large-data tasks (such as scraping and mining Amazon's Top 100 charts). The fix: install the Codex CLI inside Grok Bot, set up a Bot dedicated to data analysis, and have it call Codex for heavy data processing — the results are markedly better than letting it grind through with its built-in model.</p>
+<h3>4. Write All Output Back to Feishu, So the Assets Stay Inside the Company</h3>
+<p>You must connect Feishu collaboration and write the Agents' output back to internal company servers or the Feishu knowledge base, rather than leaving it on the cloud computer. The reason is practical: if one day Grok Bot gets dumber, or a better product appears, the migration cost depends on whether the materials are in your own hands. Even team members who don't use Grok Bot can read all the output in Feishu and carry the work forward.</p>
+<h3>5. Role Architecture: 1 + N, No Group Chats</h3>
+<p>He built 12 role Bots + 1 Amazon manager Bot, divided by "looking outward / looking inward / traffic side / support side":</p>
+<ul>
+<li><strong>Looking outward</strong>: a cross-border intelligence Bot that watches trend changes on Amazon and in the US market and feeds them back into their own Listings;</li>
+<li><strong>Looking inward</strong>: a VOC feedback Bot + an operations data analysis Bot, watching for real problems after products go live;</li>
+<li><strong>Content production</strong>: one copywriting Bot and one image Bot (connected to the Nano Banana model for image generation);</li>
+<li><strong>Traffic side</strong>: an advertising strategy Bot (looking across Google, Meta, Amazon DSP and other cross-platform traffic) + an Amazon ads Bot (handling only on-site ad reports);</li>
+<li><strong>Support side</strong>: an inventory Bot, a logistics-timeliness Bot, a finance Bot (watching the margin of every listing, producing weekly and monthly reports), and a compliance Bot (pulling compliance policies to vet listings before they go live, e.g. restrictions on magnetic products and certification requirements);</li>
+<li><strong>Closing the loop</strong>: one more Bot dedicated to weekly and monthly reports, distilling lessons from what was done right and wrong into the internal knowledge base.</li>
+</ul>
+<p>Two details are worth noting:</p>
+<ul>
+<li><strong>Why data analysis is split into three Bots</strong>: at first all reports were stuffed into a single "operations data analysis" Bot; later the advertising data and financial data were split out into separate Bots for context isolation — because they come from a premium-listing background, they regard advertising and finance as the two most important pieces of the Amazon business and worth refining; the operations analysis Bot went back to watching traffic and listing-detail-page data and producing summaries.</li>
+<li><strong>VOC's data dilemma</strong>: Amazon originally had an SP-API interface for getting review data from your own store, but shut it down around July–August 2025, and ERPs such as Lingxing can no longer get review data either. Their current approach is to manually pull the latest reviews, store them internally, and then let Agents analyze them — he advises sellers who truly care about VOC to put more effort into reviews, since AI can mine reviews far more deeply than before.</li>
+</ul>
+<p>The whole system has accumulated sixty to seventy Skills, distributed among the Bots (three to five under each Bot), and the full chain — product selection, copywriting, listing, ad strategy and placement, inventory, through to finance — flows and advances inside Feishu.</p>
+<h3>6. What Happened When Someone Copied the Framework Wholesale</h3>
+<p>After he shared this framework with friends in his community, someone copied it wholesale and pulled the copywriting, product-selection, and finance Bots into one group — whereupon the Bots spoke up one after another: "That's not my job, I'm leaving the group." The lesson is the architectural principle above: divide by task, keep boundaries clear, and don't mix Bots together in a group chat; a framework can only lend its thinking — every company's business is different, and it cannot be moved over as-is.</p>
+<h3>On "Getting Dumber" and Combining Multiple Agents</h3>
+<p>Zasi says Grok Bot has noticeably degraded in the last month or two: in September it felt so good that he wanted to move all work into it, but after using it he found the more workable setup is still combining multiple Agents — local Agents write Skills, cloud Bots execute, and things can get done on a phone; even if team members' Skills aren't polished, they can just @ the corresponding Bot in Feishu and get work done.</p>
+<h2>Open-Mic Highlights (approx. 00:42–01:47)</h2>
+<h3>A Down-to-Earth Way to Scrape Reviews</h3>
+<p>One listener shared: install a browser-control Skill that goes through CDP, letting the Agent operate a <strong>local</strong> browser like a real person to scrape reviews; a local IP basically doesn't trigger platform controls (tried on Amazon, Walmart, and Reddit). Zasi added: logging into Amazon from a cloud browser to read reviews is fine, but bulk scraping triggers risk controls. The two agreed to talk in detail privately.</p>
+<h3>The Business Math: Margins, FBA, and Certification</h3>
+<ul>
+<li><strong>Margin tactics</strong>: in the early pure-trading days, 15 points or more was no problem; the previous company, an integrated industry-and-trade operation, pursued scale alone and deliberately pressed margins below 10%, spending aggressively on ads — "precisely so competitors couldn't get in" — and reached over 200 million GMV in the second year; even at 10%, that's over 20 million in profit (all per his own account);</li>
+<li><strong>Warehousing and fulfillment</strong>: most goods go straight to FBA, with a small amount of inventory in overseas warehouses for emergencies; there isn't much need to build your own overseas warehouse;</li>
+<li><strong>Certification</strong>: for most products you can use the supplier's existing certifications and have the supply chain issue the certificates; only purely private-mold products require hiring an agency yourself;</li>
+<li><strong>Why he went out on his own</strong>: he couldn't reach agreement with the company on equity (per his own account); bosses have tried to poach him, but "going there is still just a job" — the income ceiling and sense of achievement in employment are both limited;</li>
+<li><strong>Cash-flow arrangements for the startup</strong>: Amazon's cash conversion is poor and ties up a lot of money, so on one side he does consulting and coaching for cross-border companies with weaker foundations and takes on ad-management work for cash flow, while on the other side he selects products himself, leaning toward supply-chain integration rather than stocking up from 1688.</li>
+</ul>
+<h3>European Taxes: Don't Go Fully Grey</h3>
+<p>Aurora, a German seller (a Chinese team based in Germany, selling on local platforms such as TikTok, Temu, and Otto, with a product range in apparel, beauty, and 3C and their own overseas warehouse, fully certified), asked about cooperation and category preferences, and Zasi's reply brought out the barriers of the European sites:</p>
+<ul>
+<li>The Pan-European program requires registering VAT numbers in five European countries, which costs well over a hundred thousand, more than small sellers can come up with; in Europe they only pick small categories for higher margins — their main battlefield is still the US, and Europe mostly sells products taken over from the US;</li>
+<li>Aurora added the practical details: nowadays you don't necessarily need to register in five countries; generally one company entity comes with two tax numbers (domestic + EU) — a German entity, for instance, has a German tax number plus an EU tax number; and she warned: <strong>don't go fully grey</strong> — goods you believe in with high margins must go through proper customs clearance, since going fully grey creates a lot of trouble later with taxes, bookkeeping, and filing; the German tax authorities launched an investigation targeting Chinese sellers a few years ago and banned quite a few of them, and the tax authorities know very well what Chinese sellers are up to;</li>
+<li>Zasi, asked earlier about tax-inclusive double-clearance shipping in domestic logistics, had also said: much of the industry's profit is essentially money from tax evasion, and once you declare compliantly, many of the numbers no longer add up (about 38 seconds of transcription are missing from this part of his remarks; the view follows the context before and after the gap);</li>
+<li>On categories: portable air conditioners sold out in Europe this year, and Aurora's team is already stocking up for next summer; Zasi said he'd like to get into such categories but doesn't have the capital at this stage. Both sides were open to cooperation and agreed to talk after the session. The host, Lange, also pulled together a cross-border e-commerce WeChat group on the spot.</li>
+</ul>
+<h3>Multi-Agent Coordination: Feishu as the Hub, Humans Make the Final Call</h3>
+<p>Mr. Wang, from a Feishu channel partner (with a SaaS background), asked: when a task requires multiple Agents to relay it, how do you coordinate them automatically? Zasi's answer was restrained:</p>
+<ul>
+<li><strong>Don't chase end-to-end automation</strong>. They are still in the polishing stage, and at key checkpoints they insist on human-in-the-loop — "in cross-border e-commerce, real money is on the line," so a person must confirm at the end; the confirmation process itself polishes the Skills and workflows and drives the rework rate down, but the final call stays with a human;</li>
+<li>The system is built on Feishu more than on Grok Bot: all Agents' output goes back to Feishu, and any Agent (Grok Bot, Codex, Claude Code) can pick it up and push forward from there;</li>
+<li>Mr. Wang shared his own version: he spent a week building a workbench that shows each task's execution nodes and automation results; he submits feedback on the workbench, and a GPT-side Agent captures it and distributes adjustments to the various Bots — he himself rates it a complex project: "I don't know what it will be good for in the future; it's fun."</li>
+</ul>
+<h3>Connecting the Tools: CLI + Skills + Swapping the Backend Behind Feishu Bots</h3>
+<ul>
+<li>Listener Ajian asked how Grok Bot connects and works with Claude, Gemini, and others. Zasi answered: use CLIs (install the Codex CLI inside Grok Bot) + use Skills to unify behavior; the Skills are managed centrally in GitHub, whoever finds a Skill lacking while executing iterates on it, and Grok Bot periodically pulls the updates; the final results are deposited in Feishu, and intermediate communication matters less than the results themselves;</li>
+<li>Tiezhu added: Feishu bots can be connected to different Agent backends — there are open-source projects on GitHub that can plug Claude Code, Antigravity, Codex, and even domestic Chinese Agents into Feishu bots, so the copywriting role can be paired with Gemini or Kimi and the image role with Codex, maximizing each model's strengths by role; he also mentioned that Gemini's latest model is very strong and has become a flat replacement for Claude (all views are the speakers' own).</li>
+</ul>
+<h3>The Knowledge Base Must Be Able to Evolve Itself</h3>
+<ul>
+<li>Tiezhu has written a tutorial (a WeChat public-account article) on building a knowledge base based on LLM Wiki + Hermes, whose distinguishing feature is that the knowledge base can evolve itself; he will post it in the group;</li>
+<li>Mr. Wang's approach: set up a "knowledge base administrator" Agent to run two quality checks — before external information is stored, it first reviews whether it is worth storing and where its value lies; obsolete material already in the base is periodically searched out and deleted;</li>
+<li>Saiteka, who comes from traditional foreign trade (he built his own system to run cross-border for four manufacturers, running GEO/SEO/EDM, with customers communicating over WhatsApp), stressed a misconception about RAG: it is not the case that the more you feed it, the better — incoming documents must be deduplicated, cleaned, and denoised before the answers an Agent retrieves will get more and more accurate; his knowledge base is partitioned by manufacturer and product line (a product library, a customer-service library, etc.), and when a customer asks something, the corresponding Agent retrieves from it and a human relays the reply. He put an independent-site system live for his first client in September 2025, says the traffic is basically all brought in by GEO, and shared his 24-hour backend data: over 460 from Bing, over 200 from Google, and over 120 from Apple (the client makes laboratory glass instruments and sells to Europe and the US);</li>
+<li>He also warned that product selection should first look at category barriers: for products like laboratory instruments, overseas certification costs are extremely high and European and American channels are basically occupied by three major distributors, so however good the brand, it is hard to squeeze in; categories like outdoor goods are much easier to do.</li>
+</ul>
+<h3>GEO: The New Traffic Entrance Mentioned Again and Again</h3>
+<p>Tim, from a brand-going-global company, shared two projects:</p>
+<ul>
+<li><strong>The GEO project</strong>: at his previous company, an independent site did GEO for about three months, and AI-driven traffic doubled while revenue rose by about 50% (per his own account). The key points: GEO's foundation is SEO — only once your SEO is ranked first or second among competitors does GEO become twice the result with half the effort; in the North American market the main entrance for AI traffic is ChatGPT, and they first dug out the one to two hundred specific questions customers ask AI (for example, "what is the best premium machine for a beginner to buy" or "which food processor is best for acrylic scenarios"), then optimized, for those questions, the channels ChatGPT likes to crawl — their official site, Reddit, YouTube, Wikipedia, and so on (at the time they didn't even have a Wikipedia entry, and hurried to add one);</li>
+<li><strong>The VOC public-sentiment system</strong>: pull user reviews from all channels — Amazon, various social platforms, Reddit, and so on (from both buyers and non-buyers) — into one place, use a large model to tag and classify them (pre-sale questions, after-sale questions, questions about a particular product), then route them to after-sales tickets or pre-sales inquiries; the accumulated data is of great value for later product selection and product iteration;</li>
+<li>The host added: at a GEO conference that had just ended, a speaker shared that the video length Doubao crawls the most is 5-minute videos (not the long videos people usually assume); overseas GEO practitioners buy keywords and do PR, often thousands of keywords at a time. In an environment where traffic keeps getting more expensive, GEO can still pull in relatively low-cost traffic.</li>
+</ul>
+<h2>Closing in One Sentence</h2>
+<p>The most valuable part of this session is not any tool trick, but two judgments: first, the ceiling of an Agent team depends on the data APIs you feed it and the Skills you accumulate, not on the model itself; second, the more a business involves real money, the more "a human makes the final confirmation" must be written into the process.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1KoLLROOYgXqee">https://x.com/i/spaces/1KoLLROOYgXqee</a>（主持 @0xlangeai，主讲扎斯老师）· 发布日期：2026-11-23 · 时长：107 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1KoLLROOYgXqee">https://x.com/i/spaces/1KoLLROOYgXqee</a>（主持 @0xlangeai，主講扎斯老師）· 發布日期：2026-11-23 · 時長：107 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1KoLLROOYgXqee">https://x.com/i/spaces/1KoLLROOYgXqee</a> (host @0xlangeai, main speaker Zasi) · Published: 2026-11-23 · Duration: 107 minutes<br>This page is the full text of a summary prepared by human editing from a machine transcript; all views and figures are the original speakers' own and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+</main>
+<script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Grok Bot 跨境电商实战：1 个主管 + 12 个 Agent 岗位 · Yat's Talks",tw:"Grok Bot 跨境電商實戰：1 個主管 + 12 個 Agent 崗位 · Yat's Talks",en:"Grok Bot in Cross-Border E-Commerce, in Practice: 1 Manager + 12 Agent Roles · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
+</body>
+</html>

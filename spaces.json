@@ -1,9 +1,54 @@
 {
-  "updated_at": "2026-11-24T11:48:33Z",
+  "updated_at": "2026-11-24T12:54:30Z",
   "title": "Yat's List · X Space 纪要清单",
   "note": "华语圈 X Space 精选纪要存档：回放只放 X 原链接，不搬运音频。纪要中的金额、人数、战绩等数字均为发言人现场自述或转述，未经外部核实；引用时请以各方官方后续公告为准。本清单人工维护，不定期更新。",
   "source_site": "https://yatstudio.github.io/x-spaces/",
   "spaces": [
+    {
+      "id": "waytobot-grokbot-kuajing-dianshang-20261123",
+      "title": "《Grok Bot 跨境电商实战：1 个主管 + 12 个 Agent 岗位》",
+      "title_en": "Grok Bot for Cross-Border E-Commerce: One Manager, Twelve Agent Roles",
+      "title_tw": "《Grok Bot 跨境電商實戰：1 個主管 + 12 個 Agent 崗位》",
+      "series": "WayToBot 社区",
+      "episode": null,
+      "date": "2026-11-23",
+      "host": "蓝哥AI @0xlangeai",
+      "guests": [
+        "扎斯老师"
+      ],
+      "duration": "107 分钟",
+      "duration_minutes": 107,
+      "url": "https://x.com/i/spaces/1KoLLROOYgXqee",
+      "note_url": "/spaces/notes/waytobot-grokbot-kuajing-dianshang-20261123.html",
+      "topics": [
+        "Grok Bot",
+        "跨境电商",
+        "亚马逊",
+        "AI Agent",
+        "Skill",
+        "GEO",
+        "VOC",
+        "飞书"
+      ],
+      "highlights": [
+        "扎斯老师（前亚马逊团队负责人，自述约两年把团队从 0 做到 2 亿 GMV）分享 Grok Bot 落地方法：先给 Agent 接三类付费数据接口——自有店铺 ERP、市场调研工具、关键词服务商；不要让 Bot 去云电脑上抓亚马逊前台，他们 9 月试过还能进，10 月就被亚马逊的机制挡住了。",
+        "他的岗位架构是「1 个主管 + 12 个岗位 Bot」：情报、VOC、运营分析、文案、图片、广告策略、广告投手、库存、物流、财务、合规、复盘各管一摊，整套体系沉淀了六七十个 Skill。有人照搬他的框架、把几个 Bot 拉进一个群，结果 Bot 们纷纷说「这事不归我管，我要退群」。",
+        "整套体系其实搭在飞书上：所有 Agent 的产出回写飞书、资产留在公司内部；多 Agent 协同不追求全自动化，关键节点坚持人做最终确认——「做跨境电商都是真金白银砸下去」。补 Grok Bot 不能自选模型的短板，他的办法是在里面装 Codex CLI 处理大数据量任务。",
+        "开放麦聊透了生意账：上一家公司故意把利润率压到 10% 以下换规模、第二年做到 2 亿多 GMV；欧洲站别全灰，德国税局前几年发起过针对中国卖家的调查；GEO 被反复提及为新流量入口——Tim 自述上一家公司独立站做 GEO 约三个月，AI 流量翻了一倍、营收涨了约 50%。"
+      ],
+      "highlights_en": [
+        "Zashi (a former Amazon team lead who says he took his team from zero to RMB 200M GMV in about two years) shares how he deploys Grok Bot: first wire the agent to three kinds of paid data APIs — your own store ERP, market-research tools, and keyword services. Don't have the bot scrape Amazon's storefront from a cloud computer: it still worked for them in September, but Amazon's defenses blocked it by October.",
+        "His org chart is 'one manager + twelve role bots': intel, VOC, operations analytics, copywriting, images, ad strategy, Amazon ads, inventory, logistics, finance, compliance and retrospectives each own a lane, backed by sixty to seventy Skills. Someone copied his framework wholesale and put several bots in one group chat — the bots replied one after another: 'That's not my job, I'm leaving the group.'",
+        "The whole system really runs on Feishu (Lark): every agent's output is written back to Feishu so the assets stay inside the company. Multi-agent coordination is deliberately not fully automated — at key checkpoints a human makes the final call, because 'in cross-border e-commerce, real money is on the line.' To work around Grok Bot's inability to choose models, he installs the Codex CLI inside it for heavy data jobs.",
+        "The open mic got into the business math: his previous company deliberately pushed margins below 10% to buy scale and passed RMB 200M GMV in year two; don't go fully grey in Europe — Germany's tax authorities ran an investigation targeting Chinese sellers a few years ago; and GEO kept coming up as the new traffic channel — Tim said his previous company's independent site did GEO for about three months and doubled its AI-referred traffic, with revenue up roughly 50%."
+      ],
+      "highlights_tw": [
+        "扎斯老師（前亞馬遜團隊負責人，自述約兩年把團隊從 0 做到 2 億 GMV）分享 Grok Bot 落地方法：先給 Agent 接三類付費數據接口——自有店鋪 ERP、市場調研工具、關鍵詞服務商；不要讓 Bot 去雲電腦上抓亞馬遜前台，他們 9 月試過還能進，10 月就被亞馬遜的機制擋住了。",
+        "他的崗位架構是「1 個主管 + 12 個崗位 Bot」：情報、VOC、運營分析、文案、圖片、廣告策略、廣告投手、庫存、物流、財務、合規、復盤各管一攤，整套體系沉澱了六七十個 Skill。有人照搬他的框架、把幾個 Bot 拉進一個群，結果 Bot 們紛紛說「這事不歸我管，我要退群」。",
+        "整套體系其實搭在飛書上：所有 Agent 的產出回寫飛書、資產留在公司內部；多 Agent 協同不追求全自動化，關鍵節點堅持人做最終確認——「做跨境電商都是真金白銀砸下去」。補 Grok Bot 不能自選模型的短板，他的辦法是在裡面裝 Codex CLI 處理大數據量任務。",
+        "開放麥聊透了生意賬：上一家公司故意把利潤率壓到 10% 以下換規模、第二年做到 2 億多 GMV；歐洲站別全灰，德國稅局前幾年發起過針對中國賣家的調查；GEO 被反覆提及為新流量入口——Tim 自述上一家公司獨立站做 GEO 約三個月，AI 流量翻了一倍、營收漲了約 50%。"
+      ]
+    },
     {
       "id": "bzge-niaobi-huigui-20261123",
       "title": "《鸟币神豪 BZ 哥回归：一场鸟币社区的熟人闲聊局》",
