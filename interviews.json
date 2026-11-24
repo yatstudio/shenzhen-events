@@ -1,9 +1,136 @@
 {
-  "updated_at": "2026-11-22T13:22:30Z",
+  "updated_at": "2026-11-24T11:29:57Z",
   "title": "Yat's List 访谈清单",
   "note": "深度访谈与分享的全文纪要存档：每条含原视频链接、要点与全文纪要页（note_url）。内容为嘉宾在节目中的自述与观点，未经核实。人工整理、不定期更新。",
   "source_site": "https://yatslist.com/interviews/",
   "interviews": [
+    {
+      "date": "2026-11-21",
+      "duration": "65 分钟",
+      "duration_minutes": 65,
+      "guest": "刘婷",
+      "highlights": [
+        "她的判断很直接：只会完成任务的工程师不如 agent；真正耐用的技能是刨根问底——会提问、会分析为什么不 work、会迭代的人才留得下来。",
+        "她把 Claude Opus 4.6 称为转折点：coding agent 本质上就是通用 agent；但模型最大的短板是不会泛化——爱走捷径、容易 overfit 到眼前的测试。",
+        "她自述已离开 Google（节目中亲口说明）；此前从 VP 回到 IC 的那段经历，是她理解「头衔与真实能力是两回事」的来源。"
+      ],
+      "host": "硅谷温差",
+      "id": "liuting-google-fellow-20261121",
+      "note_url": "/interviews/notes/liuting-google-fellow-20261121.html",
+      "series": "硅谷温差",
+      "title": "《没人写代码了，工程师还剩什么？——硅谷温差对话 Google Fellow 刘婷》",
+      "topics": [
+        "刘婷",
+        "Google Fellow",
+        "Gemini",
+        "AI 编程",
+        "工程师",
+        "Claude"
+      ],
+      "url": "https://www.youtube.com/watch?v=Jw1WC42LMOo"
+    },
+    {
+      "date": "2026-07-21",
+      "duration": "58 分钟",
+      "duration_minutes": 58,
+      "guest": "王煜全",
+      "highlights": [
+        "他的方法论是投未来的成功者、赚 5–6 年的「提前量」；用 Perez 技术革命周期框架推演，泡沫破裂点在 2029 年：触发条件是自动驾驶跑通、AI 编程决出赢家、数字货币主流化加证券代币化，以及特朗普 2029 年下台被清算。",
+        "未来 10–15 年会出现第一家 10 万亿美元市值的公司，他押 Anthropic 而非 OpenAI；明确看空三类被高估的方向：人形机器人、低空经济、商业航天。",
+        "中国的机会不在重复造轮子，而在出海：大模型与芯片出海建云、加上工程能力输出——这是他给中国创业者的明确落点。"
+      ],
+      "host": "王钦文",
+      "id": "wangyuquan-bubble-2029-20260721",
+      "note_url": "/interviews/notes/wangyuquan-bubble-2029-20260721.html",
+      "series": "原点",
+      "title": "《王煜全：我认为的泡沫在 2029 年》",
+      "topics": [
+        "王煜全",
+        "AI 泡沫",
+        "Perez 周期",
+        "自动驾驶",
+        "Anthropic",
+        "中国出海"
+      ],
+      "url": "https://www.youtube.com/watch?v=XAujxrtd4uI"
+    },
+    {
+      "date": "2026-11-21",
+      "duration": "11 分钟",
+      "duration_minutes": 11,
+      "guest": "日本 AI 推理公司合伙人（未具名）",
+      "highlights": [
+        "核心洞察：日本客户想用中国模型，却不敢直连中国的 API——受访者的公司做的正是中间那层「保护盾」，把合规与信任问题接过去。",
+        "日本市场的三个摩擦：文化保守、决策周期 6–12 个月、SIer / 经销商这一层绕不开；想做日本市场，先想清楚怎么过这三关。",
+        "对 FDE（驻场工程师）模式的判断：宁可做合作伙伴、不自建——把落地交给本地伙伴，自己守住推理这一层。"
+      ],
+      "host": "月球大叔",
+      "id": "moon-uncle-japan-ai-20261121",
+      "note_url": "/interviews/notes/moon-uncle-japan-ai-20261121.html",
+      "series": "月球大叔",
+      "title": "《日本 AI 发展到怎样了：月球大叔街访一家日本 AI 推理公司》",
+      "topics": [
+        "日本 AI",
+        "AI 推理",
+        "中国模型",
+        "SGLang",
+        "出海"
+      ],
+      "url": "https://www.youtube.com/watch?v=ircYjVTPCKU"
+    },
+    {
+      "date": "2023-09-01",
+      "duration": "65 分钟",
+      "duration_minutes": 65,
+      "guest": "Sam Bankman-Fried",
+      "highlights": [
+        "纪录片的主线是拆解神话的制造术：SBF 如何把有效利他主义、媒体叙事和红杉路演包装成「天才」人设，再用 FTT 做成完美抵押品，把客户资金变成 Alameda 的无限额度。",
+        "2018 年 4 月 Alameda 的那场内乱是全片的伏笔：Tara Macaulay 等一半员工出走，抗议的正是后来让 FTX 倒掉的同一套做法——神话在没人注意时就已经裂了。",
+        "崩塌的七天被逐日还原：从 CoinDesk 捅破资产负债表到挤兑、破产；片尾把镜头转向币安与 CZ，问下一个神话是谁在制造。",
+        "纪要后记：SBF 于 2023 年 11 月被判 7 项罪名全数成立、2024 年 3 月获刑 25 年；Ellison 获刑 2 年；CZ 认罪、币安付约 43 亿美元和解金、本人服刑 4 个月。"
+      ],
+      "host": "James Jani",
+      "id": "james-jani-sbf-fake-genius-20230901",
+      "note_url": "/interviews/notes/james-jani-sbf-fake-genius-20230901.html",
+      "series": "James Jani 纪录片",
+      "title": "《假天才：James Jani 解剖 SBF 与那 300 亿美元的骗局》",
+      "topics": [
+        "SBF",
+        "FTX",
+        "Alameda",
+        "James Jani",
+        "纪录片",
+        "有效利他主义"
+      ],
+      "url": "https://www.youtube.com/watch?v=w3EYKuFGJ5c"
+    },
+    {
+      "date": "2026-11-22",
+      "duration": "44 分钟",
+      "duration_minutes": 44,
+      "guest": "Steve Eisman",
+      "highlights": [
+        "他的泡沫论据是英伟达 10-Q 里的应收账款结构：70% 的应收来自 5 个客户；而超大云厂商的 AI 收入约 70% 来自 Anthropic 与 OpenAI 两家——整个 AI 收入链高度集中在极少数玩家手里。",
+        "甲骨文的 RPO 从 1,500 亿涨到 4,000 亿、再到 6,000 亿美元以上，其中约一半来自 OpenAI；他直言：如果 OpenAI 倒下，美国会一夜之间陷入衰退。循环融资的结构让他想起当年的 CDO。",
+        "核心论点是 AI 没有护城河：开源权重模型紧追、用户零忠诚度；他认为末日论调本质是想要监管护城河的烟雾弹。钱应该放在收现金的一方：英伟达、美光、GE Vernova、Arista、思科、伊顿。",
+        "真正的警报器是 10 年期美债收益率：5% 是分水岭。对比特币他的评价比黄金还低——是「投机之上的投机」。"
+      ],
+      "host": "股市基友",
+      "id": "eisman-ai-bubble-no-moat-20261122",
+      "note_url": "/interviews/notes/eisman-ai-bubble-no-moat-20261122.html",
+      "series": "股市基友",
+      "title": "《大卖空艾斯曼：AI 砸了几千亿，却没有护城河》",
+      "topics": [
+        "Steve Eisman",
+        "AI 泡沫",
+        "护城河",
+        "英伟达",
+        "OpenAI",
+        "甲骨文",
+        "循环融资"
+      ],
+      "url": "https://www.youtube.com/watch?v=vQjuXd7J8hw"
+    },
     {
       "date": "2026-11-20",
       "duration": "82 分钟",

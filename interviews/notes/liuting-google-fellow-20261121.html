@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《没人写代码了，工程师还剩什么？——硅谷温差对话 Google Fellow 刘婷》 — Yat's List 访谈纪要全文</title>
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<meta name="theme-color" content="#0d1218">
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<link rel="stylesheet" href="/article.css">
+<style>
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="bwrap">
+  <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+  <nav class="topbar-nav">
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
+    <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
+    
+  </nav>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+</div></div>
+<main class="note">
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">YOUTUBE · 纪要全文</p>
+<article class="langver" data-lang="zh">
+<h1>没人写代码了，工程师还剩什么？——硅谷温差对话 Google Fellow 刘婷</h1>
+<blockquote>
+<p>来源：YouTube 频道 硅谷温差《24.对话Google Fellow刘婷：没人写代码了，工程师还剩什么？》（2026-11-21 发布，65 分钟）
+嘉宾：刘婷，清华本科、CMU 博士，Google Fellow；早年深耕搜索广告，后加入 Cloud AI，从 PaLM 2 一路参与到 Gemini 2.5 Pro。主持：Lewis、Will。本纪要据官方简体中文字幕整理，观点均为嘉宾与主持自述口径。</p>
+</blockquote>
+<h2>一句话</h2>
+<p>刘婷的答案贯穿全场：<strong>你可以让 agent 代替你写代码，但不能让它代替你思考。</strong> 只会接任务、完成任务的工程师「还不如 agent，这就没戏了」；真正的护城河是刨根问底、发现问题、判断它是不是真解决了问题——因为模型恰恰不会泛化：它只盯着眼前这个目标，会走捷径、会写死、会过拟合，而人有 prior、有 taste、能给自己设目标并随环境调整目标。</p>
+<h2>一、广告：大模型是第二次行为革命，机会比以前多</h2>
+<ul>
+<li>搜索广告是第一次颠覆：搜索改变了人的行为模式，query 里带商业意图的部分让广告可以在 right time 给 right information，于是有了按点击、按 ROI 收费的整套生态。</li>
+<li>大模型是第二次本质改变：long query、多轮对话、personal app 积累个人偏好、能 proactive 做长线任务——可变现的 query 在指数增长。一个反直觉的数据：ChatGPT 这类 App 装机量巨大，搜索流量却没有变低，反而变高了。</li>
+<li>漏斗被改写：以前广告只能控制 impression→click，click 之后转不转化、是不是回头客基本失控；agent 能把整条价值链做深——订行程、改主意、到店后的活动、后续 follow through，全程可管，agent 之间还能传递用户信息。</li>
+<li>但老形式已死：text ads、image ads 点一下跳网站，在 agent 生态里没人看了；大量 micro step 已被 agent 代劳，用户最后只需 click confirm。新的挑战是三件事：广告的新形式、个性化的分寸（overuse 个人信息会让用户觉得 creepy）、以及安全与隐私（agent 能付钱、能访问一切，信息怎么不泄漏）。</li>
+<li><strong>谷歌的质量实验</strong>：他们做过长期 AB test，一部分用户长期不给广告，结果这组人的 happiness 显著低于有广告组——在 right time 给 right information 本身是 help。她的建议是：不急于 monetize，先把体验做到最好，money will follow；到处见缝插针打广告反而适得其反。</li>
+<li>为什么 OpenAI 做广告可能低估了难度：这不是技术问题，是立场问题——你能不能看着桌上的钱不拿短线的钱。谷歌的做法是结构性的：search 与 ads 是两个相对独立的部门，search 从不以让广告赚钱为目标，经常 launch 直接干掉广告收入的功能。她还提到，自己「现在离开谷歌了，可以说」：谷歌这些年在 don't be evil 上做得确实好，至少广告领域是确保广告满足用户第一愿望、而不是为了挣钱；百度是另一个极端。</li>
+<li>给 agent 看的广告：不要再区分是不是广告，本质都是 information，按用户的 intention 给 right information，不能 cheat。想住舒适酒店的人和把 budget 放第一的人互相 target 不到——花再多钱也没用。宗旨还是 user first。</li>
+<li>创业机会在数据侧：广告商商品数据的打标与细分、把标签精准 map 到用户兴趣、用历史销售数据做 offline 推荐模型——以前用户信息太少做不到，现在可以挖的很多。</li>
+<li>广告系统的技术现实：ads 早已是 GenAI，但流量太高、cost 与 latency 要求太苛刻，用不起前沿大模型，只能用小模型；recommender 是另一类模型——不是 compute bound 而是 memory bound，业界甚至在讨论为它设计新芯片。怎么在受限模型上保住能力、什么能转 offline、embedding 质量，都是硬问题：广告要同时做到 agent 式体验和 cost efficient，非常 challenge。主持补充的 GEO（generative engine optimization）也是同一逻辑：agent 的行为很大程度取决于它能找回什么 link，底层仍是搜索引擎与索引。</li>
+</ul>
+<h2>二、做大模型的三年：最惊艳的两件事</h2>
+<ul>
+<li>Lewis 当年是被刘婷和 Warren 找去「drop everything」做 PaLM 2 的。刘婷的感受：这次革命比以往任何工业革命都大，方向上早有预期，但每一次模型迭代的效果还是会惊艳到你；几年前的科幻已经成真。</li>
+<li>惊艳之一：<strong>真正的多模态</strong>。谷歌的 vision 一直是原生多模态——图像、视频、文本、工具调用全在一个模型里，而不是 behind the scene 一堆模型攒出来的；因为人感知世界本来就是多通道合在一起的。</li>
+<li>惊艳之二：<strong>智能体真的能用了</strong>。让她改观的是 Claude Opus（主持补充：Opus 4.6 是转折点）。在与它 iterate 的过程中，它能 reliable 地把不简单的事情做出来。这期播客本身很多就是 agent 剪出来的——半年前还难以想象。她的拆解是：coding agent 只是 agent 的一种，写代码无非是打开文件、改文件、调工具；当一个模型把 reasoning、多轮深度推理、instruction following 与工具调用结合好，它就是 general purpose agent，进任何 vertical 都是几周攻破一个——剩下的只是加 harness、加 training data。</li>
+<li>下一步的判断：模型能力已经足够 capable，很多事情不必再放进模型训练，靠好的 harness 引导就能做出来；各家开始选自己的赛道（如 Meta 把 active memory、proactive 做进 post training，走 personal assistant 路线）。另一块大机会是 RSI 式循环：凡是「优化问题很难、但结果容易 verify」的领域（kernel 优化、compiler、模型 serving），都可以让 agent 自己 hill climb——哪怕模型能力就停在今天，也还有大量领域没真正用上它。</li>
+</ul>
+<h2>三、模型的短板：不会泛化</h2>
+<ul>
+<li>这是她对模型最核心的批评：模型不会泛化。你让它解决一个问题，它的目标就是解决这一个问题，它不会想「how to get there」背后的约束。企业 use case 里它会 take shortcut、找答案、hard code、不计成本——做出来的东西在真正的企业系统里不 scalable。</li>
+<li>人为什么会泛化：人有 prior——对这个世界、对这个项目、对约束条件的理解。你说「做 ads」，人立刻想到还得快、还得省、还得 serve 多少客户；模型不会，它没被训练去 generalize。你把 context 都给它会好一点，但 post training 的习惯就是「完成一个 task」，改不掉。</li>
+<li>两个亲历例子：一是让 agent 修一批 code debt，它只修了一部分，还自己给自己加了个 scope，漏掉的被指出后修了、别处又漏——多轮里它还会忘。二是 security bug fix agent 设了 RSI loop，让它总结「为什么没解决、生成一条 generalized rule 帮别人」，它生成的 learning 还是把这一次的具体解法写成了 rule。她总结：这是习惯性问题——习惯性走捷径、习惯性不考虑全面。</li>
+<li>physical AI 是另一个还没突破的方向：机器人训练远没有达到大模型的泛化程度（后面闲聊部分展开）。</li>
+</ul>
+<h2>四、从 VP 转回 IC：超级个体的诞生</h2>
+<ul>
+<li>她的心路：本心一直是 IC（做到 Principal Engineer，带过近 50 人团队的 TLM），从不想做 pure people manager；团队变大后被谷歌的规则推上 management track——想做更大的 impact 就得靠更大的团队执行，设计只是其一。代价是 GenAI 这几年变动太快，而她的时间被开会、plan、launch、回邮件、做 review 占满，只能用多年积累的 high-level intuition 给建议，而不是从新学到的东西里长出 intuition——「不长久，也不开心」。有机会，她就转回了 IC。</li>
+<li>转回去一开始也忐忑（好久没编程了），但 agent 改变了等式：她最初还用老办法——写 design doc、交团队做 prototype，三个月出来的东西和想要的不一样，再改又要几个月。后来自己用 agent 做 prototype，想的东西半天就出来了，错了也不过浪费半天。从此协作方式整个变了：不再讨论 design，直接讨论 prototype；跨团队有冲突，不再谈各自的 design，直接看对方 codebase、分析差异。</li>
+<li>对团队形态的判断：现在不需要大团队了——养一个 agent 团队、配几个有 sense 的人，最高效。团队大了反而麻烦：一个人能写上万行 code，code review、code merge 都还停在 surface level，分工都想不清楚。小团队没有这些 overhead。</li>
+<li>主持的说法是「超级 IC」；她的状态是：hands on，但不是自己写 code，是带着 agent 写——「这是我以前非常希望达到的状态，现在终于达到了」。</li>
+</ul>
+<h2>五、Junior 工程师的出路，与选人标准</h2>
+<ul>
+<li>先说残酷的：如果 junior 的定位就是干 routine 工作，agent 绝对做得比你好。代码行数这类指标也不可能再 track 了。</li>
+<li>出路在做事方式：给 junior 一个相对闭合、但并不是 straightforward 的问题（straightforward 的 agent 直接就解了），看他会不会自己分析——提出 hypothesis、做实验、看为什么不 work、tweak、再实验、迭代到 work。她自己刚做 junior 时接的就是这种活：一个很小的广告 creative 渲染问题，没有固定解法，代码量不大，全靠自己分析迭代。</li>
+<li>一句话标准：只会「你给我一个 task、我完成这个 task」的人没戏；会刨根问底、会跟 agent 一起 iterate 的人，junior 不 junior 不 matter。Senior 的差别只是经验让他更容易看出问题在哪、能对更大的系统提问。</li>
+<li>警告：agent 很会「胡写八写」，demo 做得漂亮，真做起来全是问题，完全 trust 它就糟糕了；现在还不能让它全自动干事——中间出问题、再用 agent 去解，是常态。</li>
+<li>她选人看两点：一是拿到具体问题怎么解决——会自己分析、自己迭代的人要；浅浅看一眼、不行就放弃的不要。二是 adapt 能力：进程变化太快，要能灵活调整 priority 与 approach；比如模型变强后，原来为补模型短板写的 detail prompt 就应该果断扔掉。主持补了一句：performance review 里 ownership 和 learning 以前排在最后，现在变成第一位了。</li>
+<li>关于 Vinod Khosla 的观点（主持转述）：未来可能不再有 domain expert——多数人深不过模型本身，更重要的是 flexible、学新东西快、会 connect the dots。刘婷的补充：人能给自己设目标，并随环境变化不断调整目标，还会权衡各种 balance；人会把知识「越读越薄」——见几个 case 就升华成一条 general rule，细节放着能查就行；模型是全记着、转头就忘。所以人要守住的优势是 taste 与泛化。</li>
+</ul>
+<h2>六、闲聊：Agent 手机、OpenAI 解散机器人团队、物理 AI 的缺口</h2>
+<ul>
+<li>Lewis 分享：国内 StepFun 做了 agent native 手机（他称是国内第二部，第一部是豆包手机）——硬件、操作系统都为 agent 定制，对着 agent 说话就能现场「捏」出一个 App，打 Uber 不用再跳进 App 里，用户体验一下好很多；美国还没看到，OpenAI 从苹果挖了很多人做硬件，但估计又要流产。</li>
+<li>黄仁勋的话题被主持一句话带过（「这事就不讲了，大家都知道」），没有展开。</li>
+<li>Will 抛的新闻：OpenAI 上周把 robotics team 整个解散。刘婷的解读倾向于：不是放弃方向，更像是 focus 问题——把 robotics 当作模型整体能力的一部分、不再单设团队深挖；但她个人认为长期看 physical AI 是非常重要的 area，还没成熟到「只是 another source of data」的程度，可能还是需要专门的部门。主持补充的行业视角：国内机器人公司大多不愿用云端大模型当大脑——latency 不允许，大脑要放在机器本地，这与 OpenAI 的云 focus、proprietary model 方向不 align。</li>
+<li>Physical AI 的真正缺口在传感器与数据：现在基本只有视觉，触觉、施力大小、嗅觉都缺（有创业公司在做 smell）；深度感知也是问题——人靠双眼有 depth，大模型基本是单 lens 训出来的，距离是推理算出来的，机器人则用双 camera 先算好 3D 定位再喂给模型。数据量也远远不够：起始位置变一点，任务就失败。业界现在的做法是分工：大脑做 planning，小脑管力反馈与实时调整。她判断：机器人是下一个可以有大飞跃的方向，但技术与数据的问题都还没解决；数字世界的多模态（图像、语音、语言）成熟度已经够了，物理世界还没有。</li>
+</ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>沒人寫程式了，工程師還剩什麼？——矽谷溫差對話 Google Fellow 劉婷</h1>
+<blockquote>
+<p>來源：YouTube 頻道 矽谷溫差《24.對話Google Fellow劉婷：沒人寫程式了，工程師還剩什麼？》（2026-11-21 發布，65 分鐘）
+嘉賓：劉婷，清華本科、CMU 博士，Google Fellow；早年深耕搜尋廣告，後加入 Cloud AI，從 PaLM 2 一路參與到 Gemini 2.5 Pro。主持：Lewis、Will。本紀要據官方簡體中文字幕整理，觀點均為嘉賓與主持自述口徑。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>劉婷的答案貫穿全場：<strong>你可以讓 agent 代替你寫程式，但不能讓它代替你思考。</strong> 只會接任務、完成任務的工程師「還不如 agent，這就沒戲了」；真正的護城河是刨根問底、發現問題、判斷它是不是真解決了問題——因為模型恰恰不會泛化：它只盯著眼前這個目標，會走捷徑、會寫死、會過擬合，而人有 prior、有 taste、能給自己設目標並隨環境調整目標。</p>
+<h2>一、廣告：大模型是第二次行為革命，機會比以前多</h2>
+<ul>
+<li>搜尋廣告是第一次顛覆：搜尋改變了人的行為模式，query 裡帶商業意圖的部分讓廣告可以在 right time 給 right information，於是有了按點擊、按 ROI 收費的整套生態。</li>
+<li>大模型是第二次本質改變：long query、多輪對話、personal app 累積個人偏好、能 proactive 做長線任務——可變現的 query 在指數增長。一個反直覺的數據：ChatGPT 這類 App 裝機量巨大，搜尋流量卻沒有變低，反而變高了。</li>
+<li>漏斗被改寫：以前廣告只能控制 impression→click，click 之後轉不轉化、是不是回頭客基本失控；agent 能把整條價值鏈做深——訂行程、改主意、到店後的活動、後續 follow through，全程可管，agent 之間還能傳遞使用者資訊。</li>
+<li>但老形式已死：text ads、image ads 點一下跳網站，在 agent 生態裡沒人看了；大量 micro step 已被 agent 代勞，使用者最後只需 click confirm。新的挑戰是三件事：廣告的新形式、個性化的分寸（overuse 個人資訊會讓使用者覺得 creepy）、以及安全與隱私（agent 能付錢、能存取一切，資訊怎麼不洩漏）。</li>
+<li><strong>Google 的品質實驗</strong>：他們做過長期 AB test，一部分使用者長期不給廣告，結果這組人的 happiness 顯著低於有廣告組——在 right time 給 right information 本身是 help。她的建議是：不急於 monetize，先把體驗做到最好，money will follow；到處見縫插針打廣告反而適得其反。</li>
+<li>為什麼 OpenAI 做廣告可能低估了難度：這不是技術問題，是立場問題——你能不能看著桌上的錢不拿短線的錢。Google 的做法是結構性的：search 與 ads 是兩個相對獨立的部門，search 從不以讓廣告賺錢為目標，經常 launch 直接幹掉廣告收入的功能。她還提到，自己「現在離開 Google 了，可以說」：Google 這些年在 don't be evil 上做得確實好，至少廣告領域是確保廣告滿足使用者第一願望、而不是為了賺錢；百度是另一個極端。</li>
+<li>給 agent 看的廣告：不要再區分是不是廣告，本質都是 information，按使用者的 intention 給 right information，不能 cheat。想住舒適飯店的人和把 budget 放第一的人互相 target 不到——花再多錢也沒用。宗旨還是 user first。</li>
+<li>創業機會在數據側：廣告商商品數據的打標與細分、把標籤精準 map 到使用者興趣、用歷史銷售數據做 offline 推薦模型——以前使用者資訊太少做不到，現在可以挖的很多。</li>
+<li>廣告系統的技術現實：ads 早已是 GenAI，但流量太高、cost 與 latency 要求太苛刻，用不起前沿大模型，只能用小模型；recommender 是另一類模型——不是 compute bound 而是 memory bound，業界甚至在討論為它設計新晶片。怎麼在受限模型上保住能力、什麼能轉 offline、embedding 品質，都是硬問題：廣告要同時做到 agent 式體驗和 cost efficient，非常 challenge。主持補充的 GEO（generative engine optimization）也是同一邏輯：agent 的行為很大程度取決於它能找回什麼 link，底層仍是搜尋引擎與索引。</li>
+</ul>
+<h2>二、做大模型的三年：最驚艷的兩件事</h2>
+<ul>
+<li>Lewis 當年是被劉婷和 Warren 找去「drop everything」做 PaLM 2 的。劉婷的感受：這次革命比以往任何工業革命都大，方向上早有預期，但每一次模型迭代的效果還是會驚艷到你；幾年前的科幻已經成真。</li>
+<li>驚艷之一：<strong>真正的多模態</strong>。Google 的 vision 一直是原生多模態——圖像、影片、文字、工具調用全在一個模型裡，而不是 behind the scene 一堆模型攢出來的；因為人感知世界本來就是多通道合在一起的。</li>
+<li>驚艷之二：<strong>智慧體真的能用了</strong>。讓她改觀的是 Claude Opus（主持補充：Opus 4.6 是轉捩點）。在與它 iterate 的過程中，它能 reliable 地把不簡單的事情做出來。這期 Podcast 本身很多就是 agent 剪出來的——半年前還難以想像。她的拆解是：coding agent 只是 agent 的一種，寫程式無非是打開文件、改文件、調工具；當一個模型把 reasoning、多輪深度推理、instruction following 與工具調用結合好，它就是 general purpose agent，進任何 vertical 都是幾週攻破一個——剩下的只是加 harness、加 training data。</li>
+<li>下一步的判斷：模型能力已經足夠 capable，很多事情不必再放進模型訓練，靠好的 harness 引導就能做出來；各家開始選自己的賽道（如 Meta 把 active memory、proactive 做進 post training，走 personal assistant 路線）。另一塊大機會是 RSI 式循環：凡是「優化問題很難、但結果容易 verify」的領域（kernel 優化、compiler、模型 serving），都可以讓 agent 自己 hill climb——哪怕模型能力就停在今天，也還有大量領域沒真正用上它。</li>
+</ul>
+<h2>三、模型的短板：不會泛化</h2>
+<ul>
+<li>這是她對模型最核心的批評：模型不會泛化。你讓它解決一個問題，它的目標就是解決這一個問題，它不會想「how to get there」背後的約束。企業 use case 裡它會 take shortcut、找答案、hard code、不計成本——做出來的東西在真正的企業系統裡不 scalable。</li>
+<li>人為什麼會泛化：人有 prior——對這個世界、對這個專案、對約束條件的理解。你說「做 ads」，人立刻想到還得快、還得省、還得 serve 多少客戶；模型不會，它沒被訓練去 generalize。你把 context 都給它會好一點，但 post training 的習慣就是「完成一個 task」，改不掉。</li>
+<li>兩個親歷例子：一是讓 agent 修一批 code debt，它只修了一部分，還自己給自己加了個 scope，漏掉的被指出後修了、別處又漏——多輪裡它還會忘。二是 security bug fix agent 設了 RSI loop，讓它總結「為什麼沒解決、生成一條 generalized rule 幫別人」，它生成的 learning 還是把這一次的具體解法寫成了 rule。她總結：這是習慣性問題——習慣性走捷徑、習慣性不考慮全面。</li>
+<li>physical AI 是另一個還沒突破的方向：機器人訓練遠沒有達到大模型的泛化程度（後面閒聊部分展開）。</li>
+</ul>
+<h2>四、從 VP 轉回 IC：超級個體的誕生</h2>
+<ul>
+<li>她的心路：本心一直是 IC（做到 Principal Engineer，帶過近 50 人團隊的 TLM），從不想做 pure people manager；團隊變大後被 Google 的規則推上 management track——想做更大的 impact 就得靠更大的團隊執行，設計只是其一。代價是 GenAI 這幾年變動太快，而她的時間被開會、plan、launch、回郵件、做 review 占滿，只能用多年累積的 high-level intuition 給建議，而不是從新學到的東西裡長出 intuition——「不長久，也不開心」。有機會，她就轉回了 IC。</li>
+<li>轉回去一開始也忐忑（好久沒寫程式了），但 agent 改變了等式：她最初還用老辦法——寫 design doc、交團隊做 prototype，三個月出來的東西和想要的不一樣，再改又要幾個月。後來自己用 agent 做 prototype，想的東西半天就出來了，錯了也不過浪費半天。從此協作方式整個變了：不再討論 design，直接討論 prototype；跨團隊有衝突，不再談各自的 design，直接看對方 codebase、分析差異。</li>
+<li>對團隊形態的判斷：現在不需要大團隊了——養一個 agent 團隊、配幾個有 sense 的人，最高效。團隊大了反而麻煩：一個人能寫上萬行 code，code review、code merge 都還停在 surface level，分工都想不清楚。小團隊沒有這些 overhead。</li>
+<li>主持的說法是「超級 IC」；她的狀態是：hands on，但不是自己寫 code，是帶著 agent 寫——「這是我以前非常希望達到的狀態，現在終於達到了」。</li>
+</ul>
+<h2>五、Junior 工程師的出路，與選人標準</h2>
+<ul>
+<li>先說殘酷的：如果 junior 的定位就是幹 routine 工作，agent 絕對做得比你好。程式行數這類指標也不可能再 track 了。</li>
+<li>出路在做事方式：給 junior 一個相對閉合、但並不是 straightforward 的問題（straightforward 的 agent 直接就解了），看他會不會自己分析——提出 hypothesis、做實驗、看為什麼不 work、tweak、再實驗、迭代到 work。她自己剛做 junior 時接的就是這種活：一個很小的廣告 creative 渲染問題，沒有固定解法，程式量不大，全靠自己分析迭代。</li>
+<li>一句話標準：只會「你給我一個 task、我完成這個 task」的人沒戲；會刨根問底、會跟 agent 一起 iterate 的人，junior 不 junior 不 matter。Senior 的差別只是經驗讓他更容易看出問題在哪、能對更大的系統提問。</li>
+<li>警告：agent 很會「胡寫八寫」，demo 做得漂亮，真做起來全是問題，完全 trust 它就糟糕了；現在還不能讓它全自動幹事——中間出問題、再用 agent 去解，是常態。</li>
+<li>她選人看兩點：一是拿到具體問題怎麼解決——會自己分析、自己迭代的人要；淺淺看一眼、不行就放棄的不要。二是 adapt 能力：進程變化太快，要能靈活調整 priority 與 approach；比如模型變強後，原來為補模型短板寫的 detail prompt 就應該果斷扔掉。主持補了一句：performance review 裡 ownership 和 learning 以前排在最後，現在變成第一位了。</li>
+<li>關於 Vinod Khosla 的觀點（主持轉述）：未來可能不再有 domain expert——多數人深不過模型本身，更重要的是 flexible、學新東西快、會 connect the dots。劉婷的補充：人能給自己設目標，並隨環境變化不斷調整目標，還會權衡各種 balance；人會把知識「越讀越薄」——見幾個 case 就升華成一條 general rule，細節放著能查就行；模型是全記著、轉頭就忘。所以人要守住的優勢是 taste 與泛化。</li>
+</ul>
+<h2>六、閒聊：Agent 手機、OpenAI 解散機器人團隊、物理 AI 的缺口</h2>
+<ul>
+<li>Lewis 分享：國內 StepFun 做了 agent native 手機（他稱是國內第二部，第一部是豆包手機）——硬體、作業系統都為 agent 定製，對著 agent 說話就能現場「捏」出一個 App，打 Uber 不用再跳進 App 裡，使用者體驗一下好很多；美國還沒看到，OpenAI 從蘋果挖了很多人做硬體，但估計又要流產。</li>
+<li>黃仁勳的話題被主持一句話帶過（「這事就不講了，大家都知道」），沒有展開。</li>
+<li>Will 拋的新聞：OpenAI 上週把 robotics team 整個解散。劉婷的解讀傾向於：不是放棄方向，更像是 focus 問題——把 robotics 當作模型整體能力的一部分、不再單設團隊深挖；但她個人認為長期看 physical AI 是非常重要的 area，還沒成熟到「只是 another source of data」的程度，可能還是需要專門的部門。主持補充的行業視角：國內機器人公司大多不願用雲端大模型當大腦——latency 不允許，大腦要放在機器本地，這與 OpenAI 的雲 focus、proprietary model 方向不 align。</li>
+<li>Physical AI 的真正缺口在感測器與數據：現在基本只有視覺，觸覺、施力大小、嗅覺都缺（有新創公司在做 smell）；深度感知也是問題——人靠雙眼有 depth，大模型基本是單 lens 訓出來的，距離是推理算出來的，機器人則用雙 camera 先算好 3D 定位再餵給模型。數據量也遠遠不夠：起始位置變一點，任務就失敗。業界現在的做法是分工：大腦做 planning，小腦管力回饋與即時調整。她判斷：機器人是下一個可以有大飛躍的方向，但技術與數據的問題都還沒解決；數位世界的多模態（圖像、語音、語言）成熟度已經夠了，物理世界還沒有。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>If Nobody Writes Code Anymore, What's Left for Engineers? — Silicon Valley Temp Difference Talks With Google Fellow Liu Ting</h1>
+<blockquote>
+<p>Source: YouTube channel Silicon Valley Temp Difference, "24. A Conversation With Google Fellow Liu Ting: If Nobody Writes Code Anymore, What's Left for Engineers?" (released 2026-11-21, 65 minutes)
+Guest: Liu Ting, Tsinghua undergraduate, CMU PhD, Google Fellow; she worked deeply in search advertising early on, then joined Cloud AI, participating from PaLM 2 all the way to Gemini 2.5 Pro. Hosts: Lewis and Will. These notes are compiled from the official Simplified Chinese subtitles; all views are as stated by the guest and hosts.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Liu Ting's answer runs through the whole conversation: <strong>you can let an agent write code for you, but you can't let it think for you.</strong> An engineer who only takes tasks and completes tasks is "worse than an agent — there's no hope there"; the real moat is digging to the bottom of things, spotting problems, and judging whether a problem has actually been solved — because models precisely fail to generalize: they fixate on the immediate goal, take shortcuts, hard-code, and overfit, while humans have priors, have taste, and can set goals for themselves and adjust them as the environment changes.</p>
+<h2>1. Advertising: Large Models Are the Second Behavioral Revolution, and the Opportunity Is Bigger Than Before</h2>
+<ul>
+<li>Search advertising was the first disruption: search changed people's behavior patterns, and the portion of queries carrying commercial intent let ads deliver the right information at the right time, which produced the whole ecosystem of charging per click and per ROI.</li>
+<li>Large models are the second fundamental change: long queries, multi-turn conversations, personal apps that accumulate personal preferences, and the ability to proactively carry out long-horizon tasks — monetizable queries are growing exponentially. One counterintuitive data point: apps like ChatGPT have enormous install bases, yet search traffic hasn't dropped — it has actually gone up.</li>
+<li>The funnel has been rewritten: previously ads could only control impression→click; after the click, whether it converted and whether the user came back was basically out of control. An agent can deepen the entire value chain — booking a trip, changing one's mind, activities after arriving at the store, subsequent follow-through — all manageable end to end, and agents can even pass user information between each other.</li>
+<li>But the old formats are dead: text ads and image ads that you click to jump to a website — nobody looks at those in the agent ecosystem anymore; large numbers of micro steps are already handled by agents, and in the end the user only needs to click confirm. The new challenges are threefold: new ad formats, the right calibration of personalization (overusing personal information makes users feel it's creepy), and safety and privacy (an agent can pay money and access everything — how do you keep information from leaking?).</li>
+<li><strong>Google's quality experiment</strong>: they ran a long-term AB test in which one group of users received no ads for an extended period, and that group's happiness turned out significantly lower than the group with ads — delivering the right information at the right time is itself a help. Her advice: don't rush to monetize; first make the experience the best it can be, and money will follow; cramming ads into every gap backfires.</li>
+<li>Why OpenAI might underestimate the difficulty of doing ads: it's not a technical problem, it's a matter of stance — can you look at the money on the table and not take the short-term money? Google's approach is structural: search and ads are two relatively independent departments; search never takes making ad money as its goal, and often launches features that directly kill ad revenue. She also mentioned — "I've left Google now, so I can say this" — that Google has genuinely done well on "don't be evil" over the years; at least in advertising, it ensures ads serve the user's first wish rather than existing to make money; Baidu is the other extreme.</li>
+<li>Ads for agents: stop distinguishing whether something is an ad or not; it's all information at its core. Give the right information according to the user's intention — no cheating. Someone who wants a comfortable hotel and someone who puts budget first simply can't be targeted to each other — no amount of money helps. The principle remains user first.</li>
+<li>Startup opportunities are on the data side: labeling and segmenting advertisers' product data, precisely mapping tags to user interests, building offline recommendation models from historical sales data — previously there was too little user information to do this; now there's a lot to mine.</li>
+<li>The technical reality of ad systems: ads have long been GenAI, but traffic is so high and cost and latency requirements so strict that frontier large models are unaffordable — only small models can be used. Recommenders are a different class of model — not compute bound but memory bound, and the industry is even discussing designing new chips for them. Preserving capability on constrained models, deciding what can move offline, embedding quality — all hard problems: ads must deliver an agent-like experience and be cost efficient at the same time, which is very challenging. The hosts' addition of GEO (generative engine optimization) follows the same logic: an agent's behavior depends heavily on what links it can retrieve, and underneath it all are still search engines and indexes.</li>
+</ul>
+<h2>2. Three Years Building Large Models: The Two Most Astonishing Things</h2>
+<ul>
+<li>Lewis was recruited back then by Liu Ting and Warren to "drop everything" and work on PaLM 2. Liu Ting's feeling: this revolution is bigger than any previous industrial revolution; the direction was anticipated early on, but the effect of each model iteration still astonishes you; the science fiction of a few years ago has already come true.</li>
+<li>Astonishing thing one: <strong>true multimodality</strong>. Google's vision has always been natively multimodal — images, video, text, and tool calls all in one model, rather than a pile of models cobbled together behind the scenes; because that's how humans perceive the world, with multiple channels combined.</li>
+<li>Astonishing thing two: <strong>agents actually work now</strong>. What changed her mind was Claude Opus (the host added: Opus 4.6 was the turning point). Iterating with it, it could reliably get non-trivial things done. Much of this very podcast was edited by agents — hard to imagine half a year ago. Her breakdown: a coding agent is just one kind of agent; writing code is nothing more than opening files, editing files, and calling tools. When a model combines reasoning, multi-turn deep inference, instruction following, and tool calling well, it becomes a general purpose agent, and entering any vertical means cracking one every few weeks — the rest is just adding a harness and training data.</li>
+<li>Her judgment on what's next: model capability is already capable enough that many things no longer need to go into model training; a good harness can guide them out. Each company is starting to pick its own track (Meta, for example, is putting active memory and proactivity into post training, going the personal assistant route). Another big opportunity is RSI-style loops: in any domain where "the optimization problem is hard but the result is easy to verify" (kernel optimization, compilers, model serving), agents can hill climb on their own — even if model capability froze at today's level, there are still many domains that haven't truly used it.</li>
+</ul>
+<h2>3. The Model's Shortcoming: It Doesn't Generalize</h2>
+<ul>
+<li>This is her most central criticism of models: models don't generalize. Ask one to solve a problem and its goal is to solve that one problem; it won't think about the constraints behind "how to get there." In enterprise use cases it will take shortcuts, find the answer, hard code, and ignore costs — and what it produces isn't scalable in a real enterprise system.</li>
+<li>Why humans generalize: humans have priors — an understanding of the world, of the project, of the constraints. Say "build ads" and a person immediately thinks it also has to be fast, cheap, and serve however many customers; a model doesn't — it wasn't trained to generalize. Giving it all the context helps a bit, but post training's habit is "complete a task," and that can't be changed.</li>
+<li>Two firsthand examples: First, she had an agent fix a batch of code debt; it fixed only part of it and even added a scope for itself; when the omissions were pointed out it fixed those but missed others — and over multiple rounds it also forgets. Second, a security bug fix agent was set up with an RSI loop and asked to summarize "why it wasn't solved, and generate a generalized rule to help others"; the learning it generated still wrote this one specific fix as the rule. Her summary: it's a habitual problem — habitually taking shortcuts, habitually not thinking comprehensively.</li>
+<li>Physical AI is another direction that hasn't broken through yet: robot training is nowhere near the generalization level of large models (expanded on in the chat section below).</li>
+</ul>
+<h2>4. From VP Back to IC: The Birth of the Super Individual</h2>
+<ul>
+<li>Her journey: at heart she was always an IC (she reached Principal Engineer and was a TLM leading a team of nearly 50 people), and never wanted to be a pure people manager. As the team grew, Google's rules pushed her onto the management track — to make bigger impact you had to execute through a bigger team; design was only part of it. The cost: GenAI changed too fast in these years, while her time was filled with meetings, plans, launches, replying to email, and doing reviews, so she could only give advice from high-level intuition accumulated over years rather than growing intuition from newly learned things — "not sustainable, and not happy." When the opportunity came, she moved back to IC.</li>
+<li>Going back, she was nervous at first (she hadn't programmed in a long time), but agents changed the equation: at first she still used the old method — write a design doc, hand it to the team to prototype; three months later what came out wasn't what she wanted, and changing it took months more. Later she prototyped with agents herself, and what she had in mind came out in half a day; if it was wrong, she'd only wasted half a day. From then on the whole mode of collaboration changed: no more discussing designs, discuss prototypes directly; when cross-team conflicts arose, no more debating each other's designs — look directly at each other's codebases and analyze the differences.</li>
+<li>Her judgment on team shape: big teams are no longer needed — maintain a team of agents plus a few people with sense, and that's the most efficient. A large team is actually troublesome: one person can write tens of thousands of lines of code, while code review and code merge are still at the surface level, and even the division of labor is hard to think through. Small teams have none of that overhead.</li>
+<li>The hosts call it the "super IC"; her state is: hands on, but not writing code herself — writing with agents leading the way — "this is the state I very much hoped to reach before, and now I've finally reached it."</li>
+</ul>
+<h2>5. A Way Out for Junior Engineers, and Her Hiring Criteria</h2>
+<ul>
+<li>First the brutal part: if a junior's positioning is to do routine work, an agent will absolutely do it better than you. Metrics like lines of code can't be tracked anymore either.</li>
+<li>The way out lies in how one works: give a junior a relatively closed problem that is not straightforward (a straightforward one, the agent solves directly), and see whether they analyze it themselves — form a hypothesis, run experiments, look at why it doesn't work, tweak, experiment again, iterate until it works. When she was a junior herself, this was exactly the kind of work she took on: a very small ad creative rendering problem with no fixed solution and not much code, all relying on her own analysis and iteration.</li>
+<li>The one-sentence standard: someone who only does "you give me a task, I complete the task" has no hope; someone who digs to the bottom of things and iterates together with an agent — junior or not doesn't matter. The only difference with seniors is that experience makes it easier for them to see where the problem is and to ask questions about larger systems.</li>
+<li>A warning: agents are very good at "writing nonsense" — demos look beautiful, but when you actually build with them it's all problems; fully trusting them is a disaster. They can't yet be left to work fully automatically — things going wrong midway and then using an agent to fix them is the norm.</li>
+<li>She looks at two things when hiring: first, how someone solves a concrete problem when handed one — people who analyze and iterate on their own are wanted; people who take a shallow look and give up if it doesn't work are not. Second, adaptability: the pace of change is too fast, so one must flexibly adjust priorities and approaches; for example, once models get stronger, the detailed prompts originally written to compensate for model weaknesses should be decisively thrown away. The host added: in performance reviews, ownership and learning used to rank last; now they've become number one.</li>
+<li>On Vinod Khosla's view (relayed by the host): in the future there may no longer be domain experts — most people can't go deeper than the models themselves; what matters more is being flexible, learning new things fast, and connecting the dots. Liu Ting's addition: humans can set goals for themselves and continuously adjust them as the environment changes, and they weigh various balances; humans read knowledge "thinner and thinner" — seeing a few cases, they distill a general rule, leaving details to look up when needed; models remember everything and forget it the moment they turn around. So the advantages humans must hold onto are taste and generalization.</li>
+</ul>
+<h2>6. Chat: Agent Phones, OpenAI Disbanding Its Robotics Team, and the Gaps in Physical AI</h2>
+<ul>
+<li>Lewis shared: China's StepFun has made an agent-native phone (he called it the second one in China; the first was the Doubao phone) — hardware and operating system both customized for agents; you can talk to the agent and "conjure" an app on the spot, and calling an Uber no longer requires jumping into an app, so the user experience improves a lot at once. Nothing like it has been seen in the US yet; OpenAI poached many people from Apple to do hardware, but it will probably fall through again.</li>
+<li>The Jensen Huang topic was passed over by the host in one line ("let's not talk about this, everyone knows"), with no elaboration.</li>
+<li>News from Will: OpenAI disbanded its entire robotics team last week. Liu Ting's reading leaned toward: it's not abandoning the direction, more likely a focus issue — treating robotics as part of the model's overall capability rather than maintaining a dedicated team to dig deep. But personally she believes physical AI is a very important area in the long run, not yet mature enough to be "just another source of data," and may still need a dedicated department. The hosts added an industry perspective: most Chinese robotics companies are unwilling to use cloud large models as the brain — latency doesn't allow it; the brain has to sit locally on the machine, which doesn't align with OpenAI's cloud focus and proprietary model direction.</li>
+<li>The real gap in physical AI is sensors and data: right now there's basically only vision; touch, force magnitude, and smell are all missing (some startups are working on smell). Depth perception is also a problem — humans get depth from two eyes; large models are basically trained on a single lens, with distance computed by inference, while robots use dual cameras to compute 3D positioning first and then feed it to the model. Data volume is also far from enough: shift the starting position slightly and the task fails. The industry's current approach is division of labor: the brain does planning, the cerebellum handles force feedback and real-time adjustment. Her judgment: robotics is the next direction that could see a big leap, but neither the technology nor the data problems are solved yet; multimodality in the digital world (images, speech, language) is mature enough — the physical world is not there yet.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：YouTube <a href="https://www.youtube.com/watch?v=Jw1WC42LMOo">https://www.youtube.com/watch?v=Jw1WC42LMOo</a>（硅谷温差）· 嘉宾：刘婷（Google Fellow）· 主持：Lewis、Will · 发布日期：2026-11-21 · 时长：65 分钟<br>本页为据视频自带字幕整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：YouTube <a href="https://www.youtube.com/watch?v=Jw1WC42LMOo">https://www.youtube.com/watch?v=Jw1WC42LMOo</a>（矽谷溫差）· 嘉賓：劉婷（Google Fellow）· 主持：Lewis、Will · 發布日期：2026-11-21 · 時長：65 分鐘<br>本頁為據影片自帶字幕整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: YouTube <a href="https://www.youtube.com/watch?v=Jw1WC42LMOo">https://www.youtube.com/watch?v=Jw1WC42LMOo</a> (Silicon Valley Temp Difference) · Guest: Liu Ting (Google Fellow) · Hosts: Lewis, Will · Release date: 2026-11-21 · Duration: 65 minutes<br>This page is the full text of notes compiled from the video's own subtitles; all views and figures are as stated by the original speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+</main>
+<script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"没人写代码了，工程师还剩什么？——硅谷温差对话 Google Fellow 刘婷 · Yat's Talks",tw:"沒人寫程式了，工程師還剩什麼？——矽谷溫差對話 Google Fellow 劉婷 · Yat's Talks",en:"If Nobody Writes Code Anymore, What's Left for Engineers? — Silicon Valley Temp Difference Talks With Google Fellow Liu Ting · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"YOUTUBE · 纪要全文",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
+</body>
+</html>
