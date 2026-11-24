@@ -10,10 +10,10 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 850,
-    "rent_1br_usd_month": 400,
+    "cost_usd_month": 800,
+    "rent_1br_usd_month": 375,
     "coworking_usd_month": 68,
-    "internet_mbps": 110,
+    "internet_mbps": 55,
     "safety_score": 4.6,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 24.8,
     "best_months": "Oct-Apr",
     "tags": [
       "beach",
@@ -35,14 +35,57 @@
     ],
     "summary_zh": "三亚的平替过冬地，成本低一截、生活气更足。",
     "summary_en": "Sanya's budget wintering alternative - a tier cheaper and more local in feel.",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "骑楼老街·龙华 (Qilou Old Street, Longhua)",
+        "name_en": "Qilou Old Street, Longhua",
+        "rent_1br_usd_month": 303,
+        "vibe": "历史骑楼街区，传统民居",
+        "best_for": "老城烟火气",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥2,180（历史街区条目）；rewireabroad 亦列 Longhua District 为首选片区"
+      },
+      {
+        "name": "海甸岛 (Haidian Island)",
+        "name_en": "Haidian Island",
+        "rent_1br_usd_month": 458,
+        "vibe": "江心岛，居住安静",
+        "best_for": "安静居住",
+        "coworking_density": 1,
+        "note": "everycity.guide 中央一居 ¥3,300（江心岛条目）"
+      },
+      {
+        "name": "国兴大道 CBD (Guoxing Ave CBD)",
+        "name_en": "Guoxing Ave CBD",
+        "rent_1br_usd_month": 549,
+        "vibe": "新 CBD，外籍人士密集",
+        "best_for": "商务与外籍社群",
+        "coworking_density": 3,
+        "note": "everycity.guide 中央一居 ¥3,950（新 CBD/外籍密集条目）"
+      },
+      {
+        "name": "西海岸 (West Coast)",
+        "name_en": "West Coast",
+        "rent_1br_usd_month": 528,
+        "vibe": "临海，高端居住",
+        "best_for": "海景与高端居住",
+        "coworking_density": 1,
+        "note": "everycity.guide 中央一居 ¥3,800（临海高端条目）"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Haikou-China?displayCurrency=USD",
+      "http://everycity.guide/city/haikou",
+      "https://rewireabroad.com/country/china/city/haikou-china-38867",
+      "https://citycost.org/compare/haikou-vs-beijing/",
+      "https://urcity.com/en/cities/haikou-hi/",
+      "https://en.wikipedia.org/wiki/Haikou"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -54,20 +97,31 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-24"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-24"
       },
       "visa": {
         "confidence": 0.5,
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 298,
+      "food": 157,
+      "transport": 54,
+      "utilities_internet": 63,
+      "misc": 84,
+      "total": 656,
+      "basis": "rewireabroad.com 单人中档分项（租金为市郊 1 居 $298；食品=杂货 $112+外出就餐 $45；杂项=娱乐生活 $84；分项合计 656，不含协同办公）；cost_usd_month 800 由该分项换市中心租金 $375 并加协同办公 $68 得约 $801 取整，CityCost 单人含租 $823 同量级"
     }
   }
 }

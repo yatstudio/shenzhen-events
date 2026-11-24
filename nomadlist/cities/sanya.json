@@ -10,10 +10,10 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 1100,
+    "cost_usd_month": 1150,
     "rent_1br_usd_month": 550,
     "coworking_usd_month": 88,
-    "internet_mbps": 110,
+    "internet_mbps": 100,
     "safety_score": 4.5,
     "english_score": 3.0,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": null,
+    "avg_temp_c": 26.5,
     "best_months": "Nov-Mar",
     "tags": [
       "beach",
@@ -34,14 +34,57 @@
     ],
     "summary_zh": "国内过冬第一站，旺季租金翻倍、要按月谈。",
     "summary_en": "China's top wintering spot; peak-season rents double, negotiate monthly.",
-    "neighborhoods": [],
+    "neighborhoods": [
+      {
+        "name": "大东海 (Dadonghai)",
+        "name_en": "Dadonghai",
+        "rent_1br_usd_month": 583,
+        "vibe": "中心海滩区，餐饮夜生活最密",
+        "best_for": "海滩+夜生活",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥4,200"
+      },
+      {
+        "name": "三亚湾 (Sanya Bay)",
+        "name_en": "Sanya Bay",
+        "rent_1br_usd_month": 528,
+        "vibe": "长条城市海滩，近市中心",
+        "best_for": "市中心海滩生活",
+        "coworking_density": 2,
+        "note": "everycity.guide 中央一居 ¥3,800"
+      },
+      {
+        "name": "亚龙湾 (Yalong Bay)",
+        "name_en": "Yalong Bay",
+        "rent_1br_usd_month": 764,
+        "vibe": "东侧高端度假飞地",
+        "best_for": "高端度假",
+        "coworking_density": 1,
+        "note": "everycity.guide 中央一居 ¥5,500"
+      },
+      {
+        "name": "吉阳 (Jiyang)",
+        "name_en": "Jiyang",
+        "rent_1br_usd_month": 417,
+        "vibe": "内陆中心城区，本地生活、性价比高",
+        "best_for": "本地生活与低价",
+        "coworking_density": 1,
+        "note": "everycity.guide 中央一居 ¥3,000"
+      }
+    ],
     "sources": [
       "参照站公开榜单 — 发现线索（见 discovery_sources）",
-      "Numbeo — 成本交叉"
+      "Numbeo — 成本交叉",
+      "https://www.numbeo.com/cost-of-living/in/Sanya-China",
+      "http://everycity.guide/city/sanya",
+      "https://www.livingcostlaboratory.com/cities/sanya/",
+      "https://rewireabroad.com/country/china/city/sanya",
+      "https://urcity.com/en/cities/sanya-hi/",
+      "https://en.wikipedia.org/wiki/Sanya"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -51,20 +94,31 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-24"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-24"
       },
       "visa": {
         "confidence": 0.5,
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 373,
+      "food": 161,
+      "transport": 30,
+      "utilities_internet": 47,
+      "misc": 59,
+      "total": 670,
+      "basis": "rewireabroad.com 单人中档分项（租金为市郊 1 居 $373；食品=杂货 $127+外出就餐 $34；杂项=娱乐生活 $59；分项合计 670，不含协同办公）；everycity 全包 $1,150 与 LivingCostLaboratory 淡季 $875/旺季 $1,361 的季节中值约 $1,118 同量级"
     }
   }
 }
