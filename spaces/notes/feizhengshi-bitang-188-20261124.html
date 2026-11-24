@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>非正式币谈第 188 期：币圈被黑，黄仁勋回来了</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/feizhengshi-bitang-188-20261124.mp3"></audio></p>
 <blockquote>
 <p>X Space（视频型）· 主持：Trader米哥（@tradermige）· 2026-11-24 19:59 开播 · 全场约 64 分钟，本纪要基于实录约 35 分钟（约覆盖开播后第 7–42 分钟）</p>
 <p>录音说明：本场为视频型动态播放列表，跟随抓取从约第 185 个分片起；另有 15 个短分片缺失；后半段（约第 42 分钟之后）未抓到，回放目前亦为截断版、补不回来。实录前约 8 分钟是现场酒吧闲聊与调试，正式讨论约从 [00:08] 开始。以下时间戳均以实录文件为准（[00:00] 约为开播后 7 分钟）。多处人名与术语的转写含糊，按音译存疑处理。文中数字与观点均为发言者自述，未经核实。</p>
@@ -66,9 +77,122 @@
 </ul>
 <h2>一句话收尾</h2>
 <p>这场没有成体系的结论，值钱的是两段实盘复盘：黑客事件后「跌不动」比消息本身更值得看，以及 68,000 这个从空单成本算出来的爆空位。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>非正式幣談第 188 期：幣圈被黑，黃仁勳回來了</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/feizhengshi-bitang-188-20261124.mp3"></audio></p>
+<blockquote>
+<p>X Space（影片型）· 主持：Trader米哥（@tradermige）· 2026-11-24 19:59 開播 · 全場約 64 分鐘，本紀要基於實錄約 35 分鐘（約覆蓋開播後第 7–42 分鐘）</p>
+<p>錄音說明：本場為影片型動態播放列表，跟隨抓取從約第 185 個分片起；另有 15 個短分片缺失；後半段（約第 42 分鐘之後）未抓到，回放目前亦為截斷版、補不回來。實錄前約 8 分鐘是現場酒吧閒聊與調試，正式討論約從 [00:08] 開始。以下時間戳均以實錄文件為準（[00:00] 約為開播後 7 分鐘）。多處人名與術語的轉寫含糊，按音譯存疑處理。文中數字與觀點均為發言者自述，未經核實。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>米哥和幾位朋友在酒吧裡的一場閒聊：前半段復盤了幣安被黑前後的一筆做空到做多的交易，後半段從黃仁勳回歸聊到 AI 泡沫、美國政治與物價，最後給出 BTC 的看法——55,000 是短期強支撐，目標先看 68,000、再看 75,000。</p>
+<h2>幣安被黑：那筆交易是怎麼做的（約 [00:14]–[00:18]）</h2>
+<p>一位發言者復盤了自己的操作（均為自述）：</p>
+<ul>
+<li>被黑之前他本來就是空頭，但並沒有預測到駭客事件；消息出來後 BTC 跌到約 76,000 附近就跌不動了——他的判斷是，壞消息出來 24 小時後，美亞歐三地該操作的人都操作完了，就沒有新的拋盤動能；同時他看到駭客沒有動被盜的 BTC 和 ETH，於是翻多，行情回到 81,000；</li>
+<li>在 80,700 附近他又做了空，一路做到 72,000；從 72,000 跌到 55,000 的過程中他反覆試多，停損了五次，每次約虧 1,000 美元，但他說這點虧損遠不如前面下跌段賺的多——「整個下跌的很大一塊，八千點一萬點」；</li>
+<li>他對駭客幣的後續判斷：這次被黑的量很大，駭客最終肯定要出貨砸盤；但有意思的是，這些幣最後大概率還會流回幣安，因為幣安是最大的流動性池子，洗錢也要經過它。</li>
+</ul>
+<h2>駭客與安全：潛伏的比偷錢的更嚇人（約 [00:08]–[00:14]）</h2>
+<ul>
+<li>近期被黑越來越多：Claude 的一個新模型（轉寫為 "Methos"，應為模型名音譯）在內測階段就攻克了不少銀行系統；Hugging Face 被黑後過了一兩週才被發現；</li>
+<li>發言者的觀點是：真正可怕的不是偷了錢就跑的駭客，而是悄悄潛入、只偷憑證、不立即作惡的入侵——「現在有很多正在被黑的系統，但其實都不知道，都是潛伏在裡面的」；</li>
+<li>交易所的應對在收緊：他發現現在在各家交易所提領，更大概率要刷臉了；以前給別人轉幣是不刷臉、直接就轉走的。</li>
+</ul>
+<h2>黃仁勳回來了，AI 泡沫破了嗎（約 [00:28]–[00:35]）</h2>
+<ul>
+<li>席間流傳的說法是「Jensen 用他的（某次表態）把 AI 泡沫給戳破了」，但發言者認為這輪下跌更像牛市裡的一次去槓桿：NVDA 從約 240 跌到 120 多、跌幅約 50%，Sandisk 拆股後也從 200 多跌到 70 多——「大家都在這個時候說 AI 泡沫已經破了、要繼續跌，基本上跌不下去」；看 NVDA 週線，和之前那輪沒什麼區別，他給出的目標是 NVDA 回到新高約 207；</li>
+<li>黃仁勳回歸的經過（席間轉述，未核實）：消息一波接一波出來，股價先跌，川普表態希望他回來，隨後就起飛；發言者自己在 155 買過，漲到約 173 後又回調回 155 附近；</li>
+<li>有人現場編了個陰謀論：先幹掉開源的王、再 IPO 一個閉源的、IPO 後把 Jensen 接回來，「都是操縱」——席間當作玩笑聊的，不必當真；</li>
+<li>最後的判斷落在人身上：「真正牛的 CEO 全世界就這幾個」，人才花錢就能挖到，頂級 CEO 挖不到——所以 NVIDIA 一定會讓 Jensen 回來。</li>
+</ul>
+<h2>BTC 後市：55,000 支撐，68,000 是第一個爆空位（約 [00:32]–[00:35]）</h2>
+<p>發言者的看法（均為自述）：</p>
+<ul>
+<li>55,000 是短期強支撐，目標 70,000；65,000 附近有個所有人都在看的壓力位，必須突破；</li>
+<li>突破後第一個目標是 68,000：從 62,000 算起漲 10% 正好到 68,000，而市場空單的成本大多在 62,000 附近（「沒有人會在 5 萬、4 萬 6 開空」），所以 68,000 是爆掉這批空單的關鍵位；</li>
+<li>再往上是 75,000（漲 20%），他認為達到的可能性很大；大區間仍在 57,000–87,000 的震盪裡，沒跌出這個區間之前，震盪裡做多仍然很強。</li>
+</ul>
+<h2>閒聊段：政治、物價與治安</h2>
+<p>後半段話題很散，擇要記兩點，都是發言者個人感受：</p>
+<ul>
+<li>美國政治被形容為鐘擺：特朗普當選是因為民主黨「太傻」，他上台後「滿世界炸」、股市和 Crypto 全炸、趁任期瘋狂賺錢；看夠了之後大家又想換回來，如此循環；同時提到美國內部治安與 ICE、通膨越來越高，很多東西買不起；</li>
+<li>物價與治安的對比：一位發言者說去年在北京買奶粉發現超級貴，COVID 期間漲上去就沒降下來，而且因為有人偷，奶粉都被鎖起來、要叫店員來拿；歐洲大城市則被吐槽手機和錢包常被搶，巴黎、米蘭、倫敦、巴塞羅那都被點名；相比之下中國、日本、新加坡被認為安全得多；</li>
+<li>油價的一段觀察：汽油和柴油價格關聯性很高，但一個是老百姓直接看得見的（加油貴了立刻知道），一個是隱性的（菜價裡藏著柴油運輸成本），「挺有意思」。</li>
+</ul>
+<h2>一句話收尾</h2>
+<p>這場沒有成體系的結論，值錢的是兩段實盤復盤：駭客事件後「跌不動」比消息本身更值得看，以及 68,000 這個從空單成本算出來的爆空位。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Unofficial Crypto Talk, Episode 188: Crypto Got Hacked, and Jensen Huang Is Back</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/feizhengshi-bitang-188-20261124.mp3"></audio></p>
+<blockquote>
+<p>X Space (video) · Host: Trader Mige (@tradermige) · Started 2026-11-24 at 19:59 · The full session ran about 64 minutes; these notes are based on a recording of about 35 minutes (roughly covering minutes 7–42 after the start)</p>
+<p>Recording note: this session used a dynamic video playlist, and the follower capture only began around segment 185; another 15 short segments are missing, and the second half (after roughly minute 42) was not captured — the replay is currently also a truncated version and cannot fill the gap. The first roughly 8 minutes of the recording are bar chatter and setup at the venue; the actual discussion begins around [00:08]. All timestamps below refer to the recording file ([00:00] is roughly 7 minutes after the start). Several names and terms in the transcription are unclear and are treated as uncertain phonetic renderings. All figures and views in this text are the speakers' own claims and have not been verified.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>A bar chat between Mige and a few friends: the first half reviews a trade that went from short to long around the Binance hack, and the second half moves from Jensen Huang's return to the AI bubble, US politics and prices, ending with a view on BTC — 55,000 is strong short-term support, with targets first at 68,000 and then 75,000.</p>
+<h2>The Binance Hack: How That Trade Was Done (around [00:14]–[00:18])</h2>
+<p>One speaker reviewed his own trading (all in his own words):</p>
+<ul>
+<li>He was already short before the hack, but had not predicted the hacking incident; after the news came out, BTC fell to around 76,000 and then would not fall further — his reasoning was that 24 hours after bad news breaks, everyone in the US, Asia and Europe who was going to act has acted, so there is no fresh selling momentum left; at the same time he saw that the hackers had not moved the stolen BTC and ETH, so he flipped long, and the market moved back to 81,000;</li>
+<li>Around 80,700 he shorted again and rode it down to 72,000; as it fell from 72,000 to 55,000 he repeatedly tried going long, getting stopped out five times at a loss of about 1,000 US dollars each time, but he said those losses were far smaller than what he had made on the earlier decline — "a big chunk of the whole drop, eight thousand, ten thousand points";</li>
+<li>His view on what happens to the hacked coins next: the amount stolen this time is large, so the hackers will eventually have to dump and crash the price; but interestingly, those coins will most likely end up flowing back to Binance in the end, because Binance is the biggest liquidity pool and laundering has to go through it too.</li>
+</ul>
+<h2>Hackers and Security: The Ones Lying Low Are Scarier Than the Ones Stealing Money (around [00:08]–[00:14])</h2>
+<ul>
+<li>Hacks have been getting more frequent lately: a new Claude model (transcribed as "Methos," presumably a phonetic rendering of the model name) had already broken into many banking systems during internal testing; Hugging Face was hacked and it was only discovered a week or two later;</li>
+<li>The speaker's view: what is truly frightening is not hackers who steal money and run, but intrusions that quietly slip in, steal only credentials and do no immediate harm — "there are many systems being hacked right now that don't even know it; they're all lying low inside";</li>
+<li>Exchanges are tightening their responses: he has noticed that withdrawals at various exchanges are now more likely to require face verification; before, sending coins to someone else did not require a face scan — the transfer just went through directly.</li>
+</ul>
+<h2>Jensen Huang Is Back — Has the AI Bubble Burst? (around [00:28]–[00:35])</h2>
+<ul>
+<li>A line going around the table was that "Jensen popped the AI bubble with (one of his statements)," but the speaker argued this drop looks more like a deleveraging inside a bull market: NVDA fell from about 240 to just over 120, a drop of about 50%, and SanDisk, after its stock split, also fell from over 200 to over 70 — "everyone is saying right now that the AI bubble has burst and it will keep falling, but basically it can't fall any further"; looking at NVDA's weekly chart, it is no different from the previous round, and his target is NVDA back to a new high of about 207;</li>
+<li>How Jensen Huang's return unfolded (as retold at the table, unverified): the news came out wave after wave, the share price fell first, Trump then said he hoped Jensen would come back, and after that it took off; the speaker himself had bought at 155, and after it rose to about 173 it pulled back to around 155 again;</li>
+<li>Someone at the table made up a conspiracy theory on the spot: first take out the king of open source, then IPO a closed-source one, and after the IPO bring Jensen back — "it's all manipulation" — it was joked about at the table and should not be taken seriously;</li>
+<li>The final judgment came down to people: "there are only a handful of truly great CEOs in the world" — talent can be poached with money, but a top-tier CEO cannot — so NVIDIA will definitely let Jensen come back.</li>
+</ul>
+<h2>BTC Outlook: 55,000 Support, 68,000 Is the First Short-Squeeze Level (around [00:32]–[00:35])</h2>
+<p>The speaker's view (all in his own words):</p>
+<ul>
+<li>55,000 is strong short-term support, with a target of 70,000; near 65,000 there is a resistance level everyone is watching, and it has to break;</li>
+<li>After a breakout, the first target is 68,000: a 10% rise from 62,000 lands exactly at 68,000, and most short positions in the market have a cost basis around 62,000 ("nobody opens shorts at 50,000 or 46,000"), so 68,000 is the key level that would blow out that batch of shorts;</li>
+<li>Above that is 75,000 (a 20% rise), which he thinks is quite likely to be reached; the broader range is still a 57,000–87,000 consolidation, and as long as price has not fallen out of that range, going long within the consolidation remains strong.</li>
+</ul>
+<h2>Chitchat: Politics, Prices and Public Safety</h2>
+<p>The topics in the latter part were scattered; two points are noted here, both the speakers' personal impressions:</p>
+<ul>
+<li>US politics was described as a pendulum: Trump was elected because the Democrats were "too stupid"; after taking office he "blew things up everywhere," stocks and Crypto all blew up, and he made money frantically during his term; once people have had enough they want to switch back, and so the cycle repeats; also mentioned were domestic public safety in the US and ICE, ever-rising inflation, and many things becoming unaffordable;</li>
+<li>A comparison of prices and public safety: one speaker said that when he bought baby formula in Beijing last year he found it incredibly expensive — prices went up during COVID and never came back down, and because of theft the formula is all locked up and you have to call a staff member to get it; big European cities were complained about for frequent phone and wallet theft, with Paris, Milan, London and Barcelona all named; by comparison, China, Japan and Singapore were considered much safer;</li>
+<li>An observation about fuel prices: gasoline and diesel prices are highly correlated, but one is directly visible to ordinary people (you know immediately when filling up costs more) while the other is hidden (diesel transport costs are buried in vegetable prices) — "quite interesting."</li>
+</ul>
+<h2>Closing in One Sentence</h2>
+<p>This session produced no systematic conclusions; what is valuable are two pieces of live-trading review: after a hacking incident, the fact that price "won't fall any further" is worth more attention than the news itself, and 68,000 — the short-squeeze level derived from the shorts' cost basis.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1jPVvNgrAaperW">https://x.com/i/spaces/1jPVvNgrAaperW</a>（主持 @tradermige）· 发布日期：2026-11-24 · 时长：实录 35 分钟（全场约 64 分钟，后半段未录到）<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1jPVvNgrAaperW">https://x.com/i/spaces/1jPVvNgrAaperW</a>（主持 @tradermige）· 發布日期：2026-11-24 · 時長：實錄 35 分鐘（全場約 64 分鐘，後半段未錄到）<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1jPVvNgrAaperW">https://x.com/i/spaces/1jPVvNgrAaperW</a> (host @tradermige) · Published: 2026-11-24 · Length: 35-minute recording (full session about 64 minutes; the second half was not recorded)<br>This page is the full text of notes compiled by hand from a machine transcription; all views and figures are the original speakers' own and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1jPVvNgrAaperW">https://x.com/i/spaces/1jPVvNgrAaperW</a>（主持 @tradermige）· 发布日期：2026-11-24 · 时长：实录 35 分钟（全场约 64 分钟，后半段未录到）<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"非正式币谈第 188 期：币圈被黑，黄仁勋回来了 · Yat's Talks",tw:"非正式幣談第 188 期：幣圈被黑，黃仁勳回來了 · Yat's Talks",en:"Unofficial Crypto Talk, Episode 188: Crypto Got Hacked, and Jensen Huang Is Back · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
