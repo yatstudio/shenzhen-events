@@ -1147,8 +1147,8 @@ function cardOf(e,now){
   // one quiet meta line: [city] · place · organizer · fee · deadline (no emoji, no colour blocks)
   const where=[fL(e,"district"),fL(e,"venue")].filter(Boolean).join(" · ");
   const ven=e.venue?fL(e,"venue"):"";
-  const place=online?(/^(线上|線上|online)/i.test(ven)?ven:[tr("online"),ven].filter(Boolean).join(" · "))
-    :hybrid?tr("online")+" + "+(where||tr("venueTBA")):(where||tr("venueTBA"));
+  const place=online?("🌐 "+(/^(线上|線上|online)/i.test(ven)?ven:[tr("online"),ven].filter(Boolean).join(" · ")))
+    :hybrid?("🌐+📍 "+tr("online")+" + "+(where||tr("venueTBA"))):(where||tr("venueTBA"));
   const fee=feeBadge(e).replace(/<[^>]+>/g,"").replace(/^💰\s*/,"");
   const meta=[e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
   const mapHref=(!online&&e.venue)?`https://uri.amap.com/marker?position=&name=${encodeURIComponent(`${e.city||""}${e.district||""}${e.venue}`)}&src=yat`:"";
