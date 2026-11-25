@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Gemini 对话 Kevin Xu：黄仁勋回归、Ansem 被黑与 3.5 万到 1000 万的交易路</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/gemini-kevinxu-jensen-ansem-20261124.mp3"></audio></p>
 <ul>
 <li>节目：Gemini（X Broadcast，晨间节目 Morning Motion）</li>
 <li>时间：2026-11-24（周二）21:57 CST 开播，全长 2 小时 22 分 52 秒</li>
@@ -94,9 +105,180 @@
 <li>XRP：主持人称父亲胸口纹了 XRP，相信 XRP 是“一家银行的竞品”；德国网友说 XRP 是骗局，他回应“买 dip 就对了”。</li>
 <li>尾声：主持人玩了一局 Krillin 游戏（说出最不可能被输入的答案），预告次日 9 点做 Black Friday 交易员好物专场。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Gemini 對話 Kevin Xu：黃仁勳回歸、Ansem 被黑與 3.5 萬到 1000 萬的交易路</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/gemini-kevinxu-jensen-ansem-20261124.mp3"></audio></p>
+<ul>
+<li>節目：Gemini（X Broadcast，晨間節目 Morning Motion）</li>
+<li>時間：2026-11-24（週二）21:57 CST 開播，全長 2 小時 22 分 52 秒</li>
+<li>主持：Gemini（21 歲）、Austin</li>
+<li>嘉賓：Kevin Xu（Kevin Hsu，@kevinxu），金融教育者，Alpha AI 創始人兼 CEO</li>
+<li>來源：X Broadcast 回放全量音訊轉寫，transcript.txt 2467 行</li>
+</ul>
+<p><strong>說明：以下全部為發言者自述與觀點，未經核實。英文 ASR 轉寫，人名、幣名與數字可能存在聽錯；轉寫自 [00:03:07] 開始，前約 3 分鐘無有效語音。節目內兩次宣讀免責聲明：內容僅供一般資訊參考，不構成投資、稅務或法律建議。</strong></p>
+<h2>一句話</h2>
+<p>黃仁勳回歸當天，Gemini 請來 21 歲的 Kevin Xu 聊他 3.5 萬美元炒到 1000 萬美元的經歷與新做的交易 AI 伴侶 Alpha AI；同一晚，KOL Ansem 的 Pump 錢包被黑、ANSM 代幣市值腰斬，主持人一邊在直播裡買 HYPE，一邊花了半小時拆解幣圈「造神行銷」。</p>
+<h2>1. Ansem 被黑：錢包遭入侵，ANSM 市值從約 3600 萬跌到 2000 萬</h2>
+<ul>
+<li>開播前約 3 小時，Ansem 發推稱 Pump 錢包被黑：有人未授權存取了他的 Bullpen 帳戶，該帳戶匯入了他唯一的私鑰。Ansem 本人隨後在留言區澄清：攻擊向量是 Bullpen，EVM 與 Pump 錢包裡的倉位未被動過、沒有資金轉出，目前正在做安全稽核。</li>
+<li>ANSM 代幣市值從約 3600 萬美元跌到 2000 萬美元（此前峰值約 4000 萬美元）。主持人稱自己買在了頂部附近，是「人生最快虧掉 1000 美元的一次」。</li>
+<li>社群留言區立刻出現指控：Ansem 是自導自演、賣幣後謊稱被黑。主持人反駁：KOL 也會被黑，「每個人遲早都會被黑一次」；Ansem 夏天曾帶頭復興土狗行情、被稱為「幣圈的麥可·喬丹」，主持人不認為他是惡意跑路的人。</li>
+<li>主持人的結論：買 KOL meme 幣本身就是進賭場——「你買的不是基礎建設項目，是一個 KOL 的 meme 幣」，被黑、被砸都應該算進預期裡；Meme 幣的正確策略是快進快出，拿久了就是「高位接盤後自我安慰」。</li>
+<li>補充：曾曝光 Polymarket 造假（謊報交易量）的調查者 Benny 也被提到，主持人認為他「把 Polymarket 烤糊了」。</li>
+</ul>
+<h2>2. 黃仁勳回歸：Kevin 認為他是整個 AI 交易的中心</h2>
+<ul>
+<li>Kevin 的核心判斷：黃仁勳是 AI 交易的中心——所有金融模型、CapEx 預測、未來路線圖，最終都由輝達背書，而輝達最終由黃仁勳的一句話背書；大量交易是他拍板的握手交易。沒有他，建設週期要拉長半年到一年，融資成為瓶頸。</li>
+<li>主持人看到反彈消息後，立即用 10 倍槓桿做空了比特幣。</li>
+<li>Kevin 稱，上週他曾預測 QQQ 年底收負（當時黃仁勳確定不回、董事會態度強硬），QQQ 也確實一度年內轉負；黃仁勳約 24 小時前回歸，「改變了一切」。但他也提醒：調查還在繼續，黃仁勳要去國會作證，事情需要時間消化。</li>
+<li>Kevin 看多 AI 股，認為 AI 股會反彈回 10 月 29 日的高點；他相信 AI 需求「大得離譜」，Claude Code 一年前（2025 年 11 月 24 日，Opus 4.5 發布）才真正好用，AI Agent 接管一切才剛觸到冰山一角。</li>
+</ul>
+<h2>3. Kevin 的交易路：3.5 萬美元，21 個月到 1000 萬美元</h2>
+<ul>
+<li>14 歲買第一支股票，現年 21 歲；從沒讀過交易書、沒上過課，全是從 Reddit 學的，WallStreetBets 是他口中「定義了 COVID 時代」的時刻。</li>
+<li>2017–2018 年加密：3000 美元炒到 30 萬美元，又跌回 3 萬美元（最後一支是 Deep Brain Chain，DBC，當時號稱「區塊鏈上的 AI」）。此後 2018 年下半年到 2019 年全年停手，在 YouTube、Google 上班存錢。</li>
+<li>2020 年 2 月–2021 年 11 月，用 401k 自選經紀帳戶從 3.5 萬美元做到 1000 萬美元，約 21 個月：先是口罩公司 APT（N95 口罩，美國製造），幾週內翻約 3 倍到 9 萬美元；轉入 PCR 檢測公司 CODX 翻倍到約 18 萬美元；之後一路全倉挪威郵輪、Chewy、Peloton 等，滾到 100 萬美元。</li>
+<li>GME 賺了約 20 萬美元（1.3 美元買入、1.5 美元賣出），但 2020 年 12 月提前賣飛，錯過了一個月後的軋空主升浪。</li>
+<li>最出名的一次：170 萬美元重倉 Rocket Mortgage（RKT），軋空一夜漲到 270 萬美元，次日跌回 170 萬美元——「一天賺 100 萬、第二天又還回去」。</li>
+<li>現在：約 1060 萬美元，大部分在 SPY 與 QQQ 裡（自述為退休錢）；另用一個小得多的「全倉挑戰帳戶」交易，兩個帳戶分開、公開透明。</li>
+<li>方法論：一次只盯 2–3 支股票；看中就全倉押注、等催化劑兌現後退出；不碰會一夜歸零的東西（土狗幣、槓桿 ETF），「先活下來，遊戲才長」；承認經常貪心拿過頭。</li>
+</ul>
+<h2>4. Alpha AI：把交易員的大腦做成 AI 伴侶</h2>
+<ul>
+<li>Kevin 的新產品 Alpha AI，定位是「你的 vibe 交易好朋友」——一個專注交易的 AI 伴侶，由他此前的創業項目 AfterHour（可連接投資組合、分享已驗證交易的社群網路）轉型而來。</li>
+<li>做法：用一個「soul markdown file」定義 AI 的性格與風格，越用越貼合使用者；它會讀大量資料來源，突發新聞按「對使用者有多重要」設門檻推送，避免像群組聊天裡刷屏的人。</li>
+<li>更進一步的設想：給每個 Alpha 自己的社媒帳號、電腦、觀察清單與投資組合，讓不同的 Alpha 互相交流、協作，形成一個「Alpha 論壇」——這本身又成為新的 alpha 來源與娛樂內容。</li>
+<li>Kevin 認為 AI 伴侶此前困在「性感角色扮演」的幻想場景裡，而交易話題每天每小時都有新事發生，聊起來「 grounded（腳踏實地）」，是此前沒有過的真實感。產品尚未上線，關注他的帳號等更新。</li>
+</ul>
+<h2>5. Anthropic IPO：Kevin 不玩 IPO，主持人做空做早了</h2>
+<ul>
+<li>Kevin 不玩 IPO：首日衝高後長期震盪、鎖定期陸續解禁釋放新供給，很難預測。</li>
+<li>主持人則相反，去年玩 IPO 很順：SpaceX 上市日賺約 400%（1000 美元），Anthropic 上市日賺約 60%。</li>
+<li>但主持人這次「搞砸了」一筆：他在 110 美元做空 Anthropic（ANT），跌到 79 美元時已經平掉；現場讓 Grok 現場算帳——100 美元本金 10 倍槓桿，28% 的跌幅本應賺約 282 美元，約 3 倍收益，提前平倉等於白白放跑。</li>
+</ul>
+<h2>6. 行情雜談：BTC、HYPE、Dick's 與主持人的持倉</h2>
+<ul>
+<li>BTC：前一天約 6.2 萬美元，直播時約 6 萬美元。主持人謹慎：跌到 5 萬多、甚至 4 萬多都是「可以加油」的區間；加密要漲，需要利率更便宜、錢更便宜；現在動量活不過一天，全是消息驅動與演算法主導。</li>
+<li>HYPE：主持人前一天在 69 美元買入（自述只因數字好玩），直播中又在約 163–164 美元買了 1 個 HYPE，被搭檔調侃為「top blast」（買在頂部訊號）。</li>
+<li>Dick's Sporting Goods（DKS）：財報營收 53 億美元，當天漲 15%，已收購 Foot Locker。主持人憑直覺想做空：漲 15% 的老牌零售股，第一反應是反向操作；Nike 在他看來已經不行了，「沒人穿 Nike 了，都穿 Lululemon」。</li>
+<li>主持人持倉自述：大量 Solana；Ulta Beauty 的「死忠多頭」（自第三季起一直喊）；GoPro 0.50 美元，是最大持倉之一；一支鈮金屬股（造火箭用的金屬）在 6–7 美元買入、漲 50% 後從 8 美元跌到 4 美元；兩人 10 月建倉的組合目前浮虧約 25%。</li>
+<li>Tesla 與 SpaceX 合併：董事會在談，約 3.5 兆美元的合併，主持人認為「不可避免」。</li>
+</ul>
+<h2>7. Kimchi 與 Phase Banks：一場關於幣圈「造神行銷」的長討論</h2>
+<ul>
+<li>話題人物 Kimchi：據稱靠 Trump 幣賺了 4000 萬美元。主持人質疑：Orangey 採訪他的說法一路從 1000 萬變到 3000 萬、再到 4000 萬，且沒有任何錢包追蹤證據能佐證 4000 萬美元，「故事對不上」。</li>
+<li>主持人的判斷：這是一場 S 級行銷機構操盤的造神——Kimchi 本人只是檯前，背後有 Pump 代幣（市值約 600–700 萬美元）與全網剪輯大軍（FearBuck 等頂級 X 剪輯號）配合造勢；Phase Banks 是關鍵推手，「只要他掺和，就知道是批量生產的」。</li>
+<li>分歧點：Austin 認為 Kimchi 的 vlog 剪輯精良、懂得留鉤子（Uber 司機問他賺過最多多少錢、他笑笑不答就切鏡頭），是「Drake 式行銷」；Gemini 則認為這套東西「沒有才藝，只有錢在飛」，對產業是淨負面——它教新人的是炫富，不是交易；可以尊重這種玩法，但絕不能當成所有人的模板。</li>
+<li>共識：即便賺了 5000 萬美元也別走這條路，「賺了就下線，沒人會再聽到你的消息」；以及幣圈的普遍規則——「在被證明是真的之前，先預設是假的」。</li>
+</ul>
+<h2>8. Gemini 新 UI、預測市場與 NFL 感恩節</h2>
+<ul>
+<li>Gemini 網頁版剛上線新的 Active Trader 介面（Ravi 團隊負責），主持人稱是「半年裡最好的更新」，並要求團隊加一個「資金流向」 trending 標籤。</li>
+<li>預測市場：主持人 NFL 戰績自述 60 勝 27 負；感恩節焦點戰是熊隊對獅隊，兩隊都是 5–6 連勝、龍頭榜首。他的判斷：短週（週日剛打完、週四又打），進攻端更難調動，傾向低分——押總分低於 55.5 分，25 美元贏 48 美元，自估勝率約 60%。</li>
+<li>XRP：主持人稱父親胸口刺了 XRP，相信 XRP 是「一家銀行的競品」；德國網友說 XRP 是騙局，他回應「買 dip 就對了」。</li>
+<li>尾聲：主持人玩了一局 Krillin 遊戲（說出最不可能被輸入的答案），預告次日 9 點做 Black Friday 交易員好物專場。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Gemini with Kevin Xu: Jensen's Return, the Ansem Hack, and the Trading Path from $35K to $10M</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/gemini-kevinxu-jensen-ansem-20261124.mp3"></audio></p>
+<ul>
+<li>Program: Gemini (X Broadcast, the morning show Morning Motion)</li>
+<li>Time: November 24, 2026 (Tuesday), started 21:57 CST, total length 2 hours 22 minutes 52 seconds</li>
+<li>Hosts: Gemini (21 years old), Austin</li>
+<li>Guest: Kevin Xu (Kevin Hsu, @kevinxu), financial educator, founder and CEO of Alpha AI</li>
+<li>Source: Full transcription of the X Broadcast replay audio, transcript.txt, 2,467 lines</li>
+</ul>
+<p><strong>Note: Everything below is the speakers' own accounts and opinions, unverified. English ASR transcription — names, coin names, and numbers may have been misheard; the transcript starts at [00:03:07], with roughly the first 3 minutes containing no intelligible speech. A disclaimer was read twice during the show: the content is for general information only and is not investment, tax, or legal advice.</strong></p>
+<h2>In One Sentence</h2>
+<p>On the day Jensen returned, Gemini brought in 21-year-old Kevin Xu to talk about how he traded $35,000 into $10 million and his new trading AI companion, Alpha AI; that same evening, KOL Ansem's Pump wallet was hacked and the ANSM token's market cap was cut in half, while the host bought HYPE live on air and spent half an hour dissecting crypto's "god-making marketing."</p>
+<h2>1. Ansem Hacked: Wallet Breached, ANSM Market Cap Falls from About $36M to $20M</h2>
+<ul>
+<li>About 3 hours before the show started, Ansem tweeted that his Pump wallet had been hacked: someone gained unauthorized access to his Bullpen account, into which his only private key had been imported. Ansem himself then clarified in the replies: the attack vector was Bullpen; positions in his EVM and Pump wallets were untouched, no funds were transferred out, and a security audit was underway.</li>
+<li>ANSM's market cap fell from about $36 million to $20 million (previous peak about $40 million). The host said he had bought near the top — "the fastest $1,000 I have ever lost."</li>
+<li>The community replies immediately filled with accusations: Ansem had staged it, selling his coins and then claiming to be hacked. The host pushed back: KOLs get hacked too — "everyone gets hacked sooner or later"; Ansem had led the memecoin revival over the summer and was called "the Michael Jordan of crypto," and the host did not believe he was a malicious rug-puller.</li>
+<li>The host's conclusion: buying a KOL memecoin is walking into a casino — "you are not buying an infrastructure project, you are buying a KOL's memecoin," and getting hacked or dumped on should be priced into expectations; the right memecoin strategy is to get in and out fast, because holding long is just "comforting yourself after buying the top."</li>
+<li>Also mentioned: Benny, the investigator who exposed Polymarket's fakery (inflated trading volume), whom the host said "cooked Polymarket."</li>
+</ul>
+<h2>2. Jensen's Return: Kevin Sees Him as the Center of the Entire AI Trade</h2>
+<ul>
+<li>Kevin's core judgment: Jensen is the center of the AI trade — every financial model, CapEx forecast, and future roadmap is ultimately underwritten by Nvidia, and Nvidia is ultimately underwritten by a single word from Jensen; many deals are handshake deals he personally signed off on. Without him, the build-out cycle stretches by six months to a year and financing becomes the bottleneck.</li>
+<li>On seeing the bounce news, the host immediately shorted Bitcoin with 10x leverage.</li>
+<li>Kevin said that last week he had predicted QQQ would end the year negative (at the time Jensen was definitely not coming back and the board was hardline), and QQQ did indeed dip negative for the year at one point; Jensen returned about 24 hours ago and "changed everything." But he also cautioned: the investigation is ongoing, Jensen will have to testify before Congress, and this needs time to digest.</li>
+<li>Kevin is bullish on AI stocks and believes they will bounce back to their October 29 highs; he believes AI demand is "absurdly large" — Claude Code only became truly usable a year ago (November 24, 2025, with the Opus 4.5 release), and AI agents taking over everything has only scratched the surface.</li>
+</ul>
+<h2>3. Kevin's Trading Path: $35,000 to $10 Million in 21 Months</h2>
+<ul>
+<li>Bought his first stock at 14, now 21; never read a trading book or took a course — everything was learned from Reddit, and WallStreetBets was, in his words, "the moment that defined the COVID era."</li>
+<li>Crypto in 2017–2018: turned $3,000 into $300,000, then back down to $30,000 (the last position was Deep Brain Chain, DBC, then billed as "AI on the blockchain"). After that he sat out from the second half of 2018 through all of 2019, working at YouTube and Google to save money.</li>
+<li>From February 2020 to November 2021, he grew a self-directed 401k brokerage account from $35,000 to $10 million in about 21 months: first the mask company APT (N95 masks, US-made), which roughly tripled in a few weeks to $90,000; then PCR testing company CODX, doubling to about $180,000; then full-size positions in Norwegian Cruise Line, Chewy, Peloton, and others, compounding up to $1 million.</li>
+<li>He made about $200,000 on GME (bought at $1.3, sold at $1.5), but sold too early in December 2020 and missed the main short squeeze a month later.</li>
+<li>His most famous trade: a $1.7 million all-in position in Rocket Mortgage (RKT), which squeezed overnight to $2.7 million, then fell back to $1.7 million the next day — "made a million in a day, gave it back the next."</li>
+<li>Now: about $10.6 million, most of it in SPY and QQQ (described as retirement money); he also trades a much smaller "all-in challenge account," with the two accounts kept separate and publicly transparent.</li>
+<li>Methodology: watch only 2–3 stocks at a time; when he likes one, go all in and exit once the catalyst plays out; avoid things that can go to zero overnight (memecoins, leveraged ETFs) — "survive first, and the game lasts"; he admits he often gets greedy and holds too long.</li>
+</ul>
+<h2>4. Alpha AI: Turning a Trader's Brain into an AI Companion</h2>
+<ul>
+<li>Kevin's new product, Alpha AI, is positioned as "your vibe trading buddy" — an AI companion focused on trading, pivoted from his earlier startup AfterHour (a social network where users could connect portfolios and share verified trades).</li>
+<li>How it works: a "soul markdown file" defines the AI's personality and style, and it adapts to the user the more it is used; it reads large numbers of data sources and pushes breaking news with a threshold based on "how much this matters to the user," instead of spamming like someone in a group chat.</li>
+<li>A further vision: give each Alpha its own social media account, computer, watchlist, and portfolio, and let different Alphas talk and collaborate with each other, forming an "Alpha forum" — which itself becomes a new source of alpha and of entertainment content.</li>
+<li>Kevin believes AI companions have been stuck in the "sexy roleplay" fantasy niche, while trading has something new happening every hour of every day, making conversation feel "grounded" in a way that has not existed before. The product is not yet launched; follow his account for updates.</li>
+</ul>
+<h2>5. The Anthropic IPO: Kevin Doesn't Play IPOs; the Host Shorted Too Early</h2>
+<ul>
+<li>Kevin doesn't play IPOs: after the first-day pop they chop sideways for a long time while lockups expire and release new supply — hard to predict.</li>
+<li>The host was the opposite — IPOs treated him well last year: about +400% ($1,000) on SpaceX's listing day and about +60% on Anthropic's listing day.</li>
+<li>But this time the host "messed up" a trade: he shorted Anthropic (ANT) at $110 and had already closed by the time it fell to $79; he had Grok run the math live — $100 of capital at 10x leverage, a 28% drop should have made about $282, roughly a 3x return, so closing early meant letting it slip away for nothing.</li>
+</ul>
+<h2>6. Market Chatter: BTC, HYPE, Dick's, and the Host's Positions</h2>
+<ul>
+<li>BTC: about $62,000 the day before, about $60,000 during the show. The host is cautious: a drop into the $50,000s or even $40,000s would be a zone to "add fuel"; for crypto to rise, rates need to get cheaper and money needs to get cheaper; right now momentum doesn't survive a day — everything is news-driven and algo-dominated.</li>
+<li>HYPE: the host bought the day before at $69 (by his own account, just because the number was fun), then bought 1 more HYPE live on air at about $163–164, which his co-host mocked as a "top blast" (a buy signal at the top).</li>
+<li>Dick's Sporting Goods (DKS): earnings revenue of $5.3 billion, up 15% on the day, and it has acquired Foot Locker. The host wanted to short on instinct: an old-school retailer up 15%, his first reaction is to fade it; in his view Nike is done — "nobody wears Nike anymore, everyone wears Lululemon."</li>
+<li>The host's self-described positions: a lot of Solana; a "diehard long" on Ulta Beauty (calling it since Q3); GoPro at $0.50, one of his largest positions; a niobium metal stock (a metal used in rockets) bought at $6–7, up 50%, then down from $8 to $4; the portfolio the two of them built in October is currently down about 25%.</li>
+<li>A Tesla–SpaceX merger: the boards are discussing it, a merger of about $3.5 trillion, which the host believes is "inevitable."</li>
+</ul>
+<h2>7. Kimchi and Phase Banks: A Long Discussion of Crypto's "God-Making Marketing"</h2>
+<ul>
+<li>The figure in question, Kimchi: said to have made $40 million on the Trump coin. The host questioned it: in Orangey's interview, his claimed figure drifted from $10 million to $30 million to $40 million, and no wallet-tracking evidence supports $40 million — "the story doesn't add up."</li>
+<li>The host's judgment: this is god-making run by an S-tier marketing agency — Kimchi himself is just the front man, backed by a Pump token (market cap about $6–7 million) and an army of clipping accounts across the platform (top X clippers like FearBuck) building the hype; Phase Banks is a key operator — "if he's involved, you know it's mass-produced."</li>
+<li>Where they disagreed: Austin thought Kimchi's vlogs are slickly edited and know how to plant hooks (an Uber driver asks the most he has ever made; he just smiles, doesn't answer, and the shot cuts) — "Drake-style marketing"; Gemini thought the act has "no talent, just money flying around," a net negative for the industry — it teaches newcomers to flaunt wealth, not to trade; you can respect the play, but it must never be the template for everyone.</li>
+<li>Consensus: even if you make $50 million, don't go down this road — "make it and log off, and nobody will ever hear from you again"; and crypto's general rule — "assume it's fake until proven real."</li>
+</ul>
+<h2>8. Gemini's New UI, Prediction Markets, and Thanksgiving NFL</h2>
+<ul>
+<li>Gemini's web version just launched a new Active Trader interface (built by Ravi's team), which the host called "the best update in six months," and he asked the team to add a "money flow" trending tab.</li>
+<li>Prediction markets: the host's self-reported NFL record is 60 wins, 27 losses; the Thanksgiving focus game is the Bears vs. the Lions, both on 5–6 game win streaks and top of their division. His read: a short week (played Sunday, playing again Thursday) makes offenses harder to get going, so he leans to a low-scoring game — betting the total under 55.5 points, $25 to win $48, with a self-estimated win rate of about 60%.</li>
+<li>XRP: the host said his father has XRP tattooed on his chest and believes XRP is "a competitor to a bank"; when a German viewer called XRP a scam, he replied, "just buy the dip."</li>
+<li>Close: the host played a round of the Krillin game (give the answer least likely to be entered), and teased a Black Friday traders' gear special the next day at 9.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2zkYbAZLMpevqm">https://x.com/i/broadcasts/2zkYbAZLMpevqm</a>（主持 Gemini，嘉宾 Kevin Xu）· 发布日期：2026-11-24 · 时长：143 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2zkYbAZLMpevqm">https://x.com/i/broadcasts/2zkYbAZLMpevqm</a>（主持 Gemini，嘉賓 Kevin Xu）· 發布日期：2026-11-24 · 時長：143 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X livestream <a href="https://x.com/i/broadcasts/2zkYbAZLMpevqm">https://x.com/i/broadcasts/2zkYbAZLMpevqm</a> (host Gemini, guest Kevin Xu) · Published: 2026-11-24 · Duration: 143 minutes<br>This page is the full text of notes compiled and edited from a machine transcript; all views and figures are the original speakers' own and are unverified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2zkYbAZLMpevqm">https://x.com/i/broadcasts/2zkYbAZLMpevqm</a>（主持 Gemini，嘉宾 Kevin Xu）· 发布日期：2026-11-24 · 时长：143 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Gemini 对话 Kevin Xu：黄仁勋回归、Ansem 被黑与 3.5 万到 1000 万的交易路 · Yat's Talks",tw:"Gemini 對話 Kevin Xu：黃仁勳回歸、Ansem 被黑與 3.5 萬到 1000 萬的交易路 · Yat's Talks",en:"Gemini with Kevin Xu: Jensen's Return, the Ansem Hack, and the Trading Path from $35K to $10M · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

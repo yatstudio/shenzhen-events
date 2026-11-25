@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Ran Neuner：美联储加息前最后的通胀数据，现在是部署资金的甜点吗？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/ran-neuner-final-inflation-data-20261125.mp3"></audio></p>
 <ul>
 <li>Broadcast：https://x.com/i/broadcasts/2qVYJBnbmnyMrM</li>
 <li>时间：2026-11-25 22:35 CST 开播，全长约 56 分 57 秒（3416.79 秒）</li>
@@ -132,9 +143,256 @@
 <li>12 月 9 日 FOMC、97.8%/58.4% 加息概率、40 万亿美元国债、1.6 万亿美元利息等数字均为发言者自述，未经核实。</li>
 <li>"1 月民主党上台、战争结束"为其情景假设，不是事实陈述。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Ran Neuner：美聯儲升息前最後的通膨數據，現在是部署資金的甜點嗎？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/ran-neuner-final-inflation-data-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast：https://x.com/i/broadcasts/2qVYJBnbmnyMrM</li>
+<li>時間：2026-11-25 22:35 CST 開播，全長約 56 分 57 秒（3416.79 秒）</li>
+<li>主持：Ran Neuner（英文節目，單人節目，中間兩次播放 Tom Lee 的採訪片段）</li>
+<li>逐字稿：1134 行，覆蓋 [00:00:00]–[00:56:37]</li>
+<li>說明：以下均為發言者自述觀點，未經核實。ASR 歸一見文末。</li>
+</ul>
+<h2>一句話</h2>
+<p>Ran 的核心判斷是：PCE 3.8% 與第三季 GDP 成長 4.3% 這組「火上澆油」的數據，意味著美聯儲 12 月幾乎鐵定升息、市場正進入一段升息週期；但這輪升息是從 4% 起步、美國背著 40 萬億美元債務、付不起長期高利率，所以他不認為會是一輪漫長的升息——納指已跌 20%，這正是他說的「開始部署資金的甜點」：現在買會難受幾個月，不買六個月後回頭看會覺得「明明那麼明顯」。</p>
+<h2>一、數據：火上澆油</h2>
+<ul>
+<li>PCE 通膨（美聯儲最看重的通膨指標，不是 CPI）月增 0.3%，符合預期；年增 3.8%，美聯儲目標是 2%。</li>
+<li>第三季美國 GDP 成長 4.3%，遠高於預期的 3.4%——經濟增速比預期快約 30%。</li>
+<li>他的比喻：通膨 3.8% 是火，經濟成長極快是往火上澆油；美聯儲認為通膨是因為成長太快，要壓通膨就得壓成長，辦法就是升息。</li>
+<li>12 月升息機率 97.8%，1 月再升息的機率 58.4%；核心 PCE 從 9 月的 3.1% 加速到 10 月的 3.3%，強化了通膨頑固的擔憂。</li>
+<li>PCE 的最大推手是汽油：10 月測算期油價在 106–120 美元之間（期中選舉前的高點），現在已回落到 92 美元。</li>
+<li>市場反應：納指期貨跌 3.27%（盤中一度跌 4.2%），創日內新低；BTC 也在日內低點附近，正往週末低點 55,000 美元回落；標普 500 跌 2.69%；輝達回到 142 美元，黃仁勳回歸的漲幅已全部回吐。</li>
+</ul>
+<h2>二、升息週期：市場討厭的是快升息，不是升息本身</h2>
+<ul>
+<li>市場不喜歡升息：升息讓美元（DXY）走強，所有以美元計價的資產走弱。</li>
+<li>慢而有序的升息可以接受：2015 年 11 月到 2019 年，美聯儲用了四年升息，市場先小跌、之後一路上涨。</li>
+<li>市場真正討厭的是快速升息，如 2021–2022 年：美聯儲一宣布升息，市場就開始搶跑下跌；2022 年 1 月到 10 月（273 天）市場一路下跌，納指從宣布升息到見底跌了 38%；市場在升息週期結束前就見底了——2022 年 10 月市場開始恢復，而利率直到 2023 年 7 月才見頂。</li>
+<li>規律：市場從升息消息一出就開始跌，一直跌到升息週期過半（約 50–60%）才轉向；所以任務是預估升息會持續多久——市場一嗅到美聯儲要停手、要暫停，就會開始上涨。</li>
+</ul>
+<h2>三、AI 交易是靠債務融資撐起來的</h2>
+<ul>
+<li>他引用 Bill Ackman 的推文：美聯儲 12 月 9 日再犯錯；金融環境已大幅收緊；SpaceX 這家投資級公司剛以 8.25% 的利率發有擔保債，而 IPO 時無擔保債利率不到 6%——AI 公司的借貸成本上升了約 2.5 個百分點，融資利率漲了 30% 以上。</li>
+<li>整個經濟由 AI 革命驅動，整個 AI 革命由債務融資驅動；升息等於給整個 AI 擴張拉手煞車。</li>
+<li>當天個股：輝達 142 美元、SpaceX 回到 115 美元、CoreWeave 跌到 37 美元的歷史低點；唯一逆勢的市場是印度市場，原因是它不沾 AI；沃爾瑪接近歷史高點，同樣因為不沾 AI。</li>
+<li>如果利率繼續上升，資料中心專案建不起來，甚至可能還不上債；通膨不減速、成長在加速，美聯儲要把通膨壓回 2%，就得一直加下去。</li>
+</ul>
+<h2>四、軟銀：借了 500 多億美元投 AI，股價從高點跌 70%</h2>
+<ul>
+<li>軟銀從高點跌了 70%，回到 2024 年 7 月的水準；原因是這家公司在 12 個月裡借了 500 多億美元投 AI 專案（主要是 OpenAI 這類）。</li>
+<li>孫正義（口播 "Masha-San"/"Mashayosi Sun"）是出了名的 all-in 型投資者，以前也有過 50% 的大回撤；不沾 AI 交易的公司則在漲。</li>
+</ul>
+<h2>五、兩種情景：短暫修正，還是 12 個月熊市</h2>
+<ul>
+<li>短暫修正的例子：2025 年納指跌 26%，只用了 50 天就跌完、然後恢復。</li>
+<li>長期修正的例子：2021–2022 年升息週期那次，約一年。</li>
+<li>現在納指已跌 20%，BTC 跌破 57,500 美元，Zcash 跌破 700 美元；市場開始認為這會是一場持久修正。</li>
+<li>情景一（反彈）：為反彈做好準備；情景二（長期熊市）：如果進入像 2021–2022 年那樣的 12 個月納指熊市，就完全脫離四年週期論，「比特幣在期中選舉後見底」就成了空想；但如果市場某時看到美聯儲轉向、納指恢復，比特幣也可能快速恢復。</li>
+<li>他認為值得認真討論的正是沒人敢說的第二種情景。</li>
+</ul>
+<h2>六、Tom Lee 的另一面：現在就買</h2>
+<ul>
+<li>節目中兩次播放 Tom Lee 的採訪片段：「你會買這次拋售嗎？會。我認為我們已接近拋售的尾聲，因為做空科技已成為共識交易；殖利率已經回落；美聯儲之前很鷹派，現在可能轉向鴿派；利率曾觸及 5%、人們擔心到 6%，現在已回到 5% 以下。」</li>
+<li>Tom Lee 看好：AI 與儲存瓶頸、Mag 7 正在見底、軟體、加密、廣泛的週期股與金融股；他稱之為「壓縮的彈簧」——基本面還在。</li>
+<li>歷史類比：1997 年，公開網際網路與瀏覽器推出三年後，思科在葛林斯潘「非理性繁榮」言論後大跌 50%，一年後又漲回 18 美元（口播數字，按其原話記錄）；ChatGPT 剛過三周年，AI 交易還很早期。</li>
+</ul>
+<h2>七、這輪升息不一樣：從 4% 起步，付不起長期高利率</h2>
+<ul>
+<li>此前兩次升息週期都是從接近零的利率起步（2015 年、2020 年新冠後降息至零並維持太久，鮑爾因此被稱為 "Too Late Jerome Powell"）；而這輪是從聯邦基金利率約 4–4.25% 起步。</li>
+<li>美國國債 40 萬億美元，按約 4% 的利率，每年利息支出 1.6 萬億美元，約佔 GDP 的 4%；再往上加，整個國家會被壓垮。</li>
+<li>因此他的論點：這不會是一輪漫長的激進升息；美聯儲只是從略低於 4% 微調到略高於 4%，不會加到 8% 或 9%，否則就是回到 1970 年代、修正持續數年。</li>
+<li>另一組數據：Trueflation 顯示美國真實通膨為 2.98% 且在下降；如果油價繼續回落，通膨可能到 2.6–2.7%；他的情景是：1 月民主黨上台、戰爭結束、油價下來，2–3 月通膨開始回落，AI 交易隨之反轉。</li>
+<li>結論：升息週期不會永遠持續，因為它是從 5%（口播，約數）這個高位起步的，「除非你要加到 6%、7%、8%、9%、10%，那世界就有比這大得多的問題了」。</li>
+</ul>
+<h2>八、買還是等：納指 200 週均線與他的「甜點」理論</h2>
+<ul>
+<li>前提假設：比特幣與股市的相關性處於多年來最高點，股市恢復、比特幣才恢復。</li>
+<li>納指 200 週均線：除 2008–2009 年金融危機與 2022–2023 年升息週期短暫跌破（僅跌破 6%）外，納指一般都守在 200 週均線之上；歷次修正大多在 200 週均線附近止住。</li>
+<li>兩個選擇：現在買（納指已從歷史高點跌 20%），或等 200 週均線（距歷史高點 33%，還需再跌約 16–17%）；問題是如果等、而它永遠到不了，你會後悔。</li>
+<li>他的推文原話：「如果你現在部署，準備好難受一陣子、覺得自己買早了、犯了大錯；如果你現在不部署，準備好難受——因為你心裡清楚，納指 20% 的修正本來就足夠值得開始部署。」</li>
+<li>「甜點」就是這個位置：你明知買了還會繼續跌、會難受，但你也知道如果不買，六個月後回頭看會覺得「明明那麼明顯」；他認為 AI 革命依然完整——戴爾財報雖然暴雷，但報告了記憶體嚴重短缺，說明資料中心與 AI 的需求遠大於供給，基本面很強。</li>
+<li>如果買錯了：如果市場再跌 16% 然後恢復，2025 年 2 月那次修正不到四個月就收復了失地；在半山腰部署的話，兩個月就回本；最壞情況（2021–2022 年式長期熊市）：在標普跌 20% 時部署，要被套一年才見錢；但那次利率是從 0 加到 5%，現在完全不是那個起點。</li>
+</ul>
+<h2>九、回測數據：納指跌 20% 時買，比等 200 週均線更划算</h2>
+<ul>
+<li>QQQ（納指）回測：歷史上觸及 200 週均線 3 次、接近但沒碰到 5 次——等觸及才買的話，有 5 次會錯過進場；觸及後買入，新高分別在 30 週、16 週內出現。</li>
+<li>投入 10,000 美元、納指跌 20% 時買入並持有一年：典型回報 +38%，最好情況 +83%；持有兩年：典型 +60%，最好 +100%；最壞情況是進一步回撤、但持有後收復。</li>
+<li>等 200 週均線再買：持有兩年典型回報只有 +15%，最好 +80%——結論是跌 20% 時部署比等 200 週均線更划算。</li>
+<li>半導體指數 SOX：今年漲幅已全部回吐（跌 45.3%，回到 1 月水準）；每次跌 40% 時買入，持有 1 年典型回報 +42%，最好 +132%；持有 10 年典型回報翻倍；2021–2022 年升息週期中 SOX 跌了約 47%，現在已從高點跌 40%，200 週均線還在約 25% 之外。</li>
+<li>持有 3–4 年的話，兩種買法差別不大；持有 10 年以上，等跌幅更大再買略好。他的結論：在納指 -20% 到 200 週均線之間、SOX -40% 到 200 週均線之間買入，都是合理的。</li>
+</ul>
+<h2>十、情緒與比特幣：恐懼指數全年第二差</h2>
+<ul>
+<li>恐懼與貪婪指數（CoinMarketCap 口播）是全年第二差的讀數（讀數 8）；人們很少像現在這樣對比特幣與科技失去信心，連最堅定的信仰者也是如此。</li>
+<li>Vinny Lingham（把 Ran 帶進加密圈的人）發問：「幫我理解一下比特幣未來五年的牛市理由——比特幣現在的價格比五年前還低，而這期間政府印了錢、通膨不再是暫時的、比特幣硬頂 2100 萬、終極抗通膨資產……下一個催化劑是什麼？」</li>
+<li>Ran 的回答：每次找催化劑都找不到，不找的時候催化劑反而來了；有評論說 Saylor 就是催化劑——他的看法是 Saylor 回購了 28% 的 STRC、稀釋了 MSTR 股東，MSTR 的 MNAV（淨資產溢價倍數）是歷史最低，「這傢伙做的事簡直是狗屎」，以後會專門做一期 STRC。</li>
+<li>最後的市場檢查：BTC 回到 58,000 美元，納指仍跌 4%；一年前部署的投資者沒賺到錢，兩年前部署的投資者在納指上年化賺了 16.8%。「是時候開始部署了，我不知道還能怎麼跟你們說。」</li>
+</ul>
+<h2>十一、他的自我檢討：「過早部署症」（premature deployation）</h2>
+<ul>
+<li>定義：在修正初期部署太多，越往下跌部署得越少——這正是他本輪犯的錯。</li>
+<li>他手上有 700 萬美元可部署，已部署約 50%，還剩 330 萬美元；問題是修正初期他就激進部署了，本應一開始少部署、越害怕越要多部署；現在越跌越害怕、部署得越少，「應該反過來——價格越便宜，越要多部署」。</li>
+<li>他說這會是本輪學到的教訓，以後就用 "premature deployation" 這個詞來概括。</li>
+</ul>
+<h2>十二、AI 革命為什麼還會繼續</h2>
+<ul>
+<li>他公司的會計 Matt：以前分析準備一家公司的財務報表要一個月，現在用 Claude 三到八分鐘就能出完整分析報告；開發 Bubbles 應用花了幾個月，而同一個開發者用 AI 一週就搭出了一個交易終端。</li>
+<li>「AI 讓我們的生產力提高了百萬倍……那不會改變，只會指數級變快」；不會因為市場下跌就回去用搜尋引擎、回去人工讀財報；還需要儲存、需要技術、需要資料中心；「寧願多付一點資料中心費用、不雇 10 個會計，30 秒拿到答案，而不是等 10 天。」</li>
+<li>SOX 指數自 2000 年以來的圖表一直在向上，因為人們越來越依賴技術、越來越依賴半導體；「我們正處在技術革命的開端，每個人都在用 AI，不會倒退。」</li>
+</ul>
+<h2>十三、節目尾段：Martin 的新節目與黑 Friday 推廣</h2>
+<ul>
+<li>Martin（曾「劫持」過 Ran 的節目）回來宣傳他的新節目 "247 Crypto Live"：《我是如何找到底部》，用 2022 年找到比特幣底部的三張圖，找類似的形態，認為現在接近累積區間、訊號接近觸發。</li>
+<li>Ran 推廣自己的 247 研究小組：10 多名研究員、用專有 AI 工具每天全天掃描市場；Black Friday 特價：4,000 人規模、還剩 138 個名額，每月不到 100 美元（原價 200 美元），註冊送最高 15 萬美元的 funded account。</li>
+</ul>
+<hr />
+<h3>ASR 歸一與存疑說明</h3>
+<ul>
+<li>"Kevin Wash" = Kevin Warsh（美聯儲主席提名人，口播）；"Genseng" = Jensen（黃仁勳）；"Dexie" = DXY（美元指數）；"socks" = SOX（費城半導體指數）；"Azdec" = Nasdaq；"Masha-San"/"Mashayosi Sun" = 孫正義（Masayoshi Son）；"Sailor" = Saylor；"euro-nur" = year-on-year（年增）；"Fib 2025" = 2025 年 2 月；"101 Grockbots" = 101 個 Grok 機器人（他的研究機器人）；"Kapoor"為其研究員口播名。</li>
+<li>思科 1997 年的數字（「跌到 5，一年後 18」）按其原話記錄，未核實。</li>
+<li>12 月 9 日 FOMC、97.8%/58.4% 升息機率、40 萬億美元國債、1.6 萬億美元利息等數字均為發言者自述，未經核實。</li>
+<li>「1 月民主黨上台、戰爭結束」為其情景假設，不是事實陳述。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Ran Neuner: The Final Inflation Data Before the Fed's Rate Hike — Is Now the Sweet Spot to Deploy Capital?</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/ran-neuner-final-inflation-data-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast: https://x.com/i/broadcasts/2qVYJBnbmnyMrM</li>
+<li>Time: Aired 2026-11-25 at 22:35 CST, total length about 56 min 57 sec (3416.79 seconds)</li>
+<li>Host: Ran Neuner (English-language program, solo show, with two clips of a Tom Lee interview played in between)</li>
+<li>Transcript: 1,134 lines, covering [00:00:00]–[00:56:37]</li>
+<li>Note: Everything below is the speaker's own stated views, unverified. See the end for ASR normalizations.</li>
+</ul>
+<h2>In One Sentence</h2>
+<p>Ran's core judgment: the combination of PCE at 3.8% and Q3 GDP growth of 4.3% — "fuel on the fire" — means the Fed is almost certain to hike in December and markets are entering a rate-hiking period. But because this hiking cycle starts from 4%, with the US carrying $40 trillion of debt and unable to afford high rates for long, he does not think the hikes will be prolonged. With the Nasdaq already down 20%, this is what he calls the "sweet spot to start deploying capital": buy now and you will feel sick for a few months; don't buy, and six months from now you will look back and say it was "so obvious."</p>
+<h2>1. The Data: Fuel on the Fire</h2>
+<ul>
+<li>PCE inflation (the Fed's preferred inflation gauge, not CPI) rose 0.3% month on month, in line with expectations; year on year it is 3.8%, against the Fed's 2% target.</li>
+<li>US GDP grew 4.3% in Q3, far above the 3.4% expected — the economy grew about 30% faster than anticipated.</li>
+<li>His analogy: 3.8% inflation is the fire, and very fast economic growth is fuel on that fire. The Fed believes inflation is happening because growth is too fast; to slow inflation it must slow growth, and the way to do that is to raise rates.</li>
+<li>The probability of a December hike is 97.8%, and of another hike in January 58.4%; core PCE accelerated from 3.1% in September to 3.3% in October, reinforcing concerns about persistent inflation.</li>
+<li>The biggest culprit in PCE was gasoline: during the October measurement period oil prices were between $106 and $120 (the highs before the midterm elections); oil has since fallen back to $92.</li>
+<li>Market reaction: Nasdaq futures fell 3.27% (down 4.2% at one point intraday), hitting session lows; BTC was also near its session lows, tracking back toward the weekend low of $55,000; the S&P 500 fell 2.69%; Nvidia was back at $142, having given back all of the gains from Jensen Huang's return.</li>
+</ul>
+<h2>2. The Hiking Cycle: What Markets Hate Is Fast Hikes, Not Hikes Themselves</h2>
+<ul>
+<li>Markets don't like rate hikes: hikes strengthen the dollar (DXY), and every asset denominated in dollars gets weaker.</li>
+<li>Slow, orderly hikes are acceptable: from November 2015 to 2019 the Fed raised rates over four years; markets dipped slightly at first and then kept going up.</li>
+<li>What markets truly hate is fast hikes, like 2021–2022: as soon as the Fed announced hikes, markets front-ran them and fell; from January to October 2022 (273 days) markets went down, with the Nasdaq falling 38% from the hike announcement to the bottom. Markets bottomed before the hiking cycle ended — markets began recovering in October 2022, while rates only topped out in July 2023.</li>
+<li>The pattern: markets start falling the moment hike talk begins, and keep falling until roughly halfway through the hiking cycle (about 50–60%) before turning. So the job is to estimate how long the hikes will last — the moment markets sniff that the Fed is going to stop or pause, they will start going up again.</li>
+</ul>
+<h2>3. The AI Trade Is Propped Up by Debt Financing</h2>
+<ul>
+<li>He cited a tweet by Bill Ackman: the Fed is making another mistake on December 9; financial conditions have tightened massively; SpaceX, an investment-grade company, just issued secured debt at 8.25%, versus below 6% for its unsecured bonds at IPO — AI companies' borrowing costs have risen by about 2.5 percentage points, a financing-rate increase of over 30%.</li>
+<li>The entire economy is powered by the AI revolution, and the entire AI revolution is powered by debt financing; raising rates is effectively pulling the handbrake on the whole AI expansion.</li>
+<li>Stocks that day: Nvidia at $142, SpaceX back at $115, CoreWeave at its all-time low of $37; the only market bucking the trend was India, because it is not exposed to AI; Walmart was near all-time highs for the same reason — no AI exposure.</li>
+<li>If rates keep rising, data center projects can't get built and may not even be able to make their debt repayments; inflation isn't slowing and growth is accelerating, so if the Fed wants inflation back to 2%, it will have to keep hiking.</li>
+</ul>
+<h2>4. SoftBank: Borrowed Over $50 Billion to Bet on AI, Stock Down 70% From Its Highs</h2>
+<ul>
+<li>SoftBank is down 70% from its highs, back to its July 2024 level, because the company borrowed more than $50 billion over 12 months to invest in AI projects (mainly the likes of OpenAI).</li>
+<li>Masayoshi Son (spoken as "Masha-San"/"Mashayosi Sun") is a famously all-in investor who has had 50% drawdowns before; companies with no exposure to the AI trade are going up instead.</li>
+</ul>
+<h2>5. Two Scenarios: A Short Correction, or a 12-Month Bear Market</h2>
+<ul>
+<li>Example of a short correction: in 2025 the Nasdaq fell 26% in just 50 days, then recovered.</li>
+<li>Example of a long correction: the 2021–2022 hiking cycle, which lasted about a year.</li>
+<li>Now the Nasdaq is down 20%, BTC has broken below $57,500, and Zcash is under $700; markets are starting to price in a prolonged correction.</li>
+<li>Scenario one (the bounce): be ready for the bounce. Scenario two (a prolonged bear market): if we enter a 12-month Nasdaq bear market like 2021–2022, it breaks completely away from the four-year cycle thesis, and "Bitcoin bottoming just after the midterms" becomes a pipe dream. But if at some point markets see the Fed turn and the Nasdaq recovers, Bitcoin could recover quickly too.</li>
+<li>The scenario he thinks is worth seriously discussing is the second one — the one nobody has the guts to talk about.</li>
+</ul>
+<h2>6. Tom Lee's Other Side: Buy Now</h2>
+<ul>
+<li>The show twice played clips of a Tom Lee interview: "Would you buy the sell-off yet? Yes. I think we're near the end stages of the sell-off, because it's become a consensus short to be shorting tech. Yields, which were really worrying markets, have backed away. The Fed was quite hawkish, now it's flipping potentially dovish. Rates were touching 5%, people fearing 6%, and are now back below 5%."</li>
+<li>Tom Lee is bullish on: AI and the memory bottleneck, the Mag 7 bottoming, software, crypto, and the broad cyclical trade including financials; he calls it a "coiled spring" — the fundamentals are holding in.</li>
+<li>Historical analogy: in 1997, three years after the launch of the public internet and browsers, Cisco had a massive 50% drawdown after Greenspan's "irrational exuberance" remarks, and a year later was back at $18 (spoken figures, recorded as he stated them); ChatGPT has just crossed its third anniversary, and the AI trade is still very early.</li>
+</ul>
+<h2>7. This Hiking Cycle Is Different: It Starts From 4%, and Long-Term High Rates Are Unaffordable</h2>
+<ul>
+<li>The previous two hiking cycles both started from rates very close to zero (2015; and 2020, when rates were cut to zero after COVID and kept there too long — which is why Powell was called "Too Late Jerome Powell"). This cycle starts from a federal funds rate of about 4–4.25%.</li>
+<li>The US has $40 trillion in debt; at roughly 4% interest, annual interest payments are $1.6 trillion, about 4% of GDP. Push rates much higher and you cripple the entire country.</li>
+<li>His thesis, therefore: this will not be a prolonged, aggressive hiking cycle. The Fed is only making slight adjustments, from just under 4% to just over 4%; it will not go to 8% or 9%, because that would take us back to the 1970s, a correction lasting years.</li>
+<li>Another data point: Truflation shows US inflation at 2.98% and decreasing; if oil prices keep dropping, inflation could reach 2.6–2.7%. His scenario: in January the Democrats come in, the war ends, oil comes down, and by February–March inflation starts coming down and the AI trade turns.</li>
+<li>Conclusion: the hiking cycle will not go on forever, because it is starting from the high base of 5% (spoken, approximate) — "unless you're going to go to 6%, 7%, 8%, 9%, 10%, and if we get there, the world has much bigger problems than the ones we're talking about."</li>
+</ul>
+<h2>8. Buy or Wait: The Nasdaq's 200-Week Moving Average and His "Sweet Spot" Theory</h2>
+<ul>
+<li>Working assumption: Bitcoin's correlation with stock markets is at its highest in many years; when stock markets recover, Bitcoin will recover, and until then it won't.</li>
+<li>The Nasdaq's 200-week moving average: except for the 2008–2009 financial crisis and a brief dip in 2022–23 (only 6% below), the Nasdaq generally stays above its 200-week moving average, and corrections generally stop at or around it.</li>
+<li>Two choices: buy now (the Nasdaq is down 20% from its all-time highs), or wait for the 200-week moving average (33% below the highs, another 16–17% down). The problem: if you wait and it never gets there, you'll kick yourself.</li>
+<li>His tweet, verbatim: "If you're deploying now, prepare to feel sick for a while thinking you were too early and you made a terrible mistake. If you're not deploying now, prepare to feel sick for not deploying when you knew in your heart of hearts that a 20% correction in the Nasdaq was a good enough correction to actually start deploying."</li>
+<li>The "sweet spot" is exactly this point: you know that if you deploy now you will feel sick because prices keep going down, but you also know that if you don't deploy, in six months you'll look back and say it was so obvious. He believes the AI revolution is still firmly intact — Dell's earnings crashed, but Dell reported a massive shortage of memory, meaning demand from data centers and the AI revolution far exceeds supply; the fundamentals are strong.</li>
+<li>If you buy and you're wrong: if the market drops another 16% and then recovers — the February 2025 correction took less than four months to recover to the same levels, and deploying halfway down would have meant two months to get your money back. In the worst case (a 2021–2022-style long bear market), deploying when the S&P was down 20% meant being wrong for a year before seeing money. But back then rates went from zero to 5%; we are nowhere near zero rates now.</li>
+</ul>
+<h2>9. Backtest Data: Buying at Nasdaq -20% Beats Waiting for the 200-Week Moving Average</h2>
+<ul>
+<li>QQQ (Nasdaq) backtest: historically there have been three touches of the 200-week moving average and five near-misses — if you had waited for the touch, you would have missed the entry five times. After touches, new highs came within 30 weeks and 16 weeks respectively.</li>
+<li>Put $10,000 into the Nasdaq when it drops 20% and hold for one year: the typical result is +38%, and +83% in the best case. Hold for two years: a typical return of +60%, +100% in the best case. In the worst case you suffer a further drawdown but recover your money by holding.</li>
+<li>Waiting for the 200-week moving average instead: over two years the typical return is only +15%, with a best case of +80% — the conclusion is that deploying at -20% is smarter than waiting for the 200-week moving average.</li>
+<li>The semiconductor index (SOX): it has given up all of this year's gains (down 45.3%, back to January levels). Buying every time it drops 40% gives a typical return of +42% in one year, +132% in the best case; over ten years the typical result is doubling your money. In the 2021–2022 hiking cycle the SOX dropped about 47%; it is now down 40% from its top, with the 200-week moving average still about 25% away.</li>
+<li>If you're only holding for three or four years, the two approaches don't differ much; if you're holding for ten years or more, waiting for a bigger drop is slightly better. His conclusion: buying anywhere between Nasdaq -20% and the 200-week moving average, and between SOX -40% and its 200-week moving average, is reasonable.</li>
+</ul>
+<h2>10. Sentiment and Bitcoin: The Fear Index at Its Second-Worst Reading of the Year</h2>
+<ul>
+<li>The Fear and Greed Index (CoinMarketCap, as spoken) is at its second-worst reading of the entire year (a reading of 8); people have rarely given up on Bitcoin and technology like this — even the biggest believers.</li>
+<li>Vinny Lingham (the person who got Ran into crypto) asked: "Help me understand the bull case for Bitcoin over the next five years. Bitcoin is trading at less than it was five years ago, yet all of this has happened — governments have printed money, inflation is no longer transitory, Bitcoin is hard-capped at 21 million, the ultimate inflation hedge. What is going to be the next catalyst?"</li>
+<li>Ran's answer: every time we look for a catalyst we don't get it, and when we don't look for one, we get it. A commenter said Saylor is the catalyst — Ran's view is that Saylor has bought back 28% of his STRC and diluted MSTR shareholders; the MSTR MNAV (the valuation of MSTR versus the bitcoin held on its balance sheet) is the lowest it has ever been: "it's an absolute shitter what this guy's doing." He will do a whole show on STRC.</li>
+<li>Final market check: BTC back at $58,000, the Nasdaq still down 4%; investors who deployed a year ago have made no profit, while investors who deployed two years ago have made 16.8% per year on the Nasdaq. "It's time to start deploying. I don't know how else to say this to you."</li>
+</ul>
+<h2>11. His Self-Critique: "Premature Deployation"</h2>
+<ul>
+<li>Definition: deploying too much at the beginning of a correction and less and less as it goes deeper — exactly the mistake he made this cycle.</li>
+<li>He has $7 million to deploy and has so far deployed about 50% of it, with $3.3 million left. The problem is that he jumped the gun and deployed aggressively in the first part of the correction; he should have deployed a little at the beginning and more and more as he became more fearful. Instead, as the correction deepens he is becoming less confident and deploying less. "It should be the other way around — as prices get cheaper, I should deploy more and more."</li>
+<li>He said this will be the lesson of this cycle, and from now on he will use the term "premature deployation" for it.</li>
+</ul>
+<h2>12. Why the AI Revolution Will Continue</h2>
+<ul>
+<li>Matt, an accountant at his company: analyzing and preparing financial statements for some of their companies used to take him up to a month; he now does the full analysis with Claude in three to eight minutes and delivers full reports. Their developer — the one who coded the Bubbles app, which took months — built a trading terminal in about a week.</li>
+<li>"AI has made us a million times more productive… that ain't gonna change. It's only gonna get exponentially faster." Nobody is going back to search engines or reading financial statements by hand just because markets are down; memory, technology and data centers will still be needed. "Would I rather hire 10 more accountants, or pay a little bit more for my data center credits and get my answers in 30 seconds versus 10 days? Of course."</li>
+<li>The SOX chart since 2000 just keeps going up, because we rely more and more on technology, and therefore on semiconductors. "We are in the beginning of a technological revolution. Every single person I know is using AI. We're not going backwards."</li>
+</ul>
+<h2>13. End of the Show: Martin's New Program and the Black Friday Promotion</h2>
+<ul>
+<li>Martin (who once "hijacked" Ran's show) came back to promote his new show on the channel, "247 Crypto Live" — <em>How I Found the Bottom</em> — using the same three charts he used to pinpoint the exact bottom of Bitcoin in 2022 to look for similar patterns now; he believes we are approaching accumulation levels and the same signals are close to firing.</li>
+<li>Ran promoted his own 247 research group: a team of 10-plus researchers using proprietary AI tools to scour the markets all day, every day. The Black Friday special: 4,000 members, 138 spaces left, under $100 a month (normally $200), with a free funded account of up to $150,000 for those who sign up.</li>
+</ul>
+<hr />
+<h3>ASR Normalization and Uncertainties</h3>
+<ul>
+<li>"Kevin Wash" = Kevin Warsh (Fed chair nominee, as spoken); "Genseng" = Jensen (Jensen Huang); "Dexie" = DXY (the dollar index); "socks" = SOX (the Philadelphia Semiconductor Index); "Azdec" = Nasdaq; "Masha-San"/"Mashayosi Sun" = Masayoshi Son; "Sailor" = Saylor; "euro-nur" = year-on-year; "Fib 2025" = February 2025; "101 Grockbots" = 101 Grok bots (his research bots); "Kapoor" is the spoken name of one of his researchers.</li>
+<li>Cisco's 1997 figures ("went down to five, a year later was 18") are recorded as he stated them, unverified.</li>
+<li>Figures such as the December 9 FOMC, the 97.8%/58.4% hike probabilities, $40 trillion of US debt and $1.6 trillion of interest are all the speaker's own statements, unverified.</li>
+<li>"In January the Democrats come in, the war gets ended" is his scenario assumption, not a statement of fact.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2qVYJBnbmnyMrM">https://x.com/i/broadcasts/2qVYJBnbmnyMrM</a>（主持 Ran Neuner）· 发布日期：2026-11-25 · 时长：57 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2qVYJBnbmnyMrM">https://x.com/i/broadcasts/2qVYJBnbmnyMrM</a>（主持 Ran Neuner）· 發布日期：2026-11-25 · 時長：57 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X livestream <a href="https://x.com/i/broadcasts/2qVYJBnbmnyMrM">https://x.com/i/broadcasts/2qVYJBnbmnyMrM</a> (hosted by Ran Neuner) · Published: 2026-11-25 · Duration: 57 minutes<br>This page is the full text of the notes, manually edited from a machine transcript; all views and figures are the original speaker's own and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2qVYJBnbmnyMrM">https://x.com/i/broadcasts/2qVYJBnbmnyMrM</a>（主持 Ran Neuner）· 发布日期：2026-11-25 · 时长：57 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Ran Neuner：美联储加息前最后的通胀数据，现在是部署资金的甜点吗？ · Yat's Talks",tw:"Ran Neuner：美聯儲升息前最後的通膨數據，現在是部署資金的甜點嗎？ · Yat's Talks",en:"Ran Neuner: The Final Inflation Data Before the Fed's Rate Hike — Is Now the Sweet Spot to Deploy Capital? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

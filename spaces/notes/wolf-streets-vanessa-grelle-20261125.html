@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>The Wolf Of All Streets：比特币 50 亿美元 ETF 反转背后的隐藏成本</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/wolf-streets-vanessa-grelle-20261125.mp3"></audio></p>
 <ul>
 <li>Broadcast：https://x.com/i/broadcasts/2RekazAWqzzbpN</li>
 <li>时间：2026-11-25 22:00 CST 开播，全长约 40 分 54 秒（2453.6 秒）</li>
@@ -109,9 +120,210 @@
 <li>"美国财政部遭网络攻击"为 Scott 自述他第一次读错的标题，实际并未发生。</li>
 <li>黄仁勋/英伟达"中国间谍"相关说法为 Scott 转述的传闻，未经核实，纪要仅按其原话记录。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>The Wolf Of All Streets：比特幣 50 億美元 ETF 反轉背後的隱藏成本</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/wolf-streets-vanessa-grelle-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast：https://x.com/i/broadcasts/2RekazAWqzzbpN</li>
+<li>時間：2026-11-25 22:00 CST 開播，全長約 40 分 54 秒（2453.6 秒）</li>
+<li>主持：The Wolf Of All Streets（Scott Melker，英文節目）</li>
+<li>嘉賓：Vanessa Grelle（RK Capital，投資加密與 AI 及廣義科技）</li>
+<li>逐字稿：713 行，覆蓋 [00:00:00]–[00:40:33]，末句 "Happy Thanksgiving."</li>
+<li>說明：以下均為發言者自述觀點，未經核實。ASR 歸一見文末。</li>
+</ul>
+<h2>一句話</h2>
+<p>Scott 的標題點是：11 月比特幣 ETF 流出 50 億美元、BTC 跌破 58,000 美元，但流出主要是散戶在「吐」，而 13F 資料顯示 2,200 多家機構在第三季還在加倉——反轉的「隱藏成本」是，ETF 時代的比特幣不再由散戶定價，而是由機構的資金流定價，而機構此刻全線 risk-off、在場邊等著。</p>
+<h2>一、開場：紅色星期三</h2>
+<p>PCE 資料偏熱，BTC 跌破 58,000 美元（節目中途又回到 58,000 美元上方）；通膨繼續上升、關稅承諾再起、AI「黑掉一切」；英偉達黃仁勳回歸那波大漲已經回吐，市場隨之走弱；週一 BTC 衝到約 64,000 美元的漲幅很快就沒了。Scott 的玩笑：感恩節有黑色星期五，現在有了「紅色星期三」。</p>
+<h2>二、ETF 流出 50 億：散戶在吐，機構在接</h2>
+<ul>
+<li>11 月比特幣 ETF 淨流出 50 億美元，BTC 跌破 60,000 美元；又一日淨流出 5.7 億美元，其中 IBIT 一天就流出 5 億多美元，是有史以來最糟糕的一天之一。</li>
+<li>但看底層結構：流出主要是散戶，而持有比特幣 ETF 的是機構——按 13F 資料超過 2,200 家機構持有；第三季富國銀行（Wells Fargo）的持倉上升約 106–108%，全部是註冊投資顧問（RIA）代表客戶加倉。</li>
+<li>Vanessa 的解讀：機構「迫不及待想獲得更多曝險」，哪怕只是在下跌時小口吃進，或是因為這正是他們上線的時間點；而散戶則徹底認賠離場。</li>
+<li>投資組合建構的差異：機構只配一小部分、可以上下調倉再平衡；散戶如果加密占投資組合比重很大，熊市裡就很難拿住、很難保持信念。</li>
+</ul>
+<h2>三、宏觀：高利率 + 強美元是最差組合</h2>
+<ul>
+<li>高利率與美元走強同時出現，可能是對加密最不利的宏觀組合；BTC 跌了，但跌幅比 Vanessa 預期的要小；加密與高科技、高貝塔資產高度相關。</li>
+<li>2024 年 ETF 進來之後，交易比特幣的人變了——機構管理資金流的方式與最初的散戶投資者不同，相關性因此大幅上升；現在必須對「貶值交易」（debasement trade）有觀點，也必須理解 BTC 波動率下降是會持續還是只是加密市場的暫時特徵。</li>
+<li>Vanessa 關注的是全市場的 risk-on/risk-off，而不只是加密情緒，以及 AI 交易的 unwind；英偉達的故事是觸發因素之一；Anthropic IPO 表現不佳；現在人們在所有資產上都是 risk-off，在場邊等著看會發生什麼；加密相對 AI 交易沒那麼敏感。</li>
+</ul>
+<h2>四、PCE 與關稅：資料與資料之後</h2>
+<ul>
+<li>10 月 PCE 通膨（聯準會最看重的通膨指標）升至 3.8%，為 2023 年 4 月以來第二高；符合預期；核心 PCE 比預期高 0.1%，為 3.3% 而非 3.2%；CPI、PPI、PCE 都在繼續走高；12 月升息機率在上升。</li>
+<li>Scott 的個人看法：「我個人認為聯準會現在沒那麼重要了。」問題是：如果聯準會升息 25bp，影響是什麼、何時影響通膨？並不清楚；如果機率推到 50bp，影響會更大；但大部分通膨來自油氣成本上升與關稅，很難看到升息的即時效果。</li>
+<li>關稅：美國宣布對包括中國在內的一大批國家加徵新關稅——就在川普與習近平會面、跳著 YMCA 開心完之後；這會給通膨帶來更多價格壓力。</li>
+</ul>
+<h2>五、Anthropic IPO：看起來很像一次代幣發行</h2>
+<ul>
+<li>Anthropic：發行價 83 美元，開盤 110 美元，收盤約 81 美元，盤前約 77 美元；「基本就是編好的劇本」——IPO 的機制是幾乎沒有流通盤，不到 1% 的股份可交易，首日賣出的只有剛買入的人；目前只有約 2% 的 Anthropic 股份解禁，一年後將是巨量解禁。</li>
+<li>Scott：「看起來很像一次代幣發行」，這本身也在給市場施加壓力；私人交易長期不上市的後果是短期上漲空間被封頂。</li>
+<li>監管方面：SEC 提出的「創新豁免」（innovation exemption）針對代幣——500 萬美元上限、只需一份白皮書、非合格投資者也可參與；對幾兆美元的 IPO 毫無影響，但對代幣融資有意義。</li>
+<li>合格投資者法把很多人擋在有趣機會之外；代幣化的 pre-IPO 股份可能打開通道；RK 投資了 Securitize，也看好 Ondo 與 Superstate 等提供 pre-IPO 股份與流動性的平台。</li>
+<li>Hyperliquid 上的加密永續交易員對價格發現的判斷遠勝分析師：ANT 在 Hyperliquid 上交易於 90 多美元，預測市場 70–78 美元，IPO 實際開盤超過 100 美元；SpaceX 也是如此，交易量達數億美元；大多數人其實只想要價格曝險，並不在乎有沒有底層股份的權利；對沖已有持倉的用例也很有意思。</li>
+</ul>
+<h2>六、駭客與安全：攻擊的永遠是人，不是技術</h2>
+<ul>
+<li>近期一連串事件：FinCEN 被黑（不清楚是敏感資訊還是非敏感資訊）、CIA 被黑（影響未分類資訊）、微軟 24 小時宕機；「美國財政部遭網路攻擊」的標題他第一次讀錯了，實際並沒有發生。</li>
+<li>Vanessa：未來兩年 AI 能力將成為大量攻擊的來源，無論是加密還是常規駭客；但在加密領域，幾乎永遠是人為失誤，不是技術能力被攻破；北韓用的是社會工程學的新花樣、從內部進入，而不是黑掉技術、偷走密鑰。</li>
+<li>怎麼加固「人」這個單點故障：RK 對投資組合公司格外關注——定期電話與更新，講 OpSec 基礎流程、利用 AI 提示技術，但核心是員工培訓、意識與偏執；「真正偏執的公司會成功」。</li>
+<li>風險控制：上游流程先行，再算一旦出事的最大痛苦點與最大損失；與安全公司及 "CL911"（一群幫助追回與拆解攻擊的白帽）合作；幣安被黑一案顯示了行業的韌性——美國執法部門非常老練、介入很快，幣安讓投資者與客戶得到全額補償；「慶幸是幣安，因為他們錢多到這只是個零頭」——大多數公司填不上 64 億美元的窟窿。</li>
+<li>幣安被黑資金的去向：美國已提起訴訟，要追回北韓網路攻擊者在幣安駭客事件中竊取的超過 10 億美元加密資產；Circle 表示可以凍結這些資產但拿它們沒辦法，於是乾脆宣布它們「死亡」、重新發行 11 億美元 USDC——「如果你對穩定幣的中心化還有疑問，這就是答案」；美國政府將持有這些幣；Tether 則對追回收取 20% 的費用（他的說法）。</li>
+<li>行業缺保險：沒有大型機構願意承保駭客風險，只有一些小型機構與部分基金合作；那些「恐龍級」或已死的小協議、帳面上有幾千萬美元 AUM 卻沒人在維護，是駭客眼中的「免費錢」，這裡 200 萬、那裡 400 萬。</li>
+</ul>
+<h2>七、機構採用：我們得到了想要的一切，只是做的人是摩根大通</h2>
+<ul>
+<li>Scott：「我們實際上得到了所有想要的東西，甚至更多……只是做的人是摩根大通。」區塊鏈正在變成大型機構的管道系統；DeFi 與平行軌道也有進展，但主要是機構管道。</li>
+<li>Vanessa 是企業以太坊聯盟（Enterprise Ethereum Alliance）董事會成員；摩根大通從一開始就是該協會成員，2017 年的啟動派對就在摩根大通辦公室辦的；大機構早就理解這項技術的力量，但當時技術不安全、沒有監管框架，無法行動。</li>
+<li>RK 的投資方向：利用穩定幣的新銀行（neobanks）、託管基礎設施、收益類產品與讓投資者獲得傳統收益類投資曝險的產品；金融服務基於加密軌道創新的 15 年窗口；《GENIUS 法案》與其他監管舉措是主要瓶頸，SEC 與 CFTC 正在積極推進。</li>
+<li>Securitize 當天公告：其高收益基金 HINC 上線成為 Aave Horizon 的抵押品——一隻持有公司債曝險的基金，現在可以在 Aave 上作為抵押品；這可能是第一波新型資產進入 DeFi 抵押品的開始；代幣化貨幣市場基金可以 24/7 用作抵押品、即時且便宜，這就是產品市場契合度；隨著 TradFi 與 DeFi 更深度整合，採用會大幅上升。</li>
+<li>Fidelity 把 Aave、Chainlink 與 Uniswap 代幣帶上經紀平台——現在可以在 Fidelity 買 8 種代幣，1% 費用；Fidelity 在機構採用上一直走在前面（2017–2018 年就已在場）；三個都是老牌資產、普通投資者多少能從基本面理解；Paywords（口播）推出了比特幣返現信用卡；Coinbase 讓用戶以更機構化的方式出借比特幣。</li>
+<li>長尾資產的障礙：代幣經濟學的理解難度 vs DCF 模型；越接近股票/股權、有經濟權利的代幣越容易被理解，回購就是其中之一——人們理解回購，這也是 Hyperliquid 表現好的原因之一；Venice 也是如此。</li>
+</ul>
+<h2>八、隱私：機構採用的最大解鎖</h2>
+<ul>
+<li>Vanessa 的 X 頭像橫幅寫著「Privacy is normal」（隱私是常態）；隱私是機構採用加密的最大解鎖——沒有機構會公開自己的交易帳本、讓所有人知道它在做什麼、怎麼投資。</li>
+<li>Zcash 是老牌項目；Zama 是 RK 投資的項目；還有一家早期公司專門為機構做隱私——把隱私嵌入錢包、穩定幣、協議或交易操作中；即使看不到機構的名字，一旦有人把錢包與機構關聯起來，整個交易策略就公開了。</li>
+<li>同樣的問題也出現在 AI 上：人們把資訊倒進封閉的 LLM，對方把資訊留給自己；Venice 等項目可以屏蔽這些資訊、不拿你的資料訓練模型；散戶為了方便一直在放棄隱私，「但這仍然值得爭取」。</li>
+</ul>
+<h2>九、財庫公司：有泡沫，但底層邏輯分得清</h2>
+<ul>
+<li>RK 的投資組合包括 SharpLink、Orange（口播，比特幣財庫公司）與 Forward Industries（BNB 財庫）；財庫公司確實有過一個小泡沫；本質上是對底層代幣的槓桿曝險。</li>
+<li>SharpLink 與 Forward 在他們看來做得很好，儘管股價下跌——因為底層資產也在跌；僅靠質押或參與生態系統就能比 ETH 多賺 3%，所以理論上應該比 ETH 交易得好 3%。</li>
+<li>要成功需要規模：很多小公司因流動性問題無法維持價格形成；希望一些小公司併入大機構；Orange 是巴西的比特幣曝險（當地人無法在經紀帳戶裡持有 Strategy）；Metaplanet 證明了這個模式——在日本投資 Metaplanet 比直接投資比特幣更節稅，當時也沒有 ETF；Eric Weiss（Orange 董事）是最早向他解釋這一點的人。</li>
+<li>比特幣財庫公司：Strategy 是無人能及的那一家；BTC 沒有收益，不靠某種神奇的金融工程就無法跑贏它；現在有了不同風味的 ETF，可以獲得 BTC 或質押 ETH 的額外收益。</li>
+</ul>
+<h2>十、四年週期：2025 年他曾完全否定它</h2>
+<ul>
+<li>Vanessa：相信四年週期，但減半的影響隨時間減弱（供應減少），而且機構進來了；認為要等到 2028–29 年才會回升；與科技股、納斯達克的相關性更強了。</li>
+<li>Scott：2025 年他曾完全否定四年週期，認為「它結束了」——部分原因是 BTC 因為 ETF 提前見頂，看起來不像週期；其餘加密根本沒跟上，沒有出現上一輪那樣的山寨牛市；但他無法否認：BTC 見頂的時間與四年週期「巫師」預測的只差四天；而且見底那天恰好是 FTX 底部週年，「有人在跟我們開玩笑，我們活在模擬器裡吧」。</li>
+<li>Vanessa 的書：給傳統投資者與 RIA 的框架，講加密配置如何影響傳統投資組合；不是鼓吹買 BTC、ETH 或 Solana，只是給一個能持續持有投資組合的框架；前言由 Chris John Karla（口播，按 ASR 保留，未核實姓名拼寫）撰寫，他也出過書。</li>
+</ul>
+<hr />
+<h3>ASR 歸一與存疑說明</h3>
+<ul>
+<li>嘉賓姓名：開場口播「Vanessa Grille」、中段「Verlinda Nessa」，應為 <strong>Vanessa Grelle</strong>（RK Capital）；紀要統一用此名。</li>
+<li>"RK Capital"按口播記錄；"Orange, Ford Industries"應為 Orange 與 Forward Industries（財庫公司名，按上下文整理）；"HINC"為 Securitize 高收益基金口播名，未核實全稱；"Paywords"為比特幣返現信用卡口播名，未核實；"CL911"為白帽組織口播名，未核實全稱；"Chris John Karla"為書名前言作者口播名，未核實拼寫。</li>
+<li>Anthropic 價格口播（收盤 81、盤前 77.29、開盤 110、發行價 83）前後略有出入，按發言者自述記錄。</li>
+<li>「美國財政部遭網路攻擊」為 Scott 自述他第一次讀錯的標題，實際並未發生。</li>
+<li>黃仁勳/英偉達「中國間諜」相關說法為 Scott 轉述的傳聞，未經核實，紀要僅按其原話記錄。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>The Wolf Of All Streets: The Hidden Cost Behind Bitcoin's $5 Billion ETF Reversal</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/wolf-streets-vanessa-grelle-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast: https://x.com/i/broadcasts/2RekazAWqzzbpN</li>
+<li>Time: Aired 2026-11-25 at 22:00 CST, total length about 40 min 54 sec (2453.6 seconds)</li>
+<li>Host: The Wolf Of All Streets (Scott Melker, English-language program)</li>
+<li>Guest: Vanessa Grelle (RK Capital, investing in crypto and AI and technology broadly)</li>
+<li>Transcript: 713 lines, covering [00:00:00]–[00:40:33], final line "Happy Thanksgiving."</li>
+<li>Note: Everything below is the speakers' own account and views, unverified. ASR normalizations are at the end.</li>
+</ul>
+<h2>The one-liner</h2>
+<p>Scott's headline point: Bitcoin ETFs saw $5 billion of outflows in November and BTC broke below $58,000, but the outflows were mainly retail "puking," while 13F data shows more than 2,200 institutions were still adding in Q3 — the "hidden cost" of the reversal is that in the ETF era, Bitcoin is no longer priced by retail, but by institutional flows, and institutions are currently risk-off across the board, sitting on the sidelines waiting.</p>
+<h2>1. Opening: Red Wednesday</h2>
+<p>The PCE print came in hot and BTC broke below $58,000 (it moved back above $58,000 mid-show); inflation kept rising, tariff pledges resurfaced, AI "hacked everything"; the big rally on Jensen Huang's return to Nvidia had been given back and the market weakened with it; Monday's run to about $64,000 in BTC vanished quickly. Scott's joke: Thanksgiving has Black Friday — now there is "Red Wednesday."</p>
+<h2>2. $5 billion of ETF outflows: retail puking, institutions catching</h2>
+<ul>
+<li>Bitcoin ETFs saw $5 billion of net outflows in November, and BTC broke below $60,000; another day saw $570 million of net outflows, with IBIT alone losing more than $500 million in a single day — one of the worst days ever.</li>
+<li>But look at the underlying structure: the outflows were mainly retail, while the holders of Bitcoin ETFs are institutions — more than 2,200 institutions hold them per 13F data; Wells Fargo's holdings rose about 106–108% in Q3, all of it RIAs (registered investment advisors) adding on behalf of clients.</li>
+<li>Vanessa's read: institutions "can't wait to get more exposure," even if only nibbling on the way down, or because this is simply when they came online; retail, by contrast, has fully capitulated and left.</li>
+<li>The portfolio-construction difference: institutions allocate only a small slice and can rebalance up and down; if crypto is a large share of a retail investor's portfolio, it is very hard to hold through a bear market and keep conviction.</li>
+</ul>
+<h2>3. Macro: high rates + a strong dollar is the worst combination</h2>
+<ul>
+<li>High rates and a strengthening dollar occurring together may be the worst macro combination for crypto; BTC fell, but by less than Vanessa expected; crypto is highly correlated with high-tech, high-beta assets.</li>
+<li>After ETFs arrived in 2024, the people trading Bitcoin changed — institutions manage flows differently from the original retail investors, so correlations rose sharply; you now have to have a view on the debasement trade, and you have to understand whether BTC's declining volatility will persist or is only a temporary feature of the crypto market.</li>
+<li>Vanessa watches risk-on/risk-off across the whole market, not just crypto sentiment, as well as the unwinding of the AI trade; the Nvidia story was one of the triggers; Anthropic's IPO performed poorly; people are now risk-off across all assets, sitting on the sidelines waiting to see what happens; crypto is less sensitive than the AI trade.</li>
+</ul>
+<h2>4. PCE and tariffs: the data, and what came after the data</h2>
+<ul>
+<li>October PCE inflation (the Fed's preferred inflation gauge) rose to 3.8%, the second-highest since April 2023; it was in line with expectations; core PCE came in 0.1% above expectations, at 3.3% rather than 3.2%; CPI, PPI and PCE all kept moving higher; the probability of a December rate hike was rising.</li>
+<li>Scott's personal view: "I personally don't think the Fed matters as much anymore." The question is: if the Fed hikes 25bp, what is the impact and when does it affect inflation? It is unclear; if the odds were pushed to 50bp, the impact would be bigger; but most of the inflation comes from rising oil and gas costs and tariffs, so it is hard to see an immediate effect from a rate hike.</li>
+<li>Tariffs: the US announced new tariffs on a large group of countries including China — right after Trump met Xi Jinping and happily danced to YMCA; this will add more price pressure to inflation.</li>
+</ul>
+<h2>5. The Anthropic IPO: it looks a lot like a token launch</h2>
+<ul>
+<li>Anthropic: priced at $83, opened at $110, closed around $81, about $77 pre-market; "basically a scripted play" — the IPO mechanism means there is almost no float, less than 1% of shares tradable, and the only sellers on day one are people who just bought; only about 2% of Anthropic's shares are unlocked so far, and a year from now there will be a massive unlock.</li>
+<li>Scott: "It looks a lot like a token launch," and that itself is putting pressure on the market; the consequence of private companies staying unlisted for a long time is that near-term upside gets capped.</li>
+<li>On regulation: the SEC's proposed "innovation exemption" for tokens — a $5 million cap, only a white paper required, non-accredited investors may participate; it has no impact on multi-trillion-dollar IPOs, but it matters for token fundraising.</li>
+<li>Accredited-investor law shuts many people out of interesting opportunities; tokenized pre-IPO shares could open a channel; RK has invested in Securitize, and is also bullish on platforms such as Ondo and Superstate that offer pre-IPO shares and liquidity.</li>
+<li>Crypto perpetual traders on Hyperliquid judged price discovery far better than analysts: ANT traded above $90 on Hyperliquid, prediction markets had $70–78, and the IPO actually opened above $100; the same happened with SpaceX, with hundreds of millions of dollars in volume; most people really just want price exposure and don't care about the rights of underlying shares; the use case of hedging existing positions is interesting too.</li>
+</ul>
+<h2>6. Hackers and security: the target is always people, not technology</h2>
+<ul>
+<li>A recent string of incidents: FinCEN hacked (unclear whether sensitive or non-sensitive information), the CIA hacked (affecting unclassified information), Microsoft down for 24 hours; the "US Treasury hit by cyberattack" headline — he misread it the first time; it did not actually happen.</li>
+<li>Vanessa: over the next two years AI capabilities will be the source of a large number of attacks, in crypto and in conventional hacking alike; but in crypto it is almost always human error, not technology being broken; North Korea uses new variations of social engineering, getting in from the inside, rather than hacking the technology and stealing keys.</li>
+<li>How to harden the single point of failure that is "people": RK pays extra attention to portfolio companies — regular calls and updates, teaching basic OpSec processes and using AI prompting techniques, but the core is employee training, awareness and paranoia; "the really paranoid companies will succeed."</li>
+<li>Risk control: upstream processes first, then work out the maximum pain point and maximum loss if something goes wrong; working with security firms and "CL911" (a group of white hats who help recover and dismantle attacks); the Binance hack showed the industry's resilience — US law enforcement is very sophisticated and moved fast, and Binance made investors and customers whole; "thank God it was Binance, because they have so much money this was just a rounding error" — most companies could not fill a $6.4 billion hole.</li>
+<li>Where the Binance hack funds went: the US has filed suit to recover more than $1 billion of crypto assets stolen by North Korean cyber attackers in the Binance hack; Circle said it could freeze those assets but could do nothing with them, so it simply declared them "dead" and reissued $1.1 billion of USDC — "if you had any question about the centralization of stablecoins, this is your answer"; the US government will hold those coins; Tether, by contrast, charges a 20% fee on recoveries (his account).</li>
+<li>The industry lacks insurance: no large institution is willing to underwrite hacking risk, only some small institutions working with certain funds; those "dinosaur" or dead small protocols with tens of millions of dollars of AUM on the books and nobody maintaining them are "free money" to hackers — $2 million here, $4 million there.</li>
+</ul>
+<h2>7. Institutional adoption: we got everything we wanted, it's just JPMorgan doing it</h2>
+<ul>
+<li>Scott: "We actually got everything we wanted, and more… it's just JPMorgan doing it." Blockchain is becoming the plumbing of large institutions; there is progress in DeFi and parallel rails too, but it is mainly institutional plumbing.</li>
+<li>Vanessa is a board member of the Enterprise Ethereum Alliance; JPMorgan has been a member of the association from the very beginning, and the 2017 launch party was held at JPMorgan's offices; large institutions understood the power of this technology early on, but at the time the technology was not secure and there was no regulatory framework, so they could not act.</li>
+<li>RK's investment directions: new banks (neobanks) built on stablecoins, custody infrastructure, yield products and products that give investors exposure to traditional yield-type investments; a 15-year window of financial-services innovation on crypto rails; the GENIUS Act and other regulatory moves are the main bottleneck, and the SEC and CFTC are actively pushing forward.</li>
+<li>Securitize announced that day: its high-yield fund HINC went live as collateral on Aave Horizon — a fund holding corporate bond exposure can now be used as collateral on Aave; this may be the start of the first wave of new asset types entering DeFi as collateral; tokenized money market funds can be used as collateral 24/7, instantly and cheaply — that is product-market fit; as TradFi and DeFi integrate more deeply, adoption will rise substantially.</li>
+<li>Fidelity brought the Aave, Chainlink and Uniswap tokens onto its brokerage platform — you can now buy 8 tokens on Fidelity for a 1% fee; Fidelity has always been ahead on institutional adoption (it was there in 2017–2018); all three are established assets that ordinary investors can more or less understand from fundamentals; Paywords (as spoken) launched a Bitcoin cashback credit card; Coinbase lets users lend out Bitcoin in a more institutional way.</li>
+<li>The obstacle for long-tail assets: the difficulty of understanding tokenomics vs DCF models; tokens closer to stocks/equity, with economic rights, are easier to understand, and buybacks are one of those — people understand buybacks, which is also one of the reasons Hyperliquid has performed well; the same goes for Venice.</li>
+</ul>
+<h2>8. Privacy: the biggest unlock for institutional adoption</h2>
+<ul>
+<li>Vanessa's X profile banner reads "Privacy is normal"; privacy is the biggest unlock for institutional adoption of crypto — no institution will publish its trading ledger and let everyone know what it is doing and how it is investing.</li>
+<li>Zcash is a long-standing project; Zama is an RK portfolio project; there is also an early-stage company doing privacy specifically for institutions — embedding privacy into wallets, stablecoins, protocols or trading operations; even if you cannot see an institution's name, once someone links a wallet to the institution, its entire trading strategy becomes public.</li>
+<li>The same problem appears in AI: people pour information into closed LLMs, and the other side keeps that information for itself; projects like Venice can shield that information and not train models on your data; retail has been giving up privacy for convenience all along, "but it's still worth fighting for."</li>
+</ul>
+<h2>9. Treasury companies: there is a bubble, but the underlying logic is distinguishable</h2>
+<ul>
+<li>RK's portfolio includes SharpLink, Orange (as spoken, a Bitcoin treasury company) and Forward Industries (a BNB treasury); treasury companies did have a mini-bubble; in essence they are leveraged exposure to the underlying token.</li>
+<li>In their view SharpLink and Forward have done very well despite their share prices falling — because the underlying assets fell too; staking or participating in the ecosystem alone can earn 3% more than ETH, so in theory they should trade 3% better than ETH.</li>
+<li>Success requires scale: many small companies cannot sustain price formation because of liquidity problems; the hope is that some small companies merge into larger institutions; Orange is Brazilian Bitcoin exposure (locals cannot hold Strategy in a brokerage account); Metaplanet proved the model — in Japan, investing in Metaplanet was more tax-efficient than investing in Bitcoin directly, and there was no ETF at the time; Eric Weiss (an Orange director) was the first person to explain this to him.</li>
+<li>Bitcoin treasury companies: Strategy is the one nobody can match; BTC has no yield, and without some magical financial engineering you cannot outperform it; now there are ETFs of different flavors that can earn extra yield on BTC or staked ETH.</li>
+</ul>
+<h2>10. The four-year cycle: in 2025 he completely dismissed it</h2>
+<ul>
+<li>Vanessa: she believes in the four-year cycle, but the impact of the halving weakens over time (supply reduction), and institutions have come in; she thinks it will not recover until 2028–29; the correlation with tech stocks and the Nasdaq has grown stronger.</li>
+<li>Scott: in 2025 he completely dismissed the four-year cycle, thinking "it's over" — partly because BTC topped early due to ETFs and did not look like a cycle; the rest of crypto never followed, and there was no altcoin bull market like the last cycle; but he cannot deny it: BTC's top came within four days of the four-year-cycle "wizard" prediction, and the bottoming day happened to be the anniversary of the FTX bottom — "someone is playing a joke on us, we're living in a simulation."</li>
+<li>Vanessa's book: a framework for traditional investors and RIAs on how crypto allocation affects a traditional portfolio; it does not push buying BTC, ETH or Solana, it just provides a framework for holding a portfolio sustainably; the foreword was written by Chris John Karla (as spoken, retained per ASR, spelling unverified), who has also written a book.</li>
+</ul>
+<hr />
+<h3>ASR normalizations and points of doubt</h3>
+<ul>
+<li>Guest's name: spoken as "Vanessa Grille" in the opening and "Verlinda Nessa" mid-show; this should be <strong>Vanessa Grelle</strong> (RK Capital); the notes use this name throughout.</li>
+<li>"RK Capital" is as spoken; "Orange, Ford Industries" should be Orange and Forward Industries (treasury company names, organized by context); "HINC" is the spoken name of Securitize's high-yield fund, full name unverified; "Paywords" is the spoken name of the Bitcoin cashback credit card, unverified; "CL911" is the spoken name of a white-hat organization, full name unverified; "Chris John Karla" is the spoken name of the book's foreword author, spelling unverified.</li>
+<li>The spoken Anthropic prices (close 81, pre-market 77.29, open 110, issue price 83) vary slightly across the show; they are recorded as the speakers stated them.</li>
+<li>"US Treasury hit by cyberattack" was, by Scott's own account, a headline he misread the first time; it did not actually happen.</li>
+<li>Claims about Jensen Huang/Nvidia and "Chinese spies" are rumors relayed by Scott, unverified; the notes record them only in his own words.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2RekazAWqzzbpN">https://x.com/i/broadcasts/2RekazAWqzzbpN</a>（主持 The Wolf Of All Streets，嘉宾 Vanessa Grelle）· 发布日期：2026-11-25 · 时长：41 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2RekazAWqzzbpN">https://x.com/i/broadcasts/2RekazAWqzzbpN</a>（主持 The Wolf Of All Streets，嘉賓 Vanessa Grelle）· 發布日期：2026-11-25 · 時長：41 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X live broadcast <a href="https://x.com/i/broadcasts/2RekazAWqzzbpN">https://x.com/i/broadcasts/2RekazAWqzzbpN</a> (host The Wolf Of All Streets, guest Vanessa Grelle) · Published: 2026-11-25 · Duration: 41 minutes<br>This page is the full text of notes compiled and edited by hand from a machine transcript; all views and figures are the original speakers' own, unverified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2RekazAWqzzbpN">https://x.com/i/broadcasts/2RekazAWqzzbpN</a>（主持 The Wolf Of All Streets，嘉宾 Vanessa Grelle）· 发布日期：2026-11-25 · 时长：41 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"The Wolf Of All Streets：比特币 50 亿美元 ETF 反转背后的隐藏成本 · Yat's Talks",tw:"The Wolf Of All Streets：比特幣 50 億美元 ETF 反轉背後的隱藏成本 · Yat's Talks",en:"The Wolf Of All Streets: The Hidden Cost Behind Bitcoin's $5 Billion ETF Reversal · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

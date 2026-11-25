@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>火币圆桌：跌破 200 周线之后，加密的宏观下半场怎么打？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/htx-roundtable-200-week-ma-20261125.mp3"></audio></p>
 <ul>
 <li>Broadcast：https://x.com/i/broadcasts/2brBpPadpaaPNR</li>
 <li>时间：2026-11-25 20:00–21:00 CST，全长 59 分 49 秒（3589.33 秒；直播版 3611.39 秒，回放短约 22 秒）</li>
@@ -84,9 +95,160 @@
 <li>"财固"=财库（数字资产财库公司 DAT）；"百块找 1.75%"应为纳指涨 1.75%，存疑；"脸背做多半导体"一段口播不清，纪要略去。</li>
 <li>三人爆仓数据（30 多万人/9 成；4.72 亿美元/83%/11 万人；34 万人/23.8 亿美元/96.2%）口径不一，均按各自说法记录。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>火幣圓桌：跌破 200 週線之後，加密的宏觀下半場怎麼打？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/htx-roundtable-200-week-ma-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast：https://x.com/i/broadcasts/2brBpPadpaaPNR</li>
+<li>時間：2026-11-25 20:00–21:00 CST，全長 59 分 49 秒（3589.33 秒；直播版 3611.39 秒，回放短約 22 秒）</li>
+<li>主持：火幣 HTX，主持人火幣小小</li>
+<li>嘉賓：寧慕財商（做趨勢，1–3 個月週期）、莫老頭（做主流幣、山寨與美股）</li>
+<li>逐字稿：1060 行，覆蓋 [00:00:00]–[00:59:41]；<strong>末尾莫老頭的最後一段話沒說完，節目到此結束</strong></li>
+<li>說明：以下均為嘉賓自述觀點，未經核實；三人引用的爆倉數據口徑不一，按各自說法記錄，不調和。</li>
+</ul>
+<h2>一句話</h2>
+<p>兩位嘉賓的共識是：BTC 跌破 200 週線後大方向看空、反彈只是反彈，但「空」不等於「現在就滿倉空」——寧慕認為下方只剩 49,000 與 42,000 兩個支撐、第一目標區間機率 90% 以上，莫老頭則認為左側可以拿小倉位賭賠率、右側要等週線收回 200 週線等四個訊號；爆倉之後最該重建的不是方向感，而是「以止損定倉位」的資金管理。</p>
+<h2>一、PCE 數據今晚 21:30 公布，倉位怎麼調？</h2>
+<p>市場預期：核心 PCE 年增約 3% 多、月增 0.3%。</p>
+<p><strong>寧慕財商：</strong> BTC 跌破低點後反抽，波動約 17%，高倍槓桿存活率很低；接近週線支撐，想抄底一定低倍（2–3 倍）、倉位不大於三成，先測試支撐穩不穩；6 萬已破，57,800 的支撐已無效果；週線 MACD 進入零軸下方加頂背離，月線也是空頭訊號，時間週期與指標共振，「只有一個方向，那就是空」；沒有更好點位時只能低倍、控制倉位佈局殘餘空頭，性價比最高；下方除了 49,000 和 42,000 沒有其他支撐，任何反彈都是佈局空頭的時候；等換月後若反彈仍壓制在 6 萬以下，可以把槓桿和倉位提起來，甚至滿倉也無所謂。</p>
+<p>他還特意說明：自己每句話都要帶「僅供參考」，因為以前給過建議後有人要給他打官司；在大陸，帶單、跟單無論簽不簽合約，法律上都不受保護。</p>
+<p><strong>莫老頭：</strong> 數據前先給結論——降槓桿，有現貨可不動。12 月加息 25bp 的機率 FedWatch 已達 97.4%，市場早就消化了；<strong>真正的預期差在 1 月</strong>：1 月累計加息 50bp 的機率是 67.9%，今晚核心 PCE 月增就是用來改寫這個數字的；0.3% 是分界線——聯準會理事沃勒曾放話，核心通膨月增到 0.3% 甚至更高，就要考慮更鷹派的動作；克里夫蘭聯儲預測整體 PCE 年增可能從 3.6% 抬到 3.8%，能源價格已開始向核心傳導。</p>
+<p>三種情形：
+- 月增 0.4% 及以上 → 美元衝破 104，大餅回測 55,000–55,500 前低；
+- 月增 0.3% 符合預期 → 利空出盡後的弱反彈；
+- 月增 0.2% 以下 → 加息機率下降，空頭回補，可能擠拉一步。</p>
+<p>操作上：數據公布前半小時，把強平價離現價太近的倉位先降下來、降槓桿；<strong>公布後 5 分鐘絕對不要動手</strong>——PCE 和 GDP 修正值一起出，明天又是感恩節、流動性特別薄，插針會把人掃得「親爹都不認識」；等 5–30 分鐘，看 10 年期美債和美元指數是否確認大漲，再決定；「決定應該在數據公布前就做完，公布那一刻不用做決定」；空倉本身也是一種倉位、一種智慧。</p>
+<p>點位：ETH 1,607 附近可考慮看能不能守住，守住可嘗試做多，止損 1,507（30 個點）；倉位：100 倍槓桿 3% 的倉位也可以（他先口誤說 30% 又糾正為 3%），小資金慢慢滾。主持人補了一句：一跌就想加倉搬回來，這種心態非常危險。</p>
+<h2>二、BTC 跌破 200 週線：左側承接還是右側確認？</h2>
+<p>背景：BTC 在 6 萬關口反覆爭奪，現價 58,000，200 週線已跌破；主持人提到歷史上 BTC 三次跌破 200 週均線、之後三個月都會上漲。</p>
+<p><strong>寧慕財商（趨勢派）：空頭已是「打明牌」，右側確認。</strong> 從 69,000、126,000 和 15,000 多三個點畫價格通道，下通道基本在 32,000 位置；跌破最低點後沒有任何懸念，就是往下走，看怎麼佈局吃這波空頭；時間成本 1.5–3 個月；第一目標區間 49,000–42,000，機率 90% 以上；第二目標 32,000，機率最少六成以上；做空風險係數很低，但倉位管理一定要控制好槓桿，高倍在這種高波動下基本沒活路。</p>
+<p><strong>莫老頭：左側拿小倉位賭賠率，右側等四個訊號再補。</strong> 200 週線在 68,800 附近，現價比它低約 12%；打法是左側用現貨建小底倉，右側確認後再補倉。敢左側拿一點倉位是因為賠率已出來——2013 年至今，大餅跌破 200 週線這種級別的暴跌一共出現過三次，每次三個月後價格都比當時高很多；但 2018 年大餅在 200 週線底下爬了整整 14 週才收回來，時間成本很高。左側倉位標準：按「跌到 4 萬我也可以睡得著」的方式定；抄底資金分成 3–5 份，左側最多用 3 成，剩下 7 成留給右側確認後補。</p>
+<p>右側加倉訊號（至少滿足以下幾點）：
+1. 週線收盤重新站回 200 週線（68,000 附近）；
+2. 現貨 ETF 結束連續淨流出、開始連續淨流入；
+3. 穩定幣供應回流——近 30 天流出 110 億美元，比當年 Luna 崩盤後還猛，「水不回來就很難走牛」；
+4. 資金費率轉負但價格不再創新低（量價背離）。</p>
+<p>短線他更喜歡做左側：熊市裡除非大波動行情右側容易做，大部分情況震盪市左側利潤更大；舉例前一天英偉達黃仁勳回歸、大盤暴拉，他們在 ETH 1,820 做空、止損 1,856（30 多個點），後來指引點位 1,682，吃了約 140 個點利潤；越容易洗盤，左側反而比右側更容易賺錢；右側只有在大波動行情中容易賺錢，區間波動只有 50 個點時很容易被來回掃損。</p>
+<h2>三、爆倉之後：倉位紀律怎麼重建？</h2>
+<p>背景數據（三人說法不一）：主持人說最近一輪下跌超 30 多萬名交易者被強平、多單占 9 成；寧慕看到的數據是爆倉 4.72 億美元、多單占 83%、11 萬多人被強平；莫老頭說 24 小時約 34 萬人爆倉、總共爆倉 23.8 億美元、96.2% 是多單。</p>
+<p><strong>寧慕財商：</strong> 爆倉後如果只剩一份資金就很難受；他自己前幾年一個月達到 10 倍利潤、十幾天 10 倍利潤都有，但這種打法來得快去得也快，爆倉必然。最好的辦法是把資金分成 3–5 份：一份虧到 30% 必須停下來，哪怕休息兩天，再把第二份加進去；第二份再虧 30% 就乾脆停下來；如果第二份加入後翻了一倍，就重新調整成三份、用其中一份做。</p>
+<p>槓桿：他以前只做 2–3 倍、最高不超過 5 倍；入行十來年，管理體量最高時約 4,000 多萬；2019 年 519 之後因對政策不夠敏感「被弄死了」，同批很多人賺了一兩個億撤退，因為懂得撤退，他不懂撤退；越虧越上頭、想盡快回到最高峰，往往越來越難；最難的是順風順水翻了十幾倍後能不能重新回到起點重新開始。</p>
+<p>止損規則：不能大於 1.5%，放寬一點就是 2% 的波動——對 BTC 來說超過 2% 的波動就說明你已經做錯了，必須截斷虧損，不要給自己寬限；「截斷虧損，讓利潤奔跑」；順勢加倉（滾倉）也要拉開距離和時間，否則死得很快。他引用利弗莫爾：超出意外的事件必須納入考慮。</p>
+<p><strong>莫老頭：爆倉根源不是看錯方向，而是倉位管理失控。</strong> 10 月 20 日–11 月 18 日，現貨跌了 23.6%，但合約資金費率每天都是正的——大家一邊虧錢、一邊天天交資金費率死扛抄底；按美元算持倉跌了近 23%，按 BTC 本位算反而漲了 1.6%，經典越跌越加；未平倉合約已收縮近 40%，去槓桿規模創新高；11 月 19 日稍一反彈，持倉一天又漲了 4.66%，「給一點陽光又燦爛了」。</p>
+<p>重建紀律三層：
+1. <strong>算倉位</strong>：倉位 = 帳戶資金 × 單筆風險比例 ÷ 止損距離；比如 10 萬 U 帳戶，單筆最多虧 1% 即 1,000 U，止損 5% 時倉位上限 2 萬 U，實際有效槓桿也就 0.2 倍；他認為 10 倍、20 倍槓桿是最好的、最合適的。
+2. <strong>執行</strong>：先定止損再開倉，止損必須放在邏輯失效位外面；老老實實用逐倉（不用全倉，因為全倉多個單子共用保證金、同向發展死得很快）。
+3. <strong>心理</strong>：追漲殺跌是本能，熊市來回洗盤洗到你覺得不會再漲了它就漲上去了；上頭時建議關電腦關手機、好好休息、不做了；每天寫交易日記、復盤，「真正交易員的突破可能就在反思上面」；千萬不能做報復性交易；每個人的交易系統不一樣，不能照抄別人的，交易裡主觀因素很重要；交易系統是在極度痛苦時不斷反思中慢慢建立的。</p>
+<p>具體資金分配（以 1,000 U 本金為例）：拿 300 U 出來，分成 6:4——600 U 做主流市場（BTC、ETH、SOL、英偉達、黃金、白銀等交易量大的），400 U 做山寨；600 U 分成 30 份，每單一單固定虧 20 U（止損按市場波動定，比如今天 30 個點、明天波動小就 15 個點，倉位隨止損調）；比如 ETH 吃 100 多個點、止損十幾個點，盈虧比近 1:10，虧 20 U 能吃 200 U；山寨波動高利潤大，400 U 做山寨，曾有一單 LSK 多單 24 小時內翻倉、15 倍，盈虧比 1:300——一單只允許虧 20–30 U，只開 15 U，15 U × 300 倍就很可觀；主流 30 次機會 + 山寨 20–30 次機會，總共 50–60 次機會，「你能連虧 50 次 60 次嗎」——除非管不住手；以止損定倉位，慢慢摸索，最終最起碼不會虧多少錢、甚至不會爆倉；左側講究精準入場、賠率高，右側順勢勝率高但盈虧比沒那麼高。</p>
+<h2>四、反彈是空頭回補，還是增量資金回來了？</h2>
+<p>背景：ETF 單月流出 30 多億美元（主持人說法），AI 板块英偉達前陣反彈，Solana ETF 回暖。</p>
+<p><strong>寧慕財商：</strong> 11 月 BTC ETF 累計流出 47 億美元，單單 IBIT 一支就流出約 5.09 億美元；接下來哪怕一兩天淨流入也沒什麼用；本月出現極端波動，上下 17% 左右拉到最高 64,000；想博反彈就以這個最高點為主，大方向是空，不要一口氣上 10 倍 20 倍，控制在 5 倍左右；如果衝破高點，不加倉也可以、加也可以，不加最好；如果衝過去重新壓制跌回來再加，安全係數最高；回補只是對本月從 81,000 一路跌下來的反彈，短期內反轉機率很低很低；大週期結構已破位；AI 板块、財庫、ETF——美股大盤（納指、標普 500）沒企穩之前不要抄底；週線已跌破趨勢線均線，月線是空頭開線，月線沒反轉之前不建議抄底，抄底可能被「抄家」；抄底和摸頂都很危險，一定要等關鍵回調位（斐波那契）出現反轉 K 線再抄底，安全係數才高。</p>
+<p><strong>莫老頭：</strong> 黃金從今年 1 月 5,600（口播，單位未明）直接跌到 3,550，現在約 3,510，一個月跌 11%；不是避險失效，是黃金重新回到利率定價——10 年期美債殖利率快 5%，實際利率衝到 2.88% 附近，持有不生息的黃金機會成本太高；這一波黃金還有一部分是被當成提款機砸下來的：黃仁勳恢復 CEO 職務後大家不用被迫賣黃金換現金了；過去三年黃金與實際利率脫鉤的行情結束了，利率又成了錨點；現金（短債、貨幣基金類）是當下性價比最高的避險之一，但不是唯一；美元現金和人民幣現金不是一回事（匯率本身就是一層風險）；USDT 不等於現金（發行方風險、脫錨風險，放交易所還多一層平台風險，前段時間有平台被盜）；拿現金不是為了躺平，現金真正的價值是選擇權——市場大跌時手裡有子彈，而不是被迫在地板上割肉；現在實際利率快 3%，拿現金是市場付錢讓你等機會，等聯準會轉向、實際利率往下走，黃金和大餅會最先受益；到時候再從現金裡出來，就是最好的避險資產。</p>
+<h2>五、宏觀環境：美元與實際利率走強，現金是唯一避險嗎？</h2>
+<p>背景：美元處在 19 個月高位，實際利率達到 2002 年以來最高，黃金也在下跌，BTC 跌得很厲害。</p>
+<p><strong>寧慕財商：避險資產基本上集體失靈，黃金、比特幣、基金沒有一個好的。</strong> 三種避險：①流動性避險——現金、短債，避的是拿不到錢的風險；②通膨避險——以黃金為主，比特幣七八年前是對抗美元的（美元跌 BTC 漲），現在完全跟風險資產一樣、跟著美股大盤走；③增長避險——有現金流的公司，避經濟下滑風險。黃金白銀在最高峰附近時他就說會腰斬，現在白銀已遠遠超過腰斬，黃金還沒到；黃金預計會跌破 700（國內價格），那個時候基本離底部不遠了；拿現金：拿人民幣會更好一點，拿 U 波動其實也挺大；如果完完全全拿 U，還不如用很小的倉位去做比特幣；現金分三層：應急（生活費，絕對不動）、戰術現金（專門等錯殺，市場給機會時上場）、保證現金（永遠不參與交易，永遠拿著，等真正該出手的時候、預想不到的事情發生時進場撿便宜籌碼）。</p>
+<p><strong>莫老頭：三個訊號放在一起看比較清晰，代表三股完全不同的錢。</strong> ETF 流出約 50 億、財庫在接、納指漲 1.75%——機構、企業和鏈上蓄勢資金在這裡進行鬥爭；判斷反彈真假還是看 ETF：11 月到現在淨流出快 49.4 億美元，大概率創歷史以來最大單月流出……（逐字稿到此結束，這段話沒說完。）</p>
+<hr />
+<h3>ASR 歸一與存疑說明</h3>
+<ul>
+<li>「火避」=火幣（HTX）；「凝墓才商/凝目財商」=寧慕財商；「孟老頭」=莫老頭；「火避小小」=火幣小小。</li>
+<li>「200 週限/週軍線」=200 週均線；「加限」=加息；「費博衛」=FedWatch；「臥類/臥樂」=沃勒（聯準會理事 Christopher Waller）；「流行經濟研究院」=克里夫蘭聯儲的通膨預測（口播「克里夫蘭」被 ASR 誤聽）。</li>
+<li>數字按口播整理：「49000 到 10000」=49,000–42,000；「4200」=42,000；「6 萬 9」=69,000；「12 萬 6」=126,000；「3 萬 2」=32,000；「1600 零七」=1,607；「15007」=1,507；「百分之四年六六」=4.66%。</li>
+<li>黃金價格口播「5,600/3,550/3,510」與「跌破 700」的單位未明，按口播記錄，未核實。</li>
+<li>「財固」=財庫（數位資產財庫公司 DAT）；「百塊找 1.75%」應為納指漲 1.75%，存疑；「臉背做多半導體」一段口播不清，紀要略去。</li>
+<li>三人爆倉數據（30 多萬人/9 成；4.72 億美元/83%/11 萬人；34 萬人/23.8 億美元/96.2%）口徑不一，均按各自說法記錄。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>HTX Roundtable: After the Break Below the 200-Week Moving Average, How Do You Play Crypto's Macro Second Half?</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/htx-roundtable-200-week-ma-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast: https://x.com/i/broadcasts/2brBpPadpaaPNR</li>
+<li>Time: 2026-11-25 20:00–21:00 CST, total length 59 min 49 sec (3589.33 seconds; the live version was 3611.39 seconds, so the replay is about 22 seconds shorter)</li>
+<li>Host: Huobi HTX, moderated by Huobi Xiaoxiao</li>
+<li>Guests: Ningmu Caishang (trend trader, 1–3 month horizon) and Mo Laotou (trades major coins, altcoins and US stocks)</li>
+<li>Transcript: 1060 lines, covering [00:00:00]–[00:59:41]; <strong>at the end, Mo Laotou's final remarks were cut off mid-sentence and the program ended there</strong></li>
+<li>Note: Everything below is the guests' own stated views, unverified; the three participants cited liquidation figures on different bases, recorded here as each of them stated them, without reconciliation.</li>
+</ul>
+<h2>In one sentence</h2>
+<p>The two guests agreed: after BTC broke below the 200-week moving average, the big direction is bearish and bounces are only bounces — but "bearish" does not mean "go all-in short right now." Ningmu believes only two supports remain below, at 49,000 and 42,000, with a probability of over 90% for the first target zone; Mo Laotou believes the left side can take a small position to bet on the odds, while the right side should wait for four signals such as the weekly close reclaiming the 200-week average. And after a liquidation, what most needs rebuilding is not a sense of direction, but money management that "sizes positions by the stop-loss."</p>
+<h2>1. PCE data out tonight at 21:30 — how should positions be adjusted?</h2>
+<p>Market expectations: core PCE at a little over 3% year-on-year, up 0.3% month-on-month.</p>
+<p><strong>Ningmu Caishang:</strong> After BTC broke below its low and bounced, volatility is around 17%, and the survival rate for high leverage is very low. Near weekly support, if you want to bottom-fish, keep leverage low (2–3x) and position size no more than 30%, and first test whether the support holds. The 60,000 level is already broken and the 57,800 support no longer works. The weekly MACD has moved below the zero line with a bearish divergence, and the monthly chart also shows a bearish signal — the time cycles and indicators resonate: "there is only one direction, and that is short." When there is no better entry, the best risk-reward is to lay out residual shorts with low leverage and controlled size. Below, there are no supports other than 49,000 and 42,000, and every bounce is an opportunity to lay out shorts. After the month rolls over, if the bounce is still capped below 60,000, leverage and size can be raised — even a full position would be fine.</p>
+<p>He also specifically explained that he prefixes everything with "for reference only" because someone once threatened to sue him after taking his advice; in mainland China, paid trade-calling and copy-trading are not legally protected whether or not a contract is signed.</p>
+<p><strong>Mo Laotou:</strong> His conclusion before the data: cut leverage; spot holdings can stay put. The probability of a 25bp hike in December has already reached 97.4% on FedWatch and the market has long since priced it in. <strong>The real expectation gap is in January</strong>: the probability of a cumulative 50bp of hikes by January is 67.9%, and tonight's core PCE month-on-month figure is what will rewrite that number. 0.3% is the dividing line — Fed Governor Waller has said that if core inflation comes in at 0.3% month-on-month or higher, more hawkish action should be considered. The Cleveland Fed forecasts headline PCE could rise from 3.6% to 3.8% year-on-year, and energy prices have already begun passing through into core.</p>
+<p>Three scenarios:
+- Month-on-month at 0.4% or above → the dollar breaks through 104 and Bitcoin retests the prior low at 55,000–55,500;
+- Month-on-month at 0.3%, in line with expectations → a weak bounce once the bad news is out;
+- Month-on-month at 0.2% or below → hike probabilities fall, shorts cover, and price could get squeezed up a step.</p>
+<p>In practice: half an hour before the release, reduce positions whose liquidation price is too close to the current price and cut leverage. <strong>Absolutely do not trade in the first 5 minutes after the release</strong> — PCE and the GDP revision come out together, tomorrow is Thanksgiving with especially thin liquidity, and the wicks will sweep people out beyond recognition. Wait 5–30 minutes and see whether the 10-year Treasury yield and the dollar index confirm a big move before deciding. "The decision should be made before the data comes out; at the moment of release there is no decision to make." An empty position is itself a position, and a form of wisdom.</p>
+<p>Levels: around ETH 1,607, watch whether it holds; if it holds, a long can be attempted, with a stop at 1,507 (30 points). Sizing: even 100x leverage at 3% position size is acceptable (he first misspoke 30% and then corrected it to 3%); small capital should compound slowly. The moderator added: the urge to add to a position to win it back the moment price drops is a very dangerous mindset.</p>
+<h2>2. BTC below the 200-week moving average: buy the left side or wait for right-side confirmation?</h2>
+<p>Background: BTC is fighting repeatedly around the 60,000 level, currently at 58,000, and the 200-week moving average has been broken. The moderator noted that historically BTC has broken below the 200-week average three times, and in each case the price was higher three months later.</p>
+<p><strong>Ningmu Caishang (trend trader): the shorts are already "playing with their cards face up" — right-side confirmation.</strong> Drawing a price channel through three points — 69,000, 126,000 and a little over 15,000 — the lower channel sits around 32,000. After the break below the lowest point there is no suspense left; price is heading down, and the only question is how to position to capture this short leg. Time cost: 1.5–3 months. First target zone 49,000–42,000, with a probability of over 90%; second target 32,000, with a probability of at least over 60%. The risk factor for shorting is very low, but position management must keep leverage under control — at this volatility, high leverage basically has no chance of survival.</p>
+<p><strong>Mo Laotou: take a small position on the left side to bet on the odds; wait for four signals before adding on the right side.</strong> The 200-week average is around 68,800 and the current price is about 12% below it. His approach: build a small starter position in spot on the left side, and add after right-side confirmation. He dares to take a small left-side position because the odds are already there — since 2013, crashes of this magnitude, with Bitcoin breaking below the 200-week average, have happened three times, and each time the price was much higher three months later. But in 2018 Bitcoin crawled below the 200-week average for a full 14 weeks before reclaiming it, so the time cost is high. Left-side sizing rule: size it so that "even if it falls to 40,000 I can still sleep at night." Split bottom-fishing capital into 3–5 tranches, use at most 30% on the left side, and keep the remaining 70% for adding after right-side confirmation.</p>
+<p>Right-side add signals (at least several of the following):
+1. The weekly close reclaims the 200-week moving average (around 68,000);
+2. Spot ETFs end their run of consecutive net outflows and begin consecutive net inflows;
+3. Stablecoin supply flows back in — over the past 30 days it has flowed out by 11 billion dollars, even more violently than after the Luna collapse back then; "if the water doesn't come back, a bull market is very hard";
+4. Funding rates turn negative but price stops making new lows (volume-price divergence).</p>
+<p>For short-term trading he prefers the left side: in a bear market, unless there is a big volatile move where the right side is easy to trade, most of the time a ranging market is more profitable on the left side. As an example, the day before, when Nvidia's Jensen Huang returned and the broader market spiked, they shorted ETH at 1,820 with a stop at 1,856 (a little over 30 points), and later guided to a level of 1,682, capturing about 140 points of profit. The easier it is to get shaken out, the easier the left side actually makes money compared with the right side; the right side only makes money easily in big volatile moves, and when the range is only 50 points wide it is easy to get stopped out back and forth.</p>
+<h2>3. After a liquidation: how do you rebuild position discipline?</h2>
+<p>Background figures (the three disagree): the moderator said that in the latest leg down, more than 300,000 traders were liquidated, with longs accounting for 90%; the figures Ningmu saw were 472 million dollars liquidated, longs at 83%, and more than 110,000 people liquidated; Mo Laotou said about 340,000 people were liquidated in 24 hours, with total liquidations of 2.38 billion dollars, 96.2% of them longs.</p>
+<p><strong>Ningmu Caishang:</strong> After a liquidation, if only one tranche of capital is left, it is miserable. In his earlier years he made 10x in a month, and 10x in a dozen days, but that style comes fast and goes fast — liquidation is inevitable. The best approach is to split capital into 3–5 tranches: when one tranche is down 30%, you must stop, rest for a couple of days if needed, then add the second tranche; if the second tranche also loses 30%, stop altogether. If after adding the second tranche the capital doubles, re-split it into three tranches and trade with one of them.</p>
+<p>Leverage: he used to trade only 2–3x, never more than 5x. In over a decade in the industry, the largest size he managed was a little over 40 million. After the May 19 incident in 2019, he "got killed" by not being sensitive enough to policy; many people from the same cohort made one or two hundred million and withdrew, because they knew how to withdraw — he did not. The more you lose, the more tilted you get, wanting to get back to the peak as fast as possible, and it usually gets harder and harder. The hardest part is whether, after a smooth run of ten-plus x, you can go back to the starting point and begin again.</p>
+<p>Stop-loss rule: no more than 1.5%, or at most a 2% move — for BTC, a move beyond 2% means you were already wrong, and losses must be cut without giving yourself any grace period. "Cut losses and let profits run." Pyramiding with the trend (rolling positions) also needs distance and time between adds, or you die quickly. He quoted Livermore: unexpected events must be taken into account.</p>
+<p><strong>Mo Laotou: the root cause of liquidation is not being wrong on direction, but losing control of position sizing.</strong> From October 20 to November 18, spot fell 23.6%, yet futures funding rates were positive every single day — everyone was losing money while paying funding every day to stubbornly hold and bottom-fish. In dollar terms positions fell nearly 23%, while in BTC terms they actually rose 1.6% — the classic pattern of adding more as price falls. Open interest has already contracted by nearly 40%, with deleveraging at a record scale. On November 19, at the slightest bounce, open interest rose 4.66% in a single day — "give it a little sunshine and it blooms again."</p>
+<p>Three layers for rebuilding discipline:
+1. <strong>Size the position</strong>: position size = account capital × per-trade risk ratio ÷ stop-loss distance. For example, with a 100,000 U account, a maximum loss of 1% per trade is 1,000 U; with a 5% stop, the maximum position is 20,000 U, so the actual effective leverage is only 0.2x. He believes 10x to 20x leverage is the best and most appropriate.
+2. <strong>Execution</strong>: set the stop-loss before opening the position, and the stop must sit beyond the point where the trade logic fails. Use isolated margin honestly (not cross margin, because with cross margin multiple positions share one pool of margin and die quickly when they move in the same direction).
+3. <strong>Psychology</strong>: chasing rallies and panic-selling dips is instinct; a bear market will wash you back and forth until the moment you believe it will never rise again — and then it rises. When tilted, his advice is to shut the computer and the phone, rest properly, and stop trading. Write a trading journal and review every day — "a real trader's breakthrough may lie exactly in reflection." Never revenge-trade. Everyone's trading system is different and cannot be copied from someone else; the subjective element in trading matters a great deal. A trading system is built slowly, through reflection amid extreme pain.</p>
+<p>A concrete allocation (taking 1,000 U of principal as an example): set aside 300 U, split 6:4 — 600 U for major markets (BTC, ETH, SOL, Nvidia, gold, silver and other high-volume instruments) and 400 U for altcoins. Split the 600 U into 30 parts, with a fixed loss of 20 U per trade (the stop is set by market volatility — say 30 points today, 15 points tomorrow if volatility is smaller — and position size adjusts with the stop). For example, capturing 100-plus points on ETH with a stop of a dozen points gives a risk-reward of nearly 1:10, so risking 20 U can capture 200 U. Altcoins are more volatile and more profitable: with 400 U in altcoins, he once had an LSK long that flipped the account within 24 hours for 15x, a risk-reward of 1:300 — each trade may only risk 20–30 U, opening just 15 U, and 15 U × 300 is already considerable. Thirty opportunities in majors plus 20–30 in altcoins makes 50–60 opportunities in total: "can you really lose 50 or 60 times in a row?" — unless you cannot keep your hands off. Size positions by the stop-loss, feel your way slowly, and in the end at worst you will not lose much money, and may not get liquidated at all. The left side is about precise entries and high odds; the right side follows the trend with a higher win rate but a lower risk-reward.</p>
+<h2>4. Is the bounce short covering, or is fresh money coming back?</h2>
+<p>Background: ETF outflows of more than 3 billion dollars in a single month (per the moderator), a recent bounce in the AI sector led by Nvidia, and a recovery in the Solana ETF.</p>
+<p><strong>Ningmu Caishang:</strong> In November, BTC ETFs have seen cumulative outflows of 4.7 billion dollars, with IBIT alone accounting for about 509 million dollars of that. Even a day or two of net inflows from here will not mean much. This month has seen extreme volatility, swinging about 17% up and down to a high of 64,000. If you want to play the bounce, anchor on that high: the big direction is short, do not go straight to 10x or 20x, keep it around 5x. If price breaks through the high, adding is optional — not adding is best; if it pushes through and then gets rejected back down, adding then has the highest safety factor. The covering is only a bounce within this month's slide from 81,000 all the way down, and the probability of a reversal in the short term is very, very low. The large-cycle structure is already broken. AI stocks, treasury companies, ETFs — do not bottom-fish before the US equity indices (Nasdaq, S&P 500) stabilize. The weekly chart has broken below its trendline averages and the monthly chart opened bearish; do not bottom-fish before the monthly chart reverses — bottom-fishing can get your home fished out from under you. Both bottom-fishing and top-calling are dangerous; only bottom-fish after a reversal candlestick appears at a key retracement level (Fibonacci), when the safety factor is high.</p>
+<p><strong>Mo Laotou:</strong> Gold fell straight from 5,600 in January this year (as spoken; the unit was not specified) to 3,550, and is now around 3,510, down 11% in a month. It is not that hedging has failed — gold has returned to being priced off interest rates: the 10-year Treasury yield is nearing 5% and real rates have pushed to around 2.88%, so the opportunity cost of holding non-yielding gold is too high. Part of this leg down in gold was also it being used as an ATM and sold off: after Jensen Huang was restored as CEO, people no longer had to sell gold for cash under pressure. The past three years of gold decoupling from real rates are over, and rates are the anchor again. Cash (short-term bonds, money-market funds) is one of the most cost-effective hedges right now, but not the only one. Dollar cash and renminbi cash are not the same thing (the exchange rate is itself a layer of risk). USDT is not cash (issuer risk, depeg risk, and keeping it on an exchange adds a layer of platform risk — an exchange was hacked not long ago). Holding cash is not about lying flat; the real value of cash is optionality — when the market crashes you have bullets in hand, instead of being forced to sell at the floor. With real rates near 3% now, holding cash means the market is paying you to wait for an opportunity; when the Fed turns and real rates come down, gold and Bitcoin will be the first to benefit. Coming out of cash at that point makes it the best hedging asset.</p>
+<h2>5. Macro environment: with the dollar and real rates strong, is cash the only hedge?</h2>
+<p>Background: the dollar is at a 19-month high, real rates are at their highest since 2002, gold is falling too, and BTC has fallen hard.</p>
+<p><strong>Ningmu Caishang: hedging assets have basically all failed collectively — gold, Bitcoin, funds, none of them are any good.</strong> Three kinds of hedges: (1) liquidity hedges — cash and short-term bonds, which hedge the risk of not being able to get your money; (2) inflation hedges — mainly gold; Bitcoin seven or eight years ago was a counterweight to the dollar (BTC rose when the dollar fell), but now it trades exactly like a risk asset, following the US equity market; (3) growth hedges — companies with cash flow, which hedge the risk of an economic downturn. When gold and silver were near their peaks he said they would be cut in half; silver has now fallen far more than half, and gold has not gotten there yet. He expects gold to break below 700 (domestic price), at which point it will basically be not far from the bottom. On holding cash: holding renminbi is a bit better; holding U is actually quite volatile too. If you hold nothing but U, you might as well trade Bitcoin with a very small position. Cash comes in three layers: emergency cash (living expenses, absolutely untouchable), tactical cash (kept specifically to wait for mispricings, deployed when the market offers an opportunity), and reserve cash (never participates in trading, held forever, for when it is truly time to act — when something unexpected happens, go in and pick up cheap chips).</p>
+<p><strong>Mo Laotou: three signals are clearer read together; they represent three completely different pools of money.</strong> ETF outflows of about 5 billion, treasury companies buying, and the Nasdaq up 1.75% — institutions, corporates and on-chain capital positioned and waiting are fighting it out here. To judge whether a bounce is real, still watch the ETFs: net outflows so far in November are approaching 4.94 billion dollars, very likely the largest single-month outflow in history… (The transcript ends here; this remark was left unfinished.)</p>
+<hr />
+<h3>ASR normalization and doubtful points</h3>
+<ul>
+<li>"火避" (huobi misheard) = Huobi (HTX); "凝墓才商/凝目财商" = Ningmu Caishang; "孟老头" = Mo Laotou; "火避小小" = Huobi Xiaoxiao.</li>
+<li>"200 周限/周军线" = the 200-week moving average; "加限" = rate hike; "费博卫" = FedWatch; "卧类/卧乐" = Waller (Fed Governor Christopher Waller); "流行经济研究院" = the Cleveland Fed's inflation nowcast (the spoken "克利夫兰" was misheard by ASR).</li>
+<li>Numbers as spoken: "49000 到 10000" = 49,000–42,000; "4200" = 42,000; "6 万 9" = 69,000; "12 万 6" = 126,000; "3 万 2" = 32,000; "1600 零七" = 1,607; "15007" = 1,507; "百分之四年六六" = 4.66%.</li>
+<li>The units of the spoken gold prices "5,600/3,550/3,510" and "break below 700" were not specified; recorded as spoken, unverified.</li>
+<li>"财固" = treasury companies (digital asset treasury companies, DATs); "百块找 1.75%" should be the Nasdaq rising 1.75%, doubtful; one unclear passage about "脸背做多半导体" was omitted from these notes.</li>
+<li>The three participants' liquidation figures (over 300,000 people / 90%; 472 million dollars / 83% / over 110,000 people; 340,000 people / 2.38 billion dollars / 96.2%) are on different bases and are recorded as each of them stated them.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2brBpPadpaaPNR">https://x.com/i/broadcasts/2brBpPadpaaPNR</a>（主持 火币 HTX，主持人火币小小）· 发布日期：2026-11-25 · 时长：60 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2brBpPadpaaPNR">https://x.com/i/broadcasts/2brBpPadpaaPNR</a>（主持 火幣 HTX，主持人火幣小小）· 發布日期：2026-11-25 · 時長：60 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X live broadcast <a href="https://x.com/i/broadcasts/2brBpPadpaaPNR">https://x.com/i/broadcasts/2brBpPadpaaPNR</a> (host Huobi HTX, moderated by Huobi Xiaoxiao) · Published: 2026-11-25 · Duration: 60 minutes<br>This page is the full text of notes compiled and edited from a machine transcript; all views and figures are as stated by the original speakers and are unverified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2brBpPadpaaPNR">https://x.com/i/broadcasts/2brBpPadpaaPNR</a>（主持 火币 HTX，主持人火币小小）· 发布日期：2026-11-25 · 时长：60 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"火币圆桌：跌破 200 周线之后，加密的宏观下半场怎么打？ · Yat's Talks",tw:"火幣圓桌：跌破 200 週線之後，加密的宏觀下半場怎麼打？ · Yat's Talks",en:"HTX Roundtable: After the Break Below the 200-Week Moving Average, How Do You Play Crypto's Macro Second Half? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

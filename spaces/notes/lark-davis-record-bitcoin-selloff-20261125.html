@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Lark Davis：比特币 ETF 创纪录抛售，特朗普关税又回来了</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/lark-davis-record-bitcoin-selloff-20261125.mp3"></audio></p>
 <ul>
 <li>Broadcast：https://x.com/i/broadcasts/2EmYVjNArNjplo</li>
 <li>时间：2026-11-25 晚，20:51 CST 结束，全长 80 分 38 秒（4837.93 秒）</li>
@@ -102,9 +113,196 @@
 <li>纳指盘前读数口播"6.21/6.23/6.24"语义不清，纪要略去具体数值。</li>
 <li>[01:15:28-01:15:48] 约 20 秒无语音空缺。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Lark Davis：比特幣 ETF 創紀錄拋售，川普關稅又回來了</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/lark-davis-record-bitcoin-selloff-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast：https://x.com/i/broadcasts/2EmYVjNArNjplo</li>
+<li>時間：2026-11-25 晚，20:51 CST 結束，全長 80 分 38 秒（4837.93 秒）</li>
+<li>主持：Lark Davis（英文節目）</li>
+<li>嘉賓：Isabel Foxen Duke（MARA Foundation 負責人，BIP 360 聯合提案人，約 [00:25:34]–[01:00:15] 訪談段）</li>
+<li>逐字稿：1504 行，覆蓋 [00:00:00]–[01:20:33]，與總時長吻合</li>
+<li>說明：以下均為發言者自述觀點，未經核實。ASR 歸一見文末。</li>
+</ul>
+<h2>一句話</h2>
+<p>Lark 的判斷是：11 月比特幣 ETF 流出創歷史紀錄、穩定幣每天流出 4 億美元、期權交易員極度看空，但鏈上投降指標也到了過去每次熊市底部的位置——「要麼比特幣就此死掉，要麼我們正接近一個難以置信的機會」，而量子威脅是機構資金遲遲不回來的最後一塊絆腳石。</p>
+<h2>一、關稅又回來了</h2>
+<p>美國最早本週重新對中國、歐盟和另外 14 個國家加徵關稅；歐盟、日本、韓國可能面臨 15% 或更低的稅率，印度、越南可能更高，中國預計面臨更高的稅率；新關稅可能覆蓋大多數進口商品（鋼鐵、鋁、汽車已有單獨關稅）；如果各國不解決工業產能過剩問題，稅率還可以進一步上調。</p>
+<p>Lark 的調侃：川普上週才和習近平握手，回到家就「加他關稅，狠狠地加」。他懷疑這是否只是虛張聲勢、嚇唬市場好低價買回來——畢竟最高法院之前已經否決過關稅（他提到已有 60 億到 3280 億美元正退還給進口商，數字口播不清），納斯達克從 2025 年 4 月低點已漲 53%。</p>
+<h2>二、比特幣 ETF：史上最大流出月</h2>
+<ul>
+<li>BTC 現價 58,500 美元：前幾天從 55,000 美元反彈，3 天內幾乎漲了 1 萬美元（黃仁勳回歸那波拉升），現在已基本全部回吐；再測 55,000 美元一點也不會讓他吃驚。</li>
+<li>11 月 ETF 流出 47–49 億美元（SoVali 統計 49.4 億，其他統計 47.1 億），已超過 6 月的 45 億美元——<strong>比特幣 ETF 歷史上最大的單月流出</strong>，本月還剩 3 個交易日，很可能突破 50 億。</li>
+<li>他說 ETF 現在有個大問題：上漲時每天 10 億美元湧入是利好，現在是 ETF 把巨量籌碼砸進一個極其單薄、沒人敢買的市場；市場只能吸收有限的拋壓，價格隨之下跌。ETF 淨資產還剩約 720 億美元可拋（他的玩笑說法）。</li>
+<li>iBit 平均買入成本 82,000 美元，買家深套；「遊客買頂賣底」。Coinbase 溢價指數已跌到 Luna/FTX 崩盤以來最低水準。</li>
+<li>穩定幣自 10 月 1 日以來每天流出 4 億美元，累計約 300 億美元；加上 ETF 每天約 5 億美元、ETH ETF 每天約 1 億美元流出，「所有人都在賣一切」。</li>
+<li>期權交易員極度看空：湧入看跌期權的速度是 2022 年投降以來最快，看跌/看漲持倉比為 2021 年以來最高。</li>
+<li>本輪熊市已持續 411 天以上，是比特幣歷史上最長的一次，但（目前為止）也是最淺的一次；上一輪從頂到底用了 378 天，此前最長紀錄是 410 天。</li>
+</ul>
+<h2>三、投降指標 vs 底部訊號：兩邊都有</h2>
+<p><strong>投降證據：</strong>
+- CryptoQuant：比特幣投資者水下程度已到歷史上每次熊市底部的水準；每輪熊市都會跌破投資者平均成本價——按 Glassnode 數據（口播「doodles」）平均成本約 53,250 美元；如果走 2022 年那種跌法，目標是 40,000 美元，3 萬多、4 萬出頭的目標「近得讓人不舒服」。
+- 已實現虧損（相對過去一年流入資金）為 FTX 以來最重，一週內幾乎翻倍：大量資金在 75,000–85,000 美元區間流入 BTC，現在都在認虧離場。
+- 礦工在賣、數位資產財庫公司（DAT）在賣、ETF 在賣、巨鯨在賣，「所有人都在賣」。
+- 今年已有 3–4 家加密貨幣交易所破產關門（他點名 BitMart、AscendEX），DAT 公司把比特幣還給股東，穩定幣 6 週流出 300 億美元。</p>
+<p><strong>底部訊號：</strong>
+- 「比特幣要麼死掉，要麼我們正接近一個難以置信的機會」——一個 4 年半沒出現過的鏈上訊號正在出現。
+- BTC 相對長期趨勢的便宜程度，在整個價格史上只有 60 天達到過（底部 1%）；Charles Edwards 說 BTC 自 2022 年 11 月以來沒這麼便宜過，鏈上指標看起來很強，問題是資金流太差。
+- 按四年週期理論，底部應該就在上週六或未來幾天內——2017 年那輪從頂到底基本正好一年，本輪也在這個窗口裡。</p>
+<p><strong>他的綜合判斷：</strong> 大部分投降可能已經發生了（礦工、DAT 的拋售大頭已過），但還有「時間型投降」的風險：ETF 持有者拿了 18 個月–2 年，看著英偉達、美光、閃迪的漲幅，會想「我的 BTC ETF 跌了 50%，美光可沒跌 50%，賣 BTC 買美光上行空間可能更大」。在真正的買盤回來之前，價格仍可能更低；按 Charles Edwards 的說法，量子威脅的路線圖明確下來，可能會把大資金帶回來。</p>
+<h2>四、Anthropic：他自己的倉位與判斷</h2>
+<ul>
+<li>他的交易：做空 Anthropic（目前沒什麼動靜）、做多 Uniswap（被打得很慘）、做多 Hyperliquid（輕微被打）、BTC 多單今天回吐了大部分漲幅。</li>
+<li>Anthropic 消息：他認為英偉達有 95% 的概率會動用一切來「幹掉 Anthropic」——預計拿不到晶片、英偉達會全力開發開源模型「吃掉 Claude 的午餐」；Anthropic 和 OpenAI 最怕的就是英偉達開源，因為他們的希望是封閉系統、監管護城河和政府優待，而英偉達/黃仁勳走的是完全相反的路；「很多人認為」這正是 Anthropic 方面放風要搞掉黃仁勳的原因，而川普出面說了「在我任內不行」。</li>
+<li>Anthropic 的 1.2 萬億美元解禁牆即將到來，股價已跌破發行價、解禁還沒開始；未來將有數千億美元的拋壓，「如果你在 80、90、100 美元買 Anthropic，祝你好運」；盤前 78 美元。</li>
+<li>他拿 Anthropic 與沃爾瑪的市值作比較，稱 Anthropic 內部人士上市首日大舉套現、綠鞋立即行權不給股價托底，認為他們不在乎股價短期漲跌、甚至更希望它跌下去——因為估值越低，OpenAI 越難融資、越難 IPO；他對 Anthropic 態度極其負面（原話涉及人身攻擊與陰謀論，按發言者自述記錄）。</li>
+<li>如果 OpenAI 掉隊，谷歌、Anthropic、Meta 將瓜分一個每年 40 萬億美元收入的行業；別忘了 X AI。</li>
+<li>Gemini（谷歌）年底成為最佳 AI 模型的概率為 81%（預測市場數據）；谷歌有 YouTube 和幾十個極賺錢的業務，AI 一樣好甚至會成為最好，「不要做空谷歌」。</li>
+<li>Nick Bostrom 的說法：超級智慧可能讓人活到 1,400 歲（生物醫學與抗衰老突破；不衰老情況下預期壽命約 1,200–1,400 年，是個相當保守的下限）。</li>
+<li>谷歌申請了一項專利：24/7 AI 電視頻道，由你的照片生成的虛擬形象主演、用你聲音的複製品說話，按你的人口統計與觀看歷史客製廣告。</li>
+</ul>
+<h2>五、訪談：Isabel Foxen Duke 談比特幣量子威脅與 BIP 360</h2>
+<p><strong>威脅是什麼：</strong> 比特幣錢包地址由公私鑰密碼學保護，具體是橢圓曲線密碼學，被認為「量子不安全」——足夠強的量子電腦可以用 Shor 算法破解它，從公鑰推導出私鑰、偷走資金。</p>
+<p><strong>誰最危險：</strong> 最危險的是老式地址——中本聰的約 22,000 個錢包（100 多萬枚 BTC），公鑰直接寫在地址裡；Taproot 地址同樣把公鑰暴露在地址中。大多數現代地址的公鑰受雜湊保護，雜湊被認為相當抗量子，所以<strong>沒花過的地址在靜態時基本是量子安全的</strong>；一旦你從某個地址花過錢，花費過程就會暴露公鑰，該地址隨即變得量子不安全。錢包衛生：不要從同一個地址花錢後又往回打錢。</p>
+<p><strong>但個人防護夠嗎：</strong> 她認為不夠——如果約 600 萬枚 BTC 量子不安全、一下子「沒了」，你手裡的 BTC 還值錢嗎？需要整體解決方案，而不只是想著自己的密鑰。</p>
+<p><strong>時間線：</strong> 谷歌內部模型目標是 2029 年底前升級完所有系統；以太坊方面在推 2028 年；比特幣社群討論過 2032 年目標。對普通人來說，未來幾年的實際量子風險還很低，不必太擔心；但從投資角度，機構在等一個解決方案出來之前可能會先退後一步。</p>
+<p><strong>開發者能不能做到：</strong> 她認為人們低估了開發者——過去開發者遲遲沒有大動作，是因為那些都是「有了更好」的東西，鑑於比特幣的重要性與涉及的資金，大家對改動比特幣非常保守；量子抗性是「必須有」的東西，開發者社群對此已有共識，只剩下細節：引入哪種簽名、怎麼引入。她預計 2029 年之前比特幣共識層就可能出現完整的抗量子輸出類型/地址類型加抗量子簽名；難的是讓所有人都遷移過去——最耗時的不是升級本身，而是讓成千上萬的人把幣挪走，別等到 Q-Day 前三天才匆忙遷移。</p>
+<p><strong>中本聰的幣怎麼辦：</strong> 她認為有兩種走法。第一種是「難走的路」：達不成共識，出現一堆分叉、市場選贏家（像當年的硬分叉戰爭）；大多數市場參與者會選讓自己 BTC 最值錢的那條鏈，也就是不讓黑客把 600 萬枚幣砸向市場的那條。第二種是技術回收方案：先凍結這些幣，再用零知識技術讓持有人用助記詞（而非私鑰）證明所有權來取回；閃電網路發明者 Tadge Dryja（口播「Taz Drijah」）正在全職開發這類恢復協議。如果回收技術足夠好，「先凍結、臨時凍結、能用其他方式證明所有權」就很容易說服大家；中本聰本人可能永遠取不回，但那些只是忘了遷移的普通持幣人不會被坑。</p>
+<p><strong>BIP 360 是什麼：</strong> 讓比特幣抗量子需要兩樣東西——抗量子地址類型（輸出類型）和抗量子簽名。BIP 360 引入的是前者：一種名為「pay-to-Merkle-root」（P2MR）的輸出類型，基本是 pay-to-taproot 的翻版，但去掉了 Taproot 中量子脆弱的部分；它是目前唯一正式規範化的抗量子輸出類型提案，處於領先位置。簽名方面領跑的是一個雜湊簽名方案，口播為「Shrinks」（名稱按 ASR 保留存疑），由 Blockstream 研究總監 Jonas Nick 及合作者開發；她對未來幾年內拿到輸出類型和簽名方案「相當看好」。</p>
+<p><strong>BIP 360 的爭議：</strong> 一開始就禁用量子脆弱部分，會失去 Taproot 的一些功能——普通持有者用不上，但做 L2 的開發者很喜歡。最大的競爭提案是：保留這些好用但量子脆弱的 Taproot 功能，並約定一個未來日期，等量子電腦臨近時再禁用橢圓曲線密碼學；難題是沒人知道量子電腦什麼時候來，「禁用日期定在哪一天」本身就有風險。</p>
+<p><strong>升級本身的風險：</strong> 這是極其敏感、重要的程式碼，絕不能操之過急引入 bug，尤其是在 LLM 時代 bug 更容易被發現和利用；開發者採取的姿態是對的：別磨蹭、認真對待威脅、儘快在負責任的前提下給用戶抗量子選項，但不要 rushing；Dan Boneh（口播「Dan Benet」）也談過這種節奏的重要性。</p>
+<p><strong>誰在協作：</strong> 比特幣安全聯盟（Bitcoin Security Consortium）——不到一年前，大機構持幣者（Fidelity、貝萊德、MicroStrategy 等）聚在一起，承諾出資確保量子問題得到解決，資金主要以捐贈形式流向已有的比特幣開發機構（Chaincode Labs、Brink、Jack Dorsey 的 Block 旗下 Spiral）。MARA 比較特殊：早在「比特幣第二季」L2 熱潮時就在研發層面探索抗量子側鏈，CEO Fred Thiel 很早就重視這個問題；她本人曾做 Ordinals 協議與 L2，MARA 聘她與另一位 BIP 360 聯合提案人 Hunter Beast 一起做這條側鏈，Hunter 已起草 BIP 360，她參與了 V2 的撰寫；MARA 由此有了兩名員工共同提案了第一個抗量子 BIP。</p>
+<p><strong>路線圖什麼時候來：</strong> 比特幣真正去中心化，沒有哪個管理機構會發布路線圖；但各家開發機構（Chaincode Labs、Brink、Blockstream 等）會陸續公開各自的內部路線圖。Lark 約她六個月後再來更新進展。</p>
+<h2>六、尾聲問答與其他觀點</h2>
+<ul>
+<li>只有 Monero 是真正值得一提的隱私幣，「唯一真正因為隱私原因被使用的幣」（他的原話）。</li>
+<li>黃金：買黃金訂單要等幾週、總有溢價；比特幣的好處是現在什麼價就是什麼價，不用多付 2–3%。</li>
+<li>觀眾預測：BTC 到 1 月 45,000 美元、黃金到 3 月 2,900 美元；Zcash 一天漲 50%，現在挖 Zcash 的利潤是挖 BTC 的 5 倍（但算法不同、不能用同一台礦機）。</li>
+<li>有觀眾黑五貸款買 AI agent 電腦：他在 Kamino 上借了小額 SOL 貸款——如果只借出 SOL 持倉的 10%、同時還在賺 5–6% 收益，貸款可以「自己還自己」。</li>
+<li>他的持倉：Athena、HBAR、Render、ICP；投機倉位約佔加密組合的 20%，「好的一定會強勢回來」；對 HBAR、ICP 不特別看好；資金在頭部約 5 條鏈之間流動，其他鏈長期掙扎；Cardano 上線 9 年仍是「鬼城」、沒有用戶、沒有估值模型，「純粹靠炒作和投機交易」（他的原話）。</li>
+<li>SBF 紀錄片理論：由歐巴馬的電影製作公司（Higher Ground）出品，把 SBF 塑造成「愛錯了女孩的男孩」；他認為這是在為 2028 年民主黨重新入主白宮後給 SBF 總統特赦鋪路；SBF「用很多錢打通了很多關節」，矽谷出獄後還會給他幾億甚至幾十億美元，因為「他是個會配合的人」；他對 Anthropic 的投資「傳奇」，但「那是拿你的錢……偷你的錢去衝 IPO」。</li>
+<li>雜誌封面指標（Ryan Detrick）：封面箭頭向下的雜誌很少見，但往往看漲——《紐約客》剛做了一期，往前 50 多年每次出現這種情況，標普 500 六個月後都更高；《經濟學人》/《時代》把 Saylor 放上封面那次就是頂部。</li>
+<li>韓國 KOSPI 當天跌 5%，較歷史高點跌約 50–55%；散戶上週拋售科技 ETF 的速度為歷史最快；納指期貨盤前走低，美國進入感恩節長週末。</li>
+</ul>
+<hr />
+<h3>ASR 歸一與存疑說明</h3>
+<ul>
+<li>嘉賓姓名：口播「Isabelle Fox and Duke」應為 <strong>Isabel Foxen Duke</strong>（MARA Foundation 負責人，BIP 360 聯合提案人，與 Hunter Beast 共同提案）；Lark 在節目中也稱她 Isabel/Isabella。</li>
+<li>「Satoshi Aer wallets」 = 中本聰的錢包；「Taz Drijah」 = Tadge Dryja（閃電網路發明者）；「Dan Benet」 = Dan Boneh；「Shrinks」為簽名方案口播名，未核實全稱，按口播保留；「doodles」應為某鏈上數據平台名，未核實。</li>
+<li>「6 to $328 billion already headed back to importers」為關稅退款相關口播，數字未核實；「Damage just took the house and the Senate」為 ASR 亂碼，紀要略去。</li>
+<li>Lark 稱 Anthropic 市值/收入時口播「Anthropic, $81 billion. Walmart $736 billion」前後語義不清，紀要未直接引用該組數字。</li>
+<li>納指盤前讀數口播「6.21/6.23/6.24」語義不清，紀要略去具體數值。</li>
+<li>[01:15:28-01:15:48] 約 20 秒無語音空缺。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Lark Davis: Record Bitcoin Sell-Off as Trump Brings Tariffs Back</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/lark-davis-record-bitcoin-selloff-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast: https://x.com/i/broadcasts/2EmYVjNArNjplo</li>
+<li>Time: ended 20:51 CST on the evening of 2026-11-25; total length 80 minutes 38 seconds (4837.93 seconds)</li>
+<li>Host: Lark Davis (English-language program)</li>
+<li>Guest: Isabel Foxen Duke (head of the MARA Foundation, co-author of BIP 360; interview segment roughly [00:25:34]–[01:00:15])</li>
+<li>Transcript: 1504 lines, covering [00:00:00]–[01:20:33], matching the total duration</li>
+<li>Note: everything below is the speakers' own stated views, unverified. ASR normalizations are at the end.</li>
+</ul>
+<h2>The one-liner</h2>
+<p>Lark's judgment: November saw record Bitcoin ETF outflows, stablecoins bleeding $400 million a day, and options traders positioned extremely bearish — yet on-chain capitulation indicators have also reached the levels seen at every past bear-market bottom. "Either Bitcoin dies here, or we're approaching an incredible opportunity" — and the quantum threat is the last stumbling block keeping institutional money on the sidelines.</p>
+<h2>1. The tariffs are back</h2>
+<p>The US could reimpose tariffs on China, the EU and 14 other countries as early as this week; the EU, Japan and South Korea may face rates of 15% or lower, India and Vietnam possibly higher, and China is expected to face higher rates still; the new tariffs could cover most imported goods (steel, aluminum and autos already have separate tariffs); and if countries fail to address industrial overcapacity, the rates could be raised further.</p>
+<p>Lark's jab: Trump shook hands with Xi Jinping just last week, then came home and said "tariff him, tariff him hard." He wonders whether this is just bluster — scaring the market so he can buy back in cheap — after all, the Supreme Court has already struck down tariffs before (he mentioned $6 billion to $328 billion already being returned to importers, the spoken figures unclear), and the Nasdaq is up 53% from its April 2025 low.</p>
+<h2>2. Bitcoin ETFs: the biggest outflow month in history</h2>
+<ul>
+<li>BTC spot price $58,500: a few days ago it bounced from $55,000, rising almost $10,000 in 3 days (the Jensen Huang return rally), and has now basically given it all back; a retest of $55,000 would not surprise him at all.</li>
+<li>November ETF outflows of $4.7–4.9 billion (SoVali put it at $4.94 billion, other tallies at $4.71 billion) have already surpassed June's $4.5 billion — <strong>the largest single-month outflow in Bitcoin ETF history</strong>, with 3 trading days left in the month, it will very likely break $5 billion.</li>
+<li>He says ETFs now have a big problem: on the way up, $1 billion flowing in every day was bullish; now the ETFs are dumping huge amounts of supply into an extremely thin market where nobody dares to buy; the market can only absorb so much selling pressure, and the price falls accordingly. ETF net assets still have roughly $72 billion left to sell (his joking phrasing).</li>
+<li>iBit's average buy-in cost is $82,000, leaving buyers deeply underwater; "tourists buy the top and sell the bottom." The Coinbase premium index has fallen to its lowest level since the Luna/FTX collapse.</li>
+<li>Stablecoins have been flowing out at $400 million a day since October 1, roughly $30 billion in total; add ETF outflows of about $500 million a day and ETH ETF outflows of about $100 million a day, and "everyone is selling everything."</li>
+<li>Options traders are extremely bearish: money is rushing into put options at the fastest pace since the 2022 capitulation, and the put/call open-interest ratio is the highest since 2021.</li>
+<li>This bear market has now lasted more than 411 days, the longest in Bitcoin's history, but (so far) also the shallowest; the previous cycle took 378 days from top to bottom, and the previous longest record was 410 days.</li>
+</ul>
+<h2>3. Capitulation indicators vs bottom signals: both are present</h2>
+<p><strong>Evidence of capitulation:</strong>
+- CryptoQuant: Bitcoin investors are as underwater as they have been at every historical bear-market bottom; every bear market breaks below investors' average cost basis — per Glassnode data (spoken as "doodles") the average cost is about $53,250; if it plays out like 2022, the target is $40,000, and targets in the low-to-mid $30,000s and low $40,000s are "uncomfortably close."
+- Realized losses (relative to capital inflows over the past year) are the heaviest since FTX, nearly doubling within a week: large amounts of capital flowed into BTC in the $75,000–$85,000 range and are now capitulating out at a loss.
+- Miners are selling, digital asset treasury companies (DATs) are selling, ETFs are selling, whales are selling — "everyone is selling."
+- Three to four crypto exchanges have already gone bankrupt and shut down this year (he named BitMart and AscendEX), DAT companies are returning Bitcoin to shareholders, and stablecoins saw $30 billion in outflows in 6 weeks.</p>
+<p><strong>Bottom signals:</strong>
+- "Either Bitcoin dies, or we're approaching an incredible opportunity" — an on-chain signal that hasn't appeared in four and a half years is showing up.
+- BTC's cheapness relative to its long-term trend has only been seen on 60 days in its entire price history (the bottom 1%); Charles Edwards says BTC hasn't been this cheap since November 2022, on-chain metrics look strong, and the problem is the terrible flows.
+- On four-year cycle theory, the bottom should be last Saturday or within the next few days — the 2017 cycle took almost exactly one year from top to bottom, and this cycle is in the same window.</p>
+<p><strong>His overall judgment:</strong> most of the capitulation has probably already happened (the bulk of miner and DAT selling is behind us), but there is still a risk of "time-based capitulation": ETF holders who have held for 18 months to 2 years, watching Nvidia, Micron and SanDisk run, will think "my BTC ETF is down 50%, Micron isn't down 50%, selling BTC to buy Micron might have more upside." Until real buying comes back, the price can still go lower; per Charles Edwards, once the roadmap for the quantum threat is clear, it could bring the big money back.</p>
+<h2>4. Anthropic: his own positions and judgment</h2>
+<ul>
+<li>His trades: short Anthropic (not much movement so far), long Uniswap (getting beaten up badly), long Hyperliquid (slightly beaten up), and a BTC long that gave back most of its gains today.</li>
+<li>On Anthropic: he believes there is a 95% probability Nvidia will use everything it has to "take out Anthropic" — expecting it to be cut off from chips while Nvidia goes all-in on open-source models to "eat Claude's lunch"; what Anthropic and OpenAI fear most is Nvidia going open source, because their hope rests on closed systems, regulatory moats and government favoritism, while Nvidia/Jensen Huang are taking the exact opposite path; "many people believe" this is precisely why Anthropic's side spread word to take Jensen down, and Trump stepped in to say "not on my watch."</li>
+<li>Anthropic's $1.2 trillion unlock wall is approaching, the stock has already fallen below its IPO price, and the unlocks haven't even begun; hundreds of billions of dollars of selling pressure are coming, "if you bought Anthropic at 80, 90, 100 dollars, good luck"; premarket $78.</li>
+<li>He compared Anthropic's market cap with Walmart's, said Anthropic insiders cashed out heavily on the first day of listing and the greenshoe was exercised immediately with no support for the share price, and argued they don't care about short-term price moves — they might even prefer it to fall, because the lower the valuation, the harder it is for OpenAI to raise money and go public; his attitude toward Anthropic is extremely negative (the original remarks included personal attacks and conspiracy theories, recorded here as the speaker's own statements).</li>
+<li>If OpenAI falls behind, Google, Anthropic and Meta will split an industry with $40 trillion in annual revenue; and don't forget xAI.</li>
+<li>The probability of Gemini (Google) being the best AI model by year-end is 81% (prediction market data); Google has YouTube and dozens of extremely profitable businesses, its AI is just as good and may become the best — "don't short Google."</li>
+<li>Nick Bostrom's claim: superintelligence could let people live to 1,400 (biomedical and anti-aging breakthroughs; without aging, life expectancy would be roughly 1,200–1,400 years, a fairly conservative lower bound).</li>
+<li>Google has filed a patent for a 24/7 AI TV channel, starring a virtual avatar generated from your photos, speaking in a replica of your voice, with ads tailored to your demographics and viewing history.</li>
+</ul>
+<h2>5. Interview: Isabel Foxen Duke on Bitcoin's quantum threat and BIP 360</h2>
+<p><strong>What the threat is:</strong> Bitcoin wallet addresses are protected by public/private key cryptography — specifically elliptic curve cryptography, which is considered "quantum unsafe": a sufficiently powerful quantum computer could break it using Shor's algorithm, deriving the private key from the public key and stealing the funds.</p>
+<p><strong>Who is most at risk:</strong> the most at-risk are old-style addresses — Satoshi's roughly 22,000 wallets (over 1 million BTC), where the public key is written directly into the address; Taproot addresses likewise expose the public key in the address. Most modern addresses have their public keys protected by hashing, and hashes are considered fairly quantum-resistant, so <strong>an address that has never spent is basically quantum-safe while it sits still</strong>; but once you spend from an address, the spending process exposes the public key, and that address immediately becomes quantum-unsafe. Wallet hygiene: don't send funds back into an address you have already spent from.</p>
+<p><strong>But is personal protection enough:</strong> she argues it isn't — if roughly 6 million BTC are quantum-unsafe and suddenly "gone," would the BTC in your hands still be worth anything? A systemic solution is needed, not just everyone minding their own keys.</p>
+<p><strong>Timeline:</strong> Google's internal models target upgrading all of its systems by the end of 2029; the Ethereum side is pushing for 2028; the Bitcoin community has discussed a 2032 target. For ordinary people, the practical quantum risk over the next few years is still low, so there's no need to worry much; but from an investment perspective, institutions may step back until a solution is in place.</p>
+<p><strong>Can the developers do it:</strong> she thinks people underestimate the developers — in the past they were slow to act because those things were "nice to have," and given Bitcoin's importance and the money involved, everyone is very conservative about changing Bitcoin; quantum resistance is a "must have," and the developer community has reached consensus on it, leaving only the details: which signature scheme to introduce, and how. She expects that by 2029 the Bitcoin consensus layer could have a complete quantum-resistant output type/address type plus quantum-resistant signatures; the hard part is getting everyone to migrate — the most time-consuming part is not the upgrade itself, but getting tens of thousands of people to move their coins instead of scrambling three days before Q-Day.</p>
+<p><strong>What to do about Satoshi's coins:</strong> she sees two paths. The first is "the hard road": no consensus, a pile of forks, and the market picks a winner (like the hard fork wars of the past); most market participants would choose the chain that makes their BTC worth the most — the one that doesn't let hackers dump 6 million coins onto the market. The second is a technical recovery scheme: freeze those coins first, then use zero-knowledge technology to let holders prove ownership with a seed phrase (rather than a private key) to reclaim them; Lightning Network inventor Tadge Dryja (spoken as "Taz Drijah") is working full-time on this kind of recovery protocol. If the recovery technology is good enough, "freeze first, freeze temporarily, ownership can be proven another way" becomes easy to sell to everyone; Satoshi himself may never recover his, but ordinary holders who simply forgot to migrate won't get burned.</p>
+<p><strong>What BIP 360 is:</strong> making Bitcoin quantum-resistant takes two things — a quantum-resistant address type (output type) and quantum-resistant signatures. BIP 360 introduces the former: an output type called "pay-to-Merkle-root" (P2MR), basically a copy of pay-to-taproot with the quantum-vulnerable parts of Taproot removed; it is currently the only formally specified quantum-resistant output type proposal, and it is in the lead. On signatures, the front-runner is a hash-based signature scheme, spoken as "Shrinks" (the name is kept as spoken, unverified), developed by Blockstream research director Jonas Nick and collaborators; she is "fairly optimistic" about having both an output type and a signature scheme within the next few years.</p>
+<p><strong>The controversy around BIP 360:</strong> disabling the quantum-vulnerable parts from the start means losing some Taproot functionality — ordinary holders don't use it, but L2 developers love it. The biggest competing proposal is: keep those useful but quantum-vulnerable Taproot features, and agree on a future date to disable elliptic curve cryptography when quantum computers get close; the problem is nobody knows when quantum computers will arrive, and "which day to set the disable date" is itself a risk.</p>
+<p><strong>The risk of the upgrade itself:</strong> this is extremely sensitive, critical code, and bugs must not be rushed in — especially in the LLM era, when bugs are easier to find and exploit; the developers' posture is the right one: don't dawdle, take the threat seriously, give users quantum-resistant options as soon as responsibly possible, but don't rush; Dan Boneh (spoken as "Dan Benet") has also spoken about the importance of this pacing.</p>
+<p><strong>Who is collaborating:</strong> the Bitcoin Security Consortium — less than a year ago, large institutional holders (Fidelity, BlackRock, MicroStrategy and others) came together and committed funding to make sure the quantum problem gets solved, with the money flowing mainly as donations to existing Bitcoin development organizations (Chaincode Labs, Brink, and Spiral, part of Jack Dorsey's Block). MARA is unusual: back during the "Bitcoin Season 2" L2 boom it was already exploring quantum-resistant sidechains at the R&D level, and CEO Fred Thiel took the issue seriously early on; she herself had worked on the Ordinals protocol and L2s, and MARA hired her together with fellow BIP 360 co-author Hunter Beast to build that sidechain — Hunter drafted BIP 360 and she contributed to writing V2; that gives MARA two employees who co-authored the first quantum-resistant BIP.</p>
+<p><strong>When is the roadmap coming:</strong> Bitcoin is truly decentralized, and no governing body will publish a roadmap; but the various development organizations (Chaincode Labs, Brink, Blockstream and others) will progressively publish their own internal roadmaps. Lark invited her back in six months for a progress update.</p>
+<h2>6. Closing Q&amp;A and other views</h2>
+<ul>
+<li>Monero is the only privacy coin truly worth mentioning, "the only coin that is actually used for privacy reasons" (his words).</li>
+<li>Gold: gold orders take weeks to fill and always carry a premium; Bitcoin's advantage is that the price you see is the price you pay, with no extra 2–3%.</li>
+<li>Viewer predictions: BTC to $45,000 by January, gold to $2,900 by March; Zcash rose 50% in a day, and mining Zcash is currently 5 times as profitable as mining BTC (but the algorithms differ, so you can't use the same mining rig).</li>
+<li>A viewer took out a Black Friday loan to buy an AI agent computer: he borrowed a small SOL loan on Kamino — if you only borrow against 10% of your SOL position while still earning 5–6% yield, the loan can "pay itself off."</li>
+<li>His holdings: Athena, HBAR, Render, ICP; speculative positions are about 20% of his crypto portfolio, "the good ones will definitely come back strong"; he is not especially bullish on HBAR or ICP; capital flows among roughly the top 5 chains while other chains struggle long-term; Cardano has been live for 9 years and is still a "ghost town" with no users and no valuation model, "purely hype and speculative trading" (his words).</li>
+<li>His SBF documentary theory: produced by Obama's film production company (Higher Ground), it portrays SBF as "a boy who loved the wrong girl"; he believes it is paving the way for a presidential pardon for SBF after the Democrats return to the White House in 2028; SBF "greased a lot of palms with a lot of money," and after prison Silicon Valley will still give him hundreds of millions or even billions of dollars because "he's a guy who plays ball"; his investment in Anthropic was "legendary," but "that was with your money… stealing your money to chase an IPO."</li>
+<li>The magazine cover indicator (Ryan Detrick): magazine covers with downward arrows are rare but often bullish — The New Yorker just ran one, and in every such case over the past 50-plus years, the S&amp;P 500 was higher six months later; when The Economist/Time put Saylor on the cover, that was the top.</li>
+<li>South Korea's KOSPI fell 5% that day, down roughly 50–55% from its all-time high; retail investors sold tech ETFs last week at the fastest pace in history; Nasdaq futures were lower premarket as the US headed into the Thanksgiving long weekend.</li>
+</ul>
+<hr />
+<h3>ASR normalizations and uncertainties</h3>
+<ul>
+<li>Guest's name: spoken as "Isabelle Fox and Duke," this should be <strong>Isabel Foxen Duke</strong> (head of the MARA Foundation, co-author of BIP 360 together with Hunter Beast); Lark also called her Isabel/Isabella during the program.</li>
+<li>"Satoshi Aer wallets" = Satoshi's wallets; "Taz Drijah" = Tadge Dryja (inventor of the Lightning Network); "Dan Benet" = Dan Boneh; "Shrinks" is the spoken name of a signature scheme, full name unverified, kept as spoken; "doodles" appears to be the name of an on-chain data platform, unverified.</li>
+<li>"6 to $328 billion already headed back to importers" was spoken in connection with tariff refunds, figures unverified; "Damage just took the house and the Senate" is ASR garbling and is omitted from the notes.</li>
+<li>When Lark cited Anthropic's market cap/revenue, the spoken line "Anthropic, $81 billion. Walmart $736 billion" is semantically unclear in context, so the notes do not quote those figures directly.</li>
+<li>The spoken Nasdaq premarket readings "6.21/6.23/6.24" are semantically unclear, so the notes omit the specific values.</li>
+<li>[01:15:28-01:15:48] roughly 20 seconds of silence with no speech.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2EmYVjNArNjplo">https://x.com/i/broadcasts/2EmYVjNArNjplo</a>（主持 Lark Davis，嘉宾 Isabel Foxen Duke）· 发布日期：2026-11-25 · 时长：81 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2EmYVjNArNjplo">https://x.com/i/broadcasts/2EmYVjNArNjplo</a>（主持 Lark Davis，嘉賓 Isabel Foxen Duke）· 發布日期：2026-11-25 · 時長：81 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X live broadcast <a href="https://x.com/i/broadcasts/2EmYVjNArNjplo">https://x.com/i/broadcasts/2EmYVjNArNjplo</a> (host Lark Davis, guest Isabel Foxen Duke) · Published: 2026-11-25 · Duration: 81 minutes<br>This page is the full text of notes compiled by hand from a machine transcript; all views and figures are the original speakers' own statements, unverified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2EmYVjNArNjplo">https://x.com/i/broadcasts/2EmYVjNArNjplo</a>（主持 Lark Davis，嘉宾 Isabel Foxen Duke）· 发布日期：2026-11-25 · 时长：81 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Lark Davis：比特币 ETF 创纪录抛售，特朗普关税又回来了 · Yat's Talks",tw:"Lark Davis：比特幣 ETF 創紀錄拋售，川普關稅又回來了 · Yat's Talks",en:"Lark Davis: Record Bitcoin Sell-Off as Trump Brings Tariffs Back · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

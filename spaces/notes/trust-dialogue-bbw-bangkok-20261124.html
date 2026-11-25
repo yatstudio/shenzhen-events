@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>Trust 对话第八期：BBW 曼谷前瞻——怎么跑会才不踩坑</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/trust-dialogue-bbw-bangkok-20261124.mp3"></audio></p>
 <blockquote>
 <p>X Space · 主持：TrustWallet中文 @trustwalletzh（晚晚）· 嘉宾：小宇（Four.Meme）、Eva（United Stables）、Carol（Flap）、岳小愚（Predict Fun）· 2026-11-24 19:58 开播 · 约 66 分钟</p>
 <p>这是 Trust Wallet 每周二晚的固定 AMA「Trust Talk」的一期，主题是币安区块链周（BBW，11 月 27–29 日，曼谷 QSNCC）的预热：各家在 BBW 的活动安排、新产品进展，以及跑会体感和旅居分享。文中时间均为曼谷当地时间；数字与观点均为发言者自述，未经核实。部分项目名转写含糊，按最可信的写法归一（见文末说明）。</p>
@@ -67,9 +78,126 @@
 <p>晚晚补充：她平时在新加坡，巴厘岛待过一段时间，那里有个白人健身区的人每天健身五六个小时（早上 6 点练到 10 点再工作）；一个城市与周边人的环境对人的影响很大。熊市里她鼓励大家尝试旅居、体验不同生活——她发交易员邀请函时发现，现在很多顶流交易员都在外面滑雪。</p>
 <hr />
 <p>注：转写中部分名称含糊，按最可信的写法归一——「Forear Mimi / Farmany」为 Four.Meme，「Trasolet / Chast Wallet」为 Trust Wallet，「Flapp / BLAP」为 Flap，「Predict Fun / Predict Fund」为 Predict Fun，「United Stables」为 United Stables；合作方「Renaiss」未能确认全名，纪要中略去。Trust 交易赛细节（奖池、截止时间、积分倍数）均为晚晚口播。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>Trust 對話第八期：BBW 曼谷前瞻——怎麼跑會才不踩坑</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/trust-dialogue-bbw-bangkok-20261124.mp3"></audio></p>
+<blockquote>
+<p>X Space · 主持：TrustWallet中文 @trustwalletzh（晚晚）· 嘉賓：小宇（Four.Meme）、Eva（United Stables）、Carol（Flap）、岳小愚（Predict Fun）· 2026-11-24 19:58 開播 · 約 66 分鐘</p>
+<p>這是 Trust Wallet 每週二晚的固定 AMA「Trust Talk」的一期，主題是幣安區塊鏈週（BBW，11 月 27–29 日，曼谷 QSNCC）的預熱：各家在 BBW 的活動安排、新產品進展，以及跑會體感和旅居分享。文中時間均為曼谷當地時間；數字與觀點均為發言者自述，未經核實。部分專案名轉寫含糊，按最可信的寫法歸一（見文末說明）。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>BBW 曼谷週的五家華語專案方坐下來對了一遍行程：Trust 展位在主會場 3 號館 G 層 G5，帶寶可夢主題抓娃娃機；各家在 27–28 日晚的活動排得最滿；後半段的乾貨是岳小愚橫向對比的東南亞旅居成本——以上海為 100，清邁約 60、吉隆坡約 80、曼谷與上海持平、香港 200、新加坡 250。</p>
+<h2>BBW 各家活動安排</h2>
+<p><strong>Trust Wallet（晚晚）</strong>：主會場展位在 3 號館 G 層 G5，一進門右手邊；現場有寶可夢主題抓娃娃機，難度後台可調、到時會調到最輕鬆；泰國限定周邊有泰式編織帶、防蚊手環、折扇等，當天就能用上；另有一個小範圍 VIP 晚宴，米其林餐廳，主要邀請做交易的朋友。這次 Trust 沒有辦大型 side event，會去各家活動串場。</p>
+<p><strong>Four.Meme（小宇）</strong>：安排最滿。11 月 25–26 日在 BNB 黑客松現場有展台；27 日晚湄南河遊船晚宴，帶無人機表演，遊船結束 21:00 與 UXUY 合辦「軟動之夜」酒吧派對，隨意來喝酒蹦迪；28–29 日主會場與合作方聯名展台，可以抽卡、拿周邊（帽子、T 恤、扇子均為小宇自己設計）；週日晚最後一場社交活動收尾。</p>
+<p><strong>Flap（Carol）</strong>：主場活動 27 日晚 18:00，由 Flap 主辦、合作方贊助，Luma 註冊可見具體地址；理念是把平時只在時間線和推上互動的 KOL、Trader、Creator 聚到線下，輕鬆社交、不搞正式，驚喜環節保密；另與 Pudgy 合辦了一場瑜伽活動，與 Predict Fun 合辦 Predict Night，還有幾場 Private Dinner 與合作方的聯名發布活動。</p>
+<p><strong>Predict Fun（岳小愚）</strong>：主會場有展台（28–29 日團隊都在）；28 日晚閉門酒會 Predict Night，邀請制，面向生態合作方（Flap 等）、KOL 與社群活躍用戶，定位是 BNB 生態與預測市場的深度用戶聚會；另與合作方有聯名活動。</p>
+<p><strong>United Stables（Eva）</strong>：只有一場，28 日晚「United Stablecoin Night」，BBW 官方 side event，邀請制，面向 RWA 發行方、機構與交易所朋友，目標是找到真正的合作機會而不是會場上互相介紹一下了事；感興趣可找 Eva 拿 Luma 報名連結。</p>
+<h2>各家新產品與進展</h2>
+<p><strong>Four.Meme</strong>：最近上了第二個 bonding curve 池，專案是新加坡打車類應用 Ride；另一個生態池的激勵是交易滿 100 美元即可參與空投福利，池內盤手續費 40% 進入生態獎勵池支持生態代幣持有者，60% 按每日回購規則回購當日最強生態代幣。</p>
+<p><strong>United Stables（Eva）</strong>：本週上線兩個產品：一是與 LTP 的合作（偏專業交易場景），二是 Banxa 支持了 U 的入金（目前在 BNB 鏈，後續接更多鏈）。她的核心觀點是：穩定幣要看真實用途——誰在用、為什麼持有，而不是錢包裡多一個名字；今年所有穩定幣都在撒錢，是「穩定幣最捲的一年」，補貼停掉之後誰才是用戶的真正選擇，值得好奇。</p>
+<p><strong>Flap（Carol）</strong>：主推 Flap Apps——第三方開發者可以直接用 Flap 的基建搭建產品，省搭建成本、接入合約安全審查流程、連結現有用戶與流動性，已有一些有意思的應用出現；未來重點是繼續完善安全機制與底層，同時回饋社群，讓大家在 Flap 上交易更安心、更願意長期參與生態建設。</p>
+<p><strong>Predict Fun（岳小愚）</strong>：從加密與政治的基本盤拓展到體育、電競與股票：世界盃活動曾花 200 萬美元，剛結束英雄聯盟活動、CS2 活動剛開始，平台上已有韓股、港股、美股甚至 15 分鐘漲跌的預測；與合作方上了寶可夢卡牌價格漲跌的預測。增長分三條線：2C 是社群活動（「預言家挑戰賽」，100 美元比拚最終盈利）、2B 是與各類專案合作上新奇標的、2Dev 是即將推出的 Builder Program，搭建開發者生態。</p>
+<p><strong>Trust Wallet（晚晚）</strong>：與 B-Stock 團隊的交易賽，10 萬 U 獎池，持續到 12 月 4 日上午 10 點結束；第一名 1 萬 U，滿足最低交易額可得 100 多 U；參與人數還不多，歡迎嘗試 QQQ、納斯達克等穩健標的，交易 Anthropic 與英偉達有 1.5 倍積分。她另提到市場比較熊，「昨晚老黃回歸、英偉達暴漲 30 個點」（自述說法，未核實），美股非常動盪；Trust 年底還有三個重磅產品在籌備。</p>
+<h2>今年 BBW 與往年體感的不同</h2>
+<ul>
+<li><strong>小宇</strong>：去年以 KOL 身分參加，今年以專案方 builder 身分；去年 BBW 在杜拜，華人面孔相對較少（以歐美與中東為主），今年在曼谷、離中國近，華語圈來的人多；去年是小牛市（鏈上中文 Meme 市場剛開始），今年行情涼、話題不一樣；今年多了很多有意思的生態專案。</li>
+<li><strong>晚晚</strong>：去年參加時約十分之九是歐美人、十分之一華語圈；跑會的華語圈比較固定，「進來進去就那麼幾個」；另提到 T.C. 老師每次跑會都會建一個跑會群，想進可以找他。</li>
+<li><strong>岳小愚</strong>：今年第一次以專案方身分跑會（以前是產品經理、今年做業務），變化有三：①行情熊，活動規模小、參與熱情低；②很多聚焦華語區的專案想出海拓展東南亞、日韓等地區，避免內捲；③行業流動性差、新用戶少，活動規模比去年小很多。</li>
+<li>主持人總結：今年的活動以樂趣和社交為主，是交流和一起 chill 的機會。</li>
+</ul>
+<h2>值得關注的賽道</h2>
+<ul>
+<li><strong>Carol（Flap）</strong>：繼續看 Meme 賽道。有意思的變化是代幣化資產開始與 Meme 結合：以前 Meme 只是一個梗，現在可以拿 Jensen 的照片發幣，也可以把 Meme 代幣與代幣化股票組成交易對、交易稅分給持有人代幣化股票獎勵；注意力從圈內新聞拓寬到傳統金融、上市公司、RWA，都可能成為 Meme 化的一部分。</li>
+<li><strong>Eva（United Stables）</strong>：看支付與 RWA 上鏈的真實需求。2026 年 RWA 上鏈已形成一定規模，後續的問題是「誰在用它」——上鏈之後大家為什麼要用；穩定幣同理，用戶為什麼持有；關注能讓人持續使用的東西，而不是概念熱度。</li>
+<li><strong>晚晚（Trust）</strong>：一是傳統金融結合——錢包上交易美股免 KYC、保護隱私又方便，Aster、Hyperliquid 都是美股鏈上化的體現；二是專案出海——華人做產品最捲（團隊捲、產品捲），熊市裡華語市場存量內捲有限，把蛋糕做大、讓不同用戶更好地體驗產品是更好的方向。</li>
+<li><strong>小宇（Four.Meme）</strong>：Meme 賽道永遠不會消亡，熱點每天都有；多關注 BNB Chain。</li>
+</ul>
+<h2>旅居分享：東南亞城市橫向對比</h2>
+<p>岳小愚今年一直在旅居狀態，橫向對比了幾個城市（以上海生活成本為 100）：</p>
+<ul>
+<li><strong>香港 200</strong>：是她的主要基地，但生活成本太高，所以經常在外旅居；<strong>新加坡 250</strong>：比香港還高約 25%，環境好但只有行業頂尖大佬才會長期待著。</li>
+<li><strong>吉隆坡 80</strong>：比上海便宜約 20%，約等於杭州或深圳的水準；華人約 20–30%，生活習慣接近，但馬來西亞是穆斯林國家，不進華人圈子深度體驗當地文化會有融入門檻。</li>
+<li><strong>曼谷與上海持平、普吉島也持平</strong>：曼谷繁華、玩法多樣（健身、泰拳便宜，商場、文藝咖啡店、本土景點都有）；普吉島海邊生活好。<strong>清邁約 60 多</strong>：相當於重慶、武漢、西安這類二線城市，數位遊民多，V 神每年 11–12 月都會在清邁開以太坊相關的大會。</li>
+<li>成本從低到高：清邁 &lt; 吉隆坡 &lt; 曼谷、普吉島；豐富度曼谷更好，喜歡海邊去普吉島，峇里島海更漂亮但旅遊基建不如普吉島、數位遊民也少。她個人最推薦曼谷：可玩性高、幣圈從業者多、幸福感更高。</li>
+</ul>
+<p>晚晚補充：她平時在新加坡，峇里島待過一段時間，那裡有個白人健身區的人每天健身五六個小時（早上 6 點練到 10 點再工作）；一個城市與周邊人的環境對人的影響很大。熊市裡她鼓勵大家嘗試旅居、體驗不同生活——她發交易員邀請函時發現，現在很多頂流交易員都在外面滑雪。</p>
+<hr />
+<p>註：轉寫中部分名稱含糊，按最可信的寫法歸一——「Forear Mimi / Farmany」為 Four.Meme，「Trasolet / Chast Wallet」為 Trust Wallet，「Flapp / BLAP」為 Flap，「Predict Fun / Predict Fund」為 Predict Fun，「United Stables」為 United Stables；合作方「Renaiss」未能確認全名，紀要中略去。Trust 交易賽細節（獎池、截止時間、積分倍數）均為晚晚口播。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Trust Dialogue Ep. 8: A BBW Bangkok Preview — How to Do the Conference Without Stepping on Landmines</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/trust-dialogue-bbw-bangkok-20261124.mp3"></audio></p>
+<blockquote>
+<p>X Space · Host: TrustWallet Chinese @trustwalletzh (Wanwan) · Guests: Xiaoyu (Four.Meme), Eva (United Stables), Carol (Flap), Yue Xiaoyu (Predict Fun) · Started 2026-11-24 19:58 · About 66 minutes</p>
+<p>This is an episode of "Trust Talk," Trust Wallet's regular Tuesday-evening AMA. The theme was a warm-up for Binance Blockchain Week (BBW, November 27–29, QSNCC, Bangkok): each project's BBW event schedule, new product updates, plus conference-running impressions and slow-travel sharing. All times in the text are Bangkok local time; figures and opinions are the speakers' own statements and have not been verified. Some project names were unclear in transcription and have been normalized to the most credible spellings (see the note at the end).</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Five Chinese-language projects heading to BBW Bangkok week sat down and compared schedules: Trust's booth is in the main venue, Hall 3, Level G, G5, with a Pokémon-themed claw machine; the busiest nights are the 27th–28th, when everyone's evening events cluster; and the most useful takeaway in the second half is Yue Xiaoyu's side-by-side comparison of Southeast Asian slow-travel costs — with Shanghai set at 100, Chiang Mai is about 60, Kuala Lumpur about 80, Bangkok is on par with Shanghai, Hong Kong is 200, and Singapore is 250.</p>
+<h2>Each Project's BBW Event Schedule</h2>
+<p><strong>Trust Wallet (Wanwan)</strong>: The booth is in the main venue, Hall 3, Level G, G5, on the right-hand side as you walk in. On site there is a Pokémon-themed claw machine whose difficulty can be adjusted backstage and will be set to the easiest level on the day; Thailand-limited merchandise includes Thai-style woven straps, mosquito-repellent wristbands, folding fans and more, all usable right away. There is also a small-scale VIP dinner at a Michelin restaurant, mainly inviting friends who trade. This time Trust is not hosting a large side event and will be dropping by everyone else's events instead.</p>
+<p><strong>Four.Meme (Xiaoyu)</strong>: The fullest schedule. A booth at the BNB Hackathon venue on November 25–26; a Chao Phraya River cruise dinner on the evening of the 27th with a drone show, followed at 21:00 by a "Soft Motion Night" bar party co-hosted with UXUY after the cruise ends — just drop by for drinks and dancing; a joint booth with partners in the main venue on the 28th–29th, where you can draw cards and pick up merchandise (hats, T-shirts and fans, all designed by Xiaoyu himself); and a final social event on Sunday evening to wrap up.</p>
+<p><strong>Flap (Carol)</strong>: The flagship event is on the evening of the 27th at 18:00, hosted by Flap and sponsored by partners, with the exact address visible via Luma registration. The idea is to get the KOLs, traders and creators who normally only interact on timelines and tweets together offline — relaxed socializing, nothing formal, with surprise segments kept secret. There is also a yoga event co-hosted with Pudgy, Predict Night co-hosted with Predict Fun, and several Private Dinners and joint launch events with partners.</p>
+<p><strong>Predict Fun (Yue Xiaoyu)</strong>: A booth in the main venue (the team will be there on the 28th–29th); a closed-door reception, Predict Night, on the evening of the 28th — invitation only, aimed at ecosystem partners (Flap and others), KOLs and active community users, positioned as a gathering of power users of the BNB ecosystem and prediction markets; plus joint events with partners.</p>
+<p><strong>United Stables (Eva)</strong>: Just one event — "United Stablecoin Night" on the evening of the 28th, an official BBW side event, invitation only, aimed at RWA issuers, institutions and exchange friends. The goal is to find real cooperation opportunities rather than just exchanging introductions at the venue and leaving it at that; if you're interested, ask Eva for the Luma registration link.</p>
+<h2>New Products and Updates from Each Project</h2>
+<p><strong>Four.Meme</strong>: It recently launched a second bonding curve pool, for Ride, a Singapore ride-hailing app. Another ecosystem pool's incentive: trade at least 100 USD to take part in airdrop benefits; 40% of the pool's internal trading fees go into an ecosystem reward pool supporting ecosystem token holders, and 60% is used, under a daily buyback rule, to buy back the day's strongest ecosystem token.</p>
+<p><strong>United Stables (Eva)</strong>: Two products launch this week: a partnership with LTP (geared toward professional trading scenarios), and Banxa support for depositing U (currently on BNB Chain, with more chains to follow). Her core view: with stablecoins, look at real use — who is using it and why they hold it, not just another name in a wallet. This year every stablecoin is throwing money around — "the most competitive year ever for stablecoins" — and once the subsidies stop, it will be interesting to see who users actually choose.</p>
+<p><strong>Flap (Carol)</strong>: The main push is Flap Apps — third-party developers can build products directly on Flap's infrastructure, saving build-out costs, plugging into the contract security review process, and connecting to existing users and liquidity; some interesting apps have already appeared. Going forward, the focus is on further improving the security mechanisms and the underlying layer while giving back to the community, so people can trade on Flap with more peace of mind and are more willing to take part in building the ecosystem over the long term.</p>
+<p><strong>Predict Fun (Yue Xiaoyu)</strong>: Expanding from its crypto-and-politics base into sports, esports and stocks: a World Cup campaign once cost 2 million USD; a League of Legends event just ended and a CS2 event has just begun; the platform already offers predictions on Korean, Hong Kong and US stocks, and even on 15-minute price moves; it also launched Pokémon card price predictions with a partner. Growth runs along three lines: 2C is community events (the "Prophet Challenge," competing on final profit with 100 USD), 2B is working with all kinds of projects to list novel markets, and 2Dev is the upcoming Builder Program, building out the developer ecosystem.</p>
+<p><strong>Trust Wallet (Wanwan)</strong>: A trading competition with the B-Stock team, with a 100,000 U prize pool, running until 10:00 a.m. on December 4; first place gets 10,000 U, and meeting the minimum trading volume earns you a little over 100 U. Participation is still low, so give steady instruments like QQQ and the Nasdaq a try; trading Anthropic and Nvidia earns 1.5x points. She also noted that the market is quite bearish — "last night Jensen came back and Nvidia surged 30 points" (her own statement, unverified) — and US stocks are very volatile; Trust also has three major products in preparation for year-end.</p>
+<h2>How This Year's BBW Feels Different from Previous Years</h2>
+<ul>
+<li><strong>Xiaoyu</strong>: Last year he attended as a KOL; this year as a project builder. Last year's BBW was in Dubai, with relatively few Chinese faces (mostly Europeans, Americans and Middle Eastern attendees); this year it's in Bangkok, close to China, so many more people from the Chinese-speaking circle are coming. Last year was a mini bull market (the on-chain Chinese meme market was just getting started); this year the market is cold and the topics are different; and there are many more interesting ecosystem projects this year.</li>
+<li><strong>Wanwan</strong>: Last year, about nine-tenths of attendees were Europeans and Americans and one-tenth from the Chinese-speaking circle. The Chinese-speaking conference crowd is fairly fixed — "it's the same few people coming and going." She also mentioned that Teacher T.C. sets up a conference group chat every time he runs a conference, and you can ask him if you want in.</li>
+<li><strong>Yue Xiaoyu</strong>: This is her first year running conferences as a project team member (previously a product manager, this year doing business development). Three changes: ① the market is bearish, events are smaller and enthusiasm is lower; ② many projects focused on the Chinese-speaking region want to expand overseas into Southeast Asia, Japan, Korea and elsewhere to avoid involution; ③ industry liquidity is poor and new users are few, so events are much smaller than last year.</li>
+<li>The host summed up: this year's events are mainly about fun and socializing — a chance to connect and chill together.</li>
+</ul>
+<h2>Sectors Worth Watching</h2>
+<ul>
+<li><strong>Carol (Flap)</strong>: Still watching the meme sector. An interesting change is that tokenized assets are starting to combine with memes: memes used to be just a joke, but now you can issue a coin with Jensen's photo, or pair a meme token with a tokenized stock and distribute tokenized-stock rewards to holders from the trading tax; attention is widening from in-circle news to traditional finance, listed companies and RWA — all of which could become part of meme-ification.</li>
+<li><strong>Eva (United Stables)</strong>: Watching real demand for payments and RWA going on-chain. By 2026, RWA on-chain has already reached a certain scale; the question that follows is "who is using it" — after something goes on-chain, why would people use it? The same goes for stablecoins: why do users hold them? She focuses on things people keep using, not concept hype.</li>
+<li><strong>Wanwan (Trust)</strong>: First, integration with traditional finance — trading US stocks in a wallet with no KYC, privacy-protecting and convenient; Aster and Hyperliquid are both expressions of US stocks moving on-chain. Second, projects going overseas — Chinese teams are the most competitive at building products (teams compete hard, products compete hard), and in a bear market the existing Chinese-speaking market offers only limited room for involution; making the pie bigger and giving different users a better product experience is the better direction.</li>
+<li><strong>Xiaoyu (Four.Meme)</strong>: The meme sector will never die; there are hot topics every day. Pay more attention to BNB Chain.</li>
+</ul>
+<h2>Slow-Travel Sharing: Southeast Asian Cities Side by Side</h2>
+<p>Yue Xiaoyu has been slow-traveling all year and compared several cities side by side (with the cost of living in Shanghai set at 100):</p>
+<ul>
+<li><strong>Hong Kong 200</strong>: It's her main base, but the cost of living is too high, so she often slow-travels elsewhere. <strong>Singapore 250</strong>: About 25% higher than Hong Kong; a great environment, but only top-tier industry figures stay long-term.</li>
+<li><strong>Kuala Lumpur 80</strong>: About 20% cheaper than Shanghai, roughly at the level of Hangzhou or Shenzhen; ethnic Chinese make up about 20–30%, and daily habits are similar, but Malaysia is a Muslim country — if you don't enter the local Chinese circle, deeply experiencing the local culture comes with an integration barrier.</li>
+<li><strong>Bangkok is on par with Shanghai, and Phuket is on par too</strong>: Bangkok is vibrant and varied (cheap gyms and Muay Thai, malls, artsy cafés and local sights); life by the sea in Phuket is good. <strong>Chiang Mai is a little over 60</strong>: Equivalent to second-tier cities like Chongqing, Wuhan and Xi'an; there are many digital nomads, and Vitalik holds a big Ethereum-related conference in Chiang Mai every November–December.</li>
+<li>From lowest to highest cost: Chiang Mai &lt; Kuala Lumpur &lt; Bangkok and Phuket. Bangkok offers more variety; if you like the seaside, go to Phuket. Bali's sea is prettier, but its tourism infrastructure is not as good as Phuket's and it has fewer digital nomads. Her personal top recommendation is Bangkok: lots to do, many crypto practitioners, and a greater sense of well-being.</li>
+</ul>
+<p>Wanwan added: she is usually based in Singapore and spent some time in Bali, where the people in a white expat fitness area work out five or six hours a day (training from 6 a.m. to 10 a.m., then working); the environment of a city and the people around you have a big influence on a person. In a bear market she encourages everyone to try slow travel and experience different lives — when sending out trader invitations she noticed that many top traders are out skiing right now.</p>
+<hr />
+<p>Note: Some names in the transcription were unclear and have been normalized to the most credible spellings — "Forear Mimi / Farmany" is Four.Meme, "Trasolet / Chast Wallet" is Trust Wallet, "Flapp / BLAP" is Flap, "Predict Fun / Predict Fund" is Predict Fun, and "United Stables" is United Stables. The partner name "Renaiss" could not be confirmed in full and has been omitted from these notes. The details of the Trust trading competition (prize pool, deadline, points multiplier) are all as stated by Wanwan.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1POBYZXOAZaeoZ">https://x.com/i/spaces/1POBYZXOAZaeoZ</a>（主持 @trustwalletzh）· 发布日期：2026-11-24 · 时长：66 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1POBYZXOAZaeoZ">https://x.com/i/spaces/1POBYZXOAZaeoZ</a>（主持 @trustwalletzh）· 發布日期：2026-11-24 · 時長：66 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1POBYZXOAZaeoZ">https://x.com/i/spaces/1POBYZXOAZaeoZ</a> (host @trustwalletzh) · Published: 2026-11-24 · Duration: 66 minutes<br>This page is the full text of notes compiled and edited by hand from a machine transcription; the views and figures are the original speakers' own statements and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1POBYZXOAZaeoZ">https://x.com/i/spaces/1POBYZXOAZaeoZ</a>（主持 @trustwalletzh）· 发布日期：2026-11-24 · 时长：66 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"Trust 对话第八期：BBW 曼谷前瞻——怎么跑会才不踩坑 · Yat's Talks",tw:"Trust 對話第八期：BBW 曼谷前瞻——怎麼跑會才不踩坑 · Yat's Talks",en:"Trust Dialogue Ep. 8: A BBW Bangkok Preview — How to Do the Conference Without Stepping on Landmines · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

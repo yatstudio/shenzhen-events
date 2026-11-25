@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>噪音之后周小鸟专场：创业执行与未来方向</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/zaoyinzhihou-zhouxiaoniao-20261124.mp3"></audio></p>
 <ul>
 <li>Space：https://x.com/i/spaces/1mdVbavnkJEvnk</li>
 <li>时间：2026-11-24 20:59–23:48 CST，全场约 2 小时 49 分钟（容器时长 10177.8 秒；实解码音频约 9529 秒，差值是分片拼接的时间戳间隙，非丢音）</li>
@@ -262,9 +273,514 @@
 <li>FDE 在场上未展开全称，按提问者描述是企业 AI 落地培训/内训岗位，原文保留 FDE。</li>
 <li>「A8」是场上原话（年收入层级的俗称，未展开）。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>噪音之後周小鳥專場：創業執行與未來方向</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/zaoyinzhihou-zhouxiaoniao-20261124.mp3"></audio></p>
+<ul>
+<li>Space：https://x.com/i/spaces/1mdVbavnkJEvnk</li>
+<li>時間：2026-11-24 20:59–23:48 CST，全場約 2 小時 49 分鐘（容器時長 10177.8 秒；實解碼音訊約 9529 秒，差值是分片拼接的時間戳間隙，非丟音）</li>
+<li>主持：Adrian Punk @AdrianPunk115；嘉賓：周小鳥 @xiaoniaoziming</li>
+<li>聽眾：842 人</li>
+<li>錄音：follower 全量跟隨 3176 分片，完整；開頭 seg 0 開播早期曾 404，可能缺幾秒；開場約前 6 分鐘為閒聊，正式內容從約 [00:06:00] 開始</li>
+<li>逐字稿：transcript.txt，4159 行，[00:00:00]–[02:48:30]，已通讀全文</li>
+</ul>
+<p><strong>先說清楚</strong>：以下全部是周小鳥在場上的個人自述與觀點，未經核實。他本人在場上多次聲明「今天吃了藥、喝了酒」「所有的話都是放屁的」「一點都不要信」，請當作一家之言聽個參考，不要當作事實或建議直接照搬。ASR 對人名、產品名多有誤聽，存疑處已在文中標註。</p>
+<h2>一句話</h2>
+<p>周小鳥用近 3 個小時講了一套很直白的創業執行論：別招人、別談心態、別做立功（打工思維）——一個人加 AI 工具就是一個「智能組織」，先在抖音、小紅書、影片號把東西賣出去一單，再談複製、遷移、合作與選賽道；未來 8 年內民企基層文員崗和「cosplay 創業者」會被幹掉，普通人只剩自媒體、電商、AI 三條腿，缺一不可。</p>
+<h2>開場：Adrian 的近況</h2>
+<ul>
+<li>Adrian 最近在用豆包（轉寫為「小豆」）幹活：把商單 brief 的飛書連結直接發給豆包，它能讀連結內容並按要求寫 brief，剛接的一個商單就是用豆包寫的；豆包連著抖音，可以設定時任務每天搜抖音爆款；他還準備試小紅書、X、影片號的主稿生成。</li>
+<li>Adrian 最近跟著鳥哥做留學項目：強度不小、大家都很努力，效果不錯，有幾個公眾號做到幾十萬、上百萬播放。</li>
+</ul>
+<h2>第一部分：創業執行（約 [00:06:00]–[01:17:00]）</h2>
+<h3>1. 智能組織：三層意思</h3>
+<p>起因是百度李總（李彥宏）提的「智能組織」（轉寫為「吃輪組織」）。周小鳥的理解分三層：</p>
+<ul>
+<li><strong>第一層：一個人 + AI/工具 = 一個小閉環。</strong> 現在請人、招聘「不太現實」：經濟環境差，而且在他看來員工的素質不值那個錢，「招人其實是虧損的」，除非這個人一來就幫你賺錢。文員層面的活（整理文件、做計畫書、PPT）交給 AI；個體戶報稅花兩三百、五百塊找人代辦就行，不需要財務。舉例：窩牛在閒魚賣貨——如果自己賣不出去，招人來也賣不出去，「因為如果這個人會賣，他不會來給你上班」；如果自己賣得出去，AI 能幫你完成絕大部分動作。</li>
+<li><strong>第二層：兩個智能組織強強聯合。</strong> 比如他會國內自媒體、對方會海外電商，兩人各帶自己的工具，合作完成一個更大的項目，互補自己不懂的那一半。</li>
+<li><strong>第三層：未來只有三種人。</strong> 一是「天選之人」（他不多解釋，認為這種人根本不會來聽直播）；二是智能組織這一層的人，負責創造價值、創造利潤；三是沒跟上時代的人，做智能組織的基礎體力勞動——比如快遞員給他送電腦，「他只是一個協助者」。他直言這話「在國內都不能播」，但認為未來就是這三種分法。</li>
+</ul>
+<h3>2. 別做「立功」，先把商業邏輯說清楚</h3>
+<ul>
+<li>每天喊賺錢「非常扯」：如果不把商業邏輯說清楚，「其實你沒有在賺錢，你只是在做立功」（打工）。X 上面 100 個人，「可能只有 9–10 個人真正在賺錢，而且賺得還不多」，其他人只是把 X 當測試平台——他自己就是例子，有些國內不能講的話放到 X 上說。</li>
+<li><strong>先選當下居住環境</strong>：人在國內，就只能選國內賺錢（除非人在海外）；不要做有障礙的事——「連上 X 都很困難的話，你都不適合在 X 上面做」；抖音、小紅書、影片號是三個天然戰場，先在這三個地方解決賺錢問題。X 上長期賺到錢的人絕對有，但「少之又少」，沒有抖音、小紅書、影片號多。</li>
+<li><strong>搞清自己能做什麼</strong>：不要一上來就談 100 萬、1000 萬、一個億。「你上班的時候有沒有工資超過 1 萬塊錢？如果 1 萬都沒超過，最重要的就是找一個自媒體公司或者什麼地方去打工」——看好電商就去電商打工，看好自媒體就去自媒體打工，幹到能當小組長；「你上班人家都不要你，你自己搞創業，客戶就要你嘛？我就不信了。」</li>
+<li><strong>先賣出去一分錢</strong>：不管什麼方式，先把一件事搞定——能不能在抖音/閒魚上把一個東西賣出去，「我先賣一分錢行不行」；想做海外，先去深圳找個外貿公司進去上班，看看別人要不要你。</li>
+<li><strong>自媒體、電商、AI 只是商業認知轉化的工具</strong>：「靠自媒體變現本身就是騙人的話」「自媒體只是我商業認知轉化的一個工具，有他我也能變現，沒他我也能變現」；知識付費也一樣，賺到的錢是商業知識變現，不是靠自媒體變現。</li>
+</ul>
+<h3>3. 接受市場行為</h3>
+<ul>
+<li>市場需要你幹什麼你就去幹什麼，不能說「今天我病了」「我怎麼辦」。他舉例：一個朋友做自媒體賺了錢、後面被騙了，一直反覆說這件事——「這種事情正常了，只能當學費」；接受不了，「後面多的是這種情況等著你」。</li>
+<li>他建議去深圳城中村做租房中介體驗一下：每天會遇到多少人、多少麻煩，「當警察的面人家都可以騙你」。</li>
+<li>他的定義：市場行為沒有邏輯、不談法律、不談道德、沒有規律，「純粹混沌」「大家真的死亡大樂透」；面對壞事只有兩個選擇——馬上接受、調整形態，或者受不了、崩潰，但事情已經改變不了了。</li>
+</ul>
+<h3>4. 把客戶放在心上</h3>
+<ul>
+<li>「付費的客戶就是我的爹」，要站到客戶角度想問題、把別人服務好，「怎麼伺候上帝」；甚至可以提供情緒價值。</li>
+<li>反面例子：團隊裡有人沒做過就說「我覺得客戶不是這樣想的」——「這種人說話多傲慢」「越窮的人說話越傲慢」；「他要是能搞成，我頭都剁了」。</li>
+<li>他自述有時心疼付費客戶，會主動說「退錢算了」「你不容易算了」。</li>
+</ul>
+<h3>5. 標準執行：沒賺到錢之前，執行比思考重要 100 倍</h3>
+<ul>
+<li>他們搞了一個星期的活動，全部新手，總共做了接近 300 多萬播放；其中一個人完全新手（連填飛書連結都要教），一個星期做了 190 萬播放——「我絕對不是我教得好，絕對是他運氣好」「他實力夠」。</li>
+<li>關鍵是天天發：「你看窩牛在做那個閒魚，天天發天天發」；他自己是反面教材，「比較懶」「一個月賺到一點錢就開始休息了」——但他認為自己可以懶是因為「已經賺到那個錢了」，剛開始的人「沒有資格說不行」。</li>
+<li><strong>標準值執行</strong>：他以自己做過房產中介為例——新人第一週上街發 7 天傳單，什麼都別幹；第二週一天打 100 通電話；「你要去看樓盤、學習怎麼看房子、學習打電話，都是浪費時間」「說弱智都侮辱智商」。類比到自媒體：上來先發 100 條，「陳昌文他們誰都說過，包括洞哥」。</li>
+<li>「如果你沒有賺到兩三個曾經以上的錢，或者賺到 8 位數的錢，你是沒有辦法去思考的，你的思考都是弱智思考」「在沒有達到一定成績的時候，執行力比思考重要 100 倍、1000 倍、1 萬倍」；等收入做到一年 1000 萬級別、執行拉滿了，才輪到思考重要。</li>
+<li>深圳跑滴滴的參照：每天跑 16 個小時，「差不多能夠到手一萬多」——言下之意，做自媒體還不如這個，說明執行沒到位。</li>
+</ul>
+<h3>6. 算帳：前期只允許一種花錢</h3>
+<ul>
+<li>設備、請人、註冊公司，在他看來前期都是不對的——「你買設備也是傻逼」（他自承說了髒話）；前期應該允許虧損，但虧損只允許花在一種地方：<strong>不停地給別人付費做知識付費</strong>，100、200 也好，1000、2000 也好，「付到你承認這件事情是對的為止」。</li>
+<li>邏輯：付了錢又覺得被割韭菜，「這個心態就錯了，他這輩子都賺不了錢」；只有付到完全認同知識付費這件事，才有可能賺錢——因為知識付費本身是一種商業模式，「不管裡面有沒有乾貨、有沒有好東西、割韭菜，這個人說不清的，都不談」。他打比方：買個麵包有人覺得好吃、有人覺得難吃，咬了一口怎麼退款？「存在即需求」，要接受任何一種商業模式的存在。</li>
+<li>付費還分人：不給錢的人「都是看不起你的」；他加微信會發一個碼，「門檻費是 119，你掏錢我們就繼續聊，不掏錢 24 點拉黑」。</li>
+</ul>
+<h3>7. 紙筆推演：從三年後的目標倒著選</h3>
+<p>他讓聽眾拿紙筆現場寫（約 [00:31:35] 起）：</p>
+<ol>
+<li>寫下所在城市（比如深圳）；</li>
+<li>寫下年紀（比如 32 歲）；</li>
+<li>寫下三年後應該是什麼狀態（比如 32 歲賺 1000 萬，假設）；</li>
+<li>往回推：看到哪些人每年能賺 300 萬以上、100 萬以上（比如 10 個、20 個、30 個）；</li>
+<li>默認自媒體、AI、電商這三個能賺；再往下找不需要成本的——知識付費不需要成本，「就選知識付費，沒別的」；</li>
+<li>知識付費的形式有直播、影片、圖文，自己能幹什麼就選什麼；</li>
+<li>講什麼板塊：情感、認知、創業、教人做自媒體……選自己看得懂的——「你聽別人的東西聽得懂，還能用自己的話說出來」；</li>
+<li>去抖音、影片號、小紅書找高手，「但不能太高，太高我學不了，找那個我看得懂的」；</li>
+<li>開始執行：人家發 10 條你就發 10 條，人家發 50 條你發得比人多；「發完之後再復盤，不要提前想」；「除了掏個手機把流量費充滿以外，其他任何事情都不要做」；人家用圖片你用圖片、用人家用影片你用影片，「完全照抄起來，也不要動腦，千萬不要思考，你一思考就完蛋」；</li>
+<li>發的過程中一定會有人噴你，「不理他，這些人不給你掏錢，都是傻逼，你都沒有資格評價你」；罵人的拉黑，有道理但反對的保留（給你增加容量），認同的幫你做流量，給錢的「太棒了」。</li>
+</ol>
+<h3>8. 人分層：道友、小友、螻蟻、前輩</h3>
+<ul>
+<li>他引用《天道》的分法（原話如此）：比他差的是「螻蟻」，看不上；優秀一點、可以提攜的是「小友」；跟他差不多、各有優勢的是「道友」，可以請吃飯、聊天；比他牛逼的是「前輩」。</li>
+<li>他的門檻：招人要年薪 15 萬以上才跟他聊天、才有資格做他的員工，「不然我培訓你的時間就浪費了」「以前你要給我搞，先當三年學徒再說」；賺錢是門手藝活，OPC 本質上是「走街串巷的手藝人」，運氣好能開茶樓、搭戲台，運氣不好一輩子走街串巷。</li>
+<li>知識付費價格帶在他看來從 9 塊 9 到 3000、5000、8000、10 萬都有；「你把一個東西 9 塊 9 賣給別人之後，別人都看不起你」。</li>
+<li>「不是什麼客戶都做，不是所有業務都接，不是所有人都交往」——按價值分層，這是市場行為的一部分。</li>
+</ul>
+<h3>9. 模仿 → 遷移 → 創新：那個 10 月份的案例</h3>
+<p>這是他講得最細的一個案例（約 [00:48:00]–[00:54:00]）：</p>
+<ul>
+<li>10 月份，一個有國家發的殘疾證件的人（平時上班都困難），找他學賺錢。他讓他做的第一件事：在閒魚上搜一款 10 元左右的小商品（轉寫為「一價」，疑為耳機/衣架類小件），把賣得最火的那張圖保存下來，到拼多多或 1688 用圖片搜尋找到貨源；把 1688 的圖片完整複製下來，用軟體改 MD5，照抄閒魚上那條最火的內容介紹，只改參數（別人 10 個裝、你 12 個裝），定價比別人便宜 5 毛（別人賣 10 塊、你賣 9 塊 5），但比 1688 進貨價貴兩三塊錢。結果：只發了兩條就賣出去了，賺了兩三塊錢。</li>
+<li>這叫<strong>模仿</strong>。然後他讓他別再搞要本金的，改賣零成本的虛擬資料：在閒魚上偷別人做得好的、流量高的同類帖子封面圖，把天涯論壇的帖子（他傳給對方的）放進網盤掛上去賣，當天或第二天就賣出去了。</li>
+<li>這叫<strong>遷移</strong>：從閒魚賣實物 → 閒魚賣虛擬資料 → 小紅書賣資料（用身分證註冊，零粉就能開買手掛連結），賣一本 2 塊錢的「人生指南」類 PDF，「三天賺了 10 塊錢」，從有點成本到完全沒成本，「到出師了」。但那個人後來不搞了，「看不上這個錢」「你應該直接把錢給我」——周小鳥說「人各有志」，但「這個商業模式理論上來說就是通的」；「如果一個這種情況下的人都能夠賺到錢，你還沒有在這上面賺到這個錢」，還說「這個小項目賣兩百、賣三百都可以」。</li>
+<li>方法論收尾：<strong>先模仿、再遷移、再創新</strong>。模仿是全盤抄別人的商業模式：看到窩牛做閒魚，第一步、第二步、第三步、第四步照著抄一遍，看能不能賣出去；「窩牛一定是對的，我一定賣不出去一定是我的問題」；「所有的問題都是我的問題」「所有的錯誤、痛苦、困難，一切讓我不爽的東西都是我自己造成的，跟別人一點關係都沒有」。</li>
+<li>抄會之後要講給別人聽（朋友、老媽都行），人家聽得懂並且能賣出去，說明你學會了；聽不懂，說明你還沒複製下來。</li>
+<li>拆分遷移：把一個項目拆成五步（註冊帳號、選商品、做圖片、做內容、上架），再平移到影片號、小紅書、抖音、X、Facebook——「這個能力叫遷移能力」；如果能力不能遷移、必須依賴某個平台，「這個平台把你封了，你不就完蛋了」。</li>
+<li>創新舉例：別人是女生裝男生唱歌，他能不能男生裝女生唱歌；別人一個人、他三個人，別人三個人、他五個人，別人街上、他在水裡、在泳池倒著游——「可不可以變種，有沒有這個能力」。</li>
+</ul>
+<h3>10. 合作：只跟能站起來的人合作</h3>
+<ul>
+<li>遷移之後要合作：跟窩牛、胖子、混蛋這些各有跑通業務的人合作——「我絕對不會跟我的粉絲合作，我的粉絲只能是我的學員；如果你崇拜我，你只能是我的學員；但是如果說你在我面前站起來，我可能會跟你合作」。</li>
+<li>合作的方式很直白：請對方吃飯喝酒「猛給他套」，或者花兩三百買對方的課，然後在群裡公開問——「在大庭廣眾之下在群裡問，他絕對會回答你，他不好意思不回答」。</li>
+<li>合作的目的不是一起賺錢，而是長見識：「我跟窩牛合作，我就知道閒魚；我跟 Punk 合作，我就知道社群」；看得多了，再多選：閒魚賣貨一年頂穿了 10 萬塊就不錯了，知識付費一年 100 萬「再入門」，搞加盟「可能千萬只是撒撒水」，搞 AI 另算——「你要搞完全搞清楚了之後，再來選擇你的創業執行方向」。</li>
+<li>他強調前面 40 分鐘講的都不是做商業、不是做創業，只是「適用」（測試）：適用完了再選——「我終於要生根 AI 賽道」「我終於要生根自媒體賽道」，選的是執行方向；任何商業模式都要有一個展現的地方（電話銷售也是展現方式）。</li>
+</ul>
+<h3>11. 選賽道：只做高端人群的業務</h3>
+<ul>
+<li>以銀髮經濟為例：他認為只有做「有退休金的人的業務」才叫銀髮經濟；同樣一個大詞下面，有人做貴保健品、做零食包，有利潤、客戶吃得起；有人做跌打損傷、服務經濟情況一般的人——後者「喜歡耍賴」「不願意為自己的選擇買單，因為他買不起」，「他跟你耗的時間，他能把這個錢耗回來或者鬧點錢出來」「本質上這是他的商業模式」。</li>
+<li>舉例：有人借錢交學費，看完他的全部資料要退錢；他扣掉 988 元的資料門檻費、其餘退回，對方還嫌「就發這點資料要這麼多錢」——「這種窮人跟你耗本身就是在賺錢」。</li>
+<li>結論：做生意就是兩個商業模式對抗——要麼你把他抗贏了，要麼他把你抗贏了，要麼合作共贏（他一般選合作共贏）；但要做高端客戶、做高品質人群，「不要做低端客戶」；銀髮經濟裡賣保健酒、保健品、保健藥「是最垃圾、最容易出事故的，90% 的事故都出現在這裡」，而高端養老院、高端客製旅行「很少很少」出事，「一個天上一個地上」；裝修糾紛同理：舊房最多、新房其次、別墅最少，「房價越低，糾紛越多」。</li>
+<li>選賽道之後還要想：客戶在哪裡？真實模擬客戶會出現的情況。</li>
+</ul>
+<h3>12. 產品四件套：引流款、利潤款、虧損款、最賺錢款</h3>
+<p>他以自己的產品舉例（約 [01:06:00]–[01:12:00]）：</p>
+<ul>
+<li><strong>引流款</strong>：免費給別人服務。他的一對一諮詢是 800 塊錢一個小時、一個問題；但所有加他微信的付費學員，「你可以先免費問我一個問題」。2023 年底做社區活動（北京同學會的中醫義診）的例子：淘寶買了個測量儀（「你要說他有用也沒用，要說他沒用他能出數據」），給老人測身體的常見指標；不送東西，但「如果你要那個的話，你可以每週都過來測」——免費測是引子，收費之後才能享免費複測等服務；「如果你完全免費，這個機子每天都停不了；如果你完全收費，人家會走」。</li>
+<li><strong>利潤款</strong>：一次性做好的商業群資料包（文字 + 影片），後續持續賣，每個季度更新一次；「你買了之後我交給你就行了，我不是每次都做」。</li>
+<li><strong>虧損款</strong>：3000 塊錢的 30 天實操陪跑群，「就是我陪你實操 30 天」，他自承對他來說百分之百虧損、交付很重、「有的時候經常崩潰」「只要檢查作業就會崩潰」；但必須做，因為只有掏錢進來、真實要解決某個問題的人，問題才是真實的——「網上搜的評論都是假的」；靠這個找到客戶的真實卡點，再去優化。</li>
+<li><strong>最賺錢款</strong>：商業卡點陪跑，3000 元、45 天、一對一，「只回答這個卡點就行了」，一般一兩個小時就結束；「越貴的客戶越簡單」，而且可能發展成朋友、產生合作。</li>
+<li>他反問聽眾：你有沒有一個產品幫你持續增加利潤？沒有的話「是不是得想一個」。</li>
+<li>定了產品之後要每天做自媒體帳號：記錄今天遇到什麼、解決什麼問題、怎麼想的，「記錄、發送、反思」；「你這個月沒想明白的事情，可能下個月看看自己發的抖音，哎，我原來是這樣想的」；發出去的思考才是真實的思考，不然只是腦子裡的空想；還會帶來客戶和關注，「他覺得你屌，他甚至給你掏錢」。</li>
+</ul>
+<h3>13. 回到智能組織：德否賣蘋果的例子</h3>
+<ul>
+<li>他舉「德否老師」賣山東蘋果的例子：一個人 + AI 協作，做了一個助農網站賣蘋果；蘋果需要人摘、需要人發貨——德否本人就是智能組織的位置，果農、快遞員、打包的人是「為智能組織服務」的。</li>
+<li>再往上是合作：小紅書做通了要做抖音，發現窩牛很會做抖音，就跟窩牛合作、分帳；再往上是數字人：租一台 iPhone（他說「租一台，不說買」）配 AI 做數字人，每天 24 小時不停播——又是一個成熟的智能組織。</li>
+<li>他收束：智能組織的三種形態講完了，創業執行部分講完，接下來講未來方向。</li>
+</ul>
+<h2>第二部分：問答（約 [01:17:00]–[01:48:00]，插在兩部分之間）</h2>
+<h3>Q1：FDE 培訓怎麼看？</h3>
+<p>提問者做企業 FDE（企業 AI 落地培訓/內訓、一對一），問這件事怎麼看。</p>
+<ul>
+<li>周小鳥：<strong>FDE 是一個賺錢的業務，但不是一個好生意，甚至不如代運營。</strong> 難在要進企業內部，在員工和管理層之間搭一座陌生的橋——「不亞於你徒手創造豆包」；AI 是管理者手中的鞭子：員工一天原來拍 5–10 條影片，現在要發 50 條，工作量增加了、錢沒增加，甚至因為 AI 老闆還要扣錢、開掉人；老闆肯定爽，員工肯定不爽，阻力極大。</li>
+<li>但老闆是剛需：招一個人一年要花 15 萬，培訓花兩三萬、五萬能解決，他願意掏錢；所以能賺錢。但不可持續，「今年可能、明年可能，風向一變就不行了」；而且比的不是誰真正幫企業解決問題，而是誰能當老闆的「造夢專家」——「這個老闆的夢想特別大，你怎麼吹，讓他相信你能夠實現他的夢想」。</li>
+<li>提問者補充：落地交付週期要三個月或半年、後續還要維護，大家都在卷單價；想轉培訓（交付 3–4 天、單價偏高，用漏斗篩高單價客戶）。</li>
+<li>周小鳥回：這個想法「完全是個垃圾，一文不值」；他會怎麼做：把服務過的所有客戶拉出來，看他們做什麼業務、卡點為什麼用 AI 解決，最後能不能用一台電腦加兩三個人把其中一個業務抄下來做它 10%——「其他的我都不考慮」。FDE 完全依賴老闆，「人家給你一口飯吃你才能吃」；而 FDE 最大的價值是深入企業一線，能拿到很多業務知識和數據——「我服務了這麼多 FDE，我通常會看那個表、那個單子，哪些公司賺錢、交付又好」，然後自己抄一個試試，「抄得起來算我賺了，抄不起來算我學」。</li>
+</ul>
+<h3>Q2：快手項目學員出單速度不一樣，怎麼帶？</h3>
+<p>提問者帶快手項目，手把手教，但有人很快出師賺錢、有人出單很慢；作為培訓者怎麼提升學員賺錢效率。</p>
+<ul>
+<li>周小鳥分兩個問題：第一，我很笨，如何上手一件事；第二，如何做標準化的培訓交付。</li>
+<li>他的做法：設 7 天測試線——照著「點點這裡、點點那裡」能不能行，行就幹，不行「我懷疑你基礎的理解能力都有問題，你可以走了，收費了錢都退給你」；第二階段照著他畫的線幹，幹不了就提問題，他再優化、再細化，直到崩潰為止；當 70%–90% 的人都做對了，這個內容就不用改了，就是 SOP；第三階段吸收優秀學員的做法回爐進 SOP——「絕對有人比我更優秀，我只是一個標準的劃線的人」。</li>
+<li>笨分兩種：腦子笨就多問（「任何一個人都有好為人師的特質，只要他賺到過錢，他都喜歡教你」）；手笨就多練。除此之外只有兩種情況：別人看不起你、不好好教，或者你自己看不起別人、根本沒上心做。</li>
+<li>提問者補充：不到一個月，有人已賺了快 1 萬；他們用飛書文件做篩選——周小鳥認同：飛書本身就是一道考核，「你也要相信有人不會玩手機」。</li>
+<li>另一位聽眾補充（約 [01:40:00]–[01:44:00]，ASR 斷續）：問題可能出在 SOP 本身或上下對接溝通的資訊偏差，加上每個人、每個帳號有差別，造成收入差異；也在優化。</li>
+</ul>
+<h3>Q3：海外給小孩做 AI 培訓能做嗎？</h3>
+<p>提問者在國外，現在教中文，想轉給小孩做 AI 培訓。</p>
+<ul>
+<li>周小鳥：先看當地有沒有同行在做。有的話去做志願者、上班、偷學，「搞搞一個月，基本上環境都摸清楚了」；沒有的話「趁早打下這個念頭」——「你的想法絕對有人想過；如果這個想法好，絕對有人成功，學他就行了；如果沒有，這個想法可能本身就是錯誤的」。甚至可以裝投資者去套對方的商業模式，「這個不叫欺騙，這個叫商業行為」。</li>
+</ul>
+<h3>Q4：仿真晶片新人，AI 10 分鐘幹完我一週的活，怎麼辦？</h3>
+<p>提問者剛工作不久，做模擬電路設計仿真，AI 10–30 分鐘就能做完他一週的工作；行業需要經驗積累，長週期裡新人沒法短時間獲得實踐——是拜師傅，還是換個鏈路短的專業？</p>
+<ul>
+<li>周小鳥：兩個問題——鏈路很長，我自己該怎麼執行；鏈路很長，我不想執行，是不是該換行業。</li>
+<li>如果看好這個行業，就像郭靖找江南七怪不停訓練，「扛住你就是大俠，扛不住你就是……」；如果不看好要換行業，最好還是找老師，但每個老師不一定是好老師，要花時間篩。</li>
+<li>他的建議：在長鏈路裡面加一些短鏈路去測試，也就是做兼職。</li>
+</ul>
+<h3>Q5：模型部署 + 賣課 + GEO 三線並行，求點評</h3>
+<p>提問者在公司負責所有模型的訓練和部署，同時把工作經驗做成課程在網上賣課、做陪跑，業餘時間做海外站的 GEO、SEO。</p>
+<ul>
+<li>周小鳥先批評：「你剛剛我說的話你一句都沒聽，我說的不是獨立個體，我說的是人……智能組織」；「超級個體是什麼？超級個體是一個超級打工」「智能組織是一個小老闆」。</li>
+<li>點評：業務要滿足兩個條件——可標準化、可複製化；「你的經驗、你的能力，只能算你個人牛逼，你再牛逼也是一個跑江湖的手藝人」；手藝人只有做到頂尖才賺錢，他舉景德鎮做雕像的「同師傅」為例（很貴）；沒到頂尖就是個剃頭匠，「不用談賺錢了，活著吃個飯就行了」。</li>
+<li>他跑通業務後的第一件事：找個人過來複製、教他；「如果他不能學會，就是我一波人不能學會，一個人搞不定，這個業務就是個垃圾，我不會在網上再浪費一點時間」。</li>
+</ul>
+<h3>Q6：GEO 具體怎麼做？</h3>
+<p>提問者在做 GEO 優化，問正確的 GEO 做法。</p>
+<ul>
+<li>周小鳥：GEO 是給客戶出攻略——站在客戶角度，給出一份可執行的方案，不是場景、不是關鍵詞覆蓋。他舉例：一個產品解決一個痛點、包含所有人群——減肥產品：深圳的女性怎麼減肥、胖的女生、不想運動的女生、不愛吃飯的女生、愛吃飯的女生、例假不準的女生……「就這種攻略給他滿就行了，最終指向你的產品」。</li>
+<li>關鍵句：「用戶在搜尋的時候，他希望得到的是一個答案」；「我現在想減肥，我絕對不想運動，那我在搜減肥的時候，我絕對不希望看到 AI 告訴我說你應該保持運動」；他希望看到的是：我知道你在深圳，這裡有個線下店，或者京東快遞給你，「你只要現在做一件事就是掃碼付款，結束了」；「不要跟我扯別的，我是個弱智，看不懂」。</li>
+<li>「人家要的是一個可執行的最簡單的，最好出來就是一個付款碼，掃了就行；至於說真的減不減肥，我當下的焦慮解決了」；「你想不通這個事情就不要幹了」。</li>
+<li>他追問對方「你會不會給我付費」，對方猶豫，他直接請對方下麥：「趕緊下去吧，我都說三遍了，浪費時間了」。</li>
+</ul>
+<h2>第三部分：未來方向（約 [01:48:00]–[02:31:30]）</h2>
+<p>開場白：他說這部分比較敏感，「我現在講的所有內容都是我自己亂想的、亂說的、喝醉了」「我本身就是神經病」「大家聽個笑話、讓我放屁」。定義先行：<strong>未來方向是指深刻影響你本人的、將來會發生的事情，而且這個將來就在一兩年或者三五年期間</strong>——「如果說明天世界爆炸，但是你還能活，那麼世界爆炸跟你一毛錢關係都沒有」。</p>
+<h3>1. 一個節點：不超過 8 年</h3>
+<ul>
+<li>他說未來可能存在的某個節點「不會超過八年，記住是八年」，但沒有在場上說清為什麼是八年。</li>
+</ul>
+<h3>2. 兩場「爆炸」</h3>
+<ul>
+<li><strong>第一，民企基層文員崗全部幹掉，沒有例外。</strong> 做圖片的、基礎算帳的、寫文章的，「全部都會被 AI 幹掉」；「可能我這個地方需要 10 個文員，我可能就一個文員配上 9 個 AI」。在場有做文員的，「現在就應該打開小紅書，速度開始賣單了」。</li>
+<li><strong>第二，所有 cosplay 創業者都會爆炸。</strong> 自己沒什麼業務、不接受市場行為、什麼都不懂，租個辦公室、穿上西裝、去參加各種活動，「甚至我開個奶茶店 cosplay」——「這種人會全部都被幹掉」，小地方城市的人會稍微好一點，大地方的人「一定會被幹掉」。</li>
+<li>原因：客戶的需求會變得真實——有情緒價值的需求就付情緒價值的費用，有工具的需求就付工具的費用；「包裝死完了」「立功完蛋了」。</li>
+<li>組織會變成李總說的智能組織：不會用自媒體宣傳自己、不會用電商做交易、不會用 AI 輔助工作的人，「你也是個垃圾」「除非你現在很有錢、很牛逼」；他劃的線是年收入 A8 以下，「這就是我們所有的命運，只是看這個比賽誰跑得快」。</li>
+</ul>
+<h3>3. 普通人只剩三條腿：自媒體、電商、AI</h3>
+<ul>
+<li>「自媒體、電商、AI，這就是未來普通人的三條路，而且沒有支撐——三條腿一條腿都不能少，三角結構最穩定」；底座是商業知識、商業認知、商業模式、商業思維，透過這三種方式展現出來。</li>
+<li>三個技能的定義：</li>
+<li><strong>自媒體</strong>：在公開平台宣揚自己的理念。他舉例：上週深圳紀錄大會（轉寫如此），第一天晚上有人可以上去講，他就上去講了，「有人還說講得可以，我還接到了合作」。</li>
+<li><strong>電商</strong>：不是賣東西，而是「用一個什麼樣的商業模式把這件事情跑通，把一個產品賣出去」。他自述：在 X 上有人透過推特買了他的社群產品，「那我這不叫電商出海嗎？叫知識付費出海」；在小紅書上架一個虛擬產品也是電商。</li>
+<li><strong>AI</strong>：AI 是工具、是員工，不是玩具。「你會用 AI，你才能夠當老闆」「AI 是當老闆賺錢的基礎」「老闆一定賺錢，賺錢的不一定是老闆」；不懂商業思維、商業模式、業務、卡點，「AI 是不會給你任何結果的，你就跟他聊天就行了」；「不用糾結買什麼好模型，什麼 Claude……打開每天免費的額度聊聊天得了」；「你天天把 AI 打開，創造一百多個東西，對你來說沒有任何價值，浪費時間、浪費錢」。</li>
+<li>他自述幫他賺過錢的 AI 工具/用法（均為他自述，未核實）：</li>
+<li>Workbody（轉寫如此）：在上面講課賺了接近 5000 塊錢；</li>
+<li>U-Mind：約 3 萬元，只花了 2 個小時，做了一個「小熊叔」包（30 塊錢有人買），還設了積分——積分到一定程度答不了就彈出他的微信，「加我來付費解決這個問題」；</li>
+<li>豆包：他女朋友不會上網搞這些，他用豆包給她裝上，從飛書發內容、每天自動運行發圖、做圖、做內容，她每天複製、上架就行；豆包會員每月 68 塊錢，8–11 月四個月每月產出 5000 多塊錢；</li>
+<li>谷歌的 Gemini（轉寫為「哈金密」）：印度區帳號 18 塊錢買的，他把商業價格表輸過去、讓它出方案，再以老闆角度提意見、改；</li>
+<li>還有兩台機子：一台是他自己的、一台是「穆姆」（轉寫如此，疑為朋友暱稱）那兒蹭的，「一台機子掛一個項目」，再接飛書彙總內容。</li>
+<li>他很佩服「穆姆」：買了機子做了學校相關的項目，「憑空創造了一個模式」「在我面前直觀地展示了一個模式是可行的」。</li>
+</ul>
+<h3>4. 從 SEO 到 GEO：AI 給的是執行方案</h3>
+<p>他自述在 GEO 大會上講過這套內容：</p>
+<ul>
+<li><strong>第一階段 SEO</strong>：搜問題、百度出 100 個答案，你來做選擇（比如搜「怎麼認識周小鳥」，百度出四個答案：付費、關注、評論區留言、參加噪音之後的周小鳥專場）。</li>
+<li><strong>第二階段自媒體攻略</strong>：在小紅書、推特上搜，出來的是攻略（點開誰的關注、付 129 元費用、參加社群問 Punk），你來做判斷——這個攻略對你當下有沒有用。</li>
+<li><strong>第三階段 GEO</strong>：打開豆包等 AI，輸入「我要認識周小鳥」，AI 直接給一個執行方案：現在打開連結、付款、加微信、問問題，「AI 給你的執行方案……因為 AI 比我懂你多了」。</li>
+<li>媒體形態的演變（他的劃分）：傳統媒體（指示的、固定不動的電視）→ 新媒體（要點三下才能找到內容）→ 自媒體/演算法平台（抖音、快手、影片號、小紅書、推特——「你一點進去看美女，演算法馬上把你理解成色狼，開始給你推美女；你一搜賺錢，就開始給你推怎麼賺錢；這個平台比你媽更懂你」）→ AI（先給你做一個虛擬畫像，再把一半自媒體內容、一半新媒體內容組成資料或執行步驟發給你）。</li>
+<li>結論：做 GEO 也要做自媒體、也要懂電商——「周小鳥解決什麼問題？解決商業問題、解決流量問題、解決資本問題、解決情緒價值問題」，然後就知道該怎麼選；最後都回到銷售和技術兩條腿：「怎麼把影片做得美、做得讓人看，這是技術活；怎麼讓人家看完之後買東西、成交，這是銷售活，缺一不可」。</li>
+</ul>
+<h3>5. 只剩兩種職業、兩種客戶</h3>
+<ul>
+<li><strong>未來只會存在兩種職業</strong>：一是銷售（「很準地賣東西，什麼都不談」，在賺錢裡賺得多、賺得快）；二是技術（人數多、賺錢是小技術，但技術人多、懂銷售的人少，「他就是不會銷售、面對不了人」）。再往上是他正在學習的「商業的規劃者」：規劃一個商業、一個項目、一種模式，把大家聯合起來、分工協作——「大哥也喜歡，投資者也喜歡，因為你這個東西是大致通的；有技術的人喜歡，因為他的時間價值；銷售也喜歡，因為他賺的錢；打工的人也喜歡，因為他真的在幹活；只有一種人不喜歡：廢物不喜歡，進來玩不了的人不喜歡」。</li>
+<li><strong>客戶只會分成兩種</strong>：一是有真實問題、願意花大錢解決的（「花大錢、解決大問題」）；二是只解決情緒價值的（陪玩、文生價值、心理資源價值都算）。FDE 本質上就是老闆的情緒價值，「它不解決實際問題」；做情緒價值要看別人臉色吃飯，接商單也是情緒價值；解決問題的不用看別人臉色，「只要有這個問題的人，他最終都會找到我，只是快與慢、多與少」。</li>
+</ul>
+<h3>6. 實操機會越來越少</h3>
+<ul>
+<li>AI 能解決所有知識性問題，但實操的問題解決不了——實操需要客戶、需要出發點、需要互動，「這個機會誰提供給你？搞不懂啊，你只能依附於某個師傅或者某個公司」。</li>
+<li>舉例：2014 年他打電話，一天打 100 通能接 20 個、15 個；今天打 100 通、打 1000 通，「都不一定有人跟我聊兩句」。他管 30 多個人的業務，罵了三天、受不了、換人再罵——但新人上哪找 30 個客戶練手？</li>
+<li>悖論：不會沒人要你，會了又沒人給你練手；「我憑什麼把我的客戶、我的資料來給你學習、給你練手？沒有必要吧」；「你來跟我上班，你都不會，你過來上什麼班呢？我只找那個成熟的人，我還要他自帶資源呢」。</li>
+</ul>
+<h3>7. 累了、退休潮與「路走窄」</h3>
+<ul>
+<li>他說到後面大家會累：「現在已經有很多人累了，但是現在很多人累是找不到工作的累、是沒有項目、沒有業務的累，不是賺到錢了、賺累了的累」；他自己的計畫是「我就賺三年，多一年我幹 35 歲，一定退休」，「只要我的錢夠活，回老家也行」。</li>
+<li>到那時，合夥人、員工怎麼辦？「我不玩了，大家自由，一拍兩散，或者我說一個時間點，比如一年兩年，大家再找找人」；他們又會去找有經驗的人，「有經驗的人又找有經驗的人」。</li>
+<li>他給聽眾的建議：每個人給自己畫一個定位——「我究竟在這個過程中是一個什麼樣的身分」；如果是一個學生、沒想過未來，「想清楚、想通、想決定了之後，不要抱怨」；沒想通就抓緊去賺錢、去學習技術，「學個打螺絲」「電子廠現在都要大學生了」。</li>
+<li>「讀書這個東西不改變階級」「你之前就是農民、你之前就是個窮人，你只穿了幾天這個衣服而已」「你本身是個無產階級」。</li>
+<li><strong>路越走越窄才是寬</strong>：現在有一百種方向，今年、明年、後年做下來剩 30 種，最後就剩一條路——「這條路我的選擇窄了，但這條路對我來說就是寬敞大道，我只需要在上面跑就行了」，不用再想別人做自媒體怎麼牛逼、做知識付費怎麼牛逼，「都沒跟我沒關係了」。</li>
+<li>另一種想清楚：徹底搞清楚未來就是不幹了，「停下一切，該睡覺睡覺」「享受，純粹享受」——老闆罵我也爽、沒錢也爽、吃飯也爽、吃飼料飯也爽、別人給我發工資也爽、不給我發工資、找工作還是爽。</li>
+<li>第三種：對現在也不爽、對未來也不爽、搞不清楚，「反正所有人都騙我、都害我」——「那就這樣子，這輩子就這樣子」。</li>
+</ul>
+<h3>8. 八年規劃與兩種最恐怖的人</h3>
+<ul>
+<li>他建議做一個三年、五年、八年的規劃：「我未來要成為一個什麼樣的人」「我未來想過什麼樣的生活」「需要滿足多少錢」「錢從哪裡來」「什麼工具、跟誰合作」「需要找到大哥、找到小弟、找到同行」；「能不能在短時間內，我今天解決一個、你明天解決一個、後天解決一個，逐步解決到最後，自然而然成功了」。</li>
+<li>兩種最恐怖的人：第一種是以前賺過一點錢、現在沒賺錢的人，「他老是喜歡重複，我以前能行、我現在也能行——不是的，你現在行就現在行，以前行現在不行，等於現在不行」「以前的成績都作廢」；第二種是窮人——「他這個錢只夠他思考眼前的東西」，又有妄想症，「只能靠騙衛生（維生）」：騙商家、騙入職、騙家人給他錢貸款開公司，「他要是讓他一分錢都騙不到，那這種不用說」。</li>
+<li>收尾：他說自己今天吃了藥、喝了酒，「我這所有的話都是放屁的，大家聽當聽個樂，完全不要信，一點都不要信」；然後開放提問，沒人提問就結束。</li>
+</ul>
+<h2>補充：幾個數字與說法，出處都在逐字稿裡</h2>
+<ul>
+<li>他自述 32 歲、初中學歷；10 月份在 X 發投票問自己能不能找到底薪 1 萬以上的工作，70%–80% 的人說找不到，他 4 天找到了兩份 1.8 萬的工作，要求「低於 1 萬 5 底薪我不幹」，理由是「我能夠解決老闆的問題」；收徒費已提到約 9000 元，且要先幹活、他滿意了才繼續聊，不滿意就退錢。</li>
+<li>他的收費（自述）：一對一答疑 800 元/問題；商業全案陪跑 3000 元；30 天實操群 3000 元；微信門檻費 119 元；資料門檻 988 元。</li>
+<li>留學項目是 Adrian「跟著鳥哥」在做，不是周小鳥自己的項目；一週活動 300 多萬播放、190 萬播放的新手案例，是周小鳥團隊的活動數據（自述）。</li>
+<li>「德否」「窩牛」「胖子」「混蛋」「穆姆/沐母」「陳昌文」「洞哥」均為場上提到的暱稱或人名，原文如此，未核實身分。</li>
+<li>FDE 在場上未展開全稱，按提問者描述是企業 AI 落地培訓/內訓崗位，原文保留 FDE。</li>
+<li>「A8」是場上原話（年收入層級的俗稱，未展開）。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>After the Noise: A Zhou Xiaoniao Session — Startup Execution and What's Next</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/zaoyinzhihou-zhouxiaoniao-20261124.mp3"></audio></p>
+<ul>
+<li>Space: https://x.com/i/spaces/1mdVbavnkJEvnk</li>
+<li>Time: 2026-11-24 20:59–23:48 CST, about 2 hours 49 minutes in total (container duration 10177.8 seconds; actual decoded audio about 9529 seconds — the difference is timestamp gaps from segment concatenation, not lost audio)</li>
+<li>Host: Adrian Punk @AdrianPunk115; Guest: Zhou Xiaoniao @xiaoniaoziming</li>
+<li>Listeners: 842</li>
+<li>Recording: follower captured all 3176 segments, complete; segment 0 at the very start returned a 404 early in the broadcast, so a few seconds may be missing; roughly the first 6 minutes are casual chat, with the substantive content starting around [00:06:00]</li>
+<li>Transcript: transcript.txt, 4159 lines, [00:00:00]–[02:48:30], read in full</li>
+</ul>
+<p><strong>First, to be clear</strong>: everything below is Zhou Xiaoniao's own account and opinions as stated on the show, and none of it has been verified. He himself said repeatedly during the show that he had "taken medication and drunk alcohol today," that "everything I say is bullshit," and that listeners should "not believe a single word of it." Treat it as one person's view, offered for reference only — not as fact or advice to copy directly. The ASR transcription garbled a number of names of people and products; doubtful spots are flagged in the text.</p>
+<h2>The one-liner</h2>
+<p>Over nearly 3 hours, Zhou Xiaoniao laid out a blunt theory of startup execution: don't hire, don't talk about mindset, don't do "merit-making" (the employee mindset) — one person plus AI tools is an "intelligent organization." First sell one single order on Douyin, Xiaohongshu, or WeChat Channels; only then talk about replication, transfer, collaboration, and picking a track. Within the next 8 years, entry-level clerical jobs at private companies and "cosplay entrepreneurs" will be wiped out; ordinary people will be left with only three legs — self-media, e-commerce, and AI — and none of the three can be missing.</p>
+<h2>Opening: what Adrian has been up to</h2>
+<ul>
+<li>Adrian has recently been working with Doubao (transcribed as "小豆"): he sends Doubao the Feishu link of a sponsored-post brief, and it can read the link's content and write the brief as instructed — a sponsored post he just took on was written by Doubao. Doubao is connected to Douyin and can run scheduled tasks to search for viral Douyin videos every day; he also plans to try draft generation for Xiaohongshu, X, and WeChat Channels.</li>
+<li>Adrian has recently been working with Brother Bird on a study-abroad project: the intensity is considerable, everyone works hard, and the results are good — several official accounts have reached hundreds of thousands, even over a million, views.</li>
+</ul>
+<h2>Part One: Startup Execution (approx. [00:06:00]–[01:17:00])</h2>
+<h3>1. The intelligent organization: three layers of meaning</h3>
+<p>The starting point was the "intelligent organization" proposed by Baidu's Mr. Li (Li Yanhong) (transcribed as "吃轮组织"). Zhou Xiaoniao's reading has three layers:</p>
+<ul>
+<li><strong>Layer one: one person + AI/tools = a small closed loop.</strong> Hiring people and recruiting are "not realistic" right now: the economic environment is poor, and in his view employees' quality is not worth the money — "hiring is actually a loss" — unless the person makes you money from day one. Clerical-level work (organizing files, writing plans and PPTs) goes to AI; a sole proprietor can outsource tax filing for two or three hundred, or five hundred, yuan and doesn't need an accountant. His example: Woniu selling goods on Xianyu — if you can't sell it yourself, someone you hire won't be able to sell it either, "because if that person could sell, they wouldn't come work for you"; if you can sell it yourself, AI can handle the vast majority of the actions for you.</li>
+<li><strong>Layer two: two intelligent organizations joining forces.</strong> For example, he knows domestic self-media and the other party knows overseas e-commerce; each brings their own tools and together they complete a bigger project, each covering the half the other doesn't understand.</li>
+<li><strong>Layer three: in the future there will be only three kinds of people.</strong> First, the "chosen ones" (he doesn't elaborate, and believes such people would never come listen to a livestream anyway); second, the people at the intelligent-organization layer, who create value and profit; third, people who failed to keep up with the times, doing the basic physical labor for intelligent organizations — for example, the courier who delivers his computer: "he is just a helper." He admits this "can't even be broadcast domestically," but believes the future will sort people into exactly these three groups.</li>
+</ul>
+<h3>2. Don't do "merit-making" — get the business logic clear first</h3>
+<ul>
+<li>Shouting about making money every day is "utter nonsense": if you can't state the business logic clearly, "you are not actually making money, you are just doing merit-making" (working a job). Of 100 people on X, "maybe only 9–10 are actually making money, and not much at that"; the rest just use X as a testing platform — he is an example himself, saying on X some things that can't be said domestically.</li>
+<li><strong>First choose the environment you currently live in</strong>: if you're in China, you can only make money in China (unless you're overseas); don't do things with barriers — "if even getting on X is difficult for you, you're not suited to doing business on X." Douyin, Xiaohongshu, and WeChat Channels are three natural battlefields; solve the money-making problem in those three places first. There absolutely are people who make money on X over the long term, but they are "very few," far fewer than on Douyin, Xiaohongshu, and WeChat Channels.</li>
+<li><strong>Figure out what you can actually do</strong>: don't start by talking about 1 million, 10 million, or 100 million. "When you had a job, did your salary ever exceed 10,000 yuan? If it never exceeded 10,000, the most important thing is to go work at a self-media company or somewhere like that" — if you're bullish on e-commerce, go work in e-commerce; if you're bullish on self-media, go work in self-media, until you can be a team leader. "If an employer wouldn't hire you, why would a client hire you for your startup? I just don't believe it."</li>
+<li><strong>Sell one cent first</strong>: by whatever means, get one thing done first — can you sell one item on Douyin/Xianyu? "Can I just sell one cent first?" If you want to do overseas business, first go to Shenzhen, join a foreign-trade company, and see whether anyone wants you.</li>
+<li><strong>Self-media, e-commerce, and AI are merely tools for converting business understanding</strong>: "Monetizing through self-media is itself a lie"; "self-media is just a tool for converting my business understanding — with it I can monetize, and without it I can monetize too." Paid knowledge is the same: the money earned is business knowledge monetized, not monetized by self-media.</li>
+</ul>
+<h3>3. Accept market behavior</h3>
+<ul>
+<li>Do whatever the market needs you to do; you can't say "I'm sick today" or "what am I going to do." His example: a friend made money in self-media and then got scammed, and kept talking about it over and over — "this kind of thing is normal; just treat it as tuition." If you can't accept it, "there will be plenty more of this waiting for you."</li>
+<li>He suggests trying rental agency work in a Shenzhen urban village to experience it: how many people and how much trouble you'd run into every day — "people can scam you right in front of the police."</li>
+<li>His definition: market behavior has no logic, doesn't care about law, doesn't care about morality, and follows no rules — "pure chaos," "a death lottery for everyone, really." Faced with something bad, there are only two choices: accept it immediately and adjust your form, or be unable to take it and break down — but the thing itself can no longer be changed.</li>
+</ul>
+<h3>4. Keep the customer in your heart</h3>
+<ul>
+<li>"A paying customer is my daddy." Stand in the customer's shoes, serve people well — "how to wait on God" — and you can even provide emotional value.</li>
+<li>A negative example: someone on the team who had never done it said "I don't think the customer thinks that way" — "how arrogant can a person sound"; "the poorer a person is, the more arrogant they sound"; "if he could pull it off, I'd cut my own head off."</li>
+<li>He says he sometimes feels for paying customers and proactively says "just take a refund," "you've had it hard, forget it."</li>
+</ul>
+<h3>5. Standard execution: before you've made money, execution matters 100 times more than thinking</h3>
+<ul>
+<li>They ran a one-week campaign, all newcomers, and produced close to over 3 million views in total; one of them was a complete beginner (who even had to be taught how to fill in a Feishu link) and got 1.9 million views in a week — "it absolutely wasn't that I taught well; he was just lucky," "he was capable enough."</li>
+<li>The key is posting every day: "Look at Woniu doing Xianyu — posting every day, every day." He himself is the negative example: "relatively lazy," "as soon as I make a little money in a month I start resting" — but he thinks he can afford to be lazy because he has "already made that money"; people just starting out "have no right to say no."</li>
+<li><strong>Standard-value execution</strong>: he uses his own time as a property agent as the example — in the first week, a newcomer hands out flyers on the street for 7 days and does nothing else; in the second week, 100 phone calls a day. "Going to view properties, learning how to read a house, learning to make calls — all a waste of time"; "calling it idiotic is an insult to intelligence." The self-media analogy: start by posting 100 items — "Chen Changwen and all of them have said this, including Brother Dong."</li>
+<li>"If you haven't made two or three times what you once had, or made 8 figures, you have no way to think — all your thinking is idiotic thinking." "Before you've reached a certain level of results, execution is 100 times, 1,000 times, 10,000 times more important than thinking." Only when your income reaches the 10-million-a-year level and execution is maxed out does thinking become the important thing.</li>
+<li>The Shenzhen Didi-driver benchmark: driving 16 hours a day, "you can take home a bit over ten thousand" — the implication being that if your self-media does worse than that, your execution simply isn't there.</li>
+</ul>
+<h3>6. Do the math: early on, only one kind of spending is allowed</h3>
+<ul>
+<li>Equipment, hiring people, and registering a company are all wrong in the early stage, in his view — "buying equipment makes you an idiot too" (he acknowledges he swore). Early on, losses are allowed, but only in one place: <strong>continuously paying other people for paid knowledge</strong> — 100 or 200 is fine, 1,000 or 2,000 is fine — "pay until you admit this thing is right."</li>
+<li>The logic: if you pay and then feel you were harvested like a leek, "that mindset is wrong, and that person will never make money in his life." Only when you've paid to the point of fully accepting paid knowledge as a thing can you possibly make money — because paid knowledge is itself a business model, "regardless of whether there's real substance inside, whether there's good stuff, whether it's harvesting leeks — that person can't say clearly, and we don't discuss it." His analogy: buy a loaf of bread and some people find it delicious and others awful — how do you refund it after one bite? "Existence implies demand": accept the existence of every kind of business model.</li>
+<li>Payment also sorts people: people who don't pay "all look down on you." When someone adds him on WeChat he sends a code: "the threshold fee is 119; pay and we keep talking; don't pay and you're blocked at midnight."</li>
+</ul>
+<h3>7. Paper-and-pen deduction: choose backwards from the goal three years out</h3>
+<p>He had the audience write along with pen and paper on the spot (from about [00:31:35]):</p>
+<ol>
+<li>Write down your city (e.g., Shenzhen);</li>
+<li>Write down your age (e.g., 32);</li>
+<li>Write down what state you should be in three years from now (e.g., hypothetically, earning 10 million at 32);</li>
+<li>Work backwards: look at which people earn over 3 million a year, over 1 million a year (e.g., 10, 20, 30 of them);</li>
+<li>Assume by default that self-media, AI, and e-commerce are the three that can make money; then look further down for what needs no cost — paid knowledge needs no cost, "so choose paid knowledge, there's nothing else";</li>
+<li>The forms of paid knowledge are livestreams, videos, and text-and-image posts; choose whichever you can do;</li>
+<li>Which topic to talk about: relationships, cognition, entrepreneurship, teaching people self-media… choose what you can understand — "you can understand other people's content when you listen to it, and you can say it again in your own words";</li>
+<li>Go to Douyin, WeChat Channels, and Xiaohongshu to find experts, "but not too high — too high and I can't learn from them; find the ones I can understand";</li>
+<li>Start executing: if they post 10, you post 10; if they post 50, you post more than them. "Review only after you've posted; don't think in advance." "Other than taking out your phone and topping up your data plan, don't do anything else." If they use images, you use images; if they use videos, you use videos — "copy it completely, don't use your brain, whatever you do don't think; the moment you think, you're finished";</li>
+<li>While posting, people will definitely attack you — "ignore them; these people don't pay you, they're all idiots, they have no standing to judge you." Block the abusive ones; keep the ones who disagree but have a point (they increase your capacity); the ones who agree help you get traffic; the ones who pay are "fantastic."</li>
+</ol>
+<h3>8. Sorting people into tiers: fellow travellers, juniors, ants, seniors</h3>
+<ul>
+<li>He cites the taxonomy from <em>Tiandao</em> (in his words): those worse than him are "ants," whom he looks down on; those somewhat outstanding, whom he can mentor, are "juniors"; those roughly his equals, each with their own strengths, are "fellow travellers," whom he can treat to dinner and chat with; those more capable than him are "seniors."</li>
+<li>His threshold: to chat with him, a hire needs an annual salary of over 150,000, and only then are they qualified to be his employee — "otherwise the time I spend training you is wasted"; "in the old days, if you wanted to work with me, you'd apprentice for three years first." Making money is a craft; an OPC is essentially "an itinerant craftsman walking the streets" — with luck you open a teahouse and set up a stage; without luck you walk the streets your whole life.</li>
+<li>In his view, paid-knowledge price bands run from 9.9 yuan to 3,000, 5,000, 8,000, even 100,000; "if you sell something to someone for 9.9 yuan, afterwards they'll look down on you."</li>
+<li>"Not every client is worth taking, not every business is worth accepting, not everyone is worth associating with" — sorting by value is part of market behavior.</li>
+</ul>
+<h3>9. Imitate → transfer → innovate: the October case</h3>
+<p>This is the case he told in the most detail (approx. [00:48:00]–[00:54:00]):</p>
+<ul>
+<li>In October, a person with a state-issued disability certificate (for whom even holding a regular job is difficult) came to him to learn how to make money. The first thing he had him do: search Xianyu for a small item priced around 10 yuan (transcribed as "一价," suspected to be a small item like earphones or hangers), save the picture of the best-selling one, and use image search on Pinduoduo or 1688 to find the source; copy the 1688 pictures in full, change the MD5 with software, copy the text of that best-selling Xianyu listing, changing only the parameters (theirs is a 10-pack, yours is a 12-pack), and price it 0.5 yuan cheaper than them (they sell at 10 yuan, you sell at 9.5), but two or three yuan above the 1688 purchase price. The result: he posted only two listings and it sold, earning two or three yuan.</li>
+<li>That is called <strong>imitation</strong>. Then he had him stop doing anything that required capital and switch to selling zero-cost virtual materials: take the cover images of well-made, high-traffic listings of the same kind on Xianyu, put Tianya forum posts (which Zhou had sent him) into a cloud drive and list them for sale; it sold the same day or the next.</li>
+<li>That is called <strong>transfer</strong>: from selling physical goods on Xianyu → selling virtual materials on Xianyu → selling materials on Xiaohongshu (register with an ID card; you can open a buyer account and attach links with zero followers), selling a 2-yuan "life guide" type PDF — "earned 10 yuan in three days" — going from a little cost to no cost at all, "and then he had graduated." But that person later stopped doing it — "he looked down on that money," "you should just give me the money directly." Zhou Xiaoniao said "to each his own," but "in theory this business model works"; "if a person in that situation can make money from this, and you still haven't made this money from it" — and he also said "this little project could sell for two hundred, three hundred."</li>
+<li>Methodology wrap-up: <strong>imitate first, then transfer, then innovate</strong>. Imitation is copying someone else's business model wholesale: see Woniu doing Xianyu — copy step one, step two, step three, step four, and see whether you can sell. "Woniu is definitely right; if I definitely can't sell, it must be my problem." "All problems are my problems"; "all mistakes, pain, and difficulties — everything that makes me unhappy is caused by myself and has nothing whatsoever to do with anyone else."</li>
+<li>After you've learned by copying, teach it to someone else (a friend, your mother, anyone); if they can understand it and sell, you've learned it; if they can't understand it, you haven't replicated it yet.</li>
+<li>Split-and-transfer: break a project into five steps (register the account, choose the product, make the images, make the content, list it), then port it across to WeChat Channels, Xiaohongshu, Douyin, X, Facebook — "this ability is called transfer ability." If your ability can't transfer and has to depend on one platform, "if that platform bans you, aren't you finished?"</li>
+<li>Innovation examples: if someone else is a girl dressed as a guy singing, can he be a guy dressed as a girl singing? If someone else is one person, he does three; if someone else is three people, he does five; if someone else is on the street, he's in the water, swimming backwards in a pool — "can it be mutated? Do you have that ability?"</li>
+</ul>
+<h3>10. Collaboration: only work with people who can stand up</h3>
+<ul>
+<li>After transfer comes collaboration: work with people like Woniu, Fatty, and Bastard, each of whom has a business that runs — "I will absolutely never collaborate with my fans; my fans can only be my students. If you worship me, you can only be my student. But if you stand up in front of me, I might collaborate with you."</li>
+<li>The way to collaborate is blunt: treat them to food and drink and "pump them hard," or spend two or three hundred buying their course, then ask questions publicly in the group — "ask in front of everyone in the group and he will definitely answer you; he'd be too embarrassed not to."</li>
+<li>The purpose of collaboration isn't making money together but broadening your horizons: "If I collaborate with Woniu, I learn Xianyu; if I collaborate with Punk, I learn communities." The more you see, the more choices you have: selling goods on Xianyu tops out at 100,000 yuan a year if you break through the ceiling; paid knowledge at 1 million a year is "just getting started"; franchising "might make ten million like it's nothing"; AI is a separate calculation — "only after you've figured it all out completely do you choose your direction of startup execution."</li>
+<li>He stressed that everything in the first 40 minutes was not about doing business or starting a company, just "suitability testing" (testing): after the test, then choose — "I'm finally going to root myself in the AI track," "I'm finally going to root myself in the self-media track" — what you choose is an execution direction. Any business model needs a place to be displayed (telemarketing is also a form of display).</li>
+</ul>
+<h3>11. Picking a track: only serve high-end customers</h3>
+<ul>
+<li>Take the silver economy as an example: he believes only doing "business with people who have pensions" counts as the silver economy. Under the same big word, some people sell expensive health products and snack packs, with margin, to customers who can afford them; others do sprain-and-injury services for people of average means — the latter "like to play dirty" and "won't pay for their own choices, because they can't afford to"; "the time they spend wearing you down, they can wear that money back out of you or make a fuss and extract some money out of you" — "in essence, that is their business model."</li>
+<li>An example: someone borrowed money to pay tuition, read all his materials, and demanded a refund; he deducted the 988-yuan materials threshold fee and refunded the rest, and the person still complained "this little bit of material costs this much?" — "this kind of poor person wearing you down is itself making money."</li>
+<li>The conclusion: doing business is two business models in confrontation — either you outlast them, or they outlast you, or you cooperate for a win-win (he generally chooses win-win). But serve high-end clients and high-quality crowds; "don't serve low-end clients." In the silver economy, selling health liquor, health products, and health medicines "is the most trashy and the most accident-prone; 90% of accidents happen there," while high-end nursing homes and high-end custom travel "very rarely" have incidents — "one is in heaven, the other on earth." Renovation disputes are the same: old houses the most, new houses next, villas the fewest — "the lower the house price, the more disputes."</li>
+<li>After picking a track, think further: where are the customers? Realistically simulate the situations customers will present.</li>
+</ul>
+<h3>12. The product four-piece set: traffic product, profit product, loss product, most profitable product</h3>
+<p>He used his own products as the example (approx. [01:06:00]–[01:12:00]):</p>
+<ul>
+<li><strong>Traffic product</strong>: serving others for free. His one-on-one consulting is 800 yuan for one hour, one question; but all paying students who have added his WeChat "can ask me one question for free first." An example from a community event at the end of 2023 (a traditional Chinese medicine free-clinic at a Beijing alumni gathering): he bought a measuring device on Taobao ("if you say it's useful, it isn't; if you say it's useless, it produces data") to measure common health indicators for the elderly. He didn't give anything away, but "if you want that, you can come every week to be measured" — free measurement is the hook, and only after paying can you enjoy services like free re-measurement. "If it's completely free, this machine would never stop all day; if it's completely paid, people would leave."</li>
+<li><strong>Profit product</strong>: a business-group materials package made once (text + video), sold continuously afterwards and updated once a quarter; "after you buy it, I just hand it over to you; I don't remake it every time."</li>
+<li><strong>Loss product</strong>: the 3,000-yuan 30-day hands-on coaching group — "I accompany you hands-on for 30 days." He admits it is a 100% loss for him, the delivery is heavy, and "sometimes I often break down"; "as soon as I check homework I break down." But it has to be done, because only people who pay to come in and genuinely need to solve a problem have real problems — "the comments you search up online are all fake." Through it he finds customers' real sticking points and then optimizes.</li>
+<li><strong>Most profitable product</strong>: business sticking-point coaching, 3,000 yuan, 45 days, one-on-one — "I only need to answer that one sticking point," usually finished in an hour or two. "The more expensive the client, the simpler it is," and they may develop into friends and produce collaborations.</li>
+<li>He asked the audience in return: do you have a product that continuously increases your profit? If not, "shouldn't you think of one?"</li>
+<li>Once the product is set, run a self-media account every day: record what you ran into today, what problem you solved, and how you thought about it — "record, send, reflect." "Something you couldn't figure out this month, next month you might look at the Douyin posts you sent and go, oh, so that's how I thought about it." Thinking that is sent out is real thinking; otherwise it's just empty fantasy in your head. It also brings customers and attention: "he thinks you're awesome, he might even pay you."</li>
+</ul>
+<h3>13. Back to the intelligent organization: Defou selling apples</h3>
+<ul>
+<li>He gave the example of "Teacher Defou" selling Shandong apples: one person + AI collaboration, building a website to sell apples and support farmers; the apples need people to pick them and people to ship them — Defou himself occupies the intelligent-organization position, while the fruit farmers, couriers, and packers are "serving the intelligent organization."</li>
+<li>One level up is collaboration: once Xiaohongshu works, you do Douyin; you discover Woniu is very good at Douyin, so you collaborate with Woniu and split the revenue. Another level up is digital humans: rent an iPhone (he said "rent one, not buy") paired with AI to make a digital human that broadcasts 24 hours a day without stopping — another mature intelligent organization.</li>
+<li>He wrapped up: the three forms of the intelligent organization are covered, the startup-execution part is done, and next comes what's next.</li>
+</ul>
+<h2>Part Two: Q&amp;A (approx. [01:17:00]–[01:48:00], inserted between the two parts)</h2>
+<h3>Q1: What do you think of FDE training?</h3>
+<p>The questioner does corporate FDE work (corporate AI implementation training / in-house training, one-on-one) and asked what he thinks of it.</p>
+<ul>
+<li>Zhou Xiaoniao: <strong>FDE is a business that makes money, but it is not a good business — it's even worse than agency operation.</strong> The difficulty is that you have to go inside the enterprise and build an unfamiliar bridge between employees and management — "no less than creating Doubao with your bare hands." AI is a whip in the manager's hand: an employee who used to shoot 5–10 videos a day now has to post 50; the workload increased, the pay didn't, and the boss may even dock pay or fire people because of AI. The boss is definitely happy, the employees are definitely unhappy, and the resistance is enormous.</li>
+<li>But bosses are a rigid demand: hiring one person costs 150,000 a year, while training that solves it for twenty or thirty thousand, or fifty thousand, is money he's willing to spend — so it can make money. But it's unsustainable: "maybe this year, maybe next year; once the wind changes, it's over." And what's being compared is not who actually solves the enterprise's problems, but who can be the boss's "dream-maker" — "this boss's dream is especially big; however you pitch it, make him believe you can realize his dream."</li>
+<li>The questioner added: implementation delivery cycles run three months or half a year, with maintenance afterwards, and everyone is competing on unit price; he wants to switch to training (delivery in 3–4 days, higher unit price, using a funnel to screen for high-price clients).</li>
+<li>Zhou Xiaoniao replied: that idea is "complete garbage, worthless." What he would do: pull out all the clients he has served, look at what business they do and why their sticking points were solved with AI, and finally whether one computer plus two or three people could copy one of those businesses and do 10% of it — "I wouldn't consider anything else." FDE depends entirely on the boss: "you can only eat if he gives you a mouthful of rice." And FDE's greatest value is going deep into the front line of enterprises and getting a lot of business knowledge and data — "having served so many FDEs, I usually look at that table, that list: which companies make money and deliver well," then copy one himself and try it: "if I can copy it, that's my profit; if I can't, that's my lesson."</li>
+</ul>
+<h3>Q2: Students on a Kuaishou project place orders at different speeds — how do you coach them?</h3>
+<p>The questioner coaches a Kuaishou project, teaching hand-in-hand, but some students graduate and make money quickly while others place orders very slowly; as a trainer, how do you raise students' money-making efficiency?</p>
+<ul>
+<li>Zhou Xiaoniao split it into two questions: first, I'm very dumb — how do I get started on something; second, how do I do standardized training delivery.</li>
+<li>His approach: set a 7-day test line — can you follow "click here, click there" and make it work? If yes, do it; if not, "I suspect your basic comprehension itself has a problem; you can leave, and whatever fees were charged will be refunded to you." In the second stage, work along the line he drew; if you can't, raise questions, and he optimizes and refines further, until he breaks down. When 70%–90% of people get it right, that content doesn't need changing anymore — that's the SOP. In the third stage, absorb the practices of outstanding students back into the SOP — "there is definitely someone more outstanding than me; I am just a person who draws a standard line."</li>
+<li>Dumbness comes in two kinds: if your brain is dumb, ask more ("everyone has the trait of loving to teach; as long as someone has made money, they love teaching you"); if your hands are dumb, practice more. Beyond that there are only two situations: others look down on you and won't teach you properly, or you look down on others and never put your heart into doing it.</li>
+<li>The questioner added: in less than a month, someone has already earned nearly 10,000; they use Feishu documents as a screening device — Zhou Xiaoniao agreed: Feishu itself is an assessment; "you also have to believe that some people can't use a smartphone."</li>
+<li>Another listener added (approx. [01:40:00]–[01:44:00], ASR intermittent): the problem may lie in the SOP itself or in information deviation in the handoff communication up and down the chain, plus differences between individuals and accounts, causing the income differences; they are also optimizing.</li>
+</ul>
+<h3>Q3: Can I do AI training for kids overseas?</h3>
+<p>The questioner is abroad, currently teaching Chinese, and wants to switch to AI training for children.</p>
+<ul>
+<li>Zhou Xiaoniao: first check whether anyone locally is already doing it. If so, go volunteer, get a job there, and steal the craft — "do it for a month and you'll basically have the environment figured out." If not, "drop the idea as early as possible" — "someone has definitely thought of your idea before; if the idea is good, someone has definitely succeeded at it, so just learn from them; if no one has, the idea itself is probably wrong." You can even pose as an investor to extract the other party's business model — "that's not deception, that's business behavior."</li>
+</ul>
+<h3>Q4: Newcomer in simulation chips — AI does a week of my work in 10 minutes. What do I do?</h3>
+<p>The questioner started working recently, doing analog circuit design simulation; AI can finish a week of his work in 10–30 minutes. The industry requires accumulated experience, and in a long cycle a newcomer can't gain practice in a short time — should he find a master to apprentice under, or switch to a profession with a shorter chain?</p>
+<ul>
+<li>Zhou Xiaoniao: there are two questions — the chain is long, so how do I execute myself; and the chain is long and I don't want to execute, so should I change industries?</li>
+<li>If you're bullish on the industry, it's like Guo Jing training relentlessly with the Seven Freaks of Jiangnan: "if you endure it, you're a hero; if you can't endure it, you're…" If you're not bullish and want to change industries, it's still best to find a teacher, but not every teacher is a good teacher, so take time to screen.</li>
+<li>His suggestion: add some short chains inside the long chain to test — that is, take side jobs.</li>
+</ul>
+<h3>Q5: Model deployment + selling courses + GEO, three lines in parallel — comments?</h3>
+<p>The questioner is responsible at his company for training and deploying all models, while also turning his work experience into courses sold online and doing coaching, and in his spare time doing GEO and SEO for overseas sites.</p>
+<ul>
+<li>Zhou Xiaoniao first criticized: "You didn't listen to a single word I just said. I'm not talking about independent individuals; I'm talking about people… intelligent organizations." "What is a super-individual? A super-individual is a super employee." "An intelligent organization is a small boss."</li>
+<li>His comments: a business must satisfy two conditions — it can be standardized, and it can be replicated. "Your experience and your ability only count as you personally being awesome; no matter how awesome you are, you're still an itinerant craftsman." A craftsman only makes money at the very top; he gave the example of "Master Tong," who makes statues in Jingdezhen (very expensive). Below the top, you're just a barber: "don't talk about making money; just stay alive and eat."</li>
+<li>The first thing he does after a business runs through: find someone to replicate it and teach them. "If he can't learn it — if a whole batch of people can't learn it, if one person can't manage it — this business is garbage, and I won't waste another bit of time on it online."</li>
+</ul>
+<h3>Q6: How exactly do you do GEO?</h3>
+<p>The questioner does GEO optimization and asked about the correct way to do GEO.</p>
+<ul>
+<li>Zhou Xiaoniao: GEO is producing guides for customers — standing in the customer's shoes and giving an executable plan; it's not about scenarios or keyword coverage. His example: one product solves one pain point and covers all groups of people — a weight-loss product: how women in Shenzhen lose weight, overweight girls, girls who don't want to exercise, girls who don't like eating, girls who love eating, girls with irregular periods… "just fill it up with guides like that, ultimately pointing to your product."</li>
+<li>The key lines: "When a user searches, what they hope to get is an answer." "I want to lose weight now, and I absolutely don't want to exercise; so when I search for weight loss, I absolutely do not want to see the AI tell me I should keep exercising." What he wants to see is: I know you're in Shenzhen, there's an offline store here, or JD can courier it to you — "you only need to do one thing now: scan the code and pay, done." "Don't talk to me about anything else; I'm an idiot, I can't understand it."</li>
+<li>"What people want is the simplest executable thing — ideally what comes out is just a payment code; scan it and you're done. As for whether I actually lose weight, my immediate anxiety is resolved." "If you can't figure this out, don't do this work."</li>
+<li>He pressed the questioner, "Will you pay me?" The questioner hesitated, and Zhou directly asked him to leave the mic: "Get down quickly; I've said it three times already, this is wasting time."</li>
+</ul>
+<h2>Part Three: What's Next (approx. [01:48:00]–[02:31:30])</h2>
+<p>Opening: he said this part is relatively sensitive — "everything I'm about to say is just me thinking nonsense, talking nonsense, drunk"; "I am a lunatic myself"; "everyone, listen to it as a joke, let me fart." Definitions first: <strong>"what's next" means things that will happen in the future and will profoundly affect you personally, and that future is within one or two years, or three to five years</strong> — "if the world explodes tomorrow but you still survive, then the world exploding has nothing whatsoever to do with you."</p>
+<h3>1. One node: no more than 8 years</h3>
+<ul>
+<li>He said a certain node that may exist in the future is "no more than eight years — remember, eight years," but he did not explain on the show why it is eight years.</li>
+</ul>
+<h3>2. Two "explosions"</h3>
+<ul>
+<li><strong>First, all entry-level clerical jobs at private companies will be eliminated, without exception.</strong> Image makers, basic bookkeepers, article writers — "all will be eliminated by AI"; "maybe I need 10 clerks here; I might just have one clerk paired with 9 AIs." Anyone present who works as a clerk "should open Xiaohongshu right now and start selling orders at speed."</li>
+<li><strong>Second, all cosplay entrepreneurs will explode.</strong> People with no real business of their own, who don't accept market behavior and don't understand anything, who rent an office, put on a suit, and attend all kinds of events — "even opening a milk-tea shop as cosplay" — "these people will all be eliminated." People in small cities will fare slightly better; people in big places "will definitely be eliminated."</li>
+<li>The reason: customer demand will become real — demand for emotional value pays emotional-value fees, demand for tools pays tool fees. "Packaging is completely dead"; "merit-making is finished."</li>
+<li>Organizations will become the intelligent organizations Mr. Li talked about: people who can't use self-media to promote themselves, can't use e-commerce to transact, and can't use AI to assist their work — "you are garbage too," "unless you are very rich and very awesome right now." The line he drew is annual income below A8: "this is the fate of all of us; it's just a race to see who runs faster."</li>
+</ul>
+<h3>3. Ordinary people have only three legs left: self-media, e-commerce, AI</h3>
+<ul>
+<li>"Self-media, e-commerce, AI — these are the three roads for ordinary people in the future, and there is no support: of the three legs, not one can be missing; a triangular structure is the most stable." The base is business knowledge, business understanding, business models, and business thinking, expressed through these three means.</li>
+<li>Definitions of the three skills:</li>
+<li><strong>Self-media</strong>: promoting your own ideas on public platforms. His example: at last week's Shenzhen documentary conference (as transcribed), on the first evening people could go up and speak, so he went up and spoke; "someone said it was decent, and I even got a collaboration out of it."</li>
+<li><strong>E-commerce</strong>: not selling things, but "using some business model to run this thing through and sell a product." His own account: on X, someone bought his community product via Twitter — "isn't that e-commerce going overseas? It's called paid knowledge going overseas." Listing a virtual product on Xiaohongshu is also e-commerce.</li>
+<li><strong>AI</strong>: AI is a tool, an employee, not a toy. "Only if you can use AI can you be a boss"; "AI is the foundation for a boss to make money"; "a boss definitely makes money, but someone who makes money is not necessarily a boss." If you don't understand business thinking, business models, the business itself, and sticking points, "AI will not give you any results; you can just chat with it." "Don't obsess over buying a good model, Claude or whatever… just open the free daily quota and chat." "If you open AI every day and create over a hundred things, it has no value for you — a waste of time and money."</li>
+<li>AI tools/uses he says made him money (all his own account, unverified):</li>
+<li>Workbody (as transcribed): he taught classes on it and earned close to 5,000 yuan;</li>
+<li>U-Mind: about 30,000 yuan, in only 2 hours, making a "Little Bear Uncle" pack (someone bought it for 30 yuan), with a points system set up — when the points reached a certain level and it couldn't answer, his WeChat would pop up: "add me and pay to solve this problem";</li>
+<li>Doubao: his girlfriend didn't know how to do these things online, so he set Doubao up for her; content was sent from Feishu, and it automatically ran every day posting images, making images, and making content, and she just copied and listed each day. A Doubao membership is 68 yuan a month, and over the four months from August to November it produced over 5,000 yuan a month;</li>
+<li>Google's Gemini (transcribed as "哈金密"): an India-region account bought for 18 yuan; he fed it his business price list and had it produce plans, then gave feedback and revisions from a boss's perspective;</li>
+<li>Plus two machines: one his own, and one borrowed from "Mumu" (as transcribed, suspected to be a friend's nickname) — "one machine runs one project," connected to Feishu to aggregate the content.</li>
+<li>He greatly admires "Mumu": he bought a machine and did a school-related project, "creating a model out of thin air," "showing me directly, right in front of me, that a model is viable."</li>
+</ul>
+<h3>4. From SEO to GEO: what AI gives is an execution plan</h3>
+<p>He says he presented this material at a GEO conference:</p>
+<ul>
+<li><strong>Stage one, SEO</strong>: you search a question and Baidu gives you 100 answers, and you make the choice (e.g., search "how to get to know Zhou Xiaoniao" and Baidu gives four answers: pay, follow, leave a comment, attend the Zhou Xiaoniao session of After the Noise).</li>
+<li><strong>Stage two, self-media guides</strong>: you search on Xiaohongshu or Twitter and what comes out are guides (open whose follow, pay a 129-yuan fee, join the community and ask Punk), and you make the judgment — is this guide useful to you right now?</li>
+<li><strong>Stage three, GEO</strong>: you open an AI like Doubao and enter "I want to get to know Zhou Xiaoniao," and the AI directly gives an execution plan: open this link now, pay, add the WeChat, ask the question. "The execution plan the AI gives you… because the AI understands you much better than I do."</li>
+<li>The evolution of media forms (his taxonomy): traditional media (directive, fixed television) → new media (you have to click three times to find the content) → self-media / algorithmic platforms (Douyin, Kuaishou, WeChat Channels, Xiaohongshu, Twitter — "the moment you click in to look at beauties, the algorithm immediately understands you as a pervert and starts pushing beauties to you; the moment you search for making money, it starts pushing how to make money to you; this platform understands you better than your mother does") → AI (first it builds a virtual profile of you, then combines half self-media content and half new-media content into materials or execution steps and sends them to you).</li>
+<li>The conclusion: doing GEO also requires doing self-media and understanding e-commerce — "What problems does Zhou Xiaoniao solve? Business problems, traffic problems, capital problems, emotional-value problems" — and then you know how to choose. In the end it all comes back to the two legs of sales and technology: "How to make a video beautiful and watchable is technical work; how to make people buy things and close deals after watching is sales work; neither can be missing."</li>
+</ul>
+<h3>5. Only two professions and two kinds of customers will remain</h3>
+<ul>
+<li><strong>In the future there will be only two professions</strong>: first, sales ("selling things accurately, talking about nothing else"), which earns more and earns faster among money-making; second, technology (many people, small-technology money — but there are many technical people and few who understand sales: "he just can't do sales, can't face people"). One level up is what he is currently learning: the "business planner" — planning a business, a project, a model, bringing everyone together to divide the work and collaborate. "Big brothers like it, investors like it, because your thing broadly works; technical people like it, because of the value of their time; salespeople like it, because of the money they earn; employees like it, because they are actually doing the work. Only one kind of person doesn't like it: useless people don't like it; people who come in and can't play don't like it."</li>
+<li><strong>Customers will split into only two kinds</strong>: those with real problems who are willing to spend big money to solve them ("spend big money, solve big problems"), and those who only need emotional value resolved (companionship play, text-generated value, psychological-resource value all count). FDE is essentially the boss's emotional value: "it doesn't solve actual problems." Doing emotional value means eating at others' mercy; taking sponsored posts is also emotional value. Those who solve problems don't need to eat at others' mercy: "as long as a person has this problem, they will eventually find me — it's only a matter of sooner or later, more or fewer."</li>
+</ul>
+<h3>6. Hands-on opportunities are getting scarcer</h3>
+<ul>
+<li>AI can solve all knowledge-type problems, but it can't solve hands-on problems — hands-on work needs customers, a starting point, and interaction. "Who provides you that opportunity? I don't get it; you can only attach yourself to some master or some company."</li>
+<li>An example: when he made calls in 2014, out of 100 calls a day, 20 or 15 people would pick up; today, out of 100 or even 1,000 calls, "not necessarily anyone will say two sentences to me." He managed a business of over 30 people, cursed at them for three days, couldn't stand it, replaced them and cursed again — but where does a newcomer find 30 customers to practice on?</li>
+<li>The paradox: if you don't know how, nobody wants you; if you do know how, nobody gives you a chance to practice. "Why would I take my customers and my materials for you to learn on and practice with? There's no need, right?" "You come to work for me and you don't know how — what job are you coming to do? I only look for mature people, and I even want them to bring their own resources."</li>
+</ul>
+<h3>7. Getting tired, the retirement wave, and "the road narrowing"</h3>
+<ul>
+<li>He said that later on, everyone will get tired: "Many people are already tired now, but the tiredness now is the tiredness of not finding work, of having no projects and no business — not the tiredness of having made money and being tired from earning." His own plan: "I'll just earn for three years; at most one more year — by 35, I will definitely retire." "As long as my money is enough to live on, going back to my hometown is fine too."</li>
+<li>When that time comes, what about partners and employees? "I'm not playing anymore; everyone's free; we split up, or I name a time point — say a year or two — and everyone finds other people." They will then look for experienced people, and "experienced people look for experienced people."</li>
+<li>His advice to the audience: everyone should draw a positioning for themselves — "what kind of identity do I have in this process?" If you're a student who has never thought about the future, "after you've thought it through, understood it, and decided, don't complain." If you haven't figured it out, hurry up and make money and learn technology — "learn to drive screws"; "electronics factories require university graduates now."</li>
+<li>"Reading books doesn't change your class." "You were a farmer before, you were a poor person before; you've only worn these clothes for a few days." "You yourself are a proletarian."</li>
+<li><strong>The road getting narrower is what makes it wide</strong>: now there are a hundred directions; do them this year, next year, and the year after, and 30 remain; in the end only one road remains — "on this road my choices have narrowed, but for me this road is a broad avenue; I just need to run on it." No need to think about how awesome other people's self-media is or how awesome their paid knowledge is — "none of it has anything to do with me anymore."</li>
+<li>Another way to have figured it out: completely understand that in the future you just won't work — "stop everything, sleep when it's time to sleep"; "enjoy, purely enjoy" — it's pleasant when the boss curses at me, pleasant when I have no money, pleasant when I eat, pleasant even when I eat feed-grade meals, pleasant when someone pays me a salary, pleasant when they don't pay me a salary and I look for work.</li>
+<li>A third kind: unhappy with the present, unhappy with the future, unable to figure it out — "anyway, everyone is lying to me and harming me" — "then let it be like this; this life will just be like this."</li>
+</ul>
+<h3>8. The eight-year plan and the two most terrifying kinds of people</h3>
+<ul>
+<li>He suggested making a three-year, five-year, and eight-year plan: "what kind of person do I want to become in the future," "what kind of life do I want to live in the future," "how much money needs to be satisfied," "where does the money come from," "what tools, and whom to collaborate with," "I need to find a big brother, find juniors, find peers." "Can I, in a short time, solve one today, you solve one tomorrow, another the day after, solving them step by step until, in the end, success comes naturally?"</li>
+<li>The two most terrifying kinds of people: the first is people who earned a little money before and aren't earning now — "he always likes to repeat, I could do it before, I can do it now. No: if you can do it now, you can do it now; if you could before and can't now, that equals can't now." "Past results are all void." The second is poor people — "their money is only enough for them to think about what's in front of them," and they have delusions, so they "can only rely on scamming to survive" (transcribed as "骗卫生," i.e., 维生, making a living): scamming merchants, scamming their way into jobs, scamming family members into giving them money and loans to start companies. "If you made it so he couldn't scam a single cent, then there's nothing more to say about that kind."</li>
+<li>Wrap-up: he said he had taken medication and drunk alcohol today — "everything I said is bullshit; everyone listen to it as entertainment, don't believe it at all, not one bit." Then he opened the floor for questions; if no one asked, the show would end.</li>
+</ul>
+<h2>Supplement: several numbers and claims, all sourced in the transcript</h2>
+<ul>
+<li>He says he is 32 years old with a junior-middle-school education; in October he posted a poll on X asking whether he could find a job with a base salary over 10,000, and 70%–80% of people said he couldn't; in 4 days he found two jobs at 18,000, demanding "I won't work for a base salary below 15,000," on the grounds that "I can solve the boss's problems." His apprentice fee has risen to about 9,000 yuan, and you have to work first — only if he's satisfied do you keep talking; if not, he refunds the money.</li>
+<li>His fees (his own account): one-on-one Q&amp;A, 800 yuan per question; full-case business coaching, 3,000 yuan; 30-day hands-on group, 3,000 yuan; WeChat threshold fee, 119 yuan; materials threshold, 988 yuan.</li>
+<li>The study-abroad project is something Adrian is doing "following Brother Bird"; it is not Zhou Xiaoniao's own project. The one-week campaign's over-3-million views and the beginner case with 1.9 million views are Zhou Xiaoniao's team's campaign data (his own account).</li>
+<li>"Defou," "Woniu," "Fatty," "Bastard," "Mumu," "Chen Changwen," and "Brother Dong" are all nicknames or names mentioned on the show, as in the original; their identities have not been verified.</li>
+<li>FDE was not spelled out in full on the show; per the questioner's description it is a corporate AI implementation training / in-house training role, and the original keeps "FDE."</li>
+<li>"A8" is the show's own wording (a colloquial label for an annual-income tier, not elaborated).</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1mdVbavnkJEvnk">https://x.com/i/spaces/1mdVbavnkJEvnk</a>（主持 @AdrianPunk115，嘉宾周小鸟）· 发布日期：2026-11-24 · 时长：159 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1mdVbavnkJEvnk">https://x.com/i/spaces/1mdVbavnkJEvnk</a>（主持 @AdrianPunk115，嘉賓周小鳥）· 發布日期：2026-11-24 · 時長：159 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1mdVbavnkJEvnk">https://x.com/i/spaces/1mdVbavnkJEvnk</a> (host @AdrianPunk115, guest Zhou Xiaoniao) · Published: 2026-11-24 · Duration: 159 minutes<br>This page is the full text of the notes, produced by machine transcription and then edited by hand; all views and figures are the original speakers' own account and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1mdVbavnkJEvnk">https://x.com/i/spaces/1mdVbavnkJEvnk</a>（主持 @AdrianPunk115，嘉宾周小鸟）· 发布日期：2026-11-24 · 时长：159 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"噪音之后周小鸟专场：创业执行与未来方向 · Yat's Talks",tw:"噪音之後周小鳥專場：創業執行與未來方向 · Yat's Talks",en:"After the Noise: A Zhou Xiaoniao Session — Startup Execution and What's Next · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

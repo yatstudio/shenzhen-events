@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>HTX DAO Builder Talk 第一期：币圈寒冬撞上 AI 裁员潮，普通人还有出路吗？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/htx-dao-builder-talk-1-20261125.mp3"></audio></p>
 <ul>
 <li>Space：https://x.com/i/spaces/1MEogbonZpdlQj</li>
 <li>时间：2026-11-25 18:54 CST 开播，全场约 87.5 分钟（录音 5249.67 秒）</li>
@@ -77,9 +88,146 @@
 <li>达达口播"黄仁勋的离职"疑为口误，按上下文应指黄仁勋回归事件，纪要中按回归事件处理。</li>
 <li>开场达达口播"比特币从最高点的 1 万 2"，结合后文"一直 12 万"，按 12 万处理。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>HTX DAO Builder Talk 第一期：幣圈寒冬撞上 AI 裁員潮，普通人還有出路嗎？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/htx-dao-builder-talk-1-20261125.mp3"></audio></p>
+<ul>
+<li>Space：https://x.com/i/spaces/1MEogbonZpdlQj</li>
+<li>時間：2026-11-25 18:54 CST 開播，全場約 87.5 分鐘（錄音 5249.67 秒）</li>
+<li>主持：HTX DAO @HTX_DAO，主持人達達（0x99DaDa）</li>
+<li>嘉賓：卡爾（0xcarlbot，北大電腦背景、技術出身）、德虎（wangdefou，珠海，文科生、用 AI 做產品）、rtsky7（透過 HTX 入圈，現自由職業、全身心投入 Web3）、Dexpigg（HTX DAO Genesis 負責人，2020 年入圈、DeFi 為主）、小杜（HTX DAO 社區大使，記者出身）</li>
+<li>逐字稿：1560 行，首句 [00:01:52] 為開場聲音測試，開頭約 2 分鐘無有效語音，正片從 [00:09:07] 達達開場；末行 [01:26:31-01:26:33]</li>
+<li>說明：以下均為嘉賓自述觀點，未經核實。ASR 歸一見文末。</li>
+</ul>
+<h2>一句話</h2>
+<p>寒冬是真的，但嘉賓們的共識是這輪寒冬和以前不一樣——基建、ETF、傳統資金都齊了，缺的是上漲的理由和真實的收入；AI 一邊在裁員一邊把門檻打下來，普通人的出路不在硬扛行情，而在把 AI 變成自己的生產力、同時攢下審美、判斷力和社區信任這些 AI 拿不走的東西。</p>
+<h2>一、幣圈寒冬：這輪和以前不一樣</h2>
+<p><strong>rtsky7：基建都齊了，缺的是上漲的理由。</strong> 他認為這輪寒冬和以前有比較大的不同：行業不缺基礎設施、不缺資金進入的渠道（現貨 ETF、越來越多交易基礎設施、傳統金融機構參與），但很多資產仍然缺少持續上漲的理由。他給出三個原因：</p>
+<ol>
+<li><strong>資金分流嚴重。</strong> 以前炒幣預期有很高增長，現在回頭發現 AI 也可以炒，美股、機器人都是很大的投資方向。</li>
+<li><strong>行業內部供應過剩。</strong> 項目越來越多、代幣越來越多，但真正能創造收入、擁有真實使用者的項目並沒有同比例增加。</li>
+<li><strong>投資者對敘事脫敏。</strong> 以前寫一份白皮書、講個願景就有人為夢想買單；現在大家只關心你到底有沒有賺到錢、投資這個項目未來有什麼收益。他認為這是好事，是對整個幣圈商業模式的重新洗牌：以前大家考慮如何透過發幣創造財富，現在考慮的是如何先創造財富、再透過代幣分配財富。</li>
+</ol>
+<p>他關注的方向是交易所支付、穩定幣、美股代幣化——至少有比較明確的真實需求。他認為 HTX DAO 最值得探索的是如何把社區參與、生態建設和真實價值形成長期正向循環。</p>
+<p><strong>達達：幣圈正在接盤傳統金融。</strong> 他轉述了一組數據分析口徑（未核實）：最近半年多一年，幣安等交易所上線股票代幣，圍繞黃仁勳回歸事件，幣圈在股票代幣市場大概接盤了 4 億多美元，已接近整個市場約四分之一、是第二名的兩倍多；SpaceX 永續單日成交 19.57 億 USDT，已佔到 SpaceX 現貨股份成交的約 14.9%。他的結論是：大量幣圈資金已經直接或間接參與到傳統金融股價交易當中；交易所 24 小時、全年無休交易的便利性，未來可能把傳統股民吸引過來。</p>
+<p><strong>卡爾：資金從 2025 年 9–10 月就開始往美股和 AI 流。</strong> 他認為 AI 股票像太陽、BTC 和 ETH 像月亮，資金被吸走了。2026 年 Web3 剩兩個敘事：AI Agent 與 Web3 在鏈上形成真實收益（他稱孫哥早期講過這個敘事）、RWA 代幣化。他稱 7–8 月鏈上有幾十萬個 AI Agent 在跑（自述數字，未核實），是一個在增長的市場。BTC 從 12 萬腰斬到 5.5 萬左右，最近兩天連跌；8 月 29 日 Bitcoin Asia 香港會上 CZ 還說要開啟下一輪牛市，現在誰也不敢說了。美股也不正常，Anthropic 1.5–2 萬億美元的大 IPO 是人類歷史上頭一次；幣圈現在跟資金、華爾街宏觀數據、美國失業率都掛鉤，不再是出個利好就漲。</p>
+<p>他本人今年的交易：AI 是基本盤，Web3 是今年新投的倉位；買的都是比較穩的（UNI、ZEC 等小倉），不虧就算可以；核心不是看好什麼，是在合適的時機出手、合適的時機退出。他認為現在反而是建倉的好時機——傳統金融與 Crypto 對接是圈內人多年的夢想狀態，只是對方現在也不好。</p>
+<p><strong>小杜：討論的話題變了，就是寒冬的體感。</strong> 她是記者出身，去年火幣節入圈約一年。她的觀察是：剛入圈時大家聊的是倉位、數據、機會、BTC 走向、哪個賽道有新增長；最近更多人發給她的資訊是讓她闢謠——裁員、團隊進展、幫孫哥闢謠，八卦成了熱點。看新項目時，以前問的是「有沒有空投、現在上車還有沒有機會」，現在更多人持觀望狀態，先了解項目能不能繼續生存；判斷標準從看增長和想像空間，變成了看成本和生存週期。她認為寒冬不只是幣價下跌，是市場更要求拿出更實際的東西。</p>
+<p><strong>達達總結：從「視夢率」到看真東西。</strong> 以前幣圈講「視夢率」——夢想有多大，市值就有多大；現在誰有用、誰能落地越來越清晰，這是好事。股票代幣化先在中心化跑起來，鏈上衍生金融模式未來會起來，Crypto 的開放性、可程式性優勢會慢慢凸顯。他最後補了一句：現在的寒冬一定程度上不是幣圈的寒冬，是經濟寒冬，全球金融、全球股市都在寒冬。</p>
+<h2>二、AI 裁員潮：美國已經很悲觀，中國還在暗流湧動</h2>
+<p><strong>卡爾：2027 年是比較確定性的趨勢。</strong> 他稱矽谷一直比較激進悲觀，微軟、Google 都發郵件通知「願意來就來、不愛來拿補償」（他轉述）；中國這邊降本增效從 2023 年開始一直沒停，AI 這波更嚴峻，但還沒完全爆發，表面有說有笑、實際暗流湧動；馬化騰前幾天說要打硬仗（他轉述）。他判斷 AI 裁員潮會隨著全球大勢直接爆發，2027 年是比較確定性的趨勢。</p>
+<p>他還提出一個悖論：很多人沒活幹，但又希望什麼都是無人的（無人駕駛、崗位被替代），沒人拿工資就沒人消費——全世界目前還沒有人能解決這個問題。他稱國家層面 AI 是戰略核武器地位，優先發展技術、民生往後排；到 2027 年 AI 的組織方式可能發生整體變革（他引用「聯鴻」的說法，未確認來源）。</p>
+<p><strong>設計師已經被替代，程式設計師、數學家排隊中。</strong> 卡爾稱 2024 年 Google 的 Nano Banana 模型出來後，設計師就被替代了，行業基本沒了，只剩 PS、證件照等邊角需求；程式設計師被替代也是馬上（他的判斷）；三年之內，數學家也被工程化——Anthropic、OpenAI 把以前認為 50–100 年解不出來的數學難題十幾天、二十幾天就搞定（他的說法，未核實）。他認為未來不被替代的人有兩類：做生態建設、人脈資源多的人，以及天賦綜合素質好的人。</p>
+<h2>三、普通人怎麼辦：會用 AI 和用好 AI 是兩碼事</h2>
+<p><strong>德虎（文科生轉開發）：先用起來，但別高估自己。</strong> 他用 AI 做客戶項目和垂直行業行銷工具。他的體會：寫文案、做 PPT、表格、作圖這些 AI 工具做起來輕而易舉；不會用 AI 工具的人會被會用的人替代；公司裁員後留下的是 AI 替代不了的崗位，加上能熟練掌握 AI 工具的人（一個人做兩三個人的事）。他以前在公司就推動下屬用 AI，最後只留一兩個就夠；現在招人也要求必須掌握 AI 工具，否則排到最後甚至沒有應聘機會。</p>
+<p>他的建議：越早越好從最基礎的工具用起，不用懂原理，但要會用它做事，最好懂一點原理；掌握工具後不一定非要上班，可以做自己的項目獲利。但他提醒：OPC（一人公司）不是誰都適合做——很多剛畢業大學生、沒 AI 經驗的人去做 OPC 很不現實；全國各地很多 OPC 社區建了卻沒人入住，是他看到的一個奇怪現象。</p>
+<p><strong>卡爾：會用 AI 和用得好是兩碼事。</strong> 他舉例：4 月 Claude Code 原始碼洩露後，GitHub 上很多人用 Rust 重寫，覺得效能更好；但文科生對需求的理解、對軟體工程的把握差很多，不知道怎麼做測試，只做功能性測試、以為舒服就行，達不到產業級。真正能做 OPC 的人，本身能力已經超過半個組、在行業裡已有名氣，做之前就已經有人脈資源、知道需求、知道找誰。05 後比 00 後更急，休學創業非常多，一直在抓機會（他的觀察）。</p>
+<p><strong>達達：AI 拿不走的是對需求的感受。</strong> 他認為數學家也很焦慮了，但 AI 不能替代的是人對需求的感受——了解世界、把需求說清楚、判斷做出來的東西是否滿足需求，這些感受性的東西 AI 不具備；觀察力和判斷力是未來很重要的能力。提示詞工程師這個職業一定會被 AI 自己解決（人用正常語言說清楚就行）；Claude 已經在做「說清楚想要什麼工具、它自己做出來裝到手機/電腦上」的事，安全性等也由 AI 解決；但「需要什麼、怎麼說清楚、怎麼判斷它真的做到了」很重要。</p>
+<p><strong>rtsky7：擁抱 AI，效率可能是幾十倍。</strong> 他是自由職業、全身心投入 Web3。他的體會：以前做自媒體要自己收集資料、寫文章、做圖片、剪影片，非專業根本做不出來；現在憑多個 AI，一個人能完成以前一個小團隊的事（宣傳海報、創意影片）。企業角度：以前 5 個人完成的工作，現在 2 個人用 AI 就能完成，剩下 3 個人的價值去哪？企業不一定裁員，但減少招聘就能改變就業市場。</p>
+<p>他以前做 HR，認為現在大學生非常難：以前只需要比另一個大學生優秀；現在要比 AI 優秀企業才考慮用你，大學生沒工作經驗、社會履歷不豐富，「可能還不如 AI」，就業環境非常糟糕。當每個人都有高效生產工具，效率本身不再稀缺，稀缺的是審美、判斷力、對行業的認知——AI 寫的文章需要你給提示、給角度，沒有履歷就沒法用好 AI。AI 也替代不了他在幣圈的經歷、和社區之間的信任關係。未來知識越來越便宜，重要的是個人的判斷能力和承擔能力。</p>
+<p>他的建議就一句話：積極擁抱 AI。有人排斥，覺得搶了飯碗或不夠聰明而不去用；但用上之後會發現非常好用，不主動擁抱肯定被 AI 淘汰，主動擁抱效率可能是幾十倍提升。他現在一天能生成十幾張、幾百張圖片，寫十幾篇文章打造個人 IP，以前一天最多寫一兩篇文章、一張圖片都做不出來；省下的時間可以跟社區互動。</p>
+<h2>四、給普通人的操作建議（達達在場內給出）</h2>
+<ul>
+<li>沒有很強交易能力就少交易，只做大倉位、大波動，逢低補倉或定投，不要上很多槓桿。</li>
+<li>熊市難熬，但熊市是最好建設的時機——大家無聊聊八卦的時候，你在偷偷用功，等牛市就有回報。</li>
+</ul>
+<h2>五、HTX DAO Genesis 在做什麼</h2>
+<p>這是 HTX DAO Genesis 的新欄目 Builder Talk 第一期。達達介紹：Genesis 是 HTX DAO 的去中心化共建計劃，任何人（包括社區成員）都可以加入；他作為生態節點之一，把認識的開發者召集起來，繼續在 Web3 尋找新機會。Dexpigg 補充：Genesis 核心團隊在搞「創新營」——項目方或個人開發者加入後，做出來的東西可以部署在波場上或給 HTX 賦能，按貢獻有對應等級，對開發者是扶持、對 HTX DAO 是代幣使用場景更多，是雙贏。</p>
+<p>達達在結尾邀請更多 Builder 參與：HTX DAO 帳號下有二維碼，掃碼填谷歌表單可加入（項目方、個人開發者都可）；下一期歡迎報名上麥分享。Builder Talk 的初衷：聊聊你想做什麼、已經在做什麼、看到別人在做什麼；成功的經驗值得分享，走過的彎路、沒想明白的困惑也值得拿出來交流；抱團取暖，找到一起嘗試的朋友。</p>
+<hr />
+<h3>ASR 歸一與存疑說明</h3>
+<ul>
+<li>避圈/碧圈/Crab/Craft/Crabber = 幣圈；HTX 到/HX 到/Genevus/Geneficious/Ginesis = HTX DAO Genesis；德虎/德厚/豆腐老師 = wangdefou；卡爾 = 0xcarlbot；777/rtsky7/Artist Sky = rtsky7；Dexpigg/Dpick/Dp = Dexpigg；小杜 = HTX DAO 社區大使小杜；達達 = 主持人 0x99DaDa；OPC = 一人公司（One Person Company）；「視夢率」 = 幣圈早期說法（夢想有多大、市值就有多大）。</li>
+<li>「Crow」疑為 Claude；「聯鴻」未確認（卡爾引用的說法來源）；「氣漏」疑為「洩露」；「豬腳飯」為口播原文，存疑。</li>
+<li>達達轉述的數字（幣圈接盤股票代幣約 4 億多美元、佔約四分之一；SpaceX 永續單日 19.57 億 USDT、佔現貨成交約 14.9%）均為他轉述的數據分析口徑，未核實。</li>
+<li>卡爾說的「幾十萬個 AI Agent 在跑」「數學難題十幾天搞定」、「2027 年 AI 裁員潮爆發」等均為發言者自述/判斷，未核實。</li>
+<li>達達口播「黃仁勳的離職」疑為口誤，按上下文應指黃仁勳回歸事件，紀要中按回歸事件處理。</li>
+<li>開場達達口播「比特幣從最高點的 1 萬 2」，結合後文「一直 12 萬」，按 12 萬處理。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>HTX DAO Builder Talk Episode 1: When the Crypto Winter Meets the AI Layoff Wave, Is There Still a Way Out for Ordinary People?</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/htx-dao-builder-talk-1-20261125.mp3"></audio></p>
+<ul>
+<li>Space: https://x.com/i/spaces/1MEogbonZpdlQj</li>
+<li>Time: Started 2026-11-25 18:54 CST, about 87.5 minutes in total (recording 5249.67 seconds)</li>
+<li>Host: HTX DAO @HTX_DAO, host Dada (0x99DaDa)</li>
+<li>Guests: Carl (0xcarlbot, computer science background from Peking University, technical background), Dehu (wangdefou, Zhuhai, liberal-arts background, builds products with AI), rtsky7 (entered crypto through HTX, now a freelancer fully committed to Web3), Dexpigg (head of HTX DAO Genesis, entered crypto in 2020, mainly DeFi), Xiaodu (HTX DAO community ambassador, former journalist)</li>
+<li>Transcript: 1560 lines; the first line [00:01:52] is an opening sound check, the first ~2 minutes contain no substantive speech, and the main program starts at [00:09:07] with Dada's opening; last line [01:26:31-01:26:33]</li>
+<li>Note: Everything below is the guests' own views as stated by them, and has not been verified. See the end for ASR normalization notes.</li>
+</ul>
+<h2>In one sentence</h2>
+<p>The winter is real, but the guests' consensus is that this winter is different from previous ones — the infrastructure, ETFs and traditional capital are all in place; what is missing is a reason to go up and real revenue. AI is cutting jobs on one side and lowering the barrier on the other. The way out for ordinary people is not to grit their teeth through the market, but to turn AI into their own productivity while building up the things AI cannot take away: taste, judgment and community trust.</p>
+<h2>1. The crypto winter: this one is different</h2>
+<p><strong>rtsky7: The infrastructure is all there; what's missing is a reason to go up.</strong> He believes this winter differs considerably from previous ones: the industry does not lack infrastructure or channels for capital to enter (spot ETFs, ever more trading infrastructure, participation by traditional financial institutions), yet many assets still lack a reason to keep rising. He gives three reasons:</p>
+<ol>
+<li><strong>Severe diversion of capital.</strong> Crypto used to promise very high growth expectations; now people look around and find AI can be traded too, and US stocks and robotics are also very large investment themes.</li>
+<li><strong>Oversupply inside the industry.</strong> There are more and more projects and more and more tokens, but projects that genuinely create revenue and have real users have not grown in proportion.</li>
+<li><strong>Investors have become desensitized to narratives.</strong> In the past, you could write a whitepaper, pitch a vision, and people would pay for the dream; now everyone only cares whether you are actually making money and what return investing in your project will bring in the future. He sees this as a good thing — a reshuffling of crypto's entire business model: people used to think about how to create wealth by issuing tokens; now they think about how to create wealth first and then distribute it through tokens.</li>
+</ol>
+<p>The directions he watches are exchange payments, stablecoins and tokenized US stocks — areas with at least relatively clear real demand. He believes the most worthwhile thing for HTX DAO to explore is how to turn community participation, ecosystem building and real value into a long-term positive cycle.</p>
+<p><strong>Dada: Crypto is taking over traditional finance's flow.</strong> He relayed a set of data-analysis figures (unverified): over roughly the past year or so, exchanges such as Binance have listed stock tokens, and around the Jensen Huang return event, crypto took on roughly USD 400 million-plus of stock-token trading — already close to about a quarter of the entire market and more than twice the second-place player; SpaceX perpetuals traded 1.957 billion USDT in a single day, already about 14.9% of SpaceX's spot share trading volume. His conclusion: a large amount of crypto capital is already participating, directly or indirectly, in traditional financial stock trading; and the convenience of exchanges trading 24 hours a day, all year round, may in the future draw traditional stock investors over.</p>
+<p><strong>Carl: Capital started flowing into US stocks and AI back in September–October 2025.</strong> He sees AI stocks as the sun and BTC and ETH as the moon — the capital has been sucked away. In 2026, Web3 is left with two narratives: AI Agents forming real revenue on-chain with Web3 (he says Sun Ge talked about this narrative early on), and RWA tokenization. He says there were hundreds of thousands of AI Agents running on-chain in July–August (his own figures, unverified) — a market that is growing. BTC has been cut in half from 120k to around 55k and has fallen for two straight days recently; at the Bitcoin Asia conference in Hong Kong on August 29, CZ was still talking about kicking off the next bull market, and now nobody dares say that. US stocks are not normal either: Anthropic's USD 1.5–2 trillion mega-IPO is the first of its kind in human history; crypto is now tied to capital flows, Wall Street macro data and the US unemployment rate — it no longer pumps just because some bullish news comes out.</p>
+<p>His own trading this year: AI is the core position, Web3 is a new position he opened this year; what he bought is relatively steady (small positions in UNI, ZEC and the like), and not losing money is good enough; the key is not what he is bullish on, but entering at the right time and exiting at the right time. He believes now is actually a good time to build positions — connecting traditional finance with Crypto is the dream state insiders have wanted for years; it's just that the other side is not doing well either right now.</p>
+<p><strong>Xiaodu: The change in conversation topics is what the winter feels like.</strong> She is a former journalist who entered crypto about a year ago, at last year's Huobi Festival. Her observation: when she first joined, everyone talked about positions, data, opportunities, where BTC was heading and which sector had new growth; recently, most of the messages people send her are asking her to debunk rumors — layoffs, team developments, debunking rumors for Sun Ge — gossip has become the hot topic. When looking at new projects, people used to ask "is there an airdrop, is there still a chance if I get in now"; now more people are in wait-and-see mode, first checking whether the project can survive; the standard of judgment has shifted from growth and imagination to costs and survival horizon. She believes the winter is not just falling coin prices — it is the market demanding something more concrete.</p>
+<p><strong>Dada's summary: From "dream multiple" to looking at real substance.</strong> Crypto used to talk about the "dream multiple" — the bigger the dream, the bigger the market cap; now it is becoming clearer and clearer who is useful and who can actually deliver, and that is a good thing. Stock tokenization will first run on centralized venues, on-chain derivative finance models will rise in the future, and Crypto's advantages of openness and programmability will gradually stand out. He added one more line at the end: to a certain extent, the current winter is not a crypto winter but an economic winter — global finance and global stock markets are all in winter.</p>
+<h2>2. The AI layoff wave: The US is already very pessimistic; in China it is still an undercurrent</h2>
+<p><strong>Carl: 2027 is a relatively certain trend.</strong> He says Silicon Valley has always been aggressively pessimistic, and that Microsoft and Google have sent emails telling staff "come in if you want to; if not, take the severance" (as relayed by him); in China, cost-cutting and efficiency drives have been going nonstop since 2023, and this AI wave is more severe, but it has not fully erupted yet — smiles on the surface, undercurrents underneath; Pony Ma said a few days ago that they need to fight a tough battle (as relayed by him). His judgment: the AI layoff wave will erupt directly along with the global trend, and 2027 is a relatively certain trend.</p>
+<p>He also raised a paradox: many people have no work to do, yet everyone wants everything to be unmanned (driverless vehicles, jobs replaced); if nobody earns a wage, nobody consumes — nobody in the world has solved this problem yet. He says that at the national level AI holds the status of a strategic nuclear weapon, so technology development comes first and livelihoods are pushed back; by 2027, the way AI is organized may change wholesale (he cited a claim by "Lianhong", source unconfirmed).</p>
+<p><strong>Designers have already been replaced; programmers and mathematicians are next in line.</strong> Carl says that after Google's Nano Banana model came out in 2024, designers were replaced and the industry basically disappeared, leaving only marginal needs like Photoshop work and ID photos; programmers being replaced is also imminent (his judgment); and within three years, mathematicians will be engineered too — Anthropic and OpenAI solved math problems once thought to need 50–100 years in just ten or twenty days (his claim, unverified). He believes there are two kinds of people who will not be replaced in the future: those who build ecosystems and have extensive personal networks, and those with outstanding all-round talent.</p>
+<h2>3. What can ordinary people do: Using AI and using AI well are two different things</h2>
+<p><strong>Dehu (a liberal-arts graduate turned developer): Start using it, but don't overestimate yourself.</strong> He uses AI to deliver client projects and marketing tools for vertical industries. His experience: writing copy, making PPTs, spreadsheets and graphics is effortless for AI tools; people who can't use AI tools will be replaced by people who can; after a company lays people off, the ones who remain are those in roles AI cannot replace, plus those who have mastered AI tools (one person doing the work of two or three). At his previous company he pushed his subordinates to use AI, and in the end keeping just one or two people was enough; when hiring now he also requires candidates to have mastered AI tools, otherwise they rank last or don't even get an interview.</p>
+<p>His advice: start as early as possible with the most basic tools; you don't need to understand the principles, but you do need to know how to get things done with them — ideally understanding a bit of the principles too; once you've mastered the tools, you don't necessarily have to work for someone else — you can make money from your own projects. But he cautions: an OPC (one-person company) is not for everyone — it is very unrealistic for many fresh graduates and people with no AI experience to do an OPC; OPC communities have been set up all over the country but sit empty, a strange phenomenon he has observed.</p>
+<p><strong>Carl: Using AI and using AI well are two different things.</strong> His example: after the Claude Code source code leaked in April, many people on GitHub rewrote it in Rust, thinking the performance would be better; but liberal-arts graduates have a much weaker grasp of requirements and of software engineering — they don't know how to do testing, only functional testing, thinking that if it feels comfortable it's fine, which doesn't reach industrial grade. The people who can truly run an OPC are those whose ability already exceeds half a team, who already have a reputation in the industry, and who, before they even started, already had networks, knew the demand and knew who to go to. Those born after 2005 are even more anxious than those born after 2000; very many have dropped out of school to start businesses and are constantly seizing opportunities (his observation).</p>
+<p><strong>Dada: What AI cannot take away is the feel for demand.</strong> He believes mathematicians are anxious too now, but what AI cannot replace is a person's feel for demand — understanding the world, articulating demand clearly, judging whether what was built actually meets the demand; these perceptual things are what AI does not have; observation and judgment will be very important abilities in the future. The profession of prompt engineer will definitely be solved by AI itself (people just need to state things clearly in normal language); Claude is already doing "state clearly what tool you want, and it builds it and installs it on your phone/computer", with security and the like also handled by AI; but "what is needed, how to state it clearly, and how to judge whether it really did it" matter a great deal.</p>
+<p><strong>rtsky7: Embrace AI — the efficiency gain can be dozens of times.</strong> He is a freelancer fully committed to Web3. His experience: doing self-media used to mean collecting materials, writing articles, making images and editing videos yourself — a non-professional simply couldn't do it; now, with several AIs, one person can do what used to take a small team (promotional posters, creative videos). From a company's perspective: work that used to take 5 people can now be done by 2 people with AI — where does the value of the remaining 3 people go? Companies may not necessarily lay people off, but hiring less can change the job market on its own.</p>
+<p>He used to work in HR and believes university students have it very hard now: before, you only needed to be better than another university student; now a company will only consider you if you are better than AI, and students have no work experience and thin social résumés — "they may not even be as good as AI" — so the employment environment is very poor. When everyone has efficient production tools, efficiency itself is no longer scarce; what is scarce is taste, judgment and knowledge of the industry — articles written by AI need you to give the prompts and the angle, and without a track record you can't use AI well. AI also cannot replace his experience in crypto or his trust relationships with the community. In the future knowledge will get cheaper and cheaper; what matters is an individual's judgment and ability to take responsibility.</p>
+<p>His advice comes down to one sentence: actively embrace AI. Some people resist it — feeling it stole their livelihood or that they are not smart enough, so they don't use it; but once they do, they find it extremely useful. If you don't actively embrace it, you will definitely be eliminated by AI; if you do, your efficiency can improve by dozens of times. He can now generate a dozen or even hundreds of images a day and write a dozen articles a day to build his personal IP; before, he could write at most one or two articles a day and couldn't produce a single image; the time saved can be spent interacting with the community.</p>
+<h2>4. Practical advice for ordinary people (given by Dada during the session)</h2>
+<ul>
+<li>If you don't have strong trading skills, trade less; only take large positions on large moves, add on dips or use dollar-cost averaging, and don't use a lot of leverage.</li>
+<li>Bear markets are tough, but they are the best time to build — while everyone else is bored and gossiping, you quietly put in the work, and you'll be rewarded when the bull market comes.</li>
+</ul>
+<h2>5. What HTX DAO Genesis is doing</h2>
+<p>This was Episode 1 of Builder Talk, a new program from HTX DAO Genesis. Dada explained: Genesis is HTX DAO's decentralized co-building program, and anyone (including community members) can join; as one of the ecosystem nodes, he gathers the developers he knows to keep looking for new opportunities in Web3. Dexpigg added: the Genesis core team is running an "Innovation Camp" — after a project team or individual developer joins, what they build can be deployed on Tron or used to empower HTX, with corresponding tiers based on contribution; it supports developers and gives HTX DAO more token use cases — a win-win.</p>
+<p>At the end, Dada invited more Builders to take part: there is a QR code under the HTX DAO account — scan it and fill in the Google form to join (both project teams and individual developers are welcome); sign-ups to speak on the next episode are welcome too. The original purpose of Builder Talk: talk about what you want to do, what you are already doing, and what you see others doing; successful experience is worth sharing, and so are the detours you've taken and the puzzles you haven't figured out; huddle together for warmth and find friends to experiment with.</p>
+<hr />
+<h3>ASR normalization and uncertainty notes</h3>
+<ul>
+<li>避圈/碧圈/Crab/Craft/Crabber = 币圈 (crypto); HTX 到/HX 到/Genevus/Geneficious/Ginesis = HTX DAO Genesis; 德虎/德厚/豆腐老师 = wangdefou; 卡尔 = 0xcarlbot; 777/rtsky7/Artist Sky = rtsky7; Dexpigg/Dpick/Dp = Dexpigg; 小杜 = Xiaodu, HTX DAO community ambassador; 达达 = the host, 0x99DaDa; OPC = One Person Company; "视梦率" ("dream multiple") = an early crypto saying (the bigger the dream, the bigger the market cap).</li>
+<li>"Crow" is probably Claude; "联鸿" ("Lianhong") is unconfirmed (the source of a claim cited by Carl); "气漏" is probably "泄露" (leak); "猪脚饭" (pork trotter rice) is as spoken in the original broadcast and is doubtful.</li>
+<li>The figures relayed by Dada (crypto taking on roughly USD 400 million-plus of stock tokens, about a quarter of the market; SpaceX perpetuals at 1.957 billion USDT in a single day, about 14.9% of spot trading volume) are data-analysis figures as relayed by him and have not been verified.</li>
+<li>Carl's statements such as "hundreds of thousands of AI Agents running", "math problems solved in ten-odd days" and "the AI layoff wave erupting in 2027" are the speaker's own statements/judgments and have not been verified.</li>
+<li>Dada's spoken "Jensen Huang's departure" is probably a slip of the tongue; in context it should refer to the Jensen Huang return event, and the notes treat it as the return event.</li>
+<li>In the opening, Dada said "Bitcoin from its high of 1.2万"; combined with the later "一直 12 万" (120k throughout), it is treated as 120k.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1MEogbonZpdlQj">https://x.com/i/spaces/1MEogbonZpdlQj</a>（主持 HTX DAO，主持人达达）· 发布日期：2026-11-25 · 时长：88 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1MEogbonZpdlQj">https://x.com/i/spaces/1MEogbonZpdlQj</a>（主持 HTX DAO，主持人達達）· 發布日期：2026-11-25 · 時長：88 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1MEogbonZpdlQj">https://x.com/i/spaces/1MEogbonZpdlQj</a> (hosted by HTX DAO, host Dada) · Published: 2026-11-25 · Duration: 88 minutes<br>This page contains the full notes, manually edited from a machine transcript; the views and figures are as stated by the original speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1MEogbonZpdlQj">https://x.com/i/spaces/1MEogbonZpdlQj</a>（主持 HTX DAO，主持人达达）· 发布日期：2026-11-25 · 时长：88 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"HTX DAO Builder Talk 第一期：币圈寒冬撞上 AI 裁员潮，普通人还有出路吗？ · Yat's Talks",tw:"HTX DAO Builder Talk 第一期：幣圈寒冬撞上 AI 裁員潮，普通人還有出路嗎？ · Yat's Talks",en:"HTX DAO Builder Talk Episode 1: When the Crypto Winter Meets the AI Layoff Wave, Is There Still a Way Out for Ordinary People? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
