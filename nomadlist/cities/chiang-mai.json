@@ -20,8 +20,8 @@
       "cn_passport_type": "visa_free",
       "cn_max_stay_days": 30,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+      "nomad_visa_link": "https://www.thaievisa.go.th/",
       "policy_last_change": null
     },
     "timezone": "Asia/Bangkok",
@@ -38,10 +38,11 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.thaievisa.go.th/"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-25",
     "neighborhoods": [
       {
         "name": "宁曼路 Nimman",
@@ -103,9 +104,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-25"
       }
     }
   }

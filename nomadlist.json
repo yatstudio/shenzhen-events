@@ -40,8 +40,8 @@
         "cn_passport_type": "visa_free",
         "cn_max_stay_days": 30,
         "has_nomad_visa": true,
-        "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-        "nomad_visa_link": null,
+        "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+        "nomad_visa_link": "https://www.thaievisa.go.th/",
         "policy_last_change": null
       },
       "timezone": "Asia/Bangkok",
@@ -58,10 +58,11 @@
       "sources": [
         "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
         "Numbeo Cost of Living — 成本交叉核对",
-        "该国移民局/政府官方签证页 — 签证口径"
+        "该国移民局/政府官方签证页 — 签证口径",
+        "https://www.thaievisa.go.th/"
       ],
       "verified_at": "2026-11-18",
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-25",
       "neighborhoods": [
         {
           "name": "宁曼路 Nimman",
@@ -123,9 +124,9 @@
           "as_of": "2026-11-18"
         },
         "visa": {
-          "confidence": 0.5,
-          "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-          "as_of": "2026-11-18"
+          "confidence": 0.95,
+          "basis": "verified on official immigration page",
+          "as_of": "2026-11-25"
         }
       }
     },
@@ -538,8 +539,8 @@
         "cn_passport_type": "visa_free",
         "cn_max_stay_days": 30,
         "has_nomad_visa": true,
-        "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-        "nomad_visa_link": null,
+        "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+        "nomad_visa_link": "https://www.thaievisa.go.th/",
         "policy_last_change": null
       },
       "timezone": "Asia/Bangkok",
@@ -556,10 +557,11 @@
       "sources": [
         "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
         "Numbeo Cost of Living — 成本交叉核对",
-        "该国移民局/政府官方签证页 — 签证口径"
+        "该国移民局/政府官方签证页 — 签证口径",
+        "https://www.thaievisa.go.th/"
       ],
       "verified_at": "2026-11-18",
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-25",
       "neighborhoods": [
         {
           "name": "通罗 Thonglor",
@@ -617,9 +619,9 @@
           "as_of": "2026-11-18"
         },
         "visa": {
-          "confidence": 0.5,
-          "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-          "as_of": "2026-11-18"
+          "confidence": 0.95,
+          "basis": "verified on official immigration page",
+          "as_of": "2026-11-25"
         }
       }
     },
@@ -3460,9 +3462,9 @@
       "visa": {
         "cn_passport_type": "visa_free",
         "cn_max_stay_days": 30,
-        "has_nomad_visa": false,
-        "note": "以官方移民页为准",
-        "nomad_visa_link": null,
+        "has_nomad_visa": true,
+        "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+        "nomad_visa_link": "https://www.thaievisa.go.th/",
         "policy_last_change": null
       },
       "timezone": "UTC+7",
@@ -3511,10 +3513,11 @@
         "https://thailandknowledge.com/living-in-thailand/cost-of-living/chiang-rai — 1居 ฿3,500–6,000（经济）/฿8,000–15,000（中档），预算档 ฿10,000–15,000",
         "https://thaipedia.asia/en/data/climate/chiang-rai/ — 泰国气象局 1991–2020 平年值：年均温 24.8°C",
         "网速口径差异：nomads.one 实测均值约 30 Mbps，chiangraitimes 称光纤套餐可达 300–500 Mbps",
-        "签证：待泰国移民局官方页核实，cn_passport_type / cn_max_stay_days 保持原值（DTV 数字游民签仅作线索，未核实）"
+        "签证：待泰国移民局官方页核实，cn_passport_type / cn_max_stay_days 保持原值（DTV 数字游民签仅作线索，未核实）",
+        "https://www.thaievisa.go.th/"
       ],
       "verified_at": "2026-11-18",
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-25",
       "data_tier": "checked",
       "best_months_nums": [
         1,
@@ -3533,9 +3536,9 @@
           "as_of": "2026-11-18"
         },
         "visa": {
-          "confidence": 0.5,
-          "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-          "as_of": "2026-11-18"
+          "confidence": 0.95,
+          "basis": "verified on official immigration page",
+          "as_of": "2026-11-25"
         }
       }
     },
@@ -3555,9 +3558,9 @@
       "visa": {
         "cn_passport_type": "visa_free",
         "cn_max_stay_days": 30,
-        "has_nomad_visa": false,
-        "note": "以官方移民页为准",
-        "nomad_visa_link": null,
+        "has_nomad_visa": true,
+        "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+        "nomad_visa_link": "https://www.thaievisa.go.th/",
         "policy_last_change": null
       },
       "timezone": "UTC+7",
@@ -3615,10 +3618,11 @@
         "https://destinationthailand.io/where-to-stay-in-pai/ — 五片区划分（步行街/河东岸/南端/北山西线/温泉路）",
         "https://en.climate-data.org/asia/thailand/mae-hong-son-province/pai-189120/ — 年均温 22.0°C（1991–2021）",
         "https://www.worldweatheronline.com/amphoe-pai-weather-averages/mae-hong-son/th.aspx — 月均昼夜均值推算约 24°C，取 24.0°C",
-        "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：traveldojo 称 2026-09-15 起免签回 30 天，与种子 30 天一致）"
+        "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：traveldojo 称 2026-09-15 起免签回 30 天，与种子 30 天一致）",
+        "https://www.thaievisa.go.th/"
       ],
       "verified_at": "2026-11-18",
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-25",
       "data_tier": "checked",
       "best_months_nums": [
         1,
@@ -3638,9 +3642,9 @@
           "as_of": "2026-11-18"
         },
         "visa": {
-          "confidence": 0.5,
-          "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-          "as_of": "2026-11-18"
+          "confidence": 0.95,
+          "basis": "verified on official immigration page",
+          "as_of": "2026-11-25"
         }
       },
       "cost_breakdown": {
@@ -3672,9 +3676,9 @@
       "visa": {
         "cn_passport_type": "visa_free",
         "cn_max_stay_days": 30,
-        "has_nomad_visa": false,
-        "note": "以官方移民页为准",
-        "nomad_visa_link": null,
+        "has_nomad_visa": true,
+        "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+        "nomad_visa_link": "https://www.thaievisa.go.th/",
         "policy_last_change": null
       },
       "timezone": "UTC+7",
@@ -3732,10 +3736,11 @@
         "https://www.thethailandguides.com/digital-nomad/best-cities-digital-nomads-thailand/ — 协同办公光纤 100 Mbps–1 Gbps、月成本 ฿45,000–70,000",
         "https://citycost.org/compare/pai-vs-phuket/ — 普吉单人月成本 $1,282、市中心 1居 $702（种子成本 $1,450/租金 $650 交叉一致，未改）",
         "https://www.climatestotravel.com/climate/thailand/phuket — 年均温 28.0°C（1991–2020），weatherhack ERA5 约 27.5°C 交叉",
-        "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值"
+        "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值",
+        "https://www.thaievisa.go.th/"
       ],
       "verified_at": "2026-11-18",
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-25",
       "data_tier": "checked",
       "best_months_nums": [
         1,
@@ -3757,9 +3762,9 @@
           "as_of": "2026-11-18"
         },
         "visa": {
-          "confidence": 0.5,
-          "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-          "as_of": "2026-11-18"
+          "confidence": 0.95,
+          "basis": "verified on official immigration page",
+          "as_of": "2026-11-25"
         }
       }
     },
@@ -3779,9 +3784,9 @@
       "visa": {
         "cn_passport_type": "visa_free",
         "cn_max_stay_days": 30,
-        "has_nomad_visa": false,
-        "note": "以官方移民页为准",
-        "nomad_visa_link": null,
+        "has_nomad_visa": true,
+        "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+        "nomad_visa_link": "https://www.thaievisa.go.th/",
         "policy_last_change": null
       },
       "timezone": "UTC+7",
@@ -3830,10 +3835,11 @@
         "https://www.psimonmyway.com/koh-phangan-digital-nomad/ — 居家网速均值 59 Mbps（种子 60 对上）、1居市中心 $700/市郊 $550",
         "https://citycost.org/compare/pai-vs-koh-phan-ghan/ — 帕岸岛单人月成本 $1,107、市中心 1居 $491（种子成本 $1,200/租金 $550 交叉一致，未改）",
         "https://en.climate-data.org/asia/thailand/surat-thani-province/ko-pha-ngan-710534/ — 年均温 27.2°C（1991–2021）",
-        "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：网速口径冲突——nomads.one 头图 25 Mbps vs traveldojo 光纤 200+ Mbps，种子 60 以 psimonmyway 实测均值 59 为准）"
+        "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：网速口径冲突——nomads.one 头图 25 Mbps vs traveldojo 光纤 200+ Mbps，种子 60 以 psimonmyway 实测均值 59 为准）",
+        "https://www.thaievisa.go.th/"
       ],
       "verified_at": "2026-11-18",
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-25",
       "data_tier": "checked",
       "best_months_nums": [
         1,
@@ -3854,9 +3860,9 @@
           "as_of": "2026-11-18"
         },
         "visa": {
-          "confidence": 0.5,
-          "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-          "as_of": "2026-11-18"
+          "confidence": 0.95,
+          "basis": "verified on official immigration page",
+          "as_of": "2026-11-25"
         }
       }
     },

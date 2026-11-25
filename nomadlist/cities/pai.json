@@ -19,9 +19,9 @@
     "visa": {
       "cn_passport_type": "visa_free",
       "cn_max_stay_days": 30,
-      "has_nomad_visa": false,
-      "note": "以官方移民页为准",
-      "nomad_visa_link": null,
+      "has_nomad_visa": true,
+      "note": "泰国 DTV（Destination Thailand Visa）真实存在（外交部 e-Visa 官网 thaievisa.go.th）：5 年多次往返、每次入境最长 180 天、可在境内延签一次 180 天；须 50 万泰铢存款证明、境外雇主/客户远程工作；中国护照按中泰互免协定免签入境 30 天，可延签一次 30 天。",
+      "nomad_visa_link": "https://www.thaievisa.go.th/",
       "policy_last_change": null
     },
     "timezone": "UTC+7",
@@ -79,10 +79,11 @@
       "https://destinationthailand.io/where-to-stay-in-pai/ — 五片区划分（步行街/河东岸/南端/北山西线/温泉路）",
       "https://en.climate-data.org/asia/thailand/mae-hong-son-province/pai-189120/ — 年均温 22.0°C（1991–2021）",
       "https://www.worldweatheronline.com/amphoe-pai-weather-averages/mae-hong-son/th.aspx — 月均昼夜均值推算约 24°C，取 24.0°C",
-      "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：traveldojo 称 2026-09-15 起免签回 30 天，与种子 30 天一致）"
+      "签证：待泰国移民局官方页核实，has_nomad_visa 暂保持原值（注：traveldojo 称 2026-09-15 起免签回 30 天，与种子 30 天一致）",
+      "https://www.thaievisa.go.th/"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-25",
     "data_tier": "checked",
     "best_months_nums": [
       1,
@@ -102,9 +103,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-25"
       }
     },
     "cost_breakdown": {
