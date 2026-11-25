@@ -10,8 +10,8 @@
     "country": "Portugal",
     "country_zh": "葡萄牙",
     "region": "Europe",
-    "cost_usd_month": 1850,
-    "rent_1br_usd_month": 900,
+    "cost_usd_month": 2000,
+    "rent_1br_usd_month": 1300,
     "coworking_usd_month": 140,
     "internet_mbps": 95,
     "safety_score": 4.5,
@@ -20,8 +20,8 @@
       "cn_passport_type": "schengen_visa",
       "cn_max_stay_days": 0,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "note": "葡萄牙 D8 远程工作签真实存在（外交部 MNE 官网 vistos.mne.gov.pt + 驻华使领馆清单）：近3个月月均收入≥4倍最低工资（2026年EUR920×4=EUR3,680）；居留签4个月入境后向 AIMA 换2年居留，临时停留签<1年；中国护照需提前办申根/国家签。",
+      "nomad_visa_link": "https://vistos.mne.gov.pt/en",
       "policy_last_change": null
     },
     "timezone": "Europe/Lisbon",
@@ -38,12 +38,55 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://rawtravelproject.com/blog/porto-guide",
+      "https://www.nomadforums.com/t/cost-of-living-in-portugal-2026-lisbon-porto-algarve-and-madeira/79",
+      "https://portugalbuyersagent.com/cost-of-living-in-porto/",
+      "https://viveurope.com/en/blog/living-in-porto",
+      "https://www.getfastvisa.com/moving-to-portugal/porto",
+      "https://vistos.mne.gov.pt/en"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-25",
+    "neighborhoods": [
+      {
+        "name": "塞多菲塔 Cedofeita",
+        "name_en": "Cedofeita",
+        "rent_1br_usd_month": 1000,
+        "vibe": "艺术创意核心",
+        "best_for": "社交、创意工作",
+        "coworking_density": 5,
+        "note": "估算：GetFastVisa 2026-05 一居 EUR800-1,100（Numbeo+INE）"
+      },
+      {
+        "name": "福斯 Foz do Douro",
+        "name_en": "Foz do Douro",
+        "rent_1br_usd_month": 1250,
+        "vibe": "海岸高端区",
+        "best_for": "海边、品质生活",
+        "coworking_density": 3,
+        "note": "估算：GetFastVisa 2026-05 一居 EUR1,000-1,400（Numbeo+INE）"
+      },
+      {
+        "name": "博阿维斯塔 Boavista",
+        "name_en": "Boavista",
+        "rent_1br_usd_month": 1100,
+        "vibe": "现代商务区",
+        "best_for": "商务、交通",
+        "coworking_density": 4,
+        "note": "估算：GetFastVisa 2026-05 一居 EUR900-1,200（Numbeo+INE）"
+      },
+      {
+        "name": "邦芬 Bonfim",
+        "name_en": "Bonfim",
+        "rent_1br_usd_month": 900,
+        "vibe": "高性价比、新兴游民区",
+        "best_for": "预算长住",
+        "coworking_density": 3,
+        "note": "估算：GetFastVisa 2026-05 一居 EUR700-1,000（Numbeo+INE）"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -54,9 +97,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-25"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -64,9 +107,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-25"
       }
     }
   }

@@ -12,7 +12,7 @@
     "region": "East Asia",
     "cost_usd_month": 1700,
     "rent_1br_usd_month": 800,
-    "coworking_usd_month": 140,
+    "coworking_usd_month": 160,
     "internet_mbps": 150,
     "safety_score": 4.9,
     "english_score": 3.0,
@@ -20,8 +20,8 @@
       "cn_passport_type": "permit_required",
       "cn_max_stay_days": 0,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "note": "台湾数位游牧签证真实存在（外交部领事事务局 BOCA 官网）：仅限免签国国民申办；30岁以上近两年年薪≥US$40,000、20-29岁≥US$20,000（或持他国游民签），多次入境、可延签至最长停留2年；大陆居民仍需入台许可，不能直接申办此签。",
+      "nomad_visa_link": "https://www.boca.gov.tw/fp-158-7718-c0382-2.html",
       "policy_last_change": null
     },
     "timezone": "Asia/Taipei",
@@ -38,12 +38,54 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://rawtravelproject.com/blog/taipei-guide",
+      "https://www.traveldojo.com/taiwan/taipei/digital-nomads/",
+      "https://nomadinsiders.com/destinations/taipei-taiwan",
+      "https://affordwhere.com/blog/cost-of-living-taipei-2026",
+      "https://www.boca.gov.tw/fp-158-7718-c0382-2.html"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-25",
+    "neighborhoods": [
+      {
+        "name": "大安 Da'an",
+        "name_en": "Da'an",
+        "rent_1br_usd_month": 950,
+        "vibe": "绿荫中心区、咖啡馆/书店/台大",
+        "best_for": "首站、长住",
+        "coworking_density": 5,
+        "note": "TravelDojo 2026-10 一居 $700-1,300；AffordWhere 大安 NT$22,000-32,000"
+      },
+      {
+        "name": "中山 Zhongshan",
+        "name_en": "Zhongshan",
+        "rent_1br_usd_month": 850,
+        "vibe": "咖啡馆小巷、设计店、赤峰街",
+        "best_for": "咖啡馆办公",
+        "coworking_density": 5,
+        "note": "TravelDojo 2026-10 一居 $650-1,200；AffordWhere 中山 NT$19,000-28,000"
+      },
+      {
+        "name": "信义 Xinyi",
+        "name_en": "Xinyi",
+        "rent_1br_usd_month": 1100,
+        "vibe": "现代高楼、101、商场",
+        "best_for": "现代舒适",
+        "coworking_density": 4,
+        "note": "TravelDojo 2026-10 一居 $800-1,500；AffordWhere 信义 NT$26,000-40,000"
+      },
+      {
+        "name": "文山 Wenshan",
+        "name_en": "Wenshan",
+        "rent_1br_usd_month": 650,
+        "vibe": "绿色住宅区、猫空茶山",
+        "best_for": "安静、亲近自然",
+        "coworking_density": 2,
+        "note": "TravelDojo 2026-10 一居 $450-850"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -55,9 +97,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-25"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -65,9 +107,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-25"
       }
     }
   }

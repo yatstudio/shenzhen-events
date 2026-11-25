@@ -10,9 +10,9 @@
     "country": "Spain",
     "country_zh": "西班牙",
     "region": "Europe",
-    "cost_usd_month": 1900,
-    "rent_1br_usd_month": 950,
-    "coworking_usd_month": 140,
+    "cost_usd_month": 2200,
+    "rent_1br_usd_month": 1300,
+    "coworking_usd_month": 220,
     "internet_mbps": 120,
     "safety_score": 4.5,
     "english_score": 3.2,
@@ -20,8 +20,8 @@
       "cn_passport_type": "schengen_visa",
       "cn_max_stay_days": 0,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "note": "西班牙国际远程工作签真实存在（外交部 exteriores.gob.es 领馆官网）：Law 28/2022 修 Law 14/2013；领馆签最长1年、在西班牙境内向 UGE-CE 申请居留许可最长3年；须大学学位或3年相关经验，雇主/客户须在西班牙境外；收入门槛为最低工资200%（2026年约EUR2,442-2,849/月）；中国护照需提前办申根/国家签。",
+      "nomad_visa_link": "https://www.exteriores.gob.es/Consulados/sanfrancisco/en/ServiciosConsulares/Paginas/Telework-visa.aspx",
       "policy_last_change": null
     },
     "timezone": "Europe/Madrid",
@@ -38,12 +38,54 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://expectat.com/guides/cost-of-living-valencia/",
+      "https://www.nomadzine.com/valencia",
+      "https://mynomadworld.com/cost-of-living-valencia-spain/",
+      "https://www.stampednomad.com/guides/spain",
+      "https://www.exteriores.gob.es/Consulados/sanfrancisco/en/ServiciosConsulares/Paginas/Telework-visa.aspx"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-25",
+    "neighborhoods": [
+      {
+        "name": "鲁萨法 Ruzafa",
+        "name_en": "Ruzafa",
+        "rent_1br_usd_month": 1400,
+        "vibe": "潮流波西米亚、咖啡馆/市集最密",
+        "best_for": "社交、首站落脚",
+        "coworking_density": 5,
+        "note": "游民首选区；Nomadzine 2026-09 实测一居 EUR1,200-1,400，idealista 同区间"
+      },
+      {
+        "name": "老城 El Carmen",
+        "name_en": "El Carmen / Ciutat Vella",
+        "rent_1br_usd_month": 1350,
+        "vibe": "老城石巷、夜生活",
+        "best_for": "短住体验",
+        "coworking_density": 4,
+        "note": "Nomadzine 2026-09 一居 EUR1,200-1,400；mynomadworld idealista EUR950-1,350"
+      },
+      {
+        "name": "贝尼马克莱特 Benimaclet",
+        "name_en": "Benimaclet",
+        "rent_1br_usd_month": 1150,
+        "vibe": "学生区、本地生活、便宜",
+        "best_for": "长住省钱",
+        "coworking_density": 3,
+        "note": "Nomadzine 2026-09 一居 EUR1,000-1,200；idealista EUR750-1,000 区间上限"
+      },
+      {
+        "name": "卡瓦尼奥 El Cabanyal",
+        "name_en": "El Cabanyal",
+        "rent_1br_usd_month": 1250,
+        "vibe": "老渔村、海滩边",
+        "best_for": "海边生活",
+        "coworking_density": 3,
+        "note": "Nomadzine 2026-09 一居 EUR1,100-1,300；idealista EUR850-1,200 区间上限"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -54,9 +96,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-25"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -64,9 +106,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-25"
       }
     }
   }
