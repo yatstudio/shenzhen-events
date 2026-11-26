@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高交会展商名单 · 展位查询 — Yat's List</title>
+<meta name="description" content="第二十八届高交会（CHTF 2026）全部展商名单与展位号：按公司名、展馆、行业检索，数据开放给 Agent 直接读取。">
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<style>
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--green:#2ee6a8;--bar-bg:rgba(13,18,24,.85);
+--r-md:10px;--r-lg:14px;--r-pill:999px;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+--font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+--sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.12);--border-hover:rgba(16,42,32,.24);
+--bar-bg:rgba(246,248,247,.88);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:var(--sp-md) 0}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-lg)}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:1.15rem;color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav a{color:var(--ink-sec);font-size:.92rem;text-decoration:none;font-weight:600}
+.topbar-nav a:hover{color:var(--green)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
+main{padding:var(--sp-2xl) 0 48px}
+.terminal{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:var(--sp-xl)}
+.terminal-header{background:rgba(0,0,0,.18);padding:10px var(--sp-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-sm)}
+.terminal-dot{width:12px;height:12px;border-radius:50%;background:var(--ink-ter);opacity:.4}
+.terminal-title{font-family:var(--font-mono);font-size:.86rem;color:var(--ink-sec);margin-left:var(--sp-sm)}
+.terminal-body{padding:var(--sp-xl);font-family:var(--font-mono)}
+.terminal-body h1{font-size:clamp(1.25rem,3.4vw,1.7rem);margin:0 0 6px;font-family:var(--font-sans);letter-spacing:0}
+.terminal-body .meta{color:var(--ink-sec);font-size:.9rem}
+.terminal-body .meta b{color:var(--green);font-weight:700}
+.agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
+.agentnote b{color:var(--ink)}
+.agentnote a{color:var(--green);text-decoration:none}
+.searchrow{display:flex;gap:var(--sp-sm);margin-bottom:var(--sp-md)}
+.searchrow input{flex:1;padding:12px 16px;border-radius:var(--r-md);border:1px solid var(--border);background:var(--panel);color:var(--ink);font-size:1rem;outline:none;font-family:inherit}
+.searchrow input:focus{border-color:var(--green)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--sp-sm)}
+.chip{padding:5px 12px;border-radius:var(--r-pill);border:1px solid var(--border);background:var(--panel);color:var(--ink-sec);font-size:.83rem;cursor:pointer;font-family:inherit}
+.chip:hover{border-color:var(--border-hover);color:var(--ink)}
+.chip.on{color:#0d1218;background:var(--green);border-color:var(--green);font-weight:700}
+.cnt{color:var(--ink-ter);font-size:.85rem;margin:var(--sp-md) 0}
+.ev{display:flex;gap:var(--sp-md);margin-bottom:var(--sp-sm)}
+.card{flex:1;display:flex;gap:var(--sp-md);align-items:center;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 18px}
+.card:hover{background:var(--panel-hover)}
+.card img{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#fff;flex:0 0 auto}
+.card h3{margin:0;font-size:1rem;font-weight:650}
+.cmeta{color:var(--ink-sec);font-size:.87rem;margin-top:2px}
+.cmeta .bt{color:var(--green);font-weight:700}
+.cmeta .sep{font-style:normal;opacity:.5}
+.tag{display:inline-block;border:1px solid var(--border);border-radius:var(--r-pill);padding:0 8px;font-size:.72rem;color:var(--ink-sec);margin-left:4px;vertical-align:1px}
+.empty{color:var(--ink-ter);text-align:center;padding:36px 0}
+footer{border-top:1px solid var(--border);padding:20px 0 34px;color:var(--ink-ter);font-size:.85rem}
+footer a{color:var(--ink-sec)}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <div class="brandmark">&gt; yat's list<span class="cur">_</span></div>
+  <nav class="topbar-nav"><a href="/szevents/">深圳活动</a>&nbsp;&nbsp;<a href="/hackathons/">黑客松</a></nav>
+</div></header>
+<main><div class="wrap">
+  <div class="terminal">
+    <div class="terminal-header"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-title">chtf — exhibitors</span></div>
+    <div class="terminal-body">
+      <h1>第二十八届高交会 · 展商名单</h1>
+      <div class="meta">2026-11-26 至 11-28 · 深圳国际会展中心（宝安）· 5–16 号馆 · 共 <b id="total">…</b> 家展商</div>
+    </div>
+  </div>
+  <div class="agentnote">🤖 <b>Agent 检索</b>：全部展商数据开放读取 — <a href="/chtf.json">chtf.json</a>（字段：name 展商名 / booth 展位号 / hall 展馆 / tags 行业标签）。让你的 Agent 读这个文件，按需求词、展馆或标签筛选，即可推荐展位。</div>
+  <div class="searchrow"><input id="q" type="search" placeholder="搜公司名 / 需求，如：机器人、储能、华为、半导体…"></div>
+  <div class="chips" id="halls"></div>
+  <div class="chips" id="tags"></div>
+  <div class="cnt" id="cnt"></div>
+  <div id="list"></div>
+</div></main>
+<footer><div class="wrap">数据来源：高交会展位导航官方数据（s.whte.cn）· 行业标签为按展商名关键词自动标注，仅供检索参考 · 原始导航：<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">展位平面图</a></div></footer>
+<script>
+const $=s=>document.querySelector(s);
+let DATA=[],fHall="",fTag="";
+function chips(el,items,fn,cur){el.innerHTML=items.map(t=>`<button type="button" class="chip${t===cur?" on":""}">${t||"全部"}</button>`).join("");[...el.children].forEach((c,i)=>c.onclick=()=>fn(items[i]));}
+function drawChips(){
+  chips($("#halls"),["",...new Set(DATA.map(e=>e.hall))],v=>{fHall=v;drawChips();render();},fHall);
+  chips($("#tags"),["",...new Set(DATA.flatMap(e=>e.tags))],v=>{fTag=v;drawChips();render();},fTag);
+}
+function render(){
+  const q=$("#q").value.trim(),ql=q.toLowerCase();
+  const hits=DATA.filter(e=>e.type==="exhibitor")
+    .filter(e=>!fHall||e.hall===fHall)
+    .filter(e=>!fTag||e.tags.includes(fTag))
+    .filter(e=>!q||e.name.includes(q)||e.tags.some(t=>t.includes(q))||(e.booth||"").toLowerCase().includes(ql));
+  $("#cnt").textContent="命中 "+hits.length+" 家";
+  $("#list").innerHTML=hits.length?hits.slice(0,300).map(e=>`<div class="ev"><div class="card">${e.logo?`<img src="${e.logo}" alt="" loading="lazy">`:""}<div><h3>${e.name}</h3><div class="cmeta">${e.hall}<i class="sep"> · </i>展位 <span class="bt">${e.booth||"待定"}</span>${e.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div></div></div></div>`).join(""):`<div class="empty">没找到，换个关键词试试</div>`;
+}
+$("#q").addEventListener("input",render);
+fetch("/chtf.json").then(r=>r.json()).then(d=>{DATA=d.exhibitors;$("#total").textContent=d.exhibitors.filter(e=>e.type==="exhibitor").length;drawChips();render();})
+.catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>';});
+</script>
+</body>
+</html>
