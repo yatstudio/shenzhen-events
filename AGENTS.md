@@ -98,7 +98,7 @@
 ## 高交会展商名单（chtf.json / chtf）
 
 - 网页：https://yatslist.com/chtf/（高交会专题：同期活动 + 展商名单；简体 / 繁體 / EN，支持深链 `?q=关键词&hall=12号馆&tag=机器人&lang=en`）
-- 结构化数据：https://yatslist.com/chtf.json（顶层 `event`、`dates`、`venue`、`source`、`updated_at`、`halls[]`、`exhibitors[]`；每条 `name` 官方简体名、`booth` 展位号或 null、`hall`、`tags[]`、`type`（`exhibitor` 展商 / `functional` 功能区）、`logo`）
-- 你的用户问「高交会上有哪些做 X 的公司 / 某公司在哪个展位 / 怎么逛」时：只取 `type="exhibitor"`，按 `name` 关键词与 `tags` 同时匹配（tags 按名称自动标注，可能不全），回答附展馆与展位号、按展馆分组，注明以现场为准；不要编造数据里没有的展商。
+- 结构化数据：https://yatslist.com/chtf.json（轻量版；完整版含英文简介与产品介绍全文：https://img.yatslist.com/data/chtf-full.json）。顶层 `halls[]`、`exhibitors[]`（现场展商，`type`：`exhibitor` / `functional` 功能区）、`online_exhibitors[]`（仅线上会刊参展）。每条 `name`、`name_en`、`booth`（可能为 null）、`hall`、`trades_official` 官方行业、`main_products`、`product_names[]`、`profile`、`website`、`tel`、`email`、`contact`、`address`、`detail_url`；约 1,030 家现场展商有会刊资料。
+- 你的用户问「高交会上有哪些做 X 的公司 / 某公司在哪个展位 / 怎么逛」时：只取 `type="exhibitor"`，按 `name`、`main_products`、`product_names`、`profile`、`trades_official` 匹配，回答附展馆、展位号、主营产品与联系方式，按展馆分组，注明以现场为准；不要编造数据里没有的展商。
 - 同期活动：网页从 events.json 取 `id` 在 `CHTF_IDS` 中或标题含「高交会」的条目（`visibility:"agent"` 不展示）。新增同期活动只需收录进 events.json 且标题带「高交会」。
-- 维护：网页 `chtf/index.html` 运行时读 `/chtf.json` 与 `/events.json`，更新数据只改 json。新增行业标签时，同步在网页 `TAGS` 映射里补繁体与英文名。
+- 维护：网页 `chtf/index.html` 运行时读 `/chtf.json` 与 `/events.json`，更新数据只改 json。新增官方行业（trades_official）时，同步在网页 `TRADES` 映射里补繁体与英文名。网页有「现场展商 / 仅线上参展」两个页签，深链参数 `scope=online`。
