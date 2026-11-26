@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：MeetForward Talks EP.01《AI 如何帮助一个人做成一门生意？》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/meetforward-rika-ai-business-20251125.mp3"></audio></p>
 <ul>
 <li><strong>来源</strong>：X Space https://x.com/i/spaces/1ybYQVZJgzXELR</li>
 <li><strong>时间</strong>：2026-11-25（周三）20:52–22:40 CST，录音约 108 分钟</li>
@@ -88,9 +99,168 @@
 </ul>
 <h2>ASR 归一表</h2>
 <p>马天娜＝Martina；二亚/阿雅＝Arya Li；沈以辰/沈宣＝沈以诚；Eria＝Arya；OPC＝一人公司（one-person company）；GEEO/GO/基忧/机诱＝GEO（生成式引擎优化）；货客＝获客；外貌＝外贸；查GBT＝ChatGPT；gaming＝Gemini；GBS＝GPT；Codex＝GPT Codex；clawda/Cloud＝Claude；justasyn.io＝justsing.io（Arya 的线上合唱订阅站，按「just sing」取此读法）；Hammers＝口播，疑为某 agent 框架名称，存疑；Don't Be Silent＝口播的博主名，存疑；GPT 6.2＝口播，疑指某新模型版本，存疑。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：MeetForward Talks EP.01《AI 如何幫助一個人做成一門生意？》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/meetforward-rika-ai-business-20251125.mp3"></audio></p>
+<ul>
+<li><strong>來源</strong>：X Space https://x.com/i/spaces/1ybYQVZJgzXELR</li>
+<li><strong>時間</strong>：2026-11-25（週三）20:52–22:40 CST，錄音約 108 分鐘</li>
+<li><strong>主持</strong>：Rika @Web3rika（MeetForward）</li>
+<li><strong>嘉賓</strong>：Martina @MartinaBuilds（馬天娜在進化）、Arya Li @Aryaccl（阿雅）、沈以誠 @shenshenyicheng（青島 AI 沙龍）</li>
+<li><strong>聽眾</strong>：194 人</li>
+<li><strong>形式</strong>：四人圓桌 + 聽眾連麥問答；開場約 8 分鐘錄音缺失（轉寫從 [00:07:52] 開始）</li>
+<li><strong>聲明</strong>：以下全部為發言者個人經歷與觀點，未經核實；數字、人名以逐字稿口播為準，ASR 誤聽見文末歸一</li>
+</ul>
+<h2>一句話</h2>
+<p>四位都在用 AI 把「一個人」變成「一個團隊」，但共識出奇地一致：AI 給的是執行、不是創意，更不能直接帶來客戶——它真正值錢的地方是把你從已經驗證過的業務流程裡解放出來；先有真實需求和第一個客戶，再談 AI，否則就是在賣焦慮。</p>
+<h2>① Rika：KOL 投放 80% 能被 AI 替代，工作流兩天搭好賣了 2 萬</h2>
+<p>[00:08]–[00:15]、[00:37]–[00:41]，主持人 Rika：</p>
+<ul>
+<li>背景：之前做 Web3 的 Marketing Agency，今年轉向 AI 方向，給企業客製工作流，也辦線下活動與黑客松。</li>
+<li>她的日常：找 KOL、KOC，做 marketing 策略——這三樣今年 80% 都可以被 AI 替代。KOL 投放已有專門的 AI agent 工具，月費約 100 元，或按抽佣（比如抽 2,000 美金只抽 10%）；自己搭工作台則費時費力、難大規模複製。</li>
+<li>因此她在轉向線下活動 + 銷售方向：線下能認識客戶。</li>
+<li>變現案例：給自己搭了一套 Marketing 工作台發在小紅書，上海一家獵頭公司的姊姊要買，她兩天（還在上班的狀態下）做好，2 萬元賣掉；帖子發到推特後近 1 萬人看，又有人找她談商業化——對方建議要麼把產品繼續完善後當 SaaS 賣，要麼當線下沙龍的引流品（送工作台、再賣升級服務），要麼開源引流給 agency。</li>
+<li>獲客判斷：AI 幫她寫郵件、跟海外客戶溝通、批量發郵件、做業務流規劃，流程簡化到「只需要確認一下」；投流方面 AI 能優化 SEO、GEO、谷歌流量，深圳的投流公司基本都在用。但內容創作上幫助小：AI 寫的帖子大概 60–80 分，流量特別好的帖子基本都是自己寫的。</li>
+</ul>
+<h2>② Martina：3 小時幹完一週的工作，「一個人就是一個團隊」</h2>
+<p>[00:15]–[00:21]、[00:41]–[00:46]，嘉賓 Martina：</p>
+<ul>
+<li>背景：本職在 IT 公司做 marketing，2025 年底開始做 AI 自媒體（ID「馬天娜在進化」），全平台分發 AI 教學影片。</li>
+<li>效率：現在基本上 3 小時就把一週的工作幹完了，「但是這件事情我沒有讓我們領導知道」；自媒體從改稿、做影片封面開始，逐步到 AI 粗剪影片加包裝，細節仍需自己調，但能明顯感覺模型從 2026 年初到現在一直在進步。</li>
+<li>堅持：2019 年在澳洲就想做自媒體（vlog、讀書博主），都因製作量太大斷斷續續，直到 2026 年才真正有「一個人就是一個團隊」的感覺——以前一個人完成不了，現在副業狀態下一個人做成且有變現。</li>
+<li>三明治理論：線下擺攤賣三明治不用擔心全世界有多少人在賣，只用顧好自己這條街；做 IP 也一樣，全球這麼多人，總有人喜歡你的風格——不要糾結賽道擠不擠，要不停展現自己、全平台分發。</li>
+<li>獲客：有了 AI 後發影片頻率提升、做到全平台分發，機會都是別人找上門：付費諮詢、自己的課程、準備開線下課；中午還有一家大公司旗下新成立的 AI 部門的人看到她小紅書影片、主動請她去給導師上課，「這種機會放在以前是我完全想像不到的」。</li>
+<li>生活小故事：有天健身完老公在家睡著了，11 個電話不接，她用手機連上家裡的 Claude agent，讓電腦用文字轉語音大聲喊「起床了，馬天娜叫你吃飯」，把老公叫醒了——「如果家裡有很多智慧家居的話，現在能連上 AI 就盡量都連上」。</li>
+<li>她的 2027 年展望：大膽站在聚光燈下展現自己、多參加 Space 這樣的活動，「總有人會喜歡你」。</li>
+</ul>
+<h2>③ Arya：紐約中文合唱團，AI 把她從業務裡解放了 90%</h2>
+<p>[00:21]–[00:30]、[00:46]–[00:57]，本場最完整的一個生意案例，嘉賓 Arya：</p>
+<ul>
+<li>業務：純文科、藝術生出身，2023 年 10 月在紐約創立中文合唱團；發布資訊後不到兩週就有 35 個人付費加入第一批；兩年多沒想過變現（當時在科技行業工作、薪資豐厚），當作「桃花源」，每週四、週五晚上一起唱歌。</li>
+<li>轉折：2026 年 1 月開始當真正的生意做，1–4 月盈利 7 萬多美金（自述，除開花銷的真實盈利）；但業務 100% 強烈依靠她這個創始人——她既是指揮，所有看得見看不見的事都是她一個人做，「難道我這輩子就是這個上限嗎」。</li>
+<li>解法：從 5 月起大量用 AI，目標是把自己投入在這個業務上的時間砍掉 90%、業務還能正常運作；到現在已經做到了。一個半月前開始在紐約找 AI 公司、準備把全職放進去。</li>
+<li>方法論（她反覆強調的核心）：AI 給的是執行、給不了新創意——它會給你幾百個可能性，但你沒法全做。不要追求 All-in-one（從選題到發布一個系統全搞定），那樣內容會變成 mediocre（中不溜）、丟掉個人特色。正確做法是：拿一張大白紙，把業務從客服到收完帳的全部人工流程寫下來，一步一步想哪個環節 AI 可以自動化；哪怕是很小的環節也別放過，因為每個環節都是你人工驗證過沒問題的、AI 執行也沒問題的，你才能真正抽身。</li>
+<li>新業務線：今年 1 月想到很多搬離紐約的人沒法繼續線下唱歌，就做了每週二晚上的線上一起唱歌訂閱制：首月 9.9 美金、次月 19.9 美金；前 24 小時就獲得 25 個付費用戶，一個月內 60 多個付費訂閱；訂閱系統與官網（justsing.io，口播音近「justasyn.io」，紀要取 justsing.io）全是 vibe coding，不到 5 小時搭起來，包括訂閱、扣款、退訂送 3 個月半價挽留；累計已賺超過 1 萬美金，每週只花 45 分鐘帶大家唱歌，「非常療癒」。</li>
+<li>她的判斷：AI 的真實需求只發生在一個環節——幫人降本增效。AI 有沒有帶來新客戶？「答案是沒有」。現在大量賣 AI 課的現象，讓她想起日本經濟下行、網際網路轉型時公司利用失業焦慮與轉型焦慮「賣給員工一份工作」的歷史。先找到一個被市場需要的產品、走出門找到第一個客戶，比無上限地學「怎麼讓 AI 帶來客戶」重要；她微信裡有 1,800 多個想跟她一起唱歌的人，這才是她做任何事都有第一波客戶的原因。</li>
+<li>補充：不要總強調「我是用 AI 做的」——很多傳統業務的客戶會因此低估、覺得「你很輕易就做出來了，就應該便宜」。但 GEO 是例外：面試官在 Google 搜 Chinese Choir（沒加紐約）發現她的合唱團排第一，Google 的 AI 回覆也寫著 Number 1、強烈推薦；傳統本地生意（比如重慶某區域的醫美機構、做支架的店）如果把 GEO 做好，AI 會持續給它帶客戶，而競爭對手點開它的社媒發現沒打廣告、「怎麼客戶都去你那了」，等意識到是 AI 在推薦時「可能早就已經破產了」。</li>
+<li>預告：她發帖招 CTO，不到 2 小時 20 多個回覆，週四晚（北京時間）開 Space 篩選，已有 397 人預約——「更多人不是不會用 AI，而是找不到一個業務點」。</li>
+</ul>
+<h2>④ 沈以誠：青島 AI 沙龍，AI 焦慮本身就是新市場</h2>
+<p>[00:31]–[00:37]、[01:01]–[01:08]，嘉賓沈以誠（02 年生）：</p>
+<ul>
+<li>背景：2023 年在校做知識付費博主（抖音、小紅書、影片號）；本職新媒體編導；副業做網創（網路創業）；今年轉 AI，在青島辦公益 AI 沙龍，全網播放量近 20 萬；還營運線上知識星球，正嘗試接觸政府結合做業務合作。</li>
+<li>用法兩極分化：編導工作用 AI 做靈感發散——找對標影片、深度拆解文案與影片；網創業務用 AI 瘋狂執行——以前手動私聊每個客戶要手機號、驗證碼，雇了兩個小朋友做客服交接，現在兩人全部轉去做 AI 資源類博主。</li>
+<li>變現案例：網上很火的發票業務需要人工簽名和蓋章，很多人不會；他讓 AI 模擬簽名蓋章、做出一整套工作流，打包賣給做發票生意的人，對方直接發了 1,888 元紅包。還有奶粉報單、回收比價系統（報單、回收、比價、運單號監控、利潤監控都能看），「也有很多人一次 copy 我們一起去買」。</li>
+<li>AI 焦慮論：AI 能不能帶來新客戶，不如問「AI 焦慮能不能帶來新客戶」——個人怕跟不上（群裡有人聽不懂「反向」「逆向」等詞就私聊說焦慮），中小企業的 AI 焦慮比個人深得多（想找團隊做智慧化）。辦沙龍前他沒有任何大產品，沙龍還沒開就在線上接觸到更多市場：一位百萬粉絲的 AIGC 寵物博主聊到半夜兩點，請他去營運自己的專業號（offer 還在考慮）；中小公司與政府相關的人來問有沒有團隊能提供智慧化服務。</li>
+<li>群友案例：做外貿的朋友用內建語音/語言大模型做客服，5 個客服減到 2 個，承擔率還更高；另一位群友做了外貿獲客智慧體，用 DeepSeek 寫郵件群發，已拿到 2 個客戶（「效率應該蠻低的，只不過量大」）。</li>
+<li>提醒：辦沙龍一定要提前做好客戶隔離；即使 AI 再發達，「一定不要放棄線下市場」，線下市場的信任與曝光度是線上沒法比的。</li>
+</ul>
+<h2>⑤ 聽眾問答：外貿、地產轉型、工具與提示詞</h2>
+<p>[01:08]–[01:45]：</p>
+<ul>
+<li><strong>珠寶外貿供應鏈</strong>（廣州/梧州，莫桑鑽批發）：問外貿 agent 現在能做到什麼地步。沈以誠轉述群友案例：選品 agent 整合多個第三方平台、每天定時推送賣得好的產品；獲客智慧體用 DeepSeek 寫郵件群發刺激回購，已成交 2 個客戶；另有潮汕朋友做大型叉車與睡眠艙出口，影片號粗剪工具 + AI 生成場景影片，一年營收據稱幾億（發言者自述，未核實）。</li>
+<li><strong>地產轉型聽眾</strong>：做了多年地產銷售管理，核心優勢是組織協調與銷售，問怎麼用 AI 切入。沈以誠建議：先做 AI 範式類博主（參考 Don't Be Silent，從數位博主轉 AI 博主後流量暴漲，現已發展出 Bot、線上線下課三個方向），開知識星球，同時辦線下活動加深連結、慢慢做大 IP。工具分工：GPT 做 vibe coding（人在國內，Claude 有封號煩惱所以不用），Gemini 做文案產出（「非常有活人感」），DeepSeek 接到 Hammers（口播，疑為某 agent 框架）裡用；個人 agent（Muse、Groundball 之類）用得不多。</li>
+<li><strong>剛畢業大學生</strong>（外貿公司，阿里國際站 + 中國製造網）：平台賣的 AI 智慧體約 10 萬/年，問能不能自己搭。沈以誠建議：先看對方產品說明、拆出核心功能與自己需要的功能，逐個做出來；AI 產品的作用是弱化程式碼層，但每人聊出來的結果都不一樣，因為一輪輪對話形成了你和它共有的體系；AI 只能做到半自動化、做不到全自動化——關鍵在提示詞工程：把需求寫進產品文件（MD），別一輪輪推翻自己的想法，「這是你個人的問題」。</li>
+<li><strong>工程轉行的聽眾</strong>：問 Codex/Claude 封號有沒有辦法、提示詞工程怎麼做。沈以誠的流程：先跟 Gemini 聊出想要的東西，再交給 Codex 生成比較完美的提示詞、去掉過度防禦；Codex 程式碼強但「過度防禦」，Gemini 現在反超 GPT 6.2（口播，疑為 Gemini 3 之類的新版本，紀要存疑）；多模型自己討論的方案 API 太貴、token 消耗大，「除非家裡面有礦」，不建議。Claude 封號問題他也沒辦法，深圳有社群討論過防封，可私下聯絡 Rika。</li>
+<li>收尾：Rika 逐一介紹四位嘉賓所在地（她在深圳、沈以誠在青島、Martina 在吉隆坡、Arya 在紐約），並提醒關注她主頁上的黑客松（有現金獎勵的很少）。</li>
+</ul>
+<h2>ASR 歸一表</h2>
+<p>馬天娜＝Martina；二亞/阿雅＝Arya Li；沈以辰/沈宣＝沈以誠；Eria＝Arya；OPC＝一人公司（one-person company）；GEEO/GO/基憂/機誘＝GEO（生成式引擎優化）；貨客＝獲客；外貌＝外貿；查GBT＝ChatGPT；gaming＝Gemini；GBS＝GPT；Codex＝GPT Codex；clawda/Cloud＝Claude；justasyn.io＝justsing.io（Arya 的線上合唱訂閱站，按「just sing」取此讀法）；Hammers＝口播，疑為某 agent 框架名稱，存疑；Don't Be Silent＝口播的博主名，存疑；GPT 6.2＝口播，疑指某新模型版本，存疑。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: MeetForward Talks EP.01 — "How Can AI Help One Person Build a Business?"</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/meetforward-rika-ai-business-20251125.mp3"></audio></p>
+<ul>
+<li><strong>Source</strong>: X Space https://x.com/i/spaces/1ybYQVZJgzXELR</li>
+<li><strong>Time</strong>: 2026-11-25 (Wednesday) 20:52–22:40 CST; recording approx. 108 minutes</li>
+<li><strong>Host</strong>: Rika @Web3rika (MeetForward)</li>
+<li><strong>Guests</strong>: Martina @MartinaBuilds (马天娜在进化), Arya Li @Aryaccl (阿雅), Shen Yicheng @shenshenyicheng (Qingdao AI Salon)</li>
+<li><strong>Listeners</strong>: 194</li>
+<li><strong>Format</strong>: Four-person roundtable plus audience Q&amp;A; roughly the first 8 minutes of the recording are missing (the transcript starts at [00:07:52])</li>
+<li><strong>Disclaimer</strong>: Everything below reflects the speakers' personal experiences and views and has not been verified; figures and names follow the spoken transcript, and ASR mishearings are normalized at the end of this document</li>
+</ul>
+<h2>In One Sentence</h2>
+<p>All four speakers use AI to turn "one person" into "a whole team," but their consensus is strikingly consistent: what AI gives you is execution, not creativity, and it certainly can't bring you customers directly — its real value is freeing you from business processes you have already validated. Get a real need and a first customer first, then talk about AI; otherwise you are just selling anxiety.</p>
+<h2>① Rika: 80% of KOL Placement Can Be Replaced by AI; She Built a Workflow in Two Days and Sold It for 20,000 Yuan</h2>
+<p>[00:08]–[00:15], [00:37]–[00:41], host Rika:</p>
+<ul>
+<li>Background: She previously ran a Web3 marketing agency; this year she pivoted to AI, building custom workflows for companies and also running offline events and hackathons.</li>
+<li>Her day-to-day work: finding KOLs and KOCs and doing marketing strategy — all three can now be 80% replaced by AI this year. Dedicated AI agent tools for KOL placement already exist, at around 100 yuan per month or on a commission basis (for example, taking only 10% of a 2,000 USD commission); building your own workbench, by contrast, is time-consuming and hard to replicate at scale.</li>
+<li>So she is shifting toward offline events plus sales: offline is where you actually meet customers.</li>
+<li>Monetization case: She built herself a marketing workbench and posted it on Xiaohongshu. A woman at a Shanghai headhunting firm wanted to buy it; Rika built it in two days (while still holding her day job) and sold it for 20,000 yuan. After she posted it on Twitter, nearly 10,000 people saw it, and someone approached her about commercialization — suggesting she either keep refining the product and sell it as SaaS, use it as a lead magnet for offline salons (give away the workbench, then sell upgraded services), or open-source it to drive leads to an agency.</li>
+<li>Her take on customer acquisition: AI helps her write emails, communicate with overseas clients, send bulk emails, and plan business workflows, simplifying the process to "just confirm it." For paid traffic, AI can optimize SEO, GEO, and Google traffic, and basically all traffic-buying companies in Shenzhen use it. But it helps little with content creation: posts written by AI score roughly 60–80 points, and the posts with exceptionally good traffic are basically all written by herself.</li>
+</ul>
+<h2>② Martina: A Week's Work Done in 3 Hours — "One Person Is a Whole Team"</h2>
+<p>[00:15]–[00:21], [00:41]–[00:46], guest Martina:</p>
+<ul>
+<li>Background: Her day job is marketing at an IT company. At the end of 2025 she started creating AI content (under the ID "马天娜在进化"), distributing AI tutorial videos across all platforms.</li>
+<li>Efficiency: She now basically finishes a week's work in 3 hours — "but I haven't let our boss know about this." Her content work started with AI revising drafts and making video covers, and gradually moved to rough-cutting videos with AI plus packaging; details still need her own adjustment, but she can clearly feel the models have kept improving from early 2026 to now.</li>
+<li>Persistence: Back in 2019 in Australia she already wanted to create content (vlogs, a book-review account), but the production workload was always too heavy and it kept stalling — only in 2026 did she truly feel that "one person is a whole team": what one person couldn't finish before, she can now do as a side hustle, by herself, and monetize it.</li>
+<li>The sandwich theory: A street stall selling sandwiches doesn't need to worry about how many people in the world are selling sandwiches — you only need to take good care of your own street. Building a personal brand is the same: with so many people in the world, someone will like your style. Don't agonize over whether a niche is crowded; keep showing yourself and distribute on every platform.</li>
+<li>Customer acquisition: With AI, she posts videos more frequently and distributes across all platforms, and opportunities come to her: paid consultations, her own courses, plans for offline classes. At noon that day, someone from a newly established AI department at a large company saw her Xiaohongshu video and invited her to teach their mentors — "an opportunity like this was completely unimaginable to me before."</li>
+<li>A slice of life: One day after a workout, her husband had fallen asleep at home and wasn't answering — 11 calls went unanswered. She connected her phone to the Claude agent at home and had the computer shout via text-to-speech, "Get up! Martina says it's time to eat," which woke him up. "If you have lots of smart home devices, connect everything you can to AI."</li>
+<li>Her outlook for 2027: Boldly step into the spotlight and show herself, join more events like Spaces — "someone will like you."</li>
+</ul>
+<h2>③ Arya: A Chinese Choir in New York — AI Freed Her from 90% of the Business</h2>
+<p>[00:21]–[00:30], [00:46]–[00:57], the most complete business case of the session, guest Arya:</p>
+<ul>
+<li>The business: With a pure humanities and arts background, she founded a Chinese choir in New York in October 2023. Within less than two weeks of posting the information, 35 people had paid to join the first cohort. For over two years she never thought about monetizing it (she was working in tech with a generous salary at the time) and treated it as a "utopia," singing together every Thursday and Friday evening.</li>
+<li>The turning point: In January 2026 she started running it as a real business, and from January to April it made a profit of over 70,000 USD (by her account, real profit after expenses). But the business depended 100% on her as founder — she was the conductor, and everything, visible and invisible, was done by her alone. "Is this really my ceiling for the rest of my life?"</li>
+<li>The solution: Starting in May she used AI heavily, aiming to cut the time she personally put into the business by 90% while keeping it running normally — and by now she has achieved that. A month and a half ago she started looking for an AI company in New York, preparing to put her full-time effort there.</li>
+<li>Her methodology (the core point she emphasized repeatedly): AI gives you execution, not new ideas — it will hand you hundreds of possibilities, but you can't do them all. Don't chase an all-in-one setup (one system handling everything from topic selection to publishing); that turns your content mediocre and strips away your personal character. The right approach: take a big sheet of paper, write down every manual process in the business, from customer service to collecting payment, and think step by step about which steps AI can automate. Don't skip even the smallest steps, because every step is one you have manually verified to work, and AI can execute it reliably too — only then can you truly step away.</li>
+<li>A new business line: In January this year, realizing that many people who had moved away from New York could no longer sing offline, she launched an online sing-together subscription on Tuesday evenings: 9.9 USD for the first month, 19.9 USD from the second month. It gained 25 paying users in the first 24 hours and over 60 paid subscriptions within a month. The subscription system and website (justsing.io — spoken as something close to "justasyn.io"; these notes use justsing.io) were entirely vibe-coded and built in under 5 hours, including subscriptions, billing, and a retention offer of 3 months at half price when someone tries to cancel. It has earned over 10,000 USD in total, and she spends only 45 minutes a week singing with everyone — "very healing."</li>
+<li>Her judgment: The real demand for AI arises at exactly one point — helping people cut costs and increase efficiency. Has AI brought new customers? "The answer is no." The current wave of selling AI courses reminds her of the history of Japan's economic downturn and internet transition, when companies exploited unemployment anxiety and career-change anxiety to "sell employees a job." Finding a product the market actually needs and going out to get your first customer matters more than endlessly learning "how to make AI bring you customers." She has over 1,800 people on WeChat who want to sing with her — that is why whatever she does, she always has a first wave of customers.</li>
+<li>An additional point: Don't keep emphasizing "I made this with AI" — many traditional-business clients will undervalue it, thinking "you made it so easily, so it should be cheap." GEO is the exception, though: an interviewer searched Google for "Chinese Choir" (without adding New York) and found her choir ranked first, and Google's AI answer also called it Number 1 and strongly recommended it. If a traditional local business (say, a medical aesthetics clinic in a certain district of Chongqing, or a shop that makes stents) does GEO well, AI will keep sending it customers, while competitors who open its social media see no ads and wonder "why did all the customers go to you?" — by the time they realize AI is doing the recommending, "they may already be bankrupt."</li>
+<li>Coming up: She posted that she is hiring a CTO and got over 20 replies in under 2 hours; she will run a Space on Thursday evening (Beijing time) to screen candidates, and 397 people have already booked — "More people don't fail to use AI; they just can't find a business angle."</li>
+</ul>
+<h2>④ Shen Yicheng: A Qingdao AI Salon — AI Anxiety Itself Is a New Market</h2>
+<p>[00:31]–[00:37], [01:01]–[01:08], guest Shen Yicheng (born in 2002):</p>
+<ul>
+<li>Background: In 2023, while still at university, he worked as a knowledge-payment creator (Douyin, Xiaohongshu, WeChat Channels). His day job is new-media directing and editing; his side hustle is "wangchuang" (online entrepreneurship). This year he switched to AI and runs a free public-interest AI salon in Qingdao with nearly 200,000 views across platforms; he also runs an online knowledge community (Zhishixingqiu) and is trying to connect with government partners for business cooperation.</li>
+<li>Two extremes of usage: In his directing work he uses AI for inspiration — finding benchmark videos and deeply breaking down their scripts and visuals. In his online-business work he uses AI for relentless execution — he used to manually message every customer asking for phone numbers and verification codes and hired two young assistants for customer-service handoffs; both have now switched entirely to being AI-resource creators.</li>
+<li>Monetization case: A very popular online invoice business requires manual signatures and seals, which many people don't know how to do. He had AI simulate the signatures and seals and built a complete workflow, packaged it, and sold it to people in the invoice business — one buyer immediately sent him a 1,888 yuan red packet. There is also a milk-powder order and recycling price-comparison system (orders, recycling, price comparison, waybill tracking, and profit monitoring all in one view): "and lots of people just copy us and buy together."</li>
+<li>His AI-anxiety thesis: Rather than asking whether AI can bring new customers, ask whether AI anxiety can. Individuals fear falling behind (in his group, someone who couldn't understand terms like "reverse" would privately message him about feeling anxious), and small and medium-sized enterprises feel AI anxiety far more deeply than individuals (they want to find a team to do their intelligent upgrade). Before running the salon he had no major product at all, yet even before the salon opened he was reaching more of the market online: a pet AIGC creator with a million followers talked with him until 2 a.m. and asked him to run her professional account (the offer is still under consideration); people from SMEs and government-related organizations came asking whether he had a team that could provide intelligent-upgrade services.</li>
+<li>Cases from his group: A friend in foreign trade uses a built-in voice/language large model for customer service, cutting the support team from 5 people to 2 with an even higher handling rate. Another group member built a foreign-trade customer-acquisition agent that uses DeepSeek to write and mass-send emails and has already landed 2 customers ("the efficiency is probably quite low — it's just the sheer volume").</li>
+<li>A reminder: If you run a salon, make sure to isolate your customers in advance. And no matter how advanced AI gets, "never give up the offline market" — the trust and exposure of the offline market are things the online world simply can't match.</li>
+</ul>
+<h2>⑤ Audience Q&amp;A: Foreign Trade, a Real-Estate Pivot, Tools, and Prompt Engineering</h2>
+<p>[01:08]–[01:45]:</p>
+<ul>
+<li><strong>Jewelry foreign-trade supply chain</strong> (Guangzhou/Wuzhou, wholesale moissanite): asked how far foreign-trade agents can go now. Shen Yicheng relayed cases from his group: a product-selection agent integrated with multiple third-party platforms that pushes well-selling products on a daily schedule; a customer-acquisition agent using DeepSeek to write and mass-send emails to stimulate repeat purchases, which has closed 2 customers; and a friend from Chaoshan exporting large forklifts and sleep pods, using a rough-cut tool on WeChat Channels plus AI-generated scene videos, with annual revenue said to be in the hundreds of millions of yuan (as stated by the speaker, unverified).</li>
+<li><strong>An audience member pivoting from real estate</strong>: years of experience in real-estate sales management, with core strengths in organization, coordination, and sales; asked how to enter via AI. Shen Yicheng advised: first become an AI-paradigm creator (taking Don't Be Silent as the reference — after switching from tech content to AI content, his traffic exploded, and he has since developed three directions: a bot, and online and offline courses), open a Zhishixingqiu community, and at the same time run offline events to deepen connections and slowly build a bigger personal brand. His tool split: GPT for vibe coding (he is based in mainland China, and Claude carries the hassle of account bans, so he doesn't use it), Gemini for copywriting output ("it feels very human"), and DeepSeek wired into Hammers (as spoken; presumably some agent framework). He doesn't use personal agents (Muse, Groundball, and the like) much.</li>
+<li><strong>A recent graduate</strong> (at a foreign-trade company, on Alibaba International and Made-in-China): the platform's AI agent product costs about 100,000 yuan per year; asked whether he could build his own. Shen Yicheng advised: first read the vendor's product description, break out the core features and the ones you actually need, and build them one by one. The role of an AI product is to weaken the code layer, but everyone gets different results from chatting with it, because round after round of conversation forms a system shared by you and it. AI can only achieve semi-automation, not full automation — the key is prompt engineering: write your requirements into a product document (MD), and don't keep overturning your own ideas round after round: "that's your own problem."</li>
+<li><strong>An audience member switching from engineering</strong>: asked whether anything can be done about Codex/Claude account bans, and how to do prompt engineering. Shen Yicheng's workflow: first talk through what you want with Gemini, then hand it to Codex to generate a fairly polished prompt and strip out the over-defensiveness. Codex is strong at code but "over-defensive"; Gemini has now overtaken GPT 6.2 (as spoken; presumably a new version such as Gemini 3 — uncertain in these notes). Having multiple models discuss a plan among themselves costs too much in API fees and token consumption — "unless your family owns a mine" — and is not recommended. He has no solution for Claude account bans either; there are communities in Shenzhen that discuss ban prevention, and you can contact Rika privately.</li>
+<li>Wrap-up: Rika introduced where each of the four guests is based (she is in Shenzhen, Shen Yicheng in Qingdao, Martina in Kuala Lumpur, Arya in New York) and reminded listeners to watch the hackathon on her profile page (very few offer cash prizes).</li>
+</ul>
+<h2>ASR Normalization Table</h2>
+<p>马天娜 = Martina; 二亚/阿雅 = Arya Li; 沈以辰/沈宣 = Shen Yicheng; Eria = Arya; OPC = one-person company; GEEO/GO/基忧/机诱 = GEO (generative engine optimization); 货客 = 获客 (customer acquisition); 外貌 = 外贸 (foreign trade); 查GBT = ChatGPT; gaming = Gemini; GBS = GPT; Codex = GPT Codex; clawda/Cloud = Claude; justasyn.io = justsing.io (Arya's online choir subscription site, read as "just sing"); Hammers = as spoken, presumably the name of some agent framework, uncertain; Don't Be Silent = as spoken, a creator's name, uncertain; GPT 6.2 = as spoken, presumably referring to some new model version, uncertain.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1ybYQVZJgzXELR">https://x.com/i/spaces/1ybYQVZJgzXELR</a>（主持 Rika @Web3rika）· 发布日期：2026-11-25 · 时长：108 分钟（开场约 8 分钟录音缺失）<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1ybYQVZJgzXELR">https://x.com/i/spaces/1ybYQVZJgzXELR</a>（主持 Rika @Web3rika）· 發布日期：2026-11-25 · 時長：108 分鐘（開場約 8 分鐘錄音缺失）<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1ybYQVZJgzXELR">https://x.com/i/spaces/1ybYQVZJgzXELR</a> (hosted by Rika @Web3rika) · Published: 2026-11-25 · Duration: 108 minutes (roughly the first 8 minutes of the recording are missing)<br>This page is the full text of the notes, compiled and edited by hand from a machine transcript; all views and figures are as stated by the original speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1ybYQVZJgzXELR">https://x.com/i/spaces/1ybYQVZJgzXELR</a>（主持 Rika @Web3rika）· 发布日期：2026-11-25 · 时长：108 分钟（开场约 8 分钟录音缺失）<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：MeetForward Talks EP.01《AI 如何帮助一个人做成一门生意？》 · Yat's Talks",tw:"紀要：MeetForward Talks EP.01《AI 如何幫助一個人做成一門生意？》 · Yat's Talks",en:"Notes: MeetForward Talks EP.01 — \"How Can AI Help One Person Build a Business?\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

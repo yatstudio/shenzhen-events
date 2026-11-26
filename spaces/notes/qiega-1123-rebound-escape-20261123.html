@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：茄哥 11.23《今晚反弹就是逃命机会，30 号才是转折点》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1123-rebound-escape-20261123.mp3"></audio></p>
 <ul>
 <li><strong>来源</strong>：X Space https://x.com/i/spaces/1lgyybnnzmnerz</li>
 <li><strong>时间</strong>：2026-11-23（周一）晚，录音约 93 分钟（1 小时 32 分 39 秒）</li>
@@ -79,9 +90,148 @@
 </ul>
 <h2>ASR 归一表</h2>
 <p>盘前＝盘前（转写常写作「凡钱」）；黄青＝行情；NT＝Anthropic（ANT）；Open Air＝OpenAI；亚当希腐＝亚当·希夫（Adam Schiff）；凯文沃石＝凯文·沃什（Kevin Warsh）；奥黑＝奥巴马；纽森＝加州州长纽森（Gavin Newsom）；口罩哥＝马斯克（Elon Musk，口播调侃）；贝莱德手里「78 万美元」按上下文读作 78 万枚比特币；英伟达「1.125」读作 112.5 美元。个别数字（如 SOXX 涨幅、贝莱德当日卖出额）在场内前后口播不一，正文取其最常重复的读法并标注为发言者自述。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：茄哥 11.23《今晚反彈就是逃命機會，30 號才是轉折點》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1123-rebound-escape-20261123.mp3"></audio></p>
+<ul>
+<li><strong>來源</strong>：X Space https://x.com/i/spaces/1lgyybnnzmnerz</li>
+<li><strong>時間</strong>：2026-11-23（週一）晚，錄音約 93 分鐘（1 小時 32 分 39 秒）</li>
+<li><strong>主持</strong>：茄哥 | Pod @qg7777（單口盤前分析 + 梁一偉連麥測麥、少量互動）</li>
+<li><strong>形式</strong>：美股盤前直播，邊看盤邊聊；當晚 21:30 公布美國 PMI 數據</li>
+<li><strong>聲明</strong>：以下全部為發言者個人觀點與自述，未經核實；數字、人名以逐字稿口播為準，ASR 誤聽已在文末歸一；同一數字在場內前後說法不一處已註明</li>
+</ul>
+<h2>一句話</h2>
+<p>週一盤前反彈夜：茄哥的判斷是今晚大概率反彈，但反彈就是逃命機會——盤前漲得越兇、開盤越可能高開低走，真正的轉折點在 11 月 30 日，週三（25 日）的 PCE 與第三季 GDP 他「非常不看好」；貫穿全場的主線是貝萊德在砸盤換打折貨，以及他的一套政治解讀：民主黨老牌資本要把 AI 行業打三折再收購。</p>
+<h2>① 盤前：全線反彈，但他只看到逃命</h2>
+<p>[00:02]–[00:10]，開場盤前：</p>
+<ul>
+<li>美股盤前普漲，晶片領漲（SOXX 口播漲約 5.52%，輝達盤前漲約 7.9%），那指期貨、標普、道指期貨都在漲；但他擔心重演上週五：盤前大漲、開盤高開、然後一下折下來。</li>
+<li>美元兌日元又上 159，美元指數 103.9——「美元太強勢不是好訊號」；VIX 雖然跌了約 13.9%，但仍在 30 以上，「市場還是很恐慌」。</li>
+<li>黃金反彈很猛、上到 3,600 上方但沒突破 3,650；韓國指數當天觸發了熔斷機制（暫停程式化賣出），他稱韓國現在惡意做空違法、李在明政府準備救市。</li>
+<li>BTC：現價約 61,000–61,320 美元，日內低點約 60,358、波動約 1,438 點；幣安現貨 24 小時成交約 254 億美元，幣安現貨成交約 5 億多、量在縮；日線收十字星。</li>
+<li>今晚的區間判斷：寬幅震盪，向上可能打到 62,500，向下可能幹到 59,000，收盤「還能偏空一點」；「現在看起來是偏多」只是因為日線十字星與超跌反彈因素。</li>
+</ul>
+<h2>② 原則：能跑就跑，不看獲利</h2>
+<p>[00:06]–[00:07]、[00:25]–[00:26]：</p>
+<ul>
+<li>他的操作原則：「能跑全跑，不看獲利」，只留特別不想賣的（舉例耐吉、奈飛這類）；小股票只要沒虧就幹掉。</li>
+<li>「今天晚上反彈起來了，很多人會選擇逃命」——反彈的性質是逃命窗口，不是抄底訊號。</li>
+<li>他自述白天在 61,300 附近開了空單、61,050 平掉，「要不然我不被套嗎」。</li>
+<li>時間表：反彈最多到 25 號，「尤其 25 號可能還會沒有機會了」，26–27 號感恩節休市與半日，<strong>30 號「是非常大的轉折點」</strong>，過程「非常極端」。</li>
+</ul>
+<h2>③ 貝萊德砸盤論：減倉是為了換打折貨</h2>
+<p>[00:26]–[00:33]、[00:40]–[00:43]，本場反覆講的主線（均為其說法）：</p>
+<ul>
+<li>消息面：貝萊德將約 6.4 億美元資產轉到 Coinbase，他直接解讀為「肯定是要砸盤了」；其口播稱貝萊德當天賣出約 5.9 億美元的比特幣，之前每天賣 5 億多，「要砸一個破紀錄」。</li>
+<li>持倉：貝萊德手裡現貨比特幣約 78 萬枚（口播原話為「78 萬美元」，按上下文應為 78 萬枚，紀要取此讀法），「這個量實際上太大了」，不是微策略那種量級；其他家沒多少（富達約 18 萬枚、ARK 幾萬枚）。</li>
+<li>邏輯：減倉不是為了減倉，是為了換打折貨——巴菲特最近受訪說市場「不夠便宜」，市場打三折資本才會感覺有意思；輝達回測 60%（從高點回落）「太正常了」，比特幣 69,000 跌到 15,000 就是打了不止三折，12 萬打三折是 36,000；「資本沒敢上怎麼辦？我就讓你們灰飛煙滅一下，然後我再進場」，網際網路泡沫當年也是這麼玩的。</li>
+<li>真空地帶：BTC 一小時線 59,000 到 58,000 一帶是真空地帶，58,500、58,700「都撐接不住」，還要再砸一個 56,000 出來；但也可能砸不穿 55,000、「砸一個梗頭」；貝萊德也可能走 OTC 或協議轉讓，不一定都從盤上走。</li>
+<li>風險提示（他自己也承認）：「誰也說不好」，貝萊德看情況不好也可能不出。</li>
+</ul>
+<h2>④ 週三 25 號：PCE 與 GDP，他非常不看好</h2>
+<p>[00:40]–[00:41]、[00:51]–[00:53]：</p>
+<ul>
+<li>今晚 21:30 先公布 PMI：製造業前值 54.9、預期 54.5；服務業前值 56、預期 55.6；他問了 AI 的看法後認為數據可能不會很理想，PMI 對今晚有一定影響。</li>
+<li>週三是最嚴重的：PCE、第三季 GDP、初請失業金三項同日，「週三的行情我非常不看好，25 號非常不看好」。</li>
+<li>他的框架：資金在輪動——東方某大國加倉黃金把黃金徹底拉起來，資金從比特幣輪動到黃金、再到美股、再到美元；油價走低、美元走強、美債走強，但美股超跌這麼多不反彈「似乎有點不符合原理」。</li>
+<li>宏觀判斷：通膨從去年川普上台就沒控制下來，美聯儲換上鷹派的凱文·沃什也沒大動作；降息「不會很快，明年上半年沒有降息的任何預期」。</li>
+</ul>
+<h2>⑤ 政治長篇：民主黨、AI 與 2028 大選（均為其個人解讀，未經核實）</h2>
+<p>[00:11]–[00:13]、[00:54]–[01:17]，佔了後半程的大部分篇幅：</p>
+<ul>
+<li><strong>「拒絕拯救 AI」提案</strong>：加州民主黨參議員亞當·希夫（口播「亞當希腐」）提議國會不要出手拯救陷入困境的 AI 行業，他的解讀是民主黨「向 AI 宣戰」——AI 具備平權性，老錢不希望它發展太快；雙面玩法是：一面打擊共和黨捧 AI 的人，一面由老牌民主黨資本把 AI 行業打三折收購、重新洗牌，「當年網際網路就是這麼玩的」。</li>
+<li><strong>Netflix《利他主義者》</strong>：他認為劇裡把 CZ 刻畫成誘導 SBF 犯罪，是美國人對東方人「比美國人精明」的傳統刻板印象；監製是歐巴馬的夫人，代表民主黨傾向；目的不是攻擊加密貨幣，而是讓民眾覺得民主黨在為老百姓說話、為 SBF 出獄做輿論前站；接下來他們會拍 AI、黃仁勳（「拍得極其好色、極其利己」）。</li>
+<li><strong>2028 大選</strong>：民主黨已公布 12 場總統初選辯論計畫，2027 年 6 月首場；加州州長紐森是「最熱門的選手」，哈里斯是否出選要看勝率與民調——勝率高就派紐森，勝率低就派哈里斯；他認為紐森與哈里斯都是舊金山出來、背後都是蓋蒂家族。</li>
+<li><strong>川普帳</strong>：BTC 在他上台前已超 10 萬、現在 6 萬，「給加密貨幣世界至少打了個六折」；輝達上台前約 140 美元、現在約 112.5 美元，4 月關稅戰時曾砸到 86 美元；但他也承認，沒有川普 2024 年也可能漲，民主黨上台幣價「可能會更高」；川普發迷因幣、搞持幣見面會、兒子搞 WLFI，「美國歷史上也沒有哪一任總統像他這樣搞」；加密資金被川普家族幣與 WLFI 分流，是 BTC 跌這麼慘的原因之一。</li>
+<li><strong>AI 寒冬論</strong>：AI 標的「得沉寂個三四年」，類比 2000 年網際網路泡沫後；AI 對普通民眾「最多就是個高級的搜尋引擎」，真正有落地應用的公司沒多少；在中國 AI「根本沒放在眼裡」，只是美國人搞、中國不得不搞（其說法）；AI 收費對用戶端其實很高；新手程式設計師不如學一技之長的藍領（舉四川人做車間主任的例子），AI 對新手程式設計師的衝擊最大。</li>
+<li><strong>其他消息</strong>：英國將從 2027 年 10 月 25 日起禁止加密貨幣交易所在自家平台上買賣加密貨幣；馬斯克曾關掉烏克蘭軍用版星鏈一事「可能會搞得蠻大」，到國會層面要有人背鍋（均為節目內說法）。</li>
+</ul>
+<h2>ASR 歸一表</h2>
+<p>盤前＝盤前（轉寫常寫作「凡錢」）；黃青＝行情；NT＝Anthropic（ANT）；Open Air＝OpenAI；亞當希腐＝亞當·希夫（Adam Schiff）；凱文沃石＝凱文·沃什（Kevin Warsh）；奧黑＝歐巴馬；紐森＝加州州長紐森（Gavin Newsom）；口罩哥＝馬斯克（Elon Musk，口播調侃）；貝萊德手裡「78 萬美元」按上下文讀作 78 萬枚比特幣；輝達「1.125」讀作 112.5 美元。個別數字（如 SOXX 漲幅、貝萊德當日賣出額）在場內前後口播不一，正文取其最常重複的讀法並標註為發言者自述。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: Qiege, Nov 23 — "Tonight's Rebound Is Just an Escape Window; the 30th Is the Real Turning Point"</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1123-rebound-escape-20261123.mp3"></audio></p>
+<ul>
+<li><strong>Source</strong>: X Space https://x.com/i/spaces/1lgyybnnzmnerz</li>
+<li><strong>Time</strong>: Evening of 2026-11-23 (Monday); recording about 93 minutes (1 hour 32 minutes 39 seconds)</li>
+<li><strong>Host</strong>: Qiege | Pod @qg7777 (solo pre-market analysis, with Liang Yiwei joining briefly to test his mic and limited interaction)</li>
+<li><strong>Format</strong>: US pre-market livestream, talking while watching the market; US PMI data due that evening at 21:30</li>
+<li><strong>Disclaimer</strong>: Everything below is the speaker's personal views and accounts, unverified; figures and names follow the spoken transcript, ASR mishearings are normalized at the end; where the same figure was stated inconsistently during the session, this is noted</li>
+</ul>
+<h2>In one sentence</h2>
+<p>A Monday pre-market rebound night: Qiege's judgment is that a rebound is likely tonight, but the rebound is an escape window — the harder the pre-market rallies, the more likely the open gaps up and then sells off; the real turning point is November 30, and he is "very bearish" on Wednesday's (the 25th's) PCE and Q3 GDP. The through-line of the whole session is his claim that BlackRock is dumping to reload at a discount, along with his political reading: old-line Democratic capital wants to buy the AI industry at a 70% discount after knocking it down.</p>
+<h2>① Pre-market: everything bouncing, but all he sees is an escape</h2>
+<p>[00:02]–[00:10], the opening pre-market segment:</p>
+<ul>
+<li>US stocks were up across the board pre-market, chips leading (SOXX up about 5.52% by his reading, Nvidia up about 7.9% pre-market); Nasdaq, S&P and Dow futures were all higher. But he worried about a repeat of last Friday: a big pre-market rally, a gap-up open, then a sudden fold downward.</li>
+<li>USD/JPY was back above 159 and the dollar index at 103.9 — "an overly strong dollar is not a good signal"; the VIX had fallen about 13.9% but was still above 30, "the market is still very fearful."</li>
+<li>Gold rebounded hard, rising above 3,600 but failing to break 3,650; the Korean index triggered its circuit breaker that day (a halt to programmatic selling), and he said malicious short selling is now illegal in Korea, with the Lee Jae-myung government preparing to rescue the market.</li>
+<li>BTC: trading around $61,000–$61,320, intraday low around 60,358, a range of about 1,438 points; Binance spot 24-hour volume around $25.4 billion, with Binance spot volume at a bit over $500 million and shrinking; the daily candle closed as a doji.</li>
+<li>His range call for the night: wide swings — possibly up to 62,500, possibly down to 59,000, with the close "still able to lean a bit bearish"; the current "look of leaning long" was only due to the daily doji and oversold-bounce factors.</li>
+</ul>
+<h2>② Principle: if you can run, run — don't look at profits</h2>
+<p>[00:06]–[00:07], [00:25]–[00:26]:</p>
+<ul>
+<li>His operating principle: "If you can run, run it all, don't look at profits" — keep only what you really don't want to sell (he gave examples like Nike and Netflix); cut small stocks as long as you're not at a loss.</li>
+<li>"Once it bounces tonight, many people will choose to escape" — the nature of the bounce is an escape window, not a bottom-fishing signal.</li>
+<li>He said he had opened a short around 61,300 during the day and closed it at 61,050 — "otherwise wouldn't I get trapped?"</li>
+<li>Timeline: the rebound lasts until the 25th at most, "especially by the 25th there may be no chance left"; the 26th–27th are the Thanksgiving closure and half-day; <strong>the 30th "is a very big turning point,"</strong> and the process will be "very extreme."</li>
+</ul>
+<h2>③ The BlackRock dumping thesis: selling down to reload at a discount</h2>
+<p>[00:26]–[00:33], [00:40]–[00:43], the main thread repeated throughout the session (all his claims):</p>
+<ul>
+<li>News flow: BlackRock moved about $640 million of assets to Coinbase, which he read directly as "definitely about to dump"; he said BlackRock sold about $590 million of bitcoin that day, after selling over $500 million a day before that — "about to dump a record amount."</li>
+<li>Holdings: BlackRock holds about 780,000 spot bitcoin (he literally said "780,000 dollars"; in context it should be 780,000 coins, and these notes adopt that reading) — "that amount is simply too big," not on MicroStrategy's scale; others hold little (Fidelity about 180,000 coins, ARK a few tens of thousands).</li>
+<li>The logic: the sell-down is not about reducing exposure but about reloading at a discount — Buffett said in a recent interview that the market is "not cheap enough"; only when the market is marked down to 30 cents on the dollar does capital find it interesting. Nvidia retracing 60% (falling from its high) is "perfectly normal"; bitcoin falling from 69,000 to 15,000 was more than a 70% markdown, and 120,000 marked down to 30% is 36,000. "What if capital doesn't dare step in? Then I'll wipe you out first and enter afterwards" — that's how the internet bubble was played back then, too.</li>
+<li>The vacuum zone: on BTC's hourly chart, the band from 59,000 to 58,000 is a vacuum zone; 58,500 and 58,700 "can't catch or hold," and another leg down to 56,000 still needs to be printed; but it might not break 55,000 — "it'll knock its head on it"; BlackRock might also go OTC or do negotiated transfers rather than selling everything on the open market.</li>
+<li>Risk caveat (he admitted this himself): "Nobody can say for sure" — if conditions look bad, BlackRock might not sell at all.</li>
+</ul>
+<h2>④ Wednesday the 25th: PCE and GDP — he is very bearish</h2>
+<p>[00:40]–[00:41], [00:51]–[00:53]:</p>
+<ul>
+<li>First, PMI at 21:30 tonight: manufacturing previous 54.9, expected 54.5; services previous 56, expected 55.6. After asking an AI for its view, he thought the data might not be great, and that PMI would have some impact on the night.</li>
+<li>Wednesday is the most serious day: PCE, Q3 GDP and initial jobless claims all land the same day — "I am very bearish on Wednesday's market, very bearish on the 25th."</li>
+<li>His framework: money is rotating — a certain major Eastern power has been adding to gold and pulled gold all the way up; funds rotate from bitcoin to gold, then to US stocks, then to the dollar. Oil down, dollar up, Treasuries up — but with US stocks this oversold, not bouncing at all "seems a bit against the principles."</li>
+<li>Macro judgment: inflation has not been brought under control since Trump took office last year; the Fed under hawkish Kevin Warsh has made no big moves either; rate cuts "won't come quickly — there is no expectation of any cut in the first half of next year."</li>
+</ul>
+<h2>⑤ The long political segment: Democrats, AI and the 2028 election (all his personal interpretation, unverified)</h2>
+<p>[00:11]–[00:13], [00:54]–[01:17], taking up most of the second half:</p>
+<ul>
+<li><strong>The "refuse to rescue AI" proposal</strong>: California Democratic Senator Adam Schiff (spoken as "Adam Xifu") proposed that Congress not step in to rescue a struggling AI industry; Qiege's reading is that the Democrats are "declaring war on AI" — AI has an equalizing quality, and old money doesn't want it to develop too fast. The two-sided play: on one side, attack the Republicans who champion AI; on the other, old-line Democratic capital marks the AI industry down to 30 cents on the dollar, buys it up and reshuffles it — "that's exactly how the internet was played back then."</li>
+<li><strong>Netflix's <em>The Altruists</em></strong>: he believes the show portrays CZ as having induced SBF into crime, playing on the traditional American stereotype of Easterners being "more cunning than Americans"; the executive producer is Obama's wife, representing the Democratic lean; the aim is not to attack crypto but to make the public feel the Democrats speak for ordinary people, and to prepare public opinion for SBF's eventual release. Next they will film AI and Jensen Huang ("portrayed as extremely lecherous and extremely selfish").</li>
+<li><strong>The 2028 election</strong>: the Democrats have announced a plan for 12 presidential primary debates, the first in June 2027; California Governor Newsom is "the hottest contender"; whether Harris runs depends on win probability and polling — if the odds are high they field Newsom, if low they field Harris; he believes both Newsom and Harris came out of San Francisco and both have the Getty family behind them.</li>
+<li><strong>The Trump ledger</strong>: BTC was already above 100,000 before he took office and is now at 60,000 — "at least a 40% markdown for the crypto world"; Nvidia was around $140 before he took office and is now around $112.50, having been smashed to $86 during the April tariff war; but he also conceded that 2024 might have risen without Trump, and that under the Democrats the coin price "might have been higher." Trump issued a memecoin, held meet-ups for coin holders, and his son runs WLFI — "no US president in history has done anything like this"; crypto funds being siphoned off by the Trump family coins and WLFI is one reason BTC has fallen so badly.</li>
+<li><strong>The AI winter thesis</strong>: AI names "will have to go quiet for three or four years," by analogy with the aftermath of the 2000 internet bubble; for ordinary people AI is "at most a fancy search engine," and few companies have real deployed applications; in China AI is "not taken seriously at all" — the US does it, so China has no choice but to do it too (his claim); AI charges are actually quite high for end users; novice programmers would be better off learning a trade as blue-collar workers (he gave the example of a Sichuanese workshop supervisor), as AI hits novice programmers hardest.</li>
+<li><strong>Other news</strong>: the UK will, from October 25, 2027, ban crypto exchanges from letting customers buy and sell crypto on their own platforms; the matter of Musk having once shut off the military version of Starlink for Ukraine "could get quite big," reaching Congress, where someone will have to take the blame (all as stated on the show).</li>
+</ul>
+<h2>ASR normalization table</h2>
+<p>盘前 (pre-market) = written in the transcript as "凡钱"; 黄青 = 行情 (market conditions); NT = Anthropic (ANT); Open Air = OpenAI; 亚当希腐 = Adam Schiff; 凯文沃石 = Kevin Warsh; 奥黑 = Obama; 纽森 = California Governor Gavin Newsom; 口罩哥 ("Mask Bro," a joking nickname) = Elon Musk; BlackRock's "780,000 dollars" is read in context as 780,000 bitcoin; Nvidia's "1.125" is read as $112.50. A few figures (such as SOXX's gain and BlackRock's same-day sales) were stated inconsistently during the session; the main text adopts the most frequently repeated reading and marks it as the speaker's own account.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1lgyybnnzmnerz">https://x.com/i/spaces/1lgyybnnzmnerz</a>（主持 茄哥 | Pod @qg7777）· 发布日期：2026-11-23 · 时长：93 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1lgyybnnzmnerz">https://x.com/i/spaces/1lgyybnnzmnerz</a>（主持 茄哥 | Pod @qg7777）· 發布日期：2026-11-23 · 時長：93 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1lgyybnnzmnerz">https://x.com/i/spaces/1lgyybnnzmnerz</a> (host: Qiege | Pod @qg7777) · Published: 2026-11-23 · Duration: 93 minutes<br>This page is the full text of notes compiled by hand from a machine transcript; all views and figures are the original speaker's and are unverified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1lgyybnnzmnerz">https://x.com/i/spaces/1lgyybnnzmnerz</a>（主持 茄哥 | Pod @qg7777）· 发布日期：2026-11-23 · 时长：93 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：茄哥 11.23《今晚反弹就是逃命机会，30 号才是转折点》 · Yat's Talks",tw:"紀要：茄哥 11.23《今晚反彈就是逃命機會，30 號才是轉折點》 · Yat's Talks",en:"Notes: Qiege, Nov 23 — \"Tonight's Rebound Is Just an Escape Window; the 30th Is the Real Turning Point\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
