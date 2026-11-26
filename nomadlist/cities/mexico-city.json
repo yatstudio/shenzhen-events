@@ -10,23 +10,23 @@
     "country": "Mexico",
     "country_zh": "墨西哥",
     "region": "Americas",
-    "cost_usd_month": 1600,
-    "rent_1br_usd_month": 800,
-    "coworking_usd_month": 130,
+    "cost_usd_month": 1900,
+    "rent_1br_usd_month": 900,
+    "coworking_usd_month": 200,
     "internet_mbps": 70,
     "safety_score": 3.5,
     "english_score": 2.8,
     "visa": {
-      "cn_passport_type": "visa_required",
-      "cn_max_stay_days": 0,
+      "cn_passport_type": "conditional_visa_free",
+      "cn_max_stay_days": 180,
       "has_nomad_visa": false,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "note": "INM 官方页（inm.gob.mx）核实：中国列入需签国，须在墨领馆办访客签；持有效美/加/英/日/申根签或永居可免签入境，最长 180 天；墨西哥无游民签。",
       "nomad_visa_link": null,
       "policy_last_change": null
     },
     "timezone": "America/Mexico_City",
     "currency": "MXN",
-    "avg_temp_c": 21,
+    "avg_temp_c": 17.4,
     "best_months": "All year",
     "tags": [
       "food",
@@ -38,12 +38,56 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.nomadzine.com/mexico-city",
+      "https://www.traveldojo.com/mexico-city/digital-nomads/where-to-live/",
+      "https://www.traveldojo.com/mexico-city/digital-nomads/",
+      "https://www.nomadpads.mx/guides/digital-nomads-mexico-city",
+      "https://nomadbriefing.com/cost-of-living/mexico-city/",
+      "https://www.climatestotravel.com/climate/mexico/mexico-city",
+      "https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-26",
+    "neighborhoods": [
+      {
+        "name": "Roma Norte",
+        "name_en": "Roma Norte",
+        "rent_1br_usd_month": 1250,
+        "vibe": "游民中心、咖啡馆/酒吧最密",
+        "best_for": "首站落脚、社交",
+        "coworking_density": 5,
+        "note": "traveldojo 2026-10 一居 $900-1,600；Nomadzine 2026-09 MXN20,000-40,000"
+      },
+      {
+        "name": "Condesa",
+        "name_en": "Condesa",
+        "rent_1br_usd_month": 1300,
+        "vibe": "装饰艺术街区、两大公园",
+        "best_for": "跑步、遛狗、安静一点",
+        "coworking_density": 4,
+        "note": "traveldojo 2026-10 一居 $950-1,700；Nomadzine 2026-09 MXN30,000-44,000"
+      },
+      {
+        "name": "Juárez",
+        "name_en": "Juárez",
+        "rent_1br_usd_month": 1100,
+        "vibe": "中心地段、设计感、夜生活",
+        "best_for": "性价比、近市中心",
+        "coworking_density": 4,
+        "note": "traveldojo 2026-10 一居 $800-1,400"
+      },
+      {
+        "name": "Narvarte / Del Valle",
+        "name_en": "Narvarte / Del Valle",
+        "rent_1br_usd_month": 850,
+        "vibe": "本地生活、便宜",
+        "best_for": "长住省钱",
+        "coworking_density": 3,
+        "note": "traveldojo 2026-10 一居 $600-1,100"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -60,9 +104,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-26"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -70,9 +114,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page (INM)",
+        "as_of": "2026-11-26"
       }
     }
   }

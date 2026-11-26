@@ -12,7 +12,7 @@
     "region": "Europe",
     "cost_usd_month": 2300,
     "rent_1br_usd_month": 1200,
-    "coworking_usd_month": 160,
+    "coworking_usd_month": 220,
     "internet_mbps": 120,
     "safety_score": 4.0,
     "english_score": 3.8,
@@ -20,13 +20,13 @@
       "cn_passport_type": "schengen_visa",
       "cn_max_stay_days": 0,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "note": "西班牙国际远程工作签真实存在（外交部 exteriores.gob.es 领馆官网）：Law 28/2022 修 Law 14/2013；领馆签最长1年、在西班牙境内向 UGE-CE 申请居留许可最长3年；须大学学位或3年相关经验，雇主/客户须在西班牙境外；收入门槛为最低工资200%（2026年约EUR2,442-2,849/月）；中国护照需提前办申根/国家签。",
+      "nomad_visa_link": "https://www.exteriores.gob.es/Consulados/sanfrancisco/en/ServiciosConsulares/Paginas/Telework-visa.aspx",
       "policy_last_change": null
     },
     "timezone": "Europe/Madrid",
     "currency": "EUR",
-    "avg_temp_c": 20,
+    "avg_temp_c": 16.7,
     "best_months": "Apr-Jun,Sep-Oct",
     "tags": [
       "city",
@@ -38,12 +38,55 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.nomadzine.com/barcelona",
+      "https://mynomadworld.com/cost-of-living-barcelona-spain/",
+      "https://rawtravelproject.com/blog/barcelona-guide",
+      "https://getnomadr.com/cities/barcelona/cost_of_living",
+      "https://www.climatestotravel.com/climate/spain/barcelona",
+      "https://www.exteriores.gob.es/Consulados/sanfrancisco/en/ServiciosConsulares/Paginas/Telework-visa.aspx"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-26",
+    "neighborhoods": [
+      {
+        "name": "Poblenou / Sant Martí",
+        "name_en": "Poblenou / Sant Martí",
+        "rent_1br_usd_month": 1400,
+        "vibe": "海滩边、科技区、coworking 最密",
+        "best_for": "首站落脚、找同行",
+        "coworking_density": 5,
+        "note": "Nomadzine 2026-09 一居 EUR1,100-1,500；mynomadworld EUR1,200-1,650"
+      },
+      {
+        "name": "Gràcia",
+        "name_en": "Gràcia",
+        "rent_1br_usd_month": 1700,
+        "vibe": "村落感小广场、本地生活、创意人多",
+        "best_for": "长住、创意工作",
+        "coworking_density": 4,
+        "note": "Nomadzine 2026-09 一居 EUR1,300-1,800；mynomadworld EUR1,250-1,700"
+      },
+      {
+        "name": "Sants / Poble-sec",
+        "name_en": "Sants / Poble-sec",
+        "rent_1br_usd_month": 1300,
+        "vibe": "交通枢纽旁、比市中心便宜",
+        "best_for": "省钱、短住",
+        "coworking_density": 3,
+        "note": "Nomadzine 2026-09 一居 EUR1,000-1,400"
+      },
+      {
+        "name": "Horta / Sant Andreu",
+        "name_en": "Horta / Sant Andreu",
+        "rent_1br_usd_month": 1000,
+        "vibe": "本地居民区、安静、便宜",
+        "best_for": "预算长住",
+        "coworking_density": 2,
+        "note": "Nomadzine 2026-09 一居 EUR750-1,100"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -53,9 +96,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-26"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -63,9 +106,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page (same-country DNV, Valencia round 2026-11-25)",
+        "as_of": "2026-11-26"
       }
     }
   }

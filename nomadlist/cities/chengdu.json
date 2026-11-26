@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 950,
-    "rent_1br_usd_month": 450,
+    "cost_usd_month": 850,
+    "rent_1br_usd_month": 400,
     "coworking_usd_month": 90,
     "internet_mbps": 150,
     "safety_score": 4.6,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 20,
+    "avg_temp_c": 16.6,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "food",
@@ -39,10 +39,15 @@
       "游民CO youmin.co/locations — 发现线索",
       "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
       "NomadsCN nomadscn.com — 中国城市游民指南线索",
-      "Numbeo — 成本交叉核对"
+      "Numbeo — 成本交叉核对",
+      "https://www.numbeo.com/cost-of-living/in/Chengdu",
+      "https://chinasurvivalkit.com/blog/cost-of-living-in-china",
+      "https://www.livingcostlaboratory.com/cities/chengdu/",
+      "https://www.expatden.com/china/cost-of-living-in-chengdu/",
+      "https://www.climatestotravel.com/climate/china/chengdu"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-26",
     "neighborhoods": [
       {
         "name": "玉林 Yulin",
@@ -70,9 +75,18 @@
         "best_for": "找同行",
         "coworking_density": 4,
         "note": "南边上班族区，配套新"
+      },
+      {
+        "name": "天府新区·麓湖",
+        "name_en": "Tianfu New Area",
+        "rent_1br_usd_month": 380,
+        "vibe": "新区、环境好、安静",
+        "best_for": "长住、带娃",
+        "coworking_density": 2,
+        "note": "估算；新区租金低于市中心，Numbeo 市郊一居 ¥1,556 水平之上"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -84,9 +98,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-26"
       },
       "internet_mbps": {
         "confidence": 0.6,
