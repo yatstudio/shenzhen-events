@@ -2,96 +2,443 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Telegram 群组频道机器人清单 · TG List | Yat's List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0d1218">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<title>Telegram 群组频道机器人清单 · TG List — Yat's List</title>
 <meta name="description" content="1,279 个 Telegram 频道、群组与机器人清单：含成员数、分类、语言与简介，数据 JSON 开放给 Agent 检索。">
+<link rel="canonical" href="https://yatslist.com/tglist/">
+<link rel="alternate" type="application/json" href="https://yatslist.com/tglist.json" title="Telegram list (JSON)">
+<link rel="icon" href="/logo-icon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yatslist.com/tglist/">
+<meta property="og:title" content="Telegram 群组频道机器人清单 · TG List — Yat's List">
+<meta property="og:description" content="1,279 个 Telegram 频道、群组与机器人，可按类型、分类检索，也可让你的 Agent 读 tglist.json 帮你找群。">
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#17202a;--muted:#66707c;--border:#e2e6ea;--green:#0e7c5a;--chip:#eef4f1}
-html[data-theme="dark"]{--bg:#10151b;--card:#171e26;--ink:#e8edf2;--muted:#9aa7b4;--border:#26303b;--chip:#1d2a24}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink)}
-.wrap{max-width:880px;margin:0 auto;padding:28px 18px 60px}
-a{color:var(--green);text-decoration:none}
-.crumb{font-size:.85rem;color:var(--muted);margin-bottom:14px}
-h1{font-size:1.65rem;margin:0 0 8px}
-.sub{color:var(--muted);margin:0 0 18px;line-height:1.65}
-.agentnote{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin:0 0 20px;line-height:1.7;font-size:.93rem}
-.agentnote .prompt{display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:.88rem}
-.search{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-size:1rem;background:var(--card);color:var(--ink);margin-bottom:12px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.chip{padding:6px 13px;border:1px solid var(--border);border-radius:999px;background:var(--card);cursor:pointer;font-size:.87rem;color:var(--ink)}
-.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
-.count{color:var(--muted);font-size:.88rem;margin:4px 0 12px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px 16px;margin-bottom:10px}
-.card .nm{font-weight:700;font-size:1.02rem}
-.card .nm a{color:var(--ink)}
-.card .nm a:hover{color:var(--green)}
-.meta{color:var(--muted);font-size:.84rem;margin-top:4px}
-.meta .tp{color:var(--green);font-weight:600}
-.intro{color:var(--muted);font-size:.9rem;line-height:1.55;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.more{display:block;margin:18px auto;padding:11px 34px;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer;font-size:.95rem}
-.foot{color:var(--muted);font-size:.85rem;margin-top:26px;line-height:1.7}
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--green:#2ee6a8;--green-hover:#3df4b5;--on-green:#06251a;
+--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--coral:#FF5A5F;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--cmd-bg:rgba(0,0,0,.3);--tag-bg:rgba(255,255,255,.04);--tag-border:rgba(255,255,255,.06);
+--r-sm:8px;--r-md:12px;--r-lg:16px;--r-pill:999px;
+--shadow-sm:0 2px 8px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);
+--sp-xs:4px;--sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;--sp-3xl:48px;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+--bar-bg:rgba(13,18,24,.95);
+color-scheme:dark;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--green-hover:#0e9263;--on-green:#ffffff;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--cmd-bg:rgba(16,42,32,.04);--tag-bg:rgba(16,42,32,.04);--tag-border:rgba(16,42,32,.08);
+--shadow-sm:0 2px 8px rgba(16,42,32,.08);--shadow-md:0 8px 24px rgba(16,42,32,.13);
+--bar-bg:rgba(246,248,247,.92);
+color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+a{color:var(--green)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
+
+/* topbar (same as /szevents/) */
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
+.topbar .wrap{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
+.topbar-brand{display:flex;align-items:center;gap:var(--sp-md);text-decoration:none}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav{display:flex;gap:clamp(var(--sp-lg),3vw,var(--sp-xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
+.topbar-nav a:hover,.topbar-nav a.nav-on{color:var(--green)}
+.prefs{display:inline-flex;align-items:center;gap:6px}
+.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
+.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+.langsel option{background:var(--panel);color:var(--ink)}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+
+/* hero */
+.human-section{padding:clamp(var(--sp-xl),5vw,40px) 0 var(--sp-3xl)}
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{margin:0 0 8px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase;line-height:1.4}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);font-weight:700;letter-spacing:-.01em;line-height:1.2;color:var(--ink);margin:0 0 4px}
+.section-subtitle{font-size:clamp(.9rem,2vw,.98rem);color:var(--ink-sec);margin:0;line-height:1.55}
+.statrow{display:flex;gap:clamp(var(--sp-xl),4vw,40px);flex-wrap:wrap;margin:18px 0 0}
+.stat b{font-size:clamp(1.4rem,3.2vw,1.7rem);font-weight:700;font-variant-numeric:tabular-nums;display:block;line-height:1.1;letter-spacing:-.015em;color:var(--green)}
+.stat span{font-size:.76rem;color:var(--ink-ter);letter-spacing:.04em;font-weight:600}
+
+/* agent box (same as /szevents/) */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px;margin:0 0 22px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.cmdline{font-family:var(--font-mono);background:var(--cmd-bg);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px;color:var(--green);display:flex;gap:12px;align-items:center;font-size:.85rem}
+.cmdline>span:first-child{flex:0 0 auto;white-space:nowrap}
+.cmdline .u{color:var(--ink);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmdline button{flex:0 0 auto;margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--green);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer;white-space:nowrap}
+.ab-prompt{display:none;margin:0;font-family:var(--font-mono);font-size:.82rem;line-height:1.75;color:var(--ink-sec);background:var(--cmd-bg);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px;white-space:pre-wrap;word-break:break-word}
+.agentbox.open .ab-prompt{display:block}
+.ab-ex{display:flex;flex-direction:column;gap:6px}
+.ab-exl{font-size:.8rem;color:var(--ink-ter);font-weight:600}
+.exq{text-align:left;background:var(--cmd-bg);border:1px dashed var(--border-hover);border-radius:10px;padding:8px 12px;color:var(--ink);font:inherit;font-size:.86rem;line-height:1.6;cursor:pointer}
+.exq:hover{border-color:var(--green);color:var(--green)}
+.exq::after{content:" ⧉";color:var(--ink-ter)}
+.ab-apis{font-size:.8rem;color:var(--ink-ter);line-height:1.8}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+.ab-apis code{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-sec)}
+
+/* search + filters */
+.scope{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+.vtab{appearance:none;-webkit-appearance:none;border:1px solid var(--border);background:var(--panel);color:var(--ink-sec);font:inherit;font-size:.9rem;font-weight:650;padding:7px 18px;border-radius:999px;cursor:pointer;transition:all .18s ease}
+.vtab:hover{color:var(--ink);border-color:var(--border-hover)}
+.vtab.on{background:var(--green);border-color:var(--green);color:var(--on-green)}
+.scope[hidden]{display:none}
+.alt{display:inline-block;margin-top:10px;background:none;border:1px solid var(--green);color:var(--green);border-radius:999px;padding:6px 14px;font:inherit;font-size:.88rem;font-weight:650;cursor:pointer}
+.vtab .n{font-weight:500;opacity:.7;font-variant-numeric:tabular-nums}
+.bar{padding:0 0 var(--sp-sm)}
+input[type=search]{width:100%;padding:13px var(--sp-lg);border:1px solid var(--border);border-radius:var(--r-md);font-size:.95rem;background:var(--panel);color:var(--ink);box-shadow:var(--shadow-sm);font-family:inherit;transition:all .2s cubic-bezier(.4,0,.2,1)}
+input[type=search]:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(46,230,168,.18)}
+input[type=search]::placeholder{color:var(--ink-ter)}
+.fgroup{display:flex;align-items:flex-start;gap:var(--sp-sm);margin-top:var(--sp-md)}
+.flabel{flex:0 0 3.2em;padding-top:9px;font-size:.78rem;color:var(--ink-ter);font-weight:650;letter-spacing:.08em;text-transform:uppercase}
+.seg{display:flex;gap:7px;flex-wrap:wrap;align-items:center;min-width:0}
+.chip{flex:0 0 auto;border:1px solid var(--border);background:var(--panel);border-radius:var(--r-pill);padding:7px var(--sp-md);font-size:.87rem;cursor:pointer;min-height:36px;color:var(--ink-sec);font-weight:600;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit}
+.chip:hover{border-color:var(--border-hover);background:var(--panel-hover);color:var(--ink)}
+.chip.on{background:var(--green);color:var(--on-green);border-color:var(--green);font-weight:650;box-shadow:0 0 0 3px rgba(46,230,168,.15)}
+.chip .n{font-weight:500;opacity:.6;margin-left:4px;font-variant-numeric:tabular-nums}
+.resrow{display:flex;align-items:center;gap:var(--sp-md);margin:18px 0 12px;font-size:.86rem;color:var(--ink-ter);font-weight:600}
+.resrow b{color:var(--ink)}
+.fclear{margin-left:auto;background:none;border:0;color:var(--coral);font-weight:650;cursor:pointer;font-size:.87rem;font-family:inherit;padding:4px 0}
+.fclear[hidden]{display:none}
+
+
+/* cards */
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px;align-items:start}
+.card{display:flex;gap:14px;align-items:flex-start;min-width:0;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;box-shadow:var(--shadow-sm);transition:all .2s cubic-bezier(.4,0,.2,1)}
+@media (hover:hover){.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-hover)}}
+.logo.ph{flex:0 0 46px;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--tag-bg);border:1px solid var(--tag-border);color:var(--ink-ter);font-weight:700;font-size:1.05rem}
+.cbody{min-width:0;flex:1}
+.card h3{margin:0;font-size:1.02rem;font-weight:650;line-height:1.4;color:var(--ink);word-break:break-word}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{color:var(--green)}
+.cen{font-family:var(--font-mono);font-size:.8rem;color:var(--ink-ter);margin-top:1px;line-height:1.4;word-break:break-all}
+.cmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px;font-size:.84rem;color:var(--ink-sec)}
+.tp{font-weight:700;color:var(--green);font-size:.86rem}
+.num{font-variant-numeric:tabular-nums}
+.dot{opacity:.45}
+.tag{font-size:.72rem;font-weight:600;background:var(--tag-bg);border-radius:var(--r-sm);padding:2px 8px;color:var(--ink-sec);border:1px solid var(--tag-border);cursor:pointer;font-family:inherit}
+.tag:hover{color:var(--green);border-color:var(--green)}
+.cprod{font-size:.84rem;color:var(--ink-sec);margin-top:6px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cact{flex:0 0 auto;display:flex;gap:6px;align-self:flex-start}
+.iconbtn{text-decoration:none;background:none;border:1px solid var(--border);color:var(--ink-ter);border-radius:8px;width:32px;height:32px;cursor:pointer;font:inherit;font-size:.85rem;display:inline-flex;align-items:center;justify-content:center}
+.iconbtn:hover{color:var(--green);border-color:var(--green)}
+.iconbtn.on{color:var(--warm,#FBBF24);border-color:var(--warm,#FBBF24)}
+.more{display:block;margin:18px auto 0;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:var(--r-md);padding:10px 22px;font:inherit;font-weight:650;cursor:pointer}
+.more:hover{border-color:var(--green);color:var(--green)}
+.more[hidden]{display:none}
+.empty{padding:48px 0;text-align:center;color:var(--ink-ter);font-size:.98rem;grid-column:1/-1}
+
+.foot{font-size:.83rem;color:var(--ink-ter);padding:var(--sp-2xl) 0 60px;line-height:1.9}
+.foot>div{margin:0 0 var(--sp-md);padding:var(--sp-md) var(--sp-lg);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);color:var(--ink-sec);font-size:.88rem;line-height:1.75}
+.foot a{color:var(--green);text-decoration:none;font-weight:600}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:.88rem;font-weight:650;opacity:0;pointer-events:none;transition:all .2s ease;z-index:200}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end;font-family:inherit}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+  #mnav-panel .prefs{width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
+  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
+  #mnav-panel .themecyc{width:34px}
+  .section-tagline{display:none}
+  .ab-head{flex-direction:column;align-items:stretch;gap:12px}
+  .ab-go{width:100%}
+  .fgroup{flex-direction:column;gap:6px}
+  .flabel{padding-top:0;flex:none}
+  .fgroup>*,.agentbox>*,.bar{min-width:0;max-width:100%}
+  .cmdline{min-width:0}
+  .ab-apis{overflow-wrap:anywhere}
+  .seg{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;padding-bottom:2px}
+  .seg::-webkit-scrollbar{display:none}
+  .list{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="crumb"><a href="https://yatslist.com/">Yat's List</a> / TG 清单</div>
-  <h1>✈️ Telegram 群组 · 频道 · 机器人清单</h1>
-  <p class="sub">共 <b id="totalN">1,279</b> 条：频道 427 · 群组 246 · 机器人 606。每条含成员/订阅数、分类、语言与简介。数据来源 TGbox 公开收录，本站持续核实更新中。</p>
-  <div class="agentnote">🤖 <b>让你的 Agent 帮你找群</b>（WorkBuddy · Codex · ChatGPT · Claude 都能读）：把数据文件发给它就行 —<br>
-  <span class="prompt">读 https://yatslist.com/tglist.json，帮我找 Claude 相关的 Telegram 群，给我链接和成员数。</span>
-  数据文件：<a href="/tglist.json">tglist.json</a>（字段：name 名称 / username 用户名 / type 类型 channel·group·bot / category 分类 / members 成员数 / language 语言 / intro 简介 / url 链接）</div>
-  <input class="search" id="q" type="search" placeholder="🔍 搜名称、@用户名、关键词，如 claude、量化、深圳…">
-  <div class="chips" id="typeChips">
-    <button class="chip on" data-t="">全部</button>
-    <button class="chip" data-t="channel">📢 频道</button>
-    <button class="chip" data-t="group">👥 群组</button>
-    <button class="chip" data-t="bot">🤖 机器人</button>
+<div class="topbar">
+  <div class="wrap">
+    <a class="topbar-brand" href="https://yatslist.com/szevents/"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+    <button id="mnav-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="menu">☰ 菜单</button>
+    <div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agentbox" data-i18n="navAgent">Agent</a>
+      <a href="/tglist/" class="nav-on" aria-current="page" data-i18n="navTg">TG 清单</a>
+      <a href="/szevents/" data-i18n="navEvents">深圳活动</a>
+      <a href="/hackathons/" data-i18n="navHack">黑客松</a>
+      <span class="prefs">
+        <select class="langsel" id="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select>
+        <button type="button" class="themecyc" id="themecyc" aria-label="Theme">&#9680;</button>
+      </span>
+    </nav></div>
   </div>
-  <div class="chips" id="catChips"></div>
-  <div class="count" id="count"></div>
-  <div id="list"></div>
-  <button class="more" id="moreBtn">加载更多</button>
-  <p class="foot">数据来源：<a href="https://tgbox.cc/" target="_blank" rel="noopener">TGbox</a> 公开收录，本站仅做整理与检索；条目真实性请以 t.me 原页为准。发现失效或错误，欢迎来信 event.submit@yatslist.com。<br>← 返回 <a href="https://yatslist.com/">Yat's List 首页</a></p>
 </div>
+
+<main class="human-section">
+  <div class="wrap">
+    <div class="section-header">
+      <p class="section-tagline">TELEGRAM · CHANNELS · GROUPS · BOTS · FOR AGENTS</p>
+      <h1 class="section-title" data-i18n="title">Telegram 群组 · 频道 · 机器人清单</h1>
+      <p class="section-subtitle" data-i18n="sub">每条含成员/订阅数、分类、语言与简介。数据来源 TGbox 公开收录，本站持续核实更新中。</p>
+      <div class="statrow">
+        <div class="stat"><b id="st-total">…</b><span data-i18n="stTotal">条收录</span></div>
+        <div class="stat"><b id="st-channel">…</b><span data-i18n="stChannel">个频道</span></div>
+        <div class="stat"><b id="st-group">…</b><span data-i18n="stGroup">个群组</span></div>
+        <div class="stat"><b id="st-bot">…</b><span data-i18n="stBot">个机器人</span></div>
+      </div>
+    </div>
+
+    <div class="agentbox" id="agentbox">
+      <div class="ab-head">
+        <div class="ab-text"><div class="ab-title" data-i18n="abTitle">让你的 Agent 帮你找群</div><div class="ab-sub" data-i18n="abSub">WorkBuddy · Codex · ChatGPT · Claude 都能读。</div></div>
+        <button type="button" class="ab-go" id="ab-go" data-i18n="abGo">复制 Agent 指令 →</button>
+      </div>
+      <div class="ab-ex"><span class="ab-exl" data-i18n="exLabel">或者直接发一句（点击复制）：</span><button type="button" class="exq" data-ex="0"></button><button type="button" class="exq" data-ex="1"></button></div>
+      <pre class="ab-prompt" id="ab-prompt"></pre>
+      <div class="cmdline"><span>$ fetch</span><span class="u">https://yatslist.com/tglist.json</span><button type="button" id="cmd-copy" data-i18n="copy">复制</button></div>
+      <div class="ab-apis" id="ab-apis"></div>
+    </div>
+
+    <div class="bar">
+      <div class="scope" id="scope" role="tablist">
+        <button type="button" class="vtab on" data-t="" role="tab"><span data-i18n="tAll">全部</span> <span class="n" id="n-all"></span></button>
+        <button type="button" class="vtab" data-t="channel" role="tab"><span data-i18n="tChannel">📢 频道</span> <span class="n" id="n-channel"></span></button>
+        <button type="button" class="vtab" data-t="group" role="tab"><span data-i18n="tGroup">👥 群组</span> <span class="n" id="n-group"></span></button>
+        <button type="button" class="vtab" data-t="bot" role="tab"><span data-i18n="tBot">🤖 机器人</span> <span class="n" id="n-bot"></span></button>
+      </div>
+      <input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="">
+      <div class="fgroup"><span class="flabel" data-i18n="fCat">分类</span><div class="seg" id="cats"></div></div>
+      <div class="fgroup"><span class="flabel" data-i18n="fLang">语言</span><div class="seg" id="langs"></div></div>
+    </div>
+    <div class="resrow"><span id="cnt"></span><button type="button" class="fclear" id="fclear" hidden data-i18n="clear">清除筛选</button></div>
+    <div class="list" id="list"></div>
+    <button type="button" class="more" id="more" hidden></button>
+
+    <footer class="foot">
+      <div id="foot-src"></div>
+      <div id="foot-agent"></div>
+    </footer>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-(function(){try{var t=localStorage.getItem('szTheme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
-var DATA=[], typeF='', catF='', shown=0; var PAGE=60;
-var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
-var TPN={channel:'📢 频道',group:'👥 群组',bot:'🤖 机器人'};
-function fmtN(n){if(!n)return'';return n>=10000?(n/10000).toFixed(1).replace(/\.0$/,'')+' 万':String(n)}
-function filtered(){
-  var q=document.getElementById('q').value.trim().toLowerCase();
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)};
+var DATA_URL="https://yatslist.com/tglist.json";
+var PAGE=60;
+
+/* ===== i18n: zh (default) / tw / en, shared localStorage key "szLang" with /szevents/ ===== */
+var STR={
+zh:{menu:"☰ 菜单",navAgent:"Agent",navTg:"TG 清单",navEvents:"深圳活动",navHack:"黑客松",
+ docTitle:"Telegram 群组频道机器人清单 · TG List — Yat's List",
+ title:"Telegram 群组 · 频道 · 机器人清单",sub:"每条含成员/订阅数、分类、语言与简介。数据来源 TGbox 公开收录，本站持续核实更新中。",
+ stTotal:"条收录",stChannel:"个频道",stGroup:"个群组",stBot:"个机器人",
+ abTitle:"别自己翻 1,279 条，让你的 Agent 帮你找群",abSub:"WorkBuddy · Codex · ChatGPT · Claude · 豆包 · Kimi 都能读。数据里有每条的类型、分类、成员数、语言、简介和 t.me 链接。",
+ exLabel:"或者直接发一句（点击复制）：",ex:["读 https://yatslist.com/tglist.json，帮我找 Claude 相关的 Telegram 群，给我链接和成员数。","读 https://yatslist.com/tglist.json，推荐 5 个中文的加密货币资讯频道，按订阅数排序。"],
+ abGo:"复制 Agent 指令 →",copy:"复制",copied:"已复制",copiedPrompt:"已复制，粘贴到你的 Agent，把【】里换成你的需求",
+ apis:'也可以直接读：<a href="/tglist.json">tglist.json</a>（全量 1,279 条）· <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> · 深链：<code>/tglist/?type=group&amp;q=claude</code>',
+ tAll:"全部",tChannel:"📢 频道",tGroup:"👥 群组",tBot:"🤖 机器人",type:{channel:"频道",group:"群组",bot:"机器人"},
+ subs:"订阅",mem:"成员",
+ ph:"搜名称、@用户名、关键词，如 claude、量化、深圳…",fCat:"分类",fLang:"语言",all:"全部",
+ cnt:function(n,t){return n===t?"共 <b>"+n+"</b> 条":"命中 <b>"+n+"</b> / "+t+" 条"},clear:"清除筛选",
+ more:function(n){return "再显示 "+n+" 条"},empty:"没有匹配的条目，换个关键词试试。",
+ fail:"数据加载失败，请刷新重试",open:"打开 t.me",copyCard:"复制名称与链接",
+ foot:'数据来源：<a href="https://tgbox.cc/" target="_blank" rel="noopener">TGbox</a> 公开收录，本站仅做整理与检索；条目真实性请以 t.me 原页为准。发现失效或错误，欢迎来信 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> · 更新于 ',
+ footAgent:'<b>给 Agent：</b>读 <a href="/tglist.json">tglist.json</a>，条目在 <code>entries</code>；字段 <code>name</code> 名称 / <code>username</code> 用户名 / <code>type</code>（channel·group·bot）/ <code>category</code> 分类 / <code>members</code> 成员数（可能为空）/ <code>language</code> 语言 / <code>intro</code> 简介 / <code>url</code> t.me 链接。回答时附 t.me 链接，数据里没有的群不要编造。',
+ themeLabel:"主题",theme:{auto:"自动",light:"白天",dark:"晚上"},
+ prompt:"请读取 https://yatslist.com/tglist.json（Yat's List 收录的 Telegram 频道、群组与机器人清单，共 1,279 条）。\n条目在 entries 里；字段：name 名称 / username 用户名 / type 类型（channel 频道、group 群组、bot 机器人）/ category 分类 / members 成员或订阅数（可能为空）/ language 语言 / intro 简介 / url t.me 链接。\n\n我想找：【在这里写你的需求，例如：Claude 交流群、中文的加密货币资讯频道、文件转存机器人】\n\n请：\n1. 按 name、username、category、intro 匹配；\n2. 按相关度列出最多 15 条，每条写明名称、@用户名、类型、成员数和 t.me 链接；\n3. 同等相关时按成员数从高到低排；\n4. 数据里没有的群不要编造，提醒我以 t.me 原页为准。"},
+tw:{menu:"☰ 選單",navAgent:"Agent",navTg:"TG 清單",navEvents:"深圳活動",navHack:"黑客松",
+ docTitle:"Telegram 群組頻道機器人清單 · TG List — Yat's List",
+ title:"Telegram 群組 · 頻道 · 機器人清單",sub:"每條含成員/訂閱數、分類、語言與簡介。資料來源 TGbox 公開收錄，本站持續核實更新中。",
+ stTotal:"條收錄",stChannel:"個頻道",stGroup:"個群組",stBot:"個機器人",
+ abTitle:"別自己翻 1,279 條，讓你的 Agent 幫你找群",abSub:"WorkBuddy · Codex · ChatGPT · Claude · 豆包 · Kimi 都能讀。資料裡有每條的類型、分類、成員數、語言、簡介和 t.me 連結。",
+ exLabel:"或者直接發一句（點擊複製）：",ex:["讀 https://yatslist.com/tglist.json，幫我找 Claude 相關的 Telegram 群，給我連結和成員數。","讀 https://yatslist.com/tglist.json，推薦 5 個中文的加密貨幣資訊頻道，按訂閱數排序。"],
+ abGo:"複製 Agent 指令 →",copy:"複製",copied:"已複製",copiedPrompt:"已複製，貼到你的 Agent，把【】裡換成你的需求",
+ apis:'也可以直接讀：<a href="/tglist.json">tglist.json</a>（全量 1,279 條）· <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> · 深連結：<code>/tglist/?type=group&amp;q=claude</code>',
+ tAll:"全部",tChannel:"📢 頻道",tGroup:"👥 群組",tBot:"🤖 機器人",type:{channel:"頻道",group:"群組",bot:"機器人"},
+ subs:"訂閱",mem:"成員",
+ ph:"搜名稱、@用戶名、關鍵詞，如 claude、量化、深圳…",fCat:"分類",fLang:"語言",all:"全部",
+ cnt:function(n,t){return n===t?"共 <b>"+n+"</b> 條":"命中 <b>"+n+"</b> / "+t+" 條"},clear:"清除篩選",
+ more:function(n){return "再顯示 "+n+" 條"},empty:"沒有符合的條目，換個關鍵詞試試（分類與簡介為簡體資料）。",
+ fail:"資料載入失敗，請重新整理",open:"打開 t.me",copyCard:"複製名稱與連結",
+ foot:'資料來源：<a href="https://tgbox.cc/" target="_blank" rel="noopener">TGbox</a> 公開收錄，本站僅做整理與檢索；條目真實性請以 t.me 原頁為準。發現失效或錯誤，歡迎來信 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> · 更新於 ',
+ footAgent:'<b>給 Agent：</b>讀 <a href="/tglist.json">tglist.json</a>，條目在 <code>entries</code>；欄位 <code>name</code> 名稱 / <code>username</code> 用戶名 / <code>type</code>（channel·group·bot）/ <code>category</code> 分類 / <code>members</code> 成員數（可能為空）/ <code>language</code> 語言 / <code>intro</code> 簡介 / <code>url</code> t.me 連結。回答時附 t.me 連結，資料裡沒有的群不要編造。',
+ themeLabel:"主題",theme:{auto:"自動",light:"白天",dark:"晚上"},
+ prompt:"請讀取 https://yatslist.com/tglist.json（Yat's List 收錄的 Telegram 頻道、群組與機器人清單，共 1,279 條）。\n條目在 entries 裡；欄位：name 名稱 / username 用戶名 / type 類型（channel 頻道、group 群組、bot 機器人）/ category 分類 / members 成員或訂閱數（可能為空）/ language 語言 / intro 簡介 / url t.me 連結。\n\n我想找：【在這裡寫你的需求，例如：Claude 交流群、中文的加密貨幣資訊頻道、檔案轉存機器人】\n\n請：\n1. 按 name、username、category、intro 匹配；\n2. 按相關度列出最多 15 條，每條寫明名稱、@用戶名、類型、成員數和 t.me 連結；\n3. 同等相關時按成員數從高到低排；\n4. 資料裡沒有的群不要編造，提醒我以 t.me 原頁為準。"},
+en:{menu:"☰ Menu",navAgent:"Agent",navTg:"TG List",navEvents:"Shenzhen events",navHack:"Hackathons",
+ docTitle:"Telegram channels, groups & bots · TG List — Yat's List",
+ title:"Telegram channels · groups · bots",sub:"Each entry has member/subscriber count, category, language and a short intro. Sourced from TGbox's public index and being verified by Yat's List.",
+ stTotal:"entries",stChannel:"channels",stGroup:"groups",stBot:"bots",
+ abTitle:"Skip scrolling 1,279 entries. Let your agent find the group",abSub:"Works with WorkBuddy, Codex, ChatGPT, Claude, Doubao and Kimi. Each entry has type, category, member count, language, intro and a t.me link.",
+ exLabel:"Or just send one line (click to copy):",ex:["Read https://yatslist.com/tglist.json and find Telegram groups about Claude. Give me links and member counts.","Read https://yatslist.com/tglist.json and recommend 5 Chinese-language crypto news channels, sorted by subscribers."],
+ abGo:"Copy agent prompt →",copy:"Copy",copied:"Copied",copiedPrompt:"Copied. Paste it into your agent and replace the part in 【】 with what you need",
+ apis:'Read directly: <a href="/tglist.json">tglist.json</a> (all 1,279 entries) · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> · Deep link: <code>/tglist/?type=group&amp;q=claude</code>',
+ tAll:"All",tChannel:"📢 Channels",tGroup:"👥 Groups",tBot:"🤖 Bots",type:{channel:"Channel",group:"Group",bot:"Bot"},
+ subs:"subscribers",mem:"members",
+ ph:"Search name, @username or keyword, e.g. claude, crypto, shenzhen…",fCat:"Category",fLang:"Language",all:"All",
+ cnt:function(n,t){return n===t?"<b>"+n+"</b> entries":"<b>"+n+"</b> of "+t+" entries"},clear:"Clear filters",
+ more:function(n){return "Show "+n+" more"},empty:"No matches. Try another keyword (categories and intros are in Chinese).",
+ fail:"Failed to load data. Please refresh.",open:"Open t.me",copyCard:"Copy name and link",
+ foot:'Source: <a href="https://tgbox.cc/" target="_blank" rel="noopener">TGbox</a> public index. Yat\'s List only organizes and indexes it; check the t.me page for accuracy. Report dead or wrong entries to <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> · Updated ',
+ footAgent:'<b>For agents:</b> read <a href="/tglist.json">tglist.json</a>; entries are in <code>entries</code>. Fields: <code>name</code> / <code>username</code> / <code>type</code> (channel·group·bot) / <code>category</code> / <code>members</code> (may be null) / <code>language</code> / <code>intro</code> / <code>url</code> t.me link. Include the t.me link in answers and do not invent groups that are not in the data.',
+ themeLabel:"Theme",theme:{auto:"Auto",light:"Light",dark:"Dark"},
+ prompt:"Please read https://yatslist.com/tglist.json (Yat's List index of 1,279 Telegram channels, groups and bots).\nEntries are in entries; fields: name / username / type (channel, group, bot) / category / members (member or subscriber count, may be null) / language / intro / url (t.me link).\n\nI'm looking for: 【describe what you need, e.g. a Claude discussion group, Chinese crypto news channels, a file-transfer bot】\n\nPlease:\n1. Match against name, username, category and intro;\n2. List up to 15 entries by relevance, each with name, @username, type, member count and t.me link;\n3. When equally relevant, sort by member count, highest first;\n4. Don't invent entries that aren't in the data, and remind me to check the t.me page."}
+};
+var LANG="";
+var qp=new URLSearchParams(location.search);
+try{LANG=qp.get("lang")||localStorage.getItem("szLang")||""}catch(e){LANG=qp.get("lang")||""}
+if(!LANG){var nl=((navigator.language||"zh-CN")+"").toLowerCase();LANG=(nl==="zh-tw"||nl==="zh-hk"||nl==="zh-mo"||nl.indexOf("zh-hant")===0)?"tw":nl.indexOf("zh")===0?"zh":"en"}
+if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+function tr(k){var d=STR[LANG]||STR.zh;var v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
+
+function applyLang(){
+  document.documentElement.lang=LANG==="en"?"en":LANG==="tw"?"zh-TW":"zh-CN";
+  document.title=tr("docTitle");
+  document.querySelectorAll("[data-i18n]").forEach(function(el){el.textContent=tr(el.dataset.i18n)});
+  $("#q").placeholder=tr("ph");
+  $("#ab-apis").innerHTML=tr("apis");
+  $("#ab-prompt").textContent=tr("prompt");
+  document.querySelectorAll(".exq").forEach(function(b){b.textContent=tr("ex")[+b.dataset.ex]});
+  $("#foot-agent").innerHTML=tr("footAgent");
+  $("#langsel").value=LANG;
+  syncTheme();
+}
+function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(DATA.length){drawChips();render(true);drawFoot()}syncURL()}
+$("#langsel").addEventListener("change",function(){setLang(this.value)});
+
+/* ===== theme: auto / light / dark, shared localStorage key "szTheme" ===== */
+var THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
+if(THEME!=="light"&&THEME!=="dark")THEME="auto";
+var mq=window.matchMedia("(prefers-color-scheme: dark)");
+function applyTheme(){var r=THEME==="dark"?"dark":THEME==="light"?"light":(mq.matches?"dark":"light");document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);var tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncTheme()}
+function syncTheme(){var b=$("#themecyc"),ic={auto:"◐",light:"☀",dark:"☾"},t=tr("themeLabel")+": "+tr("theme")[THEME];b.textContent=ic[THEME];b.title=t;b.setAttribute("aria-label",t)}
+$("#themecyc").addEventListener("click",function(){var o=["auto","light","dark"];THEME=o[(o.indexOf(THEME)+1)%3];try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()});
+if(mq.addEventListener)mq.addEventListener("change",function(){if(THEME==="auto")applyTheme()});
+
+/* ===== mobile menu ===== */
+(function(){var b=$("#mnav-btn"),p=$("#mnav-panel");function close(){p.classList.remove("open");b.setAttribute("aria-expanded","false")}
+b.addEventListener("click",function(e){e.stopPropagation();b.setAttribute("aria-expanded",p.classList.toggle("open"))});
+p.addEventListener("click",function(e){if(e.target.closest("a"))close()});
+document.addEventListener("click",function(e){if(!p.contains(e.target)&&e.target!==b)close()})})();
+
+/* ===== copy helpers ===== */
+var toastT;
+function toast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove("show")},2200)}
+function copy(text,msg){
+  function ok(){toast(msg||tr("copied"))}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback)}else fallback();
+  function fallback(){var ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(e){}document.body.removeChild(ta)}
+}
+$("#ab-go").addEventListener("click",function(){$("#agentbox").classList.add("open");copy(tr("prompt"),tr("copiedPrompt"))});
+$("#cmd-copy").addEventListener("click",function(){copy(DATA_URL)});
+document.querySelectorAll(".exq").forEach(function(b){b.addEventListener("click",function(){copy(b.textContent)})});
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function safeUrl(u){return /^https:\/\//i.test(u||"")?u:""}
+
+/* ===== data + filters ===== */
+var DATA=[],META={},fType="",fCat="",fLang="",shown=PAGE,ALLCATS={},ALLLANGS={};
+fType=qp.get("type")||"";fCat=qp.get("cat")||"";fLang=qp.get("lng")||"";$("#q").value=qp.get("q")||"";
+if(["channel","group","bot"].indexOf(fType)<0)fType="";
+
+function fmtN(n){if(!n)return "";if(LANG==="en")return n>=1e6?(n/1e6).toFixed(1).replace(/\.0$/,"")+"M":n>=1e4?(n/1e3).toFixed(0)+"K":String(n);return n>=1e4?(n/1e4).toFixed(1).replace(/\.0$/,"")+(LANG==="tw"?" 萬":" 万"):String(n)}
+function hay(e){return [e.name,e.username,"@"+e.username,e.category,e.language,e.intro,(e.tags||[]).join(" ")].filter(Boolean).join(" ").toLowerCase()}
+function filtered(skip){
+  var q=$("#q").value.trim().toLowerCase(),terms=q?q.split(/\s+/):[];
   return DATA.filter(function(e){
-    if(typeF&&e.type!==typeF)return false;
-    if(catF&&e.category!==catF)return false;
-    if(q){var blob=((e.name||'')+' '+e.username+' '+(e.intro||'')+' '+(e.category||'')+' '+((e.tags||[]).join(' '))).toLowerCase();if(blob.indexOf(q)<0)return false;}
-    return true;
-  });
+    if(skip!=="type"&&fType&&e.type!==fType)return false;
+    if(skip!=="cat"&&fCat&&e.category!==fCat)return false;
+    if(skip!=="lang"&&fLang&&e.language!==fLang)return false;
+    for(var i=0;i<terms.length;i++)if(e._h.indexOf(terms[i])<0)return false;
+    return true});
 }
-function render(reset){
-  var rows=filtered();
-  if(reset)shown=0;
-  shown=Math.min(rows.length,shown+PAGE);
-  document.getElementById('count').textContent='共 '+rows.length+' 条';
-  document.getElementById('list').innerHTML=rows.slice(0,shown).map(function(e){
-    var meta=[TPN[e.type]||e.type, e.category, e.members?fmtN(e.members)+(e.type==='channel'?' 订阅':' 成员'):'', e.language].filter(Boolean).join(' · ');
-    return '<div class="card"><div class="nm"><a href="'+esc(e.url)+'" target="_blank" rel="noopener">'+esc(e.name||e.username)+'</a> <span style="color:var(--muted);font-weight:400;font-size:.88rem">@'+esc(e.username)+'</span></div><div class="meta"><span class="tp">'+esc(meta)+'</span></div>'+(e.intro?'<div class="intro">'+esc(e.intro)+'</div>':'')+'</div>';
-  }).join('')||'<p style="color:var(--muted)">没有匹配的条目，换个关键词试试。</p>';
-  document.getElementById('moreBtn').style.display=shown<rows.length?'block':'none';
+function chipHTML(val,label,n,on){return '<button type="button" class="chip'+(on?" on":"")+'" data-v="'+esc(val)+'">'+esc(label)+(n!=null?'<span class="n">'+n+'</span>':"")+"</button>"}
+function drawChips(){
+  var byType=filtered("type"),byCat=filtered("cat"),byLang=filtered("lang"),tc={channel:0,group:0,bot:0},cc={},lc={};
+  byType.forEach(function(e){tc[e.type]=(tc[e.type]||0)+1});
+  byCat.forEach(function(e){if(e.category)cc[e.category]=(cc[e.category]||0)+1});
+  byLang.forEach(function(e){if(e.language)lc[e.language]=(lc[e.language]||0)+1});
+  $("#n-all").textContent=byType.length;["channel","group","bot"].forEach(function(t){$("#n-"+t).textContent=tc[t]||0});
+  document.querySelectorAll("#scope .vtab").forEach(function(b){var on=b.dataset.t===fType;b.classList.toggle("on",on);b.setAttribute("aria-selected",on)});
+  var cats=Object.keys(ALLCATS).sort(function(a,b){return ALLCATS[b]-ALLCATS[a]});if(fCat&&!ALLCATS[fCat])cats.unshift(fCat);
+  var langs=Object.keys(ALLLANGS).sort(function(a,b){return ALLLANGS[b]-ALLLANGS[a]});
+  $("#cats").innerHTML=chipHTML("",tr("all"),null,!fCat)+cats.map(function(c){return chipHTML(c,c,cc[c]||0,fCat===c)}).join("");
+  $("#langs").innerHTML=chipHTML("",tr("all"),null,!fLang)+langs.map(function(l){return chipHTML(l,l,lc[l]||0,fLang===l)}).join("");
 }
-fetch('/tglist.json').then(function(r){return r.json()}).then(function(d){
-  DATA=d.entries||[];
-  document.getElementById('totalN').textContent=d.total||DATA.length;
-  var cats={};DATA.forEach(function(e){if(e.category)cats[e.category]=(cats[e.category]||0)+1});
-  var top=Object.keys(cats).sort(function(a,b){return cats[b]-cats[a]}).slice(0,14);
-  document.getElementById('catChips').innerHTML='<button class="chip on" data-c="">全部分类</button>'+top.map(function(c){return '<button class="chip" data-c="'+esc(c)+'">'+esc(c)+' '+cats[c]+'</button>'}).join('');
-  document.querySelectorAll('#catChips .chip').forEach(function(b){b.onclick=function(){document.querySelectorAll('#catChips .chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');catF=b.dataset.c;render(true)}});
-  render(true);
-}).catch(function(){document.getElementById('count').textContent='数据加载失败，请刷新重试。'});
-document.getElementById('q').addEventListener('input',function(){render(true)});
-document.querySelectorAll('#typeChips .chip').forEach(function(b){b.onclick=function(){document.querySelectorAll('#typeChips .chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');typeF=b.dataset.t;render(true)}});
-document.getElementById('moreBtn').onclick=function(){render(false)};
+$("#scope").addEventListener("click",function(ev){var b=ev.target.closest(".vtab");if(!b||b.dataset.t===fType)return;fType=b.dataset.t;update()});
+$("#cats").addEventListener("click",function(e){var c=e.target.closest(".chip");if(!c)return;fCat=c.dataset.v===fCat&&fCat?"":c.dataset.v;update()});
+$("#langs").addEventListener("click",function(e){var c=e.target.closest(".chip");if(!c)return;fLang=c.dataset.v===fLang&&fLang?"":c.dataset.v;update()});
+
+var ICON={channel:"📢",group:"👥",bot:"🤖"};
+function card(e){
+  var url=safeUrl(e.url),name=esc(e.name||e.username);
+  var mem=e.members?'<span class="dot">·</span><span class="num">'+esc(fmtN(e.members))+" "+esc(tr(e.type==="channel"?"subs":"mem"))+"</span>":"";
+  return '<article class="card"><div class="logo ph" aria-hidden="true">'+(ICON[e.type]||"✈️")+'</div>'+
+    '<div class="cbody"><h3>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener nofollow">'+name+"</a>":name)+"</h3>"+
+    '<div class="cen">@'+esc(e.username)+"</div>"+
+    '<div class="cmeta"><span class="tp">'+esc((tr("type")||{})[e.type]||e.type)+"</span>"+mem+
+    (e.category?'<button type="button" class="tag" data-cat="'+esc(e.category)+'">'+esc(e.category)+"</button>":"")+
+    (e.language?'<button type="button" class="tag" data-lng="'+esc(e.language)+'">'+esc(e.language)+"</button>":"")+"</div>"+
+    (e.intro?'<div class="cprod">'+esc(e.intro)+"</div>":"")+"</div>"+
+    '<div class="cact">'+(url?'<a class="iconbtn" href="'+esc(url)+'" target="_blank" rel="noopener nofollow" title="'+esc(tr("open"))+'" aria-label="'+esc(tr("open"))+'">↗</a>':"")+
+    '<button type="button" class="iconbtn" data-copy="'+e._i+'" title="'+esc(tr("copyCard"))+'" aria-label="'+esc(tr("copyCard"))+'">⧉</button></div></article>';
+}
+var HITS=[];
+function render(keep){
+  HITS=filtered();if(!keep)shown=PAGE;
+  $("#cnt").innerHTML=tr("cnt",HITS.length,DATA.length);
+  $("#fclear").hidden=!($("#q").value.trim()||fType||fCat||fLang);
+  $("#list").innerHTML=HITS.length?HITS.slice(0,shown).map(card).join(""):'<div class="empty">'+esc(tr("empty"))+"</div>";
+  var left=HITS.length-shown,m=$("#more");m.hidden=left<=0;if(left>0)m.textContent=tr("more",Math.min(PAGE,left));
+}
+$("#more").addEventListener("click",function(){shown+=PAGE;render(true)});
+if("IntersectionObserver" in window){new IntersectionObserver(function(es){if(es[0].isIntersecting&&!$("#more").hidden){shown+=PAGE;render(true)}},{rootMargin:"400px"}).observe($("#more"))}
+$("#list").addEventListener("click",function(ev){
+  var t=ev.target.closest(".tag");if(t){if(t.dataset.cat)fCat=t.dataset.cat;if(t.dataset.lng)fLang=t.dataset.lng;update();window.scrollTo({top:$(".bar").offsetTop-80,behavior:"smooth"});return}
+  var c=ev.target.closest("[data-copy]");if(c){var e=DATA[+c.dataset.copy];if(!e)return;copy([e.name,"@"+e.username,e.url].filter(Boolean).join(" · "))}
+});
+$("#fclear").addEventListener("click",function(){fType="";fCat="";fLang="";$("#q").value="";update()});
+var qT;$("#q").addEventListener("input",function(){clearTimeout(qT);qT=setTimeout(update,120)});
+
+function syncURL(){var p=new URLSearchParams(),q=$("#q").value.trim();if(fType)p.set("type",fType);if(q)p.set("q",q);if(fCat)p.set("cat",fCat);if(fLang)p.set("lng",fLang);if(qp.get("lang"))p.set("lang",LANG);var s=p.toString();history.replaceState(null,"",location.pathname+(s?"?"+s:"")+location.hash)}
+function update(){drawChips();render();syncURL()}
+function drawFoot(){$("#foot-src").innerHTML=tr("foot")+esc(String(META.updated_at||"").slice(0,10))}
+
+applyLang();applyTheme();
+fetch("/tglist.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+  META=d;
+  DATA=(d.entries||[]).map(function(e,i){e._i=i;e._h=hay(e);return e});
+  var tc={channel:0,group:0,bot:0};
+  DATA.forEach(function(e){tc[e.type]=(tc[e.type]||0)+1;if(e.category)ALLCATS[e.category]=(ALLCATS[e.category]||0)+1;if(e.language)ALLLANGS[e.language]=(ALLLANGS[e.language]||0)+1});
+  $("#st-total").textContent=DATA.length.toLocaleString("en-US");
+  $("#st-channel").textContent=tc.channel;$("#st-group").textContent=tc.group;$("#st-bot").textContent=tc.bot;
+  drawFoot();drawChips();render();
+}).catch(function(){$("#list").innerHTML='<div class="empty">'+esc(tr("fail"))+"</div>"});
+})();
 </script>
 </body>
 </html>
