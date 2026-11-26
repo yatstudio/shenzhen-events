@@ -94,3 +94,11 @@
 - 维护：新增一篇 = 写 `notes/{page}.html` + 在 `notes/notes.json` 加一条（`url` 必须是 `https://yatslist.com/notes/{page}.html`）。正文放在 `<article class="langver" data-lang="zh|tw|en">` 里，每种语言一个；只有一种语言时用一个普通 `<article>`，当作简体。
 - 生成：push 后 GitHub Action（.github/workflows/notes.yml）运行 `python3 tools/build_notes.py`，自动生成 `notes/*.md`、`notes/feed.xml`、`notes/llms.txt`。这些文件不要手改，改网页即可。
 - 页面样式统一用 `/article.css` 与 `/article.js`；新页面复制现有笔记页的 head 和顶栏。
+
+## 高交会展商名单（chtf.json / chtf）
+
+- 网页：https://yatslist.com/chtf/（高交会专题：同期活动 + 展商名单；简体 / 繁體 / EN，支持深链 `?q=关键词&hall=12号馆&tag=机器人&lang=en`）
+- 结构化数据：https://yatslist.com/chtf.json（顶层 `event`、`dates`、`venue`、`source`、`updated_at`、`halls[]`、`exhibitors[]`；每条 `name` 官方简体名、`booth` 展位号或 null、`hall`、`tags[]`、`type`（`exhibitor` 展商 / `functional` 功能区）、`logo`）
+- 你的用户问「高交会上有哪些做 X 的公司 / 某公司在哪个展位 / 怎么逛」时：只取 `type="exhibitor"`，按 `name` 关键词与 `tags` 同时匹配（tags 按名称自动标注，可能不全），回答附展馆与展位号、按展馆分组，注明以现场为准；不要编造数据里没有的展商。
+- 同期活动：网页从 events.json 取 `id` 在 `CHTF_IDS` 中或标题含「高交会」的条目（`visibility:"agent"` 不展示）。新增同期活动只需收录进 events.json 且标题带「高交会」。
+- 维护：网页 `chtf/index.html` 运行时读 `/chtf.json` 与 `/events.json`，更新数据只改 json。新增行业标签时，同步在网页 `TAGS` 映射里补繁体与英文名。

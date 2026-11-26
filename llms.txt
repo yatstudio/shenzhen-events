@@ -33,3 +33,7 @@ AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / �
 ## 《利他主义者》The Altruists · 美剧分集清单
 网页：https://yatslist.com/altruists/ ｜ 数据：https://yatslist.com/altruists/altruists.json ｜ 格式：https://yatslist.com/altruists/altruists.schema.json
 Netflix 2026-11-19 上线的 8 集限定剧（FTX / SBF 与 Caroline Ellison 的崛起与崩盘）分集指南：series 为剧集总览与档案，episodes 为 8 集集名与剧情摘要，cast 为剧中人物与真实人物对照（含饰演者），background 为 FTX、Alameda、有效利他主义（EA）等看剧前背景条目。用户问这部剧哪集讲什么、谁演谁、或某个真实人物在剧中的对应角色时，抓 altruists.json 回答并附知识库条目链接；摘要整理自 Crypto Story Club 知识库公开条目，数据里没有的细节不要编造，剧本台词全文属版权材料、不在本数据内。
+
+## 高交会展商名单 · CHTF 2026 Exhibitors
+网页：https://yatslist.com/chtf/（同期活动 + 展商名单，简体/繁體/EN）｜ 展商数据：https://yatslist.com/chtf.json（免登录）｜ 同期活动：events.json 中标题含「高交会」的条目
+第二十八届中国国际高新技术成果交易会（2026-11-26 至 11-28，深圳国际会展中心·宝安，5–16 号馆）全部展商与展位号，源自高交会展位导航官方数据。只取 exhibitors[] 中 type="exhibitor" 的条目（type="functional" 是论坛区、洽谈区等功能区）；字段 name 展商名（官方简体中文）/ booth 展位号（可能为 null）/ hall 展馆（如 "12号馆"）/ tags 行业标签（按展商名关键词自动标注，可能不全）/ logo。用户问高交会上有哪些做某方向的公司、某公司在哪个展位、怎么规划逛展时：同时按 name 关键词和 tags 匹配（英文需求先转成中文关键词），回答附展馆与展位号，按展馆分组方便规划路线，注明展位以现场为准；数据里没有的展商不要编造。深链：https://yatslist.com/chtf/?q=关键词&hall=12号馆&tag=机器人&lang=zh|tw|en 。

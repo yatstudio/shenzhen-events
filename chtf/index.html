@@ -1,145 +1,465 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>高交会专题 · 活动 + 展商名单 — Yat's List</title>
-<meta name="description" content="第二十八届高交会（CHTF 2026）专题：同期活动与全部展商名单、展位号，按公司名、展馆、行业检索，数据开放给 Agent 直接读取。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0d1218">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<title>高交会专题 · 同期活动 + 展商名单 — Yat's List</title>
+<meta name="description" content="第二十八届高交会（CHTF 2026）专题：同期活动与全部展商名单、展位号，按公司名、展馆、行业检索，数据开放给 Agent 直接读取（events.json / chtf.json）。">
+<link rel="canonical" href="https://yatslist.com/chtf/">
+<link rel="alternate" type="application/json" href="https://yatslist.com/chtf.json" title="CHTF 2026 exhibitors (JSON)">
+<link rel="icon" href="/logo-icon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yatslist.com/chtf/">
+<meta property="og:title" content="高交会专题 · 同期活动 + 展商名单 — Yat's List">
+<meta property="og:description" content="CHTF 2026 全部展商与展位号，可按展馆、行业检索，也可让你的 Agent 读 chtf.json 帮你规划逛展路线。">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"CHTF 2026 (28th China Hi-Tech Fair) exhibitor list","alternateName":"第二十八届高交会展商名单","description":"Exhibitor names, booth numbers, halls and keyword-based industry tags for the 28th China Hi-Tech Fair, Shenzhen World Exhibition & Convention Center, 2026-11-26 to 2026-11-28.","url":"https://yatslist.com/chtf/","isAccessibleForFree":true,"inLanguage":"zh-CN","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://yatslist.com/chtf.json"}],"about":{"@type":"Event","name":"第二十八届中国国际高新技术成果交易会（CHTF 2026）","startDate":"2026-11-26","endDate":"2026-11-28","location":{"@type":"Place","name":"深圳国际会展中心（宝安）","address":"Bao'an, Shenzhen, China"}}}
+</script>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
 <style>
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--green:#2ee6a8;--green-hover:#3df4b5;--on-green:#06251a;
 --ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--coral:#FF5A5F;
 --border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
---green:#2ee6a8;--bar-bg:rgba(13,18,24,.85);
---r-md:10px;--r-lg:14px;--r-pill:999px;
---font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
---font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
---sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;
+--cmd-bg:rgba(0,0,0,.3);--tag-bg:rgba(255,255,255,.04);--tag-border:rgba(255,255,255,.06);
+--r-sm:8px;--r-md:12px;--r-lg:16px;--r-pill:999px;
+--shadow-sm:0 2px 8px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);
+--sp-xs:4px;--sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;--sp-3xl:48px;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+--bar-bg:rgba(13,18,24,.95);
+color-scheme:dark;
 }
 :root[data-theme="light"]{
 --bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--green-hover:#0e9263;--on-green:#ffffff;
 --ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
---border:rgba(16,42,32,.12);--border-hover:rgba(16,42,32,.24);
---bar-bg:rgba(246,248,247,.88);
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--cmd-bg:rgba(16,42,32,.04);--tag-bg:rgba(16,42,32,.04);--tag-border:rgba(16,42,32,.08);
+--shadow-sm:0 2px 8px rgba(16,42,32,.08);--shadow-md:0 8px 24px rgba(16,42,32,.13);
+--bar-bg:rgba(246,248,247,.92);
+color-scheme:light;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:var(--sp-md) 0}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-lg)}
-.brandmark{font-family:var(--font-mono);font-weight:700;font-size:1.15rem;color:var(--ink);white-space:nowrap}
-.brandmark .cur{color:var(--green)}
-.topbar-nav a{color:var(--ink-sec);font-size:.92rem;text-decoration:none;font-weight:600}
-.topbar-nav a:hover{color:var(--green)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+a{color:var(--green)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
-main{padding:var(--sp-2xl) 0 48px}
-.terminal{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:var(--sp-xl)}
-.terminal-header{background:rgba(0,0,0,.18);padding:10px var(--sp-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-sm)}
-.terminal-dot{width:12px;height:12px;border-radius:50%;background:var(--ink-ter);opacity:.4}
-.terminal-title{font-family:var(--font-mono);font-size:.86rem;color:var(--ink-sec);margin-left:var(--sp-sm)}
-.terminal-body{padding:var(--sp-xl);font-family:var(--font-mono)}
-.terminal-body h1{font-size:clamp(1.25rem,3.4vw,1.7rem);margin:0 0 6px;font-family:var(--font-sans);letter-spacing:0}
-.terminal-body .meta{color:var(--ink-sec);font-size:.9rem}
-.terminal-body .meta b{color:var(--green);font-weight:700}
-h2.sec{font-size:1.15rem;margin:28px 0 6px}
-.secsub{color:var(--ink-ter);font-size:.87rem;margin:0 0 var(--sp-md)}
-.agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
-.agentnote b{color:var(--ink)}
-.agentnote a{color:var(--green);text-decoration:none}
-.searchrow{display:flex;gap:var(--sp-sm);margin-bottom:var(--sp-md)}
-.searchrow input{flex:1;padding:12px 16px;border-radius:var(--r-md);border:1px solid var(--border);background:var(--panel);color:var(--ink);font-size:1rem;outline:none;font-family:inherit}
-.searchrow input:focus{border-color:var(--green)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--sp-sm)}
-.chip{padding:5px 12px;border-radius:var(--r-pill);border:1px solid var(--border);background:var(--panel);color:var(--ink-sec);font-size:.83rem;cursor:pointer;font-family:inherit}
-.chip:hover{border-color:var(--border-hover);color:var(--ink)}
-.chip.on{color:#0d1218;background:var(--green);border-color:var(--green);font-weight:700}
-.cnt{color:var(--ink-ter);font-size:.85rem;margin:var(--sp-md) 0}
-.ev{display:flex;gap:var(--sp-md);margin-bottom:var(--sp-sm)}
-.rail{flex:0 0 74px;text-align:right;font-family:var(--font-mono);padding-top:14px}
-.rail .t1{font-size:.95rem;font-weight:700;color:var(--ink)}
-.rail .t2{font-size:.78rem;color:var(--ink-ter)}
-.card{flex:1;display:flex;gap:var(--sp-md);align-items:center;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 18px;min-width:0}
-.card:hover{background:var(--panel-hover)}
-.card img{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#fff;flex:0 0 auto}
-.card h3{margin:0;font-size:1rem;font-weight:650}
-.card h3 a{color:var(--ink);text-decoration:none}
-.card h3 a:hover{color:var(--green)}
-.cmeta{color:var(--ink-sec);font-size:.87rem;margin-top:2px}
-.cmeta .bt{color:var(--green);font-weight:700}
-.cmeta .sep{font-style:normal;opacity:.5}
-.sum{color:var(--ink-sec);font-size:.9rem;margin:4px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.tag{display:inline-block;border:1px solid var(--border);border-radius:var(--r-pill);padding:0 8px;font-size:.72rem;color:var(--ink-sec);margin-left:4px;vertical-align:1px}
-.empty{color:var(--ink-ter);text-align:center;padding:36px 0}
-footer{border-top:1px solid var(--border);padding:20px 0 34px;color:var(--ink-ter);font-size:.85rem}
-footer a{color:var(--ink-sec)}
+
+/* topbar (same as /szevents/) */
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
+.topbar .wrap{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
+.topbar-brand{display:flex;align-items:center;gap:var(--sp-md);text-decoration:none}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav{display:flex;gap:clamp(var(--sp-lg),3vw,var(--sp-xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
+.topbar-nav a:hover,.topbar-nav a.nav-on{color:var(--green)}
+.prefs{display:inline-flex;align-items:center;gap:6px}
+.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
+.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+.langsel option{background:var(--panel);color:var(--ink)}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+
+/* hero */
+.human-section{padding:clamp(var(--sp-xl),5vw,40px) 0 var(--sp-3xl)}
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{margin:0 0 8px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase;line-height:1.4}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);font-weight:700;letter-spacing:-.01em;line-height:1.2;color:var(--ink);margin:0 0 4px}
+.section-subtitle{font-size:clamp(.9rem,2vw,.98rem);color:var(--ink-sec);margin:0;line-height:1.55}
+.statrow{display:flex;gap:clamp(var(--sp-xl),4vw,40px);flex-wrap:wrap;margin:18px 0 0}
+.stat b{font-size:clamp(1.4rem,3.2vw,1.7rem);font-weight:700;font-variant-numeric:tabular-nums;display:block;line-height:1.1;letter-spacing:-.015em;color:var(--green)}
+.stat span{font-size:.76rem;color:var(--ink-ter);letter-spacing:.04em;font-weight:600}
+
+/* agent box (same as /szevents/) */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px;margin:0 0 22px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.cmdline{font-family:var(--font-mono);background:var(--cmd-bg);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px;color:var(--green);display:flex;gap:12px;align-items:center;font-size:.85rem}
+.cmdline>span:first-child{flex:0 0 auto;white-space:nowrap}
+.cmdline .u{color:var(--ink);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmdline button{flex:0 0 auto;margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--green);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer;white-space:nowrap}
+.ab-prompt{display:none;margin:0;font-family:var(--font-mono);font-size:.82rem;line-height:1.75;color:var(--ink-sec);background:var(--cmd-bg);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px;white-space:pre-wrap;word-break:break-word}
+.agentbox.open .ab-prompt{display:block}
+.ab-apis{font-size:.8rem;color:var(--ink-ter);line-height:1.8}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+.ab-apis code{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-sec)}
+
+/* concurrent events (same card shape as /szevents/) */
+.sec{font-size:1.15rem;font-weight:700;margin:30px 0 4px;color:var(--ink)}
+.secsub{color:var(--ink-ter);font-size:.87rem;margin:0 0 14px}
+.ev{display:flex;gap:clamp(var(--sp-md),3vw,20px);margin-bottom:12px}
+.rail{flex:0 0 clamp(64px,10vw,78px);text-align:right;padding-top:18px}
+.rail .t1{font-size:1.08rem;font-weight:650;font-variant-numeric:tabular-nums;line-height:1.2;color:var(--ink)}
+.rail .t2{font-size:.8rem;color:var(--ink-ter);margin-top:2px;font-variant-numeric:tabular-nums}
+.evcard{flex:1;min-width:0;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px 20px;box-shadow:var(--shadow-sm);transition:all .2s cubic-bezier(.4,0,.2,1)}
+@media (hover:hover){.evcard:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-hover)}}
+.evcard h3{margin:0 0 4px;font-size:1.08rem;font-weight:650;line-height:1.45}
+.evcard h3 a{color:var(--ink);text-decoration:none}
+.evcard h3 a:hover{color:var(--green)}
+.evmeta{font-size:.86rem;color:var(--ink-sec)}
+.evsum{color:var(--ink-sec);font-size:.9rem;margin:6px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.evlist .empty{padding:20px 0}
+
+/* search + filters */
+.bar{padding:0 0 var(--sp-sm)}
+input[type=search]{width:100%;padding:13px var(--sp-lg);border:1px solid var(--border);border-radius:var(--r-md);font-size:.95rem;background:var(--panel);color:var(--ink);box-shadow:var(--shadow-sm);font-family:inherit;transition:all .2s cubic-bezier(.4,0,.2,1)}
+input[type=search]:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(46,230,168,.18)}
+input[type=search]::placeholder{color:var(--ink-ter)}
+.fgroup{display:flex;align-items:flex-start;gap:var(--sp-sm);margin-top:var(--sp-md)}
+.flabel{flex:0 0 3.2em;padding-top:9px;font-size:.78rem;color:var(--ink-ter);font-weight:650;letter-spacing:.08em;text-transform:uppercase}
+.seg{display:flex;gap:7px;flex-wrap:wrap;align-items:center;min-width:0}
+.chip{flex:0 0 auto;border:1px solid var(--border);background:var(--panel);border-radius:var(--r-pill);padding:7px var(--sp-md);font-size:.87rem;cursor:pointer;min-height:36px;color:var(--ink-sec);font-weight:600;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit}
+.chip:hover{border-color:var(--border-hover);background:var(--panel-hover);color:var(--ink)}
+.chip.on{background:var(--green);color:var(--on-green);border-color:var(--green);font-weight:650;box-shadow:0 0 0 3px rgba(46,230,168,.15)}
+.chip .n{font-weight:500;opacity:.6;margin-left:4px;font-variant-numeric:tabular-nums}
+.resrow{display:flex;align-items:center;gap:var(--sp-md);margin:18px 0 12px;font-size:.86rem;color:var(--ink-ter);font-weight:600}
+.resrow b{color:var(--ink)}
+.fclear{margin-left:auto;background:none;border:0;color:var(--coral);font-weight:650;cursor:pointer;font-size:.87rem;font-family:inherit;padding:4px 0}
+.fclear[hidden]{display:none}
+
+/* cards */
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.card{display:flex;gap:14px;align-items:center;min-width:0;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;box-shadow:var(--shadow-sm);transition:all .2s cubic-bezier(.4,0,.2,1)}
+@media (hover:hover){.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-hover)}}
+.logo{flex:0 0 46px;width:46px;height:46px;border-radius:10px;background:#fff;object-fit:contain;padding:3px}
+.logo.ph{display:flex;align-items:center;justify-content:center;background:var(--tag-bg);border:1px solid var(--tag-border);color:var(--ink-ter);font-weight:700;font-size:1.05rem;padding:0}
+.cbody{min-width:0;flex:1}
+.card h3{margin:0;font-size:1.02rem;font-weight:650;line-height:1.4;color:var(--ink);word-break:break-word}
+.cmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px;font-size:.84rem;color:var(--ink-sec)}
+.booth{font-family:var(--font-mono);font-weight:700;color:var(--green);font-size:.86rem}
+.booth.tbd{color:var(--ink-ter);font-weight:600}
+.dot{opacity:.45}
+.tag{font-size:.72rem;font-weight:600;background:var(--tag-bg);border-radius:var(--r-sm);padding:2px 8px;color:var(--ink-sec);border:1px solid var(--tag-border);cursor:pointer;font-family:inherit}
+.tag:hover{color:var(--green);border-color:var(--green)}
+.cact{flex:0 0 auto;display:flex;gap:6px}
+.iconbtn{background:none;border:1px solid var(--border);color:var(--ink-ter);border-radius:8px;width:32px;height:32px;cursor:pointer;font:inherit;font-size:.85rem;display:inline-flex;align-items:center;justify-content:center}
+.iconbtn:hover{color:var(--green);border-color:var(--green)}
+.iconbtn.on{color:var(--warm,#FBBF24);border-color:var(--warm,#FBBF24)}
+.more{display:block;margin:18px auto 0;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:var(--r-md);padding:10px 22px;font:inherit;font-weight:650;cursor:pointer}
+.more:hover{border-color:var(--green);color:var(--green)}
+.more[hidden]{display:none}
+.empty{padding:48px 0;text-align:center;color:var(--ink-ter);font-size:.98rem;grid-column:1/-1}
+
+.foot{font-size:.83rem;color:var(--ink-ter);padding:var(--sp-2xl) 0 60px;line-height:1.9}
+.foot>div{margin:0 0 var(--sp-md);padding:var(--sp-md) var(--sp-lg);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);color:var(--ink-sec);font-size:.88rem;line-height:1.75}
+.foot a{color:var(--green);text-decoration:none;font-weight:600}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:.88rem;font-weight:650;opacity:0;pointer-events:none;transition:all .2s ease;z-index:200}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end;font-family:inherit}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+  #mnav-panel .prefs{width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
+  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
+  #mnav-panel .themecyc{width:34px}
+  .section-tagline{display:none}
+  .ab-head{flex-direction:column;align-items:stretch;gap:12px}
+  .ab-go{width:100%}
+  .fgroup{flex-direction:column;gap:6px}
+  .flabel{padding-top:0;flex:none}
+  .fgroup>*,.agentbox>*,.bar{min-width:0;max-width:100%}
+  .cmdline{min-width:0}
+  .ab-apis{overflow-wrap:anywhere}
+  .seg{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;padding-bottom:2px}
+  .seg::-webkit-scrollbar{display:none}
+  .list{grid-template-columns:1fr}
+  .ev{flex-direction:column;gap:4px}
+  .rail{flex:none;text-align:left;padding-top:0;display:flex;gap:8px;align-items:baseline}
+  .rail .t2{margin-top:0}
+  .evcard{flex:none}
+}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="wrap">
-  <div class="brandmark">&gt; yat's list<span class="cur">_</span></div>
-  <nav class="topbar-nav"><a href="/szevents/">深圳活动</a>&nbsp;&nbsp;<a href="/hackathons/">黑客松</a></nav>
-</div></header>
-<main><div class="wrap">
-  <div class="terminal">
-    <div class="terminal-header"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-title">chtf — topic</span></div>
-    <div class="terminal-body">
-      <h1>第二十八届高交会 · 专题</h1>
-      <div class="meta">2026-11-26 至 11-28 · 深圳国际会展中心（宝安）· 同期活动 <b id="evtotal">…</b> 场 · 展商 <b id="total">…</b> 家（5–16 号馆）</div>
-    </div>
+<div class="topbar">
+  <div class="wrap">
+    <a class="topbar-brand" href="https://yatslist.com/szevents/"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
+    <button id="mnav-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="menu">☰ 菜单</button>
+    <div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agentbox" data-i18n="navAgent">Agent</a>
+      <a href="/chtf/" class="nav-on" aria-current="page" data-i18n="navChtf">高交会展商</a>
+      <a href="/szevents/" data-i18n="navEvents">深圳活动</a>
+      <a href="/hackathons/" data-i18n="navHack">黑客松</a>
+      <span class="prefs">
+        <select class="langsel" id="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select>
+        <button type="button" class="themecyc" id="themecyc" aria-label="Theme">&#9680;</button>
+      </span>
+    </nav></div>
   </div>
-  <div class="agentnote">🤖 <b>Agent 检索</b>：活动数据 <a href="/events.json">events.json</a>（筛高交会相关条目）· 展商数据 <a href="/chtf.json">chtf.json</a>（字段：name 展商名 / booth 展位号 / hall 展馆 / tags 行业标签）。让你的 Agent 读这两个文件，按需求词、展馆或标签筛选，即可推荐活动与展位。</div>
+</div>
 
-  <h2 class="sec">📅 同期活动</h2>
-  <p class="secsub">高交会主展与同期分会活动，点标题去官方页。</p>
-  <div id="evlist"></div>
+<main class="human-section">
+  <div class="wrap">
+    <div class="section-header">
+      <p class="section-tagline">CHTF 2026 · EVENTS · EXHIBITORS · FOR AGENTS</p>
+      <h1 class="section-title" data-i18n="title">第二十八届高交会 · 展商名单</h1>
+      <p class="section-subtitle" data-i18n="sub">2026-11-26 至 11-28 · 深圳国际会展中心（宝安）· 5–16 号馆</p>
+      <div class="statrow">
+        <div class="stat"><b id="st-ev">…</b><span data-i18n="stEv">场同期活动</span></div>
+        <div class="stat"><b id="st-total">…</b><span data-i18n="stTotal">家展商</span></div>
+        <div class="stat"><b id="st-booth">…</b><span data-i18n="stBooth">已公布展位号</span></div>
+        <div class="stat"><b id="st-hall">…</b><span data-i18n="stHall">个展馆</span></div>
+      </div>
+    </div>
 
-  <h2 class="sec">🏢 展商名单 · 展位查询</h2>
-  <p class="secsub">输入需求或公司名查展位，也可以按展馆、行业标签筛。</p>
-  <div class="searchrow"><input id="q" type="search" placeholder="搜公司名 / 需求，如：机器人、储能、华为、半导体…"></div>
-  <div class="chips" id="halls"></div>
-  <div class="chips" id="tags"></div>
-  <div class="cnt" id="cnt"></div>
-  <div id="list"></div>
-</div></main>
-<footer><div class="wrap">展商数据来源：高交会展位导航官方数据（s.whte.cn）· 行业标签为按展商名关键词自动标注，仅供检索参考 · 原始导航：<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">展位平面图</a> · 活动以官方页为准</div></footer>
+    <div class="agentbox" id="agentbox">
+      <div class="ab-head">
+        <div class="ab-text"><div class="ab-title" data-i18n="abTitle">让你的 Agent 帮你逛高交会</div><div class="ab-sub" data-i18n="abSub">豆包 · Kimi · ChatGPT · Claude · Codex 都能读。把需求告诉它，它按展馆排好要去的展位。</div></div>
+        <button type="button" class="ab-go" id="ab-go" data-i18n="abGo">复制 Agent 指令 →</button>
+      </div>
+      <pre class="ab-prompt" id="ab-prompt"></pre>
+      <div class="cmdline"><span>$ fetch</span><span class="u">https://yatslist.com/chtf.json</span><button type="button" id="cmd-copy" data-i18n="copy">复制</button></div>
+      <div class="ab-apis" id="ab-apis"></div>
+    </div>
+
+    <h2 class="sec" id="events" data-i18n="secEv">📅 同期活动</h2>
+    <p class="secsub" data-i18n="secEvSub">高交会主展与同期论坛，点标题去官方页。</p>
+    <div class="evlist" id="evlist"></div>
+
+    <h2 class="sec" id="exhibitors" data-i18n="secEx">🏢 展商名单 · 展位查询</h2>
+    <p class="secsub" data-i18n="secExSub">输入需求或公司名查展位，也可以按展馆、行业筛。</p>
+    <div class="bar">
+      <input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="">
+      <div class="fgroup"><span class="flabel" data-i18n="fHall">展馆</span><div class="seg" id="halls"></div></div>
+      <div class="fgroup"><span class="flabel" data-i18n="fTag">行业</span><div class="seg" id="tags"></div></div>
+    </div>
+    <div class="resrow"><span id="cnt"></span><button type="button" class="fclear" id="fclear" hidden data-i18n="clear">清除筛选</button></div>
+    <div class="list" id="list"></div>
+    <button type="button" class="more" id="more" hidden></button>
+
+    <footer class="foot">
+      <div id="foot-src"></div>
+      <div id="foot-agent"></div>
+    </footer>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-const $=s=>document.querySelector(s);
-const esc=s=>String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-/* ---- activities ---- */
-const CHTF_IDS=["7z82cp","bh77mw","3hb93b","9v5gka"];
-function feeMark(e){
-  const f=(e.fee||"").trim();
-  if(f.startsWith("免费"))return "🆓 "+esc(f);
-  if(f&&!/见官方页/.test(f))return "🎫 "+esc(f);
-  return esc(f);
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)};
+var DATA_URL="https://yatslist.com/chtf.json";
+var PAGE=60;
+
+/* ===== i18n: zh (default) / tw / en, shared localStorage key "szLang" with /szevents/ ===== */
+var TAGS={
+"消费电子":["消費電子","Consumer electronics"],"人工智能":["人工智慧","AI"],"教育科研":["教育科研","Education & research"],
+"装备制造":["裝備製造","Equipment manufacturing"],"软件云服务":["軟體雲端服務","Software & cloud"],"新材料":["新材料","Advanced materials"],
+"机器人":["機器人","Robotics"],"环保水务":["環保水務","Environment & water"],"医疗健康":["醫療健康","Healthcare"],
+"光伏新能源":["光伏新能源","Solar & new energy"],"金融服务":["金融服務","Financial services"],"储能电池":["儲能電池","Energy storage & batteries"],
+"通信网络":["通訊網路","Telecom & networking"],"汽车交通":["汽車交通","Automotive & mobility"],"显示照明":["顯示照明","Display & lighting"],
+"半导体芯片":["半導體晶片","Semiconductors"],"安防应急":["安防應急","Security & emergency"],"农业食品":["農業食品","Agri-food"]};
+function tagL(t){var m=TAGS[t];if(!m)return t;return LANG==="tw"?m[0]:LANG==="en"?m[1]:t}
+function hallL(h){var n=(h||"").replace(/[^0-9]/g,"");if(!n)return h;return LANG==="en"?"Hall "+n:LANG==="tw"?n+"號館":n+"号馆"}
+
+var STR={
+zh:{menu:"☰ 菜单",navAgent:"Agent",navChtf:"高交会展商",navEvents:"深圳活动",navHack:"黑客松",
+ docTitle:"高交会专题 · 同期活动 + 展商名单 — Yat's List",
+ title:"第二十八届高交会 · 专题",stEv:"场同期活动",secEv:"📅 同期活动",secEvSub:"高交会主展与同期论坛，点标题去官方页。",
+ secEx:"🏢 展商名单 · 展位查询",secExSub:"输入需求或公司名查展位，也可以按展馆、行业筛。",evEmpty:"暂无",evFail:"活动加载失败，请刷新重试",free:"免费",sub:"2026-11-26 至 11-28 · 深圳国际会展中心（宝安）· 5–16 号馆",
+ stTotal:"家展商",stBooth:"已公布展位号",stHall:"个展馆",
+ abTitle:"让你的 Agent 帮你逛高交会",abSub:"豆包 · Kimi · ChatGPT · Claude · Codex 都能读。把需求告诉它，它按展馆排好要去的展位。",
+ abGo:"复制 Agent 指令 →",copy:"复制",copied:"已复制",copiedPrompt:"已复制，粘贴到你的 Agent，把【】里换成你的需求",
+ apis:'也可以直接读：<a href="/chtf.json">chtf.json</a>（展商）· <a href="/events.json">events.json</a>（活动，筛标题含「高交会」） · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> · 深链：<code>/chtf/?q=机器人&amp;hall=12号馆</code>',
+ ph:"搜公司名 / 需求 / 展位号，如：机器人、储能、华为、12-",fHall:"展馆",fTag:"行业",all:"全部",
+ cnt:function(n,t){return n===t?"共 <b>"+n+"</b> 家":"命中 <b>"+n+"</b> / "+t+" 家"},clear:"清除筛选",
+ more:function(n){return "再显示 "+n+" 家"},empty:"没找到，换个关键词试试（行业标签按公司名自动标注，可能不全，直接搜关键词更准）",
+ fail:"数据加载失败，请刷新重试",tbd:"展位待定",booth:"展位",copyCard:"复制展商与展位",
+ foot:'数据来源：高交会展位导航官方数据（<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">s.whte.cn 展位平面图</a>）· 行业标签按展商名关键词自动标注，仅供检索参考 · 展位以现场为准 · 更新于 ',
+ footAgent:'<b>给 Agent：</b>读 <a href="/chtf.json">chtf.json</a>，只取 <code>type="exhibitor"</code>；字段 <code>name</code> 展商名 / <code>booth</code> 展位号（可能为 null）/ <code>hall</code> 展馆 / <code>tags</code> 行业标签 / <code>logo</code>。回答时附展位号并注明以现场为准，数据里没有的展商不要编造。',
+ themeLabel:"主题",theme:{auto:"自动",light:"白天",dark:"晚上"},
+ prompt:"请读取 https://yatslist.com/chtf.json（第二十八届高交会 CHTF 2026 展商名单，2026-11-26 至 11-28，深圳国际会展中心）。\n只看 type 为 \"exhibitor\" 的条目；字段：name 展商名 / booth 展位号（可能为空）/ hall 展馆 / tags 行业标签。\n\n我想找：【在这里写你的需求，例如：做储能电池的厂商、人形机器人、华为】\n\n请：\n1. 同时按展商名关键词和 tags 匹配（tags 是按名称自动标注的，可能不全）；\n2. 按相关度列出最多 15 家，每家写明展商名、展馆、展位号；\n3. 按展馆分组排序，方便我规划逛展路线；\n4. 数据里没有的展商不要编造，展位以现场为准。"},
+tw:{menu:"☰ 選單",navAgent:"Agent",navChtf:"高交會展商",navEvents:"深圳活動",navHack:"黑客松",
+ docTitle:"高交會專題 · 同期活動 + 展商名單 — Yat's List",
+ title:"第二十八屆高交會 · 專題",stEv:"場同期活動",secEv:"📅 同期活動",secEvSub:"高交會主展與同期論壇，點標題去官方頁。",
+ secEx:"🏢 展商名單 · 展位查詢",secExSub:"輸入需求或公司名查展位，也可以按展館、行業篩。",evEmpty:"暫無",evFail:"活動載入失敗，請重新整理",free:"免費",sub:"2026-11-26 至 11-28 · 深圳國際會展中心（寶安）· 5–16 號館",
+ stTotal:"家展商",stBooth:"已公布展位號",stHall:"個展館",
+ abTitle:"讓你的 Agent 幫你逛高交會",abSub:"豆包 · Kimi · ChatGPT · Claude · Codex 都能讀。把需求告訴它，它按展館排好要去的展位。",
+ abGo:"複製 Agent 指令 →",copy:"複製",copied:"已複製",copiedPrompt:"已複製，貼到你的 Agent，把【】裡換成你的需求",
+ apis:'也可以直接讀：<a href="/chtf.json">chtf.json</a>（展商）· <a href="/events.json">events.json</a>（活動，篩標題含「高交会」） · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> · 深連結：<code>/chtf/?q=机器人&amp;hall=12号馆</code>',
+ ph:"搜公司名 / 需求 / 展位號，如：機器人、儲能、華為、12-",fHall:"展館",fTag:"行業",all:"全部",
+ cnt:function(n,t){return n===t?"共 <b>"+n+"</b> 家":"命中 <b>"+n+"</b> / "+t+" 家"},clear:"清除篩選",
+ more:function(n){return "再顯示 "+n+" 家"},empty:"沒找到，換個關鍵詞試試（展商名為簡體官方名稱，行業標籤按公司名自動標註，可能不全）",
+ fail:"資料載入失敗，請重新整理",tbd:"展位待定",booth:"展位",copyCard:"複製展商與展位",
+ foot:'資料來源：高交會展位導航官方資料（<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">s.whte.cn 展位平面圖</a>）· 展商名保留官方簡體名稱 · 行業標籤按展商名關鍵詞自動標註，僅供檢索參考 · 展位以現場為準 · 更新於 ',
+ footAgent:'<b>給 Agent：</b>讀 <a href="/chtf.json">chtf.json</a>，只取 <code>type="exhibitor"</code>；欄位 <code>name</code> 展商名 / <code>booth</code> 展位號（可能為 null）/ <code>hall</code> 展館 / <code>tags</code> 行業標籤 / <code>logo</code>。回答時附展位號並註明以現場為準，資料裡沒有的展商不要編造。',
+ themeLabel:"主題",theme:{auto:"自動",light:"白天",dark:"晚上"},
+ prompt:"請讀取 https://yatslist.com/chtf.json（第二十八屆高交會 CHTF 2026 展商名單，2026-11-26 至 11-28，深圳國際會展中心）。\n只看 type 為 \"exhibitor\" 的條目；欄位：name 展商名（簡體官方名稱）/ booth 展位號（可能為空）/ hall 展館 / tags 行業標籤（簡體）。\n\n我想找：【在這裡寫你的需求，例如：做儲能電池的廠商、人形機器人、華為】\n\n請：\n1. 同時按展商名關鍵詞和 tags 匹配（搜尋時先轉成簡體；tags 是按名稱自動標註的，可能不全）；\n2. 按相關度列出最多 15 家，每家寫明展商名、展館、展位號；\n3. 按展館分組排序，方便我規劃逛展路線；\n4. 資料裡沒有的展商不要編造，展位以現場為準。"},
+en:{menu:"☰ Menu",navAgent:"Agent",navChtf:"CHTF exhibitors",navEvents:"Shenzhen events",navHack:"Hackathons",
+ docTitle:"CHTF 2026 Guide · Events + Exhibitors — Yat's List",
+ title:"CHTF 2026 · Fair Guide",stEv:"concurrent events",secEv:"📅 Concurrent events",secEvSub:"The main fair and its side forums. Click a title for the official page.",
+ secEx:"🏢 Exhibitors · Booth finder",secExSub:"Search by need or company name, or filter by hall and sector.",evEmpty:"None yet",evFail:"Failed to load events. Please refresh.",free:"Free",sub:"28th China Hi-Tech Fair · Nov 26–28, 2026 · Shenzhen World Exhibition & Convention Center (Bao'an) · Halls 5–16",
+ stTotal:"exhibitors",stBooth:"with booth numbers",stHall:"halls",
+ abTitle:"Let your agent plan your CHTF visit",abSub:"Works with ChatGPT, Claude, Codex, Kimi, Doubao and others. Tell it what you're looking for and it lists the booths, grouped by hall.",
+ abGo:"Copy agent prompt →",copy:"Copy",copied:"Copied",copiedPrompt:"Copied. Paste it into your agent and replace the [ ] part with what you need",
+ apis:'Read directly: <a href="/chtf.json">chtf.json</a> (exhibitors) · <a href="/events.json">events.json</a> (events, filter titles containing 高交会) · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> · Deep link: <code>/chtf/?q=robot&amp;hall=12号馆&amp;lang=en</code>',
+ ph:"Search company, need or booth: robot, battery, Huawei, 12-…",fHall:"Hall",fTag:"Sector",all:"All",
+ cnt:function(n,t){return n===t?"<b>"+n+"</b> exhibitors":"<b>"+n+"</b> of "+t+" exhibitors"},clear:"Clear filters",
+ more:function(n){return "Show "+n+" more"},empty:"No match. Company names are official Chinese names; try a sector filter or a Chinese keyword (e.g. 机器人).",
+ fail:"Failed to load data. Please refresh.",tbd:"Booth TBA",booth:"Booth",copyCard:"Copy name and booth",
+ foot:'Source: official CHTF booth navigation data (<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">s.whte.cn floor plan</a>). Company names are shown as officially listed in Chinese. Sector tags are assigned automatically from company names and may be incomplete. Check booths on site. Updated ',
+ footAgent:'<b>For agents:</b> read <a href="/chtf.json">chtf.json</a> and keep entries with <code>type="exhibitor"</code>. Fields: <code>name</code> (Chinese), <code>booth</code> (may be null), <code>hall</code>, <code>tags</code> (Chinese sector labels), <code>logo</code>. Always give the booth number, say it should be confirmed on site, and never invent exhibitors not in the data.',
+ themeLabel:"Theme",theme:{auto:"Auto",light:"Light",dark:"Dark"},
+ prompt:"Read https://yatslist.com/chtf.json (exhibitor list for CHTF 2026, the 28th China Hi-Tech Fair, Nov 26–28 2026, Shenzhen World Exhibition & Convention Center).\nOnly use entries with type \"exhibitor\". Fields: name (official Chinese name), booth (may be null), hall (e.g. \"12号馆\" = Hall 12), tags (Chinese sector labels, e.g. 机器人 = robotics, 储能电池 = energy storage, 人工智能 = AI, 半导体芯片 = semiconductors).\n\nI'm looking for: [describe what you need, e.g. battery storage suppliers, humanoid robots, Huawei]\n\nPlease:\n1. Match on both Chinese keywords in name and tags (translate my request into Chinese keywords first; tags are auto-assigned and may be incomplete).\n2. List up to 15 exhibitors by relevance with name (plus an English gloss), hall and booth.\n3. Group them by hall so I can plan a walking route.\n4. Don't invent exhibitors that aren't in the data; booths should be confirmed on site."}
+};
+
+var LANG="";
+var qp=new URLSearchParams(location.search);
+try{LANG=qp.get("lang")||localStorage.getItem("szLang")||""}catch(e){LANG=qp.get("lang")||""}
+if(!LANG){var nl=((navigator.language||"zh-CN")+"").toLowerCase();LANG=(nl==="zh-tw"||nl==="zh-hk"||nl==="zh-mo"||nl.indexOf("zh-hant")===0)?"tw":nl.indexOf("zh")===0?"zh":"en"}
+if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+function tr(k){var d=STR[LANG]||STR.zh;var v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
+
+function applyLang(){
+  document.documentElement.lang=LANG==="en"?"en":LANG==="tw"?"zh-TW":"zh-CN";
+  document.title=tr("docTitle");
+  document.querySelectorAll("[data-i18n]").forEach(function(el){el.textContent=tr(el.dataset.i18n)});
+  $("#q").placeholder=tr("ph");
+  $("#ab-apis").innerHTML=tr("apis");
+  $("#ab-prompt").textContent=tr("prompt");
+  $("#foot-agent").innerHTML=tr("footAgent");
+  $("#langsel").value=LANG;
+  syncTheme();
 }
-function fmtD(t){if(!t)return "";const d=new Date(t);return (d.getMonth()+1)+"-"+d.getDate();}
-function fmtT(t){if(!t)return "";const d=new Date(t);return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");}
-fetch("/events.json").then(r=>r.json()).then(d=>{
-  const evs=d.events.filter(e=>CHTF_IDS.includes(e.id)||(e.title||"").includes("高交会"))
-    .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
-  $("#evtotal").textContent=evs.length;
-  $("#evlist").innerHTML=evs.length?evs.map(e=>`<div class="ev"><div class="rail"><div class="t1">${fmtD(e.start)}</div><div class="t2">${fmtT(e.start)}</div></div><div class="card"><div><h3><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></h3><div class="cmeta">${esc(e.venue||"")}${e.district?`<i class="sep"> · </i>${esc(e.district)}`:""}${e.fee?`<i class="sep"> · </i>${feeMark(e)}`:""}</div>${e.summary?`<p class="sum">${esc(e.summary)}</p>`:""}</div></div></div>`).join(""):`<div class="empty">暂无</div>`;
-}).catch(()=>{$("#evlist").innerHTML='<div class="empty">活动加载失败，请刷新重试</div>';});
-/* ---- exhibitors ---- */
-let DATA=[],fHall="",fTag="";
-function chips(el,items,fn,cur){el.innerHTML=items.map(t=>`<button type="button" class="chip${t===cur?" on":""}">${t||"全部"}</button>`).join("");[...el.children].forEach((c,i)=>c.onclick=()=>fn(items[i]));}
+function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(DATA.length){drawChips();render(true);drawFoot()}drawEvents();syncURL()}
+$("#langsel").addEventListener("change",function(){setLang(this.value)});
+
+/* ===== theme: auto / light / dark, shared localStorage key "szTheme" ===== */
+var THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
+if(THEME!=="light"&&THEME!=="dark")THEME="auto";
+var mq=window.matchMedia("(prefers-color-scheme: dark)");
+function applyTheme(){var r=THEME==="dark"?"dark":THEME==="light"?"light":(mq.matches?"dark":"light");document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);var tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncTheme()}
+function syncTheme(){var b=$("#themecyc"),ic={auto:"◐",light:"☀",dark:"☾"},t=tr("themeLabel")+": "+tr("theme")[THEME];b.textContent=ic[THEME];b.title=t;b.setAttribute("aria-label",t)}
+$("#themecyc").addEventListener("click",function(){var o=["auto","light","dark"];THEME=o[(o.indexOf(THEME)+1)%3];try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()});
+if(mq.addEventListener)mq.addEventListener("change",function(){if(THEME==="auto")applyTheme()});
+
+/* ===== mobile menu ===== */
+(function(){var b=$("#mnav-btn"),p=$("#mnav-panel");function close(){p.classList.remove("open");b.setAttribute("aria-expanded","false")}
+b.addEventListener("click",function(e){e.stopPropagation();b.setAttribute("aria-expanded",p.classList.toggle("open"))});
+p.addEventListener("click",function(e){if(e.target.closest("a"))close()});
+document.addEventListener("click",function(e){if(!p.contains(e.target)&&e.target!==b)close()})})();
+
+/* ===== copy helpers ===== */
+var toastT;
+function toast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove("show")},2200)}
+function copy(text,msg){
+  function ok(){toast(msg||tr("copied"))}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback)}else fallback();
+  function fallback(){var ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(e){}document.body.removeChild(ta)}
+}
+$("#ab-go").addEventListener("click",function(){$("#agentbox").classList.add("open");copy(tr("prompt"),tr("copiedPrompt"))});
+$("#cmd-copy").addEventListener("click",function(){copy(DATA_URL)});
+
+/* ===== data + filters ===== */
+var DATA=[],META={},fHall="",fTag="",shown=PAGE;
+fHall=qp.get("hall")||"";fTag=qp.get("tag")||"";$("#q").value=qp.get("q")||"";
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function safeUrl(u){return /^https:\/\//i.test(u||"")?u:""}
+function hay(e){var n=(e.hall||"").replace(/[^0-9]/g,"");return (e.name+" "+(e.booth||"")+" "+e.hall+" "+n+"號館 hall "+n+" "+e.tags.map(function(t){var m=TAGS[t]||[];return t+" "+m.join(" ")}).join(" ")).toLowerCase()}
+
+function filtered(skip){
+  var q=$("#q").value.trim().toLowerCase(),terms=q?q.split(/\s+/):[];
+  return DATA.filter(function(e){
+    if(skip!=="hall"&&fHall&&e.hall!==fHall)return false;
+    if(skip!=="tag"&&fTag&&e.tags.indexOf(fTag)<0)return false;
+    for(var i=0;i<terms.length;i++)if(e._h.indexOf(terms[i])<0)return false;
+    return true});
+}
+function chipHTML(val,label,n,on){return '<button type="button" class="chip'+(on?" on":"")+'" data-v="'+esc(val)+'">'+esc(label)+(n!=null?'<span class="n">'+n+'</span>':"")+"</button>"}
 function drawChips(){
-  chips($("#halls"),["",...new Set(DATA.map(e=>e.hall))],v=>{fHall=v;drawChips();render();},fHall);
-  chips($("#tags"),["",...new Set(DATA.flatMap(e=>e.tags))],v=>{fTag=v;drawChips();render();},fTag);
+  var byHall=filtered("hall"),byTag=filtered("tag"),hc={},tc={};
+  byHall.forEach(function(e){hc[e.hall]=(hc[e.hall]||0)+1});
+  byTag.forEach(function(e){e.tags.forEach(function(t){tc[t]=(tc[t]||0)+1})});
+  var halls=META.halls||[],tags=Object.keys(TAGS).filter(function(t){return ALLTAGS[t]});
+  $("#halls").innerHTML=chipHTML("",tr("all"),null,!fHall)+halls.map(function(h){return chipHTML(h,hallL(h),hc[h]||0,fHall===h)}).join("");
+  $("#tags").innerHTML=chipHTML("",tr("all"),null,!fTag)+tags.map(function(t){return chipHTML(t,tagL(t),tc[t]||0,fTag===t)}).join("");
 }
-function render(){
-  const q=$("#q").value.trim(),ql=q.toLowerCase();
-  const hits=DATA.filter(e=>e.type==="exhibitor")
-    .filter(e=>!fHall||e.hall===fHall)
-    .filter(e=>!fTag||e.tags.includes(fTag))
-    .filter(e=>!q||e.name.includes(q)||e.tags.some(t=>t.includes(q))||(e.booth||"").toLowerCase().includes(ql));
-  $("#cnt").textContent="命中 "+hits.length+" 家";
-  $("#list").innerHTML=hits.length?hits.slice(0,300).map(e=>`<div class="ev"><div class="card">${e.logo?`<img src="${e.logo}" alt="" loading="lazy">`:""}<div><h3>${esc(e.name)}</h3><div class="cmeta">${esc(e.hall)}<i class="sep"> · </i>展位 <span class="bt">${esc(e.booth||"待定")}</span>${e.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div></div></div></div>`).join(""):`<div class="empty">没找到，换个关键词试试</div>`;
+var ALLTAGS={};
+$("#halls").addEventListener("click",function(e){var c=e.target.closest(".chip");if(!c)return;fHall=c.dataset.v===fHall&&fHall?"":c.dataset.v;update()});
+$("#tags").addEventListener("click",function(e){var c=e.target.closest(".chip");if(!c)return;fTag=c.dataset.v===fTag&&fTag?"":c.dataset.v;update()});
+
+function card(e){
+  var logo=safeUrl(e.logo),init=esc((e.name||"?").charAt(0));
+  var booth=e.booth?'<span class="booth">'+esc(tr("booth"))+" "+esc(e.booth)+"</span>":'<span class="booth tbd">'+esc(tr("tbd"))+"</span>";
+  return '<article class="card">'+
+    (logo?'<img class="logo" src="'+esc(logo)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-init="'+init+'">':'<div class="logo ph">'+init+"</div>")+
+    '<div class="cbody"><h3>'+esc(e.name)+'</h3><div class="cmeta"><span>'+esc(hallL(e.hall))+'</span><span class="dot">·</span>'+booth+
+    e.tags.map(function(t){return '<button type="button" class="tag" data-tag="'+esc(t)+'">'+esc(tagL(t))+"</button>"}).join("")+"</div></div>"+
+    '<div class="cact"><button type="button" class="iconbtn" data-copy="'+e._i+'" title="'+esc(tr("copyCard"))+'" aria-label="'+esc(tr("copyCard"))+'">⧉</button></div></article>';
 }
-$("#q").addEventListener("input",render);
-fetch("/chtf.json").then(r=>r.json()).then(d=>{DATA=d.exhibitors;$("#total").textContent=d.exhibitors.filter(e=>e.type==="exhibitor").length;drawChips();render();})
-.catch(()=>{$("#list").innerHTML='<div class="empty">数据加载失败，请刷新重试</div>';});
+var HITS=[];
+function render(keep){
+  HITS=filtered();if(!keep)shown=PAGE;
+  var total=DATA.length;
+  $("#cnt").innerHTML=tr("cnt",HITS.length,total);
+  $("#fclear").hidden=!($("#q").value.trim()||fHall||fTag);
+  $("#list").innerHTML=HITS.length?HITS.slice(0,shown).map(card).join(""):'<div class="empty">'+esc(tr("empty"))+"</div>";
+  var left=HITS.length-shown,m=$("#more");m.hidden=left<=0;if(left>0)m.textContent=tr("more",Math.min(PAGE,left));
+}
+$("#more").addEventListener("click",function(){shown+=PAGE;render(true)});
+if("IntersectionObserver" in window){new IntersectionObserver(function(es){if(es[0].isIntersecting&&!$("#more").hidden){shown+=PAGE;render(true)}},{rootMargin:"400px"}).observe($("#more"))}
+$("#list").addEventListener("click",function(ev){
+  var t=ev.target.closest(".tag");if(t){fTag=t.dataset.tag;update();window.scrollTo({top:$(".bar").offsetTop-80,behavior:"smooth"});return}
+  var c=ev.target.closest("[data-copy]");if(c){var e=DATA[+c.dataset.copy];copy(e.name+" · "+hallL(e.hall)+" · "+(e.booth?tr("booth")+" "+e.booth:tr("tbd")))}
+});
+$("#list").addEventListener("error",function(ev){var im=ev.target;if(im.tagName!=="IMG")return;var d=document.createElement("div");d.className="logo ph";d.textContent=im.dataset.init||"";im.replaceWith(d)},true);
+$("#fclear").addEventListener("click",function(){fHall="";fTag="";$("#q").value="";update()});
+var qT;$("#q").addEventListener("input",function(){clearTimeout(qT);qT=setTimeout(update,120)});
+
+function syncURL(){var p=new URLSearchParams(),q=$("#q").value.trim();if(q)p.set("q",q);if(fHall)p.set("hall",fHall);if(fTag)p.set("tag",fTag);if(qp.get("lang"))p.set("lang",LANG);var s=p.toString();history.replaceState(null,"",location.pathname+(s?"?"+s:"")+location.hash)}
+function update(){drawChips();render();syncURL()}
+function drawFoot(){var u=META.updated_at?String(META.updated_at).slice(0,10):"";$("#foot-src").innerHTML=tr("foot")+esc(u)}
+
+/* ===== concurrent events from /events.json ===== */
+var CHTF_IDS=["7z82cp","bh77mw","3hb93b","9v5gka"],EVS=null,TZ="Asia/Shanghai";
+function fL(e,f){return LANG==="en"?(e[f+"_en"]||e[f]):LANG==="tw"?(e[f+"_tw"]||e[f]):e[f]}
+function fmtD(t){var d=new Date(t);return isNaN(d)?"":d.toLocaleDateString(LANG==="en"?"en-US":"zh-CN",{timeZone:TZ,month:LANG==="en"?"short":"numeric",day:"numeric"})}
+function fmtT(t){var d=new Date(t);if(isNaN(d))return "";var s=d.toLocaleTimeString("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false});return s==="00:00"?"":s}
+function feeL(e){var f=(fL(e,"fee")||"").trim();if(!f)return "";if(/见官方页|見官方頁|see official/i.test(f))return "";if(/^免费|^免費|^free/i.test(f))return "🆓 "+(LANG==="zh"?f:LANG==="tw"?(e.fee_tw||f.replace("免费","免費")):(e.fee_en||tr("free")));return "🎫 "+f}
+function drawEvents(){
+  var el=$("#evlist");if(EVS===null)return;
+  if(EVS===false){el.innerHTML='<div class="empty">'+esc(tr("evFail"))+"</div>";return}
+  el.innerHTML=EVS.length?EVS.map(function(e){
+    var url=safeUrl(e.url),title=esc(fL(e,"title")),fee=feeL(e),venue=fL(e,"venue")||"",sum=fL(e,"summary")||"";
+    var end=e.end&&fmtD(e.end)!==fmtD(e.start)?" – "+fmtD(e.end):"";
+    return '<div class="ev"><div class="rail"><div class="t1">'+esc(fmtD(e.start))+'</div><div class="t2">'+esc(fmtT(e.start)+end)+'</div></div><div class="evcard"><h3>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+title+"</a>":title)+'</h3><div class="evmeta">'+esc(venue)+(fee?' <span class="dot">·</span> '+esc(fee):"")+"</div>"+(sum?'<p class="evsum">'+esc(sum)+"</p>":"")+"</div></div>"}).join(""):'<div class="empty">'+esc(tr("evEmpty"))+"</div>";
+}
+fetch("/events.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+  EVS=(d.events||[]).filter(function(e){return e.visibility!=="agent"&&(CHTF_IDS.indexOf(e.id)>=0||(e.title||"").indexOf("高交会")>=0)})
+    .sort(function(a,b){return new Date(a.start||"2100")-new Date(b.start||"2100")});
+  $("#st-ev").textContent=EVS.length;drawEvents();
+}).catch(function(){EVS=false;$("#st-ev").textContent="–";drawEvents()});
+
+applyLang();applyTheme();
+fetch("/chtf.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+  META=d;
+  DATA=(d.exhibitors||[]).filter(function(e){return e.type==="exhibitor"}).map(function(e,i){e.tags=e.tags||[];e._i=i;e._h=hay(e);e.tags.forEach(function(t){ALLTAGS[t]=1});return e});
+  if(fHall&&(d.halls||[]).indexOf(fHall)<0)fHall="";
+  $("#st-total").textContent=DATA.length;
+  $("#st-booth").textContent=DATA.filter(function(e){return e.booth}).length;
+  $("#st-hall").textContent=(d.halls||[]).length;
+  drawFoot();drawChips();render();
+}).catch(function(){$("#list").innerHTML='<div class="empty">'+esc(tr("fail"))+"</div>"});
+})();
 </script>
 </body>
 </html>
