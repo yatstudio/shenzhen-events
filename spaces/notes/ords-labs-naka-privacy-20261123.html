@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：AI 时代，BTC 生态的隐私协议大爆发（OrdsLabs · NAKA 社区场）</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/ords-labs-naka-privacy-20261123.mp3"></audio></p>
 <ul>
 <li><strong>主持</strong>：OrdsLabs @OrdsLabs（NAKA 中文社区场，主讲为社区成员毛哥，另有 Gallery、老钱等连麦）</li>
 <li><strong>时间</strong>：2026-11-23 晚 CST，录音 2 小时 9 分 33 秒，累计听众 136 人</li>
@@ -91,9 +102,174 @@
 </ul>
 <h2>ASR 归一表</h2>
 <p>NAKA 被转写为：哪卡、拿卡、NACA、Shenaka；OB1 被转写为：欧币问、OBWANG、ObiWang、OBWANG；Ordinals 生态被转写为：onus 生态、autonautos；Grok 被转写为：Goruk、Gerlok、格若克、可柔克；黄仁勋被转写为：黄泳汐、黄荣勋、皇兄、黄春勳；贝森特被转写为：贝申特、背身；meme 币被转写为：命币；大饼＝比特币；伏地＝fork（分叉）；龙一＝龙头第一；SROPEK＝Anthropic（开场打新话题）。个别数字（如 Zelle 转账金额、Solana 手机价格与空投数量）转写含糊，正文已按上下文取最保守的读法并标注为发言者自述。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：AI 時代，BTC 生態的隱私協議大爆發（OrdsLabs · NAKA 社區場）</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/ords-labs-naka-privacy-20261123.mp3"></audio></p>
+<ul>
+<li><strong>主持</strong>：OrdsLabs @OrdsLabs（NAKA 中文社區場，主講為社區成員毛哥，另有 Gallery、老錢等連麥）</li>
+<li><strong>時間</strong>：2026-11-23 晚 CST，錄音 2 小時 9 分 33 秒，累計聽眾 136 人</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1rJYXqeYAWPdYM</li>
+<li><strong>說明</strong>：本場是 NAKA 社區在熊市裡的常規聚會，前半程圍繞「隱私協議」主題，後半程大量行情與社區閒聊。文中判斷與數字均為發言者現場自述，未經核實，不構成投資建議。轉寫為機器轉寫，專名錯形見文末歸一表。</li>
+</ul>
+<h2>一句話</h2>
+<p>社區的核心判斷是：隱私不是一條獨立賽道，而是 AI 時代的主敘事暗線——AI 把鏈上監控和人物畫像的門檻打下來之後，反監控的需求會把資金推向隱私協議；NAKA 要卡的位是「比特幣生態第一個落地的隱私協議」，OB1 的下一步是把隱私錢包做成綜合支付系統。</p>
+<h2>一、主題：隱私是 AI 主敘事背後的暗線</h2>
+<ul>
+<li>毛哥的框架：資本現在只做 AI，兩個方向——做 AI 應用，或者正視 AI 帶來的風險找解法。隱私屬於後者。</li>
+<li>邏輯鏈條（毛哥）：AI 讓鏈上監控、錢包關聯、人物畫像的成本驟降（「過去要請一堆程式設計師，現在問一句 AI 就能監控」）→ 遲早出現反 AI 情緒 → 反對的不是 AI 應用，而是 AI 對人的監控 → 這種情緒衝進加密圈，落點就是隱私協議。</li>
+<li>他類比美股炒作鏈條：先炒硬體、再炒大模型、再炒應用、最後炒安全——隱私正站在「安全」這一環上。</li>
+<li>需求不只是大戶的：瑞士銀行凍結俄羅斯大戶存款後「大戶沒有安全感」；普通人同樣有資產被畫像、被「開盒」的風險（發言者舉了 Telegram 社工庫的例子）。</li>
+</ul>
+<h2>二、賽道暗線：傳統機構都在悄悄加隱私</h2>
+<p>毛哥列舉的「暗線」證據（均為其轉述，未經核實）：</p>
+<ul>
+<li><strong>Zelle</strong>：美國主流支付網路 Zelle 於 11 月 16 日晚在 Solana 上演示了一筆機密轉帳，用自家穩定幣轉了約 125 萬美元，鏈上金額加密、結算仍可驗證；並宣布該穩定幣將落戶 Solana 做跨境支付。</li>
+<li><strong>Zcash ETF</strong>：資管平台 Bitwise 已於 11 月 18 日提交 Zcash 現貨 ETF，直接在德州證券交易所掛牌，Coinbase 託管。</li>
+<li><strong>英國銀行 × Midnight</strong>：英國一家銀行 11 月 16–17 日上線代幣化存款，記錄走 Cardano 的隱私鏈 Midnight——「銀行開始把可程式化隱私當基礎設施」。</li>
+<li><strong>瀏覽器與隱私交易協議合作</strong>：某瀏覽器在與隱私交易協議合作，讓 BAT 的買賣和做市可以隱藏個人倉位與策略（產品名轉寫不清）。</li>
+<li><strong>稅務倒逼</strong>：CRS 2026 年起所有交易所都要向國家提交資訊，虧損不能抵稅、賺錢必交稅——「草幣賺的錢不能全花了，哪天翻出來讓你交稅怎麼辦」。</li>
+</ul>
+<h2>三、NAKA 與 OB1 的路線：從隱私協議到隱私錢包</h2>
+<ul>
+<li>社區對 NAKA 的定位共識（本場反覆強調）：<strong>比特幣生態第一個真正落地的隱私協議</strong>，「龍一」這個身位要卡住——發帖加標籤、讓 AI 問答也認這條線（席間多次實測 Grok，Grok 答「Ordinals 生態最完整、真正落地的隱私代幣」是 NAKA，眾人很受用）。</li>
+<li>為什麼押比特幣生態：投資者最終都是為了賺大餅、存大餅；隱私幣單幣基金會持倉過重（發言者稱某隱私幣基金會持有 20%，有砸盤風險），依附 BTC 生態既能參與生態建設、又有隱私性。</li>
+<li>OB1 的下一步（毛哥轉述 OB1 的說法）：把現在的隱私錢包做成<strong>綜合性支付系統</strong>——NAKA 的隱私功能、他自己的隱私現金鏈都裝進同一個錢包，還能與隱私幣直接連接買賣。毛哥評價：主流錢包（以太坊系、比特幣系、Solana 系）沒有一個自稱隱私錢包，這個生態位是空白。</li>
+<li>交付能力：社區對 OB1 的程式碼交付速度印象深刻（「跟玩兒似的」，並猜測有 AI 幫忙）。</li>
+</ul>
+<h2>四、插曲：有人 fork 了協議去另起發射台</h2>
+<ul>
+<li>當天新出一個隱私協議，被指直接用了 OB1 的開源程式碼。社區的態度出奇地平和：程式碼本來就開源，「一家伏地」（fork）就 fork 了。</li>
+<li>背景（發言者說法）：對方是藝術家，想在 NAKA 的發射台上發行自己的產品，但社區投票一直不通過，一氣之下去自己搭了發射台。同一套協議、各自的索引，實質是分岔，與原協議沒有關係。</li>
+<li>毛哥的解讀：投票功能本來就是把權力下放給 holder；holder 現在不放行，不代表永遠不放行——如果 fork 那邊做得熱鬧，這邊 holder 自然會積極起來。兩種結果社區都不虧：「他不行，證明 holder 的判斷是對的；他行，這邊會被帶動。」</li>
+<li>對新協議扎堆上線的提醒：現在上線時機不好，免費打新之後項目方要靠收費回本（「一張收三千封、五千封的 gas 費」之類），能不能長期維護存疑。</li>
+</ul>
+<h2>五、錢包為什麼是網頁而不是 App（Gallery 解釋）</h2>
+<ul>
+<li>現狀：NAKA 錢包 iOS、安卓都是網頁（捷徑打開），全平台同一套程式碼。</li>
+<li>不做原生 App 的理由：①雙平台要各寫一套，功能一樣但底層重寫，單人開發精力要放在協議上；②涉及資產和助記詞的 App 要審計、上架流程長（席間舉了 Unisat 當年用開發者帳號發測試版的例子）；③網頁形態不新增風險點，保障好電腦端那套即可。</li>
+</ul>
+<h2>六、行情閒聊：抄底、21 號節奏與黃仁勳事件</h2>
+<ul>
+<li><strong>抄底復盤</strong>：毛哥自述前幾天在 55,700–56,000 一帶抄底 BTC（「五萬六我抄上了」），抄早了先賣、回落又接回。席間共識：現貨拿著就行，這波主要是清槓桿；反彈先看 65,000，力度偏弱。</li>
+<li><strong>貝萊德轉帳</strong>：開場有人轉述微信群消息——貝萊德將約 6.4 億美元資產轉到 Coinbase（9,326 個 BTC、42 萬個 ETH），未經核實。</li>
+<li><strong>「21 號節奏」觀察法</strong>（毛哥分享）：本輪行情 8 月 20 日左右漲起、9 月 21 日見頂、10 月 21–22 日砸盤、11 月 21 日又是關鍵位；他等 12 月 21 日看價格在 11 月 21 日之上還是之下，再判斷方向，在此之前不操作。宏觀上他認為本輪本質是流動性問題，12 月可能出現「升息和印錢同時走」。</li>
+<li><strong>黃仁勳事件</strong>（全場花了很長時間，均為發言者說法與轉述，未經核實）：席間先聊到財長貝森特改口、黃仁勳「已經是外部人」，又追溯「盧比奧爆料說」；直播後段有人報入消息稱英偉達董事會已恢復黃仁勳總裁、CEO 及董事全部職務，英偉達暗盤「一根線拉了 20%」，半導體普漲、開空的「都爆了」。毛哥類比賈伯斯被逼走又被請回；另有人轉述「特朗普下死令」的說法。以上均為節目內說法。</li>
+<li><strong>Anthropic IPO</strong>：開場聊打新——「歷史上第一個最大的 IPO」，眾人調侃其 logo 梗（大寫 A 加除號，「A÷」）；毛哥自述在某平台打了一點、打完就賣，「參與一下」。</li>
+</ul>
+<h2>七、社區建設：龍一共識、遊樂場與「套牢才能建設」</h2>
+<ul>
+<li><strong>遊樂場</strong>：OB1 新上了 NAKA 代幣小遊戲區（彈珠台、登月計畫、輪盤賭、德州撲克、Jackpot 等，風格統一）。社區的解讀：礦機模式必須拉動消費端，用挖出來的代幣玩遊戲、讓代幣流通起來，是把生態鏈條轉起來的最輕鬆辦法；金桌德州需 100 個 NAKA 入場，抽水不高。眾人當場約著組織中文社區撲克比賽。後續短板（發言者）：第三方想接入開發，需要 OB1 提供單獨的簽名外掛。</li>
+<li><strong>「套牢才能建設」</strong>：席間金句——便宜買的人隨手就賣，必須換手；「像我這樣套牢的比較好，套住了就開始研究了，不套住天天研究命幣（meme 幣），怎麼領悟加密精神」。有人自述朋友在 BTC 8 萬時買入一萬多刀 NAKA、已虧過半；現在 6 萬買入的人「都是抄我們的底」。</li>
+<li><strong>不是官方</strong>：席間有人以為這是官方直播間，眾人趕緊澄清——「我們不是官方，官方在 DC；項目方是美國人，我們就是自己買了、湊在一起聊天的社區，項目倒閉了跟我們也沒關係」。同時提醒：對外分享時要強調自己只是參與者，別讓人以為是項目方在推廣。</li>
+<li><strong>去中心化底氣</strong>：發言者稱，就算項目方跑了，憑開源程式碼也能自己搭系統把資產提出來，「只要 BTC 鏈不跑路、礦機不停，資產就沒有問題」。</li>
+</ul>
+<h2>八、尾聲行業觀：本位之爭與窗口期（發言者長篇，未經核實）</h2>
+<ul>
+<li>後段一位發言者（老錢）提出一套「本位對盤」論：幣圈交易所老闆多是比特幣本位，既得利益者要維護 BTC，就會做空、超賣山寨去回補 BTC 與平台幣；而 SBF（「爆炸頭」）是山寨本位，用存入的 10 個 BTC 增發出 100 個 BTC 去拉山寨——散戶其實受益於山寨本位，但比特幣本位最終弄死了爆炸頭，「勝者為王，敗者為寇，本質是政治立場區別」。</li>
+<li>Hyperliquid 被視作幣安當前的對手盤：10·11 之後做市商出走、聚到相對透明的 Hyperliquid，美國也更支持它；但平台都不會雪中送炭，「你有流動性他自然上你，沒有流動性不會扶你」。</li>
+<li>對新項目的判斷偏悲觀：敘事窗口期越來越短，主流與外部資金只玩經過市場檢驗的標的（BTC、ETH、SOL、美股 AI 股），「不可能去玩你的那些幣」。</li>
+<li>中間還穿插了一段 AI 焦慮：老錢談黎曼猜想被機器證明的傳聞（稱證明材料有 1,700 萬頁、一個博士生看到退休才能看完，未經核實），擔心 1985 年發明的橢圓曲線「定海神針」哪天被 AI 動搖；眾人安慰：量子破解還遠，OB1 的方向正是「用 AI 對抗 AI」，可以去研究一下。</li>
+</ul>
+<h2>ASR 歸一表</h2>
+<p>NAKA 被轉寫為：哪卡、拿卡、NACA、Shenaka；OB1 被轉寫為：歐幣問、OBWANG、ObiWang、OBWANG；Ordinals 生態被轉寫為：onus 生態、autonautos；Grok 被轉寫為：Goruk、Gerlok、格若克、可柔克；黃仁勳被轉寫為：黃泳汐、黃榮勳、皇兄、黃春勳；貝森特被轉寫為：貝申特、背身；meme 幣被轉寫為：命幣；大餅＝比特幣；伏地＝fork（分岔）；龍一＝龍頭第一；SROPEK＝Anthropic（開場打新話題）。個別數字（如 Zelle 轉帳金額、Solana 手機價格與空投數量）轉寫含糊，正文已按上下文取最保守的讀法並標註為發言者自述。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: The Privacy Protocol Boom in the Bitcoin Ecosystem in the AI Era (OrdsLabs · NAKA Community Session)</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/ords-labs-naka-privacy-20261123.mp3"></audio></p>
+<ul>
+<li><strong>Host</strong>: OrdsLabs @OrdsLabs (NAKA Chinese community session; the main speaker was community member Mao Ge, with Gallery, Lao Qian and others joining on mic)</li>
+<li><strong>Time</strong>: Evening of 2026-11-23 CST; recording 2 hours 9 minutes 33 seconds; 136 total listeners</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1rJYXqeYAWPdYM</li>
+<li><strong>Note</strong>: This session was a regular NAKA community gathering during a bear market; the first half revolved around the "privacy protocol" theme, and the second half was mostly market talk and community chat. All judgments and figures in this text are the speakers' own statements made live, are unverified, and do not constitute investment advice. The transcript is machine-generated; garbled proper names are listed in the normalization table at the end.</li>
+</ul>
+<h2>In One Sentence</h2>
+<p>The community's core judgment: privacy is not a standalone sector but the hidden thread running beneath the AI era's main narrative — once AI lowers the barrier to on-chain surveillance and profiling, the demand for counter-surveillance will push capital toward privacy protocols; the position NAKA wants to lock down is "the first privacy protocol actually shipped in the Bitcoin ecosystem," and OB1's next step is to turn the privacy wallet into a full-fledged payment system.</p>
+<h2>1. The Theme: Privacy Is the Hidden Thread Behind the AI Narrative</h2>
+<ul>
+<li>Mao Ge's framework: capital now only does AI, in two directions — building AI applications, or facing the risks AI brings and finding solutions. Privacy falls into the latter.</li>
+<li>The logic chain (Mao Ge): AI sharply cuts the cost of on-chain surveillance, wallet linkage and profiling ("before, you had to hire a bunch of programmers; now you just ask an AI and it can monitor") → sooner or later an anti-AI sentiment emerges → what people oppose is not AI applications but AI's surveillance of people → that sentiment rushes into crypto, and its landing point is privacy protocols.</li>
+<li>He drew an analogy to the US stock speculation chain: first hardware gets hyped, then large models, then applications, and finally security — privacy is now standing at the "security" link of that chain.</li>
+<li>The demand isn't only from whales: after Swiss banks froze the deposits of Russian whales, "the whales have no sense of security"; ordinary people face the same risk of having their assets profiled and being "doxxed" (a speaker gave the example of Telegram social-engineering databases).</li>
+</ul>
+<h2>2. The Sector's Hidden Thread: Traditional Institutions Are Quietly Adding Privacy</h2>
+<p>The "hidden thread" evidence cited by Mao Ge (all relayed by him, unverified):</p>
+<ul>
+<li><strong>Zelle</strong>: On the evening of November 16, the mainstream US payment network Zelle demonstrated a confidential transfer on Solana, moving about $1.25 million in its own stablecoin with the on-chain amount encrypted yet settlement still verifiable; it also announced the stablecoin would be based on Solana for cross-border payments.</li>
+<li><strong>Zcash ETF</strong>: Asset management platform Bitwise filed for a spot Zcash ETF on November 18, to be listed directly on the Texas Stock Exchange with Coinbase as custodian.</li>
+<li><strong>A UK bank × Midnight</strong>: On November 16–17, a UK bank launched tokenized deposits with records kept on Cardano's privacy chain Midnight — "banks are starting to treat programmable privacy as infrastructure."</li>
+<li><strong>A browser partnering with a privacy trading protocol</strong>: A certain browser is working with a privacy trading protocol so that buying, selling and market-making in BAT can hide individual positions and strategies (the product name was garbled in transcription).</li>
+<li><strong>Tax pressure</strong>: From 2026, under CRS all exchanges must submit information to governments; losses can't offset taxes and profits must be taxed — "you can't spend all the money you made on shitcoins; what if one day they dig it up and make you pay tax?"</li>
+</ul>
+<h2>3. The NAKA and OB1 Roadmap: From Privacy Protocol to Privacy Wallet</h2>
+<ul>
+<li>The community's consensus on NAKA's positioning (emphasized repeatedly in this session): <strong>the first privacy protocol in the Bitcoin ecosystem that has actually shipped</strong> — this "number one" position must be held: add the tag to posts and make AI Q&A recognize this line too (during the session they tested Grok several times; Grok answered that NAKA is "the most complete, genuinely shipped privacy token in the Ordinals ecosystem," much to everyone's delight).</li>
+<li>Why bet on the Bitcoin ecosystem: in the end, investors are all out to earn and store "the big pie" (BTC); a standalone privacy coin's foundation holds too much of the supply (a speaker claimed one privacy coin's foundation holds 20%, a dump risk), while attaching to the BTC ecosystem offers both participation in ecosystem building and privacy.</li>
+<li>OB1's next step (as relayed by Mao Ge from OB1): turn the current privacy wallet into a <strong>comprehensive payment system</strong> — NAKA's privacy features and his own privacy cash chain all packed into a single wallet, with direct connection to privacy coins for buying and selling. Mao Ge's assessment: none of the mainstream wallets (Ethereum-family, Bitcoin-family, Solana-family) call themselves privacy wallets — this ecological niche is empty.</li>
+<li>Delivery capability: the community was deeply impressed by OB1's speed of shipping code ("like it's nothing," with speculation that AI is helping).</li>
+</ul>
+<h2>4. Interlude: Someone Forked the Protocol to Launch Their Own Launchpad</h2>
+<ul>
+<li>A new privacy protocol appeared that day, accused of directly using OB1's open-source code. The community's attitude was surprisingly calm: the code is open source anyway — "if a family forks, it forks."</li>
+<li>Background (per speakers): the person is an artist who wanted to issue their own product on NAKA's launchpad, but community votes never approved it, so in a fit of frustration they built their own launchpad. Same protocol, separate indexes — essentially a fork, unrelated to the original protocol.</li>
+<li>Mao Ge's reading: the voting function was always about devolving power to holders; holders not approving now doesn't mean they never will — if the fork gets lively, holders on this side will naturally get more active. Either outcome is fine for the community: "If he fails, it proves the holders' judgment was right; if he succeeds, this side gets pulled along."</li>
+<li>A caution about the wave of new protocols launching: the timing is bad right now — after free launches, projects have to recover costs through fees ("charging three or five thousand in gas per item" and the like), so whether they can be maintained long-term is questionable.</li>
+</ul>
+<h2>5. Why the Wallet Is a Web Page, Not an App (Explained by Gallery)</h2>
+<ul>
+<li>Current state: the NAKA wallet on both iOS and Android is a web page (opened via a home-screen shortcut), with a single codebase across all platforms.</li>
+<li>Reasons for not building native apps: ① Each of the two platforms would need its own build — same features but a rewritten foundation, and a solo developer's energy should go to the protocol; ② Apps involving assets and seed phrases require audits and face long app-store review processes (the session cited Unisat's example of distributing a test build via a developer account back in the day); ③ The web form adds no new risk points — just keep the desktop-side setup secure.</li>
+</ul>
+<h2>6. Market Chat: Bottom-Fishing, the "21st Rhythm," and the Jensen Huang Incident</h2>
+<ul>
+<li><strong>Bottom-fishing review</strong>: Mao Ge said he had bought BTC around 55,700–56,000 a few days earlier ("I caught it at 56k"); having bought too early, he sold first and bought back on the dip. The room's consensus: just hold spot; this wave is mainly about flushing leverage; the bounce should first look to 65,000, with weak momentum.</li>
+<li><strong>BlackRock transfer</strong>: At the start, someone relayed a WeChat group message — BlackRock had moved about $640 million in assets to Coinbase (9,326 BTC and 420,000 ETH) — unverified.</li>
+<li><strong>The "21st rhythm" method</strong> (shared by Mao Ge): this market leg rose around August 20, topped on September 21, dumped on October 21–22, and November 21 was another key level; he is waiting for December 21 to see whether price sits above or below the November 21 level before judging direction, and won't trade before then. On the macro side, he sees this leg as fundamentally a liquidity problem, and December could see "rate hikes and money printing at the same time."</li>
+<li><strong>The Jensen Huang incident</strong> (the room spent a long time on this; all of it is speakers' claims and relays, unverified): the room first discussed Treasury Secretary Bessent changing his tune and Huang being "already an outsider," tracing it back to "Rubio's revelations"; later in the stream, someone brought in news that Nvidia's board had restored Huang to all his positions — president, CEO and director — and that Nvidia "ripped 20% in a single line" in dark-pool trading, semiconductors rallied across the board, and shorts "all got blown up." Mao Ge drew a parallel with Jobs being forced out and then invited back; someone else relayed a claim that "Trump issued a kill order." All of the above is as stated on the show.</li>
+<li><strong>Anthropic IPO</strong>: The session opened with subscription talk — "the first and biggest IPO in history," with jokes about its logo (a capital A plus a division sign, "A÷"); Mao Ge said he had subscribed for a bit on some platform and sold right after, "just to take part."</li>
+</ul>
+<h2>7. Community Building: The "Number One" Consensus, the Playground, and "You Have to Be Trapped to Build"</h2>
+<ul>
+<li><strong>The playground</strong>: OB1 has newly launched a NAKA token mini-game area (pinball, moon-landing plan, roulette, Texas hold'em, Jackpot, etc., in a unified style). The community's reading: the mining-machine model has to drive the consumption side — using mined tokens to play games and get tokens circulating is the easiest way to get the ecosystem chain turning; the gold-table Texas game requires 100 NAKA to enter, with a low rake. Everyone made plans on the spot to organize a Chinese-community poker tournament. A remaining gap (per speakers): third parties wanting to build integrations need OB1 to provide a separate signing plugin.</li>
+<li><strong>"You have to be trapped to build"</strong>: a quotable line from the room — people who bought cheap sell casually, so turnover is necessary; "someone trapped like me is better: once you're trapped you start researching; if you're not trapped you study meme coins all day — how would you ever grasp the crypto spirit." Someone said a friend had bought over ten thousand dollars of NAKA when BTC was at 80k and was down more than half; the people buying at 60k now "are all buying our bottom."</li>
+<li><strong>Not official</strong>: someone in the room thought this was the official livestream room, and everyone hurried to clarify — "we're not official; the officials are in the DC (Discord); the project team are Americans; we're just a community of people who bought in and gather to chat — if the project dies it has nothing to do with us." They also reminded each other: when sharing externally, stress that you are only a participant, so people don't think the project team is promoting it.</li>
+<li><strong>Decentralization confidence</strong>: a speaker claimed that even if the project team ran away, with the open-source code you could rebuild the system yourself and withdraw your assets — "as long as the BTC chain doesn't run away and the miners don't stop, the assets are fine."</li>
+</ul>
+<h2>8. Closing Industry View: The Battle of Denominations and the Window of Opportunity (A speaker's long remarks, unverified)</h2>
+<ul>
+<li>In the later part, one speaker (Lao Qian) laid out a "denomination showdown" theory: most crypto exchange bosses are Bitcoin-denominated; incumbents protecting BTC will short and oversell altcoins to buy back BTC and exchange tokens; whereas SBF ("the explosive hair") was altcoin-denominated, using 10 deposited BTC to issue 100 BTC to pump alts — retail actually benefited from the altcoin denomination, but the Bitcoin denomination ultimately killed him: "the winner takes all, the loser is condemned — it's essentially a difference of political stance."</li>
+<li>Hyperliquid is seen as Binance's current counterparty: after 10·11, market makers fled and gathered at the relatively transparent Hyperliquid, which the US also supports more; but no platform does charity — "if you have liquidity they'll list you naturally; without liquidity they won't prop you up."</li>
+<li>The outlook for new projects is pessimistic: narrative windows are getting shorter and shorter, and mainstream and outside capital only plays battle-tested assets (BTC, ETH, SOL, US AI stocks) — "there's no way they'll play your coins."</li>
+<li>Interspersed was a stretch of AI anxiety: Lao Qian talked about rumors that the Riemann hypothesis had been proven by a machine (claiming the proof materials run to 17 million pages, which a PhD student couldn't finish reading by retirement — unverified), worried that elliptic curves, invented in 1985 and a "bedrock," might one day be shaken by AI; the room reassured him: quantum cracking is still far off, and OB1's direction is precisely "using AI to fight AI" — worth looking into.</li>
+</ul>
+<h2>ASR Normalization Table</h2>
+<p>NAKA was transcribed as: 哪卡, 拿卡, NACA, Shenaka; OB1 was transcribed as: 欧币问, OBWANG, ObiWang, OBWANG; the Ordinals ecosystem was transcribed as: onus 生态, autonautos; Grok was transcribed as: Goruk, Gerlok, 格若克, 可柔克; Jensen Huang was transcribed as: 黄泳汐, 黄荣勋, 皇兄, 黄春勳; Bessent was transcribed as: 贝申特, 背身; meme coins were transcribed as: 命币; 大饼 = Bitcoin; 伏地 = fork; 龙一 = the number-one leader; SROPEK = Anthropic (the opening IPO-subscription topic). Certain figures (such as the Zelle transfer amount, the Solana phone price and airdrop quantities) were garbled in transcription; the main text adopts the most conservative reading from context and marks them as speakers' own statements.</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1rJYXqeYAWPdYM">https://x.com/i/spaces/1rJYXqeYAWPdYM</a>（主持 OrdsLabs，NAKA 中文社区场）· 发布日期：2026-11-23 · 时长：130 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1rJYXqeYAWPdYM">https://x.com/i/spaces/1rJYXqeYAWPdYM</a>（主持 OrdsLabs，NAKA 中文社區場）· 發布日期：2026-11-23 · 時長：130 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1rJYXqeYAWPdYM">https://x.com/i/spaces/1rJYXqeYAWPdYM</a> (host OrdsLabs, NAKA Chinese community session) · Published: 2026-11-23 · Duration: 130 minutes<br>This page is the full notes, compiled and edited from a machine transcript; all views and figures are as stated by the original speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1rJYXqeYAWPdYM">https://x.com/i/spaces/1rJYXqeYAWPdYM</a>（主持 OrdsLabs，NAKA 中文社区场）· 发布日期：2026-11-23 · 时长：130 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：AI 时代，BTC 生态的隐私协议大爆发（OrdsLabs · NAKA 社区场） · Yat's Talks",tw:"紀要：AI 時代，BTC 生態的隱私協議大爆發（OrdsLabs · NAKA 社區場） · Yat's Talks",en:"Notes: The Privacy Protocol Boom in the Bitcoin Ecosystem in the AI Era (OrdsLabs · NAKA Community Session) · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

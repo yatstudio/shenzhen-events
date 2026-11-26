@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：unusual_whales WhaleWatch——AI 完了吗？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/unusual-whales-whalewatch-ai-cooked-20261125.mp3"></audio></p>
 <ul>
 <li>节目：unusual_whales WhaleWatch（期货与期权实盘直播）</li>
 <li>时间：2026-11-25（周三，感恩节前夕，美国市场）</li>
@@ -96,9 +107,188 @@
 <li>ASR 归一：Hims 口播作 Hems；Arthur 姓氏口播有 Baesteros / Biaseros / Besteros 三种写法，以开场介绍的 Baesteros 为准；AVGO 口播作 Avgol；黄仁勋口播作 Jensen Huyang；PCE 口播作 TCE；Gabe Marchank 拼写按口播，未核实；Hon Weng Chong 口播作 Han Wang Chong。</li>
 <li>文中所有数字与判断均为节目发言者自述，未经核实；本纪要不构成投资建议。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：unusual_whales WhaleWatch——AI 完了嗎？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/unusual-whales-whalewatch-ai-cooked-20261125.mp3"></audio></p>
+<ul>
+<li>節目：unusual_whales WhaleWatch（期貨與期權實盤直播）</li>
+<li>時間：2026-11-25（週三，感恩節前夕，美國市場）</li>
+<li>主持：Nick Montgomery、Anthony Sanford（姓氏按節目中自報）</li>
+<li>嘉賓：Arthur Baesteros（Unusual Bets 播客主持人）</li>
+<li>時長：約 2 小時 26 分鐘</li>
+<li>來源：https://x.com/i/broadcasts/2NgyBldPENErOz</li>
+</ul>
+<h2>一句話</h2>
+<p>感恩節前最後一個完整交易日，美股開盤跌約 3%，主持人 Nick 一邊錯過所有做空點一邊讀期權流；中段嘉賓 Arthur 帶來新播客 Unusual Bets 的幾期「非主流押注」精華——Hims 變萬億 AI 醫生、腦機介面造「數位半人馬」、地熱能是未來能源；關於標題那個問題，Nick 的答案是 AI 還沒完，先有最後一波由英偉達帶頭的吹頂，再迎來幾十年一遇的大崩盤。</p>
+<h2>當天盤面：週一熔斷式上漲，週三開盤跳水</h2>
+<ul>
+<li>週一納指出現罕見的<strong>向上熔斷</strong>：黃仁勳回歸的消息一出，納指期貨開盤前 halt 約五分鐘，隨後拉升。Nick 稱這是他交易以來第一次見到納指向上熔斷。</li>
+<li>週三開盤 SPX 跌約 3%，全天在 6970–7150 一帶的 gamma 區間裡來回拉鋸：6970 一線守住後反彈，7010–7015 遇阻回落，正 gamma 位在 7020、7040、7100、7150 一帶逐步堆積。Nick 判斷可能重演週一的區間鎖死行情。</li>
+<li>數據面：PCE 高於預期、GDP 超預期，主持人稱 12 月升息 25bp 的概率約 97%（主持人說法，未核實）。</li>
+<li>節奏：週四感恩節休市、週五半日交易，本週節目到此為止，下週一回歸。Nick 明確表示週五半日他不交易：半日低量容易出單筆大單掃損，他此前較大的虧損日多出在這種日子。</li>
+</ul>
+<h2>標題之問：AI 完了嗎？</h2>
+<p>節目以「Is AI COOKED?!」為題，但兩位主持與嘉賓的答案並不一致：</p>
+<ul>
+<li><strong>Nick：還沒完，但終局是泡沫式崩盤。</strong> 短期只是回調，還沒進熊市；他預計還會有一輪由英偉達帶頭的 AI 標的大吹頂（blowoff top），然後迎來幾十年一遇的大跌，形態類似網際網路泡沫。他同時認為英偉達本身沒事：它是賣鏟子的，造數據中心基礎設施，無論 AI 公司結局如何，英偉達都能活下來。他承認自己兩三年前就開始等這一幕，期間也曾被軋空踏錯。</li>
+<li><strong>Arthur：Shiller CAPE 已亮紅燈。</strong> 標普 Shiller CAPE 均值約 17–20，當前約 40，略低於 43。歷史上該指標破 30 後都跟著大跌：1929 年 32.5，之後跌 86%–89%；1997–2002 年 44.19，之後跌 49%；2017–2018 年 33.3，之後跌 14%–20%；新冠初期破 30，跌 34%；2022 年前後 38.6，跌 33%。他強調這只是參考指標，不是因果。</li>
+<li><strong>多空兩邊都有人。</strong> Dan Ives 在 Unusual Bets 首期稱 AI 牛市只走了 15%，是 9–10 年的建設期；Gary Marcus 則是堅定的 AI 懷疑論者（見下節）。Arthur 的態度是兩邊都聽，自己判斷。</li>
+</ul>
+
+<h2>Unusual Bets 訪談精華（約 01:04–01:44）</h2>
+<p>Unusual Bets 是 Arthur 新開的播客：請各行各業的人講一個「非主流押注」，短則數月、長則數十年，幫聽眾發現主流視野之外的想法；每週二更新，嘉賓投稿可通過 Instagram @couldbearthur 聯繫。以下均為嘉賓自述觀點，未經核實：</p>
+<ul>
+<li><strong>Antonio Linares：Hims 會成為下一個萬億公司。</strong> 這家以 ED 與脫髮業務起家的公司，終局是成為你的 AI 醫生，訂閱費 999 美元/月，「讓你活下去的訂閱」。他認為五年內人類處境將永久改變；反烏托邦的一面是：壞事會被極度個人化，人將被迫在自由與活得更久之間二選一，數位孿生會在後台 24 小時運行。</li>
+<li><strong>Hon Weng Chong（Cortical Labs 創始人，口播作 Han Wang Chong）：AI 之後是腦機介面。</strong> 他的公司把人類腦細胞接到 AI 晶片上並以此建數據中心；他已離開該公司，下一個押注是 BCI（腦機介面）：晶片植入大腦、甚至進入血管系統，讓人變成「數位半人馬」——一半人、一半 AI。他自認是技術烏托邦主義者，但也坦承反烏托邦風險：大腦訂閱制、造出能受苦的有意識系統、軍用等雙重用途。</li>
+<li><strong>Gabe Marchank（前 SAC Capital、Steve Cohen 團隊研究員）：地熱能是未來十年的能源答案。</strong> Arthur 稱自己此前甚至不知道地熱能是什麼，研究後才理解為什麼這些「大玩家」能提前發現主流視野外的機會。</li>
+<li><strong>Dan Ives（首期嘉賓）：AI 牛市只走了 15%。</strong> 承認短期波動會很大，但長期仍有很長的路要走。</li>
+<li><strong>Gary Marcus（最新一期）：AGI 懷疑論者。</strong> 他與 Miles Brundage 以真金白銀押注 2025 年底前不會出現 AGI；他曾向馬斯克開價 100 萬美元賭 2025 年出 AGI，馬斯克沒接。Arthur 想撮合馬斯克與 Marcus 同場辯論 AGI 的未來。</li>
+<li><strong>12 月預告：</strong> 社交套利交易員（曾重注交易卡、GTA 6 上市時點）；談加密與 Genius Act（2 月生效）如何改變機構通道的對沖基金人士；談能源地緣重塑的前 CNBC 記者；匿名灣區科技公司創始人，稱掌握網路攻擊內幕。</li>
+</ul>
+<h2>期權流讀法：這期值得記的方法論</h2>
+<ul>
+<li>Periscope 的 gamma 數據直接來自 CBOE 的做市商持倉：做市商為保持 delta 中性而機械對沖——正 gamma 區賣漲買跌、負 gamma 區加速趨勢方向。Nick 的打法只在正 gamma 位附近做短線 scalp，中間的負 gamma 亂區不交易。</li>
+<li>他的兩條紀律：①怕錯過就別做，錯過比被套強；②看不懂的流就跳過，「越要費勁去套解釋，越沒興趣」。</li>
+<li>一個工具層面的發現：Periscope 的成交均價顯示與逐筆明細不一致（彙總顯示中間價、點進去全是 ask 成交），Nick 已截圖發給開發團隊核查，疑似統計口徑問題。</li>
+</ul>
+
+<h2>當天具體期權流點評</h2>
+<p>以下均為節目現場對當日異動期權的即時解讀，數字為發言者自述，未經核實：</p>
+<ul>
+<li><strong>SPY puts（Anthony 自述）：</strong> 隔夜以約 2.03 美元買入，早上以 2.99 美元平倉，賺約 58%。他自嘲這是「zero or hero」彩票倉，本該拿更久。</li>
+<li><strong>RIOT 12-11 $20 calls：</strong> 大額新倉、多腿組合，全部中間價成交，讀不出方向。Nick 稱這類是「當時看不懂、一週後漲了會被人翻出來」的單子。</li>
+<li><strong>Dell 12-18 $75–80 calls：</strong> 傾向於買入開倉；Dell 剛出過好財報。</li>
+<li><strong>Costco：</strong> 疑似看跌 call spread，但成交價都在中間，無明確信號；財報在 15 天後。</li>
+<li><strong>Intel 12-31 $75 calls：</strong> 較現價高約 37% 的遠價外，IV 飆升、貼 ask 成交，讀作買入。Nick 的評價是「彩票倉位，一兩張小帳戶可以玩」。</li>
+<li><strong>Oracle：</strong> 多為移倉（roll），無明確信號；當日已漲起來的短期 call 不追。</li>
+<li><strong>AMD：</strong> 一個月跌 27%、一週跌 23%，沒看到好看的流。</li>
+<li><strong>AVGO（Broadcom）：</strong> 昨天兩天到期的 call 從 4.66 美元漲到 7.76 美元。</li>
+<li><strong>SPY 0DTE：</strong> 16 美分的合約漲到 1.95 美元，425 張，疑似日內止盈離場。</li>
+<li><strong>PBR calls：</strong> 2,000 張、近乎平值、遞增成交且 IV 上升，是當天最好看的一筆，Nick 直接收藏。</li>
+<li><strong>Anthropic（ANT）期權：</strong> 6,800 張大額開倉，$82/$87 履約價，IV 回落，傾向買入，但 Nick 不碰 IPO 的期權。他的說法是：ANT 上市衝高後較最高點回落近半，內部人士上市即拋售；對比稱 Coinbase IPO 大漲後至今未回到高點。</li>
+<li><strong>GME：</strong> 守住 24 美元支撐後穩步上行，現約 26 美元上方，12 月 8 日財報。CEO 在 8–10 月連續多月買入（9 月 10 日、21 日、29 日，10 月 2 日、13 日），董事會也買了。Nick 的判斷是 GameStop 在向收藏品轉型，eBay 收購被拒後可能再出價甚至敵意收購。</li>
+<li><strong>IREN：</strong> 被暴打，長 dated 流多為對沖或股票替代，Nick 不看 100 天以上的期權流。</li>
+<li><strong>Lulu：</strong> 無明確信號。<strong>LVWR（LiveWire，2 美元以下小票）：</strong> put 獲利了結，空頭反覆做空等期權歸零。</li>
+</ul>
+<h2>加密段：特朗普、Pump.fun 與 meme 幣</h2>
+<ul>
+<li>Nick 稱特朗普靠加密賺了 6.35–6.36 億美元（主持人說法，未核實），並稱「他不是在讓我們變富，是在讓自己變富」，稱其上任以來已賺數十億美元。以上均為 Nick 的個人言論，節目中已聲明不代表 unusual_whales 立場。</li>
+<li>Pump.fun：Nick 稱 99.9% 參與者虧錢，並當場承認這個數字是他現編的、無法核實。</li>
+<li>2024 年底至 2025 年初，一個 13 歲小孩直播發 meme 幣、rug 走約 10 萬美元，而且幹了兩次；Hawk Tuah 女孩也被提及。</li>
+<li>Markiplier 持股 GoPro 後軍方合約消息拉漲，被質疑內幕交易，主持人認為只是巧合：「他就是喜歡相機，品牌不贊助他所以他自己投了」。</li>
+</ul>
+<h2>備註與轉寫說明</h2>
+<ul>
+<li>錄音開頭約 2 分鐘缺失，轉寫自 [00:01:56] 起；節目中有兩次約 5 分鐘的中場休息，無實質內容。</li>
+<li>[01:03:42] 起播放的 Hims 相關片段為 Unusual Bets 節目剪輯，非現場發言。</li>
+<li>ASR 歸一：Hims 口播作 Hems；Arthur 姓氏口播有 Baesteros / Biaseros / Besteros 三種寫法，以開場介紹的 Baesteros 為準；AVGO 口播作 Avgol；黃仁勳口播作 Jensen Huyang；PCE 口播作 TCE；Gabe Marchank 拼寫按口播，未核實；Hon Weng Chong 口播作 Han Wang Chong。</li>
+<li>文中所有數字與判斷均為節目發言者自述，未經核實；本紀要不構成投資建議。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: unusual_whales WhaleWatch — Is AI Cooked?</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/unusual-whales-whalewatch-ai-cooked-20261125.mp3"></audio></p>
+<ul>
+<li>Program: unusual_whales WhaleWatch (live futures and options trading stream)</li>
+<li>Time: 2026-11-25 (Wednesday, the eve of Thanksgiving, US market)</li>
+<li>Hosts: Nick Montgomery, Anthony Sanford (surnames as self-reported on the show)</li>
+<li>Guest: Arthur Baesteros (host of the Unusual Bets podcast)</li>
+<li>Length: about 2 hours 26 minutes</li>
+<li>Source: https://x.com/i/broadcasts/2NgyBldPENErOz</li>
+</ul>
+<h2>In one sentence</h2>
+<p>On the last full trading day before Thanksgiving, US stocks opened down about 3% while host Nick read the options flow and missed every short entry; mid-show, guest Arthur brought highlights from his new podcast Unusual Bets and its "unconventional bets" — Hims becoming a trillion-dollar AI doctor, brain-computer interfaces creating "digital centaurs," geothermal as the energy of the future; and on the question in the title, Nick's answer is that AI is not done yet — first there will be one final blowoff top led by Nvidia, and then a once-in-decades crash.</p>
+<h2>The day's market: a melt-up halt on Monday, a plunge at Wednesday's open</h2>
+<ul>
+<li>On Monday the Nasdaq saw a rare <strong>upward circuit-breaker halt</strong>: as news of Jensen Huang's return broke, Nasdaq futures halted for about five minutes before the open, then ripped higher. Nick said it was the first time in his trading life he had seen the Nasdaq halt to the upside.</li>
+<li>On Wednesday the SPX opened down about 3% and spent the day sawing back and forth in the gamma zone around 6970–7150: the 6970 line held and bounced, 7010–7015 met resistance and fell back, and positive gamma levels gradually built up around 7020, 7040, 7100 and 7150. Nick judged it might repeat Monday's range-locked pattern.</li>
+<li>On the data side: PCE came in above expectations and GDP beat as well; the hosts put the probability of a 25bp December rate hike at about 97% (the hosts' statement, unverified).</li>
+<li>Schedule: the market is closed Thursday for Thanksgiving and trades a half day on Friday; the show ends for the week here and returns next Monday. Nick stated clearly that he does not trade the Friday half session: low volume on half days makes it easy for a single large order to sweep stops, and most of his larger losing days have come on such days.</li>
+</ul>
+<h2>The title question: is AI cooked?</h2>
+<p>The show was titled "Is AI COOKED?!", but the two hosts and the guest did not give the same answer:</p>
+<ul>
+<li><strong>Nick: not done yet, but the endgame is a bubble-style crash.</strong> In the short term this is just a pullback, not yet a bear market; he expects one more round of blowoff top in AI names led by Nvidia, followed by a once-in-decades plunge resembling the dot-com bubble. He also believes Nvidia itself is fine: it sells the shovels and builds data-center infrastructure, so whatever happens to the AI companies, Nvidia survives. He admitted he has been waiting for this scene for two or three years and has been squeezed and wrong-footed along the way.</li>
+<li><strong>Arthur: the Shiller CAPE is flashing red.</strong> The S&amp;P Shiller CAPE averages about 17–20; it is currently about 40, slightly below 43. Historically, every time the indicator broke 30 a big drop followed: 32.5 in 1929, then a fall of 86%–89%; 44.19 in 1997–2002, then a fall of 49%; 33.3 in 2017–2018, then a fall of 14%–20%; it broke 30 in the early COVID period and fell 34%; around 38.6 in 2022, it fell 33%. He stressed this is only a reference indicator, not causation.</li>
+<li><strong>There are people on both sides.</strong> Dan Ives, on the first episode of Unusual Bets, said the AI bull market is only 15% done and is a 9–10 year build-out; Gary Marcus is a firm AI skeptic (see the next section). Arthur's attitude is to listen to both sides and judge for himself.</li>
+</ul>
+
+<h2>Unusual Bets interview highlights (approx. 01:04–01:44)</h2>
+<p>Unusual Bets is Arthur's new podcast: people from all walks of life each present one "unconventional bet," ranging from a few months to several decades, helping listeners discover ideas outside the mainstream view; it updates every Tuesday, and guest pitches can be made via Instagram @couldbearthur. The following are all the guests' self-stated views, unverified:</p>
+<ul>
+<li><strong>Antonio Linares: Hims will become the next trillion-dollar company.</strong> The company, which started in ED and hair-loss treatments, ends up as your AI doctor, at a subscription of US$999/month — "the subscription that keeps you alive." He believes the human condition will change permanently within five years; the dystopian side is that bad events will be extremely personalized, people will be forced to choose between freedom and living longer, and digital twins will run in the background 24 hours a day.</li>
+<li><strong>Hon Weng Chong (founder of Cortical Labs, spoken as Han Wang Chong): after AI comes the brain-computer interface.</strong> His company connected human brain cells to AI chips and built data centers that way; he has left the company, and his next bet is BCI (brain-computer interfaces): chips implanted in the brain, even entering the vascular system, turning people into "digital centaurs" — half human, half AI. He considers himself a technological utopian but also frankly acknowledged dystopian risks: subscription brains, creating conscious systems that can suffer, and dual uses such as military applications.</li>
+<li><strong>Gabe Marchank (former researcher at SAC Capital, on Steve Cohen's team): geothermal energy is the energy answer for the next decade.</strong> Arthur said he previously didn't even know what geothermal energy was, and only after researching it did he understand why these "big players" can spot opportunities outside the mainstream view early.</li>
+<li><strong>Dan Ives (first-episode guest): the AI bull market is only 15% done.</strong> He acknowledged short-term volatility will be large, but there is still a long road ahead in the long term.</li>
+<li><strong>Gary Marcus (latest episode): an AGI skeptic.</strong> He and Miles Brundage have bet real money that AGI will not appear before the end of 2025; he once offered Musk a US$1 million bet that AGI would arrive in 2025, and Musk didn't take it. Arthur wants to get Musk and Marcus on the same show to debate the future of AGI.</li>
+<li><strong>December previews:</strong> a social-arbitrage trader (who once bet heavily on trading cards and the timing of the GTA 6 launch); a hedge fund person discussing how crypto and the Genius Act (taking effect in February) will change institutional channels; a former CNBC journalist on the geopolitical reshaping of energy; and an anonymous Bay Area tech founder who claims to have inside knowledge of cyberattacks.</li>
+</ul>
+<h2>Reading options flow: the methodology worth noting from this episode</h2>
+<ul>
+<li>Periscope's gamma data comes directly from CBOE market-maker positioning: market makers hedge mechanically to stay delta-neutral — in positive-gamma zones they sell rallies and buy dips, in negative-gamma zones they accelerate the trend direction. Nick's approach is to scalp only near positive-gamma levels and not trade the messy negative-gamma zone in between.</li>
+<li>His two rules: ① if you're afraid of missing out, don't trade — missing out beats getting trapped; ② if you can't read a flow, skip it — "the harder you have to force an explanation onto it, the less interested I am."</li>
+<li>A tooling discovery: Periscope's displayed average trade price is inconsistent with the trade-by-trade detail (the summary shows midpoint prices, but clicking in shows all trades at the ask); Nick has screenshotted it and sent it to the development team to check — a suspected statistics methodology issue.</li>
+</ul>
+
+<h2>Commentary on the day's specific options flow</h2>
+<p>The following are all real-time interpretations of the day's unusual options activity made live on the show; figures are as stated by the speakers and are unverified:</p>
+<ul>
+<li><strong>SPY puts (Anthony's account):</strong> bought overnight at about US$2.03, closed in the morning at US$2.99, for a gain of about 58%. He joked at his own expense that this was a "zero or hero" lottery position that he should have held longer.</li>
+<li><strong>RIOT 12-11 $20 calls:</strong> a large new position, multi-leg combination, all filled at midpoint prices, so no direction could be read. Nick called this the kind of order that is "unreadable at the time and gets dug up a week later when it has gone up."</li>
+<li><strong>Dell 12-18 $75–80 calls:</strong> leaning toward buying to open; Dell had just reported good earnings.</li>
+<li><strong>Costco:</strong> looked like a bearish call spread, but all fills were at midpoint, with no clear signal; earnings in 15 days.</li>
+<li><strong>Intel 12-31 $75 calls:</strong> far out-of-the-money, about 37% above the current price, IV spiking, filled at the ask — read as buying. Nick's verdict: "a lottery position; small accounts can play with one or two contracts."</li>
+<li><strong>Oracle:</strong> mostly rolls, no clear signal; he wouldn't chase the short-dated calls that had already run up that day.</li>
+<li><strong>AMD:</strong> down 27% in a month and 23% in a week; no good-looking flow seen.</li>
+<li><strong>AVGO (Broadcom):</strong> yesterday, calls with two days to expiry rose from US$4.66 to US$7.76.</li>
+<li><strong>SPY 0DTE:</strong> a 16-cent contract rose to US$1.95, 425 contracts — looked like intraday profit-taking on the way out.</li>
+<li><strong>PBR calls:</strong> 2,000 contracts, near at-the-money, traded in increasing size with IV rising — the best-looking trade of the day; Nick saved it on the spot.</li>
+<li><strong>Anthropic (ANT) options:</strong> a large opening of 6,800 contracts at the $82/$87 strikes, IV falling, leaning toward buying, but Nick doesn't touch IPO options. His account: after ANT spiked on listing it has fallen back by nearly half from its high, and insiders sold right at the IPO; by comparison, Coinbase has never returned to its high after its big IPO run.</li>
+<li><strong>GME:</strong> after holding the US$24 support it has risen steadily and is now above about US$26; earnings on December 8. The CEO bought in several consecutive months from August to October (September 10, 21, 29; October 2, 13), and the board bought too. Nick's judgment is that GameStop is transforming toward collectibles, and after the rejected eBay acquisition it may bid again or even go hostile.</li>
+<li><strong>IREN:</strong> getting beaten up; the long-dated flow is mostly hedging or stock replacement, and Nick doesn't look at options flow beyond 100 days.</li>
+<li><strong>Lulu:</strong> no clear signal. <strong>LVWR (LiveWire, a sub-US$2 small cap):</strong> puts being closed for profit, shorts repeatedly shorting it and waiting for the options to expire worthless.</li>
+</ul>
+<h2>Crypto segment: Trump, Pump.fun and meme coins</h2>
+<ul>
+<li>Nick said Trump has made US$635–636 million from crypto (the host's statement, unverified), and said "he's not making us rich, he's making himself rich," claiming Trump has made billions of dollars since taking office. The above are all Nick's personal remarks; the show stated they do not represent the position of unusual_whales.</li>
+<li>Pump.fun: Nick said 99.9% of participants lose money, and admitted on the spot that he had made that figure up and could not verify it.</li>
+<li>From late 2024 to early 2025, a 13-year-old kid livestreamed launching meme coins and rugged about US$100,000 — and did it twice; the Hawk Tuah girl was also mentioned.</li>
+<li>After Markiplier took a stake in GoPro, news of a military contract pumped the stock and drew insider-trading suspicions; the hosts thought it was just a coincidence: "he just likes cameras — the brand wouldn't sponsor him, so he invested himself."</li>
+</ul>
+<h2>Notes and transcription remarks</h2>
+<ul>
+<li>About the first 2 minutes of the recording are missing; the transcript starts at [00:01:56]; there were two intermissions of about 5 minutes during the show, with no substantive content.</li>
+<li>The Hims-related clip played from [01:03:42] is an edit from the Unusual Bets program, not live remarks.</li>
+<li>ASR normalization: Hims was spoken as Hems; Arthur's surname appears in three spoken forms — Baesteros / Biaseros / Besteros — with Baesteros, from the opening introduction, taken as authoritative; AVGO was spoken as Avgol; Jensen Huang was spoken as Jensen Huyang; PCE was spoken as TCE; Gabe Marchank's spelling follows the spoken form and is unverified; Hon Weng Chong was spoken as Han Wang Chong.</li>
+<li>All figures and judgments in this text are as stated by the show's speakers and are unverified; these notes do not constitute investment advice.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2NgyBldPENErOz">https://x.com/i/broadcasts/2NgyBldPENErOz</a>（主持 unusual_whales）· 发布日期：2026-11-25 · 时长：146 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2NgyBldPENErOz">https://x.com/i/broadcasts/2NgyBldPENErOz</a>（主持 unusual_whales）· 發布日期：2026-11-25 · 時長：146 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X livestream <a href="https://x.com/i/broadcasts/2NgyBldPENErOz">https://x.com/i/broadcasts/2NgyBldPENErOz</a> (host unusual_whales) · Published: 2026-11-25 · Duration: 146 minutes<br>This page is the full text of notes compiled and edited by hand from a machine transcript; all views and figures are as stated by the original speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2NgyBldPENErOz">https://x.com/i/broadcasts/2NgyBldPENErOz</a>（主持 unusual_whales）· 发布日期：2026-11-25 · 时长：146 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：unusual_whales WhaleWatch——AI 完了吗？ · Yat's Talks",tw:"紀要：unusual_whales WhaleWatch——AI 完了嗎？ · Yat's Talks",en:"Notes: unusual_whales WhaleWatch — Is AI Cooked? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

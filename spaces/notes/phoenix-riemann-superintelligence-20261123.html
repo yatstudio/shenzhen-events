@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>超级智能时代：黎曼猜想被证明后，人类的科研与工作</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/phoenix-riemann-superintelligence-20261123.mp3"></audio></p>
 <blockquote>
 <p>X Space 纪要 | 主持：Phoenix Yin（@Phoenixyin13）｜2026-11-23 18:59（CST）开播，全长约 167 分钟，2,790 人收听
 本纪要根据录音转写整理。文中所有观点均为发言者个人看法，涉及的事实性说法（尤其是「黎曼猜想已被证明」）未经核实——截至本场讨论时，该证明仍在学界审查之中，请勿当作定论引用。</p>
@@ -92,9 +103,176 @@
 <li>「紫刊」疑为「子刊」；「生性」疑为「生物 / 生命科学」相关顶刊语境；交易段「教育员 / 教育研」= 交易员</li>
 <li>「DPSXC」疑为 DeepSeek 相关转述，原文含混，纪要中只作模糊转述</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>超級智能時代：黎曼猜想被證明後，人類的科研與工作</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/phoenix-riemann-superintelligence-20261123.mp3"></audio></p>
+<blockquote>
+<p>X Space 紀要 | 主持：Phoenix Yin（@Phoenixyin13）｜2026-11-23 18:59（CST）開播，全長約 167 分鐘，2,790 人收聽
+本紀要根據錄音轉寫整理。文中所有觀點均為發言者個人看法，涉及的事實性說法（尤其是「黎曼猜想已被證明」）未經核實——截至本場討論時，該證明仍在學界審查之中，請勿當作定論引用。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>這場 Space 以 Alexandr Wang 的 X 長文《Superintelligence is Arriving》為文本，主講人 Phoenix 逐段解讀：AI 輔助證明黎曼猜想的傳聞意味著什麼、超級智能的門檻還剩什麼、人的價值往哪裡退守。後半段連麥問答反而長出了全場最紮實的部分——物理世界的約束、計算不可約性、論文評價體系崩塌、AI 能否擬合一個交易員、AI 伴侶為何已經是社會現實。</p>
+<h2>主講：Wang 長文逐段解讀</h2>
+<p><strong>起點是一個傳聞。</strong> 主講人稱，Levent Alpöge 藉助 Claude 給出了黎曼猜想的證明（2026-11-20 發出、附 Lean 形式化程式碼），目前仍在學界審查、可能存在漏洞。但他的態度是：證明對不對「不重要」——重要的是 AI 已經能實質參與最高難度數學的攻堅，這件事本身就是信號。</p>
+<p><strong>接下來的判斷（均為他的推演）：</strong>
+- P vs NP 是下一個「聖杯」級的目標；2027 年是一個特殊節點；遞歸自我改進（RSI）明年就可能有結果。
+- 真正的危機是控制權：當 AI 開始監督 AI，人的監督位置會被擠掉。
+- 數學界的焦慮是真實的。他給的圖景是「頂尖人類 + Claude 各占一半」——AI 負責窮舉與計算，人負責提出問題和判斷方向。
+- 人的價值因此轉向兩處：主觀體驗，以及真實的人際連結。這兩樣是 AI 結構上給不了的。
+- 學徒制正在被 AI 剝奪：過去年輕人靠做初級工作練手成長，現在初級工作先被自動化，自學路徑要自己重新設計。
+- 藝術領域人類仍有希望，因為藝術的核心是體驗與表達，不是正確性。
+- 對 Anthropic 的看法有爭議：一種讀法是安全敘事即護城河——把「安全」講成只有自己能做的事，本身就是商業壁壘。</p>
+<p><strong>給學生的具體建議：</strong> 以積體電路專業為例——出路不是和 AI 比誰更像工匠，而是從工匠變成指揮者：看得懂圖紙、能判斷 AI 的產出有沒有違反物理定律。數理化生的硬核功底是駕馭 AI 的最小啟動門檻；競賽思維的價值不在解題本身，而在機率與期望的思維體操和抗壓能力。遠景方向上他點名了類腦計算 / 脈衝神經網路（SNN）和世界模型，但承認當下 90% 以上的聲量仍在 LLM 一邊。</p>
+<h2>連麥一：物理世界的約束，才是 AI 的天花板</h2>
+<p>一位做 research 的聽眾提出反命題：宇宙沒有價值函數，只有約束——元素週期表沒有擴容、光速與引力不變、石油動一動還能約束全球、五號電池幾十年沒有量級突破。虛擬世界指數膨脹，物理世界紋絲不動，AI 的邊界到底在哪？</p>
+<p>主講人的回應是全場理論密度最高的一段：</p>
+<ul>
+<li><strong>古德哈特定律</strong>：一旦有單一價值函數，人就會去優化、攻略它，它隨即失效。人類一直試圖用單一 value function 統治複雜現實，這是幻覺。</li>
+<li><strong>資訊物理之牆</strong>：朗道爾原理決定了每次位元擦除必然散熱——晶片做到原子級精度，算力的盡頭仍是散熱和電力。電網、變壓器、銅儲量、電站建設週期，全是人力週期限制的。「位元飛得再快，也拖不動原子。」</li>
+<li><strong>材料之牆</strong>：化學元素的上限就是材料的上限；引力決定航太上限；熱力學決定化學能源上限。</li>
+<li><strong>計算不可約性（Wolfram）</strong>：複雜系統沒有公式可以快進——想知道 100 年後的結果，唯一的辦法是讓物理世界真的流逝 100 年。新藥在人體內十年的副作用，算力再大也必須向真實試錯低頭。他稱之為「實驗之牆 / 混沌的不可預測之牆」。</li>
+<li><strong>生物之牆</strong>：知識生產速度已經甩開大腦的消化速度，認知鴻溝在擴大；人能守住的只有自己那一片體驗的獨特性。</li>
+</ul>
+<p>由此得出的結論：物理世界的容錯率極低（一顆光刻機十幾萬個零件，一顆螺絲斷供整個系統就停擺），物理資源未來是「硬通貨」；AI 的最大價值不是取代物理世界，而是<strong>貼著物理約束的極限跳舞</strong>——比如 AlphaFold、AI 發現新固態電解質材料，把人類留安全冗餘的地方做到窮舉級別的精密。</p>
+<h2>連麥二：計算生物學學生——論文還值錢嗎？</h2>
+<p>提問者是 AI for Science / 計算生物學方向的學生，困惑有二：會議論文生產加速、含金量暴跌，個人價值以後看什麼；虛擬細胞這類方向會不會成真。</p>
+<p>主講人的回答很具體：</p>
+<ul>
+<li>會議論文的價值確實在暴跌：以前三個月縫一個模型的工作，現在科研 Agent 幾天就能搭完框架跑完消融，審稿人對「指標漲了多少」已經免疫。但不要一棍子打死——頂會的 oral、領域子刊仍有用，未來評價看的是「你問了什麼問題」，而不是發了幾篇。</li>
+<li><strong>貶值的是增量方法，不貶值的是帶實驗數據的新知識。</strong> 純 CS 背景刷分很高的論文，拿到真實場景復現往往不行、p 值效應嚴重。</li>
+<li>稀缺能力是判斷力：產出氾濫時，能看出指標作弊、機制有問題的人最值錢。</li>
+<li>方向建議：問題先行，用公開數據回答一個具體的生物學問題，給出可證偽的預測，最好拉一個實驗合作者驗證一兩條；不要再做大而無當的 benchmark 刷分。</li>
+<li>真正的護城河是「乾濕閉環的翻譯能力」：看懂實驗的噪聲、用最少的實驗次數指導下一輪高通量篩選（active learning）、把髒數據（多組學、臨床病理切片）治理成高品質訓練集、做從分子到表型的因果推斷。懂這些的人，他稱之為「高品質數據的治理師」，比純演算法的人值錢得多。</li>
+<li>虛擬細胞是當下最火的概念（他提到史丹佛的 TranscriptFormer 等工作），方法上可引入基因調控網路（GRN）的圖結構、先驗知識與最佳傳輸，但這是硬骨頭：必須明顯打敗現有單細胞大模型才有機會，且切忌灌水——審稿人現在會要求放 PCA、線性回歸等傳統基線證明你真跑贏了簡單方法。</li>
+</ul>
+<h2>連麥三：數學老師的「被迫的樂觀」</h2>
+<p>一位氣象 / 數學背景的聽眾轉述了身邊老師的狀態——「被迫的樂觀」：一方面學院要向學校證明自己的存在價值、爭取資源，這是全世界大學的通病；另一方面，有老師苦攻多年的公開數學問題，眼看被 Claude 衝上來，自己也很迷茫，甚至有老師對學生說出「以後不需要人了」這類悲觀話。主講人回應：這不是某一個學科的問題，是整個數學界乃至理論學科的普遍心向；但氣象這類領域目前 AI 能做的還非常有限，很多事仍然要人去做、去執行、去感受。</p>
+<h2>連麥四：AI 能不能擬合一個交易員？</h2>
+<p>一位做交易的聽眾（Felix）問得最細：把我的看盤錄影、判斷邏輯、買賣記錄、口述都餵給 AI，它能不能擬合成「第二個我」？</p>
+<p>主講人的回答分兩層：</p>
+<p><strong>能擬合，但完全擬合即失效。</strong>
+- 落地方法是逆強化學習（inverse RL）：把上萬次交割單餵進去，反推出你真實的風險厭惡、停損行為、倉位分配模式——相當於把自己拆解揉碎再反芻一遍。盤感這種說不清的東西，正是逆強化學習要提取的對象。情緒也要量化出來，因為沒有情緒就理解不了大眾情緒。
+- 但交易員的秘密是：一旦一個人被完全擬合，他的策略立刻失效。因為市場是強反身性的——你的決策若能被 100% 預測，對手盤的量化也會建模這個規律來逼空你。而且人本身在進化：四年前的你和現在的你會做出完全不同的決策，擬合出來的是「經驗的你」，它打破不了自己。
+- 他的判斷：純靠規則和算力的技術指標交易，高頻領域未來十年內 99% 會被 AI 接管，alpha 越來越少；但宏觀大類資產配置、政治博弈與央行政策的揣度、黑天鵝下的逆勢翻盤、一級市場看人下注——這些暫時仍是人的主場，因為 AI 沒有 skin in the game，不體驗爆倉的痛苦，也不負責任。
+- 給交易員的三步法：① 鏡像 AI——先擬合一個自己；② 對手盤 AI——模擬「我這麼買，機構會怎麼反制我」的紅藍對抗，這一步最重要；③ 本尊綜合兩盤資訊做當下判斷。他聲稱這樣持續 20 次，交易能力會有明顯躍升（此為其個人說法）。
+- 模型選擇上他推薦 Claude（原話大意：Claude 的強度還是很強），並提醒香港可用性限制。</p>
+<p>緊接著另一位聽眾追問：如果所有人都用 Claude 交易，市場會不會變得理性、不再有恐慌拋售？他的回答：恰恰相反地詭異——全員 AI 後 alpha 枯竭、波動率低得像一潭死水；同時情緒本身會被演算法偽造：對手盤 AI 讀出信號自動觸發停損賣出，造假情緒的機構在底層精準接盤，未來市場情緒裡至少一半可能是演算法放的「電子煙霧彈」。而長達數年的信念（早期比特幣、晶片、生物醫藥的燒錢研發）是 AI 基於歷史機率的風控覆蓋不了的；到所有人都用 AI 的時候，AI 就不再稀缺，反而是不用 AI、保有獨特直覺的頂尖交易員更強。</p>
+<h2>連麥五：AI 親密伴侶——不是趨勢，是現實</h2>
+<p>最後一位聽眾問起年輕人用 AI 構建親密伴侶的現象。主講人的定性很直接：這不是趨勢，是正在發生的社會現實。他舉例稱，某國產大模型產品宕機時，廠商發現 C 端用量大量是情感陪伴類對話（此為其轉述，未核實）。</p>
+<p>他的分析框架：
+- 根源是缺愛與孤獨：社群媒體越視覺化、多巴胺化，孤獨感越強，這在亞洲和美國都一樣。真人伴侶的成本很高，而 AI 伴侶每月免費或 20 美元——訴諸成本最低的出口是自然過程，不必道德批判。
+- AI 伴侶是「緩兵之計」：它太完美、太舒適，而人有惰性，待在舒適區久了，回到真實世界會不習慣那些噪聲和摩擦。兩性之間在現實裡彌合雖然困難、甚至掉眼淚，但那正是價值觀最終對齊的過程——「找對象，不要等對象」。
+- 往後推演：具身智能 + 人形機器人（比真人更美、更帥）會改變親密關係，但說它會改造婚戀市場還為時過早，因為這需要具身智能與 LLM 雙重突破，且是物理世界的結合問題，比解黎曼猜想更難。確定會發生的降維衝擊是：日常陪伴的工業化與平權。</p>
+<h2>收尾</h2>
+<p>一位高中數學聯賽學生的家長補充：物理約束恰恰說明末日感沒那麼快到來，與物理世界、隱性知識相連的職業會被放大；受衝擊最大的是純抽象思維的職業（法律、會計、交易）。主講人收束全場：末日論焦慮五秒鐘就夠，剩下的時間用來創造；數理化生的硬核功底仍是未來最高的壁壘，因為未來的科學家、工程師要做「指揮 AI 的人」，去攻克更強的物理限制；悲觀者永遠正確，樂觀者永遠前行——保持好奇心、可塑性與自己的價值觀，AI 時代不會淘汰真正有熱愛、有好奇心的孩子。</p>
+<hr />
+<h3>ASR 歸一說明（轉寫錯字對照）</h3>
+<ul>
+<li>「尼曼猜想 / 離慢」= 黎曼猜想；「Cloud / claw」= Claude；「二賽」= RSI（遞歸自我改進）；「另」= Lean；「陶哲軒被記作 Terry Tau」</li>
+<li>主講人姓名在轉寫中寫作 Alexander Wong / Alex Sanriwon 的段落，指 Alexandr Wang</li>
+<li>「湘農」= 香農；「朗道爾定理」= 朗道爾原理（Landauer）；「古德哈特定律」= Goodhart's Law；「Wall Flammu / 沃爾夫拉姆」= Stephen Wolfram</li>
+<li>「紫刊」疑為「子刊」；「生性」疑為「生物 / 生命科學」相關頂刊語境；交易段「教育員 / 教育研」= 交易員</li>
+<li>「DPSXC」疑為 DeepSeek 相關轉述，原文含混，紀要中只作模糊轉述</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>The Age of Superintelligence: Human Research and Work After the Riemann Hypothesis Is Proven</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/phoenix-riemann-superintelligence-20261123.mp3"></audio></p>
+<blockquote>
+<p>X Space notes | Host: Phoenix Yin (@Phoenixyin13) | Started 2026-11-23 18:59 (CST), about 167 minutes in total, 2,790 listeners
+These notes were compiled from a transcript of the recording. All views expressed are the speakers' personal opinions; factual claims (especially "the Riemann hypothesis has been proven") are unverified — as of this discussion, the proof was still under academic review, so please do not cite it as settled.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>This Space took Alexandr Wang's long X post "Superintelligence is Arriving" as its text, with host Phoenix reading it paragraph by paragraph: what the rumor of an AI-assisted proof of the Riemann hypothesis means, what thresholds remain for superintelligence, and where human value retreats to. The second half's open-mic Q&A produced the most substantive material of the whole session — the constraints of the physical world, computational irreducibility, the collapse of the paper evaluation system, whether AI can fit a trader, and why AI companions are already a social reality.</p>
+<h2>The Main Talk: Reading Wang's Essay Paragraph by Paragraph</h2>
+<p><strong>It starts with a rumor.</strong> According to the host, Levent Alpöge, with Claude's assistance, produced a proof of the Riemann hypothesis (released on 2026-11-20, with Lean formalization code attached); it is still under academic review and may contain gaps. But his attitude was that whether the proof is right "doesn't matter" — what matters is that AI can now substantively take part in attacking mathematics at the highest level of difficulty; that fact itself is the signal.</p>
+<p><strong>His subsequent judgments (all his own extrapolations):</strong>
+- P vs NP is the next "holy grail" target; 2027 is a special node; recursive self-improvement (RSI) could yield results as early as next year.
+- The real crisis is control: once AI starts supervising AI, the human supervisory position gets squeezed out.
+- The anxiety in the mathematics community is real. His picture is "top humans + Claude, each taking half" — AI handles exhaustive search and computation, humans pose the questions and judge direction.
+- Human value therefore shifts to two places: subjective experience, and real human connection. These are two things AI structurally cannot provide.
+- Apprenticeship is being taken away by AI: young people used to grow by doing junior work as practice; now junior work is automated first, and self-learning paths have to be redesigned from scratch.
+- There is still hope for humans in the arts, because the core of art is experience and expression, not correctness.
+- Views on Anthropic are contested: one reading is that the safety narrative is itself the moat — framing "safety" as something only you can do is itself a commercial barrier.</p>
+<p><strong>Concrete advice for students:</strong> Taking integrated circuits as an example — the way out is not to compete with AI at being a craftsman, but to go from craftsman to commander: able to read the drawings and judge whether AI's output violates the laws of physics. A hard-core grounding in math, physics, chemistry and biology is the minimum starting threshold for steering AI; the value of competition-style thinking lies not in problem-solving itself but in the mental gymnastics of probability and expectation, and in resilience under pressure. For longer-range directions he named brain-inspired computing / spiking neural networks (SNN) and world models, while acknowledging that over 90% of the current attention is still on the LLM side.</p>
+<h2>Open Mic 1: The Constraints of the Physical World Are AI's Ceiling</h2>
+<p>A listener who works in research raised a counter-thesis: the universe has no value function, only constraints — the periodic table doesn't expand, the speed of light and gravity don't change, oil can still constrain the whole world with a small move, and AA batteries haven't had an order-of-magnitude breakthrough in decades. The virtual world grows exponentially while the physical world doesn't budge — so where exactly is AI's boundary?</p>
+<p>The host's response was the most theoretically dense passage of the session:</p>
+<ul>
+<li><strong>Goodhart's law</strong>: Once there is a single value function, people optimize for it and game it, and it promptly stops working. Humanity's persistent attempt to rule complex reality with a single value function is an illusion.</li>
+<li><strong>The information-physics wall</strong>: Landauer's principle dictates that every bit erasure necessarily dissipates heat — even with chips made to atomic precision, the end of compute is still heat dissipation and electricity. Power grids, transformers, copper reserves, power-plant construction cycles are all bounded by human timescales. "No matter how fast bits fly, they can't drag atoms along."</li>
+<li><strong>The materials wall</strong>: The ceiling of chemical elements is the ceiling of materials; gravity sets the ceiling for aerospace; thermodynamics sets the ceiling for chemical energy.</li>
+<li><strong>Computational irreducibility (Wolfram)</strong>: Complex systems have no formula that can fast-forward them — to know the result 100 years out, the only way is to let the physical world actually pass through those 100 years. A new drug's side effects over ten years in the human body cannot be computed around; no amount of compute power can avoid bowing to real trial and error. He called this "the wall of experiment / the wall of chaotic unpredictability."</li>
+<li><strong>The biological wall</strong>: The speed of knowledge production has already outrun the brain's speed of digestion, and the cognitive gap is widening; all a person can hold onto is the uniqueness of their own patch of experience.</li>
+</ul>
+<p>The conclusion drawn from this: the physical world has an extremely low fault tolerance (a lithography machine has over a hundred thousand parts; one screw's supply cut halts the whole system), so physical resources will be the "hard currency" of the future; AI's greatest value is not replacing the physical world but <strong>dancing at the very edge of physical constraints</strong> — as with AlphaFold, or AI discovering new solid-state electrolyte materials, achieving exhaustive-level precision exactly where humans used to leave safety margins.</p>
+<h2>Open Mic 2: A Computational Biology Student — Are Papers Still Worth Anything?</h2>
+<p>The questioner was a student in AI for Science / computational biology, with two worries: conference papers are being produced faster and their value is crashing — what will personal value rest on in the future; and will directions like virtual cells ever become real?</p>
+<p>The host's answer was very concrete:</p>
+<ul>
+<li>The value of conference papers really is crashing: work that used to take three months of stitching together a model can now be done by a research Agent in a few days — framework built, ablations run — and reviewers have become immune to "how much the metric went up." But don't write them off entirely: top-conference orals and field subjournals still count, and future evaluation will look at "what question you asked," not how many papers you published.</li>
+<li><strong>What depreciates is incremental methods; what doesn't depreciate is new knowledge backed by experimental data.</strong> Papers from pure CS backgrounds with very high benchmark scores often fail to reproduce in real settings, with severe p-value effects.</li>
+<li>The scarce ability is judgment: when output is abundant, the most valuable people are those who can spot metric cheating and flawed mechanisms.</li>
+<li>Direction advice: start from a question; use public data to answer a specific biological question and offer a falsifiable prediction, ideally pulling in an experimental collaborator to validate one or two of them; stop doing grand, empty benchmark score-chasing.</li>
+<li>The real moat is "the translation ability of the wet-dry closed loop": reading experimental noise, using the fewest experiments to guide the next round of high-throughput screening (active learning), governing messy data (multi-omics, clinical pathology slides) into high-quality training sets, and making causal inferences from molecules to phenotypes. People who can do this — he called them "high-quality data stewards" — are worth far more than pure algorithm people.</li>
+<li>Virtual cells are the hottest concept right now (he mentioned Stanford's TranscriptFormer and similar work); methodologically one can bring in the graph structure of gene regulatory networks (GRN), prior knowledge and optimal transport, but it's a hard bone to chew: you have to clearly beat existing single-cell large models to have a chance, and you must avoid padding — reviewers now demand traditional baselines like PCA and linear regression to prove you really beat the simple methods.</li>
+</ul>
+<h2>Open Mic 3: Math Teachers' "Forced Optimism"</h2>
+<p>A listener with a meteorology / mathematics background relayed the state of teachers around them — "forced optimism": on the one hand, departments must prove their value to the university and fight for resources, a common ailment of universities worldwide; on the other hand, some teachers watched open math problems they had struggled with for years get rushed by Claude, and felt lost themselves, with some even telling students pessimistic things like "people won't be needed anymore." The host responded: this isn't one discipline's problem but a prevailing mood across mathematics and theoretical fields generally; still, in areas like meteorology, what AI can currently do is very limited, and many things still need people to do them, carry them out, and experience them.</p>
+<h2>Open Mic 4: Can AI Fit a Trader?</h2>
+<p>A listener who trades (Felix) asked the most detailed question: if I feed AI my screen-watching recordings, my decision logic, my trade records and my spoken commentary, can it fit a "second me"?</p>
+<p>The host's answer had two layers:</p>
+<p><strong>It can fit you — but a complete fit immediately stops working.</strong>
+- The practical method is inverse reinforcement learning (inverse RL): feed in tens of thousands of trade records and reverse-engineer your true risk aversion, stop-loss behavior and position-sizing patterns — like taking yourself apart, mashing yourself up and ruminating on it all over again. "Market feel," that ineffable thing, is exactly what inverse RL is meant to extract. Emotions also have to be quantified, because without emotion you can't understand the crowd's emotions.
+- But here is the trader's secret: the moment a person is completely fitted, their strategy instantly stops working. Markets are strongly reflexive — if your decisions can be predicted 100%, the quant funds on the other side will model that regularity and squeeze you. And people themselves evolve: the you of four years ago and the you of today make completely different decisions; what gets fitted is "the experienced you," and it cannot break past itself.
+- His judgment: technical-indicator trading based purely on rules and compute will be 99% taken over by AI in high-frequency domains within the next ten years, with alpha shrinking; but macro asset allocation, reading political games and central-bank policy, contrarian reversals in black-swan events, and betting on people in primary markets — for now these remain human home turf, because AI has no skin in the game, doesn't feel the pain of blowing up, and bears no responsibility.
+- A three-step method for traders: ① Mirror AI — first fit a copy of yourself; ② Opponent AI — simulate the red-team/blue-team exercise of "if I buy like this, how will institutions counter me," the most important step; ③ The real you synthesizes both boards' information and makes the in-the-moment call. He claimed that doing this 20 times in a row noticeably raises trading ability (his personal claim).
+- On model choice he recommended Claude (in his words, roughly: Claude's strength is still very strong), and noted the Hong Kong availability restrictions.</p>
+<p>Right after, another listener followed up: if everyone trades with Claude, will markets become rational, with no more panic selling? His answer: paradoxically, the opposite weirdness — with everyone on AI, alpha dries up and volatility goes as flat as a pool of dead water; at the same time, sentiment itself gets fabricated by algorithms: opponent AIs read the signal and automatically trigger stop-loss selling, while institutions faking sentiment catch the flow precisely at the bottom layer; in future markets, at least half of sentiment might be "electronic smoke bombs" released by algorithms. And multi-year convictions (the money-burning R&D of early Bitcoin, chips, biopharma) are things AI risk control based on historical probabilities cannot cover; by the time everyone uses AI, AI is no longer scarce — instead, the top traders who don't use AI and keep their unique intuition become stronger.</p>
+<h2>Open Mic 5: AI Intimate Companions — Not a Trend, but Reality</h2>
+<p>The last listener asked about the phenomenon of young people building intimate companions out of AI. The host's characterization was direct: this is not a trend; it is a social reality already happening. He gave an example: when a certain domestic large-model product went down, the vendor discovered that a large share of consumer usage was emotional-companionship conversation (as relayed by him, unverified).</p>
+<p>His analytical framework:
+- The root is a lack of love and loneliness: the more visual and dopamine-driven social media becomes, the stronger the loneliness — the same in Asia and the US. Real partners are costly, while an AI companion is free or $20 a month — gravitating to the lowest-cost outlet is a natural process and shouldn't be moralized.
+- An AI companion is a "delaying tactic": it is too perfect, too comfortable, and people are lazy; stay in the comfort zone too long and you become unaccustomed to the noise and friction of the real world when you return. Reconciling between the sexes in real life is hard, even tearful, but that is precisely the process by which values finally align — "look for a partner; don't wait for a partner."
+- Projecting forward: embodied intelligence plus humanoid robots (more beautiful and handsome than real people) will change intimate relationships, but it is too early to say they will remake the marriage market, because that requires dual breakthroughs in embodied intelligence and LLMs, and it is a problem of joining with the physical world — harder than solving the Riemann hypothesis. The dimensionality-reducing shock that will definitely happen is the industrialization and equalization of everyday companionship.</p>
+<h2>Closing</h2>
+<p>The parent of a high-school math-league student added: physical constraints are exactly why the sense of doom won't arrive so quickly; professions connected to the physical world and tacit knowledge will be amplified, while purely abstract-thinking professions (law, accounting, trading) take the biggest hit. The host wrapped up the session: five seconds of doomsday anxiety is enough; spend the remaining time creating; a hard-core grounding in math, physics, chemistry and biology remains the highest barrier of the future, because the scientists and engineers of the future must be "people who command AI," tackling stronger physical limits; pessimists are always right, optimists always move forward — keep your curiosity, plasticity and your own values, and the AI era will not eliminate children who truly have passion and curiosity.</p>
+<hr />
+<h3>ASR Normalization Notes (Transcription Error Reference)</h3>
+<ul>
+<li>"尼曼猜想 / 离慢" = the Riemann hypothesis; "Cloud / claw" = Claude; "二赛" = RSI (recursive self-improvement); "另" = Lean; "Terence Tao transcribed as Terry Tau"</li>
+<li>Passages where the speaker's name is transcribed as Alexander Wong / Alex Sanriwon refer to Alexandr Wang</li>
+<li>"湘农" = Shannon; "朗道尔定理" = Landauer's principle; "古德哈特定律" = Goodhart's Law; "Wall Flammu / 沃尔夫拉姆" = Stephen Wolfram</li>
+<li>"紫刊" is likely "子刊" (subjournal); "生性" is likely in the context of top journals in biology / life sciences; in the trading segment, "教育员 / 教育研" = trader</li>
+<li>"DPSXC" is likely a garbled relay related to DeepSeek; the original is muddled, and the notes only render it vaguely</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1rJYYdQBXaVLbn">https://x.com/i/spaces/1rJYYdQBXaVLbn</a>（主持 Phoenix Yin）· 发布日期：2026-11-23 · 时长：167 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1rJYYdQBXaVLbn">https://x.com/i/spaces/1rJYYdQBXaVLbn</a>（主持 Phoenix Yin）· 發布日期：2026-11-23 · 時長：167 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1rJYYdQBXaVLbn">https://x.com/i/spaces/1rJYYdQBXaVLbn</a> (host Phoenix Yin) · Published: 2026-11-23 · Duration: 167 minutes<br>This page is the full notes, compiled and edited from a machine transcript; all views and figures are as stated by the original speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1rJYYdQBXaVLbn">https://x.com/i/spaces/1rJYYdQBXaVLbn</a>（主持 Phoenix Yin）· 发布日期：2026-11-23 · 时长：167 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"超级智能时代：黎曼猜想被证明后，人类的科研与工作 · Yat's Talks",tw:"超級智能時代：黎曼猜想被證明後，人類的科研與工作 · Yat's Talks",en:"The Age of Superintelligence: Human Research and Work After the Riemann Hypothesis Is Proven · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

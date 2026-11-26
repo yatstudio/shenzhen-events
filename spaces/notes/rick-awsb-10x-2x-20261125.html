@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>纪要：rick awsb《10x比2x容易，自由麦，非投建dyor》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/rick-awsb-10x-2x-20261125.mp3"></audio></p>
 <ul>
 <li><strong>来源</strong>：X Space https://x.com/i/spaces/1mdVeXPPpjdngy</li>
 <li><strong>时间</strong>：2026-11-25 22:46–约 00:50 CST，约 2 小时 04 分（录音 7,477.87 秒）</li>
@@ -118,9 +129,236 @@
 <li>Gary/Gail 老师（「格尔」「盖尔」）、Rick（「Rack」「瑞格」）、Timo 老师、Pypno 老师、Idle 老板</li>
 <li>「雾涌之一」疑为「毋庸置疑」；「求度困境」疑为「囚徒困境」；「印不能生财，商官能生财」一句口播原话存疑，按其上下文应为「已有知识库不能生财，生财的是灵感」之意</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>紀要：rick awsb《10x比2x容易，自由麥，非投建dyor》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/rick-awsb-10x-2x-20261125.mp3"></audio></p>
+<ul>
+<li><strong>來源</strong>：X Space https://x.com/i/spaces/1mdVeXPPpjdngy</li>
+<li><strong>時間</strong>：2026-11-25 22:46–約 00:50 CST，約 2 小時 04 分（錄音 7,477.87 秒）</li>
+<li><strong>主持</strong>：rick awsb @rickawsb；主要發言：Timo 老師、Gary 老師（格爾/蓋爾，口播）、Idle 老闆、Pypno 老師（Space 元數據 speakers 為 Gong987123、Timon_spirit）</li>
+<li><strong>形式</strong>：自由麥開放討論，無固定議程；前約 40 分鐘是閒聊與等嘉賓，核心內容集中在約 [00:42] 之後</li>
+<li><strong>逐字稿</strong>：transcript.txt（1,530 行），[00:02:27]–[02:04:23]；總長 2:04:38，末行距總長約 14 秒，chunk_002/003 為空段；<strong>本場 replay=false、無回放，缺口無法補全</strong></li>
+<li><strong>聲明</strong>：以下全部為發言者個人觀點與自述，未經核實；數字、人名、模型名以逐字稿口播為準，ASR 誤聽已在文末歸一</li>
+</ul>
+<h2>一句話</h2>
+<p>這是一場沒有議程的自由麥長談：前半段是 Idle 老闆帶來的「美股大跌是共和黨內財團有預謀做空」的預警帖與 Gary 老師的康波週期回應，後半段是 Gary 老師的 AI 用法全套分享（雙模型交叉驗證、Claude/GPT/Astra 分工、模型收斂與發散之分），再加 P(doom)、抄底倉位、SpaceX、機器人落地時間的雜談。</p>
+<h2>① 美股大跌是「有預謀的陰謀」？——Idle 老闆的預警帖</h2>
+<p>[00:42]–[00:52]，Idle 老闆借 Rick 的場分享自己的一篇帖子，核心論點如下（均為其個人分析，未經核實）：</p>
+<ul>
+<li>這次美股大跌、英偉達事件、黃仁勳回歸後繼續大跌，「實際上都是有預謀有策劃的一場大陰謀」，針對的不是某一個標的，而是整個美股 500 多個標的。</li>
+<li>時間線：10 月 1 日出現第一筆異常暴露風險敞口，500 多個標的被集中做空；正常情況下這種敞口的機構會被打爆（2025 年出現過一次，很快就被爆倉了），但這一次不僅沒被打，後續走勢還「為他抬轎子」；11 月 3 日美國中期選舉，11 月 4 日發生第二次，600 多個標的；11 月 11 日美國還出了相關安全事件，經媒體運作廣而告之，此後才有三大股指的大暴跌。</li>
+<li>黃仁勳的角色：他「並不在謀局者這個桌上」，只是一個「炮灰」、可以被獻祭的犧牲品，話語權為 0，「連 1% 都沒有」；整個局從幾個月前就開始布（黃仁勳跑步上飛機、臨時參加中國商業考察團就是信號）；短期讓黃仁勳回歸只是表象，「讓大家覺得說可以抄底了」，當天又跌了；「未來黃仁勳是一定會被犧牲的」。</li>
+<li>規模：謀局者如果在 1 月 3 日之前沒人制止，能套出的美元資金約 3,000 億美元——他拿羅斯柴爾德家族作比，稱其運營百年到現在也就 3,000 億美元；謀局者想用幾個月時間把美國從 2008 年金融危機之後 18 年的努力（包括 AI 發展、國外資本注入）「一把割乾淨」；「這一把如果如他們願真的割走 3,000 億，一個時代沒落了」。</li>
+<li>現狀：截至今天謀局者平倉量非常小、持倉量非常大，「這個事還沒有完」；最要命的是現在沒有政治力量介入阻止，「人微言輕，聲音不能上達天聽」，只能在民間口口相傳；很多人以為到底了，如果市場有人宣揚這種情緒，「很有可能大家會抄在半山腰」。</li>
+<li>證據：他在帖子裡分享了一個 Google 雲盤連結（約 1.x G 的檔案，含一個資料庫與兩個可雙擊的 CMD 檔案，一個打開圖表網頁、一個補數據做數據清洗），稱通過圖表可以知道「誰在局裡誰在桌下」，黃仁勳「自始至終就沒上桌」。</li>
+</ul>
+
+<h2>② Gary 老師的回應：結論同意，框架是康波週期</h2>
+<p>[00:53]–[01:03]，Gary 老師回應：Idle 的結論他都認可（現在不是底、抄底會抄在半山腰、後面還有下降空間、要清算的人和事還很多），但他用康波週期給出另一套解釋框架：</p>
+<ul>
+<li>節點判斷：現在是康波週期末尾；上一個康波是網際網路發展、養出數據、數據養出 AI；AI 基建分五層（最底層是能源，往上是晶片生產等基建、算力、次元，最上層是應用層）——他認為黃仁勳講的 AI 五層「不夠科學」，但那是站在黃仁勳的角度。</li>
+<li>歷史同位角：1910 年代的洛克菲勒之於石油，正如今天的黃仁勳之於 AI；1914 年標準石油解體標誌上一個 50 年康波結束、下一個開始；新週期開始時經濟非常萎靡（福特想把汽車產業鏈鋪起來，成本特別高、上游供應鏈不成熟、資本不流通），從看到汽車飛機會起來、到真正起來花了 15 年以上。</li>
+<li>黃仁勳的兩個選擇：①套現路線——像安德魯·卡內基，把鋼鐵公司整個賣給 JP Morgan，最後走向慈善（「吃著人血饅頭那麼多工廠死人」，賺了錢要背罵名）；②繼續撐的路線——像洛克菲勒搞壟斷，結果是反托拉斯法案拆解標準石油。Gary 判黃仁勳不會為套現背罵名（「這種人走到這一步，他要看的是自己在歷史名冊上排多少名」），但兩種選擇「非常 dilemma」，不好說他一定選哪一種。</li>
+<li>結論：長期看孕育的新東西更多，但這個階段必須回調、把上一個康波已形成的壟斷格局打破；短期看空多於看多，但這是中短期的、不是長期的；AI 加速後重調時間可能從 15 年除以三或除以四，但重調避免不了。</li>
+</ul>
+<h2>③ AI 解決萬億級產業問題，新週期會提前嗎？</h2>
+<p>[01:04]–[01:15]，有聽眾提問：11 月 19 日中國團隊用 10 萬卡解決了哈伯-博施合成氨問題（以前高溫高壓，現在基本可以常溫常壓），這是萬億級別的產業問題；接下來會不會見到更多這類問題被加速解決、新產業週期來得更快？</p>
+<ul>
+<li>Gary：這種機會會非常多。他的比喻是 skill（技能）相當於大模型空間裡的一條腦回路，「其實他已經早就在這，只不過這條腦回路你有沒有跑過」——用很低的成本解決一個行業巨大的突破，比比皆是，只不過大家還沒發現解決方法；北美西岸解決的是大模型進一步智能化，全世界不同國家和產業解決各自的產業升級；一兩個卡點過了之後會解決 10 萬億的產業，成為 turning point（他舉了具身智能機器人產業為例，但稱地緣政治緊張、「還不能多講」）。</li>
+<li>但這不是主線進入拐點：主線是量變到質變；黎曼猜想的突破就是逐漸進入拐點的一個特點，「我認為 2026 年 1 月就已經是拐點」；他還提到一個成立一個月的兩人團隊用模型解了 250 多道前沿難題（包括高溫超導、量子計算、生命科學等）。</li>
+<li>Harness 是什麼：他把 Harness 解釋為「靜態智能」——用窮盡搜尋遍歷的方法代替智能演算法；「Harness 還是很重要的」。</li>
+<li>物理追問：模型什麼時候能提出比密度泛函、原子間勢更抽象的新理論、極大加速粒子間相互作用的計算？Gary 的回答是「小霸王學習機跑不了 GTA6」的類比：半導體計算機模擬量子問題屬於線性層面，算力「量級不夠」；黎曼能解是因為暴力堆算力（他口播「1,700 萬億」，疑為算力規模）；真正模擬最小單元的量子環境必須用量子計算機，「你要把它用廢了也沒戲」。</li>
+</ul>
+
+<h2>④ Gary 老師的 AI 用法全套：雙模型交叉驗證</h2>
+<p>[01:15]–[01:26]，這是本場最成體系的一段，Gary 老師自述的用法：</p>
+<ul>
+<li>用量與配置：本月 Claude 用量約 4,000 美元，有兩個主帳號；3 個 GPT、3 個 Muse、10 台 EC2；常開穩定跑的有 3–4 個；Claude 寫程式、寫程式碼，是執行者；GPT 與 Astra 是軍師。</li>
+<li>核心方法——雙向驗證（他稱之為遺傳演算法）：一個想法先讓模型 A 實現，再讓模型 B 當顧問審查 A 說得對不對，交回 A 改，反覆交叉 3–4 次，人在中間調錯。他稱這個過程就是遺傳演算法的選擇、交叉、變異（兩個模型討論=基因交叉，人在中間的糾錯=變異）；單模型出錯概率約 10%，兩個模型同時出錯約 1%，再加上人在中間調，「最後出錯的概率降低到萬分之一左右」；他稱這套方法「完全 for free 了這次」，「非常非常值錢」。</li>
+<li>模型分工與評價：Claude 個人體驗最好但「最不經用」，疑難問題交給 Claude；編碼問題國產模型（GLM、MiniMax 等）還行；對小白最友好的是 GPT；每天開 Uber，只有 1–1.5 小時坐在電腦前，希望 Codex 在後台跑、盡可能少問問題，Claude 體驗最好但「實在燒不起」，其次是 Astra；Gemini 最新出的模型（口播「Nio」，存疑）不錯，但用得不夠多不敢說，之前拿 Gemini 做 fallback（其他額度燒完就燒 Gemini）；最難的問題留給 Claude。</li>
+<li>路由省錢：他自己寫了一個按任務自動分配模型的簡單工具（做文字處理、grading 這類任務自動路由到便宜模型，如 GF，「幾乎免費」，一天 2,000 篇論文跑完也就幾塊錢）；但他自嘲「當開始省錢的時候，我就越不在乎地去花，到最後帳單還是很貴」。</li>
+<li>三國比方：他用三國人物給模型定位——ChatGPT 是諸葛亮（量大）、Claude 是趙雲、Muse 是馬謖或法正（口播原話，ASR 誤聽較多，存疑）；「千萬不要問馬謖和法正大仗怎麼打，你肯定是要完蛋的」。</li>
+</ul>
+<h2>⑤ 模型能解題，但能提問題嗎？——收斂 vs 發散</h2>
+<p>[01:26]–[01:37]，Rick 追問：模型解答問題的能力已到諾獎級科學家的水平，那提出問題的能力到了嗎？</p>
+<ul>
+<li>Gary 的框架：AI 最大的特點是「為了把問題 close 掉」，所以 AI 是收斂模型（無論神經網路還是任何模型，最重要的是得到結果）；Claude 的收斂率比 Astra 更高，所以解決問題、寫程式碼更強；GPT/Astra 的發散能力比 Claude 強（ChatGPT 吃了最多數據，「不是以最快收斂為目的，是以數據最多為目的」），所以拿它們當軍師。</li>
+<li>人的作用：人的腦子「不是為了收斂」，有時會冥想、發散、飄到眉邊、出現突發靈感，這就是 inspiration（靈感）；人在用模型工作時最重要的是階段性地提出「你這個方向走得太聚焦了，不對」，在矽谷這叫 steer（方向盤）；「提出問題這件事情本身就是反演算法性的」——機器只能通過收斂的模式模擬發散、提出問題，「它不是一個真的 inspiration」。</li>
+<li>Muse/Grok/Dot：特點是讓你感覺它像助理，很人性化，但「消耗的智商非常（低）」，只能幫你總結一些東西；從解決、發散、提出問題的能力來講，「都比前兩者要差得很遠」；但通過客製化讓人感受到主動性，人性化做得不錯。</li>
+<li>Rick 的體會：他在 Uber 之外接課、幫企業做 AI 化；「人在環路（human in the loop）是讓業務 scale 或者業務自動化的最大阻礙」；解決問題的瓶頸已不在人，但提出問題仍然是瓶頸，尤其是在上下文不足、有突破性新增業務的時候；模型不是完全沒有提問能力——只要上下文給得足夠多，它在其他地方接觸過類似業務，就能提出一定問題；但在一個公司裡拿到足夠多的上下文，「全線的安全的遮納（審查）就一大堆」。</li>
+<li>Gary 的結論（直接答「不是」）：模型自主賺錢不可能，因為在數據空間裡比賽是「完全有效市場、充分競爭」；真正能賺錢的是某一個人提出的、模型目前發散不到的想法，再基於這個點往回收斂；「已有的知識庫是不能生財的」，生財的是 inspiration；人不在環路時能賺錢的時間「會迅速被填平」，「到最後賺錢的就只剩模型公司了」——因為更強的模型會用暴力的算力和能源把機會填平。</li>
+</ul>
+
+<h2>⑥ P(doom) 與「以一人敵一國」</h2>
+<p>[01:38]–[01:43]，Gary 問 Rick 的 P(doom)（定義：出現大規模人口減少 10% 以上，或人口被各種意外事件消滅）：</p>
+<ul>
+<li>Rick：3 年 50%；他認為 3 年之內進入「一個人完全無法控制、超智能的狀態」已經是「霧湧之一」（口播，疑為「毋庸置疑」誤聽）；還稱西安是「下一次核爆的終點」（口播原話，存疑）。</li>
+<li>Gary：10 年還不至於到那種程度，但會生活在很不舒適的狀態裡，有大量失業、大量知識淘汰；直接出現流血對抗的可能性現在比較低。</li>
+<li>Rick 真正擔心的不是超智能殺人，而是頭部模型公司已開始不開放模型、個人或小組織借助模型「以一人敵一國」：攻擊者找一個大組織的缺陷、發起攻擊，一萬次裡成功一次就是成功；防守者一萬次成功 9,999 次、失敗一次就是失敗，「從數學角度來說，這是一個不對等的博弈」；他引 CrowdStrike CEO 訪談裡的一句話「break or breach」——要麼被攻破，要麼加固系統的速度快到你自己都會 break；他稱昨天或今天 CIA 的網站被黑了（自述）；接下來所有大組織、尤其用老舊系統的組織都會面臨這種情況，「哪怕新系統也不能倖免」。</li>
+<li>Gary：這是求度困境（口播，疑為「囚徒困境」誤聽），panic 也沒有用；黎曼猜想看不懂只是開始，以後越來越多證明都看不懂，「但是從人的天性來說，看不懂但是有用，一樣會用」；以後世界上會充滿各種人看不懂的東西，「這裡面不出問題我覺得那還有鬼」。</li>
+</ul>
+<h2>⑦ 倉位：Gary 抄底、Rick 清倉</h2>
+<p>[01:45]–[01:53]，Gary 坦白「我部分的背叛了革命」：</p>
+<ul>
+<li>Gary：把大餅「清到 4」（口播，疑為清到四成），前兩天見了 5 之後抄了不少；從 12 跌到 5 這一段，跌到 8 再跌到 6 再跌到 5；跌到 6 就開始抄，跌到 5 最近又抄了不少；抄的主要是大餅和以太坊，沒有其他東西；8–10 那段反彈時出過一部分，「但是我從來沒有出光過」。</li>
+<li>Rick：兩個月前 8 萬的時候基本清了幾乎所有大餅、剩一點點，以太清理一半；擔心明年高利率不會停、美元流動性進一步收緊、AI 對量子的加速沒有被完全定價；相信 BTC 會完成抗量子的最後遷移，但遷移過程「很痛苦以及很混亂」。</li>
+<li>Gary 抄大餅的第一性原理：全球主流經濟體的真實產值與呈現出來的市值已經是一種慣性遊戲，傳統金融體系系統性失效，應該由新金融體系替代；但 DeFi/crypto 上個週期 scamming 太嚴重、大家對它信任不足，加上過去兩年監管反撲與川普政府的持倉太難看，導致這件事滯後；26 年沒形成，27 年也很難形成；但他「一直會相信新的金融體系會反撲」；還提到「昨天剛開始清算萬斯（口播『萬思』，疑為 JD Vance），很顯然要清算川普家族」。</li>
+<li>對沖量子風險：Rick 問要不要在量子升級/分叉前做對沖；Gary 稱「考慮也沒啥用」「考慮能買啥呢」；兩人還都提到過去半年到三個月開始不再把人民幣資產換成其他資產（Gary：「我也是」）。</li>
+</ul>
+
+<h2>⑧ SpaceX、太空數據中心與馮·諾依曼自動機</h2>
+<p>[01:54]–[02:00]，群友提問 SpaceX 以後會不會「老馬（馬斯克）一統江湖」：</p>
+<ul>
+<li>Gary：SpaceX 的理念和發展空間是全球最好的企業；但他今年做了職業生涯最重要的正確決定之一——把投的一家火箭公司退了，獲得較大回報（不便透露名字，涉及直接交易）；理由是「別人看了我恐懼，別人恐懼我貪婪」，SpaceX 所有預期已全部 price in，階段性肯定回調；基本面不差，但財務路徑不能馬上兌現，所有人對它的期望太高，基本面生產、產能、行業需求反饋跟不上這麼高的資本市值；類比 1915 年萊特兄弟的飛機與福特的汽車——再好的行業，1915 年賣房子支持福特「馬上你就死了」，價值實現可能在 20 年後；航太被 AI 加速的可能性比較低（其他行業可能被 AI 加速 10 倍，它可能只能加速 2 倍）；3–5 年全球 1,000 人上火星、5,000 人上月球「沒戲」；太空沒有那麼多軌道，全世界多發十倍衛星也不現實。</li>
+<li>太空數據中心：要算成本帳（為什麼不放在加州、俄克拉荷馬、德州等美國中部地區）；散熱等物理問題能不能解決是關鍵；AI 失控威脅到人在這個話題上因素較小。</li>
+<li>馮·諾依曼自動機：他最近在研究「元胞自動機」（口播「圓包自動機」，即馮·諾依曼自動機），寫了很多 Agent 的元胞自動機程式（不是機器人版）；自動機不借助任何外力、自己複製自己、自己編排程式、把工程做出來；只要一出現就是另外一回事，「我認為肯定是 10 年之內」，但一年半還是三年沒法判斷；Agent 的自動機他已經在做了，「並不是非常難」，但 Robotic（機器人）的自動機還很難；「AI 可以自己賺錢」比這更厲害的是自動機——只要在太空任何地方有物質滿足它，它就可以自我複製。</li>
+</ul>
+<h2>⑨ 機器人：2.5 年內，2 萬美元以下進家庭</h2>
+<p>[02:00]–[02:04]，收尾雜談：</p>
+<ul>
+<li>機器人落地時間：Gary 判兩年半、不到三年，2 萬美元以下（甚至 15,000 美元以下）、能進家庭或小企業靈活完成多任務的機器人落地（「我太冷門瞎說的啊」，即其個人猜測）。</li>
+<li>形態：他更偏向奇形怪狀（按任務場景適配的各種形態），而非人形——發展太快、恐怖谷效應太嚴重，「無論是人也接受不了，regulation 也接受不了」；他提到西門子王老師的方案：模型根據任務快速匹配不同的夾爪，預置多個夾爪「就跟萬用螺絲刀一樣」，什麼任務就換上對應的夾爪，成本便宜；第一波人形更多是進黑燈工廠替代物流鏈裡的崗位。</li>
+<li>機器人自我迭代：他稱「巨生物理的或者巨生機器人自我迭代馬上就要開始了」——機器人基於每天做的事，給它一點 allowance、讓它自己下單在網上買該買的東西，家裡配 3D 列印機與小型 CNC 機床，「它自己就可以把自己該順暢的事情全幹完了」；深圳現在在醞釀明年的一個大會，他也參與了，「現在在手搓幾期」——編程效率實在太高，FPGA 到 Verilog 也可以全自動化，加上深圳的生產能力強，「現在已經可以直接手搓了」；Rick 回應：等他們手搓完，他去賣給每天開 Uber 的用戶，「反正你都給我付了 40 塊錢的（Uber）費了」。</li>
+</ul>
+<h2>ASR 歸一（逐字稿誤聽較多的地方，按口播原意整理）</h2>
+<ul>
+<li>黃仁勳（逐字稿作「華人勳」「黃云」等）、英偉達（「英美達」）</li>
+<li>康波週期（「康布州期」「康波州期」）、黎曼猜想（「李曼」「林曼」）</li>
+<li>Claude（「Cloud」）、ChatGPT（「childgpt」「Chai GPT」「Chad GPD」）、GPT-5.2 Max（「fable 5.2」「非不 5.2 Max」）、Astra（口播模型名，存疑）、Gemini（「Nio」，存疑）、Muse（「Muze」）、Codex、Grok（「菜具器」，存疑）、GLM、MiniMax</li>
+<li>哈伯-博施合成氨（「哈伯博斯」）、密度泛函（「密度泛航」）、原子間勢（「原子兼軍」「原子監軍」）、Harness、P(doom)、CrowdStrike（「Clothstrike」）</li>
+<li>馮·諾依曼自動機（「圓包自動機」）、元胞自動機（「圓包自動機」同詞）、Uber（「Wubber」「烏紋」）、Mag 7（「Mac 7」）、JD Vance（「萬思」）</li>
+<li>Gary/Gail 老師（「格爾」「蓋爾」）、Rick（「Rack」「瑞格」）、Timo 老師、Pypno 老師、Idle 老闆</li>
+<li>「霧湧之一」疑為「毋庸置疑」；「求度困境」疑為「囚徒困境」；「印不能生財，商官能生財」一句口播原話存疑，按其上下文應為「已有知識庫不能生財，生財的是靈感」之意</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Notes: rick awsb, "10x Is Easier Than 2x — Open Mic, Not Investment Advice, DYOR"</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/rick-awsb-10x-2x-20261125.mp3"></audio></p>
+<ul>
+<li><strong>Source</strong>: X Space https://x.com/i/spaces/1mdVeXPPpjdngy</li>
+<li><strong>Time</strong>: 2026-11-25, 22:46 – approx. 00:50 CST, about 2 hours 04 minutes (recording 7,477.87 seconds)</li>
+<li><strong>Host</strong>: rick awsb @rickawsb; main speakers: Teacher Timo, Teacher Gary (spoken as "Ge'er/Gai'er"), Boss Idle, Teacher Pypno (the Space metadata lists speakers as Gong987123 and Timon_spirit)</li>
+<li><strong>Format</strong>: open-mic free discussion with no fixed agenda; the first ~40 minutes were small talk and waiting for guests, with the core content concentrated after about [00:42]</li>
+<li><strong>Transcript</strong>: transcript.txt (1,530 lines), [00:02:27]–[02:04:23]; total length 2:04:38, the last line about 14 seconds short of the full length, chunk_002/003 are empty segments; <strong>this session has replay=false — no replay exists, and the gaps cannot be filled</strong></li>
+<li><strong>Disclaimer</strong>: everything below is the speakers' personal views and self-reported accounts, unverified; figures, names and model names follow the spoken transcript, and ASR mishearings are normalized at the end</li>
+</ul>
+<h2>In one sentence</h2>
+<p>This was an agenda-free, open-mic long talk: the first half was Boss Idle's warning post arguing that "the US stock plunge is a premeditated short attack by a faction within the Republican Party," plus Teacher Gary's Kondratieff-wave response; the second half was Gary's full AI workflow (dual-model cross-validation, the Claude/GPT/Astra division of labor, convergence vs. divergence in models), plus side discussions on P(doom), bottom-fishing positions, SpaceX, and when robots will arrive.</p>
+<h2>① Was the US stock plunge a "premeditated conspiracy"? — Boss Idle's warning post</h2>
+<p>[00:42]–[00:52] Boss Idle used Rick's session to share a post of his own. His core claims (all his personal analysis, unverified):</p>
+<ul>
+<li>The US stock plunge, the Nvidia affair, and the continued drop after Jensen Huang's return are "actually all one big premeditated, orchestrated conspiracy," aimed not at any single name but at more than 500 US-listed names in total.</li>
+<li>Timeline: on October 1 the first abnormal risk exposure appeared, with 500+ names shorted in a concentrated way; normally an institution with that kind of exposure would get blown up (it happened once in 2025 and was liquidated quickly), but this time not only was it not hit — the subsequent price action "carried its sedan chair"; the US midterm elections were on November 3, a second wave hit on November 4 across 600+ names; on November 11 a related security incident occurred in the US and was publicized through media operations, and only after that did the three major indices plunge.</li>
+<li>Jensen Huang's role: he is "not at the plotters' table" — just "cannon fodder," a sacrifice that can be offered up, with zero say, "not even 1%"; the setup began months ago (Huang jogging to board a plane and joining a China business delegation at the last minute were signals); letting Huang return in the short term is only a facade, "to make everyone feel they can buy the dip," and the stock fell again that same day; "in the future, Huang will definitely be sacrificed."</li>
+<li>Scale: if no one stops the plotters before January 3, they could extract roughly US$300 billion — he compared this to the Rothschild family, saying a century of operation has brought them only about US$300 billion; the plotters want to use a few months to "harvest clean" America's 18 years of effort since the 2008 financial crisis (including AI development and foreign capital inflows); "if this cut really takes away $300 billion as they wish, an era will have fallen."</li>
+<li>Current state: as of today the plotters have closed very little and hold very large positions — "this is not over yet"; the most dangerous part is that no political force has stepped in to stop it, "our voices are too small to reach the top," so it can only spread by word of mouth among the public; many people think the bottom is in, and if someone in the market promotes that sentiment, "it is quite likely everyone will buy the dip halfway down the mountain."</li>
+<li>Evidence: in his post he shared a Google Drive link (a file of about 1.x GB containing a database and two double-clickable CMD files — one opens a chart webpage, the other backfills data and does data cleaning), claiming the charts show "who is in the game and who is under the table," and that Huang "was never at the table from start to finish."</li>
+</ul>
+
+<h2>② Teacher Gary's response: same conclusion, but the framework is the Kondratieff wave</h2>
+<p>[00:53]–[01:03] Teacher Gary responded: he agrees with all of Idle's conclusions (this is not the bottom, dip-buyers will buy halfway down, there is more room to fall, and many people and matters still need to be liquidated), but he offered a different explanatory framework based on Kondratieff waves:</p>
+<ul>
+<li>Where we are: at the end of a Kondratieff wave; the previous wave was the development of the internet, which produced data, and the data produced AI; AI infrastructure has five layers (energy at the bottom, then chip production and other infrastructure, compute, dimensions, and applications at the top) — he thinks Huang's five-layer account of AI is "not very scientific," but that is from Huang's vantage point.</li>
+<li>Historical parallel: Rockefeller to oil in the 1910s is what Huang is to AI today; the 1914 breakup of Standard Oil marked the end of one 50-year Kondratieff wave and the start of the next; at the start of a new cycle the economy is deeply sluggish (Ford wanted to build out the auto supply chain, but costs were extremely high, upstream supply chains immature, and capital did not circulate), and it took more than 15 years from seeing that cars and planes would take off to their actually taking off.</li>
+<li>Huang's two choices: ① the cash-out route — like Andrew Carnegie, selling his steel company wholesale to JP Morgan and ending in philanthropy ("eating blood-stained bread while so many factory workers died" — make the money and bear the infamy); ② the hold-on route — like Rockefeller building a monopoly, which ended with antitrust law breaking up Standard Oil. Gary judges that Huang would not bear infamy for a cash-out ("someone who has reached this point cares about where he ranks in the annals of history"), but both choices are "very much a dilemma," and it is hard to say which he will pick.</li>
+<li>Conclusion: in the long run, more new things are being incubated, but at this stage a pullback is necessary to break up the monopoly structure formed in the previous Kondratieff wave; bearish outweighs bullish in the short term, but that is a short-to-medium-term view, not a long-term one; with AI acceleration, the readjustment that took 15 years might be compressed to a third or a quarter of that, but the readjustment cannot be avoided.</li>
+</ul>
+<h2>③ If AI solves trillion-scale industrial problems, will the new cycle come sooner?</h2>
+<p>[01:04]–[01:15] A listener asked: on November 19 a Chinese team used 100,000 accelerators to solve the Haber-Bosch ammonia synthesis problem (previously high temperature and high pressure, now basically doable at ambient temperature and pressure) — a trillion-scale industrial problem; will we see more such problems solved at an accelerated pace, and will the new industrial cycle arrive faster?</p>
+<ul>
+<li>Gary: there will be very many such opportunities. His metaphor: a skill is like a neural circuit in the space of a large model — "it was already there all along; the only question is whether you have ever run that circuit" — using very low cost to achieve an enormous breakthrough in an industry is everywhere; people just haven't found the solutions yet; the west coast of North America is working on making large models more intelligent, while countries and industries around the world are solving their own industrial upgrades; once one or two bottlenecks are cleared, they will unlock industries worth 10 trillion, becoming a turning point (he cited the embodied-intelligence robotics industry as an example, but said geopolitics is tense and "I can't say much more").</li>
+<li>But that does not mean the main line has reached an inflection point: the main line is quantitative change turning into qualitative change; the Riemann hypothesis breakthrough is one sign of gradually approaching an inflection point — "I believe January 2026 was already the inflection point"; he also mentioned a two-person team, founded one month ago, that used models to solve more than 250 frontier problems (including high-temperature superconductivity, quantum computing, life sciences, and more).</li>
+<li>What is a harness? He explained Harness as "static intelligence" — using exhaustive search and traversal in place of intelligent algorithms; "Harness is still very important."</li>
+<li>A physics follow-up: when will models be able to propose new theories more abstract than density functional theory and interatomic potentials, greatly accelerating calculations of inter-particle interactions? Gary answered with the analogy that "a Subor learning machine can't run GTA6": simulating quantum problems on semiconductor computers is a linear-level exercise and the compute is "orders of magnitude short"; Riemann could be solved because of brute-force compute (he said "1,700 万亿" aloud, presumably referring to the scale of compute); truly simulating a quantum environment at the smallest unit requires a quantum computer — "you could wear it out trying and still get nowhere."</li>
+</ul>
+
+<h2>④ Teacher Gary's complete AI workflow: dual-model cross-validation</h2>
+<p>[01:15]–[01:26] This was the most systematic part of the session — Gary describing his own usage:</p>
+<ul>
+<li>Usage and setup: about US$4,000 of Claude usage this month, with two main accounts; 3 GPTs, 3 Claudes, 10 EC2 instances; 3–4 running stably all the time; Claude writes programs and code — it is the executor; GPT and Astra are the strategists.</li>
+<li>Core method — two-way validation (he calls it a genetic algorithm): have model A implement an idea first, then have model B act as an advisor and review whether A is right, send it back to A for revision, cross back and forth 3–4 times, with the human correcting errors in the middle. He says this process is exactly the selection, crossover, and mutation of a genetic algorithm (two models discussing = gene crossover; the human correcting in the middle = mutation); a single model errs about 10% of the time, two models erring simultaneously about 1%, and with a human adjusting in the middle, "the final error probability drops to around one in ten thousand"; he says this method "completely paid for itself this time, for free," and is "incredibly valuable."</li>
+<li>Division of labor and assessments: Claude has the best personal experience but is "the least durable" — hard problems go to Claude; domestic models (GLM, MiniMax, etc.) are decent for coding problems; GPT is the friendliest for beginners; he drives Uber every day and sits at a computer only 1–1.5 hours, so he wants Codex to run in the background and ask as few questions as possible; Claude has the best experience but "really burns too fast," with Astra next; Gemini's newest model (spoken as "Nio," uncertain) is good, but he hasn't used it enough to say, and previously used Gemini as a fallback (burn Gemini once other quotas are used up); the hardest problems are saved for Claude.</li>
+<li>Routing to save money: he wrote a simple tool that automatically assigns models by task (text processing, grading and similar tasks are automatically routed to cheap models, e.g. GF, "almost free" — running 2,000 papers a day costs only a few yuan); but he joked at his own expense: "once I start saving money, I spend even more carelessly, and in the end the bill is still expensive."</li>
+<li>A Three Kingdoms analogy: he positioned the models with Three Kingdoms figures — ChatGPT is Zhuge Liang (sheer volume), Claude is Zhao Yun, and Muse is Ma Su or Fa Zheng (his spoken words; many ASR mishearings, uncertain); "never ask Ma Su or Fa Zheng how to fight a big battle — you're definitely doomed."</li>
+</ul>
+<h2>⑤ Models can solve problems, but can they pose them? — Convergence vs. divergence</h2>
+<p>[01:26]–[01:37] Rick asked: models' problem-solving ability has reached the level of Nobel-level scientists — what about their ability to pose problems?</p>
+<ul>
+<li>Gary's framework: AI's greatest trait is that it exists "to close out a problem," so AI is a convergent model (whether neural networks or any other model, what matters most is getting a result); Claude's convergence rate is higher than Astra's, so it is stronger at solving problems and writing code; GPT/Astra have stronger divergent ability than Claude (ChatGPT has consumed the most data — "its aim is not the fastest convergence, but the most data"), so they serve as strategists.</li>
+<li>The human role: the human brain is "not made for convergence" — sometimes it meditates, diverges, drifts to the edge of the eyebrows, and sudden inspiration strikes; that is inspiration; the most important thing for a human working with models is to periodically say "this direction is too focused — it's wrong," which in Silicon Valley is called steer (the steering wheel); "posing a question is itself anti-algorithmic" — machines can only simulate divergence and question-posing through convergent patterns; "it is not real inspiration."</li>
+<li>Muse/Grok/Dot: their trait is making you feel they are like assistants — very human-like — but they "consume very (little) intelligence" and can only help you summarize things; in terms of solving, diverging, and posing questions, "they are far behind the first two"; but through customization they give a sense of proactiveness, and the human touch is done well.</li>
+<li>Rick's experience: besides Uber, he teaches classes and helps companies adopt AI; "the human in the loop is the biggest obstacle to scaling a business or automating it"; the bottleneck in solving problems is no longer the human, but posing problems still is — especially when context is insufficient and there is breakthrough new business; models are not entirely unable to ask questions — given enough context, and having encountered similar business elsewhere, they can pose some questions; but getting enough context inside a company runs into "a whole line of security reviews and redaction."</li>
+<li>Gary's conclusion (answering "no" directly): models cannot make money autonomously, because competing in data space is a "perfectly efficient market with full competition"; what actually makes money is an idea posed by a specific person that models cannot currently diverge to, then converging back from that point; "an existing knowledge base cannot generate wealth" — what generates wealth is inspiration; the time during which money can be made with no human in the loop "will be filled in quickly," and "in the end only the model companies will be left making money" — because stronger models will fill in the opportunities with brute-force compute and energy.</li>
+</ul>
+
+<h2>⑥ P(doom) and "one person against a nation"</h2>
+<p>[01:38]–[01:43] Gary asked Rick for his P(doom) (defined as: a large-scale population reduction of more than 10%, or population wiped out by various accidents):</p>
+<ul>
+<li>Rick: 50% over 3 years; he believes that within 3 years we will enter "a state where a single person is completely unable to control superintelligence," which is already "雾涌之一" (spoken; presumably a mishearing of "毋庸置疑," beyond doubt); he also said Xi'an is "the endpoint of the next nuclear blast" (his spoken words, uncertain).</li>
+<li>Gary: in 10 years it probably won't reach that point, but we will live in a very uncomfortable state, with mass unemployment and mass obsolescence of knowledge; the likelihood of direct bloody confrontation is relatively low right now.</li>
+<li>What Rick truly worries about is not superintelligence killing people, but that top model companies have begun not opening their models, while individuals or small organizations can use models to go "one person against a nation": an attacker finds a flaw in a large organization and attacks — succeeding once in ten thousand tries is success; a defender succeeding 9,999 times out of ten thousand and failing once is failure — "mathematically, this is an asymmetric game"; he quoted a line from an interview with the CrowdStrike CEO, "break or breach" — either you get breached, or you harden your systems so fast that you break yourself; he said the CIA's website was hacked yesterday or today (his own account); next, all large organizations, especially those on legacy systems, will face this, "and even new systems are not immune."</li>
+<li>Gary: this is a "求度困境" (spoken; presumably a mishearing of "囚徒困境," prisoner's dilemma) and panicking is useless; not being able to understand the Riemann proof is just the beginning — more and more proofs will be incomprehensible, "but by human nature, if something is useful even if we don't understand it, we'll still use it"; the world will be full of things people can't understand, and "I'd be surprised if nothing goes wrong in there."</li>
+</ul>
+<h2>⑦ Positions: Gary buys the dip, Rick clears out</h2>
+<p>[01:45]–[01:53] Gary confessed, "I have partially betrayed the revolution":</p>
+<ul>
+<li>Gary: he cut his Bitcoin ("大饼") "down to 4" (spoken; presumably down to 40%), and after seeing 5 a couple of days ago he bought quite a lot; on the way down from 12 to 5, it fell to 8, then 6, then 5; he started buying at 6, and bought quite a lot more recently at 5; he mainly bought Bitcoin and Ethereum, nothing else; he sold some during the 8–10 bounce, "but I have never sold out completely."</li>
+<li>Rick: two months ago, at 80k, he basically cleared almost all his Bitcoin, leaving a tiny bit, and cleared half his Ether; he worries high interest rates won't stop next year, dollar liquidity will tighten further, and AI's acceleration of quantum has not been fully priced in; he believes BTC will complete the final quantum-resistant migration, but the migration process will be "very painful and chaotic."</li>
+<li>Gary's first principle for buying Bitcoin: the real output of the world's major economies versus the market value they present has become an inertial game; the traditional financial system is failing systemically and should be replaced by a new financial system; but DeFi/crypto had too much scamming last cycle and people don't trust it enough, compounded by the regulatory backlash of the past two years and the Trump administration's unsightly holdings, so this has been delayed; it didn't form in '26 and will be hard to form in '27 either; but he "will always believe the new financial system will strike back"; he also mentioned "yesterday they just started liquidating Vance (spoken '万思,' presumably JD Vance) — clearly they're going to liquidate the Trump family."</li>
+<li>Hedging quantum risk: Rick asked whether to hedge before the quantum upgrade/fork; Gary said "thinking about it is useless" and "what could you even buy?"; both also mentioned that over the past six months to three months they have stopped converting renminbi assets into other assets (Gary: "me too").</li>
+</ul>
+
+<h2>⑧ SpaceX, orbital data centers, and von Neumann machines</h2>
+<p>[01:54]–[02:00] A listener asked whether SpaceX will in the future "rule the world" under Musk ("老马"):</p>
+<ul>
+<li>Gary: SpaceX's philosophy and room to grow make it the best company in the world; but this year he made one of the most important correct decisions of his career — he exited a rocket company he had invested in, for a substantial return (he could not reveal the name, as it involved direct trading); his reasoning was "when others look at me I fear; when others fear I am greedy" — all expectations for SpaceX are fully priced in and it will definitely pull back in phases; the fundamentals are not bad, but the financial path cannot be realized immediately, everyone's expectations are too high, and fundamental production, capacity, and industry demand feedback cannot keep up with such a high market capitalization; he drew an analogy to the Wright brothers' airplane and Ford's automobile in 1915 — however good the industry, selling your house in 1915 to back Ford means "you die right away," and value realization may be 20 years out; aerospace is less likely to be accelerated by AI (other industries might be accelerated 10x by AI; it may only manage 2x); 1,000 people to Mars and 5,000 to the Moon globally within 3–5 years is "not happening"; there aren't that many orbits in space, and launching ten times more satellites worldwide is unrealistic.</li>
+<li>Orbital data centers: you have to do the cost math (why not put them in California, Oklahoma, Texas and other central US regions); whether physical problems like heat dissipation can be solved is the key; the factor of AI going out of control and threatening humanity is smaller in this topic.</li>
+<li>Von Neumann machines: he has recently been studying "cellular automata" (spoken as "圆包自动机," i.e., von Neumann machines) and has written many Agent cellular-automaton programs (not the robot version); a machine that, without any external force, copies itself, programs itself, and builds the engineering; once it appears it is a whole different story — "I believe it will definitely be within 10 years," though he can't judge whether it's a year and a half or three years; he is already building Agent automata — "not very hard" — but Robotic automata are still very difficult; stronger than "AI making money by itself" is the automaton — as long as there is matter anywhere in space to sustain it, it can self-replicate.</li>
+</ul>
+<h2>⑨ Robots: under US$20,000, into homes within 2.5 years</h2>
+<p>[02:00]–[02:04] Closing side discussion:</p>
+<ul>
+<li>Robot landing time: Gary judges two and a half years, under three, for robots under US$20,000 (even under US$15,000) that can enter homes or small businesses and flexibly perform multiple tasks ("I'm just making an obscure guess," i.e., his personal speculation).</li>
+<li>Form factor: he favors odd shapes (various forms fitted to task scenarios) over humanoid — development is too fast and the uncanny valley effect too severe: "neither humans nor regulation can accept it"; he mentioned a Siemens teacher Wang's approach: the model quickly matches different grippers to tasks, with multiple pre-set grippers "like a universal screwdriver" — swap in the corresponding gripper for each task, cheap; the first wave of humanoids will mostly go into dark factories to replace jobs in the logistics chain.</li>
+<li>Robot self-iteration: he said "embodied-physical or embodied-robot self-iteration is about to begin" — based on what the robot does each day, give it a little allowance and let it order online what it needs to buy, with a 3D printer and a small CNC machine at home, and "it can smoothly get everything done by itself"; Shenzhen is now brewing a conference for next year that he is also involved in, "currently hand-crafting a few sessions" — programming efficiency is simply too high, FPGA to Verilog can also be fully automated, and with Shenzhen's production capacity, "you can already hand-craft directly now"; Rick replied: once they've finished hand-crafting, he'll go sell to the users who drive Uber every day — "after all, you've already paid me the 40-yuan (Uber) fare."</li>
+</ul>
+<h2>ASR normalization (places where the transcript has many mishearings, organized by the spoken meaning)</h2>
+<ul>
+<li>Jensen Huang (黄仁勋; in the transcript as "华人勋," "黄云," etc.), Nvidia (英伟达; as "英美达")</li>
+<li>Kondratieff wave (康波周期; as "康布州期," "康波州期"), Riemann hypothesis (黎曼猜想; as "李曼," "林曼")</li>
+<li>Claude (as "Cloud"), ChatGPT (as "childgpt," "Chai GPT," "Chad GPD"), GPT-5.2 Max (as "fable 5.2," "非不 5.2 Max"), Astra (spoken model name, uncertain), Gemini (as "Nio," uncertain), Muse (as "Muze"), Codex, Grok (as "菜具器," uncertain), GLM, MiniMax</li>
+<li>Haber-Bosch ammonia synthesis (哈伯-博施合成氨; as "哈伯博斯"), density functional theory (密度泛函; as "密度泛航"), interatomic potentials (原子间势; as "原子兼军," "原子监军"), Harness, P(doom), CrowdStrike (as "Clothstrike")</li>
+<li>Von Neumann machine (冯·诺依曼自动机; as "圆包自动机"), cellular automaton (元胞自动机; same spoken form "圆包自动机"), Uber (as "Wubber," "乌纹"), Mag 7 (as "Mac 7"), JD Vance (as "万思")</li>
+<li>Teacher Gary/Gail (as "格尔," "盖尔"), Rick (as "Rack," "瑞格"), Teacher Timo, Teacher Pypno, Boss Idle</li>
+<li>"雾涌之一" is presumably "毋庸置疑"; "求度困境" is presumably "囚徒困境"; the spoken line "印不能生财，商官能生财" is uncertain as spoken, and by context should mean "an existing knowledge base cannot generate wealth; what generates wealth is inspiration"</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1mdVeXPPpjdngy">https://x.com/i/spaces/1mdVeXPPpjdngy</a>（主持 @rickawsb）· 发布日期：2026-11-25 · 时长：125 分钟（本场无回放，录音尾部约 58 秒未能补抓）<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1mdVeXPPpjdngy">https://x.com/i/spaces/1mdVeXPPpjdngy</a>（主持 @rickawsb）· 發布日期：2026-11-25 · 時長：125 分鐘（本場無回放，錄音尾部約 58 秒未能補抓）<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1mdVeXPPpjdngy">https://x.com/i/spaces/1mdVeXPPpjdngy</a> (host @rickawsb) · Published: 2026-11-25 · Duration: 125 minutes (no replay for this session; roughly the last 58 seconds of the recording could not be recovered)<br>This page is the full text of notes compiled and edited by hand from a machine transcript; all views and figures are as stated by the original speakers and have not been independently verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1mdVeXPPpjdngy">https://x.com/i/spaces/1mdVeXPPpjdngy</a>（主持 @rickawsb）· 发布日期：2026-11-25 · 时长：125 分钟（本场无回放，录音尾部约 58 秒未能补抓）<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"纪要：rick awsb《10x比2x容易，自由麦，非投建dyor》 · Yat's Talks",tw:"紀要：rick awsb《10x比2x容易，自由麥，非投建dyor》 · Yat's Talks",en:"Notes: rick awsb, \"10x Is Easier Than 2x — Open Mic, Not Investment Advice, DYOR\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

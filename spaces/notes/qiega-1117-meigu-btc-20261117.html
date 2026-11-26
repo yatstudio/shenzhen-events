@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>《美股是否反弹？BTC 何时出方向？》会议纪要</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1117-meigu-btc-20261117.mp3"></audio></p>
 <ul>
 <li><strong>活动</strong>：X Space《美股是否反弹？BTC 何时出方向？》</li>
 <li><strong>主持</strong>：茄哥 @qg7777</li>
@@ -116,9 +127,224 @@
 </ol>
 <h2>ASR 还原表</h2>
 <p>盘钱=盘前；非诚万导体=费城半导体（存疑）；SMA新片=芯片（存疑）；Topic/Rostopic=Anthropic；6万6/6外6/666=66,000；闪烂/大闪亮=大浪（波浪）；思浪=四浪；饭谈=反弹；关机闭价=关机币价（挖矿关机价）；麦克萨罗瑞=Michael Saylor（微策略）；鲁卡斯=MQ-9 无人机（存疑）；金山梦=金正恩；波厂=波场（存疑）；潘简讯=盘前（存疑）；福气=服务器（存疑）；零点=烟柱（存疑）；乐天百货=乐天（存疑）</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>《美股是否反彈？BTC 何時出方向？》會議紀要</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1117-meigu-btc-20261117.mp3"></audio></p>
+<ul>
+<li><strong>活動</strong>：X Space《美股是否反彈？BTC 何時出方向？》</li>
+<li><strong>主持</strong>：茄哥 @qg7777</li>
+<li><strong>時間</strong>：2026-11-17 20:59–21:56 CST，約 56 分鐘（錄音時長 3,387.5 秒）</li>
+<li><strong>累計收聽</strong>：195 人</li>
+<li><strong>形式</strong>：基本是茄哥單人獨白，約 54 分鐘後他提前收尾、轉場去老唐（@0xDonaldGao）的節目；本場比平時（2–3 小時）短得多</li>
+<li><strong>逐字稿</strong>：862 行，28,018 字，時間戳 [00:00:20]–[00:56:19]</li>
+</ul>
+<blockquote>
+<p>說明：以下數字與判斷均為茄哥在直播中的即興發言與自述，未經獨立核實；轉寫為機器轉寫，口音與數字多處含糊，疑似轉寫錯誤見文末 ASR 還原表。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>茄哥今晚的判斷是「等」：比特幣沒有持續向上的動力，66,000 是今晚唯一值得看的點位，拉到就下來；真正的方向要等 11 月 18 日 Anthropic 定價之後，破 6 萬、去 55,000 的中線目標不變。</p>
+<h2>開場：網路先崩了</h2>
+<ul>
+<li>開播即斷線：茄哥的軟路由突然崩了、VPS 有問題，前面幾分鐘基本在等聽眾回來、檢查設備；他稱當天不少伺服器都崩了、網速沒了，「現在不愛去查」</li>
+<li>他稱香港有至少 45 條中轉、15 個 VPN 全被封了（轉寫數字，存疑）</li>
+</ul>
+<h2>今晚的盤：平靜，但反彈沒力</h2>
+<ul>
+<li>盤前費城半導體與晶片都在漲（轉寫存疑），「色澤看著問題不大」；但打反彈的力量很低</li>
+<li>美元對日圓先走低到 159 附近又拉起來，美元還是非常強，「不得不讓他去走強」</li>
+<li>今晚看似平靜，反彈力度可能不會特別強；關鍵在明天 11 月 18 日 Anthropic 定價，情緒可能有強烈波動</li>
+</ul>
+<h2>比特幣：66,000 是今晚的點，74,000 才是轉折點</h2>
+<ul>
+<li>日線低點在 64,000，66,000 這個位置「應該是能看到的」；但沒有持續向上的動力，走勢是 ABAB 的過程——早上跌下來、拉起來</li>
+<li>如果今天不往上走一下，明天更沒機會；Anthropic 上市「肯定要做空」</li>
+<li>財報前 BTC 大概不會獨立走方向；<strong>真正的轉折點在 74,000</strong>——要把這一段快速跌幅收回去，才代表真正開始快速上漲；到 66,000 根本沒什麼作用，「勾一下之後大概率還下去」，「6 萬 6 可能下去再往下 6 千點」、破 6 萬</li>
+<li>小時線：15、16、17 號每天都有一個拉盤（昨天 10 點、今天 7 點、前天 16 點），64,000 附近有支撐、測試了三次；但 MACD 一直沒放量、RSI 在中性，不具備暴跌的可能，暴漲也比較難</li>
+<li>他的推演：拉到 66,000–66,500 附近再下來，然後在 64,000–65,000 震盪、拉到 66,000、再在 66,000–65,000 震盪，盤到 18、19 號「突然之間一根針插下來」；再往上去看不到那個力量</li>
+<li>穩定幣在減少、機構在出貨，「很難上、很難上去」；不排除一點點掙扎著往上衝、上面盤整一段</li>
+</ul>
+<h2>操作口徑：今天不建議做多也不建議做空</h2>
+<ul>
+<li>這個位置選方向意義不大，波動也不大；到 66,000 之後再看</li>
+<li>如果是慢慢漲到 66,000，做空意義也不大，會在那磨很長時間；如果是急拉上去（比如開盤 10 點半急拉），做空就挺好</li>
+<li>隨時有可能暴跌：美股隨時可能暴跌，要準備好；但也不敢輕易追空——昨天他在 65,000 開空、跌了就平了，今天這個位置追空，開盤很容易拉起來</li>
+<li>收尾口徑：空單可以掛高點 66,000、66,700，看插針上去再下來；多單不建議開</li>
+</ul>
+<h2>中線目標不變：破 6 萬，去 55,000</h2>
+<ul>
+<li>下跌結構沒走完：從 87,000 下來的大浪沒走完，小的浪走完了、四浪反彈預計最高也就 66,600 多一點，然後下來把大浪走完；「大浪肯定要破一下 6 萬」，「堅持會破到 55,000」</li>
+<li>關機幣價（挖礦關機價）分幾個檔，最底部的 39,674 他不認為會跌到那麼深，但「5 開頭肯定是沒問題了」；他稱一直堅持 55K 的中線目標，老唐看得比他更極端</li>
+<li>市場情緒：很多人跟他一樣在觀望；加密市值在縮水、穩定幣在流出、美股懸而未決；二浪反彈要降低預期</li>
+<li>黑天鵝觸發點：可能因為某一家交易所爆雷、或另外一起安全事件，突然暴跌一下</li>
+</ul>
+<h2>美股與個股</h2>
+<ul>
+<li>週末停飛的恐怖、陰謀論很多，包括「伊朗要對美國本土打擊」、美國搞警報測試；他不相信美國會大規模戰爭、「沒有必要恐慌」，特朗普正常去亞洲開會；自殺式攻擊倒是有可能</li>
+<li>沃爾瑪：盤前漲一點又下來，日線是 A 浪—B 浪回調—C 浪沒走完；最後一下能不能上 135 高點，他覺得「十分有希望」，已走了四天陽線</li>
+<li>美股現在都在等新的 IPO 上市；流動性枯竭會有「大逃亡」的過程、整個洗牌</li>
+<li>盤前個股：大多跌 0.5% 附近，蘋果跌得少，特斯拉漲 0.4%，谷歌、微軟都跌，亞馬遜漲 0.4%；AI 股票漲幅回吐；「行情很無聊，沒有方向」</li>
+<li>美國 10 月零售數據：月率 0.2%、前值 0.8%，「明顯不好」、內循環有問題；數據公布後加息預期提高，美元指數上揚十多點到 103.77，刷新 2025 年 4 月以來新高</li>
+<li>美元極力走強，回到 2025 年初特朗普上台那個狀態——「也是比特幣跌得最狠的那段時間」</li>
+</ul>
+<h2>ETF 與資金面</h2>
+<ul>
+<li>11 月 17 日 ETF 錄得正流入 801 個比特幣、約 5,200 萬美元；以太坊還在流出 1,300 萬美元；機構在買，但他認為「意義不大」——800 多個 BTC 不到一億美元，「忽略」</li>
+<li>銀行正在把比特幣帶給客戶；MicroStrategy 報告持有貝萊德比特幣 ETF 股份 4,900 萬股（轉寫數字「4,900 8 萬股」，存疑）</li>
+</ul>
+<h2>黃金與地緣消息</h2>
+<ul>
+<li>黃金短時間 15 分鐘往下插針（轉寫數字 3,807→3,848 自相矛盾，存疑）；黃金一旦插針，美元又起來</li>
+<li>伊朗：霍爾木茲海峽最大島格什姆島上空升起煙柱（轉寫「零點」，存疑），伊朗防空系統在霍爾木茲海峽擊落一架美國 MQ-9 無人機（轉寫「魯卡斯」，存疑）</li>
+<li>特朗普稱金正恩要加入他與習近平的會晤（轉寫「金山夢」，存疑）</li>
+</ul>
+<h2>2026 年「最爛的一年」與 2027 年展望</h2>
+<ul>
+<li>他稱 2026 年是 2020–2026 六年來最爛的一年：戰爭、駭客攻擊、市場操縱、裁員破產；駭客剛剛攻擊 178 家大型公司（轉寫數字，存疑）；美聯儲本週向經濟注入高達 17.56 億美元（轉寫數字，存疑）；XRP 跌回 2024 年水準</li>
+<li>AI 助長了駭客與裁員、加速學歷貶值；大學生都用 AI，「那破豆包……起個名叫豆包的，起這個名我告訴你他就有問題」</li>
+<li>黃仁勳「欺騙出軌暴雷、董事會的彈劾」（節目內說法；已核實：黃仁勳 2026-11-12 已辭任，節目內「彈劾/出軌」為傳聞未核實）</li>
+<li>2026 年的節奏：夏天熊市見底、8 月拉起來，10–11 月又回調；夏天那次回調主因是特朗普打伊朗三個月無成效；也可以看作一浪下跌、二浪反彈、三浪強烈下跌、再四浪反彈再下跌</li>
+<li>2027 年：很多人問他明年怎麼樣；他的思路是 AI 被壓下來一點、美國搞基建——美國基建老舊，取暖靠電，暴風雪斷電修不了；樂天百貨又被攻擊、飛機停飛；富人區特別好、窮人地方幾十年沒變</li>
+<li>國內：騰訊裁員是個開始，各家都會跟著裁；波場裁員、孫宇晨被罵，他認為「孫宇晨說的沒錯」</li>
+</ul>
+<h2>交易所與 OKX 注銷</h2>
+<ul>
+<li>印度執法部門把一個加密橋誤認為殺豬盤，凍結了一位無辜中國投資者 300 萬美金，法院命令把資金交給「本不屬於的那個人」（轉寫，存疑）</li>
+<li>OKX 注銷問題：要罵客服、投訴才給注銷，不投訴不給注銷；他稱「本來就是你們該我……服務你就應該給我注銷」</li>
+<li>OKX 是徐明星帶頭的地方，「天天罵幣，這個時候市場這麼低迷，還內鬥……最後都給你們自己鬥垮了」；「挨打就得立正」、「有錯你就得認」</li>
+</ul>
+<h2>值得留意的幾條線</h2>
+<ol>
+<li><strong>66,000 是今晚唯一的戰術點位，74,000 才是方向轉折點</strong>——這是本場最具體的兩個數字</li>
+<li><strong>55,000 中線目標連續三晚不變</strong>（11.16 場、11.17 場口徑一致），老唐看得更極端</li>
+<li><strong>Anthropic 定價是明天的情緒開關</strong>：11 月 18 日定價、19 日開盤，全場都等著它</li>
+<li><strong>美元 103.77 是本場最硬的宏觀錨</strong>：刷新 2025 年 4 月以來新高，茄哥直接把它和 2025 年初比特幣最狠的下跌段掛鉤</li>
+<li>本場只有 195 人收聽、56 分鐘就收尾，是茄哥近期最短的一場——一半時間在等網路恢復，另一半是單人獨白</li>
+</ol>
+<h2>ASR 還原表</h2>
+<p>盤錢=盤前；非誠萬導體=費城半導體（存疑）；SMA新片=晶片（存疑）；Topic/Rostopic=Anthropic；6萬6/6外6/666=66,000；閃爛/大閃亮=大浪（波浪）；思浪=四浪；飯談=反彈；關機閉價=關機幣價（挖礦關機價）；麥克薩羅瑞=Michael Saylor（微策略）；魯卡斯=MQ-9 無人機（存疑）；金山夢=金正恩；波廠=波場（存疑）；潘簡訊=盤前（存疑）；福氣=伺服器（存疑）；零點=煙柱（存疑）；樂天百貨=樂天（存疑）</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: "Will US Stocks Bounce? When Will BTC Pick a Direction?"</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1117-meigu-btc-20261117.mp3"></audio></p>
+<ul>
+<li><strong>Event</strong>: X Space, "Will US Stocks Bounce? When Will BTC Pick a Direction?"</li>
+<li><strong>Host</strong>: Qiega @qg7777</li>
+<li><strong>Time</strong>: 2026-11-17 20:59–21:56 CST, about 56 minutes (recording length 3,387.5 seconds)</li>
+<li><strong>Total listeners</strong>: 195</li>
+<li><strong>Format</strong>: Essentially a solo monologue by Qiega; at around the 54-minute mark he wrapped up early and moved over to Lao Tang's (@0xDonaldGao) show; this session was much shorter than usual (2–3 hours)</li>
+<li><strong>Transcript</strong>: 862 lines, 28,018 characters, timestamps [00:00:20]–[00:56:19]</li>
+</ul>
+<blockquote>
+<p>Note: All figures and judgments below are Qiega's improvised remarks and personal accounts during the livestream, not independently verified; the transcript is machine-generated, with accent and numbers garbled in many places — suspected transcription errors are listed in the ASR restoration table at the end.</p>
+</blockquote>
+<h2>In One Sentence</h2>
+<p>Qiega's call tonight was "wait": Bitcoin has no sustained upward momentum, 66,000 is the only level worth watching tonight and it will come back down once it gets there; the real direction has to wait until after Anthropic's pricing on November 18, and the medium-term target of breaking 60,000 and heading to 55,000 is unchanged.</p>
+<h2>Opening: The Network Crashed First</h2>
+<ul>
+<li>The stream dropped right at the start: Qiega's soft router suddenly crashed and his VPS had problems, so the first few minutes were mostly spent waiting for listeners to come back and checking equipment; he said quite a few servers had gone down that day and speeds were gone — "I don't feel like looking into it now"</li>
+<li>He claimed Hong Kong had at least 45 relay routes and 15 VPNs all blocked (transcribed figures, doubtful)</li>
+</ul>
+<h2>Tonight's Market: Calm, but the Bounce Has No Strength</h2>
+<ul>
+<li>Pre-market, the Philadelphia Semiconductor Index and chip stocks were up (transcription doubtful); "the color looks fine," but the force behind the bounce was very low</li>
+<li>The dollar first dipped toward 159 against the yen and then bounced back; the dollar is still very strong — "you have no choice but to let it strengthen"</li>
+<li>Tonight looks calm, and the bounce may not be particularly strong; the key is tomorrow, November 18, when Anthropic prices its offering — sentiment could swing sharply</li>
+</ul>
+<h2>Bitcoin: 66,000 Is Tonight's Level, 74,000 Is the Real Turning Point</h2>
+<ul>
+<li>The daily low sits at 64,000, and 66,000 "should be reachable"; but there is no sustained upward momentum — the pattern is an ABAB process, dipping in the morning and bouncing back</li>
+<li>If it doesn't make a move up today, tomorrow there will be even less chance; Anthropic's listing is "definitely one to short"</li>
+<li>Before earnings, BTC probably won't move in its own direction; <strong>the real turning point is 74,000</strong> — only reclaiming this leg of the sharp decline would signal a genuine fast rally; reaching 66,000 means nothing, "it'll hook up there and most likely head back down," "66k could drop another 6,000 points," breaking 60,000</li>
+<li>Hourly chart: on the 15th, 16th and 17th there was a pump each day (yesterday at 10:00, today at 7:00, the day before at 16:00); there is support near 64,000, tested three times; but MACD never expanded on volume and RSI is neutral — a crash is unlikely, and a sharp rally is hard too</li>
+<li>His scenario: a push to around 66,000–66,500 and then back down, then ranging between 64,000–65,000, up to 66,000, then ranging between 66,000–65,000 again, grinding into the 18th and 19th when "suddenly a needle spikes down"; beyond that he can't see the strength to go higher</li>
+<li>Stablecoins are shrinking and institutions are offloading — "hard to go up, very hard to go up"; he doesn't rule out a bit of struggling upward and some consolidation at the top</li>
+</ul>
+<h2>Trading Stance: Neither Long nor Short Today</h2>
+<ul>
+<li>Picking a direction at this level is pointless, and volatility is low anyway; wait until after 66,000</li>
+<li>If it grinds slowly up to 66,000, shorting isn't very meaningful either — it will chop there for a long time; if it spikes up fast (e.g., a sharp push at the 10:30 open), shorting would be good</li>
+<li>A crash could come at any time: US stocks could crater at any moment, so be prepared; but he doesn't dare chase shorts either — yesterday he shorted at 65,000 and closed once it dropped; shorting at today's level, the open could easily squeeze upward</li>
+<li>Closing stance: short orders can be placed at the highs of 66,000 and 66,700, waiting for a wick up and then down; opening longs is not recommended</li>
+</ul>
+<h2>Medium-Term Target Unchanged: Break 60,000, Go to 55,000</h2>
+<ul>
+<li>The downtrend structure isn't finished: the big wave down from 87,000 isn't done; the smaller waves have completed, and the wave-4 bounce is expected to top out at just over 66,600 at most, after which price comes down to finish the big wave; "the big wave will definitely break 60,000," "I insist it will break to 55,000"</li>
+<li>The miner shutdown price has several tiers; for the very bottom tier at 39,674 he doesn't think it will fall that deep, but "a 5-handle is definitely in the cards"; he said he has consistently held the 55K medium-term target, and Lao Tang is even more extreme than him</li>
+<li>Market sentiment: many people are on the sidelines like him; crypto market cap is shrinking, stablecoins are flowing out, US stocks are unresolved; expectations for a wave-2 bounce should be lowered</li>
+<li>Black-swan trigger: possibly an exchange blowing up, or another security incident, causing a sudden sharp drop</li>
+</ul>
+<h2>US Stocks and Individual Names</h2>
+<ul>
+<li>There were many frightening rumors and conspiracy theories about the weekend flight groundings, including "Iran is going to strike the US mainland" and the US running alert tests; he doesn't believe the US will go into a large-scale war — "no need to panic"; Trump is going to Asia for meetings as normal; a suicide attack is possible, though</li>
+<li>Walmart: up a bit pre-market then back down; on the daily chart it's an A-wave, B-wave pullback, with the C-wave unfinished; whether the final push can reach the 135 high — he thinks "there's real hope," with four consecutive green days already</li>
+<li>US stocks are all waiting for new IPOs to list; once liquidity dries up there will be a "great escape" process and a complete reshuffle</li>
+<li>Pre-market names: most down around 0.5%, Apple down the least, Tesla up 0.4%, Google and Microsoft both down, Amazon up 0.4%; AI stocks gave back gains; "the market is boring, no direction"</li>
+<li>US October retail data: +0.2% month-on-month versus +0.8% previously — "clearly bad," with problems in the internal circulation; after the release, rate-hike expectations rose and the dollar index jumped more than ten points to 103.77, its highest since April 2025</li>
+<li>The dollar is pushing hard to strengthen, back to the state it was in when Trump took office in early 2025 — "which was also the period when Bitcoin fell the hardest"</li>
+</ul>
+<h2>ETFs and Fund Flows</h2>
+<ul>
+<li>On November 17, ETFs recorded net inflows of 801 Bitcoin, about $52 million; Ethereum was still seeing outflows of $13 million; institutions are buying, but he thinks "it doesn't mean much" — 800-odd BTC is under $100 million, "ignore it"</li>
+<li>Banks are bringing Bitcoin to their clients; MicroStrategy reported holding 49 million shares of BlackRock's Bitcoin ETF (transcribed figure "4,900 8万股," doubtful)</li>
+</ul>
+<h2>Gold and Geopolitical News</h2>
+<ul>
+<li>Gold wicked down within a 15-minute window (transcribed figures 3,807→3,848 are self-contradictory, doubtful); once gold wicks down, the dollar rises again</li>
+<li>Iran: a column of smoke rose over Qeshm Island, the largest island in the Strait of Hormuz (transcribed as "零点," doubtful); Iranian air defenses shot down a US MQ-9 drone over the Strait of Hormuz (transcribed as "鲁卡斯," doubtful)</li>
+<li>Trump said Kim Jong Un wants to join his meeting with Xi Jinping (transcribed as "金山梦," doubtful)</li>
+</ul>
+<h2>2026, "The Worst Year," and the 2027 Outlook</h2>
+<ul>
+<li>He called 2026 the worst of the six years from 2020 to 2026: war, hacker attacks, market manipulation, layoffs and bankruptcies; hackers had just attacked 178 large companies (transcribed figure, doubtful); the Federal Reserve injected up to $1.756 billion into the economy this week (transcribed figure, doubtful); XRP fell back to 2024 levels</li>
+<li>AI has fueled hacking and layoffs and accelerated credential devaluation; college students all use AI — "that lousy Doubao… naming it Doubao, I'm telling you, there's something wrong with whoever picked that name"</li>
+<li>Jensen Huang's "cheating and affair scandal blowing up, impeachment by the board" (as stated on the show; verified: Jensen Huang already resigned on 2026-11-12; the "impeachment/affair" claims on the show are unverified rumors)</li>
+<li>The rhythm of 2026: the bear market bottomed in summer, rallied in August, pulled back again in October–November; the main cause of that summer pullback was Trump's three-month campaign against Iran achieving nothing; it can also be read as wave 1 down, wave 2 bounce, wave 3 sharply down, then a wave-4 bounce and further decline</li>
+<li>2027: many people ask him about next year; his thinking is that AI gets suppressed a bit and the US turns to infrastructure — US infrastructure is old, heating depends on electricity, and snowstorm power outages can't be fixed; Lotte Department Store was attacked again and flights were grounded; wealthy areas are doing great while poor areas haven't changed in decades</li>
+<li>Domestically: Tencent's layoffs are just the start, and everyone will follow; TRON laid people off and Sun Yuchen got scolded, but he thinks "Sun Yuchen wasn't wrong"</li>
+</ul>
+<h2>Exchanges and the OKX Account Closure</h2>
+<ul>
+<li>Indian law enforcement mistook a crypto bridge for a pig-butchering scam and froze $3 million belonging to an innocent Chinese investor; the court ordered the funds handed to "the person they didn't belong to" (transcription, doubtful)</li>
+<li>The OKX account-closure issue: you have to berate customer service and file complaints before they'll close your account; no complaint, no closure; he said, "it was owed to me in the first place… if you provide the service, you should close the account for me"</li>
+<li>OKX is Jack Xu's (Xu Mingxing's) place — "cursing crypto every day, the market this depressed, and still infighting… in the end you'll destroy yourselves"; "if you take a beating, stand at attention," "if you're wrong, admit it"</li>
+</ul>
+<h2>Threads Worth Watching</h2>
+<ol>
+<li><strong>66,000 is tonight's only tactical level; 74,000 is the directional turning point</strong> — the two most concrete numbers of this session</li>
+<li><strong>The 55,000 medium-term target has held for three straight nights</strong> (consistent across the Nov 16 and Nov 17 sessions); Lao Tang is even more extreme</li>
+<li><strong>Anthropic's pricing is tomorrow's sentiment switch</strong>: pricing on November 18, trading opens November 19, and the whole room is waiting for it</li>
+<li><strong>The dollar at 103.77 is this session's hardest macro anchor</strong>: a new high since April 2025, which Qiega directly links to Bitcoin's harshest decline in early 2025</li>
+<li>This session had only 195 listeners and wrapped up in 56 minutes — Qiega's shortest in a while: half the time was spent waiting for the network to come back, the other half was a solo monologue</li>
+</ol>
+<h2>ASR Restoration Table</h2>
+<p>盘钱 = pre-market; 非诚万导体 = Philadelphia Semiconductor (doubtful); SMA新片 = chips (doubtful); Topic/Rostopic = Anthropic; 6万6/6外6/666 = 66,000; 闪烂/大闪亮 = big wave (Elliott wave); 思浪 = wave 4; 饭谈 = bounce; 关机闭价 = miner shutdown price; 麦克萨罗瑞 = Michael Saylor (MicroStrategy); 鲁卡斯 = MQ-9 drone (doubtful); 金山梦 = Kim Jong Un; 波厂 = TRON (doubtful); 潘简讯 = pre-market (doubtful); 福气 = server (doubtful); 零点 = smoke column (doubtful); 乐天百货 = Lotte (doubtful)</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1wxPPKbAqRPpNPw">https://x.com/i/spaces/1wxPPKbAqRPpNPw</a>（主持 @qg7777）· 发布日期：2026-11-17 · 时长：56 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1wxPPKbAqRPpNPw">https://x.com/i/spaces/1wxPPKbAqRPpNPw</a>（主持 @qg7777）· 發布日期：2026-11-17 · 時長：56 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1wxPPKbAqRPpNPw">https://x.com/i/spaces/1wxPPKbAqRPpNPw</a> (host @qg7777) · Published: 2026-11-17 · Duration: 56 minutes<br>This page is the full notes, compiled and edited from a machine transcript; all views and figures are as stated by the original speakers and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1wxPPKbAqRPpNPw">https://x.com/i/spaces/1wxPPKbAqRPpNPw</a>（主持 @qg7777）· 发布日期：2026-11-17 · 时长：56 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"《美股是否反弹？BTC 何时出方向？》会议纪要 · Yat's Talks",tw:"《美股是否反彈？BTC 何時出方向？》會議紀要 · Yat's Talks",en:"Meeting Notes: \"Will US Stocks Bounce? When Will BTC Pick a Direction?\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>立党：陈吉宁与上海 AI——一个不可能完成的 KPI</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/lidang-chenjining-shanghai-ai-20261125.mp3"></audio></p>
 <ul>
 <li>Space：https://x.com/i/spaces/1brBenOmXVmQdB</li>
 <li>主持：立党 @lidangzzz</li>
@@ -97,9 +108,186 @@
 </ul>
 <h2>声明</h2>
 <p>本纪要基于 4,685 行逐字稿整理。文中所有数字、判断与说法均为发言者（立党及连麦听众）在直播中的自述，未经独立核实；人物、公司与机构名称按口播归一，ASR 可能存在错听（如陈吉宁在逐字稿中多次被记作陈金凌、陈金宁等）。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>立黨：陳吉寧與上海 AI——一個不可能完成的 KPI</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/lidang-chenjining-shanghai-ai-20261125.mp3"></audio></p>
+<ul>
+<li>Space：https://x.com/i/spaces/1brBenOmXVmQdB</li>
+<li>主持：立黨 @lidangzzz</li>
+<li>時間：2026-11-25 21:51 CST，約 3 小時 57 分，6,036 人收聽</li>
+<li>逐字稿：4,685 行，覆蓋 00:02:32–03:56:31，基本完整</li>
+</ul>
+<h2>一句話</h2>
+<p>立黨花了近 1 小時獨白，講他對陳吉寧與上海 AI 的判斷：上海做不了大模型，中央給陳吉寧的 KPI 本來就不可能完成；後 3 小時是連麥答疑，從選專業、找工作、留學到創業方向，核心建議只有一個——年輕人去學技術、做 Agent，別碰自動駕駛和具身智能。</p>
+<h2>核心判斷：為什麼上海做不了 AI</h2>
+<p>（以下均為立黨在直播中的說法，未經核實）</p>
+<ol>
+<li><strong>上海 AI 掉隊了。</strong>陳吉寧在上海最大的問題是能力不行——上海的 AI 產業不只是做得不夠好，而是掉隊了。立黨說他昨天第一時間關注了相關新聞，魯舍長的直播很多人也聽了。</li>
+<li><strong>AI 這個產業不適合在上海做。</strong>它需要高密度的人才、資本和「政策以外的東西」，陳吉寧去上海，遠離了這些東西。</li>
+<li><strong>東半球所有 AI 機會都在北京。</strong>北京是東半球人才密度最高的地方：清華、北大、北航、北郵、人大、北理，全國 14 億人裡最聰明的一批透過競賽、高考集中到北京。江浙滬前 10% 的人才留在上海，但前 0.01% 基本都在北京，或者北京留不住的去了矽谷。</li>
+<li><strong>大模型只需要最頂尖的一兩千人。</strong>90 後到 00 後年齡段裡，執行力最強、學習最快的一千到兩千人就夠了，後面的人不需要。這個行業不是人越多越好。</li>
+<li><strong>融資成本北京最低。</strong>在北京融 10 個億「沒有什麼難度」，在上海比較難，在深圳、杭州「非常非常難」。國家的錢、華爾街的錢、歐洲的錢、中東的錢，在北京最好融。深圳是靠深創投等地方基金把上千億的盤子拉起來的。</li>
+<li><strong>北京搶人靠股權，上海靠政策，根本不是一個量級。</strong>頭部 AI 公司給應屆生開 200–300 萬的期權包，下一輪融資三個月後 close，包就變成 1000 萬——必須現在簽。地方政府的人才補貼一年 100 萬已經頂格，拿到北京「零頭都不到」。</li>
+<li><strong>上海的 MiniMax 和階躍星辰是二線。</strong>它們的能力與智譜、月之暗面等北京頭部公司斷檔式差距。原因很簡單：清華系最牛的人都在北京，上海只能搶到「跟著國資走、跟著政策走、差一個截兒」的那批。上海 AI Lab（湯曉鷗做的、陳吉寧後來又做了一個）孵化的企業、發的論文，「全是灌水，全是垃圾」。</li>
+<li><strong>贏家通吃。</strong>大模型一定是頭部三四家吃掉全部市場份額。使用者只用最好的模型，第二好的打折用一用，第三第四第五第六就不用了。北京三家（Kimi、智譜、DeepSeek）「不一定都能活下來，可能活三家或者活兩家」；北京死一家，上海一家都活不了。阿里有通義千問（雲上已有客戶）、騰訊有混元，上海那兩家怎麼推都推不出去——「你們自己都不用，你們也不花錢」。</li>
+<li><strong>錢批出來了，但不知道怎麼花，只能瞎花。</strong>政策和預算下來了，制定政策的人不知道怎麼花，於是瞎花，裡面可能有貪腐問題。二流基金投不進最好的公司，只能投上海的清華系二隊，或者投世界模型等其他賽道，投不出好公司。</li>
+<li><strong>上海的優勢在製造業、半導體、消費電子、生物醫藥。</strong>汽車需要幾千人、上千人的工程師團隊，上海、深圳有優勢；半導體 fabrication 上海有充分優勢。他稱中芯國際工作時長卡死、不用加班，年輕人一年 30–40 萬。北京最大的優勢就是最頂級的人才和最頂級的機會。</li>
+</ol>
+<h2>清華幫：1% 的人與 90% 的人</h2>
+<ul>
+<li>清華幫不是清華學子：清華裡 90% 以上的人是上班打工的，到不了那個層次；清華幫是清華裡 1% 甚至更少的人——在創投圈、體制內、央國企、國防軍工，沿著清華校園網絡做資源置換和交易。</li>
+<li>這批人「有融資的能力、有向上溝通的能力、有換取資源的能力，但是他們沒有做事的能力」：有抄的能力、抄近路的能力、沿著現有技術走捷徑走小道的能力，「不啃硬骨頭」。</li>
+<li>北大不一樣：北大數理化生畢業大多刷 GPA 出國，留在本地的多是人文社科、黨政機關；北大「不太能壟斷資源」，因為報社電視台誰都能幹，而清華那批人幹的是「要吃智商的」活：coding、解決問題、讀論文、發論文、跟全球 community 的技術前沿。</li>
+<li>他原話稱，上海幾個 AI Lab 和頭部大學做 LLM 的人加起來，「沒有黨哥一個腳後跟厲害」。</li>
+</ul>
+<h2>開場</h2>
+<p>開場約 35 分鐘主要是等連麥、調麥，中間插了一段 AI 做遊戲副業的討論：一位聽眾在小紅書做遊戲漲了 4 萬粉，立黨回他「先幹三個月、掙出第一個十萬塊錢再說靠譜不靠譜」，並稱唯一能掙錢的遊戲平台是 Roblox，但得長期和美國小孩一起玩、摸清他們的喜好。</p>
+<h2>連麥問答精選</h2>
+<h3>職業選擇：年輕時吃學技術的苦</h3>
+<ul>
+<li>一位聽眾手握兩個 offer：AI Agent 初創公司（30–35 萬）vs 投行併購（40–50 萬）。立黨建議選前者：「年輕時候吃點學技術的苦」，技術、engineering 是換平台有飯吃的本事；投行資源換平台就沒飯吃，「投行 30 歲就大批大批的人滾蛋」，「投行養老還是技術養老」。他舉例 Eric 30 多歲才讀完電腦博士、將近 40 歲才開始工作——吃苦不晚。</li>
+<li>一位做 Apache Spark 核心研發、搞過 FPGA 和 Intel Optane 的聽眾，問要不要跳去一家做 GPU 推理引擎的小公司：可以去，看創始人能不能把公司跑下來；三星不給代工沒關係，中芯國際可以做，DUV 光刻機不限購。</li>
+<li>西安一位傳統軟體銷售想轉行：建議跟著大國企出海。</li>
+<li>一位大廠員工在兩個創業公司 offer 之間猶豫：一家清華系 AI 量化（時序模型），一家具身智能測評（Robot Use benchmark，GitHub 3.5 萬 star）。立黨選第二家：第一家是「拿著清華的牌子融一筆錢、不知道怎麼花」的典型，時序模型「不可解釋」；第二家至少能看懂業務、學到東西，跳去小米、宇樹科技都容易。但他也提醒，具身智能場景比想像小得多。</li>
+<li>一位航空公司收益管理員工問新成立的國家數據局央企：立黨稱「就是一個大外包」，不是市場化的東西，「成立就不對」，「以後一定會出現負面案子」。</li>
+<li>一位家電軟體開發聽眾稱開發已 100% 用 AI coding，立黨認同一年半後可能被取代。一位聽眾以疫情期間一針疫苗沒打過為傲，立黨回他：不打不聰明，打疫苗是正確的選擇。</li>
+</ul>
+<h3>自動駕駛與具身智能：兩個「垃圾方向」</h3>
+<ul>
+<li>一位上海在讀、北京實習的電腦學生問自動駕駛 vs 具身智能：立黨稱兩個都是垃圾方向。自動駕駛做了十年沒落地，國務院報告都沒寫進去，鋪不開——技術上要高精地圖，政策上不推，還有維穩因素（他舉例天津出租司機把共享單車往海河裡扔）。中國汽車保有量已到頭，一輛車三四十萬是一個家庭一年的收入，換車需求有限。</li>
+<li>具身智能「為什麼是騙局是垃圾」，他稱在推特講過不下 100 個帖子、YouTube 講過不下 20 個影片：越是認知低、智商低、不學習的人越覺得它有意思。判斷標準是商業價值：如果真有價值，輪不到你去做，清華的人搶著去做；如果機器人真能替代人工，美國人工最貴的地方（麥當勞、建築、FedEx）早該先用上了。</li>
+<li>唯一的方向是 Agent：他 2023 年 4 月 6 日的置頂帖就提出了 Agent，比 SWE-agent、Claude Code、Codex 都早。「平庸的人努力找到一個穩妥的方向是有飯吃的」，不要總想抄底一個特別好的機會。</li>
+<li>量子計算也一樣：一位在北京做光量子計算的聽眾問行業前景，立黨稱「行業是騙局」——如果真有用，輪不到北京來做，一定是在矽谷做成功；專用量子計算（採樣類工作）「沒有用」。一級市場允許試錯，10 個裡跑出 1 個掙 100–200 倍就行，但個人不要有信仰，「有好機會就跳」。</li>
+</ul>
+<h3>留學與實習：UIUC 孩子的「身份套利」</h3>
+<ul>
+<li>一位家長問：在 UIUC 讀 CS 工程、大二的孩子，暑期實習屢屢卡在最後一輪——Google 終面後等 team match 一個多月沒消息，Databricks 技術面很好、behavior 面被一位印度裔面試官連拋七個問題。立黨稱這是運氣問題，也和孩子「不太會說話、不夠機靈」有關。</li>
+<li>他的建議是吃「身份套利」：去北京智譜、月之暗面實習，「本科的背景去那正式實習是很簡單的事情」；去清華交換一學期，高強度練中文；不要回亞馬遜的邊緣組浪費時間。「去最好的公司做邊緣的項目，還是去第二好的公司做最核心的項目，當然選擇後者。」</li>
+<li>他還建議孩子去清華蘇世民書院或經管讀碩士，「那個碩士其實是很好申請的」；至於美國身份的華裔孩子回國實習，他認為沒有特別大的問題，老師反而喜歡英語更好的美國孩子。</li>
+<li>一位朋友的孩子想去多倫多讀數據分析碩士然後移民：立黨稱「基本上會餓死」，「99% 以上」找不到工作，「加拿大任何專業現在都找不到工作」，「清華的學生大批大批在溫哥華還找不到工作呢」。</li>
+</ul>
+<h3>茶、K 型分化與「蠢是最大的惡」</h3>
+<ul>
+<li>一位做精品茶的上海聽眾：立黨稱茶行業「縮水 70% 以上」，最終會被標準化——Costco、山姆、盒馬把茶變成小品類，東方樹葉就是唯一選項；年輕人喝冷飲、不願沖泡，精品茶只能走情緒價值、表演形式，服務少數客戶。</li>
+<li>由此展開的社會討論：13.8 億人裡很多人進不了好產業；「K 型曲線」——往上走吃八倍數的錢，往下走就是這個德性；18 歲選專業就是選擇權，選工科（電子、機械、電腦）去上海一年掙二三十萬躺平到死，選旅遊管理、酒店管理、行政管理就是給自己挖坑。「蠢是最大的惡」，「社會沒有義務去拯救每一個選擇錯誤的人」。</li>
+<li>醫保與稅收：他稱中國醫保對窮人的保底很好，美國醫保的大頭在中產身上，台灣健保按收入比例交。</li>
+</ul>
+<h3>視障朋友的 YouTube 起號建議</h3>
+<ul>
+<li>一位視力只有 0.0 幾的聽眾，長期看電腦疲勞，在電商公司做藥品採購，想用 Claude Code 做電商自動化，也想進殘聯機構求穩定，還問再婚家庭要不要再生一個孩子。</li>
+<li>立黨建議他拍 YouTube：記錄視障群體怎麼生活——怎麼買菜、出行、坐飛機、做飯、包餃子、拉二胡、彈鋼琴；多機位、群像、溫暖正能量、英文配音加字幕，面向海外觀眾。榜樣是「Zaza in China」：30 多萬粉絲，每期二三十萬播放，高的七八十萬甚至上百萬，靠廣告掙了 100 多萬（立黨說法）。</li>
+<li>電商自動化：電商已經沒有新東西，只能一家一家跟老闆聊；平台排斥第三方介面，容易封號。殘聯機構：體制內看資源，財政緊。生孩子：夫妻雙方願意就生，沒有對錯。</li>
+</ul>
+<h3>硬體創業與 3D 動效</h3>
+<ul>
+<li>一位做 3D 在線動效、想做吉他效果器硬體創業的聽眾：立黨稱硬體不是好的創業賽道，Indiegogo 上的硬體眾籌越來越少；建議做 AI-native 硬體（Plaud 這類），或者做到儀器級專精（西門子那個級別）；普通人別做硬體，庫存風險高，「爆品」邏輯對硬體是災難。</li>
+</ul>
+<h2>聲明</h2>
+<p>本紀要基於 4,685 行逐字稿整理。文中所有數字、判斷與說法均為發言者（立黨及連麥聽眾）在直播中的自述，未經獨立核實；人物、公司與機構名稱按口播歸一，ASR 可能存在錯聽（如陳吉寧在逐字稿中多次被記作陳金凌、陳金寧等）。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Lidang: Chen Jining and Shanghai AI — An Impossible KPI</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/lidang-chenjining-shanghai-ai-20261125.mp3"></audio></p>
+<ul>
+<li>Space: https://x.com/i/spaces/1brBenOmXVmQdB</li>
+<li>Host: Lidang @lidangzzz</li>
+<li>Time: 2026-11-25 21:51 CST, about 3 hours 57 minutes, 6,036 listeners</li>
+<li>Transcript: 4,685 lines, covering 00:02:32–03:56:31, essentially complete</li>
+</ul>
+<h2>In one sentence</h2>
+<p>Lidang spent nearly an hour monologuing on his view of Chen Jining and Shanghai AI: Shanghai cannot build large models, and the KPI the central government handed Chen Jining was impossible to complete from the start. The remaining three hours were open-mic Q&amp;A — choosing a major, finding a job, studying abroad, startup directions — with one core piece of advice throughout: young people should learn technology and build Agents, and stay away from autonomous driving and embodied intelligence.</p>
+<h2>The core judgment: why Shanghai can't do AI</h2>
+<p>(Everything below is Lidang's own statements during the broadcast, unverified.)</p>
+<ol>
+<li><strong>Shanghai AI has fallen behind.</strong> Chen Jining's biggest problem in Shanghai is capability — Shanghai's AI industry isn't just underperforming, it has fallen behind. Lidang said he followed the related news the moment it broke yesterday, and that many people also listened to Lu Shezhang's livestream.</li>
+<li><strong>The AI industry is not suited to Shanghai.</strong> It requires a high density of talent, capital, and "things beyond policy"; by going to Shanghai, Chen Jining moved away from all of that.</li>
+<li><strong>Every AI opportunity in the Eastern Hemisphere is in Beijing.</strong> Beijing has the highest talent density in the Eastern Hemisphere: Tsinghua, Peking University, Beihang, BUPT, Renmin, Beili — the smartest slice of the country's 1.4 billion people concentrates in Beijing through competitions and the gaokao. The top 10% of talent in the Yangtze Delta stays in Shanghai, but the top 0.01% is basically all in Beijing — or, if Beijing couldn't keep them, in Silicon Valley.</li>
+<li><strong>Large models need only the top one or two thousand people.</strong> Among those born in the 90s and 00s, the one to two thousand with the strongest execution and fastest learning are enough; everyone after that is unnecessary. This industry does not get better with more people.</li>
+<li><strong>Fundraising costs are lowest in Beijing.</strong> Raising 1 billion yuan in Beijing is "not difficult at all"; in Shanghai it's harder; in Shenzhen and Hangzhou it's "extremely, extremely hard." State money, Wall Street money, European money, Middle Eastern money — all easiest to raise in Beijing. Shenzhen built its hundred-billion-scale pool on the back of local funds like Shenzhen Capital Group.</li>
+<li><strong>Beijing poaches with equity, Shanghai with policy — not even the same league.</strong> Top AI companies offer fresh graduates equity packages of 2–3 million yuan; the next funding round closes three months later and the package becomes 10 million — you have to sign now. Local government talent subsidies top out at 1 million yuan a year, which in Beijing is "not even the small change."</li>
+<li><strong>Shanghai's MiniMax and StepFun are second-tier.</strong> Their capability lags Beijing's top companies like Zhipu and Moonshot by a whole tier. The reason is simple: the best Tsinghua people are all in Beijing, and Shanghai can only grab the batch that "follows state capital, follows policy, and is one notch below." The companies incubated and papers published by Shanghai AI Lab (the one built by Tang Xiao'ou, and another one Chen Jining set up later) are, in his words, "all padding, all garbage."</li>
+<li><strong>Winner takes all.</strong> Large models will inevitably see the top three or four players take the entire market. Users only use the best model; the second-best gets used at a discount; the third, fourth, fifth, and sixth get nothing. Beijing's three (Kimi, Zhipu, DeepSeek) "may not all survive — maybe three live, maybe two"; if Beijing loses one, Shanghai loses them all. Alibaba has Tongyi Qianwen (with existing cloud customers), Tencent has Hunyuan — Shanghai's two can't be pushed out no matter what: "You don't even use them yourselves, and you don't spend money."</li>
+<li><strong>The money gets approved, but nobody knows how to spend it, so it gets spent blindly.</strong> The policies and budgets come down, the people who made the policies don't know how to spend the money, so they spend it blindly — and there may be corruption involved. Second-rate funds can't get into the best companies; they can only invest in Shanghai's Tsinghua-system second team, or in other tracks like world models, and they won't produce good companies.</li>
+<li><strong>Shanghai's strengths are manufacturing, semiconductors, consumer electronics, and biopharma.</strong> Cars need engineering teams of thousands, where Shanghai and Shenzhen have the advantage; in semiconductor fabrication Shanghai is fully competitive. He said SMIC caps working hours with no overtime, and young people there make 300,000–400,000 yuan a year. Beijing's greatest advantage is simply the very top talent and the very top opportunities.</li>
+</ol>
+<h2>The Tsinghua clique: the 1% versus the 90%</h2>
+<ul>
+<li>The "Tsinghua clique" is not Tsinghua students in general: over 90% of people at Tsinghua are ordinary employees who never reach that level. The clique is the 1% or less — people who, across venture capital, the state system, central and state-owned enterprises, and defense industry, use the Tsinghua campus network to swap resources and make deals.</li>
+<li>These people "have the ability to raise money, the ability to communicate upward, and the ability to trade resources — but they don't have the ability to actually get things done": they can copy, take shortcuts, and ride existing technology down side paths, but they "won't chew on the hard bones."</li>
+<li>Peking University is different: most of its math, physics, chemistry, and biology graduates grind their GPA and go abroad; those who stay local are mostly in humanities, social sciences, and party/government organs. PKU "can't really monopolize resources," because anyone can work at a newspaper or TV station, whereas the Tsinghua crowd does work that "requires brains": coding, solving problems, reading papers, publishing papers, and keeping up with the global community's technical frontier.</li>
+<li>In his words, all the people doing LLMs at Shanghai's several AI labs and top universities combined are "not as good as one of Dangge's heels."</li>
+</ul>
+<h2>Opening</h2>
+<p>The first roughly 35 minutes were mostly waiting for speakers to come on mic and adjusting microphones, with a side discussion about making games with AI as a side hustle: one listener had grown a Xiaohongshu account to 40,000 followers making games, and Lidang told him to "work three months first, earn your first 100,000 yuan, then talk about whether it's viable," adding that the only game platform where you can make money is Roblox — but you have to play with American kids over the long term and learn what they like.</p>
+<h2>Selected Q&amp;A from the open mic</h2>
+<h3>Career choices: eat the bitterness of learning tech while you're young</h3>
+<ul>
+<li>One listener held two offers: an AI Agent startup (300,000–350,000 yuan) versus investment banking M&amp;A (400,000–500,000 yuan). Lidang advised taking the former: "Eat some of the bitterness of learning technology while you're young." Technical skill and engineering are abilities that keep you fed when you switch platforms; IB connections are worthless once you change platforms — "in investment banking, people get pushed out in droves at 30," and "for a career that lasts, it's tech, not investment banking." He cited Eric, who only finished his computer science PhD in his thirties and started working near 40 — it's never too late to eat the bitterness.</li>
+<li>A listener doing Apache Spark kernel development, with experience in FPGA and Intel Optane, asked about jumping to a small company building GPU inference engines: go for it — the key is whether the founder can keep the company alive. Samsung refusing foundry work doesn't matter; SMIC can fab it, and DUV lithography machines aren't purchase-restricted.</li>
+<li>A traditional software salesperson in Xi'an wanted to change careers: Lidang advised following a large state-owned enterprise going overseas.</li>
+<li>A big-tech employee was torn between two startup offers: a Tsinghua-system AI quant firm (time-series models) and an embodied-intelligence evaluation company (Robot Use benchmark, 35,000 stars on GitHub). Lidang picked the second: the first is the classic case of "raising a round on the Tsinghua brand and not knowing how to spend it," and time-series models are "uninterpretable"; the second at least lets you understand a business and learn things, and makes it easy to jump to Xiaomi or Unitree. But he also cautioned that embodied-intelligence scenarios are far smaller than people imagine.</li>
+<li>An airline revenue-management employee asked about the newly established National Data Bureau central SOE: Lidang called it "just one big outsourcing shop," not a market-based thing — "it was wrong to set it up in the first place," and "there will definitely be negative cases later."</li>
+<li>A home-appliance software developer said his development work was already 100% AI coding; Lidang agreed he might be replaced in a year and a half. One listener boasted about never having taken a single vaccine shot during the pandemic; Lidang shot back: not getting vaccinated isn't smart — vaccination is the right choice.</li>
+</ul>
+<h3>Autonomous driving and embodied intelligence: two "garbage directions"</h3>
+<ul>
+<li>A computer science student studying in Shanghai and interning in Beijing asked about autonomous driving versus embodied intelligence: Lidang called both garbage directions. Autonomous driving has gone ten years without landing; it wasn't even written into the State Council report, and it can't roll out — technically it needs high-definition maps, policy doesn't push it, and there are stability-maintenance factors (he gave the example of Tianjin taxi drivers throwing shared bikes into the Hai River). China's car ownership has peaked; a car costing 300,000–400,000 yuan is a family's annual income, so replacement demand is limited.</li>
+<li>On why embodied intelligence "is a scam and garbage," he said he has posted about it no fewer than 100 times on Twitter and covered it in no fewer than 20 YouTube videos: the lower someone's cognition and intelligence, and the less they study, the more interesting they find it. The test is commercial value: if it were truly valuable, it wouldn't be your turn — Tsinghua people would be fighting to do it; and if robots could really replace human labor, the places with the most expensive labor in America (McDonald's, construction, FedEx) would have adopted them first.</li>
+<li>The only direction is Agents: his pinned post from April 6, 2023 already proposed Agents — earlier than SWE-agent, Claude Code, and Codex. "A mediocre person who works hard to find a steady direction will have food on the table"; don't always try to bottom-fish some especially great opportunity.</li>
+<li>Quantum computing is the same: a listener in Beijing working on photonic quantum computing asked about the industry's prospects, and Lidang called "the industry a scam" — if it were truly useful, it wouldn't be Beijing's turn; it would have succeeded in Silicon Valley first. Dedicated quantum computing (sampling-type work) is "useless." Primary markets are allowed to try and fail — if 1 in 10 runs out and returns 100–200x that's fine — but individuals shouldn't have faith in it; "jump when there's a good opportunity."</li>
+</ul>
+<h3>Studying abroad and internships: the UIUC kid's "identity arbitrage"</h3>
+<ul>
+<li>A parent asked: their child is a sophomore studying CS engineering at UIUC, and summer internship applications keep stalling in the final round — after Google's final interview, over a month waiting on team match with no news; at Databricks the technical interview went well but in the behavioral round an Indian interviewer fired seven questions in a row. Lidang said this is a luck problem, and also related to the kid "not being a smooth talker, not quick enough on his feet."</li>
+<li>His advice was to take the "identity arbitrage": intern at Zhipu or Moonshot in Beijing — "with an undergraduate background, getting a proper internship there is very easy"; do an exchange semester at Tsinghua and intensively practice Chinese; don't go back to a marginal team at Amazon and waste time. "Work on a marginal project at the best company, or the most core project at the second-best company? Of course you choose the latter."</li>
+<li>He also suggested the child apply for a master's at Tsinghua's Schwarzman College or its School of Economics and Management — "that master's is actually quite easy to get into." As for Chinese-American kids with US status interning back in China, he saw no particular problem; teachers actually prefer American kids with better English.</li>
+<li>A friend's child wanted to do a data analytics master's in Toronto and then immigrate: Lidang said he would "basically starve," with a "99%+" chance of not finding a job — "no major in Canada can find work right now," and "Tsinghua students are in Vancouver in droves and still can't find jobs."</li>
+</ul>
+<h3>Tea, K-shaped divergence, and "stupidity is the greatest evil"</h3>
+<ul>
+<li>A Shanghai listener in the premium tea business: Lidang said the tea industry has "shrunk by more than 70%" and will ultimately be standardized — Costco, Sam's Club, and Hema will turn tea into a small category, and Oriental Leaf (东方树叶) will be the only option; young people drink cold beverages and don't want to brew, so premium tea can only trade on emotional value and performance, serving a small number of clients.</li>
+<li>The social discussion that unfolded from there: of 1.38 billion people, many can't get into good industries; it's a "K-shaped curve" — going up, you eat eight-fold money; going down, this is what it looks like. Choosing a major at 18 is an option right: pick engineering (electronics, mechanical, computer science), go to Shanghai, earn 200,000–300,000 yuan a year and coast for life; pick tourism management, hotel management, or administrative management and you're digging your own pit. "Stupidity is the greatest evil"; "society has no obligation to save everyone who chose wrong."</li>
+<li>On medical insurance and taxes: he said China's medical insurance provides a good floor for the poor, the bulk of US healthcare spending falls on the middle class, and Taiwan's national health insurance is paid in proportion to income.</li>
+</ul>
+<h3>YouTube channel advice for a visually impaired friend</h3>
+<ul>
+<li>One listener has vision of only 0.0-something, suffers eye fatigue from long hours at a computer, works in drug procurement at an e-commerce company, wants to use Claude Code for e-commerce automation, also wants the stability of a Disabled Persons' Federation institution, and asked whether a remarried family should have another child.</li>
+<li>Lidang advised him to film YouTube videos: document how visually impaired people live — how they shop for groceries, travel, fly, cook, wrap dumplings, play the erhu, play piano; multi-camera, group portraits, warm and positive, with English voiceover and subtitles, aimed at overseas audiences. The model is "Zaza in China": over 300,000 subscribers, each episode getting 200,000–300,000 views, with highs of 700,000–800,000 or even over a million, earning more than 1 million yuan from ads (per Lidang).</li>
+<li>On e-commerce automation: there's nothing new left in e-commerce; you can only talk to bosses one company at a time; platforms reject third-party interfaces and accounts get banned easily. On Disabled Persons' Federation institutions: inside the system it depends on resources, and finances are tight. On having a child: if both spouses are willing, have one — there's no right or wrong.</li>
+</ul>
+<h3>Hardware startups and 3D motion design</h3>
+<ul>
+<li>A listener doing 3D online motion design who wanted to start a hardware business making guitar effects pedals: Lidang said hardware is not a good startup track, and hardware crowdfunding on Indiegogo keeps shrinking; he advised either making AI-native hardware (like Plaud) or reaching instrument-grade specialization (the Siemens level). Ordinary people shouldn't do hardware — inventory risk is high, and the "hit product" logic is a disaster for hardware.</li>
+</ul>
+<h2>Disclaimer</h2>
+<p>These notes were compiled from the 4,685-line transcript. All figures, judgments, and statements are the speakers' own (Lidang and the listeners who joined the mic) as stated during the broadcast and have not been independently verified; names of people, companies, and institutions were normalized from the spoken audio, and the ASR may contain mishearings (for example, Chen Jining's name was transcribed in the transcript multiple times as Chen Jinling, Chen Jinning, and similar variants).</p>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1brBenOmXVmQdB">https://x.com/i/spaces/1brBenOmXVmQdB</a>（主持 @lidangzzz）· 发布日期：2026-11-25 · 时长：237 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1brBenOmXVmQdB">https://x.com/i/spaces/1brBenOmXVmQdB</a>（主持 @lidangzzz）· 發布日期：2026-11-25 · 時長：237 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1brBenOmXVmQdB">https://x.com/i/spaces/1brBenOmXVmQdB</a> (host @lidangzzz) · Published: 2026-11-25 · Duration: 237 minutes<br>This page contains the full notes, manually edited from a machine transcript; the views and figures are as stated by the original speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1brBenOmXVmQdB">https://x.com/i/spaces/1brBenOmXVmQdB</a>（主持 @lidangzzz）· 发布日期：2026-11-25 · 时长：237 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"立党：陈吉宁与上海 AI——一个不可能完成的 KPI · Yat's Talks",tw:"立黨：陳吉寧與上海 AI——一個不可能完成的 KPI · Yat's Talks",en:"Lidang: Chen Jining and Shanghai AI — An Impossible KPI · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

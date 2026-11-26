@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>会议纪要：《11.16 美股行情 比特币走势》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1116-meigu-btc-20261116.mp3"></audio></p>
 <ul>
 <li><strong>主持</strong>：茄哥 @qg7777</li>
 <li><strong>时间</strong>：2026-11-16 21:05 – 23:29 CST，2 小时 24 分 10 秒，707 位直播听众</li>
@@ -98,9 +109,188 @@
 <li>ASR 名词还原：切哥/邪哥/杰哥/铁格 = 茄哥 @qg7777；红毛/红魔/摩哥/胡摩 = 红毛；老汤/唐纳德 = 老唐；梁一伟 = 梁一伟；盘钱 = 盘前；阴谍/阴地 = 阴跌；卧室/凯文物室 = 美联储（转写）；玩马 = 沃尔玛；盗雄市 = 道琼斯；新维达/英伟拿 = 英伟达；Ross topic = Anthropic（转写，疑似）；Glass = Glassnode；Cloud = Claude；搜口 = SOXX；USU = 老唐直播主题（场内说法）；UVX = UVXY。</li>
 <li>核实注：黄仁勋已于 2026-11-12 辞任英伟达总裁/CEO/董事（2026-11-13 已核实），「董事会罢免」「出轨」等为节目内说法，未经核实。</li>
 </ul>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>會議紀要：《11.16 美股行情 比特幣走勢》</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1116-meigu-btc-20261116.mp3"></audio></p>
+<ul>
+<li><strong>主持</strong>：茄哥 @qg7777</li>
+<li><strong>時間</strong>：2026-11-16 21:05 – 23:29 CST，2 小時 24 分 10 秒，707 位直播聽眾</li>
+<li><strong>連結</strong>：https://x.com/i/spaces/1onqRzEzVJoKgm</li>
+<li><strong>說明</strong>：茄哥的常規晚間行情場，全程盯盤實況解說。文中判斷與數字均為嘉賓現場說法，未經核實，不構成投資建議。</li>
+</ul>
+<h2>一句話</h2>
+<p>茄哥全場極度看空：比特幣 4 小時線陰跌無量，今晚震盪向下、今晚區間約 63,000–65,000；57,000 必破，55,000 以下才開始建倉，55,500 可能在 11 月 18–19 號附近出現；春節前回 9 萬概率不到 1%、回 8 萬不到 5%。他自己在 65,176 開空、64,320 平倉，賺了 800 多點就跑，口頭禪是「見好就收，不要跟行情抗衡」。</p>
+<h2>一、比特幣：還得跌，57,000 必破</h2>
+<ul>
+<li><strong>當日盤面</strong>：高點 65,309，低點 63,905，日內波幅約 1,400 點；4 小時線陰跌、無量，現貨 24 小時成交額 292 億（縮量）；63,900 是多次測試的支撐位。</li>
+<li><strong>上方缺口</strong>：66,000 有個小缺口（4 小時線應該補一下），66,900 與 69,000 上方還有大缺口，短期補不上。</li>
+<li><strong>今晚判斷（茄哥）</strong>：大概率震盪向下，不會馬上暴跌；63,500 拉起來可能再拉到 66,000 再跌；今晚區間約 63,000–65,000；空頭也不堅決，很多空頭在止盈。收盤大概率收陰線，日線波幅約 2% 多。</li>
+<li><strong>中線點位（茄哥與紅毛共識）</strong>：</li>
+<li>57,000 必破——「到了 60,000，57,000 必破」；60,000 是下行通道底，破了就是 50,000。</li>
+<li>55,000 能撐住就不錯，55,000 以下開始建倉；55,500 這個位置可能在 11 月 18–19 號附近出現，慢的話 20 號。</li>
+<li>49,000 概率偏小，取決於怎麼到 57,000：如果直接到 57,000 就反彈，到不了 49,000；如果每天跌一點慢慢磨，那就不好說。</li>
+<li>另一種走法（老唐提出、茄哥部分認同）：先走 B 浪反彈到 68,000–69,800（補 66,600 與 69,000 的缺口），再走 C 浪砸到 55,000 甚至 53,000。</li>
+<li><strong>茄哥實盤</strong>：65,176 開空比特幣，等 66,600 插破再加倉（認為今天插不破）；後在 64,320 平倉，賺 800 多點、扣手續費剩五六百點，「不用追求 1,000 點，見好就收」。</li>
+<li><strong>為什麼看空</strong>：現貨不動、全是槓桿在動；多頭已被殺成這樣，「乾脆直接殺透就得了，不殺透現貨進不來」——60,000 砸破現貨進來一波，58,000 砸破又進來一波；機構還沒開始砸，等機構再砸一下。</li>
+<li><strong>長期展望（茄哥）</strong>：春節前回 9 萬概率不超過 1%，春節前修復回 8 萬概率不超過 5%；明年全年見到 9–10 萬的概率在 50%–60% 以上；傾向 2027 年 3–5 月見底、第三季拉起來。</li>
+<li><strong>其他幣</strong>：狗狗幣 0.054 附近，0.052 不能接（不是低點），0.05 可以少接一點、但現在不能接；狗狗幣已經跌不動了（很多幣都跌回三年前價格），除非馬斯克發推說全賣了才會暴跌。</li>
+</ul>
+<h2>二、美股開盤：低開低走，血流成河</h2>
+<ul>
+<li><strong>盤前</strong>：納斯達克 100 跌 1.2%，標普 500 跌 0.56%，半導體全跌（AMD、台積電、博通、英特爾），輝達盤前跌；只有道瓊相對強；黃金、比特幣都在跌；美元指數走強至 103.46–103.56；美元/日圓 159.65；日本 GDP 月比 -0.1%。</li>
+<li><strong>22:30 開盤後</strong>：低開低走，「今天又血流成河了」；QQQ 跌到 667 附近（0.618 回撤位在 669 附近）；特斯拉跌 1.19%，沃爾瑪、蘋果、微軟、網飛、麥當勞全跌；SanDisk 是其中最弱的；SOXX（費城半導體）60 不能買、等 40，50 也不能買。</li>
+<li><strong>艾略特波浪（茄哥）</strong>：A 浪到底、B 浪反彈 0.786（給人「牛市還在」的錯覺）、C 浪再跌；他同時承認波浪理論是「千人千浪」，自己基本不用。</li>
+<li><strong>輝達</strong>：盤前跌 8%（場內說法是董事會罷免黃仁勳，見核實注）；今晚盤後出財報，市場普遍看空，可能是「利空出盡」，明天 17 號可能大反彈；盤中在川普發表言論後跌幅收窄到 -0.42% 反彈；另有「輝達 CFO 相關女士是否中國間諜」的傳聞（川普言論，未核實）。</li>
+<li><strong>王老師</strong>：茄哥稱王老師團隊在美股上「大概率非常準、尤其在美股上，勝率九成」，但加密貨幣不行（買了川普幣、判斷參議院丟不了，誤差大）。</li>
+</ul>
+<h2>三、黃金：紅毛今早 10 手空單賺 10 萬美金</h2>
+<ul>
+<li>紅毛（胡摩）自述：今早黃金跳空高開，他開 10 手空單，賺了 10 萬美金就走，「賺幾個點就跑」。</li>
+<li>黃金今天暴跌 30 個點後拉回 3,800 以上；紅毛判斷黃金近期看空，「有好的點位放心空進去」，止損 1.5 個點；他 3,875 空進去也賺了幾個點就跑。</li>
+<li>茄哥補充：黃金不可能一下跌到 3,300–3,400，「黃金流動性是全球交易的東西」，不可能一下砸下去。</li>
+</ul>
+<h2>四、資金面：ETF 流出、微策略與套保</h2>
+<ul>
+<li><strong>ETF（茄哥說法）</strong>：昨天比特幣 ETF 流出 1.8 億美元，以太坊淨流入 2.23 億美元；本週比特幣 ETF 流出 10 億美元。</li>
+<li><strong>微策略</strong>：曬持倉穩定軍心；茄哥稱其流動資金基本耗盡（都抵押進了美債）；在這個位置加倉；其股票面臨被剔出 MSCI 指數的風險（其說法）。</li>
+<li><strong>套保</strong>：茄哥社群從 10 月底（10 月 22 日、比特幣 84,000 多時）就開始現貨避險，一直沒停，損失不大；虧錢的是跟單那幫人。</li>
+<li><strong>跟單 KOL 大罵</strong>：跟單是利益鏈——一個大 KOL 帶一幫小 KOL、再加一幫拉人的，「本質是吃客損，和交易所返佣一個道理，沒有真誠全是套路」；有人賣房 50 萬梭進去沒了，又抵押公寓 200 多萬進去又全沒了；去年 10 月 11 日黑天鵝不長記性，今年 11 月 10 日又來。</li>
+<li><strong>牛市定義之爭</strong>：茄哥稱「交易跑不贏利率就是熊市」——2023 年是熊市，2024–2025 年才是真牛市（一年漲 100% 多）；現在全年跌 26%，「這怎麼能叫牛市」。</li>
+</ul>
+<h2>五、Anthropic IPO：18 號定價、19 號開盤</h2>
+<ul>
+<li>場內稱「Ross topic」（轉寫，疑為 Anthropic）：11 月 18 號定價、19 號開盤，定價區間 70–78 美元。</li>
+<li>估值從最高 2.75 兆美元（約 3,000 美元/股）縮水到 1.09–1.4 兆美元（約 1,300 美元/股）；上市後保留 50.1% 投票權的無經濟利益 B 類股，保證創始人對公司決策的絕對控制權。</li>
+<li>茄哥不參與打新，認為這輪市場不好，「上市不會馬上砸盤，先拉一下這幫韭菜、追到 100 多再砸下來」；資金都去打新 IPO 了。</li>
+<li>以上均為場內說法，未經核實。</li>
+</ul>
+<h2>六、美聯儲與宏觀</h2>
+<ul>
+<li>12 月降息 25 個基點概率 93%、50 個基點 6.3%；12 月 9 日 FOMC 決議；今晚凌晨 2 點 Williams（舊金山聯儲）有個講話，是生產力與就業研討會開幕致辭，「沒什麼可講的」。</li>
+<li>本週重要數據：週四 FOMC 會議紀要，週五消費信心指數與通膨預期；其餘「沒什麼特別重要的」。</li>
+<li>印尼盾對美元跌到歷史最低點；布蘭特原油、燃油都在跌；全世界都在跌，「錢去哪了呢」。</li>
+</ul>
+<h2>七、其他話題</h2>
+<ul>
+<li><strong>錢包被盜</strong>：群裡有人丟了 1 萬 U（點連結中木馬）；公共充電器別用（可能被植入木馬）；手機別放交易所/錢包，「工作機就是工作機」；蘋果老系統也有漏洞；轉帳要多重驗證，不能只掃臉（後台可能偷拍）。</li>
+<li><strong>A 省虧 4 萬 U</strong>：50 倍槓桿、均價 68,105 做多比特幣被套；茄哥稱早就喊過不讓做多。</li>
+<li><strong>幣安新 Agent ID</strong>：給 AI 錢包起名，未來可能有空投，但要有交易量才有空投；Grok 交易機器人——訓練不好會虧，止損設小、換標的，遇到黑天鵝就死定了、得砍掉重練。</li>
+<li><strong>閒魚搞錢論</strong>：實業難做，「研究閒魚就夠了」——看什麼好賣、找進貨渠道、不用進貨；虛擬商品、Claude 帳號（紅毛有貨）；AI 失業潮：AI 不是造成失業潮，是讓年輕人找不到工作（沒技能沒經驗）。</li>
+<li><strong>台灣發錢</strong>：每月發 1 萬台幣給年輕人（約 2,000 人民幣）。</li>
+<li><strong>近期密集壞事（茄哥列舉）</strong>：幣安被盜、期中選舉、黃仁勳出軌/辭職、CPI、911 以後第一次全美停擺——「這兩天我覺得就是這些事全串在一起了，一直就沒休息好」。</li>
+<li><strong>RWA</strong>：老唐最近在忙 RWA 代幣（把中小市值股票搞過來做 RWA 代幣），正在寫文件。</li>
+<li><strong>明日預告</strong>：老唐明天晚上 10 點在 UXUY（平台名，場內說法）直播，教大家看 Glassnode，茄哥 21:50 過去站台；茄哥週六在幣安廣場開直播；茄哥每天晚上兩小時節目，「有重大事件完了、美聯儲講話看不看無所謂，不用熬夜」；最後建議「空倉等待機會」。</li>
+</ul>
+<h2>備註</h2>
+<ul>
+<li>ASR 名詞還原：切哥/邪哥/傑哥/鐵格 = 茄哥 @qg7777；紅毛/紅魔/摩哥/胡摩 = 紅毛；老湯/唐納德 = 老唐；梁一偉 = 梁一偉；盤錢 = 盤前；陰諜/陰地 = 陰跌；臥室/凱文物室 = 美聯儲（轉寫）；玩馬 = 沃爾瑪；盜雄市 = 道瓊斯；新維達/英偉拿 = 輝達；Ross topic = Anthropic（轉寫，疑似）；Glass = Glassnode；Cloud = Claude；搜口 = SOXX；USU = 老唐直播主題（場內說法）；UVX = UVXY。</li>
+<li>核實注：黃仁勳已於 2026-11-12 辭任輝達總裁/CEO/董事（2026-11-13 已核實），「董事會罷免」「出軌」等為節目內說法，未經核實。</li>
+</ul>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>Meeting Notes: "Nov 16 — US Stock Market and Bitcoin"</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/qiega-1116-meigu-btc-20261116.mp3"></audio></p>
+<ul>
+<li><strong>Host</strong>: Qiega @qg7777</li>
+<li><strong>Time</strong>: 2026-11-16 21:05 – 23:29 CST, 2 hours 24 minutes 10 seconds, 707 live listeners</li>
+<li><strong>Link</strong>: https://x.com/i/spaces/1onqRzEzVJoKgm</li>
+<li><strong>Note</strong>: Qiega's regular evening market session, with live commentary while watching the tape throughout. All judgments and figures are the guests' statements made live on the show, unverified, and do not constitute investment advice.</li>
+</ul>
+<h2>In one sentence</h2>
+<p>Qiega was extremely bearish all session: Bitcoin was grinding down on the 4-hour chart with no volume, likely to oscillate downward tonight within a range of roughly 63,000–65,000; 57,000 will definitely break, and he would only start building positions below 55,000, with 55,500 possibly appearing around November 18–19; the chance of returning to 90,000 before the Spring Festival is under 1%, and to 80,000 under 5%. He himself shorted at 65,176 and covered at 64,320, taking 800-plus points and running — his mantra: "Take the profit when it's there; don't fight the market."</p>
+<h2>1. Bitcoin: it has further to fall — 57,000 will break</h2>
+<ul>
+<li><strong>The day's tape</strong>: high 65,309, low 63,905, an intraday range of about 1,400 points; the 4-hour chart grinding down with no volume; spot 24-hour turnover of 29.2 billion (shrinking); 63,900 is a support level tested multiple times.</li>
+<li><strong>Gaps above</strong>: a small gap at 66,000 (the 4-hour chart should fill it), and larger gaps above at 66,900 and 69,000 that won't be filled in the short term.</li>
+<li><strong>Tonight's call (Qiega)</strong>: most likely an oscillating decline, not an immediate crash; a bounce from 63,500 could pull it back to 66,000 before falling again; tonight's range roughly 63,000–65,000; the shorts aren't resolute either, with many taking profits. The close will most likely be a red candle, with a daily range of a bit over 2%.</li>
+<li><strong>Medium-term levels (consensus of Qiega and Hongmao)</strong>:</li>
+<li>57,000 will definitely break — "once it reaches 60,000, 57,000 breaks for sure"; 60,000 is the bottom of the descending channel, and if it breaks, it's 50,000.</li>
+<li>It would be good if 55,000 holds; start building positions below 55,000; the 55,500 level may appear around November 18–19, or the 20th if slower.</li>
+<li>49,000 is less likely; it depends on how price gets to 57,000: if it goes straight to 57,000 and bounces, it won't reach 49,000; if it bleeds a little every day, it's hard to say.</li>
+<li>An alternative path (proposed by Lao Tang, partly endorsed by Qiega): first a B-wave bounce to 68,000–69,800 (filling the gaps at 66,600 and 69,000), then a C-wave smash down to 55,000 or even 53,000.</li>
+<li><strong>Qiega's own trade</strong>: shorted Bitcoin at 65,176, planning to add if 66,600 was wicked through (he believed it wouldn't be today); later covered at 64,320 for 800-plus points, about five to six hundred after fees — "no need to chase 1,000 points; take the profit when it's there."</li>
+<li><strong>Why bearish</strong>: spot isn't moving, it's all leverage moving; longs have already been slaughtered this badly, so "just kill it all the way through — if you don't, spot won't come in": smash through 60,000 and a wave of spot comes in, smash through 58,000 and another wave comes in; institutions haven't started smashing yet — wait for them to smash once more.</li>
+<li><strong>Long-term outlook (Qiega)</strong>: the chance of returning to 90,000 before the Spring Festival is no more than 1%, and of recovering to 80,000 before the Spring Festival no more than 5%; the chance of seeing 90,000–100,000 sometime next year is above 50%–60%; he leans toward a bottom in March–May 2027 and a rally in Q3.</li>
+<li><strong>Other coins</strong>: Dogecoin around 0.054; don't catch it at 0.052 (not the low), a small bite at 0.05 is possible but not now; Dogecoin can barely fall further (many coins are already back at prices from three years ago) — it would only crash if Musk tweeted that he'd sold it all.</li>
+</ul>
+<h2>2. US stocks open: lower open, lower all day, a bloodbath</h2>
+<ul>
+<li><strong>Pre-market</strong>: Nasdaq 100 down 1.2%, S&amp;P 500 down 0.56%, semiconductors all down (AMD, TSMC, Broadcom, Intel), Nvidia down pre-market; only the Dow was relatively strong; gold and Bitcoin were both falling; the dollar index strengthened to 103.46–103.56; USD/JPY at 159.65; Japan's GDP shrank 0.1% month over month.</li>
+<li><strong>After the 22:30 open</strong>: lower open and lower all day — "another bloodbath today"; QQQ fell to around 667 (the 0.618 retracement sits near 669); Tesla down 1.19%, and Walmart, Apple, Microsoft, Netflix, and McDonald's all down; SanDisk was the weakest of the group; SOXX (Philadelphia Semiconductor) — don't buy at 60, wait for 40, and don't buy at 50 either.</li>
+<li><strong>Elliott Wave (Qiega)</strong>: wave A bottoms, wave B bounces 0.786 (creating the illusion that "the bull market is still here"), then wave C falls again; he also admitted wave theory is "a thousand people, a thousand wave counts," and that he barely uses it himself.</li>
+<li><strong>Nvidia</strong>: down 8% pre-market (the on-show claim was that the board had removed Jensen Huang — see the verification note); earnings after tonight's close, with the market broadly bearish — it might be a case of "the bad news is exhausted," with a big bounce possible tomorrow, the 17th; intraday, after Trump made remarks, the loss narrowed to -0.42% in a rebound; there was also a rumor about "whether a lady connected to Nvidia's CFO is a Chinese spy" (Trump's remarks, unverified).</li>
+<li><strong>Teacher Wang</strong>: Qiega said Teacher Wang's team is "very likely extremely accurate on US stocks — especially US stocks, with a 90% win rate," but no good at crypto (bought the Trump coin, called the Senate race wrong — big errors).</li>
+</ul>
+<h2>3. Gold: Hongmao's 10-lot short this morning made $100,000</h2>
+<ul>
+<li>Hongmao (Humor) recounted: gold gapped up this morning; he opened a 10-lot short and walked away with a $100,000 profit — "make a few points and run."</li>
+<li>Gold plunged 30 points today before pulling back above 3,800; Hongmao is bearish on gold near term — "if there's a good level, short it with confidence," with a 1.5-point stop; he also shorted at 3,875, made a few points, and ran.</li>
+<li>Qiega added: gold can't fall to 3,300–3,400 in one go — "gold's liquidity is a globally traded thing" — it can't be smashed down all at once.</li>
+</ul>
+<h2>4. Flows: ETF outflows, MicroStrategy, and hedging</h2>
+<ul>
+<li><strong>ETFs (per Qiega)</strong>: yesterday Bitcoin ETFs saw $180 million in outflows while Ethereum saw $223 million in net inflows; this week Bitcoin ETFs have seen $1 billion in outflows.</li>
+<li><strong>MicroStrategy</strong>: showing its holdings to steady morale; Qiega said its liquid funds are basically exhausted (all pledged into US Treasuries); it is adding at this level; its stock faces the risk of being removed from the MSCI index (his claim).</li>
+<li><strong>Hedging</strong>: Qiega's community started hedging spot from late October (October 22, when Bitcoin was above 84,000) and never stopped, with small losses; the ones losing money are the copy-trading crowd.</li>
+<li><strong>Rant against copy-trading KOLs</strong>: copy trading is a profit chain — one big KOL leads a bunch of small KOLs plus a bunch of recruiters; "in essence it's eating client losses, same as exchange rebates — there's no sincerity, it's all a routine." Someone sold a house, threw 500,000 in, and lost it; then mortgaged an apartment for over 2 million and lost that too; they learned nothing from the October 11 black swan last year, and it happened again on November 10 this year.</li>
+<li><strong>The bull market definition debate</strong>: Qiega argued "if your trading can't beat the interest rate, it's a bear market" — 2023 was a bear market, 2024–2025 was the real bull market (up over 100% in a year); now it's down 26% on the year, "how can you call this a bull market?"</li>
+</ul>
+<h2>5. The Anthropic IPO: pricing on the 18th, opening on the 19th</h2>
+<ul>
+<li>Referred to on the show as "Ross topic" (transcription; likely Anthropic): pricing on November 18, opening on November 19, with a pricing range of $70–78.</li>
+<li>The valuation shrank from a peak of $2.75 trillion (about $3,000/share) to $1.09–1.4 trillion (about $1,300/share); after listing it retains Class B shares with 50.1% of voting rights and no economic interest, guaranteeing the founders absolute control over company decisions.</li>
+<li>Qiega won't participate in the IPO subscription; he thinks this market round is poor — "it won't dump right after listing; first they'll pump it, let the retail crowd chase above 100, then dump it"; all the money has gone into IPO subscriptions.</li>
+<li>All of the above are statements made on the show, unverified.</li>
+</ul>
+<h2>6. The Fed and macro</h2>
+<ul>
+<li>Probabilities for December: a 25-basis-point cut at 93%, 50 basis points at 6.3%; the FOMC decision is on December 9; tonight at 2 a.m. Williams (San Francisco Fed) gives opening remarks at a productivity and employment symposium — "nothing much to hear."</li>
+<li>This week's key data: Thursday's FOMC minutes, Friday's consumer confidence index and inflation expectations; the rest is "nothing particularly important."</li>
+<li>The Indonesian rupiah fell to a record low against the dollar; Brent crude and fuel oil are both falling; the whole world is falling — "where did the money go?"</li>
+</ul>
+<h2>7. Other topics</h2>
+<ul>
+<li><strong>Wallet theft</strong>: someone in the group lost 10,000 USDT (clicked a link and got hit by a trojan); don't use public charging stations (they can be implanted with trojans); don't keep exchanges/wallets on your phone — "a work phone is a work phone"; old Apple systems have vulnerabilities too; transfers need multi-factor verification, not just face scan (the back end may be secretly recording).</li>
+<li><strong>"A Province" lost 40,000 USDT</strong>: long Bitcoin at 50x leverage with an average price of 68,105, now trapped; Qiega said he had long warned against going long.</li>
+<li><strong>Binance's new Agent ID</strong>: naming AI wallets; there may be an airdrop in the future, but only with trading volume; the Grok trading bot — if trained badly it loses; keep stops small, switch targets, and if it hits a black swan it's dead and has to be scrapped and retrained.</li>
+<li><strong>The Xianyu money-making theory</strong>: real businesses are hard; "just study Xianyu" — see what sells well, find sourcing channels, no need to stock inventory; virtual goods, Claude accounts (Hongmao has stock); the AI unemployment wave: AI isn't causing an unemployment wave — it's making it impossible for young people to find jobs (no skills, no experience).</li>
+<li><strong>Taiwan handing out money</strong>: 10,000 TWD a month to young people (about 2,000 RMB).</li>
+<li><strong>A recent pile-up of bad events (Qiega's list)</strong>: the Binance hack, the midterm elections, the Jensen Huang affair/resignation, CPI, the first full US shutdown since 9/11 — "these past two days it feels like all these things strung together at once; I haven't rested well at all."</li>
+<li><strong>RWA</strong>: Lao Tang has been busy with RWA tokens lately (bringing small- and mid-cap stocks over to make RWA tokens) and is writing the documentation.</li>
+<li><strong>Tomorrow's preview</strong>: Lao Tang streams tomorrow at 10 p.m. on UXUY (platform name, as stated on the show) to teach everyone how to read Glassnode, with Qiega dropping by at 21:50 to support; Qiega streams on Binance Square on Saturday; Qiega has a two-hour show every night — "once the major events are over, whether the Fed speaks doesn't matter, no need to stay up late"; his final advice: "stay in cash and wait for the opportunity."</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>ASR name restorations: 切哥/邪哥/杰哥/铁格 = Qiega @qg7777; 红毛/红魔/摩哥/胡摩 = Hongmao; 老汤/唐纳德 = Lao Tang; 梁一伟 = Liang Yiwei; 盘钱 = pre-market; 阴谍/阴地 = grinding decline; 卧室/凯文物室 = the Federal Reserve (transcription); 玩马 = Walmart; 盗雄市 = the Dow Jones; 新维达/英伟拿 = Nvidia; Ross topic = Anthropic (transcription, suspected); Glass = Glassnode; Cloud = Claude; 搜口 = SOXX; USU = Lao Tang's stream topic (as stated on the show); UVX = UVXY.</li>
+<li>Verification note: Jensen Huang resigned as Nvidia's president/CEO/director on 2026-11-12 (verified 2026-11-13); claims such as "removed by the board" and "affair" are statements made on the show and are unverified.</li>
+</ul>
+
+</article>
+<footer data-lang="zh">来源：X Space <a href="https://x.com/i/spaces/1onqRzEzVJoKgm">https://x.com/i/spaces/1onqRzEzVJoKgm</a>（主持 @qg7777）· 发布日期：2026-11-16 · 时长：144 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X Space <a href="https://x.com/i/spaces/1onqRzEzVJoKgm">https://x.com/i/spaces/1onqRzEzVJoKgm</a>（主持 @qg7777）· 發布日期：2026-11-16 · 時長：144 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Space <a href="https://x.com/i/spaces/1onqRzEzVJoKgm">https://x.com/i/spaces/1onqRzEzVJoKgm</a> (host @qg7777) · Published: 2026-11-16 · Duration: 144 minutes<br>This page contains the full notes, manually edited from a machine transcript; the views and figures are as stated by the original speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X Space <a href="https://x.com/i/spaces/1onqRzEzVJoKgm">https://x.com/i/spaces/1onqRzEzVJoKgm</a>（主持 @qg7777）· 发布日期：2026-11-16 · 时长：144 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"会议纪要：《11.16 美股行情 比特币走势》 · Yat's Talks",tw:"會議紀要：《11.16 美股行情 比特幣走勢》 · Yat's Talks",en:"Meeting Notes: \"Nov 16 — US Stock Market and Bitcoin\" · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>

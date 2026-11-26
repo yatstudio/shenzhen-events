@@ -8,22 +8,33 @@
 <meta name="theme-color" content="#0d1218">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <link rel="stylesheet" href="/article.css">
+<style>
+.audio-wrap{margin:10px 0 2px}
+.space-audio{width:100%;height:40px}
+.langsw{display:inline-flex;align-items:center;gap:8px;margin-right:10px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 7px;min-height:32px;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="bwrap">
   <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
   <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
+    <a href="https://yatslist.com/szevents/" class="nav-ev" data-ui="nav_events">活动</a>
+    <a href="https://yatslist.com/hackathons/" data-ui="nav_hack">黑客松</a>
     <a href="https://yatslist.com/talks/" class="nav-on">Talks</a>
     
   </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
+  <span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
 </div></div>
 <main class="note">
-<a class="back" href="/talks/">← 返回 Yat's Talks</a>
-<p class="note-tag">SPACE · 纪要全文</p>
+<a class="back" href="/talks/" data-ui="back">← 返回 Yat's Talks</a>
+<p class="note-tag" data-ui="tag">SPACE · 纪要全文</p>
+<article class="langver" data-lang="zh">
 <h1>BMTV：美联储还要加息，6 万美元守得住吗？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/bitcoin-magazine-bmtv-fed-rate-hike-20261125.mp3"></audio></p>
 <ul>
 <li>Broadcast：https://x.com/i/broadcasts/2peVQVOjjMaJpP</li>
 <li>主持：Grace Remington、Sean Hagan（Bitcoin Magazine）</li>
@@ -114,9 +125,220 @@
 </ul>
 <h2>声明</h2>
 <p>本纪要基于 1,922 行逐字稿整理。文中所有数字、判断与说法均为节目主持人及嘉宾在节目中的自述，未经独立核实；人物与机构名称按口播归一，ASR 可能存在错听（如 Peter St. Onge 在逐字稿中被记作 Peter St. Orange、Matt Hougan 被记作 Matt Hogan、Daniel Lacalle 被记作 Daniel Lecaille、David Tse 被记作 David Che/Shea、Deribit 被记作 Deerabit、黄仁勋被记作 Jensen Wong）。</p>
+</article>
+<article class="langver" data-lang="tw" style="display:none">
+<h1>BMTV：美聯儲還要加息，6 萬美元守得住嗎？</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/bitcoin-magazine-bmtv-fed-rate-hike-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast：https://x.com/i/broadcasts/2peVQVOjjMaJpP</li>
+<li>主持：Grace Remington、Sean Hagan（Bitcoin Magazine）</li>
+<li>時間：2026-11-25 22:36 CST，約 2 小時，感恩節前最後一期</li>
+<li>嘉賓：Peter St. Onge（Heritage Foundation 高級經濟學家）、Matt Hougan（Bitwise 首席投資官）、Zen Benham-Herd（Base 市場與全球擴張負責人）、Daniel Lacalle（Tressis 經濟學家）、David Tse（Babylon 聯合創始人、史丹佛教授）</li>
+<li>逐字稿：1,922 行，首段語音始於 00:04:14（前段為片頭曲），末行 [01:57:32] 為主持人收尾，尾部約 163 秒為片尾音樂</li>
+</ul>
+<h2>一句話</h2>
+<p>感恩節前最後一期 BMTV：當天公布的核心 PCE 3.3% 與第三季 GDP 4.3%，讓市場把 12 月 9 日加息當作定局，比特幣跌破 5.8 萬美元、ETF 11 月流出創紀錄；五位嘉賓的共識是短期繼續難熬，但長期看漲的邏輯沒變——財政不可持續終將逼美聯儲轉向，只是時間點沒人敢押。</p>
+<h2>當天的數據：PCE、GDP 與比特幣</h2>
+<ul>
+<li>10 月核心 PCE 年比 3.3%，高於預期的 3.2%，是 2023 年 11 月以來最高；整體 PCE 3.8%，符合預期；月比兩者均為 0.3%。扣除通膨後，10 月消費支出持平。</li>
+<li>第三季 GDP 二次估值 4.3%（初值 3.4%，第二季 2.2%），上修主要來自商業投資（軟體主導）；進口跳升 19.2%、出口跌 5.4%，拖累增長 3.2 個百分點；庫存補回 1.6 個百分點。</li>
+<li>比特幣開盤約 57,300 美元，跌破 6 萬美元支撐，24 小時清算約 6,700 萬美元；未平倉合約約 400 億美元，較 10 月末跌超 20%；資金費率低於中性——沒人加槓桿抄底。節目後半段反彈至約 58,200 美元；上週五夜裡曾插針至 55,000 美元；一個月跌約 28%。</li>
+<li>現貨 ETF 週二再流出 2.32 億美元，連續 6 天流出；11 月累計淨流出約 47–50 億美元，是 ETF 上市以來流出最多的一個月（此前紀錄為 6 月的 45 億美元）。</li>
+<li>週五凌晨約 65 億美元比特幣期權在 Deribit 到期，目前買權與賣權接近持平；感恩節美股休市，比特幣是唯一深度流動的市場，主持人提醒小心假期波動。</li>
+<li>恐懼貪婪指數 13——自 2018 年 2 月以來只有約 6% 的日子在 13 或更低；歷史最低 5（2019 年 8 月與今年 2 月），2020 年 3 月新冠崩盤時 8，2022 年 6 月 Luna 之後 6，2018 年熊市底部 9。</li>
+<li>其他市場：標普 500 過去 9 個交易日跌了 8 個，僅週一歷史性大漲收紅；QQQ 當天跌 2%；10 年期美債 4.87%、2 年期 4.58%、30 年期 5.27%；黃金過去 13 週跌了 11 週，是 1970 年以來最差表現，白銀創 52 週新低；WTI 原油約 82 美元。</li>
+<li>消費者信心指數跳升 11 點多至 103.3，2025 年 1 月以來最高；但消費者預期未來一年通膨 5.7%，且預期利率繼續上升。</li>
+<li>頭條簡報：川普稱對政府入股輝達持開放態度（類似 2025 年入股英特爾），輝達週一因黃仁勳回歸 CEO 大漲 31%；烏克蘭議會通過加密市場合法化法案（2027 年 7 月 1 日生效，加密收益徵 18% 所得稅 + 5% 軍事稅，幣幣兌換不徵稅）；義大利第二大銀行 UniCredit 推出 6 年期比特幣掛鉤憑證（到期 100% 保本、收益封頂 65%，覆蓋約 800 萬客戶）；美國擬對 14 個貿易夥伴加徵關稅（中國 20%、可能升至 40%，越南 35%，2027 年 1 月前不太可能生效）；財政部金融犯罪執法網絡 FinCEN 稱遭遇網路安全事件、部分系統下線。</li>
+</ul>
+<h2>Peter St. Onge：K 型經濟與 AI 泡沫</h2>
+<ul>
+<li>他稱比特幣是 K 型經濟的「救生筏」：通膨又在加速（3.5% 接近 4%），美聯儲加息把硬通貨資產的氧氣都抽走了；但華盛頓對通膨上癮，長期看反而利多比特幣和黃金。</li>
+<li>把通膨目標從 2% 改到 3%（Bill Ackman 在 X 上的提議）等於讓儲戶被收割的速度快 50%，對攢錢的年輕人是災難；短期內加息預期更強，比特幣、黃金會承壓，長期則「極大利多」。</li>
+<li>4.3% 的 GDP 增長「全是 AI」：AI 與資料中心建設占經濟增長一半以上；拿掉 AI，經濟其他地方沒什麼增長；除科技之外的股市實際是跌的。41% 的美國人預期一年後財務狀況更糟，是 2008 年危機峰值的兩倍、「大蕭條級別」——這也是共和黨在期中選舉被橫掃的原因。</li>
+<li>民主黨推動 25 美元聯邦最低工資：美國約一半崗位工資低於 25 美元，最低工資等於「禁止低薪崗位」；AI 正在吃掉入門級白領工作，公司不裁老員工、只砍新招，Gen Z 討厭 AI 是因為「他們就是菜單上的菜」。</li>
+<li>250 年來每一代人都比上一代富約 2 倍的規律斷了：嬰兒潮一代「像國王一樣生活」，Gen Z 卻在合租吃泡麵。他把根子歸到尼克森（以及更早的羅斯福）搞壞了貨幣。</li>
+<li>期中選舉：選民對民主黨的支持率其實比共和黨還低，共和黨輸是因為「憤怒的海嘯」中他們離海灘最近、在台上。市場最怕的不是僵局，而是川普與民主黨「交朋友」、把民主黨的法案簽了。</li>
+<li>流動性：美聯儲造了一個「龐氏金融系統」，不持續注資鯊魚就死；自期中選舉以來市場已流失約 7.5 兆美元，相當於約 1% 的加息。聯邦債務已超 40 兆美元，借債成本只會越來越貴，最終只能印錢、壓收益率。</li>
+<li>AI 泡沫：加息會暴露「在 2% 的錢下合理、在 7% 的錢下不合理」的項目，AI 投入的規模堪比 2008 年危機級別的錯配投資，他預計會出現「AI 主導的 2008 式崩盤」。崩盤初期所有資產一起跌，隨後是降息至零、注入流動性、下一個泡沫（機器人、長壽、AI 藥物）。</li>
+<li>末日時點：10 年內崩就是黃金的天下（有制度記憶和基礎設施）；20–30 年後崩，比特幣與黃金的混合體會成為貨幣。</li>
+</ul>
+<h2>美元「wrecking ball」：離 2022 年重演還有多遠</h2>
+<ul>
+<li>美元指數突破 104，19 個月新高；歐元占指數近 60%、跌至 19 個月低點，11 月 10 日以來美元漲幅約三分之二來自歐元；日圓基本沒動，日本央行預計 12 月加息；交易員已完全定價 12 月 9 日美聯儲加息。</li>
+<li>美元走強的傳導鏈：美國以外約 15 兆美元美元債務，另有約 28 兆美元藏在貨幣互換裡；新興市場欠 4.6 兆美元美元債；美元每漲 1%，美國以外借款人的美元信貸就慢約 0.5 個百分點（國際清算銀行數據）；違約反而減少美元供給、進一步推高美元。</li>
+<li>回顧 2022 年：美元指數從 96 漲至 115（9 月 28 日，20 年新高），歐元 7 月跌破平價，日本 9 月花約 200 億美元干預匯市（1998 年以來首次）；轉折點是美聯儲 12 月放緩至 50 個基點，2023 年 2 月美元指數回落約 12%。</li>
+<li>Sean 的判斷：美元「wrecking ball」還有空間，要到 12 月底才見分曉；真正能逼美聯儲轉向的是股市破位——需要比峰值跌 15% 以上、歷史經驗看接近 20% 或更多；2026 年開始「eerily similar to 22」，不同的是這次股市和比特幣都沒撐住。</li>
+</ul>
+<h2>Matt Hougan：2036 年 160 萬美元，短期仍難熬</h2>
+<ul>
+<li>Bitwise 新的 10 年預測：2036 年比特幣 160 萬美元（此前為 130 萬美元）。理由是比特幣瞄準的市場都變大了——價值存儲、機構投資、離岸財富；第一家央行已買入比特幣，摩根士丹利、富國銀行等大平台已接納該資產。</li>
+<li>本輪拋售主因是 10 月偏熱的 CPI 與隨後的利率衝擊；市場已定價未來兩個週期加息 50 個基點，美聯儲不太可能再出意外；真正的風險是 AI 預期的「嚴重回撤」還沒走完，可能帶來第二波下跌。</li>
+<li>一線希望：密西根大學 1 年通膨預期從 10 月的 4.7% 回落至 11 月的 3.7%；若降息預期重現（50 個基點降至 25 個基點），可能給比特幣等風險資產築底。</li>
+<li>新關稅（中國 20%）短期是負面消息，長期中性，市場預期最終會被撤銷或緩和。</li>
+<li>ETF 流出解讀：13F 文件顯示大玩家在加倍下注、基差交易已消失，流出的主要是短期持有者（對沖基金、日內交易者），長期配置者在緩慢加倉——短期是流出，長期是好事；但年底稅損收割拋售可能繼續施壓。</li>
+<li>SoFi 調查：21% 的 Gen Z 成年人持有加密貨幣，超過有 401(k) 退休計畫的比例；年輕人越年輕持有越多，且正在變老、變富、進入領導崗位；本屆國會儘管民主黨大勝，親加密程度與上屆差不多，因為新當選的年輕民主黨議員同樣親加密。</li>
+<li>感恩節飯桌談資：美國財政不可持續是兩黨共識——2 兆美元赤字、進入潛在衰退只會更大；歐洲、日本同樣債台高築、只能印錢；「硬資產現在打折」，小倉位配置比特幣、黃金有道理。</li>
+</ul>
+<h2>今日圖表：10 年俱樂部在悄悄吸籌</h2>
+<ul>
+<li>Sean 的「今日圖表」追蹤的是「10 年未動」的比特幣錢包：2022 年中至 2024 年，深度存儲（deep storage）的增速比礦工產出快約 20%。</li>
+<li>2025 年出現「大分發」：老 OG 向 ETF 與財庫公司的買盤拋售，包括一位早期投資者在持有 14 年後移動了 8 萬枚比特幣；創紀錄的需求撞上創紀錄的老幣供給，是本輪週期見頂的重要原因。</li>
+<li>過去一年，10 年俱樂部增長約 23 萬枚比特幣（約每天 630 枚，對比礦工每天新產 450 枚），即每挖出 1 枚新幣，就有約 1.4 枚進入深度存儲；俱樂部現持有創紀錄的 360 萬枚比特幣，約占全部供應量的 18%。</li>
+<li>後備管道更大：另有 167 萬枚比特幣已 7–10 年未動；礦工未來 3 年約產出 36 萬枚；2028 年 4 月減半後日產出將降至 225 枚。即使一半管道幣在 10 歲生日前移動，深度存儲仍將以 2:1 以上的速度跑贏礦工。</li>
+<li>但他也提醒：一個 OG 決定拋售，一天就能抹掉這條線 3 個月的累積；這不是底部信號，只是「供給面在價格之前先行修復」。</li>
+</ul>
+<h2>Base：代幣化股票與 Agent 借貸</h2>
+<ul>
+<li>Coinbase 依託 Base 的比特幣抵押借貸已放出超 30 億美元貸款，現已覆蓋全美（含紐約）；持幣人借錢而不是賣幣的趨勢在穩步增長。</li>
+<li>Base 上的代幣化股票上線僅數月，就拿下該市場約三分之一的週現貨交易量。Zen 認為代幣化股票最終會吃掉 ETF 的生意：ETF 是 30 年前為解決「買 500 只股票太麻煩」而生的權宜之計，代幣化 + AI Agent 可以為每個人定制顆粒度極細的個性化組合。</li>
+<li>Agent 今天已能在 Base 上借貸：持有股票作抵押，在 Aave 這類借貸市場借出 USDC；x402 支付協議上的 Agent 交易大多不到 1 美元，主要用於支付推理、軟體、數據等費用。</li>
+<li>短期看，Agent 借貸會是抵押貸（類似閃電貸）；無抵押貸要晚得多，因為需要知道借款人是誰。長期可能出現「AI Agent 營運的銀行」，用穩定幣向全球放貸、借款人本身也是 Agent。</li>
+<li>市場展望：基本面會被 Agent 快速發現；社群媒體與直播對市場的影響更大；股票全球化後贏家通吃、波動更大、加密與傳統金融的相關性更高；各國監管機構正在競爭成為代幣化的中心（Coinbase 選擇在阿布達比發行代幣化股票）。</li>
+</ul>
+<h2>Daniel Lacalle：美聯儲在犯大錯，6 個月內轉向</h2>
+<ul>
+<li>這是 Bitcoin Magazine 播客的錄播訪談（主持人 Spencer Nichols）。Lacalle 稱美聯儲是在向一場外部能源衝擊加息，而非經濟過熱——加息立即收緊金融條件，產生美元「真空效應」：全世界囤美元、新興市場信貸驟停。</li>
+<li>美元指數在 99–101 區間內可預測，超過 101 就非常緊；美聯儲看的是與貨幣政策無關的滯後指標，貨幣流通速度已從 1.47 降至 1.42（通縮信號），貨幣供應增長只來自政府過度支出——加息解決不了任何問題，政府不會少花錢。</li>
+<li>他認為美聯儲「不是在證明獨立，而是在證明魯莽」，將很快被迫 U 形轉向；11 月 CPI 可能是負數，「你怎麼能在一份負 CPI 上加息？」</li>
+<li>比特幣與黃金不是通膨的直線對沖，而是「過度貨幣政策實施時」的對沖；真正的冰山是各國未融資但已承諾的負債：法國約 400% GDP、德國約 400%、日本約 500%、英國約 450%——這些債務終將發行、印鈔，財政主導下央行只能從鷹轉鴿，他預計在未來 6 個月內。</li>
+<li>AI 是巨大的通縮力量，但政府會「先印錢」來「保護」民眾免受 AI 威脅——法幣是控制工具，技術是解放工具，兩者並不矛盾；結果是持續但溫和的通膨，而不是 6–8% 的惡性通膨。</li>
+</ul>
+<h2>David Tse：Praxis 與無託管比特幣橋</h2>
+<ul>
+<li>史丹佛與 Byzantine Research 的新論文《Praxis：實用的 NP 見證加密》：見證加密（2013 年提出）無需私鑰，只需證明某個數學陳述為真即可解密——可用於無需託管人的比特幣跨鏈橋，也可實現無需軟分叉的比特幣契約（covenants）。</li>
+<li>具體場景：把比特幣鎖定在比特幣鏈上，在以太坊的 Aave 或 Morpho 上借穩定幣；還錢這一事實本身就是智能合約狀態，可作為解鎖比特幣的數學證明；現有方案需要挑戰者監控的樂觀協議，見證加密是非交互式的，不需要挑戰者。</li>
+<li>論文假設「一次性誠實設置」，完整系統還需一層驗證；他估計借助 AI 與形式化驗證，6–12 個月內可推向市場。</li>
+<li>Babylon 的方向：讓比特幣成為生產性資產——抵押借穩定幣、再用穩定幣賺收益；Aave 社群已支持接受 Babylon 金庫的比特幣作抵押；設計原則是無信任第三方，比特幣鎖定在比特幣鏈上；其比特幣質押協議已運行約兩年，約 4 萬枚比特幣（口播，逐字稿此處不清）。</li>
+<li>AI 在攻防兩端都在改變安全：Babylon 用內部 AI 紅隊持續審計程式碼，AI 能發現人類審計員找不到的 bug；形式化驗證可讓程式碼「數學上證明無 bug」，過去 6–9 個月進展極大。</li>
+<li>關於 P vs NP 是否已被秘密解決的傳言：他稱自己不在 Anthropic 或 OpenAI，沒有比觀眾更多的資訊；密碼學建立在計算複雜性之上，若難題變容易，密碼學基礎會受衝擊、需要發明新密碼學。</li>
+</ul>
+<h2>收尾</h2>
+<ul>
+<li>感恩節假期：美股週四休市、週五半天；節目下週一 9:30（美東）回歸，預告嘉賓為 Matt Dynes（Build Asset Management 首席投資官）、Jeff Kendrick（渣打全球數位資產研究主管）、Muhammad Bakashwain（BitZero 創始人兼總裁）、Yohan Kerbrat（Robinhood Crypto 副總裁兼總經理）。</li>
+<li>收尾閒聊：Sean 最愛的感恩節食物是蔓越莓果凍和 stuffing，Grace 喜歡火腿，並現場向 Honey Baked Ham 索要贊助。</li>
+</ul>
+<h2>聲明</h2>
+<p>本紀要基於 1,922 行逐字稿整理。文中所有數字、判斷與說法均為節目主持人及嘉賓在節目中的自述，未經獨立核實；人物與機構名稱按口播歸一，ASR 可能存在錯聽（如 Peter St. Onge 在逐字稿中被記作 Peter St. Orange、Matt Hougan 被記作 Matt Hogan、Daniel Lacalle 被記作 Daniel Lecaille、David Tse 被記作 David Che/Shea、Deribit 被記作 Deerabit、黃仁勳被記作 Jensen Wong）。</p>
+
+</article>
+<article class="langver" data-lang="en" style="display:none">
+<h1>BMTV: The Fed Is Still Hiking — Will $60,000 Hold?</h1>
+<p class="audio-wrap"><audio class="space-audio" controls preload="none" src="https://img.yatslist.com/audio/bitcoin-magazine-bmtv-fed-rate-hike-20261125.mp3"></audio></p>
+<ul>
+<li>Broadcast: https://x.com/i/broadcasts/2peVQVOjjMaJpP</li>
+<li>Hosts: Grace Remington, Sean Hagan (Bitcoin Magazine)</li>
+<li>Time: 2026-11-25 22:36 CST, about 2 hours, the last episode before Thanksgiving</li>
+<li>Guests: Peter St. Onge (senior economist, Heritage Foundation), Matt Hougan (CIO, Bitwise), Zen Benham-Herd (head of market and global expansion, Base), Daniel Lacalle (economist, Tressis), David Tse (co-founder of Babylon, Stanford professor)</li>
+<li>Transcript: 1,922 lines; first speech begins at 00:04:14 (preceded by the theme music); the last line [01:57:32] is the hosts' sign-off, with about 163 seconds of closing music after that</li>
+</ul>
+<h2>In one sentence</h2>
+<p>The last BMTV before Thanksgiving: core PCE of 3.3% and Q3 GDP of 4.3%, both released that day, led the market to treat a December 9 rate hike as a done deal; Bitcoin broke below $58,000 and November ETF outflows set a record. The consensus among the five guests was that the short term stays painful, but the long-term bullish case is intact — unsustainable fiscal policy will eventually force the Fed to pivot, though nobody would bet on the timing.</p>
+<h2>The day's data: PCE, GDP, and Bitcoin</h2>
+<ul>
+<li>October core PCE rose 3.3% year over year, above the expected 3.2% and the highest since November 2023; headline PCE was 3.8%, in line with expectations; both rose 0.3% month over month. Adjusted for inflation, October consumer spending was flat.</li>
+<li>Q3 GDP second estimate: 4.3% (first estimate 3.4%, Q2 2.2%); the upward revision came mainly from business investment (led by software); imports jumped 19.2% and exports fell 5.4%, dragging growth down 3.2 percentage points; inventories added back 1.6 percentage points.</li>
+<li>Bitcoin opened around $57,300, breaking the $60,000 support, with roughly $67 million in 24-hour liquidations; open interest was about $40 billion, down more than 20% from the end of October; funding rates were below neutral — nobody was levering up to buy the dip. It rebounded to around $58,200 in the second half of the show; it had wicked down to $55,000 the previous Friday night; down about 28% in a month.</li>
+<li>Spot ETFs saw another $232 million outflow on Tuesday, a sixth straight day of outflows; November's cumulative net outflow was about $47–50 billion, the largest month since the ETFs launched (the previous record was June's $45 billion).</li>
+<li>About $6.5 billion of Bitcoin options expire on Deribit early Friday, with calls and puts currently near even; US stocks are closed for Thanksgiving, leaving Bitcoin as the only deep, liquid market — the hosts cautioned about holiday volatility.</li>
+<li>The Fear &amp; Greed Index sat at 13 — since February 2018, only about 6% of days have been at 13 or lower; the all-time low is 5 (August 2019 and February this year), it was 8 during the March 2020 COVID crash, 6 after Luna in June 2022, and 9 at the 2018 bear market bottom.</li>
+<li>Other markets: the S&amp;P 500 fell on 8 of the past 9 trading days, with only Monday's historic rally closing green; QQQ fell 2% on the day; the 10-year Treasury yielded 4.87%, the 2-year 4.58%, the 30-year 5.27%; gold has fallen in 11 of the past 13 weeks, its worst run since 1970, and silver hit a 52-week low; WTI crude was around $82.</li>
+<li>The consumer confidence index jumped more than 11 points to 103.3, the highest since January 2025; but consumers expect 5.7% inflation over the coming year and expect rates to keep rising.</li>
+<li>Headline brief: Trump said he is open to the government taking a stake in Nvidia (similar to the 2025 Intel stake), and Nvidia surged 31% on Monday on Jensen Huang's return as CEO; Ukraine's parliament passed a crypto market legalization bill (effective July 1, 2027, taxing crypto gains at 18% income tax + 5% military levy, with crypto-to-crypto trades untaxed); Italy's second-largest bank UniCredit launched a 6-year Bitcoin-linked certificate (100% principal protection at maturity, gains capped at 65%, covering about 8 million customers); the US plans additional tariffs on 14 trading partners (China 20%, possibly rising to 40%; Vietnam 35%; unlikely to take effect before January 2027); the Treasury's Financial Crimes Enforcement Network (FinCEN) said it suffered a cybersecurity incident with some systems taken offline.</li>
+</ul>
+<h2>Peter St. Onge: the K-shaped economy and the AI bubble</h2>
+<ul>
+<li>He called Bitcoin a "life raft" in a K-shaped economy: inflation is accelerating again (3.5%, approaching 4%), and Fed hikes are sucking the oxygen out of hard-money assets; but Washington is addicted to inflation, which in the long run actually benefits Bitcoin and gold.</li>
+<li>Moving the inflation target from 2% to 3% (Bill Ackman's proposal on X) would mean savers get harvested 50% faster — a disaster for young people trying to save; in the short term, stronger hike expectations pressure Bitcoin and gold, but in the long term it is "extremely bullish."</li>
+<li>The 4.3% GDP growth is "all AI": AI and data center construction account for more than half of economic growth; strip out AI and there is little growth anywhere else; the stock market ex-tech is actually falling. 41% of Americans expect their finances to be worse in a year — twice the 2008 crisis peak, "Great Depression levels" — which is also why the Republicans were swept in the midterms.</li>
+<li>The Democrats are pushing a $25 federal minimum wage: about half of US jobs pay less than $25, so a minimum wage amounts to "banning low-wage jobs"; AI is eating entry-level white-collar work — companies aren't firing old employees, they're just cutting new hires — and Gen Z hates AI because "they're what's on the menu."</li>
+<li>The 250-year pattern of each generation being about twice as rich as the previous one has broken: boomers "lived like kings," while Gen Z shares apartments and eats instant noodles. He traced the root to Nixon (and earlier, Roosevelt) breaking the money.</li>
+<li>The midterms: voters actually approve of Democrats even less than Republicans; the Republicans lost because in the "tsunami of anger" they were closest to the beach — they were in power. What the market fears most isn't gridlock, but Trump "making friends" with the Democrats and signing their bills.</li>
+<li>Liquidity: the Fed has built a "Ponzi financial system" — stop feeding it and the shark dies; since the midterms the market has lost about $7.5 trillion, equivalent to roughly a 1% rate hike. Federal debt has passed $40 trillion and borrowing will only get more expensive; in the end it can only print money and cap yields.</li>
+<li>The AI bubble: hikes will expose projects that "made sense at 2% money and don't at 7% money"; the scale of AI spending rivals the misallocated investment of the 2008 crisis, and he expects an "AI-led 2008-style crash." Early in the crash all assets fall together; then come cuts to zero, liquidity injections, and the next bubble (robots, longevity, AI drugs).</li>
+<li>On the endgame timing: if it crashes within 10 years, it's gold's world (institutional memory and infrastructure); if it crashes in 20–30 years, a Bitcoin-gold hybrid becomes the money.</li>
+</ul>
+<h2>The dollar "wrecking ball": how far from a 2022 repeat?</h2>
+<ul>
+<li>The dollar index broke above 104, a 19-month high; the euro, nearly 60% of the index, fell to a 19-month low, and about two-thirds of the dollar's gains since November 10 came from the euro; the yen barely moved, with the Bank of Japan expected to hike in December; traders have fully priced in a Fed hike on December 9.</li>
+<li>The transmission chain of dollar strength: about $15 trillion of dollar debt sits outside the US, plus roughly $28 trillion hidden in currency swaps; emerging markets owe $4.6 trillion in dollar debt; for every 1% the dollar rises, dollar credit to borrowers outside the US slows by about 0.5 percentage points (BIS data); defaults actually reduce dollar supply, pushing the dollar higher still.</li>
+<li>Looking back at 2022: the dollar index rose from 96 to 115 (September 28, a 20-year high), the euro fell below parity in July, and Japan spent about $20 billion intervening in September (its first intervention since 1998); the turning point was the Fed slowing to 50 basis points in December, and by February 2023 the dollar index had fallen about 12%.</li>
+<li>Sean's judgment: the dollar "wrecking ball" still has room to run and won't be resolved until late December; what can truly force the Fed to pivot is an equity market break — a fall of more than 15% from the peak, with historical experience suggesting closer to 20% or more; 2026 is starting out "eerily similar to 22," except this time both stocks and Bitcoin failed to hold up.</li>
+</ul>
+<h2>Matt Hougan: $1.6 million by 2036, but the short term still hurts</h2>
+<ul>
+<li>Bitwise's new 10-year forecast: Bitcoin at $1.6 million in 2036 (up from $1.3 million previously). The reasoning: every market Bitcoin targets has grown — store of value, institutional investment, offshore wealth; the first central bank has already bought Bitcoin, and major platforms like Morgan Stanley and Wells Fargo have embraced the asset.</li>
+<li>The main cause of this selloff was October's hot CPI print and the rate shock that followed; the market has priced in 50 basis points of hikes over the next two cycles, and the Fed is unlikely to surprise again; the real risk is that the "severe drawdown" in AI expectations isn't finished, which could bring a second leg down.</li>
+<li>A silver lining: the University of Michigan's 1-year inflation expectations fell from 4.7% in October to 3.7% in November; if rate-cut expectations return (from 50 basis points down to 25), it could put a floor under Bitcoin and other risk assets.</li>
+<li>The new tariffs (China 20%) are a short-term negative but long-term neutral; the market expects they will ultimately be revoked or softened.</li>
+<li>Reading the ETF outflows: 13F filings show the big players doubling down and the basis trade gone; the outflows are mainly from short-term holders (hedge funds, day traders), while long-term allocators are slowly adding — outflows in the short term, a good thing in the long term; though year-end tax-loss harvesting could keep up the pressure.</li>
+<li>A SoFi survey: 21% of Gen Z adults hold crypto, more than the share with a 401(k) retirement plan; the younger they are, the more they hold, and they are aging, getting richer, and moving into leadership positions; despite the Democrats' big win, this Congress is about as pro-crypto as the last one, because the newly elected young Democratic members are equally pro-crypto.</li>
+<li>Thanksgiving table talk: unsustainable US fiscal policy is a bipartisan consensus — a $2 trillion deficit that only grows in a potential recession; Europe and Japan are equally debt-laden and can only print; "hard assets are on sale right now," and a small allocation to Bitcoin and gold makes sense.</li>
+</ul>
+<h2>Chart of the day: the 10-year club is quietly accumulating</h2>
+<ul>
+<li>Sean's "chart of the day" tracks Bitcoin wallets that haven't moved in 10 years: from mid-2022 to 2024, deep storage grew about 20% faster than miner output.</li>
+<li>2025 saw "the great distribution": old OGs sold into buying from ETFs and treasury companies, including one early investor who moved 80,000 BTC after holding for 14 years; record demand meeting record old-coin supply was a major reason this cycle topped.</li>
+<li>Over the past year, the 10-year club grew by about 230,000 BTC (roughly 630 per day, versus 450 newly mined per day) — for every 1 new coin mined, about 1.4 coins enter deep storage; the club now holds a record 3.6 million BTC, about 18% of total supply.</li>
+<li>The pipeline behind it is bigger: another 1.67 million BTC hasn't moved in 7–10 years; miners will produce about 360,000 BTC over the next 3 years; after the April 2028 halving, daily output drops to 225. Even if half the pipeline coins move before their 10th birthday, deep storage will still outpace miners by more than 2:1.</li>
+<li>But he also cautioned: one OG deciding to sell can erase three months of accumulation in a day; this is not a bottom signal, only "supply repairing itself before price does."</li>
+</ul>
+<h2>Base: tokenized stocks and Agent lending</h2>
+<ul>
+<li>Coinbase's Bitcoin-collateralized lending on Base has issued over $3 billion in loans and now covers the entire US (including New York); the trend of holders borrowing against their coins instead of selling them is steadily growing.</li>
+<li>Tokenized stocks on Base, live for only a few months, have already taken about a third of that market's weekly spot trading volume. Zen believes tokenized stocks will ultimately eat the ETF business: ETFs were a stopgap invented 30 years ago to solve "buying 500 stocks is too much trouble," while tokenization + AI Agents can build finely grained, personalized portfolios for everyone.</li>
+<li>Agents can already borrow and lend on Base today: post stocks as collateral, borrow USDC on lending markets like Aave; most Agent transactions on the x402 payment protocol are under $1, mainly paying for inference, software, data, and similar costs.</li>
+<li>In the short term, Agent lending will be collateralized (similar to flash loans); uncollateralized lending comes much later, because you need to know who the borrower is. In the long run there may be "banks run by AI Agents," lending stablecoins globally, with the borrowers themselves also Agents.</li>
+<li>Market outlook: fundamentals will be discovered quickly by Agents; social media and livestreams will have a bigger impact on markets; as stocks globalize it becomes winner-take-all with larger volatility and higher correlation between crypto and traditional finance; regulators worldwide are competing to become the tokenization hub (Coinbase chose to issue tokenized stocks in Abu Dhabi).</li>
+</ul>
+<h2>Daniel Lacalle: the Fed is making a big mistake, and will pivot within 6 months</h2>
+<ul>
+<li>This was a pre-recorded interview from the Bitcoin Magazine podcast (host Spencer Nichols). Lacalle said the Fed is hiking into an external energy shock, not an overheating economy — hikes immediately tighten financial conditions and create a dollar "vacuum effect": the whole world hoards dollars and emerging-market credit stops dead.</li>
+<li>The dollar index is predictable within the 99–101 range; above 101 it gets very tight. The Fed is watching lagging indicators unrelated to monetary policy; the velocity of money has fallen from 1.47 to 1.42 (a deflation signal), and money supply growth comes only from government overspending — hikes solve nothing, and the government won't spend less.</li>
+<li>He argued the Fed "is not proving independence, it's proving recklessness," and will soon be forced into a U-turn; November CPI could be negative — "how can you hike on a negative CPI print?"</li>
+<li>Bitcoin and gold are not straight-line inflation hedges, but hedges "when excessive monetary policy is being implemented"; the real iceberg is countries' unfunded but promised liabilities: France around 400% of GDP, Germany around 400%, Japan around 500%, the UK around 450% — this debt will eventually be issued and printed, and under fiscal dominance central banks can only turn from hawk to dove, which he expects within the next 6 months.</li>
+<li>AI is an enormous deflationary force, but governments will "print money first" to "protect" people from the AI threat — fiat is a tool of control, technology is a tool of liberation, and the two don't contradict each other; the result is persistent but mild inflation, not 6–8% runaway inflation.</li>
+</ul>
+<h2>David Tse: Praxis and a non-custodial Bitcoin bridge</h2>
+<ul>
+<li>A new paper from Stanford and Byzantine Research, "Praxis: Practical NP Witness Encryption": witness encryption (proposed in 2013) needs no private key — you can decrypt simply by proving a mathematical statement is true — enabling Bitcoin bridges with no custodian, and Bitcoin covenants with no soft fork.</li>
+<li>A concrete scenario: lock Bitcoin on the Bitcoin chain, borrow stablecoins against it on Aave or Morpho on Ethereum; the fact of repayment is itself smart-contract state, usable as the mathematical proof that unlocks the Bitcoin; existing solutions rely on optimistic protocols monitored by challengers, while witness encryption is non-interactive and needs no challengers.</li>
+<li>The paper assumes a "one-time honest setup," and a full system needs one more layer of verification; he estimated that with AI and formal verification it could reach market within 6–12 months.</li>
+<li>Babylon's direction: make Bitcoin a productive asset — borrow stablecoins against it, then earn yield with the stablecoins; the Aave community has voted to accept Bitcoin from Babylon vaults as collateral; the design principle is no trusted third party, with Bitcoin locked on the Bitcoin chain; its Bitcoin staking protocol has run for about two years, with roughly 40,000 BTC (as spoken; the transcript is unclear at this point).</li>
+<li>AI is changing security on both offense and defense: Babylon uses an internal AI red team to continuously audit code, and AI can find bugs human auditors miss; formal verification can make code "mathematically proven bug-free," and progress over the past 6–9 months has been dramatic.</li>
+<li>On rumors that P vs NP has been secretly solved: he said he is not at Anthropic or OpenAI and has no more information than the audience; cryptography is built on computational complexity, so if hard problems became easy, the foundations of cryptography would be shaken and new cryptography would need to be invented.</li>
+</ul>
+<h2>Closing</h2>
+<ul>
+<li>Thanksgiving holiday: US stocks closed Thursday, half day Friday; the show returns next Monday at 9:30 (Eastern), with announced guests Matt Dynes (CIO, Build Asset Management), Jeff Kendrick (global head of digital assets research, Standard Chartered), Muhammad Bakashwain (founder and president, BitZero), and Yohan Kerbrat (VP and GM, Robinhood Crypto).</li>
+<li>Closing chat: Sean's favorite Thanksgiving foods are cranberry jelly and stuffing; Grace likes ham, and made an on-air pitch for a Honey Baked Ham sponsorship.</li>
+</ul>
+<h2>Disclaimer</h2>
+<p>These notes were compiled from the 1,922-line transcript. All figures, judgments, and statements are the hosts' and guests' own as stated on the show and have not been independently verified; names of people and institutions were normalized from the spoken audio, and the ASR may contain mishearings (for example, Peter St. Onge was transcribed as Peter St. Orange, Matt Hougan as Matt Hogan, Daniel Lacalle as Daniel Lecaille, David Tse as David Che/Shea, Deribit as Deerabit, and Jensen Huang as Jensen Wong).</p>
+
+</article>
+<footer data-lang="zh">来源：X 直播 <a href="https://x.com/i/broadcasts/2peVQVOjjMaJpP">https://x.com/i/broadcasts/2peVQVOjjMaJpP</a>（主持 Bitcoin Magazine）· 发布日期：2026-11-25 · 时长：120 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+<footer data-lang="tw" style="display:none">來源：X 直播 <a href="https://x.com/i/broadcasts/2peVQVOjjMaJpP">https://x.com/i/broadcasts/2peVQVOjjMaJpP</a>（主持 Bitcoin Magazine）· 發布日期：2026-11-25 · 時長：120 分鐘<br>本頁為機器轉寫後人工整理的紀要全文；觀點、數字均為原發言者口徑，未經核實。 · <a href="https://yatslist.com/talks/">Yat's Talks · 談話錄</a></footer>
+
+<footer data-lang="en" style="display:none">Source: X Broadcast <a href="https://x.com/i/broadcasts/2peVQVOjjMaJpP">https://x.com/i/broadcasts/2peVQVOjjMaJpP</a> (host Bitcoin Magazine) · Published: 2026-11-25 · Duration: 120 minutes<br>This page contains the full notes, manually edited from a machine transcript; the views and figures are as stated by the original speaker and have not been verified. · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
+
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
-<footer>来源：X 直播 <a href="https://x.com/i/broadcasts/2peVQVOjjMaJpP">https://x.com/i/broadcasts/2peVQVOjjMaJpP</a>（主持 Bitcoin Magazine）· 发布日期：2026-11-25 · 时长：120 分钟<br>本页为机器转写后人工整理的纪要全文；观点、数字均为原发言者口径，未经核实。 · <a href="https://yatslist.com/talks/">Yat's Talks · 谈话录</a></footer>
 </main>
 <script src="/article.js" defer></script>
+<script>
+var PTITLES={zh:"BMTV：美联储还要加息，6 万美元守得住吗？ · Yat's Talks",tw:"BMTV：美聯儲還要加息，6 萬美元守得住嗎？ · Yat's Talks",en:"BMTV: The Fed Is Still Hiking — Will $60,000 Hold? · Yat's Talks"};
+var PUI={zh:{back:"← 返回 Yat's Talks",tag:"SPACE · 纪要全文",nav_events:"活动",nav_hack:"黑客松"},tw:{back:"← 返回 Yat's Talks",tag:"SPACE · 紀要全文",nav_events:"活動",nav_hack:"黑客松"},en:{back:"← Back to Yat's Talks",tag:"SPACE · Full notes",nav_events:"Events",nav_hack:"Hackathons"}};
+function applyPageLang(l){
+ if(!PUI[l])l="zh";
+ document.documentElement.lang=(l==="en"?"en":(l==="tw"?"zh-TW":"zh-CN"));
+ document.title=PTITLES[l];
+ var ui=PUI[l];
+ document.querySelectorAll("[data-ui]").forEach(function(el){var k=el.getAttribute("data-ui");if(ui[k])el.textContent=ui[k];});
+ document.querySelectorAll("[data-lang]").forEach(function(a){a.style.display=(a.getAttribute("data-lang")===l)?"":"none";});
+ document.querySelectorAll("[data-setlang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-setlang")===l);});
+ try{localStorage.setItem("szLang",l);}catch(e){}
+}
+document.querySelectorAll("[data-setlang]").forEach(function(b){b.addEventListener("click",function(){applyPageLang(b.getAttribute("data-setlang"));});});
+(function(){var l="zh";try{l=localStorage.getItem("szLang")||"zh";}catch(e){}applyPageLang(l);})();
+</script>
 </body>
 </html>
