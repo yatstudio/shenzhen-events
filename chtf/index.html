@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>高交会展商名单 · 展位查询 — Yat's List</title>
-<meta name="description" content="第二十八届高交会（CHTF 2026）全部展商名单与展位号：按公司名、展馆、行业检索，数据开放给 Agent 直接读取。">
+<title>高交会专题 · 活动 + 展商名单 — Yat's List</title>
+<meta name="description" content="第二十八届高交会（CHTF 2026）专题：同期活动与全部展商名单、展位号，按公司名、展馆、行业检索，数据开放给 Agent 直接读取。">
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
 <style>
 :root{
@@ -41,6 +41,8 @@ main{padding:var(--sp-2xl) 0 48px}
 .terminal-body h1{font-size:clamp(1.25rem,3.4vw,1.7rem);margin:0 0 6px;font-family:var(--font-sans);letter-spacing:0}
 .terminal-body .meta{color:var(--ink-sec);font-size:.9rem}
 .terminal-body .meta b{color:var(--green);font-weight:700}
+h2.sec{font-size:1.15rem;margin:28px 0 6px}
+.secsub{color:var(--ink-ter);font-size:.87rem;margin:0 0 var(--sp-md)}
 .agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
 .agentnote b{color:var(--ink)}
 .agentnote a{color:var(--green);text-decoration:none}
@@ -53,13 +55,19 @@ main{padding:var(--sp-2xl) 0 48px}
 .chip.on{color:#0d1218;background:var(--green);border-color:var(--green);font-weight:700}
 .cnt{color:var(--ink-ter);font-size:.85rem;margin:var(--sp-md) 0}
 .ev{display:flex;gap:var(--sp-md);margin-bottom:var(--sp-sm)}
-.card{flex:1;display:flex;gap:var(--sp-md);align-items:center;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 18px}
+.rail{flex:0 0 74px;text-align:right;font-family:var(--font-mono);padding-top:14px}
+.rail .t1{font-size:.95rem;font-weight:700;color:var(--ink)}
+.rail .t2{font-size:.78rem;color:var(--ink-ter)}
+.card{flex:1;display:flex;gap:var(--sp-md);align-items:center;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 18px;min-width:0}
 .card:hover{background:var(--panel-hover)}
 .card img{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#fff;flex:0 0 auto}
 .card h3{margin:0;font-size:1rem;font-weight:650}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{color:var(--green)}
 .cmeta{color:var(--ink-sec);font-size:.87rem;margin-top:2px}
 .cmeta .bt{color:var(--green);font-weight:700}
 .cmeta .sep{font-style:normal;opacity:.5}
+.sum{color:var(--ink-sec);font-size:.9rem;margin:4px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .tag{display:inline-block;border:1px solid var(--border);border-radius:var(--r-pill);padding:0 8px;font-size:.72rem;color:var(--ink-sec);margin-left:4px;vertical-align:1px}
 .empty{color:var(--ink-ter);text-align:center;padding:36px 0}
 footer{border-top:1px solid var(--border);padding:20px 0 34px;color:var(--ink-ter);font-size:.85rem}
@@ -73,22 +81,47 @@ footer a{color:var(--ink-sec)}
 </div></header>
 <main><div class="wrap">
   <div class="terminal">
-    <div class="terminal-header"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-title">chtf — exhibitors</span></div>
+    <div class="terminal-header"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-title">chtf — topic</span></div>
     <div class="terminal-body">
-      <h1>第二十八届高交会 · 展商名单</h1>
-      <div class="meta">2026-11-26 至 11-28 · 深圳国际会展中心（宝安）· 5–16 号馆 · 共 <b id="total">…</b> 家展商</div>
+      <h1>第二十八届高交会 · 专题</h1>
+      <div class="meta">2026-11-26 至 11-28 · 深圳国际会展中心（宝安）· 同期活动 <b id="evtotal">…</b> 场 · 展商 <b id="total">…</b> 家（5–16 号馆）</div>
     </div>
   </div>
-  <div class="agentnote">🤖 <b>Agent 检索</b>：全部展商数据开放读取 — <a href="/chtf.json">chtf.json</a>（字段：name 展商名 / booth 展位号 / hall 展馆 / tags 行业标签）。让你的 Agent 读这个文件，按需求词、展馆或标签筛选，即可推荐展位。</div>
+  <div class="agentnote">🤖 <b>Agent 检索</b>：活动数据 <a href="/events.json">events.json</a>（筛高交会相关条目）· 展商数据 <a href="/chtf.json">chtf.json</a>（字段：name 展商名 / booth 展位号 / hall 展馆 / tags 行业标签）。让你的 Agent 读这两个文件，按需求词、展馆或标签筛选，即可推荐活动与展位。</div>
+
+  <h2 class="sec">📅 同期活动</h2>
+  <p class="secsub">高交会主展与同期分会活动，点标题去官方页。</p>
+  <div id="evlist"></div>
+
+  <h2 class="sec">🏢 展商名单 · 展位查询</h2>
+  <p class="secsub">输入需求或公司名查展位，也可以按展馆、行业标签筛。</p>
   <div class="searchrow"><input id="q" type="search" placeholder="搜公司名 / 需求，如：机器人、储能、华为、半导体…"></div>
   <div class="chips" id="halls"></div>
   <div class="chips" id="tags"></div>
   <div class="cnt" id="cnt"></div>
   <div id="list"></div>
 </div></main>
-<footer><div class="wrap">数据来源：高交会展位导航官方数据（s.whte.cn）· 行业标签为按展商名关键词自动标注，仅供检索参考 · 原始导航：<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">展位平面图</a></div></footer>
+<footer><div class="wrap">展商数据来源：高交会展位导航官方数据（s.whte.cn）· 行业标签为按展商名关键词自动标注，仅供检索参考 · 原始导航：<a href="https://s.whte.cn/zwzl/chtf/?id=12" target="_blank" rel="noopener">展位平面图</a> · 活动以官方页为准</div></footer>
 <script>
 const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+/* ---- activities ---- */
+const CHTF_IDS=["7z82cp","bh77mw","3hb93b","9v5gka"];
+function feeMark(e){
+  const f=(e.fee||"").trim();
+  if(f.startsWith("免费"))return "🆓 "+esc(f);
+  if(f&&!/见官方页/.test(f))return "🎫 "+esc(f);
+  return esc(f);
+}
+function fmtD(t){if(!t)return "";const d=new Date(t);return (d.getMonth()+1)+"-"+d.getDate();}
+function fmtT(t){if(!t)return "";const d=new Date(t);return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");}
+fetch("/events.json").then(r=>r.json()).then(d=>{
+  const evs=d.events.filter(e=>CHTF_IDS.includes(e.id)||(e.title||"").includes("高交会"))
+    .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
+  $("#evtotal").textContent=evs.length;
+  $("#evlist").innerHTML=evs.length?evs.map(e=>`<div class="ev"><div class="rail"><div class="t1">${fmtD(e.start)}</div><div class="t2">${fmtT(e.start)}</div></div><div class="card"><div><h3><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></h3><div class="cmeta">${esc(e.venue||"")}${e.district?`<i class="sep"> · </i>${esc(e.district)}`:""}${e.fee?`<i class="sep"> · </i>${feeMark(e)}`:""}</div>${e.summary?`<p class="sum">${esc(e.summary)}</p>`:""}</div></div></div>`).join(""):`<div class="empty">暂无</div>`;
+}).catch(()=>{$("#evlist").innerHTML='<div class="empty">活动加载失败，请刷新重试</div>';});
+/* ---- exhibitors ---- */
 let DATA=[],fHall="",fTag="";
 function chips(el,items,fn,cur){el.innerHTML=items.map(t=>`<button type="button" class="chip${t===cur?" on":""}">${t||"全部"}</button>`).join("");[...el.children].forEach((c,i)=>c.onclick=()=>fn(items[i]));}
 function drawChips(){
@@ -102,7 +135,7 @@ function render(){
     .filter(e=>!fTag||e.tags.includes(fTag))
     .filter(e=>!q||e.name.includes(q)||e.tags.some(t=>t.includes(q))||(e.booth||"").toLowerCase().includes(ql));
   $("#cnt").textContent="命中 "+hits.length+" 家";
-  $("#list").innerHTML=hits.length?hits.slice(0,300).map(e=>`<div class="ev"><div class="card">${e.logo?`<img src="${e.logo}" alt="" loading="lazy">`:""}<div><h3>${e.name}</h3><div class="cmeta">${e.hall}<i class="sep"> · </i>展位 <span class="bt">${e.booth||"待定"}</span>${e.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div></div></div></div>`).join(""):`<div class="empty">没找到，换个关键词试试</div>`;
+  $("#list").innerHTML=hits.length?hits.slice(0,300).map(e=>`<div class="ev"><div class="card">${e.logo?`<img src="${e.logo}" alt="" loading="lazy">`:""}<div><h3>${esc(e.name)}</h3><div class="cmeta">${esc(e.hall)}<i class="sep"> · </i>展位 <span class="bt">${esc(e.booth||"待定")}</span>${e.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div></div></div></div>`).join(""):`<div class="empty">没找到，换个关键词试试</div>`;
 }
 $("#q").addEventListener("input",render);
 fetch("/chtf.json").then(r=>r.json()).then(d=>{DATA=d.exhibitors;$("#total").textContent=d.exhibitors.filter(e=>e.type==="exhibitor").length;drawChips();render();})
