@@ -974,7 +974,8 @@ function cardOf(h){
   const left=dl!==null&&dl>=0?`<div class="t3${warm?" warm":""}">${dl===0?tr("closesToday"):tr("daysLeft",dl)}</div>`:"";
   const rail=anchor?`<div class="rail"><div class="t1">${esc(anchor.slice(5))}</div><div class="t2">${h.deadline?tr("dlShort"):tr("startShort")}</div>${h.deadline?left:""}</div>`
     :`<div class="rail"><div class="t1">–</div><div class="t2">${tr("seeOfficial")}</div></div>`;
-  const where=esc(disp("reg",h.region))+(h.region!=="线上"&&h.city?" · "+esc(disp("city",h.city)):"");
+  const fmtMark=h.format==="线上"?"🌐 ":h.format==="线上+线下"?"🌐+📍 ":"";
+  const where=fmtMark+esc(disp("reg",h.region))+(h.region!=="线上"&&h.city?" · "+esc(disp("city",h.city)):"");
   const dates=h.start?`${tr("contest")} ${esc(mmdd(h.start))}${h.end&&h.end!==h.start?" ~ "+esc(mmdd(h.end)):""}`:tr("contestTBD");
   const prize=pickF(h,"prize");
   const fmtTxt=h.format===h.region?"":disp("fmt",h.format);
