@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram 群组频道机器人清单 · TG List | Yat's List</title>
+<meta name="description" content="1,279 个 Telegram 频道、群组与机器人清单：含成员数、分类、语言与简介，数据 JSON 开放给 Agent 检索。">
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#17202a;--muted:#66707c;--border:#e2e6ea;--green:#0e7c5a;--chip:#eef4f1}
+html[data-theme="dark"]{--bg:#10151b;--card:#171e26;--ink:#e8edf2;--muted:#9aa7b4;--border:#26303b;--chip:#1d2a24}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:880px;margin:0 auto;padding:28px 18px 60px}
+a{color:var(--green);text-decoration:none}
+.crumb{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+h1{font-size:1.65rem;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 18px;line-height:1.65}
+.agentnote{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin:0 0 20px;line-height:1.7;font-size:.93rem}
+.agentnote .prompt{display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:.88rem}
+.search{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-size:1rem;background:var(--card);color:var(--ink);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{padding:6px 13px;border:1px solid var(--border);border-radius:999px;background:var(--card);cursor:pointer;font-size:.87rem;color:var(--ink)}
+.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+.count{color:var(--muted);font-size:.88rem;margin:4px 0 12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px 16px;margin-bottom:10px}
+.card .nm{font-weight:700;font-size:1.02rem}
+.card .nm a{color:var(--ink)}
+.card .nm a:hover{color:var(--green)}
+.meta{color:var(--muted);font-size:.84rem;margin-top:4px}
+.meta .tp{color:var(--green);font-weight:600}
+.intro{color:var(--muted);font-size:.9rem;line-height:1.55;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.more{display:block;margin:18px auto;padding:11px 34px;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer;font-size:.95rem}
+.foot{color:var(--muted);font-size:.85rem;margin-top:26px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="https://yatslist.com/">Yat's List</a> / TG 清单</div>
+  <h1>✈️ Telegram 群组 · 频道 · 机器人清单</h1>
+  <p class="sub">共 <b id="totalN">1,279</b> 条：频道 427 · 群组 246 · 机器人 606。每条含成员/订阅数、分类、语言与简介。数据来源 TGbox 公开收录，本站持续核实更新中。</p>
+  <div class="agentnote">🤖 <b>让你的 Agent 帮你找群</b>（WorkBuddy · Codex · ChatGPT · Claude 都能读）：把数据文件发给它就行 —<br>
+  <span class="prompt">读 https://yatslist.com/tglist.json，帮我找 Claude 相关的 Telegram 群，给我链接和成员数。</span>
+  数据文件：<a href="/tglist.json">tglist.json</a>（字段：name 名称 / username 用户名 / type 类型 channel·group·bot / category 分类 / members 成员数 / language 语言 / intro 简介 / url 链接）</div>
+  <input class="search" id="q" type="search" placeholder="🔍 搜名称、@用户名、关键词，如 claude、量化、深圳…">
+  <div class="chips" id="typeChips">
+    <button class="chip on" data-t="">全部</button>
+    <button class="chip" data-t="channel">📢 频道</button>
+    <button class="chip" data-t="group">👥 群组</button>
+    <button class="chip" data-t="bot">🤖 机器人</button>
+  </div>
+  <div class="chips" id="catChips"></div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+  <button class="more" id="moreBtn">加载更多</button>
+  <p class="foot">数据来源：<a href="https://tgbox.cc/" target="_blank" rel="noopener">TGbox</a> 公开收录，本站仅做整理与检索；条目真实性请以 t.me 原页为准。发现失效或错误，欢迎来信 event.submit@yatslist.com。<br>← 返回 <a href="https://yatslist.com/">Yat's List 首页</a></p>
+</div>
+<script>
+(function(){try{var t=localStorage.getItem('szTheme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+var DATA=[], typeF='', catF='', shown=0; var PAGE=60;
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+var TPN={channel:'📢 频道',group:'👥 群组',bot:'🤖 机器人'};
+function fmtN(n){if(!n)return'';return n>=10000?(n/10000).toFixed(1).replace(/\.0$/,'')+' 万':String(n)}
+function filtered(){
+  var q=document.getElementById('q').value.trim().toLowerCase();
+  return DATA.filter(function(e){
+    if(typeF&&e.type!==typeF)return false;
+    if(catF&&e.category!==catF)return false;
+    if(q){var blob=((e.name||'')+' '+e.username+' '+(e.intro||'')+' '+(e.category||'')+' '+((e.tags||[]).join(' '))).toLowerCase();if(blob.indexOf(q)<0)return false;}
+    return true;
+  });
+}
+function render(reset){
+  var rows=filtered();
+  if(reset)shown=0;
+  shown=Math.min(rows.length,shown+PAGE);
+  document.getElementById('count').textContent='共 '+rows.length+' 条';
+  document.getElementById('list').innerHTML=rows.slice(0,shown).map(function(e){
+    var meta=[TPN[e.type]||e.type, e.category, e.members?fmtN(e.members)+(e.type==='channel'?' 订阅':' 成员'):'', e.language].filter(Boolean).join(' · ');
+    return '<div class="card"><div class="nm"><a href="'+esc(e.url)+'" target="_blank" rel="noopener">'+esc(e.name||e.username)+'</a> <span style="color:var(--muted);font-weight:400;font-size:.88rem">@'+esc(e.username)+'</span></div><div class="meta"><span class="tp">'+esc(meta)+'</span></div>'+(e.intro?'<div class="intro">'+esc(e.intro)+'</div>':'')+'</div>';
+  }).join('')||'<p style="color:var(--muted)">没有匹配的条目，换个关键词试试。</p>';
+  document.getElementById('moreBtn').style.display=shown<rows.length?'block':'none';
+}
+fetch('/tglist.json').then(function(r){return r.json()}).then(function(d){
+  DATA=d.entries||[];
+  document.getElementById('totalN').textContent=d.total||DATA.length;
+  var cats={};DATA.forEach(function(e){if(e.category)cats[e.category]=(cats[e.category]||0)+1});
+  var top=Object.keys(cats).sort(function(a,b){return cats[b]-cats[a]}).slice(0,14);
+  document.getElementById('catChips').innerHTML='<button class="chip on" data-c="">全部分类</button>'+top.map(function(c){return '<button class="chip" data-c="'+esc(c)+'">'+esc(c)+' '+cats[c]+'</button>'}).join('');
+  document.querySelectorAll('#catChips .chip').forEach(function(b){b.onclick=function(){document.querySelectorAll('#catChips .chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');catF=b.dataset.c;render(true)}});
+  render(true);
+}).catch(function(){document.getElementById('count').textContent='数据加载失败，请刷新重试。'});
+document.getElementById('q').addEventListener('input',function(){render(true)});
+document.querySelectorAll('#typeChips .chip').forEach(function(b){b.onclick=function(){document.querySelectorAll('#typeChips .chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');typeF=b.dataset.t;render(true)}});
+document.getElementById('moreBtn').onclick=function(){render(false)};
+</script>
+</body>
+</html>
