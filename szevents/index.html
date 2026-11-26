@@ -1149,7 +1149,9 @@ function cardOf(e,now){
   const ven=e.venue?fL(e,"venue"):"";
   const place=online?("🌐 "+(/^(线上|線上|online)/i.test(ven)?ven:[tr("online"),ven].filter(Boolean).join(" · ")))
     :hybrid?("🌐+📍 "+tr("online")+" + "+(where||tr("venueTBA"))):(where||tr("venueTBA"));
-  const fee=feeBadge(e).replace(/<[^>]+>/g,"").replace(/^💰\s*/,"");
+  const feeTxt=feeBadge(e).replace(/<[^>]+>/g,"").replace(/^💰\s*/,"");
+  const feeRaw=(e.fee||"").trim();
+  const fee=feeRaw.startsWith("免费")?("🆓 "+feeTxt):(feeRaw&&!/见官方页/.test(feeRaw)?("🎫 "+feeTxt):feeTxt);
   const meta=[e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
   const mapHref=(!online&&e.venue)?`https://uri.amap.com/marker?position=&name=${encodeURIComponent(`${e.city||""}${e.district||""}${e.venue}`)}&src=yat`:"";
   const idx=DATA.indexOf(e);
