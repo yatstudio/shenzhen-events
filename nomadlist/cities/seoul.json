@@ -11,9 +11,9 @@
     "country_zh": "韩国",
     "region": "East Asia",
     "cost_usd_month": 2000,
-    "rent_1br_usd_month": 900,
+    "rent_1br_usd_month": 930,
     "coworking_usd_month": 150,
-    "internet_mbps": 200,
+    "internet_mbps": 239,
     "safety_score": 4.7,
     "english_score": 2.8,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Seoul",
     "currency": "KRW",
-    "avg_temp_c": 15,
+    "avg_temp_c": 12.9,
     "best_months": "Apr-Jun,Sep-Oct",
     "tags": [
       "city",
@@ -38,12 +38,54 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://guides.nomadinasia.com/seoul/live",
+      "https://relocatenomad.com/country/south-korea/cost-of-living",
+      "https://nomadranker.com/cities/seoul/cost-of-living/",
+      "https://guides.nomadinasia.com/stories/fastest-internet-asia-2026",
+      "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/mainstn/nrmlist.php"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "麻浦/弘大",
+        "name_en": "Mapo & Hongdae",
+        "rent_1br_usd_month": 950,
+        "vibe": "年轻、夜生活与咖啡馆密集，游民与学生多",
+        "best_for": "首次来首尔、社交型游民",
+        "coworking_density": 4,
+        "note": "租金按市中心一居区间取中位（估算）"
+      },
+      {
+        "name": "圣水",
+        "name_en": "Seongsu",
+        "rent_1br_usd_month": 1050,
+        "vibe": "被称为首尔的布鲁克林，loft 工作室与创意产业聚集",
+        "best_for": "创意与科技从业者",
+        "coworking_density": 4,
+        "note": "租金据当地 loft studio 约 ₩160 万/月换算（估算）"
+      },
+      {
+        "name": "江南",
+        "name_en": "Gangnam",
+        "rent_1br_usd_month": 1200,
+        "vibe": "商务与高端住宅区，配套顶级、节奏快",
+        "best_for": "商务型、高预算长住",
+        "coworking_density": 5,
+        "note": "租金按市中心一居区间上沿（估算）"
+      },
+      {
+        "name": "梨泰院/龙山",
+        "name_en": "Itaewon & Yongsan",
+        "rent_1br_usd_month": 1000,
+        "vibe": "国际化社区，英语友好，外籍居民多",
+        "best_for": "英语使用者、外派与长住外国人",
+        "coworking_density": 3,
+        "note": "租金按外籍社区一居行情（估算）"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -53,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

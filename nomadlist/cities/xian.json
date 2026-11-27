@@ -10,10 +10,10 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 800,
-    "rent_1br_usd_month": 380,
+    "cost_usd_month": 775,
+    "rent_1br_usd_month": 290,
     "coworking_usd_month": 70,
-    "internet_mbps": 140,
+    "internet_mbps": 110,
     "safety_score": 4.5,
     "english_score": 2.8,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 14,
+    "avg_temp_c": 14.5,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "history",
@@ -39,12 +39,55 @@
       "游民CO youmin.co/locations — 发现线索",
       "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
       "NomadsCN nomadscn.com — 中国城市游民指南线索",
-      "Numbeo — 成本交叉核对"
+      "Numbeo — 成本交叉核对",
+      "https://www.numbeo.com/cost-of-living/in/Xi'an?displayCurrency=USD",
+      "https://citycost.org/xi-an/",
+      "https://rewireabroad.com/country/china/city/xian",
+      "https://expatwhy.com/cities/xian-china",
+      "https://weatherspark.com/y/120416/Average-Weather-in-Xi%E2%80%99an-China-Year-Round",
+      "https://www.internationaltravel.ai/ctryguide/32837/31/China/Living-in-Xian-Best-Neighborhoods-for-Single-Digital-Nomads-Living-in-Xian"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "verified_at": "2026-11-27",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "高新区 (Gaoxin)",
+        "name_en": "Gaoxin / High-tech Zone",
+        "rent_1br_usd_month": 460,
+        "vibe": "科技园区+年轻从业者，协同办公与咖啡馆密度全市最高",
+        "best_for": "协同办公与科技社群",
+        "coworking_density": 5,
+        "note": "估算：internationaltravel.ai 一居 ¥2,500–4,000 区间中值 ¥3,250≈$460（2024 数据）；该站口径偏外籍租客，高于 Numbeo 市中心均值 ¥1,910"
+      },
+      {
+        "name": "曲江新区 (Qujiang)",
+        "name_en": "Qujiang New District",
+        "rent_1br_usd_month": 565,
+        "vibe": "大唐不夜城/大雁塔文旅区，环境新、生活品质高，租金全市偏高",
+        "best_for": "生活品质与文化氛围",
+        "coworking_density": 3,
+        "note": "估算：internationaltravel.ai 一居 ¥3,000–5,000 区间中值 ¥4,000≈$565（2024 数据）"
+      },
+      {
+        "name": "雁塔区·小寨 (Yanta / Xiaozhai)",
+        "name_en": "Yanta / Xiaozhai",
+        "rent_1br_usd_month": 515,
+        "vibe": "高校环绕+小寨商圈，咖啡馆多、年轻人多，交通枢纽",
+        "best_for": "高校氛围与便利生活",
+        "coworking_density": 4,
+        "note": "估算：internationaltravel.ai 一居 ¥2,800–4,500 区间中值 ¥3,650≈$515（2024 数据）"
+      },
+      {
+        "name": "碑林区·城墙内老城 (Beilin)",
+        "name_en": "Beilin / Inside the City Wall",
+        "rent_1br_usd_month": 420,
+        "vibe": "钟楼/回民街/书院门，老城烟火气与历史感最强，老房居多",
+        "best_for": "老城生活与吃喝",
+        "coworking_density": 3,
+        "note": "估算：internationaltravel.ai 一居 ¥2,200–3,800 区间中值 ¥3,000≈$420（2024 数据）"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -56,14 +99,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

@@ -10,23 +10,23 @@
     "country": "Japan",
     "country_zh": "日本",
     "region": "East Asia",
-    "cost_usd_month": 2400,
-    "rent_1br_usd_month": 1100,
+    "cost_usd_month": 2150,
+    "rent_1br_usd_month": 1250,
     "coworking_usd_month": 180,
-    "internet_mbps": 160,
+    "internet_mbps": 225,
     "safety_score": 4.9,
     "english_score": 2.5,
     "visa": {
       "cn_passport_type": "visa_required",
       "cn_max_stay_days": 0,
-      "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "has_nomad_visa": false,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国 日本数字游民签证（特定活动告示第53号，停留6个月、不可续签，年收入门槛1000万日元）确实存在，但适用国籍限免签且有税收协定国家，中国护照不在名单内，故对中国护照标注为无可用游民签。",
+      "nomad_visa_link": "https://www.moj.go.jp/isa/content/001422249.pdf",
       "policy_last_change": null
     },
     "timezone": "Asia/Tokyo",
     "currency": "JPY",
-    "avg_temp_c": 18,
+    "avg_temp_c": 15.8,
     "best_months": "Mar-May,Oct-Nov",
     "tags": [
       "city",
@@ -38,12 +38,55 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://nostos.navoy.io/cities/tokyo",
+      "https://www.nomadforums.com/t/cost-of-living-in-japan-2026-tokyo-osaka-fukuoka-kyoto/104",
+      "https://www.traveldojo.com/tokyo/digital-nomads/",
+      "https://guides.nomadinasia.com/stories/fastest-internet-asia-2026",
+      "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/mainstn/nrmlist.php",
+      "https://www.moj.go.jp/isa/content/001422249.pdf"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "下北泽/世田谷",
+        "name_en": "Shimokitazawa & Setagaya",
+        "rent_1br_usd_month": 1200,
+        "vibe": "低层住宅区，古着店、live house 与咖啡馆密集，文艺松弛",
+        "best_for": "性价比与在地生活感、年轻创作者",
+        "coworking_density": 3,
+        "note": "租金为带家具月租公寓口径（来源区间 $1,000–1,700 取中位，估算）"
+      },
+      {
+        "name": "中目黑/目黑",
+        "name_en": "Nakameguro & Meguro",
+        "rent_1br_usd_month": 1500,
+        "vibe": "目黑川沿岸，精品咖啡与买手店，安静时髦",
+        "best_for": "长住、情侣、想要社区感的人",
+        "coworking_density": 3,
+        "note": "租金为带家具月租公寓口径（来源区间 $1,300–2,100 取中位，估算）"
+      },
+      {
+        "name": "中野",
+        "name_en": "Nakano",
+        "rent_1br_usd_month": 1100,
+        "vibe": "本地生活气浓，商店街与中野百老汇，租金明显低一档",
+        "best_for": "预算型长住",
+        "coworking_density": 2,
+        "note": "租金为带家具月租公寓口径（来源区间 $900–1,500 取中位，估算）"
+      },
+      {
+        "name": "浅草/上野",
+        "name_en": "Asakusa & Ueno",
+        "rent_1br_usd_month": 1150,
+        "vibe": "老东京风貌，寺庙、市场与公园，东区租金较低",
+        "best_for": "文化爱好者、低预算体验老东京",
+        "coworking_density": 2,
+        "note": "租金为带家具月租公寓口径（来源区间 $900–1,600 取中位，估算）"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -53,19 +96,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "official_page",
+        "as_of": "2026-11-27"
       }
     }
   }

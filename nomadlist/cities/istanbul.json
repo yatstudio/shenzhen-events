@@ -10,10 +10,10 @@
     "country": "Turkey",
     "country_zh": "土耳其",
     "region": "Middle East / Europe",
-    "cost_usd_month": 1350,
-    "rent_1br_usd_month": 650,
+    "cost_usd_month": 1500,
+    "rent_1br_usd_month": 800,
     "coworking_usd_month": 110,
-    "internet_mbps": 60,
+    "internet_mbps": 90,
     "safety_score": 3.8,
     "english_score": 2.8,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Europe/Istanbul",
     "currency": "TRY",
-    "avg_temp_c": 18,
+    "avg_temp_c": 15,
     "best_months": "Apr-Jun,Sep-Oct",
     "tags": [
       "city",
@@ -38,12 +38,53 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://homesofturkey.com/cost-of-living-istanbul-2026/ — Numbeo 2026-11：单人 $1,400-1,800、中心一居约 $1,000",
+      "https://www.living-abroad.org/countries/turkey/cost-of-living/ — Numbeo 交叉：非租金成本约 €677、中心一居约 €866",
+      "https://ookla-marketing-generator.ookla.dev/research/reports/turkiye-speedtest-connectivity-report-h2-2025 — Ookla：伊斯坦布尔固定宽带中位 87.57 Mbps",
+      "https://en.wikipedia.org/wiki/Climate_of_Istanbul — 1991-2020 年均温约 14-15°C（NOAA 气候数据）"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "卡德柯伊（莫达）",
+        "name_en": "Kadıköy (Moda)",
+        "rent_1br_usd_month": 750,
+        "vibe": "亚洲岸、本地青年和游民实际落点、渡轮通欧洲岸",
+        "best_for": "长住主力片区",
+        "coworking_density": 4,
+        "note": "估算：介于 Numbeo 中心（约 $975-1,000）与非中心（约 $626-651）均值之间，片区级挂牌未逐条核"
+      },
+      {
+        "name": "贝希克塔什",
+        "name_en": "Beşiktaş",
+        "rent_1br_usd_month": 950,
+        "vibe": "欧洲岸中心、生活便利、租金全市最高一档",
+        "best_for": "短住、便利优先",
+        "coworking_density": 4,
+        "note": "估算：接近 Numbeo 市中心一居均值"
+      },
+      {
+        "name": "贝伊奥卢（吉汉吉尔）",
+        "name_en": "Beyoğlu (Cihangir)",
+        "rent_1br_usd_month": 900,
+        "vibe": "老城文艺区、外籍人士传统聚居地",
+        "best_for": "文化型、社交型",
+        "coworking_density": 4,
+        "note": "估算：接近 Numbeo 市中心均值略低"
+      },
+      {
+        "name": "希什利（博蒙提）",
+        "name_en": "Şişli (Bomonti)",
+        "rent_1br_usd_month": 850,
+        "vibe": "新式公寓多、交通枢纽、办公氛围",
+        "best_for": "长住、办公型",
+        "coworking_density": 5,
+        "note": "估算：按 Numbeo 中心均值下浮，片区级挂牌未逐条核"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -53,14 +94,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

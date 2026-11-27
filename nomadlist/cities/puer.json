@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 480,
-    "rent_1br_usd_month": 220,
+    "cost_usd_month": 380,
+    "rent_1br_usd_month": 170,
     "coworking_usd_month": 40,
     "internet_mbps": 90,
     "safety_score": 4.8,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 20,
+    "avg_temp_c": 19.3,
     "best_months": "All year",
     "tags": [
       "tea",
@@ -39,11 +39,54 @@
       "游民CO youmin.co/locations — 发现线索",
       "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
       "NomadsCN nomadscn.com — 中国城市游民指南线索",
-      "Numbeo — 成本交叉核对"
+      "Numbeo — 成本交叉核对",
+      "https://www.163.com/dy/article/KFHSADSV05565JWF.html",
+      "https://pe.58.com/chuzu/",
+      "https://www.bkwk.cn/article/pu-er-si-mao-qu-pu-er-zhan-zhou-bian-zu-fang-gong-lve-xue-sheng-zu-shang-ban-zu-bi-kan-xiang-jie-zu.html",
+      "https://chigui.net/city/puer",
+      "https://en.wikipedia.org/wiki/Pu'er_City",
+      "https://finance.sina.cn/2026-09-11/detail-inirmruc2429330.d.html"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "思茅老城·振兴大道 (Simao Old Town)",
+        "name_en": "Simao Old Town / Zhenxing Ave",
+        "rent_1br_usd_month": 165,
+        "vibe": "五一市场/市医院/老城商业，生活气最浓，长租一居供给最多",
+        "best_for": "长住生活与烟火气",
+        "coworking_density": 2,
+        "note": "58同城 2026-11 在租一居 ¥1,100–1,250（利民小筑/普洱广场/中心商务区）≈$165；网易旅居实测称老城两居 ¥1,000–1,500"
+      },
+      {
+        "name": "茶马古城·北部新区 (Chama Town / North)",
+        "name_en": "Chama Ancient Town / North New Area",
+        "rent_1br_usd_month": 225,
+        "vibe": "茶马古城文旅区+北部湿地，新公寓多、带办公桌的游民公寓集中",
+        "best_for": "数字游民公寓与新房",
+        "coworking_density": 3,
+        "note": "估算：58同城茶马古城映山和园一居 ¥1,700、普洱中心两居 ¥1,700–2,000；网易实测称新城区游民公寓月租 ¥1,500–2,000，取一居约 ¥1,600≈$225"
+      },
+      {
+        "name": "梅子湖片区 (Meizihu Lake)",
+        "name_en": "Meizihu Lake",
+        "rent_1br_usd_month": 210,
+        "vibe": "梅子湖公园畔的养生公寓带，环境安静，离老城约 15 分钟",
+        "best_for": "湖畔慢生活与康养长住",
+        "coworking_density": 1,
+        "note": "估算：迟归指南称梅子湖周边养生公寓包食宿短租 ¥3,500–8,000/月，长租一居按约 ¥1,500≈$210 估算"
+      },
+      {
+        "name": "南屏·普洱学院 (Nanping / Pu'er University)",
+        "name_en": "Nanping / Pu'er University",
+        "rent_1br_usd_month": 125,
+        "vibe": "普洱学院与机场路一带，学生区物价低，房源偏小户型",
+        "best_for": "预算长住",
+        "coworking_density": 1,
+        "note": "估算：58同城机场小区一居 ¥800、北门街小户型 ¥500–550，长租一居按约 ¥900≈$125 估算"
+      }
+    ],
     "data_tier": "verified_v1",
     "best_months_nums": [
       1,
@@ -62,8 +105,8 @@
     "fields_provenance": {
       "cost_usd_month": {
         "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "basis": "single detailed worked example (163.com on-the-ground stay: rent CNY 1,200 + living CNY 1,500 = CNY 2,700/mo ≈ $380; rent component separately cross-checked from 58.com listings)",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
         "confidence": 0.6,

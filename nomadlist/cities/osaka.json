@@ -20,8 +20,8 @@
       "cn_passport_type": "visa_required",
       "cn_max_stay_days": 0,
       "has_nomad_visa": false,
-      "note": "以官方移民页为准",
-      "nomad_visa_link": null,
+      "note": "以官方移民页为准 日本数字游民签证（特定活动告示第53号，停留6个月、不可续签，年收入门槛1000万日元）确实存在，但适用国籍限免签且有税收协定国家，中国护照不在名单内，故对中国护照标注为无可用游民签。",
+      "nomad_visa_link": "https://www.moj.go.jp/isa/content/001422249.pdf",
       "policy_last_change": null
     },
     "timezone": "UTC+9",
@@ -80,7 +80,7 @@
       "签证：待日本出入国在留管理厅官方页核实，has_nomad_visa 暂保持原值"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-27",
     "data_tier": "checked",
     "best_months_nums": [
       3,
@@ -101,9 +101,9 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "official_page",
+        "as_of": "2026-11-27"
       }
     }
   }

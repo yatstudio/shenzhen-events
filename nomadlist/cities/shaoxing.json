@@ -10,10 +10,10 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 750,
-    "rent_1br_usd_month": 350,
+    "cost_usd_month": 740,
+    "rent_1br_usd_month": 430,
     "coworking_usd_month": 50,
-    "internet_mbps": 130,
+    "internet_mbps": 95,
     "safety_score": 4.8,
     "english_score": 2.5,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 20,
+    "avg_temp_c": 16.9,
     "best_months": "Mar-Jun,Sep-Nov",
     "tags": [
       "heritage",
@@ -39,11 +39,53 @@
       "游民CO youmin.co/locations — 发现线索",
       "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
       "NomadsCN nomadscn.com — 中国城市游民指南线索",
-      "Numbeo — 成本交叉核对"
+      "Numbeo — 成本交叉核对",
+      "https://www.numbeo.com/cost-of-living/in/Shaoxing-China",
+      "https://citycost.org/shaoxing/",
+      "https://rewireabroad.com/country/china/city/shaoxing",
+      "https://urcity.com/en/cities/shaoxing-zj/",
+      "https://zh.wikipedia.org/wiki/%E7%B4%B9%E8%88%88%E5%B8%82"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "越城区·鲁迅故里老城 (Yuecheng Old Town)",
+        "name_en": "Yuecheng Old Town",
+        "rent_1br_usd_month": 410,
+        "vibe": "鲁迅故里/仓桥直街水乡老城，文化氛围最浓，老房与改造公寓混合",
+        "best_for": "水乡老城生活",
+        "coworking_density": 2,
+        "note": "Numbeo 市中心一居 ¥2,900≈$410；Rewire 称 Ucommune/Regus 在绍兴有网点（细节有限）"
+      },
+      {
+        "name": "镜湖新区 (Jinghu New Area)",
+        "name_en": "Jinghu New Area",
+        "rent_1br_usd_month": 340,
+        "vibe": "市政府与新 CBD 所在，楼盘新、地铁通，生活配套在补齐中",
+        "best_for": "新房与通勤",
+        "coworking_density": 3,
+        "note": "估算：介于 Numbeo 市中心 ¥2,900 与市郊 ¥1,500 之间，按约 ¥2,400≈$340 估算"
+      },
+      {
+        "name": "柯桥区 (Keqiao)",
+        "name_en": "Keqiao District",
+        "rent_1br_usd_month": 270,
+        "vibe": "中国轻纺城商贸区，外贸从业者多，离杭州萧山半小时",
+        "best_for": "商贸与杭州通勤半径",
+        "coworking_density": 2,
+        "note": "估算：urcity 全市一居中位 ¥2,000（安居客/贝壳口径），柯桥按约 ¥1,900≈$270 估算"
+      },
+      {
+        "name": "上虞区 (Shangyu)",
+        "name_en": "Shangyu District",
+        "rent_1br_usd_month": 210,
+        "vibe": "曹娥江畔的独立城区，节奏更慢、租金最低，高铁站在此",
+        "best_for": "预算与安静",
+        "coworking_density": 1,
+        "note": "Numbeo 市郊一居 ¥1,500≈$210"
+      }
+    ],
     "data_tier": "verified_v1",
     "best_months_nums": [
       3,
@@ -56,20 +98,31 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
         "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "basis": "single source: rewireabroad avg internet speed 95 Mbps; Numbeo only confirms 60 Mbps+ unlimited plans are standard (CNY 60/mo)",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 224,
+      "food": 144,
+      "transport": 20,
+      "utilities_internet": 65,
+      "misc": 60,
+      "total": 513,
+      "basis": "rewireabroad 2026-11-15 中档单人分项（租金为市郊一居 $224；食品=杂货 $107+外食 $37；水电网络 $65；交通 $20；娱乐生活 $60；合计 $513）；CityCost 单人含租 $757、Rewire 市中心租口径 $289+$433=$722，两源区间内 cost_usd_month 取 740"
     }
   }
 }

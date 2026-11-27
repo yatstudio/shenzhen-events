@@ -10,7 +10,7 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 880,
+    "cost_usd_month": 800,
     "rent_1br_usd_month": 335,
     "coworking_usd_month": 56,
     "internet_mbps": 120,
@@ -78,11 +78,13 @@
       "Numbeo — 成本交叉",
       "http://everycity.guide/city/yixing",
       "https://en.wikipedia.org/wiki/Yixing",
-      "https://www.numbeo.com/cost-of-living/in/Yixing-China"
+      "https://www.numbeo.com/cost-of-living/in/Yixing-China",
+      "https://livingcost.org/cost/china/yixing",
+      "https://www.traveldojo.com/yixing-county/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-22",
-    "data_tier": "seed_v2",
+    "verified_at": "2026-11-27",
+    "updated_at": "2026-11-27",
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -91,14 +93,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.4,
-        "basis": "single source: everycity.guide May 2026, not yet cross-checked",
-        "as_of": "2026-11-22"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.4,
-        "basis": "estimate, pending verification",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

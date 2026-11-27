@@ -13,20 +13,20 @@
     "cost_usd_month": 1400,
     "rent_1br_usd_month": 700,
     "coworking_usd_month": 130,
-    "internet_mbps": 60,
+    "internet_mbps": 40,
     "safety_score": 4.0,
     "english_score": 4.0,
     "visa": {
       "cn_passport_type": "voa",
       "cn_max_stay_days": 30,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "note": "中国护照落地签 30 天（可延一次）；印尼移民局 E33G 远程工作签（官方指南，Ngurah Rai 移民局）：1 年多次入境、须境外公司雇佣合同+年收入 ≥$60,000+近 3 个月余额 ≥$2,000，费用合计约 Rp7,000,000，经 evisa.imigrasi.go.id 申请。",
+      "nomad_visa_link": "https://ngurahrai.imigrasi.go.id/web/wp-content/uploads/2026/10/e33g-visa-guide-en.pdf",
       "policy_last_change": null
     },
     "timezone": "Asia/Makassar",
     "currency": "IDR",
-    "avg_temp_c": 28,
+    "avg_temp_c": 27.5,
     "best_months": "Apr-Oct",
     "tags": [
       "surf",
@@ -38,10 +38,14 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Indonesia&city1=Bali&country2=Indonesia&city2=Denpasar",
+      "https://www.nomadforums.com/t/cost-of-living-in-bali-for-digital-nomads-2026-canggu-rent-visas-and-areas/54",
+      "https://navid.me/free-tools/digital-nomad-locations/canggu",
+      "https://ngurahrai.imigrasi.go.id/web/wp-content/uploads/2026/10/e33g-visa-guide-en.pdf"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-27",
     "neighborhoods": [
       {
         "name": "贝拉瓦 Berawa",
@@ -69,9 +73,18 @@
         "best_for": "带家人/团队",
         "coworking_density": 4,
         "note": "适合整租别墅合住"
+      },
+      {
+        "name": "通巴巴尤 Tumbak Bayuh",
+        "name_en": "Tumbak Bayuh",
+        "rent_1br_usd_month": 600,
+        "vibe": "佩雷南内侧、稻田环绕、新建别墅多",
+        "best_for": "安静长住、躲堵车",
+        "coworking_density": 3,
+        "note": "估算：介于佩雷南与贝拉瓦之间，实际以长租挂牌为准"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       4,
       5,
@@ -83,19 +96,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-27"
       }
     }
   }

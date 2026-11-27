@@ -10,7 +10,7 @@
     "country": "China",
     "country_zh": "中国",
     "region": "East Asia",
-    "cost_usd_month": 1600,
+    "cost_usd_month": 1400,
     "rent_1br_usd_month": 750,
     "coworking_usd_month": 120,
     "internet_mbps": 180,
@@ -19,14 +19,14 @@
     "visa": {
       "cn_passport_type": "home_or_visa_required",
       "cn_max_stay_days": 0,
-      "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
+      "has_nomad_visa": false,
+      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国 中国无数字游民签证计划，此前 true 为种子误标，2026-11-27 修正。",
       "nomad_visa_link": null,
       "policy_last_change": null
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 23,
+    "avg_temp_c": 23.3,
     "best_months": "Oct-Apr",
     "tags": [
       "hardware",
@@ -38,10 +38,13 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.numbeo.com/cost-of-living/in/Shenzhen",
+      "https://www.climatestotravel.com/climate/china/shenzhen",
+      "https://chinastay.org/city-guides/best-cities-china-digital-nomads/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "verified_at": "2026-11-27",
+    "updated_at": "2026-11-27",
     "neighborhoods": [
       {
         "name": "南山·科技园/后海",
@@ -80,7 +83,7 @@
         "note": "适合短住换脑子，长住通勤不便"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -92,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

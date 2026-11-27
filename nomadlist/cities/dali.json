@@ -10,7 +10,7 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 550,
+    "cost_usd_month": 700,
     "rent_1br_usd_month": 280,
     "coworking_usd_month": 60,
     "internet_mbps": 100,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 18,
+    "avg_temp_c": 15.4,
     "best_months": "Mar-May,Sep-Nov",
     "tags": [
       "low-cost",
@@ -39,10 +39,14 @@
       "游民CO youmin.co/locations — 发现线索",
       "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
       "NomadsCN nomadscn.com — 中国城市游民指南线索",
-      "Numbeo — 成本交叉核对"
+      "Numbeo — 成本交叉核对",
+      "https://chinastay.org/city-guides/dali/",
+      "https://thenomadhq.com/blog/dali-china-digital-nomad-guide",
+      "https://trekfeed.com/dali-digital-nomad-guide-and-erhai-lake-coworking-2026",
+      "https://en.wikipedia.org/wiki/Dali_City"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "verified_at": "2026-11-27",
+    "updated_at": "2026-11-27",
     "neighborhoods": [
       {
         "name": "大理古城",
@@ -81,7 +85,7 @@
         "note": "成本地板，配套靠电动车"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -92,14 +96,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

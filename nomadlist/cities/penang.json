@@ -10,10 +10,10 @@
     "country": "Malaysia",
     "country_zh": "马来西亚",
     "region": "Southeast Asia",
-    "cost_usd_month": 1050,
+    "cost_usd_month": 1100,
     "rent_1br_usd_month": 420,
     "coworking_usd_month": 90,
-    "internet_mbps": 85,
+    "internet_mbps": 170,
     "safety_score": 4.4,
     "english_score": 4.2,
     "visa": {
@@ -21,7 +21,7 @@
       "cn_max_stay_days": 30,
       "has_nomad_visa": true,
       "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
+      "nomad_visa_link": "https://mdec.my/derantau",
       "policy_last_change": null
     },
     "timezone": "Asia/Kuala_Lumpur",
@@ -38,12 +38,54 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.traveldojo.com/georgetown/digital-nomads/",
+      "https://www.actualnomad.com/penang-digital-nomad-guide/",
+      "https://www.visitpenang.com/digital-nomad",
+      "https://en.wikipedia.org/wiki/List_of_sovereign_states_by_Internet_connection_speeds",
+      "https://mdec.my/derantau"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "乔治市老城",
+        "name_en": "George Town Heritage Zone",
+        "rent_1br_usd_month": 550,
+        "vibe": "世遗街屋、街头美食与咖啡馆，步行生活",
+        "best_for": "美食与文化、写作型游民",
+        "coworking_density": 4,
+        "note": "租金综合两家指南区间 $340–900 取中位（估算）；老街屋隔热差、电费偏高"
+      },
+      {
+        "name": "葛尼/浮罗池滑",
+        "name_en": "Gurney & Pulau Tikus",
+        "rent_1br_usd_month": 650,
+        "vibe": "海滨公寓与商场，现代配套齐全",
+        "best_for": "想要现代便利与海景的人",
+        "coworking_density": 4,
+        "note": "租金据指南区间 $450–900 取中位（估算）"
+      },
+      {
+        "name": "丹绒道光/丹绒武雅",
+        "name_en": "Tanjung Tokong & Tanjung Bungah",
+        "rent_1br_usd_month": 550,
+        "vibe": "北海岸泳池公寓带，安静、适合长住",
+        "best_for": "长住、公寓生活型",
+        "coworking_density": 2,
+        "note": "租金据指南区间 $400–800 取中位（估算）"
+      },
+      {
+        "name": "峇六拜",
+        "name_en": "Bayan Lepas",
+        "rent_1br_usd_month": 500,
+        "vibe": "机场与科技园区旁，本地生活气息，租金较低",
+        "best_for": "科技从业者、预算型",
+        "coworking_density": 2,
+        "note": "租金据指南区间 $350–700 取中位（估算）"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -51,19 +93,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration/government page",
+        "as_of": "2026-11-27"
       }
     }
   }

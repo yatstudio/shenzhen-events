@@ -10,8 +10,8 @@
     "country": "China",
     "country_zh": "中国",
     "region": "China Domestic",
-    "cost_usd_month": 520,
-    "rent_1br_usd_month": 240,
+    "cost_usd_month": 690,
+    "rent_1br_usd_month": 310,
     "coworking_usd_month": 40,
     "internet_mbps": 110,
     "safety_score": 4.7,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Shanghai",
     "currency": "CNY",
-    "avg_temp_c": 22,
+    "avg_temp_c": 22.6,
     "best_months": "Oct-Apr",
     "tags": [
       "low-cost",
@@ -39,12 +39,54 @@
       "游民CO youmin.co/locations — 发现线索",
       "小住 StayHere stay.xbuding.com — 惠州等成本/房源实测线索",
       "NomadsCN nomadscn.com — 中国城市游民指南线索",
-      "Numbeo — 成本交叉核对"
+      "Numbeo — 成本交叉核对",
+      "https://everycity.guide/city/zhaoqing",
+      "https://rewireabroad.com/compare-cities/zhaoqing-vs-bangi",
+      "https://www.numbeo.com/cost-of-living/in/Zhaoqing-China",
+      "https://en.wikipedia.org/wiki/Zhaoqing",
+      "https://www.traveldojo.com/zhaoqing/"
     ],
-    "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "verified_at": "2026-11-27",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "端州老城 (Duanzhou Old Town)",
+        "name_en": "Duanzhou Old Town",
+        "rent_1br_usd_month": 325,
+        "vibe": "宋城墙内的老城核心，星湖与骑楼街在侧，公交与生活配套最全",
+        "best_for": "市中心生活与长住便利",
+        "coworking_density": 2,
+        "note": "everycity.guide 2026-05：一居 ¥2,300/月≈$325；本地协同办公稀少，多靠咖啡馆/图书馆（traveldojo）"
+      },
+      {
+        "name": "星湖·七星岩 (Star Lake)",
+        "name_en": "Star Lake / Seven Star Crags",
+        "rent_1br_usd_month": 365,
+        "vibe": "七星岩湖畔高端住宅区，环境全市最好，租金也最高",
+        "best_for": "湖景与生活品质",
+        "coworking_density": 1,
+        "note": "everycity.guide 2026-05：一居 ¥2,600/月≈$365"
+      },
+      {
+        "name": "鼎湖区 (Dinghu)",
+        "name_en": "Dinghu District",
+        "rent_1br_usd_month": 280,
+        "vibe": "鼎湖山脚下，空气好、节奏慢，离老城约 20 分钟车程",
+        "best_for": "山景慢生活",
+        "coworking_density": 1,
+        "note": "everycity.guide 2026-05：一居 ¥2,000/月≈$280"
+      },
+      {
+        "name": "高要区 (Gaoyao)",
+        "name_en": "Gaoyao District",
+        "rent_1br_usd_month": 255,
+        "vibe": "西江对岸的新房供给区，性价比最高，进老城需过桥",
+        "best_for": "预算与新房",
+        "coworking_density": 1,
+        "note": "everycity.guide 2026-05：一居 ¥1,800/月≈$255"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -56,20 +98,31 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,
         "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
         "as_of": "2026-11-18"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 324,
+      "food": 195,
+      "transport": 18,
+      "utilities_internet": 61,
+      "misc": 162,
+      "total": 760,
+      "basis": "everycity.guide 2026-05 单人市中心一居 14 项明细（租金 ¥2,300≈$324、食品 $195、交通 $18、水电 $48+宽带 $13=$61、其余健身/手机/咖啡/外食等 $162，合计 $760）；Rewire 口径为不含租 $322+市中心一居 $300=$622，两源区间内 cost_usd_month 取 690"
     }
   }
 }

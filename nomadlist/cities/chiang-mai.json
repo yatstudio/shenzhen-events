@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Bangkok",
     "currency": "THB",
-    "avg_temp_c": 28,
+    "avg_temp_c": 26.2,
     "best_months": "Nov-Feb",
     "tags": [
       "low-cost",
@@ -39,10 +39,13 @@
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
       "该国移民局/政府官方签证页 — 签证口径",
-      "https://www.thaievisa.go.th/"
+      "https://www.thaievisa.go.th/",
+      "https://www.numbeo.com/cost-of-living/in/Chiang-Mai?displayCurrency=USD",
+      "https://nostos.navoy.io/cities/chiang-mai",
+      "https://thaipedia.asia/en/data/climate/chiang-mai/"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-25",
+    "updated_at": "2026-11-27",
     "neighborhoods": [
       {
         "name": "宁曼路 Nimman",
@@ -81,7 +84,7 @@
         "note": "长租公寓供应最足"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -94,14 +97,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.95,

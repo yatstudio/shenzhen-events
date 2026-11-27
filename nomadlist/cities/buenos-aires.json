@@ -10,10 +10,10 @@
     "country": "Argentina",
     "country_zh": "阿根廷",
     "region": "Americas",
-    "cost_usd_month": 1150,
-    "rent_1br_usd_month": 550,
+    "cost_usd_month": 1450,
+    "rent_1br_usd_month": 650,
     "coworking_usd_month": 100,
-    "internet_mbps": 75,
+    "internet_mbps": 110,
     "safety_score": 3.6,
     "english_score": 2.5,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "America/Argentina/Buenos_Aires",
     "currency": "ARS",
-    "avg_temp_c": 20,
+    "avg_temp_c": 18.4,
     "best_months": "Sep-Nov,Mar-May",
     "tags": [
       "culture",
@@ -38,12 +38,53 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.internationalre.org/blog/cost-of-living-buenos-aires-2026.html — Numbeo 2026-10：单人含租 $1,380-1,610、中心一居 $731",
+      "https://www.internationalre.org/quick-reads/cost-of-living-buenos-aires-per-month.html — Zonaprop 2026-09 片区挂牌（巴勒莫 $655、全市 $585）",
+      "https://www.climatestotravel.com/climate/argentina/buenos-aires — 1991-2020 年均温 18.35°C",
+      "https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds — Speedtest 2026-03 阿根廷固定宽带中位 111.54 Mbps"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "巴勒莫",
+        "name_en": "Palermo",
+        "rent_1br_usd_month": 655,
+        "vibe": "游民第一大本营、咖啡馆和协同办公最密",
+        "best_for": "短住、社交型、首站",
+        "coworking_density": 5,
+        "note": "Zonaprop 2026-09 一居挂牌均值约 $655（实测挂牌，非估算）"
+      },
+      {
+        "name": "雷科莱塔",
+        "name_en": "Recoleta",
+        "rent_1br_usd_month": 700,
+        "vibe": "老钱区、建筑和博物馆、安静体面",
+        "best_for": "长住、文化型",
+        "coworking_density": 3,
+        "note": "估算：按 Numbeo 市中心一居均值（约 $731）略下浮"
+      },
+      {
+        "name": "贝尔格拉诺",
+        "name_en": "Belgrano",
+        "rent_1br_usd_month": 600,
+        "vibe": "中产住宅区、生活气足、比巴勒莫便宜",
+        "best_for": "长住、安静型",
+        "coworking_density": 3,
+        "note": "估算：接近 Zonaprop 全市一居均值 $585 上浮"
+      },
+      {
+        "name": "圣特尔莫",
+        "name_en": "San Telmo",
+        "rent_1br_usd_month": 550,
+        "vibe": "老城+探戈+市集、老房子多、夜里偏静",
+        "best_for": "预算型、文艺型",
+        "coworking_density": 2,
+        "note": "估算：按 Numbeo 非中心均值（约 $494）上浮"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       3,
       4,
@@ -54,14 +95,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,

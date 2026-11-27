@@ -20,13 +20,13 @@
       "cn_passport_type": "visa_free",
       "cn_max_stay_days": 30,
       "has_nomad_visa": true,
-      "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
-      "nomad_visa_link": null,
-      "policy_last_change": null
+      "note": "马来西亚 DE Rantau Nomad Pass（MDEC 官方）：专业访问准证，首签 3–12 个月；2026-12-01 起增强框架可续至总计 4 年，科技类年收入门槛 $36,000（此前 $24,000）、非科技类 $60,000，处理费 RM1,080；2026-11-01 至 11-30 新申请暂停、12-01 按新框架恢复。中国护照免签入境 30 天。",
+      "nomad_visa_link": "https://www.mdec.my/expats-announcements/enhanced-de-rantau-nomad-pass-framework-and-temporary-closure-of-new-application-submissions",
+      "policy_last_change": "2026-12-01"
     },
     "timezone": "Asia/Kuala_Lumpur",
     "currency": "MYR",
-    "avg_temp_c": 28,
+    "avg_temp_c": 27.8,
     "best_months": "All year",
     "tags": [
       "city",
@@ -38,10 +38,14 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.numbeo.com/cost-of-living/in/Kuala-Lumpur?displayCurrency=USD",
+      "https://nostos.navoy.io/cities/kuala-lumpur",
+      "https://www.mdec.my/expats-announcements/enhanced-de-rantau-nomad-pass-framework-and-temporary-closure-of-new-application-submissions",
+      "https://en.wikipedia.org/wiki/Template:Kuala_Lumpur_weatherbox"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-27",
     "neighborhoods": [
       {
         "name": "孟沙 Bangsar",
@@ -69,9 +73,18 @@
         "best_for": "短住、枢纽",
         "coworking_density": 5,
         "note": "热闹贵，适合首周落脚"
+      },
+      {
+        "name": "敦依斯迈花园 TTDI",
+        "name_en": "Taman Tun Dr Ismail (TTDI)",
+        "rent_1br_usd_month": 480,
+        "vibe": "本地中产社区、绿化好、咖啡馆与小食中心多",
+        "best_for": "安静长住",
+        "coworking_density": 3,
+        "note": "估算：按 Numbeo 市中心外一居 $345–450 区间上沿取，实际以长租挂牌为准"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -88,19 +101,19 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official immigration page",
+        "as_of": "2026-11-27"
       }
     }
   }

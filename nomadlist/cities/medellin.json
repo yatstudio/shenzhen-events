@@ -10,10 +10,10 @@
     "country": "Colombia",
     "country_zh": "哥伦比亚",
     "region": "Americas",
-    "cost_usd_month": 1250,
-    "rent_1br_usd_month": 600,
+    "cost_usd_month": 1500,
+    "rent_1br_usd_month": 750,
     "coworking_usd_month": 110,
-    "internet_mbps": 65,
+    "internet_mbps": 70,
     "safety_score": 3.4,
     "english_score": 2.5,
     "visa": {
@@ -26,7 +26,7 @@
     },
     "timezone": "America/Bogota",
     "currency": "COP",
-    "avg_temp_c": 22,
+    "avg_temp_c": 21.1,
     "best_months": "All year",
     "tags": [
       "climate",
@@ -38,12 +38,53 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.internationalre.org/quick-reads/cost-of-living-medellin-per-month.html — Numbeo 2026-11 成本 + Fincaraíz 片区挂牌中位",
+      "https://www.nomadforums.com/t/living-in-medellin-as-a-digital-nomad-2026-cost-of-living-visas-safety/61 — Numbeo 交叉、舒适预算 $1,340-2,500",
+      "https://settlednomad.com/cities/medellin — 网速 70 Mbps 口径、月预算构成",
+      "https://weatherhack.com/weather/ — ERA5 麦德林年均温约 21.1°C"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "劳雷莱斯",
+        "name_en": "Laureles",
+        "rent_1br_usd_month": 826,
+        "vibe": "本地生活+游民混居、性价比片区、咖啡馆多",
+        "best_for": "长住主力片区",
+        "coworking_density": 5,
+        "note": "Fincaraíz 2026-11 一居挂牌中位 COP 2,740,000 ≈ $826（实测挂牌，非估算）"
+      },
+      {
+        "name": "埃尔波夫拉多",
+        "name_en": "El Poblado",
+        "rent_1br_usd_month": 1379,
+        "vibe": "外籍人士第一站、夜生活和餐厅最密、也最贵",
+        "best_for": "短住、社交型",
+        "coworking_density": 5,
+        "note": "Fincaraíz 2026-11 一居挂牌中位 COP 4,575,000 ≈ $1,379（实测挂牌，非估算）"
+      },
+      {
+        "name": "恩维加多",
+        "name_en": "Envigado",
+        "rent_1br_usd_month": 1161,
+        "vibe": "波夫拉多以南的安静平替、本地家庭区",
+        "best_for": "安静长住",
+        "coworking_density": 3,
+        "note": "Fincaraíz 2026-11 一居挂牌中位 COP 3,850,000 ≈ $1,161（实测挂牌，非估算）"
+      },
+      {
+        "name": "贝伦",
+        "name_en": "Belén",
+        "rent_1br_usd_month": 620,
+        "vibe": "本地居住区、游客少、租金低",
+        "best_for": "预算型、融入本地生活",
+        "coworking_density": 2,
+        "note": "估算：接近 Numbeo 非中心一居均值（约 $600-638），片区级挂牌未逐条核"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -60,14 +101,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "visa": {
         "confidence": 0.5,
