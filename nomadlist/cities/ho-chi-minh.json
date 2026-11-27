@@ -10,8 +10,8 @@
     "country": "Vietnam",
     "country_zh": "越南",
     "region": "Southeast Asia",
-    "cost_usd_month": 1150,
-    "rent_1br_usd_month": 500,
+    "cost_usd_month": 1200,
+    "rent_1br_usd_month": 600,
     "coworking_usd_month": 100,
     "internet_mbps": 95,
     "safety_score": 3.8,
@@ -26,7 +26,7 @@
     },
     "timezone": "Asia/Ho_Chi_Minh",
     "currency": "VND",
-    "avg_temp_c": 29,
+    "avg_temp_c": 28.0,
     "best_months": "Dec-Apr",
     "tags": [
       "city",
@@ -38,12 +38,56 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.traveldojo.com/ho-chi-minh-city/digital-nomads/",
+      "https://www.nomadalmanac.com/countries/vietnam/cities/ho-chi-minh-city",
+      "https://mynomadworld.com/cost-of-living-in-vietnam/",
+      "https://expectat.com/guides/cost-of-living-ho-chi-minh-city/",
+      "https://www.numbeo.com/cost-of-living/in/Ho-Chi-Minh-City",
+      "http://hcmc.com/weather/climate/",
+      "https://evisa.gov.vn"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "第一郡 District 1",
+        "name_en": "District 1",
+        "rent_1br_usd_month": 700,
+        "vibe": "市中心：步行街、屋顶酒吧、街头美食与大部分协同办公空间",
+        "best_for": "初到者、短住、步行生活",
+        "coworking_density": 5,
+        "note": "traveldojo 2026 一居 $500-900；nomadalmanac $850；expatden $900-1,800"
+      },
+      {
+        "name": "草田 Thao Dien",
+        "name_en": "Thao Dien",
+        "rent_1br_usd_month": 750,
+        "vibe": "外籍村：别墅、咖啡馆、国际餐饮、节奏慢",
+        "best_for": "长住、家庭、西式舒适",
+        "coworking_density": 3,
+        "note": "traveldojo 2026 一居 $500-1,000；nomadalmanac $800"
+      },
+      {
+        "name": "平盛郡 Binh Thanh",
+        "name_en": "Binh Thanh",
+        "rent_1br_usd_month": 650,
+        "vibe": "Vinhomes Central Park 高层公寓群，近市中心、性价比高",
+        "best_for": "公寓配套生活、高性价比",
+        "coworking_density": 3,
+        "note": "traveldojo 2026 一居 $450-850；nomadalmanac $600"
+      },
+      {
+        "name": "第三郡 District 3",
+        "name_en": "District 3",
+        "rent_1br_usd_month": 600,
+        "vibe": "林荫街道、本地咖啡馆与美食，游客少、近市中心",
+        "best_for": "长住、近市中心本地生活",
+        "coworking_density": 3,
+        "note": "traveldojo 2026 一居 $400-800；nomadalmanac 第 4 区 $650"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -53,9 +97,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -63,10 +107,22 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official e-visa portal (evisa.gov.vn): valid max 90 days, single $25 / multiple $50; portal sets no nationality exclusion list (China not named explicitly on the pages read)",
+        "as_of": "2026-11-27"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 288,
+      "food": 319,
+      "transport": 12,
+      "utilities_internet": 114,
+      "coworking": 0,
+      "misc": 0,
+      "total": 733,
+      "basis": "expectat.com 2026-09 单人分项（Numbeo 2026 数据；市郊 1 居 $288；食品=杂货 $200+外出就餐 $119；水电网=水电 $104+光纤 $10；合计 $733，不含协同办公与保险）；换市中心租金 $600 并加协同办公 $100 得约 $1,145，与 cost_usd_month 1,200 同量级"
     }
   }
 }

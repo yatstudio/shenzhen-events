@@ -10,8 +10,8 @@
     "country": "Georgia",
     "country_zh": "格鲁吉亚",
     "region": "Caucasus",
-    "cost_usd_month": 1100,
-    "rent_1br_usd_month": 500,
+    "cost_usd_month": 1300,
+    "rent_1br_usd_month": 650,
     "coworking_usd_month": 100,
     "internet_mbps": 70,
     "safety_score": 4.0,
@@ -22,11 +22,12 @@
       "has_nomad_visa": false,
       "note": "以该国移民局官方页为准；cn_passport_type: visa_free=免签, evisa=电子签, voa=落地签, schengen_visa/visa_required=需提前办签, conditional_visa_free=有条件免签（如持美/申根签）, permit_required/home_or_visa_required=需许可/属本国",
       "nomad_visa_link": null,
-      "policy_last_change": null
+      "policy_last_change": null,
+      "confidence": 0.95
     },
     "timezone": "Asia/Tbilisi",
     "currency": "GEL",
-    "avg_temp_c": 15,
+    "avg_temp_c": 13.0,
     "best_months": "May-Oct",
     "tags": [
       "low-cost",
@@ -38,12 +39,58 @@
     "sources": [
       "Nomads.com (原 Nomad List) 公开城市页 — 发现线索与社区口径",
       "Numbeo Cost of Living — 成本交叉核对",
-      "该国移民局/政府官方签证页 — 签证口径"
+      "该国移民局/政府官方签证页 — 签证口径",
+      "https://www.aluri.app/blog/tbilisi/tbilisi-cost-of-living-digital-nomads",
+      "https://www.driftbearing.io/digital-nomad-life/how-much-money-you-need-to-live-in-tbilisi/",
+      "https://www.entergeorgia.com/guides/cost-of-living-tbilisi/",
+      "https://www.expatden.com/georgia/best-neighborhoods-tbilisi-expats/",
+      "https://www.nomadalmanac.com/countries/georgia/cities/tbilisi",
+      "https://expectat.com/guides/cost-of-living-tbilisi/",
+      "https://www.numbeo.com/cost-of-living/in/Tbilisi",
+      "https://en.wikivoyage.org/wiki/Tbilisi",
+      "https://ge.china-embassy.gov.cn/eng/lsyw/202405/t20240527_11312571.htm"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-18",
-    "neighborhoods": [],
-    "data_tier": "verified_v1",
+    "updated_at": "2026-11-27",
+    "neighborhoods": [
+      {
+        "name": "薇拉 Vera",
+        "name_en": "Vera",
+        "rent_1br_usd_month": 600,
+        "vibe": "市中心、林荫、咖啡馆最密，游民非正式大本营",
+        "best_for": "初到者、找同行、步行生活",
+        "coworking_density": 5,
+        "note": "nomadalmanac $600；driftbearing $600-1,000；aluri $400-700；entergeorgia $550-900"
+      },
+      {
+        "name": "瓦克 Vake",
+        "name_en": "Vake",
+        "rent_1br_usd_month": 750,
+        "vibe": "绿荫、高档、使馆区与大公园，安静",
+        "best_for": "长住、家庭、要安静",
+        "coworking_density": 4,
+        "note": "nomadalmanac $750；driftbearing $600-1,000；entergeorgia $600-950"
+      },
+      {
+        "name": "索洛拉基与老城 Sololaki / Old Town",
+        "name_en": "Sololaki / Old Town",
+        "rent_1br_usd_month": 550,
+        "vibe": "历史街区、木阳台老楼、坡道多、氛围好",
+        "best_for": "氛围感、能接受老楼",
+        "coworking_density": 3,
+        "note": "nomadalmanac $550；entergeorgia $550-900"
+      },
+      {
+        "name": "萨布塔洛 Saburtalo",
+        "name_en": "Saburtalo",
+        "rent_1br_usd_month": 450,
+        "vibe": "现代住宅区、地铁直达、超市多、性价比最高",
+        "best_for": "预算优先、地铁通勤、长住",
+        "coworking_density": 2,
+        "note": "nomadalmanac $400；driftbearing $300-700；aluri $400-500；entergeorgia $450-750"
+      }
+    ],
+    "data_tier": "checked",
     "best_months_nums": [
       5,
       6,
@@ -54,9 +101,9 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked",
+        "as_of": "2026-11-27"
       },
       "internet_mbps": {
         "confidence": 0.6,
@@ -64,10 +111,22 @@
         "as_of": "2026-11-18"
       },
       "visa": {
-        "confidence": 0.5,
-        "basis": "type from public sources; NOT yet verified on official immigration page unless visa.policy_last_change is set",
-        "as_of": "2026-11-18"
+        "confidence": 0.95,
+        "basis": "verified on official page (Chinese Embassy in Georgia: mutual visa exemption in force 2024-05-28, 30 days per stay / 90 per 180 days)",
+        "as_of": "2026-11-27"
       }
+    },
+    "cost_breakdown": {
+      "currency": "USD",
+      "tier": "mid-range",
+      "stay": 680,
+      "food": 400,
+      "transport": 15,
+      "utilities_internet": 109,
+      "coworking": 0,
+      "misc": 96,
+      "total": 1300,
+      "basis": "expectat.com 2026-09 单人舒适档分项（Numbeo 2026 数据；市中心 1 居 $680；食品=杂货 $210+外出就餐 $190；水电网=水电 $89+宽带 $20；杂项=手机+健身 $96；合计 $1,300 与 cost_usd_month 一致，不含协同办公）"
     }
   }
 }
