@@ -11,10 +11,11 @@ const TZ = "Asia/Shanghai";
 const day = (iso) => new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 
 // file: data file; arr: list field; keys: identity fields (any match = same item); keep: which current items count as listed
+// merge: extra data files whose items count too (events-archive.json holds events ended 30+ days ago; same id: main file wins)
 const isHk = (x) => x && (x.city_id === "hk" || /香港|hong kong/i.test(x.city || "")); // city_id may be missing (external writer)
 const LISTS = {
-  events: { file: "events.json", arr: (d) => d.events, keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
-  hk: { file: "events.json", arr: (d) => (d.events || []).filter(isHk), keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
+  events: { file: "events.json", merge: ["events-archive.json"], arr: (d) => d.events, keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
+  hk: { file: "events.json", merge: ["events-archive.json"], arr: (d) => (d.events || []).filter(isHk), keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
   hackathons: { file: "hackathons.json", arr: (d) => d.hackathons, keys: ["url"] },
   talks: { file: "talks.json", arr: (d) => d.talks, keys: ["url", "id"], also: [["spaces.json", (d) => d.spaces], ["interviews.json", (d) => d.interviews]] },
   vps: { file: "vps.json", arr: (d) => d.plans, keys: ["id"] },
@@ -51,8 +52,15 @@ const out = { timezone: TZ, today, lists: {} }; // no timestamp: the file only c
 for (const [name, L] of Object.entries(LISTS)) {
   let cur;
   try { cur = JSON.parse(readFileSync(join(root, L.file), "utf8")); } catch { continue; }
-  const items = (L.arr(cur) || []).filter((x) => x && (!L.keep || L.keep(x)));
-  const seen = firstSeen([[L.file, L.arr], ...(L.also || [])], L.keys);
+  let all = L.arr(cur) || [];
+  for (const f of L.merge || []) {
+    let extra = [];
+    try { extra = L.arr(JSON.parse(readFileSync(join(root, f), "utf8"))) || []; } catch { continue; }
+    const ids = new Set(all.map((x) => x && x.id).filter(Boolean));
+    all = all.concat(extra.filter((x) => x && !(x.id && ids.has(x.id))));
+  }
+  const items = all.filter((x) => x && (!L.keep || L.keep(x)));
+  const seen = firstSeen([[L.file, L.arr], ...(L.merge || []).map((f) => [f, L.arr]), ...(L.also || [])], L.keys);
   const byDay = {};
   for (const x of items) {
     const ts = L.keys.map((k) => seen.get(x[k])).filter(Boolean).sort()[0];

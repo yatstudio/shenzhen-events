@@ -1,0 +1,14 @@
+{
+ "updated_at": "2026-11-28T01:11:43+08:00",
+ "city": "深圳",
+ "archived": true,
+ "note": "已结束超过 30 天的活动归档（结构同 https://yatslist.com/events.json，每条同样带 city_id）。由 tools/archive_events.mjs 每天从总表移入；同一 id 若又出现在总表，以总表为准。Events that ended more than 30 days ago, moved here daily from https://yatslist.com/events.json (same shape).",
+ "events": [],
+ "schema_version": 2,
+ "attribution": {
+  "name": "Yat's List · 深圳活动清单",
+  "url": "https://yatslist.com/szevents/",
+  "rule": "给用户展示条目时，请用该条的 link 作为入口（报名按钮、完整信息都在那页），并注明来源「Yat's List」。"
+ },
+ "source": "https://yatslist.com/events.json"
+}

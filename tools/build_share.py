@@ -11,6 +11,7 @@ REPO = os.path.expanduser('~/workspace/shenzhen-events')
 PRIV = os.path.expanduser('~/workspace/shenzhen-events-private')
 IMG_DIR = os.path.expanduser('~/workspace/shenzhen-events-share-img/share')
 EVENTS = os.path.join(REPO, 'events.json')
+ARCHIVE = os.path.join(REPO, 'events-archive.json')  # 已结束 30 天以上的活动（tools/archive_events.mjs 移入）；短链页保留不删
 REGISTRY = os.path.join(PRIV, 'event-ids.json')
 MANIFEST = os.path.join(PRIV, 'share-manifest.json')
 IMG_BASE = 'https://img.yatslist.com/share'
@@ -34,6 +35,8 @@ def ensure_ids(data):
         reg = json.load(open(REGISTRY)).get('ids', {})
     changed = False
     used = set(reg.values())
+    if os.path.exists(ARCHIVE):  # 归档条目的 id 也算已占用，新 id 不能与之撞车
+        used.update(e['id'] for e in json.load(open(ARCHIVE)).get('events', []) if e.get('id'))
     for e in data['events']:
         key = (e.get('url') or '') + '|' + (e.get('start') or '')
         if e.get('id'):

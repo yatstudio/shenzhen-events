@@ -1,5 +1,8 @@
 // Guard for the shared site shell (/shell.js): every wired page must load it and must not carry
 // its own copy of the topbar language select. Run: node tools/check-shell.mjs  (exit 1 on failure)
+// --data: also fail when generated data is stale: /<city_id>/events.json slices vs. events.json, and events.json still
+// holding events that belong in events-archive.json. Run by the stats workflow after it rebuilds; not by the shell
+// workflow, because the daily writer's commits (events.json + e/*.html) are stale by design until the stats bot runs.
 import { readFileSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { dirname, join } from "node:path";
@@ -43,6 +46,15 @@ try {
   execFileSync(process.execPath, [join(ROOT, "tools", "build_city_pages.mjs"), "--check"], { stdio: "pipe" });
 } catch (e) {
   errors.push("hk/index.html: stale vs. szevents/index.html; run node tools/build_city_pages.mjs");
+}
+
+if (process.argv.includes("--data")) {
+  const run = (script, args, msg) => {
+    try { execFileSync(process.execPath, [join(ROOT, "tools", script), ...args], { stdio: "pipe" }); }
+    catch (e) { errors.push(msg + ": " + String(e.stderr || e.message).trim()); }
+  };
+  run("build_slices.mjs", ["--check"], "city slices stale");
+  run("archive_events.mjs", ["--check"], "events.json not archived");
 }
 
 if (errors.length) {

@@ -461,8 +461,10 @@ function drawEvents(){
     var end=e.end&&fmtD(e.end)!==fmtD(e.start)?" – "+fmtD(e.end):"";
     return '<div class="ev"><div class="rail"><div class="t1">'+esc(fmtD(e.start))+'</div><div class="t2">'+esc(fmtT(e.start)+end)+'</div></div><div class="evcard"><h3>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+title+"</a>":title)+'</h3><div class="evmeta">'+esc(venue)+(fee?' <span class="dot">·</span> '+esc(fee):"")+"</div>"+(sum?'<p class="evsum">'+esc(sum)+"</p>":"")+"</div></div>"}).join(""):'<div class="empty">'+esc(tr("evEmpty"))+"</div>";
 }
-fetch("/events.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
-  EVS=(d.events||[]).filter(function(e){return e.visibility!=="agent"&&(CHTF_IDS.indexOf(e.id)>=0||(e.title||"").indexOf("高交会")>=0)})
+/* events.json + events-archive.json (ended 30+ days ago); same id: events.json wins */
+Promise.all([fetch("/events.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}),fetch("/events-archive.json").then(function(r){return r.ok?r.json():{events:[]}}).catch(function(){return {events:[]}})]).then(function(ds){
+  var d=ds[0],seen={};(d.events||[]).forEach(function(e){if(e&&e.id)seen[e.id]=1});
+  EVS=(d.events||[]).concat((ds[1].events||[]).filter(function(e){return e&&!(e.id&&seen[e.id])})).filter(function(e){return e.visibility!=="agent"&&(CHTF_IDS.indexOf(e.id)>=0||(e.title||"").indexOf("高交会")>=0)})
     .sort(function(a,b){return new Date(a.start||"2100")-new Date(b.start||"2100")});
   $("#st-ev").textContent=EVS.length;drawEvents();
 }).catch(function(){EVS=false;$("#st-ev").textContent="–";drawEvents()});

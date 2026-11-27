@@ -1330,7 +1330,17 @@ fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.events||[];if(PAGE_CITY!=="sz")DATA=DATA.filter(e=>cityOf(e)===PAGE_CITY);
 window._updRaw=j.updated_at||null;fmtUpd();
 render();measureBar();setTimeout(measureBar,400);
+loadArchive();
 }).catch(()=>$("#list").innerHTML='<div class="empty">'+tr("loadFail")+'</div>');
+/* events ended 30+ days ago live in /events-archive.json: fetch after first render and merge (same id: events.json wins),
+   so 过往活动, search, favourites and counts still see them */
+function loadArchive(){
+fetch("/events-archive.json",{cache:"no-store"}).then(r=>r.ok?r.json():{events:[]}).then(j=>{
+const have=new Set(DATA.map(e=>e.id).filter(Boolean));
+let arc=(j.events||[]).filter(e=>e&&!(e.id&&have.has(e.id)));if(PAGE_CITY!=="sz")arc=arc.filter(e=>cityOf(e)===PAGE_CITY);
+if(!arc.length)return;DATA=DATA.concat(arc);render();measureBar();
+}).catch(()=>{});
+}
 
 /* ===== English (expat) view: same page, separate data (page merges, data does not) ===== */
 let VIEW=PAGE_CITY==="sz"&&(new URLSearchParams(location.search).get("view")==="en"||location.hash==="#en")?"en":"zh";

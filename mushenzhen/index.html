@@ -671,7 +671,8 @@ function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("s
 if(window.YL)YL.onLang(setLang);
 $("#cmd-copy").addEventListener("click",function(){const t="https://yatslist.com/events.json";if(navigator.clipboard)navigator.clipboard.writeText(t);this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1500)});
 applyLang();
-fetch("/events.json").then(r=>r.json()).then(d=>{const all=Array.isArray(d)?d:(d.events||[]);EVENTS=all.filter(isMu).sort((a,b)=>Date.parse(a.start)-Date.parse(b.start));render()}).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
+/* events.json + events-archive.json (ended 30+ days ago); same id: events.json wins */
+Promise.all([fetch("/events.json").then(r=>r.json()),fetch("/events-archive.json").then(r=>r.ok?r.json():{events:[]}).catch(()=>({events:[]}))]).then(([d,a])=>{const cur=Array.isArray(d)?d:(d.events||[]);const ids=new Set(cur.map(e=>e.id).filter(Boolean));const all=cur.concat((a.events||[]).filter(e=>e&&!(e.id&&ids.has(e.id))));EVENTS=all.filter(isMu).sort((a,b)=>Date.parse(a.start)-Date.parse(b.start));render()}).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
 </script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 <script src="/stats.js" defer></script>
