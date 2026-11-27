@@ -1,6 +1,6 @@
 /* Yat's List · shared site shell (topbar, language select, theme toggle).
    Usage, placed where the topbar goes (synchronous, not defer):
-     <div id="yl-topbar" data-active="tglist"></div><script src="/shell.js?v=1"></script>
+     <div id="yl-topbar" data-active="tglist"></div><script src="/shell.js?v=2"></script>
    Placeholder attributes:
      data-active     nav key to highlight: szevents hackathons talks tglist xlist vps nomadlist btc quant altruists remote
      data-label      extra highlighted item for pages outside the nav (data-label-tw / data-label-en optional)
@@ -112,6 +112,8 @@
   }
 
   /* ---------- markup ---------- */
+  /* 暂时只显示 活动 / 黑客松 / Talks；改成 true 恢复 Agent、清单下拉和专题高亮项 */
+  var SHOW_EXTRAS = false;
   var ACTIVE = cfg.active || "";
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
   function link(key, href, label) {
@@ -125,9 +127,9 @@
     "<a class=\"topbar-brand\" href=\"https://yatslist.com/szevents/\" aria-label=\"Yat's List\"><span class=\"brandmark\">&gt; yat's list<span class=\"cur\">_</span></span></a>" +
     "<button id=\"mnav-btn\" type=\"button\" aria-expanded=\"false\" aria-haspopup=\"true\" data-yl=\"menu\">" + esc(S[LANG].menu) + "</button>" +
     "<div id=\"mnav-panel\"><nav class=\"topbar-nav\">" +
-    (cfg.label ? "<a href=\"" + esc(location.pathname) + "\" class=\"nav-on yl-label\" aria-current=\"page\">" + esc(cfg.label) + "</a>" : "") +
+    (cfg.label && SHOW_EXTRAS ? "<a href=\"" + esc(location.pathname) + "\" class=\"nav-on yl-label\" aria-current=\"page\">" + esc(cfg.label) + "</a>" : "") +
     MAIN.map(function (x) { return link(x[0], x[1], x[2]); }).join("") +
-    "<span class=\"yl-dd\"><button type=\"button\" class=\"yl-dd-btn" + (listOn ? " nav-on" : "") + "\" aria-expanded=\"false\" aria-haspopup=\"true\"><span data-yl=\"lists\">" + esc(S[LANG].lists) + "</span><svg class=\"yl-caret\" aria-hidden=\"true\" width=\"10\" height=\"6\" viewBox=\"0 0 10 6\"><path d=\"M1 1l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></button>" +
+    "<span class=\"yl-dd\"" + (SHOW_EXTRAS ? "" : " hidden") + "><button type=\"button\" class=\"yl-dd-btn" + (listOn ? " nav-on" : "") + "\" aria-expanded=\"false\" aria-haspopup=\"true\"><span data-yl=\"lists\">" + esc(S[LANG].lists) + "</span><svg class=\"yl-caret\" aria-hidden=\"true\" width=\"10\" height=\"6\" viewBox=\"0 0 10 6\"><path d=\"M1 1l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></button>" +
     "<span class=\"yl-dd-head\" data-yl=\"lists\" aria-hidden=\"true\">" + esc(S[LANG].lists) + "</span>" +
     "<span class=\"yl-dd-menu\">" + LISTS.map(function (x) { return link(x[0], x[1], x[0]); }).join("") + "</span></span>" +
     "<span class=\"prefs\">" +
@@ -215,7 +217,7 @@
   /* "Agent" link: first nav item when the page has an agent box */
   function addAgent() {
     var href = cfg.agent || (d.getElementById("agentbox") ? "#agentbox" : "");
-    if (!href || $(".yl-agent")) return;
+    if (!SHOW_EXTRAS || !href || $(".yl-agent")) return;
     var a = d.createElement("a"); a.href = href; a.className = "yl-agent"; a.setAttribute("data-yl", "agent"); a.textContent = S[LANG].agent;
     nav.insertBefore(a, nav.firstChild);
   }
