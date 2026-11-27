@@ -1,0 +1,29 @@
+# Shared topbar guard: wired pages must load /shell.js and must not inline their own topbar / language select.
+# Read-only check, separate from the auto-committing stats/notes jobs.
+name: shell
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - shell.js
+      - tools/check-shell.mjs
+      - .github/workflows/shell.yml
+  pull_request:
+    paths:
+      - "**/*.html"
+      - shell.js
+      - tools/check-shell.mjs
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check shell.js
+      - run: node tools/check-shell.mjs
