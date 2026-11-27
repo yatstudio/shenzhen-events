@@ -19,13 +19,6 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:rgba(13,18,24,.95);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:var(--sp-md) 0}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-lg);flex-wrap:wrap}
-.brand{font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none}
-.brand span{color:var(--green)}
-.topnav{display:flex;gap:var(--sp-xl);flex-wrap:wrap}
-.topnav a{color:var(--ink-sec);font-size:.92rem;text-decoration:none;font-weight:600}
-.topnav a:hover{color:var(--green)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
 .hero{padding:clamp(var(--sp-2xl),6vw,56px) 0 var(--sp-xl)}
 .hero h1{font-size:clamp(1.7rem,4.5vw,2.5rem);margin:0 0 var(--sp-sm);letter-spacing:-.01em;line-height:1.3}
@@ -82,10 +75,7 @@ footer a{color:var(--ink-sec)}
 @media (max-width:560px){.grid{grid-template-columns:1fr}}
 </style></head>
 <body>
-<div class="topbar"><div class="wrap">
-<a class="brand" href="https://yatslist.com/">Yat's <span>List</span></a>
-<nav class="topnav"><a href="https://yatslist.com/">深圳活动</a><a href="https://yatslist.com/nomadlist/">NomadList</a><a href="https://yatslist.com/nomadlist.json">JSON 数据</a></nav>
-</div></div>
+<div id="yl-topbar" data-active="nomadlist" data-i18n="none" data-themes="dark"></div><script src="/shell.js?v=1"></script>
 <div class="wrap">
 <div class="hero">
 <h1>数字游民城市清单 <em>NomadList</em></h1>

@@ -34,14 +34,8 @@ color-scheme:light;
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
-.topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
-.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
-.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
-.topbar-nav a:hover{color:var(--green)}
 .agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
 .agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
 .agentnote b{color:var(--ink)}
@@ -230,11 +224,6 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
 @media (max-width:768px){
 body{overflow-x:hidden}
-.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
-.topbar-brand{flex-shrink:0}
-.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav a{flex-shrink:0;font-size:.84rem}
 .terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
 .terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
 .terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
@@ -286,10 +275,6 @@ select{font-size:16px}
 
 /* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
 @media (max-width:820px){
-.topbar{padding:8px 0}
-.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
-.topbar-nav{gap:14px;overflow:visible;width:auto}
-.topbar-nav a{font-size:.82rem}
 .human-section{padding-top:24px}
 .section-title{font-size:1.5rem}
 .section-subtitle{font-size:.9rem}
@@ -312,16 +297,6 @@ select{font-size:16px}
 .subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
 .card .actions .btn{flex:1 1 30%}
 }
-.langsw{display:inline-flex;align-items:center;gap:8px}
-.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.langsw button:hover{color:var(--ink)}
-.langsw button.on{color:var(--green)}
-.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
-.themesw{display:inline-flex;align-items:center;gap:8px}
-.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.themesw button:hover{color:var(--ink)}
-.themesw button.on{color:var(--green)}
-.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
@@ -371,7 +346,6 @@ select{font-size:16px}
 [data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
 
 /* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
-.topbar{padding-top:10px;padding-bottom:10px}
 .human-section{padding-top:18px}
 .brandmark{line-height:1.25}
 .section-tagline{line-height:1.4;margin-top:8px}
@@ -396,12 +370,6 @@ select{font-size:16px}
 .sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
 input[type=search]{font-size:16px}
 @media (max-width:820px){
-.topbar{padding:6px 0}
-.topbar .wrap{gap:10px;padding:0 14px}
-.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav>*{flex-shrink:0}
-.langsw button,.themesw button{min-height:32px;padding:4px 7px}
 .human-section{padding-top:14px}
 .section-tagline{display:none}
 .herometa{font-size:.8rem;line-height:1.55;padding:0 4px}
@@ -465,9 +433,6 @@ input[type=search]{font-size:16px}
 
 
 /* ===== topbar compact 2026-11-13 ===== */
-.topbar{padding-top:8px;padding-bottom:8px}
-@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
-@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "z6a9pxyr63");
@@ -483,34 +448,11 @@ input[type=search]{font-size:16px}
 <meta name="apple-mobile-web-app-title" content="Yat's List">
 <style>
 /* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
-.prefs{display:inline-flex;align-items:center;gap:6px}
-.prefs .langsw,.prefs .themesw{display:none!important}
-.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
-.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-.langsel option{background:var(--panel);color:var(--ink)}
-.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
-.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-@media (max-width:820px){
-  #mnav-panel .prefs{order:9;width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
-  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
-  #mnav-panel .themecyc{width:34px}
-}
 </style>
 </head>
 <body>
 <a id="top"></a>
-<div class="topbar">
-  <div class="wrap">
-    <a class="topbar-brand" href="https://yatslist.com/szevents/" style="text-decoration:none"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
-    <nav class="topbar-nav">
-      <a href="https://yatslist.com/szevents/">活动</a>
-      <a href="https://yatslist.com/hackathons/">黑客松</a>
-      <a href="https://yatslist.com/talks/">Talks</a>
-      <a href="https://yatslist.com/xlist/" aria-current="page">X List</a>
-      <span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
-    </nav>
-  </div>
-</div>
+<div id="yl-topbar" data-active="xlist"></div><script src="/shell.js?v=1"></script>
 
 <div class="wrap">
   <div class="xhero">
@@ -583,13 +525,10 @@ input[type=search]{font-size:16px}
 </footer>
 
 <script>
-/* theme + lang: same keys as other list pages (szTheme / szLang) */
-let THEME="auto"; try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
-function applyTheme(){const t=THEME==="auto"?(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"):THEME;document.documentElement.dataset.theme=t;document.querySelectorAll("[data-settheme]").forEach(b=>b.classList.toggle("on",b.dataset.settheme===THEME));}
-document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>{THEME=b.dataset.settheme;try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme();}));
-applyTheme();
+/* theme + lang: owned by /shell.js (szTheme / szLang) */
 let LANG="zh"; try{LANG=localStorage.getItem("szLang")||"zh"}catch(e){}
 if(["zh","tw","en"].indexOf(LANG)<0)LANG="zh";
+if(window.YL)LANG=YL.lang;/* /shell.js owns language detection (?lang=, szLang) */
 const I18N={
  zh:{title:"AI X List",sub:"华语 AI 圈的人，都在这张单子上：按分类和地域找到他们，一键打开主页或关注。首批来自 AI 圈谱（aimap.social）公开图谱，也开放自助登记——自己加进来，就能被别人找到。",join:"＋ 把我加进去（网页提交，不用注册）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@账号、地域、自我介绍…",all:"全部",allReg:"全部地区",unknown:"未知",home:"X主页 ›",follow:"＋ 到X关注",fans:"粉丝",sortRec:"推荐",sortFans:"粉丝排序",sortRandom:"随机",shuffle:"🔀 换一换",empty:"没有符合的人，换个筛选试试。"},
  tw:{title:"AI X List",sub:"華語 AI 圈的人，都在這張單子上：按分類和地域找到他們，一鍵打開主頁或關注。首批來自 AI 圈譜（aimap.social）公開圖譜，也開放自助登記——自己加進來，就能被別人找到。",join:"＋ 把我加進去（網頁提交，不用註冊）",joinGh:"用 GitHub 提交（提 PR 加一行）",search:"搜名字、@帳號、地域、自我介紹…",all:"全部",allReg:"全部地區",unknown:"未知",home:"X主頁 ›",follow:"＋ 到X關注",fans:"粉絲",sortRec:"推薦",sortFans:"粉絲排序",sortRandom:"隨機",shuffle:"🔀 換一換",empty:"沒有符合的人，換個篩選試試。"},
@@ -627,10 +566,9 @@ function applyLang(){
   document.getElementById("x-join").textContent=t.join;
   document.getElementById("x-join-gh").textContent=t.joinGh;
   document.getElementById("xq").placeholder=t.search;
-  document.querySelectorAll("[data-setlang]").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
   renderChips(); renderSort(); render();
 }
-document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>{LANG=b.dataset.setlang;try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();}));
+if(window.YL)YL.onLang(function(l){LANG=l;applyLang()});
 function allCats(){const s=[];PEOPLE.forEach(p=>(p.categories||[]).forEach(c=>{if(s.indexOf(c)<0)s.push(c)}));return s}
 function renderChips(){
   const t=I18N[LANG]; const cats=["全部"].concat(allCats());
@@ -706,19 +644,6 @@ const XRELS=["AI 从业者","AI 创业者","投资人","内容创作者","研究
 function openXJoin(){document.getElementById("xovl").classList.add("open")}
 function closeXJoin(){document.getElementById("xovl").classList.remove("open")}
 
-</script>
-<script>
-(function(){document.querySelectorAll(".prefs").forEach(function(p){
-var sel=p.querySelector(".langsel"),lg=p.querySelector(".langsw"),cyc=p.querySelector(".themecyc"),tg=p.querySelector(".themesw");
-if(sel&&lg){var syncL=function(){var on=lg.querySelector("button.on");if(on&&sel.value!==on.dataset.setlang)sel.value=on.dataset.setlang};
-sel.addEventListener("change",function(){var b=lg.querySelector('[data-setlang="'+sel.value+'"]');if(b)b.click();syncL()});
-new MutationObserver(syncL).observe(lg,{subtree:true,attributes:true,attributeFilter:["class"]});syncL()}
-if(cyc&&tg){var order=["auto","light","dark"],ic={auto:"\u25D0",light:"\u2600",dark:"\u263E"};
-var cur=function(){var on=tg.querySelector("button.on");return on?on.dataset.settheme:"auto"};
-var syncT=function(){var c=cur(),b=tg.querySelector('[data-settheme="'+c+'"]'),l=b?(b.getAttribute("aria-label")||b.textContent):c,t=(tg.getAttribute("aria-label")||"Theme")+": "+l;cyc.textContent=ic[c]||ic.auto;cyc.title=t;cyc.setAttribute("aria-label",t)};
-cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],b=tg.querySelector('[data-settheme="'+n+'"]');if(b)b.click();syncT()});
-new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
-})})();
 </script>
 <script src="/stats.js" defer></script>
 </body>

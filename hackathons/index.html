@@ -49,14 +49,8 @@ color-scheme:light;
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
-.topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
-.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
-.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
-.topbar-nav a:hover{color:var(--green)}
 .agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
 .agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
 .agentnote b{color:var(--ink)}
@@ -239,11 +233,6 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
 @media (max-width:768px){
 body{overflow-x:hidden}
-.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
-.topbar-brand{flex-shrink:0}
-.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav a{flex-shrink:0;font-size:.84rem}
 .terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
 .terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
 .terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
@@ -295,10 +284,6 @@ select{font-size:16px}
 
 /* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
 @media (max-width:820px){
-.topbar{padding:8px 0}
-.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
-.topbar-nav{gap:14px;overflow:visible;width:auto}
-.topbar-nav a{font-size:.82rem}
 .human-section{padding-top:24px}
 .section-title{font-size:1.5rem}
 .section-subtitle{font-size:.9rem}
@@ -321,16 +306,6 @@ select{font-size:16px}
 .subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
 .card .actions .btn{flex:1 1 30%}
 }
-.langsw{display:inline-flex;align-items:center;gap:8px}
-.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.langsw button:hover{color:var(--ink)}
-.langsw button.on{color:var(--green)}
-.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
-.themesw{display:inline-flex;align-items:center;gap:8px}
-.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.themesw button:hover{color:var(--ink)}
-.themesw button.on{color:var(--green)}
-.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
@@ -398,7 +373,6 @@ select{font-size:16px}
 .rail .dur{font-size:.8rem;color:var(--warm);font-weight:650;margin-top:2px}
 [data-theme="light"] .rail .tm.urgent{color:#d92d20}
 [data-theme="light"] .rail .dur{color:#b45309}
-.topbar-nav .navcur{color:var(--green);font-size:clamp(.88rem,2vw,.95rem);font-weight:600;white-space:nowrap}
 .sf-src{margin:14px 0 0;color:var(--ink-ter);font-size:.85rem;line-height:1.85}
 .sf-src a{color:var(--green);font-weight:600;text-decoration:none}
 .sf-src a:hover{text-decoration:underline}
@@ -406,7 +380,6 @@ select{font-size:16px}
 .card .mian{flex:1;min-width:0}
 
 /* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
-.topbar{padding-top:10px;padding-bottom:10px}
 .hack-hero{padding-top:24px}
 .brandmark{line-height:1.25}
 .section-tagline{line-height:1.4;margin-top:8px}
@@ -425,12 +398,6 @@ select{font-size:16px}
 .sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
 input[type=search]{font-size:16px}
 @media (max-width:820px){
-.topbar{padding:6px 0}
-.topbar .wrap{gap:10px;padding:0 14px}
-.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav>*{flex-shrink:0}
-.langsw button,.themesw button{min-height:32px;padding:4px 7px}
 .hack-hero{padding-top:12px}
 .section-tagline{display:none}
 .listsw{display:flex;gap:8px;margin:12px 0 0}
@@ -454,12 +421,8 @@ input[type=search]{font-size:16px}
 .human-section{padding:22px 0 8px}
 .human-section>.wrap{max-width:880px}
 /* topbar */
-.topbar-nav a.nav-ag{color:var(--green)}
-.topbar-nav a.nav-on{color:var(--ink)}
 .nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
 .nav-submit:hover{border-color:var(--green);color:var(--green)}
-#mnav-btn{display:none}
-#mnav-panel{display:contents}
 /* hero: left-aligned, tagline above the title */
 .section-header{text-align:left;margin-bottom:16px}
 .section-tagline{display:block;margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
@@ -532,11 +495,6 @@ input[type=search]{font-size:16px}
 .cmenu>*:first-child{border-top:0}
 .cmenu>*:hover{background:var(--tint);color:var(--green)}
 @media (max-width:820px){
-  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end;font-family:inherit}
-  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
-  #mnav-panel.open{display:block}
-  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap;overflow:visible;width:auto}
-  #mnav-panel .topbar-nav a{font-size:.95rem}
   .section-tagline{display:block;font-size:.66rem;letter-spacing:.04em}
   .human-section{padding-top:16px}
   .human-section>.wrap{padding:0 16px}
@@ -566,9 +524,6 @@ input[type=search]{font-size:16px}
 }
 
 /* ===== topbar compact 2026-11-13 ===== */
-.topbar{padding-top:8px;padding-bottom:8px}
-@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
-@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d1218">
@@ -579,40 +534,13 @@ input[type=search]{font-size:16px}
 <meta name="apple-mobile-web-app-title" content="Yat's List">
 <style>
 /* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
-.prefs{display:inline-flex;align-items:center;gap:6px}
-.prefs .langsw,.prefs .themesw{display:none!important}
-.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
-.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-.langsel option{background:var(--panel);color:var(--ink)}
-.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
-.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-@media (max-width:820px){
-  #mnav-panel .prefs{order:9;width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
-  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
-  #mnav-panel .themecyc{width:34px}
-}
 </style>
 </head>
 <body>
 <a id="top"></a>
 
 <!-- Sticky Topbar -->
-<div class="topbar">
-  <div class="wrap">
-    <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="Yat's List" style="text-decoration:none">
-      <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
-    </a>
-    <button id="mnav-btn" type="button" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
-<div id="mnav-panel"><nav class="topbar-nav">
-      <a href="#agent-sub" id="nav-agent" class="nav-ag">Agent</a>
-      <a href="https://yatslist.com/szevents/" id="nav-home">活动</a>
-      <a href="https://yatslist.com/hackathons/" id="nav-hack" class="nav-on" aria-current="page">黑客松</a>
-      <a href="https://yatslist.com/talks/" id="nav-spaces">Talks</a>
-      <span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
-      <button type="button" class="nav-submit" id="hpost-btn" onclick="goPost()">提交黑客松</button>
-    </nav></div>
-  </div>
-</div>
+<div id="yl-topbar" data-active="hackathons"><button type="button" class="nav-submit" id="hpost-btn" onclick="goPost()">提交黑客松</button></div><script src="/shell.js?v=1"></script>
 
 <section class="human-section" id="human-section">
 <div class="wrap">
@@ -741,6 +669,7 @@ input[type=search]{font-size:16px}
 let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
 if(!LANG){LANG="en"}
 if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+if(window.YL)LANG=YL.lang;/* /shell.js owns language detection (?lang=, szLang) */
 const DISP={"reg": {"zh": {"大陆": "大陆", "香港": "香港", "澳门": "澳门", "台湾": "台湾", "线上": "线上", "中国": "中国", "北美": "北美", "欧洲": "欧洲", "亚洲": "亚洲", "大洋洲": "大洋洲", "拉美": "拉美", "非洲与中东": "非洲与中东", "其他地区": "其他地区"}, "tw": {"大陆": "大陸", "香港": "香港", "澳门": "澳門", "台湾": "臺灣", "线上": "線上", "中国": "中國", "北美": "北美", "欧洲": "歐洲", "亚洲": "亞洲", "大洋洲": "大洋洲", "拉美": "拉美", "非洲与中东": "非洲與中東", "其他地区": "其他地區"}, "en": {"大陆": "Mainland China", "香港": "Hong Kong", "澳门": "Macau", "台湾": "Taiwan", "线上": "Online", "中国": "China", "北美": "North America", "欧洲": "Europe", "亚洲": "Asia", "大洋洲": "Oceania", "拉美": "Latin America", "非洲与中东": "Africa & Middle East", "其他地区": "Other Regions"}}, "fmt": {"zh": {"线下": "线下", "线上": "线上", "线上+线下": "线上+线下"}, "tw": {"线下": "線下", "线上": "線上", "线上+线下": "線上+線下"}, "en": {"线下": "In-person", "线上": "Online", "线上+线下": "Hybrid"}}, "city": {"zh": {"线上": "线上", "北京": "北京", "上海": "上海", "天津": "天津", "广州": "广州", "杭州": "杭州", "苏州": "苏州", "深圳": "深圳", "香港": "香港", "珠海": "珠海", "澳门": "澳门", "台北": "台北", "台中": "台中", "宜兰": "宜兰", "东莞": "东莞", "重庆": "重庆", "旧金山": "旧金山", "纽约": "纽约", "班加罗尔": "班加罗尔", "伦敦": "伦敦", "新加坡": "新加坡", "柏林": "柏林", "多伦多": "多伦多", "森尼维尔": "森尼维尔", "孟买": "孟买", "圣地亚哥（智利）": "圣地亚哥（智利）", "布鲁塞尔": "布鲁塞尔", "东京": "东京", "马德里": "马德里", "吉隆坡": "吉隆坡", "芝加哥": "芝加哥", "科钦": "科钦", "悉尼": "悉尼", "雷德伍德城": "雷德伍德城", "米尔皮塔斯": "米尔皮塔斯", "阿默斯特": "阿默斯特", "门洛帕克": "门洛帕克", "牛津": "牛津", "芒特普莱森特（密歇根州）": "芒特普莱森特（密歇根州）", "墨尔本": "墨尔本", "伊萨卡": "伊萨卡", "杜伦": "杜伦", "卡尔加里": "卡尔加里", "萨克拉门托": "萨克拉门托", "伊普西兰蒂": "伊普西兰蒂", "阿灵顿（得克萨斯州）": "阿灵顿（得克萨斯州）", "普林斯顿": "普林斯顿", "河内": "河内", "圣迭戈": "圣迭戈", "坦佩": "坦佩", "卡尔斯鲁厄": "卡尔斯鲁厄", "马卡姆（安大略省）": "马卡姆（安大略省）", "雅加达": "雅加达", "霍桑": "霍桑", "温莎（安大略省）": "温莎（安大略省）", "奥斯汀": "奥斯汀", "渥太华": "渥太华", "巴里": "巴里", "贝尔维尤": "贝尔维尤", "布加勒斯特": "布加勒斯特", "明斯特": "明斯特", "戈尔韦": "戈尔韦", "塔什干": "塔什干", "慕尼黑": "慕尼黑", "圣约翰斯": "圣约翰斯", "韦尔斯利": "韦尔斯利", "曼谷": "曼谷", "海得拉巴": "海得拉巴", "卡基纳达": "卡基纳达", "尼科西亚": "尼科西亚", "滑铁卢": "滑铁卢", "莱里达": "莱里达", "谢菲尔德": "谢菲尔德", "北九州": "北九州", "阿伦": "阿伦", "阿斯塔纳": "阿斯塔纳", "曼哈顿（堪萨斯州）": "曼哈顿（堪萨斯州）", "波哥大": "波哥大", "巴塞罗那": "巴塞罗那", "汉密尔顿（安大略省）": "汉密尔顿（安大略省）", "华盛顿": "华盛顿", "密西沙加": "密西沙加", "东兰辛": "东兰辛", "圣克拉拉": "圣克拉拉", "南昌": "南昌", "济南": "济南", "成都": "成都", "武汉": "武汉", "南京": "南京", "厦门": "厦门", "青岛": "青岛", "长沙": "长沙", "郑州": "郑州", "合肥": "合肥", "福州": "福州", "昆明": "昆明", "大连": "大连", "沈阳": "沈阳", "哈尔滨": "哈尔滨", "无锡": "无锡", "宁波": "宁波", "佛山": "佛山", "温州": "温州", "贵阳": "贵阳", "南宁": "南宁", "太原": "太原", "石家庄": "石家庄", "乌鲁木齐": "乌鲁木齐", "拉萨": "拉萨", "呼和浩特": "呼和浩特", "银川": "银川", "兰州": "兰州", "西宁": "西宁", "海口": "海口", "三亚": "三亚", "桂林": "桂林", "洛阳": "洛阳", "扬州": "扬州", "新北": "新北", "桃园": "桃园", "新竹": "新竹", "台南": "台南", "高雄": "高雄", "基隆": "基隆", "嘉义": "嘉义", "首尔": "首尔", "大阪": "大阪", "京都": "京都", "胡志明市": "胡志明市", "马尼拉": "马尼拉", "新德里": "新德里", "巴黎": "巴黎", "阿姆斯特丹": "阿姆斯特丹", "苏黎世": "苏黎世", "维也纳": "维也纳", "都柏林": "都柏林", "米兰": "米兰", "罗马": "罗马", "华沙": "华沙", "布拉格": "布拉格", "里斯本": "里斯本", "斯德哥尔摩": "斯德哥尔摩", "哥本哈根": "哥本哈根", "奥斯陆": "奥斯陆", "赫尔辛基": "赫尔辛基", "洛杉矶": "洛杉矶", "西雅图": "西雅图", "波士顿": "波士顿", "丹佛": "丹佛", "迈阿密": "迈阿密", "亚特兰大": "亚特兰大", "达拉斯": "达拉斯", "休斯顿": "休斯顿", "费城": "费城", "凤凰城": "凤凰城", "圣何塞": "圣何塞", "温哥华": "温哥华", "蒙特利尔": "蒙特利尔", "迪拜": "迪拜", "特拉维夫": "特拉维夫", "内罗毕": "内罗毕", "开罗": "开罗", "拉各斯": "拉各斯", "开普敦": "开普敦", "圣保罗": "圣保罗", "墨西哥城": "墨西哥城", "布宜诺斯艾利斯": "布宜诺斯艾利斯", "利马": "利马", "奥克兰": "奥克兰", "布里斯班": "布里斯班", "珀斯": "珀斯"}, "tw": {"线上": "線上", "北京": "北京", "上海": "上海", "天津": "天津", "广州": "廣州", "杭州": "杭州", "苏州": "蘇州", "深圳": "深圳", "香港": "香港", "珠海": "珠海", "澳门": "澳門", "台北": "臺北", "台中": "臺中", "宜兰": "宜蘭", "东莞": "東莞", "重庆": "重慶", "旧金山": "舊金山", "纽约": "紐約", "班加罗尔": "班加羅爾", "伦敦": "倫敦", "新加坡": "新加坡", "柏林": "柏林", "多伦多": "多倫多", "森尼维尔": "森尼維爾", "孟买": "孟買", "圣地亚哥（智利）": "聖地亞哥（智利）", "布鲁塞尔": "布魯塞爾", "东京": "東京", "马德里": "馬德里", "吉隆坡": "吉隆坡", "芝加哥": "芝加哥", "科钦": "科欽", "悉尼": "悉尼", "雷德伍德城": "雷德伍德城", "米尔皮塔斯": "米爾皮塔斯", "阿默斯特": "阿默斯特", "门洛帕克": "門洛帕克", "牛津": "牛津", "芒特普莱森特（密歇根州）": "芒特普萊森特（密歇根州）", "墨尔本": "墨爾本", "伊萨卡": "伊薩卡", "杜伦": "杜倫", "卡尔加里": "卡爾加里", "萨克拉门托": "薩克拉門托", "伊普西兰蒂": "伊普西蘭蒂", "阿灵顿（得克萨斯州）": "阿靈頓（得克薩斯州）", "普林斯顿": "普林斯頓", "河内": "河內", "圣迭戈": "聖迭戈", "坦佩": "坦佩", "卡尔斯鲁厄": "卡爾斯魯厄", "马卡姆（安大略省）": "馬卡姆（安大略省）", "雅加达": "雅加達", "霍桑": "霍桑", "温莎（安大略省）": "溫莎（安大略省）", "奥斯汀": "奧斯汀", "渥太华": "渥太華", "巴里": "巴里", "贝尔维尤": "貝爾維尤", "布加勒斯特": "布加勒斯特", "明斯特": "明斯特", "戈尔韦": "戈爾韋", "塔什干": "塔什干", "慕尼黑": "慕尼黑", "圣约翰斯": "聖約翰斯", "韦尔斯利": "韋爾斯利", "曼谷": "曼谷", "海得拉巴": "海得拉巴", "卡基纳达": "卡基納達", "尼科西亚": "尼科西亞", "滑铁卢": "滑鐵盧", "莱里达": "萊里達", "谢菲尔德": "謝菲爾德", "北九州": "北九州", "阿伦": "阿倫", "阿斯塔纳": "阿斯塔納", "曼哈顿（堪萨斯州）": "曼哈頓（堪薩斯州）", "波哥大": "波哥大", "巴塞罗那": "巴塞羅那", "汉密尔顿（安大略省）": "漢密爾頓（安大略省）", "华盛顿": "華盛頓", "密西沙加": "密西沙加", "东兰辛": "東蘭辛", "圣克拉拉": "聖克拉拉", "南昌": "南昌", "济南": "濟南", "成都": "成都", "武汉": "武漢", "南京": "南京", "厦门": "廈門", "青岛": "青島", "长沙": "長沙", "郑州": "鄭州", "合肥": "合肥", "福州": "福州", "昆明": "昆明", "大连": "大連", "沈阳": "瀋陽", "哈尔滨": "哈爾濱", "无锡": "無錫", "宁波": "寧波", "佛山": "佛山", "温州": "溫州", "贵阳": "貴陽", "南宁": "南寧", "太原": "太原", "石家庄": "石家莊", "乌鲁木齐": "烏魯木齊", "拉萨": "拉薩", "呼和浩特": "呼和浩特", "银川": "銀川", "兰州": "蘭州", "西宁": "西寧", "海口": "海口", "三亚": "三亞", "桂林": "桂林", "洛阳": "洛陽", "扬州": "揚州", "新北": "新北", "桃园": "桃園", "新竹": "新竹", "台南": "臺南", "高雄": "高雄", "基隆": "基隆", "嘉义": "嘉義", "首尔": "首爾", "大阪": "大阪", "京都": "京都", "胡志明市": "胡志明市", "马尼拉": "馬尼拉", "新德里": "新德里", "巴黎": "巴黎", "阿姆斯特丹": "阿姆斯特丹", "苏黎世": "蘇黎世", "维也纳": "維也納", "都柏林": "都柏林", "米兰": "米蘭", "罗马": "羅馬", "华沙": "華沙", "布拉格": "布拉格", "里斯本": "里斯本", "斯德哥尔摩": "斯德哥爾摩", "哥本哈根": "哥本哈根", "奥斯陆": "奧斯陸", "赫尔辛基": "赫爾辛基", "洛杉矶": "洛杉磯", "西雅图": "西雅圖", "波士顿": "波士頓", "丹佛": "丹佛", "迈阿密": "邁阿密", "亚特兰大": "亞特蘭大", "达拉斯": "達拉斯", "休斯顿": "休斯頓", "费城": "費城", "凤凰城": "鳳凰城", "圣何塞": "聖何塞", "温哥华": "溫哥華", "蒙特利尔": "蒙特利爾", "迪拜": "迪拜", "特拉维夫": "特拉維夫", "内罗毕": "內羅畢", "开罗": "開羅", "拉各斯": "拉各斯", "开普敦": "開普敦", "圣保罗": "聖保羅", "墨西哥城": "墨西哥城", "布宜诺斯艾利斯": "布宜諾斯艾利斯", "利马": "利馬", "奥克兰": "奧克蘭", "布里斯班": "布里斯班", "珀斯": "珀斯"}, "en": {"线上": "Online", "北京": "Beijing", "上海": "Shanghai", "天津": "Tianjin", "广州": "Guangzhou", "杭州": "Hangzhou", "苏州": "Suzhou", "深圳": "Shenzhen", "香港": "Hong Kong", "珠海": "Zhuhai", "澳门": "Macau", "台北": "Taipei", "台中": "Taichung", "宜兰": "Yilan", "东莞": "Dongguan", "重庆": "Chongqing", "旧金山": "San Francisco", "纽约": "New York", "班加罗尔": "Bengaluru", "伦敦": "London", "新加坡": "Singapore", "柏林": "Berlin", "多伦多": "Toronto", "森尼维尔": "Sunnyvale", "孟买": "Mumbai", "圣地亚哥（智利）": "Santiago", "布鲁塞尔": "Brussels", "东京": "Tokyo", "马德里": "Madrid", "吉隆坡": "Kuala Lumpur", "芝加哥": "Chicago", "科钦": "Kochi", "悉尼": "Sydney", "雷德伍德城": "Redwood City", "米尔皮塔斯": "Milpitas", "阿默斯特": "Amherst", "门洛帕克": "Menlo Park", "牛津": "Oxford", "芒特普莱森特（密歇根州）": "Mount Pleasant", "墨尔本": "Melbourne", "伊萨卡": "Ithaca", "杜伦": "Durham", "卡尔加里": "Calgary", "萨克拉门托": "Sacramento", "伊普西兰蒂": "Ypsilanti", "阿灵顿（得克萨斯州）": "Arlington", "普林斯顿": "Princeton", "河内": "Hanoi", "圣迭戈": "San Diego", "坦佩": "Tempe", "卡尔斯鲁厄": "Karlsruhe", "马卡姆（安大略省）": "Markham", "雅加达": "Jakarta", "霍桑": "Hawthorne", "温莎（安大略省）": "Windsor", "奥斯汀": "Austin", "渥太华": "Ottawa", "巴里": "Bari", "贝尔维尤": "Bellevue", "布加勒斯特": "Bucharest", "明斯特": "Münster", "戈尔韦": "Galway", "塔什干": "Tashkent", "慕尼黑": "Munich", "圣约翰斯": "St. John's", "韦尔斯利": "Wellesley", "曼谷": "Bangkok", "海得拉巴": "Hyderabad", "卡基纳达": "Kakinada", "尼科西亚": "Nicosia", "滑铁卢": "Waterloo", "莱里达": "Lleida", "谢菲尔德": "Sheffield", "北九州": "Kitakyushu", "阿伦": "Aalen", "阿斯塔纳": "Astana", "曼哈顿（堪萨斯州）": "Manhattan", "波哥大": "Bogotá", "巴塞罗那": "Barcelona", "汉密尔顿（安大略省）": "Hamilton", "华盛顿": "Washington", "密西沙加": "Mississauga", "东兰辛": "East Lansing", "圣克拉拉": "Santa Clara", "南昌": "Nanchang", "济南": "Jinan", "成都": "Chengdu", "武汉": "Wuhan", "南京": "Nanjing", "厦门": "Xiamen", "青岛": "Qingdao", "长沙": "Changsha", "郑州": "Zhengzhou", "合肥": "Hefei", "福州": "Fuzhou", "昆明": "Kunming", "大连": "Dalian", "沈阳": "Shenyang", "哈尔滨": "Harbin", "无锡": "Wuxi", "宁波": "Ningbo", "佛山": "Foshan", "温州": "Wenzhou", "贵阳": "Guiyang", "南宁": "Nanning", "太原": "Taiyuan", "石家庄": "Shijiazhuang", "乌鲁木齐": "Urumqi", "拉萨": "Lhasa", "呼和浩特": "Hohhot", "银川": "Yinchuan", "兰州": "Lanzhou", "西宁": "Xining", "海口": "Haikou", "三亚": "Sanya", "桂林": "Guilin", "洛阳": "Luoyang", "扬州": "Yangzhou", "新北": "New Taipei", "桃园": "Taoyuan", "新竹": "Hsinchu", "台南": "Tainan", "高雄": "Kaohsiung", "基隆": "Keelung", "嘉义": "Chiayi", "首尔": "Seoul", "大阪": "Osaka", "京都": "Kyoto", "胡志明市": "Ho Chi Minh City", "马尼拉": "Manila", "新德里": "New Delhi", "巴黎": "Paris", "阿姆斯特丹": "Amsterdam", "苏黎世": "Zurich", "维也纳": "Vienna", "都柏林": "Dublin", "米兰": "Milan", "罗马": "Rome", "华沙": "Warsaw", "布拉格": "Prague", "里斯本": "Lisbon", "斯德哥尔摩": "Stockholm", "哥本哈根": "Copenhagen", "奥斯陆": "Oslo", "赫尔辛基": "Helsinki", "洛杉矶": "Los Angeles", "西雅图": "Seattle", "波士顿": "Boston", "丹佛": "Denver", "迈阿密": "Miami", "亚特兰大": "Atlanta", "达拉斯": "Dallas", "休斯顿": "Houston", "费城": "Philadelphia", "凤凰城": "Phoenix", "圣何塞": "San Jose", "温哥华": "Vancouver", "蒙特利尔": "Montreal", "迪拜": "Dubai", "特拉维夫": "Tel Aviv", "内罗毕": "Nairobi", "开罗": "Cairo", "拉各斯": "Lagos", "开普敦": "Cape Town", "圣保罗": "São Paulo", "墨西哥城": "Mexico City", "布宜诺斯艾利斯": "Buenos Aires", "利马": "Lima", "奥克兰": "Auckland", "布里斯班": "Brisbane", "珀斯": "Perth"}}, "topic": {"zh": {"创业": "创业", "教育": "教育", "开发者工具": "开发者工具", "硬件": "硬件", "AI 编程": "AI 编程", "医疗": "医疗", "开源": "开源", "游戏": "游戏", "AI 智能体": "AI 智能体", "数据": "数据", "社会影响": "社会影响", "影像": "影像", "应用开发": "应用开发", "机器学习": "机器学习", "机器人": "机器人", "多智能体": "多智能体", "端侧 AI": "端侧 AI", "AI应用": "AI应用", "开源模型": "开源模型", "一人公司": "一人公司", "金融科技": "金融科技", "网络安全": "网络安全", "AI 视频": "AI 视频", "区块链": "区块链", "能源": "能源", "人工智能": "人工智能", "云计算": "云计算", "智能体": "智能体", "具身智能": "具身智能", "青少年": "青少年", "体育": "体育", "数据科学": "数据科学", "支付": "支付", "开放数据": "开放数据", "公益": "公益", "AI 安全": "AI 安全", "设计": "设计", "API开发": "API开发", "无障碍": "无障碍", "全链游戏": "全链游戏", "蛋白设计": "蛋白设计", "选举": "选举", "运动科技": "运动科技", "数据分析": "数据分析", "物理AI": "物理AI", "智能合约": "智能合约", "AI 入门": "AI 入门", "中学生": "中学生", "太空": "太空", "密码学": "密码学", "安全": "安全", "音乐": "音乐", "语音助手": "语音助手", "数据问答": "数据问答", "全栈": "全栈", "3D 生成": "3D 生成", "语音": "语音", "智能家居": "智能家居", "出海": "出海", "学生赛": "学生赛", "影视": "影视", "AI 应用": "AI 应用", "开源硬件": "开源硬件", "移动应用": "移动应用", "Web 开发": "Web 开发", "出行": "出行", "数据竞赛": "数据竞赛", "万圣节": "万圣节", "沉浸式体验": "沉浸式体验", "生物科技": "生物科技", "质谱": "质谱", "AI 身份": "AI 身份", "可持续交通": "可持续交通", "工程": "工程", "城市": "城市", "科研": "科研", "嵌入式": "嵌入式", "去中心化推理": "去中心化推理", "物联网": "物联网", "创新": "创新", "环保": "环保", "编程": "编程", "游戏开发": "游戏开发", "编程语言": "编程语言", "编译器": "编译器", "AI 编程助手": "AI 编程助手"}, "tw": {"创业": "創業", "教育": "教育", "开发者工具": "開發者工具", "硬件": "硬件", "AI 编程": "AI 編程", "医疗": "醫療", "开源": "開源", "游戏": "遊戲", "AI 智能体": "AI 智能體", "数据": "數據", "社会影响": "社會影響", "影像": "影像", "应用开发": "應用開發", "机器学习": "機器學習", "机器人": "機器人", "多智能体": "多智能體", "端侧 AI": "端側 AI", "AI应用": "AI應用", "开源模型": "開源模型", "一人公司": "一人公司", "金融科技": "金融科技", "网络安全": "網絡安全", "AI 视频": "AI 視頻", "区块链": "區塊鏈", "能源": "能源", "人工智能": "人工智能", "云计算": "雲計算", "智能体": "智能體", "具身智能": "具身智能", "青少年": "青少年", "体育": "體育", "数据科学": "數據科學", "支付": "支付", "开放数据": "開放數據", "公益": "公益", "AI 安全": "AI 安全", "设计": "設計", "API开发": "API開發", "无障碍": "無障礙", "全链游戏": "全鏈遊戲", "蛋白设计": "蛋白設計", "选举": "選舉", "运动科技": "運動科技", "数据分析": "數據分析", "物理AI": "物理AI", "智能合约": "智能合約", "AI 入门": "AI 入門", "中学生": "中學生", "太空": "太空", "密码学": "密碼學", "安全": "安全", "音乐": "音樂", "语音助手": "語音助手", "数据问答": "數據問答", "全栈": "全棧", "3D 生成": "3D 生成", "语音": "語音", "智能家居": "智能家居", "出海": "出海", "学生赛": "學生賽", "影视": "影視", "AI 应用": "AI 應用", "开源硬件": "開源硬件", "移动应用": "移動應用", "Web 开发": "Web 開發", "出行": "出行", "数据竞赛": "數據競賽", "万圣节": "萬聖節", "沉浸式体验": "沉浸式體驗", "生物科技": "生物科技", "质谱": "質譜", "AI 身份": "AI 身份", "可持续交通": "可持續交通", "工程": "工程", "城市": "城市", "科研": "科研", "嵌入式": "嵌入式", "去中心化推理": "去中心化推理", "物联网": "物聯網", "创新": "創新", "环保": "環保", "编程": "編程", "游戏开发": "遊戲開發", "编程语言": "編程語言", "编译器": "編譯器", "AI 编程助手": "AI 編程助手"}, "en": {"创业": "Startups", "教育": "Education", "开发者工具": "Dev Tools", "硬件": "Hardware", "AI 编程": "AI Coding", "医疗": "Healthcare", "开源": "Open Source", "游戏": "Gaming", "AI 智能体": "AI Agents", "数据": "Data", "社会影响": "Social Impact", "影像": "Imaging", "应用开发": "App Development", "机器学习": "Machine Learning", "机器人": "Robotics", "多智能体": "Multi-Agent", "端侧 AI": "On-device AI", "AI应用": "AI Apps", "开源模型": "Open Models", "一人公司": "One-Person Company", "金融科技": "FinTech", "网络安全": "Cybersecurity", "AI 视频": "AI Video", "区块链": "Blockchain", "能源": "Energy", "人工智能": "AI", "云计算": "Cloud Computing", "智能体": "Agents", "具身智能": "Embodied AI", "青少年": "Youth", "体育": "Sports", "数据科学": "Data Science", "支付": "Payments", "开放数据": "Open Data", "公益": "Public Good", "AI 安全": "AI Safety", "设计": "Design", "API开发": "API Development", "无障碍": "Accessibility", "全链游戏": "Fully On-chain Games", "蛋白设计": "Protein Design", "选举": "Elections", "运动科技": "Sports Tech", "数据分析": "Data Analytics", "物理AI": "Physical AI", "智能合约": "Smart Contracts", "AI 入门": "Intro to AI", "中学生": "Students", "太空": "Space", "密码学": "Cryptography", "安全": "Security", "音乐": "Music", "语音助手": "Voice Assistants", "数据问答": "Data Q&A", "全栈": "Full-stack", "3D 生成": "3D Generation", "语音": "Voice", "智能家居": "Smart Home", "出海": "Going Global", "学生赛": "Student Track", "影视": "Film & TV", "AI 应用": "AI Apps", "开源硬件": "Open Hardware", "移动应用": "Mobile Apps", "Web 开发": "Web Development", "出行": "Mobility", "数据竞赛": "Data Competitions", "万圣节": "Halloween", "沉浸式体验": "Immersive Experiences", "生物科技": "Biotech", "质谱": "Mass Spectrometry", "AI 身份": "AI Identity", "可持续交通": "Sustainable Transport", "工程": "Engineering", "城市": "Urban", "科研": "Research", "嵌入式": "Embedded", "去中心化推理": "Decentralized Inference", "物联网": "IoT", "创新": "Innovation", "环保": "Environment", "编程": "Programming", "游戏开发": "Game Development", "编程语言": "Programming Languages", "编译器": "Compilers", "AI 编程助手": "AI Coding Assistants"}}};
 const STR={
 zh:{
@@ -913,8 +842,7 @@ function applyLang(){
   document.documentElement.lang=LANG==="en"?"en":(LANG==="tw"?"zh-TW":"zh-CN");
   document.title=tr("docTitle");
   const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
-  document.querySelectorAll(".langsw button").forEach(b=>{const on=b.dataset.setlang===LANG;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")});
-  _st("#nav-home",tr("navHome"));_st("#nav-agent",tr("navAgent"));_st("#mnav-btn",tr("mnavBtn"));_st("#ab-title",tr("abTitle"));_st("#ab-sub",tr("abSub"));_sh("#ab-apis",tr("abApis"));_st("#nav-hack",tr("navHack"));_st("#nav-spaces",tr("navSpaces"));
+  _st("#ab-title",tr("abTitle"));_st("#ab-sub",tr("abSub"));_sh("#ab-apis",tr("abApis"));
   _st("#lsw-ev",tr("swEv"));_st("#lsw-hack",tr("swHack"));_st("#lsw-expat",tr("swExpat"));_st("#lsw-spaces",tr("swSpaces"));_st("#ta-sub",tr("subAnchor"));
   _st("#page-title",tr("pageTitle"));_sh("#page-sub",tr("pageSub"));_st("#cmd-label",tr("cmdLabel"));_st("#cmd-copy",tr("copy"));_st("#pip-label",tr("pipLabel"));_st("#pip-copy",tr("copy"));
   _st("#st-total-label",tr("statTotal"));_st("#st-soon-label",tr("statSoon"));_st("#st-cn-label",tr("statCn"));_st("#st-upd-label",tr("statUpd"));
@@ -936,18 +864,7 @@ if(document.querySelector("#ovl.open")&&typeof mLoad==="function")mLoad();
   if(typeof render==="function")render();
 }
 function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang()}
-document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
-/* ===== theme: auto (follow system) / light / dark - preference stored in localStorage "szTheme" (shared with index) ===== */
-let THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
-if(THEME!=="light"&&THEME!=="dark")THEME="auto";
-const _mqDark=window.matchMedia("(prefers-color-scheme: dark)");
-function resolvedTheme(){return THEME==="dark"?"dark":THEME==="light"?"light":(_mqDark.matches?"dark":"light")}
-function syncThemeUI(){document.querySelectorAll(".themesw button").forEach(b=>{const on=b.dataset.settheme===THEME;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");if(b.dataset.settheme==="auto")b.textContent=tr("themeAuto");if(b.dataset.settheme==="light"){b.setAttribute("aria-label",tr("themeLight"));b.title=tr("themeLight")}if(b.dataset.settheme==="dark"){b.setAttribute("aria-label",tr("themeDark"));b.title=tr("themeDark")}});const g=document.querySelector(".themesw");if(g)g.setAttribute("aria-label",tr("themeLabel"))}
-function applyTheme(){const r=resolvedTheme();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncThemeUI()}
-function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()}
-document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>setTheme(b.dataset.settheme)));
-if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
-applyTheme();
+if(window.YL)YL.onLang(setLang);
 </script>
 
 <script>
@@ -1075,28 +992,7 @@ fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   applyLang();
 }).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
 </script>
-<script>
-(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
-function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
-b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-p.addEventListener('click',function(e){if(e.target.closest('a')||e.target.closest('.nav-submit'))close()});
-document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
-})();
-</script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
-<script>
-(function(){document.querySelectorAll(".prefs").forEach(function(p){
-var sel=p.querySelector(".langsel"),lg=p.querySelector(".langsw"),cyc=p.querySelector(".themecyc"),tg=p.querySelector(".themesw");
-if(sel&&lg){var syncL=function(){var on=lg.querySelector("button.on");if(on&&sel.value!==on.dataset.setlang)sel.value=on.dataset.setlang};
-sel.addEventListener("change",function(){var b=lg.querySelector('[data-setlang="'+sel.value+'"]');if(b)b.click();syncL()});
-new MutationObserver(syncL).observe(lg,{subtree:true,attributes:true,attributeFilter:["class"]});syncL()}
-if(cyc&&tg){var order=["auto","light","dark"],ic={auto:"\u25D0",light:"\u2600",dark:"\u263E"};
-var cur=function(){var on=tg.querySelector("button.on");return on?on.dataset.settheme:"auto"};
-var syncT=function(){var c=cur(),b=tg.querySelector('[data-settheme="'+c+'"]'),l=b?(b.getAttribute("aria-label")||b.textContent):c,t=(tg.getAttribute("aria-label")||"Theme")+": "+l;cyc.textContent=ic[c]||ic.auto;cyc.title=t;cyc.setAttribute("aria-label",t)};
-cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],b=tg.querySelector('[data-settheme="'+n+'"]');if(b)b.click();syncT()});
-new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
-})})();
-</script>
 <script src="/stats.js" defer></script>
 </body>
 </html>

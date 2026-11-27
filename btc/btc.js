@@ -5,24 +5,9 @@
   var DAY = 864e5;
   var GENESIS = Date.UTC(2009, 0, 3);
 
-  /* ---------- theme toggle (same storage key as the other lists) ---------- */
-  var THEMES = ["auto", "light", "dark"], ICON = { auto: "◐", light: "☀", dark: "☾" }, NAME = { auto: "自动", light: "白天", dark: "晚上" };
-  var mq = window.matchMedia("(prefers-color-scheme: dark)");
-  function themeMode() { var t; try { t = localStorage.getItem("szTheme"); } catch (e) {} return THEMES.indexOf(t) >= 0 ? t : "auto"; }
-  function applyTheme() {
-    var t = themeMode(), d = t === "dark" || (t === "auto" && mq.matches);
-    document.documentElement.setAttribute("data-theme", d ? "dark" : "light");
-    document.documentElement.setAttribute("data-theme-mode", t);
-    var b = $("#themecyc"); b.textContent = ICON[t]; b.title = "主题：" + NAME[t]; b.setAttribute("aria-label", b.title);
-    var m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute("content", d ? "#0d1218" : "#f6f8f7");
-    if (CH) drawChart();
-  }
-  $("#themecyc").addEventListener("click", function () {
-    var n = THEMES[(THEMES.indexOf(themeMode()) + 1) % 3];
-    try { localStorage.setItem("szTheme", n); } catch (e) {}
-    applyTheme();
-  });
-  if (mq.addEventListener) mq.addEventListener("change", applyTheme);
+  /* ---------- theme: toggle + storage owned by /shell.js; redraw the chart when it changes ---------- */
+  function applyTheme() { if (CH) drawChart(); }
+  if (window.YL) window.YL.onTheme(applyTheme);
 
   /* ---------- formatting ---------- */
   function usd(v, dp) { if (v == null || !isFinite(v)) return "—"; return "$" + v.toLocaleString("en-US", { minimumFractionDigits: dp || 0, maximumFractionDigits: dp || 0 }); }

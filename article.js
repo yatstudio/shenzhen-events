@@ -10,12 +10,15 @@
     if (b) { b.textContent = ICON[t]; b.title = "主题：" + NAME[t]; b.setAttribute("aria-label", b.title); }
     var m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute("content", d ? "#0d1218" : "#f6f8f7");
   }
-  if (b) b.addEventListener("click", function () {
-    try { localStorage.setItem("szTheme", THEMES[(THEMES.indexOf(mode()) + 1) % 3]); } catch (e) {}
+  // pages wired to /shell.js (window.YL) get their theme toggle from the shell
+  if (!window.YL) {
+    if (b) b.addEventListener("click", function () {
+      try { localStorage.setItem("szTheme", THEMES[(THEMES.indexOf(mode()) + 1) % 3]); } catch (e) {}
+      apply();
+    });
+    if (mq.addEventListener) mq.addEventListener("change", apply);
     apply();
-  });
-  if (mq.addEventListener) mq.addEventListener("change", apply);
-  apply();
+  }
   // tables scroll sideways inside a rounded box instead of squeezing their columns
   Array.prototype.forEach.call(document.querySelectorAll("article table"), function (t) {
     if (t.parentNode.classList.contains("tblwrap")) return;

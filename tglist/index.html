@@ -49,22 +49,8 @@ a{color:var(--green)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
 
 /* topbar (same as /szevents/) */
-.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
-.topbar .wrap{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
-.topbar-brand{display:flex;align-items:center;gap:var(--sp-md);text-decoration:none}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
-.topbar-nav{display:flex;gap:clamp(var(--sp-lg),3vw,var(--sp-xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
-.topbar-nav a:hover,.topbar-nav a.nav-on{color:var(--green)}
-.prefs{display:inline-flex;align-items:center;gap:6px}
-.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
-.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-.langsel option{background:var(--panel);color:var(--ink)}
-.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
-.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-#mnav-btn{display:none}
-#mnav-panel{display:contents}
 
 /* hero */
 .human-section{padding:clamp(var(--sp-xl),5vw,40px) 0 var(--sp-3xl)}
@@ -158,14 +144,6 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media (max-width:820px){
-  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end;font-family:inherit}
-  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
-  #mnav-panel.open{display:block}
-  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
-  #mnav-panel .topbar-nav a{font-size:.95rem}
-  #mnav-panel .prefs{width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
-  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
-  #mnav-panel .themecyc{width:34px}
   .section-tagline{display:none}
   .ab-head{flex-direction:column;align-items:stretch;gap:12px}
   .ab-go{width:100%}
@@ -181,22 +159,7 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="wrap">
-    <a class="topbar-brand" href="https://yatslist.com/szevents/"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
-    <button id="mnav-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="menu">☰ 菜单</button>
-    <div id="mnav-panel"><nav class="topbar-nav">
-      <a href="#agentbox" data-i18n="navAgent">Agent</a>
-      <a href="/tglist/" class="nav-on" aria-current="page" data-i18n="navTg">TG 清单</a>
-      <a href="/szevents/" data-i18n="navEvents">深圳活动</a>
-      <a href="/hackathons/" data-i18n="navHack">黑客松</a>
-      <span class="prefs">
-        <select class="langsel" id="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select>
-        <button type="button" class="themecyc" id="themecyc" aria-label="Theme">&#9680;</button>
-      </span>
-    </nav></div>
-  </div>
-</div>
+<div id="yl-topbar" data-active="tglist"></div><script src="/shell.js?v=1"></script>
 
 <main class="human-section">
   <div class="wrap">
@@ -314,6 +277,7 @@ var qp=new URLSearchParams(location.search);
 try{LANG=qp.get("lang")||localStorage.getItem("szLang")||""}catch(e){LANG=qp.get("lang")||""}
 if(!LANG){var nl=((navigator.language||"zh-CN")+"").toLowerCase();LANG=(nl==="zh-tw"||nl==="zh-hk"||nl==="zh-mo"||nl.indexOf("zh-hant")===0)?"tw":nl.indexOf("zh")===0?"zh":"en"}
 if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+if(window.YL)LANG=YL.lang;/* /shell.js owns language detection (?lang=, szLang) */
 function tr(k){var d=STR[LANG]||STR.zh;var v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
 
 function applyLang(){
@@ -325,26 +289,11 @@ function applyLang(){
   $("#ab-prompt").textContent=tr("prompt");
   document.querySelectorAll(".exq").forEach(function(b){b.textContent=tr("ex")[+b.dataset.ex]});
   $("#foot-agent").innerHTML=tr("footAgent");
-  $("#langsel").value=LANG;
-  syncTheme();
 }
 function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(DATA.length){drawChips();render(true);drawFoot()}syncURL()}
-$("#langsel").addEventListener("change",function(){setLang(this.value)});
+if(window.YL)YL.onLang(setLang);
 
-/* ===== theme: auto / light / dark, shared localStorage key "szTheme" ===== */
-var THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
-if(THEME!=="light"&&THEME!=="dark")THEME="auto";
-var mq=window.matchMedia("(prefers-color-scheme: dark)");
-function applyTheme(){var r=THEME==="dark"?"dark":THEME==="light"?"light":(mq.matches?"dark":"light");document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);var tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncTheme()}
-function syncTheme(){var b=$("#themecyc"),ic={auto:"◐",light:"☀",dark:"☾"},t=tr("themeLabel")+": "+tr("theme")[THEME];b.textContent=ic[THEME];b.title=t;b.setAttribute("aria-label",t)}
-$("#themecyc").addEventListener("click",function(){var o=["auto","light","dark"];THEME=o[(o.indexOf(THEME)+1)%3];try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()});
-if(mq.addEventListener)mq.addEventListener("change",function(){if(THEME==="auto")applyTheme()});
 
-/* ===== mobile menu ===== */
-(function(){var b=$("#mnav-btn"),p=$("#mnav-panel");function close(){p.classList.remove("open");b.setAttribute("aria-expanded","false")}
-b.addEventListener("click",function(e){e.stopPropagation();b.setAttribute("aria-expanded",p.classList.toggle("open"))});
-p.addEventListener("click",function(e){if(e.target.closest("a"))close()});
-document.addEventListener("click",function(e){if(!p.contains(e.target)&&e.target!==b)close()})})();
 
 /* ===== copy helpers ===== */
 var toastT;
@@ -428,7 +377,7 @@ function syncURL(){var p=new URLSearchParams(),q=$("#q").value.trim();if(fType)p
 function update(){drawChips();render();syncURL()}
 function drawFoot(){$("#foot-src").innerHTML=tr("foot")+esc(String(META.updated_at||"").slice(0,10))}
 
-applyLang();applyTheme();
+applyLang();
 fetch("/tglist.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
   META=d;
   DATA=(d.entries||[]).map(function(e,i){e._i=i;e._h=hay(e);return e});

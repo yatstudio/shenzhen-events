@@ -10,16 +10,7 @@
 <link rel="stylesheet" href="/quant/quant.css">
 </head>
 <body>
-<div class="topbar"><div class="bwrap">
-  <a href="https://yatslist.com/szevents/" aria-label="Yat's List"><span class="brandmark">&gt; yat's list<span class="cur">_</span></span></a>
-  <nav class="topbar-nav">
-    <a href="https://yatslist.com/szevents/" class="nav-ev">活动</a>
-    <a href="https://yatslist.com/hackathons/">黑客松</a>
-    <a href="https://yatslist.com/btc/">BTC</a>
-    <a href="https://yatslist.com/quant/" class="nav-on" aria-current="page">量化</a>
-  </nav>
-  <button type="button" class="themecyc" id="themecyc" aria-label="主题">&#9680;</button>
-</div></div>
+<div id="yl-topbar" data-active="quant" data-i18n="none"></div><script src="/shell.js?v=1"></script>
 <div class="wrap">
   <p class="section-tagline">QUANT · PAPER TRADING</p>
   <h1>Crypto 量化纸面盘 · 策略 v2 / v3 看板</h1>
@@ -229,6 +220,6 @@ async function tick() {
 }
 tick(); setInterval(tick, 30000);
 </script>
-<script src="/article.js" defer></script>
+<script src="/article.js?v=2" defer></script>
 </body>
 </html>
