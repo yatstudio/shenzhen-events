@@ -27,3 +27,21 @@ export function cityIdOf(cities) {
   };
 }
 
+
+// Per-city slice of the master feed (/<city_id>/events.json): same shape as /events.json, only this city's events.
+export function citySlice(c, data, idOf) {
+  const site = "https://yatslist.com";
+  return {
+    updated_at: data.updated_at,
+    city: c.name,
+    city_id: c.id,
+    events: (data.events || []).filter((e) => e && idOf(e) === c.id).map((e) => (e.city_id === c.id ? e : { ...e, city_id: c.id })),
+    schema_version: data.schema_version,
+    attribution: {
+      ...(data.attribution || {}),
+      name: `Yat's List · ${c.name}活动清单`,
+      url: c.page_url || (data.attribution && data.attribution.url) || `${site}/`,
+    },
+    source: `${site}/events.json`,
+  };
+}

@@ -3,7 +3,11 @@
 这是给 AI Agent 阅读的站点说明。人类网页在同目录 index.html。
 
 ## 这是什么
-深圳 AI·创业·科技·跨境出海·Web3·加密线下活动 + 黑客松/技术/硬件专场 + 相关主题 X Space（在线）的结构化清单，每天早上（Asia/Shanghai）更新一次。维护者逐条核实官方页面后收录；已结束的保留在数据中（网页自动归入「过往活动」），报名已截止但活动未举行的也会标明。
+深圳 AI·创业·科技·跨境出海·Web3·加密线下活动 + 黑客松/技术/硬件专场 + 相关主题 X Space（在线）的结构化清单，每天早上（Asia/Shanghai）更新一次。维护者逐条核实官方页面后收录；已结束的保留在数据中（网页自动归入「过往活动」；结束超过 30 天的移到 https://yatslist.com/events-archive.json ），报名已截止但活动未举行的也会标明。
+
+## 多城市 / Multi-city
+默认订阅 https://yatslist.com/events.json（所有城市的总表），按用户关心的城市筛 `city_id`（sz 深圳 / hk 香港 / online 线上 …）；只需一个城市可用 `https://yatslist.com/<city_id>/events.json`（结构同 events.json，现有 sz、hk）。城市列表与代码见 https://yatslist.com/cities.json（每城有 id、三语名称、tz、currency、events_url、slice_url、page_url），新增城市只会在这里出现，订阅地址不变。个别新条目可能暂时没有 `city_id`，此时按 `city` 字段判断（含「香港」即 hk）。已结束超过 30 天的活动在 https://yatslist.com/events-archive.json（结构相同，`archived: true`）；查历史活动时两份合并、同一 `id` 以 events.json 为准。
+English: subscribe to https://yatslist.com/events.json, the single all-city feed, and filter by `city_id` (sz Shenzhen / hk Hong Kong / online …). If you need only one city, `https://yatslist.com/<city_id>/events.json` has the same shape (sz and hk today). The city directory is https://yatslist.com/cities.json; new cities (e.g. sh, bj) appear only there and your subscription URL never changes. A fresh entry may briefly lack `city_id`; fall back to the `city` field. Events that ended more than 30 days ago move to https://yatslist.com/events-archive.json (same shape); when you need history, merge both and let events.json win on the same `id`.
 
 ## 维护者
 本站由 Yat 的 Agent 自动维护（每日更新、审核投稿）。建议或问题可联系 Yat：X https://x.com/yatbtc
@@ -19,7 +23,7 @@
 
 ## 香港活动清单
 网页：https://yatslist.com/hk/（默认繁體，可切简体 / EN）｜ 数据：https://yatslist.com/hk/events.json（结构同 events.json，只含 city_id=hk）｜ RSS：https://yatslist.com/hk/feed.xml ｜ 日历：https://yatslist.com/hk/events.ics
-用户只关心香港时抓 hk/events.json；也可以抓全量 events.json 按 `city_id`（sz 深圳 / hk 香港 / online 线上 / jm 江门，定义见 https://yatslist.com/cities.json）筛选。个别条目可能还没有 city_id，此时按 `city` 字段判断（含「香港」即香港）。cities.json 的 hk.areas 把 district 归入 港岛 / 九龙 / 新界。
+用户只关心香港时抓 hk/events.json；也可以抓全量 events.json 按 `city_id` 筛选（见上「多城市」）。cities.json 的 hk.areas 把 district 归入 港岛 / 九龙 / 新界。
 
 ## categories 枚举
 AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / 在线Space

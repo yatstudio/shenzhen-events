@@ -1,12 +1,11 @@
 // 由 szevents/index.html（模板）+ cities.json + events.json 生成香港页与香港数据：
 //   hk/index.html   页面（模板里的城市逻辑由 window.YL_CITY="hk" 打开）
-//   hk/events.json  只含 city_id=hk 的活动（结构同 /events.json）
-//   hk/feed.xml、hk/events.ics
+//   hk/feed.xml、hk/events.ics（hk/events.json 数据切片由 tools/build_slices.mjs 生成，内容同 citySlice）
 // 用法：node tools/build_city_pages.mjs          生成
 //       node tools/build_city_pages.mjs --check  只检查 hk/index.html 是否与生成结果一致（CI 用，不一致 exit 1）
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { ROOT, loadCities, cityIdOf } from "./cities.mjs";
+import { ROOT, loadCities, cityIdOf, citySlice } from "./cities.mjs";
 import { publicEvents, buildRss, buildIcs } from "./feeds.mjs";
 
 const CHECK = process.argv.includes("--check");
@@ -97,20 +96,8 @@ if (CHECK) {
 // ---------- data ----------
 const data = JSON.parse(readFileSync(join(ROOT, "events.json"), "utf8"));
 const idOf = cityIdOf(cities);
-const hkEvents = (data.events || []).filter((e) => e && idOf(e) === "hk").map((e) => (e.city_id === "hk" ? e : { ...e, city_id: "hk" }));
-const hkData = {
-  updated_at: data.updated_at,
-  city: hk.name,
-  city_id: hk.id,
-  events: hkEvents,
-  schema_version: data.schema_version,
-  attribution: {
-    ...(data.attribution || {}),
-    name: "Yat's List · 香港活动清单",
-    url: `${SITE}/hk/`,
-  },
-  source: `${SITE}/events.json`,
-};
+const hkData = citySlice(hk, data, idOf);
+const hkEvents = hkData.events;
 
 mkdirSync(join(ROOT, "hk"), { recursive: true });
 const write = (f, s) => {
@@ -118,7 +105,6 @@ const write = (f, s) => {
   if (!existsSync(p) || readFileSync(p, "utf8") !== s) writeFileSync(p, s);
 };
 write("index.html", page);
-write("events.json", JSON.stringify(hkData, null, 1) + "\n");
 const pub = publicEvents(hkData);
 write("feed.xml", buildRss(hkData, pub, {
   title: "Yat's List 香港活动清单",
@@ -126,4 +112,4 @@ write("feed.xml", buildRss(hkData, pub, {
   description: "香港 AI·创业·科技·Web3·加密活动，每天更新",
 }));
 write("events.ics", buildIcs(hkData, pub, { prodid: "-//yatslist//hk//CN" }));
-console.log(`hk/: index.html + events.json (${hkEvents.length} events) + feed.xml + events.ics (${pub.filter((e) => e.start).length} dated)`);
+console.log(`hk/: index.html + feed.xml (${hkEvents.length} events) + events.ics (${pub.filter((e) => e.start).length} dated)`);

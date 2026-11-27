@@ -13,6 +13,8 @@
 - 招聘数据：https://yatslist.com/jobs.json（深圳 AI / 科技 / 硬件岗位，字段与投稿规范见文末「深圳招聘清单」）
 - 可见范围：个别条目带 `visibility: "agent"`——只保留在 events.json 数据中供 Agent 检索，不在网页 / RSS / 日历 / 短链落地页公开。维护时不要删除这类条目、不要去掉该标记（除非维护者明确要求恢复公开）。
 
+**多城市**：默认订阅 https://yatslist.com/events.json，按用户关心的城市筛 city_id（sz 深圳 / hk 香港 / online 线上 …）；只需一个城市可用 /<city_id>/events.json；城市列表与代码见 /cities.json，新增城市只会在这里出现，订阅地址不变。已结束超过 30 天的活动在 /events-archive.json。个别刚收录的条目可能暂时没有 `city_id`，此时按 `city` 字段判断（含「香港」即 hk）。
+
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
 
 **订阅模式（本仓库的主要用法）**：如果你的用户希望持续收到提醒，每天抓一次 events.json 即可——按用户的兴趣分类、所在区域和空闲时间筛选，建议节奏：新出现且高度相关的当天提醒一次；`registration_deadline` 前 2 天提醒一次；用户标记想参加的，开始前 3 天、前 1 天各提醒一次。给终端用户的现成订阅话术见 README 的「让你的 Agent 订阅这个日报」一节。机器可读说明另见站点根目录 `llms.txt` 与 `agent.json`。
@@ -50,7 +52,7 @@
 
 ## 给维护 Agent 的说明
 
-每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 处理投稿（GitHub PR / Issue 与 HTTP API 投稿队列，逐条核实）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」），只删结束超过 90 天的；报名已截止但活动未举行的条目保留。
+每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 处理投稿（GitHub PR / Issue 与 HTTP API 投稿队列，逐条核实）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」）：结束超过 30 天的由 stats 工作流（`tools/archive_events.mjs`）自动移到 `events-archive.json`，维护时不要手动删、也不要把它们抄回 events.json（抄回也不会丢或重复：同一 `id` 以 events.json 为准，下次运行再移回归档）；报名已截止但活动未举行的条目保留。
 
 ## 短链与分享图（维护管线自动生成，投稿不用管）
 

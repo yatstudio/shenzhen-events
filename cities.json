@@ -1,5 +1,5 @@
 {
- "about": "Yat's List 城市表：events.json 每条活动的 city_id 由 city 字段按 match 推导（tools/normalize_city.mjs）。hk.areas 把香港 district 归入 港岛 / 九龙 / 新界；未列出的 district 不归区。",
+ "about": "Yat's List 城市表（城市目录）。所有城市的活动都在一份总表 events.json 里，每条带 city_id（由 city 字段按 match 推导，tools/normalize_city.mjs）；按 events_url + events_filter 筛即可。slice=true 的城市另有只含该城市的切片 slice_url（由总表生成，tools/build_slices.mjs）；page_url 是该城市的网页。新增城市只会出现在这里，订阅地址不变。已结束超过 30 天的活动在 https://yatslist.com/events-archive.json 。hk.areas 把香港 district 归入 港岛 / 九龙 / 新界；未列出的 district 不归区。",
  "cities": [
   {
    "id": "sz",
@@ -9,8 +9,11 @@
    "match": ["深圳", "Shenzhen"],
    "tz": "Asia/Shanghai",
    "currency": "CNY",
-   "page": "https://yatslist.com/szevents/",
-   "events_json": "https://yatslist.com/events.json"
+   "events_url": "https://yatslist.com/events.json",
+   "events_filter": "city_id=sz",
+   "slice": true,
+   "slice_url": "https://yatslist.com/sz/events.json",
+   "page_url": "https://yatslist.com/szevents/"
   },
   {
    "id": "hk",
@@ -20,8 +23,11 @@
    "match": ["香港", "Hong Kong"],
    "tz": "Asia/Hong_Kong",
    "currency": "HKD",
-   "page": "https://yatslist.com/hk/",
-   "events_json": "https://yatslist.com/hk/events.json",
+   "events_url": "https://yatslist.com/events.json",
+   "events_filter": "city_id=hk",
+   "slice": true,
+   "slice_url": "https://yatslist.com/hk/events.json",
+   "page_url": "https://yatslist.com/hk/",
    "areas": [
     {
      "id": "hki",
@@ -53,7 +59,9 @@
    "name_en": "Online",
    "match": ["线上", "線上", "Online"],
    "tz": "Asia/Shanghai",
-   "currency": "CNY"
+   "currency": "CNY",
+   "events_url": "https://yatslist.com/events.json",
+   "events_filter": "city_id=online"
   },
   {
    "id": "jm",
@@ -62,7 +70,10 @@
    "name_en": "Jiangmen",
    "match": ["江门", "江門", "Jiangmen"],
    "tz": "Asia/Shanghai",
-   "currency": "CNY"
+   "currency": "CNY",
+   "events_url": "https://yatslist.com/events.json",
+   "events_filter": "city_id=jm"
   }
- ]
+ ],
+ "archive_url": "https://yatslist.com/events-archive.json"
 }
