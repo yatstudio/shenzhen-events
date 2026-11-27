@@ -1,5 +1,7 @@
 # Rebuild stats.json (list totals + new-per-day counts) whenever a list's data changes,
 # and once just after midnight Shanghai time so "new today" resets.
+# Also: add city_id to events.json (the daily writer doesn't set it) and regenerate /hk/
+# (page from the szevents/index.html template + hk/events.json, feed.xml, events.ics).
 name: stats
 on:
   push:
@@ -15,6 +17,12 @@ on:
       - nomadlist.json
       - notes/notes.json
       - tools/build_stats.mjs
+      - szevents/index.html
+      - cities.json
+      - tools/cities.mjs
+      - tools/feeds.mjs
+      - tools/normalize_city.mjs
+      - tools/build_city_pages.mjs
   schedule:
     - cron: "5 16 * * *"
   workflow_dispatch:
@@ -33,13 +41,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node tools/build_stats.mjs
-      - name: Commit stats.json if counts changed
+      - name: Build city_id, /hk/ and stats
+        run: |
+          node tools/normalize_city.mjs
+          node tools/build_city_pages.mjs
+          node tools/build_stats.mjs
+      - name: Commit generated files if they changed
         run: |
           git config user.name "yatslist-stats[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stats.json
-          if git diff --cached --quiet -- stats.json; then echo "no change"; exit 0; fi
-          git commit -m "stats: rebuild list counts [skip ci]"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          FILES="stats.json events.json hk"
+          for i in 1 2 3; do
+            git add -A $FILES
+            if git diff --cached --quiet; then echo "no change"; exit 0; fi
+            git commit -q -m "stats: rebuild list counts, city_id, /hk/ [skip ci]"
+            git push -q origin HEAD:main && exit 0
+            # main moved (e.g. the daily writer pushed events.json): rebuild on top of it instead of rebasing generated files
+            sleep 5
+            git fetch -q origin main && git reset -q --hard origin/main
+            node tools/normalize_city.mjs && node tools/build_city_pages.mjs && node tools/build_stats.mjs
+          done
           exit 1

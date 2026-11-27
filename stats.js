@@ -3,20 +3,20 @@
    and the homepage hackathon banner (<a class="hackhero">). */
 (function () {
   var U = {
-    zh: { events: "场活动在列", hackathons: "场黑客松正在报名", talks: "场谈话", vps: "个套餐", xlist: "位", expat: "场活动", remote: "个岗位", nomadlist: "座城市", notes: "篇笔记",
+    zh: { events: "场活动在列", hk: "场香港活动在列", hackathons: "场黑客松正在报名", talks: "场谈话", vps: "个套餐", xlist: "位", expat: "场活动", remote: "个岗位", nomadlist: "座城市", notes: "篇笔记",
       today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暂无新增",
       hackTitle: "全球黑客松", hackSub: function (n) { return n + " 场正在报名，每天核实更新"; }, go: "去看 →",
       chtfTitle: "高交会专题", chtfSub: "11月26–28日 · 深圳国际会展中心（宝安）· 4 场同期活动 + 1,529 家展商展位查询" },
-    tw: { events: "場活動在列", hackathons: "場黑客松正在報名", talks: "場談話", vps: "個套餐", xlist: "位", expat: "場活動", remote: "個崗位", nomadlist: "座城市", notes: "篇筆記",
+    tw: { events: "場活動在列", hk: "場香港活動在列", hackathons: "場黑客松正在報名", talks: "場談話", vps: "個套餐", xlist: "位", expat: "場活動", remote: "個崗位", nomadlist: "座城市", notes: "篇筆記",
       today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暫無新增",
       hackTitle: "全球黑客松", hackSub: function (n) { return n + " 場正在報名，每天核實更新"; }, go: "去看 →",
       chtfTitle: "高交會專題", chtfSub: "11月26–28日 · 深圳國際會展中心（寶安）· 4 場同期活動 + 1,529 家展商展位查詢" },
-    en: { events: "events listed", hackathons: "hackathons open", talks: "talks", vps: "plans", xlist: "people", expat: "events", remote: "jobs", nomadlist: "cities", notes: "notes",
+    en: { events: "events listed", hk: "Hong Kong events listed", hackathons: "hackathons open", talks: "talks", vps: "plans", xlist: "people", expat: "events", remote: "jobs", nomadlist: "cities", notes: "notes",
       today: "New today", last: "Last added", week: "Last 7 days", none: "Nothing new yet today",
       hackTitle: "Global hackathons", hackSub: function (n) { return n + " open for registration, verified daily"; }, go: "Browse →",
       chtfTitle: "CHTF 2026 topic", chtfSub: "Nov 26–28 · Shenzhen World Exhibition & Convention Center · 4 events + 1,529 exhibitors with booth lookup" }
   };
-  function lang() { var l; try { l = localStorage.getItem("szLang"); } catch (e) {} return l === "en" || l === "tw" ? l : "zh"; }
+  function lang() { var l = window.YL && YL.lang; if (!l) try { l = localStorage.getItem("szLang"); } catch (e) {} return l === "en" || l === "tw" ? l : "zh"; }
   function md(d, L) { var m = +d.slice(5, 7), dd = +d.slice(8, 10); return L === "en" ? ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m - 1] + " " + dd : m + "月" + dd + "日"; }
   var css = ".ylstat{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:10px 0 0;font-size:.88rem;color:var(--ink-sec,#8b98a5);font-variant-numeric:tabular-nums}" +
     ".ylstat:empty{display:none}.ylstat .n{font-size:1.5rem;font-weight:800;color:var(--ink,#e6edf3);letter-spacing:-.01em;margin-right:4px}" +
@@ -64,5 +64,6 @@
   fetch("/stats.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { S = j; render(); }).catch(function () {});
   // re-render after a language switch (pages set szLang, then re-render their own text)
   document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("[data-setlang]")) setTimeout(render, 0); });
+  document.addEventListener("yl:lang", function () { setTimeout(render, 0); });
   document.addEventListener("change", function (e) { if (e.target.classList && e.target.classList.contains("langsel")) setTimeout(render, 0); });
 })();

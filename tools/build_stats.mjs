@@ -11,8 +11,10 @@ const TZ = "Asia/Shanghai";
 const day = (iso) => new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 
 // file: data file; arr: list field; keys: identity fields (any match = same item); keep: which current items count as listed
+const isHk = (x) => x && (x.city_id === "hk" || /香港|hong kong/i.test(x.city || "")); // city_id may be missing (external writer)
 const LISTS = {
   events: { file: "events.json", arr: (d) => d.events, keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
+  hk: { file: "events.json", arr: (d) => (d.events || []).filter(isHk), keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
   hackathons: { file: "hackathons.json", arr: (d) => d.hackathons, keys: ["url"] },
   talks: { file: "talks.json", arr: (d) => d.talks, keys: ["url", "id"], also: [["spaces.json", (d) => d.spaces], ["interviews.json", (d) => d.interviews]] },
   vps: { file: "vps.json", arr: (d) => d.plans, keys: ["id"] },

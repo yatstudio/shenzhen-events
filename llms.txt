@@ -17,6 +17,10 @@
 5. 也可以订阅 feed.xml（RSS）或 events.ics（日历）实现同样效果。
 6. 消费级 Agent（豆包工作、WorkBuddy、Codex 等带定时任务的产品）的人类订阅指南与现成话术在首页「让你的 Agent 提醒你」区块（#agent-sub）。
 
+## 香港活动清单
+网页：https://yatslist.com/hk/（默认繁體，可切简体 / EN）｜ 数据：https://yatslist.com/hk/events.json（结构同 events.json，只含 city_id=hk）｜ RSS：https://yatslist.com/hk/feed.xml ｜ 日历：https://yatslist.com/hk/events.ics
+用户只关心香港时抓 hk/events.json；也可以抓全量 events.json 按 `city_id`（sz 深圳 / hk 香港 / online 线上 / jm 江门，定义见 https://yatslist.com/cities.json）筛选。个别条目可能还没有 city_id，此时按 `city` 字段判断（含「香港」即香港）。cities.json 的 hk.areas 把 district 归入 港岛 / 九龙 / 新界。
+
 ## categories 枚举
 AI / 创业 / 科技 / 跨境 / Web3 / 加密 / 黑客松 / 技术 / 硬件 / 在线Space
 

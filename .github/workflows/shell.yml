@@ -7,13 +7,17 @@ on:
     paths:
       - "**/*.html"
       - shell.js
+      - cities.json
       - tools/check-shell.mjs
+      - tools/build_city_pages.mjs
       - .github/workflows/shell.yml
   pull_request:
     paths:
       - "**/*.html"
       - shell.js
+      - cities.json
       - tools/check-shell.mjs
+      - tools/build_city_pages.mjs
   workflow_dispatch:
 permissions:
   contents: read

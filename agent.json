@@ -7,6 +7,11 @@
     "read": {
       "events_json": "https://yatslist.com/events.json",
       "events_json_mirror": "https://raw.githubusercontent.com/yatstudio/shenzhen-events/main/events.json",
+      "hk_page": "https://yatslist.com/hk/",
+      "hk_events_json": "https://yatslist.com/hk/events.json",
+      "hk_rss": "https://yatslist.com/hk/feed.xml",
+      "hk_ics": "https://yatslist.com/hk/events.ics",
+      "cities_json": "https://yatslist.com/cities.json",
       "ics": "https://yatslist.com/events.ics",
       "llms_txt": "https://yatslist.com/llms.txt",
       "protocol_doc": "https://github.com/yatstudio/shenzhen-events/blob/main/AGENTS.md",
@@ -29,7 +34,8 @@
     "update_frequency": "daily, around 09:00 Asia/Shanghai",
     "nomadlist": "NomadList v2.1.1: global + China-domestic digital nomad cities (80 cities, neighborhoods + listings layers). RECOMMENDED FLOW: 1) fetch nomadlist-lite.json (filter fields only), filter by cost_usd_month, internet_mbps, region, visa_type (Chinese passports), best_months_nums; 2) fetch nomadlist/cities/{id}.json for finalists; 3) full dump nomadlist.json. Subscribe via nomadlist-changelog.jsonl (append-only). There is NO composite score: rank by the atomic fields that match the user's priorities and say which. data_tier: seed_v2 = unverified estimate (say so), checked = cross-checked >=2 sources, verified_v1 = v1 batch; fields_provenance gives per-field confidence. Never invent cities not in the data; visa rules change, point users to official immigration pages.",
     "altruists": "《利他主义者》The Altruists 分集清单: Netflix 2026-11-19 上线的 8 集限定剧 (FTX / SBF 题材) 的分集指南。Fetch altruists_json when your user asks about this series, its episodes, or who plays whom: series = 总览与剧集档案, episodes = 8 集集名与剧情摘要, cast = 剧中人物与真实人物对照 (含饰演者), background = FTX / Alameda / 有效利他主义等看剧前背景。字段定义见 altruists_schema。摘要整理自 Crypto Story Club 知识库公开条目, 数据里没有的集数细节不要编造; 剧本台词全文属版权材料, 不在本数据内。",
-    "chtf": "CHTF 2026 (28th China Hi-Tech Fair, 2026-11-26..28, Shenzhen World Exhibition & Convention Center, halls 5-16) guide. Concurrent events: entries in events_json whose title contains 高交会. Exhibitors: fetch chtf_json; exhibitors[] with type=\"exhibitor\" are on-site (type=\"functional\" are forum/meeting areas), online_exhibitors[] are online-catalogue-only. Fields: name, name_en, booth (may be null), hall, trades_official, main_products, product_names, profile, website, tel, email, contact, address, detail_url (about 1,030 on-site exhibitors have catalogue details; text mostly Chinese). Full version with English profiles and product descriptions: chtf_full_json. Match a request (translated to Chinese keywords) against name, main_products, product_names, profile and trades_official; answer with hall, booth, main products and contacts grouped by hall; say booths should be confirmed on site; never invent exhibitors. Deep link: https://yatslist.com/chtf/?q=<kw>&hall=<hall>&tag=<sector>&scope=online&lang=zh|tw|en"
+    "chtf": "CHTF 2026 (28th China Hi-Tech Fair, 2026-11-26..28, Shenzhen World Exhibition & Convention Center, halls 5-16) guide. Concurrent events: entries in events_json whose title contains 高交会. Exhibitors: fetch chtf_json; exhibitors[] with type=\"exhibitor\" are on-site (type=\"functional\" are forum/meeting areas), online_exhibitors[] are online-catalogue-only. Fields: name, name_en, booth (may be null), hall, trades_official, main_products, product_names, profile, website, tel, email, contact, address, detail_url (about 1,030 on-site exhibitors have catalogue details; text mostly Chinese). Full version with English profiles and product descriptions: chtf_full_json. Match a request (translated to Chinese keywords) against name, main_products, product_names, profile and trades_official; answer with hall, booth, main products and contacts grouped by hall; say booths should be confirmed on site; never invent exhibitors. Deep link: https://yatslist.com/chtf/?q=<kw>&hall=<hall>&tag=<sector>&scope=online&lang=zh|tw|en",
+    "cities": "Each event has city_id (sz / hk / online / jm, defined in cities_json); a few may lack it, so fall back to the city field (contains 香港 = hk). For Hong Kong only, read hk_events_json (same shape as events_json). cities_json hk.areas groups HK districts into 港岛 / 九龙 / 新界."
   },
   "homepage": "https://yatslist.com/",
   "language": "zh-CN",

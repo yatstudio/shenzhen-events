@@ -444,6 +444,7 @@ input[type=search]{font-size:16px}
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
       <h2 class="section-title" id="hero-title">深圳活动清单</h2>
       <p class="section-subtitle" id="hero-sub">深圳活动，喂给你的 Agent 吃。</p>
+      <nav class="cityswitch" id="cityswitch" aria-label="城市"><a href="/szevents/" data-city="sz" class="on" aria-current="page">深圳</a><a href="/hk/" data-city="hk">香港</a></nav>
       <div class="ylstat" data-list="events"></div>
     </div>
     <a class="hackhero" href="https://yatslist.com/hackathons/"></a>
@@ -465,6 +466,14 @@ input[type=search]{font-size:16px}
 .vtab{appearance:none;-webkit-appearance:none;border:1px solid var(--border);background:var(--panel);color:var(--ink-sec);font:inherit;font-size:.92rem;font-weight:650;padding:8px 20px;border-radius:999px;cursor:pointer;transition:all .18s ease}
 .vtab:hover{color:var(--ink);border-color:var(--border-hover)}
 .vtab.on{background:var(--green);border-color:var(--green);color:#06251a}
+.cityswitch{display:inline-flex;gap:4px;margin:12px 0 0;padding:3px;border:1px solid var(--border);border-radius:999px;background:var(--panel)}
+.cityswitch a{padding:5px 16px;border-radius:999px;color:var(--ink-sec);font-size:.88rem;font-weight:650;text-decoration:none;transition:all .18s ease}
+.cityswitch a:hover{color:var(--ink)}
+.cityswitch a.on{background:var(--green);color:#06251a}
+[data-theme=light] .cityswitch a.on{color:#fff}
+/* /hk/ (html.city-hk): no city filter, no Shenzhen-only blocks; 区域 filter only there */
+html.city-hk #city-label,html.city-hk #g-city,html.city-hk #qchips [data-q^="city:"],html.city-hk .viewtabs,html.city-hk .chtfhero{display:none!important}
+html:not(.city-hk) .hkonly{display:none!important}
 .exbar{display:flex;gap:12px;align-items:center;margin:0 0 6px}
 .exbar[hidden]{display:none}
 .exbar input[type=search]{flex:1}
@@ -539,12 +548,14 @@ input[type=search]{font-size:16px}
             <button class="chip" data-v="offline">线下</button>
             <button class="chip" data-v="online">线上</button>
           </span>
-          <span class="flabel">城市</span>
+          <span class="flabel" id="city-label">城市</span>
           <span class="seg" id="g-city">
             <button class="chip on" data-v="all">全部</button>
             <button class="chip" data-v="sz">深圳</button>
             <button class="chip" data-v="hk">🇭🇰 香港</button>
           </span>
+          <span class="flabel hkonly" id="area-label" data-k="areaLabel">区域</span>
+          <span class="seg hkonly" id="g-area"></span>
         </div>
         <div class="fgroup">
           <span class="flabel">分类</span>
@@ -640,7 +651,7 @@ input[type=search]{font-size:16px}
         <div class="endpoint-item">
           <span class="endpoint-name">events.json</span>
           <span class="endpoint-url">https://yatslist.com/events.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">活动数据（JSON）</span>
         </div>
         <div class="endpoint-item">
@@ -652,13 +663,13 @@ input[type=search]{font-size:16px}
         <div class="endpoint-item">
           <span class="endpoint-name">feed.xml</span>
           <span class="endpoint-url">https://yatslist.com/feed.xml</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/feed.xml').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">RSS 订阅源</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">events.ics</span>
           <span class="endpoint-url">https://yatslist.com/events.ics</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.ics').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">日历订阅文件</span>
         </div>
         <div class="endpoint-item">
@@ -902,6 +913,32 @@ qChips:{all:"全部","time:week":"本週","fee:free":"免費","fmt:online":"線�
 }};
 function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
+/* ===== city page: /szevents/ = "sz" (default); /hk/ is generated by tools/build_city_pages.mjs and sets window.YL_CITY="hk" ===== */
+const PAGE_CITY=window.YL_CITY==="hk"?"hk":"sz";
+const CITY_CONF=window.YL_CITY_CONF||{};
+Object.assign(STR.zh,{cityNav:"城市",citySz:"深圳",cityHk:"香港",areaLabel:"区域"});
+Object.assign(STR.tw,{cityNav:"城市",citySz:"深圳",cityHk:"香港",areaLabel:"區域"});
+Object.assign(STR.en,{cityNav:"City",citySz:"Shenzhen",cityHk:"Hong Kong",areaLabel:"Area"});
+if(PAGE_CITY==="hk"){
+document.documentElement.classList.add("city-hk");
+Object.assign(STR.zh,{docTitle:"Yat's List · 香港活动清单 · AI / 创业 / Web3 / 黑客松",metaDesc:"Yat's List 香港活动清单：香港 AI·创业·科技·Web3·加密活动，每天逐条核实更新；可搜索、按港岛 / 九龙 / 新界筛选、收藏，也可让你的 Agent 订阅 hk/events.json。",heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",cmdLabel:"香港活动清单",swEv:"香港活动清单",termPrompt:"$ subscribe: yat's list · 香港活动清单",footTag:"香港活动，喂给你的 Agent 吃。",introP2:'这份是<b style="color:var(--ink)">香港活动清单</b>：香港的 AI、创业、科技、Web3、加密活动；深圳活动见 <a href="/szevents/">深圳活动清单</a>。',aiPh:"问我香港活动：时间、地点、报名…"});
+Object.assign(STR.tw,{docTitle:"Yat's List · 香港活動清單 · AI / 創業 / Web3 / 黑客松",metaDesc:"Yat's List 香港活動清單：香港 AI·創業·科技·Web3·加密活動，每天逐條核實更新；可搜索、按港島 / 九龍 / 新界篩選、收藏，也可讓你的 Agent 訂閱 hk/events.json。",heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",cmdLabel:"香港活動清單",swEv:"香港活動清單",termPrompt:"$ subscribe: yat's list · 香港活動清單",footTag:"香港活動，餵給你的 Agent 吃。",introP2:'這份是<b style="color:var(--ink)">香港活動清單</b>：香港的 AI、創業、科技、Web3、加密活動；深圳活動見 <a href="/szevents/">深圳活動清單</a>。',aiPh:"問我香港活動：時間、地點、報名…"});
+Object.assign(STR.en,{docTitle:"Yat's List · Hong Kong Events · AI / Startups / Web3 / Hackathons",metaDesc:"Yat's List Hong Kong Events: verified AI, startup, tech, Web3 and crypto events in Hong Kong, checked against official pages and updated daily. Search, filter by HK Island / Kowloon / New Territories, save events — or let your Agent subscribe to hk/events.json.",heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",cmdLabel:"Hong Kong Events",swEv:"Hong Kong Events",termPrompt:"$ subscribe: yat's list · Hong Kong events",footTag:"Hong Kong events, served to your Agent.",introP2:'This is the <b style="color:var(--ink)">Hong Kong Events</b> list: AI, startup, tech, Web3 and crypto events in Hong Kong. Shenzhen events are on <a href="/szevents/">Shenzhen Events</a>.',aiPh:"Ask about Hong Kong events: time, venue, registration…"});
+}
+/* Shenzhen wording in prompts → Hong Kong on /hk/ (identity on /szevents/) */
+const CITY_TX=[["深圳活动清单","香港活动清单"],["深圳活動清單","香港活動清單"],["Shenzhen Events","Hong Kong Events"],["深圳+香港","香港"],["Shenzhen + Hong Kong","Hong Kong"],["Asia/Shanghai","Asia/Hong_Kong"],["宝安区和南山区","中环和湾仔"],["宝安、南山","中环、湾仔"],["寶安區和南山區","中環和灣仔"],["寶安、南山","中環、灣仔"],["Bao'an and Nanshan districts","Central and Wan Chai"],["Bao'an & Nanshan","Central & Wan Chai"],["https://yatslist.com/events.json","https://yatslist.com/hk/events.json"],["https://yatslist.com/events.ics","https://yatslist.com/hk/events.ics"],["https://yatslist.com/feed.xml","https://yatslist.com/hk/feed.xml"]];
+function cityTx(t){if(PAGE_CITY!=="hk"||typeof t!=="string")return t;for(const [a,b] of CITY_TX)t=t.split(a).join(b);return t}
+function applyCityUI(){
+const cs=document.getElementById("cityswitch");
+if(cs){cs.setAttribute("aria-label",tr("cityNav"));const lq=new URLSearchParams(location.search).get("lang");cs.querySelectorAll("a[data-city]").forEach(a=>{const c=a.dataset.city,on=c===PAGE_CITY;a.textContent=tr(c==="hk"?"cityHk":"citySz");a.href=(c==="hk"?"/hk/":"/szevents/")+(lq?"?lang="+encodeURIComponent(lq):"");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")})}
+_setText("#area-label",tr("areaLabel"));
+if(PAGE_CITY==="hk"){
+const ai=document.getElementById("yl-input");if(ai)ai.placeholder=tr("aiPh");
+/* data links point at the /hk/ feeds (rewritten after every language switch, since applyLang resets these blocks) */
+document.querySelectorAll('a[href="/events.json"],a[href="/feed.xml"],a[href="/events.ics"]').forEach(a=>a.setAttribute("href","/hk"+a.getAttribute("href")));
+document.querySelectorAll(".endpoint-url,#agentbox .cmdline .u").forEach(el=>{el.textContent=cityTx(el.textContent)});
+}
+}
 const PROMPTS={
 zh:{
 generic:"请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
@@ -918,6 +955,7 @@ generic:"請訂閱「Yat's List 深圳活動清單」並給我活動提醒：數
 doubao:"每天早上 9 點，打開 https://yatslist.com/events.json 讀取最新數據（這是深圳+香港行業活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）72 小時內報名截止的；3）我感興趣的類別：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 workbuddy:"每天早上 9 點，打開 https://yatslist.com/events.json 讀取最新數據（這是深圳+香港行業活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）72 小時內報名截止的；3）我感興趣的類別：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 codex:"請為我訂閱「Yat's List 深圳活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/events.json，並閱讀說明 https://yatslist.com/AGENTS.md 。只看未結束的活動，篩選：今天和明天舉行的、72 小時內報名截止的、以及我感興趣的類別。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。另外，如果我讓你提交活動，也按該說明裡的規範提交。"}};
+if(PAGE_CITY==="hk")for(const l in PROMPTS)for(const k in PROMPTS[l])PROMPTS[l][k]=cityTx(PROMPTS[l][k]);
 const SUBMIT_PROMPT_EN="Please help me submit an event to “Yat's List — Shenzhen Events”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official event page to verify the date, time, venue and ticket price. Submit it via the guide's HTTP API method (no GitHub account needed; a successful submission returns an id starting with “sub-”). If the API submission fails, email the event details to the submission inbox event.submit@yatslist.com instead. The event I want to submit: [event name and official link here]. After submitting, tell me the result (the success id or the reason it failed).";
 const MSTEPS_EN={generic:"Works with any Agent that can access the web: paste the prompt to it and ask it to set up a daily task.",doubao:"Doubao Workspace → “Scheduled tasks” → New → repeat “Daily”, time 9:00 → paste the prompt as the task content → Save.",workbuddy:"WorkBuddy → “Automation” in the left sidebar → Add task → frequency “Daily 9:00” → paste the prompt → Save.",codex:"Send the prompt straight to Codex and ask it to create a daily 9:00 (Asia/Shanghai) automation."};
 const MEX_SUB_EN="<b>Customization examples (edit the same way):</b><br>· Only Bao'an & Nanshan: change the filter to “only events in Bao'an and Nanshan districts”<br>· Free only: add “only recommend free events”<br>· Hardware & makers: change the categories to [Hardware / Engineering]<br>· Weekends only: add “only Saturdays and Sundays”";
@@ -943,7 +981,7 @@ _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setT
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
 const flk=["favLabel","favNote","timeLabel","feeLabel","fmtLabel","cityLabel","catLabel"];
-document.querySelectorAll(".flabel").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
+document.querySelectorAll(".flabel:not([data-k])").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
 const fb=document.getElementById("favbtn");if(fb&&fb.childNodes[0])fb.childNodes[0].textContent=tr("favOnlyBtn");
 const fd=document.getElementById("fdate");if(fd)fd.setAttribute("aria-label",LANG==="en"?"Filter by date":LANG==="tw"?"按日期篩選":"按日期筛选");
 [["#g-time","segTime"],["#g-fee","segFee"],["#g-fmt","segFmt"],["#g-city","segCity"]].forEach(function(pair){const dict=STR[LANG][pair[1]]||{};document.querySelectorAll(pair[0]+" .chip").forEach(ch=>{if(dict[ch.dataset.v])ch.textContent=dict[ch.dataset.v]})});
@@ -968,6 +1006,7 @@ _setText("#tourprev",tr("tourPrev"));_setText("#tournext",tr("tourNext"));_setTe
 _setText("#sf-tag",tr("footTag"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
 fmtUpd();
+applyCityUI();if(typeof renderAreas==="function")renderAreas();
 if(typeof syncFilterUI==="function")syncFilterUI();
 if(typeof applyTheme==="function")applyTheme();
 }
@@ -977,7 +1016,7 @@ if(window.YL)YL.onLang(setLang);
 <script>
 const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"];
 let DATA=[];
-let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
+let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",area:"all",cats:new Set()};
 let FAVS=new Set();try{FAVS=new Set(JSON.parse(localStorage.getItem("szFavs")||"[]"))}catch(e){}
 let favOnly=false;
 function saveFavs(){try{localStorage.setItem("szFavs",JSON.stringify([...FAVS]))}catch(e){}}
@@ -991,6 +1030,11 @@ const shDayNum=t=>{const p=shParts(t);return Date.UTC(p[0],p[1]-1,p[2])/DAY};
 const shMidnightMs=()=>shDayNum(Date.now())*DAY-8*3600e3;
 const isOnline=e=>e.format==="线上Space"||e.format==="线上";
 const isHybrid=e=>e.format==="线上+线下";
+/* city_id with fallback: the daily writer may omit it, so derive from `city` first (same order as /cities.json) */
+const CITY_MATCH=[["sz",/深圳|shenzhen/i],["hk",/香港|hong kong/i],["online",/线上|線上|online/i],["jm",/江门|江門|jiangmen/i]];
+function cityOf(e){const c=e.city||"";for(const [id,re] of CITY_MATCH)if(re.test(c))return id;if(e.city_id)return e.city_id;return c?"":(isOnline(e)?"online":"sz")}
+const AREAS=CITY_CONF.areas||[];
+function areaOf(e){const d=[e.district,e.district_tw].filter(Boolean).join(" ");if(!d)return null;for(const a of AREAS)if(a.districts.some(x=>d.includes(x)))return a.id;return null}
 const fmtT=t=>new Date(t).toLocaleTimeString(LANG==="en"?"en-GB":"zh-CN",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false});
 const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/DAY):null;
 function feeBadge(e){
@@ -1033,9 +1077,11 @@ function pass(e){
     if(F.fmt==="online"&&!isO)return false;
   }
   if(F.city!=="all"){
-    if(F.city==="sz"&&(e.city||"").includes("香港"))return false;
-    if(F.city==="hk"&&!(e.city||"").includes("香港"))return false;
+    const c=cityOf(e);
+    if(F.city==="sz"&&c==="hk")return false;
+    if(F.city==="hk"&&c!=="hk")return false;
   }
+  if(F.area!=="all"&&areaOf(e)!==F.area)return false;
   if(F.cats.size>0){
     const cats=e.categories||[];
     if(!cats.some(c=>F.cats.has(c)))return false;
@@ -1083,7 +1129,7 @@ function cardOf(e,now){
   const feeTxt=feeBadge(e).replace(/<[^>]+>/g,"").replace(/^💰\s*/,"");
   const feeRaw=(e.fee||"").trim();
   const fee=feeRaw.startsWith("免费")?("🆓 "+feeTxt):(feeRaw&&!/见官方页/.test(feeRaw)?("🎫 "+feeTxt):feeTxt);
-  const meta=[e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
+  const meta=[PAGE_CITY!=="hk"&&e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
   const mapHref=(!online&&e.venue)?`https://uri.amap.com/marker?position=&name=${encodeURIComponent(`${e.city||""}${e.district||""}${e.venue}`)}&src=yat`:"";
   const idx=DATA.indexOf(e);
   const menu=[
@@ -1178,7 +1224,7 @@ const MEX_POST_TW="<b>填寫示例：</b><br>「我要投稿的活動：【深�
 let mMode="sub",mKey="generic";
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
 if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";document.getElementById("mpost-alt").style.display="block";}
-else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";document.getElementById("mpost-alt").style.display="none";}}
+else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=cityTx((en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey]);document.getElementById("mex").innerHTML=cityTx(en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB);document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";document.getElementById("mpost-alt").style.display="none";}}
 function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
 document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
@@ -1207,7 +1253,7 @@ try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
-const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.city!=="all"?1:0)+F.cats.size;
+const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.city!=="all"?1:0)+(F.area!=="all"?1:0)+F.cats.size;
 $("#fclear").hidden=active===0;
 $("#fcount").textContent=active?String(active):"";
 document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=active===0&&!favOnly;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
@@ -1217,7 +1263,7 @@ const ch=ev.target.closest("[data-q]");if(!ch)return;
 const q=ch.dataset.q;
 if(q==="all"){$("#fclear").click();if(favOnly)$("#favbtn").click();return}
 const [k,v]=q.split(":");
-const grp={time:"#g-time",fee:"#g-fee",fmt:"#g-fmt",city:"#g-city"}[k];
+const grp={time:"#g-time",fee:"#g-fee",fmt:"#g-fmt",city:"#g-city",area:"#g-area"}[k];
 const target=$(grp+' [data-v="'+(F[k]===v?"all":v)+'"]');
 if(target)target.click();
 });
@@ -1231,7 +1277,16 @@ if(key==="time"){F.date="";const d=$("#fdate");d.value="";d.classList.remove("on
 syncFilterUI();render();measureBar();
 });
 }
-segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");segWire("#g-city","city");
+segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");segWire("#g-city","city");segWire("#g-area","area");
+/* 区域 chips (hk only): filter group + quick chips, labels from /cities.json areas */
+function renderAreas(){
+if(!AREAS.length)return;
+const nm=a=>LANG==="en"?(a.name_en||a.name):LANG==="tw"?(a.name_tw||a.name):a.name;
+$("#g-area").innerHTML=[`<button class="chip${F.area==="all"?" on":""}" data-v="all">${tr("segCity").all}</button>`].concat(AREAS.map(a=>`<button class="chip${F.area===a.id?" on":""}" data-v="${a.id}">${nm(a)}</button>`)).join("");
+const qc=$("#qchips");
+AREAS.forEach(a=>{let b=qc.querySelector('[data-q="area:'+a.id+'"]');if(!b){b=document.createElement("button");b.type="button";b.className="chip";b.dataset.q="area:"+a.id;qc.appendChild(b)}b.textContent=nm(a)});
+}
+renderAreas();
 function renderCats(){$("#g-cats").innerHTML=CATS.map(c=>`<button class="chip${F.cats.has(c)?" on":""}" data-c="${c}">${CATDISP[LANG][c]||c}</button>`).join("")}
 renderCats();
 $("#g-cats").addEventListener("click",ev=>{
@@ -1248,7 +1303,7 @@ if(F.date){F.time="all";document.querySelectorAll("#g-time .chip").forEach(x=>x.
 syncFilterUI();render();measureBar();
 });
 $("#fclear").addEventListener("click",()=>{
-F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
+F={time:"all",date:"",fee:"all",fmt:"all",city:"all",area:"all",cats:new Set()};
 document.querySelectorAll(".seg").forEach(s=>s.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all")));
 const d=$("#fdate");d.value="";d.classList.remove("on");
 syncFilterUI();render();measureBar();
@@ -1261,13 +1316,13 @@ measureBar();
 $("#q").addEventListener("input",()=>{render();measureBar()});
 applyLang();
 fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
-DATA=j.events||[];
+DATA=j.events||[];if(PAGE_CITY!=="sz")DATA=DATA.filter(e=>cityOf(e)===PAGE_CITY);
 window._updRaw=j.updated_at||null;fmtUpd();
 render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>$("#list").innerHTML='<div class="empty">'+tr("loadFail")+'</div>');
 
 /* ===== English (expat) view: same page, separate data (page merges, data does not) ===== */
-let VIEW=(new URLSearchParams(location.search).get("view")==="en"||location.hash==="#en")?"en":"zh";
+let VIEW=PAGE_CITY==="sz"&&(new URLSearchParams(location.search).get("view")==="en"||location.hash==="#en")?"en":"zh";
 let EXDATA=null,EXLOADING=false;
 const EXURL="https://yatslist.com/szexpat/events.json";
 const ZHURL="https://yatslist.com/events.json";
@@ -1579,7 +1634,7 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 
 
 
-<script src="/stats.js?v=20261126" defer></script>
+<script src="/stats.js?v=20261127" defer></script>
 </body>
 </html>
 

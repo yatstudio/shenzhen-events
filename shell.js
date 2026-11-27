@@ -6,6 +6,7 @@
      data-label      extra highlighted item for pages outside the nav (data-label-tw / data-label-en optional)
      data-i18n="none"  page body is not translated: hide the language select, show the topbar in data-lang (default zh)
      data-lang       fixed page language (e.g. talks/en/)
+     data-lang-default  language when there is no ?lang= and no stored szLang (e.g. "tw" on /hk/); not stored
      data-lang-base  with data-lang: switching language navigates to base (zh), base+"tw/", base+"en/"
      data-themes="dark"  page has no light CSS: hide the theme toggle and always render dark
      data-agent      href for the "Agent" link (default "#agentbox" when the page has #agentbox)
@@ -37,12 +38,13 @@
     ["quant", "/quant/"], ["altruists", "/altruists/"], ["remote", "/remote/"]];
 
   /* ---------- language: ?lang= > localStorage szLang > browser language ---------- */
-  var I18N = cfg.i18n !== "none", FIXED = cfg.lang || "", BASE = cfg.langBase || "";
+  var I18N = cfg.i18n !== "none", FIXED = cfg.lang || "", BASE = cfg.langBase || "", DEF = cfg.langDefault || "";
   function norm(l) { return l === "en" || l === "tw" ? l : "zh"; }
   function detect() {
     var l = "", q = null;
     try { q = new URLSearchParams(location.search).get("lang"); } catch (e) {}
     try { l = q || localStorage.getItem("szLang") || ""; } catch (e) { l = q || ""; }
+    if (!l && DEF) l = DEF;
     if (!l) { var nl = ((navigator.language || "zh-CN") + "").toLowerCase(); l = (nl === "zh-tw" || nl === "zh-hk" || nl === "zh-mo" || nl.indexOf("zh-hant") === 0) ? "tw" : nl.indexOf("zh") === 0 ? "zh" : "en"; }
     return norm(l);
   }
