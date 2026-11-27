@@ -1076,6 +1076,8 @@ function feeBadge(e){
   return `<span class="fee paid" title="${esc}">💰 ${txt}</span>`;
 }
 const dayKey=t=>shParts(t).join("-");
+const isAllDayish=e=>{if(!e.start)return false;const s=new Date(e.start);if(isNaN(s))return false;const hm=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false}).format(s);let multi=false;if(e.end){const en=new Date(e.end);if(!isNaN(en)&&en>s)multi=dayKey(en.getTime()-1)!==dayKey(s)}return hm==="00:00"||hm==="24:00"||multi};
+const byStart=(a,b)=>{const ta=new Date(a.start||"2100"),tb=new Date(b.start||"2100");if(isNaN(ta)||isNaN(tb))return 0;const da=dayKey(ta),db=dayKey(tb);if(da!==db)return ta-tb;const fa=isAllDayish(a)?1:0,fb=isAllDayish(b)?1:0;if(fa!==fb)return fa-fb;return ta-tb};
 const relLabel=t=>{const diff=shDayNum(t)-shDayNum(Date.now());return diff===0?tr("relToday"):diff===1?tr("relTomorrow"):diff===2?tr("relDayAfter"):""};
 function pass(e){
   const now=Date.now();
@@ -1187,7 +1189,7 @@ function render(){
   const past=DATA.filter(isPast).filter(e=>!qv||(e.title+(e.organizer||"")).includes(qv)).sort((a,b)=>new Date(b.start)-new Date(a.start));
   $("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">${tr("pastTitle")}<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">${tr("pastHint")}</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString(LOC(),{timeZone:TZ,month:"numeric",day:"numeric"})}</span><span><a href="${e.url}" target="_blank" rel="noopener">${e.city==="香港"?"🇭🇰 ":""}${fL(e,"title")}</a><div class="pm">${[fL(e,"organizer"),fL(e,"district"),fL(e,"venue")].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">'+tr("pastEmpty")+'</div>'}</div></div>`;
   const evs=DATA.filter(e=>!isPast(e)).filter(pass)
-  .sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
+  .sort(byStart);
   const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
   const total=DATA.filter(e=>!isPast(e)).length;
   $("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;const _lce=$("#lc-ev-n");if(_lce)_lce.textContent=total;
@@ -1195,7 +1197,7 @@ function render(){
   const _sd=$("#st-dl");if(_sd)_sd.textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
   const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
   if(favOnly){
-    const favs=DATA.filter(e=>FAVS.has(e.url)).sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
+    const favs=DATA.filter(e=>FAVS.has(e.url)).sort(byStart);
     $("#list").innerHTML='<div class="dayhead"><span class="dmeta">'+tr("favTitle")+'</span></div>'+(favs.length?'<div class="dlist">'+favs.map(e=>cardOf(e,now)).join("")+'</div>':'<div class="empty">'+tr("favEmpty")+'</div>');
     return;
   }
@@ -1370,7 +1372,7 @@ function renderEx(){
   const q=(($("#q-en")||{}).value||"").trim().toLowerCase();
   let evs=EXDATA.filter(e=>{const en=new Date(e.end||e.start);return !isNaN(en)&&en>=t0});
   if(q)evs=evs.filter(e=>((e.title||"")+" "+(e.venue||"")+" "+(e.area||"")+" "+(e.organizer||"")).toLowerCase().includes(q));
-  evs.sort((a,b)=>new Date(a.start||"2100")-new Date(b.start||"2100"));
+  evs.sort(byStart);
   const ce=$("#excount");if(ce)ce.textContent=evs.length+" events";
   if(!evs.length){listEl.innerHTML='<div class="empty">No events found.</div>';return}
   const todayNum=shDayNum(Date.now()),todayKey=dayKey(Date.now());
