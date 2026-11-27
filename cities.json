@@ -1,0 +1,68 @@
+{
+ "about": "Yat's List 城市表：events.json 每条活动的 city_id 由 city 字段按 match 推导（tools/normalize_city.mjs）。hk.areas 把香港 district 归入 港岛 / 九龙 / 新界；未列出的 district 不归区。",
+ "cities": [
+  {
+   "id": "sz",
+   "name": "深圳",
+   "name_tw": "深圳",
+   "name_en": "Shenzhen",
+   "match": ["深圳", "Shenzhen"],
+   "tz": "Asia/Shanghai",
+   "currency": "CNY",
+   "page": "https://yatslist.com/szevents/",
+   "events_json": "https://yatslist.com/events.json"
+  },
+  {
+   "id": "hk",
+   "name": "香港",
+   "name_tw": "香港",
+   "name_en": "Hong Kong",
+   "match": ["香港", "Hong Kong"],
+   "tz": "Asia/Hong_Kong",
+   "currency": "HKD",
+   "page": "https://yatslist.com/hk/",
+   "events_json": "https://yatslist.com/hk/events.json",
+   "areas": [
+    {
+     "id": "hki",
+     "name": "港岛",
+     "name_tw": "港島",
+     "name_en": "HK Island",
+     "districts": ["中环", "上环", "金钟", "湾仔", "铜锣湾", "銅鑼灣", "香港岛", "港岛", "天后", "北角", "鲗鱼涌", "太古", "半山区", "半山", "西营盘", "坚尼地城", "西环", "跑马地", "薄扶林", "数码港", "香港仔", "黄竹坑", "中環", "上環", "金鐘", "灣仔", "香港島", "港島"]
+    },
+    {
+     "id": "kln",
+     "name": "九龙",
+     "name_tw": "九龍",
+     "name_en": "Kowloon",
+     "districts": ["尖沙咀", "九龙", "九龍", "旺角", "长沙湾", "九龙塘", "油麻地", "佐敦", "红磡", "观塘", "九龙湾", "深水埗", "启德", "西九龙", "太子", "黄大仙", "土瓜湾", "何文田", "長沙灣", "九龍塘", "觀塘"]
+    },
+    {
+     "id": "nt",
+     "name": "新界",
+     "name_tw": "新界",
+     "name_en": "New Territories",
+     "districts": ["新界", "西贡", "清水湾", "清水灣", "沙田", "荃湾", "东涌", "大屿山", "将军澳", "大埔", "屯门", "元朗", "葵涌", "上水", "粉岭", "马鞍山", "白石角", "科学园", "西貢", "荃灣", "東涌", "將軍澳"]
+    }
+   ]
+  },
+  {
+   "id": "online",
+   "name": "线上",
+   "name_tw": "線上",
+   "name_en": "Online",
+   "match": ["线上", "線上", "Online"],
+   "tz": "Asia/Shanghai",
+   "currency": "CNY"
+  },
+  {
+   "id": "jm",
+   "name": "江门",
+   "name_tw": "江門",
+   "name_en": "Jiangmen",
+   "match": ["江门", "江門", "Jiangmen"],
+   "tz": "Asia/Shanghai",
+   "currency": "CNY"
+  }
+ ]
+}

@@ -30,6 +30,16 @@
       "default": "深圳",
       "type": "string"
      },
+     "city_id": {
+      "description": "城市代码，见 https://yatslist.com/cities.json（sz 深圳 / hk 香港 / online 线上 / jm 江门）。可不填：维护管线由 city 自动推导。",
+      "enum": [
+       "sz",
+       "hk",
+       "online",
+       "jm"
+      ],
+      "type": "string"
+     },
      "district": {
       "description": "深圳行政区，如 宝安区 / 南山区；线上活动填 null",
       "type": [
