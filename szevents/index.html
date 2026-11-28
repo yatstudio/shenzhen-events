@@ -36,14 +36,8 @@ color-scheme:light;
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
-.topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
-.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
-.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
-.topbar-nav a:hover{color:var(--green)}
 .agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
 .agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
 .agentnote b{color:var(--ink)}
@@ -232,11 +226,6 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
 @media (max-width:768px){
 body{overflow-x:hidden}
-.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
-.topbar-brand{flex-shrink:0}
-.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav a{flex-shrink:0;font-size:.84rem}
 .terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
 .terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
 .terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
@@ -288,10 +277,6 @@ select{font-size:16px}
 
 /* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
 @media (max-width:820px){
-.topbar{padding:8px 0}
-.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
-.topbar-nav{gap:14px;overflow:visible;width:auto}
-.topbar-nav a{font-size:.82rem}
 .human-section{padding-top:24px}
 .section-title{font-size:1.5rem}
 .section-subtitle{font-size:.9rem}
@@ -314,16 +299,6 @@ select{font-size:16px}
 .subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
 .card .actions .btn{flex:1 1 30%}
 }
-.langsw{display:inline-flex;align-items:center;gap:8px}
-.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.langsw button:hover{color:var(--ink)}
-.langsw button.on{color:var(--green)}
-.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
-.themesw{display:inline-flex;align-items:center;gap:8px}
-.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.themesw button:hover{color:var(--ink)}
-.themesw button.on{color:var(--green)}
-.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
@@ -373,7 +348,6 @@ select{font-size:16px}
 [data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
 
 /* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
-.topbar{padding-top:10px;padding-bottom:10px}
 .human-section{padding-top:18px}
 .brandmark{line-height:1.25}
 .section-tagline{line-height:1.4;margin-top:8px}
@@ -398,12 +372,6 @@ select{font-size:16px}
 .sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
 input[type=search]{font-size:16px}
 @media (max-width:820px){
-.topbar{padding:6px 0}
-.topbar .wrap{gap:10px;padding:0 14px}
-.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav>*{flex-shrink:0}
-.langsw button,.themesw button{min-height:32px;padding:4px 7px}
 .human-section{padding-top:14px}
 .section-tagline{display:none}
 .herometa{font-size:.8rem;line-height:1.55;padding:0 4px}
@@ -460,41 +428,13 @@ input[type=search]{font-size:16px}
 <meta name="apple-mobile-web-app-title" content="Yat's List">
 <style>
 /* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
-.prefs{display:inline-flex;align-items:center;gap:6px}
-.prefs .langsw,.prefs .themesw{display:none!important}
-.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
-.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-.langsel option{background:var(--panel);color:var(--ink)}
-.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
-.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-@media (max-width:820px){
-  #mnav-panel .prefs{order:9;width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
-  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
-  #mnav-panel .themecyc{width:34px}
-}
 </style>
 </head>
 <body>
 <a id="top"></a>
 
 <!-- Sticky Topbar -->
-<div class="topbar">
-  <div class="wrap">
-    <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="回到顶部" style="text-decoration:none">
-      <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
-    </a>
-    <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
-<div id="mnav-panel"><nav class="topbar-nav">
-      <a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
-      <a href="#human-section" id="nav-events" class="nav-on" aria-current="page">活动</a>
-      <a href="https://yatslist.com/hkevents/" id="nav-hk">香港活动</a>
-      <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
-      <a href="https://yatslist.com/talks/" id="nav-spaces">Talks</a>
-      <span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
-      <button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">提交活动</button>
-    </nav></div>
-  </div>
-</div>
+<div id="yl-topbar" data-active="szevents"><button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">提交活动</button></div><script src="/shell.js?v=3"></script>
 
 <!-- Human Section (第一屏) -->
 <section class="human-section" id="human-section">
@@ -504,10 +444,12 @@ input[type=search]{font-size:16px}
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
       <h2 class="section-title" id="hero-title">深圳活动清单</h2>
       <p class="section-subtitle" id="hero-sub">深圳活动，喂给你的 Agent 吃。</p>
+      <nav class="cityswitch" id="cityswitch" data-page-city="sz" aria-label="城市"><a href="/szevents/" data-city="sz" class="on" aria-current="page">深圳</a><a href="/hkevents/" data-city="hk">香港</a></nav>
       <div class="ylstat" data-list="events"></div>
     </div>
     <a class="hackhero" href="https://yatslist.com/hackathons/"></a>
     <a class="hackhero chtfhero" href="https://yatslist.com/chtf/"></a>
+    <a class="hackhero cityhero" data-city="hk" href="https://yatslist.com/hkevents/"></a>
 
     <!-- Agent subscription: the one primary action on the page -->
     <div class="agentbox" id="agentbox">
@@ -519,6 +461,14 @@ input[type=search]{font-size:16px}
       <div class="ab-apis" id="ab-apis">也可以直接读：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）</div>
       <div class="ab-apis" id="ab-cats">全品类都在数据里：生活、艺文、教育、美食等活动也已收录，你的 Agent 可直接查 <a href="/events.json">events.json</a> 全量数据；自己找活动，用下方搜索与分类筛选。</div>
     </div>
+
+    <style>
+.cityswitch{display:inline-flex;gap:4px;margin:12px 0 0;padding:3px;border:1px solid var(--border);border-radius:999px;background:var(--panel)}
+.cityswitch a{padding:5px 16px;border-radius:999px;color:var(--ink-sec);font-size:.88rem;font-weight:650;text-decoration:none;transition:all .18s ease}
+.cityswitch a:hover{color:var(--ink)}
+.cityswitch a.on{background:var(--green);color:#06251a}
+[data-theme=light] .cityswitch a.on{color:#fff}
+    </style>
 
     <!-- Filter Bar -->
     <div class="bar">
@@ -581,7 +531,7 @@ input[type=search]{font-size:16px}
             <button class="chip" data-v="offline">线下</button>
             <button class="chip" data-v="online">线上</button>
           </span>
-          <span class="flabel">城市</span>
+          <span class="flabel" id="city-label">城市</span>
           <span class="seg" id="g-city">
             <button class="chip on" data-v="all">全部</button>
             <button class="chip" data-v="sz">深圳</button>
@@ -682,7 +632,7 @@ input[type=search]{font-size:16px}
         <div class="endpoint-item">
           <span class="endpoint-name">events.json</span>
           <span class="endpoint-url">https://yatslist.com/events.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">活动数据（JSON）</span>
         </div>
         <div class="endpoint-item">
@@ -694,13 +644,13 @@ input[type=search]{font-size:16px}
         <div class="endpoint-item">
           <span class="endpoint-name">feed.xml</span>
           <span class="endpoint-url">https://yatslist.com/feed.xml</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/feed.xml').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">RSS 订阅源</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">events.ics</span>
           <span class="endpoint-url">https://yatslist.com/events.ics</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.ics').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">日历订阅文件</span>
         </div>
         <div class="endpoint-item">
@@ -765,12 +715,13 @@ input[type=search]{font-size:16px}
 let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
 if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
 if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+if(window.YL)LANG=YL.lang;/* /shell.js owns language detection (?lang=, szLang) */
 const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","在线Space":"在线Space","生活":"生活","社交":"社交","金融":"金融","教育":"教育","艺文":"艺文","美食":"美食","展览":"展览","音乐":"音乐","亲子":"亲子","运动":"运动"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","在线Space":"在線Space","生活":"生活","社交":"社交","金融":"金融","教育":"教育","艺文":"藝文","美食":"美食","展览":"展覽","音乐":"音樂","亲子":"親子","运动":"運動"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","在线Space":"Online Spaces","生活":"Lifestyle","社交":"Social","金融":"Finance","教育":"Education","艺文":"Arts & Culture","美食":"Food & Drink","展览":"Exhibitions","音乐":"Music","亲子":"Family & Kids","运动":"Sports"}};
 const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
-brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHk:"香港活动",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"提交活动",taAgent:"用我的 Agent 订阅 →",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
@@ -829,7 +780,7 @@ qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线�
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen-only events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
-brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHk:"Hong Kong",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"Submit event",taAgent:"Subscribe with my Agent →",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
@@ -888,7 +839,7 @@ qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
-brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHk:"香港活動",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"提交活動",taAgent:"用我的 Agent 訂閱 →",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
@@ -977,9 +928,6 @@ function applyLang(){
 document.documentElement.lang=LANG==="en"?"en":LANG==="tw"?"zh-TW":"zh-CN";
 document.title=tr("docTitle");
 const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
-const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
-document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hk",tr("navHk"));_setText("#nav-hack",tr("navHack"));_setText("#nav-jobs",tr("navJobs"));_setText("#nav-spaces",tr("navSpaces"));_setText("#nav-mu",tr("navMu"));
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
@@ -990,7 +938,7 @@ _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setT
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
 const flk=["favLabel","favNote","timeLabel","feeLabel","fmtLabel","cityLabel","catLabel"];
-document.querySelectorAll(".flabel").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
+document.querySelectorAll(".flabel:not([data-k])").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
 const fb=document.getElementById("favbtn");if(fb&&fb.childNodes[0])fb.childNodes[0].textContent=tr("favOnlyBtn");
 const fd=document.getElementById("fdate");if(fd)fd.setAttribute("aria-label",LANG==="en"?"Filter by date":LANG==="tw"?"按日期篩選":"按日期筛选");
 [["#g-time","segTime"],["#g-fee","segFee"],["#g-fmt","segFmt"],["#g-city","segCity"]].forEach(function(pair){const dict=STR[LANG][pair[1]]||{};document.querySelectorAll(pair[0]+" .chip").forEach(ch=>{if(dict[ch.dataset.v])ch.textContent=dict[ch.dataset.v]})});
@@ -1019,18 +967,7 @@ if(typeof syncFilterUI==="function")syncFilterUI();
 if(typeof applyTheme==="function")applyTheme();
 }
 function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(typeof renderCats==="function")renderCats();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
-document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
-/* ===== theme: auto (follow system) / light / dark - preference stored in localStorage "szTheme" ===== */
-let THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
-if(THEME!=="light"&&THEME!=="dark")THEME="auto";
-const _mqDark=window.matchMedia("(prefers-color-scheme: dark)");
-function resolvedTheme(){return THEME==="dark"?"dark":THEME==="light"?"light":(_mqDark.matches?"dark":"light")}
-function syncThemeUI(){document.querySelectorAll(".themesw button").forEach(b=>{const on=b.dataset.settheme===THEME;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");if(b.dataset.settheme==="auto")b.textContent=tr("themeAuto");if(b.dataset.settheme==="light"){b.setAttribute("aria-label",tr("themeLight"));b.title=tr("themeLight")}if(b.dataset.settheme==="dark"){b.setAttribute("aria-label",tr("themeDark"));b.title=tr("themeDark")}});const g=document.querySelector(".themesw");if(g)g.setAttribute("aria-label",tr("themeLabel"))}
-function applyTheme(){const r=resolvedTheme();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncThemeUI()}
-function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()}
-document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>setTheme(b.dataset.settheme)));
-if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
-applyTheme();
+if(window.YL)YL.onLang(setLang);
 </script>
 <script>
 const TECHCATS=new Set(["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"]);
@@ -1050,6 +987,9 @@ const shDayNum=t=>{const p=shParts(t);return Date.UTC(p[0],p[1]-1,p[2])/DAY};
 const shMidnightMs=()=>shDayNum(Date.now())*DAY-8*3600e3;
 const isOnline=e=>e.format==="线上Space"||e.format==="线上";
 const isHybrid=e=>e.format==="线上+线下";
+/* city_id with fallback: the daily writer may omit it, so derive from `city` first (same order as /cities.json) */
+const CITY_MATCH=[["sz",/深圳|shenzhen/i],["hk",/香港|hong kong/i],["online",/线上|線上|online/i],["jm",/江门|江門|jiangmen/i]];
+function cityOf(e){const c=e.city||"";for(const [id,re] of CITY_MATCH)if(re.test(c))return id;if(e.city_id)return e.city_id;return c?"":(isOnline(e)?"online":"sz")}
 const fmtT=t=>new Date(t).toLocaleTimeString(LANG==="en"?"en-GB":"zh-CN",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false});
 const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/DAY):null;
 function feeBadge(e){
@@ -1092,8 +1032,9 @@ function pass(e){
     if(F.fmt==="online"&&!isO)return false;
   }
   if(F.city!=="all"){
-    if(F.city==="sz"&&(e.city||"").includes("香港"))return false;
-    if(F.city==="hk"&&!(e.city||"").includes("香港"))return false;
+    const c=cityOf(e);
+    if(F.city==="sz"&&c==="hk")return false;
+    if(F.city==="hk"&&c!=="hk")return false;
   }
   if(F.cats.size>0){
     const cats=e.categories||[];
@@ -1231,7 +1172,7 @@ const _ppc=document.getElementById("pip-copy");if(_ppc)_ppc.addEventListener("cl
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent=tr('copiedGo');setTimeout(()=>b.textContent=t,1800)})};
 window.fillPostCard=function(){var el=document.getElementById("prompt-post-card");if(el)el.textContent=LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT};
 window.fillPostCard();
-document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setTimeout(window.fillPostCard,0)));
+if(window.YL)YL.onLang(function(){setTimeout(window.fillPostCard,0)});
 window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),fm=document.getElementById("route-form"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail"),n=document.getElementById("epost-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText).then(()=>{const t=b.textContent;b.textContent=tr('copied');setTimeout(()=>b.textContent=t,1500)})};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
@@ -1347,7 +1288,18 @@ fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.events||[];
 window._updRaw=j.updated_at||null;fmtUpd();
 render();measureBar();setTimeout(measureBar,400);
+loadArchive();
 }).catch(()=>$("#list").innerHTML='<div class="empty">'+tr("loadFail")+'</div>');
+/* events ended 30+ days ago live in /events-archive.json: fetch after first render and merge (same id: events.json wins),
+   so 过往活动, search, favourites and counts still see them */
+function loadArchive(){
+fetch("/events-archive.json",{cache:"no-store"}).then(r=>r.ok?r.json():{events:[]}).then(j=>{
+const have=new Set(DATA.map(e=>e.id).filter(Boolean));
+let arc=(j.events||[]).filter(e=>e&&!(e.id&&have.has(e.id)));
+if(!arc.length)return;DATA=DATA.concat(arc);render();measureBar();
+}).catch(()=>{});
+}
+
 </script>
 <script>fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.hackathons||[]).length;var el=document.getElementById("hackcount");if(el&&n)el.textContent=n;var el2=document.getElementById("hackcount2");if(el2&&n)el2.textContent=n}).catch(function(){})</script>
 <script>fetch("/szexpat/events.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{var n=(d.events||[]).length;var el=document.getElementById("lc-expat-n");if(el&&n)el.textContent=n}).catch(function(){})</script>
@@ -1433,14 +1385,7 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 }
 
 /* ===== mobile topbar dropdown + drop duplicated list chips 2026-11-11 ===== */
-#mnav-btn{display:none}
-#mnav-panel{display:contents}
 @media (max-width:820px){
-  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
-  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
-  #mnav-panel.open{display:block}
-  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
-  #mnav-panel .topbar-nav a{font-size:.95rem}
   .listchips{display:none}
 }
 
@@ -1449,8 +1394,6 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 :root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
 .human-section>.wrap{max-width:880px}
 /* topbar */
-.topbar-nav a.nav-ag{color:var(--green)}
-.topbar-nav a.nav-on{color:var(--ink)}
 .nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
 .nav-submit:hover{border-color:var(--green);color:var(--green)}
 /* hero: left-aligned, tagline above the title */
@@ -1566,9 +1509,6 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 }
 
 /* ===== topbar compact 2026-11-13 ===== */
-.topbar{padding-top:8px;padding-bottom:8px}
-@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
-@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 
 <script>
@@ -1598,29 +1538,9 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 </script>
 
 
-<script>
-(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
-function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
-b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-p.addEventListener('click',function(e){if(e.target.closest('a'))close()});
-document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
-})();
-</script>
 
-<script>
-(function(){document.querySelectorAll(".prefs").forEach(function(p){
-var sel=p.querySelector(".langsel"),lg=p.querySelector(".langsw"),cyc=p.querySelector(".themecyc"),tg=p.querySelector(".themesw");
-if(sel&&lg){var syncL=function(){var on=lg.querySelector("button.on");if(on&&sel.value!==on.dataset.setlang)sel.value=on.dataset.setlang};
-sel.addEventListener("change",function(){var b=lg.querySelector('[data-setlang="'+sel.value+'"]');if(b)b.click();syncL()});
-new MutationObserver(syncL).observe(lg,{subtree:true,attributes:true,attributeFilter:["class"]});syncL()}
-if(cyc&&tg){var order=["auto","light","dark"],ic={auto:"\u25D0",light:"\u2600",dark:"\u263E"};
-var cur=function(){var on=tg.querySelector("button.on");return on?on.dataset.settheme:"auto"};
-var syncT=function(){var c=cur(),b=tg.querySelector('[data-settheme="'+c+'"]'),l=b?(b.getAttribute("aria-label")||b.textContent):c,t=(tg.getAttribute("aria-label")||"Theme")+": "+l;cyc.textContent=ic[c]||ic.auto;cyc.title=t;cyc.setAttribute("aria-label",t)};
-cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],b=tg.querySelector('[data-settheme="'+n+'"]');if(b)b.click();syncT()});
-new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
-})})();
-</script>
-<script src="/stats.js?v=20261126" defer></script>
+<script src="/stats.js?v=20261128" defer></script>
+<script src="/city.js?v=1" defer></script>
 </body>
 </html>
 
