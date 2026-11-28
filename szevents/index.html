@@ -545,6 +545,10 @@ input[type=search]{font-size:16px}
 
     <!-- Filter Bar -->
     <div class="bar">
+      <div class="scoperow" id="scoperow">
+        <button type="button" class="chip on" data-scope="tech">科技活动</button>
+        <button type="button" class="chip" data-scope="other">其他</button>
+      </div>
       <div class="srow">
       <input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
       <button id="ftoggle" aria-expanded="false" aria-controls="fgroups"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2" fill="var(--panel)"/><circle cx="13" cy="10" r="2" fill="var(--panel)"/><circle cx="8" cy="15" r="2" fill="var(--panel)"/></svg><span id="ftoggle-label">筛选</span><span id="fcount"></span></button>
@@ -750,7 +754,7 @@ input[type=search]{font-size:16px}
       <a href="#agent-section" id="sf-sub">订阅说明</a>
     </nav>
     <p class="sf-small" id="sf-small">数据每日更新 · 逐条核实自官方页面 · 免费无广告</p>
-    <p class="sf-contact" id="sf-contact">合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a></p>
+    <p class="sf-contact" id="sf-contact">合作联系：<a href="/cdn-cgi/l/email-protection#1069716450697164637c7963643e737f7d"><span class="__cf_email__" data-cfemail="add4ccd9edd4ccd9dec1c4ded983cec2c0">[email&#160;protected]</span></a></p>
     <p class="sf-copy">© 2026 Yat's List · yatslist.com</p>
   </div>
 </footer>
@@ -769,7 +773,7 @@ input[type=search]{font-size:16px}
     <textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
     <p class="mhint" id="mhint">✏️ 这段话术可以直接改：把【】里换成你的兴趣、区域、预算，改完再复制，Agent 就按你的喜好筛。</p>
     <div class="mex" id="mex"></div>
-    <div class="mex" id="mpost-alt" style="display:none;margin-top:10px"><b>没有 Agent？也可以用邮件提交：</b><br>把活动官方链接发到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> 即可。两种方式任选一种，都会在每日更新时核实、去重后收录。</div>
+    <div class="mex" id="mpost-alt" style="display:none;margin-top:10px"><b>没有 Agent？也可以用邮件提交：</b><br>把活动官方链接发到 <a href="/cdn-cgi/l/email-protection#91f4e7f4ffe5bfe2e4f3fcf8e5d1e8f0e5e2fdf8e2e5bff2fefc"><span class="__cf_email__" data-cfemail="771201121903590402151a1e03370e1603041b1e04035914181a">[email&#160;protected]</span></a> 即可。两种方式任选一种，都会在每日更新时核实、去重后收录。</div>
 <div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
   </div>
 </div>
@@ -779,7 +783,7 @@ input[type=search]{font-size:16px}
 <!-- Tour Card -->
 <div class="tourcard" id="tourcard"><div id="tourtext"></div><div class="mrow"><button class="btn" id="tourprev" onclick="tourStep(-1)">上一步</button><button class="btn primary" id="tournext" onclick="tourStep(1)">下一步</button><button class="btn" id="tourend" onclick="endTour()">结束导览</button><span id="tourprog" style="color:var(--ink-ter);font-size:12.5px"></span></div></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ===== i18n: zh (default) / tw / en — preference stored in localStorage "szLang" ===== */
 let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
 if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
@@ -843,7 +847,7 @@ regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收
 abTitle:"让你的 Agent 每天替你刷活动",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣才提醒你。",
 abApis:'也可以直接读：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）',
 abCats:'全品类都在数据里：生活、艺文、教育、美食等活动也已收录，你的 Agent 可直接查 <a href="/events.json">events.json</a> 全量数据；自己找活动，用下方搜索与分类筛选。',
-qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线上","city:sz":"深圳","city:hk":"香港"},welcClose:"关闭"
+qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线上","city:sz":"深圳","city:hk":"香港"},scopeTech:"科技活动",scopeOther:"其他",welcClose:"关闭"
 },
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
@@ -902,7 +906,7 @@ regBtn:"Register →",moreBtn:"More actions",mCal:"Add to calendar",mFavOn:"Remo
 abTitle:"Let your Agent check events for you every day",abSub:"Doubao, WorkBuddy, Codex, Claude Code and others can subscribe. Set it up once; it only pings you when something matches.",
 abApis:'Or read directly: <a href="/feed.xml">RSS</a> · <a href="/events.ics">Calendar .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide)',
 abCats:'All categories are in the data — lifestyle, arts, education, food and more. Your Agent can query the full dataset via <a href="/events.json">events.json</a>; browsing yourself, use the search and category filters below.',
-qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online","city:sz":"Shenzhen","city:hk":"Hong Kong"},welcClose:"Close"
+qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online","city:sz":"Shenzhen","city:hk":"Hong Kong"},scopeTech:"Tech Events",scopeOther:"Others",welcClose:"Close"
 },
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
@@ -961,7 +965,7 @@ regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收
 abTitle:"讓你的 Agent 每天替你刷活動",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，命中興趣才提醒你。",
 abApis:'也可以直接讀：<a href="/feed.xml">RSS</a> · <a href="/events.ics">日曆 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範）',
 abCats:'全品類都在資料裡：生活、藝文、教育、美食等活動也已收錄，你的 Agent 可直接查 <a href="/events.json">events.json</a> 全量資料；自己找活動，用下方搜尋與分類篩選。',
-qChips:{all:"全部","time:week":"本週","fee:free":"免費","fmt:online":"線上","city:sz":"深圳","city:hk":"香港"},welcClose:"關閉"
+qChips:{all:"全部","time:week":"本週","fee:free":"免費","fmt:online":"線上","city:sz":"深圳","city:hk":"香港"},scopeTech:"科技活動",scopeOther:"其他",welcClose:"關閉"
 }};
 function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
@@ -1052,9 +1056,10 @@ if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="a
 applyTheme();
 </script>
 <script>
+const TECHCATS=new Set(["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"]);
 const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space","生活","社交","金融","教育","艺文","美食","展览","音乐","亲子","运动"];
 let DATA=[];
-let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
+let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set(),scope:"tech"};
 let FAVS=new Set();try{FAVS=new Set(JSON.parse(localStorage.getItem("szFavs")||"[]"))}catch(e){}
 let favOnly=false;
 function saveFavs(){try{localStorage.setItem("szFavs",JSON.stringify([...FAVS]))}catch(e){}}
@@ -1116,6 +1121,11 @@ function pass(e){
   if(F.cats.size>0){
     const cats=e.categories||[];
     if(!cats.some(c=>F.cats.has(c)))return false;
+  }
+  if(F.cats.size===0){
+    const isT=(e.categories||[]).some(c=>TECHCATS.has(c));
+    if(F.scope==="tech"&&!isT)return false;
+    if(F.scope==="other"&&isT)return false;
   }
   const q=($("#q").value||"").trim().toLowerCase();
   if(q){
@@ -1198,6 +1208,7 @@ function render(){
   const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
   const total=DATA.filter(e=>!isPast(e)).length;
   $("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;const _lce=$("#lc-ev-n");if(_lce)_lce.textContent=total;
+  renderScope();
   const _sw=$("#st-week");if(_sw)_sw.textContent=DATA.filter(e=>e.start&&(new Date(e.start)-now)<=7*DAY&&new Date(e.start)>=new Date(now-DAY)).length;
   const _sd=$("#st-dl");if(_sd)_sd.textContent=DATA.filter(e=>{const d=dlDays(e);return d!==null&&d>=0&&d<=3}).length;
   const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
@@ -1309,6 +1320,18 @@ syncFilterUI();render();measureBar();
 });
 }
 segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");segWire("#g-city","city");
+function renderScope(){
+const row=$("#scoperow");if(!row)return;
+const t0=shMidnightMs();
+const isT=e=>(e.categories||[]).some(c=>TECHCATS.has(c));
+let nt=0,no=0;
+for(const e of DATA){if(e.start&&new Date(e.end||e.start)<t0)continue;if(isT(e))nt++;else no++}
+row.querySelectorAll("[data-scope]").forEach(b=>{
+const s2=b.dataset.scope;
+b.innerHTML=(s2==="tech"?tr("scopeTech"):tr("scopeOther"))+" <span class=\"scnt\">"+(s2==="tech"?nt:no)+"</span>";
+b.classList.toggle("on",F.cats.size===0&&F.scope===s2);
+});
+}
 function renderCats(){$("#g-cats").innerHTML=CATS.map(c=>`<button class="chip${F.cats.has(c)?" on":""}" data-c="${c}">${CATDISP[LANG][c]||c}</button>`).join("")}
 renderCats();
 $("#g-cats").addEventListener("click",ev=>{
@@ -1318,6 +1341,12 @@ if(F.cats.has(c))F.cats.delete(c);else F.cats.add(c);
 b.classList.toggle("on",F.cats.has(c));
 syncFilterUI();render();measureBar();
 });
+$("#scoperow").addEventListener("click",ev=>{
+const b=ev.target.closest("[data-scope]");if(!b)return;
+F.scope=b.dataset.scope;
+if(F.cats.size){F.cats.clear();renderCats()}
+syncFilterUI();render();measureBar();
+});
 $("#fdate").addEventListener("change",e=>{
 F.date=e.target.value;
 e.target.classList.toggle("on",!!F.date);
@@ -1325,7 +1354,7 @@ if(F.date){F.time="all";document.querySelectorAll("#g-time .chip").forEach(x=>x.
 syncFilterUI();render();measureBar();
 });
 $("#fclear").addEventListener("click",()=>{
-F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
+F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set(),scope:"tech"};
 document.querySelectorAll(".seg").forEach(s=>s.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all")));
 const d=$("#fdate");d.value="";d.classList.remove("on");
 syncFilterUI();render();measureBar();
@@ -1555,6 +1584,10 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 #fgroups.open{display:block}
 .qchips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .qchips::-webkit-scrollbar{display:none}
+.scoperow{display:flex;gap:8px;margin-bottom:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.scoperow::-webkit-scrollbar{display:none}
+.scoperow .chip{font-size:.92rem;min-height:40px;padding:7px 16px}
+.scoperow .scnt{opacity:.72;font-weight:600;margin-left:3px}
 .chip{background:none;border-color:var(--border-hover);min-height:34px;padding:5px 13px;font-size:.84rem}
 .chip:hover{transform:none}
 .chip.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
