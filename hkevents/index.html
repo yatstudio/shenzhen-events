@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's List · 香港活动清单</title>
-<meta name="description" content="Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hk-events.json。">
+<meta name="description" content="Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。">
 <style>
 
 :root{
@@ -682,8 +682,8 @@ input[type=search]{font-size:16px}
 <div class="ab-text"><div class="ab-title" id="ab-title">让你的 Agent 每天替你刷活动</div><div class="ab-sub" id="ab-sub">豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣才提醒你。</div></div>
 <button type="button" class="ab-go" id="ta-agent" onclick="openModal('sub')">用我的 Agent 订阅 →</button>
 </div>
-<div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/hk-events.json</span><button type="button" id="cmd-copy">复制</button></div>
-<div class="ab-apis" id="ab-apis">也可以直接读：<a href="/hk-events.json">hk-events.json</a> · <a href="https://yatslist.com/szevents/">深圳活动清单</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a></div>
+<div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/hkevents.json</span><button type="button" id="cmd-copy">复制</button></div>
+<div class="ab-apis" id="ab-apis">也可以直接读：<a href="/hkevents.json">hkevents.json</a> · <a href="https://yatslist.com/szevents/">深圳活动清单</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a></div>
 </div>
 
 <!-- Filter Bar -->
@@ -759,7 +759,7 @@ input[type=search]{font-size:16px}
 <!-- Footer -->
 <div class="foot">
 <div id="foot-note">🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a></div>
-<span id="foot-apis">数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：</span><a href="/hk-events.json">hk-events.json</a> · <a href="/events.json">events.json（深圳）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a><br>
+<span id="foot-apis">数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：</span><a href="/hkevents.json">hkevents.json</a> · <a href="/events.json">events.json（深圳）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a><br>
 <span id="foot-tail-post">报名前请以官方页面最新信息为准。</span>
 </div>
 </div>
@@ -805,9 +805,9 @@ input[type=search]{font-size:16px}
 <h3>📡 接口清单（给 Agent）</h3>
 <div class="endpoint-list">
 <div class="endpoint-item">
-<span class="endpoint-name">hk-events.json</span>
-<span class="endpoint-url">https://yatslist.com/hk-events.json</span>
-<button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/hk-events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+<span class="endpoint-name">hkevents.json</span>
+<span class="endpoint-url">https://yatslist.com/hkevents.json</span>
+<button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/hkevents.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
 <span class="endpoint-desc">香港活动数据（JSON）</span>
 </div>
 <div class="endpoint-item">
@@ -875,7 +875,7 @@ const DIST_TW={"中西区":"中西區","油尖旺区":"油尖旺區","湾仔区"
 const DIST_EN={"中西区":"Central & Western","油尖旺区":"Yau Tsim Mong","湾仔区":"Wan Chai","观塘区":"Kwun Tong","南区":"Southern","九龙城区":"Kowloon City","东区":"Eastern","离岛区":"Islands","西贡区":"Sai Kung","深水埗区":"Sham Shui Po","黄大仙区":"Wong Tai Sin","元朗区":"Yuen Long","沙田区":"Sha Tin","北区":"North","荃湾区":"Tsuen Wan","大埔区":"Tai Po","屯门区":"Tuen Mun","葵青区":"Kwai Tsing"};
 const STR={
 zh:{
-docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hk-events.json。",
+docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。",
 brandTop:"回到顶部",navAgent:"Agent",navSz:"深圳活动",navEvents:"香港活动",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",scopeNote:"香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活动统一收录、去重，按日期排好；点卡片直达官方报名页。",
 heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",
@@ -916,7 +916,7 @@ feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",r
 regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收藏",mFavOff:"收藏",dayCount:function(n){return n+" 场"}
 },
 tw:{
-docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清單：香港全量活動聚合（Luma / Eventbrite / Meetup / Peatix），科技、創業、藝文、生活一站檢索；可搜索、按分類與行政區篩選，也可讓你的 Agent 訂閱 hk-events.json。",
+docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清單：香港全量活動聚合（Luma / Eventbrite / Meetup / Peatix），科技、創業、藝文、生活一站檢索；可搜索、按分類與行政區篩選，也可讓你的 Agent 訂閱 hkevents.json。",
 brandTop:"回到頂部",navAgent:"Agent",navSz:"深圳活動",navEvents:"香港活動",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",scopeNote:"香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活動統一收錄、去重，按日期排好；點卡片直達官方報名頁。",
 heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",
@@ -957,7 +957,7 @@ feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",r
 regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收藏",mFavOff:"收藏",dayCount:function(n){return n+" 場"}
 },
 en:{
-docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong events, aggregated in full from Luma, Eventbrite, Meetup and Peatix: tech, startups, arts and everyday life in one searchable list. Filter by category and district, or let your Agent subscribe to hk-events.json.",
+docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong events, aggregated in full from Luma, Eventbrite, Meetup and Peatix: tech, startups, arts and everyday life in one searchable list. Filter by category and district, or let your Agent subscribe to hkevents.json.",
 brandTop:"Back to top",navAgent:"Agent",navSz:"Shenzhen",navEvents:"Hong Kong",navHack:"Hackathons",navSpaces:"Talks",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",scopeNote:"The full picture: Hong Kong events from Luma, Eventbrite, Meetup and more, deduplicated and sorted by date. Cards link straight to the official registration page.",
 heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",
@@ -1001,20 +1001,20 @@ function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
 const PROMPTS={
 zh:{
-generic:"请订阅「Yat's List 香港活动清单」并给我活动提醒：数据源 https://yatslist.com/hk-events.json（每日更新，无需登录）。每天读取一次，按我的兴趣和想去的区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
-doubao:"每天早上 9 点，打开 https://yatslist.com/hk-events.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
-workbuddy:"每天早上 9 点，打开 https://yatslist.com/hk-events.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
-codex:"请为我订阅「Yat's List 香港活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/hk-events.json 。只看未结束的活动，筛选：今天和明天举行的、以及我感兴趣的类别和区域。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。"},
+generic:"请订阅「Yat's List 香港活动清单」并给我活动提醒：数据源 https://yatslist.com/hkevents.json（每日更新，无需登录）。每天读取一次，按我的兴趣和想去的区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
+doubao:"每天早上 9 点，打开 https://yatslist.com/hkevents.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
+workbuddy:"每天早上 9 点，打开 https://yatslist.com/hkevents.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
+codex:"请为我订阅「Yat's List 香港活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/hkevents.json 。只看未结束的活动，筛选：今天和明天举行的、以及我感兴趣的类别和区域。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。"},
 tw:{
-generic:"請訂閱「Yat's List 香港活動清單」並給我活動提醒：數據源 https://yatslist.com/hk-events.json（每日更新，無需登錄）。每天讀取一次，按我的興趣和想去的區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附官方報名鏈接。",
-doubao:"每天早上 9 點，打開 https://yatslist.com/hk-events.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
-workbuddy:"每天早上 9 點，打開 https://yatslist.com/hk-events.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
-codex:"請為我訂閱「Yat's List 香港活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/hk-events.json 。只看未結束的活動，篩選：今天和明天舉行的、以及我感興趣的類別和區域。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。"},
+generic:"請訂閱「Yat's List 香港活動清單」並給我活動提醒：數據源 https://yatslist.com/hkevents.json（每日更新，無需登錄）。每天讀取一次，按我的興趣和想去的區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附官方報名鏈接。",
+doubao:"每天早上 9 點，打開 https://yatslist.com/hkevents.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
+workbuddy:"每天早上 9 點，打開 https://yatslist.com/hkevents.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
+codex:"請為我訂閱「Yat's List 香港活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/hkevents.json 。只看未結束的活動，篩選：今天和明天舉行的、以及我感興趣的類別和區域。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。"},
 en:{
-generic:"Please subscribe to “Yat's List — Hong Kong Events” and send me event reminders. Data source: https://yatslist.com/hk-events.json (updated daily, no login required). Read it once a day and filter by my interests and the districts I care about. Tell me the same day when a new event matches my interests; and for events I mark as attending, remind me 3 days before and again 1 day before they start. Never invent events that are not in the data source, and always include the official registration link in your reminders.",
-doubao:"Every morning at 9:00, open https://yatslist.com/hk-events.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
-workbuddy:"Every morning at 9:00, open https://yatslist.com/hk-events.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
-codex:"Please subscribe me to “Yat's List — Hong Kong Events”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/hk-events.json. Consider only events that have not ended, and filter for: events happening today and tomorrow, plus my categories of interest [AI / Tech / Arts / Music] and districts [Central & Western / Wan Chai]. Report briefly, sorted by date, one event per line with its registration link; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day."}};
+generic:"Please subscribe to “Yat's List — Hong Kong Events” and send me event reminders. Data source: https://yatslist.com/hkevents.json (updated daily, no login required). Read it once a day and filter by my interests and the districts I care about. Tell me the same day when a new event matches my interests; and for events I mark as attending, remind me 3 days before and again 1 day before they start. Never invent events that are not in the data source, and always include the official registration link in your reminders.",
+doubao:"Every morning at 9:00, open https://yatslist.com/hkevents.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
+workbuddy:"Every morning at 9:00, open https://yatslist.com/hkevents.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
+codex:"Please subscribe me to “Yat's List — Hong Kong Events”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/hkevents.json. Consider only events that have not ended, and filter for: events happening today and tomorrow, plus my categories of interest [AI / Tech / Arts / Music] and districts [Central & Western / Wan Chai]. Report briefly, sorted by date, one event per line with its registration link; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day."}};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
 const MSTEPS_TW={generic:"任何能聯網的 Agent 都適用：把話術粘貼給它，並讓它設一個每天執行的任務。",doubao:"豆包工作 →「定時任務」→ 新建 → 重複選「每天」、時間 9:00 → 把話術粘貼為任務內容 → 保存。",workbuddy:"WorkBuddy → 左側「自動化」→ 添加任務 → 執行頻率選「每天 9:00」→ 把話術粘貼為提示詞 → 保存。",codex:"把話術直接發給 Codex，讓它創建每天 9:00（Asia/Shanghai）的自動化任務。"};
 const MSTEPS_EN={generic:"Works with any Agent that can access the web: paste the prompt to it and ask it to set up a daily task.",doubao:"Doubao Workspace → “Scheduled tasks” → New → repeat “Daily”, time 9:00 → paste the prompt as the task content → Save.",workbuddy:"WorkBuddy → “Automation” in the left sidebar → Add task → frequency “Daily 9:00” → paste the prompt → Save.",codex:"Send the prompt straight to Codex and ask it to create a daily 9:00 (Asia/Shanghai) automation."};
@@ -1253,7 +1253,7 @@ if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus();
 document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
 document.addEventListener("keydown",ev=>{if(ev.key==="Escape"){closeMenus();closeModal()}});
 function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
-const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/hk-events.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
+const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/hkevents.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
@@ -1323,7 +1323,7 @@ measureBar();
 });
 $("#q").addEventListener("input",()=>{render();measureBar()});
 applyLang();
-fetch("/hk-events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
+fetch("/hkevents.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
 DATA=j.events||[];
 window._updRaw=j.updated_at||null;fmtUpd();
 renderDist();render();measureBar();setTimeout(measureBar,400);
