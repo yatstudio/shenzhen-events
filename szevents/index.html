@@ -36,8 +36,14 @@ color-scheme:light;
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
+.topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
+.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
+.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
+.topbar-nav a:hover{color:var(--green)}
 .agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
 .agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
 .agentnote b{color:var(--ink)}
@@ -226,6 +232,11 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
 @media (max-width:768px){
 body{overflow-x:hidden}
+.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
+.topbar-brand{flex-shrink:0}
+.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav a{flex-shrink:0;font-size:.84rem}
 .terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
 .terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
 .terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
@@ -277,6 +288,10 @@ select{font-size:16px}
 
 /* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
 @media (max-width:820px){
+.topbar{padding:8px 0}
+.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
+.topbar-nav{gap:14px;overflow:visible;width:auto}
+.topbar-nav a{font-size:.82rem}
 .human-section{padding-top:24px}
 .section-title{font-size:1.5rem}
 .section-subtitle{font-size:.9rem}
@@ -299,6 +314,16 @@ select{font-size:16px}
 .subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
 .card .actions .btn{flex:1 1 30%}
 }
+.langsw{display:inline-flex;align-items:center;gap:8px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+.themesw{display:inline-flex;align-items:center;gap:8px}
+.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
+.themesw button:hover{color:var(--ink)}
+.themesw button.on{color:var(--green)}
+.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
@@ -348,6 +373,7 @@ select{font-size:16px}
 [data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
 
 /* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
+.topbar{padding-top:10px;padding-bottom:10px}
 .human-section{padding-top:18px}
 .brandmark{line-height:1.25}
 .section-tagline{line-height:1.4;margin-top:8px}
@@ -372,6 +398,12 @@ select{font-size:16px}
 .sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
 input[type=search]{font-size:16px}
 @media (max-width:820px){
+.topbar{padding:6px 0}
+.topbar .wrap{gap:10px;padding:0 14px}
+.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav>*{flex-shrink:0}
+.langsw button,.themesw button{min-height:32px;padding:4px 7px}
 .human-section{padding-top:14px}
 .section-tagline{display:none}
 .herometa{font-size:.8rem;line-height:1.55;padding:0 4px}
@@ -428,13 +460,41 @@ input[type=search]{font-size:16px}
 <meta name="apple-mobile-web-app-title" content="Yat's List">
 <style>
 /* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
+.prefs{display:inline-flex;align-items:center;gap:6px}
+.prefs .langsw,.prefs .themesw{display:none!important}
+.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
+.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+.langsel option{background:var(--panel);color:var(--ink)}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+@media (max-width:820px){
+  #mnav-panel .prefs{order:9;width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
+  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
+  #mnav-panel .themecyc{width:34px}
+}
 </style>
 </head>
 <body>
 <a id="top"></a>
 
 <!-- Sticky Topbar -->
-<div id="yl-topbar" data-active="szevents"><button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">提交活动</button></div><script src="/shell.js?v=2"></script>
+<div class="topbar">
+  <div class="wrap">
+    <a class="topbar-brand" href="https://yatslist.com/szevents/" aria-label="回到顶部" style="text-decoration:none">
+      <span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
+    </a>
+    <button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+<div id="mnav-panel"><nav class="topbar-nav">
+      <a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
+      <a href="#human-section" id="nav-events" class="nav-on" aria-current="page">活动</a>
+      <a href="https://yatslist.com/hkevents/" id="nav-hk">香港活动</a>
+      <a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+      <a href="https://yatslist.com/talks/" id="nav-spaces">Talks</a>
+      <span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
+      <button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">提交活动</button>
+    </nav></div>
+  </div>
+</div>
 
 <!-- Human Section (第一屏) -->
 <section class="human-section" id="human-section">
@@ -444,7 +504,6 @@ input[type=search]{font-size:16px}
       <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
       <h2 class="section-title" id="hero-title">深圳活动清单</h2>
       <p class="section-subtitle" id="hero-sub">深圳活动，喂给你的 Agent 吃。</p>
-      <nav class="cityswitch" id="cityswitch" aria-label="城市"><a href="/szevents/" data-city="sz" class="on" aria-current="page">深圳</a><a href="/hk/" data-city="hk">香港</a></nav>
       <div class="ylstat" data-list="events"></div>
     </div>
     <a class="hackhero" href="https://yatslist.com/hackathons/"></a>
@@ -466,14 +525,6 @@ input[type=search]{font-size:16px}
 .vtab{appearance:none;-webkit-appearance:none;border:1px solid var(--border);background:var(--panel);color:var(--ink-sec);font:inherit;font-size:.92rem;font-weight:650;padding:8px 20px;border-radius:999px;cursor:pointer;transition:all .18s ease}
 .vtab:hover{color:var(--ink);border-color:var(--border-hover)}
 .vtab.on{background:var(--green);border-color:var(--green);color:#06251a}
-.cityswitch{display:inline-flex;gap:4px;margin:12px 0 0;padding:3px;border:1px solid var(--border);border-radius:999px;background:var(--panel)}
-.cityswitch a{padding:5px 16px;border-radius:999px;color:var(--ink-sec);font-size:.88rem;font-weight:650;text-decoration:none;transition:all .18s ease}
-.cityswitch a:hover{color:var(--ink)}
-.cityswitch a.on{background:var(--green);color:#06251a}
-[data-theme=light] .cityswitch a.on{color:#fff}
-/* /hk/ (html.city-hk): no city filter, no Shenzhen-only blocks; 区域 filter only there */
-html.city-hk #city-label,html.city-hk #g-city,html.city-hk #qchips [data-q^="city:"],html.city-hk .viewtabs,html.city-hk .chtfhero{display:none!important}
-html:not(.city-hk) .hkonly{display:none!important}
 .exbar{display:flex;gap:12px;align-items:center;margin:0 0 6px}
 .exbar[hidden]{display:none}
 .exbar input[type=search]{flex:1}
@@ -548,14 +599,12 @@ html:not(.city-hk) .hkonly{display:none!important}
             <button class="chip" data-v="offline">线下</button>
             <button class="chip" data-v="online">线上</button>
           </span>
-          <span class="flabel" id="city-label">城市</span>
+          <span class="flabel">城市</span>
           <span class="seg" id="g-city">
             <button class="chip on" data-v="all">全部</button>
             <button class="chip" data-v="sz">深圳</button>
             <button class="chip" data-v="hk">🇭🇰 香港</button>
           </span>
-          <span class="flabel hkonly" id="area-label" data-k="areaLabel">区域</span>
-          <span class="seg hkonly" id="g-area"></span>
         </div>
         <div class="fgroup">
           <span class="flabel">分类</span>
@@ -651,7 +700,7 @@ html:not(.city-hk) .hkonly{display:none!important}
         <div class="endpoint-item">
           <span class="endpoint-name">events.json</span>
           <span class="endpoint-url">https://yatslist.com/events.json</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">活动数据（JSON）</span>
         </div>
         <div class="endpoint-item">
@@ -663,13 +712,13 @@ html:not(.city-hk) .hkonly{display:none!important}
         <div class="endpoint-item">
           <span class="endpoint-name">feed.xml</span>
           <span class="endpoint-url">https://yatslist.com/feed.xml</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/feed.xml').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">RSS 订阅源</span>
         </div>
         <div class="endpoint-item">
           <span class="endpoint-name">events.ics</span>
           <span class="endpoint-url">https://yatslist.com/events.ics</span>
-          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.previousElementSibling.textContent.trim()).then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+          <button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.ics').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
           <span class="endpoint-desc">日历订阅文件</span>
         </div>
         <div class="endpoint-item">
@@ -734,13 +783,12 @@ html:not(.city-hk) .hkonly{display:none!important}
 let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
 if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
 if(LANG!=="en"&&LANG!=="tw")LANG="zh";
-if(window.YL)LANG=YL.lang;/* /shell.js owns language detection (?lang=, szLang) */
 const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","在线Space":"在线Space"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","在线Space":"在線Space"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","在线Space":"Online Spaces"}};
 const STR={
 zh:{
 docTitle:"Yat's List · 深圳活动清单 · AI / 创业 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活动清单：深圳 AI·创业·科技·跨境·Web3·加密活动 + 黑客松/硬件专场，每天逐条核实更新；可搜索、筛选、收藏，也可让你的 Agent 订阅 events.json。",
-brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+brandTop:"回到顶部",navAgent:"Agent",navEvents:"活动",navHk:"香港活动",navHack:"黑客松",navJobs:"招聘",navExpat:"外国人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"深圳活动清单",heroSub:"深圳活动，喂给你的 Agent 吃。",scopeNote:"本站活动清单只收录深圳（另含少量香港精选），不覆盖其他城市。黑客松清单收录全球赛事，是唯一例外。",cmdLabel:"深圳活动清单",pipLabel:"命令行 CLI",epostTitle:"📋 提交活动：把一场活动加进清单",routeQ:"你想怎么提交？",routeYes:"有 GitHub",routeMail:"用邮箱提交",routeNo:"填网页表单",routeFormBtn:"📝 打开网页表单提交",routeMailNote:"把活动名称和官方链接发到这个邮箱即可，我们核实后会收录进清单。",routeMailCopy:"📋 复制邮箱",routeMailSend:"✉️ 写邮件",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8A%A8%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 复制投稿话术给我的 Agent",
 statWeek:"未来 7 天",statDl:"72h 内截止报名",heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",swEv:"深圳活动清单",swHack:"黑客松清单",swExpat:"外国人活动",swSpaces:"Space 纪要",lcDescEv:"仅深圳 · AI · 创业 · 科技 · 跨境活动，每天核实更新",lcDescHack:"全球黑客松与创新大赛，正在报名",lcDescExpat:"外国人常去的聚会、演出与展览",lcDescSpaces:"华语圈 X Space 纪要与回放要点",lcUnit:"场",
 taSubmit:"提交活动",taAgent:"用我的 Agent 订阅 →",taEmail:"✉️ 邮件订阅",taTour:"🧭 订阅导览",taPost:"📋 复制投稿话术给我的 Agent",
@@ -798,7 +846,7 @@ qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线�
 en:{
 docTitle:"Yat's List · Shenzhen Events · AI / Startups / Global / Web3 / Hackathons",
 metaDesc:"Yat's List — a verified Shenzhen-only events list: AI, startup, tech, cross-border, Web3 and crypto events plus hackathons, checked against official pages and updated daily. Search, filter and save events — or let your Agent subscribe to events.json.",
-brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+brandTop:"Back to top",navAgent:"Agent",navEvents:"Events",navHk:"Hong Kong",navHack:"Hackathons",navJobs:"Jobs",navExpat:"Expat",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Shenzhen Events",heroSub:"Shenzhen events, served to your Agent.",scopeNote:"This events list covers Shenzhen only (plus a few Hong Kong picks) — no other cities. The Hackathons list is the one exception: it is global.",cmdLabel:"Shenzhen Events",pipLabel:"CLI",epostTitle:"📋 Submit an event",routeQ:"How would you like to submit?",routeYes:"Yes, use GitHub",routeMail:"Submit by email",routeNo:"Use the web form",routeFormBtn:"📝 Open the web submission form",routeMailNote:"Just send the event name and its official link to this address - we'll verify it and add it to the list.",routeMailCopy:"📋 Copy email address",routeMailSend:"✉️ Write an email",routeMailHref:"mailto:event.submit@yatslist.com?subject=Event%20submission%3A%20",epostCopy:"📋 Copy the submission prompt for my Agent",
 statWeek:"Next 7 days",statDl:"Closing within 72h",heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",swEv:"Shenzhen Events",swHack:"Hackathons",swExpat:"Expat Events",swSpaces:"Space Notes",lcDescEv:"Shenzhen only · AI, startup, tech & cross-border events, verified daily",lcDescHack:"Global hackathons & contests open for registration",lcDescExpat:"Meetups, shows & exhibitions for expats",lcDescSpaces:"Chinese X Space recaps & replay highlights",lcUnit:"events",
 taSubmit:"Submit event",taAgent:"Subscribe with my Agent →",taEmail:"✉️ Email subscription",taTour:"🧭 Guided tour",taPost:"📋 Copy a submission prompt for my Agent",
@@ -856,7 +904,7 @@ qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online
 tw:{
 docTitle:"Yat's List · 深圳活動清單 · AI / 創業 / 跨境 / Web3 / 黑客松",
 metaDesc:"Yat's List 深圳活動清單：深圳 AI·創業·科技·跨境·Web3·加密活動 + 黑客松/硬件專場，每天逐條核實更新；可搜索、篩選、收藏，也可讓你的 Agent 訂閱 events.json。",
-brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+brandTop:"回到頂部",navAgent:"Agent",navEvents:"活動",navHk:"香港活動",navHack:"黑客松",navJobs:"招聘",navExpat:"外國人",navSpaces:"Talks",navMu:"muShenzhen",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"深圳活動清單",heroSub:"深圳活動，餵給你的 Agent 吃。",scopeNote:"本站活動清單只收錄深圳（另含少量香港精選），不覆蓋其他城市。黑客松清單收錄全球賽事，是唯一例外。",cmdLabel:"深圳活動清單",pipLabel:"命令列 CLI",epostTitle:"📋 提交活動：把一場活動加進清單",routeQ:"你想怎麼提交？",routeYes:"有 GitHub",routeMail:"用電郵提交",routeNo:"填網頁表單",routeFormBtn:"📝 打開網頁表單提交",routeMailNote:"把活動名稱和官方連結發到這個信箱即可，我們核實後會收錄進清單。",routeMailCopy:"📋 複製信箱",routeMailSend:"✉️ 寫電郵",routeMailHref:"mailto:event.submit@yatslist.com?subject=%E6%B4%BB%E5%8B%95%E6%8A%95%E7%A8%BF%EF%BC%9A",epostCopy:"📋 複製投稿話術給我的 Agent",
 statWeek:"未來 7 天",statDl:"72h 內截止報名",heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",swEv:"深圳活動清單",swHack:"黑客松清單",swExpat:"外國人活動",swSpaces:"Space 紀要",lcDescEv:"僅深圳 · AI · 創業 · 科技 · 跨境活動，每天核實更新",lcDescHack:"全球黑客松與創新大賽，正在報名",lcDescExpat:"外國人常去的聚會、演出與展覽",lcDescSpaces:"華語圈 X Space 紀要與回放要點",lcUnit:"場",
 taSubmit:"提交活動",taAgent:"用我的 Agent 訂閱 →",taEmail:"✉️ 郵件訂閱",taTour:"🧭 訂閱導覽",taPost:"📋 複製投稿話術給我的 Agent",
@@ -913,32 +961,6 @@ qChips:{all:"全部","time:week":"本週","fee:free":"免費","fmt:online":"線�
 }};
 function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
-/* ===== city page: /szevents/ = "sz" (default); /hk/ is generated by tools/build_city_pages.mjs and sets window.YL_CITY="hk" ===== */
-const PAGE_CITY=window.YL_CITY==="hk"?"hk":"sz";
-const CITY_CONF=window.YL_CITY_CONF||{};
-Object.assign(STR.zh,{cityNav:"城市",citySz:"深圳",cityHk:"香港",areaLabel:"区域"});
-Object.assign(STR.tw,{cityNav:"城市",citySz:"深圳",cityHk:"香港",areaLabel:"區域"});
-Object.assign(STR.en,{cityNav:"City",citySz:"Shenzhen",cityHk:"Hong Kong",areaLabel:"Area"});
-if(PAGE_CITY==="hk"){
-document.documentElement.classList.add("city-hk");
-Object.assign(STR.zh,{docTitle:"Yat's List · 香港活动清单 · AI / 创业 / Web3 / 黑客松",metaDesc:"Yat's List 香港活动清单：香港 AI·创业·科技·Web3·加密活动，每天逐条核实更新；可搜索、按港岛 / 九龙 / 新界筛选、收藏，也可让你的 Agent 订阅 hk/events.json。",heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",cmdLabel:"香港活动清单",swEv:"香港活动清单",termPrompt:"$ subscribe: yat's list · 香港活动清单",footTag:"香港活动，喂给你的 Agent 吃。",introP2:'这份是<b style="color:var(--ink)">香港活动清单</b>：香港的 AI、创业、科技、Web3、加密活动；深圳活动见 <a href="/szevents/">深圳活动清单</a>。',aiPh:"问我香港活动：时间、地点、报名…"});
-Object.assign(STR.tw,{docTitle:"Yat's List · 香港活動清單 · AI / 創業 / Web3 / 黑客松",metaDesc:"Yat's List 香港活動清單：香港 AI·創業·科技·Web3·加密活動，每天逐條核實更新；可搜索、按港島 / 九龍 / 新界篩選、收藏，也可讓你的 Agent 訂閱 hk/events.json。",heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",cmdLabel:"香港活動清單",swEv:"香港活動清單",termPrompt:"$ subscribe: yat's list · 香港活動清單",footTag:"香港活動，餵給你的 Agent 吃。",introP2:'這份是<b style="color:var(--ink)">香港活動清單</b>：香港的 AI、創業、科技、Web3、加密活動；深圳活動見 <a href="/szevents/">深圳活動清單</a>。',aiPh:"問我香港活動：時間、地點、報名…"});
-Object.assign(STR.en,{docTitle:"Yat's List · Hong Kong Events · AI / Startups / Web3 / Hackathons",metaDesc:"Yat's List Hong Kong Events: verified AI, startup, tech, Web3 and crypto events in Hong Kong, checked against official pages and updated daily. Search, filter by HK Island / Kowloon / New Territories, save events — or let your Agent subscribe to hk/events.json.",heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",cmdLabel:"Hong Kong Events",swEv:"Hong Kong Events",termPrompt:"$ subscribe: yat's list · Hong Kong events",footTag:"Hong Kong events, served to your Agent.",introP2:'This is the <b style="color:var(--ink)">Hong Kong Events</b> list: AI, startup, tech, Web3 and crypto events in Hong Kong. Shenzhen events are on <a href="/szevents/">Shenzhen Events</a>.',aiPh:"Ask about Hong Kong events: time, venue, registration…"});
-}
-/* Shenzhen wording in prompts → Hong Kong on /hk/ (identity on /szevents/) */
-const CITY_TX=[["深圳活动清单","香港活动清单"],["深圳活動清單","香港活動清單"],["Shenzhen Events","Hong Kong Events"],["深圳+香港","香港"],["Shenzhen + Hong Kong","Hong Kong"],["Asia/Shanghai","Asia/Hong_Kong"],["宝安区和南山区","中环和湾仔"],["宝安、南山","中环、湾仔"],["寶安區和南山區","中環和灣仔"],["寶安、南山","中環、灣仔"],["Bao'an and Nanshan districts","Central and Wan Chai"],["Bao'an & Nanshan","Central & Wan Chai"],["https://yatslist.com/events.json","https://yatslist.com/hk/events.json"],["https://yatslist.com/events.ics","https://yatslist.com/hk/events.ics"],["https://yatslist.com/feed.xml","https://yatslist.com/hk/feed.xml"]];
-function cityTx(t){if(PAGE_CITY!=="hk"||typeof t!=="string")return t;for(const [a,b] of CITY_TX)t=t.split(a).join(b);return t}
-function applyCityUI(){
-const cs=document.getElementById("cityswitch");
-if(cs){cs.setAttribute("aria-label",tr("cityNav"));const lq=new URLSearchParams(location.search).get("lang");cs.querySelectorAll("a[data-city]").forEach(a=>{const c=a.dataset.city,on=c===PAGE_CITY;a.textContent=tr(c==="hk"?"cityHk":"citySz");a.href=(c==="hk"?"/hk/":"/szevents/")+(lq?"?lang="+encodeURIComponent(lq):"");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")})}
-_setText("#area-label",tr("areaLabel"));
-if(PAGE_CITY==="hk"){
-const ai=document.getElementById("yl-input");if(ai)ai.placeholder=tr("aiPh");
-/* data links point at the /hk/ feeds (rewritten after every language switch, since applyLang resets these blocks) */
-document.querySelectorAll('a[href="/events.json"],a[href="/feed.xml"],a[href="/events.ics"]').forEach(a=>a.setAttribute("href","/hk"+a.getAttribute("href")));
-document.querySelectorAll(".endpoint-url,#agentbox .cmdline .u").forEach(el=>{el.textContent=cityTx(el.textContent)});
-}
-}
 const PROMPTS={
 zh:{
 generic:"请订阅「Yat's List 深圳活动清单」并给我活动提醒：数据源 https://yatslist.com/events.json（每天早上更新，无需登录）。每天读取一次，按我的兴趣和所在区域筛选；有新活动符合我的兴趣时当天告诉我；报名截止前 2 天提醒我一次；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
@@ -955,7 +977,6 @@ generic:"請訂閱「Yat's List 深圳活動清單」並給我活動提醒：數
 doubao:"每天早上 9 點，打開 https://yatslist.com/events.json 讀取最新數據（這是深圳+香港行業活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）72 小時內報名截止的；3）我感興趣的類別：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 workbuddy:"每天早上 9 點，打開 https://yatslist.com/events.json 讀取最新數據（這是深圳+香港行業活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）72 小時內報名截止的；3）我感興趣的類別：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 codex:"請為我訂閱「Yat's List 深圳活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/events.json，並閱讀說明 https://yatslist.com/AGENTS.md 。只看未結束的活動，篩選：今天和明天舉行的、72 小時內報名截止的、以及我感興趣的類別。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。另外，如果我讓你提交活動，也按該說明裡的規範提交。"}};
-if(PAGE_CITY==="hk")for(const l in PROMPTS)for(const k in PROMPTS[l])PROMPTS[l][k]=cityTx(PROMPTS[l][k]);
 const SUBMIT_PROMPT_EN="Please help me submit an event to “Yat's List — Shenzhen Events”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official event page to verify the date, time, venue and ticket price. Submit it via the guide's HTTP API method (no GitHub account needed; a successful submission returns an id starting with “sub-”). If the API submission fails, email the event details to the submission inbox event.submit@yatslist.com instead. The event I want to submit: [event name and official link here]. After submitting, tell me the result (the success id or the reason it failed).";
 const MSTEPS_EN={generic:"Works with any Agent that can access the web: paste the prompt to it and ask it to set up a daily task.",doubao:"Doubao Workspace → “Scheduled tasks” → New → repeat “Daily”, time 9:00 → paste the prompt as the task content → Save.",workbuddy:"WorkBuddy → “Automation” in the left sidebar → Add task → frequency “Daily 9:00” → paste the prompt → Save.",codex:"Send the prompt straight to Codex and ask it to create a daily 9:00 (Asia/Shanghai) automation."};
 const MEX_SUB_EN="<b>Customization examples (edit the same way):</b><br>· Only Bao'an & Nanshan: change the filter to “only events in Bao'an and Nanshan districts”<br>· Free only: add “only recommend free events”<br>· Hardware & makers: change the categories to [Hardware / Engineering]<br>· Weekends only: add “only Saturdays and Sundays”";
@@ -971,6 +992,9 @@ function applyLang(){
 document.documentElement.lang=LANG==="en"?"en":LANG==="tw"?"zh-TW":"zh-CN";
 document.title=tr("docTitle");
 const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
+const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
+document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
+_setText("#nav-agent",tr("navAgent"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hk",tr("navHk"));_setText("#nav-hack",tr("navHack"));_setText("#nav-jobs",tr("navJobs"));_setText("#nav-spaces",tr("navSpaces"));_setText("#nav-mu",tr("navMu"));
 _setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#cmd-label",tr("cmdLabel"));_setText("#cmd-copy",tr("copy"));_setText("#pip-label",tr("pipLabel"));_setText("#pip-copy",tr("copy"));_setText("#epost-title",tr("epostTitle"));_setText("#epost-q",tr("routeQ"));_setText("#epost-yes",tr("routeYes"));_setText("#epost-no",tr("routeNo"));_setText("#epost-form-btn",tr("routeFormBtn"));_setText("#epost-mail",tr("routeMail"));_setText("#epost-mail-note",tr("routeMailNote"));_setText("#epost-mail-copy",tr("routeMailCopy"));_setText("#epost-mail-send",tr("routeMailSend"));{const _rme=document.getElementById("epost-mail-send");if(_rme)_rme.setAttribute("href",tr("routeMailHref"))}_setText("#epost-copy",tr("epostCopy"));
 _setText("#st-week-label",tr("statWeek"));_setText("#st-dl-label",tr("statDl"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#lc-ev-name",tr("swEv"));_setText("#lc-hack-name",tr("swHack"));_setText("#lc-expat-name",tr("swExpat"));_setText("#lc-ev-desc",tr("lcDescEv"));_setText("#lc-hack-desc",tr("lcDescHack"));_setText("#lc-expat-desc",tr("lcDescExpat"));_setText("#lc-u1",tr("lcUnit"));_setText("#lc-u2",tr("lcUnit"));_setText("#lc-u3",tr("lcUnit"));_setText("#lc-space-name",tr("swSpaces"));_setText("#lc-space-desc",tr("lcDescSpaces"));_setText("#lc-u4",tr("lcUnit"));
 _setText("#ta-submit",tr("taSubmit"));_setText("#ta-agent",tr("taAgent"));_setText("#ta-email",tr("taEmail"));_setText("#ta-tour",tr("taTour"));_setText("#postbtn",tr("taPost"));
@@ -981,7 +1005,7 @@ _setText("#bb-title",tr("bbTitle"));_setText("#bb-sub-pre",tr("bbSubPre"));_setT
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
 const flk=["favLabel","favNote","timeLabel","feeLabel","fmtLabel","cityLabel","catLabel"];
-document.querySelectorAll(".flabel:not([data-k])").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
+document.querySelectorAll(".flabel").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
 const fb=document.getElementById("favbtn");if(fb&&fb.childNodes[0])fb.childNodes[0].textContent=tr("favOnlyBtn");
 const fd=document.getElementById("fdate");if(fd)fd.setAttribute("aria-label",LANG==="en"?"Filter by date":LANG==="tw"?"按日期篩選":"按日期筛选");
 [["#g-time","segTime"],["#g-fee","segFee"],["#g-fmt","segFmt"],["#g-city","segCity"]].forEach(function(pair){const dict=STR[LANG][pair[1]]||{};document.querySelectorAll(pair[0]+" .chip").forEach(ch=>{if(dict[ch.dataset.v])ch.textContent=dict[ch.dataset.v]})});
@@ -1006,17 +1030,27 @@ _setText("#tourprev",tr("tourPrev"));_setText("#tournext",tr("tourNext"));_setTe
 _setText("#sf-tag",tr("footTag"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
 fmtUpd();
-applyCityUI();if(typeof renderAreas==="function")renderAreas();
 if(typeof syncFilterUI==="function")syncFilterUI();
 if(typeof applyTheme==="function")applyTheme();
 }
 function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(typeof renderCats==="function")renderCats();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
-if(window.YL)YL.onLang(setLang);
+document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
+/* ===== theme: auto (follow system) / light / dark - preference stored in localStorage "szTheme" ===== */
+let THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
+if(THEME!=="light"&&THEME!=="dark")THEME="auto";
+const _mqDark=window.matchMedia("(prefers-color-scheme: dark)");
+function resolvedTheme(){return THEME==="dark"?"dark":THEME==="light"?"light":(_mqDark.matches?"dark":"light")}
+function syncThemeUI(){document.querySelectorAll(".themesw button").forEach(b=>{const on=b.dataset.settheme===THEME;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");if(b.dataset.settheme==="auto")b.textContent=tr("themeAuto");if(b.dataset.settheme==="light"){b.setAttribute("aria-label",tr("themeLight"));b.title=tr("themeLight")}if(b.dataset.settheme==="dark"){b.setAttribute("aria-label",tr("themeDark"));b.title=tr("themeDark")}});const g=document.querySelector(".themesw");if(g)g.setAttribute("aria-label",tr("themeLabel"))}
+function applyTheme(){const r=resolvedTheme();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncThemeUI()}
+function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()}
+document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>setTheme(b.dataset.settheme)));
+if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
+applyTheme();
 </script>
 <script>
 const CATS=["AI","创业","科技","跨境","Web3","加密","黑客松","技术","硬件","在线Space"];
 let DATA=[];
-let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",area:"all",cats:new Set()};
+let F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
 let FAVS=new Set();try{FAVS=new Set(JSON.parse(localStorage.getItem("szFavs")||"[]"))}catch(e){}
 let favOnly=false;
 function saveFavs(){try{localStorage.setItem("szFavs",JSON.stringify([...FAVS]))}catch(e){}}
@@ -1030,11 +1064,6 @@ const shDayNum=t=>{const p=shParts(t);return Date.UTC(p[0],p[1]-1,p[2])/DAY};
 const shMidnightMs=()=>shDayNum(Date.now())*DAY-8*3600e3;
 const isOnline=e=>e.format==="线上Space"||e.format==="线上";
 const isHybrid=e=>e.format==="线上+线下";
-/* city_id with fallback: the daily writer may omit it, so derive from `city` first (same order as /cities.json) */
-const CITY_MATCH=[["sz",/深圳|shenzhen/i],["hk",/香港|hong kong/i],["online",/线上|線上|online/i],["jm",/江门|江門|jiangmen/i]];
-function cityOf(e){const c=e.city||"";for(const [id,re] of CITY_MATCH)if(re.test(c))return id;if(e.city_id)return e.city_id;return c?"":(isOnline(e)?"online":"sz")}
-const AREAS=CITY_CONF.areas||[];
-function areaOf(e){const d=[e.district,e.district_tw].filter(Boolean).join(" ");if(!d)return null;for(const a of AREAS)if(a.districts.some(x=>d.includes(x)))return a.id;return null}
 const fmtT=t=>new Date(t).toLocaleTimeString(LANG==="en"?"en-GB":"zh-CN",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false});
 const dlDays=e=>e.registration_deadline?Math.ceil((new Date(e.registration_deadline)-Date.now())/DAY):null;
 function feeBadge(e){
@@ -1077,11 +1106,9 @@ function pass(e){
     if(F.fmt==="online"&&!isO)return false;
   }
   if(F.city!=="all"){
-    const c=cityOf(e);
-    if(F.city==="sz"&&c==="hk")return false;
-    if(F.city==="hk"&&c!=="hk")return false;
+    if(F.city==="sz"&&(e.city||"").includes("香港"))return false;
+    if(F.city==="hk"&&!(e.city||"").includes("香港"))return false;
   }
-  if(F.area!=="all"&&areaOf(e)!==F.area)return false;
   if(F.cats.size>0){
     const cats=e.categories||[];
     if(!cats.some(c=>F.cats.has(c)))return false;
@@ -1129,7 +1156,7 @@ function cardOf(e,now){
   const feeTxt=feeBadge(e).replace(/<[^>]+>/g,"").replace(/^💰\s*/,"");
   const feeRaw=(e.fee||"").trim();
   const fee=feeRaw.startsWith("免费")?("🆓 "+feeTxt):(feeRaw&&!/见官方页/.test(feeRaw)?("🎫 "+feeTxt):feeTxt);
-  const meta=[PAGE_CITY!=="hk"&&e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
+  const meta=[e.city==="香港"?`<span class="hkpin">${tr("hk")}</span>`:"",place,e.organizer?fL(e,"organizer"):"",fee].filter(Boolean).join('<i class="sep"> · </i>');
   const mapHref=(!online&&e.venue)?`https://uri.amap.com/marker?position=&name=${encodeURIComponent(`${e.city||""}${e.district||""}${e.venue}`)}&src=yat`:"";
   const idx=DATA.indexOf(e);
   const menu=[
@@ -1212,7 +1239,7 @@ const _ppc=document.getElementById("pip-copy");if(_ppc)_ppc.addEventListener("cl
 window.copySubmit=b=>{if(navigator.clipboard)navigator.clipboard.writeText(LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT).then(()=>{const t=b.textContent;b.textContent=tr('copiedGo');setTimeout(()=>b.textContent=t,1800)})};
 window.fillPostCard=function(){var el=document.getElementById("prompt-post-card");if(el)el.textContent=LANG==="en"?SUBMIT_PROMPT_EN:LANG==="tw"?SUBMIT_PROMPT_TW:SUBMIT_PROMPT};
 window.fillPostCard();
-if(window.YL)YL.onLang(function(){setTimeout(window.fillPostCard,0)});
+document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setTimeout(window.fillPostCard,0)));
 window.routePost=function(w){var gh=document.getElementById("route-gh"),ml=document.getElementById("route-mail"),fm=document.getElementById("route-form"),y=document.getElementById("epost-yes"),m=document.getElementById("epost-mail"),n=document.getElementById("epost-no");if(!gh||!fm)return;gh.hidden=w!=="gh";if(ml)ml.hidden=w!=="mail";fm.hidden=w!=="form";if(y)y.classList.toggle("on",w==="gh");if(m)m.classList.toggle("on",w==="mail");if(n)n.classList.toggle("on",w==="form")};window.copyRouteMail=function(b){if(navigator.clipboard)navigator.clipboard.writeText("event.submit@yatslist.com").then(()=>{const t=b.textContent;b.textContent=tr("copied");setTimeout(()=>b.textContent=t,1500)})};
 window.copyPrompt=b=>{if(navigator.clipboard)navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText).then(()=>{const t=b.textContent;b.textContent=tr('copied');setTimeout(()=>b.textContent=t,1500)})};
 const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
@@ -1224,7 +1251,7 @@ const MEX_POST_TW="<b>填寫示例：</b><br>「我要投稿的活動：【深�
 let mMode="sub",mKey="generic";
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
 if(mMode==="post"){ta.value=en?SUBMIT_PROMPT_EN:tw?SUBMIT_PROMPT_TW:SUBMIT_PROMPT;document.getElementById("msteps").textContent=en?POST_STEPS_EN:tw?POST_STEPS_TW:POST_STEPS_ZH;document.getElementById("mex").innerHTML=en?MEX_POST_EN:tw?MEX_POST_TW:MEX_POST;document.getElementById("mtitle").textContent=en?"📋 Submission prompt":tw?"📋 投稿話術":"📋 投稿话术";document.getElementById("mpost-alt").style.display="block";}
-else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=cityTx((en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey]);document.getElementById("mex").innerHTML=cityTx(en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB);document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";document.getElementById("mpost-alt").style.display="none";}}
+else{const src={generic:"subprompt-text",doubao:"prompt-doubao",workbuddy:"prompt-workbuddy",codex:"prompt-codex"}[mKey];ta.value=document.getElementById(src).innerText;document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";document.getElementById("mpost-alt").style.display="none";}}
 function openModal(mode){mMode=mode;document.getElementById("mchips").style.display=mode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
 document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
@@ -1253,7 +1280,7 @@ try{if(!localStorage.getItem("szTourSeen"))document.getElementById("welc").style
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
 function syncFilterUI(){
-const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.city!=="all"?1:0)+(F.area!=="all"?1:0)+F.cats.size;
+const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.city!=="all"?1:0)+F.cats.size;
 $("#fclear").hidden=active===0;
 $("#fcount").textContent=active?String(active):"";
 document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=active===0&&!favOnly;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
@@ -1263,7 +1290,7 @@ const ch=ev.target.closest("[data-q]");if(!ch)return;
 const q=ch.dataset.q;
 if(q==="all"){$("#fclear").click();if(favOnly)$("#favbtn").click();return}
 const [k,v]=q.split(":");
-const grp={time:"#g-time",fee:"#g-fee",fmt:"#g-fmt",city:"#g-city",area:"#g-area"}[k];
+const grp={time:"#g-time",fee:"#g-fee",fmt:"#g-fmt",city:"#g-city"}[k];
 const target=$(grp+' [data-v="'+(F[k]===v?"all":v)+'"]');
 if(target)target.click();
 });
@@ -1277,16 +1304,7 @@ if(key==="time"){F.date="";const d=$("#fdate");d.value="";d.classList.remove("on
 syncFilterUI();render();measureBar();
 });
 }
-segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");segWire("#g-city","city");segWire("#g-area","area");
-/* 区域 chips (hk only): filter group + quick chips, labels from /cities.json areas */
-function renderAreas(){
-if(!AREAS.length)return;
-const nm=a=>LANG==="en"?(a.name_en||a.name):LANG==="tw"?(a.name_tw||a.name):a.name;
-$("#g-area").innerHTML=[`<button class="chip${F.area==="all"?" on":""}" data-v="all">${tr("segCity").all}</button>`].concat(AREAS.map(a=>`<button class="chip${F.area===a.id?" on":""}" data-v="${a.id}">${nm(a)}</button>`)).join("");
-const qc=$("#qchips");
-AREAS.forEach(a=>{let b=qc.querySelector('[data-q="area:'+a.id+'"]');if(!b){b=document.createElement("button");b.type="button";b.className="chip";b.dataset.q="area:"+a.id;qc.appendChild(b)}b.textContent=nm(a)});
-}
-renderAreas();
+segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");segWire("#g-city","city");
 function renderCats(){$("#g-cats").innerHTML=CATS.map(c=>`<button class="chip${F.cats.has(c)?" on":""}" data-c="${c}">${CATDISP[LANG][c]||c}</button>`).join("")}
 renderCats();
 $("#g-cats").addEventListener("click",ev=>{
@@ -1303,7 +1321,7 @@ if(F.date){F.time="all";document.querySelectorAll("#g-time .chip").forEach(x=>x.
 syncFilterUI();render();measureBar();
 });
 $("#fclear").addEventListener("click",()=>{
-F={time:"all",date:"",fee:"all",fmt:"all",city:"all",area:"all",cats:new Set()};
+F={time:"all",date:"",fee:"all",fmt:"all",city:"all",cats:new Set()};
 document.querySelectorAll(".seg").forEach(s=>s.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all")));
 const d=$("#fdate");d.value="";d.classList.remove("on");
 syncFilterUI();render();measureBar();
@@ -1316,23 +1334,13 @@ measureBar();
 $("#q").addEventListener("input",()=>{render();measureBar()});
 applyLang();
 fetch("/events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
-DATA=j.events||[];if(PAGE_CITY!=="sz")DATA=DATA.filter(e=>cityOf(e)===PAGE_CITY);
+DATA=j.events||[];
 window._updRaw=j.updated_at||null;fmtUpd();
 render();measureBar();setTimeout(measureBar,400);
-loadArchive();
 }).catch(()=>$("#list").innerHTML='<div class="empty">'+tr("loadFail")+'</div>');
-/* events ended 30+ days ago live in /events-archive.json: fetch after first render and merge (same id: events.json wins),
-   so 过往活动, search, favourites and counts still see them */
-function loadArchive(){
-fetch("/events-archive.json",{cache:"no-store"}).then(r=>r.ok?r.json():{events:[]}).then(j=>{
-const have=new Set(DATA.map(e=>e.id).filter(Boolean));
-let arc=(j.events||[]).filter(e=>e&&!(e.id&&have.has(e.id)));if(PAGE_CITY!=="sz")arc=arc.filter(e=>cityOf(e)===PAGE_CITY);
-if(!arc.length)return;DATA=DATA.concat(arc);render();measureBar();
-}).catch(()=>{});
-}
 
 /* ===== English (expat) view: same page, separate data (page merges, data does not) ===== */
-let VIEW=PAGE_CITY==="sz"&&(new URLSearchParams(location.search).get("view")==="en"||location.hash==="#en")?"en":"zh";
+let VIEW=(new URLSearchParams(location.search).get("view")==="en"||location.hash==="#en")?"en":"zh";
 let EXDATA=null,EXLOADING=false;
 const EXURL="https://yatslist.com/szexpat/events.json";
 const ZHURL="https://yatslist.com/events.json";
@@ -1494,7 +1502,14 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 }
 
 /* ===== mobile topbar dropdown + drop duplicated list chips 2026-11-11 ===== */
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
 @media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
   .listchips{display:none}
 }
 
@@ -1503,6 +1518,8 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 :root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
 .human-section>.wrap{max-width:880px}
 /* topbar */
+.topbar-nav a.nav-ag{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
 .nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
 .nav-submit:hover{border-color:var(--green);color:var(--green)}
 /* hero: left-aligned, tagline above the title */
@@ -1614,6 +1631,9 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 }
 
 /* ===== topbar compact 2026-11-13 ===== */
+.topbar{padding-top:8px;padding-bottom:8px}
+@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
+@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 </style>
 
 <script>
@@ -1643,8 +1663,29 @@ document.getElementById("shareCopy").addEventListener("click",function(){
 </script>
 
 
+<script>
+(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
+function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
+b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+p.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
+})();
+</script>
 
-<script src="/stats.js?v=20261127" defer></script>
+<script>
+(function(){document.querySelectorAll(".prefs").forEach(function(p){
+var sel=p.querySelector(".langsel"),lg=p.querySelector(".langsw"),cyc=p.querySelector(".themecyc"),tg=p.querySelector(".themesw");
+if(sel&&lg){var syncL=function(){var on=lg.querySelector("button.on");if(on&&sel.value!==on.dataset.setlang)sel.value=on.dataset.setlang};
+sel.addEventListener("change",function(){var b=lg.querySelector('[data-setlang="'+sel.value+'"]');if(b)b.click();syncL()});
+new MutationObserver(syncL).observe(lg,{subtree:true,attributes:true,attributeFilter:["class"]});syncL()}
+if(cyc&&tg){var order=["auto","light","dark"],ic={auto:"\u25D0",light:"\u2600",dark:"\u263E"};
+var cur=function(){var on=tg.querySelector("button.on");return on?on.dataset.settheme:"auto"};
+var syncT=function(){var c=cur(),b=tg.querySelector('[data-settheme="'+c+'"]'),l=b?(b.getAttribute("aria-label")||b.textContent):c,t=(tg.getAttribute("aria-label")||"Theme")+": "+l;cyc.textContent=ic[c]||ic.auto;cyc.title=t;cyc.setAttribute("aria-label",t)};
+cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],b=tg.querySelector('[data-settheme="'+n+'"]');if(b)b.click();syncT()});
+new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
+})})();
+</script>
+<script src="/stats.js?v=20261126" defer></script>
 </body>
 </html>
 

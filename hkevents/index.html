@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
+<title>Yat's List · 香港活动清单</title>
+<meta name="description" content="Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hk-events.json。">
+<style>
+
+:root{
+--bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
+--green:#2ee6a8;--green-dim:#1a8a66;
+--ink:#e6edf3;--ink-sec:#8b98a5;--ink-ter:#6a737d;
+--coral:#FF5A5F;
+--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+--r-sm:8px;--r-md:12px;--r-lg:16px;--r-pill:999px;
+--shadow-sm:0 2px 8px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);
+--sp-xs:4px;--sp-sm:8px;--sp-md:12px;--sp-lg:16px;--sp-xl:24px;--sp-2xl:32px;--sp-3xl:48px;
+--font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+--font-mono:ui-monospace,"SF Mono",Consolas,"Courier New",monospace;
+--warm:#FBBF24;--warm-dim:#78350F;
+--red:#F87171;--red-dim:#7F1D1D;
+--green-hover:#3df4b5;--bar-bg:rgba(13,18,24,.95);--bar-bg96:rgba(13,18,24,.96);
+color-scheme:dark;
+}
+:root[data-theme="light"]{
+--bg:#f6f8f7;--panel:#ffffff;--panel-hover:#edf2f0;
+--green:#0a7d55;--green-dim:#0a7d55;--green-hover:#0e9263;
+--ink:#15211c;--ink-sec:#42534b;--ink-ter:#67766e;
+--border:rgba(16,42,32,.13);--border-hover:rgba(16,42,32,.26);
+--shadow-sm:0 2px 8px rgba(16,42,32,.08);--shadow-md:0 8px 24px rgba(16,42,32,.13);
+--bar-bg:rgba(246,248,247,.92);--bar-bg96:rgba(246,248,247,.94);
+color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
+.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
+.topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
+.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
+.brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
+.brandmark .cur{color:var(--green)}
+.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
+.topbar-nav a:hover{color:var(--green)}
+.agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
+.agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
+.agentnote b{color:var(--ink)}
+.agentnote a{color:var(--green);text-decoration:none;font-weight:600}
+.agentnote a:hover{text-decoration:underline}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl))}
+.terminal{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:clamp(var(--sp-2xl),5vw,var(--sp-3xl))}
+.terminal-header{background:rgba(0,0,0,.3);padding:var(--sp-md) var(--sp-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-sm)}
+.terminal-dot{width:12px;height:12px;border-radius:50%;background:var(--ink-ter);opacity:.4}
+.terminal-title{font-family:var(--font-mono);font-size:.86rem;color:var(--ink-sec);margin-left:var(--sp-sm)}
+.terminal-body{padding:clamp(var(--sp-xl),4vw,var(--sp-2xl)) clamp(var(--sp-lg),4vw,var(--sp-xl));font-family:var(--font-mono);font-size:clamp(.88rem,2vw,.95rem);line-height:1.8;color:var(--ink)}
+.terminal-prompt{color:var(--green);font-weight:600;font-size:clamp(1rem,2.2vw,1.1rem);margin-bottom:var(--sp-md)}
+.terminal-status{color:var(--ink-sec);margin-top:var(--sp-sm);font-size:clamp(.84rem,2vw,.9rem)}
+.talk-block{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-xl),4vw,var(--sp-2xl)) clamp(var(--sp-lg),4vw,var(--sp-xl));margin-bottom:clamp(var(--sp-xl),4vw,var(--sp-2xl))}
+.intro{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-xl),4vw,var(--sp-2xl));margin-bottom:clamp(var(--sp-xl),4vw,var(--sp-2xl))}
+.talk-block h3{margin:0 0 var(--sp-lg);font-size:clamp(1.05rem,2.4vw,1.2rem);font-weight:650;color:var(--ink)}
+.code-block{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-md);padding:var(--sp-lg);font-family:var(--font-mono);font-size:clamp(.82rem,1.9vw,.88rem);line-height:1.75;color:var(--ink-sec);margin:var(--sp-md) 0;position:relative;white-space:pre-wrap;word-break:break-word}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:clamp(42px,10vw,48px);padding:var(--sp-md) clamp(var(--sp-lg),3vw,var(--sp-xl));border-radius:var(--r-md);font-size:clamp(.88rem,2vw,.94rem);font-weight:600;text-decoration:none;border:1px solid var(--border);color:var(--ink-sec);background:var(--panel);cursor:pointer;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit;letter-spacing:.005em;white-space:nowrap}
+.btn:hover{background:var(--panel-hover);border-color:var(--border-hover);color:var(--ink);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--green);color:var(--bg);border-color:var(--green);font-weight:650;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:var(--green-hover);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-copy{position:absolute;top:var(--sp-sm);right:var(--sp-sm);min-height:32px;padding:6px var(--sp-md);font-size:.82rem;background:rgba(46,230,168,.12);border-color:rgba(46,230,168,.25);color:var(--green)}
+.btn-copy:hover{background:rgba(46,230,168,.2)}
+.endpoint-list{display:grid;gap:var(--sp-md);margin:var(--sp-lg) 0}
+.endpoint-item{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-lg);display:grid;grid-template-columns:auto 1fr auto;gap:var(--sp-md);align-items:center;font-family:var(--font-mono);font-size:clamp(.82rem,1.9vw,.88rem);transition:all .2s ease}
+.endpoint-item:hover{background:rgba(0,0,0,.4);border-color:rgba(255,255,255,.12)}
+.endpoint-item .btn-copy{position:static;flex-shrink:0}
+.endpoint-desc{grid-column:1/-1}
+.endpoint-name{color:var(--green);font-weight:650}
+.endpoint-url{color:var(--ink-sec);font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.endpoint-desc{color:var(--ink-ter);font-size:.82rem;font-family:var(--font-sans);grid-column:2 / 4;margin:-6px 0 0}
+.human-section{background:var(--bg);padding:clamp(var(--sp-3xl),8vw,64px) 0}
+.section-header{text-align:center;margin-bottom:clamp(var(--sp-2xl),5vw,var(--sp-3xl))}
+.section-title{font-size:clamp(1.8rem,4.5vw,2.2rem);font-weight:700;letter-spacing:-.01em;color:var(--ink);margin:0 0 var(--sp-sm)}
+.section-subtitle{font-size:clamp(.9rem,2vw,.98rem);color:var(--ink-sec);margin:0}
+.stats{display:flex;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));justify-content:center;flex-wrap:wrap;margin:clamp(var(--sp-xl),4vw,var(--sp-2xl)) 0}
+.stat{text-align:center}
+.stat b{font-size:clamp(1.5rem,3.5vw,1.9rem);font-weight:700;font-variant-numeric:tabular-nums;display:block;line-height:1.1;letter-spacing:-.015em;color:var(--green);margin-bottom:4px}
+.stat span{font-size:.8rem;color:var(--ink-ter);letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.topact{display:flex;gap:var(--sp-md);flex-wrap:wrap;justify-content:center;margin:var(--sp-xl) 0}
+.topact .submit{background:var(--warm);color:var(--bg);border-color:var(--warm);box-shadow:var(--shadow-sm)}
+.topact .submit:hover{background:#fcd34d;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.topact .agent{background:var(--green);color:var(--bg);border-color:var(--green)}
+.topact .agent:hover{background:#3df4b5;transform:translateY(-1px)}
+.bar{position:static;background:var(--bar-bg96);backdrop-filter:blur(16px) saturate(180%);padding:var(--sp-lg) 0;margin:0 calc(-1 * clamp(var(--sp-lg),4vw,var(--sp-xl)));padding-left:clamp(var(--sp-lg),4vw,var(--sp-xl));padding-right:clamp(var(--sp-lg),4vw,var(--sp-xl));border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(255,255,255,.02)}
+.chip{flex:0 0 auto;border:1px solid var(--border);background:var(--panel);border-radius:var(--r-pill);padding:var(--sp-sm) var(--sp-lg);font-size:.88rem;cursor:pointer;min-height:38px;color:var(--ink-sec);font-weight:600;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit;letter-spacing:.005em}
+.chip:hover{border-color:var(--border-hover);background:var(--panel-hover);transform:translateY(-1px)}
+.chip:active{transform:translateY(0)}
+.chip.on{background:var(--green);color:var(--bg);border-color:var(--green);font-weight:650;box-shadow:0 0 0 3px rgba(46,230,168,.15)}
+input[type=search]{width:100%;padding:13px var(--sp-lg);border:1px solid var(--border);border-radius:var(--r-md);font-size:.95rem;background:var(--panel);color:var(--ink);box-shadow:var(--shadow-sm);font-family:inherit;transition:all .2s cubic-bezier(.4,0,.2,1);letter-spacing:.005em}
+input[type=search]:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(46,230,168,.18)}
+input[type=search]::placeholder{color:var(--ink-ter)}
+#ftoggle{display:none;width:100%;margin-top:var(--sp-md);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);min-height:48px;font-weight:650;font-size:.94rem;padding:0 var(--sp-lg);align-items:center;justify-content:space-between;cursor:pointer;color:var(--ink);font-family:inherit;transition:all .2s cubic-bezier(.4,0,.2,1)}
+#ftoggle:hover{background:var(--panel-hover);border-color:var(--border-hover)}
+#ftoggle #fcount{color:var(--green);font-weight:700;margin-right:var(--sp-sm)}
+.fgroup{display:flex;align-items:center;gap:var(--sp-sm);flex-wrap:wrap;margin-top:var(--sp-md)}
+.flabel{font-size:.78rem;color:var(--ink-ter);font-weight:650;min-width:2.5em;text-transform:uppercase;letter-spacing:.08em}
+.seg{display:inline-flex;gap:7px;flex-wrap:wrap;align-items:center}
+.fgroup .chip{min-height:36px;padding:7px var(--sp-md);font-size:.87rem}
+#fdate{border:1px solid var(--border);border-radius:var(--r-pill);padding:7px var(--sp-md);font-size:.87rem;background:var(--panel);color:var(--ink);min-height:36px;font-family:inherit;cursor:pointer;transition:all .2s cubic-bezier(.4,0,.2,1);font-weight:600}
+#fdate:hover{border-color:var(--border-hover);background:var(--panel-hover)}
+#fdate.on{border-color:var(--green);box-shadow:0 0 0 2px rgba(46,230,168,.2);font-weight:650}
+.fres{margin-left:auto;font-size:.85rem;color:var(--ink-ter);font-weight:600}
+.fclear{margin-left:auto;background:none;border:0;color:var(--coral);font-weight:650;cursor:pointer;font-size:.87rem;min-height:36px;font-family:inherit;transition:all .2s ease}
+.fclear:hover{color:#ff8184;opacity:.9}
+.dayhead{position:static;display:flex;align-items:baseline;gap:var(--sp-md);padding:clamp(var(--sp-xl),5vw,28px) 0 clamp(var(--sp-md),2vw,var(--sp-md));background:var(--bg)}
+.dayhead .dnum{font-size:clamp(2rem,4.5vw,2.4rem);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;color:var(--green)}
+.dayhead .dmeta{font-size:clamp(1rem,2.2vw,1.1rem);font-weight:650;color:var(--ink-sec);letter-spacing:-.005em}
+.dayhead .drel{font-size:.79rem;font-weight:650;color:var(--bg);background:var(--coral);border-radius:var(--r-sm);padding:4px var(--sp-md);letter-spacing:.015em}
+.dayhead .drel.future{background:var(--green)}
+.ev{display:flex;gap:clamp(var(--sp-md),3vw,20px);margin-bottom:clamp(var(--sp-md),3vw,18px)}
+.rail{flex:0 0 clamp(68px,12vw,82px);text-align:right;padding-top:clamp(20px,4vw,24px)}
+.rail .t1{font-size:clamp(1.08rem,2.4vw,1.24rem);font-weight:650;font-variant-numeric:tabular-nums;line-height:1.2;color:var(--ink)}
+.rail .t2{font-size:.81rem;color:var(--ink-ter);font-variant-numeric:tabular-nums;margin-top:var(--sp-xs)}
+.card{flex:1;min-width:0;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(20px,4vw,24px);box-shadow:var(--shadow-sm);transition:all .2s cubic-bezier(.4,0,.2,1);position:relative}
+@media (hover:hover){.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-hover)}}
+.card h3{margin:0 0 var(--sp-sm);font-size:clamp(1.14rem,2.5vw,1.28rem);font-weight:650;line-height:1.45;letter-spacing:-.005em;color:var(--ink)}
+.card h3 a{color:var(--ink);text-decoration:none;transition:color .2s ease}
+.card h3 a:hover{color:var(--green)}
+.loc{font-size:.96rem;color:var(--ink-sec);margin:var(--sp-sm) 0 var(--sp-xs)}
+.loc .pin{color:var(--coral)}
+.loc b{font-weight:650;color:var(--ink)}
+.meta{font-size:.85rem;color:var(--ink-ter);line-height:1.7}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin:var(--sp-md) 0 var(--sp-xs)}
+.tag{font-size:.77rem;font-weight:600;background:rgba(255,255,255,.04);border-radius:var(--r-sm);padding:5px var(--sp-md);color:var(--ink-sec);border:1px solid rgba(255,255,255,.06)}
+.tag.hack{background:rgba(248,113,113,.12);color:#fca5a5;border-color:rgba(248,113,113,.2)}
+.tag.web3{background:rgba(74,222,128,.12);color:#86efac;border-color:rgba(74,222,128,.2)}
+.tag.space{background:rgba(46,230,168,.12);color:var(--green);border-color:rgba(46,230,168,.2)}
+.dl{display:inline-block;font-size:.81rem;font-weight:650;color:var(--warm)}
+.dl.soon{color:var(--bg);background:var(--coral);border-radius:var(--r-sm);padding:3px var(--sp-md);font-weight:650}
+.dl.closed{color:var(--ink-ter);font-weight:600}
+.sum{font-size:.95rem;line-height:1.7;margin:var(--sp-md) 0 0;color:var(--ink-sec)}
+.org{font-size:.95rem;margin:6px 0 var(--sp-xs);color:var(--ink-sec)}
+.org b{font-weight:650;color:var(--ink)}
+.actions{display:flex;gap:var(--sp-sm);flex-wrap:wrap;margin-top:var(--sp-lg)}
+.btn.nav{background:rgba(46,230,168,.1);border-color:rgba(46,230,168,.25);color:var(--green)}
+.btn.nav:hover{background:rgba(46,230,168,.16);border-color:rgba(46,230,168,.35)}
+.trow{display:flex;gap:var(--sp-md);align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.trow h3{flex:1;min-width:0}
+.fee{flex:0 0 auto;font-size:.87rem;font-weight:650;border-radius:var(--r-pill);padding:6px var(--sp-md);margin-top:var(--sp-xs);white-space:nowrap}
+.fee.free{background:rgba(74,222,128,.16);color:#86efac;border:1px solid rgba(74,222,128,.25)}
+.fee.paid{background:rgba(251,191,36,.16);color:#fcd34d;border:1px solid rgba(251,191,36,.25)}
+.fee.na{background:rgba(255,255,255,.04);color:var(--ink-ter);font-weight:600;border:1px solid rgba(255,255,255,.06)}
+.hkflag{display:inline-block;background:var(--coral);color:var(--bg);font-size:.75rem;font-weight:700;border-radius:var(--r-sm);padding:3px var(--sp-md);margin-right:9px;vertical-align:.14em;letter-spacing:.04em;white-space:nowrap}
+.hkpin{color:var(--coral);font-weight:700;white-space:nowrap}
+.card.online{background:rgba(46,230,168,.05);border:1px solid rgba(46,230,168,.2);padding-top:0;overflow:hidden}
+.online-strip{margin:0 calc(-1 * clamp(20px,4vw,24px)) var(--sp-md);background:var(--green);color:var(--bg);font-weight:650;font-size:.95rem;letter-spacing:.02em;padding:11px clamp(20px,4vw,24px)}
+.card.hybrid{background:var(--panel);border:1px solid rgba(46,230,168,.18);padding-top:0;overflow:hidden}
+.hybrid-strip{margin:0 calc(-1 * clamp(20px,4vw,24px)) var(--sp-md);background:rgba(46,230,168,.08);color:var(--green);font-weight:650;font-size:.95rem;letter-spacing:.02em;padding:11px clamp(20px,4vw,24px);border-bottom:1px solid rgba(46,230,168,.15)}
+.subcard{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-xl),5vw,var(--sp-2xl));margin:clamp(28px,6vw,36px) 0 var(--sp-sm);box-shadow:var(--shadow-md)}
+.subcard h3{margin:0 0 var(--sp-md);font-size:clamp(1.16rem,2.6vw,1.28rem);font-weight:650;color:var(--ink);letter-spacing:-.005em}
+.subcard .prompt{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-lg);font-size:.92rem;line-height:1.75;color:var(--ink-sec);font-family:var(--font-mono)}
+.subcard .sum{font-size:.96rem;line-height:1.7;margin:var(--sp-md) 0;color:var(--ink-sec)}
+.foot{font-size:.83rem;color:var(--ink-ter);padding:clamp(26px,5vw,var(--sp-2xl)) 0 clamp(var(--sp-3xl),10vw,60px);line-height:1.9}
+.foot a{color:var(--green);text-decoration:none;transition:color .2s ease;font-weight:600}
+.foot a:hover{color:var(--green-hover)}
+.foot>div{margin:0 0 var(--sp-md);padding:var(--sp-md) var(--sp-lg);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);color:var(--ink-sec);font-size:.92rem;line-height:1.7}
+.foot>div b{color:var(--ink);font-weight:650}
+.empty{padding:clamp(40px,8vw,52px) 0;text-align:center;color:var(--ink-ter);font-size:.98rem}
+.pastsec{margin:clamp(30px,6vw,40px) 0 var(--sp-sm)}
+.pasthead{display:flex;align-items:center;gap:var(--sp-md);width:100%;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(var(--sp-md),3vw,18px) clamp(var(--sp-lg),4vw,20px);font-size:1.02rem;font-weight:650;cursor:pointer;color:var(--ink);text-align:left;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:inherit}
+.pasthead:hover{background:var(--panel-hover);border-color:var(--border-hover);transform:translateY(-1px)}
+.pasthead:active{transform:translateY(0)}
+.pasthead .cnt{background:var(--green);color:var(--bg);border-radius:var(--r-pill);padding:3px var(--sp-md);font-size:.81rem;font-weight:650}
+.pastlist{display:none;padding-top:var(--sp-md)}
+.pastlist.open{display:block}
+.prow{display:flex;gap:var(--sp-md);background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:13px var(--sp-lg);margin-bottom:var(--sp-md);font-size:.93rem;align-items:baseline;transition:all .2s cubic-bezier(.4,0,.2,1)}
+.prow:hover{background:var(--panel-hover);border-color:var(--border-hover)}
+.prow .pd{flex:0 0 88px;color:var(--ink-ter);font-variant-numeric:tabular-nums;font-size:.87rem}
+.prow a{color:var(--ink);font-weight:650;text-decoration:none;transition:color .2s ease}
+.prow a:hover{color:var(--green)}
+.prow .pm{color:var(--ink-ter);font-size:.84rem}
+.btn,.chip,button{touch-action:manipulation}
+#agent-sub{scroll-margin-top:118px}
+.agblock{border-top:1px solid rgba(255,255,255,.08);margin-top:18px;padding-top:var(--sp-md)}
+.agblock h4{margin:0 0 var(--sp-sm);font-size:.91rem;font-weight:650;color:var(--ink)}
+.agblock ol{margin:0 0 var(--sp-md);padding-left:20px;color:var(--ink-sec);font-size:.87rem;line-height:1.7}
+.live{display:inline-block;background:#16a34a;color:#fff;font-size:.71rem;font-weight:700;border-radius:var(--r-pill);padding:2px 9px;vertical-align:2px;margin-right:6px;letter-spacing:.02em}
+.favbtn.on{background:var(--warm);border-color:var(--warm);color:var(--bg);font-weight:650;box-shadow:0 0 0 3px rgba(251,191,36,.15)}
+.foldhead{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 4px;background:var(--panel);border:1px dashed var(--border-hover);border-radius:var(--r-md);padding:12px 16px;color:var(--ink-sec);font:inherit;font-size:.91rem;font-weight:650;cursor:pointer}
+.foldhead .chev{transition:transform .2s ease}
+.foldhead.open .chev{transform:rotate(180deg)}
+.foldbody{display:none}
+.foldbody.open{display:block}
+.cmdline{margin:0 auto;max-width:780px;font-family:var(--font-mono);background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;color:var(--green);display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.92rem}
+.cmdline .u{color:var(--ink-sec);font-size:.83rem;word-break:break-all}
+.cmdline button{margin-left:auto;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--green);border-radius:8px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+[data-theme="light"] .cmdline{background:#edf2f0;border-color:rgba(16,42,32,.12);color:var(--green)}
+[data-theme="light"] .cmdline button{background:rgba(10,125,85,.08);border-color:rgba(10,125,85,.3)}
+.actions button.btn.on{border-color:var(--green);color:var(--green);background:rgba(46,230,168,.14)}
+.boardbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0 6px;background:linear-gradient(135deg,rgba(232,89,12,.28),rgba(255,214,10,.14));border:1.5px solid rgba(255,160,60,.55);border-radius:18px;padding:20px 22px;color:var(--ink);text-decoration:none;box-shadow:0 8px 32px rgba(232,89,12,.18)}
+.boardbar .bb-main{display:flex;align-items:center;gap:16px;min-width:0}
+.boardbar .bb-emoji{font-size:2.1rem;line-height:1}
+.boardbar .bb-text{display:flex;flex-direction:column;gap:2px}
+.boardbar .bb-title{font-size:1.32rem;font-weight:850;letter-spacing:.01em;color:#fff}
+.boardbar .bb-sub{font-size:.94rem;color:var(--ink-sec)}
+.boardbar .bb-sub b{color:#ffd60a;font-variant-numeric:tabular-nums}
+.boardbar .go{background:#ffd60a;color:#0a0c10;font-weight:850;white-space:nowrap;border-radius:999px;padding:11px 20px;font-size:1rem}
+.ovl{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;z-index:200;align-items:flex-start;justify-content:center;padding:clamp(18px,4vw,var(--sp-xl));overflow:auto;backdrop-filter:blur(12px) saturate(120%)}
+.ovl.open{display:flex}
+.modal{background:var(--panel);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);max-width:640px;width:100%;padding:clamp(18px,4vw,var(--sp-xl));box-shadow:var(--shadow-md);animation:modalIn .2s cubic-bezier(.4,0,.2,1)}
+@keyframes modalIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-md)}
+.mhead h3{margin:0;font-size:clamp(1.1rem,2.4vw,1.24rem);font-weight:650;color:var(--ink);letter-spacing:-.005em}
+.mhead .btn{min-height:38px;padding:var(--sp-sm) var(--sp-md);font-size:.88rem}
+.mchips{display:flex;gap:7px;flex-wrap:wrap;margin:var(--sp-md) 0 6px}
+.mchip{border:1px solid rgba(255,255,255,.12);background:var(--panel-hover);color:var(--ink-sec);border-radius:var(--r-pill);padding:7px var(--sp-md);cursor:pointer;font-size:.88rem;font-weight:600;transition:all .18s cubic-bezier(.4,0,.2,1);font-family:inherit}
+.mchip:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+.mchip.on{background:var(--green);color:var(--bg);border-color:var(--green);font-weight:650;box-shadow:0 0 0 3px rgba(46,230,168,.15)}
+.msteps{color:var(--ink-sec);font-size:.88rem;line-height:1.7;margin:var(--sp-sm) 0 var(--sp-md)}
+.modal textarea{width:100%;min-height:168px;background:rgba(0,0,0,.3);color:var(--ink);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);padding:var(--sp-md);font-size:.92rem;line-height:1.65;box-sizing:border-box;font-family:inherit;resize:vertical;transition:all .18s cubic-bezier(.4,0,.2,1)}
+.modal textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 2px rgba(46,230,168,.18)}
+.mhint{color:var(--green);font-size:.86rem;margin:var(--sp-md) 0 0}
+.mex{background:rgba(0,0,0,.25);border:1px dashed rgba(255,255,255,.12);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-md);font-size:.88rem;color:var(--ink-sec);line-height:1.8;margin:var(--sp-md) 0 var(--sp-xs)}
+.mex b{color:var(--ink);font-weight:650}
+.mrow{display:flex;gap:var(--sp-sm);margin-top:var(--sp-md);flex-wrap:wrap;align-items:center}
+.mrow .btn.primary{flex:1;min-height:48px}
+.welc{position:fixed;right:var(--sp-md);bottom:var(--sp-md);z-index:205;background:var(--panel);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);max-width:320px;padding:var(--sp-lg) 18px;box-shadow:var(--shadow-md);display:none;font-size:.92rem;line-height:1.65;color:var(--ink-sec);animation:slideIn .3s cubic-bezier(.4,0,.2,1)}
+@keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+.welc b{color:var(--ink);font-weight:650}
+.tourcard{position:fixed;left:50%;transform:translateX(-50%);bottom:var(--sp-lg);z-index:210;background:var(--panel);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);max-width:560px;width:calc(100% - var(--sp-xl));padding:var(--sp-lg) 18px;box-shadow:var(--shadow-md);display:none;font-size:.92rem;line-height:1.7;color:var(--ink-sec)}
+.tourcard b{color:var(--ink);font-weight:650}
+.tourcard.open{display:block;animation:slideUp .25s cubic-bezier(.4,0,.2,1)}
+@keyframes slideUp{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+.tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
+@media (max-width:768px){
+body{overflow-x:hidden}
+.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
+.topbar-brand{flex-shrink:0}
+.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav a{flex-shrink:0;font-size:.84rem}
+.terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
+.terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
+.terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
+.intro{padding:var(--sp-lg)}
+.talk-block{padding:var(--sp-lg)}
+.code-block{overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:pre-wrap;word-wrap:break-word;padding:var(--sp-md)}
+.btn-copy{position:static;margin-top:var(--sp-sm);width:100%}
+.endpoint-item{grid-template-columns:1fr;padding:var(--sp-md)}
+.endpoint-name{grid-column:1/-1}
+.endpoint-url{grid-column:1/-1;overflow-wrap:break-word;word-break:break-all;white-space:normal}
+.endpoint-item .btn-copy{position:static;grid-column:1/-1;margin-top:var(--sp-sm);width:auto}
+.endpoint-desc{grid-column:1/-1}
+.stats{gap:var(--sp-lg);flex-wrap:wrap;justify-content:space-around}
+.topact{gap:var(--sp-sm);flex-wrap:wrap}
+.topact .btn,.topact button{flex:1 1 calc(50% - 4px);min-width:140px;font-size:.86rem;padding:var(--sp-sm) var(--sp-md)}
+.boardbar{flex-direction:column;align-items:stretch;gap:var(--sp-md);padding:var(--sp-lg)}
+.boardbar .bb-main{width:100%}
+.boardbar .go{width:100%;text-align:center}
+#ftoggle{display:flex}
+.fgroup{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+.fgroup::-webkit-scrollbar{display:none}
+.fgroup .chip{flex-shrink:0}
+.seg{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+.seg::-webkit-scrollbar{display:none}
+.seg .chip{flex-shrink:0}
+input[type=search]{font-size:16px;padding:var(--sp-md)}
+textarea{font-size:16px}
+select{font-size:16px}
+.ev{flex-direction:column;gap:0;margin-bottom:var(--sp-md)}
+.rail{flex:none;text-align:left;padding:0 0 var(--sp-xs);display:flex;gap:9px;align-items:baseline}
+.rail .t1{font-size:1.08rem}.rail .t2{font-size:.82rem;margin-top:0}
+.card{padding:clamp(18px,4vw,20px)}
+.card h3{font-size:1.14rem;word-wrap:break-word}
+.online-strip{margin:0 calc(-1 * clamp(18px,4vw,20px)) var(--sp-md);padding:var(--sp-md) clamp(18px,4vw,20px)}
+.hybrid-strip{margin:0 calc(-1 * clamp(18px,4vw,20px)) var(--sp-md);padding:var(--sp-md) clamp(18px,4vw,20px)}
+.actions{gap:var(--sp-sm);margin-top:var(--sp-md);flex-wrap:wrap}
+.btn{flex:0 1 auto;min-height:44px;padding:var(--sp-sm) var(--sp-md);font-size:.88rem;white-space:nowrap}
+.prow{flex-direction:column;gap:var(--sp-xs)}
+.prow .pd{flex:none}
+#agent-sub{scroll-margin-top:106px}
+.wrap{padding:0 var(--sp-lg)}
+.bar{margin:0 calc(-1 * var(--sp-lg));padding:var(--sp-md) var(--sp-lg)}
+.ovl{padding:12px}
+.modal{width:calc(100vw - 24px);padding:var(--sp-lg)}
+.welc{left:12px;right:12px;max-width:calc(100vw - 24px);bottom:12px}
+.tourcard{width:calc(100vw - 24px);left:12px;right:12px;transform:none;bottom:12px;padding:var(--sp-md) 14px}
+@keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+}
+
+/* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
+@media (max-width:820px){
+.topbar{padding:8px 0}
+.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
+.topbar-nav{gap:14px;overflow:visible;width:auto}
+.topbar-nav a{font-size:.82rem}
+.human-section{padding-top:24px}
+.section-title{font-size:1.5rem}
+.section-subtitle{font-size:.9rem}
+.stats{margin:12px 0 2px}
+.stat b{font-size:1.65rem}
+.topact{margin:12px 0}
+.agentnote{font-size:.86rem;padding:10px 12px;margin-bottom:14px;line-height:1.65}
+.boardbar{padding:14px 16px;margin-top:12px}
+.bar{padding-top:12px;padding-bottom:12px}
+.fgroup{flex-wrap:wrap;overflow:visible;row-gap:8px}
+.fgroup .seg{flex:1 1 calc(100% - 3.4em);min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+.fgroup .seg::-webkit-scrollbar{display:none}
+.fgroup .chip{flex-shrink:0}
+#fdate{flex:0 0 auto}
+.fres{white-space:nowrap;margin-left:auto}
+.welc{padding:12px 14px;font-size:.86rem;line-height:1.55}
+.welc .mrow{gap:8px;margin-top:10px}
+.welc .btn{min-height:40px;padding:6px 12px;font-size:.86rem;flex:1}
+.tourcard{font-size:.88rem;line-height:1.6;padding:12px 14px}
+.subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
+.card .actions .btn{flex:1 1 30%}
+}
+.langsw{display:inline-flex;align-items:center;gap:8px}
+.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
+.langsw button:hover{color:var(--ink)}
+.langsw button.on{color:var(--green)}
+.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+.themesw{display:inline-flex;align-items:center;gap:8px}
+.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
+.themesw button:hover{color:var(--ink)}
+.themesw button.on{color:var(--green)}
+.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
+.section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
+.sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
+.sitefoot .wrap{text-align:center}
+.sf-brand{font-family:var(--font-mono);font-size:1.25rem;font-weight:700;color:var(--ink)}
+.sf-brand .sf-cur{color:var(--green)}
+.sf-tag{margin:10px 0 0;color:var(--ink);font-size:1rem;font-weight:600}
+.sf-nav{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:18px 0 0}
+.sf-nav a{color:var(--ink-sec);text-decoration:none;font-weight:600;font-size:.94rem;transition:color .2s ease}
+.sf-nav a:hover{color:var(--green)}
+.sf-small{margin:16px 0 0;color:var(--ink-ter);font-size:.83rem;line-height:1.7}
+.sf-contact{margin:10px 0 0;color:var(--ink-sec);font-size:.92rem}
+.sf-contact a{color:var(--green);font-weight:600;text-decoration:none}
+.sf-contact a:hover{text-decoration:underline}
+.sf-copy{margin:6px 0 0;color:var(--ink-ter);font-size:.83rem;font-family:var(--font-mono)}
+
+/* ===== Light theme overrides (hardcoded dark-only blocks) ===== */
+[data-theme="light"] .terminal-header{background:rgba(16,42,32,.06)}
+[data-theme="light"] .code-block{background:#edf2f0;border-color:rgba(16,42,32,.12);color:var(--ink-sec)}
+[data-theme="light"] .endpoint-item{background:rgba(16,42,32,.04);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .endpoint-item:hover{background:rgba(16,42,32,.07);border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .tag{background:rgba(16,42,32,.05);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .tag.hack{background:rgba(248,113,113,.14);color:#b91c1c;border-color:rgba(185,28,28,.3)}
+[data-theme="light"] .tag.web3{background:rgba(74,222,128,.16);color:#15803d;border-color:rgba(21,128,61,.3)}
+[data-theme="light"] .tag.space{background:rgba(46,230,168,.14);color:var(--green);border-color:rgba(10,125,85,.3)}
+[data-theme="light"] .fee.free{background:rgba(74,222,128,.18);color:#15803d;border-color:rgba(21,128,61,.32)}
+[data-theme="light"] .fee.paid{background:rgba(251,191,36,.22);color:#b45309;border-color:rgba(217,119,6,.38)}
+[data-theme="light"] .fee.na{background:rgba(16,42,32,.05);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .subcard .prompt{background:rgba(16,42,32,.045);border-color:rgba(16,42,32,.1)}
+[data-theme="light"] .modal{border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .modal textarea{background:rgba(16,42,32,.04);border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .mex{background:rgba(16,42,32,.04);border-color:rgba(16,42,32,.16)}
+[data-theme="light"] .mchip{background:#eef3f1;border-color:rgba(16,42,32,.18)}
+[data-theme="light"] .mchip:hover{background:rgba(16,42,32,.08);border-color:rgba(16,42,32,.28)}
+[data-theme="light"] .mchip.on{background:var(--green);color:#fff;border-color:var(--green)}
+[data-theme="light"] .welc,[data-theme="light"] .tourcard{border-color:rgba(16,42,32,.16)}
+[data-theme="light"] .agblock{border-top-color:rgba(16,42,32,.12)}
+[data-theme="light"] .boardbar .bb-title{color:#7c2d12}
+[data-theme="light"] .boardbar .bb-sub b{color:#b45309}
+[data-theme="light"] .topact .submit{color:#1a1206}
+[data-theme="light"] .favbtn.on{color:#1a1206}
+[data-theme="light"] .hkflag{background:#e5484d;color:#fff}
+[data-theme="light"] .dayhead .drel{background:#e5484d;color:#fff}
+[data-theme="light"] .dayhead .drel.future{background:var(--green);color:#fff}
+[data-theme="light"] .dl{color:#b45309}
+[data-theme="light"] .dl.soon{background:#e5484d;color:#fff}
+[data-theme="light"] .fclear{color:#d92d20}
+[data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
+
+/* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
+.topbar{padding-top:10px;padding-bottom:10px}
+.human-section{padding-top:18px}
+.brandmark{line-height:1.25}
+.section-tagline{line-height:1.4;margin-top:8px}
+.section-title{line-height:1.2}
+.section-subtitle{line-height:1.55}
+.section-header{margin-bottom:10px}
+.herometa{margin:0 auto;text-align:center;color:var(--ink-sec);font-size:.88rem;line-height:1.6}
+.herometa b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.herometa i{font-style:normal;margin:0 7px;color:var(--ink-ter)}
+.scopenote{text-align:center;color:var(--ink-sec);font-size:.85rem;line-height:1.55;margin:10px auto 0;max-width:920px}
+.listchips{display:flex;gap:var(--sp-md);justify-content:center;margin:12px auto 0;max-width:920px}
+.lchip{flex:1 1 0;min-width:0;text-align:left;background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:9px 14px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.lchip.on{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.lc-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;line-height:1.3}
+.lc-top>b{font-size:.95rem;white-space:nowrap}
+.lc-n{color:var(--green);font-weight:700;font-size:.85rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.lc-desc{font-size:.8rem;color:var(--ink-sec);line-height:1.45;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topact{margin:12px 0 0}
+#agent-sub .cmdline{margin-bottom:var(--sp-lg)}
+.cmdline .u{overflow-wrap:anywhere;min-width:0}
+.subcard .prompt,.prompt{overflow-wrap:anywhere}
+.sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+input[type=search]{font-size:16px}
+@media (max-width:820px){
+.topbar{padding:6px 0}
+.topbar .wrap{gap:10px;padding:0 14px}
+.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav>*{flex-shrink:0}
+.langsw button,.themesw button{min-height:32px;padding:4px 7px}
+.human-section{padding-top:14px}
+.section-tagline{display:none}
+.herometa{font-size:.8rem;line-height:1.55;padding:0 4px}
+.listchips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;margin-top:12px;padding-bottom:2px}
+.listchips::-webkit-scrollbar{display:none}
+.lchip{flex:0 0 66%;justify-content:center}
+.topact{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;margin:10px 0 0;padding-bottom:2px}
+.topact::-webkit-scrollbar{display:none}
+.topact .btn,.topact button{flex:0 0 auto;min-height:44px}
+.btn{min-height:44px}
+.chip{min-height:40px}
+#ftoggle{min-height:44px}
+}
+
+/* ===== readability pass 2026-11-10: hierarchy — bold title, quiet meta, clamped summary, lighter buttons ===== */
+.card{padding:18px 20px}
+.card h3{font-size:1.16rem;font-weight:700;line-height:1.42}
+.org{font-size:.82rem;color:var(--ink-ter);margin:2px 0 0}
+.org b{font-weight:600;color:var(--ink-sec)}
+.loc{font-size:.88rem;margin:6px 0 0}
+.loc b{font-weight:600}
+.sum{font-size:.9rem;line-height:1.65;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tags{margin:10px 0 0}
+.tag{font-size:.72rem;padding:3px 9px}
+.meta{font-size:.78rem;line-height:1.6}
+.dl{font-size:.78rem}
+.fee{font-size:.8rem;padding:4px 10px}
+.actions{margin-top:12px;gap:8px}
+.actions .btn{min-height:36px;padding:6px 14px;font-size:.85rem;border-radius:10px}
+.actions .btn.primary{flex:0 1 auto;min-height:38px;padding:6px 18px}
+
+/* importance tiers: near-term / closing-soon events stand out */
+.card.hot{border-color:rgba(46,230,168,.45);border-left:3px solid var(--green)}
+.card.hot h3{font-size:1.26rem}
+
+</style>
+<link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+<meta name="theme-color" content="#0d1218">
+<!-- Umami -->
+<script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://img.yatslist.com/pwa/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yat's List">
+<style>
+
+/* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
+.prefs{display:inline-flex;align-items:center;gap:6px}
+.prefs .langsw,.prefs .themesw{display:none!important}
+.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
+.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+.langsel option{background:var(--panel);color:var(--ink)}
+.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
+@media (max-width:820px){
+  #mnav-panel .prefs{order:9;width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
+  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
+  #mnav-panel .themecyc{width:34px}
+}
+
+</style>
+<style>
+
+#yl-open{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;min-height:44px;padding:0 14px;background:var(--panel);border:1px solid var(--border-hover);border-radius:999px;color:var(--green);font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;white-space:nowrap}
+#yl-open:hover{border-color:var(--green)}
+.srow input[type=search]{min-width:0}
+#yl-panel{width:100%;height:min(440px,60vh);margin:12px 0 6px;background:var(--panel);border:1px solid var(--border);border-radius:16px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+#yl-panel.open{display:flex}
+.yl-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--border);font-weight:700;font-size:.95rem}
+.yl-head small{font-weight:400;color:var(--ink-ter);font-size:.74rem}
+.yl-head button{margin-left:auto;background:none;border:none;color:var(--ink-sec);font-size:1.05rem;cursor:pointer}
+#yl-msgs{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:10px;font-size:.9rem;line-height:1.6}
+.yl-m{max-width:88%;padding:8px 11px;border-radius:12px;white-space:normal;word-break:break-word}
+.yl-m.u{align-self:flex-end;background:var(--green,#2ee6a8);color:#06281c;border-bottom-right-radius:4px}
+.yl-m.a{align-self:flex-start;background:var(--card);border:1px solid var(--border);border-bottom-left-radius:4px}
+.yl-m a{color:var(--green,#2ee6a8);text-decoration:underline}
+.yl-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 14px 8px}
+.yl-chips button{background:var(--card);border:1px solid var(--border);color:var(--ink-sec);border-radius:999px;padding:5px 10px;font-size:.78rem;cursor:pointer}
+.yl-inrow{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--border)}
+#yl-input{flex:1;background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:9px 11px;font-size:.9rem;outline:none}
+#yl-send{background:var(--green,#2ee6a8);color:#06281c;border:none;border-radius:10px;padding:0 16px;font-weight:700;cursor:pointer}
+#yl-send:disabled{opacity:.5}
+
+/* mobile filter collapse: groups hidden by default on small screens, toggle to open */
+@media (max-width:820px){
+#fgroups{display:none}
+#fgroups.open{display:block}
+}
+
+/* ===== Luma-inspired mobile simplification 2026-11-10 ===== */
+@media (max-width:820px){
+  .card .sum{display:none}
+  .card .tags{display:none}
+  .card .meta.srcrow{display:none}
+  .card .actions{gap:6px;margin-top:10px}
+  .card .actions .btn{min-height:32px;padding:4px 10px;font-size:.8rem;border-radius:999px}
+  .lc-desc{display:none}
+  .dayhead .dnum::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:10px;vertical-align:middle}
+  .card{padding:14px 16px}
+}
+
+/* ===== mobile topbar dropdown + drop duplicated list chips 2026-11-11 ===== */
+#mnav-btn{display:none}
+#mnav-panel{display:contents}
+@media (max-width:820px){
+  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
+  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
+  #mnav-panel.open{display:block}
+  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  #mnav-panel .topbar-nav a{font-size:.95rem}
+  .listchips{display:none}
+}
+
+/* ===== simplify pass 2026-11-11: one accent colour, one primary action per event, Agent subscription up top ===== */
+:root{--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3)}
+:root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
+.human-section>.wrap{max-width:880px}
+/* topbar */
+.topbar-nav a.nav-ag{color:var(--green)}
+.topbar-nav a.nav-on{color:var(--ink)}
+.nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.nav-submit:hover{border-color:var(--green);color:var(--green)}
+/* hero: left-aligned, tagline above the title */
+.section-header{text-align:left;margin-bottom:16px}
+.section-tagline{display:block;margin:0 0 6px;font-size:.74rem;letter-spacing:.14em;color:var(--green);font-weight:600}
+.section-title{font-size:clamp(1.5rem,4vw,1.9rem);margin:0 0 4px}
+/* Agent box */
+.agentbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.ab-head{display:flex;align-items:center;gap:20px}
+.ab-text{flex:1;min-width:0}
+.ab-title{font-size:1.02rem;font-weight:700;color:var(--ink)}
+.ab-sub{font-size:.85rem;color:var(--ink-sec);margin-top:2px}
+.ab-go{flex:0 0 auto;background:var(--green);color:var(--on-green);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ab-go:hover{background:var(--green-hover)}
+.agentbox .cmdline{max-width:none;margin:0;background:var(--cmd-bg);flex-wrap:nowrap;font-size:.85rem;padding:10px 12px}
+.agentbox .cmdline .u{color:var(--ink);font-size:.85rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.agentbox .cmdline button{flex:0 0 auto;white-space:nowrap}
+.ab-apis{font-size:.8rem;color:var(--ink-ter)}
+.ab-apis a{color:var(--ink-sec);text-decoration:none}
+.ab-apis a:hover{color:var(--green)}
+/* search + quick chips; full filter panel behind the filter button on every screen size */
+.bar{background:none;backdrop-filter:none;border-bottom:0;box-shadow:none;padding-top:18px;padding-bottom:4px}
+.srow{display:flex;gap:10px}
+.srow input[type=search]{flex:1;box-shadow:none;padding:10px 14px}
+#ftoggle{display:inline-flex;width:auto;margin:0;gap:6px;min-height:44px;padding:0 12px;color:var(--ink-sec);justify-content:center}
+#ftoggle #fcount{margin:0;color:var(--green)}
+#ftoggle #fcount:empty{display:none}
+#fgroups{display:none;margin-top:6px}
+#fgroups.open{display:block}
+.qchips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.qchips::-webkit-scrollbar{display:none}
+.chip{background:none;border-color:var(--border-hover);min-height:34px;padding:5px 13px;font-size:.84rem}
+.chip:hover{transform:none}
+.chip.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+[data-theme="light"] .mchip.on,.mchip.on{box-shadow:none}
+.favbtn.on{background:var(--tint);color:var(--green);border-color:var(--green);box-shadow:none}
+/* welcome: one-line inline bar */
+.welc{position:static;display:none;align-items:center;gap:12px;max-width:none;margin:14px 0 0;padding:9px 14px;border-radius:10px;border:1px solid var(--border);background:var(--tint);box-shadow:none;animation:none;font-size:.88rem;color:var(--ink-sec)}
+.welc #welc-body{flex:1;min-width:0}
+.welc #welc-body b{margin-right:6px}
+.welc-tour{background:none;border:0;color:var(--green);font:inherit;font-weight:600;cursor:pointer;padding:4px 0;white-space:nowrap}
+.welc-x{background:none;border:0;color:var(--ink-ter);font-size:1rem;cursor:pointer;padding:4px 6px;line-height:1}
+/* day header: "今天  11月11日 · 星期三 ........ 5 场" */
+.dayhead{align-items:baseline;gap:8px;padding:24px 0 10px}
+.dayhead .dnum{font-size:1.02rem;font-weight:700;color:var(--ink);letter-spacing:0}
+.dayhead .dnum::before{display:none!important}
+.dayhead .dmeta{font-size:.85rem;font-weight:400;color:var(--ink-sec)}
+.dayhead .dcnt{margin-left:auto;font-size:.78rem;color:var(--ink-ter)}
+/* one bordered list per day, rows divided by hairlines */
+.dlist{background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.dlist .ev{margin:0;gap:18px;padding:14px 18px;border-top:1px solid var(--border);align-items:flex-start}
+.dlist .ev:first-child{border-top:0}
+.dlist .rail{flex:0 0 72px;text-align:left;padding-top:1px}
+.dlist .rail .t1{font-family:var(--font-mono);font-size:1rem;font-weight:500}
+.dlist .rail .t2{font-family:var(--font-mono);font-size:.75rem;margin-top:2px}
+.dlist .card,.dlist .card:hover{background:none;border:0;border-radius:0;box-shadow:none;padding:0;transform:none;display:flex;gap:16px;align-items:flex-start}
+.cmain{flex:1;min-width:0}
+.dlist .card h3{font-size:1rem;font-weight:700;line-height:1.4;margin:0}
+.cmeta{font-size:.82rem;color:var(--ink-sec);margin-top:3px;line-height:1.5}
+.cmeta .sep{font-style:normal;color:var(--ink-ter)}
+.cmeta .hkpin{color:var(--ink-sec);font-weight:600}
+.cdl .dl,.cdl .dl.soon{background:none;padding:0;color:var(--warm);font-size:.8rem;font-weight:600}
+[data-theme="light"] .cdl .dl,[data-theme="light"] .cdl .dl.soon{background:none;color:#b45309}
+.cdl .dl.closed{color:var(--ink-ter)}
+.dlist .sum{font-size:.82rem;color:var(--ink-ter);margin:3px 0 0;-webkit-line-clamp:1;line-height:1.5}
+.live{background:none;color:var(--green);padding:0;font-size:.78rem;margin-right:8px;vertical-align:1px}
+.favmark{color:var(--warm);margin-right:6px;font-size:.9em}
+[data-theme="light"] .favmark{color:#b45309}
+.cact{flex:0 0 auto;display:flex;align-items:center;gap:8px;position:relative}
+.reg{border:1px solid var(--green);color:var(--green);border-radius:999px;padding:4px 14px;font-size:.84rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.reg:hover{background:var(--tint)}
+.more{background:none;border:0;color:var(--ink-ter);font-size:1.05rem;letter-spacing:1px;line-height:1;width:32px;height:30px;border-radius:6px;cursor:pointer}
+.more:hover,.cact.open .more{background:var(--panel-hover);color:var(--ink)}
+.cmenu{display:none;position:absolute;right:0;top:calc(100% + 6px);z-index:50;min-width:150px;background:var(--panel-hover);border:1px solid var(--border-hover);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden}
+.cact.open .cmenu{display:block}
+.cmenu>*{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--border);padding:9px 16px;font:inherit;font-size:.85rem;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.cmenu>*:first-child{border-top:0}
+.cmenu>*:hover{background:var(--tint);color:var(--green)}
+.foldhead{border-style:solid;font-weight:600}
+@media (max-width:820px){.talk-block .actions .btn{white-space:normal;max-width:100%;text-align:center}}
+@media (max-width:820px){
+  .section-tagline{display:block}
+  .human-section>.wrap{padding:0 16px}
+  .agentbox{padding:14px;gap:10px;border-radius:12px}
+  .ab-head{display:contents}
+  .ab-text{order:1}
+  .agentbox .cmdline{order:2;font-size:.78rem;padding:8px 10px}
+  .agentbox .cmdline .u{font-size:.78rem}
+  .ab-go{order:3;text-align:center;padding:11px}
+  .ab-sub,.ab-apis,.ab-cmd{display:none}
+  .bar{margin:0;padding:14px 0 0}
+  #ftoggle-label{display:none}
+  #ftoggle{min-width:46px;padding:0 10px}
+  .chip{min-height:34px}
+  .dlist .ev{flex-direction:row;flex-wrap:wrap;gap:0;padding:12px 14px}
+  .dlist .rail{flex:0 0 100%;display:flex;gap:4px;align-items:baseline;padding:0 0 2px}
+  .dlist .rail .t1{font-size:.8rem;color:var(--ink-sec)}
+  .dlist .rail .t2{font-size:.75rem}
+  .dlist .card{flex:1 1 100%;gap:10px}
+  .dlist .card h3{font-size:.95rem;word-break:break-word}
+  .dlist .sum{display:none}
+  .cact{flex-direction:column;align-items:flex-end;justify-content:space-between;align-self:stretch;gap:6px;margin-top:-22px}
+  .cact .more{order:-1;height:24px}
+  .reg{padding:4px 12px;font-size:.8rem}
+  .cmeta{font-size:.78rem}
+  .welc{font-size:.82rem;gap:8px;padding:8px 10px 8px 12px}
+  .welc #welc-body{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .agentbox .cmdline{gap:8px}
+}
+
+/* ===== topbar compact 2026-11-13 ===== */
+.topbar{padding-top:8px;padding-bottom:8px}
+@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
+@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
+
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- Sticky Topbar -->
+<div class="topbar">
+<div class="wrap">
+<a class="topbar-brand" href="https://yatslist.com/hkevents/" aria-label="回到顶部" style="text-decoration:none">
+<span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
+</a>
+<button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
+<div id="mnav-panel"><nav class="topbar-nav">
+<a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
+<a href="https://yatslist.com/szevents/" id="nav-sz">深圳活动</a>
+<a href="#human-section" id="nav-events" class="nav-on" aria-current="page">香港活动</a>
+<a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
+<a href="https://yatslist.com/talks/" id="nav-spaces">Talks</a>
+<span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
+</nav></div>
+</div>
+</div>
+
+<!-- Human Section (第一屏) -->
+<section class="human-section" id="human-section">
+<div class="wrap">
+<div class="section-header">
+<p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
+<h2 class="section-title" id="hero-title">香港活动清单</h2>
+<p class="section-subtitle" id="hero-sub">香港活动，喂给你的 Agent 吃。</p>
+<p class="herometa" id="hm-line"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><span id="hm-upd"></span></p>
+<p class="scopenote" id="scope-note">香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活动统一收录、去重，按日期排好；点卡片直达官方报名页。</p>
+</div>
+
+<!-- Agent subscription: the one primary action on the page -->
+<div class="agentbox" id="agentbox">
+<div class="ab-head">
+<div class="ab-text"><div class="ab-title" id="ab-title">让你的 Agent 每天替你刷活动</div><div class="ab-sub" id="ab-sub">豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣才提醒你。</div></div>
+<button type="button" class="ab-go" id="ta-agent" onclick="openModal('sub')">用我的 Agent 订阅 →</button>
+</div>
+<div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/hk-events.json</span><button type="button" id="cmd-copy">复制</button></div>
+<div class="ab-apis" id="ab-apis">也可以直接读：<a href="/hk-events.json">hk-events.json</a> · <a href="https://yatslist.com/szevents/">深圳活动清单</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a></div>
+</div>
+
+<!-- Filter Bar -->
+<div class="bar">
+<div class="srow">
+<input type="search" id="q" placeholder="搜索活动名 / 主办方 / 地点…">
+<button id="ftoggle" aria-expanded="false" aria-controls="fgroups"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2" fill="var(--panel)"/><circle cx="13" cy="10" r="2" fill="var(--panel)"/><circle cx="8" cy="15" r="2" fill="var(--panel)"/></svg><span id="ftoggle-label">筛选</span><span id="fcount"></span></button>
+</div>
+<div class="qchips" id="qchips">
+<button type="button" class="chip on" data-q="all">全部</button>
+<button type="button" class="chip" data-q="time:week">本周</button>
+<button type="button" class="chip" data-q="fee:free">免费</button>
+<button type="button" class="chip" data-q="fmt:online">线上</button>
+</div>
+<div id="fgroups">
+<div class="fgroup">
+<span class="flabel">收藏</span>
+<button class="chip" id="favbtn">⭐ 只看收藏<span id="favcount"></span></button>
+<span class="flabel" style="opacity:.75">收藏存本机、无需注册</span>
+</div>
+<div class="fgroup">
+<span class="flabel">时间</span>
+<span class="seg" id="g-time">
+<button class="chip on" data-v="all">全部</button>
+<button class="chip" data-v="today">今天</button>
+<button class="chip" data-v="tomorrow">明天</button>
+<button class="chip" data-v="dayafter">后天</button>
+<button class="chip" data-v="week">本周</button>
+</span>
+<input type="date" id="fdate" aria-label="按日期筛选">
+<span class="fres" id="fres"></span>
+</div>
+<div class="fgroup">
+<span class="flabel">费用</span>
+<span class="seg" id="g-fee">
+<button class="chip on" data-v="all">全部</button>
+<button class="chip" data-v="free">免费</button>
+<button class="chip" data-v="paid">付费</button>
+</span>
+<span class="flabel">形式</span>
+<span class="seg" id="g-fmt">
+<button class="chip on" data-v="all">全部</button>
+<button class="chip" data-v="offline">线下</button>
+<button class="chip" data-v="online">线上</button>
+</span>
+</div>
+<div class="fgroup">
+<span class="flabel">区域</span>
+<span class="seg" id="g-dist"></span>
+</div>
+<div class="fgroup">
+<span class="flabel">分类</span>
+<span class="seg" id="g-cats"></span>
+<button id="fclear" class="fclear" hidden>清除筛选 ✕</button>
+</div>
+</div>
+</div>
+
+<!-- Event List -->
+<div id="list"><div class="empty" id="list-loading">加载中…</div></div>
+
+<!-- Past Events -->
+<div id="past"></div>
+
+<!-- Agent Subscription Card -->
+<div class="subcard" id="agent-sub">
+<h3 id="asub-title">🤖 让你的 Agent 提醒你，不用自己刷</h3>
+<p class="sum" id="asub-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：</p>
+<p class="prompt" id="prompt-generic-card"></p>
+<div class="actions"><button class="btn primary" id="asub-all" onclick="openModal('sub')">查看全部 Agent 版本</button></div>
+</div>
+
+<!-- Footer -->
+<div class="foot">
+<div id="foot-note">🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a></div>
+<span id="foot-apis">数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：</span><a href="/hk-events.json">hk-events.json</a> · <a href="/events.json">events.json（深圳）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a><br>
+<span id="foot-tail-post">报名前请以官方页面最新信息为准。</span>
+</div>
+</div>
+</section>
+
+<!-- Agent Section (给 Agent) -->
+<section class="agent-section" id="agent-section">
+<div class="wrap">
+<div class="intro">
+<h3 style="font-size:1.18rem;margin:0 0 10px" id="intro-title">Yat's List 是什么？</h3>
+<p style="color:var(--ink-sec);line-height:1.8;margin:0 0 10px" id="intro-p1">每份清单都结构化发布。在上方浏览，或把订阅话术发给你的 Agent，让它每天替你筛选。</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">✓ 全量聚合去重</span><span class="tag">🤖 Agent 可直接订阅</span><span class="tag">🔕 没命中就不打扰</span></div>
+</div>
+
+<div class="terminal">
+<div class="terminal-header">
+<span class="terminal-dot"></span>
+<span class="terminal-dot"></span>
+<span class="terminal-dot"></span>
+<span class="terminal-title">agent — subscribe</span>
+</div>
+<div class="terminal-body">
+<div class="terminal-prompt" id="term-prompt">$ subscribe: yat's list · 香港活动清单</div>
+<div class="terminal-status">
+<span id="st-total">–</span> <span id="lbl-evlisted">场活动在列</span> ·
+<span id="lbl-lastupd">最近更新</span> <span id="st-upd">–</span>
+</div>
+</div>
+</div>
+
+<div class="talk-block">
+<h3 id="tb-title">🤖 订阅话术（给 Agent）</h3>
+<p class="sum" id="tb-sum">豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：</p>
+<div class="code-block" id="subprompt"><span id="subprompt-text"></span>
+<button class="btn-copy" id="subprompt-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('subprompt-text').innerText.trim()).then(()=>{this.textContent=tr('copied');setTimeout(()=>this.textContent=tr('copy'),1500)})">复制</button>
+</div>
+<div class="actions">
+<button class="btn btn-primary" id="tb-all" onclick="openModal('sub')">其他 Agent 版本（豆包 / WorkBuddy / Codex）</button>
+</div>
+</div>
+
+<div class="talk-block">
+<h3>📡 接口清单（给 Agent）</h3>
+<div class="endpoint-list">
+<div class="endpoint-item">
+<span class="endpoint-name">hk-events.json</span>
+<span class="endpoint-url">https://yatslist.com/hk-events.json</span>
+<button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/hk-events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+<span class="endpoint-desc">香港活动数据（JSON）</span>
+</div>
+<div class="endpoint-item">
+<span class="endpoint-name">events.json</span>
+<span class="endpoint-url">https://yatslist.com/events.json</span>
+<button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/events.json').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+<span class="endpoint-desc">深圳活动数据（JSON）</span>
+</div>
+<div class="endpoint-item">
+<span class="endpoint-name">llms.txt</span>
+<span class="endpoint-url">https://yatslist.com/llms.txt</span>
+<button class="btn-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://yatslist.com/llms.txt').then(()=>{this.textContent=tr('copiedShort');setTimeout(()=>this.textContent=tr('copy'),1200)})">复制</button>
+<span class="endpoint-desc">给 AI 的站点说明</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Site Footer -->
+<footer class="sitefoot" id="site-footer">
+<div class="wrap">
+<div class="sf-brand">&gt; yat's list<span class="sf-cur">_</span></div>
+<p class="sf-tag" id="sf-tag">香港活动，喂给你的 Agent 吃。</p>
+<nav class="sf-nav">
+<a href="https://yatslist.com/szevents/" id="sf-sz">深圳活动</a>
+<a href="#top" id="sf-home">香港活动</a>
+<a href="https://yatslist.com/hackathons/" id="sf-hack">黑客松</a>
+<a href="https://yatslist.com/spaces/" id="sf-spaces">Space 纪要</a>
+<a href="#agent-section" id="sf-sub">订阅说明</a>
+</nav>
+<p class="sf-small" id="sf-small">数据每日更新 · 聚合自官方平台页面 · 免费无广告</p>
+<p class="sf-contact" id="sf-contact">合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a></p>
+<p class="sf-copy">© 2026 Yat's List · yatslist.com</p>
+</div>
+</footer>
+
+<!-- Modal Overlay -->
+<div class="ovl" id="ovl" onclick="if(event.target===this)closeModal()">
+<div class="modal">
+<div class="mhead"><h3 id="mtitle">🤖 订阅话术</h3><button class="btn" id="mclose1" onclick="closeModal()">✕ 关闭</button></div>
+<div class="mchips" id="mchips">
+<button class="mchip on" data-k="generic">通用版</button>
+<button class="mchip" data-k="doubao">🫘 豆包工作</button>
+<button class="mchip" data-k="workbuddy">💼 WorkBuddy</button>
+<button class="mchip" data-k="codex">🧑‍💻 Codex</button>
+</div>
+<p class="msteps" id="msteps"></p>
+<textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
+<p class="mhint" id="mhint">✏️ 这段话术可以直接改：把里换成你的兴趣、区域，改完再复制，Agent 就按你的喜好筛。</p>
+<div class="mex" id="mex"></div>
+<div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
+</div>
+</div>
+
+<script>
+/* ===== i18n: zh (default) / tw / en — preference stored in localStorage "szLang" (shared with the Shenzhen list) ===== */
+let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
+if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
+if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+const CATS=["AI","科技","技术","创业","Web3","加密","黑客松","硬件","跨境","金融","教育","艺文","展览","音乐","社交","生活","美食","运动","亲子"];
+const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","金融":"金融","教育":"教育","艺文":"艺文","展览":"展览","音乐":"音乐","社交":"社交","生活":"生活","美食":"美食","运动":"运动","亲子":"亲子"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","金融":"金融","教育":"教育","艺文":"藝文","展览":"展覽","音乐":"音樂","社交":"社交","生活":"生活","美食":"美食","运动":"運動","亲子":"親子"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","金融":"Finance","教育":"Education","艺文":"Arts & Culture","展览":"Exhibitions","音乐":"Music","社交":"Social","生活":"Life","美食":"Food & Drink","运动":"Sports","亲子":"Family"}};
+const DIST_TW={"中西区":"中西區","油尖旺区":"油尖旺區","湾仔区":"灣仔區","观塘区":"觀塘區","南区":"南區","九龙城区":"九龍城區","东区":"東區","离岛区":"離島區","西贡区":"西貢區","深水埗区":"深水埗區","黄大仙区":"黃大仙區","元朗区":"元朗區","沙田区":"沙田區","北区":"北區","荃湾区":"荃灣區","大埔区":"大埔區","屯门区":"屯門區","葵青区":"葵青區"};
+const DIST_EN={"中西区":"Central & Western","油尖旺区":"Yau Tsim Mong","湾仔区":"Wan Chai","观塘区":"Kwun Tong","南区":"Southern","九龙城区":"Kowloon City","东区":"Eastern","离岛区":"Islands","西贡区":"Sai Kung","深水埗区":"Sham Shui Po","黄大仙区":"Wong Tai Sin","元朗区":"Yuen Long","沙田区":"Sha Tin","北区":"North","荃湾区":"Tsuen Wan","大埔区":"Tai Po","屯门区":"Tuen Mun","葵青区":"Kwai Tsing"};
+const STR={
+zh:{
+docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hk-events.json。",
+brandTop:"回到顶部",navAgent:"Agent",navSz:"深圳活动",navEvents:"香港活动",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
+heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",scopeNote:"香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活动统一收录、去重，按日期排好；点卡片直达官方报名页。",
+heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",
+searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"筛选",
+favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
+timeLabel:"时间",feeLabel:"费用",fmtLabel:"形式",distLabel:"区域",catLabel:"分类",
+segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"后天",week:"本周"},
+segFee:{all:"全部",free:"免费",paid:"付费"},
+segFmt:{all:"全部",offline:"线下",online:"线上"},
+distAll:"全部",fclear:"清除筛选 ✕",
+qChips:{all:"全部","time:week":"本周","fee:free":"免费","fmt:online":"线上"},
+abTitle:"让你的 Agent 每天替你刷活动",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能订阅。设置一次，命中兴趣才提醒你。",
+asubTitle:"🤖 让你的 Agent 提醒你，不用自己刷",
+asubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。按你用的 Agent 选一份话术，设置一次，之后每天自动提醒你。<br><b>通用版</b>（任何能联网的 Agent 都适用）：',
+asubAll:"查看全部 Agent 版本",
+footNote:'🤖 本站由 <b>Yat 的 Agent</b> 自动维护（每日更新）· 有建议或问题，欢迎联系 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a>',
+footApis:"数据接口（任何人 / 任何 Agent 可直接读取，无需登录）：",footTailPost:"报名前请以官方页面最新信息为准。",
+introTitle:"Yat's List 是什么？",
+introP1:'Yat\'s List 是<b style="color:var(--ink)">给 Agent 订阅的清单</b>：不做信息流、不刷屏。每份清单都结构化发布。你可以直接在上方清单里浏览，也可以把下面这段话术发给你的 Agent，让它每天替你筛选，命中你的兴趣才提醒你。',
+introTags:["✓ 全量聚合去重","🤖 Agent 可直接订阅","🔕 没命中就不打扰"],
+termPrompt:"$ subscribe: yat's list · 香港活动清单",evListed:"场活动在列",lastUpd:"最近更新",
+tbTitle:"🤖 订阅话术（给 Agent）",
+tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：',
+tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
+epDescs:["香港活动数据（JSON）","深圳活动数据（JSON）","给 AI 的站点说明"],
+mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把里换成你的兴趣、区域，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
+chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
+copyPrompt:"复制这段话",copy:"复制",copied:"已复制 ✓",copiedShort:"已复制",copiedGo:"已复制 ✓ 去粘贴给你的 Agent",
+footTag:"香港活动，喂给你的 Agent 吃。",footSz:"深圳活动",footHome:"香港活动",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 聚合自官方平台页面 · 免费无广告",
+footContact:'合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
+loading:"加载中…",loadFail:"数据加载失败，请刷新页面重试",
+pastTitle:"📚 过往活动",pastHint:"点开看历史记录",pastEmpty:"暂无过往记录，活动结束后会自动归档到这里",
+noResults:"没有符合条件的活动",fres:function(n){return "共 "+n+" 场"},
+favTitle:"⭐ 我的收藏",favEmpty:"还没有收藏。看到想去的活动，点「···」里的「收藏」就会存到这里——收藏只存在这台设备的浏览器里，不用注册、不会上传。",
+dateTBD:"时间待定",ongoingFold:function(n){return "持续进行中 · "+n+" 场长活动"},
+online:"线上",venueTBA:"地点待公布",liveNow:"进行中",organizer:"主办方：",tbd:"待定",
+feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",relTomorrow:"明天",relDayAfter:"后天",
+regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收藏",mFavOff:"收藏",dayCount:function(n){return n+" 场"}
+},
+tw:{
+docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清單：香港全量活動聚合（Luma / Eventbrite / Meetup / Peatix），科技、創業、藝文、生活一站檢索；可搜索、按分類與行政區篩選，也可讓你的 Agent 訂閱 hk-events.json。",
+brandTop:"回到頂部",navAgent:"Agent",navSz:"深圳活動",navEvents:"香港活動",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
+heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",scopeNote:"香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活動統一收錄、去重，按日期排好；點卡片直達官方報名頁。",
+heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",
+searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"篩選",
+favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
+timeLabel:"時間",feeLabel:"費用",fmtLabel:"形式",distLabel:"區域",catLabel:"分類",
+segTime:{all:"全部",today:"今天",tomorrow:"明天",dayafter:"後天",week:"本週"},
+segFee:{all:"全部",free:"免費",paid:"付費"},
+segFmt:{all:"全部",offline:"線下",online:"線上"},
+distAll:"全部",fclear:"清除篩選 ✕",
+qChips:{all:"全部","time:week":"本週","fee:free":"免費","fmt:online":"線上"},
+abTitle:"讓你的 Agent 每天替你刷活動",abSub:"豆包工作 · WorkBuddy · Codex · Claude Code 都能訂閱。設置一次，命中興趣才提醒你。",
+asubTitle:"🤖 讓你的 Agent 提醒你，不用自己刷",
+asubSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以訂閱。按你用的 Agent 選一份話術，設置一次，之後每天自動提醒你。<br><b>通用版</b>（任何能聯網的 Agent 都適用）：',
+asubAll:"查看全部 Agent 版本",
+footNote:'🤖 本站由 <b>Yat 的 Agent</b> 自動維護（每日更新）· 有建議或問題，歡迎聯繫 Yat：<a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a>',
+footApis:"數據接口（任何人 / 任何 Agent 可直接讀取，無需登錄）：",footTailPost:"報名前請以官方頁面最新信息為準。",
+introTitle:"Yat's List 是什麼？",
+introP1:'Yat\'s List 是<b style="color:var(--ink)">給 Agent 訂閱的清單</b>：不做信息流、不刷屏。每份清單都結構化發佈。你可以直接在上方清單裡瀏覽，也可以把下面這段話術發給你的 Agent，讓它每天替你篩選，命中你的興趣才提醒你。',
+introTags:["✓ 全量聚合去重","🤖 Agent 可直接訂閱","🔕 沒命中就不打擾"],
+termPrompt:"$ subscribe: yat's list · 香港活動清單",evListed:"場活動在列",lastUpd:"最近更新",
+tbTitle:"🤖 訂閱話術（給 Agent）",
+tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以訂閱。下方是<b>通用版</b>話術（任何能聯網的 Agent 都適用）：',
+tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
+epDescs:["香港活動數據（JSON）","深圳活動數據（JSON）","給 AI 的站點說明"],
+mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把裡換成你的興趣、區域，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
+chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
+copyPrompt:"複製這段話",copy:"複製",copied:"已複製 ✓",copiedShort:"已複製",copiedGo:"已複製 ✓ 去粘貼給你的 Agent",
+footTag:"香港活動，餵給你的 Agent 吃。",footSz:"深圳活動",footHome:"香港活動",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 聚合自官方平臺頁面 · 免費無廣告",
+footContact:'合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
+loading:"加載中…",loadFail:"數據加載失敗，請刷新頁面重試",
+pastTitle:"📚 過往活動",pastHint:"點開看歷史記錄",pastEmpty:"暫無過往記錄，活動結束後會自動歸檔到這裡",
+noResults:"沒有符合條件的活動",fres:function(n){return "共 "+n+" 場"},
+favTitle:"⭐ 我的收藏",favEmpty:"還沒有收藏。看到想去的活動，點「···」裡的「收藏」就會存到這裡——收藏只存在這臺設備的瀏覽器裡，不用註冊、不會上傳。",
+dateTBD:"時間待定",ongoingFold:function(n){return "持續進行中 · "+n+" 場長活動"},
+online:"線上",venueTBA:"地點待公佈",liveNow:"進行中",organizer:"主辦方：",tbd:"待定",
+feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",relTomorrow:"明天",relDayAfter:"後天",
+regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收藏",mFavOff:"收藏",dayCount:function(n){return n+" 場"}
+},
+en:{
+docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong events, aggregated in full from Luma, Eventbrite, Meetup and Peatix: tech, startups, arts and everyday life in one searchable list. Filter by category and district, or let your Agent subscribe to hk-events.json.",
+brandTop:"Back to top",navAgent:"Agent",navSz:"Shenzhen",navEvents:"Hong Kong",navHack:"Hackathons",navSpaces:"Talks",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
+heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",scopeNote:"The full picture: Hong Kong events from Luma, Eventbrite, Meetup and more, deduplicated and sorted by date. Cards link straight to the official registration page.",
+heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",
+searchPh:"Search by event, organizer, venue…",ftoggleLabel:"Filters",
+favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
+timeLabel:"When",feeLabel:"Fee",fmtLabel:"Format",distLabel:"District",catLabel:"Category",
+segTime:{all:"All",today:"Today",tomorrow:"Tomorrow",dayafter:"In 2 days",week:"This week"},
+segFee:{all:"All",free:"Free",paid:"Paid"},
+segFmt:{all:"All",offline:"In person",online:"Online"},
+distAll:"All",fclear:"Clear filters ✕",
+qChips:{all:"All","time:week":"This week","fee:free":"Free","fmt:online":"Online"},
+abTitle:"Let your Agent check events for you every day",abSub:"Doubao, WorkBuddy, Codex, Claude Code and others can subscribe. Set it up once; it only pings you when something matches.",
+asubTitle:"🤖 Let your Agent watch for you — no more scrolling",
+asubSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Agents can all subscribe. Pick the prompt for your Agent, set it up once, and get reminded automatically every day.<br><b>Generic version</b> (works with any Agent that can access the web):',
+asubAll:"See all Agent versions",
+footNote:'🤖 This site is maintained automatically by <b>Yat\'s Agent</b> (daily updates) · Questions or suggestions? Reach Yat on <a href="https://x.com/yatbtc" target="_blank" rel="noopener"><b>X @yatbtc</b></a>',
+footApis:"Data endpoints (open to anyone and any Agent, no login required): ",footTailPost:"Always confirm the latest details on the official page before registering.",
+introTitle:"What is Yat's List?",
+introP1:'Yat\'s List is <b style="color:var(--ink)">a list built for Agents to subscribe to</b>: no feed, no noise. Every list is published as structured data. Browse the list above yourself — or send the prompt below to your Agent and let it filter for you daily, pinging you only when something matches your interests.',
+introTags:["✓ Aggregated & deduplicated","🤖 Agents can subscribe directly","🔕 Silent unless it matches you"],
+termPrompt:"$ subscribe: yat's list · Hong Kong events",evListed:"events listed",lastUpd:"Last updated",
+tbTitle:"🤖 Subscription prompt (for your Agent)",
+tbSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Agents can all subscribe. Below is the <b>generic version</b> (works with any Agent that can access the web):',
+tbAll:"Other Agent versions (Doubao / WorkBuddy / Codex)",
+epDescs:["Hong Kong event data (JSON)","Shenzhen event data (JSON)","Site guide for AI"],
+mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests and districts, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
+chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
+copyPrompt:"Copy this prompt",copy:"Copy",copied:"Copied ✓",copiedShort:"Copied",copiedGo:"Copied ✓ — now paste it to your Agent",
+footTag:"Hong Kong events, served to your Agent.",footSz:"Shenzhen Events",footHome:"Hong Kong Events",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Aggregated from official platform pages · Free, no ads",
+footContact:'Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
+loading:"Loading…",loadFail:"Failed to load data — please refresh and try again",
+pastTitle:"📚 Past events",pastHint:"Tap to view history",pastEmpty:"No past events yet — finished events are archived here automatically.",
+noResults:"No events match your filters",fres:function(n){return n+" events"},
+favTitle:"⭐ My saved events",favEmpty:"Nothing saved yet. When you spot an event you like, tap “···” → “Save” and it will live here — saved only in this device's browser, no account, nothing uploaded.",
+dateTBD:"Date TBD",ongoingFold:function(n){return "Ongoing · "+n+" multi-day events"},
+online:"Online",venueTBA:"Venue TBA",liveNow:"Happening now",organizer:"Organizer: ",tbd:"TBD",
+feeNa:"See official page for pricing",feeFree:"Free",feePaid:"Paid",relToday:"Today",relTomorrow:"Tomorrow",relDayAfter:"In 2 days",
+regBtn:"Register →",moreBtn:"More actions",mCal:"Add to calendar",mFavOn:"Remove from saved",mFavOff:"Save",dayCount:function(n){return n+(n===1?" event":" events")}
+}};
+function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
+function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
+const PROMPTS={
+zh:{
+generic:"请订阅「Yat's List 香港活动清单」并给我活动提醒：数据源 https://yatslist.com/hk-events.json（每日更新，无需登录）。每天读取一次，按我的兴趣和想去的区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
+doubao:"每天早上 9 点，打开 https://yatslist.com/hk-events.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
+workbuddy:"每天早上 9 点，打开 https://yatslist.com/hk-events.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
+codex:"请为我订阅「Yat's List 香港活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/hk-events.json 。只看未结束的活动，筛选：今天和明天举行的、以及我感兴趣的类别和区域。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。"},
+tw:{
+generic:"請訂閱「Yat's List 香港活動清單」並給我活動提醒：數據源 https://yatslist.com/hk-events.json（每日更新，無需登錄）。每天讀取一次，按我的興趣和想去的區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附官方報名鏈接。",
+doubao:"每天早上 9 點，打開 https://yatslist.com/hk-events.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
+workbuddy:"每天早上 9 點，打開 https://yatslist.com/hk-events.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
+codex:"請為我訂閱「Yat's List 香港活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/hk-events.json 。只看未結束的活動，篩選：今天和明天舉行的、以及我感興趣的類別和區域。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。"},
+en:{
+generic:"Please subscribe to “Yat's List — Hong Kong Events” and send me event reminders. Data source: https://yatslist.com/hk-events.json (updated daily, no login required). Read it once a day and filter by my interests and the districts I care about. Tell me the same day when a new event matches my interests; and for events I mark as attending, remind me 3 days before and again 1 day before they start. Never invent events that are not in the data source, and always include the official registration link in your reminders.",
+doubao:"Every morning at 9:00, open https://yatslist.com/hk-events.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
+workbuddy:"Every morning at 9:00, open https://yatslist.com/hk-events.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
+codex:"Please subscribe me to “Yat's List — Hong Kong Events”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/hk-events.json. Consider only events that have not ended, and filter for: events happening today and tomorrow, plus my categories of interest [AI / Tech / Arts / Music] and districts [Central & Western / Wan Chai]. Report briefly, sorted by date, one event per line with its registration link; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day."}};
+const MSTEPS={generic:"任何能联网的 Agent 都适用：把话术粘贴给它，并让它设一个每天执行的任务。",doubao:"豆包工作 →「定时任务」→ 新建 → 重复选「每天」、时间 9:00 → 把话术粘贴为任务内容 → 保存。",workbuddy:"WorkBuddy → 左侧「自动化」→ 添加任务 → 执行频率选「每天 9:00」→ 把话术粘贴为提示词 → 保存。",codex:"把话术直接发给 Codex，让它创建每天 9:00（Asia/Shanghai）的自动化任务。"};
+const MSTEPS_TW={generic:"任何能聯網的 Agent 都適用：把話術粘貼給它，並讓它設一個每天執行的任務。",doubao:"豆包工作 →「定時任務」→ 新建 → 重複選「每天」、時間 9:00 → 把話術粘貼為任務內容 → 保存。",workbuddy:"WorkBuddy → 左側「自動化」→ 添加任務 → 執行頻率選「每天 9:00」→ 把話術粘貼為提示詞 → 保存。",codex:"把話術直接發給 Codex，讓它創建每天 9:00（Asia/Shanghai）的自動化任務。"};
+const MSTEPS_EN={generic:"Works with any Agent that can access the web: paste the prompt to it and ask it to set up a daily task.",doubao:"Doubao Workspace → “Scheduled tasks” → New → repeat “Daily”, time 9:00 → paste the prompt as the task content → Save.",workbuddy:"WorkBuddy → “Automation” in the left sidebar → Add task → frequency “Daily 9:00” → paste the prompt → Save.",codex:"Send the prompt straight to Codex and ask it to create a daily 9:00 (Asia/Shanghai) automation."};
+const MEX_SUB="<b>定制示例（照着改）：</b><br>· 只看中环、湾仔：把区域改成<br>· 只看免费：加一句「只推免费活动」<br>· 只看科技创业：类别改成<br>· 只看周末：加一句「只推周六、周日的」";
+const MEX_SUB_TW="<b>定製示例（照著改）：</b><br>· 只看中環、灣仔：把區域改成<br>· 只看免費：加一句「只推免費活動」<br>· 只看科技創業：類別改成<br>· 只看週末：加一句「只推週六、週日的」";
+const MEX_SUB_EN="<b>Customization examples (edit the same way):</b><br>· Central & Wan Chai only: change the districts to [Central & Western / Wan Chai]<br>· Free only: add “only recommend free events”<br>· Tech & startups: change the categories to [AI / Tech / Startups]<br>· Weekends only: add “only Saturdays and Sundays”";
+function fmtUpd(){const _d=window._updRaw?new Date(window._updRaw).toLocaleString(LOC(),{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}):"–";const el=document.getElementById("st-upd");if(el)el.textContent=_d;const hm=document.getElementById("hm-upd");if(hm)hm.textContent=tr("heroMetaDaily")+(window._updRaw?" · "+tr("heroMetaData")+" "+_d:"")}
+function _setText(sel,txt){const el=document.querySelector(sel);if(el)el.textContent=txt}
+function _setHTML(sel,html){const el=document.querySelector(sel);if(el)el.innerHTML=html}
+function applyLang(){
+document.documentElement.lang=LANG==="en"?"en":LANG==="tw"?"zh-TW":"zh-CN";
+document.title=tr("docTitle");
+const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
+const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
+document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
+_setText("#nav-agent",tr("navAgent"));_setText("#nav-sz",tr("navSz"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-spaces",tr("navSpaces"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#hm-total-label",tr("heroMetaTotal"));
+_setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setText("#cmd-copy",tr("copy"));
+{const qd=tr("qChips")||{};document.querySelectorAll("#qchips.chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
+const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
+_setText("#ftoggle-label",tr("ftoggleLabel"));
+const flk=["favLabel","timeLabel","feeLabel","distLabel","catLabel"];
+document.querySelectorAll(".flabel").forEach((el,i)=>{if(flk[i])el.textContent=tr(flk[i])});
+const fnote=document.querySelectorAll(".flabel")[1];
+const fb=document.getElementById("favbtn");if(fb&&fb.childNodes[0])fb.childNodes[0].textContent=tr("favOnlyBtn");
+const fd=document.getElementById("fdate");if(fd)fd.setAttribute("aria-label",LANG==="en"?"Filter by date":LANG==="tw"?"按日期篩選":"按日期筛选");
+[["#g-time","segTime"],["#g-fee","segFee"],["#g-fmt","segFmt"]].forEach(function(pair){const dict=STR[LANG][pair[1]]||{};document.querySelectorAll(pair[0]+".chip").forEach(ch=>{if(dict[ch.dataset.v])ch.textContent=dict[ch.dataset.v]})});
+_setText("#fclear",tr("fclear"));
+_setText("#asub-title",tr("asubTitle"));_setHTML("#asub-sum",tr("asubSum"));_setText("#asub-all",tr("asubAll"));
+const P=PROMPTS[LANG];
+_setText("#prompt-generic-card",P.generic);_setText("#subprompt-text",P.generic);
+_setHTML("#foot-note",tr("footNote"));_setText("#foot-apis",tr("footApis"));_setText("#foot-tail-post",tr("footTailPost"));
+_setText("#intro-title",tr("introTitle"));_setHTML("#intro-p1",tr("introP1"));
+document.querySelectorAll(".intro.tag").forEach((el,i)=>{if(STR[LANG].introTags[i])el.textContent=STR[LANG].introTags[i]});
+_setText("#term-prompt",tr("termPrompt"));_setText("#lbl-evlisted",tr("evListed"));_setText("#lbl-lastupd",tr("lastUpd"));
+_setText("#tb-title",tr("tbTitle"));_setHTML("#tb-sum",tr("tbSum"));_setText("#tb-all",tr("tbAll"));
+document.querySelectorAll(".endpoint-desc").forEach((el,i)=>{if(STR[LANG].epDescs[i])el.textContent=STR[LANG].epDescs[i]});
+document.querySelectorAll(".endpoint-item.btn-copy").forEach(el=>{el.textContent=tr("copy")});
+_setText("#subprompt-copy",tr("copy"));
+_setText("#mclose1",tr("mclose"));_setText("#mclose2",tr("mclose2"));_setText("#mhint",tr("mhint"));_setText("#mcopy",tr("mcopy"));
+document.querySelectorAll("#mchips.mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
+_setText("#sf-tag",tr("footTag"));_setText("#sf-sz",tr("footSz"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
+const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
+fmtUpd();
+if(typeof syncFilterUI==="function")syncFilterUI();
+if(typeof applyTheme==="function")applyTheme();
+}
+function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(typeof renderCats==="function")renderCats();if(typeof renderDist==="function")renderDist();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
+document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
+/* ===== theme: auto (follow system) / light / dark - preference stored in localStorage "szTheme" ===== */
+let THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
+if(THEME!=="light"&&THEME!=="dark")THEME="auto";
+const _mqDark=window.matchMedia("(prefers-color-scheme: dark)");
+function resolvedTheme(){return THEME==="dark"?"dark":THEME==="light"?"light":(_mqDark.matches?"dark":"light")}
+function syncThemeUI(){document.querySelectorAll(".themesw button").forEach(b=>{const on=b.dataset.settheme===THEME;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");if(b.dataset.settheme==="auto")b.textContent=tr("themeAuto");if(b.dataset.settheme==="light"){b.setAttribute("aria-label",tr("themeLight"));b.title=tr("themeLight")}if(b.dataset.settheme==="dark"){b.setAttribute("aria-label",tr("themeDark"));b.title=tr("themeDark")}});const g=document.querySelector(".themesw");if(g)g.setAttribute("aria-label",tr("themeLabel"))}
+function applyTheme(){const r=resolvedTheme();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncThemeUI()}
+function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()}
+document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>setTheme(b.dataset.settheme)));
+if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
+applyTheme();
+</script>
+<script>
+let DATA=[];
+let F={time:"all",date:"",fee:"all",fmt:"all",dist:"all",cats:new Set()};
+let FAVS=new Set();try{FAVS=new Set(JSON.parse(localStorage.getItem("hkFavs")||"[]"))}catch(e){}
+let favOnly=false;
+function saveFavs(){try{localStorage.setItem("hkFavs",JSON.stringify([...FAVS]))}catch(e){}}
+function toggleFav(url){if(FAVS.has(url))FAVS.delete(url);else FAVS.add(url);saveFavs();render()}
+const $=s=>document.querySelector(s);
+const DAY=864e5;
+const TZ="Asia/Shanghai";
+const _dtf=new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"});
+const shParts=t=>{const p={};for(const x of _dtf.formatToParts(new Date(t)))p[x.type]=x.value;return [+p.year,+p.month,+p.day]};
+const shDayNum=t=>{const p=shParts(t);return Date.UTC(p[0],p[1]-1,p[2])/DAY};
+const shMidnightMs=()=>shDayNum(Date.now())*DAY-8*3600e3;
+const isOnline=e=>e.format==="线上Space"||e.format==="线上";
+const isHybrid=e=>e.format==="线上+线下";
+const fmtT=t=>new Date(t).toLocaleTimeString(LANG==="en"?"en-GB":"zh-CN",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false});
+const isFreeFee=f=>{f=(f||"").trim();return f.startsWith("免费")&&!/HK\$|¥|\d/.test(f)};
+function feeText(e){
+const f=(e.fee||"").trim();
+if(!f)return tr("feeNa");
+if(isFreeFee(f))return "🆓 "+tr("feeFree");
+const m=f.match(/HK\$\s?[\d,]+(?:\.\d+)?(?:\s?[–\-~]\s?(?:HK\$)?\s?[\d,]+(?:\.\d+)?)?/)||f.match(/(¥|￥)\s?\d[\d,\.–\-~]*\d|(¥|￥)\s?\d/)||f.match(/US\$\s?[\d,]+(?:\.\d+)?/);
+if(m)return "🎫 "+m[0].replace(/\s+/g,"");
+if(/见官方页/.test(f))return tr("feeNa");
+return "🎫 "+tr("feePaid");
+}
+const dayKey=t=>shParts(t).join("-");
+const isAllDayish=e=>{if(!e.start)return false;const s=new Date(e.start);if(isNaN(s))return false;const hm=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false}).format(s);let multi=false;if(e.end){const en=new Date(e.end);if(!isNaN(en)&&en>s)multi=dayKey(en.getTime()-1)!==dayKey(s)}return hm==="00:00"||hm==="24:00"||multi};
+const byStart=(a,b)=>{const ta=new Date(a.start||"2100"),tb=new Date(b.start||"2100");if(isNaN(ta)||isNaN(tb))return 0;const da=dayKey(ta),db=dayKey(tb);if(da!==db)return ta-tb;const fa=isAllDayish(a)?1:0,fb=isAllDayish(b)?1:0;if(fa!==fb)return fa-fb;return ta-tb};
+const relLabel=t=>{const diff=shDayNum(t)-shDayNum(Date.now());return diff===0?tr("relToday"):diff===1?tr("relTomorrow"):diff===2?tr("relDayAfter"):""};
+function fL(e,f){if(LANG==="en")return e[f+"_en"]||e[f];if(LANG==="tw")return e[f+"_tw"]||e[f];return e[f+"_zh"]||e[f]}
+function fD(e){const d=e.district;if(!d)return "";if(LANG==="en")return DIST_EN[d]||d;if(LANG==="tw")return DIST_TW[d]||e.district_tw||d;return d}
+function pass(e){
+const now=Date.now();
+const st=e.start?new Date(e.start):null;
+if(favOnly&&!FAVS.has(e.url))return false;
+if(F.time!=="all"){
+const dn=shDayNum(now);
+const edn=st?shDayNum(st):null;
+if(F.time==="today"&&edn!==dn)return false;
+if(F.time==="tomorrow"&&edn!==dn+1)return false;
+if(F.time==="dayafter"&&edn!==dn+2)return false;
+if(F.time==="week"&&st&&st<now+7*DAY&&st>=now){}else if(F.time==="week")return false;
+}
+if(F.date&&st&&dayKey(st)!==F.date)return false;
+if(F.fee!=="all"){
+const isFree=isFreeFee(e.fee);
+if(F.fee==="free"&&!isFree)return false;
+if(F.fee==="paid"&&isFree)return false;
+}
+if(F.fmt!=="all"){
+const isO=isOnline(e)||isHybrid(e);
+if(F.fmt==="offline"&&isO)return false;
+if(F.fmt==="online"&&!isO)return false;
+}
+if(F.dist!=="all"&&(e.district||"")!==F.dist)return false;
+if(F.cats.size>0){
+const cats=e.categories||[];
+if(!cats.some(c=>F.cats.has(c)))return false;
+}
+const q=($("#q").value||"").trim().toLowerCase();
+if(q){
+const txt=[e.title,e.title_zh,e.title_tw,e.title_en,e.venue,e.venue_tw,e.venue_en,e.district,e.organizer,e.organizer_en,e.summary,e.summary_zh,e.summary_tw,e.summary_en].filter(Boolean).join(" ").toLowerCase();
+if(!txt.includes(q))return false;
+}
+return true;
+}
+function ics(e){
+const st=e.start?new Date(e.start):null;
+const et=e.end?new Date(e.end):st?new Date(st.getTime()+2*3600e3):null;
+if(!st)return;
+const fmt=d=>d.toISOString().replace(/[-:]/g,"").split(".")[0]+"Z";
+const loc=`${fD(e)}${e.venue||""}`;
+const desc=`${e.summary||""}\n\n${LANG==="en"?"Registration: ":LANG==="tw"?"報名連結：":"报名链接："}${e.url}`;
+const ical=`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Yat's List//NONSGML v1.0//EN\nBEGIN:VEVENT\nUID:${e.url}\nDTSTAMP:${fmt(new Date())}\nDTSTART:${fmt(st)}\nDTEND:${fmt(et)}\nSUMMARY:${e.title}\nDESCRIPTION:${desc.replace(/\n/g,"\\n")}\nLOCATION:${loc}\nURL:${e.url}\nEND:VEVENT\nEND:VCALENDAR`;
+const blob=new Blob([ical],{type:"text/calendar;charset=utf-8"});
+const link=document.createElement("a");
+link.href=URL.createObjectURL(blob);
+link.download=`${e.title}.ics`;
+link.click();
+}
+window._ics=ics;
+function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function cardOf(e,now){
+const online=isOnline(e),hybrid=isHybrid(e);
+const ongoing=e.start&&new Date(e.start)<shMidnightMs()&&new Date(e.end||e.start)>=shMidnightMs();
+const fav=FAVS.has(e.url);
+const where=[fD(e),fL(e,"venue")].filter(Boolean).join(" · ");
+const ven=e.venue?fL(e,"venue"):"";
+const place=online?("🌐 "+(/^(线上|線上|online)/i.test(ven)?ven:[tr("online"),ven].filter(Boolean).join(" · ")))
+:hybrid?("🌐+📍 "+tr("online")+" + "+(where||tr("venueTBA"))):(where||tr("venueTBA"));
+const meta=[place,e.organizer?fL(e,"organizer"):"",feeText(e)].filter(Boolean).join('<i class="sep"> · </i>');
+const idx=DATA.indexOf(e);
+const menu=[
+e.start?`<button type="button" role="menuitem" onclick="_ics(DATA[${idx}])">${tr("mCal")}</button>`:"",
+`<button type="button" role="menuitem" data-fav="${encodeURIComponent(e.url)}">${fav?tr("mFavOn"):tr("mFavOff")}</button>`
+].join("");
+return `<div class="ev">
+<div class="rail"><div class="t1">${e.start?fmtT(e.start):tr("tbd")}</div><div class="t2">${e.end?"– "+fmtT(e.end):""}</div></div>
+<div class="card">
+<div class="cmain">
+<h3>${ongoing?'<span class="live">'+tr("liveNow")+'</span>':''}${fav?'<span class="favmark" aria-hidden="true">★</span>':''}<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(fL(e,"title"))}</a></h3>
+<div class="cmeta">${meta}</div>
+${e.summary?`<p class="sum">${esc(fL(e,"summary"))}</p>`:""}
+</div>
+<div class="cact">
+<a class="reg" href="${esc(e.url)}" target="_blank" rel="noopener">${tr("regBtn")}</a>
+<button type="button" class="more" aria-haspopup="menu" aria-expanded="false" aria-label="${tr("moreBtn")}" title="${tr("moreBtn")}">···</button>
+<div class="cmenu" role="menu">${menu}</div>
+</div>
+</div>
+</div>`;
+}
+function render(){
+const now=Date.now();
+const t0=shMidnightMs();
+const isPast=e=>!!(e.start&&new Date(e.end||e.start)<t0);
+const qv=$("#q").value.trim();
+const past=DATA.filter(isPast).filter(e=>!qv||(e.title+(e.organizer||"")).includes(qv)).sort((a,b)=>new Date(b.start)-new Date(a.start));
+$("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="document.getElementById('plist').classList.toggle('open')">${tr("pastTitle")}<span class="cnt">${past.length}</span><span style="margin-left:auto;font-weight:600;font-size:.82rem">${tr("pastHint")}</span></button><div class="pastlist" id="plist">${past.length?past.map(e=>`<div class="prow"><span class="pd">${new Date(e.start).toLocaleDateString(LOC(),{timeZone:TZ,month:"numeric",day:"numeric"})}</span><span><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(fL(e,"title"))}</a><div class="pm">${[fL(e,"organizer"),fD(e),fL(e,"venue")].filter(Boolean).join(" · ")||e.format}</div></span></div>`).join(""):'<div class="empty">'+tr("pastEmpty")+'</div>'}</div></div>`;
+const evs=DATA.filter(e=>!isPast(e)).filter(pass).sort(byStart);
+const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
+const total=DATA.filter(e=>!isPast(e)).length;
+$("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;
+const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
+if(favOnly){
+const favs=DATA.filter(e=>FAVS.has(e.url)).sort(byStart);
+$("#list").innerHTML='<div class="dayhead"><span class="dmeta">'+tr("favTitle")+'</span></div>'+(favs.length?'<div class="dlist">'+favs.map(e=>cardOf(e,now)).join("")+'</div>':'<div class="empty">'+tr("favEmpty")+'</div>');
+return;
+}
+if(!evs.length){$("#list").innerHTML='<div class="empty">'+tr("noResults")+'</div>';return}
+let html="";
+const todayNum=shDayNum(now);
+const todayKey=dayKey(now);
+const groups=new Map();
+for(const e of evs){
+const effTs=e.start?(shDayNum(e.start)<todayNum?t0+12*3600e3:new Date(e.start).getTime()):null;
+const dk=e.start?dayKey(effTs):"待定";
+if(!groups.has(dk))groups.set(dk,{effTs,items:[]});
+groups.get(dk).items.push(e);
+}
+const dlist=items=>items.length?`<div class="dlist">${items.map(e=>cardOf(e,now)).join("")}</div>`:"";
+for(const [dk,g] of groups){
+const cnt=`<span class="dcnt">${tr("dayCount",g.items.length)}</span>`;
+if(g.effTs){const sp=shParts(g.effTs),rel=relLabel(g.effTs),wd=new Date(g.effTs).toLocaleDateString(LOC(),{timeZone:TZ,weekday:"long"});
+const ds=LANG==="en"?new Date(g.effTs).toLocaleDateString("en-US",{timeZone:TZ,month:"short",day:"numeric"}):sp[1]+"月"+sp[2]+"日";
+html+=`<div class="dayhead"><span class="dnum">${rel||ds}</span><span class="dmeta">${rel?ds+" · ":""}${wd}</span>${cnt}</div>`;
+}else{html+=`<div class="dayhead"><span class="dnum">${tr("dateTBD")}</span>${cnt}</div>`}
+if(dk===todayKey){
+const own=g.items.filter(e=>shDayNum(e.start)>=todayNum);
+const ongoing=g.items.filter(e=>shDayNum(e.start)<todayNum);
+html+=dlist(own);
+if(ongoing.length)html+=`<button class="foldhead" onclick="this.nextElementSibling.classList.toggle('open');this.classList.toggle('open')"><span>${tr("ongoingFold",ongoing.length)}</span><span class="chev">▾</span></button><div class="foldbody">${dlist(ongoing)}</div>`;
+}else{
+html+=dlist(g.items);
+}
+}
+$("#list").innerHTML=html;
+}
+let mKey="generic";
+function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
+ta.value=PROMPTS[LANG][mKey];document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}
+function openModal(mode){mLoad();document.getElementById("ovl").classList.add("open")}
+function closeModal(){document.getElementById("ovl").classList.remove("open")}
+document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips.mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
+document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly;document.getElementById("favbtn").classList.toggle("on",favOnly);if(typeof syncFilterUI==="function")syncFilterUI();render()});
+function closeMenus(except){document.querySelectorAll(".cact.open").forEach(c=>{if(c!==except){c.classList.remove("open");const m=c.querySelector(".more");if(m)m.setAttribute("aria-expanded","false")}})}
+document.getElementById("list").addEventListener("click",ev=>{
+const mb=ev.target.closest(".more");
+if(mb){const c=mb.parentElement;closeMenus(c);const o=c.classList.toggle("open");mb.setAttribute("aria-expanded",o?"true":"false");return}
+const b=ev.target.closest("[data-fav]");if(b){ev.preventDefault();toggleFav(decodeURIComponent(b.dataset.fav));return}
+if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus();
+});
+document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
+document.addEventListener("keydown",ev=>{if(ev.key==="Escape"){closeMenus();closeModal()}});
+function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
+const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/hk-events.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
+function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
+window.addEventListener("resize",measureBar);
+function syncFilterUI(){
+const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.dist!=="all"?1:0)+F.cats.size;
+$("#fclear").hidden=active===0;
+$("#fcount").textContent=active?String(active):"";
+document.querySelectorAll("#qchips.chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=active===0&&!favOnly;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
+}
+$("#qchips").addEventListener("click",ev=>{
+const ch=ev.target.closest("[data-q]");if(!ch)return;
+const q=ch.dataset.q;
+if(q==="all"){$("#fclear").click();if(favOnly)$("#favbtn").click();return}
+const [k,v]=q.split(":");
+const grp={time:"#g-time",fee:"#g-fee",fmt:"#g-fmt"}[k];
+const target=$(grp+' [data-v="'+(F[k]===v?"all":v)+'"]');
+if(target)target.click();
+});
+function segWire(id,key){
+const el=$(id);
+el.addEventListener("click",ev=>{
+const b=ev.target.closest("[data-v]");if(!b)return;
+F[key]=b.dataset.v;
+el.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===b));
+if(key==="time"){F.date="";const d=$("#fdate");d.value="";d.classList.remove("on")}
+syncFilterUI();render();measureBar();
+});
+}
+segWire("#g-time","time");segWire("#g-fee","fee");segWire("#g-fmt","fmt");
+function renderDist(){
+const counts={};DATA.forEach(e=>{if(e.district)counts[e.district]=(counts[e.district]||0)+1});
+const list=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+const label=d=>LANG==="en"?(DIST_EN[d]||d):LANG==="tw"?(DIST_TW[d]||d):d;
+$("#g-dist").innerHTML=`<button class="chip${F.dist==="all"?" on":""}" data-v="all">${tr("distAll")}</button>`+list.map(d=>`<button class="chip${F.dist===d?" on":""}" data-v="${d}">${label(d)}</button>`).join("");
+}
+$("#g-dist").addEventListener("click",ev=>{
+const b=ev.target.closest("[data-v]");if(!b)return;
+F.dist=b.dataset.v;
+document.querySelectorAll("#g-dist.chip").forEach(x=>x.classList.toggle("on",x===b));
+syncFilterUI();render();measureBar();
+});
+function renderCats(){$("#g-cats").innerHTML=CATS.map(c=>`<button class="chip${F.cats.has(c)?" on":""}" data-c="${c}">${CATDISP[LANG][c]||c}</button>`).join("")}
+renderCats();
+$("#g-cats").addEventListener("click",ev=>{
+const b=ev.target.closest("[data-c]");if(!b)return;
+const c=b.dataset.c;
+if(F.cats.has(c))F.cats.delete(c);else F.cats.add(c);
+b.classList.toggle("on",F.cats.has(c));
+syncFilterUI();render();measureBar();
+});
+$("#fdate").addEventListener("change",e=>{
+F.date=e.target.value;
+e.target.classList.toggle("on",!!F.date);
+if(F.date){F.time="all";document.querySelectorAll("#g-time.chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all"))}
+syncFilterUI();render();measureBar();
+});
+$("#fclear").addEventListener("click",()=>{
+F={time:"all",date:"",fee:"all",fmt:"all",dist:"all",cats:new Set()};
+document.querySelectorAll(".seg").forEach(s=>s.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all")));
+const d=$("#fdate");d.value="";d.classList.remove("on");
+renderCats();
+syncFilterUI();render();measureBar();
+});
+$("#ftoggle").addEventListener("click",()=>{
+const g=$("#fgroups");g.classList.toggle("open");
+$("#ftoggle").setAttribute("aria-expanded",g.classList.contains("open"));
+measureBar();
+});
+$("#q").addEventListener("input",()=>{render();measureBar()});
+applyLang();
+fetch("/hk-events.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
+DATA=j.events||[];
+window._updRaw=j.updated_at||null;fmtUpd();
+renderDist();render();measureBar();setTimeout(measureBar,400);
+}).catch(()=>{const el=document.getElementById("list");if(el)el.innerHTML='<div class="empty">'+tr("loadFail")+'</div>'});
+</script>
+<script>
+(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
+function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
+b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+p.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
+})();
+</script>
+<script>
+(function(){document.querySelectorAll(".prefs").forEach(function(p){
+var sel=p.querySelector(".langsel"),lg=p.querySelector(".langsw"),cyc=p.querySelector(".themecyc"),tg=p.querySelector(".themesw");
+if(sel&&lg){var syncL=function(){var on=lg.querySelector("button.on");if(on&&sel.value!==on.dataset.setlang)sel.value=on.dataset.setlang};
+sel.addEventListener("change",function(){var b=lg.querySelector('[data-setlang="'+sel.value+'"]');if(b)b.click();syncL()});
+new MutationObserver(syncL).observe(lg,{subtree:true,attributes:true,attributeFilter:["class"]});syncL()}
+if(cyc&&tg){var order=["auto","light","dark"],ic={auto:"\u25D0",light:"\u2600",dark:"\u263E"};
+var cur=function(){var on=tg.querySelector("button.on");return on?on.dataset.settheme:"auto"};
+var syncT=function(){var c=cur(),b=tg.querySelector('[data-settheme="'+c+'"]'),l=b?(b.getAttribute("aria-label")||b.textContent):c,t=(tg.getAttribute("aria-label")||"Theme")+": "+l;cyc.textContent=ic[c]||ic.auto;cyc.title=t;cyc.setAttribute("aria-label",t)};
+cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],b=tg.querySelector('[data-settheme="'+n+'"]');if(b)b.click();syncT()});
+new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
+})})();
+</script>
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
+</body>
+</html>
