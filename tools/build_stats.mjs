@@ -16,6 +16,7 @@ const isHk = (x) => x && (x.city_id === "hk" || /香港|hong kong/i.test(x.city 
 const LISTS = {
   events: { file: "events.json", merge: ["events-archive.json"], arr: (d) => d.events, keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
   hk: { file: "events.json", merge: ["events-archive.json"], arr: (d) => (d.events || []).filter(isHk), keys: ["id", "url"], keep: (x) => x.visibility !== "agent" },
+  hkevents: { file: "hkevents.json", arr: (d) => d.events, keys: ["id", "url"] }, // full HK list (/hkevents/); `hk` above = curated HK items in events.json
   hackathons: { file: "hackathons.json", arr: (d) => d.hackathons, keys: ["url"] },
   talks: { file: "talks.json", arr: (d) => d.talks, keys: ["url", "id"], also: [["spaces.json", (d) => d.spaces], ["interviews.json", (d) => d.interviews]] },
   vps: { file: "vps.json", arr: (d) => d.plans, keys: ["id"] },

@@ -1,4 +1,4 @@
-// RSS / ICS builders shared by build_feeds.mjs (site-wide feeds) and build_city_pages.mjs (/hk/ feeds).
+// RSS / ICS builders shared by build_feeds.mjs (site-wide feeds) and build_slices.mjs (/hk/ feeds).
 export const publicEvents = (data) => (data.events || []).filter((e) => e && e.title && e.url && e.visibility !== "agent");
 
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

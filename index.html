@@ -3,13 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yat's List · 深圳活动清单</title>
+<title>Yat's List · 深圳 / 香港活动清单</title>
 <link rel="canonical" href="https://yatslist.com/szevents/">
-<meta http-equiv="refresh" content="0; url=/szevents/">
+<link rel="alternate" hreflang="zh-HK" href="https://yatslist.com/hkevents/">
+<!-- no-JS / bots: Shenzhen after 3s; with JS, city.js picks 深圳 or 香港 first (stored szCity > Cloudflare loc > time zone) -->
+<meta http-equiv="refresh" content="3; url=/szevents/">
 <style>body{background:#0d1218;color:#dcebe4;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}a{color:#2ee6a8}</style>
-<script>location.replace('/szevents/' + location.search + location.hash);</script>
+<script src="/city.js?v=1"></script>
+<script>
+(function(){
+var done=false,go=function(c){if(done)return;done=true;var p=(window.YLCity&&YLCity.pages[c])||"/szevents/";location.replace(p+location.search+location.hash)};
+if(!window.YLCity){go("sz");return}
+var t=setTimeout(function(){go("sz")},1500);/* belt and braces: city.js resolves within ~800ms */
+YLCity.detect({timeout:800}).then(function(r){clearTimeout(t);go(r.city)},function(){clearTimeout(t);go("sz")});
+})();
+</script>
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script></head>
 <body>
-<p>正在打开 <a href="/szevents/">Yat's List 深圳活动清单</a>…</p>
+<p>正在打开 <a href="/szevents/">深圳活动清单</a> · <a href="/hkevents/">香港活動清單</a>…</p>
 </body>
 </html>

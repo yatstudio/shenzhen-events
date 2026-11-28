@@ -13,7 +13,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 // Pages whose topbar comes from /shell.js. Add a page here when you wire it.
 const PAGES = [
   "szevents/index.html",
-  "hk/index.html",
+  "hkevents/index.html",
   "hackathons/index.html",
   "chtf/index.html",
   "tglist/index.html",
@@ -41,11 +41,15 @@ for (const p of PAGES) {
   if (/<div class="topbar[ "]/.test(html)) errors.push(`${p}: still has its own <div class="topbar"> markup`);
 }
 
-// hk/index.html is generated from szevents/index.html: fail when it is stale or hand-edited
-try {
-  execFileSync(process.execPath, [join(ROOT, "tools", "build_city_pages.mjs"), "--check"], { stdio: "pipe" });
-} catch (e) {
-  errors.push("hk/index.html: stale vs. szevents/index.html; run node tools/build_city_pages.mjs");
+// Old city URLs that are now redirect stubs: must redirect (keeping ?query and #hash) and point canonical at the new page
+const REDIRECTS = { "hk/index.html": "/hkevents/" };
+for (const [p, to] of Object.entries(REDIRECTS)) {
+  const f = join(ROOT, p);
+  if (!existsSync(f)) { errors.push(`${p}: redirect stub missing`); continue; }
+  const html = readFileSync(f, "utf8");
+  if (!html.includes(`location.replace('${to}' + location.search + location.hash)`)) errors.push(`${p}: does not redirect to ${to} (with search + hash)`);
+  if (!html.includes(`<link rel="canonical" href="https://yatslist.com${to}">`)) errors.push(`${p}: canonical is not https://yatslist.com${to}`);
+  if (html.includes("shell.js")) errors.push(`${p}: redirect stub should not load the shell`);
 }
 
 if (process.argv.includes("--data")) {
@@ -61,4 +65,4 @@ if (errors.length) {
   console.error("check-shell: " + errors.length + " problem(s)\n  " + errors.join("\n  "));
   process.exit(1);
 }
-console.log(`check-shell: ${PAGES.length} pages use /shell.js`);
+console.log(`check-shell: ${PAGES.length} pages use /shell.js; ${Object.keys(REDIRECTS).length} redirect stub(s) ok`);

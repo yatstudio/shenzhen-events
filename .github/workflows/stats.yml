@@ -2,7 +2,8 @@
 # and once just after midnight Shanghai time so "new today" resets.
 # Also, in this order: add city_id to events.json (the daily writer doesn't set it) -> move events ended 30+ days ago
 # to events-archive.json -> per-city data slices (/<city_id>/events.json for cities.json entries with "slice": true)
-# -> /hk/ page + feed.xml + events.ics (from the szevents/index.html template) -> stats.json (counts master + archive).
+# (hk slice = /hkevents.json + events.json's HK items, plus /hk/feed.xml + /hk/events.ics) -> stats.json (counts master + archive).
+# /hk/ itself is a static redirect to /hkevents/ (hand-written page, not generated).
 name: stats
 on:
   push:
@@ -10,6 +11,7 @@ on:
     paths:
       - events.json
       - events-archive.json
+      - hkevents.json
       - hackathons.json
       - talks.json
       - vps.json
@@ -19,14 +21,12 @@ on:
       - nomadlist.json
       - notes/notes.json
       - tools/build_stats.mjs
-      - szevents/index.html
       - cities.json
       - tools/cities.mjs
       - tools/feeds.mjs
       - tools/normalize_city.mjs
       - tools/archive_events.mjs
       - tools/build_slices.mjs
-      - tools/build_city_pages.mjs
       - tools/check-shell.mjs
   schedule:
     - cron: "5 16 * * *"
@@ -46,12 +46,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build city_id, archive, city slices, /hk/ and stats
+      - name: Build city_id, archive, city slices and stats
         run: |
           node tools/normalize_city.mjs
           node tools/archive_events.mjs
           node tools/build_slices.mjs
-          node tools/build_city_pages.mjs
           node tools/build_stats.mjs
           node tools/check-shell.mjs --data
       - name: Commit generated files if they changed
@@ -62,11 +61,11 @@ jobs:
           for i in 1 2 3; do
             git add -A $FILES
             if git diff --cached --quiet; then echo "no change"; exit 0; fi
-            git commit -q -m "stats: rebuild list counts, city_id, archive, city slices, /hk/ [skip ci]"
+            git commit -q -m "stats: rebuild list counts, city_id, archive, city slices [skip ci]"
             git push -q origin HEAD:main && exit 0
             # main moved (e.g. the daily writer pushed events.json): rebuild on top of it instead of rebasing generated files
             sleep 5
             git fetch -q origin main && git reset -q --hard origin/main
-            node tools/normalize_city.mjs && node tools/archive_events.mjs && node tools/build_slices.mjs && node tools/build_city_pages.mjs && node tools/build_stats.mjs && node tools/check-shell.mjs --data
+            node tools/normalize_city.mjs && node tools/archive_events.mjs && node tools/build_slices.mjs && node tools/build_stats.mjs && node tools/check-shell.mjs --data
           done
           exit 1

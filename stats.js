@@ -1,20 +1,25 @@
 /* Yat's List: list counts + "new today" from /stats.json.
    Fills <div class="ylstat" data-list="..."> and adds a count badge to the 黑客松 menu link
-   and the homepage hackathon banner (<a class="hackhero">). */
+   and the homepage hackathon banner (<a class="hackhero">).
+   City cards: <a class="hackhero cityhero" data-city="sz|hk"> link the other city's page with its count
+   (sz: lists.events, hk: lists.hkevents). */
 (function () {
   var U = {
-    zh: { events: "场活动在列", hk: "场香港活动在列", hackathons: "场黑客松正在报名", talks: "场谈话", vps: "个套餐", xlist: "位", expat: "场活动", remote: "个岗位", nomadlist: "座城市", notes: "篇笔记",
+    zh: { events: "场活动在列", hk: "场香港活动在列", hkevents: "场活动在列", hackathons: "场黑客松正在报名", talks: "场谈话", vps: "个套餐", xlist: "位", expat: "场活动", remote: "个岗位", nomadlist: "座城市", notes: "篇笔记",
       today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暂无新增",
       hackTitle: "全球黑客松", hackSub: function (n) { return n + " 场正在报名，每天核实更新"; }, go: "去看 →",
-      chtfTitle: "高交会专题", chtfSub: "11月26–28日 · 深圳国际会展中心（宝安）· 4 场同期活动 + 1,529 家展商展位查询" },
-    tw: { events: "場活動在列", hk: "場香港活動在列", hackathons: "場黑客松正在報名", talks: "場談話", vps: "個套餐", xlist: "位", expat: "場活動", remote: "個崗位", nomadlist: "座城市", notes: "篇筆記",
+      chtfTitle: "高交会专题", chtfSub: "11月26–28日 · 深圳国际会展中心（宝安）· 4 场同期活动 + 1,529 家展商展位查询",
+      szTitle: "深圳活动", szSub: "AI、创业、科技、跨境活动，每天核实更新", hkTitle: "香港活动", hkSub: "香港全量活动，三语，按行政区筛选" },
+    tw: { events: "場活動在列", hk: "場香港活動在列", hkevents: "場活動在列", hackathons: "場黑客松正在報名", talks: "場談話", vps: "個套餐", xlist: "位", expat: "場活動", remote: "個崗位", nomadlist: "座城市", notes: "篇筆記",
       today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暫無新增",
       hackTitle: "全球黑客松", hackSub: function (n) { return n + " 場正在報名，每天核實更新"; }, go: "去看 →",
-      chtfTitle: "高交會專題", chtfSub: "11月26–28日 · 深圳國際會展中心（寶安）· 4 場同期活動 + 1,529 家展商展位查詢" },
-    en: { events: "events listed", hk: "Hong Kong events listed", hackathons: "hackathons open", talks: "talks", vps: "plans", xlist: "people", expat: "events", remote: "jobs", nomadlist: "cities", notes: "notes",
+      chtfTitle: "高交會專題", chtfSub: "11月26–28日 · 深圳國際會展中心（寶安）· 4 場同期活動 + 1,529 家展商展位查詢",
+      szTitle: "深圳活動", szSub: "AI、創業、科技、跨境活動，每天核實更新", hkTitle: "香港活動", hkSub: "香港全量活動，三語，按行政區篩選" },
+    en: { events: "events listed", hk: "Hong Kong events listed", hkevents: "events listed", hackathons: "hackathons open", talks: "talks", vps: "plans", xlist: "people", expat: "events", remote: "jobs", nomadlist: "cities", notes: "notes",
       today: "New today", last: "Last added", week: "Last 7 days", none: "Nothing new yet today",
       hackTitle: "Global hackathons", hackSub: function (n) { return n + " open for registration, verified daily"; }, go: "Browse →",
-      chtfTitle: "CHTF 2026 topic", chtfSub: "Nov 26–28 · Shenzhen World Exhibition & Convention Center · 4 events + 1,529 exhibitors with booth lookup" }
+      chtfTitle: "CHTF 2026 topic", chtfSub: "Nov 26–28 · Shenzhen World Exhibition & Convention Center · 4 events + 1,529 exhibitors with booth lookup",
+      szTitle: "Shenzhen events", szSub: "AI, startup, tech and cross-border events, verified daily", hkTitle: "Hong Kong events", hkSub: "All Hong Kong events, in three languages, by district" }
   };
   function lang() { var l = window.YL && YL.lang; if (!l) try { l = localStorage.getItem("szLang"); } catch (e) {} return l === "en" || l === "tw" ? l : "zh"; }
   function md(d, L) { var m = +d.slice(5, 7), dd = +d.slice(8, 10); return L === "en" ? ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m - 1] + " " + dd : m + "月" + dd + "日"; }
@@ -30,6 +35,7 @@
     ".hackhero .hup{color:var(--green,#2ee6a8);font-weight:700}.hackhero .hgo{flex:0 0 auto;font-weight:700;color:var(--green,#2ee6a8);white-space:nowrap}" +
     "[data-theme=light] .ylstat .up{background:rgba(10,125,85,.07)}[data-theme=light] .navbadge{color:#fff}" +
     "[data-theme=light] .hackhero{background:linear-gradient(90deg,rgba(10,125,85,.10),rgba(10,125,85,.02))}" +
+    ".hackhero.cityhero{padding:10px 16px}.hackhero.cityhero .hn{font-size:1.4rem}.hackhero.cityhero:empty{display:none}" +
     "@media (max-width:640px){.ylstat .n{font-size:1.3rem}.hackhero{padding:12px 14px;gap:12px}.hackhero .hn{font-size:1.6rem}.hackhero .hgo{display:none}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
   var S = null;
@@ -50,11 +56,17 @@
     });
     var hk = S.lists.hackathons; if (hk && stale) hk = Object.assign({}, hk, { new_today: 0 });
     if (hk) {
-      document.querySelectorAll("a.hackhero:not(.chtfhero)").forEach(function (a) {
+      document.querySelectorAll("a.hackhero:not(.chtfhero):not(.cityhero)").forEach(function (a) {
         a.innerHTML = '<span class="hn">' + hk.total + '</span><span class="ht"><b>' + T.hackTitle + "</b><span>" + T.hackSub(hk.total) +
           (hk.new_today ? ' · <span class="hup">' + T.today + " +" + hk.new_today + "</span>" : "") + '</span></span><span class="hgo">' + T.go + "</span>";
       });
     }
+    // city cards: the other city's list and its size
+    document.querySelectorAll("a.cityhero[data-city]").forEach(function (a) {
+      var c = a.getAttribute("data-city"), s = S.lists[c === "hk" ? "hkevents" : "events"];
+      if (!s || !(c === "hk" || c === "sz")) return;
+      a.innerHTML = '<span class="hn">' + s.total + '</span><span class="ht"><b>' + T[c + "Title"] + "</b><span>" + T[c + "Sub"] + '</span></span><span class="hgo">' + T.go + "</span>";
+    });
     // CHTF topic banner: only while the fair runs (through 2026-11-28, Shanghai time)
     document.querySelectorAll("a.chtfhero").forEach(function (a) {
       if (today > "2026-11-28") { a.style.display = "none"; return; }

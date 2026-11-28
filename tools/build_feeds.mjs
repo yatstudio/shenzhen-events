@@ -1,5 +1,5 @@
 // 由 events.json 生成 feed.xml（RSS）与 events.ics（日历）。用法：node tools/build_feeds.mjs
-// （/hk/ 的 feed.xml 与 events.ics 由 tools/build_city_pages.mjs 生成）
+// （/hk/ 的 feed.xml 与 events.ics 由 tools/build_slices.mjs 生成）
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";

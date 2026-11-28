@@ -9,7 +9,6 @@ on:
       - shell.js
       - cities.json
       - tools/check-shell.mjs
-      - tools/build_city_pages.mjs
       - .github/workflows/shell.yml
   pull_request:
     paths:
@@ -17,7 +16,6 @@ on:
       - shell.js
       - cities.json
       - tools/check-shell.mjs
-      - tools/build_city_pages.mjs
   workflow_dispatch:
 permissions:
   contents: read
@@ -30,4 +28,5 @@ jobs:
         with:
           node-version: 22
       - run: node --check shell.js
+      - run: node --check city.js
       - run: node tools/check-shell.mjs

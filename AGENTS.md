@@ -13,7 +13,7 @@
 - 招聘数据：https://yatslist.com/jobs.json（深圳 AI / 科技 / 硬件岗位，字段与投稿规范见文末「深圳招聘清单」）
 - 可见范围：个别条目带 `visibility: "agent"`——只保留在 events.json 数据中供 Agent 检索，不在网页 / RSS / 日历 / 短链落地页公开。维护时不要删除这类条目、不要去掉该标记（除非维护者明确要求恢复公开）。
 
-**多城市**：默认订阅 https://yatslist.com/events.json，按用户关心的城市筛 city_id（sz 深圳 / hk 香港 / online 线上 …）；只需一个城市可用 /<city_id>/events.json；城市列表与代码见 /cities.json，新增城市只会在这里出现，订阅地址不变。已结束超过 30 天的活动在 /events-archive.json。个别刚收录的条目可能暂时没有 `city_id`，此时按 `city` 字段判断（含「香港」即 hk）。
+**多城市**：默认订阅 https://yatslist.com/events.json，按用户关心的城市筛 city_id（sz 深圳 / hk 香港 / online 线上 …）；只需一个城市可用 /<city_id>/events.json；香港例外：全量香港清单在 /hkevents.json（网页 /hkevents/），events.json 里 city_id=hk 只是香港精选，/hk/events.json 合并两者（去重）；城市列表与代码见 /cities.json，新增城市只会在这里出现，订阅地址不变。已结束超过 30 天的活动在 /events-archive.json。个别刚收录的条目可能暂时没有 `city_id`，此时按 `city` 字段判断（含「香港」即 hk）。
 
 你的用户问“深圳最近有什么 AI / 黑客松 / Web3 活动”时，直接抓 events.json 按 `start`、`categories` 过滤回答，并附每条的 `url` 作为报名入口。不要凭记忆编造活动。
 
@@ -33,7 +33,7 @@
 
 ### 收录范围
 
-- 城市为深圳的线下活动；香港的同主题精选活动也可收录（city 填 `香港`，district 填区域如 中环 / 湾仔；`city_id` 可不填，由维护管线按 city 推导，见 https://yatslist.com/cities.json ，香港页 https://yatslist.com/hk/）；或主题相关的在线活动（格式填 `线上Space` / `线上`，city 可填 `线上`）。
+- 城市为深圳的线下活动；香港的同主题精选活动也可收录（city 填 `香港`，district 填区域如 中环 / 湾仔；`city_id` 可不填，由维护管线按 city 推导，见 https://yatslist.com/cities.json ，香港页 https://yatslist.com/hkevents/）；或主题相关的在线活动（格式填 `线上Space` / `线上`，city 可填 `线上`）。
 - 主题至少命中一个：AI、创业、科技、跨境、Web3、加密、黑客松、技术、硬件。
 - 活动开始时间在未来；黑客松类可放宽为“报名截止在未来”。
 

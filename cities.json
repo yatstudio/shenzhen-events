@@ -1,5 +1,5 @@
 {
- "about": "Yat's List 城市表（城市目录）。所有城市的活动都在一份总表 events.json 里，每条带 city_id（由 city 字段按 match 推导，tools/normalize_city.mjs）；按 events_url + events_filter 筛即可。slice=true 的城市另有只含该城市的切片 slice_url（由总表生成，tools/build_slices.mjs）；page_url 是该城市的网页。新增城市只会出现在这里，订阅地址不变。已结束超过 30 天的活动在 https://yatslist.com/events-archive.json 。hk.areas 把香港 district 归入 港岛 / 九龙 / 新界；未列出的 district 不归区。",
+ "about": "Yat's List 城市表（城市目录）。所有城市的活动都在一份总表 events.json 里，每条带 city_id（由 city 字段按 match 推导，tools/normalize_city.mjs）；按 events_url + events_filter 筛即可。slice=true 的城市另有只含该城市的切片 slice_url（tools/build_slices.mjs 生成）；page_url 是该城市的网页。香港例外：全量香港清单在 hk.data_url（/hkevents.json），总表只含香港精选，hk 的 slice_url 合并两者（见 hk.slice_note）。新增城市只会出现在这里，订阅地址不变。已结束超过 30 天的活动在 https://yatslist.com/events-archive.json 。hk.areas 把香港 district 归入 港岛 / 九龙 / 新界；未列出的 district 不归区。",
  "cities": [
   {
    "id": "sz",
@@ -25,9 +25,11 @@
    "currency": "HKD",
    "events_url": "https://yatslist.com/events.json",
    "events_filter": "city_id=hk",
+   "data_url": "https://yatslist.com/hkevents.json",
    "slice": true,
    "slice_url": "https://yatslist.com/hk/events.json",
-   "page_url": "https://yatslist.com/hk/",
+   "slice_note": "香港全量清单在 data_url（/hkevents.json，Eventbrite / Meetup / Luma 等平台聚合）；events.json 里 city_id=hk 的只是另行核实收录的精选。slice_url（/hk/events.json，老订阅地址，继续有效）= hkevents.json 全部 + events.json 里 hkevents.json 没有的香港活动（按 id / url / 标题+开始时间去重）。",
+   "page_url": "https://yatslist.com/hkevents/",
    "areas": [
     {
      "id": "hki",

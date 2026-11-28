@@ -37,14 +37,8 @@ color-scheme:light;
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;scroll-behavior:smooth}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;letter-spacing:.01em}
-.topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--border);padding:clamp(var(--sp-md),3vw,var(--sp-lg)) 0}
-.topbar .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(var(--sp-lg),4vw,var(--sp-xl));display:grid;grid-template-columns:auto 1fr;gap:clamp(var(--sp-xl),4vw,var(--sp-2xl));align-items:center}
-.topbar-brand{display:flex;align-items:center;gap:var(--sp-md)}
 .brandmark{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink);white-space:nowrap}
 .brandmark .cur{color:var(--green)}
-.topbar-nav{display:flex;gap:clamp(var(--sp-lg),4vw,var(--sp-2xl));align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.topbar-nav a{color:var(--ink-sec);font-size:clamp(.88rem,2vw,.95rem);text-decoration:none;font-weight:600;transition:color .2s ease;white-space:nowrap}
-.topbar-nav a:hover{color:var(--green)}
 .agent-section{background:var(--bg);padding:clamp(var(--sp-2xl),6vw,56px) 0 clamp(var(--sp-3xl),8vw,60px)}
 .agentnote{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;font-size:.92rem;color:var(--ink-sec);line-height:1.75;margin:0 0 var(--sp-xl)}
 .agentnote b{color:var(--ink)}
@@ -233,11 +227,6 @@ input[type=search]::placeholder{color:var(--ink-ter)}
 .tour-hl{outline:3px solid var(--green)!important;outline-offset:3px;border-radius:var(--r-md);box-shadow:0 0 0 6px rgba(46,230,168,.12)!important}
 @media (max-width:768px){
 body{overflow-x:hidden}
-.topbar .wrap{grid-template-columns:auto;gap:var(--sp-md)}
-.topbar-brand{flex-shrink:0}
-.topbar-nav{gap:var(--sp-md);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav a{flex-shrink:0;font-size:.84rem}
 .terminal-body{padding:var(--sp-lg) var(--sp-md);overflow-x:hidden}
 .terminal-body .terminal-prompt{overflow-wrap:break-word;word-break:break-all}
 .terminal-body .terminal-status{overflow-wrap:break-word;word-break:break-word}
@@ -289,10 +278,6 @@ select{font-size:16px}
 
 /* Mobile refinements (2026-11-06): compact topbar/hero, stacked filter groups, slimmer welcome card */
 @media (max-width:820px){
-.topbar{padding:8px 0}
-.topbar .wrap{grid-template-columns:auto 1fr;gap:10px;padding:0 14px}
-.topbar-nav{gap:14px;overflow:visible;width:auto}
-.topbar-nav a{font-size:.82rem}
 .human-section{padding-top:24px}
 .section-title{font-size:1.5rem}
 .section-subtitle{font-size:.9rem}
@@ -315,16 +300,6 @@ select{font-size:16px}
 .subcard .prompt{overflow-wrap:anywhere;word-break:break-word}
 .card .actions .btn{flex:1 1 30%}
 }
-.langsw{display:inline-flex;align-items:center;gap:8px}
-.langsw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.langsw button:hover{color:var(--ink)}
-.langsw button.on{color:var(--green)}
-.langsw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
-.themesw{display:inline-flex;align-items:center;gap:8px}
-.themesw button{background:none;border:0;color:var(--ink-ter);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:2px 0;letter-spacing:.02em}
-.themesw button:hover{color:var(--ink)}
-.themesw button.on{color:var(--green)}
-.themesw .lsep{color:var(--ink-ter);opacity:.45;font-size:.8rem}
 .section-tagline{margin:10px 0 0;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.38em;color:var(--ink-ter);text-transform:uppercase}
 .sitefoot{border-top:1px solid var(--border);background:var(--bg);padding:42px 0 48px}
 .sitefoot .wrap{text-align:center}
@@ -374,7 +349,6 @@ select{font-size:16px}
 [data-theme="light"] .btn-copy{background:rgba(10,125,85,.1);border-color:rgba(10,125,85,.3)}
 
 /* ===== FS pass 2026-11-08: 首屏 + 手机端 ===== */
-.topbar{padding-top:10px;padding-bottom:10px}
 .human-section{padding-top:18px}
 .brandmark{line-height:1.25}
 .section-tagline{line-height:1.4;margin-top:8px}
@@ -399,12 +373,6 @@ select{font-size:16px}
 .sitefoot{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
 input[type=search]{font-size:16px}
 @media (max-width:820px){
-.topbar{padding:6px 0}
-.topbar .wrap{gap:10px;padding:0 14px}
-.topbar-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;gap:12px}
-.topbar-nav::-webkit-scrollbar{display:none}
-.topbar-nav>*{flex-shrink:0}
-.langsw button,.themesw button{min-height:32px;padding:4px 7px}
 .human-section{padding-top:14px}
 .section-tagline{display:none}
 .herometa{font-size:.8rem;line-height:1.55;padding:0 4px}
@@ -443,6 +411,8 @@ input[type=search]{font-size:16px}
 </style>
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <meta name="theme-color" content="#0d1218">
+<link rel="canonical" href="https://yatslist.com/hkevents/">
+<link rel="alternate" type="application/json" title="香港活動清單 hkevents.json" href="https://yatslist.com/hkevents.json">
 <!-- Umami -->
 <script defer src="https://stats.carromking.shop/script.js" data-website-id="3491fc29-b40f-4815-b12e-49ffe1746c81"></script>
 <link rel="manifest" href="/manifest.webmanifest">
@@ -453,19 +423,6 @@ input[type=search]{font-size:16px}
 <meta name="apple-mobile-web-app-title" content="Yat's List">
 <style>
 
-/* ===== compact menu prefs 2026-11-21: one language select + one theme toggle ===== */
-.prefs{display:inline-flex;align-items:center;gap:6px}
-.prefs .langsw,.prefs .themesw{display:none!important}
-.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a9a94' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.82rem;font-weight:600;height:30px;padding:0 24px 0 10px;cursor:pointer;line-height:1}
-.langsel:hover,.langsel:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-.langsel option{background:var(--panel);color:var(--ink)}
-.themecyc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;background:none;border:1px solid var(--border);border-radius:8px;color:var(--ink-sec);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
-.themecyc:hover,.themecyc:focus-visible{color:var(--ink);border-color:var(--border-hover)}
-@media (max-width:820px){
-  #mnav-panel .prefs{order:9;width:100%;padding-top:12px;margin-top:2px;border-top:1px solid var(--border)}
-  #mnav-panel .langsel,#mnav-panel .themecyc{height:34px}
-  #mnav-panel .themecyc{width:34px}
-}
 
 </style>
 <style>
@@ -508,15 +465,8 @@ input[type=search]{font-size:16px}
   .card{padding:14px 16px}
 }
 
-/* ===== mobile topbar dropdown + drop duplicated list chips 2026-11-11 ===== */
-#mnav-btn{display:none}
-#mnav-panel{display:contents}
+/* ===== drop duplicated list chips on mobile 2026-11-11 ===== */
 @media (max-width:820px){
-  #mnav-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;cursor:pointer;justify-self:end}
-  #mnav-panel{display:none;position:absolute;top:calc(100% + 6px);right:10px;z-index:130;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:12px 16px;min-width:210px}
-  #mnav-panel.open{display:block}
-  #mnav-panel .topbar-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex-wrap:nowrap}
-  #mnav-panel .topbar-nav a{font-size:.95rem}
   .listchips{display:none}
 }
 
@@ -524,9 +474,6 @@ input[type=search]{font-size:16px}
 :root{--tint:rgba(46,230,168,.10);--on-green:#06281c;--cmd-bg:rgba(0,0,0,.3)}
 :root[data-theme="light"]{--tint:rgba(10,125,85,.07);--on-green:#ffffff;--cmd-bg:#edf2f0}
 .human-section>.wrap{max-width:880px}
-/* topbar */
-.topbar-nav a.nav-ag{color:var(--green)}
-.topbar-nav a.nav-on{color:var(--ink)}
 .nav-submit{background:none;border:1px solid var(--border-hover);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
 .nav-submit:hover{border-color:var(--green);color:var(--green)}
 /* hero: left-aligned, tagline above the title */
@@ -637,37 +584,19 @@ input[type=search]{font-size:16px}
   .agentbox .cmdline{gap:8px}
 }
 
-/* ===== topbar compact 2026-11-13 ===== */
-.topbar{padding-top:8px;padding-bottom:8px}
-@media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
-@media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 
-/* ylstat count banner: same component as szevents (styles injected there by /stats.js; inlined here, filled from this page's own fetch) */
-.ylstat{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:10px 0 0;font-size:.88rem;color:var(--ink-sec,#8b98a5);font-variant-numeric:tabular-nums}
-.ylstat .n{font-size:1.5rem;font-weight:800;color:var(--ink,#e6edf3);letter-spacing:-.01em;margin-right:4px}
-@media (max-width:640px){.ylstat .n{font-size:1.3rem}}
+.cityswitch{display:inline-flex;gap:4px;margin:12px 0 0;padding:3px;border:1px solid var(--border);border-radius:999px;background:var(--panel)}
+.cityswitch a{padding:5px 16px;border-radius:999px;color:var(--ink-sec);font-size:.88rem;font-weight:650;text-decoration:none;transition:all .18s ease}
+.cityswitch a:hover{color:var(--ink)}
+.cityswitch a.on{background:var(--green);color:#06251a}
+[data-theme=light] .cityswitch a.on{color:#fff}
 </style>
 </head>
 <body>
 <a id="top"></a>
 
 <!-- Sticky Topbar -->
-<div class="topbar">
-<div class="wrap">
-<a class="topbar-brand" href="https://yatslist.com/hkevents/" aria-label="回到顶部" style="text-decoration:none">
-<span class="brandmark">&gt; yat's list<span class="cur">_</span></span>
-</a>
-<button id="mnav-btn" aria-expanded="false" aria-haspopup="true">☰ 菜单</button>
-<div id="mnav-panel"><nav class="topbar-nav">
-<a href="#agent-section" id="nav-agent" class="nav-ag">Agent</a>
-<a href="https://yatslist.com/szevents/" id="nav-sz">深圳活动</a>
-<a href="#human-section" id="nav-events" class="nav-on" aria-current="page">香港活动</a>
-<a href="https://yatslist.com/hackathons/" id="nav-hack">黑客松</a>
-<a href="https://yatslist.com/talks/" id="nav-spaces">Talks</a>
-<span class="prefs"><select class="langsel" aria-label="Language"><option value="zh">简体</option><option value="tw">繁體</option><option value="en">EN</option></select><span class="langsw" role="group" aria-label="Language"><button type="button" data-setlang="zh" class="on">简体</button><span class="lsep">|</span><button type="button" data-setlang="tw">繁體</button><span class="lsep">|</span><button type="button" data-setlang="en">EN</button></span><button type="button" class="themecyc" aria-label="Theme">&#9680;</button><span class="themesw" role="group" aria-label="Theme"><button type="button" data-settheme="auto" class="on">自动</button><span class="lsep">|</span><button type="button" data-settheme="light" aria-label="白天" title="白天">☀</button><span class="lsep">|</span><button type="button" data-settheme="dark" aria-label="晚上" title="晚上">☾</button></span></span>
-</nav></div>
-</div>
-</div>
+<div id="yl-topbar" data-active="szevents" data-lang-default="tw"><button type="button" class="nav-submit" id="ta-submit" onclick="openModal('post')">提交活动</button></div><script src="/shell.js?v=3"></script>
 
 <!-- Human Section (第一屏) -->
 <section class="human-section" id="human-section">
@@ -676,10 +605,12 @@ input[type=search]{font-size:16px}
 <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
 <h2 class="section-title" id="hero-title">香港活动清单</h2>
 <p class="section-subtitle" id="hero-sub">香港活动，喂给你的 Agent 吃。</p>
-<div class="ylstat" id="hk-stat"><span><span class="n" id="hk-stat-n">–</span><span id="hk-stat-label">场活动在列</span></span></div>
-<p class="herometa" id="hm-line"><span id="hm-upd"></span></p>
-<p class="scopenote" id="scope-note">香港活动全量聚合：统一收录、去重，按日期排好；点卡片直达官方报名页。</p>
+<nav class="cityswitch" id="cityswitch" data-page-city="hk" aria-label="城市"><a href="/szevents/" data-city="sz">深圳</a><a href="/hkevents/" data-city="hk" class="on" aria-current="page">香港</a></nav>
+<div class="ylstat" data-list="hkevents"></div>
 </div>
+<a class="hackhero cityhero" data-city="sz" href="https://yatslist.com/szevents/"></a>
+<a class="hackhero" href="https://yatslist.com/hackathons/"></a>
+<a class="hackhero chtfhero" href="https://yatslist.com/chtf/"></a>
 
 <!-- Agent subscription: the one primary action on the page -->
 <div class="agentbox" id="agentbox">
@@ -688,7 +619,7 @@ input[type=search]{font-size:16px}
 <button type="button" class="ab-go" id="ta-agent" onclick="openModal('sub')">用我的 Agent 订阅 →</button>
 </div>
 <div class="cmdline"><span>$<span class="ab-cmd"> subscribe</span></span><span class="u">https://yatslist.com/hkevents.json</span><button type="button" id="cmd-copy">复制</button></div>
-<div class="ab-apis" id="ab-apis">也可以直接读：<a href="/hkevents.json">hkevents.json</a> · <a href="https://yatslist.com/szevents/">深圳活动清单</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a></div>
+<div class="ab-apis" id="ab-apis">也可以直接读：<a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a></div>
 </div>
 
 <!-- Filter Bar -->
@@ -865,6 +796,7 @@ input[type=search]{font-size:16px}
 <textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
 <p class="mhint" id="mhint">✏️ 这段话术可以直接改：把里换成你的兴趣、区域，改完再复制，Agent 就按你的喜好筛。</p>
 <div class="mex" id="mex"></div>
+<div class="mex" id="mpost-alt" style="display:none;margin-top:10px"></div>
 <div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
 </div>
 </div>
@@ -874,6 +806,7 @@ input[type=search]{font-size:16px}
 let LANG="";try{LANG=localStorage.getItem("szLang")||""}catch(e){}
 if(!LANG){const _nl=((navigator.language||"zh-CN")+"").toLowerCase();if(_nl==="zh-tw"||_nl==="zh-hk"||_nl==="zh-mo"||_nl.indexOf("zh-hant")===0)LANG="tw";else if(_nl.indexOf("zh")===0)LANG="zh";else LANG="en"}
 if(LANG!=="en"&&LANG!=="tw")LANG="zh";
+if(window.YL)LANG=YL.lang;/* /shell.js owns language detection (?lang=, szLang; this page defaults to 繁體) */
 const CATS=["AI","科技","技术","创业","Web3","加密","黑客松","硬件","跨境","金融","教育","艺文","展览","音乐","社交","生活","美食","运动","亲子"];
 const CATDISP={zh:{AI:"AI","创业":"创业","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技术","硬件":"硬件","金融":"金融","教育":"教育","艺文":"艺文","展览":"展览","音乐":"音乐","社交":"社交","生活":"生活","美食":"美食","运动":"运动","亲子":"亲子"},tw:{AI:"AI","创业":"創業","科技":"科技","跨境":"跨境",Web3:"Web3","加密":"加密","黑客松":"黑客松","技术":"技術","硬件":"硬件","金融":"金融","教育":"教育","艺文":"藝文","展览":"展覽","音乐":"音樂","社交":"社交","生活":"生活","美食":"美食","运动":"運動","亲子":"親子"},en:{AI:"AI","创业":"Startups","科技":"Tech","跨境":"Global",Web3:"Web3","加密":"Crypto","黑客松":"Hackathons","技术":"Engineering","硬件":"Hardware","金融":"Finance","教育":"Education","艺文":"Arts & Culture","展览":"Exhibitions","音乐":"Music","社交":"Social","生活":"Life","美食":"Food & Drink","运动":"Sports","亲子":"Family"}};
 const DIST_TW={"中西区":"中西區","油尖旺区":"油尖旺區","湾仔区":"灣仔區","观塘区":"觀塘區","南区":"南區","九龙城区":"九龍城區","东区":"東區","离岛区":"離島區","西贡区":"西貢區","深水埗区":"深水埗區","黄大仙区":"黃大仙區","元朗区":"元朗區","沙田区":"沙田區","北区":"北區","荃湾区":"荃灣區","大埔区":"大埔區","屯门区":"屯門區","葵青区":"葵青區"};
@@ -881,9 +814,11 @@ const DIST_EN={"中西区":"Central & Western","油尖旺区":"Yau Tsim Mong","�
 const STR={
 zh:{
 docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清单：香港全量活动聚合，科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。",
-brandTop:"回到顶部",navAgent:"Agent",navSz:"深圳活动",navEvents:"香港活动",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
 heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",scopeNote:"香港活动全量聚合：统一收录、去重，按日期排好；点卡片直达官方报名页。",
 heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",
+taSubmit:"提交活动",abApis:'也可以直接读：<a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a>',
+postTitle:"📋 投稿话术",postSteps:"把话术发给你的 Agent（Codex / Claude Code / WorkBuddy 等），它会核对官方页并代你提交，不需要 GitHub 账号。",postEx:"<b>填写示例：</b><br>「我要投稿的活动：【中环 AI 创业者聚会，https://官方链接】」——把【】里换成真实的活动名和官方链接再复制。投稿前先打开官方页，确认日期、地点、票价无误。",postAlt:'<b>没有 Agent？也可以用邮件提交：</b><br>把活动官方链接发到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> 即可，核实、去重后收录。',
+submitPrompt:"请帮我给「Yat's List 香港活动清单」投稿一个活动。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开官方活动页核对日期、时间、地点、票价，按规范里的「HTTP API」方式提交（city 填「香港」；不需要 GitHub 账号，提交成功会返回一个 sub- 开头的编号）；如果 API 提交失败，就把活动信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的活动：【在这里填活动名和官方链接】。提交后把结果（成功编号或失败原因）告诉我。",
 searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"筛选",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"时间",feeLabel:"费用",fmtLabel:"形式",distLabel:"区域",catLabel:"分类",
@@ -922,9 +857,11 @@ regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收
 },
 tw:{
 docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清單：香港全量活動聚合，科技、創業、藝文、生活一站檢索；可搜索、按分類與行政區篩選，也可讓你的 Agent 訂閱 hkevents.json。",
-brandTop:"回到頂部",navAgent:"Agent",navSz:"深圳活動",navEvents:"香港活動",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
 heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",scopeNote:"香港活動全量聚合：統一收錄、去重，按日期排好；點卡片直達官方報名頁。",
-heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",
+heroMetaTotal:"場活動在列",heroMetaDaily:"數據更新於",heroMetaData:"數據",
+taSubmit:"提交活動",abApis:'也可以直接讀：<a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">日曆 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a>',
+postTitle:"📋 投稿話術",postSteps:"把話術發給你的 Agent（Codex / Claude Code / WorkBuddy 等），它會核對官方頁並代你提交，不需要 GitHub 帳號。",postEx:"<b>填寫示例：</b><br>「我要投稿的活動：【中環 AI 創業者聚會，https://官方連結】」——把【】裡換成真實的活動名和官方連結再複製。投稿前先打開官方頁，確認日期、地點、票價無誤。",postAlt:'<b>沒有 Agent？也可以用電郵提交：</b><br>把活動官方連結發到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> 即可，核實、去重後收錄。',
+submitPrompt:"請幫我給「Yat's List 香港活動清單」投稿一個活動。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開官方活動頁核對日期、時間、地點、票價，按規範裡的「HTTP API」方式提交（city 填「香港」；不需要 GitHub 帳號，提交成功會返回一個 sub- 開頭的編號）；如果 API 提交失敗，就把活動信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的活動：【在這裡填活動名和官方連結】。提交後把結果（成功編號或失敗原因）告訴我。",
 searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"篩選",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
 timeLabel:"時間",feeLabel:"費用",fmtLabel:"形式",distLabel:"區域",catLabel:"分類",
@@ -963,9 +900,11 @@ regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收
 },
 en:{
 docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong events, aggregated in full: tech, startups, arts and everyday life in one searchable list. Filter by category and district, or let your Agent subscribe to hkevents.json.",
-brandTop:"Back to top",navAgent:"Agent",navSz:"Shenzhen",navEvents:"Hong Kong",navHack:"Hackathons",navSpaces:"Talks",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
 heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",scopeNote:"The full picture: Hong Kong events, deduplicated and sorted by date. Cards link straight to the official registration page.",
 heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",
+taSubmit:"Submit event",abApis:'Or read directly: <a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">Calendar .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a>',
+postTitle:"📋 Submission prompt",postSteps:"Send this prompt to your Agent (Codex / Claude Code / WorkBuddy, etc.) — it will verify the official page and submit it for you. No GitHub account needed.",postEx:"<b>Example:</b><br>“The event I want to submit: [Central AI Founders Meetup, https://official-link]” — replace the brackets with the real event name and official link before copying. Open the official page first to confirm the date, venue and price.",postAlt:'<b>No Agent? Submit by email:</b><br>send the official event link to <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a>; we verify and deduplicate before listing it.',
+submitPrompt:"Please help me submit an event to “Yat's List — Hong Kong Events”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official event page to verify the date, time, venue and ticket price. Submit it via the guide's HTTP API method (set city to 香港; no GitHub account needed; a successful submission returns an id starting with “sub-”). If the API submission fails, email the event details to event.submit@yatslist.com instead. The event I want to submit: [event name and official link here]. After submitting, tell me the result (the success id or the reason it failed).",
 searchPh:"Search by event, organizer, venue…",ftoggleLabel:"Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
 timeLabel:"When",feeLabel:"Fee",fmtLabel:"Format",distLabel:"District",catLabel:"Category",
@@ -1033,12 +972,10 @@ function applyLang(){
 document.documentElement.lang=LANG==="en"?"en":LANG==="tw"?"zh-TW":"zh-CN";
 document.title=tr("docTitle");
 const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute("content",tr("metaDesc"));
-const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
-document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
-_setText("#nav-agent",tr("navAgent"));_setText("#nav-sz",tr("navSz"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-spaces",tr("navSpaces"));
-_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#hk-stat-label",tr("heroMetaTotal"));
-_setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setText("#cmd-copy",tr("copy"));
-{const qd=tr("qChips")||{};document.querySelectorAll("#qchips.chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
+_setText("#ta-submit",tr("taSubmit"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));
+_setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setHTML("#ab-apis",tr("abApis"));_setText("#cmd-copy",tr("copy"));
+{const qd=tr("qChips")||{};document.querySelectorAll("#qchips .chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
 _setText("#ftoggle-label",tr("ftoggleLabel"));
 const flk=["favLabel","timeLabel","feeLabel","distLabel","catLabel"];
@@ -1046,40 +983,28 @@ document.querySelectorAll(".flabel").forEach((el,i)=>{if(flk[i])el.textContent=t
 const fnote=document.querySelectorAll(".flabel")[1];
 const fb=document.getElementById("favbtn");if(fb&&fb.childNodes[0])fb.childNodes[0].textContent=tr("favOnlyBtn");
 const fd=document.getElementById("fdate");if(fd)fd.setAttribute("aria-label",LANG==="en"?"Filter by date":LANG==="tw"?"按日期篩選":"按日期筛选");
-[["#g-time","segTime"],["#g-fee","segFee"],["#g-fmt","segFmt"]].forEach(function(pair){const dict=STR[LANG][pair[1]]||{};document.querySelectorAll(pair[0]+".chip").forEach(ch=>{if(dict[ch.dataset.v])ch.textContent=dict[ch.dataset.v]})});
+[["#g-time","segTime"],["#g-fee","segFee"],["#g-fmt","segFmt"]].forEach(function(pair){const dict=STR[LANG][pair[1]]||{};document.querySelectorAll(pair[0]+" .chip").forEach(ch=>{if(dict[ch.dataset.v])ch.textContent=dict[ch.dataset.v]})});
 _setText("#fclear",tr("fclear"));
 _setText("#asub-title",tr("asubTitle"));_setHTML("#asub-sum",tr("asubSum"));_setText("#asub-all",tr("asubAll"));
 const P=PROMPTS[LANG];
 _setText("#prompt-generic-card",P.generic);_setText("#subprompt-text",P.generic);
 _setHTML("#foot-note",tr("footNote"));_setText("#foot-apis",tr("footApis"));_setText("#foot-tail-post",tr("footTailPost"));
 _setText("#intro-title",tr("introTitle"));_setHTML("#intro-p1",tr("introP1"));
-document.querySelectorAll(".intro.tag").forEach((el,i)=>{if(STR[LANG].introTags[i])el.textContent=STR[LANG].introTags[i]});
+document.querySelectorAll(".intro .tag").forEach((el,i)=>{if(STR[LANG].introTags[i])el.textContent=STR[LANG].introTags[i]});
 _setText("#term-prompt",tr("termPrompt"));_setText("#lbl-evlisted",tr("evListed"));_setText("#lbl-lastupd",tr("lastUpd"));
 _setText("#tb-title",tr("tbTitle"));_setHTML("#tb-sum",tr("tbSum"));_setText("#tb-all",tr("tbAll"));
 document.querySelectorAll(".endpoint-desc").forEach((el,i)=>{if(STR[LANG].epDescs[i])el.textContent=STR[LANG].epDescs[i]});
-document.querySelectorAll(".endpoint-item.btn-copy").forEach(el=>{el.textContent=tr("copy")});
+document.querySelectorAll(".endpoint-item .btn-copy").forEach(el=>{el.textContent=tr("copy")});
 _setText("#subprompt-copy",tr("copy"));
 _setText("#mclose1",tr("mclose"));_setText("#mclose2",tr("mclose2"));_setText("#mhint",tr("mhint"));_setText("#mcopy",tr("mcopy"));
-document.querySelectorAll("#mchips.mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
+document.querySelectorAll("#mchips .mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
 _setText("#sf-tag",tr("footTag"));_setText("#sf-sz",tr("footSz"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
 fmtUpd();
 if(typeof syncFilterUI==="function")syncFilterUI();
-if(typeof applyTheme==="function")applyTheme();
 }
-function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";try{localStorage.setItem("szLang",LANG)}catch(e){}applyLang();if(typeof renderCats==="function")renderCats();if(typeof renderDist==="function")renderDist();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
-document.querySelectorAll("[data-setlang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setlang)));
-/* ===== theme: auto (follow system) / light / dark - preference stored in localStorage "szTheme" ===== */
-let THEME="auto";try{THEME=localStorage.getItem("szTheme")||"auto"}catch(e){}
-if(THEME!=="light"&&THEME!=="dark")THEME="auto";
-const _mqDark=window.matchMedia("(prefers-color-scheme: dark)");
-function resolvedTheme(){return THEME==="dark"?"dark":THEME==="light"?"light":(_mqDark.matches?"dark":"light")}
-function syncThemeUI(){document.querySelectorAll(".themesw button").forEach(b=>{const on=b.dataset.settheme===THEME;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");if(b.dataset.settheme==="auto")b.textContent=tr("themeAuto");if(b.dataset.settheme==="light"){b.setAttribute("aria-label",tr("themeLight"));b.title=tr("themeLight")}if(b.dataset.settheme==="dark"){b.setAttribute("aria-label",tr("themeDark"));b.title=tr("themeDark")}});const g=document.querySelector(".themesw");if(g)g.setAttribute("aria-label",tr("themeLabel"))}
-function applyTheme(){const r=resolvedTheme();document.documentElement.setAttribute("data-theme",r);document.documentElement.setAttribute("data-theme-mode",THEME);const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",r==="light"?"#f6f8f7":"#0d1218");syncThemeUI()}
-function setTheme(t){THEME=(t==="light"||t==="dark")?t:"auto";try{localStorage.setItem("szTheme",THEME)}catch(e){}applyTheme()}
-document.querySelectorAll("[data-settheme]").forEach(b=>b.addEventListener("click",()=>setTheme(b.dataset.settheme)));
-if(_mqDark.addEventListener)_mqDark.addEventListener("change",()=>{if(THEME==="auto")applyTheme()});
-applyTheme();
+function setLang(l){LANG=(l==="en"||l==="tw")?l:"zh";applyLang();if(typeof renderCats==="function")renderCats();if(typeof renderDist==="function")renderDist();if(typeof render==="function")render();if(typeof measureBar==="function")measureBar()}
+if(window.YL)YL.onLang(setLang);
 </script>
 <script>
 let DATA=[];
@@ -1205,7 +1130,7 @@ $("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="doc
 const evs=DATA.filter(e=>!isPast(e)).filter(pass).sort(byStart);
 const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
 const total=DATA.filter(e=>!isPast(e)).length;
-$("#st-total").textContent=total;const _hs=$("#hk-stat-n");if(_hs)_hs.textContent=DATA.length;
+$("#st-total").textContent=total;
 const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
 if(favOnly){
 const favs=DATA.filter(e=>FAVS.has(e.url)).sort(byStart);
@@ -1241,12 +1166,12 @@ html+=dlist(g.items);
 }
 $("#list").innerHTML=html;
 }
-let mKey="generic";
+let mKey="generic",mMode="sub";
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
-ta.value=PROMPTS[LANG][mKey];document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}
-function openModal(mode){mLoad();document.getElementById("ovl").classList.add("open")}
+const alt=document.getElementById("mpost-alt");if(mMode==="post"){ta.value=tr("submitPrompt");document.getElementById("msteps").textContent=tr("postSteps");document.getElementById("mex").innerHTML=tr("postEx");document.getElementById("mtitle").textContent=tr("postTitle");if(alt){alt.innerHTML=tr("postAlt");alt.style.display="block"}return}if(alt)alt.style.display="none";ta.value=PROMPTS[LANG][mKey];document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}
+function openModal(mode){mMode=mode==="post"?"post":"sub";const mc=document.getElementById("mchips");if(mc)mc.style.display=mMode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
-document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips.mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
+document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
 document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly;document.getElementById("favbtn").classList.toggle("on",favOnly);if(typeof syncFilterUI==="function")syncFilterUI();render()});
 function closeMenus(except){document.querySelectorAll(".cact.open").forEach(c=>{if(c!==except){c.classList.remove("open");const m=c.querySelector(".more");if(m)m.setAttribute("aria-expanded","false")}})}
 document.getElementById("list").addEventListener("click",ev=>{
@@ -1265,7 +1190,7 @@ function syncFilterUI(){
 const active=(F.time!=="all"?1:0)+(F.date?1:0)+(F.fee!=="all"?1:0)+(F.fmt!=="all"?1:0)+(F.dist!=="all"?1:0)+F.cats.size;
 $("#fclear").hidden=active===0;
 $("#fcount").textContent=active?String(active):"";
-document.querySelectorAll("#qchips.chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=active===0&&!favOnly;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
+document.querySelectorAll("#qchips .chip").forEach(ch=>{const q=ch.dataset.q;let on;if(q==="all")on=active===0&&!favOnly;else{const [k,v]=q.split(":");on=F[k]===v}ch.classList.toggle("on",on)});
 }
 $("#qchips").addEventListener("click",ev=>{
 const ch=ev.target.closest("[data-q]");if(!ch)return;
@@ -1296,7 +1221,7 @@ $("#g-dist").innerHTML=`<button class="chip${F.dist==="all"?" on":""}" data-v="a
 $("#g-dist").addEventListener("click",ev=>{
 const b=ev.target.closest("[data-v]");if(!b)return;
 F.dist=b.dataset.v;
-document.querySelectorAll("#g-dist.chip").forEach(x=>x.classList.toggle("on",x===b));
+document.querySelectorAll("#g-dist .chip").forEach(x=>x.classList.toggle("on",x===b));
 syncFilterUI();render();measureBar();
 });
 function renderCats(){$("#g-cats").innerHTML=CATS.map(c=>`<button class="chip${F.cats.has(c)?" on":""}" data-c="${c}">${CATDISP[LANG][c]||c}</button>`).join("")}
@@ -1311,7 +1236,7 @@ syncFilterUI();render();measureBar();
 $("#fdate").addEventListener("change",e=>{
 F.date=e.target.value;
 e.target.classList.toggle("on",!!F.date);
-if(F.date){F.time="all";document.querySelectorAll("#g-time.chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all"))}
+if(F.date){F.time="all";document.querySelectorAll("#g-time .chip").forEach(x=>x.classList.toggle("on",x.dataset.v==="all"))}
 syncFilterUI();render();measureBar();
 });
 $("#fclear").addEventListener("click",()=>{
@@ -1334,27 +1259,8 @@ window._updRaw=j.updated_at||null;fmtUpd();
 renderDist();render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>{const el=document.getElementById("list");if(el)el.innerHTML='<div class="empty">'+tr("loadFail")+'</div>'});
 </script>
-<script>
-(function(){var b=document.getElementById('mnav-btn'),p=document.getElementById('mnav-panel');if(!b||!p)return;
-function close(){p.classList.remove('open');b.setAttribute('aria-expanded','false')}
-b.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-p.addEventListener('click',function(e){if(e.target.closest('a'))close()});
-document.addEventListener('click',function(e){if(!p.contains(e.target))close()});
-})();
-</script>
-<script>
-(function(){document.querySelectorAll(".prefs").forEach(function(p){
-var sel=p.querySelector(".langsel"),lg=p.querySelector(".langsw"),cyc=p.querySelector(".themecyc"),tg=p.querySelector(".themesw");
-if(sel&&lg){var syncL=function(){var on=lg.querySelector("button.on");if(on&&sel.value!==on.dataset.setlang)sel.value=on.dataset.setlang};
-sel.addEventListener("change",function(){var b=lg.querySelector('[data-setlang="'+sel.value+'"]');if(b)b.click();syncL()});
-new MutationObserver(syncL).observe(lg,{subtree:true,attributes:true,attributeFilter:["class"]});syncL()}
-if(cyc&&tg){var order=["auto","light","dark"],ic={auto:"\u25D0",light:"\u2600",dark:"\u263E"};
-var cur=function(){var on=tg.querySelector("button.on");return on?on.dataset.settheme:"auto"};
-var syncT=function(){var c=cur(),b=tg.querySelector('[data-settheme="'+c+'"]'),l=b?(b.getAttribute("aria-label")||b.textContent):c,t=(tg.getAttribute("aria-label")||"Theme")+": "+l;cyc.textContent=ic[c]||ic.auto;cyc.title=t;cyc.setAttribute("aria-label",t)};
-cyc.addEventListener("click",function(){var n=order[(order.indexOf(cur())+1)%3],b=tg.querySelector('[data-settheme="'+n+'"]');if(b)b.click();syncT()});
-new MutationObserver(syncT).observe(tg,{subtree:true,attributes:true,childList:true,characterData:true});syncT()}
-})})();
-</script>
+<script src="/stats.js?v=20261128" defer></script>
+<script src="/city.js?v=1" defer></script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
 </html>
