@@ -1,0 +1,20 @@
+#!/bin/sh
+# Blocks commits that break the shared site shell / city switch (see AGENTS.md「编辑页面」).
+# Enable once per clone:  git config core.hooksPath .githooks
+command -v node >/dev/null 2>&1 || { echo "pre-commit: node not found, skipping tools/check-shell.mjs" >&2; exit 0; }
+root=$(git rev-parse --show-toplevel) || exit 1
+if ! out=$(node "$root/tools/check-shell.mjs" 2>&1); then
+  cat >&2 <<EOF
+$out
+
+✋ 提交被拦下：页面缺少共享顶栏/城市切换。你很可能用旧副本覆盖了整页。
+   先 git pull，从最新 main 重新改，只改你要改的部分。以下内容必须保留：
+     <div id="yl-topbar" …> 占位 + <script src="/shell.js?v=…">
+     <script src="/city.js…">、深圳|香港 <nav class="cityswitch" …> 及其 CSS
+     if(window.YL)LANG=YL.lang 、上方的 <!-- DO NOT REMOVE … --> 注释
+✋ Commit blocked: a page lost the shared topbar / city switch, most likely because a stale copy
+   overwrote it. git pull, redo your edit on latest main, and keep the lines listed above.
+   (Bypass only if you really know why: git commit --no-verify)
+EOF
+  exit 1
+fi

@@ -50,6 +50,12 @@
 - 投稿被合并后会出现在次日日报与网页；未通过的会在 PR/Issue 里说明原因。
 - **谁来审**：审核由维护者的 Agent 执行（维护者本人不逐个看）。每天随日报处理一次：核实无误、且**只改动 `events.json`** 的 PR 会被直接合并；需要修改的，Agent 会在 PR 里逐项留言，改好 push 后自动复审；明显违规（无官方链接、已过期、重复、超范围、垃圾广告）的会被留言拒绝并关闭。涉及 `index.html`、`tools/`、`.github/` 等其他文件的 PR 不会被自动合并，会转交维护者本人决定。
 
+## 编辑页面（szevents / hkevents 等网页）
+
+- **编辑页面前先 `git pull`；不要用旧副本覆盖整页。** 只改你要改的部分；整页替换曾误删过共享顶栏与 深圳|香港 切换（6893a56）。
+- 克隆后先运行一次 `git config core.hooksPath .githooks`：pre-commit 钩子会跑 `node tools/check-shell.mjs`，页面缺 `<div id="yl-topbar">`、`/shell.js`、`/city.js`、`cityswitch` 时拒绝提交。
+- 标着 `<!-- DO NOT REMOVE … -->` 的行不要删。
+
 ## 给维护 Agent 的说明
 
 每日更新流程：抓取公开来源（Luma、活动行、互动吧、联谱、OPC圈、HackerTrip、黑123、X）→ 处理投稿（GitHub PR / Issue 与 HTTP API 投稿队列，逐条核实）→ 逐条打开来源页核实 → 更新 `events.json` 的 `events` 与 `updated_at` → 运行 `node tools/build_feeds.mjs` 生成 `feed.xml` 与 `events.ics` → 一并提交。已结束的条目保留在数据里归档（网页自动归入「过往活动」）：结束超过 30 天的由 stats 工作流（`tools/archive_events.mjs`）自动移到 `events-archive.json`，维护时不要手动删、也不要把它们抄回 events.json（抄回也不会丢或重复：同一 `id` 以 events.json 为准，下次运行再移回归档）；报名已截止但活动未举行的条目保留。

@@ -45,3 +45,7 @@
 ## 收录范围
 
 深圳线下：AI、创业、科技、跨境出海、Web3/加密 行业活动；黑客松、技术、硬件活动单列。线上：相关主题的 X Space 等在线活动（必须标明线上）。
+
+## 改网页（维护者 / Agent）
+
+先 `git pull`，再运行一次 `git config core.hooksPath .githooks`（提交前自动跑 `node tools/check-shell.mjs`）。不要用旧副本覆盖整页，详见 AGENTS.md「编辑页面」。

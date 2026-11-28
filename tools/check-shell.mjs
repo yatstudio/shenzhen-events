@@ -41,6 +41,20 @@ for (const p of PAGES) {
   if (/<div class="topbar[ "]/.test(html)) errors.push(`${p}: still has its own <div class="topbar"> markup`);
 }
 
+// City pages: besides the shell, they must keep the 深圳|香港 switch, /city.js and the shell language wiring.
+// These lines were lost once when someone overwrote szevents/index.html with a stale copy (6893a56).
+const CITY_PAGES = { "szevents/index.html": "sz", "hkevents/index.html": "hk" };
+for (const [p, city] of Object.entries(CITY_PAGES)) {
+  const f = join(ROOT, p);
+  if (!existsSync(f)) continue;
+  const html = readFileSync(f, "utf8");
+  if (!html.includes("<!-- DO NOT REMOVE: shared topbar (shell.js) + city switch.")) errors.push(`${p}: missing the "DO NOT REMOVE" comment above <div id="yl-topbar">`);
+  if (!html.includes(`id="cityswitch" data-page-city="${city}"`)) errors.push(`${p}: missing the 深圳|香港 <nav class="cityswitch" id="cityswitch" data-page-city="${city}">`);
+  if (!html.includes(".cityswitch{")) errors.push(`${p}: missing the .cityswitch CSS`);
+  if (!html.includes('src="/city.js')) errors.push(`${p}: does not load /city.js`);
+  if (!html.includes("if(window.YL)LANG=YL.lang")) errors.push(`${p}: missing "if(window.YL)LANG=YL.lang" (language comes from /shell.js)`);
+}
+
 // Old city URLs that are now redirect stubs: must redirect (keeping ?query and #hash) and point canonical at the new page
 const REDIRECTS = { "hk/index.html": "/hkevents/" };
 for (const [p, to] of Object.entries(REDIRECTS)) {

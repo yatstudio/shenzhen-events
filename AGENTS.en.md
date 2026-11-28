@@ -109,6 +109,10 @@ on). Recommended: `end`, `registration_deadline`, `district`, `venue`, `fee`, `o
 - When referencing a single event, prefer the short link over screenshots of official pages that may
   change or expire.
 
+## Editing pages (maintainers / agents)
+
+Run `git pull` before editing a page and never overwrite a whole page with an old copy. Once per clone run `git config core.hooksPath .githooks`; the pre-commit hook runs `node tools/check-shell.mjs` and blocks commits that drop the shared topbar (`<div id="yl-topbar">` + `/shell.js`), `/city.js` or the city switch. Keep lines marked `<!-- DO NOT REMOVE … -->`.
+
 ## Contact
 
 Maintainer: yat@yatslist.com · Submissions by email (humans): event.submit@yatslist.com
