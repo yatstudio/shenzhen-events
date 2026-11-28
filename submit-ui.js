@@ -1,8 +1,8 @@
-/* Yat's List · shared submit modal + modal shell for /szevents/, /hkevents/, /hackathons/.
-   Self-contained: injects its own CSS (hackathons does not load /events.css). Bump ?v= in all three pages when you change it.
+/* Yat's List · shared submit modal + modal shell for /szevents/, /hkevents/, /hackathons/, /talks/ (+ /talks/tw/, /talks/en/).
+   Self-contained: injects its own CSS (hackathons does not load /events.css). Bump ?v= in all these pages when you change it.
    Page setup (inline, before this file runs or before the first click):
-     window.YL_SUBMIT = { kind: "event" | "hackathon", city: "sz" | "hk", prompt: function (lang) { return "…"; } };
-   API: YLSubmit.open() / YLSubmit.close() — the 「提交活动 / 提交黑客松」 modal (Agent tab + email tab).
+     window.YL_SUBMIT = { kind: "event" | "hackathon" | "talk", city: "sz" | "hk", prompt: function (lang) { return "…"; } };
+   API: YLSubmit.open() / YLSubmit.close() — the 「提交活动 / 提交黑客松 / 提交谈话」 modal (Agent tab + email tab).
         YLSubmit.copy(text, button) — copy with 「复制 → 已复制」 feedback on the button.
    It also upgrades the page's own subscribe modal (#ovl): mobile bottom sheet, body scroll lock, back button closes it,
    localized ✕ / 复制 / 定制示例 labels. */
@@ -15,20 +15,23 @@
       lead: "复制下面这段发给你的 Agent，它会帮你整理并提交。", mailNote: "只需官方链接，我们核实后收录。", copyMail: "复制邮箱", ex: "✏️ 定制示例",
       event: { title: "提交活动", note: "把【】里换成活动名和官方链接", subject: "活动投稿", body: "活动名：\n官方链接：\n时间：\n地点：\n" },
       hackathon: { title: "提交黑客松", note: "把【】里换成比赛名和官方链接", subject: "黑客松投稿", body: "比赛名：\n官方链接：\n时间：\n地点：\n" },
+      talk: { title: "提交谈话 / 投稿纪要", note: "把【】里换成谈话名称和原始链接", subject: "谈话投稿", body: "谈话名称：\n原始链接：\n日期：\n主持人 / 嘉宾：\n" },
       hk: "（香港）" },
     tw: { close: "關閉", copy: "複製", copied: "已複製", tabAgent: "用 Agent 提交", tabMail: "用電郵提交", openMail: "打開郵件",
       lead: "複製下面這段發給你的 Agent，它會幫你整理並提交。", mailNote: "只需官方連結，我們核實後收錄。", copyMail: "複製信箱", ex: "✏️ 定製示例",
       event: { title: "提交活動", note: "把【】裡換成活動名和官方連結", subject: "活動投稿", body: "活動名：\n官方連結：\n時間：\n地點：\n" },
       hackathon: { title: "提交黑客松", note: "把【】裡換成比賽名和官方連結", subject: "黑客松投稿", body: "比賽名：\n官方連結：\n時間：\n地點：\n" },
+      talk: { title: "提交談話 / 投稿紀要", note: "把【】裡換成談話名稱和原始連結", subject: "談話投稿", body: "談話名稱：\n原始連結：\n日期：\n主持人 / 嘉賓：\n" },
       hk: "（香港）" },
     en: { close: "Close", copy: "Copy", copied: "Copied", tabAgent: "Via your Agent", tabMail: "By email", openMail: "Open email",
       lead: "Copy this and send it to your Agent. It will check the details and submit for you.", mailNote: "The official link is enough. We verify it before listing.", copyMail: "Copy email address", ex: "✏️ Customization examples",
       event: { title: "Submit an event", note: "Replace the [ ] part with the event name and official link", subject: "Event submission", body: "Event name:\nOfficial link:\nDate & time:\nVenue:\n" },
       hackathon: { title: "Submit a hackathon", note: "Replace the [ ] part with the hackathon name and official link", subject: "Hackathon submission", body: "Hackathon name:\nOfficial link:\nDate & time:\nLocation:\n" },
+      talk: { title: "Submit a talk or notes", note: "Replace the [ ] part with the talk title and original link", subject: "Talk submission", body: "Talk title:\nOriginal link:\nDate:\nHost / guests:\n" },
       hk: " (Hong Kong)" }
   };
   function lang() { var l = (typeof window.LANG === "string" && window.LANG) || (window.YL && YL.lang); try { if (typeof LANG === "string") l = LANG; } catch (e) {} return l === "en" || l === "tw" ? l : "zh"; }
-  function cfg() { var c = window.YL_SUBMIT || {}; return { kind: c.kind === "hackathon" ? "hackathon" : "event", city: c.city || "sz", prompt: c.prompt }; }
+  function cfg() { var c = window.YL_SUBMIT || {}; return { kind: c.kind === "hackathon" || c.kind === "talk" ? c.kind : "event", city: c.city || "sz", prompt: c.prompt }; }
   function t() { return L[lang()]; }
 
   /* ---------- CSS (injected after the page styles, so it wins at equal specificity) ---------- */

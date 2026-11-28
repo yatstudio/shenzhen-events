@@ -1,5 +1,5 @@
-/* Shared styles for the city event pages /szevents/ and /hkevents/ (one copy, so the two pages cannot drift).
-   Page-specific rules stay inline in each page. Bump ?v= in both pages when you change this file (sw.js caches static files). */
+/* Shared styles for the city event pages /szevents/, /hkevents/ and the talks pages /talks/, /talks/tw/, /talks/en/ (one copy, so the pages cannot drift).
+   Page-specific rules stay inline in each page. The .ylstat count line is styled by /stats.js. Bump ?v= in all these pages when you change this file (sw.js caches static files). */
 
 :root{
 --bg:#0d1218;--panel:#10151b;--panel-hover:#161d26;
@@ -566,7 +566,6 @@ input[type=search]{font-size:16px}
 .promos .hackhero .hgo{display:none}
 .promos .hackhero .ht b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .promos .hackhero .ht span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:1.45}
-.ylstat .wk-up{color:var(--ink-sec)}
 /* long URLs / English words never widen the page */
 .dlist .card h3,.cmeta,.dlist .sum,.ab-apis,.prompt,.code-block,.foot,.yl-citybar .m{overflow-wrap:anywhere}
 /* agent box: ▾ toggle exists for mobile only */
@@ -587,7 +586,6 @@ html.fs-lock body{position:fixed;left:0;right:0;width:100%}
   .section-subtitle{font-size:.92rem;margin:0}
   .cityswitch{margin-top:10px}
   .cityswitch a{display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font-size:.92rem}
-  .ylstat{margin-top:10px;gap:4px 10px;font-size:.84rem}
   /* promo cards: one compact row that scrolls sideways (title + number on one line) */
   .promos{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scroll-padding:0 16px;margin:0 -16px 12px;padding:0 16px}
   .promos::-webkit-scrollbar{display:none}

@@ -25,11 +25,13 @@
   };
   function lang() { var l = window.YL && YL.lang; if (!l) try { l = localStorage.getItem("szLang"); } catch (e) {} return l === "en" || l === "tw" ? l : "zh"; }
   function md(d, L) { var m = +d.slice(5, 7), dd = +d.slice(8, 10); return L === "en" ? ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m - 1] + " " + dd : m + "月" + dd + "日"; }
-  var css = ".ylstat{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:10px 0 0;font-size:.88rem;color:var(--ink-sec,#8b98a5);font-variant-numeric:tabular-nums}" +
+  // .ylstat is styled only here (one copy for every page). The row wraps between items; an item wider than the row breaks inside itself.
+  var css = ".ylstat{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:10px 0 0;max-width:100%;min-width:0;font-size:.88rem;color:var(--ink-sec,#8b98a5);font-variant-numeric:tabular-nums}" +
+    ".ylstat>span{min-width:0;max-width:100%;overflow-wrap:anywhere}.ylstat .up{flex-wrap:wrap}" +
     ".ylstat:empty{display:none}.ylstat .n{font-size:1.5rem;font-weight:800;color:var(--ink,#e6edf3);letter-spacing:-.01em;margin-right:4px}" +
     ".ylstat .up{display:inline-flex;align-items:baseline;gap:4px;color:var(--green,#2ee6a8);font-weight:700;background:rgba(46,230,168,.10);border:1px solid rgba(46,230,168,.35);border-radius:999px;padding:1px 10px}" +
     ".ylstat .up b{font-size:1rem}.ylstat .up.quiet{color:var(--ink-sec,#8b98a5);background:none;border-color:var(--border,rgba(255,255,255,.08));font-weight:600}" +
-    ".ylstat .wk{color:var(--ink-ter,#6a737d)}" +
+    ".ylstat .wk{color:var(--ink-ter,#6a737d)}.ylstat .wk-up{color:var(--ink-sec,#8b98a5)}" +
     ".navbadge{display:inline-block;margin-left:5px;padding:0 6px;border-radius:999px;background:var(--green,#2ee6a8);color:#06281c;font-size:.7rem;font-weight:800;line-height:1.55;vertical-align:1px;font-variant-numeric:tabular-nums}" +
     ".hackhero{display:flex;align-items:center;gap:14px;margin:0 0 14px;padding:14px 18px;border-radius:14px;text-decoration:none;color:var(--ink,#e6edf3);background:linear-gradient(90deg,rgba(46,230,168,.16),rgba(46,230,168,.04));border:1px solid rgba(46,230,168,.45)}" +
     ".hackhero:hover{border-color:var(--green,#2ee6a8)}.hackhero .hn{font-size:2rem;font-weight:800;color:var(--green,#2ee6a8);line-height:1;font-variant-numeric:tabular-nums}" +
@@ -38,6 +40,7 @@
     "[data-theme=light] .ylstat .up{background:rgba(10,125,85,.07)}[data-theme=light] .navbadge{color:#fff}" +
     "[data-theme=light] .hackhero{background:linear-gradient(90deg,rgba(10,125,85,.10),rgba(10,125,85,.02))}" +
     ".hackhero:empty{display:none}" +
+    "@media (max-width:820px){.ylstat{gap:4px 10px;font-size:.84rem}}" +
     "@media (max-width:640px){.ylstat .n{font-size:1.3rem}.hackhero{padding:12px 14px;gap:12px}.hackhero .hn{font-size:1.6rem}.hackhero .hgo{display:none}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
   var S = null;

@@ -7,7 +7,7 @@
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's List · 香港活动清单</title>
 <meta name="description" content="Yat's List 香港活动清单：香港全量活动聚合，科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。">
-<link rel="stylesheet" href="/events.css?v=1">
+<link rel="stylesheet" href="/events.css?v=2">
 <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
 <meta name="theme-color" content="#0d1218">
 <link rel="canonical" href="https://yatslist.com/hkevents/">
@@ -735,10 +735,10 @@ window._updRaw=j.updated_at||null;fmtUpd();
 renderDist();render();measureBar();setTimeout(measureBar,400);
 }).catch(()=>{const el=document.getElementById("list");if(el)el.innerHTML='<div class="empty">'+tr("loadFail")+'</div>'});
 </script>
-<script src="/stats.js?v=20261128b" defer></script>
+<script src="/stats.js?v=20261129" defer></script>
 <script src="/city.js?v=2" defer></script>
 <script src="/events-ui.js?v=1" defer></script>
-<script src="/submit-ui.js?v=1" defer></script>
+<script src="/submit-ui.js?v=2" defer></script>
 <script src="/chat.js?v=1" defer></script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>

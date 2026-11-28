@@ -950,7 +950,7 @@ fetch("/hackathons.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
 }).catch(()=>{$("#list").innerHTML=`<div class="empty">${tr("loadFail")}</div>`});
 </script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
-<script src="/submit-ui.js?v=1" defer></script>
-<script src="/stats.js" defer></script>
+<script src="/submit-ui.js?v=2" defer></script>
+<script src="/stats.js?v=20261129" defer></script>
 </body>
 </html>
