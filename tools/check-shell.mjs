@@ -50,7 +50,11 @@ for (const [p, city] of Object.entries(CITY_PAGES)) {
   const html = readFileSync(f, "utf8");
   if (!html.includes("<!-- DO NOT REMOVE: shared topbar (shell.js) + city switch.")) errors.push(`${p}: missing the "DO NOT REMOVE" comment above <div id="yl-topbar">`);
   if (!html.includes(`id="cityswitch" data-page-city="${city}"`)) errors.push(`${p}: missing the 深圳|香港 <nav class="cityswitch" id="cityswitch" data-page-city="${city}">`);
-  if (!html.includes(".cityswitch{")) errors.push(`${p}: missing the .cityswitch CSS`);
+  // .cityswitch CSS: inline in the page, or in the shared /events.css loaded with <link> in <head> (render-blocking, no flash)
+  const sharedCss = join(ROOT, "events.css");
+  const cssOk = html.includes(".cityswitch{") ||
+    (/<link[^>]+href="\/events\.css[?"]/.test(html) && existsSync(sharedCss) && readFileSync(sharedCss, "utf8").includes(".cityswitch{"));
+  if (!cssOk) errors.push(`${p}: missing the .cityswitch CSS (inline or via <link href="/events.css">)`);
   if (!html.includes('src="/city.js')) errors.push(`${p}: does not load /city.js`);
   if (!html.includes("if(window.YL)LANG=YL.lang")) errors.push(`${p}: missing "if(window.YL)LANG=YL.lang" (language comes from /shell.js)`);
 }

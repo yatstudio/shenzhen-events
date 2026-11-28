@@ -2,21 +2,23 @@
    Fills <div class="ylstat" data-list="..."> and adds a count badge to the 黑客松 menu link
    and the homepage hackathon banner (<a class="hackhero">).
    City cards: <a class="hackhero cityhero" data-city="sz|hk"> link the other city's page with its count
-   (sz: lists.events, hk: lists.hkevents). */
+   (sz: lists.events, hk: lists.hkevents).
+   Optional data-week="N" on .ylstat (set by the page from its own data: events starting in the next 7 days) adds
+   "本周 N 场" after the stats.json figures; the page calls YLStats.render() after setting it. */
 (function () {
   var U = {
     zh: { events: "场活动在列", hk: "场香港活动在列", hkevents: "场活动在列", hackathons: "场黑客松正在报名", talks: "场谈话", vps: "个套餐", xlist: "位", expat: "场活动", remote: "个岗位", nomadlist: "座城市", notes: "篇笔记",
-      today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暂无新增",
+      today: "今日新增", last: "最近新增", week: "近 7 天", upcoming: function (n) { return "本周 " + n + " 场"; }, none: "今日暂无新增",
       hackTitle: "全球黑客松", hackSub: function (n) { return n + " 场正在报名，每天核实更新"; }, go: "去看 →",
       chtfTitle: "高交会专题", chtfSub: "11月26–28日 · 深圳国际会展中心（宝安）· 4 场同期活动 + 1,529 家展商展位查询",
       szTitle: "深圳活动", szSub: "AI、创业、科技、跨境活动，每天核实更新", hkTitle: "香港活动", hkSub: "香港全量活动，三语，按行政区筛选" },
     tw: { events: "場活動在列", hk: "場香港活動在列", hkevents: "場活動在列", hackathons: "場黑客松正在報名", talks: "場談話", vps: "個套餐", xlist: "位", expat: "場活動", remote: "個崗位", nomadlist: "座城市", notes: "篇筆記",
-      today: "今日新增", last: "最近新增", week: "近 7 天", none: "今日暫無新增",
+      today: "今日新增", last: "最近新增", week: "近 7 天", upcoming: function (n) { return "本週 " + n + " 場"; }, none: "今日暫無新增",
       hackTitle: "全球黑客松", hackSub: function (n) { return n + " 場正在報名，每天核實更新"; }, go: "去看 →",
       chtfTitle: "高交會專題", chtfSub: "11月26–28日 · 深圳國際會展中心（寶安）· 4 場同期活動 + 1,529 家展商展位查詢",
       szTitle: "深圳活動", szSub: "AI、創業、科技、跨境活動，每天核實更新", hkTitle: "香港活動", hkSub: "香港全量活動，三語，按行政區篩選" },
     en: { events: "events listed", hk: "Hong Kong events listed", hkevents: "events listed", hackathons: "hackathons open", talks: "talks", vps: "plans", xlist: "people", expat: "events", remote: "jobs", nomadlist: "cities", notes: "notes",
-      today: "New today", last: "Last added", week: "Last 7 days", none: "Nothing new yet today",
+      today: "New today", last: "Last added", week: "Last 7 days", upcoming: function (n) { return n + " this week"; }, none: "Nothing new yet today",
       hackTitle: "Global hackathons", hackSub: function (n) { return n + " open for registration, verified daily"; }, go: "Browse →",
       chtfTitle: "CHTF 2026 topic", chtfSub: "Nov 26–28 · Shenzhen World Exhibition & Convention Center · 4 events + 1,529 exhibitors with booth lookup",
       szTitle: "Shenzhen events", szSub: "AI, startup, tech and cross-border events, verified daily", hkTitle: "Hong Kong events", hkSub: "All Hong Kong events, in three languages, by district" }
@@ -35,7 +37,7 @@
     ".hackhero .hup{color:var(--green,#2ee6a8);font-weight:700}.hackhero .hgo{flex:0 0 auto;font-weight:700;color:var(--green,#2ee6a8);white-space:nowrap}" +
     "[data-theme=light] .ylstat .up{background:rgba(10,125,85,.07)}[data-theme=light] .navbadge{color:#fff}" +
     "[data-theme=light] .hackhero{background:linear-gradient(90deg,rgba(10,125,85,.10),rgba(10,125,85,.02))}" +
-    ".hackhero.cityhero{padding:10px 16px}.hackhero.cityhero .hn{font-size:1.4rem}.hackhero.cityhero:empty{display:none}" +
+    ".hackhero:empty{display:none}" +
     "@media (max-width:640px){.ylstat .n{font-size:1.3rem}.hackhero{padding:12px 14px;gap:12px}.hackhero .hn{font-size:1.6rem}.hackhero .hgo{display:none}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
   var S = null;
@@ -52,6 +54,8 @@
       if (s.new_today) h += '<span class="up">' + T.today + " <b>+" + s.new_today + "</b></span>";
       else if (s.last_new_day) h += '<span class="up quiet">' + T.last + " +" + s.last_new_count + " · " + md(s.last_new_day, L) + "</span>";
       if (s.new_7d && s.new_7d !== s.new_today) h += '<span class="wk">' + T.week + " +" + s.new_7d + "</span>";
+      var wk = el.getAttribute("data-week");
+      if (wk !== null && wk !== "" && !isNaN(+wk)) h += '<span class="wk wk-up">' + T.upcoming(+wk) + "</span>";
       el.innerHTML = h;
     });
     var hk = S.lists.hackathons; if (hk && stale) hk = Object.assign({}, hk, { new_today: 0 });
@@ -73,6 +77,7 @@
       a.innerHTML = '<span class="hn">1529</span><span class="ht"><b>' + T.chtfTitle + "</b><span>" + T.chtfSub + '</span></span><span class="hgo">' + T.go + "</span>";
     });
   }
+  window.YLStats = { render: render };
   fetch("/stats.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { S = j; render(); }).catch(function () {});
   // re-render after a language switch (pages set szLang, then re-render their own text)
   document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("[data-setlang]")) setTimeout(render, 0); });
