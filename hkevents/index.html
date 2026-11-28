@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <script>(function(){try{var t=localStorage.getItem("szTheme")||"auto";if(t!=="light"&&t!=="dark")t="auto";var d=t==="dark"||(t==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.setAttribute("data-theme-mode",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 <title>Yat's List · 香港活动清单</title>
-<meta name="description" content="Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。">
+<meta name="description" content="Yat's List 香港活动清单：香港全量活动聚合，科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。">
 <style>
 
 :root{
@@ -677,8 +677,8 @@ input[type=search]{font-size:16px}
 <h2 class="section-title" id="hero-title">香港活动清单</h2>
 <p class="section-subtitle" id="hero-sub">香港活动，喂给你的 Agent 吃。</p>
 <div class="ylstat" id="hk-stat"><span><span class="n" id="hk-stat-n">–</span><span id="hk-stat-label">场活动在列</span></span></div>
-<p class="herometa" id="hm-line"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><span id="hm-upd"></span></p>
-<p class="scopenote" id="scope-note">香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活动统一收录、去重，按日期排好；点卡片直达官方报名页。</p>
+<p class="herometa" id="hm-line"><span id="hm-upd"></span></p>
+<p class="scopenote" id="scope-note">香港活动全量聚合：统一收录、去重，按日期排好；点卡片直达官方报名页。</p>
 </div>
 
 <!-- Agent subscription: the one primary action on the page -->
@@ -845,7 +845,7 @@ input[type=search]{font-size:16px}
 <a href="https://yatslist.com/spaces/" id="sf-spaces">Space 纪要</a>
 <a href="#agent-section" id="sf-sub">订阅说明</a>
 </nav>
-<p class="sf-small" id="sf-small">数据每日更新 · 聚合自官方平台页面 · 免费无广告</p>
+<p class="sf-small" id="sf-small">数据每日更新 · 免费无广告</p>
 <p class="sf-contact" id="sf-contact">合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a></p>
 <p class="sf-copy">© 2026 Yat's List · yatslist.com</p>
 </div>
@@ -880,9 +880,9 @@ const DIST_TW={"中西区":"中西區","油尖旺区":"油尖旺區","湾仔区"
 const DIST_EN={"中西区":"Central & Western","油尖旺区":"Yau Tsim Mong","湾仔区":"Wan Chai","观塘区":"Kwun Tong","南区":"Southern","九龙城区":"Kowloon City","东区":"Eastern","离岛区":"Islands","西贡区":"Sai Kung","深水埗区":"Sham Shui Po","黄大仙区":"Wong Tai Sin","元朗区":"Yuen Long","沙田区":"Sha Tin","北区":"North","荃湾区":"Tsuen Wan","大埔区":"Tai Po","屯门区":"Tuen Mun","葵青区":"Kwai Tsing"};
 const STR={
 zh:{
-docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清单：香港全量活动聚合（Luma / Eventbrite / Meetup / Peatix），科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。",
+docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清单：香港全量活动聚合，科技、创业、艺文、生活一站检索；可搜索、按分类与行政区筛选，也可让你的 Agent 订阅 hkevents.json。",
 brandTop:"回到顶部",navAgent:"Agent",navSz:"深圳活动",navEvents:"香港活动",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自动",themeLight:"白天",themeDark:"晚上",themeLabel:"主题",
-heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",scopeNote:"香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活动统一收录、去重，按日期排好；点卡片直达官方报名页。",
+heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",scopeNote:"香港活动全量聚合：统一收录、去重，按日期排好；点卡片直达官方报名页。",
 heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",
 searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"筛选",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
@@ -909,7 +909,7 @@ epDescs:["香港活动数据（JSON）","深圳活动数据（JSON）","给 AI �
 mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把里换成你的兴趣、区域，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 copyPrompt:"复制这段话",copy:"复制",copied:"已复制 ✓",copiedShort:"已复制",copiedGo:"已复制 ✓ 去粘贴给你的 Agent",
-footTag:"香港活动，喂给你的 Agent 吃。",footSz:"深圳活动",footHome:"香港活动",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 聚合自官方平台页面 · 免费无广告",
+footTag:"香港活动，喂给你的 Agent 吃。",footSz:"深圳活动",footHome:"香港活动",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 免费无广告",
 footContact:'合作联系：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"加载中…",loadFail:"数据加载失败，请刷新页面重试",
 pastTitle:"📚 过往活动",pastHint:"点开看历史记录",pastEmpty:"暂无过往记录，活动结束后会自动归档到这里",
@@ -921,9 +921,9 @@ feeNa:"票价见官方页",feeFree:"免费",feePaid:"付费",relToday:"今天",r
 regBtn:"报名 →",moreBtn:"更多操作",mCal:"加入日历",mFavOn:"取消收藏",mFavOff:"收藏",dayCount:function(n){return n+" 场"}
 },
 tw:{
-docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清單：香港全量活動聚合（Luma / Eventbrite / Meetup / Peatix），科技、創業、藝文、生活一站檢索；可搜索、按分類與行政區篩選，也可讓你的 Agent 訂閱 hkevents.json。",
+docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清單：香港全量活動聚合，科技、創業、藝文、生活一站檢索；可搜索、按分類與行政區篩選，也可讓你的 Agent 訂閱 hkevents.json。",
 brandTop:"回到頂部",navAgent:"Agent",navSz:"深圳活動",navEvents:"香港活動",navHack:"黑客松",navSpaces:"Talks",themeAuto:"自動",themeLight:"白天",themeDark:"晚上",themeLabel:"主題",
-heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",scopeNote:"香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活動統一收錄、去重，按日期排好；點卡片直達官方報名頁。",
+heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",scopeNote:"香港活動全量聚合：統一收錄、去重，按日期排好；點卡片直達官方報名頁。",
 heroMetaTotal:"場活動在列",heroMetaDaily:"数据更新于",heroMetaData:"數據",
 searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"篩選",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
@@ -950,7 +950,7 @@ epDescs:["香港活動數據（JSON）","深圳活動數據（JSON）","給 AI �
 mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把裡換成你的興趣、區域，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 copyPrompt:"複製這段話",copy:"複製",copied:"已複製 ✓",copiedShort:"已複製",copiedGo:"已複製 ✓ 去粘貼給你的 Agent",
-footTag:"香港活動，餵給你的 Agent 吃。",footSz:"深圳活動",footHome:"香港活動",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 聚合自官方平臺頁面 · 免費無廣告",
+footTag:"香港活動，餵給你的 Agent 吃。",footSz:"深圳活動",footHome:"香港活動",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 免費無廣告",
 footContact:'合作聯繫：<a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"加載中…",loadFail:"數據加載失敗，請刷新頁面重試",
 pastTitle:"📚 過往活動",pastHint:"點開看歷史記錄",pastEmpty:"暫無過往記錄，活動結束後會自動歸檔到這裡",
@@ -962,9 +962,9 @@ feeNa:"票價見官方頁",feeFree:"免費",feePaid:"付費",relToday:"今天",r
 regBtn:"報名 →",moreBtn:"更多操作",mCal:"加入日曆",mFavOn:"取消收藏",mFavOff:"收藏",dayCount:function(n){return n+" 場"}
 },
 en:{
-docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong events, aggregated in full from Luma, Eventbrite, Meetup and Peatix: tech, startups, arts and everyday life in one searchable list. Filter by category and district, or let your Agent subscribe to hkevents.json.",
+docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong events, aggregated in full: tech, startups, arts and everyday life in one searchable list. Filter by category and district, or let your Agent subscribe to hkevents.json.",
 brandTop:"Back to top",navAgent:"Agent",navSz:"Shenzhen",navEvents:"Hong Kong",navHack:"Hackathons",navSpaces:"Talks",themeAuto:"Auto",themeLight:"Light",themeDark:"Dark",themeLabel:"Theme",
-heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",scopeNote:"The full picture: Hong Kong events from Luma, Eventbrite, Meetup and more, deduplicated and sorted by date. Cards link straight to the official registration page.",
+heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",scopeNote:"The full picture: Hong Kong events, deduplicated and sorted by date. Cards link straight to the official registration page.",
 heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",
 searchPh:"Search by event, organizer, venue…",ftoggleLabel:"Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
@@ -991,7 +991,7 @@ epDescs:["Hong Kong event data (JSON)","Shenzhen event data (JSON)","Site guide 
 mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests and districts, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
 chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 copyPrompt:"Copy this prompt",copy:"Copy",copied:"Copied ✓",copiedShort:"Copied",copiedGo:"Copied ✓ — now paste it to your Agent",
-footTag:"Hong Kong events, served to your Agent.",footSz:"Shenzhen Events",footHome:"Hong Kong Events",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Aggregated from official platform pages · Free, no ads",
+footTag:"Hong Kong events, served to your Agent.",footSz:"Shenzhen Events",footHome:"Hong Kong Events",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Free, no ads",
 footContact:'Partnerships: <a href="mailto:yat@yatslist.com">yat@yatslist.com</a>',
 loading:"Loading…",loadFail:"Failed to load data — please refresh and try again",
 pastTitle:"📚 Past events",pastHint:"Tap to view history",pastEmpty:"No past events yet — finished events are archived here automatically.",
@@ -1006,17 +1006,17 @@ function LOC(){return LANG==="en"?"en-US":LANG==="tw"?"zh-TW":"zh-CN"}
 function tr(k){const d=STR[LANG]||STR.zh;const v=d[k]!==undefined?d[k]:STR.zh[k];if(typeof v==="function")return v.apply(null,Array.prototype.slice.call(arguments,1));return v}
 const PROMPTS={
 zh:{
-generic:"请订阅「Yat's List 香港活动清单」并给我活动提醒：数据源 https://yatslist.com/hkevents.json（每日更新，无需登录）。每天读取一次，按我的兴趣和想去的区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造数据源里没有的活动，提醒时附官方报名链接。",
+generic:"请订阅「Yat's List 香港活动清单」并给我活动提醒：活动数据在 https://yatslist.com/hkevents.json（每日更新，无需登录）。每天读取一次，按我的兴趣和想去的区域筛选；有新活动符合我的兴趣时当天告诉我；我标记想参加的活动，开始前 3 天和前 1 天各提醒我一次。不要编造这份清单里没有的活动，提醒时附官方报名链接。",
 doubao:"每天早上 9 点，打开 https://yatslist.com/hkevents.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
 workbuddy:"每天早上 9 点，打开 https://yatslist.com/hkevents.json 读取最新数据（这是香港活动的 JSON 数据文件）。只看还没结束的活动，帮我挑出：1）今天和明天举行的；2）我感兴趣的类别：；3）我想去的区域：。按日期排序，每场一行：日期时间 + 标题 + 区域 + 一句话介绍 + 报名链接。没有符合的就回一句「今日无新增提醒」。不要编造文件里没有的活动。",
 codex:"请为我订阅「Yat's List 香港活动清单」：每天早上 9 点（Asia/Shanghai）获取 https://yatslist.com/hkevents.json 。只看未结束的活动，筛选：今天和明天举行的、以及我感兴趣的类别和区域。按日期排序简要汇报，每场一行并附报名链接；没有符合项时只回「今日无新增提醒」。请把这项工作设为每天自动运行的任务。"},
 tw:{
-generic:"請訂閱「Yat's List 香港活動清單」並給我活動提醒：數據源 https://yatslist.com/hkevents.json（每日更新，無需登錄）。每天讀取一次，按我的興趣和想去的區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造數據源裡沒有的活動，提醒時附官方報名鏈接。",
+generic:"請訂閱「Yat's List 香港活動清單」並給我活動提醒：活動數據在 https://yatslist.com/hkevents.json（每日更新，無需登錄）。每天讀取一次，按我的興趣和想去的區域篩選；有新活動符合我的興趣時當天告訴我；我標記想參加的活動，開始前 3 天和前 1 天各提醒我一次。不要編造這份清單裡沒有的活動，提醒時附官方報名鏈接。",
 doubao:"每天早上 9 點，打開 https://yatslist.com/hkevents.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 workbuddy:"每天早上 9 點，打開 https://yatslist.com/hkevents.json 讀取最新數據（這是香港活動的 JSON 數據文件）。只看還沒結束的活動，幫我挑出：1）今天和明天舉行的；2）我感興趣的類別：；3）我想去的區域：。按日期排序，每場一行：日期時間 + 標題 + 區域 + 一句話介紹 + 報名鏈接。沒有符合的就回一句「今日無新增提醒」。不要編造文件裡沒有的活動。",
 codex:"請為我訂閱「Yat's List 香港活動清單」：每天早上 9 點（Asia/Shanghai）獲取 https://yatslist.com/hkevents.json 。只看未結束的活動，篩選：今天和明天舉行的、以及我感興趣的類別和區域。按日期排序簡要彙報，每場一行並附報名鏈接；沒有符合項時只回「今日無新增提醒」。請把這項工作設為每天自動運行的任務。"},
 en:{
-generic:"Please subscribe to “Yat's List — Hong Kong Events” and send me event reminders. Data source: https://yatslist.com/hkevents.json (updated daily, no login required). Read it once a day and filter by my interests and the districts I care about. Tell me the same day when a new event matches my interests; and for events I mark as attending, remind me 3 days before and again 1 day before they start. Never invent events that are not in the data source, and always include the official registration link in your reminders.",
+generic:"Please subscribe to “Yat's List — Hong Kong Events” and send me event reminders. The event feed is at https://yatslist.com/hkevents.json (updated daily, no login required). Read it once a day and filter by my interests and the districts I care about. Tell me the same day when a new event matches my interests; and for events I mark as attending, remind me 3 days before and again 1 day before they start. Never invent events that are not in the list, and always include the official registration link in your reminders.",
 doubao:"Every morning at 9:00, open https://yatslist.com/hkevents.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
 workbuddy:"Every morning at 9:00, open https://yatslist.com/hkevents.json and read the latest data (a JSON file of Hong Kong events). Consider only events that have not ended yet, and pick out: 1) events happening today and tomorrow; 2) categories I am interested in: [AI / Tech / Arts / Music — edit to your own interests]; 3) districts I want: [e.g. Central & Western / Wan Chai / Yau Tsim Mong]. Sort by date, one event per line: date & time + title + district + one-line intro + registration link. If nothing matches, just reply “No new reminders today.” Never invent events that are not in the file.",
 codex:"Please subscribe me to “Yat's List — Hong Kong Events”: every morning at 9:00 (Asia/Shanghai), fetch https://yatslist.com/hkevents.json. Consider only events that have not ended, and filter for: events happening today and tomorrow, plus my categories of interest [AI / Tech / Arts / Music] and districts [Central & Western / Wan Chai]. Report briefly, sorted by date, one event per line with its registration link; if nothing matches, reply only “No new reminders today.” Set this up as a task that runs automatically every day."}};
@@ -1036,7 +1036,7 @@ const md=document.querySelector('meta[name="description"]');if(md)md.setAttribut
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
 _setText("#nav-agent",tr("navAgent"));_setText("#nav-sz",tr("navSz"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-spaces",tr("navSpaces"));
-_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#hk-stat-label",tr("heroMetaTotal"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#hk-stat-label",tr("heroMetaTotal"));
 _setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setText("#cmd-copy",tr("copy"));
 {const qd=tr("qChips")||{};document.querySelectorAll("#qchips.chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
@@ -1205,7 +1205,7 @@ $("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="doc
 const evs=DATA.filter(e=>!isPast(e)).filter(pass).sort(byStart);
 const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
 const total=DATA.filter(e=>!isPast(e)).length;
-$("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;const _hs=$("#hk-stat-n");if(_hs)_hs.textContent=DATA.length;
+$("#st-total").textContent=total;const _hs=$("#hk-stat-n");if(_hs)_hs.textContent=DATA.length;
 const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
 if(favOnly){
 const favs=DATA.filter(e=>FAVS.has(e.url)).sort(byStart);
