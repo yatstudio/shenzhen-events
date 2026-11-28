@@ -13,7 +13,7 @@
     "cost_usd_month": 380,
     "rent_1br_usd_month": 170,
     "coworking_usd_month": 40,
-    "internet_mbps": 90,
+    "internet_mbps": 70,
     "safety_score": 4.8,
     "english_score": 2.2,
     "visa": {
@@ -45,10 +45,13 @@
       "https://www.bkwk.cn/article/pu-er-si-mao-qu-pu-er-zhan-zhou-bian-zu-fang-gong-lve-xue-sheng-zu-shang-ban-zu-bi-kan-xiang-jie-zu.html",
       "https://chigui.net/city/puer",
       "https://en.wikipedia.org/wiki/Pu'er_City",
-      "https://finance.sina.cn/2026-09-11/detail-inirmruc2429330.d.html"
+      "https://finance.sina.cn/2026-09-11/detail-inirmruc2429330.d.html",
+      "https://www.kikiholidays.com/post/winter-long-stay-in-yunnan",
+      "https://rewireabroad.com/country/china/city/simao",
+      "https://www.cnblogs.com/jiuling-zhao-ka-jia/p/23743192"
     ],
     "verified_at": "2026-11-18",
-    "updated_at": "2026-11-27",
+    "updated_at": "2026-11-28",
     "neighborhoods": [
       {
         "name": "思茅老城·振兴大道 (Simao Old Town)",
@@ -87,7 +90,7 @@
         "note": "估算：58同城机场小区一居 ¥800、北门街小户型 ¥500–550，长租一居按约 ¥900≈$125 估算"
       }
     ],
-    "data_tier": "verified_v1",
+    "data_tier": "checked",
     "best_months_nums": [
       1,
       2,
@@ -104,14 +107,14 @@
     ],
     "fields_provenance": {
       "cost_usd_month": {
-        "confidence": 0.6,
-        "basis": "single detailed worked example (163.com on-the-ground stay: rent CNY 1,200 + living CNY 1,500 = CNY 2,700/mo ≈ $380; rent component separately cross-checked from 58.com listings)",
-        "as_of": "2026-11-27"
+        "confidence": 0.8,
+        "basis": "cross_checked: 163.com on-the-ground stay rent CNY 1,200 + living CNY 1,500 = CNY 2,700/mo ≈ $380; kikiholidays winter long-stay (2026-11): couple covers accom+food+transport ~CNY 3,000/mo, 2BR central Simao CNY 1,000-1,800 — single-nomad total brackets $333-415, $380 kept as midpoint",
+        "as_of": "2026-11-28"
       },
       "internet_mbps": {
-        "confidence": 0.6,
-        "basis": "v1 seed batch, public sources",
-        "as_of": "2026-11-18"
+        "confidence": 0.8,
+        "basis": "cross_checked: Rewire Simao avg 70 Mbps; cnblogs 2026-11-22 field report: 300M/500M/1000M plans on sale in Simao, a 500M plan measured 80M at night — real-world working speed ~70; v1 seed 90 Mbps had no stated basis, revised down to 70",
+        "as_of": "2026-11-28"
       },
       "visa": {
         "confidence": 0.5,
