@@ -642,6 +642,10 @@ input[type=search]{font-size:16px}
 @media (min-width:821px){.topbar-nav{gap:18px;flex-wrap:nowrap}}
 @media (min-width:821px) and (max-width:1150px){.topbar-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}.topbar-nav::-webkit-scrollbar{display:none}.topbar-nav>*{flex-shrink:0}}
 
+/* ylstat count banner: same component as szevents (styles injected there by /stats.js; inlined here, filled from this page's own fetch) */
+.ylstat{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:10px 0 0;font-size:.88rem;color:var(--ink-sec,#8b98a5);font-variant-numeric:tabular-nums}
+.ylstat .n{font-size:1.5rem;font-weight:800;color:var(--ink,#e6edf3);letter-spacing:-.01em;margin-right:4px}
+@media (max-width:640px){.ylstat .n{font-size:1.3rem}}
 </style>
 </head>
 <body>
@@ -672,6 +676,7 @@ input[type=search]{font-size:16px}
 <p class="section-tagline">DAILY · VERIFIED · FOR AGENTS</p>
 <h2 class="section-title" id="hero-title">香港活动清单</h2>
 <p class="section-subtitle" id="hero-sub">香港活动，喂给你的 Agent 吃。</p>
+<div class="ylstat" id="hk-stat"><span><span class="n" id="hk-stat-n">–</span><span id="hk-stat-label">场活动在列</span></span></div>
 <p class="herometa" id="hm-line"><b id="hm-total">–</b> <span id="hm-total-label">场活动在列</span><i>·</i><span id="hm-upd"></span></p>
 <p class="scopenote" id="scope-note">香港全量聚合：Luma、Eventbrite、Meetup 等平台的香港活动统一收录、去重，按日期排好；点卡片直达官方报名页。</p>
 </div>
@@ -1031,7 +1036,7 @@ const md=document.querySelector('meta[name="description"]');if(md)md.setAttribut
 const brand=document.querySelector(".topbar-brand");if(brand)brand.setAttribute("aria-label",tr("brandTop"));
 document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on",b.dataset.setlang===LANG));
 _setText("#nav-agent",tr("navAgent"));_setText("#nav-sz",tr("navSz"));_setText("#nav-events",tr("navEvents"));_setText("#nav-hack",tr("navHack"));_setText("#nav-spaces",tr("navSpaces"));
-_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#hm-total-label",tr("heroMetaTotal"));
+_setText("#hero-title",tr("heroTitle"));_setText("#hero-sub",tr("heroSub"));_setText("#scope-note",tr("scopeNote"));_setText("#hm-total-label",tr("heroMetaTotal"));_setText("#hk-stat-label",tr("heroMetaTotal"));
 _setText("#ab-title",tr("abTitle"));_setText("#ab-sub",tr("abSub"));_setText("#cmd-copy",tr("copy"));
 {const qd=tr("qChips")||{};document.querySelectorAll("#qchips.chip").forEach(ch=>{if(qd[ch.dataset.q])ch.textContent=qd[ch.dataset.q]})}
 const q=document.getElementById("q");if(q)q.placeholder=tr("searchPh");
@@ -1200,7 +1205,7 @@ $("#past").innerHTML=`<div class="pastsec"><button class="pasthead" onclick="doc
 const evs=DATA.filter(e=>!isPast(e)).filter(pass).sort(byStart);
 const fr=$("#fres");if(fr)fr.textContent=tr("fres",evs.length);
 const total=DATA.filter(e=>!isPast(e)).length;
-$("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;
+$("#st-total").textContent=total;const _hm=$("#hm-total");if(_hm)_hm.textContent=total;const _hs=$("#hk-stat-n");if(_hs)_hs.textContent=DATA.length;
 const fcEl=$("#favcount");if(fcEl)fcEl.textContent=FAVS.size?"（"+FAVS.size+"）":"";
 if(favOnly){
 const favs=DATA.filter(e=>FAVS.has(e.url)).sort(byStart);
