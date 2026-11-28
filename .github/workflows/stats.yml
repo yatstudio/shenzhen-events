@@ -25,6 +25,8 @@ on:
       - tools/cities.mjs
       - tools/feeds.mjs
       - tools/normalize_city.mjs
+      - tools/apply_hk_i18n.mjs
+      - data/i18n-cache/**
       - tools/archive_events.mjs
       - tools/build_slices.mjs
       - tools/check-shell.mjs
@@ -49,6 +51,7 @@ jobs:
       - name: Build city_id, archive, city slices and stats
         run: |
           node tools/normalize_city.mjs
+          node tools/apply_hk_i18n.mjs
           node tools/archive_events.mjs
           node tools/build_slices.mjs
           node tools/build_stats.mjs
@@ -57,7 +60,7 @@ jobs:
         run: |
           git config user.name "yatslist-stats[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          FILES="stats.json events.json events-archive.json hk sz"
+          FILES="stats.json events.json events-archive.json hkevents.json hk sz"
           for i in 1 2 3; do
             git add -A $FILES
             if git diff --cached --quiet; then echo "no change"; exit 0; fi
@@ -66,6 +69,6 @@ jobs:
             # main moved (e.g. the daily writer pushed events.json): rebuild on top of it instead of rebasing generated files
             sleep 5
             git fetch -q origin main && git reset -q --hard origin/main
-            node tools/normalize_city.mjs && node tools/archive_events.mjs && node tools/build_slices.mjs && node tools/build_stats.mjs && node tools/check-shell.mjs --data
+            node tools/normalize_city.mjs && node tools/apply_hk_i18n.mjs && node tools/archive_events.mjs && node tools/build_slices.mjs && node tools/build_stats.mjs && node tools/check-shell.mjs --data
           done
           exit 1
