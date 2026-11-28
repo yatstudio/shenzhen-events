@@ -234,8 +234,8 @@
 
 <!-- Modal Overlay -->
 <div class="ovl" id="ovl" onclick="if(event.target===this)closeModal()">
-<div class="modal">
-<div class="mhead"><h3 id="mtitle">🤖 订阅话术</h3><button class="btn" id="mclose1" onclick="closeModal()">✕ 关闭</button></div>
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+<div class="mhead"><h3 id="mtitle">🤖 订阅话术</h3><button type="button" class="yx-close" id="mclose1" onclick="closeModal()" aria-label="关闭">✕</button></div>
 <div class="mchips" id="mchips">
 <button class="mchip on" data-k="generic">通用版</button>
 <button class="mchip" data-k="doubao">🫘 豆包工作</button>
@@ -243,11 +243,8 @@
 <button class="mchip" data-k="codex">🧑‍💻 Codex</button>
 </div>
 <p class="msteps" id="msteps"></p>
-<textarea id="mprompt" aria-label="话术内容，可编辑"></textarea>
-<p class="mhint" id="mhint">✏️ 这段话术可以直接改：把【】里换成你的兴趣、区域，改完再复制，Agent 就按你的喜好筛。</p>
-<div class="mex" id="mex"></div>
-<div class="mex" id="mpost-alt" style="display:none;margin-top:10px"></div>
-<div class="mrow"><button class="btn primary" id="mcopy" onclick="copyModal(this)">📋 复制这段话</button><button class="btn" id="mclose2" onclick="closeModal()">关闭</button></div>
+<div class="yx-code"><button type="button" class="yx-copy" id="mcopy" onclick="copyModal(this)">复制</button><textarea id="mprompt" aria-label="话术内容，可编辑"></textarea></div>
+<details class="mexd"><summary id="mex-sum">✏️ 定制示例</summary><div class="mex" id="mex"></div></details>
 </div>
 </div>
 
@@ -267,7 +264,7 @@ docTitle:"Yat's List · 香港活动清单",metaDesc:"Yat's List 香港活动清
 heroTitle:"香港活动清单",heroSub:"香港活动，喂给你的 Agent 吃。",scopeNote:"香港活动全量聚合：统一收录、去重，按日期排好；点卡片直达官方报名页。",
 heroMetaTotal:"场活动在列",heroMetaDaily:"数据更新于",heroMetaData:"数据",
 taSubmit:"提交活动",taAgent:"用我的 Agent 订阅 →",abApis:'也可以直接读：<a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">日历 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿规范）',
-postTitle:"📋 投稿话术",postSteps:"把话术发给你的 Agent（Codex / Claude Code / WorkBuddy 等），它会核对官方页并代你提交，不需要 GitHub 账号。",postEx:"<b>填写示例：</b><br>「我要投稿的活动：【中环 AI 创业者聚会，https://官方链接】」——把【】里换成真实的活动名和官方链接再复制。投稿前先打开官方页，确认日期、地点、票价无误。",postAlt:'<b>没有 Agent？也可以用邮件提交：</b><br>把活动官方链接发到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> 即可，核实、去重后收录。',
+
 submitPrompt:"请帮我给「Yat's List 香港活动清单」投稿一个活动。先读投稿规范 https://yatslist.com/AGENTS.md ，然后打开官方活动页核对日期、时间、地点、票价，按规范里的「HTTP API」方式提交（city 填「香港」；不需要 GitHub 账号，提交成功会返回一个 sub- 开头的编号）；如果 API 提交失败，就把活动信息发到投稿邮箱 event.submit@yatslist.com 。我要投稿的活动：【在这里填活动名和官方链接】。提交后把结果（成功编号或失败原因）告诉我。",
 searchPh:"搜索活动名 / 主办方 / 地点…",ftoggleLabel:"筛选",
 favLabel:"收藏",favNote:"收藏存本机、无需注册",favOnlyBtn:"⭐ 只看收藏",
@@ -291,7 +288,7 @@ tbTitle:"🤖 订阅话术（给 Agent）",
 tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以订阅。下方是<b>通用版</b>话术（任何能联网的 Agent 都适用）：',
 tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
 epDescs:["香港活动数据（JSON）","深圳活动数据（JSON）","给 AI 的站点说明"],
-mclose:"✕ 关闭",mclose2:"关闭",mhint:"✏️ 这段话术可以直接改：把【】里换成你的兴趣、区域，改完再复制，Agent 就按你的喜好筛。",mcopy:"📋 复制这段话",
+
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 copyPrompt:"复制这段话",copy:"复制",copied:"已复制 ✓",copiedShort:"已复制",copiedGo:"已复制 ✓ 去粘贴给你的 Agent",
 footTag:"香港活动，喂给你的 Agent 吃。",footSz:"深圳活动",footHome:"香港活动",footHack:"黑客松",footSubLink:"订阅说明",footSmall:"数据每日更新 · 免费无广告",
@@ -310,7 +307,7 @@ docTitle:"Yat's List · 香港活動清單",metaDesc:"Yat's List 香港活動清
 heroTitle:"香港活動清單",heroSub:"香港活動，餵給你的 Agent 吃。",scopeNote:"香港活動全量聚合：統一收錄、去重，按日期排好；點卡片直達官方報名頁。",
 heroMetaTotal:"場活動在列",heroMetaDaily:"數據更新於",heroMetaData:"數據",
 taSubmit:"提交活動",taAgent:"用我的 Agent 訂閱 →",abApis:'也可以直接讀：<a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">日曆 .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a>（Agent 投稿規範）',
-postTitle:"📋 投稿話術",postSteps:"把話術發給你的 Agent（Codex / Claude Code / WorkBuddy 等），它會核對官方頁並代你提交，不需要 GitHub 帳號。",postEx:"<b>填寫示例：</b><br>「我要投稿的活動：【中環 AI 創業者聚會，https://官方連結】」——把【】裡換成真實的活動名和官方連結再複製。投稿前先打開官方頁，確認日期、地點、票價無誤。",postAlt:'<b>沒有 Agent？也可以用電郵提交：</b><br>把活動官方連結發到 <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a> 即可，核實、去重後收錄。',
+
 submitPrompt:"請幫我給「Yat's List 香港活動清單」投稿一個活動。先讀投稿規範 https://yatslist.com/AGENTS.md ，然後打開官方活動頁核對日期、時間、地點、票價，按規範裡的「HTTP API」方式提交（city 填「香港」；不需要 GitHub 帳號，提交成功會返回一個 sub- 開頭的編號）；如果 API 提交失敗，就把活動信息發到投稿郵箱 event.submit@yatslist.com 。我要投稿的活動：【在這裡填活動名和官方連結】。提交後把結果（成功編號或失敗原因）告訴我。",
 searchPh:"搜索活動名 / 主辦方 / 地點…",ftoggleLabel:"篩選",
 favLabel:"收藏",favNote:"收藏存本機、無需註冊",favOnlyBtn:"⭐ 只看收藏",
@@ -334,7 +331,7 @@ tbTitle:"🤖 訂閱話術（給 Agent）",
 tbSum:'豆包工作、WorkBuddy、Codex、Claude Code 等主流 Agent 都可以訂閱。下方是<b>通用版</b>話術（任何能聯網的 Agent 都適用）：',
 tbAll:"其他 Agent 版本（豆包 / WorkBuddy / Codex）",
 epDescs:["香港活動數據（JSON）","深圳活動數據（JSON）","給 AI 的站點說明"],
-mclose:"✕ 關閉",mclose2:"關閉",mhint:"✏️ 這段話術可以直接改：把【】裡換成你的興趣、區域，改完再複製，Agent 就按你的喜好篩。",mcopy:"📋 複製這段話",
+
 chipGeneric:"通用版",chipDoubao:"🫘 豆包工作",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 copyPrompt:"複製這段話",copy:"複製",copied:"已複製 ✓",copiedShort:"已複製",copiedGo:"已複製 ✓ 去粘貼給你的 Agent",
 footTag:"香港活動，餵給你的 Agent 吃。",footSz:"深圳活動",footHome:"香港活動",footHack:"黑客松",footSubLink:"訂閱說明",footSmall:"數據每日更新 · 免費無廣告",
@@ -353,7 +350,7 @@ docTitle:"Yat's List · Hong Kong Events",metaDesc:"Yat's List — Hong Kong eve
 heroTitle:"Hong Kong Events",heroSub:"Hong Kong events, served to your Agent.",scopeNote:"The full picture: Hong Kong events, deduplicated and sorted by date. Cards link straight to the official registration page.",
 heroMetaTotal:"events listed",heroMetaDaily:"Data updated",heroMetaData:"Data",
 taSubmit:"Submit event",taAgent:"Subscribe with my Agent →",abApis:'Or read directly: <a href="/hkevents.json">hkevents.json</a> · <a href="/hk/feed.xml">RSS</a> · <a href="/hk/events.ics">Calendar .ics</a> · <a href="/llms.txt">llms.txt</a> · <a href="/agent.json">agent.json</a> · <a href="https://yatslist.com/AGENTS.md">AGENTS.md</a> (Agent submission guide)',
-postTitle:"📋 Submission prompt",postSteps:"Send this prompt to your Agent (Codex / Claude Code / WorkBuddy, etc.) — it will verify the official page and submit it for you. No GitHub account needed.",postEx:"<b>Example:</b><br>“The event I want to submit: [Central AI Founders Meetup, https://official-link]” — replace the brackets with the real event name and official link before copying. Open the official page first to confirm the date, venue and price.",postAlt:'<b>No Agent? Submit by email:</b><br>send the official event link to <a href="mailto:event.submit@yatslist.com">event.submit@yatslist.com</a>; we verify and deduplicate before listing it.',
+
 submitPrompt:"Please help me submit an event to “Yat's List — Hong Kong Events”. First read the submission guide at https://yatslist.com/AGENTS.md, then open the official event page to verify the date, time, venue and ticket price. Submit it via the guide's HTTP API method (set city to 香港; no GitHub account needed; a successful submission returns an id starting with “sub-”). If the API submission fails, email the event details to event.submit@yatslist.com instead. The event I want to submit: [event name and official link here]. After submitting, tell me the result (the success id or the reason it failed).",
 searchPh:"Search by event, organizer, venue…",ftoggleLabel:"Filters",
 favLabel:"Saved",favNote:"Saved on this device — no account needed",favOnlyBtn:"⭐ Saved only",
@@ -377,7 +374,7 @@ tbTitle:"🤖 Subscription prompt (for your Agent)",
 tbSum:'Doubao Workspace, WorkBuddy, Codex, Claude Code and other mainstream Agents can all subscribe. Below is the <b>generic version</b> (works with any Agent that can access the web):',
 tbAll:"Other Agent versions (Doubao / WorkBuddy / Codex)",
 epDescs:["Hong Kong event data (JSON)","Shenzhen event data (JSON)","Site guide for AI"],
-mclose:"✕ Close",mclose2:"Close",mhint:"✏️ Feel free to edit this prompt: replace the placeholders with your interests and districts, then copy — your Agent will filter to your taste.",mcopy:"📋 Copy this prompt",
+
 chipGeneric:"Generic",chipDoubao:"🫘 Doubao",chipWorkbuddy:"💼 WorkBuddy",chipCodex:"🧑‍💻 Codex",
 copyPrompt:"Copy this prompt",copy:"Copy",copied:"Copied ✓",copiedShort:"Copied",copiedGo:"Copied ✓ — now paste it to your Agent",
 footTag:"Hong Kong events, served to your Agent.",footSz:"Shenzhen Events",footHome:"Hong Kong Events",footHack:"Hackathons",footSubLink:"How to subscribe",footSmall:"Updated daily · Free, no ads",
@@ -446,7 +443,6 @@ _setText("#tb-title",tr("tbTitle"));_setHTML("#tb-sum",tr("tbSum"));_setText("#t
 document.querySelectorAll(".endpoint-desc").forEach((el,i)=>{if(STR[LANG].epDescs[i])el.textContent=STR[LANG].epDescs[i]});
 document.querySelectorAll(".endpoint-item .btn-copy").forEach(el=>{el.textContent=tr("copy")});
 _setText("#subprompt-copy",tr("copy"));
-_setText("#mclose1",tr("mclose"));_setText("#mclose2",tr("mclose2"));_setText("#mhint",tr("mhint"));_setText("#mcopy",tr("mcopy"));
 document.querySelectorAll("#mchips .mchip").forEach(ch=>{const key={generic:"chipGeneric",doubao:"chipDoubao",workbuddy:"chipWorkbuddy",codex:"chipCodex"}[ch.dataset.k];if(key)ch.textContent=tr(key)});
 _setText("#sf-tag",tr("footTag"));_setText("#sf-sz",tr("footSz"));_setText("#sf-home",tr("footHome"));_setText("#sf-hack",tr("footHack"));_setText("#sf-spaces",tr("navSpaces"));_setText("#sf-sub",tr("footSubLink"));_setText("#sf-small",tr("footSmall"));_setHTML("#sf-contact",tr("footContact"));
 const ld=document.getElementById("list-loading");if(ld)ld.textContent=tr("loading");
@@ -629,9 +625,10 @@ html+=dlist(g.items);
 $("#list").innerHTML=html;
 }
 let mKey="generic",mMode="sub";
+window.YL_SUBMIT={kind:"event",city:"hk",prompt:l=>(STR[l]||STR.zh).submitPrompt};
 function mLoad(){const ta=document.getElementById("mprompt");const en=LANG==="en";const tw=LANG==="tw";
-const alt=document.getElementById("mpost-alt");if(mMode==="post"){ta.value=tr("submitPrompt");document.getElementById("msteps").textContent=tr("postSteps");document.getElementById("mex").innerHTML=tr("postEx");document.getElementById("mtitle").textContent=tr("postTitle");if(alt){alt.innerHTML=tr("postAlt");alt.style.display="block"}return}if(alt)alt.style.display="none";ta.value=PROMPTS[LANG][mKey];document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}
-function openModal(mode){mMode=mode==="post"?"post":"sub";const mc=document.getElementById("mchips");if(mc)mc.style.display=mMode==="sub"?"flex":"none";mLoad();document.getElementById("ovl").classList.add("open")}
+ta.value=PROMPTS[LANG][mKey];document.getElementById("msteps").textContent=(en?MSTEPS_EN:tw?MSTEPS_TW:MSTEPS)[mKey];document.getElementById("mex").innerHTML=en?MEX_SUB_EN:tw?MEX_SUB_TW:MEX_SUB;document.getElementById("mtitle").textContent=en?"🤖 Subscription prompt":tw?"🤖 訂閱話術":"🤖 订阅话术";}
+function openModal(mode){if(mode==="post"){if(window.YLSubmit)YLSubmit.open();return}mMode="sub";mLoad();document.getElementById("ovl").classList.add("open")}
 function closeModal(){document.getElementById("ovl").classList.remove("open")}
 document.getElementById("mchips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;mKey=b.dataset.k;document.querySelectorAll("#mchips .mchip").forEach(x=>x.classList.toggle("on",x===b));mLoad()});
 document.getElementById("favbtn").addEventListener("click",()=>{favOnly=!favOnly;document.getElementById("favbtn").classList.toggle("on",favOnly);if(typeof syncFilterUI==="function")syncFilterUI();render()});
@@ -644,7 +641,7 @@ if(ev.target.closest(".cmenu [role=menuitem]"))closeMenus();
 });
 document.addEventListener("click",ev=>{if(!ev.target.closest(".cact"))closeMenus()});
 document.addEventListener("keydown",ev=>{if(ev.key==="Escape"){closeMenus();closeModal()}});
-function copyModal(b){const ta=document.getElementById("mprompt");const done=()=>{const t=b.textContent;b.textContent=tr("copiedGo");setTimeout(()=>b.textContent=t,1800)};if(navigator.clipboard)navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ta.select();document.execCommand("copy");done()});else{ta.select();document.execCommand("copy");done()}}
+function copyModal(b){if(window.YLSubmit)YLSubmit.copy(document.getElementById("mprompt").value,b)}
 const _cc=document.getElementById("cmd-copy");if(_cc)_cc.addEventListener("click",function(){if(navigator.clipboard)navigator.clipboard.writeText("https://yatslist.com/hkevents.json").then(()=>{this.textContent=tr("copied");setTimeout(()=>this.textContent=tr("copy"),1200)})});
 function measureBar(){const b=document.querySelector(".bar");if(b)document.documentElement.style.setProperty("--barh",b.offsetHeight+"px")}
 window.addEventListener("resize",measureBar);
@@ -741,6 +738,7 @@ renderDist();render();measureBar();setTimeout(measureBar,400);
 <script src="/stats.js?v=20261128b" defer></script>
 <script src="/city.js?v=2" defer></script>
 <script src="/events-ui.js?v=1" defer></script>
+<script src="/submit-ui.js?v=1" defer></script>
 <script src="/chat.js?v=1" defer></script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}</script>
 </body>
