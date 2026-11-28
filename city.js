@@ -66,11 +66,11 @@
     var q = null; try { q = new URLSearchParams(location.search).get("lang"); } catch (e) {}
     return PAGES[c] + (q ? "?lang=" + encodeURIComponent(q) : "");
   }
-  /* .cityswitch styles live in each city page (no flash before this deferred script runs); only the bar is styled here */
+  /* .cityswitch styles live in /events.css, linked in each city page's <head> (no flash before this deferred script runs); only the bar is styled here */
   var css =
-    ".yl-citybar{display:flex;align-items:center;gap:10px;margin:0 0 14px;padding:9px 12px 9px 16px;border:1px solid var(--border);border-radius:12px;background:var(--panel);font-size:.88rem;color:var(--ink-sec)}" +
+    ".yl-citybar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:0 0 14px;padding:9px 12px 9px 16px;border:1px solid var(--border);border-radius:12px;background:var(--panel);font-size:.88rem;color:var(--ink-sec)}" +
     ".yl-citybar[hidden]{display:none}.yl-citybar .m{flex:1;min-width:0}.yl-citybar a{color:var(--green);font-weight:700;text-decoration:none;white-space:nowrap}" +
-    ".yl-citybar button{flex:0 0 auto;background:none;border:0;color:var(--ink-ter);font:inherit;font-size:1rem;line-height:1;padding:4px 6px;cursor:pointer}.yl-citybar button:hover{color:var(--ink)}";
+    ".yl-citybar button{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;margin:-6px -6px -6px 0;background:none;border:0;border-radius:8px;color:var(--ink-ter);font:inherit;font-size:1rem;line-height:1;padding:0;cursor:pointer}.yl-citybar button:hover{color:var(--ink)}";
 
   function initPage() {
     var nav = d.querySelector("nav.cityswitch[data-page-city]");
